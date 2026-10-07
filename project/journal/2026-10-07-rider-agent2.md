@@ -263,3 +263,9 @@ Finding: Glove enclosure fails because the isolated source thumb chart was mappe
 Validation: Same frozen candidate diagnostic returns0 in1.954 seconds,36 profiles. Only proximal thumb fails: scales5.190/3.206/2.663; first source radius7.738mm versus target36.657mm. Actual MCP is52.336mm downstream of metacarpal; source first isolated section is distinct from palm/thumb root. Original2.5 bound and body fields unchanged; no projection/bake/reconstruction.
 
 Limits: Source sections have no true joint annotations. A corrected anatomical station/domain recipe must preserve all old enclosure guards and pass actual full dressed movement before acceptance.
+
+Finding: Correct selected thumb appearance correspondence from the isolated source chart onto the actual MCP/IP/skin-tip arc. Geometric palm/thenar ownership replaces a mistaken inference from metacarpal bone mass, with original rigging intact.
+
+Validation: Parent reviews recipe02 diff and both Python files compile. Measured source station proportions are retained; explicit MCP transition pools are0+5 and distal thumb5only. All36 volume profiles and domain/reversal witnesses precede rejection.
+
+Limits: One corrected intended-final candidate has not run; original2.5ease/2.5mm padding and topology/source guards remain unchanged. No source-model substitutes or art acceptance.

@@ -1115,3 +1115,5 @@ October 7 actual face native02 forms one closed welded wearer with unchanged pro
 October 7 identical selected private rider slots share one parsed source document and texture objects; exact source/slot validation and eleven regression tests pass. Original maps remain intact; deliberate renderer texture derivatives/device96MiB budget still require actual readback and played appearance.
 
 October 7 exact glove failure diagnostic localizes the mismatch to thumb metacarpal/thenar surface ownership: isolated donor thumb sections were mapped52.336mm upstream of actual MCP. All36 profiles recorded without reconstruction; proposed correction changes anatomical station/domain identity while preserving original fields and enclosure guards.
+
+October 7 corrected selected thumb recipe maps measured source digit stations to actual MCP/IP/skin-tip and separates thenar appearance ownership geometrically. Original75 fields and enclosure guards stay intact; source checkpoint precedes one corrected native attempt.

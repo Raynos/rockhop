@@ -1,0 +1,40 @@
+{
+  "accepted": false,
+  "candidate": "selected-glove02",
+  "productionIntent": true,
+  "previousFrozenRecipeSHA256": "3c67ed274a934ec6fbf46fbe48d8dc6a57ad94db0169b581f765be4ec2fccf62",
+  "measuredCauseCheckpoint": "831add58a",
+  "helperSHA256": "c2f3a693d7cd9d4c449020af8f8370e1e15e852064e691df6ef1ecf17ccfc95b",
+  "verifierSHA256": "d17e2261e4bc488805d76476920aebd1a61f596508387a72a9c655c01a3890bf",
+  "sourceAndTargetAnatomy": {
+    "source": "Four verified isolated donor thumb section centers, preserving their measured relative arc stations",
+    "target": "Actual DEF-thumb.02.R MCP head, DEF-thumb.03.R IP head and actual body skin tip plus 2 mm",
+    "metacarpal": "DEF-thumb.01.R remains an original deformation field; it is excluded from isolated donor digit controls",
+    "surfaceDomain": "MCP signed plane and nearest downstream anatomical digit arc distinguish palm/thenar source 0 from thumb source 5; other digit surface identities remain preserved",
+    "transition": "The MCP-to-second donor section target arc uses source pools 0+5; subsequent thumb surface uses source 5 exclusively",
+    "preservation": "All original body coordinates, named75 rest transforms and deformation influences remain untouched"
+  },
+  "unchangedGuards": {
+    "radialEaseMaximum": 2.5,
+    "minimumPositiveOuterPaddingM": 0.0025,
+    "volumeTargetPaddingM": 0.0035,
+    "unsupportedExterior": "Reject before bake; no offset-body fallback",
+    "orientation": "Every reconstructed hand triangle must retain orientation",
+    "cavity": "Coherent hand patch, true inward shell and cuff rim; closed Euler2 cloth volume"
+  },
+  "witnessesBeforeGuards": [
+    "Original source controls and actual MCP/IP/skin-tip control targets",
+    "Every target point MCP distance, nearest digit arc distances, permitted source region and unchanged thumb deformation mass",
+    "All 36 source/skin section radii, radial scales and fallback sample counts before volume rejection",
+    "Every supported source triangle/corner barycentric and semantic region, plus every unsupported point before correspondence rejection",
+    "All reversed or degenerate retopology faces before orientation rejection"
+  ],
+  "bake": "One original-PBR 4096 dedicated atlas bake under guarded Blender CPU job only after geometry gates pass",
+  "limits": [
+    "Source section centers are geometric hypotheses rather than annotated donor joints",
+    "Compact16000-triangle normal bake does not preserve all dense donor microgeometry",
+    "Global selected-to-active bake may query a neighboring finger; per-pixel semantic correspondence remains unqualified until validated",
+    "Native structural witnesses do not qualify played glove deformation, grip surface or visual quality"
+  ],
+  "execution": "Not executed; parent source review and checkpoint precede one corrected intended-final attempt"
+}
