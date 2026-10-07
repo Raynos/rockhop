@@ -17,3 +17,15 @@ Finding: Native49/capture50 intake is intact. Current exact exporter, full51 eng
 Validation: Parent streams all52controller inputs through SHA256 checks, checks fresh outputs and AST syntax. No contact/build/browser/model run from this preparation.
 
 Limits: Prepared controller and read-only engine audit only; current candidate remains private/unaccepted.
+
+Finding: Five-day audit completed before construction. All21retained source/native/engine films played to natural end; parent inspected temporal evidence. Historical defects persist; native49/body07 still needs its own review.
+
+Validation: 21source SHA256 pins, muted1x/WebDriver playback with no seeks/stalls,1354actual presented PNG pins match. Two killed all-PNG runs retained; remaining16films succeed with at most64PNG captures each. Prepared scripts syntax-check.
+
+Limits: Sampled historical defect review only. No new score, current candidate, contacts, clothes, support, GPU or device acceptance.
+
+Finding: Parent closes the historical played audit as its own coherent checkpoint before the dressed-candidate successor plan.
+
+Validation: 21films played and1354presented PNG hashes checked; complete audit documents now ready. No current candidate authoring ran.
+
+Limits: Historical sampled defect review; every current rider gate remains open.
