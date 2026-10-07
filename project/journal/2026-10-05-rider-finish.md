@@ -941,3 +941,36 @@ Finding: Pause handoff freezes corrected glove-enclosure12 preparation only: fir
 Validation: Python compile and exact four input/recipe/proposal hashes pass. Foundation UV/corner arrays exist; UV seam/triangle-loop checks remain unimplemented. No inventory, glove authoring or heavy execution ran.
 
 Limits: Prepared only. No execution admission, candidate authoring, contact, moving-art, clothes, engine or device acceptance. All six gates open.
+
+## October7: full fresh-agent handoff
+
+Finding: User ask310 pauses at verified capture50. Full handoff preserves
+current authority, exact source/output pins, local dependencies, failure
+limits and first contacts51/ordinarygate51 unit. Six separate owned source,
+receipt, frame and proposal checkpoints are committed. Successor ask312
+registered independently and its concurrent main commit is preserved.
+
+Validation: All39restart inputs hash exactly, prepared gate51 and verifier
+compile; no execution51 output exists. Owned untracked finish paths are
+empty. Foreign working/index changes inventoried without reset or sweep.
+Ordinary gate51 preparation is not gameplay evidence.
+
+Limits:0/6milestones accepted. Local ignored native masters/harness/model
+outputs are still required; fresh clone alone is insufficient. Foreign
+changes remain dirty. No promotion, push, deploy or future experiment.
+
+## October7: execution plan and ask handoff status
+
+Finding: Replace the obsolete39–40next-repair instructions with actual
+native49/capture50 state, first unexecuted contacts51/gamegate51, moving
+review and distinct prepared hip/glove proposals. Predecessor pauses;
+ask305 transfers to successor312,310handoff done;0/6remain accepted.
+
+Validation: Plan and handoff local paths/JSON targets exist, immutable
+restart39input check passes; plan diff whitespace clean. Owned asks
+305/309/310/313 retained together using a grouped private-index update;
+successor312 and foreign shared hunks preserved. Documentation only;
+no contact/game/model/native execution or existing receipt alteration.
+
+Limits: All genuine rider, garment, generic/bike/engine, phone/stranger
+and release gates remain open. No plan archive, push or promotion.

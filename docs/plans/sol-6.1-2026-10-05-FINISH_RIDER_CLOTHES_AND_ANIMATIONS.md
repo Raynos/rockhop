@@ -1,8 +1,14 @@
 # Finish the rider, clothes and animations
 
 Created: 2026-10-05 · writer: Codex / gpt-6.1-sol · asks303–305.
-**Status: active execution plan; assembled rider unaccepted; M0–M5 all open.**
+**Status: paused for fresh-agent handoff at verified capture50, 2026-10-07;
+assembled rider unaccepted; accepted milestones0/6; F0–F5/M0–M5 all open.**
 Basis: [72-hour audit](../evidence/hero-remaster/audit-2026-10-05/README.md).
+
+Current restart record: [full October7 handoff](../evidence/hero-remaster/handoff-2026-10-07/HANDOFF.md).
+The user asks310 requested a good pause point, committed owned work and a fresh
+agent. No experiment51 has run. Resume only when the user instructs the fresh
+agent; this status does not close or archive the plan.
 
 This plan owns the next execution order and stop rules. The
 [October3 baseline specification](sol-6.1-2026-10-03-RIDER_BASELINE_TO_SHIP.md)
@@ -302,26 +308,55 @@ and verified live SHA. AllM0–M5 evidence linked; no unmeasured gate is green.
 
 ## First round, stop rules and closure
 
-**Current checkpoint after executions39–40:** body06 retains the scoped cap
-repair, exact protected source/rig data, stable triangles and finite proper
-head-self/body-head crossings0 across ten saved poses. Its current loft witness
-uses automatic geometric normals (packed0, six smooth faces), so a rigid
-head-normal reference or angular custom-offset decoder cannot resolve the
-remaining1.48846linear-skin disagreement. Body shoulder/hip/underwear failures
-remain inherited; the played body is still rejected at3/10. These checkpoints
-are construction progress, not F1/M1 or actual-engine acceptance.
+**Current checkpoint after execution50:** body07 stores the first fixed
+anatomically anchored chest/shoulder/upperArm harmonic field trial.330 body rows
+change within438; geometry, exact boundary and outside fields are preserved.
+All96 stored shoulder crossing pairs clear in the numerical preflight, but
+those truncated witnesses do not establish whole-surface clearance. Maximum
+predicted displacement0.138344571m requires moving appearance review.
 
-**Next production repair:** freeze one anatomically anchored chest/shoulder/
-upper-arm field trial around the two humeral pivots, preserving geometry first.
-Current reach/raised/asymmetric proper shoulder crossings exist in both FULL
-and FOUR; truncation alone is not the primary cause. Pin exact patch/anchor/
-boundary IDs and raw controls, verify outside-field equality and disclose any
-normalization mass difference. Use one fixed harmonic partition, then actual
-native save/reopen, whole-body contact and held-out moving checks. Root judges
-same-view exposed gray/PBR motion. If that trial fails, stop field retuning and
-propose joint-aware deltoid/axilla geometry or corrective deformation. Original
-source controls stay immutable; permitted production geometry/semantic fields
-need not preserve diagnosed bad derivative deformation indefinitely.
+Native49 saves/reopens the actual candidate, SHA27d123d9…, authored fields
+bb443342…. Four one-hot FULL membership values above Blender's RNA maximum1
+are stored as1 with normalized predicted fields byte-identical; raw references
+remain separate. No global source normalization or harmonic retune occurred.
+Independent capture50 retains ten exact saved51 pose/skin/boneWorld payloads.
+Parent [readback](../evidence/hero-remaster/finish-2026-10-05/runtime/savedpose-capture01/parent-readback50.json)
+confirms body/head XYZ, triangles and rawFULL/FOUR exactly match authored49,
+outside330 raw body rows remain body06-exact, and native/prediction agreement
+is within4.625616761e-7m. Original34/own51/protectedhead/UV/PBR remain exact.
+Body/head/cheek evaluated triangles/corner triples stay stable; boxer fails
+triangulation stability at landing302 in both fields, with actual faces retained.
+
+Body06's scoped cap repair and proper head-self/body-head crossings0 survive as
+earlier construction evidence. Whole-head moving linear-skin normal disagreement
+1.48846 remains open: its loft witness uses automatic geometric normals, packed0
+and six smooth faces. A rigid reference/custom-offset decoder alone cannot fix
+it. The last played body05 appearance remains3/10 rejected; body07 has no played
+verdict. Current hip/underwear, continuous motion and actual-engine gates remain
+open. These checkpoints grant no F1/M1 or player acceptance.
+
+**Next resumed execution unit51:** rehash current native49/capture50 controls;
+run the complete existing geometry classifier against all four captured regions,
+all FULL/FOUR pairs and all ten actual evaluated poses. Preserve the boxer302
+failure and missing wardrobe. Run the mandatory ordinary cold-boot/clear/crash/
+restart gate51 serially with zero candidate replacements, then commit the full
+finding. Next ordinary game gate54. No source edit, new model run, parameter
+retune or candidate promotion precedes this checkpoint.
+
+Then parent judges played held-out body07 gray/PBR motion, including mirrored
+asymmetry, reverse and grounded/exposed-shoulder cases. If the fixed field fails,
+stop field retuning and propose joint-aware deltoid/axilla geometry or corrective
+deformation. Original source controls stay immutable; production derivatives
+may repair diagnosed deformation only within a reviewed explicit scope.
+
+The prepared [hip/underwear proposal](../evidence/hero-remaster/finish-2026-10-05/construction/body07/hip-underwear-next-proposal.json)
+separates hip773 from knee/thigh witnesses outside that scope. Hip fields remain
+body06-exact; first hip witnesses survive identicalFULL/FOUR. Boxer has26 baseline
+proper rest crossings as well as302retessellation. An explicit triangulation
+control can isolate topology, but does not resolve shell embedding or hip folds.
+Complete current contacts and played review precede any such authoring admission;
+later joint-local hip corrective and measured crotch/gusset construction are
+separate unadmitted units. No blind9mm offset or global weight campaign.
 
 The exact glove opening preserves all retained source geometry/UV/PBR lineage.
 Its remaining genus1handle is localized to a cuff-side label0region, outside
@@ -330,6 +365,17 @@ interpreting that feature: a handle may be legitimate cuff/strap detail. Surface
 homology does not authorize another cut or certify usable inner space. Prove
 mouth/palm/finger enclosure before fitting or skin transfer; no more failed RBF
 sweeps. Hoodie, jeans and boots continue toward one complete assembled wearer.
+
+Finite cavity11 now records25 paths:17 positive computed margins and8 distal
+single-face hits, no cycle-neighborhood hits. These zero-radius probes are not
+hand-volume enclosure. Prepared [glove-enclosure12 inventory](../evidence/hero-remaster/finish-2026-10-05/wardrobe/glove-enclosure12/PROPOSAL.md)
+is unexecuted: after contacts51 is checkpointed, verify unchanged body07 hand
+ancestry and review one bounded CPU2 target-only inventory52. It preserves the
+complete first wrist clip, all15 digit roles/weak/mixed/web faces and selected
+unqualified geometry before unsupported topology outcomes. No seam weld/cut.
+Foundation UV/corner arrays exist; this draft has not checked hand UV continuity
+or exact triangle-to-loop ancestry. Preserve original UV/loop lineage before
+garment authorship; no geometric loop count accepts the charts or glove.
 
 Generic grounded30Hz fixtures, complete foot masks and the bounded UniMate
 pilot remain separate inputs. Their finite probes do not close full signed
