@@ -1,0 +1,58 @@
+{
+  "accepted": false,
+  "lock": "/Users/raynos/projects/localai/.model.lock",
+  "method": "lockf -k",
+  "command": [
+    "/Applications/Blender.app/Contents/MacOS/Blender",
+    "--background",
+    "--threads",
+    "2",
+    "--python-exit-code",
+    "1",
+    "--python",
+    "assets/blender/rider-rebuild/donor-hand-foot01/verify-glove-unit02.py",
+    "--",
+    "harness/out/rider-rebuild/selected-glove02"
+  ],
+  "controllerPID": 69463,
+  "pollSeconds": 1,
+  "startAnonymousBelowGiB": 55,
+  "stopAnonymousGiB": 65,
+  "stopAnonymousPlusWiredGiB": 96,
+  "limitSeconds": 600.0,
+  "guardSHA256": "cf8acd15d8b7484480bee74d23892be815d955ffd87115d3da8ed228ffb3d916",
+  "status": "worker returned; review pending",
+  "samples": [
+    {
+      "seconds": 0,
+      "anonymousGiB": 33.6,
+      "wiredGiB": 8.8,
+      "freeGiB": 31.2
+    },
+    {
+      "seconds": 0.042,
+      "anonymousGiB": 33.6,
+      "wiredGiB": 8.8,
+      "freeGiB": 31.2
+    },
+    {
+      "seconds": 1.088,
+      "anonymousGiB": 34.3,
+      "wiredGiB": 8.5,
+      "freeGiB": 30.9
+    },
+    {
+      "seconds": 2.127,
+      "anonymousGiB": 34.9,
+      "wiredGiB": 8.3,
+      "freeGiB": 30.5
+    }
+  ],
+  "physicalMemoryBytes": 137438953472,
+  "requiredPhysicalMemoryBytes": 137438953472,
+  "scope": "Future explicitly invoked owned Rockhop job only",
+  "pressureOrSwapLimits": "No separate pressure/swap gate exists in the pinned original guard; none altered",
+  "ownedChildPID": 69467,
+  "exitCode": 1,
+  "elapsedSeconds": 2.25
+}

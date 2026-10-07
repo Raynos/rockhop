@@ -269,3 +269,9 @@ Finding: Correct selected thumb appearance correspondence from the isolated sour
 Validation: Parent reviews recipe02 diff and both Python files compile. Measured source station proportions are retained; explicit MCP transition pools are0+5 and distal thumb5only. All36 volume profiles and domain/reversal witnesses precede rejection.
 
 Limits: One corrected intended-final candidate has not run; original2.5ease/2.5mm padding and topology/source guards remain unchanged. No source-model substitutes or art acceptance.
+
+Finding: Corrected thumb registration passes regional volume gates, but the selected-glove normal-ray correspondence still does not construct a fully enclosed exterior. Reject this method before baking or assembling a pretend complete outfit.
+
+Validation: Corrected guard returns1 in2.250 seconds; all36 profiles pass, control residual0.1095mm.943/2949points lack permitted rays;279 supported points miss minimum padding, minimum1.014mm. All domain/profile/correspondence/log witnesses retained before rejection. No bake, glove native or fallback.
+
+Limits: Ray misses do not prove absent donor geometry. Original body/rest post-return verifier was not reached; copied-patch recipe does not write them. Next method requires independent structural surface correspondence review, not another ray or threshold tweak.

@@ -1117,3 +1117,5 @@ October 7 identical selected private rider slots share one parsed source documen
 October 7 exact glove failure diagnostic localizes the mismatch to thumb metacarpal/thenar surface ownership: isolated donor thumb sections were mapped52.336mm upstream of actual MCP. All36 profiles recorded without reconstruction; proposed correction changes anatomical station/domain identity while preserving original fields and enclosure guards.
 
 October 7 corrected selected thumb recipe maps measured source digit stations to actual MCP/IP/skin-tip and separates thenar appearance ownership geometrically. Original75 fields and enclosure guards stay intact; source checkpoint precedes one corrected native attempt.
+
+October 7 corrected glove02 passes all regional volume profiles but rejects943unsupported source rays and279insufficient-padding hits before bake. Full witnesses retained; no complete outfit. Independent Astra review must replace the surface correspondence mechanism, with no repeated ray/threshold adjustment.
