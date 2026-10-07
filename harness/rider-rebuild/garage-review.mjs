@@ -9,9 +9,14 @@ import { webkit } from 'playwright';
 
 const arg = (name, fallback = '') => process.argv.find(value => value.startsWith(`--${name}=`))?.slice(name.length + 3) ?? fallback;
 const build = path.resolve(arg('build')), out = path.resolve(arg('out'));
+assert(arg('contract'), 'Pass the exact selected rider contract');
+const contractPath = path.resolve(arg('contract')), contractBytes = fs.readFileSync(contractPath);
+const expected = JSON.parse(contractBytes).specification.meshNames;
+const required = ['RiderBody', 'RiderHoodie', 'RiderJeans', 'ActualSelectedGlove.L', 'ActualSelectedGlove.R', 'ActualSelectedBoot.L', 'ActualSelectedBoot.R'];
+for (const name of required) assert(Object.values(expected).includes(name), `Missing selected dressed object ${name}`);
 assert(!fs.existsSync(out), 'Use a fresh output directory');
 fs.mkdirSync(out, { recursive: true });
-const report = { build, recipeSHA256: crypto.createHash('sha256').update(fs.readFileSync(new URL(import.meta.url))).digest('hex'), errors: [], loaded: [], snapshots: [], audio: 'silent webdriver; audio=0', review: 'Actual Garage UI, selected native clip or riding IK with breathing, pointer-driven orbit; no pose injection' };
+const report = { build, contract: { path: contractPath, sha256: crypto.createHash('sha256').update(contractBytes).digest('hex'), expectedObjects: expected }, recipeSHA256: crypto.createHash('sha256').update(fs.readFileSync(new URL(import.meta.url))).digest('hex'), errors: [], loaded: [], snapshots: [], audio: 'silent webdriver; audio=0', review: 'Actual Garage UI, selected native clip or riding IK with breathing, pointer-driven orbit; no pose injection' };
 const server = await preview({ configFile: false, root: process.cwd(), build: { outDir: build }, preview: { host: '127.0.0.1', port: 0 }, logLevel: 'warn' });
 const browser = await webkit.launch({ headless: true });
 const context = await browser.newContext({ viewport: { width: 1440, height: 900 }, deviceScaleFactor: 1, recordVideo: { dir: out, size: { width: 1440, height: 900 } } });
@@ -45,7 +50,12 @@ try {
   }
   await Promise.all(responses);
   assert.deepEqual(report.errors, []);
-  assert(report.snapshots.every(row => row.debug.candidate?.visibleMeshes?.length >= 26 && Object.keys(row.debug.candidate?.authorMeshRoles ?? {}).length >= 20), 'Complete dressed material primitives and authored objects loaded');
+  for (const row of report.snapshots) {
+    assert.deepEqual(row.debug.candidate?.authorMeshRoles, expected, 'Exact selected source object inventory loaded');
+    const visible = new Set(row.debug.candidate.visibleMeshes.filter(mesh => mesh.skinned && mesh.triangles > 0).map(mesh => mesh.name));
+    for (const mesh of row.debug.candidate.meshRoles) assert(visible.has(mesh.name), `Selected dressed primitive is visible and skinned: ${mesh.name}`);
+    assert(row.debug.candidate.meshRoles.length >= Object.keys(expected).length, 'Every declared selected object has a dressed material primitive');
+  }
   assert(report.snapshots.at(-1).stageTime > report.snapshots[0].stageTime, 'Actual Garage motion clock advances');
 } catch (error) { report.failure = error.stack; process.exitCode = 1; }
 finally {

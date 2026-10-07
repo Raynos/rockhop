@@ -1,0 +1,96 @@
+{
+  "status": "READ_ONLY_ACTUAL_SELECTED_DONOR_RUNTIME_INTAKE_AUDIT",
+  "utc": "2026-10-07T22:16:43.505663+00:00",
+  "sourcePins": [
+    {
+      "path": "harness/rider-rebuild/private-rider.mjs",
+      "sha256": "afddcc0089dc3c4e5b226b3268de0f44c7ff7c58cbdc343179d9c986518fc185"
+    },
+    {
+      "path": "harness/rider-rebuild/new-humanoid-contract.mjs",
+      "sha256": "db73c6489f4cac9041f5d8e8ba6f110a8dbec437762f936e5cbadbfdd8ef43a8"
+    },
+    {
+      "path": "harness/rider-rebuild/build-private-engine.mjs",
+      "sha256": "f3be374024bf5abc8dc8679a3adb5b8a42da56ed2225c020427a1e7adaa7f4af"
+    },
+    {
+      "path": "harness/rider-rebuild/private-engine-plugin.mjs",
+      "sha256": "47d417195753db65d16b40fe8641fcd8c67be603407912a608c85041ed833947"
+    },
+    {
+      "path": "harness/rider-rebuild/garage-review.mjs",
+      "sha256": "d7ab99bf5fc078b8ae3757c93b79722ebcbdb578dcbf931a0cefaf1cc725bfae"
+    },
+    {
+      "path": "harness/rider-rebuild/private-rider.test.mjs",
+      "sha256": "d4e90006c88f38954ad4701fcfb434168afe40fafb8235858d10528680231199"
+    },
+    {
+      "path": "assets/blender/rider-rebuild/construction02/build-selected-rider01.py",
+      "sha256": "837084124649bcc5e4ce6067c130cb14c296bd3c700b21012efec1f792560c8e"
+    },
+    {
+      "path": "assets/blender/rider-rebuild/construction02/build-selected-face01.py",
+      "sha256": "0dbf0c734ecb4efbeda62d89eb33666bea08a0b09ef0120cef433b567325acfc"
+    },
+    {
+      "path": "assets/blender/rider-rebuild/construction01/assemble-export04.py",
+      "sha256": "960bf0c0adef29e59157a35eedb9ebc196ea126a91594814ebf2a394551904ac"
+    }
+  ],
+  "expectedFinalAuthorObjects": {
+    "bodyAndSourceFace": "RiderBody (original cranium/face merged with official body through anatomical bridge)",
+    "hoodie": "RiderHoodie",
+    "jeans": "RiderJeans",
+    "gloveRight": "ActualSelectedGlove.R",
+    "gloveLeft": "ActualSelectedGlove.L",
+    "bootRight": "ActualSelectedBoot.R",
+    "bootLeft": "ActualSelectedBoot.L"
+  },
+  "expectedFinalAuthorObjectCount": 7,
+  "primitiveCount": "Measure the exported primitives. Body and head material slots can produce several primitives; discard the former26-primitive minimum.",
+  "compatibleRuntime": [
+    "loadedSpecification resolves each declared author object and expands its actual SkinnedMesh descendants, preserving materials and FOUR fields.",
+    "Contract intake requires all75 actual bones, every skinned part exactly once, and identical inverse binds across parts. It does not depend on old garment names or counts.",
+    "Dynamic specification.meshNames works with the head merged into RiderBody; the head joint role remains DEF-spine.006.",
+    "Runtime setLivery is a no-op and material clones preserve original PBR. The normal loader caps skinned albedo at1024 and data maps at512. Judge source appearance after this conversion."
+  ],
+  "requiredChanges": [
+    {
+      "path": "harness/rider-rebuild/garage-review.mjs",
+      "line": 48,
+      "cause": "Garage capture requires26 visible meshes and20 author objects from the former procedural outfit, rejecting the coherent seven-object selected-source assembly.",
+      "change": "Compare the declared source inventory with loaded parts and verify all four garment types, paired gloves and boots, and actual face provenance. Do not substitute a generic count check."
+    },
+    {
+      "path": "harness/rider-rebuild/private-rider.test.mjs",
+      "line": 89,
+      "cause": "The test requires removed RiderBuzzcut and RiderGloves. The selected face removes generated eyes, brows and hair; selected gloves are separate ActualSelectedGlove.R/L.",
+      "change": "Assert the declared selected-source inventory, actual face receipt and both glove parts."
+    },
+    {
+      "path": "assets/blender/rider-rebuild/construction01/assemble-export04.py",
+      "line": 114,
+      "cause": "The sole-anchor lookup uses RiderSole.L/R and misses ActualSelectedBoot.L/R, leaving sockets at the former barefoot floor.",
+      "change": "The new assembly must calibrate sole sockets to the actual boot outsole landmarks; keep the original assembly recipe unchanged."
+    },
+    {
+      "path": "assets/blender/rider-rebuild/construction02/build-selected-rider01.py",
+      "line": 22,
+      "cause": "The current intermediate collects hoodie, jeans, boots and face, and explicitly omits gloves.",
+      "change": "Include the selected glove builder outputs before export and meshNames capture. Keep the intermediate internal."
+    }
+  ],
+  "notes": [
+    "This auditor made no runtime, construction02 or glove changes. Parent and native owner received the required fixes.",
+    "Pass the new GLB and its exact contract to build-private-engine. A pose-calibration receipt must match this new GLB SHA; it cannot silently reuse the former source hash, even when rig04 is unchanged.",
+    "Actual moving appearance and surface contacts remain unaccepted."
+  ],
+  "followUp": {
+    "authority": "Parent report after independent source audit",
+    "garageAndTests": "Parent replaced former hardcoded counts and procedural names with the exact seven-object selected-source inventory and all declared skinned primitives. Parent reports11 tests passed.",
+    "nativeIntegration": "Parent informed native owner to use actual boot sole calibration and include both selected gloves before export. Actual native output and moving intake remain pending.",
+    "originalAuditPinsPreserved": true
+  }
+}

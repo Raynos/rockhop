@@ -1103,3 +1103,5 @@ October 7 the actual liked face carrier has a source-preserving welded neck cons
 October 7 selected-face native attempt01 stops safely on an unsupported deformation-map API after2.83seconds. Explicit indexed field writes correct the API; fresh native topology and played face/neck remain open.
 
 October 7 selected glove production reconstruction is checkpointed before its first bounded native attempt: semantic source exterior, measured padded sections, coherent five-digit cavity, original PBR and shared75 fields. Global bake pixel lineage and dense normal microdetail remain unqualified; no moving acceptance.
+
+October 7 actual Garage intake compares the exact selected-source contract and seven required dressed objects, then verifies every visible skinned primitive. Eight binding and eleven private-rider tests pass; actual source capture and texture/device review remain open.

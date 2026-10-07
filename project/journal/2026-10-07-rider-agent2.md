@@ -227,3 +227,9 @@ Finding: Reconstruct the selected glove appearance on a coherent five-digit hand
 Validation: Parent reviews semantic ray pools, measured tip/volume controls and positive-thickness guards. Float64 source-corner projection and immutable source/map pins are checked; both Python files compile. No reconstruction or bake has run yet.
 
 Limits: One final-intent structural candidate only. Global bake pixel correspondence and dense microdetail normals remain unqualified; manifold/source guards are not moving contact or art acceptance.
+
+Finding: Actual selected donor intake requires the declared seven-object source inventory and every loaded skinned material primitive, rather than counts and generated hair/glove names from the rejected coarse model.
+
+Validation: Garage harness syntax passes; eight binding tests and eleven actual private-rider/anthropometry tests pass. Read-only intake audit identifies actual boot sole calibration and complete glove inclusion as remaining native responsibilities.
+
+Limits: Actual selected-source Garage capture has not run. Texture resolution/device cost and moving appearance remain open.

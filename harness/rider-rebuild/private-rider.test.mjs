@@ -86,8 +86,8 @@ test('actual exported assembly loads all explicitly declared objects and the com
   assert.equal(rider.debug.bones, Object.keys(metadata.specification.jointNames).length);
   assert.deepEqual(rider.debug.candidate.authorMeshRoles, metadata.specification.meshNames);
   assert.ok(rider.binding.meshes.length >= Object.keys(metadata.specification.meshNames).length);
-  assert.ok(rider.debug.candidate.visibleMeshes.some(mesh => mesh.name === 'RiderBuzzcut'));
-  assert.ok(rider.debug.candidate.visibleMeshes.some(mesh => mesh.name === 'RiderGloves'));
+  const visible = new Set(rider.debug.candidate.visibleMeshes.filter(mesh => mesh.skinned && mesh.triangles > 0).map(mesh => mesh.name));
+  for (const { mesh } of rider.binding.meshes) assert.ok(visible.has(mesh.name), `Declared dressed primitive is visible: ${mesh.name}`);
   const originalWeights = new Map();
   loaded.scene.traverse(node => { if (node.isSkinnedMesh) originalWeights.set(node.name, [...node.geometry.attributes.skinWeight.array]); });
   for (const { mesh } of rider.binding.meshes) assert.deepEqual([...mesh.geometry.attributes.skinWeight.array], originalWeights.get(mesh.name));
