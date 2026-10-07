@@ -1087,3 +1087,5 @@ October 7 wardrobe04 checkpoints one loose cloth envelope selected from connecte
 October 7 user rejects the coarse assembled preview (asks327–328): it substitutes generic head and procedural clothes for the actual selected high-resolution assets. Stop procedural polish; preserve the working75 rig/engine and integrate real painted hoodie, denim, gloves, boots and liked face/hair. All appearance gates and two-hour baseline remain open.
 
 Ask329 makes source-correct final construction mandatory: no temporary or throwaway appearance substitutions, even to meet the two-hour deadline. Coarse preview server stopped. Actual selected assets, proper fitting/shared rig, seamless anatomical head join and parent played engine judgment are required before another visual is presented.
+
+The superseded [cloth05 source checkpoint](../evidence/rider-rebuild/construction02/combined05/README.md) preserves the completed pre-rejection assembly and exact frozen body fields. It is unaccepted and will not be presented as delivery. Actual selected donor construction supersedes it; no further procedural appearance experiments.

@@ -1,0 +1,35 @@
+{
+  "accepted": false,
+  "inputs": [
+    {
+      "path": "/Users/raynos/projects/games/rockhop/assets/blender/rider-rebuild/construction01/assemble-export04.py",
+      "sha256": "960bf0c0adef29e59157a35eedb9ebc196ea126a91594814ebf2a394551904ac"
+    },
+    {
+      "path": "/Users/raynos/projects/games/rockhop/harness/out/rider-rebuild/construction01/rig04/anatomical-rig.blend",
+      "sha256": "e348548d974150cf089e5440b6d6b34846c7b6fbecd71b208df7b5fce81a0629"
+    },
+    {
+      "path": "/Users/raynos/projects/games/rockhop/assets/blender/rider-rebuild/wardrobe04/build-wardrobe.py",
+      "sha256": "676b463da026961d3851f7e8f2b0ea4b14d0467b178afb8228d258279026d163"
+    }
+  ],
+  "integrationInputs": [
+    {
+      "path": "/Users/raynos/projects/games/rockhop/assets/blender/rider-rebuild/construction02/assemble-cloth05.py",
+      "sha256": "d93600cf3fc104d286d4ec0391b9932f248c33d15ec93c61d089a4a805313b98"
+    },
+    {
+      "path": "/Users/raynos/projects/games/rockhop/assets/blender/rider-rebuild/wardrobe04/construction-proposal.py",
+      "sha256": "516855e020df38872a24f1447af5f5d625692fd54aefab1c8f3025da5d02cc6a"
+    },
+    {
+      "path": "/Users/raynos/projects/games/rockhop/assets/blender/rider-rebuild/wardrobe01/build-wardrobe03.py",
+      "sha256": "3f8599336daaeeabc7b9307b07bf3d40ccb3f35b6433ac719aaa774827320098"
+    }
+  ],
+  "limits": [
+    "One loose-cloth checkpoint, frozen rig04 and body FOUR unchanged.",
+    "Generic action is a separate derivative; no tiny-weight cleanup bundled."
+  ]
+}

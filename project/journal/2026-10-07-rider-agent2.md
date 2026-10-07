@@ -185,3 +185,9 @@ Finding: The user rejects the complete coarse engine preview because it omits th
 Validation: Parent reads the supplied actual-game screenshot and agrees the hoodie, shoes and generic face fail the requested baseline. Original donor source pins from the five-day audit remain available and unchanged.
 
 Limits: Appearance integration is unfinished. Neither working contact checks nor engine replay proves delivery of the selected assets; all art and plan gates remain open.
+
+Finding: Preserve the completed loose-cloth05 source/evidence without promotion after the user rejects substitute appearance. Its completed construction is an unaccepted historical control; actual selected donors supersede it.
+
+Validation: Parent reruns decoded preservation: all body source/normal/skin/triangle arrays and 75-joint rest contract equal frozen04. Guarded native assembly completed in 2.27 seconds before the source-correct pivot.
+
+Limits: No played art acceptance or generic03 derivative. This candidate does not satisfy the user's actual high-resolution asset request and no further procedural appearance iteration is authorized.

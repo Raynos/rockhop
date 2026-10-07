@@ -1,0 +1,1485 @@
+{
+  "accepted": false,
+  "sourceNative": "/Users/raynos/projects/games/rockhop/harness/out/rider-rebuild/construction01/rig04/anatomical-rig.blend",
+  "nativeSHA256": "098645efe650bacb70f6b800a6871aa35f45bff15f8d71fb6df020565939830c",
+  "glbSHA256": "5d3a5fbef55871860b38ef802eab7fee75e1a312f510be8f7c69f07935adeadc",
+  "glbBytes": 7639132,
+  "deformJointCount": 75,
+  "meshNames": [
+    "RiderBody",
+    "GEO-body_male_realistic.eye.L",
+    "GEO-body_male_realistic.eye.R",
+    "RiderBuzzcut",
+    "RiderBrows",
+    "RiderHoodie",
+    "RiderJeans",
+    "RiderGloves",
+    "RiderShoeAnkles",
+    "RiderHoodieCuff.L",
+    "RiderGloveCuff.L",
+    "RiderHoodieCuff.R",
+    "RiderGloveCuff.R",
+    "RiderHoodieHem",
+    "RiderHoodieCollar",
+    "RiderJeansWaist",
+    "RiderHood",
+    "RiderKangarooPocket",
+    "RiderShoeUpper.L",
+    "RiderSole.L",
+    "RiderShoeUpper.R",
+    "RiderSole.R",
+    "RiderSideSeam.L",
+    "RiderSideSeam.R"
+  ],
+  "meshVertices": {
+    "RiderBody": 10582,
+    "GEO-body_male_realistic.eye.L": 546,
+    "GEO-body_male_realistic.eye.R": 546,
+    "RiderBuzzcut": 406,
+    "RiderBrows": 68,
+    "RiderHoodie": 2043,
+    "RiderJeans": 1281,
+    "RiderGloves": 1548,
+    "RiderShoeAnkles": 227,
+    "RiderHoodieCuff.L": 128,
+    "RiderGloveCuff.L": 128,
+    "RiderHoodieCuff.R": 128,
+    "RiderGloveCuff.R": 128,
+    "RiderHoodieHem": 256,
+    "RiderHoodieCollar": 256,
+    "RiderJeansWaist": 256,
+    "RiderHood": 902,
+    "RiderKangarooPocket": 7,
+    "RiderShoeUpper.L": 192,
+    "RiderSole.L": 144,
+    "RiderShoeUpper.R": 192,
+    "RiderSole.R": 144,
+    "RiderSideSeam.L": 6,
+    "RiderSideSeam.R": 6
+  },
+  "wardrobe": {
+    "reportPath": "/Users/raynos/projects/games/rockhop/harness/out/rider-rebuild/construction02/combined05/wardrobe/construction.json",
+    "objects": [
+      "RiderHoodie",
+      "RiderJeans",
+      "RiderGloves",
+      "RiderShoeAnkles",
+      "RiderHoodieCuff.L",
+      "RiderGloveCuff.L",
+      "RiderHoodieCuff.R",
+      "RiderGloveCuff.R",
+      "RiderHoodieHem",
+      "RiderHoodieCollar",
+      "RiderJeansWaist",
+      "RiderHood",
+      "RiderKangarooPocket",
+      "RiderShoeUpper.L",
+      "RiderSole.L",
+      "RiderShoeUpper.R",
+      "RiderSole.R",
+      "RiderSideSeam.L",
+      "RiderSideSeam.R"
+    ],
+    "materials": [
+      "RiderMustardFleece",
+      "RiderMustardRib",
+      "RiderIndigoDenim",
+      "RiderBlackLeather",
+      "RiderBlackRubber"
+    ],
+    "metrics": {
+      "accepted": false,
+      "scope": "first complete dressed construction",
+      "boundaryRevision": "wardrobe03; moving02 collar rejection retained",
+      "cuffCalibration": {
+        "L": {
+          "wristJoint": "DEF-hand.L",
+          "elbowJoint": "DEF-forearm.L",
+          "wristMetres": [
+            0.3939262628555298,
+            -0.06635655462741852,
+            0.93272864818573
+          ],
+          "elbowMetres": [
+            0.30123773217201233,
+            0.006319677457213402,
+            1.1644500494003296
+          ],
+          "axis": [
+            -0.3565792739391327,
+            0.27959054708480835,
+            0.891448438167572
+          ],
+          "hoodieProximalMetres": 0.035,
+          "gloveProximalMetres": 0.018
+        },
+        "R": {
+          "wristJoint": "DEF-hand.R",
+          "elbowJoint": "DEF-forearm.R",
+          "wristMetres": [
+            -0.3939262628555298,
+            -0.06635653227567673,
+            0.9327287673950195
+          ],
+          "elbowMetres": [
+            -0.30123770236968994,
+            0.006319692358374596,
+            1.1644500494003296
+          ],
+          "axis": [
+            0.3565795421600342,
+            0.2795906364917755,
+            0.8914483785629272
+          ],
+          "hoodieProximalMetres": 0.035,
+          "gloveProximalMetres": 0.018
+        }
+      },
+      "sourceBodyVertices": 10582,
+      "sourceScale": 1.0532787293442336,
+      "sourceFloor": -0.005547829,
+      "bodyTriangles": 21160,
+      "wardrobeTriangles": 15364,
+      "actorTriangles": 36524,
+      "newMaterialCount": 5,
+      "textureDecodedBytes": 22282240,
+      "limits": [
+        "No moving/art/contact acceptance implied.",
+        "Boundary loop/neighbor fields are explicitly authored derivatives; body FOUR is unchanged.",
+        "Supplemental parts copy nearest new-body FOUR rows except matching boundary rib fields.",
+        "Rims are open wearable lips; soles are closed geometry.",
+        "The source body itself remains unchanged."
+      ],
+      "looseCloth04": {
+        "accepted": false,
+        "candidate": "one loose torso shell and cuff/profile unit",
+        "anatomySelection": "connected central section graph + actual trunk/limb FOUR roles",
+        "profilesMetres": [
+          {
+            "z": 1.0643885332706937,
+            "cx": -0.00010487196974552637,
+            "cy": -0.0362039492839847,
+            "rx": 0.18362436846113847,
+            "ry": 0.13057794282399796,
+            "sourceSectionPointCount": 36,
+            "easeMetres": 0.026,
+            "maxSourceSquaredEllipseRadius": 0.8538650372863683,
+            "connectedSectionPointCount": 36,
+            "armRoleExcludedSectionPoints": 0
+          },
+          {
+            "z": 1.0959868951510208,
+            "cx": 0.00012511865505818176,
+            "cy": -0.03649485664875985,
+            "rx": 0.18152829442683527,
+            "ry": 0.13096641662435873,
+            "sourceSectionPointCount": 34,
+            "easeMetres": 0.026,
+            "maxSourceSquaredEllipseRadius": 0.8465917599711916,
+            "connectedSectionPointCount": 34,
+            "armRoleExcludedSectionPoints": 0
+          },
+          {
+            "z": 1.1275852570313478,
+            "cx": 0.00013748412794602205,
+            "cy": -0.0351469401550007,
+            "rx": 0.18018502419183216,
+            "ry": 0.1345961674463183,
+            "sourceSectionPointCount": 34,
+            "easeMetres": 0.026,
+            "maxSourceSquaredEllipseRadius": 0.86653021733306,
+            "connectedSectionPointCount": 34,
+            "armRoleExcludedSectionPoints": 0
+          },
+          {
+            "z": 1.1591836189116749,
+            "cx": -3.267893217341611e-05,
+            "cy": -0.03314650044901203,
+            "rx": 0.18405288881652396,
+            "ry": 0.1397789394825694,
+            "sourceSectionPointCount": 38,
+            "easeMetres": 0.026,
+            "maxSourceSquaredEllipseRadius": 0.9187553098805386,
+            "connectedSectionPointCount": 38,
+            "armRoleExcludedSectionPoints": 0
+          },
+          {
+            "z": 1.190781980792002,
+            "cx": -8.180013634473404e-05,
+            "cy": -0.030172573194341357,
+            "rx": 0.191755829403723,
+            "ry": 0.14458122572110316,
+            "sourceSectionPointCount": 36,
+            "easeMetres": 0.026,
+            "maxSourceSquaredEllipseRadius": 0.9554702268996484,
+            "connectedSectionPointCount": 36,
+            "armRoleExcludedSectionPoints": 0
+          },
+          {
+            "z": 1.222380342672329,
+            "cx": 2.8188439393533882e-05,
+            "cy": -0.024200248941995184,
+            "rx": 0.1960171724235829,
+            "ry": 0.14458121723527342,
+            "sourceSectionPointCount": 30,
+            "easeMetres": 0.026,
+            "maxSourceSquaredEllipseRadius": 0.9852205662741249,
+            "connectedSectionPointCount": 36,
+            "armRoleExcludedSectionPoints": 6
+          },
+          {
+            "z": 1.253978704552656,
+            "cx": 1.5840040726758375e-05,
+            "cy": -0.020429222315531806,
+            "rx": 0.18678789609596222,
+            "ry": 0.14751952430213927,
+            "sourceSectionPointCount": 28,
+            "easeMetres": 0.026,
+            "maxSourceSquaredEllipseRadius": 0.9448196944150264,
+            "connectedSectionPointCount": 44,
+            "armRoleExcludedSectionPoints": 16
+          },
+          {
+            "z": 1.2855770664329829,
+            "cx": 6.63339987498901e-05,
+            "cy": -0.021798754035362702,
+            "rx": 0.18613893397734366,
+            "ry": 0.16389971802829298,
+            "sourceSectionPointCount": 26,
+            "easeMetres": 0.026,
+            "maxSourceSquaredEllipseRadius": 1.0,
+            "connectedSectionPointCount": 52,
+            "armRoleExcludedSectionPoints": 26
+          },
+          {
+            "z": 1.31717542831331,
+            "cx": 8.682274507558485e-05,
+            "cy": -0.01631413469254763,
+            "rx": 0.1870907538761961,
+            "ry": 0.1689694010230965,
+            "sourceSectionPointCount": 22,
+            "easeMetres": 0.026,
+            "maxSourceSquaredEllipseRadius": 0.9999999999999997,
+            "connectedSectionPointCount": 84,
+            "armRoleExcludedSectionPoints": 62
+          },
+          {
+            "z": 1.3487737901936367,
+            "cx": -9.720383116390563e-06,
+            "cy": -0.011442333866724747,
+            "rx": 0.16780203383736525,
+            "ry": 0.16248349836806975,
+            "sourceSectionPointCount": 20,
+            "easeMetres": 0.026,
+            "maxSourceSquaredEllipseRadius": 1.0,
+            "connectedSectionPointCount": 80,
+            "armRoleExcludedSectionPoints": 60
+          },
+          {
+            "z": 1.3698393647805216,
+            "cx": -7.511487287076984e-05,
+            "cy": -0.010072694909071617,
+            "rx": 0.12496794716462092,
+            "ry": 0.1489602951995689,
+            "sourceSectionPointCount": 14,
+            "easeMetres": 0.026,
+            "maxSourceSquaredEllipseRadius": 1.0,
+            "connectedSectionPointCount": 80,
+            "armRoleExcludedSectionPoints": 66
+          }
+        ],
+        "changedClothPointCount": 274,
+        "corePointCount": 143,
+        "maxDisplacementMetres": 0.040251065207861175,
+        "sourceBodyFacesHidden": false,
+        "bodySkeletonAndFieldsChanged": false,
+        "clothFourFieldsChangedFrom03": false,
+        "preservedBoundarySupportRows": 3,
+        "geometricNormals": "recomputed from modified rest cloth topology",
+        "pocketExactClothHits": [
+          {
+            "nativePoint": 0,
+            "clothFace": 570,
+            "hitMetres": [
+              -0.11796721816062927,
+              -0.15530163049697876,
+              1.1802492141723633
+            ],
+            "clearanceMetres": 0.0045
+          },
+          {
+            "nativePoint": 1,
+            "clothFace": 572,
+            "hitMetres": [
+              -0.07478278875350952,
+              -0.17235645651817322,
+              1.2034213542938232
+            ],
+            "clearanceMetres": 0.0045
+          },
+          {
+            "nativePoint": 2,
+            "clothFace": 1479,
+            "hitMetres": [
+              0.07478278875350952,
+              -0.17122787237167358,
+              1.2034213542938232
+            ],
+            "clearanceMetres": 0.0045
+          },
+          {
+            "nativePoint": 3,
+            "clothFace": 1477,
+            "hitMetres": [
+              0.11796721816062927,
+              -0.1554783284664154,
+              1.1802492141723633
+            ],
+            "clearanceMetres": 0.0045
+          },
+          {
+            "nativePoint": 4,
+            "clothFace": 1480,
+            "hitMetres": [
+              0.11796721816062927,
+              -0.144544780254364,
+              1.0991467237472534
+            ],
+            "clearanceMetres": 0.0045
+          },
+          {
+            "nativePoint": 5,
+            "clothFace": 573,
+            "hitMetres": [
+              -0.11796721816062927,
+              -0.14471691846847534,
+              1.0991467237472534
+            ],
+            "clearanceMetres": 0.0045
+          },
+          {
+            "nativePoint": 6,
+            "clothFace": 1368,
+            "hitMetres": [
+              0.0,
+              -0.18523457646369934,
+              1.1609392166137695
+            ],
+            "clearanceMetres": 0.0045
+          }
+        ],
+        "sideSeams": [
+          {
+            "object": "RiderSideSeam.L",
+            "sourceClothPoints": [
+              1422,
+              1422,
+              1419,
+              1419,
+              1420,
+              1420
+            ],
+            "vertices": 6,
+            "triangles": 4
+          },
+          {
+            "object": "RiderSideSeam.R",
+            "sourceClothPoints": [
+              475,
+              475,
+              472,
+              472,
+              473,
+              473
+            ],
+            "vertices": 6,
+            "triangles": 4
+          }
+        ],
+        "coreSkinSurfaceDiagnostics": [
+          {
+            "clothPoint": 403,
+            "bodySourcePoint": 3151,
+            "clothFace": 560,
+            "distanceMetres": 0.015724489465355873,
+            "signedSkinMinusClothMetres": -0.015462623559869826
+          },
+          {
+            "clothPoint": 404,
+            "bodySourcePoint": 3152,
+            "clothFace": 560,
+            "distanceMetres": 0.01075499877333641,
+            "signedSkinMinusClothMetres": -0.010736807395005599
+          },
+          {
+            "clothPoint": 405,
+            "bodySourcePoint": 3153,
+            "clothFace": 534,
+            "distanceMetres": 0.012132196687161922,
+            "signedSkinMinusClothMetres": -0.01213217998156324
+          },
+          {
+            "clothPoint": 406,
+            "bodySourcePoint": 3154,
+            "clothFace": 564,
+            "distanceMetres": 0.017831848934292793,
+            "signedSkinMinusClothMetres": -0.017722860327921808
+          },
+          {
+            "clothPoint": 407,
+            "bodySourcePoint": 3155,
+            "clothFace": 400,
+            "distanceMetres": 0.02436588704586029,
+            "signedSkinMinusClothMetres": -0.023732779431156814
+          },
+          {
+            "clothPoint": 408,
+            "bodySourcePoint": 3156,
+            "clothFace": 517,
+            "distanceMetres": 0.034378137439489365,
+            "signedSkinMinusClothMetres": -0.034377584379399195
+          },
+          {
+            "clothPoint": 411,
+            "bodySourcePoint": 3159,
+            "clothFace": 90,
+            "distanceMetres": 0.023912958800792694,
+            "signedSkinMinusClothMetres": -0.02390979533083737
+          },
+          {
+            "clothPoint": 412,
+            "bodySourcePoint": 3160,
+            "clothFace": 566,
+            "distanceMetres": 0.03163967281579971,
+            "signedSkinMinusClothMetres": -0.03163864102680236
+          },
+          {
+            "clothPoint": 413,
+            "bodySourcePoint": 3161,
+            "clothFace": 97,
+            "distanceMetres": 0.022143051028251648,
+            "signedSkinMinusClothMetres": -0.02214289710718731
+          },
+          {
+            "clothPoint": 414,
+            "bodySourcePoint": 3162,
+            "clothFace": 470,
+            "distanceMetres": 0.030696937814354897,
+            "signedSkinMinusClothMetres": -0.03069688839786977
+          },
+          {
+            "clothPoint": 415,
+            "bodySourcePoint": 3163,
+            "clothFace": 403,
+            "distanceMetres": 0.024710536003112793,
+            "signedSkinMinusClothMetres": -0.024710331411370134
+          },
+          {
+            "clothPoint": 416,
+            "bodySourcePoint": 3164,
+            "clothFace": 568,
+            "distanceMetres": 0.021254710853099823,
+            "signedSkinMinusClothMetres": -0.02124503266531974
+          },
+          {
+            "clothPoint": 417,
+            "bodySourcePoint": 3165,
+            "clothFace": 406,
+            "distanceMetres": 0.012807609513401985,
+            "signedSkinMinusClothMetres": -0.012807591585442424
+          },
+          {
+            "clothPoint": 418,
+            "bodySourcePoint": 3166,
+            "clothFace": 568,
+            "distanceMetres": 0.017321959137916565,
+            "signedSkinMinusClothMetres": -0.017311238683760166
+          },
+          {
+            "clothPoint": 419,
+            "bodySourcePoint": 3167,
+            "clothFace": 406,
+            "distanceMetres": 0.009725142270326614,
+            "signedSkinMinusClothMetres": -0.00972512864973396
+          },
+          {
+            "clothPoint": 420,
+            "bodySourcePoint": 3168,
+            "clothFace": 582,
+            "distanceMetres": 0.022355999797582626,
+            "signedSkinMinusClothMetres": -0.02210473845661909
+          },
+          {
+            "clothPoint": 421,
+            "bodySourcePoint": 3169,
+            "clothFace": 534,
+            "distanceMetres": 0.018589716404676437,
+            "signedSkinMinusClothMetres": -0.018364807896432467
+          },
+          {
+            "clothPoint": 422,
+            "bodySourcePoint": 3170,
+            "clothFace": 407,
+            "distanceMetres": 0.026542743667960167,
+            "signedSkinMinusClothMetres": -0.02652829885482788
+          },
+          {
+            "clothPoint": 423,
+            "bodySourcePoint": 3171,
+            "clothFace": 398,
+            "distanceMetres": 0.025494588539004326,
+            "signedSkinMinusClothMetres": -0.025484693702310324
+          },
+          {
+            "clothPoint": 439,
+            "bodySourcePoint": 3197,
+            "clothFace": 404,
+            "distanceMetres": 0.01755557581782341,
+            "signedSkinMinusClothMetres": -0.01752870879136026
+          },
+          {
+            "clothPoint": 440,
+            "bodySourcePoint": 3198,
+            "clothFace": 584,
+            "distanceMetres": 0.009778941981494427,
+            "signedSkinMinusClothMetres": -0.009764603169514885
+          },
+          {
+            "clothPoint": 441,
+            "bodySourcePoint": 3199,
+            "clothFace": 399,
+            "distanceMetres": 0.015598449856042862,
+            "signedSkinMinusClothMetres": -0.015597850641484001
+          },
+          {
+            "clothPoint": 442,
+            "bodySourcePoint": 3200,
+            "clothFace": 543,
+            "distanceMetres": 0.0014507670421153307,
+            "signedSkinMinusClothMetres": -0.0014223329908418236
+          },
+          {
+            "clothPoint": 443,
+            "bodySourcePoint": 3201,
+            "clothFace": 503,
+            "distanceMetres": 0.005109267774969339,
+            "signedSkinMinusClothMetres": -0.005109267686407293
+          },
+          {
+            "clothPoint": 444,
+            "bodySourcePoint": 3202,
+            "clothFace": 580,
+            "distanceMetres": 0.004916940815746784,
+            "signedSkinMinusClothMetres": -0.00489321572240442
+          },
+          {
+            "clothPoint": 445,
+            "bodySourcePoint": 3203,
+            "clothFace": 480,
+            "distanceMetres": 0.004788219928741455,
+            "signedSkinMinusClothMetres": -0.004787636280525476
+          },
+          {
+            "clothPoint": 446,
+            "bodySourcePoint": 3204,
+            "clothFace": 442,
+            "distanceMetres": 0.020091619342565536,
+            "signedSkinMinusClothMetres": -0.019350854126969352
+          },
+          {
+            "clothPoint": 447,
+            "bodySourcePoint": 3205,
+            "clothFace": 561,
+            "distanceMetres": 0.024216635152697563,
+            "signedSkinMinusClothMetres": -0.024008471076740534
+          },
+          {
+            "clothPoint": 448,
+            "bodySourcePoint": 3206,
+            "clothFace": 398,
+            "distanceMetres": 0.0274313036352396,
+            "signedSkinMinusClothMetres": -0.02720551542006433
+          },
+          {
+            "clothPoint": 449,
+            "bodySourcePoint": 3207,
+            "clothFace": 445,
+            "distanceMetres": 0.02966921031475067,
+            "signedSkinMinusClothMetres": -0.029384104651398957
+          },
+          {
+            "clothPoint": 462,
+            "bodySourcePoint": 3230,
+            "clothFace": 436,
+            "distanceMetres": 0.01187821477651596,
+            "signedSkinMinusClothMetres": -0.01185387684381567
+          },
+          {
+            "clothPoint": 464,
+            "bodySourcePoint": 3232,
+            "clothFace": 532,
+            "distanceMetres": 0.01537394616752863,
+            "signedSkinMinusClothMetres": -0.015370138770208541
+          },
+          {
+            "clothPoint": 466,
+            "bodySourcePoint": 3234,
+            "clothFace": 579,
+            "distanceMetres": 0.012385621666908264,
+            "signedSkinMinusClothMetres": -0.01202194462530315
+          },
+          {
+            "clothPoint": 467,
+            "bodySourcePoint": 3235,
+            "clothFace": 486,
+            "distanceMetres": 0.012149090878665447,
+            "signedSkinMinusClothMetres": -0.012108482187613845
+          },
+          {
+            "clothPoint": 469,
+            "bodySourcePoint": 3237,
+            "clothFace": 576,
+            "distanceMetres": 0.016471674665808678,
+            "signedSkinMinusClothMetres": -0.016443278873339295
+          },
+          {
+            "clothPoint": 471,
+            "bodySourcePoint": 3239,
+            "clothFace": 537,
+            "distanceMetres": 0.02430262789130211,
+            "signedSkinMinusClothMetres": -0.024163274763850495
+          },
+          {
+            "clothPoint": 474,
+            "bodySourcePoint": 3242,
+            "clothFace": 422,
+            "distanceMetres": 0.0036294960882514715,
+            "signedSkinMinusClothMetres": -0.003628731779073746
+          },
+          {
+            "clothPoint": 550,
+            "bodySourcePoint": 3353,
+            "clothFace": 385,
+            "distanceMetres": 0.028748514130711555,
+            "signedSkinMinusClothMetres": -0.028585151361767203
+          },
+          {
+            "clothPoint": 551,
+            "bodySourcePoint": 3354,
+            "clothFace": 377,
+            "distanceMetres": 0.032021086663007736,
+            "signedSkinMinusClothMetres": -0.03200575819937512
+          },
+          {
+            "clothPoint": 552,
+            "bodySourcePoint": 3355,
+            "clothFace": 356,
+            "distanceMetres": 0.03385470062494278,
+            "signedSkinMinusClothMetres": -0.03263099246578349
+          },
+          {
+            "clothPoint": 553,
+            "bodySourcePoint": 3356,
+            "clothFace": 356,
+            "distanceMetres": 0.04081488400697708,
+            "signedSkinMinusClothMetres": -0.04077724751914502
+          },
+          {
+            "clothPoint": 554,
+            "bodySourcePoint": 3357,
+            "clothFace": 367,
+            "distanceMetres": 0.04399040713906288,
+            "signedSkinMinusClothMetres": -0.04399039267536864
+          },
+          {
+            "clothPoint": 555,
+            "bodySourcePoint": 3358,
+            "clothFace": 366,
+            "distanceMetres": 0.04681721329689026,
+            "signedSkinMinusClothMetres": -0.046806818048935384
+          },
+          {
+            "clothPoint": 556,
+            "bodySourcePoint": 3359,
+            "clothFace": 360,
+            "distanceMetres": 0.044696927070617676,
+            "signedSkinMinusClothMetres": -0.04469667683588341
+          },
+          {
+            "clothPoint": 562,
+            "bodySourcePoint": 3365,
+            "clothFace": 79,
+            "distanceMetres": 0.046404968947172165,
+            "signedSkinMinusClothMetres": -0.04625342629151419
+          },
+          {
+            "clothPoint": 564,
+            "bodySourcePoint": 3367,
+            "clothFace": 512,
+            "distanceMetres": 0.041054848581552505,
+            "signedSkinMinusClothMetres": -0.04105456845718436
+          },
+          {
+            "clothPoint": 565,
+            "bodySourcePoint": 3368,
+            "clothFace": 390,
+            "distanceMetres": 0.028421927243471146,
+            "signedSkinMinusClothMetres": -0.0284165384946391
+          },
+          {
+            "clothPoint": 566,
+            "bodySourcePoint": 3369,
+            "clothFace": 87,
+            "distanceMetres": 0.03458015248179436,
+            "signedSkinMinusClothMetres": -0.03457595544750802
+          },
+          {
+            "clothPoint": 567,
+            "bodySourcePoint": 3370,
+            "clothFace": 78,
+            "distanceMetres": 0.020171916112303734,
+            "signedSkinMinusClothMetres": -0.02016684680711478
+          },
+          {
+            "clothPoint": 568,
+            "bodySourcePoint": 3371,
+            "clothFace": 80,
+            "distanceMetres": 0.033069781959056854,
+            "signedSkinMinusClothMetres": -0.03291434947459493
+          },
+          {
+            "clothPoint": 569,
+            "bodySourcePoint": 3372,
+            "clothFace": 520,
+            "distanceMetres": 0.021967468783259392,
+            "signedSkinMinusClothMetres": -0.021903952656430192
+          },
+          {
+            "clothPoint": 588,
+            "bodySourcePoint": 3408,
+            "clothFace": 96,
+            "distanceMetres": 0.028343960642814636,
+            "signedSkinMinusClothMetres": -0.027762063138652593
+          },
+          {
+            "clothPoint": 589,
+            "bodySourcePoint": 3409,
+            "clothFace": 515,
+            "distanceMetres": 0.028124896809458733,
+            "signedSkinMinusClothMetres": -0.027075129248260055
+          },
+          {
+            "clothPoint": 601,
+            "bodySourcePoint": 3421,
+            "clothFace": 556,
+            "distanceMetres": 0.009089866653084755,
+            "signedSkinMinusClothMetres": -0.009066831524251029
+          },
+          {
+            "clothPoint": 602,
+            "bodySourcePoint": 3422,
+            "clothFace": 78,
+            "distanceMetres": 0.018088072538375854,
+            "signedSkinMinusClothMetres": -0.018083319417200983
+          },
+          {
+            "clothPoint": 603,
+            "bodySourcePoint": 3423,
+            "clothFace": 88,
+            "distanceMetres": 0.03118288330733776,
+            "signedSkinMinusClothMetres": -0.03112687806424219
+          },
+          {
+            "clothPoint": 616,
+            "bodySourcePoint": 3441,
+            "clothFace": 421,
+            "distanceMetres": 0.034532345831394196,
+            "signedSkinMinusClothMetres": -0.034293656739464495
+          },
+          {
+            "clothPoint": 617,
+            "bodySourcePoint": 3442,
+            "clothFace": 561,
+            "distanceMetres": 0.028168361634016037,
+            "signedSkinMinusClothMetres": -0.028129591069955495
+          },
+          {
+            "clothPoint": 625,
+            "bodySourcePoint": 3450,
+            "clothFace": 589,
+            "distanceMetres": 0.038386717438697815,
+            "signedSkinMinusClothMetres": -0.038338811486028135
+          },
+          {
+            "clothPoint": 626,
+            "bodySourcePoint": 3451,
+            "clothFace": 518,
+            "distanceMetres": 0.03872622177004814,
+            "signedSkinMinusClothMetres": -0.038715703412890434
+          },
+          {
+            "clothPoint": 627,
+            "bodySourcePoint": 3452,
+            "clothFace": 84,
+            "distanceMetres": 0.03419850766658783,
+            "signedSkinMinusClothMetres": -0.034198405896859185
+          },
+          {
+            "clothPoint": 628,
+            "bodySourcePoint": 3453,
+            "clothFace": 95,
+            "distanceMetres": 0.031025314703583717,
+            "signedSkinMinusClothMetres": -0.03102507715811953
+          },
+          {
+            "clothPoint": 629,
+            "bodySourcePoint": 3454,
+            "clothFace": 409,
+            "distanceMetres": 0.026623910292983055,
+            "signedSkinMinusClothMetres": -0.026391376450192183
+          },
+          {
+            "clothPoint": 640,
+            "bodySourcePoint": 3465,
+            "clothFace": 503,
+            "distanceMetres": 0.007750899996608496,
+            "signedSkinMinusClothMetres": -0.007750900671680938
+          },
+          {
+            "clothPoint": 641,
+            "bodySourcePoint": 3466,
+            "clothFace": 525,
+            "distanceMetres": 0.013933766633272171,
+            "signedSkinMinusClothMetres": -0.01393265921069542
+          },
+          {
+            "clothPoint": 1026,
+            "bodySourcePoint": 8078,
+            "clothFace": 79,
+            "distanceMetres": 0.05667982995510101,
+            "signedSkinMinusClothMetres": -0.056602856784593314
+          },
+          {
+            "clothPoint": 1027,
+            "bodySourcePoint": 8079,
+            "clothFace": 1419,
+            "distanceMetres": 0.054463256150484085,
+            "signedSkinMinusClothMetres": -0.05446296121226624
+          },
+          {
+            "clothPoint": 1028,
+            "bodySourcePoint": 8080,
+            "clothFace": 994,
+            "distanceMetres": 0.04881030693650246,
+            "signedSkinMinusClothMetres": -0.04880265027168207
+          },
+          {
+            "clothPoint": 1029,
+            "bodySourcePoint": 8081,
+            "clothFace": 987,
+            "distanceMetres": 0.044323280453681946,
+            "signedSkinMinusClothMetres": -0.044151929746462315
+          },
+          {
+            "clothPoint": 1036,
+            "bodySourcePoint": 8094,
+            "clothFace": 88,
+            "distanceMetres": 0.045842938125133514,
+            "signedSkinMinusClothMetres": -0.0457605952542508
+          },
+          {
+            "clothPoint": 1350,
+            "bodySourcePoint": 8408,
+            "clothFace": 1467,
+            "distanceMetres": 0.01627439446747303,
+            "signedSkinMinusClothMetres": -0.016154548153281212
+          },
+          {
+            "clothPoint": 1351,
+            "bodySourcePoint": 8409,
+            "clothFace": 1467,
+            "distanceMetres": 0.011684841476380825,
+            "signedSkinMinusClothMetres": -0.011661664815619588
+          },
+          {
+            "clothPoint": 1352,
+            "bodySourcePoint": 8410,
+            "clothFace": 1441,
+            "distanceMetres": 0.012976322323083878,
+            "signedSkinMinusClothMetres": -0.012976265221368521
+          },
+          {
+            "clothPoint": 1353,
+            "bodySourcePoint": 8411,
+            "clothFace": 1471,
+            "distanceMetres": 0.018166614696383476,
+            "signedSkinMinusClothMetres": -0.018105349445249885
+          },
+          {
+            "clothPoint": 1354,
+            "bodySourcePoint": 8412,
+            "clothFace": 1316,
+            "distanceMetres": 0.025445347651839256,
+            "signedSkinMinusClothMetres": -0.02281330055120634
+          },
+          {
+            "clothPoint": 1355,
+            "bodySourcePoint": 8413,
+            "clothFace": 1424,
+            "distanceMetres": 0.033920884132385254,
+            "signedSkinMinusClothMetres": -0.0339208431832958
+          },
+          {
+            "clothPoint": 1358,
+            "bodySourcePoint": 8416,
+            "clothFace": 1275,
+            "distanceMetres": 0.023952148854732513,
+            "signedSkinMinusClothMetres": -0.0235647177323699
+          },
+          {
+            "clothPoint": 1359,
+            "bodySourcePoint": 8417,
+            "clothFace": 1473,
+            "distanceMetres": 0.031592756509780884,
+            "signedSkinMinusClothMetres": -0.03159104730002582
+          },
+          {
+            "clothPoint": 1360,
+            "bodySourcePoint": 8418,
+            "clothFace": 1004,
+            "distanceMetres": 0.02203967608511448,
+            "signedSkinMinusClothMetres": -0.022039461759050027
+          },
+          {
+            "clothPoint": 1361,
+            "bodySourcePoint": 8419,
+            "clothFace": 1377,
+            "distanceMetres": 0.03051387332379818,
+            "signedSkinMinusClothMetres": -0.030513733929183218
+          },
+          {
+            "clothPoint": 1362,
+            "bodySourcePoint": 8420,
+            "clothFace": 1310,
+            "distanceMetres": 0.024200865998864174,
+            "signedSkinMinusClothMetres": -0.024200461701866516
+          },
+          {
+            "clothPoint": 1363,
+            "bodySourcePoint": 8421,
+            "clothFace": 1475,
+            "distanceMetres": 0.02089070715010166,
+            "signedSkinMinusClothMetres": -0.02088500082027167
+          },
+          {
+            "clothPoint": 1364,
+            "bodySourcePoint": 8422,
+            "clothFace": 1313,
+            "distanceMetres": 0.012330968864262104,
+            "signedSkinMinusClothMetres": -0.012330790515989065
+          },
+          {
+            "clothPoint": 1365,
+            "bodySourcePoint": 8423,
+            "clothFace": 1475,
+            "distanceMetres": 0.017460955306887627,
+            "signedSkinMinusClothMetres": -0.0174609562382102
+          },
+          {
+            "clothPoint": 1366,
+            "bodySourcePoint": 8424,
+            "clothFace": 1313,
+            "distanceMetres": 0.009538750164210796,
+            "signedSkinMinusClothMetres": -0.009538612212054431
+          },
+          {
+            "clothPoint": 1367,
+            "bodySourcePoint": 8425,
+            "clothFace": 1376,
+            "distanceMetres": 0.02225879766047001,
+            "signedSkinMinusClothMetres": -0.020761749299708754
+          },
+          {
+            "clothPoint": 1368,
+            "bodySourcePoint": 8426,
+            "clothFace": 1441,
+            "distanceMetres": 0.019217627122998238,
+            "signedSkinMinusClothMetres": -0.018902678435551934
+          },
+          {
+            "clothPoint": 1369,
+            "bodySourcePoint": 8427,
+            "clothFace": 1378,
+            "distanceMetres": 0.026342861354351044,
+            "signedSkinMinusClothMetres": -0.026290560606867075
+          },
+          {
+            "clothPoint": 1370,
+            "bodySourcePoint": 8428,
+            "clothFace": 1305,
+            "distanceMetres": 0.02597389928996563,
+            "signedSkinMinusClothMetres": -0.0259344638325274
+          },
+          {
+            "clothPoint": 1386,
+            "bodySourcePoint": 8454,
+            "clothFace": 1311,
+            "distanceMetres": 0.017500245943665504,
+            "signedSkinMinusClothMetres": -0.017464486649259925
+          },
+          {
+            "clothPoint": 1387,
+            "bodySourcePoint": 8455,
+            "clothFace": 1491,
+            "distanceMetres": 0.009888090193271637,
+            "signedSkinMinusClothMetres": -0.00987820763543823
+          },
+          {
+            "clothPoint": 1388,
+            "bodySourcePoint": 8456,
+            "clothFace": 1306,
+            "distanceMetres": 0.015264121815562248,
+            "signedSkinMinusClothMetres": -0.01526377358419495
+          },
+          {
+            "clothPoint": 1389,
+            "bodySourcePoint": 8457,
+            "clothFace": 1450,
+            "distanceMetres": 0.0028072854038327932,
+            "signedSkinMinusClothMetres": -0.0026387388661532896
+          },
+          {
+            "clothPoint": 1390,
+            "bodySourcePoint": 8458,
+            "clothFace": 1410,
+            "distanceMetres": 0.005024202633649111,
+            "signedSkinMinusClothMetres": -0.005024198319233619
+          },
+          {
+            "clothPoint": 1391,
+            "bodySourcePoint": 8459,
+            "clothFace": 1487,
+            "distanceMetres": 0.005774196237325668,
+            "signedSkinMinusClothMetres": -0.005719622073229402
+          },
+          {
+            "clothPoint": 1392,
+            "bodySourcePoint": 8460,
+            "clothFace": 1387,
+            "distanceMetres": 0.004554680082947016,
+            "signedSkinMinusClothMetres": -0.004554679966531694
+          },
+          {
+            "clothPoint": 1393,
+            "bodySourcePoint": 8461,
+            "clothFace": 1349,
+            "distanceMetres": 0.020443223416805267,
+            "signedSkinMinusClothMetres": -0.019861590932123363
+          },
+          {
+            "clothPoint": 1394,
+            "bodySourcePoint": 8462,
+            "clothFace": 1468,
+            "distanceMetres": 0.024416452273726463,
+            "signedSkinMinusClothMetres": -0.02404618586297147
+          },
+          {
+            "clothPoint": 1395,
+            "bodySourcePoint": 8463,
+            "clothFace": 1305,
+            "distanceMetres": 0.027913175523281097,
+            "signedSkinMinusClothMetres": -0.02787413843907416
+          },
+          {
+            "clothPoint": 1396,
+            "bodySourcePoint": 8464,
+            "clothFace": 1352,
+            "distanceMetres": 0.031207207590341568,
+            "signedSkinMinusClothMetres": -0.031082363333553076
+          },
+          {
+            "clothPoint": 1409,
+            "bodySourcePoint": 8487,
+            "clothFace": 1447,
+            "distanceMetres": 0.013703865930438042,
+            "signedSkinMinusClothMetres": -0.010074885562062263
+          },
+          {
+            "clothPoint": 1411,
+            "bodySourcePoint": 8489,
+            "clothFace": 1439,
+            "distanceMetres": 0.01433547679334879,
+            "signedSkinMinusClothMetres": -0.014328626024507685
+          },
+          {
+            "clothPoint": 1413,
+            "bodySourcePoint": 8491,
+            "clothFace": 1342,
+            "distanceMetres": 0.013778982684016228,
+            "signedSkinMinusClothMetres": -0.010871242615394294
+          },
+          {
+            "clothPoint": 1414,
+            "bodySourcePoint": 8492,
+            "clothFace": 1342,
+            "distanceMetres": 0.01482897438108921,
+            "signedSkinMinusClothMetres": -0.014301317511126399
+          },
+          {
+            "clothPoint": 1416,
+            "bodySourcePoint": 8494,
+            "clothFace": 1483,
+            "distanceMetres": 0.017935218289494514,
+            "signedSkinMinusClothMetres": -0.01784015103476122
+          },
+          {
+            "clothPoint": 1418,
+            "bodySourcePoint": 8496,
+            "clothFace": 1444,
+            "distanceMetres": 0.023463957011699677,
+            "signedSkinMinusClothMetres": -0.023254083112988155
+          },
+          {
+            "clothPoint": 1421,
+            "bodySourcePoint": 8499,
+            "clothFace": 1329,
+            "distanceMetres": 0.004088066052645445,
+            "signedSkinMinusClothMetres": -0.00408746757041456
+          },
+          {
+            "clothPoint": 1498,
+            "bodySourcePoint": 8611,
+            "clothFace": 1284,
+            "distanceMetres": 0.028315968811511993,
+            "signedSkinMinusClothMetres": -0.028259015329240356
+          },
+          {
+            "clothPoint": 1499,
+            "bodySourcePoint": 8612,
+            "clothFace": 1284,
+            "distanceMetres": 0.03120807558298111,
+            "signedSkinMinusClothMetres": -0.03120166141889058
+          },
+          {
+            "clothPoint": 1500,
+            "bodySourcePoint": 8613,
+            "clothFace": 1263,
+            "distanceMetres": 0.03513576462864876,
+            "signedSkinMinusClothMetres": -0.03334584409560648
+          },
+          {
+            "clothPoint": 1501,
+            "bodySourcePoint": 8614,
+            "clothFace": 1263,
+            "distanceMetres": 0.04105871170759201,
+            "signedSkinMinusClothMetres": -0.041045593439434924
+          },
+          {
+            "clothPoint": 1502,
+            "bodySourcePoint": 8615,
+            "clothFace": 1274,
+            "distanceMetres": 0.04438197612762451,
+            "signedSkinMinusClothMetres": -0.044381915815847606
+          },
+          {
+            "clothPoint": 1503,
+            "bodySourcePoint": 8616,
+            "clothFace": 1273,
+            "distanceMetres": 0.046808015555143356,
+            "signedSkinMinusClothMetres": -0.046797364091617055
+          },
+          {
+            "clothPoint": 1504,
+            "bodySourcePoint": 8617,
+            "clothFace": 1267,
+            "distanceMetres": 0.04479384422302246,
+            "signedSkinMinusClothMetres": -0.044793617067625746
+          },
+          {
+            "clothPoint": 1510,
+            "bodySourcePoint": 8623,
+            "clothFace": 986,
+            "distanceMetres": 0.046759795397520065,
+            "signedSkinMinusClothMetres": -0.046720948710571975
+          },
+          {
+            "clothPoint": 1512,
+            "bodySourcePoint": 8625,
+            "clothFace": 1419,
+            "distanceMetres": 0.0408230684697628,
+            "signedSkinMinusClothMetres": -0.040822856448357925
+          },
+          {
+            "clothPoint": 1513,
+            "bodySourcePoint": 8626,
+            "clothFace": 1297,
+            "distanceMetres": 0.02854529209434986,
+            "signedSkinMinusClothMetres": -0.02854128531180322
+          },
+          {
+            "clothPoint": 1514,
+            "bodySourcePoint": 8627,
+            "clothFace": 994,
+            "distanceMetres": 0.034282658249139786,
+            "signedSkinMinusClothMetres": -0.03427728459064383
+          },
+          {
+            "clothPoint": 1515,
+            "bodySourcePoint": 8628,
+            "clothFace": 985,
+            "distanceMetres": 0.020029906183481216,
+            "signedSkinMinusClothMetres": -0.02002425619866699
+          },
+          {
+            "clothPoint": 1516,
+            "bodySourcePoint": 8629,
+            "clothFace": 987,
+            "distanceMetres": 0.03251473605632782,
+            "signedSkinMinusClothMetres": -0.03236726450631977
+          },
+          {
+            "clothPoint": 1517,
+            "bodySourcePoint": 8630,
+            "clothFace": 1427,
+            "distanceMetres": 0.02105909027159214,
+            "signedSkinMinusClothMetres": -0.02100855761091225
+          },
+          {
+            "clothPoint": 1536,
+            "bodySourcePoint": 8666,
+            "clothFace": 1003,
+            "distanceMetres": 0.027227826416492462,
+            "signedSkinMinusClothMetres": -0.026686187367886305
+          },
+          {
+            "clothPoint": 1537,
+            "bodySourcePoint": 8667,
+            "clothFace": 1422,
+            "distanceMetres": 0.02643316239118576,
+            "signedSkinMinusClothMetres": -0.02597071348282043
+          },
+          {
+            "clothPoint": 1549,
+            "bodySourcePoint": 8679,
+            "clothFace": 1463,
+            "distanceMetres": 0.009299603290855885,
+            "signedSkinMinusClothMetres": -0.009224310342688113
+          },
+          {
+            "clothPoint": 1550,
+            "bodySourcePoint": 8680,
+            "clothFace": 985,
+            "distanceMetres": 0.017877424135804176,
+            "signedSkinMinusClothMetres": -0.01787258544936776
+          },
+          {
+            "clothPoint": 1551,
+            "bodySourcePoint": 8681,
+            "clothFace": 995,
+            "distanceMetres": 0.03190695121884346,
+            "signedSkinMinusClothMetres": -0.03188679557933938
+          },
+          {
+            "clothPoint": 1564,
+            "bodySourcePoint": 8699,
+            "clothFace": 1328,
+            "distanceMetres": 0.034047435969114304,
+            "signedSkinMinusClothMetres": -0.03374745792825706
+          },
+          {
+            "clothPoint": 1565,
+            "bodySourcePoint": 8700,
+            "clothFace": 1468,
+            "distanceMetres": 0.028851864859461784,
+            "signedSkinMinusClothMetres": -0.028850554015662055
+          },
+          {
+            "clothPoint": 1573,
+            "bodySourcePoint": 8708,
+            "clothFace": 1496,
+            "distanceMetres": 0.03834298998117447,
+            "signedSkinMinusClothMetres": -0.03829794892226346
+          },
+          {
+            "clothPoint": 1574,
+            "bodySourcePoint": 8709,
+            "clothFace": 1425,
+            "distanceMetres": 0.038810573518276215,
+            "signedSkinMinusClothMetres": -0.03880035609472543
+          },
+          {
+            "clothPoint": 1575,
+            "bodySourcePoint": 8710,
+            "clothFace": 991,
+            "distanceMetres": 0.03395112603902817,
+            "signedSkinMinusClothMetres": -0.03395097601332964
+          },
+          {
+            "clothPoint": 1576,
+            "bodySourcePoint": 8711,
+            "clothFace": 1002,
+            "distanceMetres": 0.030986765399575233,
+            "signedSkinMinusClothMetres": -0.030986661557108164
+          },
+          {
+            "clothPoint": 1577,
+            "bodySourcePoint": 8712,
+            "clothFace": 1316,
+            "distanceMetres": 0.02523105964064598,
+            "signedSkinMinusClothMetres": -0.025178615260415427
+          },
+          {
+            "clothPoint": 1588,
+            "bodySourcePoint": 8723,
+            "clothFace": 1410,
+            "distanceMetres": 0.0076796142384409904,
+            "signedSkinMinusClothMetres": -0.007679606994997812
+          },
+          {
+            "clothPoint": 1589,
+            "bodySourcePoint": 8724,
+            "clothFace": 1432,
+            "distanceMetres": 0.013872480019927025,
+            "signedSkinMinusClothMetres": -0.01387117059857701
+          },
+          {
+            "clothPoint": 1599,
+            "bodySourcePoint": 9141,
+            "clothFace": 360,
+            "distanceMetres": 0.048835694789886475,
+            "signedSkinMinusClothMetres": -0.04872821234675939
+          },
+          {
+            "clothPoint": 1601,
+            "bodySourcePoint": 9143,
+            "clothFace": 1284,
+            "distanceMetres": 0.03030250407755375,
+            "signedSkinMinusClothMetres": -0.0302371735451743
+          },
+          {
+            "clothPoint": 1602,
+            "bodySourcePoint": 9144,
+            "clothFace": 1274,
+            "distanceMetres": 0.05184086784720421,
+            "signedSkinMinusClothMetres": -0.05184080243179778
+          },
+          {
+            "clothPoint": 1605,
+            "bodySourcePoint": 9147,
+            "clothFace": 1273,
+            "distanceMetres": 0.05304837226867676,
+            "signedSkinMinusClothMetres": -0.053035220320452936
+          },
+          {
+            "clothPoint": 1609,
+            "bodySourcePoint": 9151,
+            "clothFace": 377,
+            "distanceMetres": 0.034003179520368576,
+            "signedSkinMinusClothMetres": -0.033986901049502194
+          },
+          {
+            "clothPoint": 1610,
+            "bodySourcePoint": 9152,
+            "clothFace": 1424,
+            "distanceMetres": 0.037908438593149185,
+            "signedSkinMinusClothMetres": -0.037908400932792574
+          },
+          {
+            "clothPoint": 1611,
+            "bodySourcePoint": 9153,
+            "clothFace": 1263,
+            "distanceMetres": 0.04631568491458893,
+            "signedSkinMinusClothMetres": -0.045909512757852156
+          },
+          {
+            "clothPoint": 1612,
+            "bodySourcePoint": 9154,
+            "clothFace": 1263,
+            "distanceMetres": 0.04085101932287216,
+            "signedSkinMinusClothMetres": -0.03711015886074165
+          }
+        ],
+        "minimumCoreSkinSurfaceDistanceMetres": 0.0014507670421153307,
+        "maximumCoreSignedSkinMinusClothMetres": -0.0014223329908418236,
+        "shoeToeFootprintPreserved": true,
+        "soleTopSourceZ": 0.025,
+        "upperLowerSourceZ": 0.022,
+        "limits": [
+          "Rest nearest-surface diagnostics do not certify posed collision/contact.",
+          "One candidate; no follow-up before parent actual game played verdict.",
+          "Field and actual generic/bike motion acceptance remain parent-owned."
+        ]
+      }
+    }
+  },
+  "animationCount": 1,
+  "skinCount": 1,
+  "nativeBreathMaxVertexDeltaMetres": {
+    "RiderBody": 0.002973498719839225,
+    "GEO-body_male_realistic.eye.L": 0.0028796441966740024,
+    "GEO-body_male_realistic.eye.R": 0.0028796441966740024,
+    "RiderBuzzcut": 0.0028796441966740024,
+    "RiderBrows": 0.0028796441966734,
+    "RiderHoodie": 0.0025772751313296095,
+    "RiderJeans": 0.00011211950951289717,
+    "RiderGloves": 0.0020530624760071304,
+    "RiderShoeAnkles": 0.0,
+    "RiderHoodieCuff.L": 0.0009267026544439803,
+    "RiderGloveCuff.L": 0.0009057834056575692,
+    "RiderHoodieCuff.R": 0.0009267103390934287,
+    "RiderGloveCuff.R": 0.0009057778811442634,
+    "RiderHoodieHem": 0.0,
+    "RiderHoodieCollar": 0.0025753239143687747,
+    "RiderJeansWaist": 0.00011241357390072227,
+    "RiderHood": 0.0029151680970232667,
+    "RiderKangarooPocket": 0.00033130792662804,
+    "RiderShoeUpper.L": 0.0,
+    "RiderSole.L": 0.0,
+    "RiderShoeUpper.R": 0.0,
+    "RiderSole.R": 0.0,
+    "RiderSideSeam.L": 0.0002390340965977833,
+    "RiderSideSeam.R": 0.0002402753501181461
+  },
+  "soleAnchorsNativeMetres": {
+    "L": [
+      0.2222418189048767,
+      -0.02633196860551834,
+      -0.0031598361674696207
+    ],
+    "R": [
+      -0.2222418189048767,
+      -0.02633196860551834,
+      -0.0031598361674696207
+    ]
+  },
+  "eyeBoundsNativeMetres": {
+    "GEO-body_male_realistic.eye.L": [
+      [
+        0.021971583366394043,
+        0.0472479909658432
+      ],
+      [
+        -0.14089186489582062,
+        -0.11572253704071045
+      ],
+      [
+        1.6507327556610107,
+        1.6760344505310059
+      ]
+    ],
+    "GEO-body_male_realistic.eye.R": [
+      [
+        -0.047289665788412094,
+        -0.02200600691139698
+      ],
+      [
+        -0.14091074466705322,
+        -0.11571874469518661
+      ],
+      [
+        1.6507327556610107,
+        1.6760344505310059
+      ]
+    ]
+  }
+}
