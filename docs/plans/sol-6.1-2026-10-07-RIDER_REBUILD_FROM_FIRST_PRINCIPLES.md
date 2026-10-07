@@ -237,6 +237,20 @@ checkpoint; none of these gates is passed by this plan's existence.
 
 ## Immediate sequence, ownership and closure
 
+**Current priority — ask326,20:33UTC October7:** deliver a sound, good-looking
+assembled private actual-engine Garage candidate and short game ride within
+the user's next-two-hours target (22:33UTC). All body/head/buzzcut and four
+garments together; detail work follows this review. Native author builds the
+coherent wearer/rig and integrates the master; wardrobe teammate authors all
+four coarse textured garments; engine teammate supplies actual Garage/game
+adapter and early intake; root verifies and judges complete silent played
+evidence. Construction, wardrobe and engine source work proceed in parallel;
+heavy jobs stay serial. Baseline fix/fit/reset/export checks still apply.
+This review checkpoint stays private/unaccepted until judged; final R0–R5
+release/device/detail gates are preserved. Avoid further standalone planning
+or old-part gallery work before this assembled engine result.
+
+
 1. Complete this independently reviewed replacement plan; retire superseded
    method documents with explicit uncompleted status in a separate commit.
 2. Inventory and inspect a conventional whole-body source and reusable wardrobe

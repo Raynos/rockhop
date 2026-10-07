@@ -1041,3 +1041,5 @@ October7 rebuild R0 independent anatomy inventory selects the clean Blender whol
 Rider gallery publication, October 7 (ask323): initial deployment hit the 25 MiB file limit. The full-rider web copy is now 23.1 MB with the same 926 frames/dimensions; original download retained. Public access request324 remains pending publication.
 
 Integrated rider audit, October 7 (ask325): matched normal Garage comparison consumes the same old mustard rider in the October 4 build and October 7 main. All 72 rider-region frame pairs are pixel-identical; player source/public assets also have zero changes since the October 5 48-hour baseline. No integrated remaster reached the normal game. Gallery now leads with this six-second proof; successor execution remains separate.
+
+**Immediate rider delivery — ask326:**20:33→22:33UTC October7 target: coherent newbody/head/buzzcut+hoodie/jeans/blackgloves/shoes together in actual private Garage and short gameplay. Three parallel sourcebuilders plus rootQA; detailwork after assembledengine review, serialheavyguard retained. Baseline checks required; R0–R5 remain open.

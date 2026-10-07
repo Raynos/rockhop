@@ -59,3 +59,9 @@ Finding: Independent source inspection selects the clean Blender male base as pr
 Validation: Parent rehashes all3 independent source/native/inventory pins; all match. Declared distal branches, closed limb sections and continuous head/neck topology independently inventoried; Rigify installed source review identifies required finger rig, linear-skin and B-Bone settings.
 
 Limits: Surface centers are fit proposals, not certified joint centers, skin weights, art or movement acceptance. New rig must be fitted and played; no uniform stock-metarig scale assumption.
+
+Finding: User prioritizes a sound whole dressed rider in the actual engine Garage/game within two hours over further external detail work. Three authorized parallel builders now own native wearer/rig/head/hair, four coarse garments and private actual-engine adapter; root integrates/tests/judges.
+
+Validation: Deadline and ownership sent to all three live teammates, with exact selected source paths and explicit baseline/export/private-review limits. Existing headless silent harness retained; no new candidate has yet been rendered or accepted.
+
+Limits: Two-hour delivery target, not an art/deformation acceptance claim; final detail/device/release gates remain open.
