@@ -53,3 +53,9 @@ Finding: Private humanoid intake resolves the true complete joint hierarchy and 
 Validation: Parent source review and7targeted Node tests pass, including actual SkeletonUtils clone, extra spine/twist/metacarpal parents,60byte-identical repeated skin evaluations, rotated palm offset and invalid metadata/bind/parent rejection.
 
 Limits: Tested contract helper only; no new exported asset, anatomical correspondence, finger/arm solver, FOUR skin field, actual-game or device acceptance.
+
+Finding: Independent source inspection selects the clean Blender male base as primary. Exact limb-section edges and five-digit tip/branch IDs support deliberate anatomical fit; gallery translation and source axes are distinguished from body shape.
+
+Validation: Parent rehashes all3 independent source/native/inventory pins; all match. Declared distal branches, closed limb sections and continuous head/neck topology independently inventoried; Rigify installed source review identifies required finger rig, linear-skin and B-Bone settings.
+
+Limits: Surface centers are fit proposals, not certified joint centers, skin weights, art or movement acceptance. New rig must be fitted and played; no uniform stock-metarig scale assumption.

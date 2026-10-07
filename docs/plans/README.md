@@ -1035,3 +1035,5 @@ October7 rebuild R0 source intake: official Blender male whole-body CC0 collecti
 Rider review gallery, October 7 (ask323): five ranked historical videos now lead the photo Site source; 98.269 seconds total. Source/hash checks pass; publication pending. This does not change the successor first-principles plan or rider acceptance.
 
 October7 rebuild early engine foundation: private arbitrary-hierarchy [contract helper](../../harness/rider-rebuild/README.md) passes7targeted parent-reviewed tests, including60identical repeated skin/reset frames and rotated palm offset. Actual new-rig asset/IK/game intake remains open; normal player code unchanged, R0–R5 open.
+
+October7 rebuild R0 independent anatomy inventory selects the clean Blender whole-body base over old MPFB-derived construction: explicit limb-section edges and five-digit branch/tip IDs, continuous head/neck, source/gallery axes identified. [Inventory](../evidence/rider-rebuild/source-intake01/independent-anatomy.json). All3 source pins rechecked; joint centers/rig/skin/art remain unqualified. Next fit one conventional full-finger rig; R0–R5 open.
