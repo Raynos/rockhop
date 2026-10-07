@@ -36,7 +36,7 @@ fs.writeFileSync(driverPath, generated); fs.writeFileSync(mappingPath, JSON.stri
 fs.writeFileSync(path.join(out, 'rider-rebuild-inputs.json'), JSON.stringify({
   releaseBuild: false, source, contract, sourceSHA256: sha(sourceBytes), metadataSHA256: sha(metadataBytes),
   actualBuildRecipe: { path: originalPath, sha256: sha(original) },
-  adapter: ['private-rider.mjs', 'private-engine-plugin.mjs', 'new-humanoid-contract.mjs'].map(name => {
+  adapter: ['private-rider.mjs', 'private-engine-plugin.mjs', 'new-humanoid-contract.mjs', 'anthropometric-inverse.mjs'].map(name => {
     const file = path.join(root, 'harness/rider-rebuild', name); return { path: file, sha256: sha(fs.readFileSync(file)) };
   }), modelSlots: Object.keys(mapping),
 }, null, 2));

@@ -107,3 +107,9 @@ Finding: New wearer measured segment mass proxy inverts physicalCOM to distinct 
 Validation: Parent helper source review and2Newton/singularity tests pass; actualGLBprobe converges2–3iterations under.5micrometre COMresidual, but grip28–65mm and forwardsole20.6mm remain.
 
 Limits: Approximate adultmale massfraction model, synthetictargets/control diagnosis only; no newart/contact/renderedGPU/device acceptance.
+
+Finding: Privateadapter now inverts actualposed newwearer massproxy eachframe, preserving physicalCOM asinput and complete reset. Originalprofile remains deterministicinitialguess/angles only; failureflags remainhonest.
+
+Validation: Parent reviews integratedsource and actual9CPUtests pass across41leans/worldbikerotations; actualCOM residualmax.5378micrometre; realgrip64.985mm/sole20.601mm failreported. DesktopCPU median1.473ms/max7.14ms.
+
+Limits: Approximate massdistribution, provisional rig03 anatomy; no contact/art/phone/GPU acceptance. Native04 calibration pending.

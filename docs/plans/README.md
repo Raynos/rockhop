@@ -1059,3 +1059,5 @@ October7 first [actual-engine intake](../evidence/rider-rebuild/runtime01/README
 October7 [appearance02](../evidence/rider-rebuild/construction01/combined02/README.md) corrects toes/neckline/hair/skin in the actualGarage on unchangedrig03;39490triangles/75sharedjoints. Rearhoodiehem tabs remain, native anatomical armfit04 and physicalnewbody reach pending. No final art/player/device approval.
 
 October7 [anthropometric diagnosis](../evidence/rider-rebuild/runtime01/ANTHRO_HANDOFF.md) measures actual newwearer joint/extents; COMinverse converges under0.5µm but frozenrig03 contacts stillfail. Preserve2testedhelper/probe checkpoint before actualrig04 integration; physicalCOM remains distinctfromhips.
+
+October7 [integrated COM checkpoint](../evidence/rider-rebuild/runtime02/FINDING.md): nineactualCPU tests pass with ≤.5378µm measuredmassproxy residual and fixedsegmentlengths/fullreset. Grip64.985mm/sole20.601mm stillfail underprovisionalrig03; sourcefit04 required, no contact/art/device approval.

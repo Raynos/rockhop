@@ -4,6 +4,7 @@ import { clone as cloneSkeleton } from 'three/addons/utils/SkeletonUtils.js';
 import { countTriangles, prepareHeroMaterials } from '../../src/render/hero/gltf.ts';
 import { makeRiderRigPose, riderRigFromCOM, riderPoseAtLean, RIDER_PROFILE, RIDER_TORSO_REST } from '../../src/core/riderGeometry.ts';
 import { bindHumanoidContract, captureHumanoidContract, resetHumanoidPose, setJointWorldQuaternion, solvePalmSocketTarget } from './new-humanoid-contract.mjs';
+import { calibrateAnthropometry, invertAnthropometricCOM, measureAnthropometricCOM } from './anthropometric-inverse.mjs';
 
 const V = (...xyz) => new THREE.Vector3(...xyz);
 const Q = () => new THREE.Quaternion();
@@ -96,6 +97,7 @@ export function createPrivateRiderClass(metadata) {
         this.restP.set(id, bone.getWorldPosition(V()));
       }
       for (const side of SIDES) this.calibrateSide(side);
+      this.anthropometry = calibrateAnthropometry(this, metadata);
       this.debug.bones = this.binding.byId.size;
       this.debug.clips = gltf.animations.map(clip => clip.name);
       this.debug.candidate = {
@@ -104,6 +106,7 @@ export function createPrivateRiderClass(metadata) {
         authorMeshRoles: structuredClone((metadata.specification ?? metadata.spec).meshNames), visibleMeshes: [],
         jointNames: Object.fromEntries([...this.binding.byId].map(([id, bone]) => [id, bone.name])),
         contractSchema: this.binding.contract.schema, geometry: 'author FOUR unchanged; no legacy sleeve conditioning',
+        massApproximation: this.anthropometry.approximation,
       };
       this.scene.traverse(node => {
         if (node.isMesh) this.debug.candidate.visibleMeshes.push({ name: node.name, skinned: !!node.isSkinnedMesh, triangles: (node.geometry.index?.count ?? node.geometry.attributes.position.count) / 3 });
@@ -213,19 +216,37 @@ export function createPrivateRiderClass(metadata) {
         this.bike.frame.updateWorldMatrix(true, false);
         const elements = this.bike.frame.matrixWorld.elements, frameAngle = Math.atan2(elements[1], elements[0]);
         const relative = frame.riderBody.relAngle + frame.bikeAngle - frameAngle;
-        return riderRigFromCOM(com.x, com.y, RIDER_TORSO_REST + Math.atan2(Math.sin(relative), Math.cos(relative)), this.physicalRig);
+        const p = riderRigFromCOM(com.x, com.y, RIDER_TORSO_REST + Math.atan2(Math.sin(relative), Math.cos(relative)), this.physicalRig);
+        return { ...p, requestedCOM: com };
       }
       const p = riderPoseAtLean(this.stage ? 0 : frame.rider.lean, this.physicalRig);
       if (this.stage) p.torsoAngle += Math.sin(this.stageTime * 2) * 0.008;
-      return p;
+      return { ...p, requestedCOM: V(p.com.x, p.com.y, 0) };
     }
 
     poseRiding(frame) {
-      const p = this.physicsTarget(frame), torso = V(Math.cos(p.torsoAngle), Math.sin(p.torsoAngle), 0);
-      this.setPosition(this.role('pelvis'), this.toWorld(V(p.hips.x, p.hips.y, 0)));
+      const p = this.physicsTarget(frame), started = performance.now();
+      const evaluate = hips => {
+        resetHumanoidPose(this.binding); this.debug.fullResetCount++;
+        this.poseFromHips(frame, p, hips);
+        return this.toBike(measureAnthropometricCOM(this, this.anthropometry));
+      };
+      const inverse = invertAnthropometricCOM(evaluate, p.requestedCOM, [p.hips.x, p.hips.y], 8);
+      evaluate(inverse.hips);
+      this.debug.comResidual = inverse.residualM;
+      this.debug.anthropometry = { ...inverse, requestedCOM: p.requestedCOM.toArray(),
+        carrierAngle: p.torsoAngle, spineFlexRadians: 0, elapsedMs: performance.now() - started };
+      this.debug.physicalPose = !this.stage && !!frame.riderBody.present;
+      this.debug.stageClip = this.stage ? 'measured riding IK + breathing' : null;
+      Object.assign(this.debug.stance, { on: true, pose: frame.rider.lean < 0 ? 'back' : frame.rider.lean > 0 ? 'forward' : 'seated', blend: Math.abs(frame.rider.lean), lean: frame.rider.lean });
+    }
+
+    poseFromHips(frame, p, hips, spineFlex = 0) {
+      const torso = V(Math.cos(p.torsoAngle), Math.sin(p.torsoAngle), 0);
+      this.setPosition(this.role('pelvis'), this.toWorld(V(hips[0], hips[1], 0)));
       const trunk = ids(this.roles.trunk), head = this.role('head');
       this.aim(this.roles.pelvis, trunk.at(-1), torso);
-      this.aim(trunk, head, torso);
+      this.aim(trunk, head, V(Math.cos(p.torsoAngle + spineFlex), Math.sin(p.torsoAngle + spineFlex), 0));
       const neck = ids(this.roles.neck);
       if (neck.length) this.aim(neck, head, V(Math.cos(p.headAngle), Math.sin(p.headAngle), 0));
       const neckBase = neck[0] ?? trunk.at(-1);
@@ -252,10 +273,6 @@ export function createPrivateRiderClass(metadata) {
         this.debug.soleErr[index] = this.toBike(sole.node.getWorldPosition(V())).distanceTo(peg);
         this.debug.ankleErr[index] = this.debug.soleErr[index]; this.debug.footOnPeg[index] = this.debug.soleErr[index] < 0.01;
       });
-      this.debug.comResidual = p.residual;
-      this.debug.physicalPose = !this.stage && !!frame.riderBody.present;
-      this.debug.stageClip = this.stage ? 'measured riding IK + breathing' : null;
-      Object.assign(this.debug.stance, { on: true, pose: frame.rider.lean < 0 ? 'back' : frame.rider.lean > 0 ? 'forward' : 'seated', blend: Math.abs(frame.rider.lean), lean: frame.rider.lean });
     }
 
     beginRelease(frame) {

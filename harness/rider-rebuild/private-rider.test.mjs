@@ -11,6 +11,7 @@ import { BIKE_GEOMETRY_V2 } from '../../src/render/hero/assetFrame.ts';
 import { makeRiderRigPose, riderPoseAtLean, RIDER_TORSO_REST } from '../../src/core/riderGeometry.ts';
 import { createPrivateRiderClass } from './private-rider.mjs';
 import { privateEnginePlugin } from './private-engine-plugin.mjs';
+import { measureAnthropometricCOM } from './anthropometric-inverse.mjs';
 
 const source = path.resolve(process.env.RIDER_REBUILD_SOURCE ?? 'harness/out/rider-rebuild/construction01/combined01/rider.glb');
 const metadataPath = path.resolve(process.env.RIDER_REBUILD_CONTRACT ?? 'harness/out/rider-rebuild/construction01/combined01/rider-contract.json');
@@ -69,6 +70,29 @@ test('actual forward/back/neutral targets retain finite full-hierarchy control a
     assert.ok(rider.debug.allBoneFinite); assert.ok(rider.debug.physicalPose);
     for (const err of [...rider.debug.gripErr, ...rider.debug.soleErr]) assert.ok(Number.isFinite(err) && err >= 0);
     assert.ok(rider.debug.gripAngleErr.every(angle => angle < 1e-5));
+    assert.ok(rider.debug.comResidual < 1e-5);
+    const measured = rider.toBike(measureAnthropometricCOM(rider, rider.anthropometry));
+    assert.ok(measured.distanceTo(new THREE.Vector3().fromArray(rider.debug.anthropometry.requestedCOM)) < 1e-5);
+    for (const limb of rider.limbs.values()) {
+      assert.ok(Math.abs(rider.position(limb.upper).distanceTo(rider.position(limb.lower)) - limb.lengths[0]) < 1e-5);
+      assert.ok(Math.abs(rider.position(limb.lower).distanceTo(rider.position(limb.end)) - limb.lengths[1]) < 1e-5);
+    }
+  }
+});
+
+test('actual COM and socket errors remain bike-local at different world bike leans', { skip }, async () => {
+  const { rider, frame } = await instance(), base = frame.position.clone();
+  for (const lean of [-1, 0, 1]) {
+    const f = poseFrame(lean); rider.update(f);
+    const expected = [...rider.debug.gripErr, ...rider.debug.soleErr];
+    for (const angle of [-0.7, 0.4, 1.1]) {
+      frame.quaternion.setFromAxisAngle(new THREE.Vector3(0, 0, 1), angle);
+      frame.position.copy(base).applyQuaternion(frame.quaternion); frame.updateWorldMatrix(true, true);
+      f.bikeAngle = angle; rider.update(f);
+      assert.ok(rider.debug.comResidual < 1e-5);
+      [...rider.debug.gripErr, ...rider.debug.soleErr].forEach((error, i) => assert.ok(Math.abs(error - expected[i]) < 1e-5));
+    }
+    frame.quaternion.identity(); frame.position.copy(base); frame.updateWorldMatrix(true, true);
   }
 });
 
