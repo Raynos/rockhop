@@ -909,3 +909,11 @@ Finding: Pause preservation retains eight source/trial NPZ archives and dormant 
 Validation: Eight NPZ archives pass ZIP CRC checks; all source bytes rehashed; superseded shoulder recipe syntax and declared hash match. No trial ran.
 
 Limits: Source archives are experimental; whole contacts51, played review and allF/Mgates remain open.
+
+## October7: pause preservation legacy
+
+Finding: Pause preservation retains historical body02/body05 diagnosis and UniMate pilot traces separately from current native49/capture50.
+
+Validation: Existing diagnostic JSON parses and eight source receipts/traces are rehashed; no new model, export, native or gameplay execution.
+
+Limits: Historical controls are unaccepted; no current engine, normal, animation or garment pass.

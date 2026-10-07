@@ -1,0 +1,108 @@
+[10/05/26 08:47:27] INFO     Using config:
+                             [/Users/raynos/projects/games/rockhop/assets/blende
+                             r/hero-remaster/rider/finish-2026-10-05/unimate/dat
+                             a/trial02/experiment/config.json] (sample.py)
+                    INFO     Using checkpoint:
+                             [/Users/raynos/projects/games/rockhop/assets/blende
+                             r/hero-remaster/rider/finish-2026-10-05/unimate/dat
+                             a/trial02/experiment/checkpoints/checkpoint_step_10
+                             0000.pt] (sample.py)
+                    INFO     Set random seed to [42] (sample.py)
+                    INFO     Inference scope from
+                             /Users/raynos/projects/games/rockhop/assets/blender
+                             /hero-remaster/rider/finish-2026-10-05/unimate/data
+                             /trial02/cases.json: 1 object types, 3 pinned clip
+                             stems (sample.py)
+[10/05/26 08:47:27] INFO     Initializing Mixture Dataset with datasets:
+                             ['objaverse'] (dataset.py)
+                    INFO     Objaverse: no captions.json in
+                             /Users/raynos/projects/games/rockhop/assets/blender
+                             /hero-remaster/rider/finish-2026-10-05/unimate/data
+                             /trial02/preprocessed (caption-free dataset)
+                             (dataset.py)
+                    INFO     Objaverse Dataset has 1 object types (dataset.py)
+                    INFO     Pre-encoding joint names: 31 unique / 51 total (0
+                             cached, 31 to encode, chunk_size=256) (dataset.py)
+                    INFO     Text cache incomplete; loading t5 encoder
+                             (dataset.py)
+[10/05/26 08:47:27] INFO     Creating T5 text encoder: google/flan-t5-base
+                             (pool=False) (factory.py)
+
+Loading weights:   0%|          | 0/111 [00:00<?, ?it/s]
+Loading weights: 100%|██████████| 111/111 [00:00<00:00, 47599.20it/s]
+
+Encoding joint names:   0%|          | 0/1 [00:00<?, ?it/s]
+Encoding joint names: 100%|██████████| 1/1 [00:00<00:00,  1.66it/s]
+Encoding joint names: 100%|██████████| 1/1 [00:00<00:00,  1.66it/s]
+[10/05/26 08:47:28] INFO     Skipping caption pre-encoding (inference mode).
+                             (dataset.py)
+                    INFO     Objaverse dataset has 1 object types (dataset.py)
+
+Loading Objaverse motions:   0%|          | 0/1 [00:00<?, ?it/s]
+Loading Objaverse motions: 100%|██████████| 1/1 [00:00<00:00, 252.61it/s]
+                    INFO     Objaverse loaded 1/1 valid motions across 1 object
+                             type (dataset.py)
+                    INFO     Clip split: 1 train / 0 eval (ratio=0.000, seed=42)
+                             (dataset.py)
+                    INFO     Using prebuilt max_joints=71 | max_depth=19
+                             (skipping data scan). (dataset.py)
+                    INFO     MotionDataset loaded 1 train + 0 eval clips from 1
+                             object types | max_joints=71 | max_depth=19
+                             (dataset.py)
+                    INFO     Loading saved dataset stats from
+                             /Users/raynos/projects/games/rockhop/assets/blender
+                             /hero-remaster/rider/finish-2026-10-05/unimate/data
+                             /trial02/experiment/dataset_stats.npy (dataset.py)
+[10/05/26 08:47:28] INFO     Creating model and diffusion... (sample.py)
+                    INFO     Loading checkpoints from
+                             [/Users/raynos/projects/games/rockhop/assets/blende
+                             r/hero-remaster/rider/finish-2026-10-05/unimate/dat
+                             a/trial02/experiment/checkpoints/checkpoint_step_10
+                             0000.pt]... (sample.py)
+                    INFO     Loading EMA weights into model parameters.
+                             (sample.py)
+                    INFO     Loaded 1 test cases from
+                             /Users/raynos/projects/games/rockhop/assets/blender
+                             /hero-remaster/rider/finish-2026-10-05/unimate/data
+                             /trial02/cases.json (sample.py)
+[10/05/26 08:47:28] INFO     Creating T5 text encoder: google/flan-t5-base
+                             (pool=False) (factory.py)
+[10/05/26 08:47:28] INFO     T5 autocast dtype: float32 (t5.py)
+
+Loading weights:   0%|          | 0/111 [00:00<?, ?it/s]
+Loading weights: 100%|██████████| 111/111 [00:00<00:00, 18775.16it/s]
+[10/05/26 08:47:30] INFO     Using cfg_scale=3.0 (sample.py)
+                    INFO     Motion editing: keep_joints=['pelvis', 'spine',
+                             'thigh.L', 'thigh.R', 'chest', 'shin.L', 'shin.R',
+                             'shoulder.R', 'shoulder.L', 'foot.L', 'foot.R',
+                             'upperArm.R', 'upperArm.L', 'ball.L', 'ball.R',
+                             'forearm.R', 'forearm.L', 'hand.R', 'hand.L',
+                             'thumb_01.R', 'pinky_01.R', 'ring_01.R',
+                             'middle_01.R', 'index_01.R', 'thumb_01.L',
+                             'pinky_01.L', 'ring_01.L', 'middle_01.L',
+                             'index_01.L', 'thumb_02.R', 'pinky_02.R',
+                             'ring_02.R', 'middle_02.R', 'index_02.R',
+                             'thumb_02.L', 'pinky_02.L', 'ring_02.L',
+                             'middle_02.L', 'index_02.L', 'thumb_03.R',
+                             'pinky_03.R', 'ring_03.R', 'middle_03.R',
+                             'index_03.R', 'thumb_03.L', 'pinky_03.L',
+                             'ring_03.L', 'middle_03.L', 'index_03.L'].
+                             (sample.py)
+                    INFO     Starting sampling: 1 test cases × 1 reps in chunks
+                             of 1. (sample.py)
+                    INFO     --- rep #0 --- (sample.py)
+                    INFO     motion_edit: RiderFinishIdle-Animation-000.npz →
+                             valid_length=60 (sample + GT will be saved at this
+                             length). (sample.py)
+[10/05/26 08:47:40] INFO     rep#0 chunk[0:1] 10.33s for batch=1
+                             (10.326s/motion). (sample.py)
+[10/05/26 08:47:40] INFO     Saved motion features at
+                             [/Users/raynos/projects/games/rockhop/assets/blende
+                             r/hero-remaster/rider/finish-2026-10-05/unimate/dat
+                             a/trial02/sample/motion_edit/motions/RiderFinishIdl
+                             e-Animation-000-rep_0-0.npy] (visualization.py)
+                    INFO     Saved motion features at
+                             [/Users/raynos/projects/games/rockhop/assets/blende
+                             r/hero-remaster/rider/finish-2026-10-05/unimate/dat
+                             a/trial02/sample/motion_edit/motions/RiderFinishIdl
+                             e-Animation-000-gt_rep_0-0.npy] (visualization.py)

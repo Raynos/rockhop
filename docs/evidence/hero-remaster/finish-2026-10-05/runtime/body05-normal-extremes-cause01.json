@@ -1,0 +1,789 @@
+{
+  "status": "UNACCEPTED_BODY05_CUSTOM_FAN_NORMAL_AND_GEOMETRIC_FOLD_DIAGNOSIS",
+  "inputPins": {
+    "rawWitness": "harness/out/rider-finish/body05-normal-extremes01.json",
+    "rawWitnessSHA256": "dff83383f4c8f2db9ca7630799e6fa8e75e8ecd0c45bc3d04a342f10bdc868b9",
+    "rawReaderSHA256Executed": "acbbb3ef92d5f37f71f8baebdd0aac1e96444af2d5ee9fd1a85430a4568c4167"
+  },
+  "sourcePins": {
+    "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/finish-2026-10-05/construction/body05/natural-foundation.blend": "58c59f6e8b3e1a3c792e628040a137714fcf62f9ff8989578e2429a038e59661",
+    "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/finish-2026-10-05/construction/body05/authored-neck-fields.npz": "36277520249bcd2a8058a76c2f4a7595d7c460d3196e9bc59b3aa3a31690cb2d",
+    "/Users/raynos/projects/games/rockhop/harness/out/rider-finish/body05-intake01/report.json": "4937d207ee8da9f58cf2778b0e4635e094a66e3065440a94bc9229ba95c4494f",
+    "/Users/raynos/projects/games/rockhop/harness/out/rider-finish/body05-intake01/sample-0244.json.gz": "f21766a9bdfe2c7e2d3726ef4f1db34650af799d9ff557fb3e5c76c4b8f6dc57",
+    "/Users/raynos/projects/games/rockhop/harness/out/rider-finish/body05-intake01/sample-0128.json.gz": "05a969e1d45babb504bc34cce7b69c29280bcca3904960516583099280a2749b"
+  },
+  "algebraRecipeSHA256": "ca3e9ff63015c9fd5490bbaf562d0d700cafeaa23a9b9747d31ab3e7e1c89a42",
+  "exactSavedOwn51SkinRows": true,
+  "records": [
+    {
+      "region": "head",
+      "field": "full",
+      "sample": 244,
+      "corner": 206973,
+      "vertex": 43732,
+      "pointAncestry": [
+        39618.0,
+        39683.0,
+        0.7783094644546509
+      ],
+      "cornerAncestry": [
+        -1.0,
+        -1.0,
+        0.0
+      ],
+      "targetInfluenceCount": 2,
+      "targetRigidSingleBone": false,
+      "manualNativeMaximumLocalXYZErrorM": 7.306530997557849e-08,
+      "linearNativeTargetNormalVectorError": 1.9863025854633596,
+      "savedNativeTargetNormalWorldVectorError": 3.003707892533701e-08,
+      "rawTargetWeights": {
+        "neck": 0.018732460215687752,
+        "head": 0.9812675714492798
+      },
+      "packedUnchanged": true,
+      "packedTarget": [
+        16708,
+        16374
+      ],
+      "fanTopologyUnchanged": true,
+      "states": {
+        "rest": {
+          "nativeTargetDecodedNormalLocal": [
+            -0.12129724025726318,
+            0.7077009081840515,
+            0.6960219144821167
+          ],
+          "trueGeometryAngleWeightedFanNormalFloat64": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "newellGeometryAngleWeightedFanNormalFloat64": [
+            -2.0255134673228509e-07,
+            0.0,
+            0.9999999999999795
+          ],
+          "mixedRNAFaceToNormalizedDecodedCornerMeanMaximumVectorError": 3.136122722002216e-08,
+          "trueNewellToDirectCrossMaximumVectorError": 6.70233875048327e-06,
+          "fanPolygons": [
+            {
+              "polygon": 68991,
+              "trueDirectCrossNormalLocal": [
+                0.0,
+                -0.0,
+                1.0
+              ],
+              "trueArea2M2": 3.1060651740945355e-06,
+              "RNAFaceMixedNormalLocal": [
+                -0.055342480540275574,
+                0.7126617431640625,
+                0.6993213891983032
+              ]
+            },
+            {
+              "polygon": 68992,
+              "trueDirectCrossNormalLocal": [
+                0.0,
+                -0.0,
+                1.0
+              ],
+              "trueArea2M2": 1.2731434747663417e-06,
+              "RNAFaceMixedNormalLocal": [
+                -0.045279938727617264,
+                0.7139891386032104,
+                0.6986910700798035
+              ]
+            }
+          ]
+        },
+        "moving": {
+          "nativeTargetDecodedNormalLocal": [
+            0.7125145196914673,
+            0.10102616250514984,
+            -0.6943462491035461
+          ],
+          "trueGeometryAngleWeightedFanNormalFloat64": [
+            0.0,
+            0.0,
+            -1.0
+          ],
+          "newellGeometryAngleWeightedFanNormalFloat64": [
+            0.002698566068733215,
+            0.0,
+            -0.9999963588639573
+          ],
+          "mixedRNAFaceToNormalizedDecodedCornerMeanMaximumVectorError": 5.375914870088681e-08,
+          "trueNewellToDirectCrossMaximumVectorError": 0.001784566923226617,
+          "fanPolygons": [
+            {
+              "polygon": 68991,
+              "trueDirectCrossNormalLocal": [
+                0.0,
+                -0.0,
+                -1.0
+              ],
+              "trueArea2M2": 2.0874906358492318e-06,
+              "RNAFaceMixedNormalLocal": [
+                -0.5449522137641907,
+                0.5670138001441956,
+                0.6176750659942627
+              ]
+            },
+            {
+              "polygon": 68992,
+              "trueDirectCrossNormalLocal": [
+                0.0,
+                0.0,
+                1.0
+              ],
+              "trueArea2M2": 5.735302652715157e-06,
+              "RNAFaceMixedNormalLocal": [
+                -0.6426336765289307,
+                0.2631634473800659,
+                0.7195602059364319
+              ]
+            }
+          ]
+        }
+      },
+      "targetTrueFaceNormalRestMovingDot": -1.0,
+      "trueNewellPrecisionDoesNotExplainNearlyTwoVectorError": true
+    },
+    {
+      "region": "head",
+      "field": "four",
+      "sample": 244,
+      "corner": 206973,
+      "vertex": 43732,
+      "pointAncestry": [
+        39618.0,
+        39683.0,
+        0.7783094644546509
+      ],
+      "cornerAncestry": [
+        -1.0,
+        -1.0,
+        0.0
+      ],
+      "targetInfluenceCount": 2,
+      "targetRigidSingleBone": false,
+      "manualNativeMaximumLocalXYZErrorM": 7.306530997557849e-08,
+      "linearNativeTargetNormalVectorError": 1.9863025854633596,
+      "savedNativeTargetNormalWorldVectorError": 3.003707892533701e-08,
+      "rawTargetWeights": {
+        "neck": 0.018732460215687752,
+        "head": 0.9812675714492798
+      },
+      "packedUnchanged": true,
+      "packedTarget": [
+        16708,
+        16374
+      ],
+      "fanTopologyUnchanged": true,
+      "states": {
+        "rest": {
+          "nativeTargetDecodedNormalLocal": [
+            -0.12129724025726318,
+            0.7077009081840515,
+            0.6960219144821167
+          ],
+          "trueGeometryAngleWeightedFanNormalFloat64": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "newellGeometryAngleWeightedFanNormalFloat64": [
+            -2.0255134673228509e-07,
+            0.0,
+            0.9999999999999795
+          ],
+          "mixedRNAFaceToNormalizedDecodedCornerMeanMaximumVectorError": 3.136122722002216e-08,
+          "trueNewellToDirectCrossMaximumVectorError": 6.70233875048327e-06,
+          "fanPolygons": [
+            {
+              "polygon": 68991,
+              "trueDirectCrossNormalLocal": [
+                0.0,
+                -0.0,
+                1.0
+              ],
+              "trueArea2M2": 3.1060651740945355e-06,
+              "RNAFaceMixedNormalLocal": [
+                -0.055342480540275574,
+                0.7126617431640625,
+                0.6993213891983032
+              ]
+            },
+            {
+              "polygon": 68992,
+              "trueDirectCrossNormalLocal": [
+                0.0,
+                -0.0,
+                1.0
+              ],
+              "trueArea2M2": 1.2731434747663417e-06,
+              "RNAFaceMixedNormalLocal": [
+                -0.045279938727617264,
+                0.7139891386032104,
+                0.6986910700798035
+              ]
+            }
+          ]
+        },
+        "moving": {
+          "nativeTargetDecodedNormalLocal": [
+            0.7125145196914673,
+            0.10102616250514984,
+            -0.6943462491035461
+          ],
+          "trueGeometryAngleWeightedFanNormalFloat64": [
+            0.0,
+            0.0,
+            -1.0
+          ],
+          "newellGeometryAngleWeightedFanNormalFloat64": [
+            0.002698566068733215,
+            0.0,
+            -0.9999963588639573
+          ],
+          "mixedRNAFaceToNormalizedDecodedCornerMeanMaximumVectorError": 5.375914870088681e-08,
+          "trueNewellToDirectCrossMaximumVectorError": 0.001784566923226617,
+          "fanPolygons": [
+            {
+              "polygon": 68991,
+              "trueDirectCrossNormalLocal": [
+                0.0,
+                -0.0,
+                -1.0
+              ],
+              "trueArea2M2": 2.0874906358492318e-06,
+              "RNAFaceMixedNormalLocal": [
+                -0.5449522137641907,
+                0.5670138001441956,
+                0.6176750659942627
+              ]
+            },
+            {
+              "polygon": 68992,
+              "trueDirectCrossNormalLocal": [
+                0.0,
+                0.0,
+                1.0
+              ],
+              "trueArea2M2": 5.735302652715157e-06,
+              "RNAFaceMixedNormalLocal": [
+                -0.6426336765289307,
+                0.2631634473800659,
+                0.7195602059364319
+              ]
+            }
+          ]
+        }
+      },
+      "targetTrueFaceNormalRestMovingDot": -1.0,
+      "trueNewellPrecisionDoesNotExplainNearlyTwoVectorError": true
+    },
+    {
+      "region": "body",
+      "field": "full",
+      "sample": 128,
+      "corner": 26810,
+      "vertex": 4572,
+      "pointAncestry": [
+        8051.0,
+        8051.0,
+        0.0
+      ],
+      "cornerAncestry": [
+        30858.0,
+        30858.0,
+        0.0
+      ],
+      "targetInfluenceCount": 3,
+      "targetRigidSingleBone": false,
+      "manualNativeMaximumLocalXYZErrorM": 1.58368454909332e-07,
+      "linearNativeTargetNormalVectorError": 1.9837674666493574,
+      "savedNativeTargetNormalWorldVectorError": 2.718812790906731e-08,
+      "rawTargetWeights": {
+        "chest": 0.11769999563694,
+        "shoulder.R": 0.28850001096725464,
+        "upperArm.R": 0.5938000082969666
+      },
+      "packedUnchanged": true,
+      "packedTarget": [
+        1235,
+        24736
+      ],
+      "fanTopologyUnchanged": true,
+      "states": {
+        "rest": {
+          "nativeTargetDecodedNormalLocal": [
+            0.9372977614402771,
+            0.3120013475418091,
+            0.15533214807510376
+          ],
+          "trueGeometryAngleWeightedFanNormalFloat64": [
+            0.9571017017199067,
+            0.2579566169450562,
+            0.13196482993252504
+          ],
+          "newellGeometryAngleWeightedFanNormalFloat64": [
+            0.9571012996662621,
+            0.25795794250324783,
+            0.13196515478202292
+          ],
+          "mixedRNAFaceToNormalizedDecodedCornerMeanMaximumVectorError": 7.402656988579432e-08,
+          "trueNewellToDirectCrossMaximumVectorError": 3.6235421107483216e-06,
+          "fanPolygons": [
+            {
+              "polygon": 8936,
+              "trueDirectCrossNormalLocal": [
+                0.887878678089562,
+                0.3087294043374286,
+                0.3411123097916413
+              ],
+              "trueArea2M2": 0.00045288548160673,
+              "RNAFaceMixedNormalLocal": [
+                0.9152080416679382,
+                0.20262111723423004,
+                0.3483373820781708
+              ]
+            },
+            {
+              "polygon": 8937,
+              "trueDirectCrossNormalLocal": [
+                0.9681764799936521,
+                0.06037997833225732,
+                0.24287560973407288
+              ],
+              "trueArea2M2": 0.00037892112129620084,
+              "RNAFaceMixedNormalLocal": [
+                0.9374763369560242,
+                0.21881680190563202,
+                0.2706609070301056
+              ]
+            },
+            {
+              "polygon": 8938,
+              "trueDirectCrossNormalLocal": [
+                0.9456183173862129,
+                0.323162667491955,
+                0.03703900866858726
+              ],
+              "trueArea2M2": 0.00028447514815533665,
+              "RNAFaceMixedNormalLocal": [
+                0.9458250403404236,
+                0.31825825572013855,
+                0.0642387643456459
+              ]
+            },
+            {
+              "polygon": 8955,
+              "trueDirectCrossNormalLocal": [
+                0.9613611494571845,
+                0.19999163135060552,
+                0.18917739744505555
+              ],
+              "trueArea2M2": 0.0004171927315479141,
+              "RNAFaceMixedNormalLocal": [
+                0.923169732093811,
+                0.30442649126052856,
+                0.2346961945295334
+              ]
+            },
+            {
+              "polygon": 8956,
+              "trueDirectCrossNormalLocal": [
+                0.9160884188837072,
+                0.4003298988657097,
+                0.02275919289693756
+              ],
+              "trueArea2M2": 0.00028255700964622757,
+              "RNAFaceMixedNormalLocal": [
+                0.9092685580253601,
+                0.41494011878967285,
+                0.032486092299222946
+              ]
+            },
+            {
+              "polygon": 8957,
+              "trueDirectCrossNormalLocal": [
+                0.9577804766548759,
+                0.2874916741150186,
+                0.0022573996772157472
+              ],
+              "trueArea2M2": 0.0002792333896979657,
+              "RNAFaceMixedNormalLocal": [
+                0.9089428186416626,
+                0.4125169515609741,
+                -0.06043670326471329
+              ]
+            }
+          ]
+        },
+        "moving": {
+          "nativeTargetDecodedNormalLocal": [
+            -0.71076899766922,
+            -0.0595720000565052,
+            -0.7008984684944153
+          ],
+          "trueGeometryAngleWeightedFanNormalFloat64": [
+            -0.685293126441198,
+            -0.004984142676187518,
+            -0.7282502929448307
+          ],
+          "newellGeometryAngleWeightedFanNormalFloat64": [
+            -0.6852909628513584,
+            -0.004980854708824856,
+            -0.7282523514006857
+          ],
+          "mixedRNAFaceToNormalizedDecodedCornerMeanMaximumVectorError": 9.486223324639824e-08,
+          "trueNewellToDirectCrossMaximumVectorError": 6.314981546568473e-05,
+          "fanPolygons": [
+            {
+              "polygon": 8936,
+              "trueDirectCrossNormalLocal": [
+                -0.15722856500797605,
+                0.7007806144582132,
+                -0.6958345412129967
+              ],
+              "trueArea2M2": 5.468807103728379e-05,
+              "RNAFaceMixedNormalLocal": [
+                -0.6640192866325378,
+                0.15538395941257477,
+                0.731391966342926
+              ]
+            },
+            {
+              "polygon": 8937,
+              "trueDirectCrossNormalLocal": [
+                -0.845071519326135,
+                -0.26226243390296544,
+                -0.4659104452436224
+              ],
+              "trueArea2M2": 3.133953427162862e-05,
+              "RNAFaceMixedNormalLocal": [
+                -0.8410575985908508,
+                -0.528640866279602,
+                0.11472057551145554
+              ]
+            },
+            {
+              "polygon": 8938,
+              "trueDirectCrossNormalLocal": [
+                -0.7399193340856579,
+                -0.6420116417925086,
+                -0.20084927395717428
+              ],
+              "trueArea2M2": 0.00010579836948452829,
+              "RNAFaceMixedNormalLocal": [
+                -0.7260781526565552,
+                -0.6760743260383606,
+                -0.12543576955795288
+              ]
+            },
+            {
+              "polygon": 8955,
+              "trueDirectCrossNormalLocal": [
+                0.32991234229982785,
+                0.9407940860827385,
+                0.07787383379535198
+              ],
+              "trueArea2M2": 0.00010919712864353382,
+              "RNAFaceMixedNormalLocal": [
+                0.4036023020744324,
+                0.9146767258644104,
+                0.021718235686421394
+              ]
+            },
+            {
+              "polygon": 8956,
+              "trueDirectCrossNormalLocal": [
+                -0.6994577939522462,
+                0.3550507011468584,
+                -0.620240110033672
+              ],
+              "trueArea2M2": 8.936945960494571e-06,
+              "RNAFaceMixedNormalLocal": [
+                -0.32568708062171936,
+                0.8466768264770508,
+                -0.4207924008369446
+              ]
+            },
+            {
+              "polygon": 8957,
+              "trueDirectCrossNormalLocal": [
+                -0.6143415962872218,
+                -0.7204514420195106,
+                -0.32176718720726555
+              ],
+              "trueArea2M2": 0.00012423232881409656,
+              "RNAFaceMixedNormalLocal": [
+                -0.8888149261474609,
+                -0.06029324233531952,
+                -0.45428287982940674
+              ]
+            }
+          ]
+        }
+      },
+      "targetTrueFaceNormalRestMovingDot": -0.16060603637027152,
+      "trueNewellPrecisionDoesNotExplainNearlyTwoVectorError": true
+    },
+    {
+      "region": "body",
+      "field": "four",
+      "sample": 128,
+      "corner": 26810,
+      "vertex": 4572,
+      "pointAncestry": [
+        8051.0,
+        8051.0,
+        0.0
+      ],
+      "cornerAncestry": [
+        30858.0,
+        30858.0,
+        0.0
+      ],
+      "targetInfluenceCount": 3,
+      "targetRigidSingleBone": false,
+      "manualNativeMaximumLocalXYZErrorM": 1.58368454909332e-07,
+      "linearNativeTargetNormalVectorError": 1.9837672260672017,
+      "savedNativeTargetNormalWorldVectorError": 4.281531739128499e-08,
+      "rawTargetWeights": {
+        "chest": 0.11769999563694,
+        "shoulder.R": 0.28850001096725464,
+        "upperArm.R": 0.5938000082969666
+      },
+      "packedUnchanged": true,
+      "packedTarget": [
+        1235,
+        24736
+      ],
+      "fanTopologyUnchanged": true,
+      "states": {
+        "rest": {
+          "nativeTargetDecodedNormalLocal": [
+            0.9372977614402771,
+            0.3120013475418091,
+            0.15533214807510376
+          ],
+          "trueGeometryAngleWeightedFanNormalFloat64": [
+            0.9571017017199067,
+            0.2579566169450562,
+            0.13196482993252504
+          ],
+          "newellGeometryAngleWeightedFanNormalFloat64": [
+            0.9571012996662621,
+            0.25795794250324783,
+            0.13196515478202292
+          ],
+          "mixedRNAFaceToNormalizedDecodedCornerMeanMaximumVectorError": 7.402656988579432e-08,
+          "trueNewellToDirectCrossMaximumVectorError": 3.6235421107483216e-06,
+          "fanPolygons": [
+            {
+              "polygon": 8936,
+              "trueDirectCrossNormalLocal": [
+                0.887878678089562,
+                0.3087294043374286,
+                0.3411123097916413
+              ],
+              "trueArea2M2": 0.00045288548160673,
+              "RNAFaceMixedNormalLocal": [
+                0.9152080416679382,
+                0.20262111723423004,
+                0.3483373820781708
+              ]
+            },
+            {
+              "polygon": 8937,
+              "trueDirectCrossNormalLocal": [
+                0.9681764799936521,
+                0.06037997833225732,
+                0.24287560973407288
+              ],
+              "trueArea2M2": 0.00037892112129620084,
+              "RNAFaceMixedNormalLocal": [
+                0.9374763369560242,
+                0.21881680190563202,
+                0.2706609070301056
+              ]
+            },
+            {
+              "polygon": 8938,
+              "trueDirectCrossNormalLocal": [
+                0.9456183173862129,
+                0.323162667491955,
+                0.03703900866858726
+              ],
+              "trueArea2M2": 0.00028447514815533665,
+              "RNAFaceMixedNormalLocal": [
+                0.9458250403404236,
+                0.31825825572013855,
+                0.0642387643456459
+              ]
+            },
+            {
+              "polygon": 8955,
+              "trueDirectCrossNormalLocal": [
+                0.9613611494571845,
+                0.19999163135060552,
+                0.18917739744505555
+              ],
+              "trueArea2M2": 0.0004171927315479141,
+              "RNAFaceMixedNormalLocal": [
+                0.923169732093811,
+                0.30442649126052856,
+                0.2346961945295334
+              ]
+            },
+            {
+              "polygon": 8956,
+              "trueDirectCrossNormalLocal": [
+                0.9160884188837072,
+                0.4003298988657097,
+                0.02275919289693756
+              ],
+              "trueArea2M2": 0.00028255700964622757,
+              "RNAFaceMixedNormalLocal": [
+                0.9092685580253601,
+                0.41494011878967285,
+                0.032486092299222946
+              ]
+            },
+            {
+              "polygon": 8957,
+              "trueDirectCrossNormalLocal": [
+                0.9577804766548759,
+                0.2874916741150186,
+                0.0022573996772157472
+              ],
+              "trueArea2M2": 0.0002792333896979657,
+              "RNAFaceMixedNormalLocal": [
+                0.9089428186416626,
+                0.4125169515609741,
+                -0.06043670326471329
+              ]
+            }
+          ]
+        },
+        "moving": {
+          "nativeTargetDecodedNormalLocal": [
+            -0.7107685208320618,
+            -0.05957441031932831,
+            -0.7008986473083496
+          ],
+          "trueGeometryAngleWeightedFanNormalFloat64": [
+            -0.6852931497419542,
+            -0.004985265435264769,
+            -0.7282502633334857
+          ],
+          "newellGeometryAngleWeightedFanNormalFloat64": [
+            -0.6852906537484154,
+            -0.004983327246486686,
+            -0.7282526253537464
+          ],
+          "mixedRNAFaceToNormalizedDecodedCornerMeanMaximumVectorError": 1.0681726892195078e-07,
+          "trueNewellToDirectCrossMaximumVectorError": 6.314981546568473e-05,
+          "fanPolygons": [
+            {
+              "polygon": 8936,
+              "trueDirectCrossNormalLocal": [
+                -0.15722856500797605,
+                0.7007806144582132,
+                -0.6958345412129967
+              ],
+              "trueArea2M2": 5.468807103728379e-05,
+              "RNAFaceMixedNormalLocal": [
+                -0.6640194058418274,
+                0.15538091957569122,
+                0.731392502784729
+              ]
+            },
+            {
+              "polygon": 8937,
+              "trueDirectCrossNormalLocal": [
+                -0.845071519326135,
+                -0.26226243390296544,
+                -0.4659104452436224
+              ],
+              "trueArea2M2": 3.133953427162862e-05,
+              "RNAFaceMixedNormalLocal": [
+                -0.8410574197769165,
+                -0.5286413431167603,
+                0.11471978574991226
+              ]
+            },
+            {
+              "polygon": 8938,
+              "trueDirectCrossNormalLocal": [
+                -0.7399185306731816,
+                -0.6420129511725787,
+                -0.20084804826812774
+              ],
+              "trueArea2M2": 0.0001057982276690559,
+              "RNAFaceMixedNormalLocal": [
+                -0.726075291633606,
+                -0.6760771870613098,
+                -0.12543658912181854
+              ]
+            },
+            {
+              "polygon": 8955,
+              "trueDirectCrossNormalLocal": [
+                0.32991234229982785,
+                0.9407940860827385,
+                0.07787383379535198
+              ],
+              "trueArea2M2": 0.00010919712864353382,
+              "RNAFaceMixedNormalLocal": [
+                0.4036032259464264,
+                0.9146763682365417,
+                0.021718138828873634
+              ]
+            },
+            {
+              "polygon": 8956,
+              "trueDirectCrossNormalLocal": [
+                -0.6994577939522462,
+                0.3550507011468584,
+                -0.620240110033672
+              ],
+              "trueArea2M2": 8.936945960494571e-06,
+              "RNAFaceMixedNormalLocal": [
+                -0.3256867825984955,
+                0.846677303314209,
+                -0.4207915961742401
+              ]
+            },
+            {
+              "polygon": 8957,
+              "trueDirectCrossNormalLocal": [
+                -0.6143405156119115,
+                -0.720452877038506,
+                -0.32176603743190507
+              ],
+              "trueArea2M2": 0.00012423216324686942,
+              "RNAFaceMixedNormalLocal": [
+                -0.8888139724731445,
+                -0.06029645353555679,
+                -0.45428401231765747
+              ]
+            }
+          ]
+        }
+      },
+      "targetTrueFaceNormalRestMovingDot": -0.16060603637027152,
+      "trueNewellPrecisionDoesNotExplainNearlyTwoVectorError": true
+    }
+  ],
+  "finding": "Both current extreme corners are nonrigid with nonzero unchanged packed custom normals and stable fan topology. Their geometry deforms and true face directions change substantially. New head target triangle68991 flips true orientation+Z to-Z under turn; the original body reach fan also changes. Native custom vectors are fan-relative evaluated outputs and do not follow the linear blended-vector hypothesis at these witnesses.",
+  "readerSemanticCorrection": "The raw reader faceNormalLocal is Blender polygon_normals, experimentally equal to normalized means of decoded custom corner normals. It is not the true geometric face normal with these packed values. Its automaticFanAngleWeightedNormalLocal and newellToFaceVectorError fields are invalid geometric-fan/cancellation comparisons and must not be used. This algebra derives geometric fans from recorded localXYZ direct crosses/Newell separately.",
+  "limits": [
+    "True geometric fan is reconstructed with float64 angle weighting; Blender approximate acos/custom fan-space basis decoding is not fully reproduced.",
+    "An observed face orientation change is a finite deformation witness, not a continuous self-contact or signed-volume certificate.",
+    "True float32 Newell/direct-cross error is small relative to near2 failure here; the prior rigid packedzero turn244 precision cause is not a general explanation.",
+    "No normal parity pass, exclusion, relaxed tolerance, source mutation, GLB/GPU, played-art, contact or device acceptance."
+  ]
+}

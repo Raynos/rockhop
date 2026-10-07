@@ -998,3 +998,5 @@ Execution49 body07fixed shoulder fields save/reopen successfully (native27d123d9
 Execution50 exact saved51 native capture and parent readback pass: body/head XYZ, triangles and raw FULL/FOUR match authored49 exactly; all ten copied poses/skin/boneWorld exact, body preflight/native maximum0.000000463m. Original34/own51/protected head/UV/PBR remain exact. Boxer triangulation/corner triples fail at landing302 in both fields. Evidence: `../evidence/hero-remaster/finish-2026-10-05/runtime/savedpose-capture01/parent-readback50.json`. User requests a pause and fresh-agent handoff before contacts51 + ordinary gate51; allF/Mgates open, no promotion.
 
 Pause preservation retains eight source/trial NPZ archives and dormant shoulder preparation unchanged; current candidate remains native49/capture50.
+
+Pause preservation retains historical body02/body05 diagnosis and UniMate pilot traces separately from current native49/capture50.

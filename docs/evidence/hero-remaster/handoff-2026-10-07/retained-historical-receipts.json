@@ -1,0 +1,63 @@
+{
+  "status": "HISTORICAL_UNACCEPTED_DIAGNOSTICS_PRESERVED",
+  "files": [
+    {
+      "path": "docs/evidence/hero-remaster/finish-2026-10-05/runtime/body02-contact-witness-classification.json",
+      "sha256": "23dced549d0a1c45e52600e05324fec411e39f6a3100e74d9b5dc6c033d43a31",
+      "bytes": 2487528
+    },
+    {
+      "path": "docs/evidence/hero-remaster/finish-2026-10-05/runtime/body02-contacts.json",
+      "sha256": "df3e63c477b5525996606707c3149eb535b5eaae9ea3a6d6f8ba6156407f7cbd",
+      "bytes": 1091998
+    },
+    {
+      "path": "docs/evidence/hero-remaster/finish-2026-10-05/runtime/body02-export-check.json",
+      "sha256": "a5331ccf9cf05c93e46809f9459d16aec758cdca03de8e6ce19255c5a6ad0bd9",
+      "bytes": 515447
+    },
+    {
+      "path": "docs/evidence/hero-remaster/finish-2026-10-05/runtime/body02-export-mapping.json",
+      "sha256": "7460faefdbe2704f172122148c23e865aed26ea1a24a188c74c49384810e36b4",
+      "bytes": 4777
+    },
+    {
+      "path": "docs/evidence/hero-remaster/finish-2026-10-05/runtime/body02-source-rest-contacts.json",
+      "sha256": "3c255425be27ff0deb2ae2d4d6376af699fa1e410bf2635d92f6329b346c9290",
+      "bytes": 43446
+    },
+    {
+      "path": "docs/evidence/hero-remaster/finish-2026-10-05/runtime/body05-normal-extremes-cause01.json",
+      "sha256": "667d99e556a9946f10ccb88a01b40427dd9449c1955d983ccac04774a8eb91ee",
+      "bytes": 26663
+    },
+    {
+      "path": "docs/evidence/hero-remaster/finish-2026-10-05/unimate/trial02/inference.txt",
+      "sha256": "9fa3349d32f1aae65105922c0dc9cd6c8c05cf06f4ff7c8971c7f9a8016bf7a9",
+      "bytes": 7224,
+      "rawLocalLog": {
+        "path": "docs/evidence/hero-remaster/finish-2026-10-05/unimate/trial02/inference.raw.log",
+        "sha256": "cd879492042c66112c66fc0d77a1cbda8a7103e3757fb15c9540327a773487b9",
+        "bytes": 8391
+      },
+      "transform": "Readable transcript: trailing line padding removed; exact original bytes retained in ignored rawLocalLog."
+    },
+    {
+      "path": "docs/evidence/hero-remaster/finish-2026-10-05/unimate/trial02/preprocess.txt",
+      "sha256": "2e42b2908ae77599491ac0c6b5ed7ae0dc1754a0d2a7dcfe059a84313e1e2c79",
+      "bytes": 4772,
+      "rawLocalLog": {
+        "path": "docs/evidence/hero-remaster/finish-2026-10-05/unimate/trial02/preprocess.raw.log",
+        "sha256": "2e42b2908ae77599491ac0c6b5ed7ae0dc1754a0d2a7dcfe059a84313e1e2c79",
+        "bytes": 4772
+      },
+      "transform": "Readable transcript: trailing line padding removed; exact original bytes retained in ignored rawLocalLog."
+    }
+  ],
+  "limits": [
+    "Preserves existing body02 diagnostics/body05 normal cause report and UniMate pilot stdout, not new qualification.",
+    "Current candidate is body07; no body02 export/contact or body05 normal result may be relabeled as a current candidate pass.",
+    "UniMate pilot remains unqualified and unadopted.",
+    "Two stdout transcripts remove trailing line padding to satisfy whitespace hooks; original raw log bytes remain local with exact pins. No substantive output changed."
+  ]
+}
