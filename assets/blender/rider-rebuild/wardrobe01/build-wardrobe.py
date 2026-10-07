@@ -195,6 +195,14 @@ def buildWardrobe(body, rig, out):
                 edge_count[key][0] += 1
         boundaries = [directed for count, directed in edge_count.values() if count == 1]
         face_mats = [0] * len(faces)
+        collar_boundary = []
+        if name == "RiderHoodie":
+            # Centroid selection left the neck edge on alternating source loop
+            # heights. Retain the same chart/FOUR rows, regularize only its rim.
+            collar_boundary = sorted({vi for edge in boundaries for vi in edge
+                                      if source[indices[vi]].z > 1.37})
+            for vi in collar_boundary:
+                points[vi].z = co(0, 0, 1.408).z
         # Open boundary gets an inward lip, never a blind wrist/ankle cap.
         rim_indices = {}
         thickness = .0025 if region == 6 else .004
@@ -211,6 +219,12 @@ def buildWardrobe(body, rig, out):
         reports[-1]["boundaryEdges"] = len(boundaries)
         reports[-1]["openWearableLips"] = True
         reports[-1]["sourceBodyFaces"] = [p.index for p in selected]
+        if collar_boundary:
+            reports[-1]["regularCollar"] = {
+                "sourcePlaneZ": 1.408,
+                "nativeBoundaryPointIds": collar_boundary,
+                "sourcePointIds": [indices[vi] for vi in collar_boundary],
+                "field": "retained exact source FOUR row; only boundary XYZ displaced"}
         return result
 
     def hoodie_ease(point, p, n):
@@ -263,6 +277,8 @@ def buildWardrobe(body, rig, out):
                   .035, .028, .021, leather, 6, 32)
     ring_band("RiderHoodieHem", co(0, -.020, 1.002), (1, 0, 0), (0, 1, 0),
               .151 * scale, .109 * scale, .035, rib, 4, 64)
+    ring_band("RiderHoodieCollar", co(0, -.005, 1.408), (1, 0, 0), (0, 1, 0),
+              .080 * scale, .070 * scale, .014, rib, 4, 64)
     ring_band("RiderJeansWaist", co(0, -.026, 1.012), (1, 0, 0), (0, 1, 0),
               .139 * scale, .099 * scale, .029, denim, 5, 64)
 
@@ -336,10 +352,10 @@ def buildWardrobe(body, rig, out):
         lateral = Vector((forward.y, -forward.x, 0))
         upper_points, upper_ids, upper_faces, upper_uv = [], [], [], []
         count = 48
-        upper_rings = [(.211, -.025, .055, .140, .038),
-                       (.211, -.020, .054, .133, .077),
-                       (.183, .043, .044, .075, .121),
-                       (.1694, .05835, .037, .043, .160)]
+        upper_rings = [(.211, -.025, .070, .155, .038),
+                       (.211, -.020, .071, .153, .080),
+                       (.183, .043, .050, .085, .125),
+                       (.1694, .05835, .041, .050, .165)]
         for row, (cx, cy, rw, rl, z) in enumerate(upper_rings):
             for j in range(count):
                 angle = math.tau * j / count
@@ -360,12 +376,12 @@ def buildWardrobe(body, rig, out):
         mesh_object("RiderShoeUpper." + side, upper_points, upper_faces, upper_ids,
                     [leather], face_uvs=upper_uv, region=7)
         points, ids = [], []
-        for z, spread in ((.006, 1), (.029, 1.025), (.046, .98)):
+        for z, spread in ((source_floor - .003, 1), (.016, 1.015), (.041, 1)):
             for j in range(count):
                 a = math.tau * j / count
                 xy = Vector((sign * .211, -.025, 0)) + \
-                    lateral * (.057 * math.cos(a) * spread) + \
-                    forward * (.142 * math.sin(a) * spread)
+                    lateral * (.072 * math.cos(a) * spread) + \
+                    forward * (.157 * math.sin(a) * spread)
                 pt = co(xy.x, xy.y, z)
                 points.append(pt)
                 ids.append(all_tree.find(pt)[1])

@@ -1055,3 +1055,5 @@ October7 assembled native checkpoint [Combined01](../evidence/rider-rebuild/cons
 October7 private intake [helper](../../harness/rider-rebuild/README.md) explicitly admits bounded16.45ppm float32 residual at1e-4 without mutating sourceTRS or inversebinds;8targeted tests pass. This approximation is provisional; exact native/runtime parity remains open.
 
 October7 first [actual-engine intake](../evidence/rider-rebuild/runtime01/README.md) builds complete dressed candidate into existingGarage/game privately. Six actualassembly tests and low/high clear/crash/instantrestart pass with byte-identical physics finish; playedGarage reveals appearance corrections. Current ride barreach fails; newbody anthropometrics and jointfit correction pending.
+
+October7 [appearance02](../evidence/rider-rebuild/construction01/combined02/README.md) corrects toes/neckline/hair/skin in the actualGarage on unchangedrig03;39490triangles/75sharedjoints. Rearhoodiehem tabs remain, native anatomical armfit04 and physicalnewbody reach pending. No final art/player/device approval.

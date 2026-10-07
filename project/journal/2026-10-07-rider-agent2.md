@@ -95,3 +95,9 @@ Finding: Private actual-engine adapter consumes complete new75joint wearer and a
 Validation: Parent helper8tests and actualassembly6tests pass; actualWebKit low/high4810tick clear/hash/finishbytes match, crash103/restart0ticks3–5ms; rootplayed fullGarage orbit with26visibleprimitives.
 
 Limits: Gripreach fails28–116mm underoldprofile; anatomy/anthropometric correction and shoe/collar/face appearance02 pending. No art/contact/device acceptance.
+
+Finding: Appearance02 fixes firstactualGarage baretoe and neckedge defects on the samebody/rig. Added continuoushairline/brows and darker skin; originalsource wearer unchanged.
+
+Validation: Parent source/inputsha checks; guardednative export; actualGarage frames showcoveredtoes/smoothneckline.75joints/28primitives/39490triangles normalizedFOUR, sourceattributes exported.
+
+Limits: Rearlowerhoodiehem jaggedtabs stillvisible; fullplayed02 review and bike/contact/art/device gates open.
