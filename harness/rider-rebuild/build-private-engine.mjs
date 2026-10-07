@@ -13,6 +13,26 @@ for (const name of ['source', 'contract', 'out']) if (!arg(name)) throw new Erro
 if (out === root || out === path.join(root, 'public') || fs.existsSync(path.join(out, 'hero-review.json'))) throw new Error('Use a fresh private output directory');
 const sourceBytes = fs.readFileSync(source), metadataBytes = fs.readFileSync(contract);
 const metadata = { ...JSON.parse(metadataBytes), sourceSHA256: sha(sourceBytes), metadataSHA256: sha(metadataBytes) };
+const calibrationPath = arg('pose-calibration') ? path.resolve(arg('pose-calibration')) : null;
+const calibration = calibrationPath ? JSON.parse(fs.readFileSync(calibrationPath, 'utf8')) : null;
+if (calibration) {
+  if (calibration.sourceSHA256 !== sha(sourceBytes)) throw new Error('Pose calibration source changed');
+  Object.assign(metadata.driver, calibration.driver);
+}
+// Runtime mass calibration consumes five native head/tail correspondences only.
+// Full 75-joint names/roles/parents remain captured and checked on the loaded rig;
+// do not ship unused native 4x4 matrices inside private player JavaScript.
+const first = value => Array.isArray(value) ? value[0] : value;
+const endpointIds = [first(metadata.specification.roles.head), ...['left', 'right'].flatMap(side => {
+  const suffix = side === 'left' ? 'Left' : 'Right';
+  return [first(metadata.specification.roles['toe' + suffix] ?? metadata.specification.roles['foot' + suffix]),
+    metadata.specification.hands[side].digits.middle.at(-1)];
+})];
+const endpointNames = new Set(endpointIds.map(id => metadata.specification.jointNames[id]));
+const runtimeMetadata = { sourceSHA256: metadata.sourceSHA256, metadataSHA256: metadata.metadataSHA256,
+  specification: metadata.specification, driver: metadata.driver,
+  nativeRest: { frame: metadata.nativeRest.frame, bones: metadata.nativeRest.bones.filter(row => endpointNames.has(row.name))
+    .map(({ name, head, tail }) => ({ name, head, tail })) } };
 if (arg('garage-clip')) metadata.driver.garageClip = arg('garage-clip');
 if (arg('near-similarity')) metadata.driver.nearSimilarityTolerance = Number(arg('near-similarity'));
 const originalPath = path.join(root, 'harness/hero-remaster/build.mts'), original = fs.readFileSync(originalPath, 'utf8');
@@ -21,7 +41,7 @@ const replacements = [
   ["'../../src/boot/model-catalog'", JSON.stringify(path.join(root, 'src/boot/model-catalog.ts'))],
   ["'./new-rider-private-adapter.mjs'", JSON.stringify(path.join(root, 'harness/hero-remaster/new-rider-private-adapter.mjs'))],
   ["'./new-rider-hip-corrective.mjs'", JSON.stringify(path.join(root, 'harness/hero-remaster/new-rider-hip-corrective.mjs'))],
-  ['plugins: [adapterPlugin, plugin]', `plugins: [privateEnginePlugin(${JSON.stringify(metadata)}), adapterPlugin, plugin]`],
+  ['plugins: [adapterPlugin, plugin]', `plugins: [privateEnginePlugin(${JSON.stringify(runtimeMetadata)}), adapterPlugin, plugin]`],
 ];
 let generated = `import { privateEnginePlugin } from ${JSON.stringify(pluginPath)};\n` + original;
 for (const [before, after] of replacements) {
@@ -36,6 +56,8 @@ fs.writeFileSync(driverPath, generated); fs.writeFileSync(mappingPath, JSON.stri
 fs.writeFileSync(path.join(out, 'rider-rebuild-inputs.json'), JSON.stringify({
   releaseBuild: false, source, contract, sourceSHA256: sha(sourceBytes), metadataSHA256: sha(metadataBytes),
   actualBuildRecipe: { path: originalPath, sha256: sha(original) },
+  runtimeMetadataSHA256: sha(JSON.stringify(runtimeMetadata)),
+  poseCalibration: calibrationPath ? { path: calibrationPath, sha256: sha(fs.readFileSync(calibrationPath)), driver: calibration.driver } : null,
   adapter: ['private-rider.mjs', 'private-engine-plugin.mjs', 'new-humanoid-contract.mjs', 'anthropometric-inverse.mjs'].map(name => {
     const file = path.join(root, 'harness/rider-rebuild', name); return { path: file, sha256: sha(fs.readFileSync(file)) };
   }), modelSlots: Object.keys(mapping),

@@ -1071,3 +1071,5 @@ October7 [boundary03 structural proposal](../evidence/rider-rebuild/wardrobe01/b
 October7 [completecalibrated04](../evidence/rider-rebuild/construction01/combined04/README.md) pins native04/wardrobe03/actualsolebottoms together. Parentbinaryreadback confirms10582bodypositions unchanged andeyes nowathead. Tinyexportweightpruning/FULLloss explicitlyopen; nextactualGarage/game judgments allfourgarments together.
 
 October7 [independentfrozen04 audit](../evidence/rider-rebuild/construction02/README.md): rootrerun confirms connected10582pointbody/75joint parentcontract and subµm restresiduals, but12tinyFOUR bodyrows are prunedbyexporter≤.0001. NativeGPU exactfield/FULLloss motion gates explicitlyopen.
+
+October7 [actual-engine03 candidate](../evidence/rider-rebuild/runtime02/ENGINE03.md) usesexact04 anatomy,45degreepalm and≤10degree upperspine withactualCOM/carrier preserved.11CPUtests andunchangedJS/inlinebudgets pass; steadysocketcenters≤4.4032mm. Dynamicrealgame/glovebar surfaces/wholeclothedart stillunaccepted.

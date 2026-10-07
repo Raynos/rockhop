@@ -143,3 +143,9 @@ Finding: Independentfrozen04 native/export audit verifiescoherenttopology/bindco
 Validation: Parent rerunsread-only audit;10582connectedsourcepoints/75exacthierarchy, restheadsmax.772µm/LBSpositions.987µm.12rowprunes,maxweighterror.0000941177 confirmed; installedexporterhardcodes≤.0001 cutoff.
 
 Limits: Statictransport only; FULLloss.2531 nearwrists/neck/pelvis stillneedsmovingerror measurements. No art/contact/device approval.
+
+Finding: Exactnative04 privatepose uses anatomical45degree downwardpalm and bounded≤10degree upperspine workspace table, actualCOM/carrier preserved. Build keeps existing701KiBJS/8192Binline limits by awaiting compressedcalibration inexisting catalog withhonestloadreceipts.
+
+Validation: Parent source review and11actualCPUtests pass onexact04/selectedcalibration includingmetadatarequestsharing/retry; steady41targets maxsocketgap4.4032mm. Actualbuild JS717176B≤717824B andinline8176B≤8192B.
+
+Limits: Centerproximity isnotactualglovesurface/phalange/handlebar clearance; dynamicphysicsCOM andmovingart/device review next.

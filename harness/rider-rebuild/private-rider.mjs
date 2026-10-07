@@ -44,7 +44,6 @@ function alignPalm(forward, normal, wantedForward, wantedNormal) {
 }
 
 export function createPrivateRiderClass(metadata) {
-  fail(metadata.driver?.assetToBikeQuaternionXYZW?.length === 4, 'Declare asset-to-bike orientation');
   return class GltfRider {
     root = new THREE.Group();
     placement = new THREE.Group();
@@ -68,6 +67,7 @@ export function createPrivateRiderClass(metadata) {
     soleFrames = new Map();
 
     constructor(gltf, lib) {
+      fail(metadata.driver?.assetToBikeQuaternionXYZW?.length === 4, 'Declare asset-to-bike orientation');
       this.source = gltf;
       this.scene = cloneSkeleton(gltf.scene);
       this.binding = bindHumanoidContract(this.scene, captureHumanoidContract(this.scene, loadedSpecification(metadata, this.scene)));
@@ -107,6 +107,13 @@ export function createPrivateRiderClass(metadata) {
         jointNames: Object.fromEntries([...this.binding.byId].map(([id, bone]) => [id, bone.name])),
         contractSchema: this.binding.contract.schema, geometry: 'author FOUR unchanged; no legacy sleeve conditioning',
         massApproximation: this.anthropometry.approximation,
+        materials: this.materials.map(material => ({ name: material.name, baseColor: material.color?.toArray(),
+          roughness: material.roughness, metalness: material.metalness,
+          maps: Object.fromEntries(['map', 'normalMap', 'roughnessMap', 'metalnessMap'].map(key => {
+            const texture = material[key], data = texture?.source?.data;
+            return [key, texture ? { loaded: !!data, width: data?.width ?? null, height: data?.height ?? null,
+              colorSpace: texture.colorSpace } : null];
+          })) })),
       };
       this.scene.traverse(node => {
         if (node.isMesh) this.debug.candidate.visibleMeshes.push({ name: node.name, skinned: !!node.isSkinnedMesh, triangles: (node.geometry.index?.count ?? node.geometry.attributes.position.count) / 3 });
@@ -226,16 +233,28 @@ export function createPrivateRiderClass(metadata) {
 
     poseRiding(frame) {
       const p = this.physicsTarget(frame), started = performance.now();
+      const table = this.driver.spineFlexTable ?? [[-1, 0], [1, 0]];
+      const lean = this.stage ? 0 : frame.rider.lean;
+      let spineFlex = table[0][1];
+      for (let i = 1; i < table.length; i++) {
+        if (lean > table[i][0]) { spineFlex = table[i][1]; continue; }
+        const t = Math.max(0, (lean - table[i - 1][0]) / (table[i][0] - table[i - 1][0]));
+        spineFlex = table[i - 1][1] + (table[i][1] - table[i - 1][1]) * t; break;
+      }
+      fail(Number.isFinite(spineFlex) && Math.abs(spineFlex) <= (this.driver.maxSpineFlexRadians ?? 0), 'Spine flex exceeds declared anatomical bound');
       const evaluate = hips => {
         resetHumanoidPose(this.binding); this.debug.fullResetCount++;
-        this.poseFromHips(frame, p, hips);
+        this.poseFromHips(frame, p, hips, spineFlex);
         return this.toBike(measureAnthropometricCOM(this, this.anthropometry));
       };
       const inverse = invertAnthropometricCOM(evaluate, p.requestedCOM, [p.hips.x, p.hips.y], 8);
       evaluate(inverse.hips);
       this.debug.comResidual = inverse.residualM;
       this.debug.anthropometry = { ...inverse, requestedCOM: p.requestedCOM.toArray(),
-        carrierAngle: p.torsoAngle, spineFlexRadians: 0, elapsedMs: performance.now() - started };
+        carrierAngle: p.torsoAngle, spineFlexRadians: spineFlex, elapsedMs: performance.now() - started,
+        articulationRule: this.driver.spineFlexTable ? 'Source-specific input-lean table; physical COM and carrier preserved' : 'Fixed upper spine',
+        palmForwardBike: this.driver.palmForwardBike ?? [1, -0.25, 0],
+        contactLimit: 'Socket center residual only; no glove surface/bar radius or phalange penetration qualification' };
       this.debug.physicalPose = !this.stage && !!frame.riderBody.present;
       this.debug.stageClip = this.stage ? 'measured riding IK + breathing' : null;
       Object.assign(this.debug.stance, { on: true, pose: frame.rider.lean < 0 ? 'back' : frame.rider.lean > 0 ? 'forward' : 'seated', blend: Math.abs(frame.rider.lean), lean: frame.rider.lean });

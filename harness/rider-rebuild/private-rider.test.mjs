@@ -21,6 +21,11 @@ const skip = !available ? 'External unaccepted assembly is absent' : false;
 const metadata = available ? JSON.parse(fs.readFileSync(metadataPath)) : {};
 if (available) metadata.sourceSHA256 = crypto.createHash('sha256').update(fs.readFileSync(source)).digest('hex');
 if (available) metadata.driver.nearSimilarityTolerance = 1e-4; // Explicit measured 16.5ppm native-rest residual, source TRS retained.
+if (process.env.RIDER_REBUILD_POSE_CALIBRATION) {
+  const calibration = JSON.parse(fs.readFileSync(process.env.RIDER_REBUILD_POSE_CALIBRATION));
+  assert.equal(calibration.sourceSHA256, metadata.sourceSHA256);
+  Object.assign(metadata.driver, calibration.driver);
+}
 let loaded;
 async function instance() {
   loaded ??= await loadRigAt(pathToFileURL(source), true); // CPU images omitted; no disk modification/material acceptance.
@@ -42,13 +47,38 @@ const poseFrame = lean => {
 };
 const snapshot = rider => JSON.stringify([...rider.binding.byId].map(([id, bone]) => [id, bone.position.toArray(), bone.quaternion.toArray(), bone.scale.toArray(), bone.matrixWorld.toArray()]));
 
-test('private plugin replaces only rider adapter and scoped part merge', () => {
+test('private plugin scopes rider, part merge and awaited model-catalog metadata', () => {
   const plugin = privateEnginePlugin({ driver: { assetToBikeQuaternionXYZW: [0, 0, 0, 1] } });
   assert.equal(plugin.transform('untouched', '/src/main.ts'), null);
   assert.match(plugin.transform('legacy', '/src/render/hero/gltfRider.ts').code, /createPrivateRiderClass/);
   assert.ok(!plugin.transform('  mergeSkinnedByMaterial(root);', '/src/render/hero/lod.ts').code.includes('mergeSkinnedByMaterial(root)'));
   assert.throws(() => plugin.transform('changed call', '/src/render/hero/lod.ts'), /call changed/);
+  const loader = plugin.transform('              resolve(g);', '/src/render/hero/gltf.ts').code;
+  assert.match(loader, /loadPrivateRiderMetadata\(\)\.then\(\(\) => resolve\(g\)/);
+  assert.throws(() => plugin.transform('changed resolve', '/src/render/hero/gltf.ts'), /resolve changed/);
   plugin.buildEnd();
+});
+
+test('private metadata load shares a request, retries failure, and preserves actual catalog receipts', async () => {
+  const metadata = { driver: { assetToBikeQuaternionXYZW: [0, 0, 0, 1] } }, plugin = privateEnginePlugin(metadata);
+  const loader = plugin.transform('              resolve(g);', '/src/render/hero/gltf.ts').code;
+  const prefix = loader.split('\n              void')[0].replace('export const', 'const');
+  let requests = 0;
+  const get = new Function('fetch', 'document', `${prefix}\nreturn { load: loadPrivateRiderMetadata, metadata: privateRiderMetadata };`);
+  const module = get(async () => {
+    requests++;
+    if (requests === 1) throw new Error('temporary metadata failure');
+    return { ok: true, json: async () => ({ privateRiderMetadata: metadata }) };
+  }, { baseURI: 'http://private.test/index.html' });
+  await assert.rejects(module.load(), /temporary metadata failure/);
+  const a = module.load(), b = module.load(); assert.equal(a, b); await a;
+  assert.equal(requests, 2); assert.deepEqual(module.metadata, metadata);
+  const bundle = { 'model-catalog.json': { source: JSON.stringify({ models: ['actual-model'] }) },
+    'load-manifest.json': { source: JSON.stringify({ items: [{ path: './model-catalog.json', bytes: 0, gz: 0, phase: 'other' }] }) } };
+  plugin.generateBundle.handler({}, bundle);
+  const catalog = JSON.parse(bundle['model-catalog.json'].source), row = JSON.parse(bundle['load-manifest.json'].source).items[0];
+  assert.deepEqual(catalog.models, ['actual-model']); assert.deepEqual(catalog.privateRiderMetadata, metadata);
+  assert.equal(row.bytes, Buffer.byteLength(bundle['model-catalog.json'].source)); assert.ok(row.gz > 0); assert.equal(row.phase, 'other');
 });
 
 test('actual exported assembly loads all explicitly declared objects and the complete shared skeleton', { skip }, async () => {
@@ -71,6 +101,7 @@ test('actual forward/back/neutral targets retain finite full-hierarchy control a
     assert.ok(rider.debug.allBoneFinite); assert.ok(rider.debug.physicalPose);
     for (const err of [...rider.debug.gripErr, ...rider.debug.soleErr]) assert.ok(Number.isFinite(err) && err >= 0);
     assert.ok(rider.debug.gripAngleErr.every(angle => angle < 1e-5));
+    if (process.env.RIDER_REBUILD_POSE_CALIBRATION) assert.ok(Math.max(...rider.debug.gripErr, ...rider.debug.soleErr) < 0.005);
     assert.ok(rider.debug.comResidual < 1e-5);
     const measured = rider.toBike(measureAnthropometricCOM(rider, rider.anthropometry));
     assert.ok(measured.distanceTo(new THREE.Vector3().fromArray(rider.debug.anthropometry.requestedCOM)) < 1e-5);
