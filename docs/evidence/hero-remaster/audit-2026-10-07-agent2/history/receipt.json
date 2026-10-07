@@ -1,0 +1,436 @@
+{
+  "auditHead": "b48ac6d756199f013705d953929b8d9fe40c972f",
+  "sinceInclusive": "2026-10-02T00:00:00-05:00",
+  "scope": "All main-reachable commits, selected by Git committer-date traversal; dates below are author dates. Historical five-day work plus current October7 handoff.",
+  "commitCount": 551,
+  "distinctChangedPaths": 4349,
+  "authorDates": {
+    "2026-10-07": 8,
+    "2026-10-05": 60,
+    "2026-10-04": 115,
+    "2026-10-03": 302,
+    "2026-10-02": 66
+  },
+  "types": {
+    "docs": 103,
+    "design": 258,
+    "test": 138,
+    "art": 22,
+    "fix": 25,
+    "chore": 3,
+    "build": 1,
+    "feat": 1
+  },
+  "playerSourceOrModelChangedPaths": [],
+  "finishPlanCreationCommit": "c83490ccbca708735ab8bf323859a5a91dff9151",
+  "commitsAfterFinishPlanCreation": 62,
+  "limits": [
+    "Commit counts include preservation/documentation and are not accepted progress.",
+    "No model execution, Blender, gameplay, contact recomputation, movie playback or visual acceptance performed by this auditor. Parent judges.",
+    "Pinned HEAD prevents concurrent new commits from changing this audit scope."
+  ],
+  "sourceVerification": [
+    {
+      "path": ".tmp/generation-comparison-2026-10-03/user-agent2/qualified-hunyuan-paint06/paint/painted.glb",
+      "exists": true,
+      "bytes": 42329320,
+      "sha256": "800d7a9717757b90b296a78c605cddb698c68d399a96e403aa381103e77d2eba",
+      "expectedSHA256": "800d7a9717757b90b296a78c605cddb698c68d399a96e403aa381103e77d2eba",
+      "expectedMatch": true,
+      "committedAtAuditHead": false,
+      "ignored": false,
+      "name": "hoodie",
+      "glbVersion": 2,
+      "declaredBytes": 42329320,
+      "triangles": 921722,
+      "skins": 0,
+      "animations": 0
+    },
+    {
+      "path": ".tmp/generation-comparison-2026-10-03/user-agent2/items01/jeans/paint01/painted.glb",
+      "exists": true,
+      "bytes": 43271320,
+      "sha256": "7dbec82f2cc62c954685a00ef2dc484b3f7aede5fd8ee1d0b6887da288e1a788",
+      "expectedSHA256": "7dbec82f2cc62c954685a00ef2dc484b3f7aede5fd8ee1d0b6887da288e1a788",
+      "expectedMatch": true,
+      "committedAtAuditHead": false,
+      "ignored": false,
+      "name": "jeans",
+      "glbVersion": 2,
+      "declaredBytes": 43271320,
+      "triangles": 841998,
+      "skins": 0,
+      "animations": 0
+    },
+    {
+      "path": ".tmp/generation-comparison-2026-10-03/user-agent2/items01/gloves/paint01/painted.glb",
+      "exists": true,
+      "bytes": 22940908,
+      "sha256": "890f8693256347156c20f82a62dd79e2145cf511e7a85eb5239089644a20bfea",
+      "expectedSHA256": "890f8693256347156c20f82a62dd79e2145cf511e7a85eb5239089644a20bfea",
+      "expectedMatch": true,
+      "committedAtAuditHead": false,
+      "ignored": false,
+      "name": "gloves",
+      "glbVersion": 2,
+      "declaredBytes": 22940908,
+      "triangles": 570242,
+      "skins": 0,
+      "animations": 0
+    },
+    {
+      "path": ".tmp/generation-comparison-2026-10-03/user-agent2/items01/boots/paint01/painted.glb",
+      "exists": true,
+      "bytes": 32387936,
+      "sha256": "b8dbd980f4d5a6a46b86db6f315ac630be07c538382a24fa5a2d2002a7d97d8c",
+      "expectedSHA256": "b8dbd980f4d5a6a46b86db6f315ac630be07c538382a24fa5a2d2002a7d97d8c",
+      "expectedMatch": true,
+      "committedAtAuditHead": false,
+      "ignored": false,
+      "name": "boots",
+      "glbVersion": 2,
+      "declaredBytes": 32387936,
+      "triangles": 611198,
+      "skins": 0,
+      "animations": 0
+    }
+  ],
+  "capture50PinVerification": [
+    {
+      "path": "docs/evidence/hero-remaster/finish-2026-10-05/runtime/savedpose-capture01/capture50-execution.json",
+      "exists": true,
+      "bytes": 10596,
+      "sha256": "ee81ecc74d1844c629d61287f0719c7bdd654e17a9676f0af985fe35df1ac45f",
+      "committedAtAuditHead": true,
+      "workingBytesEqualAuditHead": true
+    },
+    {
+      "path": "docs/evidence/hero-remaster/finish-2026-10-05/runtime/savedpose-capture01/COMMAND-capture50.txt",
+      "exists": true,
+      "bytes": 724,
+      "sha256": "e7b4ecf39fdbc9e0be6ce3e5c7d6b484e3bb37ea09366f0ef22c1aa3023a94d1",
+      "expectedSHA256": "e7b4ecf39fdbc9e0be6ce3e5c7d6b484e3bb37ea09366f0ef22c1aa3023a94d1",
+      "expectedMatch": true,
+      "committedAtAuditHead": true,
+      "workingBytesEqualAuditHead": true
+    },
+    {
+      "path": "docs/evidence/hero-remaster/finish-2026-10-05/runtime/savedpose-capture01/manifest-bound50.json",
+      "exists": true,
+      "bytes": 5446,
+      "sha256": "6780ceb99f5c8ceb120bd8a39fd2764b101774edeffe523cc12681938c0466ab",
+      "expectedSHA256": "6780ceb99f5c8ceb120bd8a39fd2764b101774edeffe523cc12681938c0466ab",
+      "expectedMatch": true,
+      "committedAtAuditHead": true,
+      "workingBytesEqualAuditHead": true
+    },
+    {
+      "path": "docs/evidence/hero-remaster/finish-2026-10-05/runtime/savedpose-capture01/capture-v3.py",
+      "exists": true,
+      "bytes": 17894,
+      "sha256": "4cc7c6f9b86fe2d9668e7a8ce74ced578a3bfff954e2592e5b6f531198537cff",
+      "expectedSHA256": "4cc7c6f9b86fe2d9668e7a8ce74ced578a3bfff954e2592e5b6f531198537cff",
+      "expectedMatch": true,
+      "committedAtAuditHead": true,
+      "workingBytesEqualAuditHead": true
+    },
+    {
+      "path": "assets/blender/hero-remaster/generation-comparison-2026-10-03/user-agent2/run_bounded96.py",
+      "exists": true,
+      "bytes": 5230,
+      "sha256": "cf8acd15d8b7484480bee74d23892be815d955ffd87115d3da8ed228ffb3d916",
+      "expectedSHA256": "cf8acd15d8b7484480bee74d23892be815d955ffd87115d3da8ed228ffb3d916",
+      "expectedMatch": true,
+      "committedAtAuditHead": true,
+      "workingBytesEqualAuditHead": true
+    },
+    {
+      "path": "assets/blender/hero-remaster/rider/finish-2026-10-05/construction/body07/natural-foundation.blend",
+      "exists": true,
+      "bytes": 77393547,
+      "sha256": "27d123d90eb3878ffc33364dd7f6f691109659b7296ca1400d3a31ab897cf569",
+      "expectedSHA256": "27d123d90eb3878ffc33364dd7f6f691109659b7296ca1400d3a31ab897cf569",
+      "expectedMatch": true,
+      "committedAtAuditHead": false,
+      "ignored": true
+    },
+    {
+      "path": "assets/blender/hero-remaster/rider/finish-2026-10-05/construction/body07/authored-neck-fields.npz",
+      "exists": true,
+      "bytes": 3698812,
+      "sha256": "bb443342133b2eedebf3ca566ff0ebd4b2c5a9c3e50a5fda2ff6eb34ad214586",
+      "expectedSHA256": "bb443342133b2eedebf3ca566ff0ebd4b2c5a9c3e50a5fda2ff6eb34ad214586",
+      "expectedMatch": true,
+      "committedAtAuditHead": true,
+      "workingBytesEqualAuditHead": true
+    },
+    {
+      "path": "docs/evidence/hero-remaster/finish-2026-10-05/construction/body07/parent-author49.json",
+      "exists": true,
+      "bytes": 1002,
+      "sha256": "788c8aab0a3e04ee335c7d4733738762b7f03e8fc9650c1dc8fc98181cf06dfd",
+      "expectedSHA256": "788c8aab0a3e04ee335c7d4733738762b7f03e8fc9650c1dc8fc98181cf06dfd",
+      "expectedMatch": true,
+      "committedAtAuditHead": true,
+      "workingBytesEqualAuditHead": true
+    },
+    {
+      "path": "harness/out/rider-finish/body07-exact-saved50/rest.json.gz",
+      "exists": true,
+      "bytes": 23980644,
+      "sha256": "9eafea4b89c790b428831a80f552bdacc26cbe6fe384cad3e4c29c1475a8011c",
+      "expectedSHA256": "9eafea4b89c790b428831a80f552bdacc26cbe6fe384cad3e4c29c1475a8011c",
+      "expectedMatch": true,
+      "committedAtAuditHead": false,
+      "ignored": true
+    },
+    {
+      "path": "harness/out/rider-finish/body07-exact-saved50/sample-0000.json.gz",
+      "exists": true,
+      "bytes": 13717531,
+      "sha256": "51abd6b100728df524aecbe53c7857cc23bd092a492a6ebe054b142db68778a3",
+      "expectedSHA256": "51abd6b100728df524aecbe53c7857cc23bd092a492a6ebe054b142db68778a3",
+      "expectedMatch": true,
+      "committedAtAuditHead": false,
+      "ignored": true
+    },
+    {
+      "path": "harness/out/rider-finish/body07-exact-saved50/sample-0070.json.gz",
+      "exists": true,
+      "bytes": 13726718,
+      "sha256": "e604bf5c49415c43ac115f55aebf3fa29628b775a986465c8143dae5f4a3319e",
+      "expectedSHA256": "e604bf5c49415c43ac115f55aebf3fa29628b775a986465c8143dae5f4a3319e",
+      "expectedMatch": true,
+      "committedAtAuditHead": false,
+      "ignored": true
+    },
+    {
+      "path": "harness/out/rider-finish/body07-exact-saved50/sample-0099.json.gz",
+      "exists": true,
+      "bytes": 13725629,
+      "sha256": "d2796adc701d2a09740175465c32e038b3f38bcf6c2a7653ac5cd93057f638e8",
+      "expectedSHA256": "d2796adc701d2a09740175465c32e038b3f38bcf6c2a7653ac5cd93057f638e8",
+      "expectedMatch": true,
+      "committedAtAuditHead": false,
+      "ignored": true
+    },
+    {
+      "path": "harness/out/rider-finish/body07-exact-saved50/sample-0128.json.gz",
+      "exists": true,
+      "bytes": 13729277,
+      "sha256": "70d14f287b9fc2f04847b3625e3fb84c243267cacccb6080ba5f2938037ddec6",
+      "expectedSHA256": "70d14f287b9fc2f04847b3625e3fb84c243267cacccb6080ba5f2938037ddec6",
+      "expectedMatch": true,
+      "committedAtAuditHead": false,
+      "ignored": true
+    },
+    {
+      "path": "harness/out/rider-finish/body07-exact-saved50/sample-0151.json.gz",
+      "exists": true,
+      "bytes": 13725231,
+      "sha256": "24238959960d90c8294d1cbf358dcd4f50d171d508f1b51cfe0c91037a38db75",
+      "expectedSHA256": "24238959960d90c8294d1cbf358dcd4f50d171d508f1b51cfe0c91037a38db75",
+      "expectedMatch": true,
+      "committedAtAuditHead": false,
+      "ignored": true
+    },
+    {
+      "path": "harness/out/rider-finish/body07-exact-saved50/sample-0157.json.gz",
+      "exists": true,
+      "bytes": 13725296,
+      "sha256": "3506ffb577f194de4af80642095a5e9c0a5839520b3c0c530ff9981186758b3e",
+      "expectedSHA256": "3506ffb577f194de4af80642095a5e9c0a5839520b3c0c530ff9981186758b3e",
+      "expectedMatch": true,
+      "committedAtAuditHead": false,
+      "ignored": true
+    },
+    {
+      "path": "harness/out/rider-finish/body07-exact-saved50/sample-0186.json.gz",
+      "exists": true,
+      "bytes": 13727028,
+      "sha256": "eb565474cbb31ec9b4814dae49ff8421864a6245aec043dafc7578ef69ad27db",
+      "expectedSHA256": "eb565474cbb31ec9b4814dae49ff8421864a6245aec043dafc7578ef69ad27db",
+      "expectedMatch": true,
+      "committedAtAuditHead": false,
+      "ignored": true
+    },
+    {
+      "path": "harness/out/rider-finish/body07-exact-saved50/sample-0244.json.gz",
+      "exists": true,
+      "bytes": 13760062,
+      "sha256": "7dfcbb19ee6c8e127d6e185852403b759e1c3299efa5c878fc4f67a56cf013be",
+      "expectedSHA256": "7dfcbb19ee6c8e127d6e185852403b759e1c3299efa5c878fc4f67a56cf013be",
+      "expectedMatch": true,
+      "committedAtAuditHead": false,
+      "ignored": true
+    },
+    {
+      "path": "harness/out/rider-finish/body07-exact-saved50/sample-0302.json.gz",
+      "exists": true,
+      "bytes": 13812827,
+      "sha256": "221f440570a1136ace8195746aea84ef9fa5a762ad3e30e4c770d8ff057f2c46",
+      "expectedSHA256": "221f440570a1136ace8195746aea84ef9fa5a762ad3e30e4c770d8ff057f2c46",
+      "expectedMatch": true,
+      "committedAtAuditHead": false,
+      "ignored": true
+    },
+    {
+      "path": "harness/out/rider-finish/body07-exact-saved50/sample-0422.json.gz",
+      "exists": true,
+      "bytes": 13790768,
+      "sha256": "d1a0401869fbc264662b7bf0fc0a9f04bbc30360f3038f527f5ab39100323b79",
+      "expectedSHA256": "d1a0401869fbc264662b7bf0fc0a9f04bbc30360f3038f527f5ab39100323b79",
+      "expectedMatch": true,
+      "committedAtAuditHead": false,
+      "ignored": true
+    }
+  ],
+  "primaryReceiptPins": [
+    {
+      "path": "docs/evidence/hero-remaster/independent-audit-2026-10-03/README.md",
+      "exists": true,
+      "bytes": 4640,
+      "sha256": "4aad8539b7d154ab8ed409bc7cfb8b00ec395bfc1f317bb8df7c2e1321e332ee",
+      "committedAtAuditHead": true,
+      "workingBytesEqualAuditHead": true
+    },
+    {
+      "path": "docs/evidence/hero-remaster/user-agent3-qa-2026-10-03/body53/finding.json",
+      "exists": true,
+      "bytes": 7812,
+      "sha256": "2b7bfa5f6dd1a9e0975cc9fa7c4803c26c75528ddd38b39eb173476577ce475b",
+      "committedAtAuditHead": true,
+      "workingBytesEqualAuditHead": true
+    },
+    {
+      "path": "docs/evidence/hero-remaster/anatomical-foundation-2026-10-03/user-agent1/selected-hoodie26/native92/FINDING.md",
+      "exists": true,
+      "bytes": 2006,
+      "sha256": "7f7b8ced7d75438351d67f0076d5605c492edbc5e7ddf5476656af13ad0ae76b",
+      "committedAtAuditHead": true,
+      "workingBytesEqualAuditHead": true
+    },
+    {
+      "path": "docs/evidence/hero-remaster/anatomical-foundation-2026-10-03/user-agent1/selected-hoodie26/rest-head94/FINDING.md",
+      "exists": true,
+      "bytes": 2397,
+      "sha256": "5b63611f79b3799474105973fb1f082223f67d77b8b9e7e9f7c4a96a65143383",
+      "committedAtAuditHead": true,
+      "workingBytesEqualAuditHead": true
+    },
+    {
+      "path": "docs/evidence/hero-remaster/user-agent3-qa-2026-10-03/hand83/FINDING.md",
+      "exists": true,
+      "bytes": 9147,
+      "sha256": "0ee205ccbea9d265ed82dccafd9099f97a0e82f6e564aa7a9b001fc8d7af0c9a",
+      "committedAtAuditHead": true,
+      "workingBytesEqualAuditHead": true
+    },
+    {
+      "path": "docs/evidence/hero-remaster/finish-2026-10-05/runtime/played-review01/parent-review.json",
+      "exists": true,
+      "bytes": 2583,
+      "sha256": "c999d90d459a27f7ece01de9778719a2370300d8a790f3353b1f52aec43fbc19",
+      "committedAtAuditHead": true,
+      "workingBytesEqualAuditHead": true
+    },
+    {
+      "path": "docs/evidence/hero-remaster/finish-2026-10-05/runtime/played-review01/playback.json",
+      "exists": true,
+      "bytes": 107412,
+      "sha256": "11d7641fd3da4ff208dd80f52c5349de95d322e0be6ec2d322c26d4aac288aee",
+      "committedAtAuditHead": true,
+      "workingBytesEqualAuditHead": true
+    },
+    {
+      "path": "docs/evidence/hero-remaster/finish-2026-10-05/construction/body07/parent-preflight45.json",
+      "exists": true,
+      "bytes": 2115,
+      "sha256": "013cfe056e9d360c3f8cf4f8aabbdfd7eccf237d22cd2515971ba0891895bbf1",
+      "committedAtAuditHead": true,
+      "workingBytesEqualAuditHead": true
+    },
+    {
+      "path": "docs/evidence/hero-remaster/finish-2026-10-05/runtime/body06-qa-summary01.json",
+      "exists": true,
+      "bytes": 2489,
+      "sha256": "dad50ffd624425eada22b2019f4dc9a69fc457edf9a2e3fdbf42f1170e4af68c",
+      "committedAtAuditHead": true,
+      "workingBytesEqualAuditHead": true
+    },
+    {
+      "path": "docs/evidence/hero-remaster/finish-2026-10-05/runtime/body06-parent-readback01.json",
+      "exists": true,
+      "bytes": 3000,
+      "sha256": "a05865c328ab737c5cc841cc7408f376fcbc4b914dc0fb09fe6ae1e6a3f3f61d",
+      "committedAtAuditHead": true,
+      "workingBytesEqualAuditHead": true
+    },
+    {
+      "path": "docs/evidence/hero-remaster/finish-2026-10-05/runtime/body06-loft-fan-parent01.json",
+      "exists": true,
+      "bytes": 2235,
+      "sha256": "709dda56014c5288910742f39d79a322791f5aed3f614f9057ca4ae6fc341c20",
+      "committedAtAuditHead": true,
+      "workingBytesEqualAuditHead": true
+    },
+    {
+      "path": "docs/evidence/hero-remaster/finish-2026-10-05/runtime/savedpose-capture01/parent-readback50.json",
+      "exists": true,
+      "bytes": 4419,
+      "sha256": "57036f397274535f43c0bf49440fe503891eee45a8f0cbba3d8462db8b11a553",
+      "committedAtAuditHead": true,
+      "workingBytesEqualAuditHead": true
+    },
+    {
+      "path": "docs/evidence/hero-remaster/finish-2026-10-05/unimate/decode02/parent-verdict.json",
+      "exists": true,
+      "bytes": 889,
+      "sha256": "66bf5dc8da2f5051554d80a8d3fe1745599b479b0c8028732b176e5ff21ad1c0",
+      "committedAtAuditHead": true,
+      "workingBytesEqualAuditHead": true
+    },
+    {
+      "path": "docs/evidence/hero-remaster/handoff-2026-10-07/HANDOFF.md",
+      "exists": true,
+      "bytes": 22586,
+      "sha256": "150a1eec9b12e5a908345f3dcc68ab4da87e56c16d61620d0e915ec43492bb45",
+      "committedAtAuditHead": false,
+      "ignored": false
+    },
+    {
+      "path": "docs/plans/sol-6.1-2026-10-05-FINISH_RIDER_CLOTHES_AND_ANIMATIONS.md",
+      "exists": true,
+      "bytes": 27957,
+      "sha256": "f4a9711d41c049cdc95ce9b6d09af1217e410c6cc71e973985fc5fcccfbfa6f9",
+      "committedAtAuditHead": true,
+      "workingBytesEqualAuditHead": false
+    },
+    {
+      "path": "docs/plans/sol-6.1-2026-10-03-RIDER_BASELINE_TO_SHIP.md",
+      "exists": true,
+      "bytes": 30935,
+      "sha256": "2b04a5b8dfd559cf0510944b297481153581e66eb2769b4dfa6a2c687e9953b8",
+      "committedAtAuditHead": true,
+      "workingBytesEqualAuditHead": true
+    },
+    {
+      "path": "docs/evidence/hero-remaster/finish-2026-10-05/construction/body07/hip-underwear-next-proposal.json",
+      "exists": true,
+      "bytes": 8177,
+      "sha256": "8a694e3de5cda62a4f4f02eb0d01088a02c5fbb53f784df8aeaee023663172f9",
+      "committedAtAuditHead": false,
+      "ignored": false
+    },
+    {
+      "path": "assets/blender/hero-remaster/rider/finish-2026-10-05/wardrobe/glove-enclosure12/inventory-target.py",
+      "exists": true,
+      "bytes": 23515,
+      "sha256": "7d3d53f3a28c3b3bbd12bf016927a591c80188548d8a7dd8c05feb996951ac39",
+      "committedAtAuditHead": false,
+      "ignored": false
+    }
+  ],
+  "allDeclaredSourceAndCaptureHashesMatch": true,
+  "contacts51ReceiptExists": false
+}

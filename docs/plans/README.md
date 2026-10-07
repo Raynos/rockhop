@@ -1008,3 +1008,5 @@ Pause preservation retains344existing body05 grounded-front PBR source frames,12
 Pause handoff preserves a static hip/underwear proposal: hip773 is unchanged; knee witnesses outside that mask stay separate. Explicit boxer triangulation control and later geometry fixes remain unadmitted; contacts51 and played review first.
 
 Pause handoff freezes corrected glove-enclosure12 preparation only: first clipped geometry retained before unsupported outcomes, complete weak/mixed fields and source ancestry accounted for. UV arrays exist but seam continuity/triangle-to-loop lineage remain unchecked; inventory52 unexecuted.
+
+October7 successor five-day history audit pins b48ac6d7:551commits/4349paths,22declared source/capture pins matched; no src/ or public/models/ changes. Reproducible native49/capture50 remains unaccepted. Historical handoff commitment mismatch is explicit; current pause preservation proceeds separately. Evidence: ../evidence/hero-remaster/audit-2026-10-07-agent2/history/FINDING.md. Audit playback and plan refresh precede contacts51.
