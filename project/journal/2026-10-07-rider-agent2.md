@@ -275,3 +275,9 @@ Finding: Corrected thumb registration passes regional volume gates, but the sele
 Validation: Corrected guard returns1 in2.250 seconds; all36 profiles pass, control residual0.1095mm.943/2949points lack permitted rays;279 supported points miss minimum padding, minimum1.014mm. All domain/profile/correspondence/log witnesses retained before rejection. No bake, glove native or fallback.
 
 Limits: Ray misses do not prove absent donor geometry. Original body/rest post-return verifier was not reached; copied-patch recipe does not write them. Next method requires independent structural surface correspondence review, not another ray or threshold tweak.
+
+Finding: Independent Astra source review shows actual glove digit contours are present; the failed normal-ray chart method omits real mixed boundary triangles and can select hits far downstream. The certified handle is near the cuff and may be legitimate detail, not a diagnosed palm defect.
+
+Validation: Parent rehashes source/recipe pins. Array-only assay records7200 source triangle/barycentric hits across20 closed sampled contours,0missing/0multiple rays, and427mixed triangles excluded by old pure-label pools. cavity08 retains exact referenced source vertices/faces, one71edge boundary and cuffhandle. Warning-free explicit-reduction rerun passes.
+
+Limits: Finite source sampling does not prove full charts, anatomical fit or art acceptance. New intended method deforms actual selected exterior through source contour/palm/web/cuff charts and preserves dense appearance; coherent wearer supplies cavity/fields only.

@@ -1119,3 +1119,5 @@ October 7 exact glove failure diagnostic localizes the mismatch to thumb metacar
 October 7 corrected selected thumb recipe maps measured source digit stations to actual MCP/IP/skin-tip and separates thenar appearance ownership geometrically. Original75 fields and enclosure guards stay intact; source checkpoint precedes one corrected native attempt.
 
 October 7 corrected glove02 passes all regional volume profiles but rejects943unsupported source rays and279insufficient-padding hits before bake. Full witnesses retained; no complete outfit. Independent Astra review must replace the surface correspondence mechanism, with no repeated ray/threshold adjustment.
+
+October 7 independent Astra source review establishes7200sampled source contour hits and retains427mixed chart-boundary triangles plus possible legitimate cuff detail. Prior palm-handle assumption is corrected. New source-preserving exterior chart deformation replaces failed hand-normal rays; full coverage/fit/played art remain open.
