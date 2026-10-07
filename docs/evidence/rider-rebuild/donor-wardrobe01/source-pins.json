@@ -133,7 +133,7 @@
   },
   "helper": {
     "path": "/Users/raynos/projects/games/rockhop/assets/blender/rider-rebuild/donor-wardrobe01/build-wardrobe.py",
-    "sha256": "9a0f3b5190f8a6cffc6736f868d587f215323b158f3ff3bb274e8bada2a9b548"
+    "sha256": "7ded4e43a627e23b3a7bfecb8327eb11025b399081b2d023a3f7f472898ec7b0"
   },
   "validation": "Python syntax passed; originals/prepared files rehashed match all20 historical pins. Native candidate not executed yet.",
   "limits": [
@@ -142,5 +142,14 @@
   "uvConstruction": "Original corner owned by1e-5 face-inward query then exact closest triangle barycentric of ACTUAL sourcecorner, with per-corner originaltriangleRow/UV-chart/projectiondist sidecar; no source-face extrapolation.",
   "skinScope": "All canonical .L/.R chains including twist suffix .001; normalizedFOUR wearer fields.",
   "anatomicalEndpoints": "Shoulder DEF-upper_arm.head -> elbow DEF-forearm.head -> wrist DEF-hand.head; hip DEF-thigh.head -> knee DEF-shin.head -> ankle DEF-foot.head, never twist-chain midpoint tails.",
-  "costValidation": "All dense NPZ arrays cached once outside48000-corner loop, including originalCornerUV; no repeated dense decompression."
+  "costValidation": "All dense NPZ arrays cached once outside48000-corner loop, including originalCornerUV; no repeated dense decompression.",
+  "numericValidation": "Originaldensejeans841644 validfaces includes778float32-dot determinants<=1e-18/24nonpositive cancellations. Barycentric uses NumPyfloat64 cross products/normal-squared determinant; truezero threshold1e-30. Ownership/projection/geometry unchanged; nativejobnotstarted atcorrection.",
+  "denseTriangleNumericReadback": {
+    "faces": 841644,
+    "float32DotDeterminantsBelowOrEqual1eMinus18": 778,
+    "float32DotNonPositive": 24,
+    "float64CrossMinimumDeterminant": 9.355267135806075e-25,
+    "float64CrossBelowOrEqual1eMinus30": 0,
+    "result": "All authoritative cleanedsourcefaces pass robust barycentric determinant gate."
+  }
 }

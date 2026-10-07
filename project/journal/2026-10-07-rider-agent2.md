@@ -203,3 +203,9 @@ Finding: Actual selected hoodie and denim retain source geometry/material detail
 Validation: Corrected helper compiles; all20 dense/maps/prototype source pins rehash exact. Hoodie polygon cycles and loopUV are preserved by construction; jeans records dense source-corner ancestry. Actual native execution has not yet occurred in this checkpoint.
 
 Limits: Intended final source fitting only; first native, texture seam, body-volume clearance and played engine art review remain open. No substitute garments or body masking.
+
+Finding: Dense selected denim corner projection requires double precision at very small valid source triangles. Float32 dot determinants falsely classified valid original charts as degenerate.
+
+Validation: All 841644 original cleaned faces have positive float64 cross determinants; minimum 9.355267e-25, zero below 1e-30. Corrected helper compiles before first native execution.
+
+Limits: Mechanical source lookup fix only; native fitting and played appearance remain open.

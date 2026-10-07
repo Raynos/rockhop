@@ -289,13 +289,16 @@ def buildWardrobe(body, rig, out):
                       "ownership": "Each corner query inset1e-5 toward its own face midpoint, then closest point of ACTUAL original corner onto selected dense source triangle"}
 
     def barycentric(point, a, b, c):
+        # Dense originals contain valid very thin triangles. Float32 dot
+        # determinant subtraction cancels for them; solve with double cross
+        # products and the positive normal-squared area instead.
+        a, b, c, point = (np.asarray(p, dtype=np.float64) for p in (a,b,c,point))
         v0, v1, v2 = b-a, c-a, point-a
-        d00, d01, d11 = v0.dot(v0), v0.dot(v1), v1.dot(v1)
-        d20, d21 = v2.dot(v0), v2.dot(v1)
-        denom = d00*d11-d01*d01
-        assert abs(denom) > 1e-18
-        v = (d11*d20-d01*d21)/denom
-        w = (d00*d21-d01*d20)/denom
+        normal = np.cross(v0, v1)
+        denom = float(normal.dot(normal))
+        assert denom > 1e-30, "Truly degenerate authoritative source triangle"
+        v = float(np.cross(v2, v1).dot(normal))/denom
+        w = float(np.cross(v0, v2).dot(normal))/denom
         return np.asarray((1-v-w, v, w))
 
     def closest_on_triangle(point, a, b, c):

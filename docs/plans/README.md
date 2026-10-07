@@ -1095,3 +1095,5 @@ October 7 [actual selected boots](../evidence/rider-rebuild/donor-hand-foot01/BO
 October 7 [actual hoodie and denim construction](../evidence/rider-rebuild/donor-wardrobe01/CONSTRUCTION.md) preserves selectedhoodie25 geometry/loopUV/PBR and original jeans charts/maps. Parent source review corrects complete75 twist-chain scopes, anatomical joint-head endpoints and cached source-corner UV lookup. Intended final donor fitting recipe is checkpointed before first native execution; appearance remains unaccepted.
 
 The actual-game review camera now settles alpha-zero interpolation before measuring the bone target. Twelve paired states retain exact physics hashes and center the rider to below1e-12 projected X. This corrects evidence framing only; it does not accept the rejected appearance.
+
+October 7 selected denim lookup uses float64 determinants for tiny valid source triangles; 841644 original faces pass the precision preflight. Actual native fitting and played appearance remain open.
