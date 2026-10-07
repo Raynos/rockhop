@@ -125,3 +125,9 @@ Finding: Native04 calibrates sourcejointcenters/frames as one coherentwearer: ac
 Validation: Parent reads builder, rehashesnative master, checks10582normalizedFOUR/max4/all30digit fields and sourcehead-region eyebounds. Guard06 finishes3.636s.
 
 Limits: RawFULL removal .2531, provisional skin/joints; exactmoving native/engine/grip/art/phone gates remainopen.
+
+Finding: Twoedge geometryrepairs failed underdressedmotion becauseboundarypoints useddifferent skinmatrices. Boundary03 changes the deformationconstruction: one continuousloopfield, fourrow smoothfalloff, actualjoint-derivedcuffs andregularhem.
+
+Validation: Parent helper review; author verifiesclosedloops22/24wrists,34hem,70neck andexplicitnormalized FOUR boundaryfield. Sourcebody/rig immutable; proposalretainsboth priorneckfailures.
+
+Limits: Structuralfield replacement is documented escalation, not renamedattemptreset; movingcollar/hem/cuff review remainsopen.

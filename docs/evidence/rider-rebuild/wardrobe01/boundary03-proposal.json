@@ -1,0 +1,52 @@
+{
+  "accepted": false,
+  "status": "structural boundary candidate ready; parent moving review required",
+  "sourceHelper": "assets/blender/rider-rebuild/wardrobe01/build-wardrobe03.py",
+  "sourceHelperSHA256": "3f8599336daaeeabc7b9307b07bf3d40ccb3f35b6433ac719aaa774827320098",
+  "preservedAppearance02HelperSHA256": "c05f472ff846d07b75d1663371355eecf295a979ea75a0d38047fc9fff0ee783",
+  "visibleDefectFamily": "ragged neckline",
+  "priorCandidateCount": 2,
+  "thisVisibleDefectCandidateOrdinal": 3,
+  "previousFailures": [
+    "combined01 source-centroid boundary had a visible jagged neck edge",
+    "combined02 flattened rest neckline improved Garage rest but parent actual ride02 rejected ragged moving neckline"
+  ],
+  "newStructuralMechanism": "Uniform skin blend on complete inner and outer collar boundary plus matching collar rib. The ring shares one affine skinned transform; four adjacent local mesh rows smoothly transition back to the source body field.",
+  "failureBudget": "Earlier two candidates remain counted. This is a documented structural clothing-field construction change after actual moving rejection, rather than another height/radius parameter attempt or renamed reset. Parent owns admission and moving verdict.",
+  "collarField": [
+    ["DEF-spine.003", 0.65],
+    ["DEF-spine.004", 0.35]
+  ],
+  "collarHeadField": false,
+  "skinFalloffMeshRows": 4,
+  "falloff": "cubic smoothstep; final rows sorted, limited to four and normalized",
+  "actualJointCuffCalibration": {
+    "wrist": "DEF-hand.L/R.head_local",
+    "elbow": "DEF-forearm.L/R.head_local",
+    "axis": "normalized elbow minus wrist",
+    "hoodieProximalMetres": 0.035,
+    "gloveProximalMetres": 0.018
+  },
+  "hoodieSourceBoundaryLoopPointCounts": [22, 24, 34, 70],
+  "hoodieSourceBoundaryGraphDegree": 2,
+  "regularHemSourceZ": 0.997,
+  "regularCollarSourceZ": 1.408,
+  "otherConditionedLoops": "Hoodie hem/wrist and glove wrist loops use one averaged actual native body FOUR field each, matching rib bands and four local rows of smooth falloff.",
+  "blindWearerCapAdded": false,
+  "bodyFacesHiddenOrDeleted": false,
+  "bodyGeometryOrBodyWeightsChanged": false,
+  "skeletonChangedByHelper": false,
+  "paletteOrShoeCoverageChangedFrom02": false,
+  "staticChecks": [
+    "Python AST passes",
+    "Source hoodie boundaries are four closed degree-two loops",
+    "Actual joint reads and body normalized FOUR assertions remain enforced at integration",
+    "Body and original02 helper remain unchanged"
+  ],
+  "blenderExecutedByWardrobeBuilder": false,
+  "limits": [
+    "Native04 body rebind and whole assembly execution remain with Astra under parent serial guard.",
+    "Moving neckline, hem, wrists, deformation, coverage and fit have not passed.",
+    "A common affine loop transform preserves rest planarity algebraically but does not certify contact, anatomy or silhouette."
+  ]
+}

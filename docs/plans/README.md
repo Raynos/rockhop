@@ -1065,3 +1065,5 @@ October7 [integrated COM checkpoint](../evidence/rider-rebuild/runtime02/FINDING
 October7 [fixed physical carrier](../evidence/rider-rebuild/runtime02/FIXED_CARRIER.md): pelvisID excluded fromuppertrunk aiming, tenactualCPU tests pass including independentflex invariant. Oldbody6×7×13workspace sweep stillfailscontacts; no wrist/spine angle selected or art/device approval.
 
 October7 [native04](../evidence/rider-rebuild/construction01/rig04/README.md) recalibrates measuredarmcenters (.5346398m actualnormalizedchain) and correctlybakes eyes into the bodyframe. Nativepins/10582FOUR/all30digit fields checked; rawFULL loss.2531 andmovingqualifications remainopen.
+
+October7 [boundary03 structural proposal](../evidence/rider-rebuild/wardrobe01/boundary03-proposal.json): twofailed necklinegeometryrepairs retained; replace boundarydeformation with continuouscommonloop FOUR field/four-rowfalloff, actualjoint-derivedcuffs/regularhem. This documented structuralchange remains movingunaccepted; no silentattemptbudget reset.
