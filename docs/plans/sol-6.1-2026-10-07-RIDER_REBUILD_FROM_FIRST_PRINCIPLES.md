@@ -309,3 +309,44 @@ and preserve useful source work. No substitute preview, source-density shortcut,
 body hiding or numerical-only art acceptance may satisfy delivery. The coarse
 local preview server is stopped; the next visible result must use the actual
 selected assets and pass parent played review in the Garage and game.
+
+
+## October 7 measured source integration and deadline outcome
+
+The20:33–22:33UTC first-delivery target was missed. The rejected coarse
+preview is not delivery. The actual complete outfit has not yet passed played
+Garage/game review; R0–R5 and asks312/326–329 remain open.
+
+Actual selected hoodie/denim native transport passes with original chart/PBR
+ancestry and unchanged wearer fields. Actual boots have source-map and shared75
+receipts. The liked face forms one closed welded wearer; protected face/ear/scalp
+geometry, corner UV and normals remain unchanged. These are source construction
+checks, not art ratings, universal motion approval or a complete outfit.
+
+The selected glove asset remains viable. Independent Astra measurements record
+7200successful section-angle samples over20closed finger contours. Prior pure
+label pools omitted427real mixed palm/digit triangles; farthest normal-ray hits
+can land far along a finger. Stop that correspondence method after its retained
+failures. Also correct the historical palm-handle assumption: certified cycles
+are near the cuff and may be legitimate strap detail; preserve source features.
+
+The next glove construction deforms the actual selected exterior through
+measured source finger, cap, palm, web and cuff charts with common seam vertices.
+Use complete directional wearer-containment constraints and smooth minimal
+source deformation. The coherent hand supplies the inner cavity and shared
+deformation fields. Retain original corner UV/PBR and transport dense residual
+detail through the same deformation. Require complete chart ancestry, seam
+continuity, bounded distortion, full surface clearance and played articulation;
+no body-offset replacement or automatic removal of source cuff geometry.
+
+The final native/export recipe fails before construction when a verified actual
+glove source is absent, and requires exactly the seven actual authored parts.
+Final skin finishing may explicitly canonicalize FOUR fields with measured
+cutoff/rounding deltas for exact native/GPU parity, preserving original masters,
+geometry, source identities and75rest. Every original source remains pinned.
+
+Original4096maps remain in source masters/export. The deliberate1024/512 runtime
+texture derivatives and source-document sharing must be measured against the
+96MiB renderer budget and judged in motion; silently admitting779MiB of maps is
+not a mobile qualification. The next user-visible result remains the complete
+selected outfit, played to the end in the actual Garage and game.

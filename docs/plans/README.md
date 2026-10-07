@@ -1121,3 +1121,5 @@ October 7 corrected selected thumb recipe maps measured source digit stations to
 October 7 corrected glove02 passes all regional volume profiles but rejects943unsupported source rays and279insufficient-padding hits before bake. Full witnesses retained; no complete outfit. Independent Astra review must replace the surface correspondence mechanism, with no repeated ray/threshold adjustment.
 
 October 7 independent Astra source review establishes7200sampled source contour hits and retains427mixed chart-boundary triangles plus possible legitimate cuff detail. Prior palm-handle assumption is corrected. New source-preserving exterior chart deformation replaces failed hand-normal rays; full coverage/fit/played art remain open.
+
+October 7 the original two-hour complete-review target is missed, not fulfilled by the rejected substitute. Actual face/clothing/boot source checks pass; source-preserving glove chart construction remains. Active replacement plan records measured correction, full-source export gate and deliberate texture budget; all moving/human gates remain open.
