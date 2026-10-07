@@ -35,3 +35,15 @@ Site source and delivery/status units are separate main commits.
 Limits: Source render history is October3–5, reviewed/preserved recently;
 currentbody07has no render. All rider milestones open, no game promotion
 or main push. Photos ZIP878.2MB, videos67.4MB, local ignored exports.
+
+Finding: Put five ranked videos above the photo gallery for ask323. The
+full rider and landing show game context; hoodie, glove and neck trials
+show the blockers. Update the durable builder and historical status copy.
+
+Validation: Five movie copies and all 84 photo hashes match source pins;
+all 199 local asset links resolve. Five existing silent playback receipts
+ended. Controls, muted playback, mobile inline support and no autoplay
+are present; loading begins only on user action. Total time 98.269 seconds.
+
+Limits: Historical October 3–5 evidence, not new rebuild progress or an
+acceptance claim. No game code changed; Site publication follows.

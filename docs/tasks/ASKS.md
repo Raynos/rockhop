@@ -497,3 +497,7 @@ Status: **open** (nobody on it) · **in flight** (owner named) · **needs pick**
 | 321 | Bust/head-to-body join looks glued on and rigid in side profile; inspect it and write a seamless anatomical construction mini-plan from first principles. | **done — seamless head/neck construction plan, 2026-10-07** | Replace bust overlap/cap construction with one continuous anatomically sculpted and retopologized external skin surface, then judge moving side profiles. |
 
 | 322 | Ask for any genuinely needed user decisions during successor rider work. | **done — facial scope answered; restart authorized, 2026-10-07** | No remaining construction permission question; independent production work continues. Real device judgment stays queued. |
+
+| 323 | Put the five most important videos on the existing rider photo Site; watching all 21 takes too long. | **in flight — selecting five and updating Site, 2026-10-07** | Prioritize whole-rider motion and the clothing, glove and neck failures; preserve original evidence and private audience. |
+
+| 324 | Make the rider progress website public. | **in flight — publishing featured videos then changing audience, 2026-10-07** | Explicit user authorization to change this same Site from owner-private to public. |
