@@ -1133,3 +1133,5 @@ October 7 corrected selected-head native readback passes protected face identiti
 October 7 stale early-milestone allowance for temporary textured garments is removed. First visible and current execution milestones explicitly require selected face/hair and actual garment source lineage; substitutes are prohibited throughout.
 
 October 7 selected-outfit generic reach/grip/release source requires all seven actual meshes, canonical FOUR fields and exact appearance preservation on independent readback. Source syntax and 21 existing runtime regressions pass; native clip and played acceptance await the fitted actual glove.
+
+October 7 real-garment moving-field measurement source captures actual seated/leaning solver joint deltas and checks unchanged selected native units. Source-only checkpoint; fit estimates and whole-outfit moving judgment pending.
