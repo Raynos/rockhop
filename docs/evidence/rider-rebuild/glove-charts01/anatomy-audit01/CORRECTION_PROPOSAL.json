@@ -1,0 +1,41 @@
+{
+  "status": "SOURCE_ANATOMY_CORRECTION_PROPOSAL_NO_NATIVE_CHANGE",
+  "acceptedAnatomy": false,
+  "minimumProvenDefects": [
+    "Bilateral pinky MCP and proximal segment begin outside actual skin",
+    "Bilateral middle PIP junction lies outside actual skin"
+  ],
+  "newDerivativeOnly": true,
+  "bodyPositionsMustRemainExact": true,
+  "geometryAuthority": "Original CC0 body surface recovered through frozen source vertex IDs; distal branch topology and actual transverse contour centers are independent of heat fields",
+  "jointCorrections": [
+    {
+      "joint": "pinky MCP, both hands",
+      "affectedEndpoints": ["DEF-palm.04 tail", "DEF-f_pinky.01 head"],
+      "requiredMeasurement": "Actual local connected-palm/knuckle medial section at the intended MCP anatomical station, associated with the independently isolated pinky branch",
+      "excludedSubstitutes": ["Moving to 60 percent of the old phalanx until a ring appears", "Applying the 48 mm proximal extrapolation of the distal surface curve", "Moving only just under the nearest skin triangle"],
+      "qualification": "Joint center and complete incident segment inside actual tissue, distinct pinky knuckle articulation under spread/curl/grip, no source-body deformation to conceal the error"
+    },
+    {
+      "joint": "middle PIP, both hands",
+      "affectedEndpoints": ["DEF-f_middle.01 tail", "DEF-f_middle.02 head"],
+      "measuredRightSurfaceCenterM": [-0.451586, -0.128077, 0.820332],
+      "measuredLeftSurfaceCenterM": [0.451624, -0.128049, 0.820329],
+      "qualification": "These are directly supported transverse surface-center proposals near the old axial station, not an accepted anatomical crease. Confirm joint station/roll against actual geometry and articulated movement before adoption."
+    }
+  ],
+  "restAndFieldRecanonicalization": [
+    "Preserve original rig masters and construct a new intended-final derivative with the same explicit joint identities",
+    "Keep connected endpoint relationships exact; update incident segments and palm links together",
+    "Recompute proper native rest frames and all affected inverse binds; numerical old frame validity does not permit reusing changed-joint binds",
+    "Regenerate true FULL hand fields from the corrected geometry/bones, then derive declared FOUR with discarded-mass and segment-coverage witnesses",
+    "Preserve body coordinates and explicitly account for any changed field domain at the wrist, rather than allowing unrelated whole-body binding changes to pass silently",
+    "Recompute driver flex axes, hand/socket calibration and native-to-runtime matrices from the corrected rest",
+    "Rebind affected clothing fields explicitly; source clothing geometry remains independently meaningful because body rest coordinates remain unchanged",
+    "Refresh native body/hand target extraction and its pins before resuming selected-glove fit"
+  ],
+  "surfaceCorrespondenceCorrection": "Use the actual topological digit-root/web charts for the selected glove's isolated source branch roots, while MCP/PIP/DIP remain articulation landmarks. Preserve actual source exterior and padding; never manufacture a replacement outer hand.",
+  "appearanceContract": "After geometry passes, unwrap a coherent production atlas and bake directly from transformed dense original corner-owned albedo/MR and dense geometric detail. Prototype corner UV transport alone is not a qualified appearance path.",
+  "requiredMovement": ["neutral", "spread", "individual finger curl", "full fist", "thumb opposition", "handle grip", "release"],
+  "parentOwnsPlayedJudgment": true
+}
