@@ -845,3 +845,23 @@ Limits: API clamping is a hypothesis until actual native evidence. Next
 bounded unit48will prove proposed storage representation preserves all
 normalized fields and run ordinary game gate48before any new native save.
 Candidate native/motion/appearance remains unqualified.
+
+
+## Four one-hot FULL anchors have an exact bounded representation
+
+Finding: Four trialFULLraw memberships are one Float32step above1and
+have no other positive influences. Store each as1while retaining the
+trialrawFULL separately. Every normalized51-vector across all9183rows
+is byte-identical; this changes transport, not the harmonic deformation.
+
+Validation: One bounded array48exits0 in0.120s, stderr empty; actual
+onlychanged cells are36/111shoulder.L and4588/4661shoulder.R. All
+FOUR/source/rawcontrols remain exact. Normalized FULL/FOUR residual0,
+allarray bytes exact. Ordinary game gate48passes low/high identical
+finish/replay and coldboot/clear/crash/tick0restart, errors0; combined
+guard exits0 in11.127s. Root reviews actualscope and gate receipts.
+
+Limits: Actual47storedmismatch remains unmeasured; nextauthor49must
+record RNA bounds and all mismatches before assertions. Normalizedinput
+identity is no actualnative/GPU/art pass. No globalnormalization, geometry,
+rig or source change. Execution48; next ordinary game gate51.
