@@ -1,0 +1,171 @@
+{
+  "accepted": false,
+  "kind": "Read-only original dense UV chart and compact interpolation audit",
+  "recipeSHA256": "63f1c74911ef91e4f1107a267f49d7175962ccc5cf51f67ae6721c7d8654743c",
+  "items": {
+    "jeans": {
+      "accepted": false,
+      "scope": "EXACT executed jeans source-corner lineage; no UV regeneration",
+      "denseVertices": 420800,
+      "denseFaces": 841644,
+      "compactVertices": 7978,
+      "compactFaces": 16000,
+      "denseUVChartTopology": {
+        "connectedUVCharts": 43284,
+        "chartEndpointToleranceUV": 1e-06,
+        "sharedGeometricEdges": 1262466,
+        "UVSeamEdges": 212674,
+        "boundaryGeometricEdges": 0,
+        "nonmanifoldGeometricEdges": 0
+      },
+      "compactFacesWhoseCornersBorrowDifferentUVCharts": 8830,
+      "mixedChartFaceFraction": 0.551875,
+      "compactUVTriangleArea": {
+        "minimum": 0.0,
+        "median": 0.00022649982090605647,
+        "p95": 0.07919818886920846,
+        "p99": 0.2067702877555158,
+        "maximum": 0.43343280199322726
+      },
+      "denseUVTriangleArea": {
+        "minimum": 0.0,
+        "median": 7.712830267792015e-07,
+        "p95": 1.2940482406520456e-06,
+        "p99": 1.7977799268464874e-06,
+        "maximum": 1.1348220141371712e-05
+      },
+      "compactFaceCentreToSourceDistanceInSourceUnits": {
+        "minimum": 1.1102230246251565e-16,
+        "median": 0.0005591465659002963,
+        "p95": 0.0017059490631336543,
+        "p99": 0.00237006910173683,
+        "maximum": 0.004236495351316816
+      },
+      "centreUVLinearInterpolationErrorPixelsAt4096": {
+        "minimum": 0.00043837791369308527,
+        "median": 483.1021948038533,
+        "p95": 2456.858784531294,
+        "p99": 3537.9272793646187,
+        "maximum": 4791.166702551688
+      },
+      "centreErrorsOver32Pixels": 9750,
+      "centreRGBErrorByteEuclidean": {
+        "minimum": 0.0,
+        "median": 11.090536506409418,
+        "p95": 78.65430571932644,
+        "p99": 103.49443085523819,
+        "maximum": 227.7147338228249
+      },
+      "RGBErrorsOver30Of255Euclidean": 4934,
+      "centreNearestMethod": "Closest point among 32 nearest dense triangle centroids, chunk512; sampled diagnostic, not certified global BVH.",
+      "sources": {
+        "cleaned-donor.npz": {
+          "path": "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/finish-2026-10-05/wardrobe/data/prep02/jeans/cleaned-donor.npz",
+          "sha256": "c38413a36d564d97f106ebde13bb240d4c7075078ce463f30234a97c0f3d2237"
+        },
+        "retopology-prototype.npz": {
+          "path": "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/finish-2026-10-05/wardrobe/data/prep02/jeans/retopology-prototype.npz",
+          "sha256": "6907492293a23765f49b41a64a65cbdf18a6e10b15cfd183416113352f759a49"
+        },
+        "baseColorTexture.png": {
+          "path": "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/finish-2026-10-05/wardrobe/data/prep02/jeans/baseColorTexture.png",
+          "sha256": "29a166cd304c492a025ea15f5949da0b8540e1ce11de196c2ed0b5afec50e810"
+        }
+      },
+      "limits": [
+        "Chart mixing is a strict seam incompatibility for existing original atlas interpolation.",
+        "Centre sampling also includes compact geometry chord error and possible nearest-sheet ambiguity.",
+        "No native/export/player/material source was modified; this is not moving art acceptance."
+      ],
+      "executedLineage": {
+        "path": "/Users/raynos/projects/games/rockhop/harness/out/rider-rebuild/construction02/selected-wardrobe01/actual-donor-wardrobe/jeans-source-corner-lineage.json",
+        "sha256": "44e4a7544027ab99de642b43a24e1e941a760a054b3a7666265d1874d77a0797"
+      },
+      "executedGLTFUV": {
+        "path": "/Users/raynos/projects/games/rockhop/harness/out/rider-rebuild/construction02/selected-wardrobe01/rider.glb",
+        "sha256": "728169362a1067c7230ffb5d28b26ec820e9456651fdd57f46493c8fba332257",
+        "sourceCornerIDsCount": 48000,
+        "allRecordedCornerIDsPresent": true,
+        "originalLineageVsExecutedGLTFUVMaximumError": 0.0,
+        "exactFloat32ArraysEqual": true,
+        "gltfVConvention": "1-nativeV"
+      }
+    },
+    "boots": {
+      "accepted": false,
+      "scope": "Prototype vertex source ancestry only; executed boot per-corner BVH mapping is UNMEASURED",
+      "denseVertices": 305453,
+      "denseFaces": 610934,
+      "compactVertices": 4986,
+      "compactFaces": 10000,
+      "denseUVChartTopology": {
+        "connectedUVCharts": 29871,
+        "chartEndpointToleranceUV": 1e-06,
+        "sharedGeometricEdges": 916401,
+        "UVSeamEdges": 151718,
+        "boundaryGeometricEdges": 0,
+        "nonmanifoldGeometricEdges": 0
+      },
+      "compactFacesWhoseCornersBorrowDifferentUVCharts": 6794,
+      "mixedChartFaceFraction": 0.6794,
+      "compactUVTriangleArea": {
+        "minimum": 0.0,
+        "median": 0.0010608675128289669,
+        "p95": 0.13859501640324298,
+        "p99": 0.25709529382472746,
+        "maximum": 0.44601964650580905
+      },
+      "denseUVTriangleArea": {
+        "minimum": 0.0,
+        "median": 1.2629323009605287e-06,
+        "p95": 1.7231057597655305e-06,
+        "p99": 2.21754499762028e-06,
+        "maximum": 1.0613811355142388e-05
+      },
+      "compactFaceCentreToSourceDistanceInSourceUnits": {
+        "minimum": 0.0,
+        "median": 0.0007549716112344078,
+        "p95": 0.002463531542616252,
+        "p99": 0.0034438554461591695,
+        "maximum": 0.006076687558707586
+      },
+      "centreUVLinearInterpolationErrorPixelsAt4096": {
+        "minimum": 0.000527037926157296,
+        "median": 749.6424995322075,
+        "p95": 2576.2823042090895,
+        "p99": 3516.0095326182573,
+        "maximum": 4664.078310420002
+      },
+      "centreErrorsOver32Pixels": 7233,
+      "centreRGBErrorByteEuclidean": {
+        "minimum": 0.0,
+        "median": 3.1622776601683795,
+        "p95": 12.12435565298214,
+        "p99": 17.320508075688775,
+        "maximum": 98.29547293746543
+      },
+      "RGBErrorsOver30Of255Euclidean": 36,
+      "centreNearestMethod": "Closest point among 32 nearest dense triangle centroids, chunk512; sampled diagnostic, not certified global BVH.",
+      "sources": {
+        "cleaned-donor.npz": {
+          "path": "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/finish-2026-10-05/wardrobe/data/prep02/boots/cleaned-donor.npz",
+          "sha256": "9849de6444632c2dcd1e1d76fda42ac27a7cbe8c7d2c0263ab2082e24b94777f"
+        },
+        "retopology-prototype.npz": {
+          "path": "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/finish-2026-10-05/wardrobe/data/prep02/boots/retopology-prototype.npz",
+          "sha256": "d420da6bc7db4fa02ea095266dc174ff07cd3fb657cb0b01b91a319aa6b17853"
+        },
+        "baseColorTexture.png": {
+          "path": "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/finish-2026-10-05/wardrobe/data/prep02/boots/baseColorTexture.png",
+          "sha256": "5bda21b0d584f91aad83d310b868be6a575d28eddb1170e01e65c0b2071f4044"
+        }
+      },
+      "limits": [
+        "Chart mixing is a strict seam incompatibility for existing original atlas interpolation.",
+        "Centre sampling also includes compact geometry chord error and possible nearest-sheet ambiguity.",
+        "No native/export/player/material source was modified; this is not moving art acceptance."
+      ]
+    }
+  },
+  "witnessesSHA256": "0427de794fa7d1031729977f0e3841821bcb5e71d333e27991818b1f5b37c83a"
+}

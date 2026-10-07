@@ -1151,3 +1151,5 @@ October 7 five actual 75-joint solver states are captured without source/rest/ph
 October 7 active rider plan now explicitly prioritizes observed actual-source fit defects, hand anatomy registration and coherent compact UV/dense detail reconstruction. Source preservation is distinct from wearable fit and played appearance; all R0–R5 gates remain open.
 
 October 7 progress-photo ask330 is filed in the canonical four-column ledger with the actual-source evidence link and explicit unfinished-fit limits.
+
+October 7 executed denim appearance audit proves 8830/16000 compact triangles interpolate across unrelated original UV charts; all48000actual exported corners equal recorded lineage. Independent seam-graph verification agrees. New coherent UV and transformed dense-source detail baking replaces this defective corner projection; boot prototype risk is separate from unmeasured executed boot UV.
