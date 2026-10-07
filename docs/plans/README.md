@@ -1141,3 +1141,5 @@ October 7 ask330 requests progress photos. Source-review recipe uses actual sele
 October 7 genuine selected-source progress photos were sent for ask330 and expose severe denim/boot embedding and an axilla gap. Source-preservation receipts are not fit passes. Actual donor geometry must be fitted from full surface containment before complete Garage delivery; all art milestones remain open.
 
 October 7 selected-glove global exterior-fit source preserves original contour, cap, cuff and seam identities; independent parent smoke passes analytic geometry and actual-hand signs. Whole-surface containment and distortion gates are declared before the bounded fit; no candidate is accepted yet.
+
+October 7 selected seven-part engine gate source independently checks native/decoded source identity and exact 75-joint calibration preservation. Twelve real-reference and receipt regressions pass, including all 10582 native fields; final actual intake and parent played art remain open. Any anatomical rig/socket change requires explicit fresh calibration.
