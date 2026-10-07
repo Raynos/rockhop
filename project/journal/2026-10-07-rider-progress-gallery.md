@@ -22,3 +22,16 @@ is retained. No model, Blender, new rider rendering or art judgment.
 
 Limits: Earlier/later cameras and poses differ; comparisons illustrate
 history and do not prove a measured repair. Publishing remains next.
+
+Finding: Deliver a private dated photo Site and the complete existing
+video/photo packet. Native Sites publication succeeds;21videos and1354
+photos remain unedited in local ZIP exports with individual video links.
+
+Validation: Native deployment succeeded with URL/version/source receipt;
+all84Site photo hashes/static links match, full ZIP contents/pins inventoried.
+No new browser QA or Blender/model/rider experiment ran. Small inventory,
+Site source and delivery/status units are separate main commits.
+
+Limits: Source render history is October3–5, reviewed/preserved recently;
+currentbody07has no render. All rider milestones open, no game promotion
+or main push. Photos ZIP878.2MB, videos67.4MB, local ignored exports.
