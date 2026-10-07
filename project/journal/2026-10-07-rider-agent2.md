@@ -113,3 +113,9 @@ Finding: Privateadapter now inverts actualposed newwearer massproxy eachframe, p
 Validation: Parent reviews integratedsource and actual9CPUtests pass across41leans/worldbikerotations; actualCOM residualmax.5378micrometre; realgrip64.985mm/sole20.601mm failreported. DesktopCPU median1.473ms/max7.14ms.
 
 Limits: Approximate massdistribution, provisional rig03 anatomy; no contact/art/phone/GPU acceptance. Native04 calibration pending.
+
+Finding: Explicit pelvisID exclusion from uppertrunk aiming preserves physicalpelvis carrier under independent spine articulation. Grasp/spine defaults remainunchanged until newanatomy feasibilitycomparison.
+
+Validation: Ten actualCPUtests pass including ±.3rad upper-spine flex with exactpelvis quaternion; oldsource sweep records6palm×7lean×13spine comparisons withoutcontactacceptance. COM .415micrometre, grip61.34mm/sole21.82mm remainfailed.
+
+Limits: Numerical workspace diagnosis only; source04 and movingtruebar surfaces notyet reviewed.

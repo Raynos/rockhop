@@ -12,6 +12,7 @@ import { makeRiderRigPose, riderPoseAtLean, RIDER_TORSO_REST } from '../../src/c
 import { createPrivateRiderClass } from './private-rider.mjs';
 import { privateEnginePlugin } from './private-engine-plugin.mjs';
 import { measureAnthropometricCOM } from './anthropometric-inverse.mjs';
+import { resetHumanoidPose } from './new-humanoid-contract.mjs';
 
 const source = path.resolve(process.env.RIDER_REBUILD_SOURCE ?? 'harness/out/rider-rebuild/construction01/combined01/rider.glb');
 const metadataPath = path.resolve(process.env.RIDER_REBUILD_CONTRACT ?? 'harness/out/rider-rebuild/construction01/combined01/rider-contract.json');
@@ -93,6 +94,16 @@ test('actual COM and socket errors remain bike-local at different world bike lea
       [...rider.debug.gripErr, ...rider.debug.soleErr].forEach((error, i) => assert.ok(Math.abs(error - expected[i]) < 1e-5));
     }
     frame.quaternion.identity(); frame.position.copy(base); frame.updateWorldMatrix(true, true);
+  }
+});
+
+test('anatomical upper-spine flex leaves the explicit physical pelvis carrier fixed', { skip }, async () => {
+  const { rider } = await instance(), frame = poseFrame(0.4), p = rider.physicsTarget(frame);
+  let expected;
+  for (const flex of [0, -0.3, 0.3]) {
+    resetHumanoidPose(rider.binding); rider.poseFromHips(frame, p, [p.hips.x, p.hips.y], flex);
+    const actual = rider.bone(rider.role('pelvis')).getWorldQuaternion(new THREE.Quaternion()).toArray();
+    if (expected) assert.deepEqual(actual, expected); else expected = actual;
   }
 });
 

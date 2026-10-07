@@ -244,7 +244,10 @@ export function createPrivateRiderClass(metadata) {
     poseFromHips(frame, p, hips, spineFlex = 0) {
       const torso = V(Math.cos(p.torsoAngle), Math.sin(p.torsoAngle), 0);
       this.setPosition(this.role('pelvis'), this.toWorld(V(hips[0], hips[1], 0)));
-      const trunk = ids(this.roles.trunk), head = this.role('head');
+      // The declared trunk also contains the pelvis; extra spinal flex must never
+      // overwrite the fixed physical pelvis carrier orientation.
+      const trunk = ids(this.roles.trunk).filter(id => !ids(this.roles.pelvis).includes(id)), head = this.role('head');
+      fail(trunk.length > 0, 'Missing anatomical spine above pelvis');
       this.aim(this.roles.pelvis, trunk.at(-1), torso);
       this.aim(trunk, head, V(Math.cos(p.torsoAngle + spineFlex), Math.sin(p.torsoAngle + spineFlex), 0));
       const neck = ids(this.roles.neck);

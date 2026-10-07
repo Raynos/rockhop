@@ -1061,3 +1061,5 @@ October7 [appearance02](../evidence/rider-rebuild/construction01/combined02/READ
 October7 [anthropometric diagnosis](../evidence/rider-rebuild/runtime01/ANTHRO_HANDOFF.md) measures actual newwearer joint/extents; COMinverse converges under0.5µm but frozenrig03 contacts stillfail. Preserve2testedhelper/probe checkpoint before actualrig04 integration; physicalCOM remains distinctfromhips.
 
 October7 [integrated COM checkpoint](../evidence/rider-rebuild/runtime02/FINDING.md): nineactualCPU tests pass with ≤.5378µm measuredmassproxy residual and fixedsegmentlengths/fullreset. Grip64.985mm/sole20.601mm stillfail underprovisionalrig03; sourcefit04 required, no contact/art/device approval.
+
+October7 [fixed physical carrier](../evidence/rider-rebuild/runtime02/FIXED_CARRIER.md): pelvisID excluded fromuppertrunk aiming, tenactualCPU tests pass including independentflex invariant. Oldbody6×7×13workspace sweep stillfailscontacts; no wrist/spine angle selected or art/device approval.
