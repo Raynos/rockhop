@@ -1155,3 +1155,5 @@ October 7 progress-photo ask330 is filed in the canonical four-column ledger wit
 October 7 executed denim appearance audit proves 8830/16000 compact triangles interpolate across unrelated original UV charts; all48000actual exported corners equal recorded lineage. Independent seam-graph verification agrees. New coherent UV and transformed dense-source detail baking replaces this defective corner projection; boot prototype risk is separate from unmeasured executed boot UV.
 
 October 7 independent bilateral hand topology audit confirms actual distal branches and76inside-skin centres, with990joint queries exposing pinky-proximal and middle-PIP registration defects. No rig changed. Proper local MCP and PIP centering, refreshed hand fields/binds and actual digit articulation precede glove fitting.
+
+October 7 actual-boot corrective source uses anatomical toe-out, explicit source cuff aperture and anatomical inner cavity while retaining detailed selected exterior. Isolated solve/annulus tests pass; inherited UV remains unaccepted pending proper dense bake, and full surface/moving gates remain open.
