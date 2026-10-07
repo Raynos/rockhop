@@ -1,0 +1,7 @@
+# Local native hand derivative source
+
+Finding: Conventional automatic native binding can provide corrected hand fields without changing the rest of the body. The prepared source changes only four heads/four parent tails and eight frames, blending FULL fields over the explicit 1,446-source-ID domain and preserving the remaining 9,136 rows. Individual phalanx response and source-defined curl/spread/opposition signs are measured independently after reopen.
+
+Validation: Parent warning-as-error source check passes: eleven pinned inputs, eight proper frames, exact domain and stable top-four/removed-mass operations. All four ASTs pass. Parent caught the glTF low-weight cutoff mismatch; the independent verifier now applies the actual <=0.0001 drop operator before retained-weight normalization and reports its loss separately.
+
+Limits: Native construction and moving tests have not executed. Source checks do not accept anatomy, glove fit, contact, artwork, engine or device delivery.
