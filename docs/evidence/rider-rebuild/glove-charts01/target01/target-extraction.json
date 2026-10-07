@@ -1,0 +1,524 @@
+{
+  "acceptedWearable": false,
+  "status": "EXACT_NATIVE_TARGET_EXTRACTION_ONLY",
+  "sourcePins": {
+    "glb": {
+      "path": "harness/out/rider-rebuild/construction01/combined04/rider.glb",
+      "sha256": "58677cc37aff6b22bb98144762eb5a93dfe689ac207ea0b74a214ba60538f6fc"
+    },
+    "contract": {
+      "path": "harness/out/rider-rebuild/construction01/combined04/rider-contract.json",
+      "sha256": "32d67e9031bd6865a561ba29dc6d2765ace49ad13bfb08bd61df07df85440ee4"
+    },
+    "nativeWeights": {
+      "path": "harness/out/rider-rebuild/construction01/rig04/weights-four.json",
+      "sha256": "9ce2e702f65c6ea1492750b0e1066e923a96fcb4bcbd301525a38e2d3503c3af"
+    },
+    "originalRest": {
+      "path": "harness/out/rider-rebuild/construction01/rig04/joint-rest.json",
+      "sha256": "875c60bc3096e331eeb76896f217194cee9dc879865953f954413a14bd4d51e9"
+    }
+  },
+  "recipe": {
+    "path": "assets/blender/rider-rebuild/glove-charts01/prepare-target.py",
+    "sha256": "67a20fcc6efbf4ca93f787118aa86034defaba0018d54f77c35f71198e8b322f"
+  },
+  "body": {
+    "path": "docs/evidence/rider-rebuild/glove-charts01/target01/native-body.npz",
+    "sha256": "b34897b3c1fe810d7bd77806a1635f8132b3a43e66986986c218ab23cfad2f45"
+  },
+  "nativeVertexCount": 10582,
+  "exportedVertexCount": 12010,
+  "duplicatePositionResidualM": 0,
+  "allSourceIDsCovered": true,
+  "nativeWeightAuthority": "rig04/weights-four.json; exported normalized/truncated weights unused",
+  "skinJointOrder": [
+    "DEF-spine",
+    "DEF-pelvis.L",
+    "DEF-pelvis.R",
+    "DEF-spine.001",
+    "DEF-spine.002",
+    "DEF-spine.003",
+    "DEF-shoulder.L",
+    "DEF-upper_arm.L",
+    "DEF-upper_arm.L.001",
+    "DEF-forearm.L",
+    "DEF-forearm.L.001",
+    "DEF-hand.L",
+    "DEF-palm.01.L",
+    "DEF-f_index.01.L",
+    "DEF-f_index.02.L",
+    "DEF-f_index.03.L",
+    "DEF-palm.02.L",
+    "DEF-f_middle.01.L",
+    "DEF-f_middle.02.L",
+    "DEF-f_middle.03.L",
+    "DEF-palm.03.L",
+    "DEF-f_ring.01.L",
+    "DEF-f_ring.02.L",
+    "DEF-f_ring.03.L",
+    "DEF-palm.04.L",
+    "DEF-f_pinky.01.L",
+    "DEF-f_pinky.02.L",
+    "DEF-f_pinky.03.L",
+    "DEF-thumb.01.L",
+    "DEF-thumb.02.L",
+    "DEF-thumb.03.L",
+    "PalmSocket.L",
+    "DEF-shoulder.R",
+    "DEF-upper_arm.R",
+    "DEF-upper_arm.R.001",
+    "DEF-forearm.R",
+    "DEF-forearm.R.001",
+    "DEF-hand.R",
+    "DEF-palm.01.R",
+    "DEF-f_index.01.R",
+    "DEF-f_index.02.R",
+    "DEF-f_index.03.R",
+    "DEF-palm.02.R",
+    "DEF-f_middle.01.R",
+    "DEF-f_middle.02.R",
+    "DEF-f_middle.03.R",
+    "DEF-palm.03.R",
+    "DEF-f_ring.01.R",
+    "DEF-f_ring.02.R",
+    "DEF-f_ring.03.R",
+    "DEF-palm.04.R",
+    "DEF-f_pinky.01.R",
+    "DEF-f_pinky.02.R",
+    "DEF-f_pinky.03.R",
+    "DEF-thumb.01.R",
+    "DEF-thumb.02.R",
+    "DEF-thumb.03.R",
+    "PalmSocket.R",
+    "DEF-spine.004",
+    "DEF-spine.005",
+    "DEF-spine.006",
+    "DEF-thigh.L",
+    "DEF-thigh.L.001",
+    "DEF-shin.L",
+    "DEF-shin.L.001",
+    "DEF-foot.L",
+    "DEF-toe.L",
+    "SoleSocket.L",
+    "DEF-thigh.R",
+    "DEF-thigh.R.001",
+    "DEF-shin.R",
+    "DEF-shin.R.001",
+    "DEF-foot.R",
+    "DEF-toe.R",
+    "SoleSocket.R"
+  ],
+  "handRestChecks": [
+    {
+      "name": "DEF-forearm.L",
+      "absoluteResiduals": {
+        "head": 2.7939677238464355e-09,
+        "tail": 1.862645149230957e-09,
+        "matrix": 2.3096799850463867e-07
+      }
+    },
+    {
+      "name": "DEF-forearm.L.001",
+      "absoluteResiduals": {
+        "head": 5.587935447692871e-09,
+        "tail": 7.450580596923828e-09,
+        "matrix": 1.9371509552001953e-07
+      }
+    },
+    {
+      "name": "DEF-hand.L",
+      "absoluteResiduals": {
+        "head": 7.450580596923828e-09,
+        "tail": 0.0,
+        "matrix": 2.086162567138672e-07
+      }
+    },
+    {
+      "name": "DEF-palm.01.L",
+      "absoluteResiduals": {
+        "head": 5.960464477539063e-08,
+        "tail": 5.960464477539063e-08,
+        "matrix": 2.2351741790771484e-07
+      }
+    },
+    {
+      "name": "DEF-f_index.01.L",
+      "absoluteResiduals": {
+        "head": 5.960464477539063e-08,
+        "tail": 5.960464477539063e-08,
+        "matrix": 2.384185791015625e-07
+      }
+    },
+    {
+      "name": "DEF-f_index.02.L",
+      "absoluteResiduals": {
+        "head": 5.960464477539063e-08,
+        "tail": 5.960464477539063e-08,
+        "matrix": 1.1920928955078125e-07
+      }
+    },
+    {
+      "name": "DEF-f_index.03.L",
+      "absoluteResiduals": {
+        "head": 5.960464477539063e-08,
+        "tail": 5.960464477539063e-08,
+        "matrix": 1.341104507446289e-07
+      }
+    },
+    {
+      "name": "DEF-palm.02.L",
+      "absoluteResiduals": {
+        "head": 5.960464477539063e-08,
+        "tail": 5.960464477539063e-08,
+        "matrix": 8.940696716308594e-08
+      }
+    },
+    {
+      "name": "DEF-f_middle.01.L",
+      "absoluteResiduals": {
+        "head": 5.960464477539063e-08,
+        "tail": 5.960464477539063e-08,
+        "matrix": 1.1920928955078125e-07
+      }
+    },
+    {
+      "name": "DEF-f_middle.02.L",
+      "absoluteResiduals": {
+        "head": 5.960464477539063e-08,
+        "tail": 5.960464477539063e-08,
+        "matrix": 5.960464477539063e-08
+      }
+    },
+    {
+      "name": "DEF-f_middle.03.L",
+      "absoluteResiduals": {
+        "head": 5.960464477539063e-08,
+        "tail": 5.960464477539063e-08,
+        "matrix": 1.1920928955078125e-07
+      }
+    },
+    {
+      "name": "DEF-palm.03.L",
+      "absoluteResiduals": {
+        "head": 5.960464477539063e-08,
+        "tail": 5.960464477539063e-08,
+        "matrix": 1.30385160446167e-07
+      }
+    },
+    {
+      "name": "DEF-f_ring.01.L",
+      "absoluteResiduals": {
+        "head": 5.960464477539063e-08,
+        "tail": 5.960464477539063e-08,
+        "matrix": 2.384185791015625e-07
+      }
+    },
+    {
+      "name": "DEF-f_ring.02.L",
+      "absoluteResiduals": {
+        "head": 5.960464477539063e-08,
+        "tail": 5.960464477539063e-08,
+        "matrix": 2.980232238769531e-07
+      }
+    },
+    {
+      "name": "DEF-f_ring.03.L",
+      "absoluteResiduals": {
+        "head": 5.960464477539063e-08,
+        "tail": 5.960464477539063e-08,
+        "matrix": 3.5762786865234375e-07
+      }
+    },
+    {
+      "name": "DEF-palm.04.L",
+      "absoluteResiduals": {
+        "head": 5.960464477539063e-08,
+        "tail": 5.960464477539063e-08,
+        "matrix": 5.960464477539063e-08
+      }
+    },
+    {
+      "name": "DEF-f_pinky.01.L",
+      "absoluteResiduals": {
+        "head": 5.960464477539063e-08,
+        "tail": 5.960464477539063e-08,
+        "matrix": 1.1920928955078125e-07
+      }
+    },
+    {
+      "name": "DEF-f_pinky.02.L",
+      "absoluteResiduals": {
+        "head": 5.960464477539063e-08,
+        "tail": 5.960464477539063e-08,
+        "matrix": 1.1920928955078125e-07
+      }
+    },
+    {
+      "name": "DEF-f_pinky.03.L",
+      "absoluteResiduals": {
+        "head": 5.960464477539063e-08,
+        "tail": 5.960464477539063e-08,
+        "matrix": 1.1920928955078125e-07
+      }
+    },
+    {
+      "name": "DEF-thumb.01.L",
+      "absoluteResiduals": {
+        "head": 7.450580596923828e-09,
+        "tail": 1.4901161193847656e-08,
+        "matrix": 2.980232238769531e-07
+      }
+    },
+    {
+      "name": "DEF-thumb.02.L",
+      "absoluteResiduals": {
+        "head": 1.4901161193847656e-08,
+        "tail": 1.4901161193847656e-08,
+        "matrix": 5.960464477539062e-07
+      }
+    },
+    {
+      "name": "DEF-thumb.03.L",
+      "absoluteResiduals": {
+        "head": 1.4901161193847656e-08,
+        "tail": 1.4901161193847656e-08,
+        "matrix": 3.5762786865234375e-07
+      }
+    },
+    {
+      "name": "DEF-forearm.R",
+      "absoluteResiduals": {
+        "head": 1.3969838619232178e-08,
+        "tail": 9.313225746154785e-09,
+        "matrix": 3.203749656677246e-07
+      }
+    },
+    {
+      "name": "DEF-forearm.R.001",
+      "absoluteResiduals": {
+        "head": 1.30385160446167e-08,
+        "tail": 7.450580596923828e-09,
+        "matrix": 2.2351741790771484e-07
+      }
+    },
+    {
+      "name": "DEF-hand.R",
+      "absoluteResiduals": {
+        "head": 1.4901161193847656e-08,
+        "tail": 1.4901161193847656e-08,
+        "matrix": 2.086162567138672e-07
+      }
+    },
+    {
+      "name": "DEF-palm.01.R",
+      "absoluteResiduals": {
+        "head": 2.2351741790771484e-08,
+        "tail": 2.9802322387695312e-08,
+        "matrix": 2.384185791015625e-07
+      }
+    },
+    {
+      "name": "DEF-f_index.01.R",
+      "absoluteResiduals": {
+        "head": 1.4901161193847656e-08,
+        "tail": 1.4901161193847656e-08,
+        "matrix": 4.172325134277344e-07
+      }
+    },
+    {
+      "name": "DEF-f_index.02.R",
+      "absoluteResiduals": {
+        "head": 1.4901161193847656e-08,
+        "tail": 1.4901161193847656e-08,
+        "matrix": 5.364418029785156e-07
+      }
+    },
+    {
+      "name": "DEF-f_index.03.R",
+      "absoluteResiduals": {
+        "head": 1.4901161193847656e-08,
+        "tail": 1.4901161193847656e-08,
+        "matrix": 5.960464477539062e-07
+      }
+    },
+    {
+      "name": "DEF-palm.02.R",
+      "absoluteResiduals": {
+        "head": 1.4901161193847656e-08,
+        "tail": 7.450580596923828e-09,
+        "matrix": 4.172325134277344e-07
+      }
+    },
+    {
+      "name": "DEF-f_middle.01.R",
+      "absoluteResiduals": {
+        "head": 1.4901161193847656e-08,
+        "tail": 1.4901161193847656e-08,
+        "matrix": 2.086162567138672e-07
+      }
+    },
+    {
+      "name": "DEF-f_middle.02.R",
+      "absoluteResiduals": {
+        "head": 1.4901161193847656e-08,
+        "tail": 1.4901161193847656e-08,
+        "matrix": 1.7881393432617188e-07
+      }
+    },
+    {
+      "name": "DEF-f_middle.03.R",
+      "absoluteResiduals": {
+        "head": 1.4901161193847656e-08,
+        "tail": 1.4901161193847656e-08,
+        "matrix": 2.384185791015625e-07
+      }
+    },
+    {
+      "name": "DEF-palm.03.R",
+      "absoluteResiduals": {
+        "head": 1.4901161193847656e-08,
+        "tail": 1.4901161193847656e-08,
+        "matrix": 3.5762786865234375e-07
+      }
+    },
+    {
+      "name": "DEF-f_ring.01.R",
+      "absoluteResiduals": {
+        "head": 1.4901161193847656e-08,
+        "tail": 2.2351741790771484e-08,
+        "matrix": 3.5762786865234375e-07
+      }
+    },
+    {
+      "name": "DEF-f_ring.02.R",
+      "absoluteResiduals": {
+        "head": 2.2351741790771484e-08,
+        "tail": 2.2351741790771484e-08,
+        "matrix": 4.172325134277344e-07
+      }
+    },
+    {
+      "name": "DEF-f_ring.03.R",
+      "absoluteResiduals": {
+        "head": 2.2351741790771484e-08,
+        "tail": 2.2351741790771484e-08,
+        "matrix": 4.172325134277344e-07
+      }
+    },
+    {
+      "name": "DEF-palm.04.R",
+      "absoluteResiduals": {
+        "head": 1.4901161193847656e-08,
+        "tail": 1.862645149230957e-08,
+        "matrix": 4.76837158203125e-07
+      }
+    },
+    {
+      "name": "DEF-f_pinky.01.R",
+      "absoluteResiduals": {
+        "head": 1.862645149230957e-08,
+        "tail": 2.2351741790771484e-08,
+        "matrix": 4.172325134277344e-07
+      }
+    },
+    {
+      "name": "DEF-f_pinky.02.R",
+      "absoluteResiduals": {
+        "head": 2.2351741790771484e-08,
+        "tail": 2.2351741790771484e-08,
+        "matrix": 5.960464477539062e-07
+      }
+    },
+    {
+      "name": "DEF-f_pinky.03.R",
+      "absoluteResiduals": {
+        "head": 2.2351741790771484e-08,
+        "tail": 2.2351741790771484e-08,
+        "matrix": 5.364418029785156e-07
+      }
+    },
+    {
+      "name": "DEF-thumb.01.R",
+      "absoluteResiduals": {
+        "head": 2.2351741790771484e-08,
+        "tail": 2.9802322387695312e-08,
+        "matrix": 4.172325134277344e-07
+      }
+    },
+    {
+      "name": "DEF-thumb.02.R",
+      "absoluteResiduals": {
+        "head": 2.9802322387695312e-08,
+        "tail": 4.470348358154297e-08,
+        "matrix": 4.76837158203125e-07
+      }
+    },
+    {
+      "name": "DEF-thumb.03.R",
+      "absoluteResiduals": {
+        "head": 2.9802322387695312e-08,
+        "tail": 2.9802322387695312e-08,
+        "matrix": 4.172325134277344e-07
+      }
+    }
+  ],
+  "hands": {
+    "R": {
+      "output": {
+        "path": "docs/evidence/rider-rebuild/glove-charts01/target01/native-hand-R.npz",
+        "sha256": "38ff5b613aded2d608c20ab1beff282124f1f17ce0c3fc63581b0f012e5e8072"
+      },
+      "measurements": {
+        "referencedVertices": 763,
+        "faces": 1484,
+        "edges": 2246,
+        "euler": 1,
+        "boundaryEdges": 40,
+        "boundaryDegreeNotTwo": 0,
+        "nonmanifoldEdges": 0,
+        "sourceCornerReconstructionMaxM": 1.249000902703301e-16,
+        "aperturePlaneMaxResidualM": 1.0581813203458523e-16,
+        "wrist": [
+          -0.3939262628555298,
+          -0.06635653227567673,
+          0.9327287673950195
+        ],
+        "cuffOffsetM": 0.028,
+        "coefficientSumMaxResidual": 2.220446049250313e-16,
+        "maximumInterpolatedInfluences": 4
+      }
+    },
+    "L": {
+      "output": {
+        "path": "docs/evidence/rider-rebuild/glove-charts01/target01/native-hand-L.npz",
+        "sha256": "871bd1b2db32e3463aa87030977b5004b3c1f76023f6a4c7043264f4b4c42a49"
+      },
+      "measurements": {
+        "referencedVertices": 763,
+        "faces": 1484,
+        "edges": 2246,
+        "euler": 1,
+        "boundaryEdges": 40,
+        "boundaryDegreeNotTwo": 0,
+        "nonmanifoldEdges": 0,
+        "sourceCornerReconstructionMaxM": 1.2412670766236366e-16,
+        "aperturePlaneMaxResidualM": 9.974659986866641e-17,
+        "wrist": [
+          0.3939262628555298,
+          -0.06635655462741852,
+          0.93272864818573
+        ],
+        "cuffOffsetM": 0.028,
+        "coefficientSumMaxResidual": 2.220446049250313e-16,
+        "maximumInterpolatedInfluences": 4
+      }
+    }
+  },
+  "limits": [
+    "Original rig04 has 404 control/deformation bones; contract and GLB select the same 75 exported joint names.",
+    "Hand rest comparison includes native float reconstruction residuals, not byte equality of JSON coordinates.",
+    "Clipped seam coefficients interpolate exact native FOUR and can have more than four influences; no silent truncation.",
+    "This is a body reference and future inner-cavity reference only, never the glove exterior."
+  ]
+}

@@ -1123,3 +1123,5 @@ October 7 corrected glove02 passes all regional volume profiles but rejects943un
 October 7 independent Astra source review establishes7200sampled source contour hits and retains427mixed chart-boundary triangles plus possible legitimate cuff detail. Prior palm-handle assumption is corrected. New source-preserving exterior chart deformation replaces failed hand-normal rays; full coverage/fit/played art remain open.
 
 October 7 the original two-hour complete-review target is missed, not fulfilled by the rejected substitute. Actual face/clothing/boot source checks pass; source-preserving glove chart construction remains. Active replacement plan records measured correction, full-source export gate and deliberate texture budget; all moving/human gates remain open.
+
+October 7 actual-glove chart preparation preserves all selected exterior faces and material ancestry, 427 mixed digit/palm triangles and cuff detail. Independent parent readback passes exact native hand fields and complete chart reconstruction; fitting and played acceptance remain open.

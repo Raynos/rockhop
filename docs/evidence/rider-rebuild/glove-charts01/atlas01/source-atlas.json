@@ -1,0 +1,140 @@
+{
+  "acceptedWearable": false,
+  "status": "COMPLETE_SOURCE_PATCH_OWNERSHIP_WITH_SHARED_SEAMS",
+  "recipe": {
+    "path": "assets/blender/rider-rebuild/glove-charts01/prepare-source-atlas.py",
+    "sha256": "fa3a92cb826d828f9f478d30f7af4fce8d360bab9bd16527ca39ae0cab1e5394"
+  },
+  "sourcePins": {
+    "source": {
+      "path": "assets/blender/hero-remaster/rider/finish-2026-10-05/wardrobe/data/glove-cavity08/open-glove-source.npz",
+      "sha256": "8379004e394bbae110f495c13bfc12a205977061d13cefdcc8ee24c6e5343782"
+    },
+    "branches": {
+      "path": "assets/blender/hero-remaster/rider/finish-2026-10-05/wardrobe/data/glove-anatomy02b/branches.npz",
+      "sha256": "2bb0068e983394ed6bbb6afd94de4b0f735bc62a94b449204ead8d8058e03562"
+    },
+    "classification": {
+      "path": "docs/evidence/hero-remaster/finish-2026-10-05/wardrobe/glove-anatomy02/classification.json",
+      "sha256": "4a0428f4b3054562e33db8f70accfb4cd0073fe561b2dd5823af6fd04fa4e154"
+    },
+    "localization": {
+      "path": "docs/evidence/hero-remaster/finish-2026-10-05/wardrobe/glove-cavity09/localization.json",
+      "sha256": "c197e995337cf1ccaacd3c3835a2018b5982c8385ace908f91673b2615ef777c"
+    },
+    "opening": {
+      "path": "docs/evidence/hero-remaster/finish-2026-10-05/wardrobe/glove-cavity08/opening.json",
+      "sha256": "eef2fde73da89499f18b7e0b161198477bfb749a29bad38b004165337719c938"
+    }
+  },
+  "output": {
+    "path": "docs/evidence/rider-rebuild/glove-charts01/atlas01/source-atlas.npz",
+    "sha256": "3ef1d2672f07c9a766bcda579dec342cd06e0e987a6f06494045ffb015a28635"
+  },
+  "referencedSourceVertices": 7306,
+  "retainedSourceFaces": 14543,
+  "unassignedFaces": 0,
+  "duplicatedGeometryVertices": 0,
+  "sourceXYZFacesPrototypeCornerUVUnchanged": true,
+  "sharedSeamEdges": 1050,
+  "chartFaceCounts": {
+    "pinky_digit": 916,
+    "pinky_collar": 77,
+    "palm_positive_z": 2291,
+    "palm_side": 456,
+    "palm_negative_z": 1574,
+    "cuff": 2186,
+    "web_pinky_ring": 254,
+    "ring_digit": 1574,
+    "ring_collar": 78,
+    "web_ring_middle": 161,
+    "middle_digit": 1782,
+    "middle_collar": 85,
+    "cuff_feature": 239,
+    "web_middle_index": 210,
+    "index_collar": 94,
+    "index_digit": 1541,
+    "web_index_thumb": 327,
+    "thumb_collar": 93,
+    "thumb_digit": 605
+  },
+  "sourcePartitionMinimum": 0.0,
+  "sourcePartitionMaximum": 1.0,
+  "sourcePartitionUnityMaxResidual": 5.995204332975845e-15,
+  "harmonicFreeEquationMaxResidual": 2.7003562415385575e-13,
+  "digitCoordinateReconstructionMaxSourceUnits": {
+    "pinky": 4.871083751574258e-16,
+    "ring": 4.585973723508303e-16,
+    "middle": 3.554447978966673e-16,
+    "index": 3.554447978966673e-16,
+    "thumb": 8.829589126839103e-16
+  },
+  "cuffFeature": {
+    "exactCycleIncidentFaceSeeds": [
+      7335,
+      7399,
+      7400,
+      7459,
+      7461,
+      7463,
+      7534,
+      7539,
+      7541,
+      7543,
+      7545,
+      7546,
+      7586,
+      7588,
+      7590,
+      7591,
+      7651,
+      7653,
+      7654,
+      7656,
+      7657,
+      7659,
+      7719,
+      7722,
+      7723,
+      7781,
+      7783,
+      7784,
+      7785,
+      7861,
+      7863,
+      7864,
+      7865,
+      7866,
+      7869,
+      7871,
+      7874,
+      7947,
+      7948,
+      7949,
+      8018,
+      8021,
+      8024,
+      8102,
+      8250,
+      8252,
+      8329,
+      8332,
+      8333,
+      8433,
+      8438,
+      8520,
+      8521,
+      8524,
+      8617
+    ],
+    "twoRingProtectedFaces": 239,
+    "interpretation": "Unchanged actual cuff feature neighborhood, no automatic topology repair"
+  },
+  "limits": [
+    "Geometric patch atlas in 3D, not a claim of bijective 2D flattening or replacement texture UVs.",
+    "Web/palm/cuff patch ownership derives from explicit harmonic partition and face orientation; anatomical naming remains a fitting hypothesis.",
+    "Partition fields are source interpolation coordinates, not garment skinning weights or source-to-target correspondence.",
+    "Source preserved at identity; no fitted deformation or deformed distortion/enclosure pass claimed.",
+    "Prototype corner UV is an unchanged proxy; final appearance still requires dense original corner UV authority."
+  ]
+}
