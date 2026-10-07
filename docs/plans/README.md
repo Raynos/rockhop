@@ -1099,3 +1099,5 @@ The actual-game review camera now settles alpha-zero interpolation before measur
 October 7 selected denim lookup uses float64 determinants for tiny valid source triangles; 841644 original faces pass the precision preflight. Actual native fitting and played appearance remain open.
 
 October 7 the actual liked face carrier has a source-preserving welded neck construction recipe and native checker; original PBR/corner identity and one closed shared75 wearer are mandatory guards. Source checkpoint only; first native and moving profile remain open.
+
+October 7 selected-face native attempt01 stops safely on an unsupported deformation-map API after2.83seconds. Explicit indexed field writes correct the API; fresh native topology and played face/neck remain open.

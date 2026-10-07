@@ -215,3 +215,9 @@ Finding: Join the exact liked face carrier to the coherent wearer using a welded
 Validation: Parent reviews source and Python compilation passes. Original raw donor has one closed manifold connected surface including the cheek repair. New construction asserts protected source identity, opposite winding, one closed component and complete shared75 FOUR fields before save.
 
 Limits: First native geometry and actual moving neck profile remain unaccepted. No original face transform is reapplied; no generic replacement head is permitted.
+
+Finding: Selected-face native construction reached the actual nested neck loops but stopped on an unsupported BMDeformVert dict API. Use explicit indexed weight writes without changing source geometry.
+
+Validation: First guarded run stops safely after 2.83 seconds, exit1; exact input and log preserved. Parent reviews the mechanical fix and Python compilation passes.
+
+Limits: No new native master or face appearance pass from this attempt; fresh topology and moving review remain open.

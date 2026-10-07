@@ -155,9 +155,13 @@ def buildFace(body, rig, out):
         assert total > 0
         return {k: v / total for k, v in four}
 
+    def set_field(vertex, field):
+        vertex[deform].clear()
+        for key, value in field.items(): vertex[deform][key] = value
+
     for vertex in lower:
         field = normalized(dict(vertex[deform]))
-        vertex[deform].clear(); vertex[deform].update(field)
+        set_field(vertex, field)
 
     def head_field(z):
         t = max(0, min(1, (z - top) / .070)); t = t * t * (3 - 2 * t)
@@ -165,9 +169,9 @@ def buildFace(body, rig, out):
 
     for vertex in head_vertices:
         if vertex.is_valid:
-            vertex[deform].clear(); vertex[deform].update(normalized(head_field(vertex.co.z)))
+            set_field(vertex, normalized(head_field(vertex.co.z)))
     for vertex in outer + inner:
-        vertex[deform].clear(); vertex[deform].update(normalized(head_field(top)))
+        set_field(vertex, normalized(head_field(top)))
 
     def arc(ring):
         distances = [0.]
@@ -205,7 +209,7 @@ def buildFace(body, rig, out):
             blend = t*t*(3-2*t); upper_field = head_field(top)
             combined = {k: v * (1-blend) for k, v in field.items()}
             for key, value in upper_field.items(): combined[key] = combined.get(key, 0) + blend*value
-            vertex[deform].update(normalized(combined)); ring.append(vertex)
+            set_field(vertex, normalized(combined)); ring.append(vertex)
         rings.append(ring)
     rings.append(outer)
     bridge_faces = []
