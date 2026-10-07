@@ -73,3 +73,15 @@ and AudioContexts. The six-second 72-frame movie played muted to end.
 Limits: Baseline build replayed today, not a video recorded October 4.
 Current side is local main, not a claim about a fresh live game deploy.
 Crops/titles are presentation only; no new rig, pose or accepted art.
+
+Finding: Publish the integrated Garage before/now proof and five
+supplemental historical clips on the same Site. User ask324 authorizes
+public access; owner-only audience becomes public at revision2.
+
+Validation: Native deployment succeeded; get_site reports public and the
+verified same live URL, version3. All 193 local references resolve;
+largest hosted file is 23,065,143 bytes, below the 25 MiB limit.
+Asks323/324/325 close with the delivery receipt and direct movie link.
+
+Limits: No game/main push, new rider promotion or acceptance. Local main
+Garage remains visually unchanged; web review publication is separate.

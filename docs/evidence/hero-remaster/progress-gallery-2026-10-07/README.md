@@ -1,6 +1,6 @@
 # Rider progress photos and videos — October7
 
-[Private before/after photo Site](https://rockhop-rider-progress-oct7.raynos.chatgpt.site):
+[Public before/after Site](https://rockhop-rider-progress-oct7.raynos.chatgpt.site):
 five priority videos (1 minute 38 seconds), three body/glove/hoodie
 comparisons and 84 unedited photos from all 21 sequences.
 Earlier/later cameras and poses differ; these are historical comparisons,
@@ -19,7 +19,8 @@ Full ZIPs remain local ignored exports; all source movie/photo pins and Site
 source are committed. No media bytes were edited. Videos are silent; prior
 automated playback ended for every sequence. No new Blender/model job,
 current moving-body verdict, acceptance, game publication or resumed core goal.
-The photo Site is private and separately published through Sites.
+The photo/video Site is public, as explicitly requested in ask324.
+Publication/access readback is [recorded here](garage-public-delivery.json).
 
 The five clips are ranked: full rider on the bike, landing/jeans/boots,
 failed hoodie deformation, failed finger flex, and the failed head/neck repair.
