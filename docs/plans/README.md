@@ -1167,3 +1167,5 @@ October 7 actual boot fit04 rejected before native save: source cavity faces and
 October 7 source-supported hand correction proposes only bilateral pinky MCP and middle PIP endpoints. Parent independently certifies all30continuous phalanx segments inside actual skin (minimum104.673µm) and reproduces the 1446-vertex rebinding domain exactly; 9136body field rows remain unchanged. Native binding and moving anatomy/art qualification remain pending.
 
 October 7 intended-final dense artwork transport source is checkpointed: eight warning-as-error geometric tests pass. The unexecuted native entry builds a coherent compact UV atlas and 4K source-derived albedo/MR/normal maps from fitted original dense geometry, with explicit cap/inner ownership and actual bake-support checks. Rejected/missing fits remain ineligible; no material or art gate passes yet.
+
+October 7 genuine boot-source diagnostic renderer is checkpointed before execution: exact dense source corner UV, normals and original PBR, plus compact geometric section overlays, will identify the existing cavity/rim. It creates no fitted rider or runtime model and cannot confer art acceptance.
