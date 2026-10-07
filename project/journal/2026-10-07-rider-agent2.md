@@ -29,3 +29,9 @@ Finding: Parent closes the historical played audit as its own coherent checkpoin
 Validation: 21films played and1354presented PNG hashes checked; complete audit documents now ready. No current candidate authoring ran.
 
 Limits: Historical sampled defect review; every current rider gate remains open.
+
+Finding: User-authorized first-principles rider rebuild supersedes the failed protected-bust/fixed-bind repair sequence. The production plan makes a coherent anatomical wearer, one shared rig and all four dressed garments the first visible moving checkpoint; facial animation is explicitly deferred.
+
+Validation: Completed five-day audit and played historical review inform the plan; official Tripo pricing/rig capabilities checked. Astra and engine reviews applied: mandatory early new-rig intake, gross-shape R1 rejection, defect-based two-attempt cap, early allocation and separate FOUR transport/approximation-normal contracts. No new model, paid API request or runtime change executed.
+
+Limits: Plan/source strategy only; all six new production gates remain open, with no inherited art acceptance or physical-device claim.

@@ -39,10 +39,3 @@ waiting on. IDs never reused. Ported from the FF15 demo's `HUMAN_REVIEW.md`.
   [one-rider candidate](../../docs/plans/sol-6.1-2026-10-03-RIDER_BASELINE_TO_SHIP.md) passes structural and played motion review, judge it in the actual Garage and forward-standing/back-seated riding on landscape iPhone Safari and desktop. Current candidate remains unaccepted. Picture feedback is welcome throughout; it does not block autonomous target/construction/motion work. Outfits and hairstyle follow the accepted baseline. Stranger attempts/restart and sustained phone pacing remain release gates.
 
 - **HR-24 — Earned Rookie→Pro campaign check ([focused audit](../../docs/evidence/course-remaster/challenge-progression-audit/README.md)).** Waiting on: two fresh players — run unbriefed in landscape from empty saves through levels 1–8, earning 1,840 Scrap, buying/equipping Pro and attempting level 9, or stop at 90 minutes. Record attempts/fault corrections, medals/wallet after each clear/upgrade, retry latency and time seeking missing Scrap. Keep price/clocks fixed while measuring; assisted-agent results suggest a possible grind but do not establish one. This does not block independent art work.
-
-- **HR-25 — Facial animation scope for the rider remaster (ask307).** Waiting on: you — the
-  consolidated handoff includes facial rigging, but the current51-bone rider has no jaw/eye
-  controls or facial morphs and the current repair contract protects its face. Choose whether
-  facial animation joins this remaster after the body/clothing foundation, or whether this
-  remaster remains focused on body/bike motion. The plan audit and independent body/wardrobe
-  work continue; no face or bind change is authorized by this pending question.
