@@ -11,3 +11,9 @@ Finding: Intact wardrobe appearance sources need deliberate wearable topology an
 Validation: Parent independently rehashes4available cited wardrobe files; all match. Four source GLBs total140929484bytes/2945160triangles, zero skins/animations.
 
 Limits: Read-only source audit; no fit, bake, skin, motion, collision, phone or art acceptance. Foundation contacts and moving review precede incorporation.
+
+Finding: Native49/capture50 intake is intact. Current exact exporter, full51 engine motion and normal/UniMate adapters remain unqualified. Prepared contacts51 controller preserves failures and uses zero player model replacements.
+
+Validation: Parent streams all52controller inputs through SHA256 checks, checks fresh outputs and AST syntax. No contact/build/browser/model run from this preparation.
+
+Limits: Prepared controller and read-only engine audit only; current candidate remains private/unaccepted.

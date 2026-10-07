@@ -1,0 +1,77 @@
+{
+  "status": "READ_ONLY_ENGINE_AND_UNIMATE_INTAKE_AUDIT_UNACCEPTED",
+  "filePins": {
+    "harness/rider-finish/native-sample.py": "852be70ec38424466d5ad12478517172290d6866737660a49d43c64a23bd8050",
+    "harness/rider-finish/export-check.mjs": "5f23b6c56a9406d08aafb3d2b64b17bf3eb1e660c2aef98c879ee9c84b2cc77e",
+    "harness/rider-finish/prepare-export-mapping.py": "3fad3be4827f7f2e4be9afcbe4af12351a2b88d47f1df0463a67943ab076546d",
+    "harness/rider-finish/consumed-skin-inventory.mjs": "b15591bde288c83f8962521d64a73ef9fed534a42049bc5fe48508b96538d5eb",
+    "src/render/hero/gltfRider.ts": "b1c3a11b75d901f3c11c946667611025fb70ed4c8609e500931a966231919935",
+    "src/render/hero/sleeveSkin.ts": "35ee7f2165fae54a25fb5559c148738d016d73692515fc72513316389dc88916",
+    "harness/hero-remaster/new-rider-private-adapter.mts": "96c95b7fc02814dfd7055a493e4b3dc8a53aeb5ac1430c71fe3c30235132c9d7",
+    "assets/blender/hero-remaster/rider/finish-2026-10-05/unimate/trial02.py": "f8819490a12087a1ea9b54108ca728708be3e76b28bfc2badde9d5f307dfe34e",
+    "assets/blender/hero-remaster/rider/finish-2026-10-05/unimate/blender-preprocess-idle.py": "0f6f9586827abe15b24621ce70f55043470b1232467a036980670decad5b992a",
+    "assets/blender/hero-remaster/rider/finish-2026-10-05/unimate/decode-trial02.py": "f5ee725544a042f7c8763c4fd64ee692a50c892499b4b59fbbae46a4701e11b1"
+  },
+  "localWrapperPins": {
+    "/Users/raynos/projects/localai/bin/unimate/decode_motion.py": "0496c5da88b8e7b932763b220a8bf7935b8f8178a3d40e9858dd6433cf20d1f6",
+    "/Users/raynos/projects/localai/bin/unimate/prepare_candidate.py": "c2304b03fb4bc4e6c17c1e2554044c17e4cda39e1625e33f8d6b793d6b8d5f9f",
+    "/Users/raynos/projects/localai/bin/unimate/blender_animate.py": "304638a7610c5d9292d4f65cfb1d43b5b08d21269b4bf4ce182f2b8618a76dab",
+    "/Users/raynos/projects/localai/runtime/unimate/code/data_process/mesh_animation/preprocess_char.py": "df23fec9a1a4643fbdcdf23474b1f0358ac6e3a547eef22fd4aaa4ae875c88de",
+    "/Users/raynos/projects/localai/runtime/unimate/code/unimate/utils/motion_utils.py": "19bf1e956f075a5c393f462e8ceb5a29e2e55e3b19dccb75369099d65129b74f"
+  },
+  "engine": {
+    "currentNative": "body07 saved native49 27d123d90eb3878ffc33364dd7f6f691109659b7296ca1400d3a31ab897cf569",
+    "currentExport": "No export of exact native49/capture50 admitted or recorded; historical body07-build path cannot identify this save.",
+    "freshCaptureNeededForContacts": false,
+    "nativeRestAndSamplesAvailableForFutureExportCheck": true,
+    "exportFourPyExists": false,
+    "nativeSampleExporterLimitation": "Top-level function applies regenerated semantic FK commands and transient idle keyframes. AST-loaded helper use in capture-v3 avoided that path. An exact saved-rig exporter remains required.",
+    "identity": "_NATIVE_ID,_CORNER_ID,_REGION_ID must cover exact native point/corner/part through GLTFLoader, merge and clone; no nearest-coordinate fallback. Existing prepare-export-mapping uses unique exact coordinates only for legacy cheek and lacks complete required corner identity there.",
+    "skeleton": "All51 original deform joints/hierarchy/rest/inverse binds remain authority; ORDER19 is physics role table; 153 auxiliary groups are not joints.",
+    "normal": "export-check installed Three CPU formula deliberately suppresses real texture decoding; neither it nor finite nonzero native normals proves GPU/PBR parity. Stock linear rest-normal skin omits native variable-weight geometric fan terms; original protected custom-normal route is separate.",
+    "conditioner": "GltfRider applies conditionSleeveSkin at construction; explicit ancestor rockhopRiderSkinConditioned=1 skips it. Verify actual post-constructor named normalized fields. Stage switches authored/riding geometry.",
+    "legacyAdapter": "new-rider-private-adapter asserts this.bones.size===19; requires legacy metadata/morphs/sole offsets. Keep --new-rider-adapter=0 for own51 stock path.",
+    "animation": "boneName is shared between bones and sampler; finger names containing underscores are not transformed by letters-only regex, but mutual identical keys may bind. No claim of missing finger binding from the regex alone.",
+    "all51MotionGap": "Stage pose, base rest capture/reset, additiveBasis and ragdoll are ORDER19 based. Fallback additive traverses all mapped quaternion tracks except ARM_CHAIN; physical riderBody+grip+bike path returns before additive clips. Actual per51 binding/local transforms/repeated identical frame reset required before full generic/hand animation acceptance.",
+    "privateIntake": "Freeze native49 separately from historical body06 contract, export exact source IDs+binds, run CPU check with explicit limits then stock actual headless draw/decoded textures/consumption inventory; measure generic clip and physical bike driver separately."
+  },
+  "unimate": {
+    "installedRevision": "5d6aabedd947297b5ba6706d8e9113e68c0c3e4f",
+    "inputSHA256": "2b07ce4bd70b20a075de21e9769d79a9d9b77952d06594d7b206fc9abeaab50b",
+    "inputExactToTrial02Admission": true,
+    "inputJoints": 51,
+    "inputAnimations": 1,
+    "sourceLineage": "body02-native-intake.json idleExport, not current body07 native49",
+    "sourceFrames": 61,
+    "featureFrames": 60,
+    "capacity": {
+      "maxJoints": 71,
+      "maxDepth": 19,
+      "observedDepth": 9
+    },
+    "scaleFactor": 0.7713867883629453,
+    "decodedVerdict": {
+      "accepted": false,
+      "status": "CANONICAL_CONTROL_MEASURED_NATIVE_AND_MOVING_REVIEW_PENDING",
+      "measurementSHA256": "d3bdbd4684b3eb327369ee7696650e0c86866593152df37ce9dcd3f56360c38b",
+      "rawContactDriftCanonicalM": 0.00286465898066743,
+      "boundedContactDriftToGTCanonicalM": 0,
+      "boundedNeckDetailDegrees": 0.10117886439457946,
+      "headDetailDegrees": 0,
+      "policy": "Retain authored support as authority. This single trial has negligible head detail; no additional neural generation before the body/clothes and native adapter qualify.",
+      "limits": [
+        "Feature masking alone failed decoded contacts; exact reference local restoration is required.",
+        "Canonical GT is not yet proved a native rest/motion roundtrip. First/last positional difference persists under T-1 decoding.",
+        "No native retarget, moving visual, contact to actual ground, engine or art acceptance."
+      ]
+    },
+    "installedAdapterCapability": "decode_motion recovers canonical NumPy FK; prepare_candidate restores reference local rotations/positions outside neck/head; blender_animate drives canonical asset using canonical T-pose. No qualified original-native49 rest/bind roundtrip adapter.",
+    "canonicalization": "preprocess bake solves similarity from original world bone heads, transforms mesh coordinates, removes/rebuilds armature bones in BFS canonical order and rest, rotates object+90X for Blender. It is model-only data; importing its rebind into original own51 violates immutable original rest.",
+    "requiredAdapterGate": "First authored GT feature/decode -> inverse canonical similarity + original-rest bone basis retarget -> exact original51 native skin/endpoint/root/contact readback. Derive per-joint frame relations, not name/order or quaternion copy. Preserve original inverse binds. T-1 row60 endpoint requires explicit timing authority. No additional inference before this gate and qualified body/clothes."
+  },
+  "limits": [
+    "Read-only local code and receipts; no new native, export, shader, inference, played art, browser or device job.",
+    "Finite raw output and canonical contact restoration do not establish physical signed hand/sole volumes, support or good motion.",
+    "Parent alone accepts candidate and approves execution after the five-day review."
+  ]
+}
