@@ -7,8 +7,9 @@ Release authority: [FINISH_TO_PUBLISH](sol-6.1-2026-09-29-FINISH_TO_PUBLISH.md).
 Bars: [mission, especially person/contact and phone pacing](../mission.md).
 
 This is the sole rider production execution/specification plan. It supersedes
-FINISH_RIDER_CLOTHES_AND_ANIMATIONS, RIDER_BASELINE_TO_SHIP and the supplemental
-RIDER_CONSOLIDATED_PLAN as construction instructions. Their sources, provenance,
+[FINISH_RIDER_CLOTHES_AND_ANIMATIONS](../../project/archive/sol-6.1-2026-10-05-FINISH_RIDER_CLOTHES_AND_ANIMATIONS.md),
+[RIDER_BASELINE_TO_SHIP](../../project/archive/sol-6.1-2026-10-03-RIDER_BASELINE_TO_SHIP.md) and
+[RIDER_CONSOLIDATED_PLAN](../../project/archive/sol-6.1-2026-10-05-RIDER_CONSOLIDATED_PLAN.md) as construction instructions. Their sources, provenance,
 failed controls and handoffs remain historical evidence. Retirement does not
 award their open milestones. Archive/pointer maintenance follows separately.
 

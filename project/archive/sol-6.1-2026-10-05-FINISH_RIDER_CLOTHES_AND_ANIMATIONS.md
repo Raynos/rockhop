@@ -1,11 +1,16 @@
+**Retired: 2026-10-07 · user-directed first-principles restart, ask318.**
+Successor: [RIDER_REBUILD_FROM_FIRST_PRINCIPLES](../../docs/plans/sol-6.1-2026-10-07-RIDER_REBUILD_FROM_FIRST_PRINCIPLES.md).
+Provenance revision: `4c3f76f181cda32ee4939d28fdd3fd206a49eef4`. **Uncompleted historical method; no product gates passed by retirement.**
+The snapshot below records its former scope/status; successor instructions take precedence.
+
 # Finish the rider, clothes and animations
 
 Created: 2026-10-05 · writer: Codex / gpt-6.1-sol · asks303–305.
 **Status: paused for fresh-agent handoff at verified capture50, 2026-10-07;
 assembled rider unaccepted; accepted milestones0/6; F0–F5/M0–M5 all open.**
-Basis: [72-hour audit](../evidence/hero-remaster/audit-2026-10-05/README.md).
+Basis: [72-hour audit](../../docs/evidence/hero-remaster/audit-2026-10-05/README.md).
 
-Current restart record: [full October7 handoff](../evidence/hero-remaster/handoff-2026-10-07/HANDOFF.md).
+Current restart record: [full October7 handoff](../../docs/evidence/hero-remaster/handoff-2026-10-07/HANDOFF.md).
 The user asks310 requested a good pause point, committed owned work and a fresh
 agent. No experiment51 has run. Resume only when the user instructs the fresh
 agent; this status does not close or archive the plan.
@@ -14,8 +19,8 @@ This plan owns the next execution order and stop rules. The
 [October3 baseline specification](sol-6.1-2026-10-03-RIDER_BASELINE_TO_SHIP.md)
 retains identity, reference, provenance and M0–M5 acceptance requirements;
 its historical next-action logs do not override this sequence.
-[FINISH_TO_PUBLISH](sol-6.1-2026-09-29-FINISH_TO_PUBLISH.md) remains release
-authority and [mission](../mission.md) retains the person/contact and phone bars.
+[FINISH_TO_PUBLISH](../../docs/plans/sol-6.1-2026-09-29-FINISH_TO_PUBLISH.md) remains release
+authority and [mission](../../docs/mission.md) retains the person/contact and phone bars.
 No milestone is reset, waived or accepted by writing a successor schedule.
 
 ## Finished result
@@ -64,7 +69,7 @@ art acceptance. Retain authored motion if the bounded candidate is worse.
 | Engine | Existing exact source-ID/51-bind checks and recorded Rookie/Pro fixtures | Same candidate, same consumed skin/normal/controller path, real LOD and lifecycle |
 
 Full hashes, actual source costs and evidence are in
-[source verification](../evidence/hero-remaster/audit-2026-10-05/source-verification.json).
+[source verification](../../docs/evidence/hero-remaster/audit-2026-10-05/source-verification.json).
 These four dense GLBs total140,929,484 bytes/2,945,160 triangles and have no skins
 or animations. They are appearance sources for deliberate production construction
 and UV/PBR transfer, not direct phone assets. New glove/boot sources must not be
@@ -75,7 +80,7 @@ confused with the historical hand107 or wedge-boot controls.
 The [consolidated recovery handoff](sol-6.1-2026-10-05-RIDER_CONSOLIDATED_PLAN.md)
 is incorporated as historical requirements/evidence context. Its copied ten-stage
 and M0–M5 tables exactly match the baseline; all seven local links resolve.
-[Review receipt](../evidence/hero-remaster/finish-2026-10-05/consolidated-plan-review.json)
+[Review receipt](../../docs/evidence/hero-remaster/finish-2026-10-05/consolidated-plan-review.json)
 records checked claims, current replacements and remaining unknowns.
 This finish plan remains the current execution sequence, the October3 baseline
 retains acceptance/specification, and FINISH_TO_PUBLISH remains release authority.
@@ -320,7 +325,7 @@ bb443342…. Four one-hot FULL membership values above Blender's RNA maximum1
 are stored as1 with normalized predicted fields byte-identical; raw references
 remain separate. No global source normalization or harmonic retune occurred.
 Independent capture50 retains ten exact saved51 pose/skin/boneWorld payloads.
-Parent [readback](../evidence/hero-remaster/finish-2026-10-05/runtime/savedpose-capture01/parent-readback50.json)
+Parent [readback](../../docs/evidence/hero-remaster/finish-2026-10-05/runtime/savedpose-capture01/parent-readback50.json)
 confirms body/head XYZ, triangles and rawFULL/FOUR exactly match authored49,
 outside330 raw body rows remain body06-exact, and native/prediction agreement
 is within4.625616761e-7m. Original34/own51/protectedhead/UV/PBR remain exact.
@@ -349,7 +354,7 @@ stop field retuning and propose joint-aware deltoid/axilla geometry or correctiv
 deformation. Original source controls stay immutable; production derivatives
 may repair diagnosed deformation only within a reviewed explicit scope.
 
-The prepared [hip/underwear proposal](../evidence/hero-remaster/finish-2026-10-05/construction/body07/hip-underwear-next-proposal.json)
+The prepared [hip/underwear proposal](../../docs/evidence/hero-remaster/finish-2026-10-05/construction/body07/hip-underwear-next-proposal.json)
 separates hip773 from knee/thigh witnesses outside that scope. Hip fields remain
 body06-exact; first hip witnesses survive identicalFULL/FOUR. Boxer has26 baseline
 proper rest crossings as well as302retessellation. An explicit triangulation
@@ -368,7 +373,7 @@ sweeps. Hoodie, jeans and boots continue toward one complete assembled wearer.
 
 Finite cavity11 now records25 paths:17 positive computed margins and8 distal
 single-face hits, no cycle-neighborhood hits. These zero-radius probes are not
-hand-volume enclosure. Prepared [glove-enclosure12 inventory](../evidence/hero-remaster/finish-2026-10-05/wardrobe/glove-enclosure12/PROPOSAL.md)
+hand-volume enclosure. Prepared [glove-enclosure12 inventory](../../docs/evidence/hero-remaster/finish-2026-10-05/wardrobe/glove-enclosure12/PROPOSAL.md)
 is unexecuted: after contacts51 is checkpointed, verify unchanged body07 hand
 ancestry and review one bounded CPU2 target-only inventory52. It preserves the
 complete first wrist clip, all15 digit roles/weak/mixed/web faces and selected

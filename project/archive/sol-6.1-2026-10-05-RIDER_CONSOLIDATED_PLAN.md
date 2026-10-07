@@ -1,3 +1,8 @@
+**Retired: 2026-10-07 · user-directed first-principles restart, ask318.**
+Successor: [RIDER_REBUILD_FROM_FIRST_PRINCIPLES](../../docs/plans/sol-6.1-2026-10-07-RIDER_REBUILD_FROM_FIRST_PRINCIPLES.md).
+Provenance revision: `4c3f76f181cda32ee4939d28fdd3fd206a49eef4`. **Uncompleted historical method; no product gates passed by retirement.**
+The snapshot below records its former scope/status; successor instructions take precedence.
+
 # Rockhop rider: consolidated recovery and delivery plan
 
 **Prepared:** 2026-10-05. **Status:** supplemental planning handoff; rider is
@@ -23,8 +28,8 @@ remains the canonical implementation authority. This is a **supplemental
 consolidated handoff**, not a superseding execution plan. Preserve the original
 file and its ten-stage dependency order. The work packages below describe
 requirements and outstanding evidence, not replacement stage numbering.
-The [unified release plan](sol-6.1-2026-09-29-FINISH_TO_PUBLISH.md) retains
-release authority; [mission §3–4](../mission.md) retains the person, contact
+The [unified release plan](../../docs/plans/sol-6.1-2026-09-29-FINISH_TO_PUBLISH.md) retains
+release authority; [mission §3–4](../../docs/mission.md) retains the person, contact
 and phone performance bars.
 
 ### Exact canonical ten stages
@@ -223,7 +228,7 @@ textured head**. This never establishes unconditional zero-rest clearance:
   that film. Intersection counts are not a visual-severity score.
 - Rest-head analysis 94 `5d986ec5`: all 490 finite garment/head crossing pair
   IDs identical across 24/25/26; neither normals nor four-influence conversion
-  caused them. See the [existing scope receipt](../evidence/hero-remaster/anatomical-foundation-2026-10-03/user-agent1/selected-hoodie26/rest-head94/FINDING.md).
+  caused them. See the [existing scope receipt](../../docs/evidence/hero-remaster/anatomical-foundation-2026-10-03/user-agent1/selected-hoodie26/rest-head94/FINDING.md).
 
 Read-only attachment 95 `65efa7e0`: 149 hem boundary vertices average 33.713%
 thigh mass. Boundary-only thigh→pelvis analysis reduced maximum plane deviation
@@ -344,7 +349,7 @@ Native SHA:
 Independent hand 83 `5d7b0aa511d96377075650632782a4f82f2b6601` confirms
 positive donor distal regions exist but transfer sampling misses them. Palm shift
 4.402 mm. Manual moving-loss peak 0.180069 mm and native peak 0.245992 mm occur
-at different frames; the [existing audit](../evidence/hero-remaster/user-agent3-qa-2026-10-03/hand83/FINDING.md)
+at different frames; the [existing audit](../../docs/evidence/hero-remaster/user-agent3-qa-2026-10-03/hand83/FINDING.md)
 explicitly withholds parity proof.
 
 **Next construction prerequisite:** read-only anatomical finger registration /
@@ -363,7 +368,7 @@ unchanged guards. No further source generation is currently needed.
 All-items checkpoint: `cc01ab040bb613ddce1b8c0aa3b06e25264a1486`.
 Readiness SHA:
 `75893a4ecffa268f287550e298730e91d48bfdc6917e174a8f6465a738a1aa6a`.
-Local receipt: [all-items-ready.json](../evidence/hero-remaster/generation-comparison-2026-10-03/user-agent2/items01/all-items-ready.json).
+Local receipt: [all-items-ready.json](../../docs/evidence/hero-remaster/generation-comparison-2026-10-03/user-agent2/items01/all-items-ready.json).
 
 | Item | Source result | Root visual finding | Unresolved |
 | --- | --- | --- | --- |

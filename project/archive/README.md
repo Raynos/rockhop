@@ -35,3 +35,5 @@ Contents
 - `HERO_ART_INTEGRATION.md` — catalog rider, bike and garage, closed 2026-09-21 on the user's acceptance (ask 71), pinned to `v0.3.0`; the measured phone-high gap moved to `docs/plans/sol-6.1-2026-09-29-FINISH_TO_PUBLISH.md`, and actual iPhone garage fps remains unmeasured.
 
 - `sol-6.1-2026-09-30-HERO_REMASTER.md`, `sol-6.1-2026-09-30-RIDER_THREE_CHECKPOINTS.md` and `unknown-model-2026-10-03-LOCAL_CLOUD_RIDER_RECONCILE.md` — user-retired by ask259 on 2026-10-03; successor `docs/plans/sol-6.1-2026-10-03-RIDER_BASELINE_TO_SHIP.md`. Superseded methods, not passed product gates; source/failure evidence and original provenance retained.
+
+- `sol-6.1-2026-10-03-RIDER_BASELINE_TO_SHIP.md`, `sol-6.1-2026-10-05-FINISH_RIDER_CLOTHES_AND_ANIMATIONS.md`, `sol-6.1-2026-10-05-RIDER_CONSOLIDATED_PLAN.md` — retired uncompleted by user-directed first-principles restart (ask318),2026-10-07. Successor `docs/plans/sol-6.1-2026-10-07-RIDER_REBUILD_FROM_FIRST_PRINCIPLES.md`; original sources, handoffs and failures retained, no product acceptance claimed.

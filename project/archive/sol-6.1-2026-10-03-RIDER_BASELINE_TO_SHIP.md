@@ -1,11 +1,16 @@
+**Retired: 2026-10-07 · user-directed first-principles restart, ask318.**
+Successor: [RIDER_REBUILD_FROM_FIRST_PRINCIPLES](../../docs/plans/sol-6.1-2026-10-07-RIDER_REBUILD_FROM_FIRST_PRINCIPLES.md).
+Provenance revision: `4c3f76f181cda32ee4939d28fdd3fd206a49eef4`. **Uncompleted historical method; no product gates passed by retirement.**
+The snapshot below records its former scope/status; successor instructions take precedence.
+
 # One rider, from visual targets to shipping
 
 Created: 2026-10-03 · writer: Codex / gpt-6.1-sol · ask 259.
 Status: **baseline specification; target suite incomplete; baseline unaccepted**.
 This replaces HERO_REMASTER, RIDER_THREE_CHECKPOINTS and LOCAL_CLOUD_RIDER_RECONCILE
 as execution plans. Their source, failed attempts and evidence remain archived.
-[FINISH_TO_PUBLISH](sol-6.1-2026-09-29-FINISH_TO_PUBLISH.md) retains release authority;
-[mission §3–4](../mission.md) retains person/contact and phone performance bars.
+[FINISH_TO_PUBLISH](../../docs/plans/sol-6.1-2026-09-29-FINISH_TO_PUBLISH.md) retains release authority;
+[mission §3–4](../../docs/mission.md) retains person/contact and phone performance bars.
 
 Current execution order and stop rules: [finish rider, clothes and animations](sol-6.1-2026-10-05-FINISH_RIDER_CLOTHES_AND_ANIMATIONS.md),
 created after the October5 audit (ask304). This specification retains identity,
@@ -84,7 +89,7 @@ Current protected baseline is donor `b7f4f227…`, approved wardrobe storyboard
 `d48e3913…`, and Agent1 appearance03 raw-normal GLB `010501c3…` with explicit
 source-normals controller. Agent3 independently verifies43712head/294cheek
 source vectors, images/specular factors and51bind; hood/wardrobe and fit remain
-open. The completed [Hunyuan paint06 handoff](../evidence/hero-remaster/generation-comparison-2026-10-03/user-agent2/qualified-hunyuan-paint06/handoff.json)
+open. The completed [Hunyuan paint06 handoff](../../docs/evidence/hero-remaster/generation-comparison-2026-10-03/user-agent2/qualified-hunyuan-paint06/handoff.json)
 pins the selected shape/PBR GLB `800d7a97…`: 921722 triangles, 4096px textures,
 eight 768px paint views, 15 steps and seed42. Root played its 12-angle PBR orbit
 and selected its recognizable mustard hood/sleeve/cuff character as the visual
@@ -97,7 +102,7 @@ remains frozen; their failures do not defer this full-garment construction.
 
 ## What exists and what is left
 
-The [independent audit](../evidence/hero-remaster/independent-audit-2026-10-03/README.md)
+The [independent audit](../../docs/evidence/hero-remaster/independent-audit-2026-10-03/README.md)
 confirms a useful generated face/body, recorded experiments and exact exported
 pose diagnostics. It withholds acceptance. These are the remaining deliverables:
 
@@ -125,7 +130,7 @@ convincing whole character. A favourable strain score, closed seam, new skeleton
 or grip point has repeatedly coexisted with poor silhouette or unsupported sitting.
 Source-preservation bounds also constrained geometry that needed reconstruction.
 This plan stops the unbounded patch loop and makes the final pictures and motions
-the unit of progress. The existing [attempt catalogue](../evidence/hero-remaster/next-agent-handoff-2026-10-03/README.md)
+the unit of progress. The existing [attempt catalogue](../../docs/evidence/hero-remaster/next-agent-handoff-2026-10-03/README.md)
 is mandatory before admitting a new mechanism; old failure counts carry forward.
 
 There is one selected source lineage, one production construction, one bind,
@@ -279,7 +284,7 @@ contract; root alone accepts a candidate. Agree exact source, pose and leaf-path
 ownership before restarting work. Do not run competing whole riders indefinitely.
 
 Root decision owner is `01a0f09b-0a5a-7358-81b2-7821a3d40009`.
-The [checkpoint ownership handoff](../evidence/cloud-local-checker-handoff-2026-10-03/README.md)
+The [checkpoint ownership handoff](../../docs/evidence/cloud-local-checker-handoff-2026-10-03/README.md)
 records frozen foundation owner `01a1013b-2fce-7613-a549-da881625200e`.
 Local `docs/evidence/hero-remaster/anatomical-foundation-2026-10-03/HANDOFF.md`
 and `docs/evidence/hero-remaster/generation-comparison-2026-10-03/HANDOFF.md`
@@ -291,7 +296,7 @@ R1 native construction `01a1016e-c8da-77d0-9437-a5f980a6e427` and generation
 `01a10170-5861-7dc3-971a-3273daead862` are final-wrap-only. Their preparation
 remains unaccepted; preserve each owner's final receipt and frozen input pins.
 This human-created Audit task freezes after its
-[final handoff](../evidence/hero-remaster/independent-audit-2026-10-03/FINAL-HANDOFF.md).
+[final handoff](../../docs/evidence/hero-remaster/independent-audit-2026-10-03/FINAL-HANDOFF.md).
 Manager `01a10191-f0f0-73fe-ba72-69a30631701f` assigns one fresh integrator
 and one generator after stop receipts and duplicate checks; IDs remain pending.
 Root chooses local/cloud execution case by case. The new canonical integrator
@@ -336,7 +341,7 @@ are carried by M1/M4/M5 and the unified release gates, not abandoned with its fi
 
 ## Attempt catalogue appendix
 
-The existing [attempt catalogue](../evidence/hero-remaster/next-agent-handoff-2026-10-03/README.md)
+The existing [attempt catalogue](../../docs/evidence/hero-remaster/next-agent-handoff-2026-10-03/README.md)
 remains the detailed evidence home. Classify a reused item before integration:
 
 | Class | Examples and limits |
@@ -352,9 +357,9 @@ conversion and current parity proof. A reusable component is not an accepted rid
 
 ## Retirement record
 
-[HERO_REMASTER](../../project/archive/sol-6.1-2026-09-30-HERO_REMASTER.md),
-[RIDER_THREE_CHECKPOINTS](../../project/archive/sol-6.1-2026-09-30-RIDER_THREE_CHECKPOINTS.md)
-and [LOCAL_CLOUD_RIDER_RECONCILE](../../project/archive/unknown-model-2026-10-03-LOCAL_CLOUD_RIDER_RECONCILE.md)
+[HERO_REMASTER](sol-6.1-2026-09-30-HERO_REMASTER.md),
+[RIDER_THREE_CHECKPOINTS](sol-6.1-2026-09-30-RIDER_THREE_CHECKPOINTS.md)
+and [LOCAL_CLOUD_RIDER_RECONCILE](unknown-model-2026-10-03-LOCAL_CLOUD_RIDER_RECONCILE.md)
 are retired by ask259, not successfully completed. Read their explicit provenance
 revision and the distilled attempt catalogue when reusing a method. Retiring these
 plans does not accept geometry, bind, motion, device behavior or publication.

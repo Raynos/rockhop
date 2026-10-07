@@ -8,7 +8,7 @@ The [twelve-course execution plan](sol-6.1-2026-09-29-TWELVE_COURSE_REMASTER.md)
 and [retired session record](../../project/archive/sol-6-2026-09-28-REMASTER_CURRENT_ROUND.md) preserve earlier findings. The parent owns status and final judgment.
 No estimate or passing bot result declares the game finished. Archive this plan only after all six gates and verified public launch.
 
-Current rider execution: [finish rider, clothes and animations](sol-6.1-2026-10-05-FINISH_RIDER_CLOTHES_AND_ANIMATIONS.md), grounded in the October5 audit; the [baseline specification](sol-6.1-2026-10-03-RIDER_BASELINE_TO_SHIP.md) retains identity and M0–M5 requirements. Retired hero/rider methods do not close presentation or device gates.
+Current rider execution/specification: [first-principles rider rebuild](sol-6.1-2026-10-07-RIDER_REBUILD_FROM_FIRST_PRINCIPLES.md), authorized after the October7 five-day audit and visual rejection of the prior construction. Former baseline/finish/consolidated methods are retired uncompleted. Supported dressed motion, actual-engine, appearance and physical-device gates remain open.
 
 ## Product and decisions
 

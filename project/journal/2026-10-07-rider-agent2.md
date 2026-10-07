@@ -35,3 +35,9 @@ Finding: User-authorized first-principles rider rebuild supersedes the failed pr
 Validation: Completed five-day audit and played historical review inform the plan; official Tripo pricing/rig capabilities checked. Astra and engine reviews applied: mandatory early new-rig intake, gross-shape R1 rejection, defect-based two-attempt cap, early allocation and separate FOUR transport/approximation-normal contracts. No new model, paid API request or runtime change executed.
 
 Limits: Plan/source strategy only; all six new production gates remain open, with no inherited art acceptance or physical-device claim.
+
+Finding: Superseded baseline/finish/consolidated rider methods are retired uncompleted under the explicit restart authorization. Production/release/index/device pointers now name the coherent rebuild; source provenance and historical evidence are retained.
+
+Validation: Three source documents moved with git history, relative Markdown links rebased, explicit retirement/provenance headers added. Active authority pointers inspected. Ordinary silent player gate is checked separately and cannot validate the new rider.
+
+Limits: Archival is method retirement, not milestone completion; R0–R5 and physical-device acceptance remain open.
