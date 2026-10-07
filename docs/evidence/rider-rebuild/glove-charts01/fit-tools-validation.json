@@ -1,0 +1,42 @@
+{
+  "acceptedWearable": false,
+  "status": "FIT_TOOL_SMOKE_PASS_NO_FIT_EXECUTED",
+  "recipe": {
+    "path": "assets/blender/rider-rebuild/glove-charts01/check-fit-tools.py",
+    "sha256": "bfad8b9d08b56001cf2a79aa85f4b149b5a4fd0b32085403ef2b419630689867"
+  },
+  "fitRecipe": {
+    "path": "assets/blender/rider-rebuild/glove-charts01/fit-exterior.py",
+    "sha256": "52d3430530364169d9795120de699ecb8b389a47a00b482402dd04f4aed43152"
+  },
+  "geometryHelper": {
+    "path": "assets/blender/rider-rebuild/glove-charts01/geometry-checks.py",
+    "sha256": "d9b6080dc6380b23e35eaf3978b539b930955e052c4254d869d7e7ff3b8746fa"
+  },
+  "tests": [
+    "exhaustive closest/winding tetra inside outside boundary",
+    "proper rotation and doubled principal stretch",
+    "tetra full adjacent/nonadjacent intersection",
+    "shared edge valid versus fold",
+    "shared vertex disjoint versus crossing",
+    "whole-triangle clearance pass versus violation",
+    "analytic continuous orientation pass versus inversion"
+  ],
+  "actualHands": {
+    "L": {
+      "signedOffsetPairs": 30,
+      "offsetM": 1e-07,
+      "closedMathematicalTriangles": 1524,
+      "pass": true
+    },
+    "R": {
+      "signedOffsetPairs": 30,
+      "offsetM": 1e-07,
+      "closedMathematicalTriangles": 1524,
+      "pass": true
+    }
+  },
+  "limits": [
+    "No selected exterior fit or complete fitted geometry qualification has executed."
+  ]
+}
