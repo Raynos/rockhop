@@ -1159,3 +1159,5 @@ October 7 independent bilateral hand topology audit confirms actual distal branc
 October 7 actual-boot corrective source uses anatomical toe-out, explicit source cuff aperture and anatomical inner cavity while retaining detailed selected exterior. Isolated solve/annulus tests pass; inherited UV remains unaccepted pending proper dense bake, and full surface/moving gates remain open.
 
 October 7 corrected boot launch failed inline wrapper syntax before fitting. A compiled standalone evidence wrapper replaces the quoting-sensitive launch; original fit source is unchanged and no candidate was produced.
+
+**Touch system-edge mitigation (ask331):** The gameplay layer and drawn keys now clear the bottom safe area plus 20 CSS pixels. [Evidence](../evidence/touch-system-edge-2026-10-07/README.md) retains 24 headless Chromium/WebKit layout/input cases and 64 passing actual-game touch checks. Physical rapid-tap/hold Siri avoidance remains HR-26; this change makes no release/device acceptance claim.

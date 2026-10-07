@@ -1,0 +1,10 @@
+
+> rockhop@0.3.2 harness:e2e /Users/raynos/projects/games/rockhop
+> tsx harness/e2e/touch.mts --only=run --run-entry=hook --jobs=1
+
+e2e: 2 flows on up to 1 contexts (run@iphone13, run@iphone15promax); loadavg 25.7 20.0 14.8 / 18 cores
+  flow run@iphone13: 33 s
+  flow run@iphone15promax: 29 s
+e2e wall 63 s on up to 1 contexts; loadavg 19.5 19.2 14.9 / 18 cores
+
+touch e2e: 64/64 checks pass, 0 fail

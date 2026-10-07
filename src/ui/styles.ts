@@ -70,6 +70,8 @@ export const TOKENS_CSS = /* css */ `
   --sat: env(safe-area-inset-top, 0px);
   --sar: env(safe-area-inset-right, 0px);
   --sab: env(safe-area-inset-bottom, 0px);
+  /* Keep gameplay fingers above the system edge, including Type to Siri. */
+  --touch-edge-gap: calc(var(--sab) + 20px);
   --sal: env(safe-area-inset-left, 0px);
   /* Viewport units go through these tokens (one place to redefine them). */
   --vw: 1vw; --vh: 1vh;
@@ -705,10 +707,10 @@ export const HUD_CSS = /* css */ `
 .touch-layer.under-overlay .tz, .touch-layer.under-overlay .tz-btn { opacity: 0 !important; }
 
 /* ---- touch layer: G "strip with keys" (assets/design/controls/SPEC.md § Round 2, game.md §3) ---------------------- */
-/* Tokens: strip 3.33rem (52 px at 932×430, 48 px at 844×390) + the home-indicator inset; key = strip − 2 × 6 px. Key colours
+/* Tokens: strip 3.33rem (52 px at 932×430, 48 px at 844×390) + the system-edge gap; key = strip − 2 × 6 px. Key colours
    as r,g,b triplets so the wash can take an alpha: the two LEAN keys share ONE neutral (cool steel, #d7e3ef), BRAKE red #ff5a5a,
    GAS green #5aff8c. */
-.touch-layer { position: absolute; inset: 0; pointer-events: none; touch-action: none; -webkit-user-select: none; user-select: none; -webkit-touch-callout: none; -webkit-tap-highlight-color: transparent; --strip-h: 3.33rem; --key-h: calc(var(--strip-h) - .77rem); --k-lean: 215,227,239; --k-brake: 255,90,90; --k-gas: 90,255,140; }
+.touch-layer { position: absolute; inset: 0 0 var(--touch-edge-gap); pointer-events: none; touch-action: none; -webkit-user-select: none; user-select: none; -webkit-touch-callout: none; -webkit-tap-highlight-color: transparent; --strip-h: 3.33rem; --key-h: calc(var(--strip-h) - .77rem); --k-lean: 215,227,239; --k-brake: 255,90,90; --k-gas: 90,255,140; }
 .touch-layer * { touch-action: none; -webkit-user-select: none; user-select: none; -webkit-touch-callout: none; pointer-events: none; }
 .touch-debug { position: absolute; left: 50%; top: calc(5.2rem + var(--sat)); transform: translateX(-50%); margin: 0; padding: .4rem .6rem; background: rgba(0,0,0,.8); color: #9f9; font: 12px/1.35 var(--mono); border-radius: .3rem; pointer-events: none; white-space: pre; z-index: 5; }
 .touch-layer.on { pointer-events: auto; }
@@ -716,8 +718,8 @@ export const HUD_CSS = /* css */ `
    not an element, not a hit rect, so no .live of its own (the layer root takes the pointers and the quarter columns are the
    hit areas, zoneAt). ::after is the amber seam at 50 %: the two-thumbs split a finger never crosses. Touch-only: it is drawn
    only while the layer is .visible (touch is the active device); keyboard / pad keep the HUD hints. */
-.touch-layer::before { content: ''; position: absolute; left: 0; right: 0; bottom: 0; height: calc(var(--strip-h) + var(--sab)); background: #0a0c10; border-top: 1px solid rgba(255,255,255,.22); opacity: 0; transition: opacity .25s; pointer-events: none; }
-.touch-layer::after { content: ''; position: absolute; left: calc(50% - 1px); width: 2px; bottom: 0; height: calc(var(--strip-h) + var(--sab)); background: #ffb020; opacity: 0; transition: opacity .25s; pointer-events: none; }
+.touch-layer::before { content: ''; position: absolute; left: 0; right: 0; bottom: calc(-1 * var(--touch-edge-gap)); height: calc(var(--strip-h) + var(--touch-edge-gap)); background: #0a0c10; border-top: 1px solid rgba(255,255,255,.22); opacity: 0; transition: opacity .25s; pointer-events: none; }
+.touch-layer::after { content: ''; position: absolute; left: calc(50% - 1px); width: 2px; bottom: calc(-1 * var(--touch-edge-gap)); height: calc(var(--strip-h) + var(--touch-edge-gap)); background: #ffb020; opacity: 0; transition: opacity .25s; pointer-events: none; }
 .touch-layer.on.visible::before { opacity: .4; }
 .touch-layer.on.visible::after { opacity: .7; }
 .touch-layer.on.visible.settled::before { opacity: .3; transition: opacity var(--t3) var(--ease); }
@@ -732,9 +734,9 @@ export const HUD_CSS = /* css */ `
 .tz-back { left: 0; } .tz-fwd { left: 25%; } .tz-brake { left: 50%; --k: var(--k-brake); } .tz-throttle { left: 75%; --k: var(--k-gas); }
 .touch-layer.on.visible .tz-zone { opacity: 1; }
 .touch-layer.on.visible .tz-zone.held { background: linear-gradient(to top, rgba(var(--k), .08), rgba(var(--k), 0) 55%); }
-/* Key caps: 75 % of the quarter wide, inset 6 px from the strip's top edge and 6 px above the home indicator, radius 8,
+/* Key caps: 75 % of the quarter wide, inset 6 px from the strip's top edge and 6 px above the input boundary, radius 8,
    bevelled (top highlight, darker bottom); glyph 22 px, label .72rem tracking .2em. */
-.tz-key { position: absolute; left: 12.5%; right: 12.5%; bottom: calc(var(--sab) + .385rem); height: var(--key-h); display: flex; align-items: center; justify-content: center; gap: .3rem; border-radius: 8px; color: rgb(var(--k)); background: rgba(255,255,255,.1); box-shadow: inset 0 1px 0 rgba(255,255,255,.28), inset 0 -2px 0 rgba(0,0,0,.45), 0 0 0 1px rgba(0,0,0,.35); font-size: .72rem; font-weight: 700; letter-spacing: .2em; text-transform: uppercase; white-space: nowrap; text-shadow: 0 1px 0 rgba(0,0,0,.6); transform-origin: 50% 100%; transition: background-color 80ms var(--ease), color 80ms var(--ease), transform 80ms var(--ease), box-shadow 80ms var(--ease), text-shadow 80ms; }
+.tz-key { position: absolute; left: 12.5%; right: 12.5%; bottom: .385rem; height: var(--key-h); display: flex; align-items: center; justify-content: center; gap: .3rem; border-radius: 8px; color: rgb(var(--k)); background: rgba(255,255,255,.1); box-shadow: inset 0 1px 0 rgba(255,255,255,.28), inset 0 -2px 0 rgba(0,0,0,.45), 0 0 0 1px rgba(0,0,0,.35); font-size: .72rem; font-weight: 700; letter-spacing: .2em; text-transform: uppercase; white-space: nowrap; text-shadow: 0 1px 0 rgba(0,0,0,.6); transform-origin: 50% 100%; transition: background-color 80ms var(--ease), color 80ms var(--ease), transform 80ms var(--ease), box-shadow 80ms var(--ease), text-shadow 80ms; }
 .tz-key b, .tz-key i { display: inline-flex; align-items: center; gap: .05rem; }
 .tz-key svg { display: block; width: 22px; height: 22px; }
 .tz-key span { padding: 0 .1em; }
@@ -751,7 +753,7 @@ export const HUD_CSS = /* css */ `
 .tz-restart { right: calc(.8rem + var(--sar)); }
 .tz-pause { left: calc(.8rem + var(--sal)); }
 .hud.touch .hud-top { padding-left: calc(4.8rem + var(--sal)); padding-right: calc(4.8rem + var(--sar)); }
-.hud.touch .hints { bottom: calc(3.6rem + var(--sab)); }
+.hud.touch .hints { bottom: calc(3.6rem + var(--touch-edge-gap)); }
 
 /* ---- landscape prompt (rotate-to-play) ------------------------------- */
 .rotate { position: absolute; inset: 0; z-index: 28; /* above .onboard (25) and every run overlay */ display: none; align-items: center; justify-content: center; flex-direction: column; gap: var(--s5); background: radial-gradient(120% 90% at 50% 30%, #17737B 0%, var(--teal) 45%, #093B40 100%); color: var(--ink); text-align: center; padding: calc(var(--s6) + var(--sat)) var(--s5) calc(var(--s6) + var(--sab)); pointer-events: auto; }

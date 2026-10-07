@@ -5,6 +5,7 @@
  *
  *   pnpm harness:e2e            all flows, both geometries (the transition grid on the first geometry; --grid=all for both)
  *   pnpm harness:e2e --only=run --geom=iphone15promax
+ *   pnpm harness:e2e --only=run --run-entry=hook   isolate in-run touch checks from menu/map navigation
  *   pnpm harness:e2e --only=grid       (--jobs=1 --transition=menu→tracks --instances=2 --verbose=1: one transition, serial, logged)
  *   pnpm harness:e2e --only=entry       track entry hold on e1 (canyon): no frame after GO with the placeholder, `?perf=1` overlay fields + rate
  *   pnpm harness:e2e --only=boot        the loading screen at LTE / 3G × SW × art pack (harness/e2e/boot.mts); the 3G rows are informational since the
@@ -34,7 +35,7 @@
  *   R6  THE INVARIANT (docs/tasks/touch-navigation-invariant.md, src/ui/live.ts): across every phase transition, a tap
  *       changes the screen / phase only when its point is inside a `.live` element drawn at ≥ .5 opacity — a 12×6 grid
  *       at 0/50/100/200/400/800 ms after each transition — and every pause / restart hit rect equals its drawn rect;
- *   R7  the strip with keys (design/controls G): one band ≤ 13 % of the height on the bottom edge, four keys, held key solid in its
+ *   R7  the strip with keys (design/controls G): one band ≤ 13 % of the height plus the system-edge gap, four keys, held key solid in its
  *       colour (lean pair one neutral, brake red, gas green) + column wash, hidden under overlays; `--stills=<dir>` saves stills.
  */
 import fs from 'node:fs';
@@ -202,17 +203,17 @@ async function touchLayer(page: Page): Promise<{ on: boolean; visible: boolean; 
 
 // ---------------------------------------------------------------------------------------------- R7: the strip with keys
 //
-// assets/design/controls/SPEC.md § Round 2 (G) + game.md §3: one band on the bottom edge (3.33rem + the home-indicator inset:
-// 52 px at 932×430, 48 px at 844×390 — capped here at 13 % of the height + the inset), 40 % idle → 30 % settled, four key caps
+// assets/design/controls/SPEC.md § Round 2 (G) + game.md §3: one band on the bottom edge (3.33rem + the system-edge gap:
+// 52 px at 932×430, 48 px at 844×390 — capped here at 13 % of the height + the gap), 40 % idle → 30 % settled, four key caps
 // inside it; a held key goes solid in its colour (LEAN BACK and LEAN FWD one shared neutral, BRAKE red, GAS green), presses to
 // .96 and its whole quarter column takes the wash; everything hides under an overlay with the zones. The strip is the layer
 // root's ::before (not a hit rect), so it is read from the pseudo-element's computed style.
 
-const STRIP_MAX_H = (g: Geom): number => g.height * 0.13 + 1;
+const STRIP_MAX_H = (g: Geom, edgeGap: number): number => g.height * 0.13 + edgeGap + 1;
 /** Where to write the run-flow stills (`--stills=<dir>`; idle / held-back-gas / settled at each geometry). */
 const stillsDir = args.get('stills');
 
-interface StripInfo { w: number; h: number; top: number; bottom: number; op: number; keys: { id: string; w: number; h: number; top: number; bottom: number }[] }
+interface StripInfo { w: number; h: number; edgeGap: number; top: number; bottom: number; op: number; keys: { id: string; w: number; h: number; top: number; bottom: number }[] }
 /** Jump every running CSS transition to its end: under SwiftShader the animation clock advances per (slow) frame, so a computed style read 150 ms after a class flip is still the transition's start value. */
 const FINISH = "document.getAnimations().forEach((a) => { try { a.finish(); } catch (e) {} });";
 async function strip(page: Page): Promise<StripInfo> {
@@ -223,7 +224,8 @@ async function strip(page: Page): Promise<StripInfo> {
     const lr = tl.getBoundingClientRect();
     const h = parseFloat(cs.height) || 0, w = parseFloat(cs.width) || 0;
     const keys = [...document.querySelectorAll('.tz-zone .tz-key')].map((k) => { const r = k.getBoundingClientRect(); return { id: k.className.replace(/.*tz-key-(\\w+).*/, '$1'), w: r.width, h: r.height, top: r.top, bottom: r.bottom }; });
-    return { w, h, top: lr.bottom - h, bottom: lr.bottom, op: parseFloat(cs.opacity), keys };
+    const bottom = lr.bottom - (parseFloat(cs.bottom) || 0);
+    return { w, h, edgeGap: innerHeight - lr.bottom, top: bottom - h, bottom, op: parseFloat(cs.opacity), keys };
   })()`) as Promise<StripInfo>;
 }
 
@@ -486,13 +488,19 @@ async function flowFront(ctx: BrowserContext, url: string, g: Geom): Promise<voi
 async function flowRun(ctx: BrowserContext, url: string, g: Geom): Promise<void> {
   const flow = `run@${g.name}`;
   const page = await boot(ctx, url);
-  await toMenu(page, flow, g);
-  const tl0 = await touchLayer(page);
-  expect(!tl0.on, flow, 'R4-off-in-menus', `touch layer on in the menu`);
-  await menuItem(page, flow, 'Play');
-  // Tap the focused marker (B1, the opening focus on a fresh profile): the focused marker's diamond launches (world map, project/archive/WORLD_MAP.md).
-  const ok = await tapSel(page, flow, '.tracks-screen.live .wm-marker.on .wm-hit');
-  if (!ok) return page.close();
+  if (args.get('run-entry') === 'hook') {
+    // Use the real App play path; menu/map tests remain on the default entry.
+    await page.waitForFunction('!!window.__rockhop?.app', null, { timeout: 30000 });
+    await page.evaluate("window.__rockhop.app.play('c1-low-tide')");
+  } else {
+    await toMenu(page, flow, g);
+    const tl0 = await touchLayer(page);
+    expect(!tl0.on, flow, 'R4-off-in-menus', `touch layer on in the menu`);
+    await menuItem(page, flow, 'Play');
+    // Tap the focused marker (B1, the opening focus on a fresh profile): the focused marker's diamond launches (world map, project/archive/WORLD_MAP.md).
+    const ok = await tapSel(page, flow, '.tracks-screen.live .wm-marker.on .wm-hit');
+    if (!ok) return page.close();
+  }
   // SwiftShader stalls the main thread for seconds on the run's first frames: wait for the handoff, don't time it.
   await page.waitForFunction(() => ![...document.querySelectorAll('.screen')].some((el) => el.classList.contains('show')), null, { timeout: 60000 }).catch(() => undefined);
   expect((await visibleScreens(page)).length === 0, flow, 'card→run', `a front screen is still visible: ${await visibleScreens(page)}`);
@@ -512,7 +520,7 @@ async function flowRun(ctx: BrowserContext, url: string, g: Geom): Promise<void>
   await checkIsolation(page, flow + ':run');
   // R7 — the strip with keys (design/controls G): one band on the bottom edge, ≤ SPEC's height, four keys in their colours.
   const strip0 = await strip(page);
-  expect(strip0.h > 0 && strip0.h <= STRIP_MAX_H(g) && strip0.bottom >= g.height - 1 && strip0.w >= g.width - 1, flow, 'R7-strip', `strip ${strip0.w.toFixed(0)}×${strip0.h.toFixed(0)} bottom ${strip0.bottom.toFixed(0)} (max height ${STRIP_MAX_H(g).toFixed(0)})`);
+  expect(strip0.h > 0 && strip0.h <= STRIP_MAX_H(g, strip0.edgeGap) && strip0.bottom >= g.height - 1 && strip0.w >= g.width - 1, flow, 'R7-strip', `strip ${strip0.w.toFixed(0)}×${strip0.h.toFixed(0)} bottom ${strip0.bottom.toFixed(0)} (max height ${STRIP_MAX_H(g, strip0.edgeGap).toFixed(0)})`);
   expect(strip0.op >= 0.3 && strip0.op <= 0.5, flow, 'R7-strip-idle', `strip idle opacity ${strip0.op} (want .4)`);
   expect(strip0.keys.length === 4 && strip0.keys.every((k) => k.w > 0 && k.h <= strip0.h && k.top >= strip0.top - 1 && k.bottom <= strip0.bottom + 1), flow, 'R7-keys', `keys ${JSON.stringify(strip0.keys)} inside strip top ${strip0.top.toFixed(0)}`);
   await still(page, g, 'idle');

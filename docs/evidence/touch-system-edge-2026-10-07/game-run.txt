@@ -1,0 +1,25 @@
+
+> rockhop@0.3.2 harness:e2e /Users/raynos/projects/games/rockhop
+> tsx harness/e2e/touch.mts --only=run --jobs=1
+
+e2e: 2 flows on up to 1 contexts (run@iphone13, run@iphone15promax); loadavg 22.1 17.1 12.9 / 18 cores
+  FAIL run@iphone13 menu-no-leak: menu text is "V 1 . 0 B U I L D E 2 6 7 F 1 1 7 B · 2 0 2 6 - 1 0 - 0 7 P L A Y G A R A G E R E V I E W S E T T I N G S C R E D I T S" — expected the title and the five actions only
+  FAIL run@iphone13 menu-tile-floor: garage tile is 50 px tall (< 52)
+  FAIL run@iphone13 menu-tile-floor: review tile is 50 px tall (< 52)
+  FAIL run@iphone13 menu-tile-floor: settings tile is 50 px tall (< 52)
+  FAIL run@iphone13 present: .tracks-screen.live .wm-marker.on .wm-hit is not visible/tappable
+  flow run@iphone13: 27 s
+  FAIL run@iphone15promax menu-no-leak: menu text is "V 1 . 0 B U I L D E 2 6 7 F 1 1 7 B · 2 0 2 6 - 1 0 - 0 7 P L A Y G A R A G E R E V I E W S E T T I N G S C R E D I T S" — expected the title and the five actions only
+  FAIL run@iphone15promax present: .tracks-screen.live .wm-marker.on .wm-hit is not visible/tappable
+  flow run@iphone15promax: 25 s
+e2e wall 52 s on up to 1 contexts; loadavg 21.8 17.6 13.3 / 18 cores
+
+touch e2e: 29/36 checks pass, 7 fail
+  ✗ run@iphone13 menu-no-leak: menu text is "V 1 . 0 B U I L D E 2 6 7 F 1 1 7 B · 2 0 2 6 - 1 0 - 0 7 P L A Y G A R A G E R E V I E W S E T T I N G S C R E D I T S" — expected the title and the five actions only
+  ✗ run@iphone13 menu-tile-floor: garage tile is 50 px tall (< 52)
+  ✗ run@iphone13 menu-tile-floor: review tile is 50 px tall (< 52)
+  ✗ run@iphone13 menu-tile-floor: settings tile is 50 px tall (< 52)
+  ✗ run@iphone13 present: .tracks-screen.live .wm-marker.on .wm-hit is not visible/tappable
+  ✗ run@iphone15promax menu-no-leak: menu text is "V 1 . 0 B U I L D E 2 6 7 F 1 1 7 B · 2 0 2 6 - 1 0 - 0 7 P L A Y G A R A G E R E V I E W S E T T I N G S C R E D I T S" — expected the title and the five actions only
+  ✗ run@iphone15promax present: .tracks-screen.live .wm-marker.on .wm-hit is not visible/tappable
+ ELIFECYCLE  Command failed with exit code 1.
