@@ -149,3 +149,9 @@ Finding: Exactnative04 privatepose uses anatomical45degree downwardpalm and boun
 Validation: Parent source review and11actualCPUtests pass onexact04/selectedcalibration includingmetadatarequestsharing/retry; steady41targets maxsocketgap4.4032mm. Actualbuild JS717176B≤717824B andinline8176B≤8192B.
 
 Limits: Centerproximity isnotactualglovesurface/phalange/handlebar clearance; dynamicphysicsCOM andmovingart/device review next.
+
+Finding: Actual played physics displaces the rider beyond the nominal lean table. At tick 1160 the dressed engine rider has a 44.6867 mm hand-center gap while physical COM and fixed anatomy remain correct.
+
+Validation: All 192 recorded states are finite. Independent CPU reconstruction matches actual engine03 socket errors within 2.178e-13 m and preserves every state hash; COM residual stays below 0.889 micrometers, sole gaps below 1.066 mm.
+
+Limits: This is an unaccepted failure checkpoint before a contact-driven spine repair. Glove surfaces, moving art and device acceptance remain open.

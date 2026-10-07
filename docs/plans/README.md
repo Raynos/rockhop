@@ -1073,3 +1073,5 @@ October7 [completecalibrated04](../evidence/rider-rebuild/construction01/combine
 October7 [independentfrozen04 audit](../evidence/rider-rebuild/construction02/README.md): rootrerun confirms connected10582pointbody/75joint parentcontract and subµm restresiduals, but12tinyFOUR bodyrows are prunedbyexporter≤.0001. NativeGPU exactfield/FULLloss motion gates explicitlyopen.
 
 October7 [actual-engine03 candidate](../evidence/rider-rebuild/runtime02/ENGINE03.md) usesexact04 anatomy,45degreepalm and≤10degree upperspine withactualCOM/carrier preserved.11CPUtests andunchangedJS/inlinebudgets pass; steadysocketcenters≤4.4032mm. Dynamicrealgame/glovebar surfaces/wholeclothedart stillunaccepted.
+
+October 7 [actual ride contact failure](../evidence/rider-rebuild/runtime02/PLAYED_STATE_FINDING.md): the nominal lean table leaves a 44.6867 mm hand-center gap under force-displaced COM. All 192 CPU states match engine03; preserve physics/anatomy and replace the input-only table with measured contact feedback. Unaccepted checkpoint.
