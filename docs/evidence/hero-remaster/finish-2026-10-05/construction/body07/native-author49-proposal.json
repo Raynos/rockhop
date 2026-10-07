@@ -1,0 +1,67 @@
+{
+  "status": "PREPARED_NATIVE_AUTHOR49_ROOT_READBACK_REQUIRED_NOT_EXECUTED",
+  "recipe": "assets/blender/hero-remaster/rider/finish-2026-10-05/construction/body07/build_harmonic_shoulders_v2.py",
+  "recipeSHA256": "fc8e75d94a35ca50cdb64a21c93e2d6a177e9dcc50b0315af4aed9d045f5568f",
+  "syntax": "AST PASS; NPZ literal key inventories PASS; no bpy execution",
+  "archiveKeyChecks": {
+    "fields": {
+      "literalReferencedKeys": [
+        "bodyFourWeights",
+        "bodyFullWeights",
+        "bodyRestXYZ",
+        "bodyTriangles",
+        "boneNames"
+      ],
+      "missingKeys": []
+    },
+    "proposal": {
+      "literalReferencedKeys": [
+        "body06NativeRawFourReference",
+        "body06NativeRawFullReference",
+        "bodyRestXYZReference",
+        "bodyTrianglesReference",
+        "boneNames",
+        "mask438NativeIDs",
+        "productionFourWeights",
+        "productionFullWeights"
+      ],
+      "missingKeys": []
+    },
+    "storage": {
+      "literalReferencedKeys": [
+        "productionFourWeights",
+        "productionFullWeights",
+        "trial45RawProductionFullReference"
+      ],
+      "missingKeys": []
+    }
+  },
+  "command": "/usr/bin/lockf -k -n -t 0 /Users/raynos/projects/localai/.model.lock /usr/bin/env OPENBLAS_NUM_THREADS=2 OMP_NUM_THREADS=2 VECLIB_MAXIMUM_THREADS=2 /Users/raynos/projects/localai/runtime/unimate/.venv/bin/python assets/blender/hero-remaster/generation-comparison-2026-10-03/user-agent2/run_bounded96.py --locked --out docs/evidence/hero-remaster/finish-2026-10-05/construction/body07/native-author49-guard --limit-seconds 180 -- /Applications/Blender.app/Contents/MacOS/Blender --background --threads 2 --python-exit-code 1 --python assets/blender/hero-remaster/rider/finish-2026-10-05/construction/body07/build_harmonic_shoulders_v2.py",
+  "commandSHA256": "ceb94853549f514af1f4fd643f441441eeaf0b664549109dd825d85a1f96ea38",
+  "guardSHA256": "cf8acd15d8b7484480bee74d23892be815d955ffd87115d3da8ed228ffb3d916",
+  "nativeAuthorRound": 49,
+  "independentCaptureRound": 50,
+  "wholeContactAndGameGateRound": 51,
+  "frozenStorageFieldsSHA256": "0bcf58024d83c84a4d4fea9b7ae5fa69f3b82141758456e664acfd6581fb64e6",
+  "rootStorage48ScopeSHA256": "cbb696e46d5b332f21a934c93fa72645347a9d3bbaca709ee4d0a2ea0fba35ca",
+  "scope": "Only admitted330 FULL/FOUR field rows within438 original body rows. Storage48 changes exactly four onehot FULL scalars to1; normalized fields byteexact to trial45. No harmonic/geometry/bone/pose/normal/UV/material edit.",
+  "nativeDiagnostics": "Actual VertexGroupElement.weight and VertexGroup.add.weight RNA hard/soft min/max. Every source/afterwrite/reopen scalar mismatch for both FULL/FOUR, with Float32 bits and actual range, persisted before field assertions.",
+  "controls": "Original34 global objects/memberships; all scenes/membership; original and copied own51 rest/world/savedposes; every mesh geometry/topology/head/UV/raw+decoded restnormals; materials/images; auxiliary and outside330 raw fields preserved exactly.",
+  "separateRawReferences": [
+    "All original body06/body52 raw controls preserved",
+    "bodyBody06RawReferenceFullWeights/bodyBody06RawReferenceFourWeights",
+    "bodyShoulderTrial45RawFullWeights distinct from storage bodyFullWeights"
+  ],
+  "freshOutputs": [
+    "assets/blender/hero-remaster/rider/finish-2026-10-05/construction/body07/natural-foundation.blend",
+    "assets/blender/hero-remaster/rider/finish-2026-10-05/construction/body07/authored-neck-fields.npz",
+    "docs/evidence/hero-remaster/finish-2026-10-05/construction/body07/authoring.json",
+    "docs/evidence/hero-remaster/finish-2026-10-05/construction/body07/native-author49-fields.json",
+    "docs/evidence/hero-remaster/finish-2026-10-05/construction/body07/native-author49-guard"
+  ],
+  "limits": [
+    "Unaccepted source checkpoint only; no export/render/player promotion.",
+    "Native47 cause remains unmeasured; RNA bounds49 and exact bounded writes do not retroactively record rejected47 mismatches.",
+    "Independent native evaluated/manual parity, whole contacts and parent played anatomy remain pending; inherited hip/boxer/head-normal failures remain open."
+  ]
+}

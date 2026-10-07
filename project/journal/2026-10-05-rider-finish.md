@@ -865,3 +865,23 @@ Limits: Actual47storedmismatch remains unmeasured; nextauthor49must
 record RNA bounds and all mismatches before assertions. Normalizedinput
 identity is no actualnative/GPU/art pass. No globalnormalization, geometry,
 rig or source change. Execution48; next ordinary game gate51.
+
+
+## Native49 saves and reopens the fixed shoulder candidate
+
+Finding: Exact bounded FULL/FOUR memberships now survive actual native
+write/reopen. Preserve body07as an unaccepted source checkpoint before
+independent native contacts and moving judgment.
+
+Validation: One CPU2author guard exits0 in14.199s, warnings0. Actual
+RNA weight hard range0–1; allsixsource/afterwrite/reopen field readbacks
+have zero mismatches/nonfinites. Author alloriginal34/global/scenes/UV/
+raw+decoded normals/material/images/rest+savedown51/geometry snapshots
+exact. Parent rehashes native27d123d9… and fieldsbb443342…, verifies
+every prior NPZ array except two declared production fields unchanged;
+raw body06and trial45FULL references exact and separate.
+
+Limits: Author evidence only; independent capture50/wholecontacts51/
+mandatorygate51/played grayPBR review pending. Native47actual mismatch
+values remain unmeasured. No harmonicretune, outfit/engine/art/device
+acceptance or player promotion. Execution49; next ordinary gate51.
