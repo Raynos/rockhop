@@ -191,3 +191,9 @@ Finding: Preserve the completed loose-cloth05 source/evidence without promotion 
 Validation: Parent reruns decoded preservation: all body source/normal/skin/triangle arrays and 75-joint rest contract equal frozen04. Guarded native assembly completed in 2.27 seconds before the source-correct pivot.
 
 Limits: No played art acceptance or generic03 derivative. This candidate does not satisfy the user's actual high-resolution asset request and no further procedural appearance iteration is authorized.
+
+Finding: The real selected boot appearance is fitted to each anatomical foot using original 4096 PBR and dense source-corner UV ownership. Both selected derivatives use the same75 skeleton, with mirrored winding and source skin interpolation.
+
+Validation: Parent verifies exact recipe/native hashes and source preservation receipts. Two 10k-triangle boots have normalized FOUR residual below 2.981e-8; source-corner projection below 2.844e-6 units. Unchanged wearer/rest checks pass; guarded build completed in 1.774 seconds after caching correction.
+
+Limits: Source/fitting checkpoint only; actual foot-volume coverage and moving sole/art remain open. Glove enclosure is a separate production reconstruction, not a proxy substitute.
