@@ -257,3 +257,9 @@ Finding: Ten private outfit/LOD slots containing identical selected rider bytes 
 Validation: Parent reruns eleven private driver/alias tests, all pass; exact ten paths share one document/map identity, bikes and undeclared paths remain distinct, invalid SHA/slots fail. Builder syntax passes with matching source declaration.
 
 Limits: Actual cold boot and GPU memory readback remain pending. Original4096 source maps are retained while the existing1024/512 renderer derivatives remain deliberate under the96MiB texture budget; no full4K779MiB admission or art acceptance.
+
+Finding: Glove enclosure fails because the isolated source thumb chart was mapped to the target metacarpal and target bone influence included broad thenar tissue. Surface chart identity must come from actual thumb MCP geometry while shared75 deformation fields stay intact.
+
+Validation: Same frozen candidate diagnostic returns0 in1.954 seconds,36 profiles. Only proximal thumb fails: scales5.190/3.206/2.663; first source radius7.738mm versus target36.657mm. Actual MCP is52.336mm downstream of metacarpal; source first isolated section is distinct from palm/thumb root. Original2.5 bound and body fields unchanged; no projection/bake/reconstruction.
+
+Limits: Source sections have no true joint annotations. A corrected anatomical station/domain recipe must preserve all old enclosure guards and pass actual full dressed movement before acceptance.

@@ -1,0 +1,88 @@
+{
+  "accepted": false,
+  "diagnosticOnly": true,
+  "sourceThumbChart": {
+    "regionId": 5,
+    "vertices": 326,
+    "bounds": [
+      [
+        0.33065998554229736,
+        -0.09706500172615051,
+        -0.4583800137042999
+      ],
+      [
+        0.6844940185546875,
+        0.15329299867153168,
+        -0.22895200550556183
+      ]
+    ],
+    "axis": [
+      0.876215908676647,
+      0.48191874977215593,
+      0.0
+    ],
+    "sectionStations": [
+      0.3308790922263212,
+      0.4323421439707987,
+      0.5338051957152762,
+      0.6352682474597536
+    ],
+    "sectionCenters": [
+      [
+        0.4218826032855861,
+        -0.08047239578199256,
+        -0.3421911110340538
+      ],
+      [
+        0.5103910266935261,
+        -0.030857054785493693,
+        -0.3457667068056416
+      ],
+      [
+        0.5837449801289882,
+        0.04631186797914678,
+        -0.355155811587739
+      ],
+      [
+        0.6635473723321804,
+        0.11175635662064147,
+        -0.3700662373808178
+      ]
+    ],
+    "previousTip": [
+      0.35325300693511963,
+      0.8119709491729736,
+      -0.30368220806121826
+    ],
+    "previousTipNearestOwnBranchDistanceSourceUnits": 0.7001376607899139,
+    "previousTipNearestConnectivityBranch": "index",
+    "limits": "Section centers are geometric fitting hypotheses, not anatomical source joints. Proximal palm/web attachment remains unclassified."
+  },
+  "previousGeometricPalmThumbBaseHypothesis": [
+    0.3,
+    -0.29,
+    -0.29119500517845154
+  ],
+  "firstSectionDistanceFromGeometricPalmThumbBaseSourceUnits": 0.24770504380299832,
+  "targetMetacarpalHead": [
+    -0.3781270682811737,
+    -0.10848768800497055,
+    0.9137696623802185
+  ],
+  "actualMCPHead": [
+    -0.38023361563682556,
+    -0.1516721099615097,
+    0.884277880191803
+  ],
+  "metacarpalToMCPM": 0.05233638369366925,
+  "sourceMappingCause": "Current donor first distal-connectivity section is registered to the target thumb metacarpal head; source geometric palm/thumb base is separate and lies proximal to that source section. This is not anatomical joint identity.",
+  "proposedCorrection": {
+    "bodyFields": "Keep every original75-joint influence and transform exactly; bone influence does not determine surface chart",
+    "surfaceDomains": "Use actual thumb MCP plane and downstream thumb arc to separate proximal thenar/palm source0 from thumb source5; explicit local MCP transition may blend0/5, distal thumb remains exclusively5",
+    "registration": "Source first isolated thumb section should correspond to downstream thumb/MCP surface, not blindly to metacarpal head. Review source geometric palm thumb anchor separately before adding an anatomical registration control."
+  },
+  "limits": [
+    "Source models have no actual skeleton/joint annotation; geometric thumb root hypothesis is not proven MCP anatomy",
+    "No source/body/field/control modification or new construction retry occurred"
+  ]
+}
