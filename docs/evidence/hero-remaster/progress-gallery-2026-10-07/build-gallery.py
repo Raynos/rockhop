@@ -18,7 +18,8 @@ featured=json.loads((leaf/'featured-videos.json').read_text())
 video_cards=''
 for v in featured['videos']:
  src=root/v['source'];assert hashlib.sha256(src.read_bytes()).hexdigest()==v['sha256']
- shutil.copyfile(src,out/v['src'])
+ if 'deliveryEncoding' not in v: shutil.copyfile(src,out/v['src'])
+ else: assert hashlib.sha256((out/v['src']).read_bytes()).hexdigest()==v['deliveryEncoding']['sha256']
  poster=byid[v['index']]['photos'][1]['src']
  duration=f"{v['durationSeconds']:.1f}s"
  video_cards+=f'<article class="video-card"><h3><span class="rank">{v["rank"]:02d}</span> {esc(v["title"])}</h3><video controls playsinline muted preload="none" poster="{poster}" aria-label="{esc(v["title"])}"><source src="{v["src"]}" type="video/mp4"></video><p class="duration">{duration} · historical, unaccepted evidence</p><p>{esc(v["why"])}</p></article>'

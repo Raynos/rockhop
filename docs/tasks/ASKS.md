@@ -501,3 +501,5 @@ Status: **open** (nobody on it) · **in flight** (owner named) · **needs pick**
 | 323 | Put the five most important videos on the existing rider photo Site; watching all 21 takes too long. | **in flight — selecting five and updating Site, 2026-10-07** | Prioritize whole-rider motion and the clothing, glove and neck failures; preserve original evidence and private audience. |
 
 | 324 | Make the rider progress website public. | **in flight — publishing featured videos then changing audience, 2026-10-07** | Explicit user authorization to change this same Site from owner-private to public. |
+
+| 325 | Show the clearest simplest before/after video of the integrated rider in the same garage in engine; establish whether any rider remaster progress actually reached the game. | **in flight — checking integrated evidence and runtime, 2026-10-07** | Component trials are not proof; find matched garage footage or report the absence plainly. |

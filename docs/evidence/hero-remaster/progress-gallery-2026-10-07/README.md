@@ -23,6 +23,7 @@ The photo Site is private and separately published through Sites.
 
 The five clips are ranked: full rider on the bike, landing/jeans/boots,
 failed hoodie deformation, failed finger flex, and the failed head/neck repair.
-See [selection and exact source pins](featured-videos.json). All five copies
-are byte-identical silent originals; controls require a deliberate play.
+See [selection and exact source pins](featured-videos.json). Four copies match the silent originals byte for byte; the full-rider clip
+is a smaller H.264 web copy with the same 926 frames and dimensions.
+The original download remains unchanged; controls require a deliberate play.
 The first-principles successor rebuild is separate from this historical Site.

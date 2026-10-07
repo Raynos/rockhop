@@ -41,9 +41,20 @@ full rider and landing show game context; hoodie, glove and neck trials
 show the blockers. Update the durable builder and historical status copy.
 
 Validation: Five movie copies and all 84 photo hashes match source pins;
-all 199 local asset links resolve. Five existing silent playback receipts
+all 191 local asset links resolve. Five existing silent playback receipts
 ended. Controls, muted playback, mobile inline support and no autoplay
 are present; loading begins only on user action. Total time 98.269 seconds.
 
 Limits: Historical October 3–5 evidence, not new rebuild progress or an
 acceptance claim. No game code changed; Site publication follows.
+
+Finding: The first video publication failed because the 31.6 MB full-rider
+original exceeds Sites' 25 MiB file limit. Preserve its original download
+and encode a 23.1 MB CRF20 H.264 delivery copy for the web gallery.
+
+Validation: The delivery copy fully decodes, retains 926 frames at
+1920x720 and the 30.867-second duration, and has no audio stream. Its
+new hash is pinned; four other copies and 84 photos stay source-exact.
+
+Limits: The web copy is lossy. Failed publication is retained; the
+original and earlier source commit stay unchanged. No rider promotion.
