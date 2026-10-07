@@ -41,3 +41,9 @@ Finding: Superseded baseline/finish/consolidated rider methods are retired uncom
 Validation: Three source documents moved with git history, relative Markdown links rebased, explicit retirement/provenance headers added. Active authority pointers inspected. Ordinary silent player gate is checked separately and cannot validate the new rider.
 
 Limits: Archival is method retirement, not milestone completion; R0–R5 and physical-device acceptance remain open.
+
+Finding: Official Blender male base offers a coherent continuous head/neck/body/hand foundation with explicit CC0 collection metadata,10582vertices/10590mostlyquad faces and no pre-existing rig. Choose this as the primary conventional construction input pending anatomical/articulation review; fresh MPFB sources remain fallback.
+
+Validation: Official50,643,039byte download pinned; guarded Blender native inventory succeeds. Connected/oriented/closed graph checks pass with Euler2; source license and separate embedded Rain text both retained. Ordinary low/high4810tick clear/hash/finish bytes match, crash103/restart0ticks1–2ms, zero model replacements.
+
+Limits: Static foundation only, not rig, joint deformation, identity, clothes or played new-rider acceptance.

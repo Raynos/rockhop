@@ -1,0 +1,103 @@
+{
+  "accepted": false,
+  "retrievedDate": "2026-10-07",
+  "archiveURL": "https://download.blender.org/demo/asset-bundles/human-base-meshes/human-base-meshes-bundle-v1.4.1.zip",
+  "archiveBytes": 50643039,
+  "archiveSHA256": "811f43accbb31a88266d932f8f5563b2d13586fca0ba2693aad1f5fe582b3515",
+  "nativeSHA256": "3c121505651140ceb4d69fd1d8923f7788ffadd81672f5be14845a5f2c75c137",
+  "base": {
+    "name": "GEO-body_male_realistic",
+    "type": "MESH",
+    "asset": null,
+    "matrixWorld": [
+      [
+        1.0,
+        0.0,
+        0.0,
+        -2.2643022537231445
+      ],
+      [
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "modifiers": [
+      {
+        "name": "Multires",
+        "type": "MULTIRES"
+      }
+    ],
+    "vertices": 10582,
+    "edges": 21170,
+    "polygons": 10590,
+    "polygonSizes": {
+      "4": 10570,
+      "3": 20
+    },
+    "boundaryEdges": 0,
+    "nonmanifoldEdges": 0,
+    "looseEdges": 0,
+    "vertexGroups": [],
+    "materials": [],
+    "uvLayers": [
+      "UVMap"
+    ],
+    "shapeKeys": [],
+    "bounds": [
+      [
+        -0.4404309391975403,
+        0.4402700662612915
+      ],
+      [
+        -0.17945513129234314,
+        0.11099401116371155
+      ],
+      [
+        -0.005547828506678343,
+        1.684413194656372
+      ]
+    ]
+  },
+  "collection": {
+    "name": "Body Male - Realistic",
+    "objects": [
+      "GEO-body_male_realistic",
+      "GEO-body_male_realistic.eye.L",
+      "GEO-body_male_realistic.eye.R"
+    ],
+    "asset": {
+      "author": "Dan Ulrich",
+      "description": "Realistic scan data model with multiresolution details",
+      "copyright": "",
+      "license": "CC0"
+    }
+  },
+  "topology": {
+    "components": [
+      10582
+    ],
+    "orientationConflicts": 0,
+    "euler": 2
+  },
+  "README": "Important Info\n==============\n\nHuman Base Meshes: Asset Bundle - Version 1.4\n\nAll provided assets are public domain under the CC0 license.\nThe minimum supported Blender version is 4.2!\n\nWhat's included\n==============\n\nThese are various human base meshes that are provided by the Blender community and the Blender Studio.\nThey include:\n    - Quad topology for multi-resolution sculpting\n    - Closed volumes for voxel remeshing\n    - Face sets\n    - UV maps (including UDIMs)\n    - Multiresoluton levels for realistic assets\n    - Creased edges and Subdiv modifiers for planar/primitive assets\n\nHow to install the Asset Bundle\n===============================\n\nIt's recommended to create a new Asset Library in the preferences first:\n- Open the Preferences\n- Go to \"File Paths\"\n- Add a New Asset Library with the + button and call it \"Human Base Meshes\"\n- Set the \"Import Method\" to \"Append\"\n\nTo add the assets from this file to the Asset Library:\n- In the Asset Browser below, click on \"Copy Bundle to Asset Library\"\n- Choose a target Asset Library\n- Choose a target folder location\n\nThat's it. Enjoy!",
+  "otherEmbeddedLicense": "LICENSE\n\nThe Rain Rig is released under the Creative Commons Attribution 4.0 license. \nThe attribution is \u00a9 Blender Foundation | cloud.blender.org",
+  "limits": [
+    "Base collection explicitly CC0; separate embedded Rain license text retained, not substituted for selected asset metadata.",
+    "Closed connected oriented topology is static input evidence only, not articulation or art acceptance.",
+    "No armature/weights/materials on chosen body."
+  ]
+}
