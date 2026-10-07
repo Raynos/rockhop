@@ -1,0 +1,52 @@
+{
+  "schema": "rockhop-exact-saved51-native-intake-v1",
+  "status": "PREPARED_ONLY_NO_ADMISSION_OR_CANDIDATE_BINDING",
+  "rootFrozen": false,
+  "candidate": { "path": null, "sha256": null },
+  "fields": { "path": null, "sha256": null },
+  "candidateScopeReceipt": { "path": null, "sha256": null },
+  "parentNative": {
+    "path": "assets/blender/hero-remaster/rider/finish-2026-10-05/construction/body06/natural-foundation.blend",
+    "sha256": "66c45ab5a76fe592b0b284a5a96dc3e6ba1f74b2854e5dae849aaff03f43bb77"
+  },
+  "f0Original": {
+    "path": "assets/blender/hero-remaster/rider/anatomical-foundation-2026-10-03/user-agent1/selected-hoodie26/native-four-with-full-control.blend",
+    "sha256": "4a0904b94a507f35590d1ec4ebfe763237fa5fb21fa189573842309cb776a0ad"
+  },
+  "f0Contract": {
+    "path": "docs/evidence/hero-remaster/finish-2026-10-05/construction/foundation-contract.json",
+    "sha256": "1cae63bda363c79d70b37c8cf317696d02007ae17b8a8ecc4e990901eb1bab0e"
+  },
+  "f0SnapshotHelper": {
+    "path": "assets/blender/hero-remaster/rider/anatomical-foundation-2026-10-03/user-agent1/verify_extended_protected_data.py",
+    "sha256": "8a5c9159909655ae728a7e1b3095ee88fd4bbe4f4516bb3e5c63b421143e1512"
+  },
+  "nativeSerializer": {
+    "path": "harness/rider-finish/native-sample.py",
+    "sha256": "852be70ec38424466d5ad12478517172290d6866737660a49d43c64a23bd8050"
+  },
+  "preservationReader": {
+    "path": "harness/rider-finish/preservation-check-v2.py",
+    "sha256": "346c8a05ff6e83a1d095de3c1f934f681edea6ddc0a71795e4e88be271e7a97b"
+  },
+  "poseAuthorityReport": {
+    "path": "harness/out/rider-finish/body05-intake01/report.json",
+    "sha256": "4937d207ee8da9f58cf2778b0e4635e094a66e3065440a94bc9229ba95c4494f"
+  },
+  "sceneName": "Finish natural wearer diagnostic",
+  "rigName": "Finish rig",
+  "normalizedWeightTolerance": 0.000001,
+  "normalizedRequiredObjects": ["Finish body FOUR", "Finish head FOUR", "Finish boxer FOUR"],
+  "indices": [0, 70, 99, 128, 151, 157, 186, 244, 302, 422],
+  "pairs": [
+    {"region": "body", "full": "Finish body FULL", "four": "Finish body FOUR"},
+    {"region": "head", "full": "Finish head FULL", "four": "Finish head FOUR"},
+    {"region": "boxer", "full": "Finish boxer FULL", "four": "Finish boxer FOUR"},
+    {"region": "cheek", "full": "Finish coherent cheek", "four": "Finish coherent cheek"}
+  ],
+  "limits": [
+    "Root must supply actual candidate/fields/scope receipt pins and explicit serial admission; this template cannot run.",
+    "Body06 parent remains unaccepted. No historical body07 proposal is a candidate pin.",
+    "Run through the existing canonical nonblocking CPU2 guard; do not launch Blender directly."
+  ]
+}

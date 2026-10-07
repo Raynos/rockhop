@@ -885,3 +885,19 @@ Limits: Author evidence only; independent capture50/wholecontacts51/
 mandatorygate51/played grayPBR review pending. Native47actual mismatch
 values remain unmeasured. No harmonicretune, outfit/engine/art/device
 acceptance or player promotion. Execution49; next ordinary gate51.
+
+## October7: exact saved native capture50 pause checkpoint
+
+Finding: Independent saved-pose capture50 and parent readback preserve the
+authored49 body/head raw arrays and ten exact51pose/skin/boneWorld payloads.
+Boxer triangulation/corner triples still fail at landing302 in both fields.
+
+Validation: Native capture CPU2guard exits0 in70.222s, warnings0. Parent
+readback guard exits0 in13.431s; all pinned inputs/outputs rehashed, raw
+body/head XYZ/triangles/FULL/FOUR exact, body outside330 exact to body06,
+boxer/cheek rest fields unchanged, maximum candidate prediction/native
+error4.625616761e-7m. See savedpose-capture01/parent-readback50.json.
+
+Limits: Capture is unaccepted. Full contacts51, mandatory ordinary gate51,
+played anatomy/normals, clothes, actual engine and devices remain open.
+User asks310 pauses at this checkpoint; no experiment51 launched.

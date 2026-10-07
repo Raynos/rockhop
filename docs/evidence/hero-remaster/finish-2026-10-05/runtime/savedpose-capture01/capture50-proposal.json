@@ -1,0 +1,69 @@
+{
+  "status": "PREPARED_ONLY_ROOT_EXACT_MANIFEST_AND_COMMAND_ADMISSION_PENDING_NO_EXECUTION",
+  "round": 50,
+  "recipe": {
+    "path": "docs/evidence/hero-remaster/finish-2026-10-05/runtime/savedpose-capture01/capture-v3.py",
+    "sha256": "4cc7c6f9b86fe2d9668e7a8ce74ced578a3bfff954e2592e5b6f531198537cff"
+  },
+  "manifest": {
+    "path": "docs/evidence/hero-remaster/finish-2026-10-05/runtime/savedpose-capture01/manifest-bound50.json",
+    "sha256": "6780ceb99f5c8ceb120bd8a39fd2764b101774edeffe523cc12681938c0466ab"
+  },
+  "command": {
+    "path": "docs/evidence/hero-remaster/finish-2026-10-05/runtime/savedpose-capture01/COMMAND-capture50.txt",
+    "sha256": "e7b4ecf39fdbc9e0be6ce3e5c7d6b484e3bb37ea09366f0ef22c1aa3023a94d1"
+  },
+  "guard": {
+    "path": "assets/blender/hero-remaster/generation-comparison-2026-10-03/user-agent2/run_bounded96.py",
+    "sha256": "cf8acd15d8b7484480bee74d23892be815d955ffd87115d3da8ed228ffb3d916"
+  },
+  "argv": [
+    "/usr/bin/lockf",
+    "-k",
+    "-n",
+    "-t",
+    "0",
+    "/Users/raynos/projects/localai/.model.lock",
+    "/usr/bin/env",
+    "OPENBLAS_NUM_THREADS=2",
+    "OMP_NUM_THREADS=2",
+    "VECLIB_MAXIMUM_THREADS=2",
+    "/Users/raynos/projects/localai/runtime/unimate/.venv/bin/python",
+    "assets/blender/hero-remaster/generation-comparison-2026-10-03/user-agent2/run_bounded96.py",
+    "--locked",
+    "--out",
+    "harness/out/rider-finish/body07-exact-saved50-guard",
+    "--limit-seconds",
+    "180",
+    "--",
+    "/opt/homebrew/bin/blender",
+    "--background",
+    "--threads",
+    "2",
+    "--python-exit-code",
+    "1",
+    "--python",
+    "docs/evidence/hero-remaster/finish-2026-10-05/runtime/savedpose-capture01/capture-v3.py",
+    "--",
+    "--manifest",
+    "docs/evidence/hero-remaster/finish-2026-10-05/runtime/savedpose-capture01/manifest-bound50.json",
+    "--out",
+    "harness/out/rider-finish/body07-exact-saved50"
+  ],
+  "freshOutput": "harness/out/rider-finish/body07-exact-saved50",
+  "freshGuardOutput": "harness/out/rider-finish/body07-exact-saved50-guard",
+  "limitSeconds": 180,
+  "CPUThreads": 2,
+  "blenderPythonExitCode": 1,
+  "limits": [
+    "No execution, native save, export, render, contact pass or promotion.",
+    "Parent must read exact manifest/command and separately admit this single guarded capture.",
+    "Actual raw authored-array equality remains a postcapture root check; inherited boxer changed triangles remain a failed-stability finding.",
+    "Thread environment precedes the guard Python process and is inherited by its F0/NumPy/Blender child; no execution follows preparation alone."
+  ],
+  "threadEnvironment": {
+    "OPENBLAS_NUM_THREADS": "2",
+    "OMP_NUM_THREADS": "2",
+    "VECLIB_MAXIMUM_THREADS": "2"
+  }
+}
