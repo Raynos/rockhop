@@ -1101,3 +1101,5 @@ October 7 selected denim lookup uses float64 determinants for tiny valid source 
 October 7 the actual liked face carrier has a source-preserving welded neck construction recipe and native checker; original PBR/corner identity and one closed shared75 wearer are mandatory guards. Source checkpoint only; first native and moving profile remain open.
 
 October 7 selected-face native attempt01 stops safely on an unsupported deformation-map API after2.83seconds. Explicit indexed field writes correct the API; fresh native topology and played face/neck remain open.
+
+October 7 selected glove production reconstruction is checkpointed before its first bounded native attempt: semantic source exterior, measured padded sections, coherent five-digit cavity, original PBR and shared75 fields. Global bake pixel lineage and dense normal microdetail remain unqualified; no moving acceptance.

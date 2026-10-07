@@ -221,3 +221,9 @@ Finding: Selected-face native construction reached the actual nested neck loops 
 Validation: First guarded run stops safely after 2.83 seconds, exit1; exact input and log preserved. Parent reviews the mechanical fix and Python compilation passes.
 
 Limits: No new native master or face appearance pass from this attempt; fresh topology and moving review remain open.
+
+Finding: Reconstruct the selected glove appearance on a coherent five-digit hand chart with measured padded source sections and a genuine inner cavity. This replaces the source donor palm handle topology, preserves original PBR ancestry and shares the full75 wearer fields.
+
+Validation: Parent reviews semantic ray pools, measured tip/volume controls and positive-thickness guards. Float64 source-corner projection and immutable source/map pins are checked; both Python files compile. No reconstruction or bake has run yet.
+
+Limits: One final-intent structural candidate only. Global bake pixel correspondence and dense microdetail normals remain unqualified; manifold/source guards are not moving contact or art acceptance.

@@ -1,0 +1,39 @@
+{
+  "accepted": false,
+  "status": "UNACCEPTED_INTENDED_PRODUCTION_RETOPOLOGY_PREPARATION_NO_GLOVE_EXECUTION",
+  "recipe": {
+    "path": "assets/blender/rider-rebuild/donor-hand-foot01/build-selected-glove.py",
+    "sha256": "3c67ed274a934ec6fbf46fbe48d8dc6a57ad94db0169b581f765be4ec2fccf62",
+    "verifier": "assets/blender/rider-rebuild/donor-hand-foot01/verify-glove-unit.py",
+    "verifierSHA256": "6368bf90b9da64aafaf6150df584f0627dcd9539f30a1b97541ce34f04f5096c"
+  },
+  "selectedExterior": {
+    "prototype": "assets/blender/hero-remaster/rider/finish-2026-10-05/wardrobe/data/prep02/gloves/retopology-prototype.npz",
+    "sha256": "746c99bb9fc109492b27e6e9bd3d7281bf3d4799488cb0d6beebf2804d8a6c5e",
+    "branchClassification": "assets/blender/hero-remaster/rider/finish-2026-10-05/wardrobe/data/glove-anatomy02b/branches.npz",
+    "branchSHA256": "2bb0068e983394ed6bbb6afd94de4b0f735bc62a94b449204ead8d8058e03562",
+    "denseCornerAuthority": "assets/blender/hero-remaster/rider/finish-2026-10-05/wardrobe/data/prep02/gloves/cleaned-donor.npz",
+    "denseSHA256": "f07a705f334d3d2b802fa7d23baec3e9cd54b211d160b7bbd6ab2c9f4a96541c",
+    "baseColorSHA256": "9633beec8bf2bb3bd73918589b931d2fc4f33f8e3e702415094ed173a129f95c",
+    "metallicRoughnessSHA256": "a7a712769a73844a9560d4bef1d163ce3fb8721e388d1a7ecfa07a3515280e67"
+  },
+  "structuralCause": "The compact donor is genus1; cuff opening08 leaves Euler-1 with one71-edge boundary and a remaining palm handle. Fitting and skinning alone cannot qualify that topology.",
+  "construction": [
+    "Use exact coherent wearer hand topology as a new production scaffold, retaining all five digits and shared75-joint deformation fields. Derive one anatomically measured wrist plane and cut the scaffold into a single connected hand patch with one cuff boundary.",
+    "Derive source exterior branch/section correspondences from the pinned selected donor, and exact target centerlines from named new75 joints. Register selected exterior as an appearance-control surface; never reuse old51 skin fields or adopt its faulty cavity.",
+    "Fit geometric end stations to measured actual wearer-skin99percentile extent plus2mm, because terminal bone tails stop4.1–7.9mm short of finger skin. Preserve every bone transform. Measure source and actual skin branch/palm radii in anatomical section frames at six arc stations, and smoothly ease the selected radial profile only when needed for3.5mm positive volume. Reject scales above2.5.",
+    "Reconstruct the scaffold outer surface from measured selected-donor outward silhouette and padded contour, carrying explicit source triangle and barycentric provenance for every reconstruction query. Stop on unsupported source correspondence; do not silently fall back to a plain offset hand.",
+    "Use separate verified semantic source triangle pools: target digit mass at least0.20 selects its own finger chart, mixed proximal mass below0.55 may explicitly blend palm/web chart0, and distal fingers never borrow another finger. Record both semantic regions and weights for every success or missing witness. Reject unsupported outward projection, padding below2.5mm and reversed scaffold faces before any bake.",
+    "Build a separate coherent inner hand cavity with positive thickness, join inner and outer cuff rings, and verify manifold closed cloth volume, anatomical finger channels and no unintended genus passage. Preserve all original wearer data.",
+    "Unwrap a dedicated glove atlas, bake original selected base color, metallic/roughness and padding normals from their exact original corner authority. Export one material atlas shared by the mirrored pair, reverse geometry and UV winding on reflection.",
+    "Recover dense donor corner UV with float64 cross-area barycentrics and exact closest-edge/vertex projection on the actual selected triangle, checking degeneracy. Cache compressed arrays once; preserve source triangle IDs and count edge projections.",
+    "Verify source pins, semantic correspondence counts, per-corner provenance, thickness, triangle enclosure and native/GPU fields before final assembly. Parent judges full dressed grip/release and riding motion before acceptance."
+  ],
+  "executionLimits": [
+    "At most one new structural reconstruction candidate; no repeated cavity cut-plane or RBF-fitting campaign.",
+    "A measured source-to-target exterior registration is appearance authority only, not a production glove until the new cavity and original-PBR bake exist.",
+    "Padding normals are baked from the selected compact donor. Dense geometric microdetail beyond the16k appearance derivative remains unqualified.",
+    "Standard selected-to-active atlas bake may query a neighboring finger. Per-pixel semantic source fidelity remains unqualified until bake witness or region validation, even though reconstruction geometry uses strict semantic pools.",
+    "No arbitrary plain body-offset black glove, old bad cavity rebranding, hidden skin, limb stretch, physics mutation or player promotion."
+  ]
+}
