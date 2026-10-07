@@ -1,0 +1,29 @@
+{
+  "accepted": false,
+  "status": "LAUNCH_REJECTED_BEFORE_RECIPE_EXECUTION",
+  "reason": "Inline diagnostic wrapper newline was incorrectly escaped; Python syntax failure before actual recipe execution.",
+  "recipeSHA256": "5aaf5dc2641e801001745edcece73d93e168e19f0d32575de4db4bbb13ff9846",
+  "nativeProduced": false,
+  "fitGeometryAttempted": false,
+  "leaseReleased": true,
+  "guard": {
+    "path": "/Users/raynos/projects/games/rockhop/harness/out/rider-rebuild/selected-boot03-guard/guard.json",
+    "sha256": "7cee8641cc0f238b57ff681a8b086a68ba716660cbc0b666ef86b3f8199468bf",
+    "exitCode": 1,
+    "elapsedSeconds": 1.479
+  },
+  "workerLog": {
+    "path": "/Users/raynos/projects/games/rockhop/harness/out/rider-rebuild/selected-boot03-guard/worker.log",
+    "sha256": "7418fc4ace723ad5ebcd5a46d9e6edb74baddcf930d136636b8b7c4662ac4712"
+  },
+  "correctedWrapper": {
+    "path": "/Users/raynos/projects/games/rockhop/assets/blender/rider-rebuild/clothing-motion01/run-boot-fit03.py",
+    "sha256": "c6510c15346adb26086a939feefa3efdf1771c7725014111dd9b94eed658dc3b",
+    "pythonASTPassed": true,
+    "pythonCompilePassed": true,
+    "structuredArgvAndFreshOwnedOutputGuard": true
+  },
+  "limits": [
+    "No corrected boot geometry measured or accepted; retry requires parent checkpoint."
+  ]
+}
