@@ -77,3 +77,9 @@ Finding: First coarse four-piece wardrobe transports complete five-finger black 
 Validation: ActualGLB39,032triangles,20objects/26primitives, normalized FOUR maxerror1.3411e-7; ten embeddedPNG exactsourcebytes. Root reviewed recipe and actual firstGarage frames.
 
 Limits: Garage exposes baretoe/shoe coverage and jaggedneckline failures;10palettes exceed8target and sourceattributes omitted. Moving fit unaccepted.
+
+Finding: Combined01 assembles continuous wearer/head/buzz and all four garments into the first complete native75joint export, with authored2second breath. Preserve source/output pins before appearance02.
+
+Validation: Parent reads the clean deform export recipe, verifies exact input receipts and actualGLB/static wardrobe transport; guarded assembly succeeds. First actual Garage played to naturalend, fullorbit reviewed.
+
+Limits: Baretoe, jaggedneckline, weakface/eyes visible; no moving garment/contact/art/device acceptance.

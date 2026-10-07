@@ -1049,3 +1049,5 @@ Rider review delivery, October 7 (asks323–325): public Site version3 is publis
 October7 assembledGarage sprint nativecheckpoint: coherent1.78m wearer/fullfinger65meta/71DEF rig,10582bodyverts normalizedmax4, all30digit fields present; source/native/fit preserved [unaccepted](../evidence/rider-rebuild/construction01/rig03/README.md). FULL removal relative max26.4% risk remains unplayed; next eyes/buzz/all4wardrobe export to actualprivateGarage. No player promotion/R0–R5 acceptance.
 
 October7 first clothed export checkpoint: all four garments and five-digit gloves share the same75joint FOUR skin; embedded texture transport independently checked [here](../evidence/rider-rebuild/wardrobe01/FINDING.md). Actual Garage reveals shoe coverage and jagged neckline failures; corrective construction pending, no player promotion.
+
+October7 assembled native checkpoint [Combined01](../evidence/rider-rebuild/construction01/combined01/README.md): continuous wearer/head/buzz and all four garments exported together; actual Garage played review exposes concrete footwear/collar/face defects. Appearance02 pending; bike reach and all production art/device gates remain open.
