@@ -1,0 +1,14 @@
+00:00.309  blend            | Read blend: "/Users/raynos/projects/games/rockhop/harness/out/rider-rebuild/construction01/combined04/rider-assembled.blend"
+Traceback (most recent call last):
+  File "/Users/raynos/projects/games/rockhop/assets/blender/rider-rebuild/donor-hand-foot01/verify-glove-unit.py", line 19, in <module>
+    unit = runpy.run_path(str(helper))["buildSelectedGloves"](body, rig, out)
+  File "/Users/raynos/projects/games/rockhop/assets/blender/rider-rebuild/donor-hand-foot01/build-selected-glove.py", line 161, in buildSelectedGloves
+    assert max(scales) <= 2.5, "Selected branch cannot faithfully enclose actual hand volume"
+           ^^^^^^^^^^^^^^^^^^
+AssertionError: Selected branch cannot faithfully enclose actual hand volume
+
+Error: script failed, file: 'assets/blender/rider-rebuild/donor-hand-foot01/verify-glove-unit.py', exiting.
+Blender 5.2.1 LTS (hash 9e2066aef7ef built 2026-08-25 01:35:57)
+scripts disabled for "/Users/raynos/projects/games/rockhop/harness/out/rider-rebuild/construction01/combined04/rider-assembled.blend", skipping 'RIG-RiderMetarig_ui.py'
+
+Blender quit

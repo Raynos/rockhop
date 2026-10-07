@@ -1107,3 +1107,5 @@ October 7 selected glove production reconstruction is checkpointed before its fi
 October 7 actual Garage intake compares the exact selected-source contract and seven required dressed objects, then verifies every visible skinned primitive. Eight binding and eleven private-rider tests pass; actual source capture and texture/device review remain open.
 
 October 7 actual selected hoodie/denim native unit passes guarded assembly and independent decoded preservation: unchanged wearer arrays/shared75 deformation rest, original garment loopUV/PBR retained. Internal intermediate only; actual complete outfit and played art remain open.
+
+October 7 actual glove reconstruction01 stops on measured hand-volume fidelity before bake in1.480seconds; no glove output or fallback. Exact failing station witnesses require diagnostic readback before a structural correction. Full selected-source outfit remains unfinished.

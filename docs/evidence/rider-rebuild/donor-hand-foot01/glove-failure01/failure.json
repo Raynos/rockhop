@@ -1,0 +1,25 @@
+{
+  "accepted": false,
+  "status": "FAILED_MEASURED_ANATOMICAL_VOLUME_BEFORE_BAKE",
+  "recipe": {
+    "path": "assets/blender/rider-rebuild/donor-hand-foot01/build-selected-glove.py",
+    "sha256": "3c67ed274a934ec6fbf46fbe48d8dc6a57ad94db0169b581f765be4ec2fccf62"
+  },
+  "verifier": {
+    "path": "assets/blender/rider-rebuild/donor-hand-foot01/verify-glove-unit.py",
+    "sha256": "6368bf90b9da64aafaf6150df584f0627dcd9539f30a1b97541ce34f04f5096c"
+  },
+  "exitCode": 1,
+  "elapsedSeconds": 1.48,
+  "centerlineResidualM": 0.00014624281613973401,
+  "requiredMaximumRadialEase": 2.5,
+  "actualFailure": "At least one measured anatomical branch station requires radial ease greater than2.5; precise station/radii were not written before the assertion",
+  "bakePerformed": false,
+  "finalGloveCreated": false,
+  "bodyOrRestChanged": false,
+  "limits": [
+    "The failed-volume guard precludes production glove or source-appearance acceptance",
+    "The outer correspondence, cavity topology and original PBR atlas bake were not reached",
+    "Next diagnostic may repeat only the same registration and emit all measured witness data without relaxing guards or constructing another candidate"
+  ]
+}

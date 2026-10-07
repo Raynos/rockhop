@@ -239,3 +239,9 @@ Finding: The actual selected hoodie and denim assemble on the shared75 wearer wi
 Validation: Guarded native assembly returns0 in7.479 seconds. Parent reruns decoded validation: body source IDs, positions, normals, joints, weights and triangles exactly equal frozen04; all71 deformation and two palm rest bones unchanged. Hoodie12430 vertices/24359 triangles retains source UV/polygon cycles; jeans7978 vertices/16000 triangles has0outside UV corners.
 
 Limits: Two sole sockets temporarily retain bare source locations because this internal clothing-only unit contains no soles; final boot calibration must restore actual outsole anchors. No moving garment or assembled appearance acceptance.
+
+Finding: The first selected-glove reconstruction rejects its source registration because a measured hand section needs more than2.5 radial ease. The enclosure guard stops before texture baking or producing a replacement glove.
+
+Validation: Guard returns1 safely after1.480 seconds; source centerline residual146.243 micrometres. Original body/rest unchanged, no bake, no glove output and no fallback. Exact recipe/input/log retained.
+
+Limits: Failure witnesses were not written before the assertion; diagnostic-only instrumentation must expose exact region/radius requirements before structural changes. Full dressed actual-source assembly remains unfinished.
