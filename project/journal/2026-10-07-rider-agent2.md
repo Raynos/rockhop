@@ -209,3 +209,9 @@ Finding: Dense selected denim corner projection requires double precision at ver
 Validation: All 841644 original cleaned faces have positive float64 cross determinants; minimum 9.355267e-25, zero below 1e-30. Corrected helper compiles before first native execution.
 
 Limits: Mechanical source lookup fix only; native fitting and played appearance remain open.
+
+Finding: Join the exact liked face carrier to the coherent wearer using a welded anatomical section bridge, retaining its two original PBR primitives, protected source positions, corner UVs and shading normals. The nested inner cut is closed internally rather than attached as a second visible neck.
+
+Validation: Parent reviews source and Python compilation passes. Original raw donor has one closed manifold connected surface including the cheek repair. New construction asserts protected source identity, opposite winding, one closed component and complete shared75 FOUR fields before save.
+
+Limits: First native geometry and actual moving neck profile remain unaccepted. No original face transform is reapplied; no generic replacement head is permitted.

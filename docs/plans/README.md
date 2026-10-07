@@ -1097,3 +1097,5 @@ October 7 [actual hoodie and denim construction](../evidence/rider-rebuild/donor
 The actual-game review camera now settles alpha-zero interpolation before measuring the bone target. Twelve paired states retain exact physics hashes and center the rider to below1e-12 projected X. This corrects evidence framing only; it does not accept the rejected appearance.
 
 October 7 selected denim lookup uses float64 determinants for tiny valid source triangles; 841644 original faces pass the precision preflight. Actual native fitting and played appearance remain open.
+
+October 7 the actual liked face carrier has a source-preserving welded neck construction recipe and native checker; original PBR/corner identity and one closed shared75 wearer are mandatory guards. Source checkpoint only; first native and moving profile remain open.
