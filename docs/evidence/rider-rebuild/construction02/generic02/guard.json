@@ -1,0 +1,191 @@
+{
+  "accepted": false,
+  "lock": "/Users/raynos/projects/localai/.model.lock",
+  "method": "lockf -k",
+  "command": [
+    "/Applications/Blender.app/Contents/MacOS/Blender",
+    "--background",
+    "--threads",
+    "2",
+    "--python-exit-code",
+    "1",
+    "--python",
+    "assets/blender/rider-rebuild/construction02/author-stand-reach01.py",
+    "--",
+    "harness/out/rider-rebuild/construction01/combined04/rider-assembled.blend",
+    "harness/out/rider-rebuild/construction02/generic02"
+  ],
+  "controllerPID": 739,
+  "pollSeconds": 1,
+  "startAnonymousBelowGiB": 55,
+  "stopAnonymousGiB": 65,
+  "stopAnonymousPlusWiredGiB": 96,
+  "limitSeconds": 180.0,
+  "guardSHA256": "cf8acd15d8b7484480bee74d23892be815d955ffd87115d3da8ed228ffb3d916",
+  "status": "worker returned; review pending",
+  "samples": [
+    {
+      "seconds": 0,
+      "anonymousGiB": 27.5,
+      "wiredGiB": 8.7,
+      "freeGiB": 44.5
+    },
+    {
+      "seconds": 0.035,
+      "anonymousGiB": 27.5,
+      "wiredGiB": 8.7,
+      "freeGiB": 44.5
+    },
+    {
+      "seconds": 1.072,
+      "anonymousGiB": 27.7,
+      "wiredGiB": 8.7,
+      "freeGiB": 44.3
+    },
+    {
+      "seconds": 2.115,
+      "anonymousGiB": 27.3,
+      "wiredGiB": 9.0,
+      "freeGiB": 44.3
+    },
+    {
+      "seconds": 3.152,
+      "anonymousGiB": 27.6,
+      "wiredGiB": 8.7,
+      "freeGiB": 44.3
+    },
+    {
+      "seconds": 4.186,
+      "anonymousGiB": 27.4,
+      "wiredGiB": 9.0,
+      "freeGiB": 44.3
+    },
+    {
+      "seconds": 5.228,
+      "anonymousGiB": 27.6,
+      "wiredGiB": 8.7,
+      "freeGiB": 44.3
+    },
+    {
+      "seconds": 6.263,
+      "anonymousGiB": 27.4,
+      "wiredGiB": 9.0,
+      "freeGiB": 44.2
+    },
+    {
+      "seconds": 7.307,
+      "anonymousGiB": 27.3,
+      "wiredGiB": 9.0,
+      "freeGiB": 44.3
+    },
+    {
+      "seconds": 8.347,
+      "anonymousGiB": 27.3,
+      "wiredGiB": 9.0,
+      "freeGiB": 44.3
+    },
+    {
+      "seconds": 9.384,
+      "anonymousGiB": 27.3,
+      "wiredGiB": 9.1,
+      "freeGiB": 44.3
+    },
+    {
+      "seconds": 10.425,
+      "anonymousGiB": 27.5,
+      "wiredGiB": 8.8,
+      "freeGiB": 44.3
+    },
+    {
+      "seconds": 11.462,
+      "anonymousGiB": 27.4,
+      "wiredGiB": 9.0,
+      "freeGiB": 44.2
+    },
+    {
+      "seconds": 12.5,
+      "anonymousGiB": 27.4,
+      "wiredGiB": 9.0,
+      "freeGiB": 44.2
+    },
+    {
+      "seconds": 13.538,
+      "anonymousGiB": 27.4,
+      "wiredGiB": 9.0,
+      "freeGiB": 44.2
+    },
+    {
+      "seconds": 14.579,
+      "anonymousGiB": 27.4,
+      "wiredGiB": 9.0,
+      "freeGiB": 44.2
+    },
+    {
+      "seconds": 15.616,
+      "anonymousGiB": 27.8,
+      "wiredGiB": 9.0,
+      "freeGiB": 43.8
+    },
+    {
+      "seconds": 16.66,
+      "anonymousGiB": 29.0,
+      "wiredGiB": 8.8,
+      "freeGiB": 42.8
+    },
+    {
+      "seconds": 17.703,
+      "anonymousGiB": 27.4,
+      "wiredGiB": 9.0,
+      "freeGiB": 44.2
+    },
+    {
+      "seconds": 18.74,
+      "anonymousGiB": 27.6,
+      "wiredGiB": 8.8,
+      "freeGiB": 44.2
+    },
+    {
+      "seconds": 19.781,
+      "anonymousGiB": 27.4,
+      "wiredGiB": 9.0,
+      "freeGiB": 44.2
+    },
+    {
+      "seconds": 20.824,
+      "anonymousGiB": 27.4,
+      "wiredGiB": 9.0,
+      "freeGiB": 44.2
+    },
+    {
+      "seconds": 21.87,
+      "anonymousGiB": 27.4,
+      "wiredGiB": 9.1,
+      "freeGiB": 44.2
+    },
+    {
+      "seconds": 22.907,
+      "anonymousGiB": 24.8,
+      "wiredGiB": 9.0,
+      "freeGiB": 46.8
+    },
+    {
+      "seconds": 23.941,
+      "anonymousGiB": 26.3,
+      "wiredGiB": 9.0,
+      "freeGiB": 45.3
+    },
+    {
+      "seconds": 24.987,
+      "anonymousGiB": 27.6,
+      "wiredGiB": 8.7,
+      "freeGiB": 44.3
+    }
+  ],
+  "physicalMemoryBytes": 137438953472,
+  "requiredPhysicalMemoryBytes": 137438953472,
+  "scope": "Future explicitly invoked owned Rockhop job only",
+  "pressureOrSwapLimits": "No separate pressure/swap gate exists in the pinned original guard; none altered",
+  "ownedChildPID": 746,
+  "exitCode": 0,
+  "elapsedSeconds": 25.4
+}

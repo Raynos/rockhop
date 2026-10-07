@@ -167,3 +167,9 @@ Finding: Actual contact feedback replaces the input-only spine table with three 
 Validation: Parent reruns all 11 exact-source CPU tests successfully. All 192 states remain finite, with COM below 0.990 micrometers and soles below 3.104 micrometers. Engine04 preserves JS/inline budgets; desktop CPU P95 is 2.788 ms.
 
 Limits: Unaccepted render-only articulation; actual moving judgment, glove surface contact and physical-phone cost remain open. No source geometry, weight or physical-input changes.
+
+Finding: The first fully dressed generic action resets and keys all 75 joints through standing, reaching, gripping, releasing and returning. Authored generic movement remains distinct from physical riding.
+
+Validation: Parent reruns decoded verifier: 225 finite TRS tracks, 193 samples each, eight-second span, exact start/end component return. All 22 dressed mesh position/normal/joint/weight arrays equal frozen04; native return vertex error is zero.
+
+Limits: Transport/action checkpoint only. Actual Garage played movement, hand surface clearance and native/GPU moving deformation remain unaccepted.
