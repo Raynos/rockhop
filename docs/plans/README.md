@@ -1067,3 +1067,5 @@ October7 [fixed physical carrier](../evidence/rider-rebuild/runtime02/FIXED_CARR
 October7 [native04](../evidence/rider-rebuild/construction01/rig04/README.md) recalibrates measuredarmcenters (.5346398m actualnormalizedchain) and correctlybakes eyes into the bodyframe. Nativepins/10582FOUR/all30digit fields checked; rawFULL loss.2531 andmovingqualifications remainopen.
 
 October7 [boundary03 structural proposal](../evidence/rider-rebuild/wardrobe01/boundary03-proposal.json): twofailed necklinegeometryrepairs retained; replace boundarydeformation with continuouscommonloop FOUR field/four-rowfalloff, actualjoint-derivedcuffs/regularhem. This documented structuralchange remains movingunaccepted; no silentattemptbudget reset.
+
+October7 [completecalibrated04](../evidence/rider-rebuild/construction01/combined04/README.md) pins native04/wardrobe03/actualsolebottoms together. Parentbinaryreadback confirms10582bodypositions unchanged andeyes nowathead. Tinyexportweightpruning/FULLloss explicitlyopen; nextactualGarage/game judgments allfourgarments together.

@@ -131,3 +131,9 @@ Finding: Twoedge geometryrepairs failed underdressedmotion becauseboundarypoints
 Validation: Parent helper review; author verifiesclosedloops22/24wrists,34hem,70neck andexplicitnormalized FOUR boundaryfield. Sourcebody/rig immutable; proposalretainsboth priorneckfailures.
 
 Limits: Structuralfield replacement is documented escalation, not renamedattemptreset; movingcollar/hem/cuff review remainsopen.
+
+Finding: Combined04 assembles calibrated nativewearer, correctlyplacedeyes, consistentwearableboundaries and actualsolebottomsocket onone shared75joint dressedexport. Preservecompletecheckpoint beforeactualnew-contact Garage/game review.
+
+Validation: Parent independently compares10582exportedbody positions bysourceIDs byteidentical02, checks botheye nodes atheadheight, verifiesallinputSHA andguard07success.75joints/28primitives/39490tris normalizedGPU FOUR.
+
+Limits: NativeGPU12tinyweightrowprunes≤.0001 andFULLloss.2531 unmeasured; actualmoving/contact/art/device qualification open.
