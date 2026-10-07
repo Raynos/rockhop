@@ -955,7 +955,7 @@ compile; no execution51 output exists. Owned untracked finish paths are
 empty. Foreign working/index changes inventoried without reset or sweep.
 Ordinary gate51 preparation is not gameplay evidence.
 
-Limits:0/6milestones accepted. Local ignored native masters/harness/model
+Limits: 0/6milestones accepted. Local ignored native masters/harness/model
 outputs are still required; fresh clone alone is insufficient. Foreign
 changes remain dirty. No promotion, push, deploy or future experiment.
 
@@ -974,3 +974,14 @@ no contact/game/model/native execution or existing receipt alteration.
 
 Limits: All genuine rider, garment, generic/bike/engine, phone/stranger
 and release gates remain open. No plan archive, push or promotion.
+
+## October7: handoff commit completion
+
+Finding: Save the complete handoff and local dependency manifest after the
+journal-format hook rejected its first commit attempt. The plan/status
+commit is separate; successor audit commits remain preserved.
+
+Validation: All39immutable handoff inputs exact; prepared scripts compile.
+Corrected the missing space after Limits: and retained normal hooks.
+
+Limits: No experiment51, acceptance, archive, promotion, push or deployment.
