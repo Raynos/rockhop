@@ -1,0 +1,94 @@
+{
+  "acceptedWearable": false,
+  "status": "REJECTED_BEFORE_COMPLETE_GEOMETRY_QUALIFICATION",
+  "sourcePins": {
+    "body": {
+      "path": "docs/evidence/rider-rebuild/glove-charts01/target01/native-body.npz",
+      "sha256": "b34897b3c1fe810d7bd77806a1635f8132b3a43e66986986c218ab23cfad2f45"
+    },
+    "hand": {
+      "path": "docs/evidence/rider-rebuild/glove-charts01/target01/native-hand-R.npz",
+      "sha256": "38ff5b613aded2d608c20ab1beff282124f1f17ce0c3fc63581b0f012e5e8072"
+    },
+    "atlas": {
+      "path": "docs/evidence/rider-rebuild/glove-charts01/atlas01/source-atlas.npz",
+      "sha256": "3ef1d2672f07c9a766bcda579dec342cd06e0e987a6f06494045ffb015a28635"
+    },
+    "sections": {
+      "path": "docs/evidence/rider-rebuild/glove-charts01/source-measurements.json",
+      "sha256": "736c065f5b8dcf228515b22b93fd7de8f81cfc0eafafeeec738e0a6442c9ca1a"
+    },
+    "witnesses": {
+      "path": "docs/evidence/rider-rebuild/glove-charts01/source-section-witnesses.npz",
+      "sha256": "44c76baa8a042a4a4016e19806fa6fe4d2ef6d0e69bf02c95616433b50d3d8e1"
+    }
+  },
+  "recipe": {
+    "path": "assets/blender/rider-rebuild/glove-charts01/fit-exterior.py",
+    "sha256": "52d3430530364169d9795120de699ecb8b389a47a00b482402dd04f4aed43152"
+  },
+  "geometryHelper": {
+    "path": "assets/blender/rider-rebuild/glove-charts01/geometry-checks.py",
+    "sha256": "d9b6080dc6380b23e35eaf3978b539b930955e052c4254d869d7e7ff3b8746fa"
+  },
+  "bounds": {
+    "paddingGoalM": 0.0035,
+    "minimumPaddingM": 0.0025,
+    "maximumRadialEase": 2.5,
+    "maximumPrincipalStretch": 2.5,
+    "minimumPrincipalStretch": 0.2,
+    "maximumTriangleCondition": 8
+  },
+  "iterations": [],
+  "contours": [
+    {
+      "digit": "pinky",
+      "rootTrials": [
+        {
+          "fractionOfProximalPhalanx": 0.0,
+          "ownDigitMeanField": 0.08304990105818666,
+          "missingRays": 215,
+          "multipleRays": 145,
+          "contourDegreeNotTwo": 0,
+          "qualified": false
+        },
+        {
+          "fractionOfProximalPhalanx": 0.1,
+          "ownDigitMeanField": 0.11479955904448899,
+          "missingRays": 215,
+          "multipleRays": 145,
+          "contourDegreeNotTwo": 0,
+          "qualified": false
+        },
+        {
+          "fractionOfProximalPhalanx": 0.2,
+          "ownDigitMeanField": 0.17369944873592147,
+          "missingRays": 213,
+          "multipleRays": 147,
+          "contourDegreeNotTwo": 0,
+          "qualified": false
+        },
+        {
+          "fractionOfProximalPhalanx": 0.3,
+          "ownDigitMeanField": 0.1619936533461828,
+          "missingRays": 212,
+          "multipleRays": 148,
+          "contourDegreeNotTwo": 0,
+          "qualified": false
+        },
+        {
+          "fractionOfProximalPhalanx": 0.4,
+          "ownDigitMeanField": 0.2316033007648228,
+          "missingRays": 208,
+          "multipleRays": 152,
+          "contourDegreeNotTwo": 0,
+          "qualified": false
+        }
+      ],
+      "sections": [],
+      "thumbMetacarpalExcluded": false
+    }
+  ],
+  "error": "AssertionError: No independently covered anatomical root contour for pinky",
+  "elapsedSeconds": 0.02603766694664955
+}

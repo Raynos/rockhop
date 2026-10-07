@@ -1,0 +1,11 @@
+{"status": "REJECTED_BEFORE_COMPLETE_GEOMETRY_QUALIFICATION", "elapsedSeconds": 0.02603766694664955, "error": "AssertionError: No independently covered anatomical root contour for pinky"}
+Traceback (most recent call last):
+  File "/Users/raynos/projects/games/rockhop/assets/blender/rider-rebuild/glove-charts01/fit-exterior.py", line 311, in <module>
+    main()
+  File "/Users/raynos/projects/games/rockhop/assets/blender/rider-rebuild/glove-charts01/fit-exterior.py", line 190, in main
+    transform, source_cuff, digit_report, contours = target_sections(body, hand, atlas, source_report, report["contours"])
+                                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/raynos/projects/games/rockhop/assets/blender/rider-rebuild/glove-charts01/fit-exterior.py", line 90, in target_sections
+    assert root is not None, "No independently covered anatomical root contour for " + digit
+           ^^^^^^^^^^^^^^^^
+AssertionError: No independently covered anatomical root contour for pinky

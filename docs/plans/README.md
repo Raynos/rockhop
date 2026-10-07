@@ -1143,3 +1143,5 @@ October 7 genuine selected-source progress photos were sent for ask330 and expos
 October 7 selected-glove global exterior-fit source preserves original contour, cap, cuff and seam identities; independent parent smoke passes analytic geometry and actual-hand signs. Whole-surface containment and distortion gates are declared before the bounded fit; no candidate is accepted yet.
 
 October 7 selected seven-part engine gate source independently checks native/decoded source identity and exact 75-joint calibration preservation. Twelve real-reference and receipt regressions pass, including all 10582 native fields; final actual intake and parent played art remain open. Any anatomical rig/socket change requires explicit fresh calibration.
+
+October 7 actual glove exterior fit rejects before deformation: authoritative pinky base and 0–40% proximal stations lie outside the actual hand by 0.954–1.884mm. Independent parent occupancy confirms real-surface witnesses; full anatomical branch/rig audit precedes another fit and any changed rest needs fresh calibration.
