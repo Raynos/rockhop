@@ -273,3 +273,30 @@ checked release SHA verified and reproducible master/export delivery committed.
 Update asks and plan index, then move this plan to project/archive with the closing
 pin. If a human/device judgment is pending, file the concrete package in HR-23 and
 continue independent work; never fabricate approval or call an open gate complete.
+
+
+## October 7 source-appearance correction, asks 327–328
+
+The user rejects the first assembled source04 preview: its generic replacement
+head, dark skin material and coarse offset-body garments do not use the selected
+brand-new high-resolution face, hair, mustard hoodie, denim, gloves and boots.
+This candidate fails the requested good-looking baseline. Stop its clothing
+polish and keep it only as unaccepted rig/engine control evidence.
+
+The selected painted donors and liked face are the appearance authority. Use
+their actual geometry, original corner UVs and PBR maps; a derived runtime mesh
+must preserve that appearance with explicit source/bake lineage. Do not present
+new procedural substitutes as the requested assets. Retain useful conventional
+whole-body anatomy, complete shared75 hierarchy, fixed segment lengths, actual
+COM/contact solver and private actual-Garage integration where compatible.
+
+Parallel next units: wardrobe owner integrates actual hoodie/jeans geometry and
+4096 maps; hand/foot owner fits the actual gloves/boots with semantic digit
+correspondence and shared-body fields; native owner restores the liked face/hair
+without transplanting a rigid shoulder bust. Parent composes the complete donor
+outfit, verifies export/import, plays actual Garage and game, and records the
+result. Source preservation is mandatory; source density alone is no quality
+pass, and failure to finish within two hours must be reported honestly.
+
+All R0–R5 remain open. No source04 coarse appearance approval, plan closure,
+normal-player promotion or release is authorized by its working engine checks.

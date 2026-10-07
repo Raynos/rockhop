@@ -179,3 +179,9 @@ Finding: One structural loose-cloth candidate fills muscular chest/abdomen conca
 Validation: Parent reviews source and compiles both Python recipes. Static anatomical preflight excludes joined biceps from upper torso sections and retains central surface points. No Blender execution or moving acceptance is claimed by this checkpoint.
 
 Limits: New native assembly, enclosed foot clearance and actual played drape remain pending. One candidate only before the parent judges actual engine motion.
+
+Finding: The user rejects the complete coarse engine preview because it omits the selected high-resolution appearance assets. Treat that rejection as a mandatory source correction; preserve useful rig/engine work and stop procedural wardrobe polish.
+
+Validation: Parent reads the supplied actual-game screenshot and agrees the hoodie, shoes and generic face fail the requested baseline. Original donor source pins from the five-day audit remain available and unchanged.
+
+Limits: Appearance integration is unfinished. Neither working contact checks nor engine replay proves delivery of the selected assets; all art and plan gates remain open.
