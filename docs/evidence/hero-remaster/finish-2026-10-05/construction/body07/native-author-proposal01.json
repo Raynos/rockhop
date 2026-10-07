@@ -1,0 +1,50 @@
+{
+  "status": "PREPARED_NATIVE_AUTHOR_NOT_EXECUTED_ROOT_REVIEW_REQUIRED",
+  "intendedAuthorRound": 47,
+  "independentQARound": 48,
+  "recipe": "assets/blender/hero-remaster/rider/finish-2026-10-05/construction/body07/build_harmonic_shoulders.py",
+  "recipeSHA256": "e5a957f2bbd92c662c03f71c7413df422322df7a9e6a118273541aeba8f97f4d",
+  "syntax": "AST PASS; literal archive keys validated by ZIP inventory",
+  "archiveKeyChecks": {
+    "fields": {
+      "literalReferencedKeys": [
+        "bodyFourWeights",
+        "bodyFullWeights",
+        "bodyRestXYZ",
+        "bodyTriangles",
+        "boneNames"
+      ],
+      "missingKeys": []
+    },
+    "proposal": {
+      "literalReferencedKeys": [
+        "body06NativeRawFourReference",
+        "body06NativeRawFullReference",
+        "bodyRestXYZReference",
+        "bodyTrianglesReference",
+        "boneNames",
+        "mask438NativeIDs",
+        "productionFourWeights",
+        "productionFullWeights"
+      ],
+      "missingKeys": []
+    }
+  },
+  "command": "/usr/bin/lockf -k -n -t 0 /Users/raynos/projects/localai/.model.lock /usr/bin/env OPENBLAS_NUM_THREADS=2 OMP_NUM_THREADS=2 VECLIB_MAXIMUM_THREADS=2 /Users/raynos/projects/localai/runtime/unimate/.venv/bin/python assets/blender/hero-remaster/generation-comparison-2026-10-03/user-agent2/run_bounded96.py --locked --out docs/evidence/hero-remaster/finish-2026-10-05/construction/body07/native-author-guard01 --limit-seconds 180 -- /Applications/Blender.app/Contents/MacOS/Blender --background --threads 2 --python-exit-code 1 --python assets/blender/hero-remaster/rider/finish-2026-10-05/construction/body07/build_harmonic_shoulders.py",
+  "scope": "Only exact frozen330 effective body fields in FULL and FOUR, within438 original derivative rows. No field recomputation, normalization, sweep, retune or geometry edit. Source34 and own51 immutable.",
+  "candidateFieldsSHA256": "dc92e1192a411d0ba90a67ef7144bdf697008164b2f2014c10dff69a149dfd35",
+  "parentReadbackSHA256": "013cfe056e9d360c3f8cf4f8aabbdfd7eccf237d22cd2515971ba0891895bbf1",
+  "guards": "Existing body06 snapshot helper captures meshXYZ/topology/UV/all raw+decoded normals/materials/group names, materials/nodes/images/global object states, original34 weights, all rig/rest/world/savedpose. All scenes and their membership/properties and source active scene preserved. FULL/Four nonbone/all outside330 memberships exact; within330 actual raw fields equal frozen expected arrays. Actual saved master reopened and snapshots/fields repeated.",
+  "references": "New authored-neck-fields.npz retains every old body06 array exact except bodyFullWeights/bodyFourWeights. Body06 raw native FULL/Four stored separately. Prior body52 raw source FULL/canonical FOUR and head cap references remain untouched. New scope/changed/anchor/partition metadata lives external NPZ only; no native annotations.",
+  "freshOutputs": [
+    "assets/blender/hero-remaster/rider/finish-2026-10-05/construction/body07/natural-foundation.blend",
+    "assets/blender/hero-remaster/rider/finish-2026-10-05/construction/body07/authored-neck-fields.npz",
+    "docs/evidence/hero-remaster/finish-2026-10-05/construction/body07/authoring.json",
+    "docs/evidence/hero-remaster/finish-2026-10-05/construction/body07/native-author-guard01"
+  ],
+  "limits": [
+    "Native save/reopen only, unaccepted source checkpoint before independent QA/movie. No render/export/player promotion.",
+    "Array cleared96 known pairs, not whole new contact search. Prediction displacement138.34mm and minimum area ratio.071934 need native whole contacts and played anatomy judgment.",
+    "No head/neckloft/boxer/elbow/hip/rest/normal/UV/material/bone/pose changes; inherited failures remain open."
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "status": "FAILED_NATIVE_AUTHOR47_BEFORE_SAVE_FROZEN_NO_RETRY",
+  "checkpointBeforeAttempt": "bdeb5f26",
+  "exitCode": 1,
+  "elapsedSeconds": 5.612,
+  "failure": "First FULL raw_fields after applying frozen330 memberships is not array_equal expected FULL at recipe line206. Exact mismatch IDs/values were not logged by frozen recipe, so cause remains unmeasured.",
+  "warnings": "None logged; complete unsuppressed AssertionError trace retained",
+  "sourceBody06Unchanged": true,
+  "frozenArrayCandidateUnchanged": true,
+  "body07MasterSaved": false,
+  "body07FieldsWritten": false,
+  "authorReceiptCreated": false,
+  "geometryRigAndOriginalSourceSave": "No save invoked; source files remain exact. In-memory fields died with failed process.",
+  "sourceAndCandidatePins": {
+    "assets/blender/hero-remaster/rider/finish-2026-10-05/construction/body06/natural-foundation.blend": "66c45ab5a76fe592b0b284a5a96dc3e6ba1f74b2854e5dae849aaff03f43bb77",
+    "assets/blender/hero-remaster/rider/finish-2026-10-05/construction/body06/authored-neck-fields.npz": "ec307c63651b1b76cda75758572cce236987a0dc5c6d2543fd3e23492f9f626a",
+    "docs/evidence/hero-remaster/finish-2026-10-05/construction/body07/array-preflight04/frozen-shoulder-fields.npz": "dc92e1192a411d0ba90a67ef7144bdf697008164b2f2014c10dff69a149dfd35"
+  },
+  "frozenArtifactPins": {
+    "assets/blender/hero-remaster/rider/finish-2026-10-05/construction/body07/build_harmonic_shoulders.py": "e5a957f2bbd92c662c03f71c7413df422322df7a9e6a118273541aeba8f97f4d",
+    "docs/evidence/hero-remaster/finish-2026-10-05/construction/body07/native-author-proposal01.json": "17f326720ee68f57f7eecd5cd256054c41359a3bfdaef3da42979180e1995ec4",
+    "docs/evidence/hero-remaster/finish-2026-10-05/construction/body07/COMMAND-native01.txt": "bd15ff060dac22bb92a2e8310ce195f8b19a88e421546ac33c711b43951666b3",
+    "docs/evidence/hero-remaster/finish-2026-10-05/construction/body07/native-author-guard01/guard.json": "9596e657bf8e4395d5b17a3b59a13e678252611531952f9c88f1c391c8a1ba72",
+    "docs/evidence/hero-remaster/finish-2026-10-05/construction/body07/native-author-guard01/worker.log": "9539c17e754d08a424d3f6978a59c71453b095075898a2296125729f8fdfcc81"
+  },
+  "diagnosticHypothesis": "Unverified: an interior FULL primary anchor may preserve raw mass slightly above1 from Float32 sum, while Blender weight API caps scalar membership at1. No diagnostic or adjustment run.",
+  "next": "Parent checkpoint required before any new diagnostic/corrected attempt. No retries/new source experiment/render/export/QA performed; author retires with handoff."
+}

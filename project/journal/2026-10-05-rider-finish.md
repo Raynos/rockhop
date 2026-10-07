@@ -827,3 +827,21 @@ Limits: Zero-radius paths do not establish mouth entry, endpointoccupancy,
 hand-size clearance, freevolume or feature/defect interpretation. Source
 units uncalibrated, no new cut/fit/skin/grip/art acceptance. Finite numerical
 geometry, not interval certificate. Execution46; next ordinary gate48.
+
+
+## Native47 stops before saving on FULL raw-field mismatch
+
+Finding: Blender stored memberships fail the exact frozenFULL comparison.
+The failed recipe did not persist mismatch rows, so that native cause is
+unmeasured. Preserve failure before storage-bound diagnosis. Root array
+inspection finds four FULL one-hot values1.0000001192092896at native
+36/111/4588/4661; each normalized row is exactly unit shoulder influence.
+
+Validation: One CPU2native author exits1 in5.612s, warnings0. Unsuppressed
+AssertionError retained; no new master/fields/authoring receipt. Parent
+source/field/candidate pins remain exact. No retries or harmonic retune.
+
+Limits: API clamping is a hypothesis until actual native evidence. Next
+bounded unit48will prove proposed storage representation preserves all
+normalized fields and run ordinary game gate48before any new native save.
+Candidate native/motion/appearance remains unqualified.
