@@ -245,3 +245,9 @@ Finding: The first selected-glove reconstruction rejects its source registration
 Validation: Guard returns1 safely after1.480 seconds; source centerline residual146.243 micrometres. Original body/rest unchanged, no bake, no glove output and no fallback. Exact recipe/input/log retained.
 
 Limits: Failure witnesses were not written before the assertion; diagnostic-only instrumentation must expose exact region/radius requirements before structural changes. Full dressed actual-source assembly remains unfinished.
+
+Finding: Actual selected face construction creates one welded closed wearer while preserving every protected source triangle and corner. Independent PNG sampling also establishes the encoded neck albedo and its correct linear material constant.
+
+Validation: Guarded native returns0 in2.485 seconds:41775 vertices/83606 triangles, one component,0boundary/0nonmanifold/0winding errors,66364 protected source triangles with0position/UV/corner-normal change. Raw PNG median190/129/94 matches Blender byte channels; source explicitly converts to linear0.5149177/0.2195262/0.1119324.
+
+Limits: Native02 master precedes material-constant correction; final assembly will apply it. Moving sculpture, tangent shading and outfit intersections remain unaccepted.

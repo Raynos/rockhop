@@ -262,7 +262,12 @@ def buildFace(body, rig, out):
         y = min(height-1, max(0, int(value.y * height)))
         offset = 4 * (y * width + x)
         samples.append(image.pixels[offset:offset+3])
-    skin_linear = np.median(np.asarray(samples), axis=0)
+    assert image.colorspace_settings.name == 'sRGB'
+    skin_encoded = np.median(np.asarray(samples), axis=0)
+    # Independent raw PNG readback proves Blender's sampled values here match
+    # encoded 8-bit channels. Constant Principled colors use linear RGB.
+    skin_linear = np.where(skin_encoded <= .04045, skin_encoded / 12.92,
+                           ((skin_encoded + .055) / 1.055) ** 2.4)
     body_mat = body.data.materials[0]; body_mat.diffuse_color = (*map(float, skin_linear), 1)
     body_mat.node_tree.nodes.get('Principled BSDF').inputs['Base Color'].default_value = (*map(float, skin_linear), 1)
     boundaries = sum(e.is_boundary for e in bm.edges)
@@ -292,6 +297,7 @@ def buildFace(body, rig, out):
               'oppositeEdgeWindingErrors': winding_errors,
               'bridgeMaximumEndpointTangentM': max_tangent, 'neckAlbedoImage': image.name,
               'sourceSampledSkinLinearRGB': list(map(float, skin_linear)),
+              'sourceSampledSkinEncodedSRGB': list(map(float, skin_encoded)),
               'limits': ['Native construction only; actual moving profile and normal/tangent continuity require parent review.']}
     bm.to_mesh(body.data); bm.free(); body.data.update()
     assert len(corner_normals) == len(body.data.loops)

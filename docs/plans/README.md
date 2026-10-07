@@ -1109,3 +1109,5 @@ October 7 actual Garage intake compares the exact selected-source contract and s
 October 7 actual selected hoodie/denim native unit passes guarded assembly and independent decoded preservation: unchanged wearer arrays/shared75 deformation rest, original garment loopUV/PBR retained. Internal intermediate only; actual complete outfit and played art remain open.
 
 October 7 actual glove reconstruction01 stops on measured hand-volume fidelity before bake in1.480seconds; no glove output or fallback. Exact failing station witnesses require diagnostic readback before a structural correction. Full selected-source outfit remains unfinished.
+
+October 7 actual face native02 forms one closed welded wearer with unchanged protected source face/UV/corner normals. Independent PNG readback corrects the exposed-neck material constant from encoded sRGB to linear. Moving anatomy/shading and complete outfit remain unaccepted.
