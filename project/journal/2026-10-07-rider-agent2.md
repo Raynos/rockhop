@@ -101,3 +101,9 @@ Finding: Appearance02 fixes firstactualGarage baretoe and neckedge defects on th
 Validation: Parent source/inputsha checks; guardednative export; actualGarage frames showcoveredtoes/smoothneckline.75joints/28primitives/39490triangles normalizedFOUR, sourceattributes exported.
 
 Limits: Rearlowerhoodiehem jaggedtabs stillvisible; fullplayed02 review and bike/contact/art/device gates open.
+
+Finding: New wearer measured segment mass proxy inverts physicalCOM to distinct hips on actual posedjoints and nativehead/toe/fingerextents. Frozenrig03 diagnosis shows originalprofileinverse is partofreach mismatch, but contacts still fail afterconvergence.
+
+Validation: Parent helper source review and2Newton/singularity tests pass; actualGLBprobe converges2–3iterations under.5micrometre COMresidual, but grip28–65mm and forwardsole20.6mm remain.
+
+Limits: Approximate adultmale massfraction model, synthetictargets/control diagnosis only; no newart/contact/renderedGPU/device acceptance.

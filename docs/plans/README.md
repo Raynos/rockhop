@@ -1057,3 +1057,5 @@ October7 private intake [helper](../../harness/rider-rebuild/README.md) explicit
 October7 first [actual-engine intake](../evidence/rider-rebuild/runtime01/README.md) builds complete dressed candidate into existingGarage/game privately. Six actualassembly tests and low/high clear/crash/instantrestart pass with byte-identical physics finish; playedGarage reveals appearance corrections. Current ride barreach fails; newbody anthropometrics and jointfit correction pending.
 
 October7 [appearance02](../evidence/rider-rebuild/construction01/combined02/README.md) corrects toes/neckline/hair/skin in the actualGarage on unchangedrig03;39490triangles/75sharedjoints. Rearhoodiehem tabs remain, native anatomical armfit04 and physicalnewbody reach pending. No final art/player/device approval.
+
+October7 [anthropometric diagnosis](../evidence/rider-rebuild/runtime01/ANTHRO_HANDOFF.md) measures actual newwearer joint/extents; COMinverse converges under0.5µm but frozenrig03 contacts stillfail. Preserve2testedhelper/probe checkpoint before actualrig04 integration; physicalCOM remains distinctfromhips.
