@@ -300,3 +300,12 @@ pass, and failure to finish within two hours must be reported honestly.
 
 All R0–R5 remain open. No source04 coarse appearance approval, plan closure,
 normal-player promotion or release is authorized by its working engine checks.
+
+
+The user makes this mandatory in ask329: do the intended construction properly
+or leave it unfinished; never create temporary or throwaway appearance assets
+to meet a deadline. Every new source recipe must be intended final construction
+and preserve useful source work. No substitute preview, source-density shortcut,
+body hiding or numerical-only art acceptance may satisfy delivery. The coarse
+local preview server is stopped; the next visible result must use the actual
+selected assets and pass parent played review in the Garage and game.
