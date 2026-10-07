@@ -1,0 +1,4137 @@
+{
+  "acceptedWearable": false,
+  "status": "FIXED_FINITE_SOURCE_PATH_CUFF_CYCLE_RELATIONS_ONLY",
+  "recipeSHA256": "2edd6d7279f73d82cc8a23382de213a0b3aaa28c5d710cb8b3afd71a3096db09",
+  "source": {
+    "path": "assets/blender/hero-remaster/rider/finish-2026-10-05/wardrobe/data/glove-cavity08/open-glove-source.npz",
+    "sha256": "8379004e394bbae110f495c13bfc12a205977061d13cefdcc8ee24c6e5343782"
+  },
+  "inputPins": [
+    {
+      "path": "docs/evidence/hero-remaster/finish-2026-10-05/wardrobe/glove-cavity08/opening.json",
+      "sha256": "eef2fde73da89499f18b7e0b161198477bfb749a29bad38b004165337719c938"
+    },
+    {
+      "path": "docs/evidence/hero-remaster/finish-2026-10-05/wardrobe/glove-cavity09/localization.json",
+      "sha256": "c197e995337cf1ccaacd3c3835a2018b5982c8385ace908f91673b2615ef777c"
+    },
+    {
+      "path": "docs/evidence/hero-remaster/finish-2026-10-05/wardrobe/glove-cavity05/preflight.json",
+      "sha256": "604cc70ff0aa88e7d6e89f070506f252fc252098cfbfcbe5f13e2d5fac53a6eb"
+    }
+  ],
+  "raw": {
+    "path": "assets/blender/hero-remaster/rider/finish-2026-10-05/wardrobe/data/glove-cavity11/fixed-path-witnesses.npz",
+    "sha256": "4e6edc7eb5682e52452ab3cdbbdd70c414ab246a8f42e879ab866dd9e535e0bf"
+  },
+  "fixedAnchorSource": "The unchanged five cavity05 anchor hypotheses, not recertified occupancy labels.",
+  "pathFamily": {
+    "outsideStartY": -1.1001879930496217,
+    "fixedEndpointsY": [
+      -0.655137,
+      -0.305137,
+      -0.105137,
+      0.145137,
+      0.245137
+    ],
+    "anchorCount": 5,
+    "segments": 25,
+    "pathDirection": "Source+Y, fixed original anchor XZ.",
+    "pathRadius": 0,
+    "nearContactDisclosureThresholdSourceUnits": 1e-10
+  },
+  "records": [
+    {
+      "anchorIndex": 0,
+      "endY": -0.655137,
+      "startSourceXYZ": [
+        -0.19893085956573486,
+        -1.1001879930496217,
+        -0.06397416442632675
+      ],
+      "endSourceXYZ": [
+        -0.19893085956573486,
+        -0.655137,
+        -0.06397416442632675
+      ],
+      "testedAllRetainedTriangles": 14543,
+      "surfaceIntersectionFaceCount": 0,
+      "allIntersectionFacesIncludingCoincidentEdgeHits": [],
+      "minimumWholeSegmentSurfaceDistanceSourceUnits": 0.1366404534303535,
+      "closestPathSourceXYZ": [
+        -0.19893085956573486,
+        -0.9890130162239075,
+        -0.06397416442632675
+      ],
+      "closestSurfaceLineage": {
+        "retainedFaceRow": 6288,
+        "prototypeFaceRow": 7039,
+        "sourceVertexIds": [
+          3589,
+          3668,
+          3377
+        ],
+        "witnessSourceXYZ": [
+          -0.16998120164154804,
+          -0.9890130162239075,
+          -0.19751266381779503
+        ],
+        "witnessTriangleBarycentric": [
+          9.992007221626409e-16,
+          0.5860756091822574,
+          0.41392439081774157
+        ],
+        "prototypeCornerUV": [
+          [
+            0.016423000022768974,
+            0.33319100737571716
+          ],
+          [
+            0.018478000536561012,
+            0.32955101132392883
+          ],
+          [
+            0.01836800016462803,
+            0.3414919972419739
+          ]
+        ],
+        "witnessPrototypeUV": [
+          0.018432468699618926,
+          0.33449367664581886
+        ],
+        "denseTriangleRowsByCorner": [
+          246115,
+          255250,
+          234326
+        ],
+        "denseBarycentricByCorner": [
+          [
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            1.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "cycleIncidentClasses": []
+      },
+      "strictlyPositiveComputedSurfaceMargin": true,
+      "ambiguousContactWithoutNonparallelHit": false,
+      "boundaryRelation": {
+        "minimumDistanceSourceUnits": 0.1366404534303535,
+        "closestBoundarySourceEdge": [
+          3377,
+          3668
+        ],
+        "pathWitness": [
+          -0.19893085956573486,
+          -0.9890130162239075,
+          -0.06397416442632675
+        ],
+        "boundaryWitness": [
+          -0.16998120164154804,
+          -0.9890130162239075,
+          -0.19751266381779503
+        ]
+      },
+      "cycleRelations": [
+        {
+          "class": 1,
+          "minimumDistanceSourceUnits": 0.20853864368987743,
+          "closestSourceEdge": [
+            4443,
+            4309
+          ],
+          "pathWitness": [
+            -0.19893085956573486,
+            -0.947039008140564,
+            -0.06397416442632675
+          ],
+          "cycleWitness": [
+            -0.07045099884271622,
+            -0.947039008140564,
+            -0.22823399305343628
+          ]
+        },
+        {
+          "class": 2,
+          "minimumDistanceSourceUnits": 0.21391601071586663,
+          "closestSourceEdge": [
+            4194,
+            4274
+          ],
+          "pathWitness": [
+            -0.19893085956573486,
+            -0.9103119969367981,
+            -0.06397416442632675
+          ],
+          "cycleWitness": [
+            -0.07083100080490112,
+            -0.9103119969367981,
+            -0.23529399931430817
+          ]
+        }
+      ]
+    },
+    {
+      "anchorIndex": 0,
+      "endY": -0.305137,
+      "startSourceXYZ": [
+        -0.19893085956573486,
+        -1.1001879930496217,
+        -0.06397416442632675
+      ],
+      "endSourceXYZ": [
+        -0.19893085956573486,
+        -0.305137,
+        -0.06397416442632675
+      ],
+      "testedAllRetainedTriangles": 14543,
+      "surfaceIntersectionFaceCount": 0,
+      "allIntersectionFacesIncludingCoincidentEdgeHits": [],
+      "minimumWholeSegmentSurfaceDistanceSourceUnits": 0.12333457545500344,
+      "closestPathSourceXYZ": [
+        -0.19893085956573486,
+        -0.305137,
+        -0.06397416442632675
+      ],
+      "closestSurfaceLineage": {
+        "retainedFaceRow": 5827,
+        "prototypeFaceRow": 6532,
+        "sourceVertexIds": [
+          3155,
+          3436,
+          3156
+        ],
+        "witnessSourceXYZ": [
+          -0.21723131211697994,
+          -0.2677037094451474,
+          0.052108821826274215
+        ],
+        "witnessTriangleBarycentric": [
+          0.4030961147804535,
+          0.15671534937014475,
+          0.44018853584940176
+        ],
+        "prototypeCornerUV": [
+          [
+            0.4644930064678192,
+            0.6422290205955505
+          ],
+          [
+            0.4533120095729828,
+            0.6383159756660461
+          ],
+          [
+            0.4622249901294708,
+            0.6469820141792297
+          ]
+        ],
+        "witnessPrototypeUV": [
+          0.4617424178418783,
+          0.6437079996788235
+        ],
+        "denseTriangleRowsByCorner": [
+          218561,
+          238374,
+          216587
+        ],
+        "denseBarycentricByCorner": [
+          [
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0
+          ]
+        ],
+        "cycleIncidentClasses": []
+      },
+      "strictlyPositiveComputedSurfaceMargin": true,
+      "ambiguousContactWithoutNonparallelHit": false,
+      "boundaryRelation": {
+        "minimumDistanceSourceUnits": 0.1366404534303535,
+        "closestBoundarySourceEdge": [
+          3377,
+          3668
+        ],
+        "pathWitness": [
+          -0.19893085956573486,
+          -0.9890130162239075,
+          -0.06397416442632675
+        ],
+        "boundaryWitness": [
+          -0.16998120164154804,
+          -0.9890130162239075,
+          -0.19751266381779503
+        ]
+      },
+      "cycleRelations": [
+        {
+          "class": 1,
+          "minimumDistanceSourceUnits": 0.20853864368987743,
+          "closestSourceEdge": [
+            4443,
+            4309
+          ],
+          "pathWitness": [
+            -0.19893085956573486,
+            -0.947039008140564,
+            -0.06397416442632675
+          ],
+          "cycleWitness": [
+            -0.07045099884271622,
+            -0.947039008140564,
+            -0.22823399305343628
+          ]
+        },
+        {
+          "class": 2,
+          "minimumDistanceSourceUnits": 0.21391601071586663,
+          "closestSourceEdge": [
+            4194,
+            4274
+          ],
+          "pathWitness": [
+            -0.19893085956573486,
+            -0.9103119969367981,
+            -0.06397416442632675
+          ],
+          "cycleWitness": [
+            -0.07083100080490112,
+            -0.9103119969367981,
+            -0.23529399931430817
+          ]
+        }
+      ]
+    },
+    {
+      "anchorIndex": 0,
+      "endY": -0.105137,
+      "startSourceXYZ": [
+        -0.19893085956573486,
+        -1.1001879930496217,
+        -0.06397416442632675
+      ],
+      "endSourceXYZ": [
+        -0.19893085956573486,
+        -0.105137,
+        -0.06397416442632675
+      ],
+      "testedAllRetainedTriangles": 14543,
+      "surfaceIntersectionFaceCount": 0,
+      "allIntersectionFacesIncludingCoincidentEdgeHits": [],
+      "minimumWholeSegmentSurfaceDistanceSourceUnits": 0.08912616576456858,
+      "closestPathSourceXYZ": [
+        -0.19893085956573486,
+        -0.105137,
+        -0.06397416442632675
+      ],
+      "closestSurfaceLineage": {
+        "retainedFaceRow": 5508,
+        "prototypeFaceRow": 6164,
+        "sourceVertexIds": [
+          3065,
+          3163,
+          3164
+        ],
+        "witnessSourceXYZ": [
+          -0.22298699617385864,
+          -0.06137013370148051,
+          0.009844783885012415
+        ],
+        "witnessTriangleBarycentric": [
+          -9.992007221626409e-16,
+          0.4393586355470161,
+          0.560641364452985
+        ],
+        "prototypeCornerUV": [
+          [
+            0.5998089909553528,
+            0.8809459805488586
+          ],
+          [
+            0.2979170083999634,
+            0.20358000695705414
+          ],
+          [
+            0.6006969809532166,
+            0.8726999759674072
+          ]
+        ],
+        "witnessPrototypeUV": [
+          0.46766798534125625,
+          0.5787163393657568
+        ],
+        "denseTriangleRowsByCorner": [
+          210576,
+          216773,
+          216805
+        ],
+        "denseBarycentricByCorner": [
+          [
+            1.1102230246251565e-16,
+            0.0,
+            0.9999999999999999
+          ],
+          [
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            1.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "cycleIncidentClasses": []
+      },
+      "strictlyPositiveComputedSurfaceMargin": true,
+      "ambiguousContactWithoutNonparallelHit": false,
+      "boundaryRelation": {
+        "minimumDistanceSourceUnits": 0.1366404534303535,
+        "closestBoundarySourceEdge": [
+          3377,
+          3668
+        ],
+        "pathWitness": [
+          -0.19893085956573486,
+          -0.9890130162239075,
+          -0.06397416442632675
+        ],
+        "boundaryWitness": [
+          -0.16998120164154804,
+          -0.9890130162239075,
+          -0.19751266381779503
+        ]
+      },
+      "cycleRelations": [
+        {
+          "class": 1,
+          "minimumDistanceSourceUnits": 0.20853864368987743,
+          "closestSourceEdge": [
+            4443,
+            4309
+          ],
+          "pathWitness": [
+            -0.19893085956573486,
+            -0.947039008140564,
+            -0.06397416442632675
+          ],
+          "cycleWitness": [
+            -0.07045099884271622,
+            -0.947039008140564,
+            -0.22823399305343628
+          ]
+        },
+        {
+          "class": 2,
+          "minimumDistanceSourceUnits": 0.21391601071586663,
+          "closestSourceEdge": [
+            4194,
+            4274
+          ],
+          "pathWitness": [
+            -0.19893085956573486,
+            -0.9103119969367981,
+            -0.06397416442632675
+          ],
+          "cycleWitness": [
+            -0.07083100080490112,
+            -0.9103119969367981,
+            -0.23529399931430817
+          ]
+        }
+      ]
+    },
+    {
+      "anchorIndex": 0,
+      "endY": 0.145137,
+      "startSourceXYZ": [
+        -0.19893085956573486,
+        -1.1001879930496217,
+        -0.06397416442632675
+      ],
+      "endSourceXYZ": [
+        -0.19893085956573486,
+        0.145137,
+        -0.06397416442632675
+      ],
+      "testedAllRetainedTriangles": 14543,
+      "surfaceIntersectionFaceCount": 1,
+      "allIntersectionFacesIncludingCoincidentEdgeHits": [
+        {
+          "pathFraction": 0.9553220551738857,
+          "sourceY": 0.08949843866994778,
+          "triangleBarycentric": [
+            0.6736686694722384,
+            0.1316345009913037,
+            0.19469682953645792
+          ],
+          "strictInteriorBarycentric": true,
+          "nearBoundaryBarycentric": false,
+          "directionNormalUnnormalized": 0.0008867608922459387,
+          "lineage": {
+            "retainedFaceRow": 6089,
+            "prototypeFaceRow": 6824,
+            "sourceVertexIds": [
+              3320,
+              3189,
+              3479
+            ],
+            "witnessSourceXYZ": [
+              -0.19893085956573486,
+              0.08949843866994778,
+              -0.06397416442632675
+            ],
+            "witnessTriangleBarycentric": [
+              0.6736686694722384,
+              0.1316345009913037,
+              0.19469682953645792
+            ],
+            "prototypeCornerUV": [
+              [
+                0.00901199970394373,
+                0.7236700057983398
+              ],
+              [
+                0.6362959742546082,
+                0.9000200033187866
+              ],
+              [
+                0.8720179796218872,
+                0.13110299408435822
+              ]
+            ],
+            "witnessPrototypeUV": [
+              0.25960874083478974,
+              0.6315128312531562
+            ],
+            "denseTriangleRowsByCorner": [
+              230267,
+              220934,
+              238750
+            ],
+            "denseBarycentricByCorner": [
+              [
+                0.0,
+                0.0,
+                1.0
+              ],
+              [
+                0.0,
+                0.0,
+                1.0
+              ],
+              [
+                0.0,
+                1.0,
+                0.0
+              ]
+            ],
+            "cycleIncidentClasses": []
+          }
+        }
+      ],
+      "minimumWholeSegmentSurfaceDistanceSourceUnits": 0.0,
+      "closestPathSourceXYZ": [
+        -0.19893085956573486,
+        0.08949843866994778,
+        -0.06397416442632675
+      ],
+      "closestSurfaceLineage": {
+        "retainedFaceRow": 6089,
+        "prototypeFaceRow": 6824,
+        "sourceVertexIds": [
+          3320,
+          3189,
+          3479
+        ],
+        "witnessSourceXYZ": [
+          -0.19893085956573486,
+          0.08949843866994778,
+          -0.06397416442632675
+        ],
+        "witnessTriangleBarycentric": [
+          0.6736686694722384,
+          0.1316345009913037,
+          0.19469682953645792
+        ],
+        "prototypeCornerUV": [
+          [
+            0.00901199970394373,
+            0.7236700057983398
+          ],
+          [
+            0.6362959742546082,
+            0.9000200033187866
+          ],
+          [
+            0.8720179796218872,
+            0.13110299408435822
+          ]
+        ],
+        "witnessPrototypeUV": [
+          0.25960874083478974,
+          0.6315128312531562
+        ],
+        "denseTriangleRowsByCorner": [
+          230267,
+          220934,
+          238750
+        ],
+        "denseBarycentricByCorner": [
+          [
+            0.0,
+            0.0,
+            1.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0
+          ]
+        ],
+        "cycleIncidentClasses": []
+      },
+      "strictlyPositiveComputedSurfaceMargin": false,
+      "ambiguousContactWithoutNonparallelHit": false,
+      "boundaryRelation": {
+        "minimumDistanceSourceUnits": 0.1366404534303535,
+        "closestBoundarySourceEdge": [
+          3377,
+          3668
+        ],
+        "pathWitness": [
+          -0.19893085956573486,
+          -0.9890130162239075,
+          -0.06397416442632675
+        ],
+        "boundaryWitness": [
+          -0.16998120164154804,
+          -0.9890130162239075,
+          -0.19751266381779503
+        ]
+      },
+      "cycleRelations": [
+        {
+          "class": 1,
+          "minimumDistanceSourceUnits": 0.20853864368987743,
+          "closestSourceEdge": [
+            4443,
+            4309
+          ],
+          "pathWitness": [
+            -0.19893085956573486,
+            -0.947039008140564,
+            -0.06397416442632675
+          ],
+          "cycleWitness": [
+            -0.07045099884271622,
+            -0.947039008140564,
+            -0.22823399305343628
+          ]
+        },
+        {
+          "class": 2,
+          "minimumDistanceSourceUnits": 0.21391601071586663,
+          "closestSourceEdge": [
+            4194,
+            4274
+          ],
+          "pathWitness": [
+            -0.19893085956573486,
+            -0.9103119969367981,
+            -0.06397416442632675
+          ],
+          "cycleWitness": [
+            -0.07083100080490112,
+            -0.9103119969367981,
+            -0.23529399931430817
+          ]
+        }
+      ]
+    },
+    {
+      "anchorIndex": 0,
+      "endY": 0.245137,
+      "startSourceXYZ": [
+        -0.19893085956573486,
+        -1.1001879930496217,
+        -0.06397416442632675
+      ],
+      "endSourceXYZ": [
+        -0.19893085956573486,
+        0.245137,
+        -0.06397416442632675
+      ],
+      "testedAllRetainedTriangles": 14543,
+      "surfaceIntersectionFaceCount": 1,
+      "allIntersectionFacesIncludingCoincidentEdgeHits": [
+        {
+          "pathFraction": 0.884311551384141,
+          "sourceY": 0.08949843866994778,
+          "triangleBarycentric": [
+            0.6736686694722384,
+            0.1316345009913037,
+            0.19469682953645792
+          ],
+          "strictInteriorBarycentric": true,
+          "nearBoundaryBarycentric": false,
+          "directionNormalUnnormalized": 0.000957968078899632,
+          "lineage": {
+            "retainedFaceRow": 6089,
+            "prototypeFaceRow": 6824,
+            "sourceVertexIds": [
+              3320,
+              3189,
+              3479
+            ],
+            "witnessSourceXYZ": [
+              -0.19893085956573486,
+              0.08949843866994778,
+              -0.06397416442632675
+            ],
+            "witnessTriangleBarycentric": [
+              0.6736686694722384,
+              0.1316345009913037,
+              0.19469682953645792
+            ],
+            "prototypeCornerUV": [
+              [
+                0.00901199970394373,
+                0.7236700057983398
+              ],
+              [
+                0.6362959742546082,
+                0.9000200033187866
+              ],
+              [
+                0.8720179796218872,
+                0.13110299408435822
+              ]
+            ],
+            "witnessPrototypeUV": [
+              0.25960874083478974,
+              0.6315128312531562
+            ],
+            "denseTriangleRowsByCorner": [
+              230267,
+              220934,
+              238750
+            ],
+            "denseBarycentricByCorner": [
+              [
+                0.0,
+                0.0,
+                1.0
+              ],
+              [
+                0.0,
+                0.0,
+                1.0
+              ],
+              [
+                0.0,
+                1.0,
+                0.0
+              ]
+            ],
+            "cycleIncidentClasses": []
+          }
+        }
+      ],
+      "minimumWholeSegmentSurfaceDistanceSourceUnits": 0.0,
+      "closestPathSourceXYZ": [
+        -0.19893085956573486,
+        0.08949843866994778,
+        -0.06397416442632675
+      ],
+      "closestSurfaceLineage": {
+        "retainedFaceRow": 6089,
+        "prototypeFaceRow": 6824,
+        "sourceVertexIds": [
+          3320,
+          3189,
+          3479
+        ],
+        "witnessSourceXYZ": [
+          -0.19893085956573486,
+          0.08949843866994778,
+          -0.06397416442632675
+        ],
+        "witnessTriangleBarycentric": [
+          0.6736686694722384,
+          0.1316345009913037,
+          0.19469682953645792
+        ],
+        "prototypeCornerUV": [
+          [
+            0.00901199970394373,
+            0.7236700057983398
+          ],
+          [
+            0.6362959742546082,
+            0.9000200033187866
+          ],
+          [
+            0.8720179796218872,
+            0.13110299408435822
+          ]
+        ],
+        "witnessPrototypeUV": [
+          0.25960874083478974,
+          0.6315128312531562
+        ],
+        "denseTriangleRowsByCorner": [
+          230267,
+          220934,
+          238750
+        ],
+        "denseBarycentricByCorner": [
+          [
+            0.0,
+            0.0,
+            1.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0
+          ]
+        ],
+        "cycleIncidentClasses": []
+      },
+      "strictlyPositiveComputedSurfaceMargin": false,
+      "ambiguousContactWithoutNonparallelHit": false,
+      "boundaryRelation": {
+        "minimumDistanceSourceUnits": 0.1366404534303535,
+        "closestBoundarySourceEdge": [
+          3377,
+          3668
+        ],
+        "pathWitness": [
+          -0.19893085956573486,
+          -0.9890130162239075,
+          -0.06397416442632675
+        ],
+        "boundaryWitness": [
+          -0.16998120164154804,
+          -0.9890130162239075,
+          -0.19751266381779503
+        ]
+      },
+      "cycleRelations": [
+        {
+          "class": 1,
+          "minimumDistanceSourceUnits": 0.20853864368987743,
+          "closestSourceEdge": [
+            4443,
+            4309
+          ],
+          "pathWitness": [
+            -0.19893085956573486,
+            -0.947039008140564,
+            -0.06397416442632675
+          ],
+          "cycleWitness": [
+            -0.07045099884271622,
+            -0.947039008140564,
+            -0.22823399305343628
+          ]
+        },
+        {
+          "class": 2,
+          "minimumDistanceSourceUnits": 0.21391601071586663,
+          "closestSourceEdge": [
+            4194,
+            4274
+          ],
+          "pathWitness": [
+            -0.19893085956573486,
+            -0.9103119969367981,
+            -0.06397416442632675
+          ],
+          "cycleWitness": [
+            -0.07083100080490112,
+            -0.9103119969367981,
+            -0.23529399931430817
+          ]
+        }
+      ]
+    },
+    {
+      "anchorIndex": 1,
+      "endY": -0.655137,
+      "startSourceXYZ": [
+        -0.25893085956573486,
+        -1.1001879930496217,
+        -0.06397416442632675
+      ],
+      "endSourceXYZ": [
+        -0.25893085956573486,
+        -0.655137,
+        -0.06397416442632675
+      ],
+      "testedAllRetainedTriangles": 14543,
+      "surfaceIntersectionFaceCount": 0,
+      "allIntersectionFacesIncludingCoincidentEdgeHits": [],
+      "minimumWholeSegmentSurfaceDistanceSourceUnits": 0.1420060012025341,
+      "closestPathSourceXYZ": [
+        -0.25893085956573486,
+        -0.973272979259491,
+        -0.06397416442632675
+      ],
+      "closestSurfaceLineage": {
+        "retainedFaceRow": 5227,
+        "prototypeFaceRow": 5822,
+        "sourceVertexIds": [
+          2973,
+          2764,
+          3073
+        ],
+        "witnessSourceXYZ": [
+          -0.2597140073776245,
+          -0.973272979259491,
+          -0.20597800612449646
+        ],
+        "witnessTriangleBarycentric": [
+          1.0,
+          0.0,
+          0.0
+        ],
+        "prototypeCornerUV": [
+          [
+            0.02399899996817112,
+            0.36309298872947693
+          ],
+          [
+            0.022192999720573425,
+            0.3699969947338104
+          ],
+          [
+            0.5191959738731384,
+            0.7571359872817993
+          ]
+        ],
+        "witnessPrototypeUV": [
+          0.02399899996817112,
+          0.36309298872947693
+        ],
+        "denseTriangleRowsByCorner": [
+          200137,
+          186575,
+          211248
+        ],
+        "denseBarycentricByCorner": [
+          [
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "cycleIncidentClasses": []
+      },
+      "strictlyPositiveComputedSurfaceMargin": true,
+      "ambiguousContactWithoutNonparallelHit": false,
+      "boundaryRelation": {
+        "minimumDistanceSourceUnits": 0.1420060012025341,
+        "closestBoundarySourceEdge": [
+          2765,
+          2973
+        ],
+        "pathWitness": [
+          -0.25893085956573486,
+          -0.973272979259491,
+          -0.06397416442632675
+        ],
+        "boundaryWitness": [
+          -0.2597140073776245,
+          -0.973272979259491,
+          -0.20597800612449646
+        ]
+      },
+      "cycleRelations": [
+        {
+          "class": 1,
+          "minimumDistanceSourceUnits": 0.25001189811442154,
+          "closestSourceEdge": [
+            4443,
+            4309
+          ],
+          "pathWitness": [
+            -0.25893085956573486,
+            -0.947039008140564,
+            -0.06397416442632675
+          ],
+          "cycleWitness": [
+            -0.07045099884271622,
+            -0.947039008140564,
+            -0.22823399305343628
+          ]
+        },
+        {
+          "class": 2,
+          "minimumDistanceSourceUnits": 0.254424925453248,
+          "closestSourceEdge": [
+            4194,
+            4274
+          ],
+          "pathWitness": [
+            -0.25893085956573486,
+            -0.9103119969367981,
+            -0.06397416442632675
+          ],
+          "cycleWitness": [
+            -0.07083100080490112,
+            -0.9103119969367981,
+            -0.23529399931430817
+          ]
+        }
+      ]
+    },
+    {
+      "anchorIndex": 1,
+      "endY": -0.305137,
+      "startSourceXYZ": [
+        -0.25893085956573486,
+        -1.1001879930496217,
+        -0.06397416442632675
+      ],
+      "endSourceXYZ": [
+        -0.25893085956573486,
+        -0.305137,
+        -0.06397416442632675
+      ],
+      "testedAllRetainedTriangles": 14543,
+      "surfaceIntersectionFaceCount": 0,
+      "allIntersectionFacesIncludingCoincidentEdgeHits": [],
+      "minimumWholeSegmentSurfaceDistanceSourceUnits": 0.10822656060912372,
+      "closestPathSourceXYZ": [
+        -0.25893085956573486,
+        -0.305137,
+        -0.06397416442632675
+      ],
+      "closestSurfaceLineage": {
+        "retainedFaceRow": 4858,
+        "prototypeFaceRow": 5427,
+        "sourceVertexIds": [
+          2950,
+          2992,
+          2593
+        ],
+        "witnessSourceXYZ": [
+          -0.28792987250805774,
+          -0.2702080011367798,
+          0.03427048279714535
+        ],
+        "witnessTriangleBarycentric": [
+          1.1102230246251565e-16,
+          0.39393703088013204,
+          0.6060629691198679
+        ],
+        "prototypeCornerUV": [
+          [
+            0.4801889955997467,
+            0.6402209997177124
+          ],
+          [
+            0.474139004945755,
+            0.6498590111732483
+          ],
+          [
+            0.48728498816490173,
+            0.6579070091247559
+          ]
+        ],
+        "witnessPrototypeUV": [
+          0.48210629856755105,
+          0.6547366047072096
+        ],
+        "denseTriangleRowsByCorner": [
+          201309,
+          203665,
+          175858
+        ],
+        "denseBarycentricByCorner": [
+          [
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0
+          ]
+        ],
+        "cycleIncidentClasses": []
+      },
+      "strictlyPositiveComputedSurfaceMargin": true,
+      "ambiguousContactWithoutNonparallelHit": false,
+      "boundaryRelation": {
+        "minimumDistanceSourceUnits": 0.1420060012025341,
+        "closestBoundarySourceEdge": [
+          2765,
+          2973
+        ],
+        "pathWitness": [
+          -0.25893085956573486,
+          -0.973272979259491,
+          -0.06397416442632675
+        ],
+        "boundaryWitness": [
+          -0.2597140073776245,
+          -0.973272979259491,
+          -0.20597800612449646
+        ]
+      },
+      "cycleRelations": [
+        {
+          "class": 1,
+          "minimumDistanceSourceUnits": 0.25001189811442154,
+          "closestSourceEdge": [
+            4443,
+            4309
+          ],
+          "pathWitness": [
+            -0.25893085956573486,
+            -0.947039008140564,
+            -0.06397416442632675
+          ],
+          "cycleWitness": [
+            -0.07045099884271622,
+            -0.947039008140564,
+            -0.22823399305343628
+          ]
+        },
+        {
+          "class": 2,
+          "minimumDistanceSourceUnits": 0.254424925453248,
+          "closestSourceEdge": [
+            4194,
+            4274
+          ],
+          "pathWitness": [
+            -0.25893085956573486,
+            -0.9103119969367981,
+            -0.06397416442632675
+          ],
+          "cycleWitness": [
+            -0.07083100080490112,
+            -0.9103119969367981,
+            -0.23529399931430817
+          ]
+        }
+      ]
+    },
+    {
+      "anchorIndex": 1,
+      "endY": -0.105137,
+      "startSourceXYZ": [
+        -0.25893085956573486,
+        -1.1001879930496217,
+        -0.06397416442632675
+      ],
+      "endSourceXYZ": [
+        -0.25893085956573486,
+        -0.105137,
+        -0.06397416442632675
+      ],
+      "testedAllRetainedTriangles": 14543,
+      "surfaceIntersectionFaceCount": 0,
+      "allIntersectionFacesIncludingCoincidentEdgeHits": [],
+      "minimumWholeSegmentSurfaceDistanceSourceUnits": 0.07798905309919694,
+      "closestPathSourceXYZ": [
+        -0.25893085956573486,
+        -0.105137,
+        -0.06397416442632675
+      ],
+      "closestSurfaceLineage": {
+        "retainedFaceRow": 4789,
+        "prototypeFaceRow": 5348,
+        "sourceVertexIds": [
+          2575,
+          2852,
+          2853
+        ],
+        "witnessSourceXYZ": [
+          -0.280643819533184,
+          -0.06320792056499955,
+          -0.001903301128844466
+        ],
+        "witnessTriangleBarycentric": [
+          0.16482907102236188,
+          0.5042783638799173,
+          0.3308925650977208
+        ],
+        "prototypeCornerUV": [
+          [
+            0.5900560021400452,
+            0.8998739719390869
+          ],
+          [
+            0.5789350271224976,
+            0.8762279748916626
+          ],
+          [
+            0.5955759882926941,
+            0.890824019908905
+          ]
+        ],
+        "witnessPrototypeUV": [
+          0.5862744574308008,
+          0.8849552453944243
+        ],
+        "denseTriangleRowsByCorner": [
+          176118,
+          191059,
+          194918
+        ],
+        "denseBarycentricByCorner": [
+          [
+            0.0,
+            0.0,
+            1.0
+          ],
+          [
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "cycleIncidentClasses": []
+      },
+      "strictlyPositiveComputedSurfaceMargin": true,
+      "ambiguousContactWithoutNonparallelHit": false,
+      "boundaryRelation": {
+        "minimumDistanceSourceUnits": 0.1420060012025341,
+        "closestBoundarySourceEdge": [
+          2765,
+          2973
+        ],
+        "pathWitness": [
+          -0.25893085956573486,
+          -0.973272979259491,
+          -0.06397416442632675
+        ],
+        "boundaryWitness": [
+          -0.2597140073776245,
+          -0.973272979259491,
+          -0.20597800612449646
+        ]
+      },
+      "cycleRelations": [
+        {
+          "class": 1,
+          "minimumDistanceSourceUnits": 0.25001189811442154,
+          "closestSourceEdge": [
+            4443,
+            4309
+          ],
+          "pathWitness": [
+            -0.25893085956573486,
+            -0.947039008140564,
+            -0.06397416442632675
+          ],
+          "cycleWitness": [
+            -0.07045099884271622,
+            -0.947039008140564,
+            -0.22823399305343628
+          ]
+        },
+        {
+          "class": 2,
+          "minimumDistanceSourceUnits": 0.254424925453248,
+          "closestSourceEdge": [
+            4194,
+            4274
+          ],
+          "pathWitness": [
+            -0.25893085956573486,
+            -0.9103119969367981,
+            -0.06397416442632675
+          ],
+          "cycleWitness": [
+            -0.07083100080490112,
+            -0.9103119969367981,
+            -0.23529399931430817
+          ]
+        }
+      ]
+    },
+    {
+      "anchorIndex": 1,
+      "endY": 0.145137,
+      "startSourceXYZ": [
+        -0.25893085956573486,
+        -1.1001879930496217,
+        -0.06397416442632675
+      ],
+      "endSourceXYZ": [
+        -0.25893085956573486,
+        0.145137,
+        -0.06397416442632675
+      ],
+      "testedAllRetainedTriangles": 14543,
+      "surfaceIntersectionFaceCount": 1,
+      "allIntersectionFacesIncludingCoincidentEdgeHits": [
+        {
+          "pathFraction": 0.9454376211746305,
+          "sourceY": 0.0771891059685259,
+          "triangleBarycentric": [
+            0.2481466995331859,
+            0.5673542040334184,
+            0.18449909643339568
+          ],
+          "strictInteriorBarycentric": true,
+          "nearBoundaryBarycentric": false,
+          "directionNormalUnnormalized": 0.0008405708545665425,
+          "lineage": {
+            "retainedFaceRow": 5429,
+            "prototypeFaceRow": 6064,
+            "sourceVertexIds": [
+              3066,
+              2854,
+              3134
+            ],
+            "witnessSourceXYZ": [
+              -0.25893085956573486,
+              0.0771891059685259,
+              -0.06397416442632675
+            ],
+            "witnessTriangleBarycentric": [
+              0.2481466995331859,
+              0.5673542040334184,
+              0.18449909643339568
+            ],
+            "prototypeCornerUV": [
+              [
+                0.6330909729003906,
+                0.9085500240325928
+              ],
+              [
+                0.6250460147857666,
+                0.9143469929695129
+              ],
+              [
+                0.8820679783821106,
+                0.8105829954147339
+              ]
+            ],
+            "witnessPrototypeUV": [
+              0.6744626646368559,
+              0.893764130469346
+            ],
+            "denseTriangleRowsByCorner": [
+              208571,
+              191257,
+              216937
+            ],
+            "denseBarycentricByCorner": [
+              [
+                1.0,
+                0.0,
+                0.0
+              ],
+              [
+                1.0,
+                0.0,
+                0.0
+              ],
+              [
+                1.0,
+                0.0,
+                0.0
+              ]
+            ],
+            "cycleIncidentClasses": []
+          }
+        }
+      ],
+      "minimumWholeSegmentSurfaceDistanceSourceUnits": 0.0,
+      "closestPathSourceXYZ": [
+        -0.25893085956573486,
+        0.0771891059685259,
+        -0.06397416442632675
+      ],
+      "closestSurfaceLineage": {
+        "retainedFaceRow": 5429,
+        "prototypeFaceRow": 6064,
+        "sourceVertexIds": [
+          3066,
+          2854,
+          3134
+        ],
+        "witnessSourceXYZ": [
+          -0.25893085956573486,
+          0.0771891059685259,
+          -0.06397416442632675
+        ],
+        "witnessTriangleBarycentric": [
+          0.2481466995331859,
+          0.5673542040334184,
+          0.18449909643339568
+        ],
+        "prototypeCornerUV": [
+          [
+            0.6330909729003906,
+            0.9085500240325928
+          ],
+          [
+            0.6250460147857666,
+            0.9143469929695129
+          ],
+          [
+            0.8820679783821106,
+            0.8105829954147339
+          ]
+        ],
+        "witnessPrototypeUV": [
+          0.6744626646368559,
+          0.893764130469346
+        ],
+        "denseTriangleRowsByCorner": [
+          208571,
+          191257,
+          216937
+        ],
+        "denseBarycentricByCorner": [
+          [
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            1.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "cycleIncidentClasses": []
+      },
+      "strictlyPositiveComputedSurfaceMargin": false,
+      "ambiguousContactWithoutNonparallelHit": false,
+      "boundaryRelation": {
+        "minimumDistanceSourceUnits": 0.1420060012025341,
+        "closestBoundarySourceEdge": [
+          2765,
+          2973
+        ],
+        "pathWitness": [
+          -0.25893085956573486,
+          -0.973272979259491,
+          -0.06397416442632675
+        ],
+        "boundaryWitness": [
+          -0.2597140073776245,
+          -0.973272979259491,
+          -0.20597800612449646
+        ]
+      },
+      "cycleRelations": [
+        {
+          "class": 1,
+          "minimumDistanceSourceUnits": 0.25001189811442154,
+          "closestSourceEdge": [
+            4443,
+            4309
+          ],
+          "pathWitness": [
+            -0.25893085956573486,
+            -0.947039008140564,
+            -0.06397416442632675
+          ],
+          "cycleWitness": [
+            -0.07045099884271622,
+            -0.947039008140564,
+            -0.22823399305343628
+          ]
+        },
+        {
+          "class": 2,
+          "minimumDistanceSourceUnits": 0.254424925453248,
+          "closestSourceEdge": [
+            4194,
+            4274
+          ],
+          "pathWitness": [
+            -0.25893085956573486,
+            -0.9103119969367981,
+            -0.06397416442632675
+          ],
+          "cycleWitness": [
+            -0.07083100080490112,
+            -0.9103119969367981,
+            -0.23529399931430817
+          ]
+        }
+      ]
+    },
+    {
+      "anchorIndex": 1,
+      "endY": 0.245137,
+      "startSourceXYZ": [
+        -0.25893085956573486,
+        -1.1001879930496217,
+        -0.06397416442632675
+      ],
+      "endSourceXYZ": [
+        -0.25893085956573486,
+        0.245137,
+        -0.06397416442632675
+      ],
+      "testedAllRetainedTriangles": 14543,
+      "surfaceIntersectionFaceCount": 1,
+      "allIntersectionFacesIncludingCoincidentEdgeHits": [
+        {
+          "pathFraction": 0.8751618420090711,
+          "sourceY": 0.0771891059685259,
+          "triangleBarycentric": [
+            0.2481466995331859,
+            0.5673542040334184,
+            0.18449909643339568
+          ],
+          "strictInteriorBarycentric": true,
+          "nearBoundaryBarycentric": false,
+          "directionNormalUnnormalized": 0.0009080689662448527,
+          "lineage": {
+            "retainedFaceRow": 5429,
+            "prototypeFaceRow": 6064,
+            "sourceVertexIds": [
+              3066,
+              2854,
+              3134
+            ],
+            "witnessSourceXYZ": [
+              -0.25893085956573486,
+              0.0771891059685259,
+              -0.06397416442632675
+            ],
+            "witnessTriangleBarycentric": [
+              0.2481466995331859,
+              0.5673542040334184,
+              0.18449909643339568
+            ],
+            "prototypeCornerUV": [
+              [
+                0.6330909729003906,
+                0.9085500240325928
+              ],
+              [
+                0.6250460147857666,
+                0.9143469929695129
+              ],
+              [
+                0.8820679783821106,
+                0.8105829954147339
+              ]
+            ],
+            "witnessPrototypeUV": [
+              0.6744626646368559,
+              0.893764130469346
+            ],
+            "denseTriangleRowsByCorner": [
+              208571,
+              191257,
+              216937
+            ],
+            "denseBarycentricByCorner": [
+              [
+                1.0,
+                0.0,
+                0.0
+              ],
+              [
+                1.0,
+                0.0,
+                0.0
+              ],
+              [
+                1.0,
+                0.0,
+                0.0
+              ]
+            ],
+            "cycleIncidentClasses": []
+          }
+        }
+      ],
+      "minimumWholeSegmentSurfaceDistanceSourceUnits": 0.0,
+      "closestPathSourceXYZ": [
+        -0.25893085956573486,
+        0.0771891059685259,
+        -0.06397416442632675
+      ],
+      "closestSurfaceLineage": {
+        "retainedFaceRow": 5429,
+        "prototypeFaceRow": 6064,
+        "sourceVertexIds": [
+          3066,
+          2854,
+          3134
+        ],
+        "witnessSourceXYZ": [
+          -0.25893085956573486,
+          0.0771891059685259,
+          -0.06397416442632675
+        ],
+        "witnessTriangleBarycentric": [
+          0.2481466995331859,
+          0.5673542040334184,
+          0.18449909643339568
+        ],
+        "prototypeCornerUV": [
+          [
+            0.6330909729003906,
+            0.9085500240325928
+          ],
+          [
+            0.6250460147857666,
+            0.9143469929695129
+          ],
+          [
+            0.8820679783821106,
+            0.8105829954147339
+          ]
+        ],
+        "witnessPrototypeUV": [
+          0.6744626646368559,
+          0.893764130469346
+        ],
+        "denseTriangleRowsByCorner": [
+          208571,
+          191257,
+          216937
+        ],
+        "denseBarycentricByCorner": [
+          [
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            1.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "cycleIncidentClasses": []
+      },
+      "strictlyPositiveComputedSurfaceMargin": false,
+      "ambiguousContactWithoutNonparallelHit": false,
+      "boundaryRelation": {
+        "minimumDistanceSourceUnits": 0.1420060012025341,
+        "closestBoundarySourceEdge": [
+          2765,
+          2973
+        ],
+        "pathWitness": [
+          -0.25893085956573486,
+          -0.973272979259491,
+          -0.06397416442632675
+        ],
+        "boundaryWitness": [
+          -0.2597140073776245,
+          -0.973272979259491,
+          -0.20597800612449646
+        ]
+      },
+      "cycleRelations": [
+        {
+          "class": 1,
+          "minimumDistanceSourceUnits": 0.25001189811442154,
+          "closestSourceEdge": [
+            4443,
+            4309
+          ],
+          "pathWitness": [
+            -0.25893085956573486,
+            -0.947039008140564,
+            -0.06397416442632675
+          ],
+          "cycleWitness": [
+            -0.07045099884271622,
+            -0.947039008140564,
+            -0.22823399305343628
+          ]
+        },
+        {
+          "class": 2,
+          "minimumDistanceSourceUnits": 0.254424925453248,
+          "closestSourceEdge": [
+            4194,
+            4274
+          ],
+          "pathWitness": [
+            -0.25893085956573486,
+            -0.9103119969367981,
+            -0.06397416442632675
+          ],
+          "cycleWitness": [
+            -0.07083100080490112,
+            -0.9103119969367981,
+            -0.23529399931430817
+          ]
+        }
+      ]
+    },
+    {
+      "anchorIndex": 2,
+      "endY": -0.655137,
+      "startSourceXYZ": [
+        -0.13893085956573487,
+        -1.1001879930496217,
+        -0.06397416442632675
+      ],
+      "endSourceXYZ": [
+        -0.13893085956573487,
+        -0.655137,
+        -0.06397416442632675
+      ],
+      "testedAllRetainedTriangles": 14543,
+      "surfaceIntersectionFaceCount": 0,
+      "allIntersectionFacesIncludingCoincidentEdgeHits": [],
+      "minimumWholeSegmentSurfaceDistanceSourceUnits": 0.10779920382181314,
+      "closestPathSourceXYZ": [
+        -0.13893085956573487,
+        -0.973272979259491,
+        -0.06397416442632675
+      ],
+      "closestSurfaceLineage": {
+        "retainedFaceRow": 8014,
+        "prototypeFaceRow": 9100,
+        "sourceVertexIds": [
+          4539,
+          4484,
+          4578
+        ],
+        "witnessSourceXYZ": [
+          -0.039351001381874084,
+          -0.973272979259491,
+          -0.10525999963283539
+        ],
+        "witnessTriangleBarycentric": [
+          1.0,
+          0.0,
+          0.0
+        ],
+        "prototypeCornerUV": [
+          [
+            0.03355399891734123,
+            0.2847580015659332
+          ],
+          [
+            0.0,
+            1.0
+          ],
+          [
+            0.02927199937403202,
+            0.2839300036430359
+          ]
+        ],
+        "witnessPrototypeUV": [
+          0.03355399891734123,
+          0.2847580015659332
+        ],
+        "denseTriangleRowsByCorner": [
+          318325,
+          318306,
+          325480
+        ],
+        "denseBarycentricByCorner": [
+          [
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "cycleIncidentClasses": []
+      },
+      "strictlyPositiveComputedSurfaceMargin": true,
+      "ambiguousContactWithoutNonparallelHit": false,
+      "boundaryRelation": {
+        "minimumDistanceSourceUnits": 0.10779920382181314,
+        "closestBoundarySourceEdge": [
+          4484,
+          4539
+        ],
+        "pathWitness": [
+          -0.13893085956573487,
+          -0.973272979259491,
+          -0.06397416442632675
+        ],
+        "boundaryWitness": [
+          -0.039351001381874084,
+          -0.973272979259491,
+          -0.10525999963283539
+        ]
+      },
+      "cycleRelations": [
+        {
+          "class": 1,
+          "minimumDistanceSourceUnits": 0.17351035770850054,
+          "closestSourceEdge": [
+            4485,
+            4444
+          ],
+          "pathWitness": [
+            -0.13893085956573487,
+            -0.9312989711761475,
+            -0.06397416442632675
+          ],
+          "cycleWitness": [
+            -0.04984400048851967,
+            -0.9312989711761475,
+            -0.21286800503730774
+          ]
+        },
+        {
+          "class": 2,
+          "minimumDistanceSourceUnits": 0.18435855442395593,
+          "closestSourceEdge": [
+            4194,
+            4274
+          ],
+          "pathWitness": [
+            -0.13893085956573487,
+            -0.9103119969367981,
+            -0.06397416442632675
+          ],
+          "cycleWitness": [
+            -0.07083100080490112,
+            -0.9103119969367981,
+            -0.23529399931430817
+          ]
+        }
+      ]
+    },
+    {
+      "anchorIndex": 2,
+      "endY": -0.305137,
+      "startSourceXYZ": [
+        -0.13893085956573487,
+        -1.1001879930496217,
+        -0.06397416442632675
+      ],
+      "endSourceXYZ": [
+        -0.13893085956573487,
+        -0.305137,
+        -0.06397416442632675
+      ],
+      "testedAllRetainedTriangles": 14543,
+      "surfaceIntersectionFaceCount": 0,
+      "allIntersectionFacesIncludingCoincidentEdgeHits": [],
+      "minimumWholeSegmentSurfaceDistanceSourceUnits": 0.10779920382181314,
+      "closestPathSourceXYZ": [
+        -0.13893085956573487,
+        -0.973272979259491,
+        -0.06397416442632675
+      ],
+      "closestSurfaceLineage": {
+        "retainedFaceRow": 8014,
+        "prototypeFaceRow": 9100,
+        "sourceVertexIds": [
+          4539,
+          4484,
+          4578
+        ],
+        "witnessSourceXYZ": [
+          -0.039351001381874084,
+          -0.973272979259491,
+          -0.10525999963283539
+        ],
+        "witnessTriangleBarycentric": [
+          1.0,
+          0.0,
+          0.0
+        ],
+        "prototypeCornerUV": [
+          [
+            0.03355399891734123,
+            0.2847580015659332
+          ],
+          [
+            0.0,
+            1.0
+          ],
+          [
+            0.02927199937403202,
+            0.2839300036430359
+          ]
+        ],
+        "witnessPrototypeUV": [
+          0.03355399891734123,
+          0.2847580015659332
+        ],
+        "denseTriangleRowsByCorner": [
+          318325,
+          318306,
+          325480
+        ],
+        "denseBarycentricByCorner": [
+          [
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "cycleIncidentClasses": []
+      },
+      "strictlyPositiveComputedSurfaceMargin": true,
+      "ambiguousContactWithoutNonparallelHit": false,
+      "boundaryRelation": {
+        "minimumDistanceSourceUnits": 0.10779920382181314,
+        "closestBoundarySourceEdge": [
+          4484,
+          4539
+        ],
+        "pathWitness": [
+          -0.13893085956573487,
+          -0.973272979259491,
+          -0.06397416442632675
+        ],
+        "boundaryWitness": [
+          -0.039351001381874084,
+          -0.973272979259491,
+          -0.10525999963283539
+        ]
+      },
+      "cycleRelations": [
+        {
+          "class": 1,
+          "minimumDistanceSourceUnits": 0.17351035770850054,
+          "closestSourceEdge": [
+            4485,
+            4444
+          ],
+          "pathWitness": [
+            -0.13893085956573487,
+            -0.9312989711761475,
+            -0.06397416442632675
+          ],
+          "cycleWitness": [
+            -0.04984400048851967,
+            -0.9312989711761475,
+            -0.21286800503730774
+          ]
+        },
+        {
+          "class": 2,
+          "minimumDistanceSourceUnits": 0.18435855442395593,
+          "closestSourceEdge": [
+            4194,
+            4274
+          ],
+          "pathWitness": [
+            -0.13893085956573487,
+            -0.9103119969367981,
+            -0.06397416442632675
+          ],
+          "cycleWitness": [
+            -0.07083100080490112,
+            -0.9103119969367981,
+            -0.23529399931430817
+          ]
+        }
+      ]
+    },
+    {
+      "anchorIndex": 2,
+      "endY": -0.105137,
+      "startSourceXYZ": [
+        -0.13893085956573487,
+        -1.1001879930496217,
+        -0.06397416442632675
+      ],
+      "endSourceXYZ": [
+        -0.13893085956573487,
+        -0.105137,
+        -0.06397416442632675
+      ],
+      "testedAllRetainedTriangles": 14543,
+      "surfaceIntersectionFaceCount": 0,
+      "allIntersectionFacesIncludingCoincidentEdgeHits": [],
+      "minimumWholeSegmentSurfaceDistanceSourceUnits": 0.10335867444215716,
+      "closestPathSourceXYZ": [
+        -0.13893085956573487,
+        -0.105137,
+        -0.06397416442632675
+      ],
+      "closestSurfaceLineage": {
+        "retainedFaceRow": 7061,
+        "prototypeFaceRow": 7944,
+        "sourceVertexIds": [
+          3838,
+          3837,
+          4058
+        ],
+        "witnessSourceXYZ": [
+          -0.12429561424744018,
+          -0.052547846857541346,
+          0.023793746273838567
+        ],
+        "witnessTriangleBarycentric": [
+          0.3748887995770663,
+          0.3234471611800176,
+          0.3016640392429161
+        ],
+        "prototypeCornerUV": [
+          [
+            0.24150599539279938,
+            0.9519720077514648
+          ],
+          [
+            0.6141210198402405,
+            0.8460469841957092
+          ],
+          [
+            0.25547099113464355,
+            0.9468610286712646
+          ]
+        ],
+        "witnessPrototypeUV": [
+          0.3662400042868419,
+          0.9161690609906099
+        ],
+        "denseTriangleRowsByCorner": [
+          268934,
+          268906,
+          283579
+        ],
+        "denseBarycentricByCorner": [
+          [
+            0.0,
+            0.0,
+            1.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0
+          ],
+          [
+            1.1102230246251565e-16,
+            0.0,
+            0.9999999999999999
+          ]
+        ],
+        "cycleIncidentClasses": []
+      },
+      "strictlyPositiveComputedSurfaceMargin": true,
+      "ambiguousContactWithoutNonparallelHit": false,
+      "boundaryRelation": {
+        "minimumDistanceSourceUnits": 0.10779920382181314,
+        "closestBoundarySourceEdge": [
+          4484,
+          4539
+        ],
+        "pathWitness": [
+          -0.13893085956573487,
+          -0.973272979259491,
+          -0.06397416442632675
+        ],
+        "boundaryWitness": [
+          -0.039351001381874084,
+          -0.973272979259491,
+          -0.10525999963283539
+        ]
+      },
+      "cycleRelations": [
+        {
+          "class": 1,
+          "minimumDistanceSourceUnits": 0.17351035770850054,
+          "closestSourceEdge": [
+            4485,
+            4444
+          ],
+          "pathWitness": [
+            -0.13893085956573487,
+            -0.9312989711761475,
+            -0.06397416442632675
+          ],
+          "cycleWitness": [
+            -0.04984400048851967,
+            -0.9312989711761475,
+            -0.21286800503730774
+          ]
+        },
+        {
+          "class": 2,
+          "minimumDistanceSourceUnits": 0.18435855442395593,
+          "closestSourceEdge": [
+            4194,
+            4274
+          ],
+          "pathWitness": [
+            -0.13893085956573487,
+            -0.9103119969367981,
+            -0.06397416442632675
+          ],
+          "cycleWitness": [
+            -0.07083100080490112,
+            -0.9103119969367981,
+            -0.23529399931430817
+          ]
+        }
+      ]
+    },
+    {
+      "anchorIndex": 2,
+      "endY": 0.145137,
+      "startSourceXYZ": [
+        -0.13893085956573487,
+        -1.1001879930496217,
+        -0.06397416442632675
+      ],
+      "endSourceXYZ": [
+        -0.13893085956573487,
+        0.145137,
+        -0.06397416442632675
+      ],
+      "testedAllRetainedTriangles": 14543,
+      "surfaceIntersectionFaceCount": 0,
+      "allIntersectionFacesIncludingCoincidentEdgeHits": [],
+      "minimumWholeSegmentSurfaceDistanceSourceUnits": 0.002409194345719781,
+      "closestPathSourceXYZ": [
+        -0.13893085956573487,
+        0.145137,
+        -0.06397416442632675
+      ],
+      "closestSurfaceLineage": {
+        "retainedFaceRow": 6654,
+        "prototypeFaceRow": 7474,
+        "sourceVertexIds": [
+          3663,
+          3803,
+          3687
+        ],
+        "witnessSourceXYZ": [
+          -0.1400930353894795,
+          0.1456485652800235,
+          -0.06192675979743043
+        ],
+        "witnessTriangleBarycentric": [
+          0.05871771079525377,
+          0.9390254601622392,
+          0.0022568290425070245
+        ],
+        "prototypeCornerUV": [
+          [
+            0.03154899924993515,
+            0.7366930246353149
+          ],
+          [
+            0.865077018737793,
+            0.15644200146198273
+          ],
+          [
+            0.043588001281023026,
+            0.7366470098495483
+          ]
+        ],
+        "witnessPrototypeUV": [
+          0.8142802012770674,
+          0.19182243674286162
+        ],
+        "denseTriangleRowsByCorner": [
+          253965,
+          266116,
+          254012
+        ],
+        "denseBarycentricByCorner": [
+          [
+            0.0,
+            0.0,
+            1.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0
+          ],
+          [
+            1.1102230246251565e-16,
+            0.0,
+            0.9999999999999999
+          ]
+        ],
+        "cycleIncidentClasses": []
+      },
+      "strictlyPositiveComputedSurfaceMargin": true,
+      "ambiguousContactWithoutNonparallelHit": false,
+      "boundaryRelation": {
+        "minimumDistanceSourceUnits": 0.10779920382181314,
+        "closestBoundarySourceEdge": [
+          4484,
+          4539
+        ],
+        "pathWitness": [
+          -0.13893085956573487,
+          -0.973272979259491,
+          -0.06397416442632675
+        ],
+        "boundaryWitness": [
+          -0.039351001381874084,
+          -0.973272979259491,
+          -0.10525999963283539
+        ]
+      },
+      "cycleRelations": [
+        {
+          "class": 1,
+          "minimumDistanceSourceUnits": 0.17351035770850054,
+          "closestSourceEdge": [
+            4485,
+            4444
+          ],
+          "pathWitness": [
+            -0.13893085956573487,
+            -0.9312989711761475,
+            -0.06397416442632675
+          ],
+          "cycleWitness": [
+            -0.04984400048851967,
+            -0.9312989711761475,
+            -0.21286800503730774
+          ]
+        },
+        {
+          "class": 2,
+          "minimumDistanceSourceUnits": 0.18435855442395593,
+          "closestSourceEdge": [
+            4194,
+            4274
+          ],
+          "pathWitness": [
+            -0.13893085956573487,
+            -0.9103119969367981,
+            -0.06397416442632675
+          ],
+          "cycleWitness": [
+            -0.07083100080490112,
+            -0.9103119969367981,
+            -0.23529399931430817
+          ]
+        }
+      ]
+    },
+    {
+      "anchorIndex": 2,
+      "endY": 0.245137,
+      "startSourceXYZ": [
+        -0.13893085956573487,
+        -1.1001879930496217,
+        -0.06397416442632675
+      ],
+      "endSourceXYZ": [
+        -0.13893085956573487,
+        0.245137,
+        -0.06397416442632675
+      ],
+      "testedAllRetainedTriangles": 14543,
+      "surfaceIntersectionFaceCount": 1,
+      "allIntersectionFacesIncludingCoincidentEdgeHits": [
+        {
+          "pathFraction": 0.9343747173001109,
+          "sourceY": 0.15684966700789227,
+          "triangleBarycentric": [
+            0.04661788520239463,
+            0.11923544978599229,
+            0.834146665011613
+          ],
+          "strictInteriorBarycentric": true,
+          "nearBoundaryBarycentric": false,
+          "directionNormalUnnormalized": 0.0005174893873473375,
+          "lineage": {
+            "retainedFaceRow": 6860,
+            "prototypeFaceRow": 7710,
+            "sourceVertexIds": [
+              3919,
+              3771,
+              3803
+            ],
+            "witnessSourceXYZ": [
+              -0.13893085956573487,
+              0.15684966700789227,
+              -0.06397416442632675
+            ],
+            "witnessTriangleBarycentric": [
+              0.04661788520239463,
+              0.11923544978599229,
+              0.834146665011613
+            ],
+            "prototypeCornerUV": [
+              [
+                0.8657339811325073,
+                0.1789350062608719
+              ],
+              [
+                0.05011900141835213,
+                0.740369975566864
+              ],
+              [
+                0.865077018737793,
+                0.15644200146198273
+              ]
+            ],
+            "witnessPrototypeUV": [
+              0.7679357591835081,
+              0.22711549241257303
+            ],
+            "denseTriangleRowsByCorner": [
+              275122,
+              263218,
+              266116
+            ],
+            "denseBarycentricByCorner": [
+              [
+                0.0,
+                0.0,
+                1.0
+              ],
+              [
+                0.0,
+                0.0,
+                1.0
+              ],
+              [
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "cycleIncidentClasses": []
+          }
+        }
+      ],
+      "minimumWholeSegmentSurfaceDistanceSourceUnits": 0.0,
+      "closestPathSourceXYZ": [
+        -0.13893085956573487,
+        0.15684966700789227,
+        -0.06397416442632675
+      ],
+      "closestSurfaceLineage": {
+        "retainedFaceRow": 6860,
+        "prototypeFaceRow": 7710,
+        "sourceVertexIds": [
+          3919,
+          3771,
+          3803
+        ],
+        "witnessSourceXYZ": [
+          -0.13893085956573487,
+          0.15684966700789227,
+          -0.06397416442632675
+        ],
+        "witnessTriangleBarycentric": [
+          0.04661788520239463,
+          0.11923544978599229,
+          0.834146665011613
+        ],
+        "prototypeCornerUV": [
+          [
+            0.8657339811325073,
+            0.1789350062608719
+          ],
+          [
+            0.05011900141835213,
+            0.740369975566864
+          ],
+          [
+            0.865077018737793,
+            0.15644200146198273
+          ]
+        ],
+        "witnessPrototypeUV": [
+          0.7679357591835081,
+          0.22711549241257303
+        ],
+        "denseTriangleRowsByCorner": [
+          275122,
+          263218,
+          266116
+        ],
+        "denseBarycentricByCorner": [
+          [
+            0.0,
+            0.0,
+            1.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "cycleIncidentClasses": []
+      },
+      "strictlyPositiveComputedSurfaceMargin": false,
+      "ambiguousContactWithoutNonparallelHit": false,
+      "boundaryRelation": {
+        "minimumDistanceSourceUnits": 0.10779920382181314,
+        "closestBoundarySourceEdge": [
+          4484,
+          4539
+        ],
+        "pathWitness": [
+          -0.13893085956573487,
+          -0.973272979259491,
+          -0.06397416442632675
+        ],
+        "boundaryWitness": [
+          -0.039351001381874084,
+          -0.973272979259491,
+          -0.10525999963283539
+        ]
+      },
+      "cycleRelations": [
+        {
+          "class": 1,
+          "minimumDistanceSourceUnits": 0.17351035770850054,
+          "closestSourceEdge": [
+            4485,
+            4444
+          ],
+          "pathWitness": [
+            -0.13893085956573487,
+            -0.9312989711761475,
+            -0.06397416442632675
+          ],
+          "cycleWitness": [
+            -0.04984400048851967,
+            -0.9312989711761475,
+            -0.21286800503730774
+          ]
+        },
+        {
+          "class": 2,
+          "minimumDistanceSourceUnits": 0.18435855442395593,
+          "closestSourceEdge": [
+            4194,
+            4274
+          ],
+          "pathWitness": [
+            -0.13893085956573487,
+            -0.9103119969367981,
+            -0.06397416442632675
+          ],
+          "cycleWitness": [
+            -0.07083100080490112,
+            -0.9103119969367981,
+            -0.23529399931430817
+          ]
+        }
+      ]
+    },
+    {
+      "anchorIndex": 3,
+      "endY": -0.655137,
+      "startSourceXYZ": [
+        -0.19893085956573486,
+        -1.1001879930496217,
+        -0.12397416442632675
+      ],
+      "endSourceXYZ": [
+        -0.19893085956573486,
+        -0.655137,
+        -0.12397416442632675
+      ],
+      "testedAllRetainedTriangles": 14543,
+      "surfaceIntersectionFaceCount": 0,
+      "allIntersectionFacesIncludingCoincidentEdgeHits": [],
+      "minimumWholeSegmentSurfaceDistanceSourceUnits": 0.07800254816628746,
+      "closestPathSourceXYZ": [
+        -0.19893085956573486,
+        -0.9890130162239075,
+        -0.12397416442632675
+      ],
+      "closestSurfaceLineage": {
+        "retainedFaceRow": 6288,
+        "prototypeFaceRow": 7039,
+        "sourceVertexIds": [
+          3589,
+          3668,
+          3377
+        ],
+        "witnessSourceXYZ": [
+          -0.18240466230907895,
+          -0.9890130162239075,
+          -0.20020593158850195
+        ],
+        "witnessTriangleBarycentric": [
+          -8.881784197001252e-16,
+          0.24781052033125894,
+          0.752189479668742
+        ],
+        "prototypeCornerUV": [
+          [
+            0.016423000022768974,
+            0.33319100737571716
+          ],
+          [
+            0.018478000536561012,
+            0.32955101132392883
+          ],
+          [
+            0.01836800016462803,
+            0.3414919972419739
+          ]
+        ],
+        "witnessPrototypeUV": [
+          0.018395259414033374,
+          0.33853289530835495
+        ],
+        "denseTriangleRowsByCorner": [
+          246115,
+          255250,
+          234326
+        ],
+        "denseBarycentricByCorner": [
+          [
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            1.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "cycleIncidentClasses": []
+      },
+      "strictlyPositiveComputedSurfaceMargin": true,
+      "ambiguousContactWithoutNonparallelHit": false,
+      "boundaryRelation": {
+        "minimumDistanceSourceUnits": 0.07800254816628746,
+        "closestBoundarySourceEdge": [
+          3377,
+          3668
+        ],
+        "pathWitness": [
+          -0.19893085956573486,
+          -0.9890130162239075,
+          -0.12397416442632675
+        ],
+        "boundaryWitness": [
+          -0.18240466230907895,
+          -0.9890130162239075,
+          -0.20020593158850195
+        ]
+      },
+      "cycleRelations": [
+        {
+          "class": 1,
+          "minimumDistanceSourceUnits": 0.1654605284554613,
+          "closestSourceEdge": [
+            4443,
+            4309
+          ],
+          "pathWitness": [
+            -0.19893085956573486,
+            -0.947039008140564,
+            -0.12397416442632675
+          ],
+          "cycleWitness": [
+            -0.07045099884271622,
+            -0.947039008140564,
+            -0.22823399305343628
+          ]
+        },
+        {
+          "class": 2,
+          "minimumDistanceSourceUnits": 0.16971057555153418,
+          "closestSourceEdge": [
+            4194,
+            4274
+          ],
+          "pathWitness": [
+            -0.19893085956573486,
+            -0.9103119969367981,
+            -0.12397416442632675
+          ],
+          "cycleWitness": [
+            -0.07083100080490112,
+            -0.9103119969367981,
+            -0.23529399931430817
+          ]
+        }
+      ]
+    },
+    {
+      "anchorIndex": 3,
+      "endY": -0.305137,
+      "startSourceXYZ": [
+        -0.19893085956573486,
+        -1.1001879930496217,
+        -0.12397416442632675
+      ],
+      "endSourceXYZ": [
+        -0.19893085956573486,
+        -0.305137,
+        -0.12397416442632675
+      ],
+      "testedAllRetainedTriangles": 14543,
+      "surfaceIntersectionFaceCount": 0,
+      "allIntersectionFacesIncludingCoincidentEdgeHits": [],
+      "minimumWholeSegmentSurfaceDistanceSourceUnits": 0.07800254816628746,
+      "closestPathSourceXYZ": [
+        -0.19893085956573486,
+        -0.9890130162239075,
+        -0.12397416442632675
+      ],
+      "closestSurfaceLineage": {
+        "retainedFaceRow": 6288,
+        "prototypeFaceRow": 7039,
+        "sourceVertexIds": [
+          3589,
+          3668,
+          3377
+        ],
+        "witnessSourceXYZ": [
+          -0.18240466230907895,
+          -0.9890130162239075,
+          -0.20020593158850195
+        ],
+        "witnessTriangleBarycentric": [
+          -8.881784197001252e-16,
+          0.24781052033125894,
+          0.752189479668742
+        ],
+        "prototypeCornerUV": [
+          [
+            0.016423000022768974,
+            0.33319100737571716
+          ],
+          [
+            0.018478000536561012,
+            0.32955101132392883
+          ],
+          [
+            0.01836800016462803,
+            0.3414919972419739
+          ]
+        ],
+        "witnessPrototypeUV": [
+          0.018395259414033374,
+          0.33853289530835495
+        ],
+        "denseTriangleRowsByCorner": [
+          246115,
+          255250,
+          234326
+        ],
+        "denseBarycentricByCorner": [
+          [
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            1.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "cycleIncidentClasses": []
+      },
+      "strictlyPositiveComputedSurfaceMargin": true,
+      "ambiguousContactWithoutNonparallelHit": false,
+      "boundaryRelation": {
+        "minimumDistanceSourceUnits": 0.07800254816628746,
+        "closestBoundarySourceEdge": [
+          3377,
+          3668
+        ],
+        "pathWitness": [
+          -0.19893085956573486,
+          -0.9890130162239075,
+          -0.12397416442632675
+        ],
+        "boundaryWitness": [
+          -0.18240466230907895,
+          -0.9890130162239075,
+          -0.20020593158850195
+        ]
+      },
+      "cycleRelations": [
+        {
+          "class": 1,
+          "minimumDistanceSourceUnits": 0.1654605284554613,
+          "closestSourceEdge": [
+            4443,
+            4309
+          ],
+          "pathWitness": [
+            -0.19893085956573486,
+            -0.947039008140564,
+            -0.12397416442632675
+          ],
+          "cycleWitness": [
+            -0.07045099884271622,
+            -0.947039008140564,
+            -0.22823399305343628
+          ]
+        },
+        {
+          "class": 2,
+          "minimumDistanceSourceUnits": 0.16971057555153418,
+          "closestSourceEdge": [
+            4194,
+            4274
+          ],
+          "pathWitness": [
+            -0.19893085956573486,
+            -0.9103119969367981,
+            -0.12397416442632675
+          ],
+          "cycleWitness": [
+            -0.07083100080490112,
+            -0.9103119969367981,
+            -0.23529399931430817
+          ]
+        }
+      ]
+    },
+    {
+      "anchorIndex": 3,
+      "endY": -0.105137,
+      "startSourceXYZ": [
+        -0.19893085956573486,
+        -1.1001879930496217,
+        -0.12397416442632675
+      ],
+      "endSourceXYZ": [
+        -0.19893085956573486,
+        -0.105137,
+        -0.12397416442632675
+      ],
+      "testedAllRetainedTriangles": 14543,
+      "surfaceIntersectionFaceCount": 0,
+      "allIntersectionFacesIncludingCoincidentEdgeHits": [],
+      "minimumWholeSegmentSurfaceDistanceSourceUnits": 0.07800254816628746,
+      "closestPathSourceXYZ": [
+        -0.19893085956573486,
+        -0.9890130162239075,
+        -0.12397416442632675
+      ],
+      "closestSurfaceLineage": {
+        "retainedFaceRow": 6288,
+        "prototypeFaceRow": 7039,
+        "sourceVertexIds": [
+          3589,
+          3668,
+          3377
+        ],
+        "witnessSourceXYZ": [
+          -0.18240466230907895,
+          -0.9890130162239075,
+          -0.20020593158850195
+        ],
+        "witnessTriangleBarycentric": [
+          -8.881784197001252e-16,
+          0.24781052033125894,
+          0.752189479668742
+        ],
+        "prototypeCornerUV": [
+          [
+            0.016423000022768974,
+            0.33319100737571716
+          ],
+          [
+            0.018478000536561012,
+            0.32955101132392883
+          ],
+          [
+            0.01836800016462803,
+            0.3414919972419739
+          ]
+        ],
+        "witnessPrototypeUV": [
+          0.018395259414033374,
+          0.33853289530835495
+        ],
+        "denseTriangleRowsByCorner": [
+          246115,
+          255250,
+          234326
+        ],
+        "denseBarycentricByCorner": [
+          [
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            1.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "cycleIncidentClasses": []
+      },
+      "strictlyPositiveComputedSurfaceMargin": true,
+      "ambiguousContactWithoutNonparallelHit": false,
+      "boundaryRelation": {
+        "minimumDistanceSourceUnits": 0.07800254816628746,
+        "closestBoundarySourceEdge": [
+          3377,
+          3668
+        ],
+        "pathWitness": [
+          -0.19893085956573486,
+          -0.9890130162239075,
+          -0.12397416442632675
+        ],
+        "boundaryWitness": [
+          -0.18240466230907895,
+          -0.9890130162239075,
+          -0.20020593158850195
+        ]
+      },
+      "cycleRelations": [
+        {
+          "class": 1,
+          "minimumDistanceSourceUnits": 0.1654605284554613,
+          "closestSourceEdge": [
+            4443,
+            4309
+          ],
+          "pathWitness": [
+            -0.19893085956573486,
+            -0.947039008140564,
+            -0.12397416442632675
+          ],
+          "cycleWitness": [
+            -0.07045099884271622,
+            -0.947039008140564,
+            -0.22823399305343628
+          ]
+        },
+        {
+          "class": 2,
+          "minimumDistanceSourceUnits": 0.16971057555153418,
+          "closestSourceEdge": [
+            4194,
+            4274
+          ],
+          "pathWitness": [
+            -0.19893085956573486,
+            -0.9103119969367981,
+            -0.12397416442632675
+          ],
+          "cycleWitness": [
+            -0.07083100080490112,
+            -0.9103119969367981,
+            -0.23529399931430817
+          ]
+        }
+      ]
+    },
+    {
+      "anchorIndex": 3,
+      "endY": 0.145137,
+      "startSourceXYZ": [
+        -0.19893085956573486,
+        -1.1001879930496217,
+        -0.12397416442632675
+      ],
+      "endSourceXYZ": [
+        -0.19893085956573486,
+        0.145137,
+        -0.12397416442632675
+      ],
+      "testedAllRetainedTriangles": 14543,
+      "surfaceIntersectionFaceCount": 0,
+      "allIntersectionFacesIncludingCoincidentEdgeHits": [],
+      "minimumWholeSegmentSurfaceDistanceSourceUnits": 0.010468968336237687,
+      "closestPathSourceXYZ": [
+        -0.19893085956573486,
+        0.145137,
+        -0.12397416442632675
+      ],
+      "closestSurfaceLineage": {
+        "retainedFaceRow": 5782,
+        "prototypeFaceRow": 6474,
+        "sourceVertexIds": [
+          3217,
+          3284,
+          3239
+        ],
+        "witnessSourceXYZ": [
+          -0.2089016846516992,
+          0.1482980144993667,
+          -0.12353835200676408
+        ],
+        "witnessTriangleBarycentric": [
+          0.2385594977002088,
+          0.41870830754129545,
+          0.3427321947584958
+        ],
+        "prototypeCornerUV": [
+          [
+            0.3984430134296417,
+            0.42478999495506287
+          ],
+          [
+            0.5266519784927368,
+            0.9919869899749756
+          ],
+          [
+            0.39619699120521545,
+            0.4311879873275757
+          ]
+        ],
+        "witnessPrototypeUV": [
+          0.45135538807637743,
+          0.6644728867502386
+        ],
+        "denseTriangleRowsByCorner": [
+          221079,
+          227352,
+          224173
+        ],
+        "denseBarycentricByCorner": [
+          [
+            0.0,
+            0.0,
+            1.0
+          ],
+          [
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            1.1102230246251565e-16,
+            0.9999999999999999,
+            0.0
+          ]
+        ],
+        "cycleIncidentClasses": []
+      },
+      "strictlyPositiveComputedSurfaceMargin": true,
+      "ambiguousContactWithoutNonparallelHit": false,
+      "boundaryRelation": {
+        "minimumDistanceSourceUnits": 0.07800254816628746,
+        "closestBoundarySourceEdge": [
+          3377,
+          3668
+        ],
+        "pathWitness": [
+          -0.19893085956573486,
+          -0.9890130162239075,
+          -0.12397416442632675
+        ],
+        "boundaryWitness": [
+          -0.18240466230907895,
+          -0.9890130162239075,
+          -0.20020593158850195
+        ]
+      },
+      "cycleRelations": [
+        {
+          "class": 1,
+          "minimumDistanceSourceUnits": 0.1654605284554613,
+          "closestSourceEdge": [
+            4443,
+            4309
+          ],
+          "pathWitness": [
+            -0.19893085956573486,
+            -0.947039008140564,
+            -0.12397416442632675
+          ],
+          "cycleWitness": [
+            -0.07045099884271622,
+            -0.947039008140564,
+            -0.22823399305343628
+          ]
+        },
+        {
+          "class": 2,
+          "minimumDistanceSourceUnits": 0.16971057555153418,
+          "closestSourceEdge": [
+            4194,
+            4274
+          ],
+          "pathWitness": [
+            -0.19893085956573486,
+            -0.9103119969367981,
+            -0.12397416442632675
+          ],
+          "cycleWitness": [
+            -0.07083100080490112,
+            -0.9103119969367981,
+            -0.23529399931430817
+          ]
+        }
+      ]
+    },
+    {
+      "anchorIndex": 3,
+      "endY": 0.245137,
+      "startSourceXYZ": [
+        -0.19893085956573486,
+        -1.1001879930496217,
+        -0.12397416442632675
+      ],
+      "endSourceXYZ": [
+        -0.19893085956573486,
+        0.245137,
+        -0.12397416442632675
+      ],
+      "testedAllRetainedTriangles": 14543,
+      "surfaceIntersectionFaceCount": 1,
+      "allIntersectionFacesIncludingCoincidentEdgeHits": [
+        {
+          "pathFraction": 0.9904313076561108,
+          "sourceY": 0.23226399903896322,
+          "triangleBarycentric": [
+            0.3041073228720597,
+            0.4158595802350471,
+            0.2800330968928932
+          ],
+          "strictInteriorBarycentric": true,
+          "nearBoundaryBarycentric": false,
+          "directionNormalUnnormalized": 3.752138501466609e-05,
+          "lineage": {
+            "retainedFaceRow": 5938,
+            "prototypeFaceRow": 6654,
+            "sourceVertexIds": [
+              3356,
+              3313,
+              3329
+            ],
+            "witnessSourceXYZ": [
+              -0.19893085956573486,
+              0.23226399903896322,
+              -0.12397416442632675
+            ],
+            "witnessTriangleBarycentric": [
+              0.3041073228720597,
+              0.4158595802350471,
+              0.2800330968928932
+            ],
+            "prototypeCornerUV": [
+              [
+                0.0,
+                1.0
+              ],
+              [
+                0.3686339855194092,
+                0.42156198620796204
+              ],
+              [
+                0.05011399835348129,
+                0.7196530103683472
+              ]
+            ],
+            "witnessPrototypeUV": [
+              0.16733355263508465,
+              0.6809445746812972
+            ],
+            "denseTriangleRowsByCorner": [
+              230661,
+              230602,
+              230571
+            ],
+            "denseBarycentricByCorner": [
+              [
+                1.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                1.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "cycleIncidentClasses": []
+          }
+        }
+      ],
+      "minimumWholeSegmentSurfaceDistanceSourceUnits": 0.0,
+      "closestPathSourceXYZ": [
+        -0.19893085956573486,
+        0.23226399903896322,
+        -0.12397416442632675
+      ],
+      "closestSurfaceLineage": {
+        "retainedFaceRow": 5938,
+        "prototypeFaceRow": 6654,
+        "sourceVertexIds": [
+          3356,
+          3313,
+          3329
+        ],
+        "witnessSourceXYZ": [
+          -0.19893085956573486,
+          0.23226399903896322,
+          -0.12397416442632675
+        ],
+        "witnessTriangleBarycentric": [
+          0.3041073228720597,
+          0.4158595802350471,
+          0.2800330968928932
+        ],
+        "prototypeCornerUV": [
+          [
+            0.0,
+            1.0
+          ],
+          [
+            0.3686339855194092,
+            0.42156198620796204
+          ],
+          [
+            0.05011399835348129,
+            0.7196530103683472
+          ]
+        ],
+        "witnessPrototypeUV": [
+          0.16733355263508465,
+          0.6809445746812972
+        ],
+        "denseTriangleRowsByCorner": [
+          230661,
+          230602,
+          230571
+        ],
+        "denseBarycentricByCorner": [
+          [
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "cycleIncidentClasses": []
+      },
+      "strictlyPositiveComputedSurfaceMargin": false,
+      "ambiguousContactWithoutNonparallelHit": false,
+      "boundaryRelation": {
+        "minimumDistanceSourceUnits": 0.07800254816628746,
+        "closestBoundarySourceEdge": [
+          3377,
+          3668
+        ],
+        "pathWitness": [
+          -0.19893085956573486,
+          -0.9890130162239075,
+          -0.12397416442632675
+        ],
+        "boundaryWitness": [
+          -0.18240466230907895,
+          -0.9890130162239075,
+          -0.20020593158850195
+        ]
+      },
+      "cycleRelations": [
+        {
+          "class": 1,
+          "minimumDistanceSourceUnits": 0.1654605284554613,
+          "closestSourceEdge": [
+            4443,
+            4309
+          ],
+          "pathWitness": [
+            -0.19893085956573486,
+            -0.947039008140564,
+            -0.12397416442632675
+          ],
+          "cycleWitness": [
+            -0.07045099884271622,
+            -0.947039008140564,
+            -0.22823399305343628
+          ]
+        },
+        {
+          "class": 2,
+          "minimumDistanceSourceUnits": 0.16971057555153418,
+          "closestSourceEdge": [
+            4194,
+            4274
+          ],
+          "pathWitness": [
+            -0.19893085956573486,
+            -0.9103119969367981,
+            -0.12397416442632675
+          ],
+          "cycleWitness": [
+            -0.07083100080490112,
+            -0.9103119969367981,
+            -0.23529399931430817
+          ]
+        }
+      ]
+    },
+    {
+      "anchorIndex": 4,
+      "endY": -0.655137,
+      "startSourceXYZ": [
+        -0.19893085956573486,
+        -1.1001879930496217,
+        -0.003974164426326754
+      ],
+      "endSourceXYZ": [
+        -0.19893085956573486,
+        -0.655137,
+        -0.003974164426326754
+      ],
+      "testedAllRetainedTriangles": 14543,
+      "surfaceIntersectionFaceCount": 0,
+      "allIntersectionFacesIncludingCoincidentEdgeHits": [],
+      "minimumWholeSegmentSurfaceDistanceSourceUnits": 0.17027518406159553,
+      "closestPathSourceXYZ": [
+        -0.19893085956573486,
+        -0.655137,
+        -0.003974164426326754
+      ],
+      "closestSurfaceLineage": {
+        "retainedFaceRow": 6436,
+        "prototypeFaceRow": 7222,
+        "sourceVertexIds": [
+          3948,
+          3474,
+          3559
+        ],
+        "witnessSourceXYZ": [
+          -0.14803935676504618,
+          -0.5880119121749982,
+          0.1440052795325675
+        ],
+        "witnessTriangleBarycentric": [
+          0.42845291848354894,
+          1.3914517841895232e-15,
+          0.5715470815164496
+        ],
+        "prototypeCornerUV": [
+          [
+            0.5282350182533264,
+            0.5465360283851624
+          ],
+          [
+            0.7360870242118835,
+            0.20677299797534943
+          ],
+          [
+            0.5360540151596069,
+            0.5303069949150085
+          ]
+        ],
+        "witnessPrototypeUV": [
+          0.5327039431154974,
+          0.5372603716694626
+        ],
+        "denseTriangleRowsByCorner": [
+          274152,
+          241023,
+          246873
+        ],
+        "denseBarycentricByCorner": [
+          [
+            0.0,
+            0.0,
+            1.0
+          ],
+          [
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0
+          ]
+        ],
+        "cycleIncidentClasses": []
+      },
+      "strictlyPositiveComputedSurfaceMargin": true,
+      "ambiguousContactWithoutNonparallelHit": false,
+      "boundaryRelation": {
+        "minimumDistanceSourceUnits": 0.18453398029986184,
+        "closestBoundarySourceEdge": [
+          4679,
+          4729
+        ],
+        "pathWitness": [
+          -0.19893085956573486,
+          -0.947039008140564,
+          -0.003974164426326754
+        ],
+        "boundaryWitness": [
+          -0.01836399920284748,
+          -0.947039008140564,
+          -0.04203199967741966
+        ]
+      },
+      "cycleRelations": [
+        {
+          "class": 1,
+          "minimumDistanceSourceUnits": 0.25663890623737345,
+          "closestSourceEdge": [
+            4485,
+            4444
+          ],
+          "pathWitness": [
+            -0.19893085956573486,
+            -0.9312989711761475,
+            -0.003974164426326754
+          ],
+          "cycleWitness": [
+            -0.04984400048851967,
+            -0.9312989711761475,
+            -0.21286800503730774
+          ]
+        },
+        {
+          "class": 2,
+          "minimumDistanceSourceUnits": 0.2644209519443354,
+          "closestSourceEdge": [
+            4194,
+            4274
+          ],
+          "pathWitness": [
+            -0.19893085956573486,
+            -0.9103119969367981,
+            -0.003974164426326754
+          ],
+          "cycleWitness": [
+            -0.07083100080490112,
+            -0.9103119969367981,
+            -0.23529399931430817
+          ]
+        }
+      ]
+    },
+    {
+      "anchorIndex": 4,
+      "endY": -0.305137,
+      "startSourceXYZ": [
+        -0.19893085956573486,
+        -1.1001879930496217,
+        -0.003974164426326754
+      ],
+      "endSourceXYZ": [
+        -0.19893085956573486,
+        -0.305137,
+        -0.003974164426326754
+      ],
+      "testedAllRetainedTriangles": 14543,
+      "surfaceIntersectionFaceCount": 0,
+      "allIntersectionFacesIncludingCoincidentEdgeHits": [],
+      "minimumWholeSegmentSurfaceDistanceSourceUnits": 0.06758717847220025,
+      "closestPathSourceXYZ": [
+        -0.19893085956573486,
+        -0.305137,
+        -0.003974164426326754
+      ],
+      "closestSurfaceLineage": {
+        "retainedFaceRow": 5826,
+        "prototypeFaceRow": 6531,
+        "sourceVertexIds": [
+          3155,
+          3477,
+          3436
+        ],
+        "witnessSourceXYZ": [
+          -0.20866182531162883,
+          -0.27724539327411785,
+          0.05681558202596579
+        ],
+        "witnessTriangleBarycentric": [
+          0.6587131750831191,
+          0.341286824916884,
+          -3.146042183667429e-15
+        ],
+        "prototypeCornerUV": [
+          [
+            0.4644930064678192,
+            0.6422290205955505
+          ],
+          [
+            0.4532890021800995,
+            0.6342679858207703
+          ],
+          [
+            0.4533120095729828,
+            0.6383159756660461
+          ]
+        ],
+        "witnessPrototypeUV": [
+          0.46066922741810823,
+          0.6395120243142128
+        ],
+        "denseTriangleRowsByCorner": [
+          218561,
+          241309,
+          238374
+        ],
+        "denseBarycentricByCorner": [
+          [
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            1.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "cycleIncidentClasses": []
+      },
+      "strictlyPositiveComputedSurfaceMargin": true,
+      "ambiguousContactWithoutNonparallelHit": false,
+      "boundaryRelation": {
+        "minimumDistanceSourceUnits": 0.18453398029986184,
+        "closestBoundarySourceEdge": [
+          4679,
+          4729
+        ],
+        "pathWitness": [
+          -0.19893085956573486,
+          -0.947039008140564,
+          -0.003974164426326754
+        ],
+        "boundaryWitness": [
+          -0.01836399920284748,
+          -0.947039008140564,
+          -0.04203199967741966
+        ]
+      },
+      "cycleRelations": [
+        {
+          "class": 1,
+          "minimumDistanceSourceUnits": 0.25663890623737345,
+          "closestSourceEdge": [
+            4485,
+            4444
+          ],
+          "pathWitness": [
+            -0.19893085956573486,
+            -0.9312989711761475,
+            -0.003974164426326754
+          ],
+          "cycleWitness": [
+            -0.04984400048851967,
+            -0.9312989711761475,
+            -0.21286800503730774
+          ]
+        },
+        {
+          "class": 2,
+          "minimumDistanceSourceUnits": 0.2644209519443354,
+          "closestSourceEdge": [
+            4194,
+            4274
+          ],
+          "pathWitness": [
+            -0.19893085956573486,
+            -0.9103119969367981,
+            -0.003974164426326754
+          ],
+          "cycleWitness": [
+            -0.07083100080490112,
+            -0.9103119969367981,
+            -0.23529399931430817
+          ]
+        }
+      ]
+    },
+    {
+      "anchorIndex": 4,
+      "endY": -0.105137,
+      "startSourceXYZ": [
+        -0.19893085956573486,
+        -1.1001879930496217,
+        -0.003974164426326754
+      ],
+      "endSourceXYZ": [
+        -0.19893085956573486,
+        -0.105137,
+        -0.003974164426326754
+      ],
+      "testedAllRetainedTriangles": 14543,
+      "surfaceIntersectionFaceCount": 0,
+      "allIntersectionFacesIncludingCoincidentEdgeHits": [],
+      "minimumWholeSegmentSurfaceDistanceSourceUnits": 0.04096499492859155,
+      "closestPathSourceXYZ": [
+        -0.19893085956573486,
+        -0.105137,
+        -0.003974164426326754
+      ],
+      "closestSurfaceLineage": {
+        "retainedFaceRow": 5775,
+        "prototypeFaceRow": 6467,
+        "sourceVertexIds": [
+          3438,
+          3163,
+          3133
+        ],
+        "witnessSourceXYZ": [
+          -0.21269007533325243,
+          -0.08362172253213897,
+          0.028055628367935577
+        ],
+        "witnessTriangleBarycentric": [
+          0.30522838372244465,
+          0.5207290352018173,
+          0.17404258107573803
+        ],
+        "prototypeCornerUV": [
+          [
+            0.5950459837913513,
+            0.8512870073318481
+          ],
+          [
+            0.2979170083999634,
+            0.20358000695705414
+          ],
+          [
+            0.5879510045051575,
+            0.8639600276947021
+          ]
+        ],
+        "witnessPrototypeUV": [
+          0.4390874705976413,
+          0.5162128111071951
+        ],
+        "denseTriangleRowsByCorner": [
+          235749,
+          216773,
+          216747
+        ],
+        "denseBarycentricByCorner": [
+          [
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            1.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "cycleIncidentClasses": []
+      },
+      "strictlyPositiveComputedSurfaceMargin": true,
+      "ambiguousContactWithoutNonparallelHit": false,
+      "boundaryRelation": {
+        "minimumDistanceSourceUnits": 0.18453398029986184,
+        "closestBoundarySourceEdge": [
+          4679,
+          4729
+        ],
+        "pathWitness": [
+          -0.19893085956573486,
+          -0.947039008140564,
+          -0.003974164426326754
+        ],
+        "boundaryWitness": [
+          -0.01836399920284748,
+          -0.947039008140564,
+          -0.04203199967741966
+        ]
+      },
+      "cycleRelations": [
+        {
+          "class": 1,
+          "minimumDistanceSourceUnits": 0.25663890623737345,
+          "closestSourceEdge": [
+            4485,
+            4444
+          ],
+          "pathWitness": [
+            -0.19893085956573486,
+            -0.9312989711761475,
+            -0.003974164426326754
+          ],
+          "cycleWitness": [
+            -0.04984400048851967,
+            -0.9312989711761475,
+            -0.21286800503730774
+          ]
+        },
+        {
+          "class": 2,
+          "minimumDistanceSourceUnits": 0.2644209519443354,
+          "closestSourceEdge": [
+            4194,
+            4274
+          ],
+          "pathWitness": [
+            -0.19893085956573486,
+            -0.9103119969367981,
+            -0.003974164426326754
+          ],
+          "cycleWitness": [
+            -0.07083100080490112,
+            -0.9103119969367981,
+            -0.23529399931430817
+          ]
+        }
+      ]
+    },
+    {
+      "anchorIndex": 4,
+      "endY": 0.145137,
+      "startSourceXYZ": [
+        -0.19893085956573486,
+        -1.1001879930496217,
+        -0.003974164426326754
+      ],
+      "endSourceXYZ": [
+        -0.19893085956573486,
+        0.145137,
+        -0.003974164426326754
+      ],
+      "testedAllRetainedTriangles": 14543,
+      "surfaceIntersectionFaceCount": 1,
+      "allIntersectionFacesIncludingCoincidentEdgeHits": [
+        {
+          "pathFraction": 0.8679741189314372,
+          "sourceY": -0.019278129424078028,
+          "triangleBarycentric": [
+            0.00022472922039917798,
+            0.8623180334721454,
+            0.1374572373074554
+          ],
+          "strictInteriorBarycentric": true,
+          "nearBoundaryBarycentric": false,
+          "directionNormalUnnormalized": 0.0008157982789290337,
+          "lineage": {
+            "retainedFaceRow": 5541,
+            "prototypeFaceRow": 6207,
+            "sourceVertexIds": [
+              2995,
+              3348,
+              3235
+            ],
+            "witnessSourceXYZ": [
+              -0.19893085956573486,
+              -0.019278129424078028,
+              -0.003974164426326754
+            ],
+            "witnessTriangleBarycentric": [
+              0.00022472922039917798,
+              0.8623180334721454,
+              0.1374572373074554
+            ],
+            "prototypeCornerUV": [
+              [
+                0.606905996799469,
+                0.893314003944397
+              ],
+              [
+                0.6125159859657288,
+                0.8712379932403564
+              ],
+              [
+                0.6179370284080505,
+                0.882489025592804
+              ]
+            ],
+            "witnessPrototypeUV": [
+              0.613259886754685,
+              0.8727894901890557
+            ],
+            "denseTriangleRowsByCorner": [
+              203936,
+              230131,
+              223978
+            ],
+            "denseBarycentricByCorner": [
+              [
+                0.0,
+                0.0,
+                1.0
+              ],
+              [
+                1.0,
+                0.0,
+                0.0
+              ],
+              [
+                1.1102230246251565e-16,
+                0.0,
+                0.9999999999999999
+              ]
+            ],
+            "cycleIncidentClasses": []
+          }
+        }
+      ],
+      "minimumWholeSegmentSurfaceDistanceSourceUnits": 0.0,
+      "closestPathSourceXYZ": [
+        -0.19893085956573486,
+        -0.019278129424078028,
+        -0.003974164426326754
+      ],
+      "closestSurfaceLineage": {
+        "retainedFaceRow": 5541,
+        "prototypeFaceRow": 6207,
+        "sourceVertexIds": [
+          2995,
+          3348,
+          3235
+        ],
+        "witnessSourceXYZ": [
+          -0.19893085956573486,
+          -0.019278129424078028,
+          -0.003974164426326754
+        ],
+        "witnessTriangleBarycentric": [
+          0.00022472922039917798,
+          0.8623180334721454,
+          0.1374572373074554
+        ],
+        "prototypeCornerUV": [
+          [
+            0.606905996799469,
+            0.893314003944397
+          ],
+          [
+            0.6125159859657288,
+            0.8712379932403564
+          ],
+          [
+            0.6179370284080505,
+            0.882489025592804
+          ]
+        ],
+        "witnessPrototypeUV": [
+          0.613259886754685,
+          0.8727894901890557
+        ],
+        "denseTriangleRowsByCorner": [
+          203936,
+          230131,
+          223978
+        ],
+        "denseBarycentricByCorner": [
+          [
+            0.0,
+            0.0,
+            1.0
+          ],
+          [
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            1.1102230246251565e-16,
+            0.0,
+            0.9999999999999999
+          ]
+        ],
+        "cycleIncidentClasses": []
+      },
+      "strictlyPositiveComputedSurfaceMargin": false,
+      "ambiguousContactWithoutNonparallelHit": false,
+      "boundaryRelation": {
+        "minimumDistanceSourceUnits": 0.18453398029986184,
+        "closestBoundarySourceEdge": [
+          4679,
+          4729
+        ],
+        "pathWitness": [
+          -0.19893085956573486,
+          -0.947039008140564,
+          -0.003974164426326754
+        ],
+        "boundaryWitness": [
+          -0.01836399920284748,
+          -0.947039008140564,
+          -0.04203199967741966
+        ]
+      },
+      "cycleRelations": [
+        {
+          "class": 1,
+          "minimumDistanceSourceUnits": 0.25663890623737345,
+          "closestSourceEdge": [
+            4485,
+            4444
+          ],
+          "pathWitness": [
+            -0.19893085956573486,
+            -0.9312989711761475,
+            -0.003974164426326754
+          ],
+          "cycleWitness": [
+            -0.04984400048851967,
+            -0.9312989711761475,
+            -0.21286800503730774
+          ]
+        },
+        {
+          "class": 2,
+          "minimumDistanceSourceUnits": 0.2644209519443354,
+          "closestSourceEdge": [
+            4194,
+            4274
+          ],
+          "pathWitness": [
+            -0.19893085956573486,
+            -0.9103119969367981,
+            -0.003974164426326754
+          ],
+          "cycleWitness": [
+            -0.07083100080490112,
+            -0.9103119969367981,
+            -0.23529399931430817
+          ]
+        }
+      ]
+    },
+    {
+      "anchorIndex": 4,
+      "endY": 0.245137,
+      "startSourceXYZ": [
+        -0.19893085956573486,
+        -1.1001879930496217,
+        -0.003974164426326754
+      ],
+      "endSourceXYZ": [
+        -0.19893085956573486,
+        0.245137,
+        -0.003974164426326754
+      ],
+      "testedAllRetainedTriangles": 14543,
+      "surfaceIntersectionFaceCount": 1,
+      "allIntersectionFacesIncludingCoincidentEdgeHits": [
+        {
+          "pathFraction": 0.803456316659446,
+          "sourceY": -0.019278129424078028,
+          "triangleBarycentric": [
+            0.00022472922039917798,
+            0.8623180334721454,
+            0.1374572373074554
+          ],
+          "strictInteriorBarycentric": true,
+          "nearBoundaryBarycentric": false,
+          "directionNormalUnnormalized": 0.000881307144765835,
+          "lineage": {
+            "retainedFaceRow": 5541,
+            "prototypeFaceRow": 6207,
+            "sourceVertexIds": [
+              2995,
+              3348,
+              3235
+            ],
+            "witnessSourceXYZ": [
+              -0.19893085956573486,
+              -0.019278129424078028,
+              -0.003974164426326754
+            ],
+            "witnessTriangleBarycentric": [
+              0.00022472922039917798,
+              0.8623180334721454,
+              0.1374572373074554
+            ],
+            "prototypeCornerUV": [
+              [
+                0.606905996799469,
+                0.893314003944397
+              ],
+              [
+                0.6125159859657288,
+                0.8712379932403564
+              ],
+              [
+                0.6179370284080505,
+                0.882489025592804
+              ]
+            ],
+            "witnessPrototypeUV": [
+              0.613259886754685,
+              0.8727894901890557
+            ],
+            "denseTriangleRowsByCorner": [
+              203936,
+              230131,
+              223978
+            ],
+            "denseBarycentricByCorner": [
+              [
+                0.0,
+                0.0,
+                1.0
+              ],
+              [
+                1.0,
+                0.0,
+                0.0
+              ],
+              [
+                1.1102230246251565e-16,
+                0.0,
+                0.9999999999999999
+              ]
+            ],
+            "cycleIncidentClasses": []
+          }
+        }
+      ],
+      "minimumWholeSegmentSurfaceDistanceSourceUnits": 0.0,
+      "closestPathSourceXYZ": [
+        -0.19893085956573486,
+        -0.019278129424078028,
+        -0.003974164426326754
+      ],
+      "closestSurfaceLineage": {
+        "retainedFaceRow": 5541,
+        "prototypeFaceRow": 6207,
+        "sourceVertexIds": [
+          2995,
+          3348,
+          3235
+        ],
+        "witnessSourceXYZ": [
+          -0.19893085956573486,
+          -0.019278129424078028,
+          -0.003974164426326754
+        ],
+        "witnessTriangleBarycentric": [
+          0.00022472922039917798,
+          0.8623180334721454,
+          0.1374572373074554
+        ],
+        "prototypeCornerUV": [
+          [
+            0.606905996799469,
+            0.893314003944397
+          ],
+          [
+            0.6125159859657288,
+            0.8712379932403564
+          ],
+          [
+            0.6179370284080505,
+            0.882489025592804
+          ]
+        ],
+        "witnessPrototypeUV": [
+          0.613259886754685,
+          0.8727894901890557
+        ],
+        "denseTriangleRowsByCorner": [
+          203936,
+          230131,
+          223978
+        ],
+        "denseBarycentricByCorner": [
+          [
+            0.0,
+            0.0,
+            1.0
+          ],
+          [
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            1.1102230246251565e-16,
+            0.0,
+            0.9999999999999999
+          ]
+        ],
+        "cycleIncidentClasses": []
+      },
+      "strictlyPositiveComputedSurfaceMargin": false,
+      "ambiguousContactWithoutNonparallelHit": false,
+      "boundaryRelation": {
+        "minimumDistanceSourceUnits": 0.18453398029986184,
+        "closestBoundarySourceEdge": [
+          4679,
+          4729
+        ],
+        "pathWitness": [
+          -0.19893085956573486,
+          -0.947039008140564,
+          -0.003974164426326754
+        ],
+        "boundaryWitness": [
+          -0.01836399920284748,
+          -0.947039008140564,
+          -0.04203199967741966
+        ]
+      },
+      "cycleRelations": [
+        {
+          "class": 1,
+          "minimumDistanceSourceUnits": 0.25663890623737345,
+          "closestSourceEdge": [
+            4485,
+            4444
+          ],
+          "pathWitness": [
+            -0.19893085956573486,
+            -0.9312989711761475,
+            -0.003974164426326754
+          ],
+          "cycleWitness": [
+            -0.04984400048851967,
+            -0.9312989711761475,
+            -0.21286800503730774
+          ]
+        },
+        {
+          "class": 2,
+          "minimumDistanceSourceUnits": 0.2644209519443354,
+          "closestSourceEdge": [
+            4194,
+            4274
+          ],
+          "pathWitness": [
+            -0.19893085956573486,
+            -0.9103119969367981,
+            -0.003974164426326754
+          ],
+          "cycleWitness": [
+            -0.07083100080490112,
+            -0.9103119969367981,
+            -0.23529399931430817
+          ]
+        }
+      ]
+    }
+  ],
+  "limits": [
+    "All14543actual retained source triangle surfaces queried on25declared continuous segments; finite Float64 arithmetic, not interval/exact arithmetic.",
+    "Positive computed margin means this zero-radius path is separated from the finite source surface. It does not establish endpoint solid/void occupancy, a hand-size capsule, free volume, or entry specifically through the cuff mouth.",
+    "The actual71edge boundary and two homology cycles are distance references only; no virtual mouth disk, clipping plane or synthetic blocker is inserted.",
+    "Coincident edge/corner hit face IDs are retained, not deduplicated or parity-counted into occupancy. Tangent/coplanar nearcontacts remain explicit uncertainty.",
+    "Distances and coordinates use uncalibrated donor units. Per-corner dense lineage cannot in general collapse a prototype face witness to a single dense donor triangle.",
+    "Genus1 alone is not a defect; no source interpretation/removal mask/fit/skin/render/cut/engine/device acceptance."
+  ]
+}

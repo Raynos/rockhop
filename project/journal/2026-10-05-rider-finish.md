@@ -808,3 +808,22 @@ Limits: Maximum13.834cmfield-driven displacement needs played review.
 Truncated96pairs do not exclude novel contacts/folds; actual native not
 yet authored. Inherited underwear/hip and head-normal faults remain.
 No F/M gate acceptance. Execution45; next ordinary game gate48.
+
+
+## Cuff/palm path witnesses do not implicate the localized handle
+
+Finding: Five unchanged source-axis anchors reach declared cuff/palm
+stations without surface hits. Distal extensions intersect digit/web
+surfaces away from localized cycle incident neighborhoods. Preserve source
+and move toward calibrated whole-hand enclosure, not another topology cut.
+
+Validation: One CPU2assay46exits0 in0.921s, warnings0, source/movie41
+unchanged. All25paths test14543triangles:17positive computed surface
+margins and8single strict-interior hits. Parent independent Moller-Trumbore
+classification matches allraw rows; boundpath/distances/surface witnesses
+and densecorner/UVlineage pass (distance residual4.45e-16sourceunits).
+
+Limits: Zero-radius paths do not establish mouth entry, endpointoccupancy,
+hand-size clearance, freevolume or feature/defect interpretation. Source
+units uncalibrated, no new cut/fit/skin/grip/art acceptance. Finite numerical
+geometry, not interval certificate. Execution46; next ordinary gate48.

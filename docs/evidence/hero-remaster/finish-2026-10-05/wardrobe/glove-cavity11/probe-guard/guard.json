@@ -1,0 +1,58 @@
+{
+  "accepted": false,
+  "lock": "/Users/raynos/projects/localai/.model.lock",
+  "method": "lockf -k",
+  "command": [
+    "env",
+    "OMP_NUM_THREADS=2",
+    "OPENBLAS_NUM_THREADS=2",
+    "VECLIB_MAXIMUM_THREADS=2",
+    "/Users/raynos/projects/localai/runtime/unimate/.venv/bin/python",
+    "assets/blender/hero-remaster/rider/finish-2026-10-05/wardrobe/glove-cavity11/probe-paths.py",
+    "--opening",
+    "docs/evidence/hero-remaster/finish-2026-10-05/wardrobe/glove-cavity08/opening.json",
+    "--opening-sha256",
+    "eef2fde73da89499f18b7e0b161198477bfb749a29bad38b004165337719c938",
+    "--localization",
+    "docs/evidence/hero-remaster/finish-2026-10-05/wardrobe/glove-cavity09/localization.json",
+    "--localization-sha256",
+    "c197e995337cf1ccaacd3c3835a2018b5982c8385ace908f91673b2615ef777c",
+    "--preflight",
+    "docs/evidence/hero-remaster/finish-2026-10-05/wardrobe/glove-cavity05/preflight.json",
+    "--preflight-sha256",
+    "604cc70ff0aa88e7d6e89f070506f252fc252098cfbfcbe5f13e2d5fac53a6eb",
+    "--out",
+    "assets/blender/hero-remaster/rider/finish-2026-10-05/wardrobe/data/glove-cavity11",
+    "--evidence",
+    "docs/evidence/hero-remaster/finish-2026-10-05/wardrobe/glove-cavity11/probe.json"
+  ],
+  "controllerPID": 20710,
+  "pollSeconds": 1,
+  "startAnonymousBelowGiB": 55,
+  "stopAnonymousGiB": 65,
+  "stopAnonymousPlusWiredGiB": 96,
+  "limitSeconds": 60.0,
+  "guardSHA256": "cf8acd15d8b7484480bee74d23892be815d955ffd87115d3da8ed228ffb3d916",
+  "status": "worker returned; review pending",
+  "samples": [
+    {
+      "seconds": 0,
+      "anonymousGiB": 29.1,
+      "wiredGiB": 6.7,
+      "freeGiB": 48.0
+    },
+    {
+      "seconds": 0.033,
+      "anonymousGiB": 29.1,
+      "wiredGiB": 6.7,
+      "freeGiB": 48.0
+    }
+  ],
+  "physicalMemoryBytes": 137438953472,
+  "requiredPhysicalMemoryBytes": 137438953472,
+  "scope": "Future explicitly invoked owned Rockhop job only",
+  "pressureOrSwapLimits": "No separate pressure/swap gate exists in the pinned original guard; none altered",
+  "ownedChildPID": 20714,
+  "exitCode": 0,
+  "elapsedSeconds": 0.921
+}
