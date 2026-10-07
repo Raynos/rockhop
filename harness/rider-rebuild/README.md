@@ -21,8 +21,11 @@ chosen from the actual rest anatomy. No names or axes are guessed.
    clips and procedural changes in a defined order; this helper resets every
    actual joint TRS, including fingers, twists and metacarpals.
 4. Use `setJointWorldQuaternion(binding, id, quaternion)` for world-space targets.
-   It converts through the actual immediate parent. Nonuniform, sheared or
-   reflected parent frames are explicitly unsupported by this quaternion solve.
+   It converts through the actual immediate parent. The default relative
+   near-similarity tolerance is 1e-5 for serialization residuals; quaternion
+   calculation copies are normalized. A fourth argument can explicitly admit
+   up to 1e-4. Authored TRS and inverse binds remain unchanged. Material
+   nonuniformity, shear and reflected parents are rejected.
 5. Use `solvePalmSocketTarget(binding, side, targetSocketWorld)` to obtain the
    wrist world matrix whose calibrated palm socket reaches the target frame.
    Both the offset and orientation turn with the target. The caller must solve
@@ -34,8 +37,12 @@ axes and limits, finite grip surfaces, skin clearance, animation quality and
 actual game consumption remain separate measured requirements.
 
 Validation: `node --test harness/rider-rebuild/new-humanoid-contract.test.mjs`
-passed seven tests on 2026-10-07 using installed `three@0.186.1`. The fixture has
+passed eight tests on 2026-10-07 using installed `three@0.186.1`. The fixture has
 22 opaque-named joints and a body/black-glove shared skeleton. Checks include a
 real clone, extra parents, 60 byte-identical repeated frame/skin samples, rotated
 grip frames and rejection of mismatched source/part/calibration data. No Blender,
 browser, model inference or main player runtime execution is represented here.
+The additional actual-export regression checks the 16.45ppm thigh residual:
+default admission rejects it, explicit 1e-4 admission preserves source scales,
+and meaningful shear still fails. This bounded approximation is provisional
+private intake and does not establish exact native/export/runtime parity.

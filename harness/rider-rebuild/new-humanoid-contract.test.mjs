@@ -178,3 +178,17 @@ test('world-quaternion solve explicitly rejects nonuniform or reflected parent s
     assert.throws(() => setJointWorldQuaternion(binding, 'middle-prox', rotate(1, 2, 3)), /nonreflected similarity parent/);
   }
 });
+
+test('actual 16.45ppm export residual needs explicit bounded admission and leaves source scales intact', () => {
+  const { binding, bones } = fixture(), parent = bones.get('middle-meta');
+  parent.scale.set(1.0000164508819593, 0.9999999403953558, 1.0000002384185798);
+  const sourceScale = parent.scale.toArray(), target = rotate(1, -3, 2);
+  assert.throws(() => setJointWorldQuaternion(binding, 'middle-prox', target), /nonreflected similarity/);
+  setJointWorldQuaternion(binding, 'middle-prox', target, 1e-4);
+  assert.deepEqual(parent.scale.toArray(), sourceScale);
+  assert.ok(bones.get('middle-prox').getWorldQuaternion(new Quaternion()).normalize().angleTo(target) < 1e-5);
+  assert.throws(() => setJointWorldQuaternion(binding, 'middle-prox', target, 1e-3), /tolerance must be/);
+  parent.matrixAutoUpdate = false; parent.matrix.identity(); parent.matrix.elements[4] = 0.05;
+  parent.matrixWorldNeedsUpdate = true;
+  assert.throws(() => setJointWorldQuaternion(binding, 'middle-prox', target, 1e-4), /nonreflected similarity/);
+});

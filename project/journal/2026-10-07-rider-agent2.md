@@ -83,3 +83,9 @@ Finding: Combined01 assembles continuous wearer/head/buzz and all four garments 
 Validation: Parent reads the clean deform export recipe, verifies exact input receipts and actualGLB/static wardrobe transport; guarded assembly succeeds. First actual Garage played to naturalend, fullorbit reviewed.
 
 Limits: Baretoe, jaggedneckline, weakface/eyes visible; no moving garment/contact/art/device acceptance.
+
+Finding: Actual float32 exported parents have16.45ppm compounded near-similarity residual. Private quaternion solve explicitly bounds admission at1e-4, normalizes calculation copies and retains sourceTRS/inversebinds.
+
+Validation: Parent review and8targeted helper tests pass, including actual residual fixture, unchangedsource scales, defaultrejection and material shear/reflection rejection.
+
+Limits: Provisional bounded numerical approximation; no exact native/runtime deformation parity or anatomy/art acceptance.

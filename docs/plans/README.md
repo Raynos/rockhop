@@ -1051,3 +1051,5 @@ October7 assembledGarage sprint nativecheckpoint: coherent1.78m wearer/fullfinge
 October7 first clothed export checkpoint: all four garments and five-digit gloves share the same75joint FOUR skin; embedded texture transport independently checked [here](../evidence/rider-rebuild/wardrobe01/FINDING.md). Actual Garage reveals shoe coverage and jagged neckline failures; corrective construction pending, no player promotion.
 
 October7 assembled native checkpoint [Combined01](../evidence/rider-rebuild/construction01/combined01/README.md): continuous wearer/head/buzz and all four garments exported together; actual Garage played review exposes concrete footwear/collar/face defects. Appearance02 pending; bike reach and all production art/device gates remain open.
+
+October7 private intake [helper](../../harness/rider-rebuild/README.md) explicitly admits bounded16.45ppm float32 residual at1e-4 without mutating sourceTRS or inversebinds;8targeted tests pass. This approximation is provisional; exact native/runtime parity remains open.

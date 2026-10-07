@@ -159,20 +159,25 @@ export function resetHumanoidPose(binding) {
 }
 
 /** Convert through the ACTUAL immediate parent, including unmapped physics roles. */
-export function setJointWorldQuaternion(binding, id, worldQuaternion) {
+export function setJointWorldQuaternion(binding, id, worldQuaternion, similarityTolerance = 1e-5) {
   const bone = binding.byId.get(id); require(bone, 'Unknown driven joint');
+  require(Number.isFinite(similarityTolerance) && similarityTolerance >= 0 && similarityTolerance <= 1e-4, 'Explicit near-similarity tolerance must be <= 1e-4');
   require(worldQuaternion?.isQuaternion && Math.abs(worldQuaternion.lengthSq() - 1) < 1e-5, 'Unit target quaternion required');
   const parentQuaternion = new Quaternion();
   if (bone.parent) {
     bone.parent.updateWorldMatrix(true, false);
     const e = bone.parent.matrixWorld.elements, columns = [0, 4, 8].map(k => new Vector3(e[k], e[k + 1], e[k + 2]));
     const lengths = columns.map(column => column.length());
-    require(Math.min(...lengths) > 1e-12 && Math.max(...lengths) - Math.min(...lengths) < 1e-7
-      && columns.every((a, i) => columns.every((b, j) => i === j || Math.abs(a.dot(b)) < 1e-7))
-      && bone.parent.matrixWorld.determinant() > 0, 'Quaternion-only world solve needs a nonreflected similarity parent');
-    bone.parent.getWorldQuaternion(parentQuaternion);
+    // Blender/glTF float32 TRS can compound ~1e-6 uniform-scale residuals.
+    // This is a relative serialization tolerance, not acceptance of actual shear.
+    const scale = Math.max(...lengths);
+    require(Math.min(...lengths) > 1e-12 && (scale - Math.min(...lengths)) / scale < similarityTolerance
+      && columns.every((a, i) => columns.every((b, j) => i === j || Math.abs(a.dot(b)) / (lengths[i] * lengths[j]) < similarityTolerance))
+      && bone.parent.matrixWorld.determinant() > 0,
+    `Quaternion-only world solve needs a nonreflected similarity parent (${bone.name} under ${bone.parent.name}; scales ${lengths.join(',')})`);
+    bone.parent.getWorldQuaternion(parentQuaternion).normalize();
   }
-  bone.quaternion.copy(parentQuaternion.invert().multiply(worldQuaternion));
+  bone.quaternion.copy(parentQuaternion.invert().multiply(worldQuaternion)).normalize();
   bone.updateMatrix(); bone.updateWorldMatrix(false, true);
 }
 
