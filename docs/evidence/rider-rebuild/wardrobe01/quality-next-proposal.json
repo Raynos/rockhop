@@ -1,0 +1,66 @@
+{
+  "accepted": false,
+  "status": "read-only post-baseline proposal; no future helper authored",
+  "currentHelper": "assets/blender/rider-rebuild/wardrobe01/build-wardrobe03.py",
+  "currentHelperSHA256": "3f8599336daaeeabc7b9307b07bf3d40ccb3f35b6433ac719aaa774827320098",
+  "parentVisibleEvidence": "harness/out/rider-rebuild/ride-review02/frames/0030.png",
+  "diagnosedConstructionCause": "The hoodie torso is the exact muscular body chart plus 24mm normal offset and small sign-based ease. Parallel offsets preserve pectoral and abdominal concavities and even emphasize their ridges. Material detail cannot remove this inherited silhouette.",
+  "recommendedNextUnit": {
+    "scope": "one low-frequency enclosing torso cloth-shell candidate after the actual03/04 baseline verdict",
+    "construction": "Fit smooth enclosing torso cross-sections to the connected central body surface, excluding disconnected arms. Loft a single convex/oval chest and waist envelope. Deliberate waist/hem ease fills the abdominal and sternum concavities, instead of following each muscle.",
+    "preserve": [
+      "source body geometry and its native04 skin field",
+      "one shared actual skeleton and exporter contract",
+      "already conditioned collar, hem, wrist boundary loops and their FOUR fields",
+      "upper shoulder and armhole attachment charts",
+      "all shoe coverage02 geometry",
+      "exact source point ancestry and four-slot field records"
+    ],
+    "transition": "Blend the shell displacement smoothly into the pinned shoulder/armhole/neck/cuff boundaries across local source mesh rows. Keep the lower hem regular and give the torso modest fullness above its rib band.",
+    "drape": "Add only a few broad, shallow folds caused by hem gathering and arm reach. No pectoral, abdominal or random high-frequency sculpted folds.",
+    "pocket": "Reproject the kangaroo pocket onto the new cloth shell, with recognizable entry seams; its current body-front projection would become buried by fuller cloth.",
+    "shading": "Recompute geometric garment normals after the shell change. A small optional baked fabric normal map can supplement broad shape; do not import donor baked lighting as body shading.",
+    "budget": "One candidate, one native build and one matched whole-clothed played Garage/game review. No radius/normal/weight sweep. Retain prior boundary failures and actual03/04 verdict.",
+    "staticAdmission": "The shell must enclose the untouched body in rest with declared garment ease, preserve source chart connectivity and boundary loop fields, remain below the current provisional actor and texture allocations, and keep native/export transport checks meaningful.",
+    "movingAdmission": "Parent must play generic reach/crouch and actual forward/back bike motion. Judge a natural hoodie volume with no muscle tracing, skin pokes, jagged boundaries, shoulder collapse or pocket burial. Static enclosure is not an all-pose pass."
+  },
+  "salvagedSources": [
+    {
+      "kind": "cleaned original hoodie appearance donor",
+      "path": "assets/blender/hero-remaster/rider/finish-2026-10-05/wardrobe/data/prep02/hoodie/cleaned-donor.npz",
+      "sha256": "68fc86576812923e5e403119a7967a89aae97cd6e039638c25231ea62b75048f",
+      "vertices": 460752,
+      "triangles": 921568,
+      "use": "Shape and seam reference; exact dense source corner UV/normal authority if a later material bake is authorized. Do not skin the dense mesh."
+    },
+    {
+      "kind": "prepared hoodie prototype",
+      "path": "assets/blender/hero-remaster/rider/finish-2026-10-05/wardrobe/data/prep02/hoodie/retopology-prototype.npz",
+      "sha256": "1f837907cf9b4bfae435d831642451e0af94621a7486b726d78bdd45acda64c4",
+      "vertices": 9968,
+      "triangles": 20000,
+      "use": "Potential later complete garment source; requires new-body rest fitting, new coherent skin and source-corner UV bake. Existing prototype per-point UV is not the dense corner-UV authority. Geometry cost is feasible, but this is a larger fitting/transport unit than shell relaxation."
+    },
+    {
+      "kind": "previous selected compact24 appearance",
+      "path": "assets/blender/hero-remaster/rider/anatomical-foundation-2026-10-03/user-agent1/selected-hoodie24/compact-interior.npz",
+      "sha256": "1c5f02df905cc7d5d3a64a60cf97558f802d5bf563d6b9b44fe381ac4cd71e09",
+      "vertices": 12430,
+      "triangles": 24359,
+      "use": "Previous shape reference only. Its final geometry belongs to the retired body registration and cannot be substituted as a new-body garment or skin field."
+    }
+  ],
+  "donorMapAssessment": "The two 4096-square source maps are a packed garment atlas with baked folds/shadows and irregular islands. They cannot be applied directly to the new body's unrelated UV chart. Their decoded RGBA cost would be134,217,728bytes. Any later transfer needs explicit source-corner correspondence and a smaller new wardrobe atlas, rather than the old shader/UV field.",
+  "secondaryQualityUnits": [
+    "Jeans: smooth upper-seat/fly cloth volume and add deliberate thigh ease plus small knee drape; retain inseam/leg topology and actual joint fields. Body anatomical creases painted blue do not read as sewn denim.",
+    "Shoes: retain verified enclosing footprint, then add vamp/tongue, simple lacing and a restrained midsole/tread distinction. Profile tightening must retain actual toe enclosure and moving review.",
+    "Texture detail: keep authored PBR maps and current palette budgets. Broad cloth shape and recognizable seams take priority over fine noise invisible in the whole-rider view."
+  ],
+  "sourceEdits": false,
+  "blenderOrModelJobExecuted": false,
+  "limits": [
+    "Parent alone judges actual moving appearance.",
+    "Wardrobe03 and whole native04 remain frozen during this proposal.",
+    "No future helper04 leaf will be authored until parent authorizes this concrete post-baseline unit."
+  ]
+}

@@ -173,3 +173,9 @@ Finding: The first fully dressed generic action resets and keys all 75 joints th
 Validation: Parent reruns decoded verifier: 225 finite TRS tracks, 193 samples each, eight-second span, exact start/end component return. All 22 dressed mesh position/normal/joint/weight arrays equal frozen04; native return vertex error is zero.
 
 Limits: Transport/action checkpoint only. Actual Garage played movement, hand surface clearance and native/GPU moving deformation remain unaccepted.
+
+Finding: One structural loose-cloth candidate fills muscular chest/abdomen concavities using connected source sections and interpolated bone roles. It preserves body/rig/FOUR fields and existing boundary support while shortening cuff and shoe profiles.
+
+Validation: Parent reviews source and compiles both Python recipes. Static anatomical preflight excludes joined biceps from upper torso sections and retains central surface points. No Blender execution or moving acceptance is claimed by this checkpoint.
+
+Limits: New native assembly, enclosed foot clearance and actual played drape remain pending. One candidate only before the parent judges actual engine motion.
