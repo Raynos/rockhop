@@ -1149,3 +1149,5 @@ October 7 actual glove exterior fit rejects before deformation: authoritative pi
 October 7 five actual 75-joint solver states are captured without source/rest/physics changes for real-source numerical review. Sampled grip/sole residuals are 3.456/4.403mm; this is not final donor surface contact, new-rig calibration or played acceptance.
 
 October 7 active rider plan now explicitly prioritizes observed actual-source fit defects, hand anatomy registration and coherent compact UV/dense detail reconstruction. Source preservation is distinct from wearable fit and played appearance; all R0–R5 gates remain open.
+
+October 7 progress-photo ask330 is filed in the canonical four-column ledger with the actual-source evidence link and explicit unfinished-fit limits.

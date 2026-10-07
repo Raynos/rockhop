@@ -512,4 +512,4 @@ Status: **open** (nobody on it) · **in flight** (owner named) · **needs pick**
 
 | 329 | Do it properly using the correct high-resolution assets and all useful existing work, or stop; never temporary or throwaway substitutions. | **in flight — mandatory construction rule, 2026-10-07** | Generic/coarse appearance preview stopped. Actual donor geometry/PBR, proper anatomical face join, semantic garment/digit rigging and played fully dressed engine evidence are required; deadline does not excuse stand-ins or false delivery. |
 
-| 330 | 2026-10-07 | Send progress photos of actual selected rider work | Done — fresh actual-source front/profile photos sent; severe denim/boot fit failures disclosed; glove unfinished, complete outfit not delivered | rider agent #2 |
+| 330 | Send progress photos of actual selected rider work. | **done — actual-source front/profile photos, 2026-10-07** | [Source progress and fit defects](../evidence/rider-rebuild/construction02/selected-progress01/FINDING.md); actual selected face/hair, hoodie, denim and boots shown. Severe fit failures disclosed, gloves unfinished; no complete outfit or Garage delivery claimed. |
