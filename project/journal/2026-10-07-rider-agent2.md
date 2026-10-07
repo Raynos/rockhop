@@ -233,3 +233,9 @@ Finding: Actual selected donor intake requires the declared seven-object source 
 Validation: Garage harness syntax passes; eight binding tests and eleven actual private-rider/anthropometry tests pass. Read-only intake audit identifies actual boot sole calibration and complete glove inclusion as remaining native responsibilities.
 
 Limits: Actual selected-source Garage capture has not run. Texture resolution/device cost and moving appearance remain open.
+
+Finding: The actual selected hoodie and denim assemble on the shared75 wearer with original garment chart ownership and PBR preserved. This internal source unit deliberately remains unseen until the actual face, boots and gloves are present.
+
+Validation: Guarded native assembly returns0 in7.479 seconds. Parent reruns decoded validation: body source IDs, positions, normals, joints, weights and triangles exactly equal frozen04; all71 deformation and two palm rest bones unchanged. Hoodie12430 vertices/24359 triangles retains source UV/polygon cycles; jeans7978 vertices/16000 triangles has0outside UV corners.
+
+Limits: Two sole sockets temporarily retain bare source locations because this internal clothing-only unit contains no soles; final boot calibration must restore actual outsole anchors. No moving garment or assembled appearance acceptance.
