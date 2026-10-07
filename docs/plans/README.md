@@ -1000,3 +1000,5 @@ Execution50 exact saved51 native capture and parent readback pass: body/head XYZ
 Pause preservation retains eight source/trial NPZ archives and dormant shoulder preparation unchanged; current candidate remains native49/capture50.
 
 Pause preservation retains historical body02/body05 diagnosis and UniMate pilot traces separately from current native49/capture50.
+
+October7 successor agent #2 (ask312) begins five-day audit from native49/capture50 and the handoff. No new experiment or acceptance; independent history and rig intake reviewers use new audit leaves. Predecessor pause artifacts and foreign index/worktree changes remain owned separately.
