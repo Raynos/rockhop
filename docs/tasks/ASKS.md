@@ -511,3 +511,5 @@ Status: **open** (nobody on it) · **in flight** (owner named) · **needs pick**
 | 328 | The screenshot is not using our brand-new high-resolution hoodie, jeans, gloves, face and boots. Integrate those actual assets. | **in flight — actual source integration, 2026-10-07** | Preserve selected painted donor geometry/PBR and liked face/hair. Keep useful shared75 rig and private engine, replace generic head and coarse clothing, then judge fully assembled actual Garage/game. |
 
 | 329 | Do it properly using the correct high-resolution assets and all useful existing work, or stop; never temporary or throwaway substitutions. | **in flight — mandatory construction rule, 2026-10-07** | Generic/coarse appearance preview stopped. Actual donor geometry/PBR, proper anatomical face join, semantic garment/digit rigging and played fully dressed engine evidence are required; deadline does not excuse stand-ins or false delivery. |
+
+| 330 | 2026-10-07 | Send progress photos of actual selected rider work | In flight — render genuine selected face/hair, hoodie, denim and boots; label unfinished glove clearly; no substitute asset or completion claim | rider agent #2 |
