@@ -27,3 +27,14 @@ See [selection and exact source pins](featured-videos.json). Four copies match t
 is a smaller H.264 web copy with the same 926 frames and dimensions.
 The original download remains unchanged; controls require a deliberate play.
 The first-principles successor rebuild is separate from this historical Site.
+
+The primary review is now the [6-second matched Garage before/now video](garage-before-now.mp4).
+Left: frozen October 4 normal-player build; right: October 7 local main. Both
+were replayed October 7. Every one of the 72 rider-region frame pairs is
+pixel-identical, cameras/stage times match, and both actually load the same
+mustard rider bytes. Source/public assets are unchanged across the requested
+48-hour window too. **No integrated new rider reached the normal game.**
+The first five historical clips remain available below the main comparison.
+See [capture/source proof](garage-comparison.json) and
+[headless recipe](capture-garage-comparison.mjs). No bone/skin pose override;
+the harness clocks the normal Garage idle animation. Crops/titles only.

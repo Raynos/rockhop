@@ -58,3 +58,18 @@ new hash is pinned; four other copies and 84 photos stay source-exact.
 
 Limits: The web copy is lossy. Failed publication is retained; the
 original and earlier source commit stay unchanged. No rider promotion.
+
+Finding: Answer ask325 with a single matched normal-game Garage film.
+October 4 frozen normal-player build versus October 7 main still uses the
+old integrated rider; no new remaster integration exists in this comparison.
+Make that six-second movie primary; collapse the historical five clips.
+
+Validation: Both loaders consume the exact same mustard rider hash;
+72/72 camera/time pairs match and all 72 rider-region pixel pairs are
+identical. Source/public files have zero changes since the October 5
+48-hour baseline and the October 4 build. Both captures have zero errors
+and AudioContexts. The six-second 72-frame movie played muted to end.
+
+Limits: Baseline build replayed today, not a video recorded October 4.
+Current side is local main, not a claim about a fresh live game deploy.
+Crops/titles are presentation only; no new rig, pose or accepted art.
