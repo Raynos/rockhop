@@ -901,3 +901,11 @@ error4.625616761e-7m. See savedpose-capture01/parent-readback50.json.
 Limits: Capture is unaccepted. Full contacts51, mandatory ordinary gate51,
 played anatomy/normals, clothes, actual engine and devices remain open.
 User asks310 pauses at this checkpoint; no experiment51 launched.
+
+## October7: pause preservation arrays
+
+Finding: Pause preservation retains eight source/trial NPZ archives and dormant shoulder preparation unchanged; current candidate remains native49/capture50.
+
+Validation: Eight NPZ archives pass ZIP CRC checks; all source bytes rehashed; superseded shoulder recipe syntax and declared hash match. No trial ran.
+
+Limits: Source archives are experimental; whole contacts51, played review and allF/Mgates remain open.
