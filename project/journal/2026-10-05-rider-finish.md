@@ -925,3 +925,11 @@ Finding: Pause preservation retains344existing body05 grounded-front PBR source 
 Validation: All344 sequential PNGs have the recorded dimensions; movie hash and344decoded-frame receipt match. No render or new art judgment.
 
 Limits: Source-frame preservation accepts no appearance, support or new rider candidate.
+
+## October7: prepared hip succession
+
+Finding: Pause handoff preserves a static hip/underwear proposal: hip773 is unchanged; knee witnesses outside that mask stay separate. Explicit boxer triangulation control and later geometry fixes remain unadmitted; contacts51 and played review first.
+
+Validation: Eight source pins rehash; hip773 maps directly, disjoint shoulder438, raw FULL/FOUR body06-exact. Current contacts and played review pending.
+
+Limits: Prepared only. No execution admission, candidate authoring, contact, moving-art, clothes, engine or device acceptance. All six gates open.

@@ -1004,3 +1004,5 @@ Pause preservation retains historical body02/body05 diagnosis and UniMate pilot 
 October7 successor agent #2 (ask312) begins five-day audit from native49/capture50 and the handoff. No new experiment or acceptance; independent history and rig intake reviewers use new audit leaves. Predecessor pause artifacts and foreign index/worktree changes remain owned separately.
 
 Pause preservation retains344existing body05 grounded-front PBR source frames,122851985bytes; film and PNG headers/pins match. Current candidate remains unaccepted.
+
+Pause handoff preserves a static hip/underwear proposal: hip773 is unchanged; knee witnesses outside that mask stay separate. Explicit boxer triangulation control and later geometry fixes remain unadmitted; contacts51 and played review first.
