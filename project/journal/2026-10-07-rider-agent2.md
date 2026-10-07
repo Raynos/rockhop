@@ -89,3 +89,9 @@ Finding: Actual float32 exported parents have16.45ppm compounded near-similarity
 Validation: Parent review and8targeted helper tests pass, including actual residual fixture, unchangedsource scales, defaultrejection and material shear/reflection rejection.
 
 Limits: Provisional bounded numerical approximation; no exact native/runtime deformation parity or anatomy/art acceptance.
+
+Finding: Private actual-engine adapter consumes complete new75joint wearer and all four garments in existingGarage/game without replacing player assets. Original fullhierarchy control checkpoint preserves explicit failed bar reach before newanthropometric correction.
+
+Validation: Parent helper8tests and actualassembly6tests pass; actualWebKit low/high4810tick clear/hash/finishbytes match, crash103/restart0ticks3–5ms; rootplayed fullGarage orbit with26visibleprimitives.
+
+Limits: Gripreach fails28–116mm underoldprofile; anatomy/anthropometric correction and shoe/collar/face appearance02 pending. No art/contact/device acceptance.

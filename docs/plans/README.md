@@ -1053,3 +1053,5 @@ October7 first clothed export checkpoint: all four garments and five-digit glove
 October7 assembled native checkpoint [Combined01](../evidence/rider-rebuild/construction01/combined01/README.md): continuous wearer/head/buzz and all four garments exported together; actual Garage played review exposes concrete footwear/collar/face defects. Appearance02 pending; bike reach and all production art/device gates remain open.
 
 October7 private intake [helper](../../harness/rider-rebuild/README.md) explicitly admits bounded16.45ppm float32 residual at1e-4 without mutating sourceTRS or inversebinds;8targeted tests pass. This approximation is provisional; exact native/runtime parity remains open.
+
+October7 first [actual-engine intake](../evidence/rider-rebuild/runtime01/README.md) builds complete dressed candidate into existingGarage/game privately. Six actualassembly tests and low/high clear/crash/instantrestart pass with byte-identical physics finish; playedGarage reveals appearance corrections. Current ride barreach fails; newbody anthropometrics and jointfit correction pending.
