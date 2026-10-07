@@ -1145,3 +1145,5 @@ October 7 selected-glove global exterior-fit source preserves original contour, 
 October 7 selected seven-part engine gate source independently checks native/decoded source identity and exact 75-joint calibration preservation. Twelve real-reference and receipt regressions pass, including all 10582 native fields; final actual intake and parent played art remain open. Any anatomical rig/socket change requires explicit fresh calibration.
 
 October 7 actual glove exterior fit rejects before deformation: authoritative pinky base and 0–40% proximal stations lie outside the actual hand by 0.954–1.884mm. Independent parent occupancy confirms real-surface witnesses; full anatomical branch/rig audit precedes another fit and any changed rest needs fresh calibration.
+
+October 7 five actual 75-joint solver states are captured without source/rest/physics changes for real-source numerical review. Sampled grip/sole residuals are 3.456/4.403mm; this is not final donor surface contact, new-rig calibration or played acceptance.
