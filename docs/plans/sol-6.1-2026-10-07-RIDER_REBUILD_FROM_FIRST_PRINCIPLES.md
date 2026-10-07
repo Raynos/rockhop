@@ -353,3 +353,39 @@ texture derivatives and source-document sharing must be measured against the
 96MiB renderer budget and judged in motion; silently admitting779MiB of maps is
 not a mobile qualification. The next user-visible result remains the complete
 selected outfit, played to the end in the actual Garage and game.
+
+
+## October 7 actual-source progress exposes construction defects
+
+Ask330 progress photos deliberately show actual selected face/hair, hoodie,
+denim and boots, with unfinished gloves and bare hands labeled. They are
+supplemental construction evidence, not played-art acceptance. Source checks
+preserved the assets but did not establish wearable fit. Large denim/leg
+intersections, boot/foot exposure and an axilla gap prohibit Garage delivery.
+See [actual-source progress finding](../evidence/rider-rebuild/construction02/selected-progress01/FINDING.md).
+
+Repair the genuine source exterior with explicit pelvis/leg and yawed-foot
+charts, shared source topology, real garment apertures and controlled global
+shape-preserving deformation against the complete coherent body as an obstacle.
+Discard sliding-window leg medians and total bounding-box-only shoe fitting.
+Do not hide the body or replace the selected garment exterior with offsets.
+Actual shoe sole geometry may require new socket calibration; preserve old
+masters and derive explicit new rig/engine receipts rather than forcing old pins.
+
+The admitted glove fit stops before deformation: the authoritative pinky base
+and early proximal stations are outside the actual skin. Independent occupancy
+confirms 0.954–1.884mm exterior stations; anatomical mesh branches and true
+finger centres must be audited separately from current field labels and names.
+Correct any necessary hand joint/roll registration in an intended-final rig
+with explicit rest and field lineage. Source isolated-finger sections correspond
+to actual distal/web branch surfaces, not automatically to the MCP plane.
+No expanded root trial or relaxed containment substitutes for that audit.
+
+Independent denim appearance inspection also finds compact triangles mixing
+unrelated original UV islands; in-range barycentric coordinates were insufficient.
+Original dense artwork must be transferred deliberately to a coherent compact
+UV layout with dense albedo, roughness, metallic and geometric-normal baking.
+Keep original4K maps and high-resolution source meshes intact; final4K derivative
+maps retain measured original appearance. Validate texture reconstruction and
+seam continuity, not only UV bounds. Shape fit and appearance reconstruction
+have separate gates. All R0–R5 remain open.
