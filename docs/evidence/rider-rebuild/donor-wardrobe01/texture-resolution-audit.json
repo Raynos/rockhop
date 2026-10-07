@@ -1,0 +1,88 @@
+{
+  "status": "READ_ONLY_SOURCE_TEXTURE_RESOLUTION_AND_ESTIMATED_GPU_COST",
+  "utc": "2026-10-07T22:20:24.230424+00:00",
+  "pins": [
+    {
+      "path": "src/render/hero/gltf.ts",
+      "sha256": "6de5285f505d5e09d5bd8eaf4506f62db44f42c931ed507e3c17367256e79fdf"
+    },
+    {
+      "path": "src/render/index.ts",
+      "sha256": "f876e45b0afaa45856b837a8fdb2e534d93e126a7e64a6be2824e9a2ffa1fd21"
+    },
+    {
+      "path": "harness/rider-rebuild/private-engine-plugin.mjs",
+      "sha256": "47d417195753db65d16b40fe8641fcd8c67be603407912a608c85041ed833947"
+    },
+    {
+      "path": "harness/rider-rebuild/build-private-engine.mjs",
+      "sha256": "f3be374024bf5abc8dc8679a3adb5b8a42da56ed2225c020427a1e7adaa7f4af"
+    },
+    {
+      "path": "assets/blender/rider-rebuild/donor-hand-foot01/build-selected-glove.py",
+      "sha256": "3c67ed274a934ec6fbf46fbe48d8dc6a57ad94db0169b581f765be4ec2fccf62"
+    }
+  ],
+  "loaderLocation": "src/render/hero/gltf.ts:53; shrinkTextures happens before prepareHero and before selected metadata resolves.",
+  "capPolicy": {
+    "albedoMax": 1024,
+    "dataMax": 512,
+    "appliesTo": "Every loaded GLB, every quality tier, Garage included; skinned albedo minimum1024 does not preserve4096 detail.",
+    "sampling": "Canvas high-quality image smoothing; source UVs unchanged, source pixel detail discarded."
+  },
+  "expectedFinalSelectedTextureInventory": [
+    {
+      "role": "hoodie base+MR",
+      "count": 2,
+      "sourceDimension": 4096,
+      "baseRGBA8MiB": 128.0,
+      "withFullMipsMiB": 170.66666666666666
+    },
+    {
+      "role": "jeans base+MR",
+      "count": 2,
+      "sourceDimension": 4096,
+      "baseRGBA8MiB": 128.0,
+      "withFullMipsMiB": 170.66666666666666
+    },
+    {
+      "role": "boots base+MR",
+      "count": 2,
+      "sourceDimension": 4096,
+      "baseRGBA8MiB": 128.0,
+      "withFullMipsMiB": 170.66666666666666
+    },
+    {
+      "role": "gloves baked base+MR+normal",
+      "count": 3,
+      "sourceDimension": 4096,
+      "baseRGBA8MiB": 192.0,
+      "withFullMipsMiB": 256.0
+    },
+    {
+      "role": "original face two source albedos",
+      "count": 2,
+      "sourceDimension": 1024,
+      "baseRGBA8MiB": 8.0,
+      "withFullMipsMiB": 10.666666666666666
+    }
+  ],
+  "inventoryLimit": "Counts reflect pinned garment source maps and current glove bake source plus exact face carrier material image references. Verify actual native/export images before treating this as measured GPU use. Native hoodie image graph is retained; its exported dimensions must be confirmed.",
+  "expectedOneRiderFullSourceRGBA8MiB": 584.0,
+  "expectedOneRiderFullSourceWithMipsMiB": 778.6666666666666,
+  "oldCapExpectedOneRiderWithMipsMiB": 38.666666666666664,
+  "requiredPrivateHook": "In the existing private Vite gltf.ts transform, conditionally bypass the exact shrinkTextures(g.scene) call only for the declared selected-source rider inventory. Preserve ordinary bike and player loader policy. Do not downsample first and try to restore images later. Record loaded dimensions and source SHA.",
+  "costMeasurement": "debugInfo().texturesMB calls estimateTextureMB across scene and every heroPool root, deduplicating actual Texture objects and using image width/height/type/mipmap flag. Estimate counts RGBA8 as4bytes/pixel and1.333 mip factor. imported source textures have no deliveredBytes override. Measure before and after source rider load.",
+  "duplicateSourceURLs": {
+    "finding": "build-private-engine maps every models/rider*.glb URL to the same candidate bytes. loadGltf cache uses resolved URL, so separate outfit URLs can allocate separate Texture objects for identical source images.",
+    "requiredHandling": "Canonicalize these private selected-rider aliases to one source URL before load-cache lookup, or explicitly measure and report loaded copy count; material clones already share textures within one loaded document."
+  },
+  "releaseLimit": "No device qualification or production promotion follows from preserving4K source images. An explicitly authored and measured device texture derivative may be needed; do not silently classify it as full source detail.",
+  "noCodeEdits": true,
+  "parentResolution": {
+    "decision": "Keep original4096 source maps and PBR in native masters/export; retain the existing explicit1024/512 renderer derivatives for first actual engine review. No source-resolution bypass is authorized.",
+    "reason": "Actual render budget is96MiB and mobile qualification remains mandatory. User rejection concerned replacement geometry, UVs and assets; it did not demand an exact4K framebuffer.",
+    "approvedChange": "Deduplicate the declared identical rider model aliases into one parsed document and map set; do not change bike loading or texture caps.",
+    "measurementsRemaining": "Actual exported image inventory, runtime unique Texture dimensions/types/mips, whole-scene texturesMB and real device behavior."
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "status": "PRIVATE_SELECTED_SOURCE_URL_ALIAS_IMPLEMENTED_TESTED_UNACCEPTED_ENGINE_INTAKE",
+  "utc": "2026-10-07T22:23:04.767464+00:00",
+  "pins": [
+    {
+      "path": "harness/rider-rebuild/private-engine-plugin.mjs",
+      "sha256": "b4a0d4756225ba621ae12ac566128ca8f2d94b1cd9e7274f49a577b3d8c5fbee"
+    },
+    {
+      "path": "harness/rider-rebuild/private-source-alias.test.mjs",
+      "sha256": "03cb6bdce4122c63df4cd5fb231f3519b29bd7d700ff1970df2322af427390b8"
+    }
+  ],
+  "contract": "metadata.selectedRiderSource declares exact modelSlots, canonicalLogical and the same sourceSHA256 as metadata.sourceSHA256.",
+  "behavior": "The private Vite loader transform maps only these logical slots to the canonical slot before immutable URL resolution and before the existing GLTF cache. Bikes and undeclared rider names retain their normal URLs. No source material, texture cap, animation or skin changes.",
+  "tests": {
+    "command": "node --test harness/rider-rebuild/private-source-alias.test.mjs",
+    "passed": 2,
+    "failed": 0,
+    "observed": [
+      "Ten declared full/LOD/outfit rider slots share one Promise, one parsed document and the identical Texture object.",
+      "Bike full/LOD loads remain distinct from each other and from the rider.",
+      "Unknown rider names remain unchanged.",
+      "Duplicate slots, bike declarations, undeclared canonical paths and mismatching source hashes fail.",
+      "A changed loader-resolution marker fails closed.",
+      "Existing texture shrinking policy remains in the transformed loader."
+    ]
+  },
+  "remaining": [
+    "Parent wires the exact source model slots into build-private-engine runtime metadata.",
+    "Actual private cold boot, Garage appearance and unique GPU texture count remain to be measured on the assembled donor GLB.",
+    "Alias cache reduces repeated loads; output catalogs still list the exact logical slots and their byte snapshots."
+  ],
+  "regressionTests": {
+    "command": "node --import tsx --test harness/rider-rebuild/private-rider.test.mjs harness/rider-rebuild/private-source-alias.test.mjs",
+    "passed": 11,
+    "failed": 0,
+    "skipped": 0,
+    "scope": "Existing available assembly fixture plus alias tests; not qualification of the upcoming selected donor GLB."
+  }
+}

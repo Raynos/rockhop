@@ -19,6 +19,10 @@ if (calibration) {
   if (calibration.sourceSHA256 !== sha(sourceBytes)) throw new Error('Pose calibration source changed');
   Object.assign(metadata.driver, calibration.driver);
 }
+const mapping = Object.fromEntries(fs.readdirSync(path.join(root, 'public/models')).filter(name => /^rider.*\.glb$/.test(name)).map(name => [`models/${name}`, source]));
+if (!Object.keys(mapping).length) throw new Error('No actual rider model slots');
+const canonicalLogical = 'models/rider-street-mustard.glb';
+if (!Object.hasOwn(mapping, canonicalLogical)) throw new Error('Missing canonical selected rider model slot');
 // Runtime mass calibration consumes five native head/tail correspondences only.
 // Full 75-joint names/roles/parents remain captured and checked on the loaded rig;
 // do not ship unused native 4x4 matrices inside private player JavaScript.
@@ -30,6 +34,7 @@ const endpointIds = [first(metadata.specification.roles.head), ...['left', 'righ
 })];
 const endpointNames = new Set(endpointIds.map(id => metadata.specification.jointNames[id]));
 const runtimeMetadata = { sourceSHA256: metadata.sourceSHA256, metadataSHA256: metadata.metadataSHA256,
+  selectedRiderSource: { modelSlots: Object.keys(mapping), canonicalLogical, sourceSHA256: metadata.sourceSHA256 },
   specification: metadata.specification, driver: metadata.driver,
   nativeRest: { frame: metadata.nativeRest.frame, bones: metadata.nativeRest.bones.filter(row => endpointNames.has(row.name))
     .map(({ name, head, tail }) => ({ name, head, tail })) } };
@@ -49,8 +54,6 @@ for (const [before, after] of replacements) {
   generated = generated.replace(before, after);
 }
 fs.mkdirSync(out, { recursive: true });
-const mapping = Object.fromEntries(fs.readdirSync(path.join(root, 'public/models')).filter(name => /^rider.*\.glb$/.test(name)).map(name => [`models/${name}`, source]));
-if (!Object.keys(mapping).length) throw new Error('No actual rider model slots');
 const driverPath = path.join(out, '.private-build-driver.mts'), mappingPath = path.join(out, '.private-models.json');
 fs.writeFileSync(driverPath, generated); fs.writeFileSync(mappingPath, JSON.stringify(mapping, null, 2));
 fs.writeFileSync(path.join(out, 'rider-rebuild-inputs.json'), JSON.stringify({

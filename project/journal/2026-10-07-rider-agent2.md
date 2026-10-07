@@ -251,3 +251,9 @@ Finding: Actual selected face construction creates one welded closed wearer whil
 Validation: Guarded native returns0 in2.485 seconds:41775 vertices/83606 triangles, one component,0boundary/0nonmanifold/0winding errors,66364 protected source triangles with0position/UV/corner-normal change. Raw PNG median190/129/94 matches Blender byte channels; source explicitly converts to linear0.5149177/0.2195262/0.1119324.
 
 Limits: Native02 master precedes material-constant correction; final assembly will apply it. Moving sculpture, tangent shading and outfit intersections remain unaccepted.
+
+Finding: Ten private outfit/LOD slots containing identical selected rider bytes should share the existing parsed GLTF document and its texture objects. Canonicalize only explicitly pinned rider logical paths before URL resolution and cache lookup.
+
+Validation: Parent reruns eleven private driver/alias tests, all pass; exact ten paths share one document/map identity, bikes and undeclared paths remain distinct, invalid SHA/slots fail. Builder syntax passes with matching source declaration.
+
+Limits: Actual cold boot and GPU memory readback remain pending. Original4096 source maps are retained while the existing1024/512 renderer derivatives remain deliberate under the96MiB texture budget; no full4K779MiB admission or art acceptance.

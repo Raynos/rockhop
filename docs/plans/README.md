@@ -1111,3 +1111,5 @@ October 7 actual selected hoodie/denim native unit passes guarded assembly and i
 October 7 actual glove reconstruction01 stops on measured hand-volume fidelity before bake in1.480seconds; no glove output or fallback. Exact failing station witnesses require diagnostic readback before a structural correction. Full selected-source outfit remains unfinished.
 
 October 7 actual face native02 forms one closed welded wearer with unchanged protected source face/UV/corner normals. Independent PNG readback corrects the exposed-neck material constant from encoded sRGB to linear. Moving anatomy/shading and complete outfit remain unaccepted.
+
+October 7 identical selected private rider slots share one parsed source document and texture objects; exact source/slot validation and eleven regression tests pass. Original maps remain intact; deliberate renderer texture derivatives/device96MiB budget still require actual readback and played appearance.
