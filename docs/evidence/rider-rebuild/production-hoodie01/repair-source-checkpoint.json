@@ -1,0 +1,57 @@
+{
+  "accepted": false,
+  "stage": "UNEXECUTED_DIRECT_REGIONAL_QUAD_REPAIR",
+  "ASTParsed": true,
+  "source": {
+    "path": "assets/blender/rider-rebuild/production-hoodie01/repair_axilla.py",
+    "sha256": "48fe9bd0b6e72e5ad8484f5b9a7ba50f75538cf402b6d3a314065fc03d92c2a5"
+  },
+  "frozenBase": {
+    "path": "assets/blender/rider-rebuild/production-hoodie01/author.py",
+    "sha256": "078da52b40e1f5049759314c1794ba6559ac1dae90d79294672c674f2095d14a"
+  },
+  "controls": {
+    "path": "assets/blender/rider-rebuild/production-hoodie01/inputs.json",
+    "sha256": "ae90f988b1a3b5f020d540cddd677a8a6286e6e2e3e7afb08733b5b7470aff28"
+  },
+  "source25TopologyChecked": {
+    "accepted": false,
+    "scope": "Cheap read-only original selected topology check; no Blender run",
+    "archive": {
+      "path": "assets/blender/hero-remaster/rider/anatomical-foundation-2026-10-03/user-agent1/selected-hoodie24/compact-interior.npz",
+      "sha256": "1c5f02df905cc7d5d3a64a60cf97558f802d5bf563d6b9b44fe381ac4cd71e09"
+    },
+    "source25IdentityReceipt": {
+      "path": "assets/blender/hero-remaster/rider/anatomical-foundation-2026-10-03/user-agent1/selected-hoodie25/report.json",
+      "sha256": "91566921c84c84be0d3817f53ab499c7142acaa9b292b5f0326bf31c633e6c1b"
+    },
+    "vertices": 12430,
+    "triangles": 24359,
+    "edgeIncidenceCounts": {
+      "2": 36249,
+      "1": 579
+    },
+    "boundaryDegreeCounts": {
+      "2": 579
+    },
+    "finding": "Original selected triangle topology has only incidence-2 interior edges and incidence-1 boundaries; all 579 boundary vertices have degree 2. Every source vertex link is one closed cycle or one boundary path. The right branching cut is introduced by selected face fans/touching cut cycles, rather than pre-existing nonmanifold source topology. Generated tears remain regular source boundary loops.",
+    "limits": [
+      "No exact original polygon cut has been re-executed by this cheap check.",
+      "No new mesh, fit, garment map or artwork result."
+    ],
+    "sourceVertexLinkFailures": [],
+    "vertexLinksChecked": 12430,
+    "sourceVertexLinkNonManifoldCount": 0
+  },
+  "currentRepairExecuted": false,
+  "cutSelectionChanges": true,
+  "change": "Expand only local pinched source face fans before removal; directly construct welded perimeter Coons quad grids instead of any fill-grid operator/selection trial",
+  "grossProportionalFitControlsChanged": false,
+  "originalMastersChanged": false,
+  "priorFitsAndFailuresChanged": false,
+  "limits": [
+    "One intended regional shape/topology repair, parent review/checkpoint and serial lease required.",
+    "New cut extent and patch shape are unmeasured until actual execution and art review.",
+    "No bake, full outfit or acceptance claim."
+  ]
+}

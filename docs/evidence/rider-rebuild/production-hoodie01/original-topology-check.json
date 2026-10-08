@@ -1,0 +1,29 @@
+{
+  "accepted": false,
+  "scope": "Cheap read-only original selected topology check; no Blender run",
+  "archive": {
+    "path": "assets/blender/hero-remaster/rider/anatomical-foundation-2026-10-03/user-agent1/selected-hoodie24/compact-interior.npz",
+    "sha256": "1c5f02df905cc7d5d3a64a60cf97558f802d5bf563d6b9b44fe381ac4cd71e09"
+  },
+  "source25IdentityReceipt": {
+    "path": "assets/blender/hero-remaster/rider/anatomical-foundation-2026-10-03/user-agent1/selected-hoodie25/report.json",
+    "sha256": "91566921c84c84be0d3817f53ab499c7142acaa9b292b5f0326bf31c633e6c1b"
+  },
+  "vertices": 12430,
+  "triangles": 24359,
+  "edgeIncidenceCounts": {
+    "2": 36249,
+    "1": 579
+  },
+  "boundaryDegreeCounts": {
+    "2": 579
+  },
+  "finding": "Original selected triangle topology has only incidence-2 interior edges and incidence-1 boundaries; all 579 boundary vertices have degree 2. Every source vertex link is one closed cycle or one boundary path. The right branching cut is introduced by selected face fans/touching cut cycles, rather than pre-existing nonmanifold source topology. Generated tears remain regular source boundary loops.",
+  "limits": [
+    "No exact original polygon cut has been re-executed by this cheap check.",
+    "No new mesh, fit, garment map or artwork result."
+  ],
+  "sourceVertexLinkFailures": [],
+  "vertexLinksChecked": 12430,
+  "sourceVertexLinkNonManifoldCount": 0
+}

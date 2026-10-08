@@ -1295,3 +1295,5 @@ October 7 hoodie author03: exact live left boundary selection now creates324+289
 October 7 direct selected boot sculpt source checkpoint: retain all original dense forefoot vertices/faces/corner UV/4K PBR and useful selected rear; local medial toe Grab, ball width and dorsal lift with coherent L/R transform. Parent source/AST/eight pins checked; no third lattice, run unexecuted and all art gates open.
 
 October 7 actual bilateral selected-glove map checkpoint: corrected bake exit0 in19.736s, both hands save original selected dense/PBR transfer and new native. Parent native/six map hashes match. 1024 review derivative only; appearance, seams, grip and final4K master remain unaccepted.
+
+October 7 hoodie direct regional source checkpoint: regular original vertex fans show branching is introduced by the cut. Expand pinched local cut fans and directly author welded Coons quad grids; no fill operator retry. Parent full source/AST/frozen hashes checked. Gross fit unchanged, local topology changes unexecuted and unaccepted.

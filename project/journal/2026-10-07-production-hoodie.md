@@ -39,3 +39,9 @@ Finding: Explicit live selection creates613 actual left quads; right regional cu
 Validation: Parent read actual worker and diagnostics; author03 exit1 in1.892s, fitted native preserved.
 
 Limits: Successful left patch not separately saved; final rigged hoodie absent, no bake or moving art acceptance.
+
+Finding: Regional cut face sectors create touching boundaries. Expand pinched fans locally and author welded perimeter quad grids directly, retaining selected source around the patch.
+
+Validation: Parent read full repair wrapper, parsed AST and matched frozen base/repair hashes. Retained original topology diagnostic finds all12430 vertex links regular; generated tears are regular loops.
+
+Limits: Local cut selection changes explicitly, gross fit unchanged. Source-only; direct patch shape, selected material transfer and moving art unaccepted.
