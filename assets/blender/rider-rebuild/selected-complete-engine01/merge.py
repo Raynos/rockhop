@@ -161,9 +161,16 @@ def main():
     assert len(args) == 2
     manifest_path, out = (Path(value).resolve() for value in args)
     manifest = json.loads(manifest_path.read_text())
-    assert manifest['accepted'] is False and not out.exists()
+    assert manifest['accepted'] is False and manifest.get('ready') is True and not out.exists()
+    targets = [name for unit in manifest['units'] for name in unit['objects'].values()]
+    assert len(targets) == len(set(targets)) and set(targets) == EXPECTED-{'RiderBody', 'RiderHoodie'}
     assert out.is_relative_to(ROOT/'harness/out/rider-rebuild/selected-complete-engine01')
     for row in pins(manifest): pin(row)
+    for unit in manifest['units']:
+        if 'contextUnit' in unit:
+            actual = json.loads(pin(unit['contextUnit']).read_text())
+            assert actual['native'] == unit['native'] and set(actual['visible']) == set(unit['objects'])
+            assert actual['expectedPBRHashes'] == unit['expectedPBRHashes']
     assembly = runpy.run_path(str(pin(manifest['assemblyHelper'])))
     shape = runpy.run_path(str(pin(manifest['shapeHelper'])))
     signature = runpy.run_path(str(pin(manifest['bodySignatureHelper'])))['signature']

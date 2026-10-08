@@ -1,0 +1,87 @@
+{
+  "accepted": false,
+  "ready": true,
+  "status": "READY_FOR_PARENT_CPU2_COMPLETE_SELECTED_NATIVE75_BIND_CHECKPOINT",
+  "native": {
+    "path": "harness/out/rider-rebuild/shoulder-cage05/authored02/selected-cage-outfit.blend",
+    "sha256": "9920401b64e03c7c65f468a8f1acaec16bc4531b52b796a57480173273de0caf"
+  },
+  "canonical": {
+    "path": "harness/out/rider-rebuild/native-hand-repair01/native02/anatomical-hand-rig.blend",
+    "sha256": "42fca617ea8d246a6c3e3ca68a90cd3cb5f3ce8b9bb78130e0e2bbd65f605fac"
+  },
+  "bodyVertices": 38959,
+  "assemblyHelper": {
+    "path": "assets/blender/rider-rebuild/production-authoring01/assemble.py",
+    "sha256": "81572a2f88c431ebe52bd3f11bd358eff9a772d73f8db1bcb61751d3287f86b0"
+  },
+  "shapeHelper": {
+    "path": "assets/blender/rider-rebuild/shoulder-cage05/author.py",
+    "sha256": "aa6db68a7664b98b3fe043f457676e0231c4230b1a77de1d5e3514b2fa0a9d04"
+  },
+  "bodySignatureHelper": {
+    "path": "assets/blender/rider-rebuild/production-hoodie01/author.py",
+    "sha256": "078da52b40e1f5049759314c1794ba6559ac1dae90d79294672c674f2095d14a"
+  },
+  "hoodie": {
+    "object": "Hoodie__ActualSelectedPBR_Cage05",
+    "semanticSource": "Hoodie__OriginalSelectedPBR_EditableSourcePoseAid05",
+    "expectedPBRHashes": [
+      "1eb934f396df30e3cd881211ff4e195c4460f8fa8db5bfa22ddb3b5ef28e5d09",
+      "2e598ae796f89acf741389a67635d4fa7b8d99f2ba39b0e46d0516c95db6dfae"
+    ]
+  },
+  "units": [
+    {
+      "native": {
+        "path": "harness/out/rider-rebuild/glove-anatomical04/local04/editable-selected-bilateral-gloves.blend",
+        "sha256": "fa21e40445bfb2dcd75789674adcea28ef7af7877d4ef74b22ac55bafc683d59"
+      },
+      "objects": {
+        "Gloves__LocallySculptedSelected04.L": "ActualSelectedGlove.L",
+        "Gloves__LocallySculptedSelected04.R": "ActualSelectedGlove.R"
+      },
+      "expectedPBRHashes": [
+        "9633beec8bf2bb3bd73918589b931d2fc4f33f8e3e702415094ed173a129f95c",
+        "a7a712769a73844a9560d4bef1d163ce3fb8721e388d1a7ecfa07a3515280e67"
+      ]
+    },
+    {
+      "native": {
+        "path": "harness/out/rider-rebuild/boot-last-anatomical04/pair01/paired-selected-boots.blend",
+        "sha256": "5263a76c17ec69c0eb2d7e8546991105c3ffd4398dc389fb88e7c1e71e05a37f"
+      },
+      "objects": {
+        "Boot04PairedSelected.L": "ActualSelectedBoot.L",
+        "Boot04PairedSelected.R": "ActualSelectedBoot.R"
+      },
+      "expectedPBRHashes": [
+        "5bda21b0d584f91aad83d310b868be6a575d28eddb1170e01e65c0b2071f4044",
+        "4017261b5f233cba5780578691a1508382295db4b157c4d175ad905bc98e5c30"
+      ]
+    },
+    {
+      "native": {
+        "path": "harness/out/rider-rebuild/production-jeans02/whole-correspondence02/authored02/whole-selected-jeans.blend",
+        "sha256": "41fbd25d2c126866398e68e4d81a2e082adce796280bbcb61fe37a52d159c4ef"
+      },
+      "contextUnit": {
+        "path": "harness/out/rider-rebuild/production-jeans02/whole-correspondence02/authored02/context-unit.json",
+        "sha256": "0fdfb15d748e823003cd70be9f803b2b7fd371c3e5803a9d2de60e342ff5f591"
+      },
+      "objects": {
+        "RiderJeans": "RiderJeans"
+      },
+      "expectedPBRHashes": [
+        "46ba462131c78e58e1adbc79558e59a4d8798d483e9c9e2440ba5eaa907a6f27",
+        "4dfa7b1c8505d965036b3231252045ecdcd3a60fc41f191b86ae40c4fd28f4df",
+        "a2de41d3d92e7ab1d2f8c7d10628d07a0e1d9c5c89cfda05685ff200868c972b"
+      ]
+    }
+  ],
+  "limits": [
+    "Source shape permission only: correctedhoodie9920401, originalwhole4Kjeans41fbd25, originalglovefa21 and continuousboot5263.",
+    "Complete outfit native75 bind/played art/engine/device review remains pending.",
+    "All R0-R5 open; no normal player assets or old adaptive20 calibration reused."
+  ]
+}

@@ -11,6 +11,17 @@ seven authoring bones' actual source rest frames and correcting their creation;
 coordinates, and native linear-skin predictions. No weight tuning repairs a
 wrong source rest frame.
 
+The corrected actual hoodie source `9920401b64e03c7c65f468a8f1acaec16bc4531b52b796a57480173273de0caf`
+under shoulder-cage05/authored02 now has the parent's permission for native75
+binding after actual original-PBR rest views. This is source selection, with
+masked full-outfit motion/art still open. `ready-merge.json` now pins that source,
+the actualfa21 gloves,5263 boots, and41fbd25 whole selected4K jeans. Every native
+pin was checked against the actual saved file. The merger rejects a non-ready
+manifest and any incomplete or duplicate canonical garment inventory before
+opening Blender sources or binding. The jeans context-unit file is separately
+pinned; its native, visible object and original-correspondence map hashes must
+match the declared merge unit before the job can continue.
+
 After the parent selects a corrected original hoodie, `merge.py` opens that
 explicit native and keeps its joined38959 selected face/hair/body and canonical75.
 It freezes only the visible hoodie derivative's existing object affine into
@@ -23,7 +34,7 @@ Original full-body rows may retain five positive influences. The temporary sourc
 rig supplies semantic blending only. The actual glove/jeans/boot meshes append with exact
 75-rest checks and rebind to the one wearer rig. Source files stay immutable.
 
-Manifest keys are `accepted:false`, `native`, `canonical`, `bodyVertices:38959`,
+Manifest keys are `accepted:false`, `ready:true`, `native`, `canonical`, `bodyVertices:38959`,
 `assemblyHelper`, `shapeHelper`, `bodySignatureHelper`, `hoodie`, and `units`.
 Every file is a `{path,sha256}` pin. `hoodie` names `object`, `semanticSource`, and
 `expectedPBRHashes`. Each unit declares `native`, an `objects` map from actual
@@ -35,9 +46,13 @@ manifest must contain actual executed results, never expected output placeholder
 Current actual glove source is
 `harness/out/rider-rebuild/glove-anatomical04/local04/editable-selected-bilateral-gloves.blend`,
 SHA `fa21e40445bfb2dcd75789674adcea28ef7af7877d4ef74b22ac55bafc683d59`,
-with `Gloves__LocallySculptedSelected04.L/R`. Jeans continuation is expected to
-emit `context-unit.json` under production-jeans02/whole-correspondence02/authored02;
-the parent must use its actual native/hash. The continuous selected boot pair is
+with `Gloves__LocallySculptedSelected04.L/R`. Actual jeans continuation emitted
+`context-unit.json` under production-jeans02/whole-correspondence02/authored02,
+binding `RiderJeans` in `whole-selected-jeans.blend` to native SHA
+`41fbd25d2c126866398e68e4d81a2e082adce796280bbcb61fe37a52d159c4ef`
+and all three genuine4096 map hashes. The parent's actual views retain this
+denim baseline; upper-thigh seam/detail and full-outfit motion remain open.
+The continuous selected boot pair is
 now saved under boot-last-anatomical04/pair01/paired-selected-boots.blend, objects
 `Boot04PairedSelected.L/R`, actual SHA
 `5263a76c17ec69c0eb2d7e8546991105c3ffd4398dc389fb88e7c1e71e05a37f`.
@@ -72,4 +87,5 @@ combined04's old rest/calibration and dense unmasked body IDs. Corrected75 and
 masked38959 need their own truthful intake, never a fabricated old gate pass.
 
 Validation performed: Python AST parsing of the three new source files passed.
+All actual ready-manifest native/helper/context-unit pins matched their files.
 No heavy jobs or implementation-mirroring tests were run by this builder.
