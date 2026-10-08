@@ -1,0 +1,58 @@
+TAP version 13
+# Subtest: incomplete actual census fails before a library call or candidate allocation
+ok 1 - incomplete actual census fails before a library call or candidate allocation
+  ---
+  duration_ms: 2.175333
+  type: 'test'
+  ...
+# Subtest: named fields retain rare values and changing bone identity despite equal ranked slots
+ok 2 - named fields retain rare values and changing bone identity despite equal ranked slots
+  ---
+  duration_ms: 1.196958
+  type: 'test'
+  ...
+# Subtest: drop only globally exact constant fields; report row sums without normalizing
+ok 3 - drop only globally exact constant fields; report row sums without normalizing
+  ---
+  duration_ms: 0.400458
+  type: 'test'
+  ...
+# Subtest: priority scale expresses existing vector and skin budgets without model-size multiplier
+ok 4 - priority scale expresses existing vector and skin budgets without model-size multiplier
+  ---
+  duration_ms: 0.176
+  type: 'test'
+  ...
+# Subtest: boundary/material edges stay exact; donor UV seam is measured without reusing its chart
+ok 5 - boundary/material edges stay exact; donor UV seam is measured without reusing its chart
+  ---
+  duration_ms: 0.736292
+  type: 'test'
+  ...
+# Subtest: coincident disconnected shells keep distinct source IDs and cannot disappear
+ok 6 - coincident disconnected shells keep distinct source IDs and cannot disappear
+  ---
+  duration_ms: 0.48225
+  type: 'test'
+  ...
+# Subtest: compaction preserves exact positions/fields and compact-to-original direction
+ok 7 - compaction preserves exact positions/fields and compact-to-original direction
+  ---
+  duration_ms: 0.155125
+  type: 'test'
+  ...
+# Subtest: pinned real WASM on a tiny grid retains input bytes and refuses forced allocation
+ok 8 - pinned real WASM on a tiny grid retains input bytes and refuses forced allocation
+  ---
+  duration_ms: 5.257625
+  type: 'test'
+  ...
+1..8
+# tests 8
+# suites 0
+# pass 8
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 71.958667

@@ -1,0 +1,83 @@
+{
+  "status": "SOURCE_ONLY_CONDITIONAL_SINGLE_SELECTED_BOOT_CANDIDATE",
+  "acceptedArt": false,
+  "actualCensusExecutedByThisAgent": false,
+  "actualBootSimplifierExecuted": false,
+  "nativeExecuted": false,
+  "sourcePins": {
+    "construct.mjs": {
+      "path": "assets/blender/rider-rebuild/selected-production-constructor37/construct.mjs",
+      "sha256": "3d7ec9faa6d8f10140591c4303012f9ecba69c8d7dd6284d3b851052bbe3d741"
+    },
+    "author.py": {
+      "path": "assets/blender/rider-rebuild/selected-production-constructor37/author.py",
+      "sha256": "b5ec57c735a1e2e4c030f14d90597097b043fbe59f945793de42bd134e7556cc"
+    },
+    "check_construct.mjs": {
+      "path": "assets/blender/rider-rebuild/selected-production-constructor37/check_construct.mjs",
+      "sha256": "a876ff35ff78aca2dede55f3a2766da448dd1f53cb8b4301eb47aaa27a9133e7"
+    }
+  },
+  "fixtures": {
+    "path": "docs/evidence/rider-rebuild/selected-production-constructor37/fixtures.tap",
+    "sha256": "170432b00d631fe16fb01c71781a4a2720bcf69f97f830765a9eb4d07485ddb1",
+    "passed": 8,
+    "failed": 0,
+    "tinyInstalledWASMFixtureCalls": 1,
+    "syntheticOnly": true
+  },
+  "validationCommands": [
+    "OMP_NUM_THREADS=2 node --test assets/blender/rider-rebuild/selected-production-constructor37/check_construct.mjs",
+    "node --check assets/blender/rider-rebuild/selected-production-constructor37/construct.mjs",
+    "python3 AST parse of author.py; no bpy import or Blender execution"
+  ],
+  "primaryVerification": {
+    "installedWrapper": {
+      "path": "node_modules/meshoptimizer/meshopt_simplifier.js",
+      "sha256": "d2e80c60a84c700947f97ab4678cc222a5b9ab409a0745eef2dcaa79bb1ef922"
+    },
+    "upstreamCommit": "b22872835dbabc56a6e4a366ea9917f62b7daf1a",
+    "upstreamSource": "https://github.com/zeux/meshoptimizer/blob/b22872835dbabc56a6e4a366ea9917f62b7daf1a/src/simplifier.cpp",
+    "upstreamSourceSHA256": "b645cdaffe9e3eaf64ff77bc82c3e3b8c57c0a4459b7405a0b3d2716ed92d928",
+    "verified": "Wrapper uses float strides and original index output. C++ rescales positions by extent, multiplies supplied attribute weights without extent correction, weights residual quadrics by triangle area, and rescales ErrorAbsolute combined error. Review24 normalization is a priority metric only.",
+    "relatedReview24": {
+      "path": "docs/evidence/rider-rebuild/selected-production-census35/attribute-scaling-review24.json",
+      "sha256": "558a7c2898aa9809b0aabee0bdc1ec5fbc3885768e9353f35b5b21d405f17952"
+    }
+  },
+  "singleCandidate": {
+    "intake": "Only COMPLETED_REJECTED_BOOT_CENSUS_UNACCEPTED from pinned census35 source/input/native. Verify every stage count/artifact and exact source-array SHA before output or call. Missing/incomplete census stops; no invented census.",
+    "targetTriangles": 8000,
+    "targetErrorM": 0.001,
+    "flags": [
+      "ErrorAbsolute"
+    ],
+    "attributes": "Unitized source vertex normal directions plus every globally varying named bone field; no rare-field dropping or ranked joint slots. Normal coefficient1/sqrt(1.5), named coefficient sqrt(k)/.3, common multiplier1. All original named fields are retained in candidate data unchanged.",
+    "sourceSkinValidation": "Finite nonnegative values in[0,1], nonzero rows, full range/row-sum report; actual simplifier refuses rows whose total fails to round to1 in float32. No donor field normalization.",
+    "requiredLocks": "Original open/nonmanifold boundary and material-edge vertices/edges from exact triangle topology.",
+    "additionalConservativeLocks": "All referenced coincident original positions remain distinct and locked. Report coincident groups, cross-component groups, differing-field groups and additional locks separately; coincidence never asserts topology equivalence. If ceil(lockedVertexCount/3)>8000, stop before the call. No unlocking/ratio/error/weight sweep.",
+    "ancestry": "Returned indices reference exact original native vertex IDs. Deterministic compact IDs invert to those originals; original position/field bytes and protected edges/components are validated.",
+    "aboveTarget": "Save index and candidate artifacts as REJECTED_ALLOCATION_ABOVE_8000, exit2. No forced reduction.",
+    "appearance": "Original donor geometry, UV loops, packed4K maps, materials and rig remain native and immutable. Target receives a fresh atlas only after geometric/field checks; source normal attributes are never copied onto target geometry."
+  },
+  "nativePipeline": {
+    "entryPoint": "assets/blender/rider-rebuild/selected-production-constructor37/author.py",
+    "intake": "Reopens exact rejected34 native and verifies source arrays/fields against actual source. Replaces only old rejected derivative. Saves unaccepted native before allocation/transfer checks.",
+    "frozenTransfer": "Calls unchanged selected-rider-production25/author.py transfer: nearest original-source vertex normal dot>=.25, skin L1<=.3, original1mm target vertices/source vertices/chords, FOUR<=4, removed mass<=.001, additional adjacency L1<=.002.",
+    "extraFiniteSamples": "Fresh target face geometric normals against nearest original source face with original.25 bound; target edge midpoints and original source face centroids with1mm bound. No favorable face selection or normal rewriting.",
+    "bakeBoundary": "This one left-boot candidate is not the two-sided family31/32 bake input. Successful geometry supplies source correspondence plus fresh provisional atlas; independent right boot construction and joint bilateral atlas/bake remain subsequent work. No new maps or PBR pass claimed."
+  },
+  "parentExecution": {
+    "prerequisite": "Read actual census35 first; parent owns unchanged guarded CPU2 scheduling and judges results.",
+    "constructorCommand": "node assets/blender/rider-rebuild/selected-production-constructor37/construct.mjs harness/out/rider-rebuild/selected-production-census35/bootL01/census.json harness/out/rider-rebuild/selected-production-constructor37/bootL01",
+    "nativeCommand": "/Applications/Blender.app/Contents/MacOS/Blender -b -t 2 --python-exit-code 1 --python assets/blender/rider-rebuild/selected-production-constructor37/author.py -- harness/out/rider-rebuild/selected-production-constructor37/bootL01/constructor.json harness/out/rider-rebuild/selected-production-constructor37/nativeL01",
+    "guard": "Parent wraps each actual command with unchanged run_bounded96.py and original admission/stop limits; no guard edits in this unit."
+  },
+  "limits": [
+    "Actual census and dense protection counts pending. No actual candidate, native, source surface pass, atlas/map bake or moving/device pass.",
+    "Approximate meshoptimizer error is not a Hausdorff or skin/orientation certificate. Finite samples are not exhaustive self/contact proof.",
+    "Stop if this single candidate cannot satisfy unchanged allocation and gates; no retries or threshold relaxation.",
+    "Owned source checkpoint only; all normal player assets unchanged."
+  ],
+  "parentSourceReview": "PASS: full construct/author read, eight fixtures rerun PASS, AST/source pins verified. Actual census/candidate still absent."
+}

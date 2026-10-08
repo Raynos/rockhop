@@ -1,0 +1,61 @@
+{
+  "status": "SOURCE_RESEARCH_ONLY_CONDITIONAL_SINGLE_CANDIDATE_NORMALIZATION",
+  "nativeOrSimplifierExecuted": false,
+  "pins": {
+    "installedVersion": "1.1.1",
+    "installedJS_SHA256": "d2e80c60a84c700947f97ab4678cc222a5b9ab409a0745eef2dcaa79bb1ef922",
+    "upstreamCommit": "b22872835dbabc56a6e4a366ea9917f62b7daf1a",
+    "nativeSourceSHA256": "b645cdaffe9e3eaf64ff77bc82c3e3b8c57c0a4459b7405a0b3d2716ed92d928"
+  },
+  "verifiedImplementation": {
+    "positionNormalization": "p_internal=(p-min)/S; S=max bbox extent.",
+    "attributeNormalization": "a_internal[j]=attribute_weights[j]*a[j]; no extent or ErrorAbsolute adjustment to these weights.",
+    "errorAbsolute": "With ErrorAbsolute, squared combined error limit=(0.001/S)^2; returned error=sqrt(max accepted combined quadric error)*S.",
+    "attributeError": "Area-weighted squared residual between original per-triangle affine field prediction at the candidate position and the retained candidate attribute. Attribute term is not divided by accumulated area; it is added to normalized positional quadric error.",
+    "sourceLines": {
+      "attributeScaling": [
+        605,
+        618
+      ],
+      "areaWeightedAttributeResidual": [
+        870,
+        887
+      ],
+      "combinedCollapseError": [
+        1384,
+        1394
+      ],
+      "absoluteLimit": [
+        2489,
+        2491
+      ],
+      "returnedError": [
+        2621,
+        2623
+      ]
+    }
+  },
+  "derivedUnits": {
+    "formula": "e_attr_m^2 ~= sum over accumulated triangle quadrics of A_t_m2 * sum_j (w_j * residual_tj)^2. Accumulated support can include quadric multiplicity.",
+    "consequence": "For nearly uniform residual over support scale ell=sqrt(accumulated area), e_attr_m ~= ell*norm(weighted residual). Attribute weights are inverse-attribute units, not meters. Changing to ErrorAbsolute does not justify multiplying attribute weights by0.001 or by model extent.",
+    "example": "One normalized residual unit on1mm support costs approximately1mm; on10mm support it costs approximately10mm. No universal weight converts this area-integrated cost into a pointwise angular/L1 guarantee."
+  },
+  "conditionalOneCandidateProposal": {
+    "normalChannels": "Equal nx,ny,nz coefficients1/sqrt(2*(1-0.25))=0.8164965809277261. This expresses unit-normal vector disagreement in units of the existing dot0.25 threshold; it is a priority normalization only because source normal attributes are not the final geometric source-face/target-vertex normals.",
+    "normalWeightEach": 0.8164965809277261,
+    "namedFieldChannels": "For k globally varying actual named fields, equal coefficient sqrt(k)/0.3. Cauchy-Schwarz gives L1<=sqrt(k)*L2, so L1>0.3 implies weighted L2>1. For all three source boot fields this is5.773502691896258 per channel. No inverse-variance whitening or categorical joint-slot channels.",
+    "threeFieldWeightEach": 5.773502691896257,
+    "constantFields": "Drop only channels proven globally constant by actual35 arrays; local constant rigid-foot regions naturally produce zero field residual. Keep every varying named field even if its global variance is small.",
+    "commonMultiplier": "1: use the above dimensionless normalized-budget coordinates directly under the library area scaling; no empirical multiplier, per-region coefficient fitting, or sweep.",
+    "fixedAttempt": "One index-only simplifyWithAttributes attempt at24000indices /0.001m ErrorAbsolute, after census and chart representation are frozen; no constructor executed by this review."
+  },
+  "actual35Conditions": [
+    "Verify exact source positions are meters and source normals/fields are finite; measure field ranges/row normalization before selecting k.",
+    "Measure UV and material chart discontinuities from triangleLoopIds/UV arrays. If retaining old UVs, split chart vertices exactly and preserve index discontinuities. If using the existing fresh target unwrap/bake, keep dense donor charts/maps untouched; do not introduce UV coefficients without a texel-error budget.",
+    "Do not infer joint/contact barriers from continuous variance alone; keep explicit required vertex locks.",
+    "Do not use normal attributes as stored replacement normals or claim they certify orientation."
+  ],
+  "unchangedAcceptance": "Retain actual8k triangle allocation, final source/target normals>=0.25, every original1mm bidirectional/detail check, exact nearest-source weightL1<=0.3 and FOUR/support gates. Returned approximate metric may stop above8k and is never a certificate for those gates.",
+  "agentStatus": "Exact lifetime response count is unavailable after summarized history. Long-running agent retires after this handoff instead of risking the150-response cap.",
+  "primarySource": "https://github.com/zeux/meshoptimizer/blob/b22872835dbabc56a6e4a366ea9917f62b7daf1a/src/simplifier.cpp"
+}
