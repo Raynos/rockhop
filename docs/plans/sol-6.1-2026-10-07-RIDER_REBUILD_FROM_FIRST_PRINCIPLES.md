@@ -33,18 +33,19 @@ H0 is October 8, 14:05 Panama / 19:05 UTC; target finish is October 9 at the sam
 
 | Target | Complete visible deliverable | Owner |
 | --- | --- | --- |
-| H+4 | Selected dressed rider in convincing standing/deep seated/return on both bikes, clean cuff/ankle overlap, visible hands/hips/profiles | Native lead29 and wardrobe lead28; parent judges |
+| H+4 — missed; remains unaccepted | Selected dressed rider in convincing standing/deep seated/return on both bikes, clean cuff/ankle overlap, visible hands/hips/profiles | Native lead36 and production builders; parent judges |
 | H+10 | Compact selected-appearance production candidate and genuine full/LOD, compared moving in actual Garage | Wardrobe/production lead28 and native lead29 |
 | H+16 | Same master with editable Blender controls, complete generic and bike actions, consumed engine deformation/contact | Animation/runtime lead24 and native lead29 |
 | H+24 | Exact candidate reviewed on desktop/physical iPhone, bot/stranger/replay/restart and checked release/live SHA | Parent; human/device decisions through HR-23 |
 
-Native lead29 succeeds retired lead27 at the 150-response handoff. It owns the
-integrated anatomical derivative and exact native volume transport. Wardrobe
-lead28 succeeds retired lead23 and supplies separate cuff/ankle patches and compact selected production
-meshes, detail transfer and real LOD. Animation lead24 supplies native controls,
-actions and runtime delivery. The parent schedules actual heavy jobs serially,
-integrates handoffs and judges played complete outfits. Source work proceeds
-concurrently. These are final-intent selected assets; no generic substitutions.
+Native lead36 succeeds retired leads24/29 and owns actual gameplay-control
+reconstruction and replay on the complete selected master. Boot constructor37
+continues the measured folded-triangle repair with exact source ancestry.
+Existing wardrobe lead28 and earlier construction sources remain preserved
+work; their source preparation is not a completed wardrobe result. The parent
+schedules actual heavy jobs serially, integrates handoffs and judges played
+complete outfits. Source work proceeds concurrently. These are final-intent
+selected assets; no generic substitutions.
 
 **Immediate gameplay priority, October 8, 16:30 Panama (ask356):** The user
 correctly identifies that the displayed stand-up/rest diagnostic does not show
@@ -76,6 +77,21 @@ Boot31 already ran24.261s under the same guard and failed geometry, not memory.
 This is a concrete repair path, not a completed production rider. Both-bike
 actual dressed lean films and native replay08 remain the next visible animation
 deliverable. Generic stand-up clips cannot substitute; allR0–R5remain open.
+
+**Actual gameplay result, October 8, 18:40 Panama:** Rookie capture03 now
+completed under the original guard using the headless Metal backend. All1200
+real held-input ticks, 241 samples and original75 joints are finite, with zero
+faults/errors and final hash `a0fa0c4b1b76ba5e` matching the fresh physics witness.
+The selected source is `ff9d78e2…`; forward/back reach effective +1/−1 without
+stage clips. This supersedes the earlier absence of a motion report. The12.12s
+MP4 is trimmed; continuous parent moving review awaits unchanged host admission.
+No art/contact/phone acceptance follows from successful capture. Next: play and
+judge that dressed film, capture the same Pro sequence, then execute frozen
+controls02/full-native08 using both reports. Lead36 takes this concrete native
+delivery over from retired24/29; do not change the0.1mm replay bound. H+4 was
+missed: cuff/ankle/anatomical quality is still open. Boot diagnostic34 separately
+proved a real collapsed triangle fold; census35 and constructor37 target that
+geometry rather than normal-cache or face-selection workarounds. AllR0–R5 open.
 
 **Measured construction status, October 8, 16:20 Panama:**
 
