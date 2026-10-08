@@ -48,3 +48,9 @@ Finding: Actual selected glove bake fails appearance because large occupied UV r
 Validation: Parent viewed three actual right-hand material renders; rendererexit0 in6.010s. Actual map/source/UV diagnostic finds≈40% eroded occupied MR allzero.
 
 Limits: No4096 or larger-ray retry; inspect real aligned donor and target before repair. Selected appearance and moving grip rejected/open.
+
+Finding: Actual selected dense bake donor itself penetrates palm/fingers before maps; current independent affine alignment is retired.
+
+Validation: Parent viewed all three saved donor renders with target-matched cameras; read-only rendererexit0 in10.282s and source native unchanged.
+
+Limits: Fresh source-rest anatomical rig review underway; no larger-ray/4K retry or accepted replacement.

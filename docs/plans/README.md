@@ -1315,3 +1315,5 @@ October 7 actual direct selected boot sculpt review: parent viewed all four genu
 October 7 boot target inventory: exact bilateral unchanged-body forefoot outline now versioned beside direct selected sculpt; parent copy hash matches. Inventory only, no geometry/fit/art change.
 
 October 7 actual local jeans gusset checkpoint: exit0 in2.338s,2031 vertices receive connected local delta; outside positions/UV/FULL/FOUR/topology/materials and body/shared75 pass exact assertions. Parent native hash matches; rest/moving fit remains uninspected, no maps.
+
+October 7 matched actual glove donor review: selected warped source already cuts through palm/fingers before baking. Parent viewed all three target-matched cameras; CPU2exit0 in10.282s, native unchanged. Retire current affine donor alignment; fresh Astra source-rest rig review underway, preserve original selected asset/PBR and no ray/resolution workaround.
