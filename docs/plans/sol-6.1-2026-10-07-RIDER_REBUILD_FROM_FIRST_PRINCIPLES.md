@@ -635,22 +635,21 @@ face mask, as specified below.
   TRS match source exactly at five actual times per clip; integer-frame native
   world-matrix transport also passes. This is a limited moving integration
   baseline, not GPU vertex parity, finite grip or an art/device pass.
-- Next visible result: use the complete selected Garage/game movement baseline
-  to construct one observed cuff correction, then missing deep seated
-  transitions/profiles and proper finite boot/peg support. The actual cuff dump
-  identifies outer wall versus inner return; explicit connected boundaries
-  must precede a welded local replacement, not another sector deformation.
-  [Focused Astra11](../evidence/rider-rebuild/astra-cuff-boundary11/FINDING.md)
-  proves the proposed fixed patch join already crosses both sleeves. Parent
-  chooses glove-over-sleeve: preserve the selected flared wall pair/band/lip,
-  tailor and axially seat the hoodie wrist transition inside its opening, and
-  author the adjacent join coherently. Local04 is already distorted; original
-  selected sculpture remains the shape reference. Sparse rays are constraints,
-  not clearance proof. Preserve fingers/palm and PBR; no sector retry. Proper
-  production topology/LOD/detail transfer follows the stable envelope; do not
-  spend another advisory interval polishing a dense-only preview. Physical
-  device, finite contacts and release gates remain independent. All R0–R5 stay
-  open; no normal-player promotion.
+- Next visible result: fresh user-assigned Astra12 xhigh owns actual local
+  garment construction, with separate engine intake and deep-crouch builders.
+  [Parent reproduced the causal topology faults](../evidence/rider-rebuild/glove-over-sleeve08/topology-finding03/FINDING.md):
+  selected hoodie terminals are closed caps, not annular knit walls; the
+  radial-layer chart creates new full-construction folds. Glove inner return
+  and axial floor cross visible wrist faces, so hidden-body exemptions do not
+  apply. Replace these defective derivative openings with real local topology,
+  preserving selected exterior ribs/band/lip/fingers and original PBR.
+  Original donors stay immutable; local UV/fields require honest ancestry.
+  No further cap-as-wall fitting or radial-padding campaign. Keep the actual
+  selected Garage/game baseline private while the complete repaired model is
+  built, exported and played. [Current Garage photos/orbit](../evidence/rider-rebuild/garage-progress-2026-10-08/FINDING.md)
+  show the latest integrated outfit before this repair. Production LOD, full
+  surfaces, anatomy, deep motion and physical-device gates remain open0/6.
+  An outside artist is optional; no external-resource wait blocks this work.
 
 ### Equipped-outfit body masks adopted after independent Astra05 review
 
