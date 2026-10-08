@@ -1,0 +1,69 @@
+{
+  "acceptedWearable": false,
+  "status": "REJECTED_BEFORE_COMPLETE_GEOMETRY_QUALIFICATION",
+  "sourcePins": {
+    "body": {
+      "path": "harness/out/rider-rebuild/glove-native02-fit/target01/native-body.npz",
+      "sha256": "bcb5f87baff6675bea5338680aab1c158e600ce014813e9f76bc4d27e41e9cc1"
+    },
+    "hand": {
+      "path": "harness/out/rider-rebuild/glove-native02-fit/target01/native-hand-R.npz",
+      "sha256": "2e3cd9f16768fa063de77a73eb102abfc841b16abcc11c8339b793558707c210"
+    },
+    "atlas": {
+      "path": "docs/evidence/rider-rebuild/glove-charts01/atlas01/source-atlas.npz",
+      "sha256": "3ef1d2672f07c9a766bcda579dec342cd06e0e987a6f06494045ffb015a28635"
+    },
+    "sections": {
+      "path": "docs/evidence/rider-rebuild/glove-charts01/source-measurements.json",
+      "sha256": "736c065f5b8dcf228515b22b93fd7de8f81cfc0eafafeeec738e0a6442c9ca1a"
+    },
+    "witnesses": {
+      "path": "docs/evidence/rider-rebuild/glove-charts01/source-section-witnesses.npz",
+      "sha256": "44c76baa8a042a4a4016e19806fa6fe4d2ef6d0e69bf02c95616433b50d3d8e1"
+    },
+    "anatomyAudit": {
+      "path": "docs/evidence/rider-rebuild/glove-charts01/anatomy-audit01/anatomy-audit.json",
+      "sha256": "46e87d4732fe3d50016eca20b6b3f717100f6b9fedf1b890afe9509c63fc5c5e"
+    }
+  },
+  "recipe": {
+    "path": "assets/blender/rider-rebuild/glove-native02-fit/fit-exterior.py",
+    "sha256": "a10e2d2f151b32ce7bd4e41a3729849a9f69c076ee2c40b89c2f4cc45948d787"
+  },
+  "geometryHelper": {
+    "path": "assets/blender/rider-rebuild/glove-charts01/geometry-checks.py",
+    "sha256": "d9b6080dc6380b23e35eaf3978b539b930955e052c4254d869d7e7ff3b8746fa"
+  },
+  "rootHelper": {
+    "path": "assets/blender/rider-rebuild/glove-native02-fit/branch-root-correspondence.py",
+    "sha256": "0197b595664fcf4e6923ad03ca577bb3fb9403e8ad395579d5001c34c300c7ef"
+  },
+  "nativeMaster": {
+    "path": "harness/out/rider-rebuild/native-hand-repair01/native02/anatomical-hand-rig.blend",
+    "sha256": "42fca617ea8d246a6c3e3ca68a90cd3cb5f3ce8b9bb78130e0e2bbd65f605fac"
+  },
+  "independentProof": {
+    "path": "docs/evidence/rider-rebuild/native-hand-repair01/verify-native02/independent-verification.json",
+    "sha256": "8bfd9938b40e2ef3064cc5fab06e37d7193a54ed59bd36e143e6e4eccb0542e7"
+  },
+  "bounds": {
+    "paddingGoalM": 0.0035,
+    "minimumPaddingM": 0.0025,
+    "maximumRadialEase": 2.5,
+    "maximumPrincipalStretch": 2.5,
+    "minimumPrincipalStretch": 0.2,
+    "maximumTriangleCondition": 8
+  },
+  "iterations": [],
+  "contours": [
+    {
+      "digit": "pinky",
+      "sections": [],
+      "nativeFieldGateUsed": false,
+      "MCPPositionUsedAsRoot": false
+    }
+  ],
+  "error": "RuntimeWarning: divide by zero encountered in matmul",
+  "elapsedSeconds": 0.02402083296328783
+}

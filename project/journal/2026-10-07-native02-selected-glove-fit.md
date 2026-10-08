@@ -6,3 +6,8 @@ Limits: Target extraction, actual connectivity/ray correspondence, source exteri
 Finding: Actual native02 target extraction succeeds for both distinct hands. The body geometry/rest/native fields remain exact; each 763-vertex hand retains true source-edge ancestry, geometric distal seeds and separate native, named FOUR, raw FULL and explicitly normalized FULL fields.
 Validation: Guard exit zero in .99s; parent rehashes all21source and artifact pins, compares every original body array and independently reconstructs both hand geometries and all four field representations from actual original-source edges.
 Limits: Extraction certifies target data only; right correspondence, independent left fit, source glove deformation/bake and played anatomy/outfit remain unexecuted or unqualified.
+
+
+Finding: Right correspondence01 stops before geometry testing because the host BLAS matrix-vector projection emits a divide-by-zero RuntimeWarning under warnings-as-errors. This is a numerical execution failure, not source ray coverage, anatomy or fit evidence; no constraints or ARAP candidate exist.
+Validation: Canonical guard exits1 in .277s; parent inspects the actual trace at split_event(vertices @ axis). Source and target authority remains unchanged.
+Limits: Replace the projection with explicit three-component arithmetic and recheck the owned source before another admitted run; no warning filter, geometric waiver or promotion.

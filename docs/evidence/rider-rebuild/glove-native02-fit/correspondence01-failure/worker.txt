@@ -1,0 +1,14 @@
+{"status": "REJECTED_BEFORE_COMPLETE_GEOMETRY_QUALIFICATION", "elapsedSeconds": 0.02402083296328783, "error": "RuntimeWarning: divide by zero encountered in matmul"}
+Traceback (most recent call last):
+  File "/Users/raynos/projects/games/rockhop/assets/blender/rider-rebuild/glove-native02-fit/fit-exterior.py", line 248, in <module>
+    main()
+  File "/Users/raynos/projects/games/rockhop/assets/blender/rider-rebuild/glove-native02-fit/fit-exterior.py", line 125, in main
+    transform, source_cuff, digit_report, contours = target_sections(body, hand, atlas, source_report, report["contours"])
+                                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/raynos/projects/games/rockhop/assets/blender/rider-rebuild/glove-native02-fit/branch-root-correspondence.py", line 134, in target_sections
+    sr, sc, se, sa, sl = split_event(source_vertices, source_faces, source_labels, digit_id,
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/raynos/projects/games/rockhop/assets/blender/rider-rebuild/glove-native02-fit/branch-root-correspondence.py", line 54, in split_event
+    coordinate = vertices @ axis
+                 ~~~~~~~~~^~~~~~
+RuntimeWarning: divide by zero encountered in matmul
