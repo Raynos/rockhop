@@ -27,3 +27,9 @@ Finding: Version the actual bilateral foot outline beside the direct selected bo
 Validation: Parent rehashed exact6504-byte copy; SHA cfb4d1eb6d5e10cc88d73f406c936712c6d607b97145ef819b6e78789b07e978 matches original.
 
 Limits: Inventory only; outline does not certify shoe fit or authorize a new sculpt run.
+
+Finding: Current selected dense forefoot already has ample crown/sole width; observed exposure is localized upper flank. Prepare one direct transverse proportional Grab per local defect from exact current bilateral sculpt arrays.
+
+Validation: Parent full source/controls read, AST/zeroMatMult and11input pins exact; sole/welt/rear/height/longitudinal equality guards are explicit. Each side will receive separate actual PBR views.
+
+Limits: Unexecuted one targeted local correction, no new warp/lattice/bake or shape/art acceptance.
