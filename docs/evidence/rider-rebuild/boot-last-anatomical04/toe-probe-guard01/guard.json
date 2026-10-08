@@ -1,0 +1,88 @@
+{
+  "accepted": false,
+  "lock": "/Users/raynos/projects/localai/.model.lock",
+  "method": "lockf -k",
+  "command": [
+    "/Applications/Blender.app/Contents/MacOS/Blender",
+    "-b",
+    "-t",
+    "2",
+    "--python-exit-code",
+    "1",
+    "--python",
+    "assets/blender/rider-rebuild/boot-last-anatomical04/probe_toe_fit.py",
+    "--",
+    "docs/evidence/rider-rebuild/boot-last-anatomical04/toe-fit-probe01"
+  ],
+  "controllerPID": 67302,
+  "pollSeconds": 1,
+  "startAnonymousBelowGiB": 55,
+  "stopAnonymousGiB": 65,
+  "stopAnonymousPlusWiredGiB": 96,
+  "limitSeconds": 90.0,
+  "guardSHA256": "cf8acd15d8b7484480bee74d23892be815d955ffd87115d3da8ed228ffb3d916",
+  "status": "worker returned; review pending",
+  "samples": [
+    {
+      "seconds": 0,
+      "anonymousGiB": 19.9,
+      "wiredGiB": 6.4,
+      "freeGiB": 54.5
+    },
+    {
+      "seconds": 0.035,
+      "anonymousGiB": 20.0,
+      "wiredGiB": 6.4,
+      "freeGiB": 54.5
+    },
+    {
+      "seconds": 1.065,
+      "anonymousGiB": 20.0,
+      "wiredGiB": 6.7,
+      "freeGiB": 54.1
+    },
+    {
+      "seconds": 2.101,
+      "anonymousGiB": 20.4,
+      "wiredGiB": 6.5,
+      "freeGiB": 54.0
+    },
+    {
+      "seconds": 3.139,
+      "anonymousGiB": 19.9,
+      "wiredGiB": 6.7,
+      "freeGiB": 54.3
+    },
+    {
+      "seconds": 4.189,
+      "anonymousGiB": 21.0,
+      "wiredGiB": 7.4,
+      "freeGiB": 52.5
+    },
+    {
+      "seconds": 5.218,
+      "anonymousGiB": 21.5,
+      "wiredGiB": 7.1,
+      "freeGiB": 52.4
+    },
+    {
+      "seconds": 6.259,
+      "anonymousGiB": 22.6,
+      "wiredGiB": 7.1,
+      "freeGiB": 51.2
+    },
+    {
+      "seconds": 7.301,
+      "anonymousGiB": 20.8,
+      "wiredGiB": 7.1,
+      "freeGiB": 53.0
+    }
+  ],
+  "physicalMemoryBytes": 137438953472,
+  "requiredPhysicalMemoryBytes": 137438953472,
+  "scope": "Future explicitly invoked owned Rockhop job only",
+  "pressureOrSwapLimits": "No separate pressure/swap gate exists in the pinned original guard; none altered",
+  "ownedChildPID": 67306,
+  "exitCode": 0,
+  "elapsedSeconds": 7.355
+}

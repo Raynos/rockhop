@@ -40,3 +40,10 @@ Finding: One read-only actual-native probe separates toe under-carving from oute
 Validation: Root full probe source read, actualnativec6d121b3 pin and canonical3821/47 sample identity checked in code. No edits/binds/saves/renders.
 
 Limits: Ray/containment measurements support local authoring, not wearing art acceptance.
+
+
+Finding: Actual saved boot probe separates70 cavity-outside samples from39 missing outer exits and146 outer walls nearer than4mm, exposing why empty cavity is not enclosure.
+
+Validation: CPU2 read-only exit0/7.355s; all47 actual prior toe witnesses retained, no source/native writes. Specific local toe-chamber/selected-upper repair delegated.
+
+Limits: Normal-ray evidence is anatomical diagnosis, not an art/enclosure pass; actual original-PBR and moving views decide.
