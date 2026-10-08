@@ -1661,3 +1661,5 @@ October8 actual sleeve ownership proof passes4.256s: exactly exterior/interior o
 October8 bilateral posterior source candidates frozen: explicit8-quad cores/24-quad contexts, exact original IDs/fields/body references; old thigh-edge minimum excluded. Parent reviews source/diagrams and pin/disk receipts. Offline pelvisXY/tilt/flex authoring next; no seated pose or art acceptance, R0–R5 remain0/6.
 
 October8 production correction: native07 replaces proven hidden inner sleeve band; fixed bilateral posterior cores feed offline author04, runtime minimum-gap iteration stopped. Comparison build08/capture02 pass packaging and desktop phone-layout switching only; all rider gates remain0/6.
+
+October8 native07 source checkpoint frozen and unaccepted: owned inner-wall replacement, full dense cuff bearings, exact selected exterior ancestry; actual guarded construction is next, no export/promotion or art pass.

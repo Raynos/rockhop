@@ -1,0 +1,34 @@
+{
+  "acceptedArt": false,
+  "baseConstructor": {
+    "path": "assets/blender/rider-rebuild/astra-character-construction12/construct.py",
+    "sha256": "5d13de71e8d724f01cdbd9aa4d0d18e3d351c58f58cc4513d98f5a325f9d1361"
+  },
+  "baseInput": {
+    "path": "assets/blender/rider-rebuild/astra-character-construction12/input.json",
+    "sha256": "f1c4ccfaef3fe7f175719fffd703a5f4449b2ec2a96f15a39d3f696ab214532e"
+  },
+  "ownership": {
+    "path": "harness/out/rider-rebuild/astra-character-construction12/ownership01/ownership.json",
+    "sha256": "d3e673b59f101835c370a6754fc683ad11a68c9e3aad604747f17983d9133677"
+  },
+  "settings": {
+    "sleeveLiningM": 0.001,
+    "sleeveSkinEaseM": 0.0015,
+    "garmentGapM": 0.001,
+    "contactNeighborRings": 3,
+    "contactPositionPenalty": 0.25,
+    "contactIterations": 512,
+    "contactConvergenceM": 0.0000001
+  },
+  "limits": [
+    "One explicitly unaccepted construction candidate; no export or player promotion.",
+    "Exact original selected exterior source triangles/UV/materials are retained; the proven inner band is physically removed, not compressed into a radius chart.",
+    "A monotone axial taper relocates the section7 cut into the gauntlet. Local constrained displacement is computed from actual wearer and full repaired glove triangle rays. No old radial compression map is called.",
+    "The new one-millimeter lining and both joins are authored surfaces with explicit source-parent fields/UVs. They must pass actual triangle checks, not an assumed offset guarantee.",
+    "Original selected terminal source material beyond section7 is lost. Selected turned-lip detail is not claimed preserved; moving review remains required.",
+    "Full source cuff triangle bearings span the entire axial overlap; finite bearing samples do not replace actual self/body/cloth triangle checks.",
+    "New degenerate faces are never deleted to force a pass. Only geometrically inherited local forearm/cuff degenerates can be removed, with exact source-face IDs reported.",
+    "Remote inherited torso intersections remain separately checked and continue to block geometryGatesPassed. The equipped body mask and full anatomy reference remain exact."
+  ]
+}
