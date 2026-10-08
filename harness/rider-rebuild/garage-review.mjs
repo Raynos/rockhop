@@ -58,7 +58,22 @@ const videoStartEpochMs = Date.now(), videoStartMonotonicMs = performance.now();
 const page = await context.newPage(), responses = [], witnesses = new Map();
 report.videoTimeline = { pageCreationEpochMs: videoStartEpochMs, pageCreationMonotonicMs: videoStartMonotonicMs,
   meaning: 'Recording begins during newPage; ready offset is measured from immediately before page creation. Raw full recording is retained; offset permits a separate Garage-only presentation trim.' };
-page.on('pageerror', error => report.errors.push(error.message));
+report.errorDetails = []; report.mainFrameNavigations = [];
+report.diagnosticDrops = { errorDetails: 0, mainFrameNavigations: 0 };
+let capturePhase = 'boot';
+const eventTime = () => ({ epochMs: Date.now(), monotonicMs: performance.now(),
+  secondsSincePageCreation: (performance.now() - videoStartMonotonicMs) / 1000, phase: capturePhase });
+page.on('pageerror', error => {
+  report.errors.push(error.message);
+  if (report.errorDetails.length < 64) report.errorDetails.push({ ...eventTime(), name: String(error.name).slice(0, 1024),
+    message: String(error.message).slice(0, 4096), stack: String(error.stack ?? '').slice(0, 8192), pageURL: page.url().slice(0, 2048) });
+  else report.diagnosticDrops.errorDetails++;
+});
+page.on('framenavigated', frame => {
+  if (frame !== page.mainFrame()) return;
+  if (report.mainFrameNavigations.length < 64) report.mainFrameNavigations.push({ ...eventTime(), url: frame.url().slice(0, 2048) });
+  else report.diagnosticDrops.mainFrameNavigations++;
+});
 page.on('response', response => {
   if (response.url().endsWith('.glb')) responses.push(witnessGlbResponse(response, witnesses)
     .then(row => report.loaded.push(row)).catch(error => report.errors.push(error.message)));
@@ -75,6 +90,7 @@ try {
   await page.locator(`button[data-bike=${requestedBike}][aria-pressed=true]`).waitFor();
   Object.assign(report.videoTimeline, { garageReadyEpochMs: Date.now(),
     garageReadyOffsetSeconds: (performance.now() - videoStartMonotonicMs) / 1000 });
+  capturePhase = 'garage';
   report.frameMeter = await page.evaluate(installGarageCaptureMeter);
   report.frameMeterRecipeSHA256 = crypto.createHash('sha256')
     .update(fs.readFileSync(new URL('./garage-capture-meter.mjs', import.meta.url))).digest('hex');
@@ -223,6 +239,7 @@ try {
     meaning: 'Five actual moving-frame readbacks; extrema are observed samples, not a claim that every endpoint was sampled.' };
 } catch (error) { report.failure = error.stack; process.exitCode = 1; }
 finally {
+  capturePhase = 'cleanup';
   try { report.actualFramePerformance = await page.evaluate(() => window.__garageCaptureMeter?.stop() ?? null); }
   catch (error) { report.performanceReadError = error.message; }
   if (report.actualFramePerformance && report.actualFramePerformance.rendered.frames === 0) {

@@ -17,6 +17,24 @@ async function hashFile(filename) {
 }
 const identity = stat => [stat.dev, stat.ino, stat.size, stat.mtimeMs, stat.ctimeMs];
 
+/** This transformed source adds an addon specifier absent from the normal scan. */
+export function includePrivateRiderDependency(config) {
+  config.optimizeDeps ??= {};
+  config.optimizeDeps.include = [...new Set([...(config.optimizeDeps.include ?? []), 'three/addons/utils/SkeletonUtils.js'])];
+}
+
+export function observePrivateReloads(hot, events) {
+  const send = hot.send;
+  hot.send = function (payload, ...args) {
+    if (payload?.type === 'full-reload') {
+      if (events.fullReloads.length < 64) events.fullReloads.push({ epochMs: Date.now(),
+        monotonicMs: performance.now(), path: String(payload.path ?? '').slice(0, 2048) });
+      else events.dropped++;
+    }
+    return send.call(this, payload, ...args);
+  };
+}
+
 export async function createPrivateDevReview({ source, contractPath, allowFailedDiagnostic = false, comparison = false, clip }) {
   assert(!comparison, 'Source-mode diagnostic cannot enter comparison');
   const root = process.cwd(); source = path.resolve(source); contractPath = path.resolve(contractPath);
@@ -72,8 +90,10 @@ export async function createPrivateDevReview({ source, contractPath, allowFailed
   const catalogBytes = Buffer.from(JSON.stringify(catalog));
   const values = rows => Object.fromEntries(rows.map(({ logical, ...row }) => [logical, row]));
   let planSource, totals;
+  const serverEvents = { clock: 'Node Date.now epoch milliseconds and performance.now monotonic milliseconds', fullReloads: [], dropped: 0 };
   const plugin = {
     name: 'rockhop:private-source-review',
+    config: includePrivateRiderDependency,
     configResolved() {
       const originalPlan = fs.readFileSync(path.join(root, 'src/boot/plan.generated.ts'), 'utf8');
       const publicMatch = originalPlan.match(/export const PUBLIC_BYTES = (\{[\s\S]*?\}) as const;/);
@@ -99,6 +119,9 @@ export async function createPrivateDevReview({ source, contractPath, allowFailed
       return html.replace(scripts[0][0], () => `<script>${inline}</script>`);
     } },
     configureServer(vite) {
+      // Observe the actual client hot channel without suppressing or changing
+      // its messages. Both optimizer reloads and watcher reloads use this path.
+      observePrivateReloads(vite.environments.client.hot, serverEvents);
       vite.middlewares.use((req, res, next) => {
         const pathname = new URL(req.url ?? '/', 'http://localhost').pathname;
         if (pathname === '/model-catalog.json') {
@@ -131,6 +154,6 @@ export async function createPrivateDevReview({ source, contractPath, allowFailed
     contract: { path: contractPath, sha256: sha(contractBytes) }, runtimeMetadataSHA256: sha(JSON.stringify(metadata)),
     runtime: { qualificationState: metadata.qualificationState, previewClip: metadata.previewClip,
       driver: metadata.driver, corrective: metadata.corrective, selectedRiderSource: metadata.selectedRiderSource },
-    catalogSHA256: sha(catalogBytes), placement, pins,
+    catalogSHA256: sha(catalogBytes), placement, pins, optimizeDepsInclude: server.config.optimizeDeps.include, serverEvents,
     performanceMeaning: 'Actual rendered-frame measurements from a Vite development server; not a production build or production performance qualification. Production bundle gates remain open.' } };
 }

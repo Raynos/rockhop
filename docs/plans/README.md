@@ -1747,3 +1747,5 @@ Actual diagnostic08 dressed Garage film played26.88s silent1x; all63presented sa
 Actual cuff09 construction exits1/25.769s: actualouter floorboundary isnotone ring, before lining/fitting/export/densegates; no candidate saved. Stoprecipe09; sparsepreflight was insufficient. Nextcuff work must resolve measured actualtopology, not repeat radialparameter changes. Native regionaljeansweights remain next construction.
 
 Anatomical09 source checkpoint: nativepolygon-neighbor weightbrush in explicitconnected2,778vertexdomain/2,356transition, fixedpelvis/thighanchors andboundaryfalloff; newnormalizedFOUR declared. Parent fullsource/pins/oneactualquadfixture pass; actualBlender run next. Wholebodyincidentfacegroups prepared withoutbodyweightedit; nosculpt/geometry/artacceptance.
+
+Private source Garage optimizer repair/source checkpoint: explicitlyinclude injectedSkeletonUtils andretain boundedfullerrors/navigation/Vitefullreloadtimes. Existingzeroerrorgate unchanged. Lateoptimizerreload is supportedhypothesis fromfirstcapturetimestamps, not provenrootcause; next actualcapture willresolve. Parentdiff/syntax and17builderfixtures pass; productionunchanged.
