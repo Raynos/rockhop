@@ -45,11 +45,15 @@ Animationlead24 supplies separate native controls/actions and runtime delivery.
 Parent schedules heavy jobs serially, integrates handoffs and judges played
 complete outfits. Lightweight preparation proceeds concurrently.
 
-Before sculpt, decide anatomical09 from its actual dressed film plus one seated
-and asymmetric full-versus-FOUR displacement/support comparison. Its witness
-stretch improved, but594vertices discard>1%/171discard>5%; adjacent high-loss
-vertices drop different anatomical supports. Freeze the final production FOUR
-before sculpt; allow one deliberate support correction, no smoothing sweep.
+Actual anatomical09 transport and dressed Garage playback are complete, but
+its FOUR field is rejected: seated full-versus-FOUR displacement reaches
+21.252mm and adjacent displacement jumps32.648mm; asymmetric losses remain
+centimetre scale. The dressed clip retains an inflated glute/upper-thigh fold,
+cuff spikes and exposed ankle strip. Nativelead22 makes one anatomically
+consistent support correction before coupled sculpt. Coalescing equivalent
+regional bones requires measured skin operators across the declared control
+envelope; names or equal rotations alone are insufficient. Animationlead24
+keeps the same semantics and measures all authored samples. No smoothing sweep.
 Cuff reconstruction resumes only after actual native proof of consistent source
 floor identity; physical clearance/radius/dense gates remain unchanged.
 

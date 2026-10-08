@@ -1771,3 +1771,5 @@ Cuffidentity02sourceproof retainsoriginalfloat32cutter and its existing1e-7plane
 Actualweighttransport01SUCCESS1.978s/GLB2d9423d7, preservedselectedappearance/rest/BIN; native-Three4witnessmax6.919e-7m, ULP≤2. TargetedFOURreduction FAIL: seatedmax21.252mm/neighbourjump32.648, asym17.552/25.287. Parentrejectsfieldbeforesculpt; one anatomicalsupportcorrection assigned22, noSmoothsweep/canon. Actualdressedweight-onlyGaragefilm next.
 
 Actual anatomical09 dressedGarage exits0/35.494s, zero errors/one navigation after optimizer repair; parent played28.76s silent1x/all63samples+fullprofiles. Selectedidentity intact, seatedfold/shelf/cuffspikes/anklestrip remain rejected. Development59.685renderFPS/25FPScapture; no production/devicepass. Semantic support correction precedes sculpt.
+
+24hfinishsequence now records actual anatomical09 FOUR rejection and dressedfilm defects, with one measured regional-support correction before posedsculpt; controls share declaredskinoperator envelope. Ask354 records adopted40–50%estimate/24hstretch and active concretebuilders, not stale60%claim.
