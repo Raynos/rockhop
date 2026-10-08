@@ -1743,3 +1743,5 @@ Actual native07 savedreopen02 passes withautoexecdisabled: exactprotectedfields/
 Permanent source-mode Garage review source checkpoint: actualViteconfig/catalog/boot,64SHAstreamed selectedmodel, exactauthor04provenance/bikeorigin0 placement, actualUI/75TRS/5morphslots/frameMeter. Parent syntax/source review pass; actualguardedcapture next; productionbudget/performance unchanged/open.
 
 Actual diagnostic08 dressed Garage film played26.88s silent1x; all63presented samples reviewed. Seated posterior shelf/squared fold, cuffspikes and ankle strip remain rejected. Real source capture has six access-control errors despite selectedSHA/finite75/morph witnesses;59.736devFPS is not deviceacceptance. Regional nativeweights then posedsculpt remain next; no ridergateclosed.
+
+Actual cuff09 construction exits1/25.769s: actualouter floorboundary isnotone ring, before lining/fitting/export/densegates; no candidate saved. Stoprecipe09; sparsepreflight was insufficient. Nextcuff work must resolve measured actualtopology, not repeat radialparameter changes. Native regionaljeansweights remain next construction.

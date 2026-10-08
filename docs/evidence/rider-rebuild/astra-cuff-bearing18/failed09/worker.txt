@@ -1,0 +1,27 @@
+00:11.752  blend            | Read blend: "/Users/raynos/projects/games/rockhop/harness/out/rider-rebuild/selected-complete-engine01/engine05/rider-private-masked.blend"
+CONSTRUCT selected cuff outer / new inner return L
+Traceback (most recent call last):
+  File "/Users/raynos/projects/games/rockhop/assets/blender/rider-rebuild/astra-cuff-bearing18/construct09.py", line 405, in <module>
+    main()
+    ~~~~^^
+  File "/Users/raynos/projects/games/rockhop/assets/blender/rider-rebuild/astra-cuff-bearing18/construct09.py", line 348, in main
+    row = full_cuff(surgery, dumps[side], placement['hands'][side], profiles[side], wearers[side], settings)
+  File "/Users/raynos/projects/games/rockhop/assets/blender/rider-rebuild/astra-cuff-bearing18/construct09.py", line 127, in full_cuff
+    return G['reconstruct'](surgery, dump, placement, profile, wearer, settings, B)
+           ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/raynos/projects/games/rockhop/assets/blender/rider-rebuild/astra-cuff-bearing18/reconstruct_return09.py", line 232, in reconstruct
+    rim, ownership = remove_inner_return(surgery, inner_cut, x, z, settings)
+                     ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/raynos/projects/games/rockhop/assets/blender/rider-rebuild/astra-cuff-bearing18/reconstruct_return09.py", line 52, in remove_inner_return
+    inner_ids = one_ring(inner_cut); outer_ids = one_ring(outer_cut)
+                                                 ~~~~~~~~^^^^^^^^^^^
+  File "/Users/raynos/projects/games/rockhop/assets/blender/rider-rebuild/astra-cuff-bearing18/reconstruct_return09.py", line 40, in one_ring
+    assert len(rings) == 1, 'Measured floor boundary is not one ring'
+           ^^^^^^^^^^^^^^^
+AssertionError: Measured floor boundary is not one ring
+
+Error: script failed, file: 'assets/blender/rider-rebuild/astra-cuff-bearing18/construct09.py', exiting.
+Blender 5.2.1 LTS (hash 9e2066aef7ef built 2026-08-25 01:35:57)
+scripts disabled for "/Users/raynos/projects/games/rockhop/harness/out/rider-rebuild/selected-complete-engine01/engine05/rider-private-masked.blend", skipping 'RIG-RiderMetarig_ui.py'
+
+Blender quit
