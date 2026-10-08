@@ -15,3 +15,7 @@ Finding: Prepare one conventional local OUTSIDE finishing pass around the actual
 Validation: Parent full helper and controls read; AST and six intake pins match. Native intake records local boundaries before any edit, then retains exact topology, UV, materials, fields and body/shared75. Actual native saves before views.
 
 Limits: Unexecuted 12 mm clearance hypothesis, no general fit campaign. An unexpected local opening stops before editing; parent must inspect actual enclosure and moving art remains open.
+
+Finding: Actual local hoodie outside finish violates the existing moved-point preservation assertion and stops.
+Validation: CPU2 exit1 in1.032s at vertex12473; intake no unexpected boundary, exact scope/log preserved; no edited native saved.
+Limits: Existing actual patched garment remains rejected; no weaker guard/retry/bake, exact artist package pending.

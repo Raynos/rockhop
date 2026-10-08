@@ -1,0 +1,15 @@
+00:00.427  blend            | Read blend: "/Users/raynos/projects/games/rockhop/harness/out/rider-rebuild/production-hoodie01/regional-repair01/authored-hoodie.blend"
+Traceback (most recent call last):
+  File "/Users/raynos/projects/games/rockhop/assets/blender/rider-rebuild/production-hoodie02/local-outside01/finish.py", line 167, in <module>
+    if __name__ == '__main__': main()
+                               ~~~~^^
+  File "/Users/raynos/projects/games/rockhop/assets/blender/rider-rebuild/production-hoodie02/local-outside01/finish.py", line 134, in main
+    assert i in scoped and i not in already_loose, ('Outside aid altered a protected/loose point',i)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('Outside aid altered a protected/loose point', 12473)
+
+Error: script failed, file: 'assets/blender/rider-rebuild/production-hoodie02/local-outside01/finish.py', exiting.
+Blender 5.2.1 LTS (hash 9e2066aef7ef built 2026-08-25 01:35:57)
+scripts disabled for "/Users/raynos/projects/games/rockhop/harness/out/rider-rebuild/production-hoodie01/regional-repair01/authored-hoodie.blend", skipping 'RIG-RiderMetarig_ui.py'
+
+Blender quit
