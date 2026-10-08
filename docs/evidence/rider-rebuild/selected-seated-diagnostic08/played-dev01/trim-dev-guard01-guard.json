@@ -1,0 +1,132 @@
+{
+  "accepted": false,
+  "lock": "/Users/raynos/projects/localai/.model.lock",
+  "method": "lockf -k",
+  "command": [
+    "ffmpeg",
+    "-hide_banner",
+    "-loglevel",
+    "error",
+    "-threads",
+    "2",
+    "-ss",
+    "6.56",
+    "-i",
+    "harness/out/rider-rebuild/selected-seated-diagnostic08/played-dev01/garage-played.mp4",
+    "-an",
+    "-c:v",
+    "libx264",
+    "-threads",
+    "2",
+    "-preset",
+    "fast",
+    "-crf",
+    "18",
+    "-fps_mode",
+    "passthrough",
+    "-movflags",
+    "+faststart",
+    "harness/out/rider-rebuild/selected-seated-diagnostic08/played-dev01/garage-only-diagnostic.mp4"
+  ],
+  "controllerPID": 94846,
+  "pollSeconds": 1,
+  "startAnonymousBelowGiB": 55,
+  "stopAnonymousGiB": 65,
+  "stopAnonymousPlusWiredGiB": 96,
+  "limitSeconds": 60.0,
+  "guardSHA256": "cf8acd15d8b7484480bee74d23892be815d955ffd87115d3da8ed228ffb3d916",
+  "status": "worker returned; review pending",
+  "samples": [
+    {
+      "seconds": 0,
+      "anonymousGiB": 49.5,
+      "wiredGiB": 10.0,
+      "freeGiB": 17.6
+    },
+    {
+      "seconds": 0.074,
+      "anonymousGiB": 49.5,
+      "wiredGiB": 10.0,
+      "freeGiB": 17.5
+    },
+    {
+      "seconds": 1.142,
+      "anonymousGiB": 47.7,
+      "wiredGiB": 9.9,
+      "freeGiB": 19.4
+    },
+    {
+      "seconds": 2.251,
+      "anonymousGiB": 47.2,
+      "wiredGiB": 10.5,
+      "freeGiB": 19.3
+    },
+    {
+      "seconds": 3.359,
+      "anonymousGiB": 47.9,
+      "wiredGiB": 10.0,
+      "freeGiB": 19.1
+    },
+    {
+      "seconds": 4.424,
+      "anonymousGiB": 47.7,
+      "wiredGiB": 10.0,
+      "freeGiB": 19.3
+    },
+    {
+      "seconds": 5.503,
+      "anonymousGiB": 47.5,
+      "wiredGiB": 9.9,
+      "freeGiB": 19.5
+    },
+    {
+      "seconds": 6.6,
+      "anonymousGiB": 47.4,
+      "wiredGiB": 10.0,
+      "freeGiB": 19.5
+    },
+    {
+      "seconds": 7.678,
+      "anonymousGiB": 43.3,
+      "wiredGiB": 9.0,
+      "freeGiB": 24.6
+    },
+    {
+      "seconds": 8.766,
+      "anonymousGiB": 43.8,
+      "wiredGiB": 9.1,
+      "freeGiB": 24.1
+    },
+    {
+      "seconds": 9.843,
+      "anonymousGiB": 43.6,
+      "wiredGiB": 9.0,
+      "freeGiB": 24.3
+    },
+    {
+      "seconds": 10.925,
+      "anonymousGiB": 43.2,
+      "wiredGiB": 9.0,
+      "freeGiB": 24.7
+    },
+    {
+      "seconds": 11.99,
+      "anonymousGiB": 42.7,
+      "wiredGiB": 9.0,
+      "freeGiB": 25.2
+    },
+    {
+      "seconds": 13.083,
+      "anonymousGiB": 43.3,
+      "wiredGiB": 9.2,
+      "freeGiB": 24.5
+    }
+  ],
+  "physicalMemoryBytes": 137438953472,
+  "requiredPhysicalMemoryBytes": 137438953472,
+  "scope": "Future explicitly invoked owned Rockhop job only",
+  "pressureOrSwapLimits": "No separate pressure/swap gate exists in the pinned original guard; none altered",
+  "ownedChildPID": 94853,
+  "exitCode": 0,
+  "elapsedSeconds": 13.281
+}

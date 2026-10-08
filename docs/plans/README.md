@@ -1741,3 +1741,5 @@ Actual native07 import02 saves selectedmaster ed1fa079d9d7938e788da983511418d0d2
 Actual native07 savedreopen02 passes withautoexecdisabled: exactprotectedfields/restdefault0/13curves/repeatedposeparity,exit0/26.143s. Importreceipt losslesslygzipretained. Failedshapeclassification persists; actualdevGarage film next.
 
 Permanent source-mode Garage review source checkpoint: actualViteconfig/catalog/boot,64SHAstreamed selectedmodel, exactauthor04provenance/bikeorigin0 placement, actualUI/75TRS/5morphslots/frameMeter. Parent syntax/source review pass; actualguardedcapture next; productionbudget/performance unchanged/open.
+
+Actual diagnostic08 dressed Garage film played26.88s silent1x; all63presented samples reviewed. Seated posterior shelf/squared fold, cuffspikes and ankle strip remain rejected. Real source capture has six access-control errors despite selectedSHA/finite75/morph witnesses;59.736devFPS is not deviceacceptance. Regional nativeweights then posedsculpt remain next; no ridergateclosed.
