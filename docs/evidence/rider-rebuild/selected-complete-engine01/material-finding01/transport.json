@@ -1,0 +1,94 @@
+{
+  "accepted": false,
+  "status": "SAVED_PBR_TRANSPORT_CORRECT_RUNTIME_CAUSE_OPEN",
+  "actualGLB": {
+    "path": "harness/out/rider-rebuild/selected-complete-engine01/engine03/rider.glb",
+    "sha256": "7d826b835ca07c7c584d6b3a9606e9e89780f1c7b92e4030e1f1b58aff4127ed"
+  },
+  "material": {
+    "index": 7,
+    "name": "OriginalSelectedWholeJeansPBR4K",
+    "normalTexture": 9,
+    "baseColorTexture": 10,
+    "metallicRoughnessTexture": 11,
+    "texCoord": 0,
+    "factorDefaults": {
+      "roughness": 1,
+      "metallic": 1
+    }
+  },
+  "actualEmbeddedMapsByteIdenticalToAuthored02": {
+    "normal": "a2de41d3d92e7ab1d2f8c7d10628d07a0e1d9c5c89cfda05685ff200868c972b",
+    "albedo": "46ba462131c78e58e1adbc79558e59a4d8798d483e9c9e2440ba5eaa907a6f27",
+    "metallicRoughness": "4dfa7b1c8505d965036b3231252045ecdcd3a60fc41f191b86ae40c4fd28f4df"
+  },
+  "sourceRecipeGraph": {
+    "path": "assets/blender/rider-rebuild/production-jeans02/whole-correspondence02/continue-local02.py",
+    "lines": [
+      204,
+      219
+    ],
+    "albedo": "sRGB image Color to Principled Base Color",
+    "metallicRoughness": "Non-Color image Separate Color Green to Roughness; Blue to Metallic",
+    "normal": "Non-Color image to tangent Normal Map to Principled Normal",
+    "note": "Recipe read, actual native node state not reopened by builder."
+  },
+  "actualExportedUV": {
+    "attribute": "TEXCOORD_0",
+    "minimum": [
+      0.00144725,
+      0.00144708
+    ],
+    "maximum": [
+      0.46406692,
+      0.99855274
+    ],
+    "vertexRows": 26474,
+    "triangleCenters": 51456,
+    "tangentAttribute": false,
+    "nearestSourcePngSamplesUsingGltfV": {
+      "left": {
+        "triangleCenters": 25728,
+        "alphaZero": 0,
+        "roughnessZero": 0,
+        "medianMR": [
+          255,
+          238,
+          34
+        ],
+        "medianAlbedo": [
+          43,
+          50,
+          68
+        ]
+      },
+      "right": {
+        "triangleCenters": 25728,
+        "alphaZero": 0,
+        "roughnessZero": 0,
+        "medianMR": [
+          255,
+          238,
+          35
+        ],
+        "medianAlbedo": [
+          45,
+          51,
+          69
+        ]
+      }
+    }
+  },
+  "runtimeSourceRead": {
+    "shrinkTextures": "src/render/hero/gltf.ts caps albedo1024 and data512 with canvas drawImage",
+    "materialCompletion": "src/render/materials/library.ts complete fills absent maps only; source maps present",
+    "factorOverrides": "No roughness or metallic override found in private rider preparation; environment intensity0.8",
+    "readOnlyProbe": "runtime-probe.js"
+  },
+  "next": "Parent existing silent Garage harness must measure actual prepared jeans texture pixels/transforms and normal type. Source data does not support arbitrary roughness tuning or replacing the selected maps.",
+  "limits": [
+    "Actual Garage white chrome symptom remains unaccepted.",
+    "Byte-identical exported maps and populated UV samples qualify source transport only; actual GPU samples and shading remain open.",
+    "No Blender render/export/job/commit executed by builder; normal player assets untouched."
+  ]
+}

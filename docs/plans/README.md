@@ -1569,3 +1569,5 @@ October8 actualGarage01 source-capture stops on WebKit341MiB inspectorcacheevict
 October8 actualcomplete selectedGarage02 loads7parts/exactsource andplayed17.04sproxytoend/402presentedframes. Parentrejectscuffprojections andbroadjeanschrome; sourcePBRtransportexactbutruntime4Kmapsdownsampled1024/512. TargetedAstra07cuff/runtimePBRdiagnosis active;allR0-R5open0/6.
 
 October8 freshAstra07 parentreproduced selectedcuff5.80/5.90mmhoodieoverlap atrest,100%forearmfields; FOUR/runtime notorigin. Concretebilateralproximalguidecufftuck assigned, fingers/PBR unchanged. ActualcorrectedGarage pending;0/6.
+
+October8 selectedPBRbyteexact/UV centers valid; preparedruntime material/texture probe added to existingGarage harness before anyshaderguess. Actualprobe next; allR0-R5open0/6.

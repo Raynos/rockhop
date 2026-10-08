@@ -7,6 +7,7 @@ import { spawnSync } from 'node:child_process';
 import { preview } from 'vite';
 import { webkit } from 'playwright';
 import { witnessGlbResponse } from './glb-response-witness.mjs';
+import { inspectPreparedRiderMaterials } from './inspect-prepared-materials.mjs';
 
 const arg = (name, fallback = '') => process.argv.find(value => value.startsWith(`--${name}=`))?.slice(name.length + 3) ?? fallback;
 const build = path.resolve(arg('build')), out = path.resolve(arg('out'));
@@ -38,6 +39,11 @@ try {
   const inspect = async name => {
     const diagnostic = await page.evaluate(() => ({ debug: structuredClone(window.__render.debug.rider.debug), render: window.__render.debugInfo(), stageTime: window.__render.stageTime }));
     report.snapshots.push({ name, ...diagnostic });
+    if (name === 'garage-front' && arg('material-probe')) {
+      report.materialProbe = await page.evaluate(inspectPreparedRiderMaterials);
+      report.materialProbeRecipeSHA256 = crypto.createHash('sha256')
+        .update(fs.readFileSync(new URL('./inspect-prepared-materials.mjs', import.meta.url))).digest('hex');
+    }
     await page.screenshot({ path: path.join(out, name + '.png') });
   };
   await inspect('garage-front');
