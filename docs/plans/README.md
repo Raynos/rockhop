@@ -1817,3 +1817,5 @@ Motion11 native03 fails9.152s: added-rest physicalchecks pass; all75 neutral ski
 Cuff10 actualfails79.961s afterbothglovesurfaceconstruction: leftsleeve fixedproximal exteriorboundary violatesactualcontact. Numericflooridentity repaired; no savednative/report/artpass. Lead23 replacesarbitraryimmutableboundary with deliberateadjacentsleevetailoring; no radius/ease/densegate relaxation. Secondconstructionaftergate33.
 
 Motion11 source04 derivespoleangle directlyfromBlender rootX/rootZ coefficients; analyticoldoperator predictsactualfailurewithin4.3e-7arms/2.02e-5legs, correctedidentitywithin4.29e-6. Fullnative04 queuedwithstrictneutralcheckpointbeforeactions; no native/actionpassyet or boundchange.
+
+Exactbothbike nativecontext retained:116saddletriangles each, measuredboot-contact/anatomical-socket roundtrip<1e-12, no rejectedpelvis/spinefit imported. Editableposehelperacceptsexplicitauthoredpelvis/poles. Reference/source only; nativeposture/contact/art unaccepted.
