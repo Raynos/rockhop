@@ -1829,3 +1829,5 @@ Gate34 actualMetal partialboot/clear/crash/restart PASS11/11, unchangedhardwarel
 PrivateGarage source now accepts only the explicitlypinned UNACCEPTED_POSED_VOLUME derivative: originalweightpins plus sevenfreshshapepins, actualLINEAR mesh-array tracks and fiveBody/Jeans targetchecks; failedcorrectivehelper staysabsent. FourCPUchecksPASS; no actualsculpt/film/artpassyet.
 
 Hem26 freezes one actualselected lower-hem tailoring source:1724L/1717Rvertices, sourcecollarsections,25retainedposes, positionpatchintegration preserving currentmasterweights/keys/rig. Sourcepins/ASTPASS; nativegeometry/time/memory/contact/artremainunmeasured. No cuff or upperJeans ownership overlap.
+
+Sculpt03 actual native construction saved and reopened successfully (65.679s): shared volume moves14,807 Jeans/621 Body vertices, fresh inverse target residual below0.991µm and reopened residual0. Original Basis, weights, rest and maps remain exact. Contact, crossings, runtime and dressed-art acceptance remain open.
