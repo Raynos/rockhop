@@ -28,6 +28,17 @@ def hermite(a, b, va, vb, duration, u):
     return (2*u**3-3*u*u+1)*a+(u**3-2*u*u+u)*duration*va+(-2*u**3+3*u*u)*b+(u**3-u*u)*duration*vb
 
 
+def range_body(label):
+    """Body targets shared with the source-length reach preflight."""
+    r={'root':[0.,0.,0.],'pitch':0.,'roll':0.,'chest':0.,'chestPitch':0.,'headYaw':0.,'headNod':0.,'grip':0.}
+    # A planted asymmetrical roll needs knee yield: the old straight-legged
+    # stance raised the left hip beyond its 0.803744 m physical leg reach.
+    if label=='asymmetric':r.update(root=[0.,0.,-.020],roll=6.,chest=20.,headYaw=-10.,grip=.35)
+    if label=='crouch':r.update(root=[0.,.105,-.40],pitch=12.,chestPitch=18.,headNod=-12.,grip=.1)
+    if label=='head':r.update(headYaw=35.,headNod=15.)
+    return r
+
+
 def foot_cycle(t, seconds, stride, duty, offset, clearance):
     phase = t/seconds+offset; step = math.floor(phase+1e-10); q = phase-step
     if q < 0: q = 0.

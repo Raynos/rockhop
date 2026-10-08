@@ -1,8 +1,10 @@
 """Map the six authored movement scores onto native controls."""
+import json
 import math
 import bpy
 from mathutils import Matrix, Quaternion, Vector
 from controls import ctrl
+from motion import range_body
 
 X, F, Z = Vector((1, 0, 0)), Vector((0, -1, 0)), Vector((0, 0, 1))
 I = Quaternion((1, 0, 0, 0))
@@ -17,8 +19,8 @@ def arm_direction(elevation, azimuth, sign):
 
 
 def range_pose(label, context):
-    r = {'root': Vector((0, 0, 0)), 'pitch': 0., 'roll': 0., 'chest': 0.,
-         'chestPitch': 0., 'headYaw': 0., 'headNod': 0., 'shoulder': 0., 'grip': 0., 'arms': {}}
+    r = {**range_body(label), 'shoulder': 0., 'arms': {}}
+    r['root']=Vector(r['root'])
     for side, sign in [('L', 1), ('R', -1)]:
         limb = next(l for l in context['limbs'] if l['kind']=='arm' and l['side']==side)
         h=context['heads']; upper=(h[limb['lowers'][0]]-h[limb['uppers'][0]]).normalized()
@@ -34,13 +36,10 @@ def range_pose(label, context):
             upper=arm_direction(125. if side=='L' else 45., 15. if side=='L' else 70., sign)
             lower=rotation(X, -20.)@upper
         r['arms'][side]=(upper,lower)
-    if label=='asymmetric': r.update(roll=6., chest=20., headYaw=-10., grip=.35)
-    if label=='crouch': r.update(root=Vector((0, .105, -.40)), pitch=12., chestPitch=18., headNod=-12., grip=.1)
-    if label=='head': r.update(headYaw=35., headNod=15.)
     return r
 
 
-def apply(rig, context, row):
+def apply(rig, context, row, witness=None):
     for name in context['controls']:
         b=rig.pose.bones[name]; b.location=(0,0,0); b.rotation_quaternion=I; b.scale=(1,1,1)
     current=dict(row); current['root']=Vector(row['root']); current['chestPitch']=0.; current['shoulder']=0.
@@ -104,7 +103,7 @@ def apply(rig, context, row):
                 bend=yaw@F; bend-=ray*bend.dot(ray)
             rig.pose.bones[pole].matrix=Matrix.Translation(elbow+bend.normalized()*.4)
     bpy.context.view_layer.update()
-    limb_checks={}
+    limb_checks={}; observations=[]
     for limb in context['limbs']:
         start=rig.pose.bones[limb['uppers'][0]].matrix.translation
         middle=rig.pose.bones[limb['lowers'][0]].matrix.translation
@@ -112,9 +111,20 @@ def apply(rig, context, row):
         target=rig.pose.bones[limb['target']].matrix.translation
         length_error=max(abs((middle-start).length-limb['lengths'][0]),abs((end-middle).length-limb['lengths'][1]))
         target_error=(end-target).length
-        assert length_error<.0001 and target_error<.0001,('Native limb failed target/length',limb['kind'],limb['side'],length_error,target_error)
         flex=math.degrees((middle-start).angle(end-middle))
-        limb_checks[limb['kind']+limb['side']]={'targetM':target_error,'lengthM':length_error,'flexDegrees':flex}
+        distance=(target-start).length; outer=sum(limb['lengths']); inner=abs(limb['lengths'][0]-limb['lengths'][1])
+        limb_checks[limb['kind']+limb['side']]={'targetM':target_error,'lengthM':length_error,'flexDegrees':flex,
+            'outerReachMarginM':outer-distance,'innerReachMarginM':distance-inner}
+        observations.append({'limb':limb['kind']+limb['side'],'sourceLengthsM':limb['lengths'],
+            'startNative':list(start),'middleNative':list(middle),'endNative':list(end),'targetNative':list(target),
+            'poleNative':list(rig.pose.bones[limb['poleControl']].matrix.translation),
+            **limb_checks[limb['kind']+limb['side']]})
+    if any(max(r['targetM'],r['lengthM'])>=.0001 for r in observations):
+        failure={'status':'NATIVE_POSE_TARGET_OR_LENGTH_FAILED','witness':witness or {'frame':bpy.context.scene.frame_current},
+            'score':row,'resolvedBody':{k:list(current[k]) if k=='root' else current[k] for k in ('root','yaw','pitch','roll','chest','chestPitch')},
+            'pelvisMatrix':[list(r) for r in rig.pose.bones[roles['pelvis']].matrix],'limbs':observations}
+        context['failureWitness']=failure; print(json.dumps(failure),flush=True)
+        raise AssertionError(failure)
     for side in ('L','R'):
         actual=rig.pose.bones['SoleSocket.'+side].matrix.translation
         intended[side]['actualSole']=list(actual); intended[side]['errorM']=(actual-Vector(intended[side]['sole'])).length

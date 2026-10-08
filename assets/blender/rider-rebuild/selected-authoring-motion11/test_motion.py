@@ -3,11 +3,11 @@ import math
 import json
 from pathlib import Path
 import unittest
-from motion import SCORES, foot_cycle, score
+from motion import SCORES, foot_cycle, score, range_body
 
 
 class MovementScore(unittest.TestCase):
-    def test_source_leg_lengths_reach_all_travelling_targets(self):
+    def test_source_leg_lengths_reach_all_action_targets(self):
         root=Path(__file__).resolve().parents[4]
         contract=json.loads((root/'harness/out/rider-rebuild/selected-complete-engine01/engine05/rider-contract.json').read_text())
         heads={b['name']:b['head'] for b in contract['nativeRest']['bones']}
@@ -15,12 +15,17 @@ class MovementScore(unittest.TestCase):
         sub=lambda a,b:[x-y for x,y in zip(a,b)]
         def rotate(p,degrees,axis):
             c,s=math.cos(math.radians(degrees)),math.sin(math.radians(degrees)); x,y,z=p
-            return [c*x-s*y,s*x+c*y,z] if axis=='z' else [x,c*y-s*z,s*y+c*z]
+            if axis=='z':return [c*x-s*y,s*x+c*y,z]
+            if axis=='minus_y':return [c*x-s*z,y,s*x+c*z]
+            return [x,c*y-s*z,s*y+c*z]
         pelvis=heads['DEF-spine']
         for name,spec in SCORES.items():
-            if name=='RiderRangeOfMotion': continue
             for i in range(1001):
                 r=score(name,spec['seconds']*i/1000)
+                if 'range' in r:
+                    spec_range=r['range'];a=range_body(spec_range['from']);b=range_body(spec_range['to']);u=spec_range['blend']
+                    r['root']=[x*(1-u)+y*u for x,y in zip(a['root'],b['root'])]
+                    for key in ('pitch','roll'):r[key]=a[key]*(1-u)+b[key]*u
                 for side in ('L','R'):
                     f=r['feet'][side]; source_sole=heads['SoleSocket.'+side]; source_foot=heads['DEF-foot.'+side]; p=source_sole[:]
                     if 'turnFrom' in f:
@@ -28,7 +33,7 @@ class MovementScore(unittest.TestCase):
                         a=add(rotate(sub(p,pivot),f['turnFrom'],'z'),pivot); b=add(rotate(sub(p,pivot),f['turnTo'],'z'),pivot)
                         p=[x+(y-x)*f['turnBlend'] for x,y in zip(a,b)]
                     ankle=add(add(p,[0.,-f['forward'],f['up']]),rotate(sub(source_foot,source_sole),f.get('yaw',0.),'z'))
-                    hip=add(add(pelvis,r['root']),rotate(rotate(sub(heads['DEF-thigh.'+side],pelvis),r['pitch'],'x'),r['yaw'],'z'))
+                    hip=add(add(pelvis,r['root']),rotate(rotate(rotate(sub(heads['DEF-thigh.'+side],pelvis),r['pitch'],'x'),r['roll'],'minus_y'),r['yaw'],'z'))
                     a=math.dist(heads['DEF-thigh.'+side],heads['DEF-shin.'+side]);b=math.dist(heads['DEF-shin.'+side],source_foot)
                     distance=math.dist(hip,ankle)
                     self.assertLess(distance,a+b-.0001,(name,i,side,distance,a+b))

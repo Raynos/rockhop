@@ -85,13 +85,22 @@ def main():
     if neutral_only:
         print(json.dumps({'neutralNative':neutral_report['native'],'neutralBoundM':context['neutralMaximumAffineBoundWithin2mM'],'actionsAuthored':False}),flush=True)
         return
-    scene.render.fps_base=1; rig.animation_data_create(); records=[]; arrays={'boneNames':np.asarray(names)}; controls=[]; baked=[]
+    scene.render.fps_base=1; rig.animation_data_create(); records=[]; arrays={'boneNames':np.asarray(names)}; controls=[]; baked=[]; checkpoints=[]
     for clip_index,(name,spec) in enumerate(SCORES.items()):
         frames=round(spec['seconds']*FPS)+1; action=bpy.data.actions.new('Author.'+name); action.use_fake_user=True
         rig.animation_data.action=action; world_samples=[]; local_samples=[]; support=[]; previous={}; previous_control={}
         palette_error=0.; maximum_sole_error=0.
         for frame in range(1,frames+1):
-            scene.frame_set(frame); contact=apply(rig,context,score(name,(frame-1)/FPS))
+            time=(frame-1)/FPS; authored_score=score(name,time)
+            witness={'action':name,'frame':frame,'timeSeconds':time}
+            scene.frame_set(frame)
+            try:contact=apply(rig,context,authored_score,witness=witness)
+            except Exception as error:
+                failure={'accepted':False,'status':'NATIVE_ACTION_FAILED_PARTIAL_CHECKPOINTS_RETAINED',
+                    **witness,'score':authored_score,'error':repr(error),
+                    'poseWitness':context.get('failureWitness'),'completedActions':checkpoints}
+                (out/'failed-action.json').write_text(json.dumps(failure,indent=2)+'\n')
+                raise
             for control_name in context['controls']:
                 bone=rig.pose.bones[control_name]; q=bone.rotation_quaternion.copy()
                 if control_name in previous_control and q.dot(previous_control[control_name])<0: q.negate(); bone.rotation_quaternion=q
@@ -125,6 +134,24 @@ def main():
                         'seconds':spec['seconds'],'loop':spec['loop'],'rootForwardM':spec.get('rootForwardM',0.),
                         'playback': 'ONCE_OR_ACCUMULATE_ROOT_OFFSET' if spec.get('rootForwardM') else ('LOOP' if spec['loop'] else 'ONCE'),
                         'soleTargetMaximumM':maximum_sole_error,'regionalOperatorBoundWithin2mM':palette_error,'support':support})
+        # Keep each constructed action independently recoverable before trying
+        # the next one. These are partial construction receipts, not proof that
+        # the later unconstrained bake, export, or dressed playback passed.
+        checkpoint_dir=out/f'action-{clip_index+1:02d}-{name}'; checkpoint_dir.mkdir()
+        checkpoint_native=checkpoint_dir/'native75-controls.blend'; checkpoint_arrays=checkpoint_dir/'native-action-matrices.npz'
+        rig.animation_data.action=action; rig.animation_data.action_slot=action.slots[0]
+        scene.frame_set(1); scene.frame_start=1; scene.frame_end=frames
+        bpy.ops.wm.save_as_mainfile(filepath=str(checkpoint_native),compress=True)
+        np.savez_compressed(checkpoint_arrays,**arrays)
+        checkpoint={'accepted':False,'status':'NATIVE_ACTION_CONSTRUCTED_BAKE_EXPORT_AND_ART_PENDING',
+            'source':config,'sources':{p.name:sha(p) for p in HERE.glob('*.py')},
+            'completedAction':name,'completedActions':[r['name'] for r in records],
+            'native':{'path':str(checkpoint_native.relative_to(ROOT)),'sha256':sha(checkpoint_native)},
+            'nativeMatrices':{'path':str(checkpoint_arrays.relative_to(ROOT)),'sha256':sha(checkpoint_arrays)},
+            'actions':records,'limits':['Only completed control actions and their candidate visual-bake curves are saved.',
+                'No later failed action is included. Fresh-rig bake replay/export and complete selected dressed acceptance remain pending.']}
+        checkpoint_path=checkpoint_dir/'receipt.json'; checkpoint_path.write_text(json.dumps(checkpoint,indent=2)+'\n')
+        checkpoints.append({'name':name,'receipt':{'path':str(checkpoint_path.relative_to(ROOT)),'sha256':sha(checkpoint_path)}})
         print(json.dumps({'action':name,'frames':frames,'soleMaxM':maximum_sole_error,'paletteBoundM':palette_error}),flush=True)
     assert rest_rows(rig,set(names))==contract['nativeRest']['bones'] and not bpy.data.meshes
     control_native=out/'native75-authoring-controls.blend'
@@ -165,7 +192,7 @@ def main():
             'addedRestMaximumMatrixResidual':context['addedRestMaximumMatrixResidual'],
             'addedRestBeforeConstraints':context['addedRestBeforeConstraints'],
             'neutral75BeforeActions':context['neutral75BeforeActions'],
-            'neutralMaximumAffineBoundWithin2mM':context['neutralMaximumAffineBoundWithin2mM'],'actions':records,
+            'neutralMaximumAffineBoundWithin2mM':context['neutralMaximumAffineBoundWithin2mM'],'actions':records,'constructionCheckpoints':checkpoints,
             'limits':['Rig-only construction package, never a substitute for selected dressed playback.',
                       'Foot target stationarity is not finite boot/ground or clothing collision acceptance.',
                       'Native IK control envelope preserves regional palette; arbitrary independent split twists are not covered.',

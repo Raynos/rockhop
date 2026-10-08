@@ -1831,3 +1831,5 @@ PrivateGarage source now accepts only the explicitlypinned UNACCEPTED_POSED_VOLU
 Hem26 freezes one actualselected lower-hem tailoring source:1724L/1717Rvertices, sourcecollarsections,25retainedposes, positionpatchintegration preserving currentmasterweights/keys/rig. Sourcepins/ASTPASS; nativegeometry/time/memory/contact/artremainunmeasured. No cuff or upperJeans ownership overlap.
 
 Sculpt03 actual native construction saved and reopened successfully (65.679s): shared volume moves14,807 Jeans/621 Body vertices, fresh inverse target residual below0.991µm and reopened residual0. Original Basis, weights, rest and maps remain exact. Contact, crossings, runtime and dressed-art acceptance remain open.
+
+Motion11 source05 corrects an impossible asymmetric planted-leg target with20mm pelvis yield, retaining6° roll and20° chest turn. Exact289 range keys retain≥0.630mm reach margin; five tests pass across all six scores. Completed-action checkpoints and detailed failure witnesses are added. Native05 remains pending.

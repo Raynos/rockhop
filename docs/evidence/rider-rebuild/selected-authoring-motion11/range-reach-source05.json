@@ -1,0 +1,132 @@
+{
+  "accepted": false,
+  "status": "SUPPORTED_RANGE_REACH_CORRECTION_SOURCE_NOT_NATIVE_RERUN",
+  "failedRun": {
+    "path": "docs/evidence/rider-rebuild/selected-authoring-motion11/native-guard06/worker.log",
+    "sha256": "a1f9b883af3e6f9a17b981769281d8bcc327293c2e569d4e15d30fe21cf116c2"
+  },
+  "sourceContract": {
+    "path": "harness/out/rider-rebuild/selected-complete-engine01/engine05/rider-contract.json",
+    "sha256": "2aa39bc8c15738b4ecbd2aac08fd61375e0aa8fd45a0ee2ac3046f577b019728"
+  },
+  "observedNativeTargetErrorM": 0.0004051181574029362,
+  "firstPredictedExcessVsObservedDifferenceM": 2.5296790127938835e-06,
+  "old": {
+    "samplesPerSide": 289,
+    "firstExcessBeyondGate": {
+      "frame": 144,
+      "timeSeconds": 5.958333333333333,
+      "side": "L",
+      "range": {
+        "from": "reach",
+        "to": "asymmetric",
+        "blend": 0.10200783058449066
+      },
+      "rootNativeM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "pelvisRollDegrees": 0.612046983506944,
+      "hipNativeM": [
+        0.10033704548197257,
+        -0.018959034234285355,
+        0.9285327016347409
+      ],
+      "ankleTargetNativeM": [
+        0.1784254014492035,
+        0.06145881116390228,
+        0.1322368085384369
+      ],
+      "sourceLengthsM": [
+        0.3867097383785513,
+        0.41703440761270255
+      ],
+      "targetDistanceM": 0.804146734469644,
+      "unreachableExcessM": 0.00040258847839014233
+    },
+    "worstOuterReach": {
+      "frame": 160,
+      "timeSeconds": 6.625,
+      "side": "L",
+      "range": {
+        "from": "asymmetric",
+        "to": "asymmetric",
+        "blend": 0.0072500000000002025
+      },
+      "rootNativeM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "pelvisRollDegrees": 6.0,
+      "hipNativeM": [
+        0.10226576219819224,
+        -0.018959034234285355,
+        0.9380658606557697
+      ],
+      "ankleTargetNativeM": [
+        0.1784254014492035,
+        0.06145881116390228,
+        0.1322368085384369
+      ],
+      "sourceLengthsM": [
+        0.3867097383785513,
+        0.41703440761270255
+      ],
+      "targetDistanceM": 0.813405053921876,
+      "unreachableExcessM": 0.009660907930622131
+    },
+    "minimumInnerReachMarginM": 0.3742772470309209
+  },
+  "corrected": {
+    "samplesPerSide": 289,
+    "firstExcessBeyondGate": null,
+    "worstOuterReach": {
+      "frame": 1,
+      "timeSeconds": 0.0,
+      "side": "R",
+      "range": {
+        "from": "rest",
+        "to": "rest",
+        "blend": 0.0
+      },
+      "rootNativeM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "pelvisRollDegrees": 0.0,
+      "hipNativeM": [
+        -0.10006147623062134,
+        -0.018959036096930504,
+        0.9274623394012451
+      ],
+      "ankleTargetNativeM": [
+        -0.17842541635036469,
+        0.061458803713321686,
+        0.13223673403263092
+      ],
+      "sourceLengthsM": [
+        0.38670979780182124,
+        0.4170344226978564
+      ],
+      "targetDistanceM": 0.8031137525311823,
+      "unreachableExcessM": -0.0006304679684953074
+    },
+    "minimumInnerReachMarginM": 0.3742772470309209
+  },
+  "interpretation": "The old worker did not record a frame. Frame144 is inferred as the first physically impossible exact authored key; its predicted excess agrees with the observed residual within2.53micrometres, consistent with measured source frame normalization. No solver convergence assumption is needed to explain an unreachable target.",
+  "correction": "Asymmetric station root Z is lowered20mm;6-degree pelvis roll,20-degree chest rotation, arms/head targets and planted soles are unchanged. No rest, pole, segment length, IK iteration or0.1mm gate change.",
+  "sources": {
+    "build.py": "5b0c4d282b9003fc0968df84972d009d9d9e4b1b1b06bffb80b11dbd475cf003",
+    "controls.py": "b5b77c1af0442b87d4730834baf1e76bfae737a4531daad5e1aeada79293fd21",
+    "test_motion.py": "f6d8e66a2a05d0326d5093dd58e858f263e4464c1bfa6a64b0a88ec1c2701c5d",
+    "bike_pose.py": "5f0b727147b9372b0ace2aa10c3a4435a73f3589b1646815974fe4d90995ca4f",
+    "motion.py": "5130b099583db8435fe3117ef4fefff9bca082b25e4ef3339b52a2acf9a1b278",
+    "pose.py": "a33ee62485823c22456be37f3e3053405352b723a5aae39a2ac2360e6beaaa1d",
+    "probe_controls.py": "f4eb982901ff4e5bf7916187497a7846e88eadb4b4cf7a28c1e8115e27f17649"
+  },
+  "checks": "AST all Python sources PASS; five tests PASS, including source-length reach at1001 samples for each of all six actions. Exact289 range keys independently checked here.",
+  "checkpointSemantics": "Each fully constructed control action is saved with native blend, cumulative actual matrices and an explicitly partial receipt before attempting the next. Fresh-rig bake/export/complete dressed playback remain required; partial receipts cannot satisfy transport."
+}
