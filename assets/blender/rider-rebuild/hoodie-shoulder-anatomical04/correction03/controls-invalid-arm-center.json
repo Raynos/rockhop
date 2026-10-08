@@ -1,0 +1,158 @@
+{
+  "accepted": false,
+  "stage": "ONE_EXPANDED_SIX_LANDMARK_SEWN_JOIN",
+  "incomingNative": {
+    "path": "harness/out/rider-rebuild/hoodie-shoulder-anatomical04/authored01/selected-panel-outfit.blend",
+    "sha256": "1ad5c5aa21553bbb3eb84898572200b2d4418e81e1e1995d774a763707f0124f"
+  },
+  "incomingReceipt": {
+    "path": "harness/out/rider-rebuild/hoodie-shoulder-anatomical04/authored01/author.json",
+    "sha256": "16fa88f30446f3506047a0242dd086db127b94bd87a453a2bfe6cd3a66c01f9c"
+  },
+  "savedArrays": {
+    "path": "harness/out/rider-rebuild/hoodie-shoulder-anatomical04/correction02-intake01/saved-panels.npz",
+    "sha256": "e09263ca089e3a111b23f40620564fdf012ec7fcdc58eb8e81ed920e40439c15"
+  },
+  "incomingFields": {
+    "path": "harness/out/rider-rebuild/hoodie-shoulder-anatomical04/authored01/panel-native-fields.npz",
+    "sha256": "3886c4e84c5b182e22fac7b0c9fec6ab30b9a34e3b2d1a2350a9321851bf01a4"
+  },
+  "expandedCut": {
+    "path": "docs/evidence/rider-rebuild/hoodie-shoulder-anatomical04/correction02/expanded-cut.json",
+    "sha256": "803691f4fce999d585588eacbccbe29cdc6ae4c73d84127e97811d13769e8ca9"
+  },
+  "patternSource": {
+    "path": "assets/blender/rider-rebuild/hoodie-shoulder-anatomical04/correction03/tailored_pattern.py",
+    "sha256": "a1c7140837993c499fc14a1009e8d23135d1204937a67a9636d1125eb39eefad"
+  },
+  "originalControls": {
+    "path": "assets/blender/rider-rebuild/hoodie-shoulder-anatomical04/panel-controls.json",
+    "sha256": "782f55d11a975723a71eceec10adee3cd57404d7416f0d041db236f2eaf32b25"
+  },
+  "originalHelpers": {
+    "path": "assets/blender/rider-rebuild/production-hoodie01/author.py",
+    "sha256": "078da52b40e1f5049759314c1794ba6559ac1dae90d79294672c674f2095d14a"
+  },
+  "sourceChartHelpers": {
+    "path": "assets/blender/rider-rebuild/hoodie-shoulder-anatomical04/author_panels.py",
+    "sha256": "e0fe83af63a552133fec56b80a315a6c11de62614d6ff895794d67440b3aa294"
+  },
+  "atlasHelpers": {
+    "path": "assets/blender/rider-rebuild/hoodie-shoulder-anatomical04/correction02/author_correction.py",
+    "sha256": "289b1a313610d6da6e1ae6c9f4fa5d050119b72cc66e6c49a8bb9cabad0b8ec2"
+  },
+  "selectedIntake": {
+    "path": "harness/out/rider-rebuild/hoodie-shoulder-anatomical04/intake01/selected25-source.npz",
+    "sha256": "5ccc4a69b2c2912d761babf8bde8f2ca5916d4896e816fc4ee33ae3ca34366c0"
+  },
+  "originalDensePBR": {
+    "path": ".tmp/generation-comparison-2026-10-03/user-agent2/qualified-hunyuan-paint06/paint/painted.glb",
+    "sha256": "800d7a9717757b90b296a78c605cddb698c68d399a96e403aa381103e77d2eba"
+  },
+  "atlasSize": 1024,
+  "selectedToWearerRows": [
+    [
+      0,
+      1,
+      0
+    ],
+    [
+      -1,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      1
+    ]
+  ],
+  "cloth": {
+    "columns": 16,
+    "rows": 32,
+    "frontDepthM": 0.165,
+    "rearDepthM": 0.155,
+    "shoulderBridgeZM": 1.45,
+    "torsoUnderarmXM": 0.19,
+    "sleeveUnderarmXM": 0.28,
+    "underarmSeamZM": 1.205,
+    "clothThicknessM": 0.002
+  },
+  "panels": [
+    {
+      "role": 1,
+      "side": "L",
+      "interior": false,
+      "boundaryCycle": 1,
+      "sourceComponent": "L-10628",
+      "anchors": [
+        844,
+        2529,
+        2479,
+        3035,
+        230,
+        4666
+      ]
+    },
+    {
+      "role": 2,
+      "side": "L",
+      "interior": true,
+      "boundaryCycle": 0,
+      "sourceComponent": "L-12275",
+      "anchors": [
+        2115,
+        2093,
+        1406,
+        1292,
+        5696,
+        2037
+      ]
+    },
+    {
+      "role": 3,
+      "side": "R",
+      "interior": false,
+      "boundaryCycle": 1,
+      "sourceComponent": "R-3568",
+      "anchors": [
+        2611,
+        3327,
+        1083,
+        4106,
+        3449,
+        2946
+      ]
+    },
+    {
+      "role": 4,
+      "side": "R",
+      "interior": true,
+      "boundaryCycle": 0,
+      "sourceComponent": "R-3146",
+      "anchors": [
+        3750,
+        4271,
+        756,
+        73,
+        5188,
+        2888
+      ]
+    }
+  ],
+  "anchorRoles": [
+    "frontTorso",
+    "lowerTorso",
+    "rearTorso",
+    "rearInnerSleeve",
+    "lowerInnerSleeve",
+    "frontInnerSleeve"
+  ],
+  "limits": [
+    "Expanded cut consumes2743 failed/support faces; useful garment outside proper cut remains exact.",
+    "Front/rear cloth panels share explicit lower underarm seam; true exterior and interior share one midcloth form with2mm structural thickness.",
+    "Structural cloth thickness is not a body fit/normal-displacement campaign. No body projection, mean-inset, gain sweep or generation.",
+    "Existing original4K PBR outside cut remains exact. Local genuine derivative atlas uses continuous actual donor identity and source triangle/UV sampling.",
+    "One fixed construction; parent judges. Body75 unchanged; full new fields interpolated without FOUR trimming. All R0\u2013R5 open."
+  ]
+}

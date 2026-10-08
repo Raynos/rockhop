@@ -1,0 +1,144 @@
+{
+  "accepted": false,
+  "stage": "EXPANDED_SEWN_SOURCE_READY_FIXED_ANATOMICAL_LANDMARK_PREDICTION_CLEAR",
+  "sources": [
+    {
+      "path": "assets/blender/rider-rebuild/hoodie-shoulder-anatomical04/correction03/author.py",
+      "sha256": "a4cd0abcd0f7449a2473178fb52ec23b643c8ee06db62d17fabb6e79a922eccb",
+      "AST": "PASS"
+    },
+    {
+      "path": "assets/blender/rider-rebuild/hoodie-shoulder-anatomical04/correction03/predict_landmark_fix.py",
+      "sha256": "330d4fb15a73408992cebce5f2b298beb4db8e6b6fc1198bd53965762d24f918",
+      "AST": "PASS"
+    },
+    {
+      "path": "assets/blender/rider-rebuild/hoodie-shoulder-anatomical04/correction03/predict_once.py",
+      "sha256": "7541dcce0a1e9bd2cd0a4971068d67f97061c96ed00b0f7e4127ae6a519b3405",
+      "AST": "PASS"
+    },
+    {
+      "path": "assets/blender/rider-rebuild/hoodie-shoulder-anatomical04/correction03/tailored_pattern.py",
+      "sha256": "a1c7140837993c499fc14a1009e8d23135d1204937a67a9636d1125eb39eefad",
+      "AST": "PASS"
+    }
+  ],
+  "controls": {
+    "path": "assets/blender/rider-rebuild/hoodie-shoulder-anatomical04/correction03/controls.json",
+    "sha256": "475e71ff094ca1616ba198b79e5c099135154a338652cecb75b95f0dd4840ec3"
+  },
+  "pins": [
+    {
+      "key": "incomingNative",
+      "path": "harness/out/rider-rebuild/hoodie-shoulder-anatomical04/authored01/selected-panel-outfit.blend",
+      "sha256": "1ad5c5aa21553bbb3eb84898572200b2d4418e81e1e1995d774a763707f0124f"
+    },
+    {
+      "key": "incomingReceipt",
+      "path": "harness/out/rider-rebuild/hoodie-shoulder-anatomical04/authored01/author.json",
+      "sha256": "16fa88f30446f3506047a0242dd086db127b94bd87a453a2bfe6cd3a66c01f9c"
+    },
+    {
+      "key": "savedArrays",
+      "path": "harness/out/rider-rebuild/hoodie-shoulder-anatomical04/correction02-intake01/saved-panels.npz",
+      "sha256": "e09263ca089e3a111b23f40620564fdf012ec7fcdc58eb8e81ed920e40439c15"
+    },
+    {
+      "key": "incomingFields",
+      "path": "harness/out/rider-rebuild/hoodie-shoulder-anatomical04/authored01/panel-native-fields.npz",
+      "sha256": "3886c4e84c5b182e22fac7b0c9fec6ab30b9a34e3b2d1a2350a9321851bf01a4"
+    },
+    {
+      "key": "expandedCut",
+      "path": "docs/evidence/rider-rebuild/hoodie-shoulder-anatomical04/correction02/expanded-cut.json",
+      "sha256": "803691f4fce999d585588eacbccbe29cdc6ae4c73d84127e97811d13769e8ca9"
+    },
+    {
+      "key": "patternSource",
+      "path": "assets/blender/rider-rebuild/hoodie-shoulder-anatomical04/correction03/tailored_pattern.py",
+      "sha256": "a1c7140837993c499fc14a1009e8d23135d1204937a67a9636d1125eb39eefad"
+    },
+    {
+      "key": "originalControls",
+      "path": "assets/blender/rider-rebuild/hoodie-shoulder-anatomical04/panel-controls.json",
+      "sha256": "782f55d11a975723a71eceec10adee3cd57404d7416f0d041db236f2eaf32b25"
+    },
+    {
+      "key": "originalHelpers",
+      "path": "assets/blender/rider-rebuild/production-hoodie01/author.py",
+      "sha256": "078da52b40e1f5049759314c1794ba6559ac1dae90d79294672c674f2095d14a"
+    },
+    {
+      "key": "sourceChartHelpers",
+      "path": "assets/blender/rider-rebuild/hoodie-shoulder-anatomical04/author_panels.py",
+      "sha256": "e0fe83af63a552133fec56b80a315a6c11de62614d6ff895794d67440b3aa294"
+    },
+    {
+      "key": "atlasHelpers",
+      "path": "assets/blender/rider-rebuild/hoodie-shoulder-anatomical04/correction02/author_correction.py",
+      "sha256": "289b1a313610d6da6e1ae6c9f4fa5d050119b72cc66e6c49a8bb9cabad0b8ec2"
+    },
+    {
+      "key": "selectedIntake",
+      "path": "harness/out/rider-rebuild/hoodie-shoulder-anatomical04/intake01/selected25-source.npz",
+      "sha256": "5ccc4a69b2c2912d761babf8bde8f2ca5916d4896e816fc4ee33ae3ca34366c0"
+    },
+    {
+      "key": "originalDensePBR",
+      "path": ".tmp/generation-comparison-2026-10-03/user-agent2/qualified-hunyuan-paint06/paint/painted.glb",
+      "sha256": "800d7a9717757b90b296a78c605cddb698c68d399a96e403aa381103e77d2eba"
+    },
+    {
+      "key": "selectedNative",
+      "path": "assets/blender/hero-remaster/rider/anatomical-foundation-2026-10-03/user-agent1/selected-hoodie25/crease-normal-candidate.blend",
+      "sha256": "c732d98076f6b9b1a209a45e8a0cddf793484807ea8b3ae9011fa4f82c151df0"
+    },
+    {
+      "key": "canonicalBodyArrays",
+      "path": "docs/evidence/rider-rebuild/native-hand-repair01/native02/native-body.npz",
+      "sha256": "e62e9969503b7761e99463eccc3ca7be39e0c230a2948f2f87a224db52d0f9a2"
+    }
+  ],
+  "negativeFirstControls": {
+    "path": "assets/blender/rider-rebuild/hoodie-shoulder-anatomical04/correction03/controls-invalid-arm-center.json",
+    "sha256": "c2fea68d0e4b9fdb355841ee759e7b4848335b278f20d996c8082a6ac07ce261"
+  },
+  "prediction": {
+    "path": "docs/evidence/rider-rebuild/hoodie-shoulder-anatomical04/correction03/prediction-landmark-fix.json",
+    "sha256": "91fe9627086e66a730f1d22b792f31c0dcec77c4044932d674dcfe8ab40685de",
+    "numericPatternSourceExact": true,
+    "note": "Controls acquired additional immutable ancestry pins after prediction; numeric cloth construction and anchors unchanged.",
+    "allFourShellPieces": {
+      "regularQuadFanFailures": 0,
+      "generatedVerticesInsideBody": 0,
+      "allNewFaceCentersInsideBody": 0
+    },
+    "generatedVertices": 2244,
+    "regularQuads": 2048,
+    "transitionTriangles": 748
+  },
+  "command": [
+    "/Applications/Blender.app/Contents/MacOS/Blender",
+    "-b",
+    "-t",
+    "2",
+    "--python-exit-code",
+    "1",
+    "--python",
+    "assets/blender/rider-rebuild/hoodie-shoulder-anatomical04/correction03/author.py",
+    "--",
+    "assets/blender/rider-rebuild/hoodie-shoulder-anatomical04/correction03/controls.json",
+    "harness/out/rider-rebuild/hoodie-shoulder-anatomical04/corrected03"
+  ],
+  "guardSeconds": 600,
+  "geometryNativeSavedBeforeTextureTransfer": true,
+  "noBlenderModelOrAtlasJobExecuted": true,
+  "limits": [
+    "Expanded cut consumes2743 failed/support faces; useful garment outside proper cut remains exact.",
+    "Front/rear cloth panels share explicit lower underarm seam; true exterior and interior share one midcloth form with2mm structural thickness.",
+    "Structural cloth thickness is not a body fit/normal-displacement campaign. No body projection, mean-inset, gain sweep or generation.",
+    "Existing original4K PBR outside cut remains exact. Local genuine derivative atlas uses continuous actual donor identity and source triangle/UV sampling.",
+    "One fixed construction; parent judges. Body75 unchanged; full new fields interpolated without FOUR trimming. All R0\u2013R5 open.",
+    "Triangle intersections and moving wearing are not proved by vertex/center parity or regular-quad fan checks. Parent judges actual saved geometry and PBR views."
+  ]
+}

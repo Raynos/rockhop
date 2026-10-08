@@ -9,3 +9,10 @@ Finding: One proposed fixed ruled panel correction is rejected before a Blender/
 Validation: Same-function numeric prediction records69 body-inside generated points and74 quad centers, but179 opposed fan normals. Actual saved native remains1ad5 unchanged. Parent stopped this author; checkpoint marks doNotExecuteAuthor.
 
 Limits: Numeric prediction is not an actual saved/rendered correction. Separate expanded-tailoring source required; no retuning this negative.
+
+
+Finding: Replace failed boundary-constrained axilla with expanded anatomical sewn front/rear panels and coupled inner/outer cloth. Lower seam landmark corrected from arm center to measured airspace.
+
+Validation: Root read author and fixed pattern sources, verified14pins and numeric prediction:0 opposed regular quads,0 generated points and0 new face centers inside body. Actual native/PBR job pending.
+
+Limits: Parity predictions do not prove triangle intersections, attractive silhouette or moving fit. Initial invalid landmark retained.
