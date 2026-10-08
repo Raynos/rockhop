@@ -1869,3 +1869,5 @@ Gate36 actual Metal partial boot/clear/crash/restart passes11/11 in7.411s, uncha
 Motion11 actual dressed Range Garage film captures the full12s action and plays27.24s to natural end/errors0. Selected clothes/face/hair move together; cuff flaps remain defective and bike occludes deep-crouch hips/knees, so no lower-body/contact/art gate passes. Development59.729FPS/25captureFPS. New measured seated/lean native source is next.
 
 Reference05 source preserves04 unchanged, writes original full-reference Basis/triangles/real IDs early, records exact staged cage/transform differences and saves complete surfaces plus unaccepted recovery native before late gates. Exact cage bounds remain unchanged; actual diagnosis and full wearer/contact qualification are pending.
+
+Reference05 retains actual full-wearer membership/surfaces and unaccepted native after terminal1/46.85s. Exact authored cage basis equals refreshed world/local; stale hidden-collection identity caused the late comparison failure. Other geometry/fields/actions/native75/rest-return checks pass. Reopened exact proof and all contact/art gates remain open; wardrobe can use saved original membership.
