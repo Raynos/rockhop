@@ -27,3 +27,9 @@ Finding: Build06 final-file assertion correctly rejects717865B normal JS (41Bove
 Validation: Eight focused tests pass; offline-pack test now executes the actual transformed function against original, selected full/LOD and course fixtures, proving only the course resource is included. Original defaults and all original outfit normalization remain exact.
 
 Limits: Build07 final-byte gate and actual phone capture remain pending.
+
+Finding: Build07 final-file assertion rejects717855B normal JS (31Bover), exit1/3.921s. Stop byte-wording iterations: move selected metadata fetching/validation into its optional review module with the native driver. One explicit review chunk now owns exactly four source modules. The original entry only caches lazy driver loading; failed loads reset its promise and resolve the tagged document to null.
+
+Validation: Nine focused tests pass, including HTTP503/missing-metadata rejection and exact optional module ownership/static dependency isolation. Actual build08 pending. Original all-slot and normal game sources unchanged.
+
+Limits: Selected metadata fetch follows the small optional JS fetch; actual network/parse/render timings require the phone-layout capture. No generic fallback or art promotion.

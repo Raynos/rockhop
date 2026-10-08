@@ -4,7 +4,8 @@ import { gzipSync } from 'node:zlib';
 import { createHash } from 'node:crypto';
 
 const runtime = fileURLToPath(new URL('./private-rider.mjs', import.meta.url));
-const reviewModules = ['private-rider.mjs', 'new-humanoid-contract.mjs', 'anthropometric-inverse.mjs']
+const comparisonLoader = fileURLToPath(new URL('./private-comparison-loader.mjs', import.meta.url));
+const reviewModules = ['private-comparison-loader.mjs', 'private-rider.mjs', 'new-humanoid-contract.mjs', 'anthropometric-inverse.mjs']
   .map(name => fileURLToPath(new URL(name, import.meta.url)));
 export const comparisonRider = {
   id: 'street-remastered', label: 'Mustard · Remastered',
@@ -259,14 +260,10 @@ function rememberPrivateAuthoredImages(root: THREE.Object3D) {
         const loader = comparison
           ? `export let privateSelectedRiderClass; let privateRiderRequest;
           function loadPrivateSelectedRider() {
-            return privateRiderRequest ??= Promise.all([
-              fetch(new URL('model-catalog.json', document.baseURI)).then(response => {
-                if (!response.ok) throw new Error('Rider metadata HTTP ' + response.status); return response.json();
-              }), import(${JSON.stringify(runtime)})
-            ]).then(([value, module]) => {
-              if (!value.privateRiderMetadata) throw new Error('Missing rider metadata');
-              return privateSelectedRiderClass = module.createPrivateRiderClass(value.privateRiderMetadata);
-            }).catch(error => { privateRiderRequest = null; throw error; });
+            return privateRiderRequest ??= import(${JSON.stringify(comparisonLoader)})
+              .then(module => module.loadSelectedRiderClass())
+              .then(driver => privateSelectedRiderClass = driver)
+              .catch(error => { privateRiderRequest = null; throw error; });
           }\n` : `export const privateRiderMetadata = {}; let privateRiderRequest;
           function loadPrivateRiderMetadata() {
             return privateRiderRequest ??= fetch(new URL('model-catalog.json', document.baseURI))

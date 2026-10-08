@@ -102,7 +102,7 @@ test('comparison rejects old-slot aliases and detects source anchor drift', () =
 
 test('all scoped actual sources parse and selected alias has one exact load receipt', async () => {
   const p = plugin();
-  const nativeFiles = ['private-rider.mjs', 'new-humanoid-contract.mjs', 'anthropometric-inverse.mjs'].map(name => path.resolve('harness/rider-rebuild', name));
+  const nativeFiles = ['private-comparison-loader.mjs', 'private-rider.mjs', 'new-humanoid-contract.mjs', 'anthropometric-inverse.mjs'].map(name => path.resolve('harness/rider-rebuild', name));
   await p.buildStart.call({ resolve: async id => ({ id }) });
   for (const file of ['src/core/riderPresets.ts', 'src/render/hero/urls.ts', 'src/ui/garage.ts', 'src/render/index.ts', 'src/boot/asset-totals.ts', 'src/boot/offline-pack.ts',
     'src/render/hero/gltfRider.ts', 'src/render/hero/gltf.ts', 'src/render/hero/lod.ts']) {
@@ -140,7 +140,7 @@ test('only comparison isolates exact native modules; vendor closures and normal 
   await normal.buildStart.call({ resolve() { throw Error('normal build must not resolve private chunks'); } });
   assert.equal(normal.outputOptions(options), null);
   const p = plugin(); await p.buildStart.call({ resolve: async id => ({ id }) });
-  const files = ['private-rider.mjs', 'new-humanoid-contract.mjs', 'anthropometric-inverse.mjs'].map(name => path.resolve('harness/rider-rebuild', name));
+  const files = ['private-comparison-loader.mjs', 'private-rider.mjs', 'new-humanoid-contract.mjs', 'anthropometric-inverse.mjs'].map(name => path.resolve('harness/rider-rebuild', name));
   const graph = { three: ['three-core'], 'three-core': [], '@sentry/browser': ['sentry-core'], 'sentry-core': [], 'shared-game': [] };
   files.forEach(file => { graph[file] = ['shared-game', 'three']; });
   const output = p.outputOptions.call({ getModuleInfo: id => graph[id] ? { importedIds: graph[id] } : null }, options);
@@ -170,4 +170,15 @@ test('selected document preserves authored maps across repeated texture budgets'
   module.exports.shrinkTextures(original, 512, 256);
   assert.equal(selectedTraversals, 0, 'Selected authored maps are never resampled');
   assert.equal(originalTraversals, 1, 'Original hero retains ordinary texture budget');
+});
+
+test('optional selected loader rejects HTTP and missing metadata before constructing a driver', async () => {
+  const { loadSelectedRiderClass } = await import('./private-comparison-loader.mjs');
+  const original = globalThis.fetch;
+  try {
+    globalThis.fetch = async url => { assert.equal(url.href, 'https://example.test/review/model-catalog.json'); return { ok: false, status: 503 }; };
+    await assert.rejects(loadSelectedRiderClass('https://example.test/review/'), /HTTP 503/);
+    globalThis.fetch = async () => ({ ok: true, json: async () => ({}) });
+    await assert.rejects(loadSelectedRiderClass('https://example.test/review/'), /Missing rider metadata/);
+  } finally { globalThis.fetch = original; }
 });

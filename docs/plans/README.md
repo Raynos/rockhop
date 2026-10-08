@@ -1647,3 +1647,5 @@ October8 comparison build04 remains9Babove unchanged JS cap. The selected constr
 October8 final-byte correction checkpoint: early build05 hook passed but emitted normal JS717969B exceeded unchanged cap by145B; PWA4915Bworker is now separately reported. Final-file receipts/assertions and selected-root texture-budget bypass replace duplicate comparison traversal;8/8tests pass. Build06/actual phone switching pending; no art acceptance.
 
 October8 comparison build06 final-file check correctly rejects717865B (41Bover). Existing normalizer alternatives and selected offline filename family are simplified;8/8tests include executed offline exclusion. Build07 pending, original five and selected maps intact, no phone/art acceptance.
+
+October8 selected loader ownership checkpoint: build07 final normal JS was31Bover, so selected metadata fetch/validation moves into the same lazy review chunk as native75. Exactly four owned modules, no static entry dependency;9/9tests pass under tsx (plain Node cannot resolve existing TS imports). Build08 final assertion and phone capture pending; original sources/maps intact.

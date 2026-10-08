@@ -80,7 +80,7 @@ fs.writeFileSync(path.join(out, 'rider-rebuild-inputs.json'), JSON.stringify({
   runtimeMetadataSHA256: sha(JSON.stringify(runtimeMetadata)),
   selectedRiderSource: runtimeMetadata.selectedRiderSource,
   poseCalibration: calibrationPath ? { path: calibrationPath, sha256: sha(fs.readFileSync(calibrationPath)), driver: calibration.driver } : null,
-  adapter: ['private-rider.mjs', 'private-engine-plugin.mjs', 'new-humanoid-contract.mjs', 'anthropometric-inverse.mjs'].map(name => {
+  adapter: ['private-comparison-loader.mjs', 'private-rider.mjs', 'private-engine-plugin.mjs', 'new-humanoid-contract.mjs', 'anthropometric-inverse.mjs'].map(name => {
     const file = path.join(root, 'harness/rider-rebuild', name); return { path: file, sha256: sha(fs.readFileSync(file)) };
   }), modelSlots: Object.keys(mapping),
 }, null, 2));
