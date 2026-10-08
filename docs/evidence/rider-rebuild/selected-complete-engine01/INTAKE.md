@@ -89,3 +89,13 @@ masked38959 need their own truthful intake, never a fabricated old gate pass.
 Validation performed: Python AST parsing of the three new source files passed.
 All actual ready-manifest native/helper/context-unit pins matched their files.
 No heavy jobs or implementation-mirroring tests were run by this builder.
+
+Parent then ran actual merge02: guard exit0 in63.826s, saved complete native
+SHA `dc846e7e9d440476951bcf4c8c372353d6abdd82a7865b87abdb399242653f21`.
+All seven selected parts and original maps share unchanged native75; the full
+38959 body signature remains exact. LargestFOUR conditioning removed maximum
+mass26.16% hoodie,21.04% left glove and21.75% right glove; moving art must judge
+those derivatives. Actual [receipt](merge02.json) and [guard](merge-guard02/guard.json)
+are retained. `ready-export.json` binds this exact native and af760 merge recipe
+to mask/export intake. Whole masked original-PBR views and actual Garage/game
+are next; all R0–R5 remain open, with no normal-player promotion.

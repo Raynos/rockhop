@@ -68,7 +68,7 @@ def main():
     args = sys.argv[sys.argv.index('--')+1:]; assert len(args) == 2
     manifest_path, out = (Path(value).resolve() for value in args)
     manifest = json.loads(manifest_path.read_text())
-    assert manifest['accepted'] is False and not out.exists()
+    assert manifest['accepted'] is False and manifest.get('ready') is True and not out.exists()
     assert out.is_relative_to(ROOT/'harness/out/rider-rebuild/selected-complete-engine01')
     # Use the already reviewed small merge helpers for pinning and FOUR intake.
     helper_path = ROOT/manifest['mergeHelper']['path']
@@ -77,6 +77,9 @@ def main():
     helper = runpy.run_path(str(helper_path))
     pin, sha = helper['pin'], helper['sha']
     for row in helper['pins'](manifest): pin(row)
+    merged = json.loads(pin(manifest['mergeReceipt']).read_text())
+    assert merged['native'] == manifest['native'] and merged['visibleMeshes'] == sorted(helper['EXPECTED'])
+    assert merged['recipeSHA256'] == manifest['mergeHelper']['sha256']
     bpy.ops.wm.open_mainfile(filepath=str(pin(manifest['native'])))
     body, rig = bpy.data.objects['RiderBody'], bpy.data.objects['RiderSkeleton']
     assert len(rig.data.bones) == 75 and rig.animation_data is None

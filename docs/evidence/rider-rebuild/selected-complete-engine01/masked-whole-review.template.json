@@ -1,0 +1,55 @@
+{
+  "accepted": false,
+  "ready": false,
+  "expectedNativeOutput": "harness/out/rider-rebuild/selected-complete-engine01/engine01/rider-private-masked.blend",
+  "mode": "stills",
+  "objects": [
+    "RiderBody",
+    "RiderHoodie",
+    "RiderJeans",
+    "ActualSelectedGlove.L",
+    "ActualSelectedGlove.R",
+    "ActualSelectedBoot.L",
+    "ActualSelectedBoot.R"
+  ],
+  "bodyObject": "RiderBody",
+  "rigObject": "RiderSkeleton",
+  "focus": [
+    0,
+    -0.025,
+    0.9
+  ],
+  "orthoScale": 2.12,
+  "views": {
+    "front": [
+      0,
+      -4,
+      1.0
+    ],
+    "rear": [
+      0,
+      4,
+      1.0
+    ],
+    "left-profile": [
+      -4,
+      0,
+      1.0
+    ],
+    "right-profile": [
+      4,
+      0,
+      1.0
+    ]
+  },
+  "renderer": {
+    "path": "assets/blender/rider-rebuild/production-assembly01/render.py",
+    "sha256": "e50dd77cfa8ebf4f8a1efbfa81beeaea4e224cdef3b4fd82fe99bb81fd771e4b"
+  },
+  "limits": [
+    "Template only: actual native pin is absent until masked export derivative saves successfully.",
+    "All seven selected meshes together, actual original-PBR source maps and full body context.",
+    "Whole-rider static diagnostic only. Parent must judge continuous clothed clip and actual Garage/game next. All R0-R5 open."
+  ],
+  "expectedRenderOutput": "harness/out/rider-rebuild/production-assembly01/selected-complete-masked01"
+}
