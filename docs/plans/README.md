@@ -1435,3 +1435,5 @@ October 8 complete actual-source working outfit rebuilt with conditioned broad n
 October 8 jeans directed diagnostic exit0/19.363s:4656black covered pixels all predictedmiss, zero regional UVoverlap; many wrong-side hits. Stop ray-reach escalation. One semantic front/rear cage/correspondence correction and pelvis-only actualPBR probe next; no fullbake or material acceptance.
 
 October 8 actual dressed working scene72frame headturn/nod action saved d33c2c2a, CPU2 exit0/33.675s. All75 rest/mesh/PBR unchanged; nonneck joints static and exact neutral return. One continuous actualPBR review next; no motion/art admission.
+
+October 8 jeans interpretation correction:452/1764 bounded opposite-source labels describe source normals, not physical panels. Actual long misses cross physical sides; selected front-waist height differs from receiver. One explicit projectionreceiver/cage derivative may repair correspondence without changing wearingtarget or raising global ray reach.

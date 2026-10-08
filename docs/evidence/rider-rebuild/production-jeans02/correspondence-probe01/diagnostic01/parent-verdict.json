@@ -6,13 +6,26 @@
   "blackDespitePredictedBoundedHit": 0,
   "regionalUVOverlapPixels": 0,
   "opposedSourceNormalBoundedHits": 2385,
-  "frontReceiverRearSourceHits": 452,
-  "rearReceiverFrontSourceHits": 1764,
   "rootPrimarySourceChecked": "https://github.com/blender/blender/blob/v5.2.1/source/blender/render/intern/bake.cc",
-  "supportedNext": "One feature/panel-aware authored cage/correspondence correction plus one isolated pelvis1024 actual-PBR probe; no whole bake or ray-setting sweep.",
+  "supportedNext": "One explicit same-topology/UV projection receiver and cage derivative, matched to actual front-waist height and separate geometric front/rear source halves; production wearing target unchanged; isolated1024pelvis probe.",
   "limits": [
     "Separate Python raster/BVH diagnostic is not byte-identical Cycles;6362nonblack samples predictedmiss include filtering/margin/implementation differences.",
     "Native target geometry/fields and all original selected PBR remain unchanged; no fit/motion/material acceptance.",
     "Explicit cage has no maximum-ray setting; semantic front/rear capture must be proved directly."
-  ]
+  ],
+  "frontReceiverNormalRearSourceLabels": 452,
+  "rearReceiverNormalFrontSourceLabels": 1764,
+  "sourceLabelCorrection": "SourcePanel bins are source-normal directions, not physical front/rear. Do not interpret452/1764 bounded labels as opposite physical panels.",
+  "actualLongMissPositionCheck": {
+    "frontWaistBeyondMaximum": {
+      "samples": 2806,
+      "medianTargetY": -0.1471465677022934,
+      "medianSourceY": 0.13424605131149292
+    },
+    "rearSeatBeyondMaximum": {
+      "samples": 2683,
+      "medianTargetY": 0.12119831144809723,
+      "medianSourceY": -0.14353880286216736
+    }
+  }
 }
