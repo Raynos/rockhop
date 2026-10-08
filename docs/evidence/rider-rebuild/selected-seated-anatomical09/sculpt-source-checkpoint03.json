@@ -1,0 +1,24 @@
+{
+  "accepted": false,
+  "status": "SOURCE_FROZEN_SCULPT03_NOT_RUN",
+  "sourcePins": {
+    "assets/blender/rider-rebuild/selected-seated-anatomical09/sculpt03.py": "42d7b7cdfb7dea91025b5fe7911409413e352b9623a91df85580f2d2af5d9a5d",
+    "assets/blender/rider-rebuild/selected-seated-anatomical09/sculpt03.input.json": "7d63ce2b9914bf8b07e62e92809861e3590f267191926034e552b94c9cd1321c",
+    "assets/blender/rider-rebuild/selected-seated-anatomical09/run-sculpt03.sh": "e7584f107546d16fc42adf18225bfe2aac3462b573c96a4a4dc8d8c31e1c9688",
+    "docs/evidence/rider-rebuild/selected-seated-anatomical09/SCULPT03.md": "5db5be24e412355ab32095346acb684dd3dfdf708e514eaf405e956aa3b0478f"
+  },
+  "validation": {
+    "syntax": "Python AST, Bash and whitespace PASS",
+    "finiteSaddleGuides": "12/12 actual top triangle samples;16cm2 per guide patch; not rider contact",
+    "cageField": "C2 center/edge/midpoint and boundary mask checks PASS",
+    "smallSourcePins": "PASS",
+    "largeNative": "Parent actual authored02 success; independently rehashed by execution source before native open",
+    "shapeCurves": "Source explicitly sets and counts three LINEAR scalar keys per object",
+    "protectedFingerprint": "Only no-shape-key precondition removed; all original rest geometry/normals/UV/group fields/maps/transforms remain fingerprinted"
+  },
+  "parentCommand": "bash assets/blender/rider-rebuild/selected-seated-anatomical09/run-sculpt03.sh",
+  "newRelativeKey": "A09_SeatedVolume",
+  "pose": "Same rejected author04 Rookie key as actual weight02 film; no final-posture claim",
+  "completeGeometryContactsAndMovingArt": "UNMEASURED",
+  "noHeavyJobByBuilder": true
+}

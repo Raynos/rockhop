@@ -1821,3 +1821,5 @@ Motion11 source04 derivespoleangle directlyfromBlender rootX/rootZ coefficients;
 Exactbothbike nativecontext retained:116saddletriangles each, measuredboot-contact/anatomical-socket roundtrip<1e-12, no rejectedpelvis/spinefit imported. Editableposehelperacceptsexplicitauthoredpelvis/poles. Reference/source only; nativeposture/contact/art unaccepted.
 
 Motion11 actualnative04 fixespoleinversion: all75neutraloperators within0.059482mm/2m; neutralnative saved. Idle/Walk/Jog/Turn90/JumpLand passcontactchecks, then RangeOfMotion legL fails0.405118mm targetresidual against unchanged0.1mm. Partialcontrolresult only; no fullexport/dressedartacceptance. See selected-authoring-motion11/partial04.
+
+Sculpt03 source checkpoint: one editable shared Body/Jeans posed cage, fresh inverse from authored02 FOUR, exact original Basis/maps/fields/75rest, explicit LINEAR shape keys. Actual sculpt, complete contacts/crossings and dressed moving review remain pending; rejected author04 key stays a construction witness.
