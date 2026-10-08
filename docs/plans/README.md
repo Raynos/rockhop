@@ -1455,3 +1455,5 @@ October8 one selected-boot anatomical regional CSG source is frozen: asymmetric 
 October8 one jeans material correction source is frozen: separate editable projection receiver and cage from40 actual original-source envelope witnesses. Wearing9565 unchanged; save geometry then physical-source capture gate before six isolated1024 map bakes. Parent reviewed source/pins; no corrected outcome or garment acceptance yet.
 
 October8 actual boot regional CSG exit1/42.63s after saved right union/cavity. Parent rejected two saved-native views: blunt box-like outer quarter/forefoot; protected rear tread also changed. Keep saved negative/cavity evidence, stop unchanged outer-last rerun. No left/material/fit/motion acceptance.
+
+October8 actual glove dorsal/palm and independent signed-MCP check correct assignment: originalL/reflectedR with face/UV corner reversal together. One ordinary original-selected-surface Laplacian sculpt source is frozen with303 anatomical handles per hand and semantic75 binding; parent read source/pins, no job/fit/grip acceptance yet.
