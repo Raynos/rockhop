@@ -1409,3 +1409,5 @@ October 8 real-source editable outfit saved: guarded CPU2 job exit0 in25.184s; n
 October 8 required current-player gate09 retained: parent omitted hardware backend; actual SwiftShader run9/11, exact replay finish/hash, first-frame and restart-frame timing fail. One explicit Metal rerun will restore prior test setup. Private selected outfit remains unaccepted.
 
 October 8 corrected current-player gate10: explicit Metal,11/11 checks pass in6.772s; replay finish/hash exact, restart-frame8.60ms. Software gate09 failures retained. No new-rider or phone acceptance; resume actual outfit view and construction work.
+
+October 8 actual complete selected-outfit four-view review: original appearance retained, gross fit REJECTED at hoodie shoulders/upperarms, denim inner thighs, gloves and boot openings. Read-only CPU2 render26.631s, parent viewed all4, native unchanged. Deliberate shoulder-panel and boot-last/topology authors assigned; material receiver probe and neck cleanup continue. No moving/Garage/device acceptance.

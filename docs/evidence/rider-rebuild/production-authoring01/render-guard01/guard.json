@@ -1,0 +1,191 @@
+{
+  "accepted": false,
+  "lock": "/Users/raynos/projects/localai/.model.lock",
+  "method": "lockf -k",
+  "command": [
+    "/Applications/Blender.app/Contents/MacOS/Blender",
+    "-b",
+    "-t",
+    "2",
+    "--python-exit-code",
+    "1",
+    "--python",
+    "assets/blender/rider-rebuild/production-assembly01/render.py",
+    "--",
+    "docs/evidence/rider-rebuild/production-authoring01/render-specs01/full-outfit.json",
+    "harness/out/rider-rebuild/production-assembly01/authoring01-full-outfit"
+  ],
+  "controllerPID": 82840,
+  "pollSeconds": 1,
+  "startAnonymousBelowGiB": 55,
+  "stopAnonymousGiB": 65,
+  "stopAnonymousPlusWiredGiB": 96,
+  "limitSeconds": 180.0,
+  "guardSHA256": "cf8acd15d8b7484480bee74d23892be815d955ffd87115d3da8ed228ffb3d916",
+  "status": "worker returned; review pending",
+  "samples": [
+    {
+      "seconds": 0,
+      "anonymousGiB": 42.8,
+      "wiredGiB": 10.0,
+      "freeGiB": 21.2
+    },
+    {
+      "seconds": 0.06,
+      "anonymousGiB": 42.9,
+      "wiredGiB": 10.0,
+      "freeGiB": 21.2
+    },
+    {
+      "seconds": 1.121,
+      "anonymousGiB": 42.9,
+      "wiredGiB": 9.9,
+      "freeGiB": 21.1
+    },
+    {
+      "seconds": 2.184,
+      "anonymousGiB": 44.2,
+      "wiredGiB": 10.0,
+      "freeGiB": 19.5
+    },
+    {
+      "seconds": 3.258,
+      "anonymousGiB": 45.0,
+      "wiredGiB": 10.1,
+      "freeGiB": 18.8
+    },
+    {
+      "seconds": 4.345,
+      "anonymousGiB": 46.1,
+      "wiredGiB": 10.5,
+      "freeGiB": 17.2
+    },
+    {
+      "seconds": 5.427,
+      "anonymousGiB": 44.9,
+      "wiredGiB": 10.4,
+      "freeGiB": 18.4
+    },
+    {
+      "seconds": 6.495,
+      "anonymousGiB": 46.2,
+      "wiredGiB": 10.4,
+      "freeGiB": 16.9
+    },
+    {
+      "seconds": 7.609,
+      "anonymousGiB": 47.9,
+      "wiredGiB": 10.5,
+      "freeGiB": 15.0
+    },
+    {
+      "seconds": 8.741,
+      "anonymousGiB": 48.7,
+      "wiredGiB": 10.6,
+      "freeGiB": 14.1
+    },
+    {
+      "seconds": 9.826,
+      "anonymousGiB": 50.5,
+      "wiredGiB": 10.4,
+      "freeGiB": 12.5
+    },
+    {
+      "seconds": 10.893,
+      "anonymousGiB": 50.3,
+      "wiredGiB": 10.6,
+      "freeGiB": 12.5
+    },
+    {
+      "seconds": 11.966,
+      "anonymousGiB": 51.6,
+      "wiredGiB": 10.6,
+      "freeGiB": 11.2
+    },
+    {
+      "seconds": 13.051,
+      "anonymousGiB": 51.4,
+      "wiredGiB": 10.5,
+      "freeGiB": 11.4
+    },
+    {
+      "seconds": 14.124,
+      "anonymousGiB": 51.8,
+      "wiredGiB": 10.6,
+      "freeGiB": 10.7
+    },
+    {
+      "seconds": 15.202,
+      "anonymousGiB": 52.4,
+      "wiredGiB": 11.0,
+      "freeGiB": 9.7
+    },
+    {
+      "seconds": 16.313,
+      "anonymousGiB": 54.1,
+      "wiredGiB": 10.8,
+      "freeGiB": 8.1
+    },
+    {
+      "seconds": 17.388,
+      "anonymousGiB": 54.5,
+      "wiredGiB": 11.2,
+      "freeGiB": 7.2
+    },
+    {
+      "seconds": 18.465,
+      "anonymousGiB": 54.4,
+      "wiredGiB": 10.7,
+      "freeGiB": 8.0
+    },
+    {
+      "seconds": 19.531,
+      "anonymousGiB": 54.4,
+      "wiredGiB": 11.0,
+      "freeGiB": 7.8
+    },
+    {
+      "seconds": 20.604,
+      "anonymousGiB": 54.8,
+      "wiredGiB": 11.0,
+      "freeGiB": 7.4
+    },
+    {
+      "seconds": 21.672,
+      "anonymousGiB": 55.2,
+      "wiredGiB": 11.1,
+      "freeGiB": 6.9
+    },
+    {
+      "seconds": 22.745,
+      "anonymousGiB": 56.5,
+      "wiredGiB": 10.8,
+      "freeGiB": 6.0
+    },
+    {
+      "seconds": 23.81,
+      "anonymousGiB": 56.7,
+      "wiredGiB": 11.1,
+      "freeGiB": 5.4
+    },
+    {
+      "seconds": 24.885,
+      "anonymousGiB": 57.1,
+      "wiredGiB": 10.8,
+      "freeGiB": 5.4
+    },
+    {
+      "seconds": 25.951,
+      "anonymousGiB": 56.1,
+      "wiredGiB": 11.0,
+      "freeGiB": 6.1
+    }
+  ],
+  "physicalMemoryBytes": 137438953472,
+  "requiredPhysicalMemoryBytes": 137438953472,
+  "scope": "Future explicitly invoked owned Rockhop job only",
+  "pressureOrSwapLimits": "No separate pressure/swap gate exists in the pinned original guard; none altered",
+  "ownedChildPID": 82848,
+  "exitCode": 0,
+  "elapsedSeconds": 26.631
+}

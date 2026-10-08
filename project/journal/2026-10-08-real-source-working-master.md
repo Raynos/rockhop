@@ -13,3 +13,7 @@ Limits: Corrected assembly is unexecuted; render specs require an actual saved n
 Finding: Actual selected full-outfit editable scene now saves with original packed PBR, one visible body and exact canonical75 rest.
 Validation: Corrected CPU2 assembly exit0 in25.184s; native9cedbcdbe saved334MiB, seven actual source meshes, unchanged body signature. Parent read actual receipt.
 Limits: Static authoring context only; shape review and moving fit pending. Ignored master is not a player export or accepted outfit.
+
+Finding: All selected pieces retain their high-resolution appearance together, but actual full-scene views reject gross shoulder, inner-thigh, glove and boot fit.
+Validation: Read-only CPU2 renderer exit0 in26.631s; parent viewed all four actual PBR images, complete body visible and native unchanged.
+Limits: Static authoring context only; donor intersections do not reject a separate enclosing receiver transfer. Local topology authors assigned, all motion/game/device gates open.
