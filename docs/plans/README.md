@@ -1301,3 +1301,5 @@ October 7 hoodie direct regional source checkpoint: regular original vertex fans
 October 7 direct boot sculpt attempt: NumPy bool receipt serialization fails before paired native save, exit1 in2.431s. Right sculpt arrays preserved; no L/native/views or shape verdict. Exact failure retained before bool coercion compatibility repair.
 
 October 7 boot receipt compatibility source: determinant comparison explicitly coerced to Python bool. Parent one-line diff/AST/hash checked; sculpture controls unchanged and corrected run unexecuted. No shape verdict.
+
+October 7 actual selected glove material review rejected: parent viewed three severe patchy/chrome/white artifact renders. Source MR differs from allzero target misses across≈40% eroded occupiedUV; higher resolution cannot fix missing transfer. Next inspect actual aligned selected donor/target; no blind larger-ray or4K retry. No appearance/motion acceptance.

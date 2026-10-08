@@ -1,0 +1,164 @@
+{
+  "status": "LIGHTWEIGHT_EXISTING_MAP_AND_UV_DIAGNOSIS_NO_BLENDER_JOB",
+  "acceptedArt": false,
+  "sides": {
+    "R": {
+      "rasterizedUVPixels": 47787,
+      "rasterizedInteriorPixels": 23481,
+      "red255SourceSentinelHitPixels": 87533,
+      "occupiedUVBlackMRPixels": 23510,
+      "occupiedUVBlackMRFraction": 0.49197480486324735,
+      "interiorUVBlackMRFraction": 0.3998552020782761,
+      "sourceSentinelWithinOccupiedFraction": 0.48596898738150546,
+      "hitMRQuantilesRGB": [
+        [
+          251.0,
+          156.0,
+          0.0
+        ],
+        [
+          255.0,
+          163.0,
+          0.0
+        ],
+        [
+          255.0,
+          168.0,
+          1.0
+        ],
+        [
+          255.0,
+          172.0,
+          7.0
+        ],
+        [
+          255.0,
+          174.0,
+          13.0
+        ]
+      ],
+      "occupiedNormalNeutralFraction": 0.45024797539079664,
+      "occupiedNormalBlueBelow128Fraction": 0.07857785590223282,
+      "occupiedBaseColorMax": [
+        15,
+        13,
+        14
+      ]
+    },
+    "L": {
+      "rasterizedUVPixels": 50854,
+      "rasterizedInteriorPixels": 26838,
+      "red255SourceSentinelHitPixels": 79086,
+      "occupiedUVBlackMRPixels": 25306,
+      "occupiedUVBlackMRFraction": 0.4976206394777205,
+      "interiorUVBlackMRFraction": 0.3961174454132201,
+      "sourceSentinelWithinOccupiedFraction": 0.4800212372674716,
+      "hitMRQuantilesRGB": [
+        [
+          251.0,
+          156.0,
+          0.0
+        ],
+        [
+          255.0,
+          163.0,
+          0.0
+        ],
+        [
+          255.0,
+          168.0,
+          1.0
+        ],
+        [
+          255.0,
+          172.0,
+          7.0
+        ],
+        [
+          255.0,
+          174.0,
+          16.0
+        ]
+      ],
+      "occupiedNormalNeutralFraction": 0.455637707948244,
+      "occupiedNormalBlueBelow128Fraction": 0.07712274354033115,
+      "occupiedBaseColorMax": [
+        2,
+        3,
+        2
+      ]
+    }
+  },
+  "sourceMR": {
+    "dimensions": [
+      4096,
+      4096
+    ],
+    "redMinimum": 255,
+    "redMaximum": 255,
+    "greenMedian": 169.0,
+    "blueMaximum": 88
+  },
+  "limits": [
+    "UV masks rasterize actual saved corner UVs; single-pixel edge conventions can differ from Cycles.",
+    "Red255 is present everywhere in genuine sourceMR, so black MR inside UV islands is missing source transfer, not original black leather.",
+    "Shader wiring inspection is source-code evidence; actual saved node tree has not been reopened in this lightweight analysis.",
+    "No new bake, model load, source edit or artistic acceptance."
+  ],
+  "inspectedFiles": [
+    {
+      "path": "assets/blender/rider-rebuild/production-gloves02/appearance.py",
+      "sha256": "e27416a0cdead34065be840d612160835aa3b1f98f0215d1e153c702798e24ea"
+    },
+    {
+      "path": "harness/out/rider-rebuild/production-gloves02/bake-intake02/first-review-1024/selected-articulated-gloves.blend",
+      "sha256": "73686497e479d0675e8c2dea0a6b548cba5f9300e42b14e60ffe90f3aa55df0b"
+    },
+    {
+      "path": "harness/out/rider-rebuild/production-gloves02/bake-intake02/first-review-1024/GloveProduction.R-normal.png",
+      "sha256": "bbff8f43538be3e72c0b507991be4a0196564102e900e3f4ede571069acb3c77"
+    },
+    {
+      "path": "harness/out/rider-rebuild/production-gloves02/bake-intake02/first-review-1024/GloveProduction.L-normal.png",
+      "sha256": "359c25906617fda682c5d371adc6f6dab6d4785bb09c0a920198cd5918c18e01"
+    },
+    {
+      "path": "harness/out/rider-rebuild/production-gloves02/bake-intake02/first-review-1024/GloveProduction.R-metallicRoughness.png",
+      "sha256": "0aa3eb9fe25c60ae73daa88d4aabc9b9ff2b33538e5cc81ba3b27c124ad7655c"
+    },
+    {
+      "path": "harness/out/rider-rebuild/production-gloves02/bake-intake02/first-review-1024/GloveProduction.R-baseColor.png",
+      "sha256": "2bef36fba81cbd94fa4a594844675e62b543bc65c795a6fc1c750af44f437628"
+    },
+    {
+      "path": "harness/out/rider-rebuild/production-gloves02/bake-intake02/first-review-1024/GloveProduction.L-metallicRoughness.png",
+      "sha256": "3af16977746cbc2afa6b1a8afbc1e8358cba7d95df2ebac46dea3d4c2011f7c7"
+    },
+    {
+      "path": "harness/out/rider-rebuild/production-gloves02/bake-intake02/first-review-1024/GloveProduction.L-baseColor.png",
+      "sha256": "4521629ed36c63a2d5ed2e36e625a57a3baefe920a0ec5e43111e6e92f15eadd"
+    },
+    {
+      "path": "harness/out/rider-rebuild/production-gloves02/authored01/GloveProduction.R-fields.npz",
+      "sha256": "6e0db4381a2936ed62e91a7bd88a85e983070bccaf7b0e56eedcb1a02045cadd"
+    },
+    {
+      "path": "harness/out/rider-rebuild/production-gloves02/authored01/GloveProduction.L-fields.npz",
+      "sha256": "e05fb90c4259720cec86206121041522cd136fb5c0cf42498140f8829a85b91b"
+    }
+  ],
+  "sourceCodeWiring": {
+    "sourceAndTargetRoughness": "ShaderNodeSeparateColor.Green -> Principled BSDF.Roughness",
+    "sourceAndTargetMetallic": "ShaderNodeSeparateColor.Blue -> Principled BSDF.Metallic",
+    "metallicRoughnessColorSpace": "Non-Color",
+    "normalColorSpace": "Non-Color",
+    "normalPath": "ShaderNodeTexImage.Color -> ShaderNodeNormalMap.Color -> Principled BSDF.Normal",
+    "note": "Read frozen helper source only; native node links not independently reopened."
+  },
+  "alignmentMechanismReadOnlyFinding": {
+    "sourceHelper": "appearance.py:45-107 align_dense",
+    "mechanism": "One global palm frame with depth0.68; per-digit proportional transforms with depth0.82; nearest compact vertex branch routes the dense donor; source-unit axial blend0.11 joins them.",
+    "observedLimitation": "No actual fitted-donor shape inspection or corresponding surface alignment was performed before whole-hand cage transfer; numeric source ancestry does not certify those donor surfaces lie within4mm cage/8mm ray reach.",
+    "nextConcreteInspection": "Use saved SelectedDenseBake.R and GloveProduction.R to view the actual aligned dense sculpt alone, target alone, and common-camera overlay at dorsum/palm/thumb/web/side. Existing baked native already retains both."
+  }
+}

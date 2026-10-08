@@ -42,3 +42,9 @@ Finding: Both hands now receive genuine selected-source PBR and tangent-normal r
 Validation: Corrected bake exit0 in19.736s, native and six map hashes parent verified. Compatibility lineage preserves original geometry authority.
 
 Limits: Material transfer remains uninspected;1024 is a review derivative, not4096 master or moving art acceptance.
+
+Finding: Actual selected glove bake fails appearance because large occupied UV regions miss source transfer and become zero-roughness mirrors.
+
+Validation: Parent viewed three actual right-hand material renders; rendererexit0 in6.010s. Actual map/source/UV diagnostic finds≈40% eroded occupied MR allzero.
+
+Limits: No4096 or larger-ray retry; inspect real aligned donor and target before repair. Selected appearance and moving grip rejected/open.
