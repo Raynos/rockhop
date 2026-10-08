@@ -1,6 +1,6 @@
 # What we are building — the plans and where each stands
 
-**Current rider production:** [RIDER_REBUILD_FROM_FIRST_PRINCIPLES](sol-6.1-2026-10-07-RIDER_REBUILD_FROM_FIRST_PRINCIPLES.md) is the sole active rider execution/specification plan after the user-authorized October7 restart. One coherent wearer/rig, four dressed garments and mandatory early engine intake; R0–R5 open. Prior baseline/finish/consolidated methods are retired uncompleted, with evidence retained. Fresh Astra04 corrects the external-only prerequisite: scoped anatomical authoring, actual-source working outfit and jeans correspondence probe are assigned; no rider acceptance.
+**Current rider production:** [RIDER_REBUILD_FROM_FIRST_PRINCIPLES](sol-6.1-2026-10-07-RIDER_REBUILD_FROM_FIRST_PRINCIPLES.md) is the sole active rider plan. Astra04–06 corrections are applied: production body masks, verified hoodie rest-frame repair, successful whole selected4K denim and saved opposite glove/boot pairs. Exact complete assembly, dressed motion and actual Garage/game are next. AllR0–R5 open,0/6; no normal-player promotion. Prior methods remain retired uncompleted.
 
 **Frozen transition registry (ask272):** [Reviewed snapshot](../evidence/hero-remaster/native-cycle-relay-2026-10-03/REGISTRY-R2.md) preserves old-relay and paused-manager handoffs with exact pins; original writer models remain unresolved. Accurate native reviewer attribution claims no original authorship. Future manager updates successor IDs separately; root chooses placement and alone accepts. All rider gates remain open.
 

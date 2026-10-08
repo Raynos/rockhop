@@ -556,29 +556,36 @@ face mask, as specified below.
 - Head/neck: retain broad neck sculpt90236188 and endpoint-field correction
   e68b5c41. The72frame clothed turn/nod played silently to natural end. RearC7,
   shading, hair seam and historical corner-normal residual remain open.
-- Hoodie: stop the rejected rectangular ruled-depth patch and one-strip zipper.
-  Parent reproduced Astra05's87mm corner displacement. Use conventional broad
-  source-pose transport of the original rounded selected dense surface, keeping
-  full topology/UV/original4KPBR and an editable modeling aid. Final garment
-  joins the shared75 after actual complete-outfit rest review. No shelf tuning.
-- Jeans: actual pelvis1024 correspondence transfers original fly/pockets/waist
-  without previous black blocks. Whole4K run saves8fbc94e5 before stopping with
-  0bakes: three right crotch projection faces cross the centerline;621 legitimate
-  rear-underbody first hits exceed an arbitrary80mm diagnostic bound. Repair
-  only those projection/cage faces and use exact source-face/normal/position
-  evidence for the local rear hits. Preserve successful pelvis and wearing mesh.
+- Hoodie: retain corrected original rounded source-pose garment9920401.
+  [Fresh Astra06 diagnosis](../evidence/rider-rebuild/astra-hoodie-frame06/FINDING.md)
+  and parent saved-model probe identify zero-length edit-bone initialization,
+  not incorrect source coordinates. Initialize head/tail before matrix; verify
+  actual saved rest directions. Four actual PBR views show hanging sleeves and
+  rounded shoulders, retaining original topology/UV/4K maps. Bind shared75;
+  judge masked surface and continuous dressed movement. No rectangular patches.
+- Jeans: retain actual whole4K wearing mesh41fbd25 with selected colour,
+  roughness and normal maps. The local projection correction succeeds: all four
+  captures have zero misses/wrong-side/disallowed hits and no covered black
+  texels. Six actual views retain fly, pockets, seams and folds without previous
+  skin exposure. Upper-thigh regional seam and tangent-normal interpretation
+  remain open; proceed to complete moving outfit and Garage before more baking.
 - Gloves: original source isL, reflectedR reverses faces/UV corners together.
   Source-unit coarse guide removes the actual dense cotangent singularity.
   Actual local04 now saves both selected dense gloves warning-free using the
   existing successful rest binding, on shared75, retaining original pads/ribs/PBR.
   Judge masked continuous surfaces and bilateral grip next. Hidden-body crossings
   do not warrant another inflation campaign; surface holes and poor motion do.
-- Boots: actual selected guide sculpt retains curved leather, laces and tread;
-  parent rejects former box UNION. Sculpt02 body crossings trigger diagnostic
-  review, not an unmasked-enclosure prerequisite. Use the continuous pre-cavity
-  selected surface, produce the anatomical opposite pair and shared75 binding,
-  then judge masked actual surface, ankle/toe movement and bike contacts. Stop
-  cavity/ease iterations that only remove invisible reference-body intersections.
+- Boots: retain actual continuous selected pair5263a76 on shared75 with
+  original curved leather, laces, tread, UV and4K maps. Parent rejected box UNION;
+  stop cavity/ease iterations addressing invisible reference-body intersections.
+  Actual masked surfaces, bilateral ankle/toe movement and contacts remain open.
+- Complete assembly: use exact saved hoodie9920401, jeans41fbd25, glovesfa21e404
+  and boots5263a76. Original sources stay immutable. Merge01 stopped on full-field
+  gloves above the engine FOUR limit; condition appended delivery copies using
+  largest FOUR and record removed mass. Actual combined save, masked export,
+  continuous native generic film and actual Garage/game follow immediately.
+  Dense selected preview establishes appearance first; qualified final topology,
+  GPU parity and mobile performance remain separate required delivery work.
 
 ### Equipped-outfit body masks adopted after independent Astra05 review
 
@@ -615,10 +622,9 @@ or rig is allowed where anatomy supports it. Original selected stock is immutabl
 defective derivative boundaries are not. Final coherent maps/four-weight/export
 conditions remain delivery gates, not prerequisites for editable construction.
 
-Current-player silent Metal gate15 passed11/11 after meaningful host-load
-reduction: boot209.813ms, identical finish8.591666666666667/hash622bb2554e0f9a26,
-one-tick restart5.94ms. Gate14 timing failure remains retained. Run the next
-silent ship gate after the third actual construction mutation. Existing-player
-checks do not qualify this rider. AllR0–R5 remain open, accepted0/6; no normal
-player promotion, full ship, stranger or device acceptance. Artists remain
-optional; report actual failures without inventing an external prerequisite.
+Current-player silent Metal gate17 passed11/11: identical finish
+8.591666666666667/hash622bb2554e0f9a26 and one-tick restart6.29ms. Gate14
+failure remains retained. Run the next silent ship gate after the third actual
+construction mutation. Existing-player checks do not qualify this rider.
+AllR0–R5 remain open, accepted0/6; no normal-player promotion, full ship,
+stranger or device acceptance. Artists remain optional.
