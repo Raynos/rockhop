@@ -15,3 +15,7 @@ Finding: Inherited nonuniform parent scale forces sheared child-local bases that
 Validation: Parent exact diff read, AST parity for ten protected functions, byte-identical controls/intake and all ten source pins. Existing actual 10 micrometre gate remains; failure saves editable modeling native and named desired/actual matrices before raising.
 
 Limits: API correction only; actual corrected rig and original PBR enclosure unexecuted, no fitting/art acceptance.
+
+Finding: Corrected offline scale inheritance places both original glove source rigs at their unchanged anatomical controls.
+Validation: CPU2 author02 exit0 in10.395s; actual R/L residuals below10um; native source and UV pins match; unchanged complete body/master signature.
+Limits: Unaccepted first fitted-source construction; all-sided material inspection and production articulation pending.

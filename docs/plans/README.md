@@ -1349,3 +1349,5 @@ October 7 jeans actual donor inspection: parent viewed all6matched target/donor 
 October 7 glove03 pose API correction: offline modeling bones ignore inherited scale; documented parent-first convert_local_to_pose inversion replaces lossy sheared child channel assignment. Parent diff/ten-function AST/unchangedcontrols/tenpins verified. Same10micrometre actual gate, partial native/matrix failure retention added. Corrected run unexecuted; no art acceptance.
 
 October 7 exact selected-boot artist package: parent archive/manifest/all38original+ZIPmembers rehashed. Original4Ksource, rejected bilateralnative/arrays, actualviews, unchangedwearer75 and bike/motion envelope retained. No doublemirror found; camera−T isRlateral/Lmedial, so only-left failure is not established. Bounded sculpt mechanism closed, no artist contact or acceptedboot.
+
+October 7 glove03 actualauthor02: corrected standard offline bone scale inheritance passes unchanged10um control gate on both original selected glove sources; nativeR/L saved, UV/body75 unchanged. First fitted PBR/art inspection pending; no bake/runtime/grip acceptance.

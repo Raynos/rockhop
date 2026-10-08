@@ -1,0 +1,875 @@
+{
+  "status": "SOURCE_REST_CONSTRUCTION_IN_PROGRESS",
+  "acceptedArt": false,
+  "sourcePins": {
+    "nativeMaster": {
+      "path": "harness/out/rider-rebuild/native-hand-repair01/native02/anatomical-hand-rig.blend",
+      "sha256": "42fca617ea8d246a6c3e3ca68a90cd3cb5f3ce8b9bb78130e0e2bbd65f605fac"
+    },
+    "nativeArrays": {
+      "path": "docs/evidence/rider-rebuild/native-hand-repair01/native02/native-body.npz",
+      "sha256": "e62e9969503b7761e99463eccc3ca7be39e0c230a2948f2f87a224db52d0f9a2"
+    },
+    "handL": {
+      "path": "docs/evidence/rider-rebuild/glove-native02-fit/target01/native-hand-L.npz",
+      "sha256": "d175eb289e270d83f5dfef0617a8a8396e1841a27b6de450bfa1cb4bc10a1e1d"
+    },
+    "handR": {
+      "path": "docs/evidence/rider-rebuild/glove-native02-fit/target01/native-hand-R.npz",
+      "sha256": "2e3cd9f16768fa063de77a73eb102abfc841b16abcc11c8339b793558707c210"
+    },
+    "denseSelected": {
+      "path": "assets/blender/hero-remaster/rider/finish-2026-10-05/wardrobe/data/prep02/gloves/cleaned-donor.npz",
+      "sha256": "f07a705f334d3d2b802fa7d23baec3e9cd54b211d160b7bbd6ab2c9f4a96541c"
+    },
+    "baseColor": {
+      "path": "assets/blender/hero-remaster/rider/finish-2026-10-05/wardrobe/data/prep02/gloves/baseColorTexture.png",
+      "sha256": "9633beec8bf2bb3bd73918589b931d2fc4f33f8e3e702415094ed173a129f95c"
+    },
+    "metallicRoughness": {
+      "path": "assets/blender/hero-remaster/rider/finish-2026-10-05/wardrobe/data/prep02/gloves/metallicRoughnessTexture.png",
+      "sha256": "a7a712769a73844a9560d4bef1d163ce3fb8721e388d1a7ecfa07a3515280e67"
+    },
+    "selectedOriginal": {
+      "path": ".tmp/generation-comparison-2026-10-03/user-agent2/items01/gloves/paint01/painted.glb",
+      "sha256": "890f8693256347156c20f82a62dd79e2145cf511e7a85eb5239089644a20bfea"
+    },
+    "actualDigitControls": {
+      "path": "docs/evidence/rider-rebuild/native-hand-repair01/verify-native02/digit-controls.json",
+      "sha256": "2995c37fa2db51a37257bf62e6efc79437c115818e6d412326a68dbdded03e4d"
+    },
+    "reference": {
+      "path": "assets/blender/hero-remaster/generation-comparison-2026-10-03/user-agent2/items01/references/gloves-reference01.png",
+      "sha256": "070c5fc70f1cc17e1697cc88ffb91b71bbdba35003ee3113a94e4a1b9b36adb2"
+    }
+  },
+  "sourceFiles": {
+    "controls.json": "d75387be9292303338eba6cea238bb65ef8642c051f2742b2f48796f9415c536",
+    "author.py": "1e8265e0cd5c596d5dd69a20bdc4f0dc6b88f89acc5def8ae6728b4feec24c44",
+    ".gitignore": "32dae3052f331ee34d628ef535709b301259a45df7c7522c4d35dcf49873f00b",
+    "inputs.json": "c04f3bfe87ee80bf95d2d20ef03c78afa32eaeb705aaf050d93632879b032443"
+  },
+  "bodyAndMasterRestBefore": "dacd5fdef071b681a0d4ce2db3abbb9187fe3b243cbf60b2d2fee7f57dda1395",
+  "hands": {
+    "R": {
+      "object": "SelectedFittedSource.R",
+      "offlineRig": "GloveSourceAuthoringRig.R",
+      "sourceRestObject": "SelectedSourceRest.R",
+      "vertices": 284571,
+      "triangles": 569142,
+      "controls": [
+        {
+          "name": "source-hand.R",
+          "sourceHead": [
+            -0.24,
+            -0.51,
+            -0.1462
+          ],
+          "sourceTail": [
+            -0.11,
+            0.1,
+            -0.18366
+          ],
+          "targetHead": [
+            -0.3939262628555298,
+            -0.06635653227567673,
+            0.9327287673950195
+          ],
+          "targetTail": [
+            -0.43395084142684937,
+            -0.10848769545555115,
+            0.872691810131073
+          ],
+          "sourceMeasuredSectionHalfExtent": [
+            0.4512404178860044,
+            0.27474324440615927
+          ],
+          "targetMeasuredSectionHalfExtent": [
+            0.012820988575069274,
+            0.03695060838837827
+          ],
+          "sectionSamples": [
+            31613,
+            7
+          ],
+          "authoredPoseScaleXYZ": [
+            0.035061107001868985,
+            0.1337259620179827,
+            0.1454107032721735
+          ]
+        },
+        {
+          "name": "source-metacarpal-pinky.R",
+          "sourceHead": [
+            -0.24,
+            -0.51,
+            -0.1462
+          ],
+          "sourceTail": [
+            -0.52,
+            0.04,
+            -0.21684
+          ],
+          "targetHead": [
+            -0.3939262628555298,
+            -0.06635653227567673,
+            0.9327287673950195
+          ],
+          "targetTail": [
+            -0.41946691274642944,
+            -0.06702424585819244,
+            0.8540669679641724
+          ],
+          "sourceMeasuredSectionHalfExtent": [
+            0.6769761171007336,
+            0.2565281129545638
+          ],
+          "targetMeasuredSectionHalfExtent": [
+            0.03725510535935211,
+            0.02857444260794501
+          ],
+          "sectionSamples": [
+            29875,
+            11
+          ],
+          "authoredPoseScaleXYZ": [
+            0.059463110060295046,
+            0.13314061155898546,
+            0.12308375189091836
+          ]
+        },
+        {
+          "name": "DEF-f_pinky.01.R",
+          "sourceHead": [
+            -0.52,
+            0.04,
+            -0.21684
+          ],
+          "sourceTail": [
+            -0.59,
+            0.31,
+            -0.26034
+          ],
+          "targetHead": [
+            -0.41946691274642944,
+            -0.06702424585819244,
+            0.8540669679641724
+          ],
+          "targetTail": [
+            -0.4392172396183014,
+            -0.0653032585978508,
+            0.8231877088546753
+          ],
+          "sourceMeasuredSectionHalfExtent": [
+            0.1280532412614055,
+            0.1081339380011731
+          ],
+          "targetMeasuredSectionHalfExtent": [
+            0.01761181108587037,
+            0.014138715564158728
+          ],
+          "sectionSamples": [
+            4707,
+            16
+          ],
+          "authoredPoseScaleXYZ": [
+            0.15315357028593435,
+            0.12998874597419993,
+            0.14924745979364634
+          ]
+        },
+        {
+          "name": "DEF-f_pinky.02.R",
+          "sourceHead": [
+            -0.59,
+            0.31,
+            -0.26034
+          ],
+          "sourceTail": [
+            -0.62,
+            0.49,
+            -0.32515
+          ],
+          "targetHead": [
+            -0.4392172396183014,
+            -0.0653032585978508,
+            0.8231877088546753
+          ],
+          "targetTail": [
+            -0.4476434588432312,
+            -0.06846309453248978,
+            0.7905360460281372
+          ],
+          "sourceMeasuredSectionHalfExtent": [
+            0.09264508496345442,
+            0.09508491558920905
+          ],
+          "targetMeasuredSectionHalfExtent": [
+            0.010108112714540526,
+            0.008106207599929985
+          ],
+          "sectionSamples": [
+            2790,
+            14
+          ],
+          "authoredPoseScaleXYZ": [
+            0.1306935248568966,
+            0.17489856395559208,
+            0.10628612895436922
+          ]
+        },
+        {
+          "name": "DEF-f_pinky.03.R",
+          "sourceHead": [
+            -0.62,
+            0.49,
+            -0.32515
+          ],
+          "sourceTail": [
+            -0.63,
+            0.61,
+            -0.34825
+          ],
+          "targetHead": [
+            -0.4476434588432312,
+            -0.06846309453248978,
+            0.7905360460281372
+          ],
+          "targetTail": [
+            -0.4476434588432312,
+            -0.06740981340408325,
+            0.7715770602226257
+          ],
+          "sourceMeasuredSectionHalfExtent": [
+            0.09086819089384006,
+            0.0945105281857214
+          ],
+          "targetMeasuredSectionHalfExtent": [
+            0.009220701875036754,
+            0.008371321903644556
+          ],
+          "sectionSamples": [
+            1667,
+            9
+          ],
+          "authoredPoseScaleXYZ": [
+            0.12348327577188954,
+            0.1548647736964574,
+            0.10973721237981028
+          ]
+        },
+        {
+          "name": "source-metacarpal-ring.R",
+          "sourceHead": [
+            -0.24,
+            -0.51,
+            -0.1462
+          ],
+          "sourceTail": [
+            -0.33,
+            0.08,
+            -0.20373
+          ],
+          "targetHead": [
+            -0.3939262628555298,
+            -0.06635653227567673,
+            0.9327287673950195
+          ],
+          "targetTail": [
+            -0.43289756774902344,
+            -0.0821557268500328,
+            0.8663721084594727
+          ],
+          "sourceMeasuredSectionHalfExtent": [
+            0.5451284190633953,
+            0.24852486830273418
+          ],
+          "targetMeasuredSectionHalfExtent": [
+            0.014939395371058022,
+            0.036776302268019
+          ],
+          "sectionSamples": [
+            30542,
+            7
+          ],
+          "authoredPoseScaleXYZ": [
+            0.03290856749292275,
+            0.13102162820606844,
+            0.16004958594150234
+          ]
+        },
+        {
+          "name": "DEF-f_ring.01.R",
+          "sourceHead": [
+            -0.33,
+            0.08,
+            -0.20373
+          ],
+          "sourceTail": [
+            -0.36,
+            0.42,
+            -0.25341
+          ],
+          "targetHead": [
+            -0.43289756774902344,
+            -0.0821557268500328,
+            0.8663721084594727
+          ],
+          "targetTail": [
+            -0.44553691148757935,
+            -0.10427457094192505,
+            0.8189746141433716
+          ],
+          "sourceMeasuredSectionHalfExtent": [
+            0.1287891608700702,
+            0.11919738661790548
+          ],
+          "targetMeasuredSectionHalfExtent": [
+            0.01966658531747958,
+            0.019993505566561456
+          ],
+          "sectionSamples": [
+            5974,
+            22
+          ],
+          "authoredPoseScaleXYZ": [
+            0.1682329877072346,
+            0.15600837848989846,
+            0.1845133202212141
+          ]
+        },
+        {
+          "name": "DEF-f_ring.02.R",
+          "sourceHead": [
+            -0.36,
+            0.42,
+            -0.25341
+          ],
+          "sourceTail": [
+            -0.37,
+            0.66,
+            -0.36376
+          ],
+          "targetHead": [
+            -0.44553691148757935,
+            -0.10427457094192505,
+            0.8189746141433716
+          ],
+          "targetTail": [
+            -0.4518565833568573,
+            -0.11375407874584198,
+            0.7842164039611816
+          ],
+          "sourceMeasuredSectionHalfExtent": [
+            0.09652859974116416,
+            0.1033260036146814
+          ],
+          "targetMeasuredSectionHalfExtent": [
+            0.013441811033949843,
+            0.014415229171116229
+          ],
+          "sectionSamples": [
+            3801,
+            16
+          ],
+          "authoredPoseScaleXYZ": [
+            0.15997135642033722,
+            0.13837243857048567,
+            0.15886832546365723
+          ]
+        },
+        {
+          "name": "DEF-f_ring.03.R",
+          "sourceHead": [
+            -0.37,
+            0.66,
+            -0.36376
+          ],
+          "sourceTail": [
+            -0.36,
+            0.83,
+            -0.41571
+          ],
+          "targetHead": [
+            -0.4518565833568573,
+            -0.11375407874584198,
+            0.7842164039611816
+          ],
+          "targetTail": [
+            -0.45080330967903137,
+            -0.1148073598742485,
+            0.7631508111953735
+          ],
+          "sourceMeasuredSectionHalfExtent": [
+            0.09911740235190862,
+            0.11045241724509047
+          ],
+          "targetMeasuredSectionHalfExtent": [
+            0.009806921300548995,
+            0.009191120918444953
+          ],
+          "sectionSamples": [
+            2734,
+            9
+          ],
+          "authoredPoseScaleXYZ": [
+            0.11912056834005234,
+            0.11861381722232152,
+            0.1013207424298574
+          ]
+        },
+        {
+          "name": "source-metacarpal-middle.R",
+          "sourceHead": [
+            -0.24,
+            -0.51,
+            -0.1462
+          ],
+          "sourceTail": [
+            -0.11,
+            0.1,
+            -0.18366
+          ],
+          "targetHead": [
+            -0.3939262628555298,
+            -0.06635653227567673,
+            0.9327287673950195
+          ],
+          "targetTail": [
+            -0.43395084142684937,
+            -0.10848769545555115,
+            0.872691810131073
+          ],
+          "sourceMeasuredSectionHalfExtent": [
+            0.4512404178860044,
+            0.27474324440615927
+          ],
+          "targetMeasuredSectionHalfExtent": [
+            0.012820988575069274,
+            0.03695060838837827
+          ],
+          "sectionSamples": [
+            31613,
+            7
+          ],
+          "authoredPoseScaleXYZ": [
+            0.035061107001868985,
+            0.1337259620179827,
+            0.1454107032721735
+          ]
+        },
+        {
+          "name": "DEF-f_middle.01.R",
+          "sourceHead": [
+            -0.11,
+            0.1,
+            -0.18366
+          ],
+          "sourceTail": [
+            -0.1,
+            0.46,
+            -0.22524
+          ],
+          "targetHead": [
+            -0.43395084142684937,
+            -0.10848769545555115,
+            0.872691810131073
+          ],
+          "targetTail": [
+            -0.45154181122779846,
+            -0.12812411785125732,
+            0.8203485608100891
+          ],
+          "sourceMeasuredSectionHalfExtent": [
+            0.12489401971620524,
+            0.12616664720217
+          ],
+          "targetMeasuredSectionHalfExtent": [
+            0.02091644590642039,
+            0.021010030583831756
+          ],
+          "sectionSamples": [
+            6411,
+            32
+          ],
+          "authoredPoseScaleXYZ": [
+            0.18348713540082284,
+            0.16166212052810608,
+            0.182378077678171
+          ]
+        },
+        {
+          "name": "DEF-f_middle.02.R",
+          "sourceHead": [
+            -0.1,
+            0.46,
+            -0.22524
+          ],
+          "sourceTail": [
+            -0.075,
+            0.74,
+            -0.32963
+          ],
+          "targetHead": [
+            -0.45154181122779846,
+            -0.12812411785125732,
+            0.8203485608100891
+          ],
+          "targetTail": [
+            -0.4550164043903351,
+            -0.1474590003490448,
+            0.7842164039611816
+          ],
+          "sourceMeasuredSectionHalfExtent": [
+            0.10675571377836929,
+            0.09945508707668084
+          ],
+          "targetMeasuredSectionHalfExtent": [
+            0.010564871172736178,
+            0.010920588843096017
+          ],
+          "sectionSamples": [
+            4666,
+            16
+          ],
+          "authoredPoseScaleXYZ": [
+            0.11769741148301943,
+            0.1371497682495722,
+            0.1299138055465591
+          ]
+        },
+        {
+          "name": "DEF-f_middle.03.R",
+          "sourceHead": [
+            -0.075,
+            0.74,
+            -0.32963
+          ],
+          "sourceTail": [
+            -0.05,
+            0.94,
+            -0.4071
+          ],
+          "targetHead": [
+            -0.4550164043903351,
+            -0.1474590003490448,
+            0.7842164039611816
+          ],
+          "targetTail": [
+            -0.4542791247367859,
+            -0.1474590003490448,
+            0.7652573585510254
+          ],
+          "sourceMeasuredSectionHalfExtent": [
+            0.11364409518769474,
+            0.09635428145322862
+          ],
+          "targetMeasuredSectionHalfExtent": [
+            0.010167537442002163,
+            0.007349854079538615
+          ],
+          "sectionSamples": [
+            3406,
+            12
+          ],
+          "authoredPoseScaleXYZ": [
+            0.10706704489930817,
+            0.08786739022678952,
+            0.09703620782099996
+          ]
+        },
+        {
+          "name": "source-metacarpal-index.R",
+          "sourceHead": [
+            -0.24,
+            -0.51,
+            -0.1462
+          ],
+          "sourceTail": [
+            0.12,
+            0.09,
+            -0.16453
+          ],
+          "targetHead": [
+            -0.3939262628555298,
+            -0.06635653227567673,
+            0.9327287673950195
+          ],
+          "targetTail": [
+            -0.4181516468524933,
+            -0.13271310925483704,
+            0.8747983574867249
+          ],
+          "sourceMeasuredSectionHalfExtent": [
+            0.596177844235839,
+            0.28597695874959655
+          ],
+          "targetMeasuredSectionHalfExtent": [
+            0.02883009475330183,
+            0.030475946329650547
+          ],
+          "sectionSamples": [
+            34939,
+            9
+          ],
+          "authoredPoseScaleXYZ": [
+            0.053390267788466034,
+            0.13051770816784095,
+            0.1170581940447948
+          ]
+        },
+        {
+          "name": "DEF-f_index.01.R",
+          "sourceHead": [
+            0.12,
+            0.09,
+            -0.16453
+          ],
+          "sourceTail": [
+            0.19,
+            0.43,
+            -0.18848
+          ],
+          "targetHead": [
+            -0.4181516468524933,
+            -0.13271310925483704,
+            0.8747983574867249
+          ],
+          "targetTail": [
+            -0.4350041151046753,
+            -0.15904507040977478,
+            0.827400803565979
+          ],
+          "sourceMeasuredSectionHalfExtent": [
+            0.12712174102287624,
+            0.1241136123629839
+          ],
+          "targetMeasuredSectionHalfExtent": [
+            0.023299910354540848,
+            0.019405586864177725
+          ],
+          "sectionSamples": [
+            6070,
+            28
+          ],
+          "authoredPoseScaleXYZ": [
+            0.19902111276141188,
+            0.16317982070772413,
+            0.17246768067288812
+          ]
+        },
+        {
+          "name": "DEF-f_index.02.R",
+          "sourceHead": [
+            0.19,
+            0.43,
+            -0.18848
+          ],
+          "sourceTail": [
+            0.23,
+            0.68,
+            -0.26858
+          ],
+          "targetHead": [
+            -0.4350041151046753,
+            -0.15904507040977478,
+            0.827400803565979
+          ],
+          "targetTail": [
+            -0.4402705132961273,
+            -0.1716844141483307,
+            0.8000155687332153
+          ],
+          "sourceMeasuredSectionHalfExtent": [
+            0.1225572991051255,
+            0.10327018188997543
+          ],
+          "targetMeasuredSectionHalfExtent": [
+            0.009401871441939703,
+            0.013170096180604763
+          ],
+          "sectionSamples": [
+            4612,
+            8
+          ],
+          "authoredPoseScaleXYZ": [
+            0.09303298559280067,
+            0.11529956112784452,
+            0.1468971575625485
+          ]
+        },
+        {
+          "name": "DEF-f_index.03.R",
+          "sourceHead": [
+            0.23,
+            0.68,
+            -0.26858
+          ],
+          "sourceTail": [
+            0.25,
+            0.86,
+            -0.323
+          ],
+          "targetHead": [
+            -0.4402705132961273,
+            -0.1716844141483307,
+            0.8000155687332153
+          ],
+          "targetTail": [
+            -0.44058650732040405,
+            -0.17305368185043335,
+            0.7894827723503113
+          ],
+          "sourceMeasuredSectionHalfExtent": [
+            0.11976930315755428,
+            0.10093906944188828
+          ],
+          "targetMeasuredSectionHalfExtent": [
+            0.00946245279386932,
+            0.006366039770118425
+          ],
+          "sectionSamples": [
+            3063,
+            10
+          ],
+          "authoredPoseScaleXYZ": [
+            0.0957044291957738,
+            0.05619101302663475,
+            0.082882077439151
+          ]
+        },
+        {
+          "name": "DEF-thumb.01.R",
+          "sourceHead": [
+            0.02,
+            -0.46,
+            -0.19128
+          ],
+          "sourceTail": [
+            0.32,
+            -0.29,
+            -0.29644
+          ],
+          "targetHead": [
+            -0.3781270682811737,
+            -0.10848768800497055,
+            0.9137696623802185
+          ],
+          "targetTail": [
+            -0.38023361563682556,
+            -0.1516721099615097,
+            0.884277880191803
+          ],
+          "sourceMeasuredSectionHalfExtent": [
+            0.12855437231386646,
+            0.18346738051095482
+          ],
+          "targetMeasuredSectionHalfExtent": [
+            0.02112074318069563,
+            0.02076430537854535
+          ],
+          "sectionSamples": [
+            1614,
+            16
+          ],
+          "authoredPoseScaleXYZ": [
+            0.17985186162510416,
+            0.145178115890066,
+            0.1240782166025753
+          ]
+        },
+        {
+          "name": "DEF-thumb.02.R",
+          "sourceHead": [
+            0.32,
+            -0.29,
+            -0.29644
+          ],
+          "sourceTail": [
+            0.53,
+            -0.04,
+            -0.34466
+          ],
+          "targetHead": [
+            -0.38023361563682556,
+            -0.1516721099615097,
+            0.884277880191803
+          ],
+          "targetTail": [
+            -0.38865986466407776,
+            -0.17800405621528625,
+            0.8663721084594727
+          ],
+          "sourceMeasuredSectionHalfExtent": [
+            0.12704661195804648,
+            0.13409963106624792
+          ],
+          "targetMeasuredSectionHalfExtent": [
+            0.01547170194243949,
+            0.013700179254908011
+          ],
+          "sectionSamples": [
+            5995,
+            13
+          ],
+          "authoredPoseScaleXYZ": [
+            0.13752198246899353,
+            0.09980417135418874,
+            0.11707846718199999
+          ]
+        },
+        {
+          "name": "DEF-thumb.03.R",
+          "sourceHead": [
+            0.53,
+            -0.04,
+            -0.34466
+          ],
+          "sourceTail": [
+            0.63,
+            0.12,
+            -0.36135
+          ],
+          "targetHead": [
+            -0.38865986466407776,
+            -0.17800407111644745,
+            0.8663721084594727
+          ],
+          "targetTail": [
+            -0.38865986466407776,
+            -0.18327046930789948,
+            0.8568926453590393
+          ],
+          "sourceMeasuredSectionHalfExtent": [
+            0.11904764149712642,
+            0.10168356198564567
+          ],
+          "targetMeasuredSectionHalfExtent": [
+            0.013286896955591466,
+            0.010804673075135848
+          ],
+          "sectionSamples": [
+            3053,
+            9
+          ],
+          "authoredPoseScaleXYZ": [
+            0.12840991021195883,
+            0.05725023381981557,
+            0.1259266770861493
+          ]
+        }
+      ],
+      "normalizedWeightMaxResidual": 4.440892098500626e-16,
+      "actualPoseControlMaxResidualMeters": 3.650784492492676e-07,
+      "originalCornerUVByteParity": true,
+      "sourceReflectedWithFaceAndUVCornerWinding": false
+    }
+  },
+  "bakesExecuted": 0,
+  "completeVisibleBody": "RiderBody",
+  "sourceRigIsOfflineModelingAid": true,
+  "native": {
+    "path": "docs/evidence/rider-rebuild/production-gloves03/author02/fitted-source-R.blend",
+    "sha256": "7c942d29d3207a9d80cbc1b080829b886bd53ae3eca99bf4b5f9987fa235b674"
+  }
+}
