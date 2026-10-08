@@ -701,11 +701,15 @@ and first selection requires that download. Keep the candidate private until
 played review and an isolated, accessible preview are delivered. The
 [Garage-only movie and selected photo](../evidence/rider-rebuild/phone-comparison01/played02/FINDING.md)
 are retained. The isolated preview is READY with scoped share access, but
-remote selected loading stopped at the unchanged global memory limit with
-and without recording. The verifier loading-state bug is corrected; bounded
-network/redirect receipts will identify the separate CORS failure. Uploaded
-files and range responses do not prove actual remote old/new switching.
-Physical-phone performance remains open. No rider milestone passes from
+earlier remote selected loading stopped at the unchanged global memory
+limit with and without recording. After the loading-state guard and official
+automation toolbar-skip header, the actual
+[uploaded old→new→old→new transition](../evidence/rider-rebuild/phone-comparison01/remote-verified02/FINDING.md)
+passes with selected native75/source/mesh identity, resident instances,
+483submitted frames0invalid and0errors. The scoped phone link and trimmed
+Garage movie are delivered. This does not isolate the earlier memory/CORS
+cause or prove physical-phone performance. First selected load remains357MB;
+production LOD and physical-phone performance remain open. No rider milestone passes from
 packaging or comparison performance.
 
 ### Equipped-outfit body masks adopted after independent Astra05 review

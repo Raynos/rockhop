@@ -1699,3 +1699,5 @@ Active rider plan corrected to actual failures: stop pelvis-only seated fitting 
 Current-source player gate30: explicit silent Metal --dev boot/clear/crash/restart passes11/11, exact8.591666666666667finish/hash622bb2554e0f9a26, one-tick restart and5.97ms synced-frame P95. Retain default-SwiftShader timeout and stale-dist baseline separately. No selected rider/ship/device pass.
 
 Ask348 delivered: isolated uploaded six-choice Garage passes actual silent WebKit phone-layout old→new→old→new, selected source/native75/meshroles and resident instances,483submitted frames0invalid/0errors. Scoped share link and Garage-only movie delivered in chat.357MBfirst download and full/LODalias honest; physical phone, seating/cuffs and all rider milestones remain open.
+
+Sixth comparison plan status reconciled after remote actual runtime pass67d5ce606: selected native75/source/roles, old/new resident switching and483render submissions verified, scoped phone link/movie delivered. Prior memory/CORS causes not isolated;357MBfirst load, productionLOD and physical-phone/art gates remain open.
