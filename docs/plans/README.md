@@ -1681,3 +1681,5 @@ October8 exact cuff ray replay isolates float32 world-coordinate grazing miss: f
 October8 saved-TRS seated shape diagnostic frozen: per-bone weighted readback, area stretch and gap distribution will test structural LBS distortion before any pose-space corrective; no second optimizer retune or art acceptance.
 
 October8 actual Blender confirms cuff precision diagnosis in1.169s: world cuff misses, wrist-local cuff41.087783873mm matches double actual triangle; wearer valid. Native08 will condition before Vector conversion, retain every bearing/check; no model pass.
+
+October8 exact sixth-rider preview deployed READY with scoped seven-day share access; actual version/catalog verified without login. Remote full recorded comparison stops at65.2GiB memory bound before selected-ready; smaller no-recorder uploaded integration check pending. Ask348 remains active, no production promotion/phone/art pass.
