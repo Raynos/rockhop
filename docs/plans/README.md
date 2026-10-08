@@ -1677,3 +1677,5 @@ October8 isolated preview uploaded READY; deployment-scoped share access retriev
 October8 actual offline author04 fails both bikes in1.677s:~97% footprint overlap but~2% within1mm band,23mm mean hover and4.3mm minima penetration; many new jeans/saddle/self crossings. Fixed limbs pass but no pose promotion. Astra inspects actual residual/geometry before another solve;0/6.
 
 October8 exact cuff ray replay isolates float32 world-coordinate grazing miss: float64 and wrist-relative source intersections exist; wearer hits remain. Freeze diagnostic before actual Blender BVH confirmation; no sample skipped and native07 remains failed.
+
+October8 saved-TRS seated shape diagnostic frozen: per-bone weighted readback, area stretch and gap distribution will test structural LBS distortion before any pose-space corrective; no second optimizer retune or art acceptance.
