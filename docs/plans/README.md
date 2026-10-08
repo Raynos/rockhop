@@ -1787,3 +1787,5 @@ Actual motionneutralprobe exits0/7.053s: addedrestorientations alreadywrong (thi
 Anatomicalsupport02 source frozen: measured-equivalentpelvis/thigh carriers coalesced before unchangedbrush; actual2356rowfixture fitsFOUR withzero rankloss, maxcutoffmass0.016916%. Finiteoperatorbound0.002667mm; parentreview/twosourcetests pass. Boundednativeauthor02 next, no artpass.
 
 Motion11correctedsource02 establishespositiveEditBone length BEFORE matrix assignment andassertsintendedaddedrestframes beforeconstraints. No poleanglechange; original75/neutral/target/operator/bake gates remain. Correctednative02 queued aftersupport02, sourceonly.
+
+Cuffconstruction10source frozen after actualidentityproof: originalfloat32 cutter/coordinates and physical/denseengine unchanged; sixsourcefloorpredicatesshareexistingidentity. Measured1688+71rimcircuits retaininheritedhandle, bothsewnonlyafteractualoperation; topology notdesignconstraint. Oneboundedconstruction queued, no savedcuff/artpass.

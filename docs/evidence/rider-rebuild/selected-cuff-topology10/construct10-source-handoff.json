@@ -1,0 +1,57 @@
+{
+  "acceptedArt": false,
+  "status": "FROZEN_UNEXECUTED_ONE_CONSISTENT_IDENTITY_CONSTRUCTION",
+  "files": [
+    {
+      "path": "assets/blender/rider-rebuild/selected-cuff-topology10/construct10.py",
+      "sha256": "906c4df1c117d183b9b117fe03a27d2f96c82f65f1abc45ae9fd6e9e7e29aa0e"
+    },
+    {
+      "path": "assets/blender/rider-rebuild/selected-cuff-topology10/input09.json",
+      "sha256": "076ce70b228895af9cd75ea9148abca85c57996938c19691fb6d3bdc9049d0f4"
+    },
+    {
+      "path": "assets/blender/rider-rebuild/selected-cuff-topology10/reconstruct.py",
+      "sha256": "fdab30613f06a6aabe7734f5577ef0bda428f79c77788a6fe3a7769c5e77656e"
+    },
+    {
+      "path": "assets/blender/rider-rebuild/selected-cuff-topology10/inspect_rim_ownership03.py",
+      "sha256": "bf77e249aad19b72fe9852bb9fbe396c9a754bb10e9bceaabb06c15c5f7966b7"
+    }
+  ],
+  "parentInvocation": [
+    "/Applications/Blender.app/Contents/MacOS/Blender",
+    "-b",
+    "-t",
+    "2",
+    "--python-exit-code",
+    "1",
+    "--python",
+    "assets/blender/rider-rebuild/selected-cuff-topology10/construct10.py",
+    "--",
+    "harness/out/rider-rebuild/astra-cuff-bearing18/authored10"
+  ],
+  "actualNativeOwnershipProof": "docs/evidence/rider-rebuild/selected-cuff-topology10/identity02/native-identity-probe02.json.gz",
+  "actualNativeOwnershipProofUncompressedSHA256": "51546e07f98823331bc9c374dff6f3c4a7eabbf250c5ad61f09bb00403833358",
+  "validation": {
+    "syntaxCompiled": true,
+    "cuffContactFunctionASTExact": true,
+    "engineSleeveContactDenseGatesByteExactByPinnedImport": true,
+    "sourceCoordinatesAndOriginalFloorCutterUnchanged": true,
+    "actualBothHandOwnershipProbePassed": true,
+    "nativeConstructionExecuted": false
+  },
+  "rimOwnership": {
+    "authoredTangentCircuits": [
+      1688,
+      71
+    ],
+    "actualProximalCut": 1029,
+    "inheritedCuffBandChi": -2,
+    "retainedExteriorChi": -1,
+    "bothCircuitsPairedWithoutCaps": true,
+    "sewnFlagOnlyAfterOperation": true,
+    "interpretation": "Source cuff has one handle. Reconstructing both matching rim circuits retains it without an arbitrary cap or deletion. It is not an anatomical design constraint; parent may replace a defective local surface if fit/played review fails."
+  },
+  "limits": "One unaccepted candidate only; all unchanged physical contact/radius and dense geometry gates run. This source freeze is not a saved cuff, passing geometry or accepted art. No export/player promotion."
+}
