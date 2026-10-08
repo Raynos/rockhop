@@ -1495,3 +1495,5 @@ October8 actual read-only glove solved03 extraction exit0/5.695s supplies both s
 October8 active rider plan refreshed to actual selected-material outcomes: jeans pelvis correspondence works, original-unit glove guide fixes singular solve but local skin exposure remains, rigid hoodie seam rejected with fresh targeted Astra05 review. Whole4K jeans/selected boot sculpt underway; gate14 timing failure retained; rider0/6 and no promotion.
 
 October8 actual boot selected-upper sculpt/cavity/PBR saved nativec6d121b3, CPU2 exit1/74.907s: original curved exterior/UV/sole/tread retained,0manufactured exterior faces;47/3821foot samples still insideleather. Root PBR judgment next; no left or fit/motion acceptance.
+
+October8 one whole original-selected4K jeans transfer source frozen after successful pelvis: actual measured cuffs/crotch, existing1691→26063 projection lineage and four semantic capture regions. Parent source/18pins read; saves native before gate/maps. No whole art/normal/fit/motion acceptance.

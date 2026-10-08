@@ -1,0 +1,68 @@
+{
+  "accepted": false,
+  "status": "SOURCE_ONLY_READY_FOR_PARENT_CHECKPOINT_AND_SERIAL_CPU2_LEASE",
+  "source": {
+    "path": "assets/blender/rider-rebuild/production-jeans02/whole-correspondence02/author.py",
+    "sha256": "ba18db9745cc3d4e4b7fb3917a803708a31bbe9d29ddf0be8e9dfe4ca22fbfe7"
+  },
+  "intake": {
+    "path": "assets/blender/rider-rebuild/production-jeans02/whole-correspondence02/intake.json",
+    "sha256": "56faa17d4ef31043218dcf5bb8522ca9cbff7dc02e19577d890069fcb381e6dd"
+  },
+  "generator": {
+    "path": "assets/blender/rider-rebuild/production-jeans02/whole-correspondence02/prepare-controls.py",
+    "sha256": "0b358dd08f1a210ce63cec7d013b6b89c26a5433194d734eddcc41ee200ad873"
+  },
+  "controlArray": {
+    "path": "assets/blender/rider-rebuild/production-jeans02/whole-correspondence02/lower-controls.npz",
+    "sha256": "c0488780de815517e65fb50a49fff83061489962fc8e0759e00c066962fc1171"
+  },
+  "envelopeReceipt": {
+    "path": "docs/evidence/rider-rebuild/production-jeans02/whole-correspondence02/source-envelope.json",
+    "sha256": "a5d90c9459011026039b7d217500552f4c8fc7bf89a25e1365e89aa669905721"
+  },
+  "checks": {
+    "author.py": "AST passed without import/execution",
+    "prepare-controls.py": "AST passed without import/execution",
+    "originalNativeControlPositions": {
+      "shape": [
+        1691,
+        3
+      ],
+      "dtype": "float64",
+      "finite": true,
+      "arraySHA256": "b903ed012e57e25e5518889eb3c23d300dcceae1bd69d6d7f2163203b6f2eaa9"
+    },
+    "authoredProjectionControlPositions": {
+      "shape": [
+        1691,
+        3
+      ],
+      "dtype": "float64",
+      "finite": true,
+      "arraySHA256": "15025dab60e70affc27d36ccf184f4527ad03085adab99290d4b3182b390dfc9"
+    },
+    "authoredCaptureControlPositions": {
+      "shape": [
+        1691,
+        3
+      ],
+      "dtype": "float64",
+      "finite": true,
+      "arraySHA256": "5689b33df71085bcd30dc7377827bcaa509f828e3ed4518405990dadc96fe192"
+    },
+    "sourceEnvelope": {
+      "rows": 28,
+      "angularAnchors": 224,
+      "ownSidedSupportStrips": 52,
+      "sagittalSeamControls": 13,
+      "positiveOwnSideSupport": true,
+      "originalSourceArraySHA256": "bc3b850e8b47a8e4c2711930b92ff5cb2be03e9c6a58318ba84e71a9768c1b6b"
+    },
+    "directPinsVerified": 18,
+    "inheritedHelperMapPinsVerified": 5
+  },
+  "command": "env OMP_NUM_THREADS=2 OPENBLAS_NUM_THREADS=2 MKL_NUM_THREADS=2 VECLIB_MAXIMUM_THREADS=2 NUMEXPR_NUM_THREADS=2 python3 /Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/generation-comparison-2026-10-03/user-agent2/run_bounded96.py --out /Users/raynos/projects/games/rockhop/docs/evidence/rider-rebuild/production-jeans02/whole-correspondence02/build-guard01 --limit-seconds 1790 -- /Applications/Blender.app/Contents/MacOS/Blender -b -t 2 --python-exit-code 1 --python /Users/raynos/projects/games/rockhop/assets/blender/rider-rebuild/production-jeans02/whole-correspondence02/author.py -- /Users/raynos/projects/games/rockhop/assets/blender/rider-rebuild/production-jeans02/whole-correspondence02/intake.json /Users/raynos/projects/games/rockhop/harness/out/rider-rebuild/production-jeans02/whole-correspondence02/authored01",
+  "heavyExecution": false,
+  "outputMustBeFresh": true
+}
