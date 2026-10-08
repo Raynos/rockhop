@@ -23,61 +23,71 @@ Facial animation is deferred by the user's scope answer. Facial identity and
 convincing head/neck movement remain required. No additional permission is
 needed for the authorized construction work.
 
-## Current finish sequence — October8,14:05Panama
+## Current finish sequence — October 8, 14:05 Panama
 
-The [fresh independent Astra6 X-High review](../evidence/rider-rebuild/astra-finish-review24/FINDING.md)
-puts the requested result at roughly40–50%complete, with low confidence; this is
-planning judgment, not acceptance. All six gates remain open.24hours is a stretch
-target, with36–72focused hours the more realistic conditional forecast.
-H0is October8,14:05Panama/19:05UTC; targetfinish October9 at the same time.
+The [fresh independent Astra 6 X-High review](../evidence/rider-rebuild/astra-finish-review24/FINDING.md)
+estimates roughly 40–50% complete with low confidence. This is planning judgment;
+all six acceptance gates remain open. The requested 24 hours is a stretch target;
+the conditional forecast remains 36–72 focused hours.
+H0 is October 8, 14:05 Panama / 19:05 UTC; target finish is October 9 at the same time.
 
 | Target | Complete visible deliverable | Owner |
 | --- | --- | --- |
-| H+4 | Selected dressed rider in convincing standing/deepseated/return on both bikes, clean cuff/ankle overlap, unobscured hands/hips/profiles | Nativelead22 + wardrobelead23; parent judges |
-| H+10 | Compact selected-appearance production candidate and genuine full/LOD, compared moving in actualGarage | Wardrobe/productionlead23 + nativelead22 |
-| H+16 | Same master with usable editable Blender controls, complete generic and bike actions, actual consumed engine deformation/contact | Animation/runtimelead24 + nativelead22 |
-| H+24 | Exact candidate reviewed on desktop/physicaliPhone, bot/stranger/replay/restart and checkedrelease/liveSHA | Parent; human/device decisions throughHR-23 |
+| H+4 | Selected dressed rider in convincing standing/deep seated/return on both bikes, clean cuff/ankle overlap, visible hands/hips/profiles | Native lead27 and wardrobe lead23; parent judges |
+| H+10 | Compact selected-appearance production candidate and genuine full/LOD, compared moving in actual Garage | Wardrobe/production lead23 and native lead27 |
+| H+16 | Same master with editable Blender controls, complete generic and bike actions, consumed engine deformation/contact | Animation/runtime lead24 and native lead27 |
+| H+24 | Exact candidate reviewed on desktop/physical iPhone, bot/stranger/replay/restart and checked release/live SHA | Parent; human/device decisions through HR-23 |
 
-Nativelead22 is sole writer of the integrated master: final anatomical weights,
-coupled body/jeans posed volume and head/neck. Wardrobelead23 supplies separate
-cuff/ankle patches and compact production meshes/detail transfer/LOD.
-Animationlead24 supplies separate native controls/actions and runtime delivery.
-Parent schedules heavy jobs serially, integrates handoffs and judges played
-complete outfits. Lightweight preparation proceeds concurrently.
+Native lead27 succeeds retired lead22 at the 150-response handoff. It owns the
+integrated anatomical derivative and exact native volume transport. Wardrobe
+lead23 supplies separate cuff/ankle patches and compact selected production
+meshes, detail transfer and real LOD. Animation lead24 supplies native controls,
+actions and runtime delivery. The parent schedules actual heavy jobs serially,
+integrates handoffs and judges played complete outfits. Source work proceeds
+concurrently. These are final-intent selected assets; no generic substitutions.
 
-Anatomical09 author01 was rejected: rank reduction caused21.252mm seated
-full-versus-FOUR displacement. Author02 now passes the mechanical repair: zero
-rank pruning, measured-equivalent regional support, native loss≤0.031893mm
-across six both-bike/asymmetric cases; actual loader/exporter-triangle loss
-≤0.03183mm and edge jump≤0.04694mm, under the unchanged0.1mm bound. Selected
-rest meshes, UV/maps and75 inverse binds remain exact. Actual dressed Garage
-capture02 finishes with zero errors; parent continuous playback is pending.
-This clears the weight defect, not seated shape/contact or moving-art gates.
-Nativelead22 now constructs shared Body/Jeans posed volume with fresh inverse
-skin against these frozen weights. No old corrective06 deltas or brush sweep.
+**Measured construction status, October 8, 15:25 Panama:**
 
-Cuff10 has actual native source-floor identity proof and frozen construction
-source; construction and dense/art judgment remain pending. Wardrobelead23
-also tailors the lower Jeans hem to the selected boot collar: the hem follows
-the shin, the boot follows the foot, and ~9mm rest-range overlap is insufficient.
-No masking or whole-boot/sole movement may hide that defect. Production25 begins
-with stable bilateral boots geometry; selected-source baking follows geometry.
-Motion11 native controls failed two early construction checks. Source03 fixes
-measured source-base normalization and checks all75 neutral skin operators
-against the unchanged physical bound; native03 and actions remain unaccepted.
-All new actions must preserve measured regional operator equivalence. Shared
-host headroom serializes actual heavy jobs; lightweight authoring runs in parallel.
+- Author01's rank reduction was rejected at 21.252 mm. Author02 repairs the
+  weight defect without rank pruning: actual both-bike/asymmetric native loss
+  is at most 0.031893 mm. Actual loader/exporter-triangle loss is 0.03183 mm;
+  extra edge jump is 0.04694 mm, below the unchanged 0.1 mm bound. Rest meshes,
+  UV/maps and all 75 inverse binds remain exact. The parent played capture02
+  to natural end and rejected the swollen posterior shelf, cuff and ankle gap.
+- Sculpt03 now exists as a saved, reopened editable native construction. One
+  shared body/jeans cage carries fresh inverse-skin deltas on 14,807 Jeans and
+  621 Body vertices. Maximum target residual is 0.991 micrometres; reopened
+  residual is zero. Original Basis and fields stay exact. Full finite contacts,
+  crossings and dressed moving appearance remain unaccepted. Volume03 is the
+  next exact transport and Garage film; no old corrective06 deltas are reused.
+- Cuff10 fixed source topology identity, then failed a physically impossible
+  preserved sleeve boundary. The original inner sleeve penetrates the wearer
+  proximally. Lead23 now reconstructs a connected outer/inner tailoring patch
+  and a real annular lining join, with a recoverable glove-only native save.
+  No repeated fixed-plane, radius, ease or dense-bound sweep is authorized.
+- Hem26 is frozen source for one actual collar-based lower-Jeans position patch.
+  Its IDs are disjoint from upper anatomical weights and sculpt deltas. Actual
+  native execution and dense pose/contact qualification are pending. Production25
+  starts with stable bilateral boots geometry, then selected-source detail bake.
+- Motion11 native04 fixes the IK pole convention and passes all 75 neutral
+  operators plus native Idle/Walk/Jog/Turn90/JumpLand contact checks. The range
+  action fails a physically unreachable planted-leg target. Source05 adds knee
+  yield without changing solver/rest/bounds and saves each completed action.
+  Native05, full export, dressed motion and bike authoring remain pending.
 
-Production geometry and missing actions start now, alongside fit work. Preserve
-selected appearance through compact deliberate derivatives and verified detail
-transfer; do not retain millions of source triangles as mobile delivery. Existing
-whole-scene500ktri/96MBtexture/16msp95/5MBheapgrowth60s limits stay authoritative.
-Generic delivery includes idle/walk/jog/turn/jump/landing, trueA/T, reaches,
-asymmetric bends and deepcrouch. Bike delivery includes standing/seated/leans,
-compression/hop/landing/crashrelease/instantrestartregrip. None is waived for the
-deadline. If H+4 still needs another solver campaign, replace the defective local
-surface and reforecast; do not spend the day only on seated/cuff diagnostics.
-Prepare phone/stranger review early. Missing human decisions stay explicit.
+Keep production geometry and missing actions moving alongside fit work. Preserve
+selected appearance through compact deliberate derivatives and measured detail
+transfer. Whole-scene 500k triangles / 96 MiB textures / 16 ms P95 / 5 MiB heap
+growth over 60 seconds remain authoritative. Generic delivery includes idle,
+walk, jog, turn, jump/landing, true A/T, reaches, asymmetric bends and deep crouch.
+Bike delivery includes standing/seated/leans, compression/hop/landing, crash
+release and instant restart/regrip. No deadline waiver awards a gate.
+
+If H+4 still requires a solver campaign, replace the defective local surface and
+reforecast; do not spend the day only on seated/cuff diagnostics. Prepare phone
+and stranger review early. Missing human decisions stay explicit in HR-23 and
+do not block authorized construction. Shared-host headroom can delay native or
+browser launches; retain refusal evidence and continue independent source work.
 
 ## Why the method changes
 
