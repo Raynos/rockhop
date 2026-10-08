@@ -1,0 +1,91 @@
+{
+  "accepted": false,
+  "status": "SOURCE_ONLY_MEASURED_GAMEPLAY_CONVERSION_AND_LIVE_CONTROLS_UNEXECUTED",
+  "sources": {
+    "gameplay_convert02.mjs": {
+      "path": "assets/blender/rider-rebuild/selected-authoring-motion11/gameplay_convert02.mjs",
+      "sha256": "84ee2f2d11c448666a06ed427dde09793a071e7868cbd2e03b4450b8d07ecfb6"
+    },
+    "gameplay_convert02.test.mjs": {
+      "path": "assets/blender/rider-rebuild/selected-authoring-motion11/gameplay_convert02.test.mjs",
+      "sha256": "e81481a1aaa2209b5ad1c436534ee1cdfdb10f94b2fbcde2fe5a1d602b0d9169"
+    },
+    "gameplay_controls02.py": {
+      "path": "assets/blender/rider-rebuild/selected-authoring-motion11/gameplay_controls02.py",
+      "sha256": "9e3251cee5e94e2a427512202b2d0d6fcbde5f9e32f0d9597133982ac1ce044c"
+    },
+    "controls.py": {
+      "path": "assets/blender/rider-rebuild/selected-authoring-motion11/controls.py",
+      "sha256": "b5b77c1af0442b87d4730834baf1e76bfae737a4531daad5e1aeada79293fd21"
+    },
+    "build.py": {
+      "path": "assets/blender/rider-rebuild/selected-authoring-motion11/build.py",
+      "sha256": "5b0c4d282b9003fc0968df84972d009d9d9e4b1b1b06bffb80b11dbd475cf003"
+    }
+  },
+  "tests": {
+    "coordinateAndAuthorityRegressionTests": 3,
+    "outcome": "PASS",
+    "elapsedSeconds": 0.063369959,
+    "pythonAST": "PASS",
+    "ownedWhitespace": "PASS"
+  },
+  "input": {
+    "accepted": false,
+    "requiredActualPins": [
+      "selectedNative",
+      "selectedContract",
+      "reports.rookie",
+      "reports.pro"
+    ],
+    "recipes": {
+      "commonBuild": {
+        "path": "assets/blender/rider-rebuild/selected-authoring-motion11/build.py",
+        "sha256": "5b0c4d282b9003fc0968df84972d009d9d9e4b1b1b06bffb80b11dbd475cf003"
+      },
+      "controls": {
+        "path": "assets/blender/rider-rebuild/selected-authoring-motion11/controls.py",
+        "sha256": "b5b77c1af0442b87d4730834baf1e76bfae737a4531daad5e1aeada79293fd21"
+      },
+      "gameplayControls": {
+        "path": "assets/blender/rider-rebuild/selected-authoring-motion11/gameplay_controls02.py",
+        "sha256": "9e3251cee5e94e2a427512202b2d0d6fcbde5f9e32f0d9597133982ac1ce044c"
+      },
+      "gameplayConverter": {
+        "path": "assets/blender/rider-rebuild/selected-authoring-motion11/gameplay_convert02.mjs",
+        "sha256": "84ee2f2d11c448666a06ed427dde09793a071e7868cbd2e03b4450b8d07ecfb6"
+      }
+    }
+  },
+  "invocations": [
+    "node assets/blender/rider-rebuild/selected-authoring-motion11/gameplay_convert02.mjs INPUT.json FRESH_CONVERSION_OUT",
+    "blender -b -t 2 --python-exit-code 1 --python assets/blender/rider-rebuild/selected-authoring-motion11/gameplay_controls02.py -- FRESH_CONVERSION_OUT/receipt.json FRESH_NATIVE_OUT"
+  ],
+  "scheduling": {
+    "owner": "parent",
+    "nativeWallGuardSeconds": 180,
+    "nativeExpectedSeconds": "unmeasured; budget60\u2013120s for482 simple-rig construction keys, per-action saved readback, fresh bake; fails fast on first mismatch",
+    "heavyJobsExecuted": false
+  },
+  "authority": "Actual241 rendered physical frames per bike at ticks0,5,...1200; riderBody COM+relativeangle. No new synthetic stage score or runtimeclip substitution.",
+  "sourceDiagnosis": {
+    "failedNative01SoleAffineM": [
+      0.00011411401006729589,
+      0.00011307762752746118
+    ],
+    "failedNative01SolePositionM": [
+      8.540007974575716e-05,
+      8.294835611074563e-05
+    ],
+    "officialIKSource": "https://github.com/blender/blender/blob/main/intern/iksolver/intern/IK_QJacobianSolver.cpp",
+    "observedSourceRule": "Legacy solver ignores tolerance parameter and stops after>10iterations when angle update norm<1e-3; moreiterationbudget alone is unsupported.",
+    "constructionCorrection": "Seed live IK mechanism prepose from exact captured analytic runtime limb and derive pole up fromactualupperbasis at existingpoleAngle; targetcontrols use actualaddedrest target relation. Verify all75capturedmatrix parity and savedcontrol/bake replay under unchanged0.1mm."
+  },
+  "limits": [
+    "No capture result, convertedworld arrays or native02 artifact yet.",
+    "Matrix parity is not absolute finite bike contact; actual grip/sole residuals retained and fullreference/dressedbearing check remains separate.",
+    "Source02 may fail if real captured motion is unreachable, twist diverges or savedcontrol reconstruction exceeds unchanged0.1mm; firstpose/partial action checkpoints retained.",
+    "Nativecaptures are24Hz; intermediate physical states were not captured.",
+    "Complete selected outfit native playback/appearance and normal actualphysics gameplay/device qualification remain parent gates."
+  ]
+}
