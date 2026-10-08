@@ -103,7 +103,7 @@ test('actual forward/back/neutral targets retain finite full-hierarchy control a
     assert.ok(rider.debug.gripAngleErr.every(angle => angle < 1e-5));
     if (process.env.RIDER_REBUILD_POSE_CALIBRATION) assert.ok(Math.max(...rider.debug.gripErr, ...rider.debug.soleErr) < 0.005);
     assert.ok(rider.debug.comResidual < 1e-5);
-    assert.ok(rider.debug.anthropometry.candidates.length <= 11);
+    assert.ok(rider.debug.anthropometry.candidates.length <= 3);
     assert.equal(rider.debug.anthropometry.candidateCount, rider.debug.anthropometry.candidates.length);
     assert.ok(Math.abs(rider.debug.anthropometry.spineFlexRadians) <= (metadata.driver.maxSpineFlexRadians ?? 0));
     const measured = rider.toBike(measureAnthropometricCOM(rider, rider.anthropometry));

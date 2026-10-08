@@ -244,8 +244,6 @@ export function createPrivateRiderClass(metadata) {
     poseRiding(frame) {
       const p = this.physicsTarget(frame), started = performance.now();
       const bound = this.driver.maxSpineFlexRadians ?? 0, candidates = [];
-      const refinement = { iterations: 0, bracketWidthRadians: null,
-        rule: 'Gap crossover; optimum/range unqualified' };
       fail(Number.isFinite(bound) && bound >= 0 && bound <= Math.PI / 9, 'maxSpineFlexRadians outside 0..pi/9');
       const evaluate = (hips, flex) => {
         resetHumanoidPose(this.binding); this.debug.fullResetCount++;
@@ -266,18 +264,7 @@ export function createPrivateRiderClass(metadata) {
         const edge = solve((role === 'arm' ? -1 : 1) * bound);
         const slope = initial[role] - edge[role];
         solve(edge.flex * (slope > 0 ? Math.min(1, Math.max(0, (initial[role] - 1) / slope)) : 1));
-        const difference = row => row.armGapM - row.legGapM;
-        if (initial.gapM > 0.001 && difference(initial) * difference(edge) < 0) {
-          let left = initial, right = edge;
-          for (let iteration = 0; iteration < 8; iteration++) {
-            const middle = solve((left.flex + right.flex) / 2);
-            refinement.iterations++;
-            if (difference(middle) === 0) { left = right = middle; break; }
-            if (difference(left) * difference(middle) < 0) right = middle;
-            else left = middle;
-          }
-          refinement.bracketWidthRadians = Math.abs(right.flex - left.flex);
-        }
+
       }
       const feasible = candidates.filter(row => row.gapM <= 0.001 && row.inverse.converged);
       const best = feasible.length ? feasible.sort((a, b) => Math.abs(a.flex) - Math.abs(b.flex))[0]
@@ -289,7 +276,7 @@ export function createPrivateRiderClass(metadata) {
         physicsDimensions: 'XY', measuredCOM: measuredCOM.toArray(), lateralResidualM: measuredCOM.z - p.requestedCOM.z,
         carrierAngle: p.torsoAngle, spineFlexRadians: best.flex, elapsedMs: performance.now() - started,
         articulationRule: 'Least evaluated flex: <=1mm + XY convergence; else least max gap',
-        candidateCount: candidates.length, refinement,
+        candidateCount: candidates.length,
         candidates: candidates.map(({ flex, gapM, armGapM, legGapM, reach, inverse }) => ({ flex, gapM, armGapM, legGapM, reach, comResidualM: inverse.residualM })),
         palmForwardBike: this.driver.palmForwardBike ?? [1, -0.25, 0],
         contactLimit: 'Socket-only; glove/bar/finger surfaces unqualified' };
