@@ -1,7 +1,7 @@
 # Rebuild one dressed rider from first principles
 
 Created: 2026-10-07 · writer: Codex / gpt-6.1-sol · asks312/317–322.
-**Status: uncompleted; complete selected rider is in actual private Garage; cuff fit and runtime shading correction active; accepted milestones 0/6.**
+**Status: uncompleted; selected rider played in private Garage and game; original4K shading fixed; cuff, supported reach and motion review active; accepted milestones0/6.**
 Current construction authority: [Astra workflow correction below](#astra-workflow-correction-and-advisory-cadence).
 Pending donor-registration experiments are historical controls, not the next production route.
 Execution owner: rider remodel agent #2, session01a117db-406b-7b70-a14f-d614b1d8f6e5.
@@ -579,32 +579,41 @@ face mask, as specified below.
   original curved leather, laces, tread, UV and4K maps. Parent rejected box UNION;
   stop cavity/ease iterations addressing invisible reference-body intersections.
   Actual masked surfaces, bilateral ankle/toe movement and contacts remain open.
-- Complete assembly: actual saved seven-part native dc846e7e and masked native
-  fdff3433 retain selected hoodie9920401, jeans41fbd25, glovesfa21e404 and
-  boots5263a76. Source FOUR transport matches actual decoded GLB7d826b83 within
-  1.20e-7. Full anatomy is retained separately; no re-masking that render body.
-  Parent played the real Garage orbit to natural end: all selected pieces are
-  together, but sharp exposed cuffs and chrome-looking denim FAIL current art.
-  [Actual Garage finding](../evidence/rider-rebuild/selected-complete-engine01/garage02/parent-verdict.json)
-  retains complete film and source witness. No normal-player promotion.
-- Cuff correction: [fresh Astra07](../evidence/rider-rebuild/astra-glove-cuff07/FINDING.md)
-  and parent independent rerun identify actual cuff lobes5.80/5.90mm outside
-  the sleeve, fully forearm weighted and predating local04. Preserve selected
-  glove/palm/digits. Locally taper proximal guides5713/5187/4968 using actual
-  sleeve planes and reuse saved dense binding; update only two glove positions
-  in the complete masked master. No new solver, bind or weight campaign.
-- Runtime appearance: authored/exported denim4K maps are byte-identical and
-  prepared UV samples retain blue/high roughness. Actual low-tier processing
-  reduces selected data maps to256 pixels. Preserve exact selected authored
-  texture objects through all private intake/resident budget passes, then
-  compare actual Garage dimensions and appearance. Missing exported tangents
-  leave a normal-frame parity gap; investigate only with a controlled source
-  comparison, never arbitrary roughness/palette changes. Chrome cause unproven.
-- Next visible result: corrected complete selected rider through actual Garage
-  orbit and recorded ride, plus the prepared native75 reach/grip/release film.
-  Stop and correct observed dressed failures before detail campaigns. Dense
-  preview establishes appearance; final mobile topology, moving GPU parity,
-  finite contacts, generic/bike extremes and device performance remain required.
+- Complete assembly: current masked native95a4f14e and GLB72b90e87 retain
+  all seven selected parts, original appearance and exact shared75. Source FOUR
+  transport residual is at most1.20e-7. Original full anatomy and mask remain
+  unchanged; no repeated masking or conditioning. All current work stays private.
+- Runtime appearance: the selected authored image objects now survive both
+  private loader and resident texture-budget passes. Actual Garage05 confirms
+  all denim maps4096square; the full orbit played naturally. Broad white/chrome
+  areas disappear with unchanged source maps, UVs and material scalars. Keep this
+  measured correction. Native/GPU normal parity and final mobile budget remain
+  open; do not introduce guessed roughness or tangent changes.
+- Cuff correction: actual cuff05 native6a3fcb82 reuses saved dense binding,
+  changing only proximal glove positions. Known rest lobes now lie1.31/1.44mm
+  inside the actual sleeves. Garage still shows a smaller black fragment.
+  Fresh Astra08 and parent identify stale animated raycast bounds; bypassing
+  diagnostic glove bounds hits actual right-glove triangles239604/287214 at
+  the black pixels. Preserve fields/digits/PBR; inspect these exact rest/posed
+  sectors before the second and final bounded cuff repair. No blind taper.
+- Actual ride: complete selected game05 played16seconds/192presented frames,
+  no errors or seeks/stalls. Source-bound sole witnesses stay within3.75micrometers
+  of finite pegs on Rookie; this is not whole-foot contact qualification.
+  Missing new-rig torso range leaves56/192hand socket samples beyond1cm,
+  worst57.335mm. One source-bound overlay enables the existing<=20degree upper
+  spine evaluation, re-solving unchanged physical COM with fixed limb lengths.
+  Judge chosen flex, actual surfaces and anatomy on Rookie/Pro side films;
+  do not transfer retired rig calibration or stretch limbs to fit.
+- Native movement: actual complete selected145 reach/grip/release actionc44002c9
+  rendered and played6.042seconds/all145frames. Parent keeps full-view
+  construction baseline: outfit remains together without gross collapse or
+  skin islands. Close bilateral hands/profiles remain required. Separate193
+  fixed-foot crouch/rise/overhead source is ready; actual author/film pending.
+- Next visible result: corrected supported side-view game ride on both bikes,
+  then continuous native crouch/rise/overhead and closer grip review. Stop on
+  observed dressed failures before detail campaigns. Dense preview establishes
+  appearance only; mobile topology, moving GPU parity, finite contacts, complete
+  generic/bike envelope and physical device/release gates remain open.
 
 ### Equipped-outfit body masks adopted after independent Astra05 review
 
@@ -641,7 +650,7 @@ or rig is allowed where anatomy supports it. Original selected stock is immutabl
 defective derivative boundaries are not. Final coherent maps/four-weight/export
 conditions remain delivery gates, not prerequisites for editable construction.
 
-Current-player silent Metal gate18 passed11/11: identical finish
+Current-player silent Metal gate19 passed11/11: identical finish
 8.591666666666667/hash622bb2554e0f9a26 and one-tick restart. Gate14
 failure remains retained. Run the next silent ship gate after the third actual
 construction mutation. Existing-player checks do not qualify this rider.
