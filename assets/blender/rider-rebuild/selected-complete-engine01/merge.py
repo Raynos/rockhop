@@ -47,7 +47,7 @@ def mesh_four(obj, rig, require_four=True):
     rows = []
     for vertex in obj.data.vertices:
         row = [(names[g.group], g.weight) for g in vertex.groups if g.weight > 0]
-        assert row and (not require_four or len(row) <= 4) and abs(sum(w for _, w in row)-1) < 2e-5
+        assert row and (not require_four or len(row) <= 4) and abs(sum(w for _, w in row)-1) < 2e-5, (obj.name, vertex.index, len(row), sum(w for _, w in row))
         assert all(name in rig.data.bones and not name.startswith(('PalmSocket.', 'SoleSocket.')) for name, _ in row)
         rows.append(row)
     return rows
@@ -227,7 +227,10 @@ def main():
             assert len(arms) == 1 and assembly['rest'](arms[0].object) == canonical_rest
             assert arms[0].object.matrix_world.is_identity
             assert all(b.matrix_basis.is_identity for b in arms[0].object.pose.bones)
-            mesh_four(obj, rig)
+            mesh_four(obj, rig, require_four=False)
+            # Preserve the original full-field native; condition only this
+            # appended delivery derivative for the engine FOUR contract.
+            conditioning = limit_four(obj, rig)
             maps = assembly['packed_maps'](obj)
             assert maps and set(unit['expectedPBRHashes']) <= {v['sha256'] for v in maps.values()}
             bpy.context.scene.collection.objects.link(obj)
@@ -240,7 +243,8 @@ def main():
             garments.append(obj)
             records.append({'source': unit['native'], 'sourceObject': original, 'object': obj.name,
                             'vertices': len(obj.data.vertices), 'polygons': len(obj.data.polygons),
-                            'actualSelectedPackedMaps': maps, 'fourAndExact75Rest': True})
+                            'actualSelectedPackedMaps': maps, 'fourAndExact75Rest': True,
+                            'deliveryFourConditioning': conditioning})
     for obj in bpy.data.objects:
         if obj.type == 'ARMATURE' and obj != rig:
             obj.hide_render = True

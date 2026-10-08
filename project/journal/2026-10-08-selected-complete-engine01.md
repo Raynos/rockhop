@@ -9,3 +9,7 @@ Limits: Source only; corrected hoodie surface and actual whole4K jeans must exis
 Finding: Actual correctedhoodie9920401, originalwhole4Kjeans41fbd25, glovesfa21 and continuousboots5263 now form one exact ready source manifest. The jeans native/object/maps are checked against its separately pinned actual context-unit before merge.
 Validation: AST parsing passed and every actual native/helper/context-unit SHA matched saved bytes; no heavy job ran for this checkpoint.
 Limits: Source permission only. Full native75 binding, clothed motion, masks, actual Garage/game, GPU parity and device judgment remain open. All R0-R5 open; no normal player promotion.
+
+Finding: Actualmerge01 stops at fullfieldglove versus deliveryFOUR. Condition appendeddelivery copies only; preservefullsource75fields.
+Validation: Actualguardexit1/34.475s, source read proves transfer retains allpositive coefficients; revisedsourceASTpass.
+Limits: Completeactualsave/movie/Garage pending; allR0-R5open.
