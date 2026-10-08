@@ -60,6 +60,7 @@ class Surgery:
         self.obj = obj
         self.base_local, self.base_world = A['points'](obj)
         mesh = obj.data
+        assert all(len(p.vertices) == 3 for p in mesh.polygons), 'FACE attribute ancestry requires the selected native triangle mesh'
         mesh.calc_loop_triangles()
         self.base_faces = A['faces'](obj)
         corners = np.empty(self.base_faces.shape, dtype=np.int32)
@@ -144,7 +145,7 @@ class Surgery:
                         if d[k]*d[j] < -1e-20:
                             t = float(d[k]/(d[k]-d[j]))
                             n = self.interpolate_vertex(a, b, t)
-                            polygon.append((n, (1-t)*self.uv[index][k]+t*self.uv[index][j], -1))
+                            polygon.append((n, (1-t)*self.uv[index][k].astype(float)+t*self.uv[index][j].astype(float), -1))
                     for k in range(1, len(polygon)-1):
                         tri = [polygon[0], polygon[k], polygon[k+1]]
                         if len({p[0] for p in tri}) == 3:
