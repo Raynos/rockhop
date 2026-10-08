@@ -1,0 +1,5 @@
+Actual Garage progress gallery uses the selected head/hair, mustard hoodie, denim, articulated black gloves and boots. The10.48second full-resolution movie is the existing actual193 Garage recording trimmed from7seconds; camera rotation is the original UI pointer orbit and motion is the original selected crouch/arm-raise clip. No pose injection, new asset generation or visual retouching.
+
+The640px viewing proxy played silently to natural end in10.537seconds with245 captured callbacks, no seeks/stalls/errors. Full-resolution all-frame PNG capture was killed by WebKit (signal9); that failure is retained, and no cause or art failure is inferred. The full-resolution movie remains provided.
+
+Front/side photos remain in the existing selected-garage-actions01/played01/193 packet; two additional original quarter/rear images are copied byte-for-byte here. The cuff/wrist edges remain rough, and Astra12 is rebuilding real openings. This is current private integration progress before that repair, not final art/device acceptance.
