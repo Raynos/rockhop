@@ -381,16 +381,23 @@ def contour_center(points, faces, head, axis, u, v, station):
     """
     scalar = np.sum((points-head)*axis, axis=1)-station
     distances = scalar[faces]
-    active = faces[(distances.min(axis=1) < 0) & (distances.max(axis=1) > 0)]
+    active = faces[(distances.min(axis=1) <= 0) & (distances.max(axis=1) >= 0)]
     segments = []
     for face in active:
         intersections = []
         for a, b in zip(face, np.roll(face, -1)):
             da, db = scalar[a], scalar[b]
+            if da == 0:
+                point = points[a]-head
+                intersections.append([float(np.sum(point*u)), float(np.sum(point*v))])
             if da*db < 0:
                 t = da/(da-db)
                 point = points[a]+t*(points[b]-points[a])-head
                 intersections.append([float(np.sum(point*u)), float(np.sum(point*v))])
+        # A source vertex exactly on the plane is a real section endpoint.
+        # The first station intentionally equals an actual source vertex s.
+        intersections = list(dict.fromkeys(tuple(p) for p in intersections))
+        assert len(intersections) <= 2, ('Coplanar source triangle needs explicit section handling', station, face.tolist())
         if len(intersections) == 2 and np.linalg.norm(np.subtract(*intersections)) > 1e-9:
             segments.append(intersections)
     assert len(segments) >= 8, ('Insufficient actual source contour', station, len(segments))
@@ -400,7 +407,9 @@ def contour_center(points, faces, head, axis, u, v, station):
     adjacency = defaultdict(list)
     for a, b in unique_edges:
         adjacency[int(a)].append(int(b)); adjacency[int(b)].append(int(a))
-    assert all(len(row) == 2 for row in adjacency.values()), ('Actual source contour is not closed', station)
+    assert all(len(row) == 2 for row in adjacency.values()), ('Actual source contour is not closed', station,
+        {'exactPlaneVertexIds': np.flatnonzero(scalar == 0)[:12].tolist(),
+         'badEndpointDegrees': [(int(i), len(row), endpoints[i].tolist()) for i, row in adjacency.items() if len(row) != 2][:12]})
     unseen, loops = set(adjacency), []
     while unseen:
         first = min(unseen); chain = [first]; previous, current = None, first
@@ -438,7 +447,7 @@ def contour_center(points, faces, head, axis, u, v, station):
     assert inside(centroid) and clearance(centroid) > 1e-5
     return centroid, {'stationM': float(station), 'loops': len(loops), 'edges': len(polygon),
                       'interiorCenterUV': centroid.tolist(), 'minimumBoundaryDistanceM': clearance(centroid),
-                      'method': method}
+                      'exactPlaneVertexCount': int(np.sum(scalar == 0)), 'method': method}
 
 
 def sleeve(surgery, controls, side, profile, settings):

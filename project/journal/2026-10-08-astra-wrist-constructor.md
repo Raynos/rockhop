@@ -9,3 +9,7 @@ Limits: No new repaired mesh or art pass; correct actual section frame before an
 Finding: Source sleeve section origin now comes from the actual closed triangle-plane contour, with verified interior point, instead of an axial-band bounding box.
 Validation: Parent reviewed the focused78added/7deleted correction; AST passes, actual authored02 pending.
 Limits: A closed contour and interior origin do not accept the radius map or final fitted clothing; existing dense gates and moving review remain required.
+
+Finding: Actual contour extraction stopped at its first exact source-vertex plane; strict sign-change tests omitted that real endpoint. Include exact zero endpoints and retain any further boundary-degree witnesses.
+Validation: Actual authored02 CPU2exit1/19.974s retained; parent reviewed15line correction and AST passes.
+Limits: No native save or repaired garment acceptance; authored03 still required.
