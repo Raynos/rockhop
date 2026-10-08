@@ -33,3 +33,10 @@ Finding: Actual two-view PBR retains selected curved leather/laces/seams/tread; 
 Validation: CPU2 render exit0/14.972s; root viewed both.47 leather intersections at toes alone do not explain all visible instep exposure; exterior enclosure must also be checked.
 
 Limits: No whole boot wearing or motion acceptance. Original stock immutable, derivative sole may change if anatomical evidence requires.
+
+
+Finding: One read-only actual-native probe separates toe under-carving from outer selected forefoot exposure.
+
+Validation: Root full probe source read, actualnativec6d121b3 pin and canonical3821/47 sample identity checked in code. No edits/binds/saves/renders.
+
+Limits: Ray/containment measurements support local authoring, not wearing art acceptance.
