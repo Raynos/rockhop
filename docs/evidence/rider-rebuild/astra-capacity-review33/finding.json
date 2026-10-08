@@ -1,0 +1,83 @@
+{
+  "status": "READ_ONLY_CAPACITY_REVIEW_KEEP_EXISTING_GUARD",
+  "acceptedArt": false,
+  "hostPhysicalBytes": 137438953472,
+  "guardSHA256": "cf8acd15d8b7484480bee74d23892be815d955ffd87115d3da8ed228ffb3d916",
+  "policyProvenance": {
+    "ask": "docs/tasks/ASKS.md row290",
+    "commit": "a00672ffa91627adb019266e0ad611a9039576a2",
+    "document": "assets/blender/hero-remaster/generation-comparison-2026-10-03/user-agent2/GUARD96.md",
+    "finding": "Human change explicitly raised only combined stop to96GiB, retaining55GiB admission and65GiB anonymous stop; synthetic semantics qualification is not measured high-memory capacity."
+  },
+  "prePilotReadOnlyObservation": {
+    "utcStart": "2026-10-08T22:37:49.187511+00:00",
+    "utcEnd": "2026-10-08T22:38:35.614155+00:00",
+    "elapsedSeconds": 46.43,
+    "samples": 24,
+    "sampleIntervalSeconds": 2,
+    "rawPressureSysctlValues": [
+      "1"
+    ],
+    "swapUsedMiBStart": 5521.19,
+    "swapUsedMiBEnd": 5521.19,
+    "swapinsMiBDelta": 0,
+    "swapoutsMiBDelta": 0,
+    "compressionInputMiBDelta": 0,
+    "decompressionOutputMiBDelta": 0.890625,
+    "rangesGiB": {
+      "anonymous": [
+        50.6698,
+        58.079
+      ],
+      "wired": [
+        8.8377,
+        10.4841
+      ],
+      "physicalFree": [
+        17.703,
+        25.7139
+      ],
+      "fileBacked": [
+        38.0569,
+        44.082
+      ],
+      "physicalCompressor": [
+        1.103,
+        1.103
+      ]
+    },
+    "limitation": "Aggregated measurement and displayed start/middle/end samples were captured in tool transcript; complete24 raw records were not persisted. Idle observation does not establish future workload capacity or render/device performance. File-backed pages are not all proven immediately reclaimable."
+  },
+  "actualBoot31Pilot": {
+    "guardPath": "docs/evidence/rider-rebuild/selected-production-family31/full-boots-guard01/guard.json",
+    "guardFileSHA256": "7650c154b7a0df0c029ca5bf6cdc6262eb6a7a03ee16d141b46c8924444691dc",
+    "ownedPID": 37795,
+    "status": "worker returned; review pending",
+    "exitCode": 1,
+    "elapsedSeconds": 24.261,
+    "sampleCount": 24,
+    "start": {
+      "seconds": 0,
+      "anonymousGiB": 51.7,
+      "wiredGiB": 10.0,
+      "freeGiB": 25.6
+    },
+    "last": {
+      "seconds": 23.252,
+      "anonymousGiB": 48.9,
+      "wiredGiB": 8.7,
+      "freeGiB": 27.0
+    },
+    "maxAnonymousGiB": 56.8,
+    "maxCombinedGiB": 67.3,
+    "minFreeGiB": 19.1,
+    "failure": "Wrong-facing source correspondence ActualSelectedBoot.L target vertex14 normal dot -0.5521567011583147; unchanged minimum0.25. Worker returned1; no memory-bound stop.",
+    "liveSidecarCoverage": false,
+    "sidecarLimitation": "The owned child had already exited before the first sidecar sample. The JSONL contains one post-terminal sample only; no pilot pressure, swap-rate or owned RSS/physical-footprint claim."
+  },
+  "recommendation": "Keep original55/65/96 guard. Preserve native donor isolation and fix actual correspondence failure before retry. No evidence currently justifies changing anonymous limits. Any future proposed limit change must be workload-specific, separately versioned, explicitly user-decided because ask290 retained65, and measured with pressure/swap plus owned process footprint; preserve96combined, ownership, lock,CPU,time and all art/geometry/physics/device gates.",
+  "primaryMemoryReference": "https://support.apple.com/guide/activity-monitor/view-memory-usage-actmntr1004/mac",
+  "noHeavyJobsStartedByReviewer": true,
+  "noUnownedProcessesModified": true,
+  "noGuardEdited": true
+}
