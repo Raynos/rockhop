@@ -1879,3 +1879,5 @@ Native bike source freezes two native75 seated/forward/back/return actions using
 Finish sequence16:20Panama records actual six-action selected transport and played RangeOfMotion; cuff failures and crouch occlusion remain explicit. Whole-sleeve field source is frozen and glove-only native run active. New measured bike seating/leans precede more anatomy sculpt. Full-reference cache failure is diagnosed exactly. AllR0–R5open;24h stretch target unchanged.
 
 Glove-only actual run01 reached both cuff stages, then stopped at the unchanged65GiB anonymous guard after68.447s; no native checkpoint/receipt saved. Failure retained. Smaller rig-only bike construction proceeds next; glove retry needs additional headroom, no bounds relaxed.
+
+Reference06 recovery source validates/reuses exact saved05 bytes against original03 with refreshed cage baseline, original fields/keys/actions/native75 and all30 saved full-surface samples. No repeat sculpt or giant resave. Source/pins reviewed; actual reopen and contact/art remain pending.
