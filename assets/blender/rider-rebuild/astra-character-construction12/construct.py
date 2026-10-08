@@ -14,6 +14,7 @@ import bpy
 import numpy as np
 from mathutils import Vector
 from mathutils.bvhtree import BVHTree
+from mathutils.geometry import tessellate_polygon
 
 ROOT = Path(__file__).resolve().parents[4]
 HERE = Path(__file__).resolve().parent
@@ -371,6 +372,75 @@ def source_sleeve_frame(original, controls, side):
     return xyz, head, axis, u, v, s, selected
 
 
+def contour_center(points, faces, head, axis, u, v, station):
+    """Find an interior point of the actual selected sleeve plane contour.
+
+    Vertex-band bounding boxes are not contours and can put the origin outside
+    a turned cuff. Only the triangle/plane intersection establishes this frame.
+    Quantization joins diagnostic segment endpoints; source geometry is untouched.
+    """
+    scalar = np.sum((points-head)*axis, axis=1)-station
+    distances = scalar[faces]
+    active = faces[(distances.min(axis=1) < 0) & (distances.max(axis=1) > 0)]
+    segments = []
+    for face in active:
+        intersections = []
+        for a, b in zip(face, np.roll(face, -1)):
+            da, db = scalar[a], scalar[b]
+            if da*db < 0:
+                t = da/(da-db)
+                point = points[a]+t*(points[b]-points[a])-head
+                intersections.append([float(np.sum(point*u)), float(np.sum(point*v))])
+        if len(intersections) == 2 and np.linalg.norm(np.subtract(*intersections)) > 1e-9:
+            segments.append(intersections)
+    assert len(segments) >= 8, ('Insufficient actual source contour', station, len(segments))
+    endpoints, indices = np.unique(np.round(np.asarray(segments).reshape(-1, 2), 8), axis=0, return_inverse=True)
+    unique_edges = np.unique(np.sort(indices.reshape(-1, 2), axis=1), axis=0)
+    unique_edges = unique_edges[unique_edges[:, 0] != unique_edges[:, 1]]
+    adjacency = defaultdict(list)
+    for a, b in unique_edges:
+        adjacency[int(a)].append(int(b)); adjacency[int(b)].append(int(a))
+    assert all(len(row) == 2 for row in adjacency.values()), ('Actual source contour is not closed', station)
+    unseen, loops = set(adjacency), []
+    while unseen:
+        first = min(unseen); chain = [first]; previous, current = None, first
+        while True:
+            following = next(n for n in adjacency[current] if n != previous)
+            if following == first:
+                break
+            assert following not in chain
+            chain.append(following); previous, current = current, following
+        unseen.difference_update(chain); loops.append(endpoints[chain])
+    areas = [abs(np.sum(p[:, 0]*np.roll(p[:, 1], -1)-np.roll(p[:, 0], -1)*p[:, 1]))/2 for p in loops]
+    assert len(loops) == 1, ('Source sleeve requires explicit multiple-contour interpretation', station, areas)
+    polygon = loops[0]
+    cross = polygon[:, 0]*np.roll(polygon[:, 1], -1)-np.roll(polygon[:, 0], -1)*polygon[:, 1]
+    assert abs(cross.sum()) > 1e-10
+    centroid = np.sum((polygon+np.roll(polygon, -1, axis=0))*cross[:, None], axis=0)/(3*cross.sum())
+    a, b = polygon, np.roll(polygon, -1, axis=0)
+    edge = b-a
+    def inside(point):
+        crossings = ((a[:, 1] > point[1]) != (b[:, 1] > point[1]))
+        denominator = b[:, 1]-a[:, 1]
+        x = a[:, 0]+(point[1]-a[:, 1])*(b[:, 0]-a[:, 0])/np.where(abs(denominator) > 1e-20, denominator, 1)
+        return bool(np.sum(crossings & (point[0] < x)) % 2)
+    def clearance(point):
+        t = np.clip(np.sum((point-a)*edge, axis=1)/np.sum(edge*edge, axis=1), 0, 1)
+        return float(np.linalg.norm(point-a-t[:, None]*edge, axis=1).min())
+    method = 'area centroid inside actual closed contour'
+    if not inside(centroid) or clearance(centroid) < 1e-5:
+        triangles = tessellate_polygon([[Vector((p[0], p[1], 0.)) for p in polygon]])
+        candidates = [np.mean(np.asarray(triangle)[:, :2], axis=0) for triangle in triangles]
+        candidates = [p for p in candidates if inside(p)]
+        assert candidates, ('No triangulated interior point', station)
+        centroid = max(candidates, key=clearance)
+        method = 'verified interior triangle centroid with largest boundary clearance'
+    assert inside(centroid) and clearance(centroid) > 1e-5
+    return centroid, {'stationM': float(station), 'loops': len(loops), 'edges': len(polygon),
+                      'interiorCenterUV': centroid.tolist(), 'minimumBoundaryDistanceM': clearance(centroid),
+                      'method': method}
+
+
 def sleeve(surgery, controls, side, profile, settings):
     source = np.asarray(surgery.source)
     xyz, head, axis, u, v, s, selected = source_sleeve_frame(source, controls, side)
@@ -385,16 +455,16 @@ def sleeve(surgery, controls, side, profile, settings):
     xyz, head, axis, u, v, s, selected = source_sleeve_frame(source, controls, side)
     lower = float(np.min(s[selected]))
     stations = np.linspace(lower, cut, 32)
-    centers = []
     delta = xyz-head
     planar = np.column_stack((np.sum(delta*u, axis=1), np.sum(delta*v, axis=1)))
-    for station in stations:
-        sample = planar[selected & (np.abs(s-station) < .004)]
-        assert len(sample) > 4
-        centers.append((sample.min(axis=0)+sample.max(axis=0))/2.)
-    centers = np.asarray(centers)
     local_faces = np.asarray(surgery.faces)
     local_faces = local_faces[np.any(selected[local_faces], axis=1)]
+    centers, section_receipts = [], []
+    for index, station in enumerate(stations):
+        actual_station = station-1e-5 if index == len(stations)-1 else station
+        center, receipt = contour_center(xyz, local_faces, head, axis, u, v, actual_station)
+        centers.append(center); section_receipts.append(receipt)
+    centers = np.asarray(centers)
     original_tree = tree(xyz, local_faces)
     angles = np.arange(96)*2*np.pi/96
     radii = np.empty((len(stations), len(angles)))
@@ -436,7 +506,8 @@ def sleeve(surgery, controls, side, profile, settings):
     return {'sourceCutAxialM': cut, 'sourceTipAxialM': tip, 'newHem': result,
             'cutChoice': 'Authored first-candidate cut removes the selected closed terminal20mm identified by actual section analysis; it is not an anatomically-derived or artist-approved rib boundary. Remaining selected exterior and original PBR ancestry are retained; moving review must judge cuff detail loss.',
             'positiveRadiusScaleRange': [float(np.min(radius_after/radius)), float(np.max(radius_after/radius))],
-            'sourceRadialMeaning': 'Actual first ray hit on retained source exterior, never inner/outer layer extrema'}
+            'sourceRadialMeaning': 'Actual first ray hit on retained source exterior, never inner/outer layer extrema',
+            'sourceSectionCenters': section_receipts}
 
 
 def floor_cut(surgery, guide, plane):
