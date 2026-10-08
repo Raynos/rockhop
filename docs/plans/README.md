@@ -1687,3 +1687,5 @@ October8 exact sixth-rider preview deployed READY with scoped seven-day share ac
 October8 uploaded source-transition gate frozen without recorder: actual six phone targets, old/new/old/new native identity and submitted visibility retained; incremental sanitized reports preserve load phase. Remote execution pending, no substitute art/FPS/device pass.
 
 October8 native08 checkpoint freezes verified wrist-local ray correction plus finite retained-triangle miss fallback; original dense bearings/settings and actual geometry gates unchanged. One guarded construction next; no model or art acceptance.
+
+October8 actual saved-TRS readback passes0.528s and confirms2.23/2.27x jeans core area stretch plus penalty tradeoff. Stop pose-only fitting; selected-source posterior/crotch/upper-thigh pose-space corrective delegated, original rest/UV/native IDs/Four and motion gates retained. No new model/art pass.
