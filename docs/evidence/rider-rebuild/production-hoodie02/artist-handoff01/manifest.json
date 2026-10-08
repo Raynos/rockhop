@@ -1,0 +1,301 @@
+{
+  "accepted": false,
+  "stage": "EXACT_SELECTED_HOODIE_ARTIST_HANDOFF_NO_REPAIR_RETRY",
+  "entryNative": {
+    "path": "harness/out/rider-rebuild/production-hoodie01/regional-repair01/authored-hoodie.blend",
+    "sha256": "fd7761d7b7c9794cb5871945515d992052424b52ddc83f289522dae942d05f3c"
+  },
+  "bodyVertices": 10582,
+  "nativeRestBones": 75,
+  "bodyAnd75RigSignature": "556f40171244d1875e5aaf931f2b4a0bcfd39ceba3fcc4af46dc0febdeafa8e2",
+  "failure": {
+    "exitCode": 1,
+    "elapsedSeconds": 1.032,
+    "vertex": 12473,
+    "inScopedVertices": true,
+    "inPatchVertices": true,
+    "predicate": "i in scoped and i not in already_loose",
+    "interpretation": "Recorded scope proves first term true; failure identifies loose-preservation exclusion.",
+    "undetermined": "Per-vertex distance, displacement, and cause of modifier movement were not recorded.",
+    "noSavedCorrectedNative": true
+  },
+  "localDiagnosis": {
+    "classification": "LOCAL_SURFACE_CONTINUOUS_CLIPPING_POSSIBLE",
+    "nearestBodyInsideVertices": 970,
+    "nearestBodyBelowClothClearanceVertices": 1467,
+    "unexpectedLocalBoundaryEdges": []
+  },
+  "originalImages": [
+    {
+      "channel": "baseColor",
+      "gltfImageIndex": 0,
+      "pixels": [
+        4096,
+        4096
+      ],
+      "path": "assets/blender/rider-rebuild/production-hoodie02/artist-handoff01/original-pbr/baseColor.png",
+      "sha256": "1eb934f396df30e3cd881211ff4e195c4460f8fa8db5bfa22ddb3b5ef28e5d09"
+    },
+    {
+      "channel": "metallicRoughness",
+      "gltfImageIndex": 1,
+      "pixels": [
+        4096,
+        4096
+      ],
+      "path": "assets/blender/rider-rebuild/production-hoodie02/artist-handoff01/original-pbr/metallicRoughness.png",
+      "sha256": "2e598ae796f89acf741389a67635d4fa7b8d99f2ba39b0e46d0516c95db6dfae"
+    }
+  ],
+  "originalGLTFMaterials": [
+    {
+      "pbrMetallicRoughness": {
+        "baseColorTexture": {
+          "index": 0
+        },
+        "roughnessFactor": 1.0,
+        "metallicFactor": 1.0,
+        "metallicRoughnessTexture": {
+          "index": 1
+        }
+      },
+      "alphaMode": "OPAQUE",
+      "doubleSided": false
+    }
+  ],
+  "files": {
+    "assets/blender/rider-rebuild/production-hoodie01/inputs.json": {
+      "role": "frozenInputs",
+      "sha256": "ae90f988b1a3b5f020d540cddd677a8a6286e6e2e3e7afb08733b5b7470aff28",
+      "bytes": 3541,
+      "archivePath": "rockhop-selected-hoodie-artist01/assets/blender/rider-rebuild/production-hoodie01/inputs.json"
+    },
+    "assets/blender/rider-rebuild/production-hoodie01/author.py": {
+      "role": "baseAuthor",
+      "sha256": "078da52b40e1f5049759314c1794ba6559ac1dae90d79294672c674f2095d14a",
+      "bytes": 33347,
+      "archivePath": "rockhop-selected-hoodie-artist01/assets/blender/rider-rebuild/production-hoodie01/author.py"
+    },
+    "assets/blender/rider-rebuild/production-hoodie01/repair_axilla.py": {
+      "role": "repairAuthor",
+      "sha256": "48fe9bd0b6e72e5ad8484f5b9a7ba50f75538cf402b6d3a314065fc03d92c2a5",
+      "bytes": 8583,
+      "archivePath": "rockhop-selected-hoodie-artist01/assets/blender/rider-rebuild/production-hoodie01/repair_axilla.py"
+    },
+    "harness/out/rider-rebuild/production-hoodie01/regional-repair01/author.json": {
+      "role": "authorReceipt",
+      "sha256": "95663c7336d3c98f59a527d20a2ac3b2e656ccb5a5b9159922a2bf51496412c1",
+      "bytes": 6552,
+      "archivePath": "rockhop-selected-hoodie-artist01/harness/out/rider-rebuild/production-hoodie01/regional-repair01/author.json"
+    },
+    "harness/out/rider-rebuild/production-hoodie01/regional-repair01/authored-hoodie.blend": {
+      "role": "authoredNative",
+      "sha256": "fd7761d7b7c9794cb5871945515d992052424b52ddc83f289522dae942d05f3c",
+      "bytes": 24773322,
+      "archivePath": "rockhop-selected-hoodie-artist01/harness/out/rider-rebuild/production-hoodie01/regional-repair01/authored-hoodie.blend"
+    },
+    "assets/blender/hero-remaster/rider/anatomical-foundation-2026-10-03/user-agent1/construct_selected_hoodie.py": {
+      "role": "historicalFrameRecipe",
+      "sha256": "95c555e656e889f00d59a7295e89021cc822c34c34e87bd2cfa24e131cf2d1f9",
+      "bytes": 11038,
+      "archivePath": "rockhop-selected-hoodie-artist01/assets/blender/hero-remaster/rider/anatomical-foundation-2026-10-03/user-agent1/construct_selected_hoodie.py"
+    },
+    "assets/blender/hero-remaster/rider/anatomical-foundation-2026-10-03/user-agent1/selected-hoodie25/crease-normal-candidate.blend": {
+      "role": "selectedNative",
+      "sha256": "c732d98076f6b9b1a209a45e8a0cddf793484807ea8b3ae9011fa4f82c151df0",
+      "bytes": 67509487,
+      "archivePath": "rockhop-selected-hoodie-artist01/assets/blender/hero-remaster/rider/anatomical-foundation-2026-10-03/user-agent1/selected-hoodie25/crease-normal-candidate.blend"
+    },
+    ".tmp/generation-comparison-2026-10-03/user-agent2/qualified-hunyuan-paint06/paint/painted.glb": {
+      "role": "originalDensePaint",
+      "sha256": "800d7a9717757b90b296a78c605cddb698c68d399a96e403aa381103e77d2eba",
+      "bytes": 42329320,
+      "archivePath": "rockhop-selected-hoodie-artist01/.tmp/generation-comparison-2026-10-03/user-agent2/qualified-hunyuan-paint06/paint/painted.glb"
+    },
+    "harness/out/rider-rebuild/native-hand-repair01/native02/anatomical-hand-rig.blend": {
+      "role": "nativeMaster",
+      "sha256": "42fca617ea8d246a6c3e3ca68a90cd3cb5f3ce8b9bb78130e0e2bbd65f605fac",
+      "bytes": 6647381,
+      "archivePath": "rockhop-selected-hoodie-artist01/harness/out/rider-rebuild/native-hand-repair01/native02/anatomical-hand-rig.blend"
+    },
+    "docs/evidence/rider-rebuild/native-hand-repair01/native02/native-body.npz": {
+      "role": "nativeArrays",
+      "sha256": "e62e9969503b7761e99463eccc3ca7be39e0c230a2948f2f87a224db52d0f9a2",
+      "bytes": 864388,
+      "archivePath": "rockhop-selected-hoodie-artist01/docs/evidence/rider-rebuild/native-hand-repair01/native02/native-body.npz"
+    },
+    "docs/evidence/rider-rebuild/construction02/selected-wardrobe01/report.json": {
+      "role": "geometricControlReceipt",
+      "sha256": "2880f5edb2290d2c85e78cd2bee0fe3344a330b17f853f9df20d1b94c14463c4",
+      "bytes": 11012,
+      "archivePath": "rockhop-selected-hoodie-artist01/docs/evidence/rider-rebuild/construction02/selected-wardrobe01/report.json"
+    },
+    "harness/out/rider-rebuild/production-hoodie01/regional-repair01/hoodie-fields.npz": {
+      "role": "Actual current garment full coefficient fields",
+      "sha256": "464d86bd724c2a28fb3507164de8221ac9fee568186da79ac89567b555a1f011",
+      "bytes": 441394,
+      "archivePath": "rockhop-selected-hoodie-artist01/harness/out/rider-rebuild/production-hoodie01/regional-repair01/hoodie-fields.npz"
+    },
+    "harness/out/rider-rebuild/production-hoodie01/regional-repair01/proportional-fit-before-patch.blend": {
+      "role": "Actual fitted selected surface before local topology edits",
+      "sha256": "1faede8d2738fdb5d59ee327e76079912898883132448d9f26c97a7365e3e40b",
+      "bytes": 24579911,
+      "archivePath": "rockhop-selected-hoodie-artist01/harness/out/rider-rebuild/production-hoodie01/regional-repair01/proportional-fit-before-patch.blend"
+    },
+    "harness/out/rider-rebuild/production-hoodie01/regional-repair01/proportional-fit.json": {
+      "role": "Pre-topology saved native lineage",
+      "sha256": "9f347d3dd48058a8f6efe225e477d57527de888d59fc975f7ac8059f1217eca5",
+      "bytes": 769,
+      "archivePath": "rockhop-selected-hoodie-artist01/harness/out/rider-rebuild/production-hoodie01/regional-repair01/proportional-fit.json"
+    },
+    "assets/blender/rider-rebuild/production-assembly01/render.py": {
+      "role": "Exact same-camera diagnostic renderer",
+      "sha256": "e50dd77cfa8ebf4f8a1efbfa81beeaea4e224cdef3b4fd82fe99bb81fd771e4b",
+      "bytes": 7395,
+      "archivePath": "rockhop-selected-hoodie-artist01/assets/blender/rider-rebuild/production-assembly01/render.py"
+    },
+    "assets/blender/rider-rebuild/production-hoodie02/local-outside01/finish.py": {
+      "role": "Exact failed one-pass source; do not rerun",
+      "sha256": "ad7ae108b4e73162ada91d40210ea4c713d75617090df787cf4d529d907f6157",
+      "bytes": 10069,
+      "archivePath": "rockhop-selected-hoodie-artist01/assets/blender/rider-rebuild/production-hoodie02/local-outside01/finish.py"
+    },
+    "assets/blender/rider-rebuild/production-hoodie02/local-outside01/controls.json": {
+      "role": "Exact failed one-pass controls",
+      "sha256": "4a480bdb3f02a0fefdecab2ee1b30c7d867ad68595527a676d7197167dd87c67",
+      "bytes": 2363,
+      "archivePath": "rockhop-selected-hoodie-artist01/assets/blender/rider-rebuild/production-hoodie02/local-outside01/controls.json"
+    },
+    "docs/evidence/rider-rebuild/production-hoodie02/local-outside01/source-checkpoint.json": {
+      "role": "Failed one-pass source checkpoint",
+      "sha256": "e8e11f8ff9827acd68b97d5d73b25b49fd15a2c18ec0e0c9c5a52e11481e9f2e",
+      "bytes": 3463,
+      "archivePath": "rockhop-selected-hoodie-artist01/docs/evidence/rider-rebuild/production-hoodie02/local-outside01/source-checkpoint.json"
+    },
+    "harness/out/rider-rebuild/production-hoodie02/local-outside01/trial01/diagnosis.json": {
+      "role": "Actual pre-edit scope/topology/clipping diagnosis",
+      "sha256": "f2daf9f158a7e9e917dd2ac9de32b1fb783782b05a38f32dbc3f17c768a667f5",
+      "bytes": 83242,
+      "archivePath": "rockhop-selected-hoodie-artist01/harness/out/rider-rebuild/production-hoodie02/local-outside01/trial01/diagnosis.json"
+    },
+    "docs/evidence/rider-rebuild/production-hoodie02/local-outside01/guard01/guard.json": {
+      "role": "Exact one-pass controller result",
+      "sha256": "5f5e658b1353e9035cfbf496da2a8ad4e0379a1ac06d048cccffdc27b00d2c1e",
+      "bytes": 1374,
+      "archivePath": "rockhop-selected-hoodie-artist01/docs/evidence/rider-rebuild/production-hoodie02/local-outside01/guard01/guard.json"
+    },
+    "docs/evidence/rider-rebuild/production-hoodie02/local-outside01/guard01/worker.txt": {
+      "role": "Exact failed operation output",
+      "sha256": "c2bd9d6865c72e4d4fccba22968522bc76f983851ea74afeafd36d570cb65ae3",
+      "bytes": 1159,
+      "archivePath": "rockhop-selected-hoodie-artist01/docs/evidence/rider-rebuild/production-hoodie02/local-outside01/guard01/worker.txt"
+    },
+    "docs/evidence/rider-rebuild/production-hoodie02/source-checkpoint.json": {
+      "role": "Original dense PBR/frame source intake",
+      "sha256": "35885047fefe87e5d9ba61502ffcae4ebe4d8fad3b040ebaba6b80c1a6b90421",
+      "bytes": 5680,
+      "archivePath": "rockhop-selected-hoodie-artist01/docs/evidence/rider-rebuild/production-hoodie02/source-checkpoint.json"
+    },
+    "assets/blender/rider-rebuild/production-hoodie02/controls.json": {
+      "role": "Original dense immutable intake",
+      "sha256": "59d3519fea9f365d2be1d7a649131cef1324f03978069af42783c2c835f5b796",
+      "bytes": 2187,
+      "archivePath": "rockhop-selected-hoodie-artist01/assets/blender/rider-rebuild/production-hoodie02/controls.json"
+    },
+    "assets/blender/rider-rebuild/production-hoodie02/prepare_dense.py": {
+      "role": "Unexecuted frozen dense pre-bake helper provenance",
+      "sha256": "389d0a8dce879a372c0f76599ad5bb3e091081f5721fd18ed67667ee8e966558",
+      "bytes": 10147,
+      "archivePath": "rockhop-selected-hoodie-artist01/assets/blender/rider-rebuild/production-hoodie02/prepare_dense.py"
+    },
+    "docs/evidence/rider-rebuild/production-hoodie02/target-review01/FINDING.md": {
+      "role": "Parent negative rest-fit finding",
+      "sha256": "295dc7e74505a78ee7606c77b264dad6b17a29a3df7181a39e33d5597c18e140",
+      "bytes": 817,
+      "archivePath": "rockhop-selected-hoodie-artist01/docs/evidence/rider-rebuild/production-hoodie02/target-review01/FINDING.md"
+    },
+    "docs/evidence/rider-rebuild/production-hoodie02/target-review01/render-spec.json": {
+      "role": "Matched negative three-view specification",
+      "sha256": "aace46ae82d982fa1fee0ab4816236d436218d754fdbf6c9fa6357b60074d0c6",
+      "bytes": 535,
+      "archivePath": "rockhop-selected-hoodie-artist01/docs/evidence/rider-rebuild/production-hoodie02/target-review01/render-spec.json"
+    },
+    "docs/evidence/rider-rebuild/production-hoodie02/target-review01/render.json": {
+      "role": "Matched negative three-view receipt",
+      "sha256": "3180642b739e00d33e4380902d4c2f77ce21206b2602ee760834189e53780647",
+      "bytes": 2058,
+      "archivePath": "rockhop-selected-hoodie-artist01/docs/evidence/rider-rebuild/production-hoodie02/target-review01/render.json"
+    },
+    "docs/evidence/rider-rebuild/production-hoodie02/target-review01/front.png": {
+      "role": "Parent-rejected actual front view",
+      "sha256": "0508f45bb95044894452f2ce8f6887260b7618e9c4f91e85f9a11149d06f35b6",
+      "bytes": 507972,
+      "archivePath": "rockhop-selected-hoodie-artist01/docs/evidence/rider-rebuild/production-hoodie02/target-review01/front.png"
+    },
+    "docs/evidence/rider-rebuild/production-hoodie02/target-review01/back.png": {
+      "role": "Parent-rejected actual back view",
+      "sha256": "4669bbae41570a73293712283d2de0080739cc2083c0884ccf92604ffac9d72d",
+      "bytes": 490516,
+      "archivePath": "rockhop-selected-hoodie-artist01/docs/evidence/rider-rebuild/production-hoodie02/target-review01/back.png"
+    },
+    "docs/evidence/rider-rebuild/production-hoodie02/target-review01/profile.png": {
+      "role": "Parent-rejected actual profile view",
+      "sha256": "6feb00ec554b009886baa3306ce712d0478515e4c661e55c8a06739d77162526",
+      "bytes": 470103,
+      "archivePath": "rockhop-selected-hoodie-artist01/docs/evidence/rider-rebuild/production-hoodie02/target-review01/profile.png"
+    },
+    "assets/blender/hero-remaster/rider/anatomical-foundation-2026-10-03/user-agent1/selected-hoodie25/report.json": {
+      "role": "Original selected native geometry/shading provenance",
+      "sha256": "91566921c84c84be0d3817f53ab499c7142acaa9b292b5f0326bf31c633e6c1b",
+      "bytes": 3502,
+      "archivePath": "rockhop-selected-hoodie-artist01/assets/blender/hero-remaster/rider/anatomical-foundation-2026-10-03/user-agent1/selected-hoodie25/report.json"
+    },
+    "docs/evidence/hero-remaster/anatomical-foundation-2026-10-03/user-agent1/selected-hoodie24/review85/review.json": {
+      "role": "Historical original-donor orbit provenance; unaccepted fitted context",
+      "sha256": "03189f2a0b074c9dbd349525bce0b28e95af5987a9acf49c679e2c6ff1b9a068",
+      "bytes": 65218,
+      "archivePath": "rockhop-selected-hoodie-artist01/docs/evidence/hero-remaster/anatomical-foundation-2026-10-03/user-agent1/selected-hoodie24/review85/review.json"
+    },
+    "docs/evidence/hero-remaster/anatomical-foundation-2026-10-03/user-agent1/selected-hoodie24/review85/matched-actual-donor24.mp4": {
+      "role": "Historical actual original-donor played reference",
+      "sha256": "cb405e1fc8cbf2569eb07a41de7cf3614c2a09d9b6f942e000d0a0d06c8190f3",
+      "bytes": 1409306,
+      "archivePath": "rockhop-selected-hoodie-artist01/docs/evidence/hero-remaster/anatomical-foundation-2026-10-03/user-agent1/selected-hoodie24/review85/matched-actual-donor24.mp4"
+    },
+    "docs/evidence/rider-rebuild/production-hoodie02/artist-handoff01/ARTIST_BRIEF.md": {
+      "role": "Artist scope, observations and required native handback",
+      "sha256": "abf5617297b84bbc548ad5f26b8d77ce6fc8b19ab74ead463c553e2b1abc31d6",
+      "bytes": 4579,
+      "archivePath": "rockhop-selected-hoodie-artist01/docs/evidence/rider-rebuild/production-hoodie02/artist-handoff01/ARTIST_BRIEF.md"
+    },
+    "assets/blender/rider-rebuild/production-hoodie02/artist-handoff01/.gitignore": {
+      "role": "Binary package exclusion",
+      "sha256": "b571c1dc156ea4722fa7f389ee8a630d88baf4c550d1df86a009240f97dad300",
+      "bytes": 43,
+      "archivePath": "rockhop-selected-hoodie-artist01/assets/blender/rider-rebuild/production-hoodie02/artist-handoff01/.gitignore"
+    },
+    "assets/blender/rider-rebuild/production-hoodie02/artist-handoff01/package.py": {
+      "role": "IO-only reproducible packer",
+      "sha256": "2adb0fdcf5f285f0d337213d07117e9266400b4cab8c3b5599cb9d0aceef11c0",
+      "bytes": 11154,
+      "archivePath": "rockhop-selected-hoodie-artist01/assets/blender/rider-rebuild/production-hoodie02/artist-handoff01/package.py"
+    },
+    "assets/blender/rider-rebuild/production-hoodie02/artist-handoff01/original-pbr/baseColor.png": {
+      "role": "Byte-exact original embedded 4K baseColor",
+      "sha256": "1eb934f396df30e3cd881211ff4e195c4460f8fa8db5bfa22ddb3b5ef28e5d09",
+      "bytes": 10002352,
+      "archivePath": "rockhop-selected-hoodie-artist01/assets/blender/rider-rebuild/production-hoodie02/artist-handoff01/original-pbr/baseColor.png"
+    },
+    "assets/blender/rider-rebuild/production-hoodie02/artist-handoff01/original-pbr/metallicRoughness.png": {
+      "role": "Byte-exact original embedded 4K metallicRoughness",
+      "sha256": "2e598ae796f89acf741389a67635d4fa7b8d99f2ba39b0e46d0516c95db6dfae",
+      "bytes": 6925436,
+      "archivePath": "rockhop-selected-hoodie-artist01/assets/blender/rider-rebuild/production-hoodie02/artist-handoff01/original-pbr/metallicRoughness.png"
+    }
+  },
+  "limits": [
+    "Unaccepted actual selected sources only. No generated replacement or repaired successor.",
+    "No heavy job, rerun, bake, model export, artist contact, player promotion or art acceptance.",
+    "Parent alone judges. All R0\u2013R5 open."
+  ]
+}

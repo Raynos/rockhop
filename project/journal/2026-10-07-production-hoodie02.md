@@ -19,3 +19,7 @@ Limits: Unexecuted 12 mm clearance hypothesis, no general fit campaign. An unexp
 Finding: Actual local hoodie outside finish violates the existing moved-point preservation assertion and stops.
 Validation: CPU2 exit1 in1.032s at vertex12473; intake no unexpected boundary, exact scope/log preserved; no edited native saved.
 Limits: Existing actual patched garment remains rejected; no weaker guard/retry/bake, exact artist package pending.
+
+Finding: Exact selected hoodie tailoring package preserves failed native work and original appearance authority.
+Validation: Parent reads brief/source and independently rehashes archive/manifest/all38 original sources and ZIP members; CRC passes.
+Limits: Preparation only, no character artist contacted or model/art/motion result delivered; allR0-R5open.
