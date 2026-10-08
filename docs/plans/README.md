@@ -1789,3 +1789,5 @@ Anatomicalsupport02 source frozen: measured-equivalentpelvis/thigh carriers coal
 Motion11correctedsource02 establishespositiveEditBone length BEFORE matrix assignment andassertsintendedaddedrestframes beforeconstraints. No poleanglechange; original75/neutral/target/operator/bake gates remain. Correctednative02 queued aftersupport02, sourceonly.
 
 Cuffconstruction10source frozen after actualidentityproof: originalfloat32 cutter/coordinates and physical/denseengine unchanged; sixsourcefloorpredicatesshareexistingidentity. Measured1688+71rimcircuits retaininheritedhandle, bothsewnonlyafteractualoperation; topology notdesignconstraint. Oneboundedconstruction queued, no savedcuff/artpass.
+
+Actual anatomicalsupport02PASS126.146s/native4a330ae8: max4support/rankloss0; bothbike+unilateral fullvsFOUR max0.031893mm/neighbour0.033828, CPU/native0.0001871mm, outside/rest/maps exact. Measured21mm reductiondefect cleared, notseatedart. Dressedfilm thencontinuousposedsculpt; motion02/gate33 next.
