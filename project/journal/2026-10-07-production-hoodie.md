@@ -45,3 +45,9 @@ Finding: Regional cut face sectors create touching boundaries. Expand pinched fa
 Validation: Parent read full repair wrapper, parsed AST and matched frozen base/repair hashes. Retained original topology diagnostic finds all12430 vertex links regular; generated tears are regular loops.
 
 Limits: Local cut selection changes explicitly, gross fit unchanged. Source-only; direct patch shape, selected material transfer and moving art unaccepted.
+
+Finding: Direct perimeter repair saves a complete editable selected hoodie with1035 new quads.
+
+Validation: Actual runexit0 in3.084s; parent native hash matches, original body/shared75 signature unchanged, precise local expansion/quad counts retained.
+
+Limits: Patch texture rebake, parent moving-art and assembled hem overlap remain pending; no promotion.

@@ -1307,3 +1307,5 @@ October 7 actual selected glove material review rejected: parent viewed three se
 October 7 direct jeans gusset source: actual anterior saddle was inside pubis despite a low enough bottom; own-side support strips also overlapped. New regional author uses seven anatomical front seam controls and descending own-sided supports, applying only local subdivision delta to pinned author04. Parent full source/AST/pins checked; run unexecuted.
 
 October 7 current-player baseline: initial portable SwiftShader9/11 timing failure retained; explicit headless Metal11/11 passes in5.601s, firstframe435.38ms/restartframeP955.68ms and exact finish/hash. New garments remain outside normal player; partial baseline grants no rider/device/art release.
+
+October 7 actual complete selected hoodie checkpoint: direct regional repair exit0 in3.084s,1035 new welded quads and five local right fan faces absorbed. Parent actual native hash matches, full body/shared75 unchanged. Patch material/UV rebake, moving fit and assembled hem overlap remain unaccepted.

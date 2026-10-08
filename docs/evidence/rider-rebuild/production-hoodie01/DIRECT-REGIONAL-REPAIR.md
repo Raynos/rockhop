@@ -1,4 +1,4 @@
-# Direct underarm region repair — source only
+# Direct underarm region repair — editable native saved
 
 Author03 proved live BMesh selection on the **left only**: exact 72-/68-edge
 boundaries produced 324/289 new quads, with no existing triangles selected.
@@ -38,9 +38,18 @@ bake and parent moving-art review. Direct topology does not confer acceptance.
   harness/out/rider-rebuild/production-hoodie01/regional-repair01 author
 ```
 
-Validation: wrapper AST parses, frozen base SHA matches, and the original
-topology counts above were measured with the bundled Python runtime. No Blender
-repair run, new patch native, bake or artwork judgment. Parent source review,
-checkpoint and serial CPU2 lease precede execution; a persistent structural
-failure needs an actually redrawn/rebuilt region rather than another operator
-or selection-settings trial.
+Validation: parent checkpoint `4740ff0c5` froze the AST-checked wrapper and
+base. The one authorized CPU2 run exited 0 after 3.084 seconds. Left removal
+used 548 seed faces without expansion and produced 613 quads; right removal
+expanded five pinched fan faces beyond 567 seed faces and produced 422 quads.
+All 1,035 added faces are quads. The exact `RiderHoodie` target contains 12,898
+vertices and 19,793 polygons. The complete body remains visible; its geometry,
+fields and shared75 rest fingerprint match before/after.
+
+The [actual result receipt](regional-repair01-result.json) pins the saved
+`harness/out/rider-rebuild/production-hoodie01/regional-repair01/authored-hoodie.blend`
+(SHA `fd7761d7b7c9794cb5871945515d992052424b52ddc83f289522dae942d05f3c`),
+the before-patch fit, actual fields, worker bytes and guard report. The sole
+heavy lease was released immediately at terminal. No retry, source edit, bake,
+commit or index mutation followed. Parent appearance and moving-art review,
+selected dense-material rebake and assembled hem overlap remain pending.

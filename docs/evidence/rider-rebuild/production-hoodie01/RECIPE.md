@@ -1,4 +1,4 @@
-# Selected hoodie author source — two unaccepted author failures
+# Selected hoodie — direct regional repair native, unaccepted
 
 `assets/blender/rider-rebuild/production-hoodie01/author.py` clones the actual
 selected25 mesh/materials into the complete native02 wearer. Source masters are
@@ -33,9 +33,11 @@ The next source-only API correction enters Edit Mode before selecting anything,
 deselects the live BMesh, selects the exact boundary edges and their endpoints,
 flushes/updates, and asserts actual selected edge IDs/count/pairs against the
 intended loop. It records that selection alongside the actual added faces.
-This correction is unexecuted. If the explicitly selected real boundary still
-creates no usable quad patch, this operator route stops; the local quad region
-must be directly authored rather than trying further selection settings.
+Author03 executed it on the left: exact 72-/68-edge selections added 324/289
+quads, with no existing triangles selected. The right boundary traversal then
+failed before selection because its cut had touching cycles. No final rigged
+native was saved. The [direct regional repair source](DIRECT-REGIONAL-REPAIR.md)
+changes local cut selection and constructs actual quads without a fill operator.
 
 The complete body remains visible and its vertices, polygons, fields and rig
 rest are fingerprinted before/after. Hood/collar volume, torso folds, cuffs, hem
@@ -72,8 +74,13 @@ and grants a bounded serial CPU2 lease. Each fresh output leaf is private.
 Validation: Python AST parsed; all five immutable input hashes match the
 [source receipt](source-checkpoint.json). The [first failed trial](author01-result.json)
 and [second failed trial](author02-result.json) retain their actual saved fits.
-No rigged completed author native exists; the live BMesh selection correction
-is unexecuted and no third experiment was launched.
-No dense bake, collision claim, moving-art judgment or normal-player promotion.
+The one direct regional repair exited 0 after 3.084 seconds and saved an
+editable rigged actual hoodie before maps: 613 left and 422 right new quads.
+Right cut expansion added five pinched fan faces; gross fit controls stayed
+frozen. Complete-body visibility and body/shared75 fingerprint checks passed.
+The [regional result](regional-repair01-result.json) pins actual native, fields,
+before-patch fit, worker and guard bytes. No retry or source edit followed;
+the CPU2 lease was released at terminal. No dense bake, collision claim,
+moving-art judgment or normal-player promotion.
 The parent alone judges played complete-outfit native and actual Garage/game
 evidence. One authored pass and at most one shape repair remain the limit.
