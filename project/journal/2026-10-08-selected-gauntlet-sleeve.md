@@ -15,3 +15,9 @@ Finding: Correct the full-control gate to keep inherited finger failures separat
 Validation: Parent reviews the entire diff; AST and builder actual inherited-pair regression pass. Actual guide arrays will be saved before the next gate; geometry and parameters unchanged.
 
 Limits: This source correction grants no cuff, complete-guide or moving-art pass; actual rerun remains required.
+
+Finding: Coherent cuff control construction has zero new strict crossings; dense sleeve checking exposes a degenerate face and incomplete persistence.
+
+Validation: Actual guard exit1/25.232s; full-guide pair counts and actual arrays retained. Inherited finger counts904/875 stay open.
+
+Limits: Complete dense candidate and earlier dense-check result were not saved; diagnose exact original/current sleeve areas before geometry tuning.
