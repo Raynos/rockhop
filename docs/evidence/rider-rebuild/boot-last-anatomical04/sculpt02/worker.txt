@@ -1,0 +1,28 @@
+00:04.709  blend            | Read blend: "/Users/raynos/projects/games/rockhop/harness/out/rider-rebuild/production-authoring01/working01/editable-real-source-outfit.blend"
+Blender 5.2.1 LTS (hash 9e2066aef7ef built 2026-08-25 01:35:57)
+scripts disabled for "/Users/raynos/projects/games/rockhop/harness/out/rider-rebuild/production-authoring01/working01/editable-real-source-outfit.blend", skipping 'RIG-RiderMetarig_ui.py'
+BOOT04_NATIVE_MODIFIER_LOG R-guide-decimate
+BOOT04_NATIVE_MODIFIER_LOG R-laplacian-bind
+BOOT04_NATIVE_MODIFIER_LOG R-surface-bind
+BOOT04_NATIVE_MODIFIER_LOG R-laplacian-evaluate
+Info: Saved as "anatomical-selected-boots.blend"
+BOOT04_NATIVE_MODIFIER_LOG R-surface-apply
+Info: Saved as "anatomical-selected-boots.blend"
+Info: Saved as "anatomical-selected-boots.blend"
+BOOT04_BOOLEAN_START Boot04SelectedAnatomical.R DIFFERENCE operandFaces 8258
+BOOT04_BOOLEAN_SAVED_IN_MEMORY DIFFERENCE 5.023
+Traceback (most recent call last):
+  File "/Users/raynos/projects/games/rockhop/assets/blender/rider-rebuild/boot-last-anatomical04/sculpt_selected.py", line 524, in <module>
+    main()
+    ~~~~^^
+  File "/Users/raynos/projects/games/rockhop/assets/blender/rider-rebuild/boot-last-anatomical04/sculpt_selected.py", line 514, in main
+    assert not witness['insideLeatherSampleRows']
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+Info: Saved as "anatomical-selected-boots.blend"
+Info: Saved as "anatomical-selected-boots.blend"
+Info: Saved as "failed-in-memory.blend"
+
+Error: script failed, file: 'assets/blender/rider-rebuild/boot-last-anatomical04/sculpt_selected.py', exiting.
+
+Blender quit

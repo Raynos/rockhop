@@ -19,3 +19,10 @@ Finding: Actual boot selected-upper solve attempt stops serializing a NumPy floa
 Validation: CPU2 exit1/15.94s, failed-in-memory native789d4a29 saved. Root reviewed one-expression fix; guide12204v24436tris connected/manifold, zero inactive cotangent triangles. Exact scalar JSON regression/AST/13pins pass.
 
 Limits: Actual achieved solve metrics not persisted; no selected boot shape or motion acceptance.
+
+
+Finding: Actual selected-upper guide sculpt, dense transfer and continuous cavity/PBR save with real original exterior, but47 actual foot samples still intersect leather.
+
+Validation: CPU2 exit1/74.907s; nativec6d121b3,4537 free guide points move,96813 sole points/113385 tread triangles exact. Cavity result watertight;47/3821 witness samples fail.
+
+Limits: No left/fit/motion acceptance; actual PBR shape review next before deciding local cavity repair.
