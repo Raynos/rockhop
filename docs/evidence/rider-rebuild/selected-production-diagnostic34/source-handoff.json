@@ -1,0 +1,80 @@
+{
+  "status": "FROZEN_SOURCE_ONLY_SINGLE_REJECTED_BOOT_DIAGNOSTIC",
+  "acceptedArt": false,
+  "nativeExecuted": false,
+  "sourcePins": {
+    "check_fan_math.py": {
+      "path": "assets/blender/rider-rebuild/selected-production-diagnostic34/check_fan_math.py",
+      "sha256": "b73205db4da83c0e0a59b4c69ca00483636d56a76b32dd84e82b6a41055d5b9d"
+    },
+    "diagnose.py": {
+      "path": "assets/blender/rider-rebuild/selected-production-diagnostic34/diagnose.py",
+      "sha256": "adc6186912a7eb7cd69511fd71e853763dd88c6d4c508105124c59605625b5f1"
+    },
+    "fan_math.py": {
+      "path": "assets/blender/rider-rebuild/selected-production-diagnostic34/fan_math.py",
+      "sha256": "50be0585c731261b7d7273ca2975e8a8bc8cd92dece5c66844b2fed86fd67ff8"
+    },
+    "input.json": {
+      "path": "assets/blender/rider-rebuild/selected-production-diagnostic34/input.json",
+      "sha256": "df257529c5ee472b041fe627d5a38de90cbaef482c95fa2733f96a8ba1caa2da"
+    }
+  },
+  "actualFailurePins": {
+    "actualFailedGuard": {
+      "path": "docs/evidence/rider-rebuild/selected-production-family31/full-boots-guard01/guard.json",
+      "sha256": "7650c154b7a0df0c029ca5bf6cdc6262eb6a7a03ee16d141b46c8924444691dc"
+    },
+    "actualFailedWorkerLog": {
+      "path": "docs/evidence/rider-rebuild/selected-production-family31/full-boots-guard01/worker.log",
+      "sha256": "df200e8d22f8a64177372a10e8dea3096ba399eccddda29f3d2a47f7156ecf61"
+    },
+    "actualFailedGeometryReport": {
+      "path": "harness/out/rider-rebuild/selected-production-family31/full-boots01/production.json",
+      "sha256": "594149869596352fc466aaf221f0ee11f6d32d03ba177ad803f5bc5413e7be2d"
+    }
+  },
+  "actualFinding": "31 exact source/isolation checks passed; selected54Objects/29Meshes/15Materials/26Images became3Objects/2Meshes/1Material/2Images. One original8k left-boot simplification passed frozen boundary/allocation assertions, then first transfer normal gate failed at vertex14, dot-0.5521567011583147 vs0.25. No derivative native was saved in31; source face/fan correspondence remains unknown.",
+  "construction": "Reopen exact same source, reuse pinned31 isolation/rest preparation and pinned25 simplify once for left boot at unchangedfull8k allocation. Save REJECTED-bootL-before-transfer.blend uncompressed before any BVH, fan or field diagnostic work. This incomplete target has no transferred final FOUR or atlas and cannot be used as a production asset.",
+  "diagnostics": [
+    "Exact frozen transfer prefix0..14 with original nearest source face, barycentrics, distance, orientation dot and skinL1; assert observed failure reproduces within1e-6.",
+    "Original target vertex normal, independent area/angle weighted full incident triangle fan, split corner normals and update-only normal comparison.",
+    "Exact source nearest face and its one-ring vertex neighborhood, source ancestry vertex fan, every source face within original1mm radius, face windings/material/UV/named fields, target sharp edges and per-fan ancestry IDs. Ancestry IDs are explicitly not claimed as full collapse provenance.",
+    "Interpolated source vertex/corner normal comparisons and each target incident face geometric normal versus the same original nearest source face. Queries never select a replacement correspondence."
+  ],
+  "fixDecisionAfterActualData": {
+    "storedNormalStale": "If stored normal disagrees with independent geometry and changes on a nongeometric update, correct normal evaluation/cache preparation, then re-run unchanged gates. No threshold relaxation.",
+    "sharpFanComparison": "If individual coherent surface fans agree but one averaged vertex normal is misleading, design corresponding surface-fan/corner validation with explicit ancestry, material and unchanged distance/field constraints; do not simply substitute an arbitrary aligned nearby face.",
+    "sheetOrGeometryFailure": "If nearest source lies across an unrelated sheet or target fan is folded/inverted, repair the actual corresponding topology/feature protection rather than masking it with normal selection. No allocation sweep or weakened bounds."
+  },
+  "validation": {
+    "pythonAST": "PASS three sources",
+    "fixtures": {
+      "path": "docs/evidence/rider-rebuild/selected-production-diagnostic34/math-fixtures.json",
+      "sha256": "7b3256362852f6f3e0a16c23153fb4551d04b828cc37ae959b833fc532d195c1"
+    },
+    "actualNativeDiagnostic": "NOT RUN"
+  },
+  "nextParentGuardCommand": "/Users/raynos/projects/localai/runtime/unimate/.venv/bin/python assets/blender/hero-remaster/generation-comparison-2026-10-03/user-agent2/run_bounded96.py --out docs/evidence/rider-rebuild/selected-production-diagnostic34/bootL-guard01 --limit-seconds 90 -- /Applications/Blender.app/Contents/MacOS/Blender -b -t 2 --python-exit-code 1 --python assets/blender/rider-rebuild/selected-production-diagnostic34/diagnose.py -- assets/blender/rider-rebuild/selected-production-diagnostic34/input.json harness/out/rider-rebuild/selected-production-diagnostic34/bootL01",
+  "guardRecipe": {
+    "path": "assets/blender/hero-remaster/generation-comparison-2026-10-03/user-agent2/run_bounded96.py",
+    "sha256": "cf8acd15d8b7484480bee74d23892be815d955ffd87115d3da8ed228ffb3d916"
+  },
+  "guardLock": {
+    "method": "lockf -k",
+    "path": "/Users/raynos/projects/localai/.model.lock"
+  },
+  "wallLimitSeconds": 90,
+  "threads": 2,
+  "cost": "Actual failed31 baseline24.261seconds. One same constructor plus rejected native save/local diagnostics is estimated60\u201390seconds, unmeasured;90seconds is the hard wall bound.",
+  "limits": [
+    "Root serial scheduling only; actual lean film retains priority. No native, browser, render or heavy execution by this agent.",
+    "No modified source master, simplification ratio, geometry allocation,1mm surface bound,0.25 normal limit,reverse source/detail/FOUR limit or original family wrappers.",
+    "Reverse/detail/full-field qualifiers are deliberately NOT RUN here; a successful diagnostic means the rejection was reproduced and recorded, not that production passes."
+  ],
+  "primaryReferences": [
+    "https://docs.blender.org/api/5.0/bpy.types.Mesh.html",
+    "https://docs.blender.org/api/current/mathutils.bvhtree.html",
+    "https://docs.blender.org/api/5.2/bpy.types.MeshVertex.html"
+  ]
+}
