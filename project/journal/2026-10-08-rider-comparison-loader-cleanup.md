@@ -21,3 +21,9 @@ Finding: Build05 compiled in4.059s, but final emitted entry grew161gzip bytes af
 Validation: Eight focused tests pass, including selected-root repeated map protection and unchanged original-root traversal. Parent traced all shrinkTextures call sites: hero calls receive parsed scene roots; other calls receive separate world/course roots. Script syntax passes. Build06 pending.
 
 Limits: No phone/performance/art acceptance from the earlier successful compilation. Final emitted cap must pass before phone capture.
+
+Finding: Build06 final-file assertion correctly rejects717865B normal JS (41Bover), exit1/3.797s. Extend existing outfit/family normalizer alternatives directly instead of adding duplicate branches; skip the exact selected full/LOD filename family with one prefix in eager offline packing. The build contract allows only those two selected slots.
+
+Validation: Eight focused tests pass; offline-pack test now executes the actual transformed function against original, selected full/LOD and course fixtures, proving only the course resource is included. Original defaults and all original outfit normalization remain exact.
+
+Limits: Build07 final-byte gate and actual phone capture remain pending.

@@ -1645,3 +1645,5 @@ October8 comparison build03 retained failure:717835B normal-JS versus unchanged7
 October8 comparison build04 remains9Babove unchanged JS cap. The selected constructor now relies on the existing tagged-document load promise, which initializes its native driver before resolve and returns null on failure; no generic fallback.7/7focused tests pass; build05 and phone-layout run pending.
 
 October8 final-byte correction checkpoint: early build05 hook passed but emitted normal JS717969B exceeded unchanged cap by145B; PWA4915Bworker is now separately reported. Final-file receipts/assertions and selected-root texture-budget bypass replace duplicate comparison traversal;8/8tests pass. Build06/actual phone switching pending; no art acceptance.
+
+October8 comparison build06 final-file check correctly rejects717865B (41Bover). Existing normalizer alternatives and selected offline filename family are simplified;8/8tests include executed offline exclusion. Build07 pending, original five and selected maps intact, no phone/art acceptance.

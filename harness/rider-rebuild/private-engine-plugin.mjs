@@ -34,8 +34,8 @@ function comparisonSource(code, id) {
     code = replaceOnce(code, "export type RiderOutfit = ", `export type RiderOutfit = '${outfit}' | `);
     code = replaceOnce(code, '];\nexport const AVAILABLE_RIDER_PRESETS',
       `  { id: '${outfit}', available: true, family: 'street', label: '${label}', detail: 'New face, hoodie, jeans, gloves & boots', reference: '06' },\n];\nexport const AVAILABLE_RIDER_PRESETS`);
-    code = replaceOnce(code, "  if (value === 'street-openface')", `  if (value === '${outfit}') return 'street';\n  if (value === 'street-openface')`);
-    return replaceOnce(code, "  if (value === 'street')", `  if (value === '${outfit}') return '${outfit}';\n  if (value === 'street')`);
+    code = replaceOnce(code, '(-mustard|-charcoal)?$', '(-mustard|-charcoal|-remastered)?$');
+    return replaceOnce(code, '(openface|mustard|charcoal)', '(openface|mustard|charcoal|remastered)');
   }
   if (id.endsWith('/src/render/hero/urls.ts')) {
     // The existing tables remain the five-outfit eager boot inventory. The
@@ -57,7 +57,7 @@ function comparisonSource(code, id) {
     return code;
   }
   if (id.endsWith('/src/boot/offline-pack.ts')) return replaceOnce(code, '    if (heroes.has(logical)',
-    `    if (logical === '${full}' || logical === '${comparisonRider.lod}') continue;\n    if (heroes.has(logical)`);
+    `    if (logical.startsWith('models/rider-${outfit}')) continue;\n    if (heroes.has(logical)`);
   return null;
 }
 

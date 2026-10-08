@@ -44,7 +44,7 @@ test('comparison wrapper uses legacy driver for originals and selected driver on
   assert(old instanceof GltfRider); assert(selected instanceof GltfRider);
 });
 
-test('new source is requested only when selected and omitted from eager offline pack', () => {
+test('new source is requested only when selected and omitted from eager offline pack', async () => {
   const p = plugin(), renderer = transformed(p, 'src/render/index.ts');
   const expression = renderer.slice(renderer.indexOf('    const inventory ='), renderer.indexOf('    this.heroLoading++;'));
   const old = ['models/rider-street-mustard.glb', 'models/bike-rookie.glb'];
@@ -57,7 +57,13 @@ test('new source is requested only when selected and omitted from eager offline 
   const requested = run.call(state, old, heroPair, state.models);
   assert(requested.includes(comparisonRider.full)); assert(requested.includes(comparisonRider.lod));
   assert(!requested.includes('models/rider-street-charcoal.glb'));
-  assert.match(transformed(p, 'src/boot/offline-pack.ts'), /logical === 'models\/rider-street-remastered\.glb'.*continue/);
+  const offline = transformed(p, 'src/boot/offline-pack.ts').replace(/^import .*;$/gm, '');
+  const fixture = `const BOOT_IDS = [], packMembership = () => null, artTier = () => 'phone';
+    const HERO_FILE_SET = ['models/rider-street-mustard.glb'];
+    const MODEL_ASSETS = ${JSON.stringify(Object.fromEntries(['models/rider-street-mustard.glb', comparisonRider.full, comparisonRider.lod].map(logical => [logical, { url: logical, bytes: 123 }])))};
+    const MODEL_RESOURCES = { 'course-map': { url: 'art/course.webp', bytes: 42 } };`;
+  const pack = await evaluate(fixture + offline);
+  assert.deepEqual(pack.offlinePackUrls([]), [['art/course.webp', 42]], 'Selected full/LOD stay outside eager offline download');
   assert.match(transformed(p, 'src/render/hero/gltf.ts'), /if \(g.scene.userData.privateSelectedRider\).*loadPrivateSelectedRider/);
   assert.match(transformed(p, 'src/render/hero/lod.ts'), /if \(!root.userData.privateSelectedRider\) mergeSkinnedByMaterial/);
 });
