@@ -91,6 +91,7 @@ def main():
     config=json.loads(input_path.read_text());geometry=json.loads(geometry_path.read_text());level=geometry['level']
     requested=set(args[3].split(',')) if len(args)==4 else set(geometry['authoredFamilies'])
     assert requested and requested<=set(geometry['authoredFamilies'])
+    assert requested.isdisjoint(geometry.get('preserveSelectedMaterialFamilies',[])), 'Selected original skin UV/material/maps must not be repacked or baked'
     config['objects']={n:r for n,r in config['objects'].items() if r['family'] in requested}
     assert sha(input_path)==geometry['inputSHA256'],'Source/bake manifest mismatch'
     native=ROOT/geometry['native']['path'];assert sha(native)==geometry['native']['sha256']

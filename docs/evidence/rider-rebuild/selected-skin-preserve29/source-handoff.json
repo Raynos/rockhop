@@ -1,0 +1,96 @@
+{
+  "status": "FROZEN_SOURCE_ONLY_SELECTED_SKIN_UV_PRESERVATION",
+  "acceptedArt": false,
+  "nativeRunExecuted": false,
+  "sourcePins": [
+    {
+      "path": "assets/blender/rider-rebuild/selected-skin-preserve29/author.py",
+      "sha256": "c4242ac0fe50ca578890052c0f4ee5444b7eaefad25fe24cb96a00cb7b3e6b9d"
+    },
+    {
+      "path": "assets/blender/rider-rebuild/selected-skin-preserve29/check_uv_math.py",
+      "sha256": "2f784a1565e1ed25c44ce24f70c4fc11a2460bd0f26e60cad0d75fd5c97476f1"
+    },
+    {
+      "path": "assets/blender/rider-rebuild/selected-skin-preserve29/uv_math.py",
+      "sha256": "6fbefa7a5ce9d614dc6fc74f50ec19fcd71d24fe7fd1a78fda0d85ee3b1d9da2"
+    },
+    {
+      "path": "assets/blender/rider-rebuild/selected-skin-preserve29/input.json",
+      "sha256": "36538d02465dee4fc122275faa99d56fffb09d155a8ffd472e5e6a48bb674a10"
+    },
+    {
+      "path": "assets/blender/rider-rebuild/selected-rider-production25/bake.py",
+      "sha256": "6e3a32a515a48ef9e85710aaf0fab97869a56ec3c158d2b19f3979eaf42331f9"
+    }
+  ],
+  "frozenProductionPins": {
+    "productionAuthor": {
+      "path": "assets/blender/rider-rebuild/selected-rider-production25/author.py",
+      "sha256": "bc9e03aa6d99eba0d4b5037ceff49424c34ddcde99f0f2aae0f84a5090cbc483"
+    },
+    "productionInput": {
+      "path": "assets/blender/rider-rebuild/selected-rider-production25/input.json",
+      "sha256": "49702808cf80ec8ad7104f2681c02b758e97d19f11a386e9b27ca53f8c0f6449"
+    },
+    "uvHelper": {
+      "path": "assets/blender/rider-rebuild/selected-skin-preserve29/uv_math.py",
+      "sha256": "6fbefa7a5ce9d614dc6fc74f50ec19fcd71d24fe7fd1a78fda0d85ee3b1d9da2"
+    }
+  },
+  "nextParentInvocation": "/Applications/Blender.app/Contents/MacOS/Blender -b -t 2 --python-exit-code 1 --python assets/blender/rider-rebuild/selected-skin-preserve29/author.py -- assets/blender/rider-rebuild/selected-rider-production25/input.json harness/out/rider-rebuild/selected-rider-production25/full-skin-preserve29 full skin",
+  "behavior": "Only the skin entry point wraps frozen production25 simplify/transfer. It keeps original layer names, exact directed UV/material chart boundaries and UV covered area, retains the identical original shader datablocks and packed maps, and skips atlas unwrap. A bake guard rejects explicitly preserved material families. Geometry, source correspondence and FOUR-loss limits remain unchanged.",
+  "actualEngine05Metadata": {
+    "sourceGLB": {
+      "path": "harness/out/rider-rebuild/selected-complete-engine01/engine05/rider.glb",
+      "sha256": "72b90e8790f8490743a75f8b70791aa21edfee6234cec609093e9b62e08d4bfd"
+    },
+    "materialTriangleCounts": {
+      "RiderWarmSkin": 778,
+      "Material.002": 58102,
+      "Anatomically reconstructed cheek skin": 429,
+      "Selected skin - authored anatomical neck": 5159
+    },
+    "selectedAlbedoDimensions": {
+      "textured": [
+        1024,
+        1024
+      ],
+      "CPU baked coherent cheek skin": [
+        1024,
+        1024
+      ],
+      "SelectedSkin_NewAnatomicalNeckUV": [
+        256,
+        256
+      ]
+    },
+    "actualImageDimensionsRGBA8MipMiB": 10.999996185302734,
+    "fourOtherFamiliesPlannedMipMiB": 47.99998474121094,
+    "wholeRiderPlannedMipMiB": 58.99998092651367,
+    "wholeRiderMaterialPrimitiveEstimate": 10,
+    "runtimeGPUAllocationMeasured": false
+  },
+  "validation": {
+    "pythonAST": "Passed for wrapper/math/fixtures and modified bake",
+    "fixtures": {
+      "path": "docs/evidence/rider-rebuild/selected-skin-preserve29/math-fixtures.json",
+      "sha256": "82b467113b50036ebac246784f8047e4867dc6ad27ceb67b2298335ec7c670e0"
+    },
+    "unchangedBootGeometryEntryPoint": {
+      "path": "assets/blender/rider-rebuild/selected-rider-production25/author.py",
+      "sha256": "bc9e03aa6d99eba0d4b5037ceff49424c34ddcde99f0f2aae0f84a5090cbc483"
+    },
+    "unchangedProductionInput": {
+      "path": "assets/blender/rider-rebuild/selected-rider-production25/input.json",
+      "sha256": "49702808cf80ec8ad7104f2681c02b758e97d19f11a386e9b27ca53f8c0f6449"
+    }
+  },
+  "limits": [
+    "No actual skin derivative, bake, exported runtime or moving/device pass.",
+    "Per-native material graphs, image bytes/dimensions and exact chart preservation are checked when the guarded skin job actually runs.",
+    "RGBA8 complete mip arithmetic is a source-dimension budget, not a measured GPU allocation or whole-scene timing.",
+    "Original source master is engine05; approved same-topology source edits later require frozen source ancestry refresh; topology changes invalidate affected correspondence.",
+    "The first bilateral-boots geometry invocation remains byte-identical and independently runnable. The only base25 source edit is a one-line bake guard that does not affect boots."
+  ]
+}

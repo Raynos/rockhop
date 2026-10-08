@@ -1917,3 +1917,5 @@ Actual-lean recorder now boots directly into First Ride; Rookie reuses its exist
 Ask356 remains active: actual real-input lean sequence verified on both bikes, but no new rendered film yet. Plan retires full-brake reverse input and separate stand-up substitution, uses actual simulated hip heights, single-world startup and greater headroom. Native02/replay08 are source checkpoints only; allR0–R5 open.
 
 Actual glove03 again completes both sides, then memory-stops71.804s/65GiB BEFORE its GLOVE_CHECKPOINT_SAVE marker. Parent traced full protected-state after-scan before save; compression cause is unestablished. New04 must save explicitly unaccepted constructed native first, then separately reopen/compare protected source before any success claim. No native/art pass.
+
+Selected skin production29 source preserves original face/cheek/neck UV charts, materials and packed maps; family bake rejects repacking preserved skin. Parent reviewed sources/pins and reran3UV/mip fixtures. Planned59MiB/10primitives is arithmetic, not measured runtime. No native derivative, art or device pass; boots25author/input unchanged.
