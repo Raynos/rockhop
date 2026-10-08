@@ -1535,3 +1535,5 @@ October8 exact-input equipped body mask implementation frozen and parent reviewe
 October8 actual selected curved boot pair saves CPU2exit0/147.646s, own-side native75 foot/toe/shin binding and originalUV/PBR retained. No further cavity/inflation. Masked actual complete surface/ankle/toe/bike review remains pending; rider0/6.
 
 October8 fresh Astra06 diagnosis independently confirmed in actual savednative CPU2exit0/6.133s: zero-length editbone matrix-before-length makes six sleeve rest axes +Z (Lupperarm387mm/forearm378mm error). SourceGLTF centers correct. Minimal head/tail initialization and actualrestframe assertions frozen; no gain tuning/regeneration. Corrected actual outfit still pending.
+
+October8 corrected original hoodie source transport saves CPU2exit0/17.009s after actual seven restframe endpoint/matrix assertions pass. Selected original topology/UV/4KPBR and body75 exact. Actual PBR review and finalgarmentbinding/motion remain pending.
