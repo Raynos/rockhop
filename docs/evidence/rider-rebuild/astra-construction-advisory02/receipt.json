@@ -1,0 +1,87 @@
+{
+  "date": "2026-10-07",
+  "writer": "Codex / gpt-6-astra high",
+  "acceptedArt": false,
+  "scope": "Focused independent construction advisory; no heavy job or production edit",
+  "sourcePins": {
+    "assets/blender/rider-rebuild/production-gloves01/author.py": "661880dd0ccb75738341ace95343cfbf46c11b202d0643dae520a6afcb8e8d59",
+    "assets/blender/rider-rebuild/production-boots01/author_selected_boots.py": "5b56ff0ec3c9ff40e7f7b450838563da1eb8f291aa1d0e35e5c168b8c252f1ad",
+    "assets/blender/rider-rebuild/production-boots01/controls.json": "a694d643102ebd396fc80178b447ce4fa139a4f7595d7ee62ed46b39b6d06d40",
+    "assets/blender/rider-rebuild/production-jeans01/author-jeans.py": "79a6719e16f0a8b371da992108a5499658f81db08d9850f53472f3bef4ab002c",
+    "assets/blender/rider-rebuild/production-hoodie01/author.py": "b6f7cde052fa33e4fcf8390bfe62eca71ce3e330bb993d1a8610ecbd49bb960d",
+    "docs/evidence/rider-rebuild/production-gloves01/author-guard02/worker.log": "933643ab7c9b4c94a7ada611a78399e48f91417b9dcf65687dec9afb749c2dbf",
+    "docs/evidence/rider-rebuild/glove-native02-fit/target01/native-hand-R.npz": "2e3cd9f16768fa063de77a73eb102abfc841b16abcc11c8339b793558707c210",
+    "docs/evidence/rider-rebuild/native-hand-repair01/native02/native-body.npz": "e62e9969503b7761e99463eccc3ca7be39e0c230a2948f2f87a224db52d0f9a2"
+  },
+  "viewedImages": [
+    "harness/out/rider-rebuild/production-boots01/authored02/prefit-actual-aligned-selected-dense-lateral.png",
+    "harness/out/rider-rebuild/production-boots01/authored02/prefit-actual-aligned-selected-dense-toe-threequarter.png",
+    "harness/out/rider-rebuild/production-boots01/authored02/prefit-production-selected-map-carrier-lateral.png",
+    "harness/out/rider-rebuild/production-boots01/authored02/prefit-production-selected-map-carrier-toe-threequarter.png",
+    "assets/blender/hero-remaster/generation-comparison-2026-10-03/user-agent2/items01/references/gloves-reference01.png",
+    "harness/out/rider-rebuild/production-jeans01/fit-review01/front.png",
+    "harness/out/rider-rebuild/production-jeans01/fit-review01/back.png",
+    "harness/out/rider-rebuild/production-jeans01/fit-review01/profile.png"
+  ],
+  "filmsPlayed": [],
+  "failedGloveSample": {
+    "side": "R",
+    "digit": "thumb",
+    "panel": 1,
+    "row": 0,
+    "column": 4,
+    "reconstructionDifferenceM": 2.4396542676513027e-09,
+    "point": [
+      -0.3802848291689414,
+      -0.15183215175125256,
+      0.8841690514813403
+    ],
+    "fullScaffoldHits": [
+      {
+        "face": 279,
+        "distanceM": 0.018738965732388674,
+        "normalDotOutward": 0.9888018142496967,
+        "thumbSupport": false,
+        "seeds": [
+          -1,
+          -1,
+          -1
+        ],
+        "vertices": [
+          318,
+          690,
+          689
+        ]
+      },
+      {
+        "face": 283,
+        "distanceM": 0.043046451601437115,
+        "normalDotOutward": -0.9664747731420391,
+        "thumbSupport": true,
+        "seeds": [
+          4,
+          -1,
+          -1
+        ],
+        "vertices": [
+          322,
+          686,
+          685
+        ]
+      }
+    ],
+    "conclusion": "The valid outward proximal thumb surface is omitted by isolated-tip support; this failure does not establish defective body or rig.",
+    "sourceTrial": "author02 thumb; distinct from guard01 pinky"
+  },
+  "recommendation": "Replace ray-stamped glove panels with explicit surface-region modeling; locally replace boot forefoot and sole edge; complete same-master native and private-engine dressed preview.",
+  "productionEdited": false,
+  "committed": false,
+  "parentJudgmentRequired": true,
+  "replayScript": {
+    "path": "docs/evidence/rider-rebuild/astra-construction-advisory02/replay-thumb-failure.py",
+    "sha256": "101c11d7b1fa1b4d66707d609d6da6ac5c88c60f504dc5572f5a912fb0c3be51",
+    "verifiedExitCode": 0
+  },
+  "latestJeansFinding": "Observed saddle/buttock/inner-thigh/knee/calf exposure; reject before bake. One body-authoritative local shape repair with affected projection disabled and saddle authored.",
+  "latestHoodieFinding": "Actual log exits1 after Grid Fill selection-based quad assertion; pre-patch native saved. Face-selection contamination plausible, unverified."
+}

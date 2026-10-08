@@ -473,3 +473,16 @@ prefer the next visible, fully dressed result over another preparation campaign.
 Do not resume a paused goal; stop the recurring advisory when this plan is truly
 complete and archived. All R0–R5 and the original complete rider objective remain
 open until their actual requirements are proved.
+
+
+### Actual construction advisory 02 adopted
+
+Parent verified the [fresh Astra-6 high construction advisory](../evidence/rider-rebuild/astra-construction-advisory02/FINDING.md): eight exact source pins and the retained thumb replay match. The failed sample is thumb panel one, not the earlier pinky failure. The valid outward thenar surface is excluded by isolated-tip labels. Parent inspected the actual boot and jeans views and agrees with their negative fit findings. No moving art or anatomy milestone passes.
+
+- Retire all ray-stamped glove pads and ribs. Author connected mesh regions, inset/extrude and sculpt selected pad/seam/strap shapes on each actual hand. Save editable shells and each completed hand before decorative details or maps; a failed ornament must not erase the deliverable.
+- Replace the malformed boot forefoot and matching sole perimeter locally. Keep useful selected heel, quarters, laces, tongue and collar. Fit each actual foot separately, including medial big toe versus lateral pinky; opposite-handed mirroring alone does not prove an asymmetric shoe last fits. No third lattice trial.
+- Use the jeans first targeted shape repair to author adequate saddle ease and body-compatible pelvis/leg rings. Suppress inward donor projection where actual exposure occurs. A regional outside-surface finishing aid cannot design the saddle or certify fit. Inspect the same saved-native views before baking.
+- Correct hoodie new-face bookkeeping using actual created faces, then inspect the patch and saved selected fit. The selected-face assertion is not proof of malformed new quads. Preserve the existing editable fit.
+- Produce one complete editable selected outfit from this construction block, then one real selected-material transfer and fully dressed native/private-engine motion review. Persistent inability to sculpt a usable toe box or selected glove pads requires an exact artist handoff package, not a renamed projection campaign.
+
+Source recipes, failed trials and original dense masters remain intact. Current wearer/shared75 stay authoritative; generic substitutes, unfinished normal-player promotion and positive art judgments from stills remain prohibited. R0–R5 are open.

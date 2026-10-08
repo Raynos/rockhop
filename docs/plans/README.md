@@ -1255,3 +1255,5 @@ October 7 hoodie author01 actual finding: proportional selected fit native f9606
 October 7 actual jeans shape rejected: parent viewed saved-native front/back/profile; saddle, buttocks and rear knees/calves visibly penetrate. No bake admitted. First shape result has one targeted authored repair available; actual body envelope and saddle design take precedence over inward donor fold projection.
 
 October 7 ask337 handedness answered: actual saved boot geometry is oppositely reflected, triangle winding reversed and skin side-specific; gloves author uses different actual L/R hand targets. This does not qualify an asymmetric shoe last or fit both feet, and complete glove meshes remain unsaved.
+
+October 7 fresh Astra construction advisory02 adopted: parent replay/pins confirm thumb support failure; actual boot and jeans views are rejected. Replace glove ray-stamping and boot forefoot/sole locally, repair jeans authored saddle and inward donor projection, correct hoodie new-face bookkeeping. Builders are redirected; complete outfit and all moving gates remain open.
