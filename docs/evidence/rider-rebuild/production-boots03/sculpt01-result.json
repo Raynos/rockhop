@@ -1,0 +1,35 @@
+{
+  "accepted": false,
+  "status": "RUNTIME_SERIALIZATION_FAILURE_BEFORE_NATIVE_AND_VIEWS",
+  "guardStatus": "worker returned; review pending",
+  "exitCode": 1,
+  "elapsedSeconds": 2.431,
+  "heavyLeaseReleased": true,
+  "geometryControlRepair": false,
+  "nativeSaved": false,
+  "viewsRendered": false,
+  "failure": "np.bool_ reflected-winding receipt is not JSON serializable; R dense sculpt and binding made, R NPZ saved; report failed before L",
+  "minimalPotentialRepair": "Cast reverse=np.linalg.det(transform[:3,:3])<0 to built-in bool; authoring controls unchanged; no retry authorized yet",
+  "files": [
+    {
+      "path": "docs/evidence/rider-rebuild/production-boots03/sculpt-guard01/guard.json",
+      "bytes": 1469,
+      "sha256": "eca3b9146560481aeb15abceb09b13c27c28f48a5447e19d5f9b6547c7952ef2"
+    },
+    {
+      "path": "docs/evidence/rider-rebuild/production-boots03/sculpt-guard01/worker.log",
+      "bytes": 2221,
+      "sha256": "aeae49719921fb79e5007956201c1792d66d68203ed866cb8df3771ce0b7f5ef"
+    },
+    {
+      "path": "harness/out/rider-rebuild/production-boots03/sculpt01/report.json",
+      "bytes": 2013,
+      "sha256": "d57e5a4f71cb456ac8ef680ee2c2d9c2ab34ac2dea347131410d4be35a37fd2b"
+    },
+    {
+      "path": "harness/out/rider-rebuild/production-boots03/sculpt01/direct-sculpt-source-R.npz",
+      "bytes": 4004437,
+      "sha256": "bbb0d4c50317bd241d62698d34af5f085f5439300c23de0584c595d197c1a98e"
+    }
+  ]
+}
