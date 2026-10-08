@@ -5,7 +5,7 @@ import { createHash } from 'node:crypto';
 
 const runtime = fileURLToPath(new URL('./private-rider.mjs', import.meta.url));
 const comparisonLoader = fileURLToPath(new URL('./private-comparison-loader.mjs', import.meta.url));
-const correctiveModule = fileURLToPath(new URL('../../assets/blender/rider-rebuild/selected-seated-corrective06/apply-morph.mjs', import.meta.url));
+const correctiveModule = fileURLToPath(new URL('../../assets/blender/rider-rebuild/selected-seated-corrective06/apply-morph02.mjs', import.meta.url));
 const reviewModules = ['private-comparison-loader.mjs', 'private-rider.mjs', 'new-humanoid-contract.mjs', 'anthropometric-inverse.mjs']
   .map(name => fileURLToPath(new URL(name, import.meta.url)));
 export const comparisonRider = {
@@ -192,7 +192,7 @@ export function privateEnginePlugin(metadata) {
         code = replaceOnce(code, '      this.anthropometry = calibrateAnthropometry(this, metadata);',
           '      this.anthropometry = calibrateAnthropometry(this, metadata);\n      this.applyPoseCorrective = prepareSeatedCorrective(this, { activation: metadata.corrective });');
         code = replaceOnce(code, '      this.debug.allBoneFinite =',
-          '      this.debug.correctiveWeight = this.applyPoseCorrective();\n      this.debug.allBoneFinite =');
+          '      this.debug.correctiveWeight = this.applyPoseCorrective(true);\n      this.debug.allBoneFinite =');
         touched.add('corrective');
         return { code, map: null };
       }
@@ -240,33 +240,14 @@ export class GltfRider extends OriginalGltfRider {
           // retain the ordinary game budget; no maps are synthesized or upscaled.
           code = code.replace(shrinkMarker,
             `          if (url === modelAssetUrl(${JSON.stringify(metadata.selectedRiderSource.canonicalLogical)})) {
-            ${comparison ? 'g.scene.userData.privateSelectedRider = true;' : 'rememberPrivateAuthoredImages(g.scene);'}
+            g.scene.userData.privateSelectedRider = true;
           }
           shrinkTextures(g.scene);`);
-          if (comparison) {
-            // Every hero budget call receives the parsed document scene. The
-            // source marker survives cloning; selected textures are not shared
-            // with separate original hero or world documents.
-            const signature = 'export function shrinkTextures(root: THREE.Object3D, albedoMax = 1024, otherMax = 512): void {';
-            code = replaceOnce(code, signature, signature + '\n  if (root.userData.privateSelectedRider) return;');
-          } else {
-          const textureMarker = '        if (!t || done.has(t)) continue;';
-          if (code.split(textureMarker).length !== 2) throw new Error('Private rider build: resident texture budget changed');
-          code = `const privateAuthoredImages = new WeakSet<object>();
-function rememberPrivateAuthoredImages(root: THREE.Object3D) {
-  root.traverse(object => {
-    const mesh = object as THREE.Mesh;
-    if (!mesh.isMesh) return;
-    for (const material of Array.isArray(mesh.material) ? mesh.material : [mesh.material]) {
-      for (const value of Object.values(material)) {
-        const texture = value as THREE.Texture;
-        if (texture?.isTexture) privateAuthoredImages.add(texture);
-      }
-    }
-  });
-}\n` + code.replace(textureMarker,
-            '        if (!t || done.has(t) || privateAuthoredImages.has(t)) continue;');
-          }
+          // Hero rebudgets receive the parsed document scene. The marker
+          // survives cloning and protects only the exact selected source;
+          // bikes, original riders and world roots keep their normal budgets.
+          const signature = 'export function shrinkTextures(root: THREE.Object3D, albedoMax = 1024, otherMax = 512): void {';
+          code = replaceOnce(code, signature, signature + '\n  if (root.userData.privateSelectedRider) return;');
           touched.add('authored-images');
         }
         touched.add('metadata');

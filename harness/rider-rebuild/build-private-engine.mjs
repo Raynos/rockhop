@@ -87,7 +87,7 @@ fs.writeFileSync(path.join(out, 'rider-rebuild-inputs.json'), JSON.stringify({
   actualBuildRecipe: { path: originalPath, sha256: sha(original) },
   runtimeMetadataSHA256: sha(JSON.stringify(runtimeMetadata)),
   correctiveAdapter: metadata.corrective ? (() => {
-    const file = path.join(root, 'assets/blender/rider-rebuild/selected-seated-corrective06/apply-morph.mjs');
+    const file = path.join(root, 'assets/blender/rider-rebuild/selected-seated-corrective06/apply-morph02.mjs');
     return { path: file, sha256: sha(fs.readFileSync(file)) };
   })() : null,
   selectedRiderSource: runtimeMetadata.selectedRiderSource,

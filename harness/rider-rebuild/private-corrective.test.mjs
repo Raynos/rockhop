@@ -6,7 +6,7 @@ import path from 'node:path';
 import * as THREE from 'three';
 import { privateEnginePlugin } from './private-engine-plugin.mjs';
 import { resetHumanoidPose } from './new-humanoid-contract.mjs';
-import { prepareSeatedCorrective } from '../../assets/blender/rider-rebuild/selected-seated-corrective06/apply-morph.mjs';
+import { prepareSeatedCorrective } from '../../assets/blender/rider-rebuild/selected-seated-corrective06/apply-morph02.mjs';
 import { appendAnimation, rigIdentity } from '../../assets/blender/rider-rebuild/selected-seated-diagnostic08/append-clip.mjs';
 
 const runtime = path.resolve('harness/rider-rebuild/private-rider.mjs');
@@ -16,9 +16,9 @@ const transformed = metadata => privateEnginePlugin(metadata).transform(original
 test('corrective source substitution is conditional and follows calibration and final bone pose', () => {
   assert.equal(transformed({}), undefined);
   const code = transformed({ corrective: {} });
-  assert.match(code, /import \{ prepareSeatedCorrective \} from .*apply-morph\.mjs/);
+  assert.match(code, /import \{ prepareSeatedCorrective \} from .*apply-morph02\.mjs/);
   assert.match(code, /this\.anthropometry = calibrateAnthropometry\(this, metadata\);\s+this\.applyPoseCorrective = prepareSeatedCorrective/);
-  assert.match(code, /this\.scene\.updateWorldMatrix\(true, true\);\s+this\.debug\.correctiveWeight = this\.applyPoseCorrective\(\);\s+this\.debug\.allBoneFinite/);
+  assert.match(code, /this\.scene\.updateWorldMatrix\(true, true\);\s+this\.debug\.correctiveWeight = this\.applyPoseCorrective\(true\);\s+this\.debug\.allBoneFinite/);
   assert.throws(() => privateEnginePlugin({ comparison: true, releaseBuild: false,
     qualificationState: 'FAILED_CORRECTIVE_GATES', corrective: {} }), /cannot enter the comparison/);
 });
@@ -92,4 +92,12 @@ test('actual native75 saved author key reaches runtime morph through appended TR
     assert.deepEqual(meshes.map(({ mesh }) => mesh.morphTargetInfluences[0]), Array(5).fill(rider.debug.correctiveWeight));
     assert.deepEqual(rider.debug.handOnGrip, [false, false]); assert.deepEqual(rider.debug.footOnPeg, [false, false]);
   }
+  for (const track of tracks) track.node[track.property].fromArray(track.interpolant.evaluate(2));
+  let refreshes = 0;
+  const updateWorld = scene.updateWorldMatrix;
+  scene.updateWorldMatrix = function (...args) { refreshes++; return updateWorld.apply(this, args); };
+  assert(Math.abs(rider.applyPoseCorrective() - 1) < 1e-5, 'Standalone default refreshes newly changed TRS');
+  assert.equal(refreshes, 1);
+  assert(Math.abs(rider.applyPoseCorrective(true) - 1) < 1e-5);
+  assert.equal(refreshes, 1, 'Already updated runtime pose requires no extra hierarchy traversal');
 });
