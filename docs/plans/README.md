@@ -1395,3 +1395,5 @@ October 8 broad anatomical neck source checkpoint: actual canonical shoulders pl
 October 8 anatomical neck02 first build stopped in2.85s before saving: genuine donor scan has connected internal shell at upper cut. No shape was created or judged. One scoped interior cleanup diagnosis assigned; real-source outfit and pelvis-only transfer remain next concrete outputs.
 
 October 8 real-source working master recipe ready: one joined body, original selected garment PBR and editable dependencies; no final-bake prerequisite. Parent reviewed full source, AST and 22 pins. Actual assembly remains unexecuted; fit and motion remain unaccepted.
+
+October 8 human resource queue corrected after Astra04: artist assistance is optional rather than a prerequisite for already-authorized scoped construction. HR-27 remains an unanswered resource-identity request; no artist contacted and no rider gate accepted.
