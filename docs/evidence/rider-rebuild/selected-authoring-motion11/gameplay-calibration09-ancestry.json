@@ -1,0 +1,90 @@
+{
+  "accepted": false,
+  "status": "CALIBRATION03_ANCESTRY_PASS_ACTUAL_GAMEPLAY_COMPARISON_PENDING",
+  "input": {
+    "path": "docs/evidence/rider-rebuild/selected-authoring-motion11/gameplay-calibration09-input.json",
+    "sha256": "26401d6f46fa930408673c62d533561acf54f687fbd7f69eaf0dbfa8a54977e7"
+  },
+  "recipe": {
+    "path": "harness/rider-rebuild/prepare-gameplay-calibrated09.mjs",
+    "sha256": "be70ac8783d9d7d9b6f74640043b41808896425c8805701068423c7474ad8763"
+  },
+  "sourcePins": {
+    "ancestorContract": {
+      "path": "harness/out/rider-rebuild/selected-complete-engine01/engine05/rider-contract.json",
+      "sha256": "2aa39bc8c15738b4ecbd2aac08fd61375e0aa8fd45a0ee2ac3046f577b019728"
+    },
+    "baselineContract": {
+      "path": "harness/out/rider-rebuild/selected-authoring-motion11/gameplay-source01/rider-contract.json",
+      "sha256": "e28ede23905b44318dce8cb42dadcb5c6b74328eb89d81df305db3509393168d"
+    },
+    "calibration": {
+      "path": "assets/blender/rider-rebuild/selected-ankle-contact02/engine05-contact-calibration03.json",
+      "sha256": "b5fb15d7f68b46915d0fc3919620c3aaabc8b819636a930df45766cc3bc6aedd"
+    },
+    "playedPacket": {
+      "path": "docs/evidence/rider-rebuild/selected-ankle-contact02/played01/packet.json",
+      "sha256": "b13256ef7f403ea92eb2ffadddd7b239e7502bd2109eff74481560dba8d47ca6"
+    },
+    "transportReceipt": {
+      "path": "harness/out/rider-rebuild/selected-seated-anatomical09/transport02/transport.json",
+      "sha256": "0497acb5edf34ca37e6d97b90bac51aaebe47920441568096778d895462166c5"
+    },
+    "weightContract": {
+      "path": "harness/out/rider-rebuild/selected-seated-anatomical09/transport02/rider-contract.json",
+      "sha256": "98fc88c05d2ae45112f94aed28704a02867513bd10483fd86fdc5d60b03558ba"
+    }
+  },
+  "selectedGLB": {
+    "path": "harness/out/rider-rebuild/selected-seated-anatomical09/transport02/rider.glb",
+    "sha256": "ff9d78e2c5c40a4be1218b57611c5e71db10a2de7b636ec1589358176f907a0f"
+  },
+  "native": {
+    "path": "harness/out/rider-rebuild/selected-seated-anatomical09/authored02/selected-anatomical09-weight-only.blend",
+    "sha256": "4a330ae8a5e93c00a1492dbfd28923ff29796650bbae1dacfadc5fcf00a627a0"
+  },
+  "contract": {
+    "path": "harness/out/rider-rebuild/selected-authoring-motion11/gameplay-source-calibrated09/rider-contract.json",
+    "sha256": "b7554ed11b8a84f6fc38b5e56a75bc2d690780ce6580c95dc95b91cab10effa8"
+  },
+  "originalBinaryBytesVerified": 357243920,
+  "originalBinarySHA256": "6b942497c729a5aad117cc89c9d2bb4762632f01bb4f39d13e06f24378a5740e",
+  "protectedGLTFFieldsExact": [
+    "nodes",
+    "skins",
+    "materials",
+    "images",
+    "textures",
+    "samplers",
+    "scenes",
+    "scene",
+    "original accessors and bufferViews"
+  ],
+  "unchangedMeshes": [
+    "LocallyRepairedSelectedDenseBoot.L.004",
+    "LocallyRepairedSelectedDenseBoot.R.005",
+    "Gloves__LocallySculptedSelected04.L",
+    "Gloves__LocallySculptedSelected04.R",
+    "female_v006lowresUV__ExactFaceSubset",
+    "painted.obj.002"
+  ],
+  "changedAncestorPrimitiveFields": [
+    "RiderJeans.JOINTS_0",
+    "RiderJeans.WEIGHTS_0"
+  ],
+  "addedDriverFields": [
+    "selectedSoleInFoot",
+    "selectedPegSurfaceBike",
+    "soleQuaternionBike",
+    "maxSpineFlexRadians"
+  ],
+  "gripOrientationInjected": false,
+  "baselineFileUnchanged": true,
+  "priorParentJudgment": "KEEP limited private contact baseline after both natural-playback chronologies and Pro presented frame at2.333s. Complete selected outfit retained through riding/lean/wheelie/crash/return; no gross new outfit loss. No broad art, surface, anatomical range, LOD or device acceptance.",
+  "limits": [
+    "Restore the prior limited private calibration on exact preserved boot/rest ancestry; contact and moving art remain unaccepted.",
+    "pi/9 is the existing evaluated solver envelope, not an anatomical range acceptance.",
+    "No grip quaternion is supplied by calibration03; retain the existing canonical hand-axis fallback.",
+    "Use actual coasting neutral/forward/backward/return inputs and compare both bikes against the frozen baseline."
+  ]
+}
