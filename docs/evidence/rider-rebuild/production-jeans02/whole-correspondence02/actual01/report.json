@@ -1,0 +1,115 @@
+{
+  "accepted": false,
+  "status": "FAILED_ACTUAL_WHOLE_CORRESPONDENCE_NO_RETRY",
+  "authorSHA256": "ba18db9745cc3d4e4b7fb3917a803708a31bbe9d29ddf0be8e9dfe4ca22fbfe7",
+  "intakeSHA256": "56faa17d4ef31043218dcf5bb8522ca9cbff7dc02e19577d890069fcb381e6dd",
+  "capture": [
+    {
+      "region": "pelvis-front",
+      "coveredSamples": 262848,
+      "noHit": 0,
+      "oppositePhysicalRegion": 0,
+      "wrongSide": 0,
+      "excessiveDistance": 0,
+      "firstHitMetres": {
+        "min": 0.003133425721898675,
+        "median": 0.025044748559594154,
+        "p95": 0.037156070768833156,
+        "max": 0.045469123870134354
+      },
+      "UVOverlapPixels": 0,
+      "boundarySamples": 14,
+      "path": "harness/out/rider-rebuild/production-jeans02/whole-correspondence02/authored01/pelvis-front-direct-capture.npz",
+      "sha256": "69ac0d00f0b3d6c6daa3ef7d45dbac06cb0d618e8d9078626d3bdc0d4cbca35d",
+      "passed": true
+    },
+    {
+      "region": "pelvis-rear",
+      "coveredSamples": 267174,
+      "noHit": 0,
+      "oppositePhysicalRegion": 0,
+      "wrongSide": 0,
+      "excessiveDistance": 0,
+      "firstHitMetres": {
+        "min": 0.0007945966208353639,
+        "median": 0.02602951880544424,
+        "p95": 0.043443707562983026,
+        "max": 0.06819073855876923
+      },
+      "UVOverlapPixels": 0,
+      "boundarySamples": 23,
+      "path": "harness/out/rider-rebuild/production-jeans02/whole-correspondence02/authored01/pelvis-rear-direct-capture.npz",
+      "sha256": "87aa5342d6a41eda95f20c2b3b40c8af3fc57070807355074c4a602d8ab7b188",
+      "passed": true
+    },
+    {
+      "region": "lower-L",
+      "coveredSamples": 2681463,
+      "noHit": 0,
+      "oppositePhysicalRegion": 0,
+      "wrongSide": 0,
+      "excessiveDistance": 231,
+      "firstHitMetres": {
+        "min": 0.003391808830201626,
+        "median": 0.014249389059841633,
+        "p95": 0.028422175161540504,
+        "max": 0.08812277019023895
+      },
+      "UVOverlapPixels": 526,
+      "boundarySamples": 162,
+      "path": "harness/out/rider-rebuild/production-jeans02/whole-correspondence02/authored01/lower-L-direct-capture.npz",
+      "sha256": "49ffc8ba1ece24c06410fa744acc0c213e7c9860489c233e1885f86cb852c756",
+      "passed": false
+    },
+    {
+      "region": "lower-R",
+      "coveredSamples": 2357320,
+      "noHit": 48,
+      "oppositePhysicalRegion": 12,
+      "wrongSide": 0,
+      "excessiveDistance": 390,
+      "firstHitMetres": {
+        "min": 6.624083198403241e-06,
+        "median": 0.013887697365134954,
+        "p95": 0.028196701407432544,
+        "max": 0.09543788433074951
+      },
+      "UVOverlapPixels": 459,
+      "boundarySamples": 150,
+      "path": "harness/out/rider-rebuild/production-jeans02/whole-correspondence02/authored01/lower-R-direct-capture.npz",
+      "sha256": "cc9c2eac578565c96f1a3b42eaa9711c423ba19e0e7668f39b5a392cec63c4c9",
+      "passed": false
+    }
+  ],
+  "regionalBakes": [],
+  "maps": {},
+  "limits": [
+    "One whole wearing-jeans4K three-map transfer, twelve isolated regional bake calls. No leg-only job, solver, source fit, settings sweep, retry or alternate material fallback.",
+    "Reuse actual successful pelvis-front/rear source/proxy/cage/receiver geometry exactly; measured lower controls extend the existing1691-to26063 native lineage and preserve every shared pelvis boundary ID.",
+    "Original source need not enclose body. Read only originalEvaluatedPositions from immutable failed-fit lineage; exact equality with fresh original native source evaluation is mandatory. Rejected fitted arrays/native are excluded.",
+    "Actual whole editable native saves before direct capture and maps. All four regions must have no missing coveredUVsample, no opposite physical region or paired-side hit, and firsthit<=80mm before any bake. Explicit-cage maximum_ray_distance=0 is not a distance guarantee; actual measured capture is gated.",
+    "Canonical wearing target9565 positions/topology/UV/FULL/FOUR, original selected dense/UV/maps, body10582/shared75/rest remain exact. Only correspondence derivatives triangulate once FIXED before paired geometry edits.",
+    "Original native UV overlap remains exact and reported with full-resolution multiplicity mask. Highest original-face-ID ownership is explicit across regional maps. No UV/material acceptance follows from ownership or coverage.",
+    "Python raster/BVH differs from Cycles; actual raw maps and six whole target/original-source photos remain parent review evidence. Normal bakes encode original selected geometric/shading normals in projection tangent frames and apply in unchanged wearing tangent frames; mapped quality remains unaccepted.",
+    "Save whole-selected-jeans.blend with three packed4096 actual maps and unchanged FOUR groups/FULL attrs, plus exact fields copy and context-unit.json. Parent uses existing append/rig-retarget behavior to merge into1ad5 dressed context. No new compositor or dressed-context rebuild here.",
+    "First whole original selected-PBR transfer only. Fit, art, motion, engine, player and device gates remain open; only parent judges."
+  ],
+  "authoredNative": {
+    "path": "harness/out/rider-rebuild/production-jeans02/whole-correspondence02/authored01/whole-correspondence-before-maps.blend",
+    "sha256": "8fbc94e585b60bb5fbfdc281c08435274699fbef718791495125df1293b83354"
+  },
+  "wearingTargetSourceStateSHA256": [
+    "b6574d4404b6a6dfdc474d3fab3381ed41818b5dc3091b6a34cfee708b3b62ca",
+    "abd6b247f5845617000781bb3a8ef5b07df32d42f86e2c03785b4c00ce123f4a"
+  ],
+  "body75StateSHA256": "2294c25dafe2d6e74d0e0c9e7a7e7bb3c8937f17c8b5faab3cd661e565afda99",
+  "existingPelvisBoundaryVerticesPreserved": [
+    7321,
+    7321
+  ],
+  "originalSourceArrayExact": true,
+  "regionsPartitionEveryWearingFace": true,
+  "resolution": 4096,
+  "error": "AssertionError('Whole direct capture rejected; no maps admitted')",
+  "traceback": "Traceback (most recent call last):\n  File \"/Users/raynos/projects/games/rockhop/assets/blender/rider-rebuild/production-jeans02/whole-correspondence02/author.py\", line 236, in main\n    assert all(row['passed'] for row in report['capture']), 'Whole direct capture rejected; no maps admitted'\n           ~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: Whole direct capture rejected; no maps admitted\n"
+}

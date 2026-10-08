@@ -1503,3 +1503,5 @@ October8 current-player silent Metal gate15 after actual construction cadence an
 October8 actual selected boot sculpt PBR exit0/14.972s: root2views keep genuine curved leather/laces/seams/tread (box wall gone), reject actual medial/upperforefoot skin exposure. Local outer-enclosure and toe cavity repair next; exact derivative sole not sacred if anatomy requires. No wearing/motion acceptance.
 
 October8 one bounded actual-native boot probe source reviewed to distinguish distal toe under-carving from visible proximal outer-wall exposure. No model edits or new art acceptance; local anatomical correction depends on actual result.
+
+October8 whole jeans editable8fbc94e5 saved, direct4K gate exit1/48.942s before0bakes. Pelvis both pass; root localizes621far to rearunderbody and R48miss/12cross to frontcrotch sideplane. Preserve working capture, local source-semantic correction next; no globalray increase or full outfit acceptance.
