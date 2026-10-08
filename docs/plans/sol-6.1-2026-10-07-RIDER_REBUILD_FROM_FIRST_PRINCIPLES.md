@@ -52,11 +52,13 @@ lean forward/back used by the game. The seat-held native01 score is also only a
 seated baseline; its first sole affine check fails at 0.114114 mm against 0.1 mm.
 Do not present it as gameplay lean or relax that bound. Lead24 derives new native
 controls from actual `riderPoseAtLean` and the simulated COM/torso path. The
-next visible film must show selected dressed neutral → forward-standing →
-back-seated → neutral, with hands/feet visible. Normal game rendering must
+next visible film must show selected dressed neutral → lean forward →
+lean backward → neutral at actual simulated hip heights, with hands/feet visible. Normal game rendering must
 consume simulated rider state; an isolated time clip cannot substitute for it.
 Lead29 replays those actual source poses on the complete selected native master
 before any additional anatomy sculpt. Generic actions remain required afterward.
+
+**Actual input correction, October 8, 16:52 Panama:** Full-brake held input invokes reverse and faults offtrack; it is retired for this capture. The same 1,200-tick neutral/forward/back/return sequence with zero throttle/brake passes both bikes with zero faults, finite varying physical COM and byte-identical fresh trajectories. Effective lean reaches +1/−1; net bike travel is 5.32/6.66 cm. Use those real inputs. Capture boots directly into First Ride (seed 138717428), avoiding a discarded flat-test world. The first GPU attempt stopped at the unchanged memory bound before a motion report; wait for greater host headroom, retain selected assets and do not relax guards. Native controls02 and full dressed replay08 are frozen sources, not executed animation results.
 
 **Measured construction status, October 8, 16:20 Panama:**
 

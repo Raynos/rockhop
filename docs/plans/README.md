@@ -1913,3 +1913,5 @@ Glove memory03 source preserves exact constructors/protected checks and saves na
 Actual lean preflight fixes test input: full brake engages reverse and faults rookie/pro at887/770ticks. Same1200tick lean sequence with brake0 has0faults and byte-identical fresh trajectories on both, ≈0.306m bikeX range with real COM/derived-pose motion. Capture now uses corrected real inputs; selected-source rendered/native art still pending.
 
 Actual-lean recorder now boots directly into First Ride; Rookie reuses its existing world rather than completing/discarding flat-test. Parent verified defaultseed138717428 and actual initial track/seed/bike assertions. Pro retains explicit physics-bike load. Startup memory savings unmeasured; unchanged guard remains mandatory.
+
+Ask356 remains active: actual real-input lean sequence verified on both bikes, but no new rendered film yet. Plan retires full-brake reverse input and separate stand-up substitution, uses actual simulated hip heights, single-world startup and greater headroom. Native02/replay08 are source checkpoints only; allR0–R5 open.
