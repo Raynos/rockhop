@@ -1,0 +1,26 @@
+{
+  "schema": "selected-production-meshoptimizer-research29-v1",
+  "status": "SOURCE_RESEARCH_ONLY_NO_CONSTRUCTION_OR_PRODUCTION_PASS",
+  "date": "2026-10-08",
+  "installed": {
+    "package": "meshoptimizer", "version": "1.1.1", "packageSHA256": "ef1028bdc0d4c114c578cb7836e555170eabada69661cf790b2b6fc91691747a",
+    "simplifierPath": "node_modules/meshoptimizer/meshopt_simplifier.js", "simplifierSHA256": "d2e80c60a84c700947f97ab4678cc222a5b9ab409a0745eef2dcaa79bb1ef922",
+    "typesPath": "node_modules/meshoptimizer/meshopt_simplifier.d.ts", "typesSHA256": "82a112d9f414607e9683dc87a6dafe84cdfe4b817325e08f1387026d0cf1878b",
+    "registryIntegrityMatchesLockfile": "sha512-oRFNWJRDA/WTrVj7NWvqa5HqE1t9MYDj2VaWirQCzCCrAd2GHrqR/sQezCxiWATPNlKTcRaPRHPJwIRoPBAp5g=="
+  },
+  "upstream": {
+    "tag": "v1.1.1", "commit": "b22872835dbabc56a6e4a366ea9917f62b7daf1a", "tagAPI": "https://api.github.com/repos/zeux/meshoptimizer/git/ref/tags/v1.1.1",
+    "installedSimplifierEqualsTaggedSourceBytes": true, "simplifierURL": "https://github.com/zeux/meshoptimizer/blob/b22872835dbabc56a6e4a366ea9917f62b7daf1a/js/meshopt_simplifier.js#L396-L455",
+    "nativeSourceSHA256": "b645cdaffe9e3eaf64ff77bc82c3e3b8c57c0a4459b7405a0b3d2716ed92d928", "nativeSourceURL": "https://github.com/zeux/meshoptimizer/blob/b22872835dbabc56a6e4a366ea9917f62b7daf1a/src/simplifier.cpp",
+    "headerSHA256": "497a1d8db6d9549bb4b0346d5f34a9bd67a15fe41d458cdd6a27eb608421f46c", "headerURL": "https://github.com/zeux/meshoptimizer/blob/b22872835dbabc56a6e4a366ea9917f62b7daf1a/src/meshoptimizer.h",
+    "documentationURL": "https://github.com/zeux/meshoptimizer/blob/b22872835dbabc56a6e4a366ea9917f62b7daf1a/README.md#attribute-aware-simplification"
+  },
+  "api": "await MeshoptSimplifier.ready; simplifyWithAttributes(indices:Uint32Array, positions:Float32Array, positionStride, attributes:Float32Array, attributeStride, attributeWeights:number[], vertexLock:Uint8Array|null, targetIndexCount, targetError, flags) -> [newIndices, approximateError]. JS strides count floats; at most32 weighted scalar channels. Inputs remain unchanged; output indices reference original vertices.",
+  "candidateOnly": {"sourceTrianglesPerBoot": 610934, "targetTrianglesPerBoot": 8000, "targetIndexCount": 24000, "targetError": 0.001, "flags": ["ErrorAbsolute"], "conditions": "Coordinates must use meters for .001 to mean1mm. Normal plus actual named bone-weight channels fit the attribute API; exact attribute weights require a pinned constructor decision. Preserve required boundary vertices through vertexLock=1. Construction awaits lead24 census."},
+  "orientation": "Native source lines1182-1198 reject one collapse when the surviving old/new geometric face normals have dot <=0.25*sqrt(squaredNormOld*squaredNormNew); mandatory check at1558-1565 includes current-pass remaps. This local condition does not guarantee final orientation against the original surface or prevent every self-intersection.",
+  "unchangedGates": "8k allocation,1mm bidirectional source/target and target-face-chord checks,.25 original-source normal dot,.3 skin-weight L1,FOUR influence/removed-mass/adjacent-weight limits remain mandatory. Combined position+attribute quadric error is approximate, not a Hausdorff certificate; simplification can stop above8k.",
+  "representation": ["Use exact source point IDs and named bone fields; JOINTS slot numbers and per-vertex ranked WEIGHTS slots are not consistent scalar fields.", "Original source UV loops/maps remain immutable. Reusing UVs requires correctly split corner vertices at seams; target-only new unwrap/bake can instead use original point topology without artificial UV splits. Do not weld unrelated coincident shells or discard field discontinuities.", "compactMesh mutates its supplied index array and returns oldID-to-newID mapping;0xffffffff marks unused IDs. Retain original IDs before compaction and invert the mapping for ProductionOriginalVertex. New faces have no original-face ancestry from this API.", "Do not substitute simplifyWithUpdate, simplifySloppy, Prune or Permissive for this proposed index-only candidate. Source normals used as attributes do not replace independent target geometric-normal checks."],
+  "memory": "Installed JS copies indices, positions, attributes and locks into WASM; output capacity is sized to source index count, not target count. No measured peak memory or runtime claim; parent bounded execution remains required.",
+  "validation": {"installedAndUpstreamSourceRead": true, "taggedWrapperByteEquality": true, "sourceEdited": false, "simplificationExecuted": false, "browserOrBlenderExecuted": false, "productionOrArtAccepted": false},
+  "coordination": "Exact API,source pins,flip citations and compaction/field pitfalls sent directly to parent and lead24. Lead24 owns census and repair decision. No independent constructor or ratio campaign."
+}
