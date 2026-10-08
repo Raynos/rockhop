@@ -1847,3 +1847,5 @@ Volume04 source now distinguishes543 pre-existing unused Body vertices from rend
 Gate35 actual Metal passes replay/crash/restart but fails ready P50319.03ms against unchanged300ms;10/11, not accepted. Existing player fingerprint remains fd8fe7c2. Failure and no-child headroom refusal are preserved before retry; no threshold/backend changes.
 
 Native action review source now requires the exact six successful native records and seven source pins, uses declared beside-bike presentation, holds the initial frame2s and clamps the five one-shot actions to retain root travel. Six CPU checks pass. Actual native-action transport and dressed played review remain pending.
+
+Volume04 actual transport passes4.48s with exact original BIN/maps/rest/75binds and all66,663 exported Body/Jeans rows. Both-bike native endpoints and byte-identical return pass unchanged bounds. Fresh dressed Garage playback is next; full anatomical companion/contact/shading/device and art remain open.
