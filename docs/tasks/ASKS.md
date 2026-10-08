@@ -539,3 +539,7 @@ Status: **open** (nobody on it) · **in flight** (owner named) · **needs pick**
 | 342 | Report the last 12 hours of Codex usage by hour. | **done — 12 complete hours measured, 2026-10-08** | [Hourly usage](../evidence/usage-2026-10-08/README.md): 23:00–11:00 Panama, weekly meter 26%→59%, 33 percentage points consumed, 2.75 points/hour average; boundary lag ≤17 seconds. |
 
 | 346 | Count total rider remaster days across agents from session/commit history, and show the original in-game rider before the last two weeks of remaster work. | **done — historical dates and baseline verified, 2026-10-08** | Dedicated remaster September30→October8:8elapsed days/9calendar dates; preceding hero work September15→October8:23elapsed days. Snapshot counts1093scoped commits. Original is September17Astra Street Mustard rider; original Garage capture supplied. Parallel agent hours/count not inferred from commits. |
+
+| 347 | Stop the Opus5.5 Claude review session for now. | **done — review remains stopped, 2026-10-08** | No Opus review session was launched; only CLI help/version checks ran. Do not start or resume that review without a new user request. |
+
+| 348 | Add the selected new rider as a separately named sixth Garage rider so the user can quickly compare it with original Mustard on a phone. | **active — separate comparison slot** | Keep the original Mustard intact. Use the actual selected high-resolution rider and existing Garage selection; measure mobile loading/rendering and keep unfinished art explicitly in review. |
