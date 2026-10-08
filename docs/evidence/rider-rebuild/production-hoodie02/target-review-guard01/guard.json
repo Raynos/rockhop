@@ -1,0 +1,89 @@
+{
+  "accepted": false,
+  "lock": "/Users/raynos/projects/localai/.model.lock",
+  "method": "lockf -k",
+  "command": [
+    "/Applications/Blender.app/Contents/MacOS/Blender",
+    "-b",
+    "-t",
+    "2",
+    "--python-exit-code",
+    "1",
+    "--python",
+    "assets/blender/rider-rebuild/production-assembly01/render.py",
+    "--",
+    "docs/evidence/rider-rebuild/production-assembly01/hoodie-patched01-render-spec.json",
+    "harness/out/rider-rebuild/production-assembly01/hoodie-patched01"
+  ],
+  "controllerPID": 34032,
+  "pollSeconds": 1,
+  "startAnonymousBelowGiB": 55,
+  "stopAnonymousGiB": 65,
+  "stopAnonymousPlusWiredGiB": 96,
+  "limitSeconds": 180.0,
+  "guardSHA256": "cf8acd15d8b7484480bee74d23892be815d955ffd87115d3da8ed228ffb3d916",
+  "status": "worker returned; review pending",
+  "samples": [
+    {
+      "seconds": 0,
+      "anonymousGiB": 28.9,
+      "wiredGiB": 7.5,
+      "freeGiB": 42.8
+    },
+    {
+      "seconds": 0.034,
+      "anonymousGiB": 28.9,
+      "wiredGiB": 7.5,
+      "freeGiB": 42.8
+    },
+    {
+      "seconds": 1.069,
+      "anonymousGiB": 29.2,
+      "wiredGiB": 7.6,
+      "freeGiB": 42.4
+    },
+    {
+      "seconds": 2.105,
+      "anonymousGiB": 29.2,
+      "wiredGiB": 7.6,
+      "freeGiB": 42.3
+    },
+    {
+      "seconds": 3.139,
+      "anonymousGiB": 30.1,
+      "wiredGiB": 8.0,
+      "freeGiB": 41.1
+    },
+    {
+      "seconds": 4.179,
+      "anonymousGiB": 30.8,
+      "wiredGiB": 8.5,
+      "freeGiB": 39.9
+    },
+    {
+      "seconds": 5.213,
+      "anonymousGiB": 31.3,
+      "wiredGiB": 7.9,
+      "freeGiB": 40.0
+    },
+    {
+      "seconds": 6.259,
+      "anonymousGiB": 31.1,
+      "wiredGiB": 8.0,
+      "freeGiB": 40.0
+    },
+    {
+      "seconds": 7.305,
+      "anonymousGiB": 31.0,
+      "wiredGiB": 8.0,
+      "freeGiB": 40.1
+    }
+  ],
+  "physicalMemoryBytes": 137438953472,
+  "requiredPhysicalMemoryBytes": 137438953472,
+  "scope": "Future explicitly invoked owned Rockhop job only",
+  "pressureOrSwapLimits": "No separate pressure/swap gate exists in the pinned original guard; none altered",
+  "ownedChildPID": 34036,
+  "exitCode": 0,
+  "elapsedSeconds": 8.222
+}

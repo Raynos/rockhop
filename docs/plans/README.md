@@ -1331,3 +1331,5 @@ October 7 required current-player gate05: silent headless Metal11/11 in9.723s; e
 October 7 boot targeted repair rejected: parent viewed all8separate bilateral actualPBRimages; right inspected side mostly closes but small skin spots remain, left medial ankle/forefoot still has large exposure. Same negative-transverse cameras meanRlateral/Lmedial, not anatomically matched sides. CPU2exit0 in25.658s; native/sourcebody75 exact. End local repair mechanism and prepare exact artist package, no bake or promotion.
 
 October 7 hoodie02 original-PBR inspection source: frozen actual dense helper verifies GLB→Blender axes and preserves original two4Kmaps/UV, target geometry/UV/fields/materials and body75. Parent full source/readiness/intake checks pass. Source unexecuted; patched-target then actualdonor views precede bake.
+
+October 7 saved hoodie patched-target review rejected: parent inspected actualfront/back/profile; substantial bilateral underarm skin remains despite createdquadgrids. ReadonlyCPU2exit0 in8.222s, source unchanged. One local axilla exterior/ease correction before actualdonor/bake; no whole garment solver or appearance/motion acceptance.
