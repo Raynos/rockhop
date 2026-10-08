@@ -31,3 +31,9 @@ Finding: The actual anatomical middle-neck plane now defines a C2 upper field tr
 Validation: Conditioning CPU2 exit0/2.388s, independent saved readback exit0/2.226s;1394newneck fields changed,6753canonical/1446hands, geometry/UV/corner normals/PBR/rest75 exact. Fieldsum maximumerror9.984e-8.
 
 Limits: Historical saved-normal residual remains failed; C7 and albedo issues remain. Actual clothed motion is next, not accepted by this field check.
+
+Finding: The actual selected outfit working native now contains the conditioned broad neck/selected head in one complete body. All existing garment sources and genuine PBR remain identical.
+
+Validation: CPU2 assembly exit0/26.777s; exact native75 rest, unchanged incoming body fields, seven actual visible body/clothing meshes and exact saved native pin.
+
+Limits: Garment fit remains rejected; this private editable context supports head-only clothed stress, not normal player promotion.

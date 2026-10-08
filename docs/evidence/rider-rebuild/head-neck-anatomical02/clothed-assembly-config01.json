@@ -1,0 +1,209 @@
+{
+  "schemaVersion": 1,
+  "accepted": false,
+  "stage": "PRIVATE_EDITABLE_REAL_SOURCE_AUTHORING_CONTEXT",
+  "canonical": {
+    "path": "harness/out/rider-rebuild/native-hand-repair01/native02/anatomical-hand-rig.blend",
+    "sha256": "42fca617ea8d246a6c3e3ca68a90cd3cb5f3ce8b9bb78130e0e2bbd65f605fac"
+  },
+  "bodyCandidate": {
+    "native": {
+      "path": "harness/out/rider-rebuild/head-neck-anatomical02/conditioned01/selected-head-neck-conditioned.blend",
+      "sha256": "e68b5c41072e3dd6eee0a71ee938efd57c2889217e2efa7f4c203054869cf85e"
+    },
+    "bodyObject": "RiderBody",
+    "rigObject": "RiderSkeleton",
+    "status": "UNACCEPTED_REST_SHAPE_IMPROVEMENT_ENDPOINT_CONDITIONED; CLOTHED_HEAD_STRESS_PENDING; SAVED_NORMAL_COMPARISON_FAILED",
+    "receipt": {
+      "path": "harness/out/rider-rebuild/head-neck-anatomical02/conditioned01/report.json",
+      "sha256": "353eeb90c97488be7c55607145bc7d8b8ccd8a570b322270d297a557ca44ff80"
+    },
+    "verdict": {
+      "path": "harness/out/rider-rebuild/head-neck-anatomical02/conditioned01/independent-verification.json",
+      "sha256": "d15bcc9df8ee12da95900807559b961f43b4c9c60fe764b5683e52531bee6fd2"
+    }
+  },
+  "units": [
+    {
+      "part": "Hoodie",
+      "native": {
+        "path": "harness/out/rider-rebuild/production-hoodie01/regional-repair01/authored-hoodie.blend",
+        "sha256": "fd7761d7b7c9794cb5871945515d992052424b52ddc83f289522dae942d05f3c"
+      },
+      "receipt": {
+        "path": "harness/out/rider-rebuild/production-hoodie01/regional-repair01/author.json",
+        "sha256": "95663c7336d3c98f59a527d20a2ac3b2e656ccb5a5b9159922a2bf51496412c1"
+      },
+      "visible": [],
+      "reference": [
+        "RiderHoodie"
+      ],
+      "editingAids": [],
+      "status": "PATCHED_COMPACT_DERIVATIVE_REJECTED_FIT_REFERENCE; ACTUAL_DENSE_PRIMARY_UNREVIEWED",
+      "expectedPBRHashes": []
+    },
+    {
+      "part": "Jeans",
+      "native": {
+        "path": "harness/out/rider-rebuild/production-jeans02/authored01/production-jeans.blend",
+        "sha256": "956548765454fe683952801f5ba401ed82f481489a256cf48039c459850e5c95"
+      },
+      "receipt": {
+        "path": "docs/evidence/rider-rebuild/production-jeans02/author01-report.json",
+        "sha256": "8014ed3eb5ee44e5ac31c8721646f5fa8682e77a253cb202652f1ec636214182"
+      },
+      "visible": [
+        "AlignedSelectedDenseJeans"
+      ],
+      "reference": [
+        "RiderJeans"
+      ],
+      "editingAids": [
+        "EditableSelectedJeansLattice",
+        "Jeans02GussetEditableCage",
+        "Jeans02GussetControlReference"
+      ],
+      "status": "ACTUAL_ALIGNED_DENSE_ORIGINAL_PBR_LATTICE_WORKING_CONTEXT; COMPACT_TARGET_UNBAKED",
+      "expectedPBRHashes": [
+        "29a166cd304c492a025ea15f5949da0b8540e1ce11de196c2ed0b5afec50e810",
+        "ebd8ead6d0a1b1bfdada88e16c550781848932832859733e8b00c9ccb7ede516"
+      ]
+    },
+    {
+      "part": "Gloves",
+      "native": {
+        "path": "docs/evidence/rider-rebuild/production-gloves03/author02/fitted-source-L.blend",
+        "sha256": "6ef266a0597bfa88d1c108854c14d6d7c7756e53fd08f54c1c168951683c1ca8"
+      },
+      "receipt": {
+        "path": "docs/evidence/rider-rebuild/production-gloves03/author02/report.json",
+        "sha256": "f457bbea70212ba505d9fac75faa14dc497dd9d474fbcbca6ae506e655885a1a"
+      },
+      "visible": [
+        "SelectedFittedSource.L",
+        "SelectedFittedSource.R"
+      ],
+      "reference": [
+        "SelectedSourceRest.L",
+        "SelectedSourceRest.R"
+      ],
+      "editingAids": [
+        "GloveSourceAuthoringRig.L",
+        "GloveSourceAuthoringRig.R"
+      ],
+      "status": "ACTUAL_FITTED_ORIGINAL_PBR_STATIC_CONTEXT; OFFLINE_RIGS_MODELING_AIDS_ONLY",
+      "expectedPBRHashes": [
+        "9633beec8bf2bb3bd73918589b931d2fc4f33f8e3e702415094ed173a129f95c",
+        "a7a712769a73844a9560d4bef1d163ce3fb8721e388d1a7ecfa07a3515280e67"
+      ]
+    },
+    {
+      "part": "Boots",
+      "native": {
+        "path": "harness/out/rider-rebuild/production-boots03/local-repair01/local-upper-repair-selected-source.blend",
+        "sha256": "abf70643fce7b054f0c302906b7b26c0ed953bb32cde011e9fec8dcbf64ceba9"
+      },
+      "receipt": {
+        "path": "docs/evidence/rider-rebuild/production-boots03/local-repair-review01/report.json",
+        "sha256": "6cb9a1a9502d00200c513b995964987a34174bc804742a74ff1ceb6b2c2fa29a"
+      },
+      "visible": [
+        "LocallyRepairedSelectedDenseBoot.L",
+        "LocallyRepairedSelectedDenseBoot.R"
+      ],
+      "reference": [
+        "UnchangedOriginalSelectedBoot.L",
+        "UnchangedOriginalSelectedBoot.R"
+      ],
+      "editingAids": [],
+      "status": "ACTUAL_LOCAL_SELECTED_DENSE_ORIGINAL_PBR; FIT_UNACCEPTED_NATIVE75_MODIFIER_MODELING_CONTEXT",
+      "expectedPBRHashes": [
+        "5bda21b0d584f91aad83d310b868be6a575d28eddb1170e01e65c0b2071f4044",
+        "4017261b5f233cba5780578691a1508382295db4b157c4d175ad905bc98e5c30"
+      ]
+    }
+  ],
+  "hoodieDense": {
+    "original": {
+      "path": ".tmp/generation-comparison-2026-10-03/user-agent2/qualified-hunyuan-paint06/paint/painted.glb",
+      "sha256": "800d7a9717757b90b296a78c605cddb698c68d399a96e403aa381103e77d2eba"
+    },
+    "frozenInputs": {
+      "path": "assets/blender/rider-rebuild/production-hoodie01/inputs.json",
+      "sha256": "ae90f988b1a3b5f020d540cddd677a8a6286e6e2e3e7afb08733b5b7470aff28"
+    },
+    "fitHelper": {
+      "path": "assets/blender/rider-rebuild/production-hoodie01/author.py",
+      "sha256": "078da52b40e1f5049759314c1794ba6559ac1dae90d79294672c674f2095d14a"
+    },
+    "authorReceipt": {
+      "path": "harness/out/rider-rebuild/production-hoodie01/regional-repair01/author.json",
+      "sha256": "95663c7336d3c98f59a527d20a2ac3b2e656ccb5a5b9159922a2bf51496412c1"
+    },
+    "gltfToBlenderRows": [
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        -1
+      ],
+      [
+        0,
+        1,
+        0
+      ]
+    ],
+    "sourceVertexCount": 716971,
+    "expectedPBRHashes": [
+      "1eb934f396df30e3cd881211ff4e195c4460f8fa8db5bfa22ddb3b5ef28e5d09",
+      "2e598ae796f89acf741389a67635d4fa7b8d99f2ba39b0e46d0516c95db6dfae"
+    ],
+    "placement": "ONE_FROZEN_FIT_POINT_DENSE_TRUE; NO_OUTSIDE_FINISH; STATIC_UNREVIEWED_SOURCE_REFERENCE"
+  },
+  "originalMapPins": {
+    "Boots_albedo": {
+      "path": "assets/blender/hero-remaster/rider/finish-2026-10-05/wardrobe/data/prep02/boots/baseColorTexture.png",
+      "sha256": "5bda21b0d584f91aad83d310b868be6a575d28eddb1170e01e65c0b2071f4044"
+    },
+    "Boots_metallicRoughness": {
+      "path": "assets/blender/hero-remaster/rider/finish-2026-10-05/wardrobe/data/prep02/boots/metallicRoughnessTexture.png",
+      "sha256": "4017261b5f233cba5780578691a1508382295db4b157c4d175ad905bc98e5c30"
+    },
+    "Gloves_baseColor": {
+      "path": "assets/blender/hero-remaster/rider/finish-2026-10-05/wardrobe/data/prep02/gloves/baseColorTexture.png",
+      "sha256": "9633beec8bf2bb3bd73918589b931d2fc4f33f8e3e702415094ed173a129f95c"
+    },
+    "Gloves_metallicRoughness": {
+      "path": "assets/blender/hero-remaster/rider/finish-2026-10-05/wardrobe/data/prep02/gloves/metallicRoughnessTexture.png",
+      "sha256": "a7a712769a73844a9560d4bef1d163ce3fb8721e388d1a7ecfa07a3515280e67"
+    },
+    "Jeans_albedo": {
+      "path": "assets/blender/hero-remaster/rider/finish-2026-10-05/wardrobe/data/prep02/jeans/baseColorTexture.png",
+      "sha256": "29a166cd304c492a025ea15f5949da0b8540e1ce11de196c2ed0b5afec50e810",
+      "size": [
+        4096,
+        4096
+      ]
+    },
+    "Jeans_metallicRoughness": {
+      "path": "assets/blender/hero-remaster/rider/finish-2026-10-05/wardrobe/data/prep02/jeans/metallicRoughnessTexture.png",
+      "sha256": "ebd8ead6d0a1b1bfdada88e16c550781848932832859733e8b00c9ccb7ede516",
+      "size": [
+        4096,
+        4096
+      ]
+    }
+  },
+  "outputRoot": "harness/out/rider-rebuild/production-authoring01",
+  "limits": [
+    "Private editable working context only; zero art/motion/fit/final delivery gates accepted.",
+    "Original source files immutable. No bake, retopology, weight conditioning, solver, generation, render or player export.",
+    "Unrigged dense sources and offline rigs are modeling context; no shared75 moving claim.",
+    "Exactly one visible joined body candidate; canonical42f remains authority pin. New neck candidate replaces explicit bodyCandidate pin after parent review.",
+    "All R0\u2013R5 open; parent alone judges."
+  ]
+}
