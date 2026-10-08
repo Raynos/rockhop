@@ -5,3 +5,10 @@ Finding: preserve the real selected hoodie proportional fit before local axilla 
 Validation: parent read frozen author, parsed AST and rehashed all five immutable input pins plus source and controls. All match source-checkpoint.json.
 
 Limits: unexecuted selected mesh author, no fitted result, dense bake or positive moving-art claim. R0-R5 remain open.
+
+
+Finding: actual selected hoodie fit saves before an axilla new-face assertion stops authoring. All selected faces are not reliably newly generated grid faces.
+
+Validation: exit1 after1.747s; original frozen recipe preserved, exact guard/worker copied and fitted native SHA rehashed.
+
+Limits: grid geometry not independently measured; fit/bake/played outfit unaccepted.
