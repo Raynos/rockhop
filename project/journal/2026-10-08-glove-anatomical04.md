@@ -52,3 +52,10 @@ Finding: Actual saved bilateral solved guides and successful right dense world g
 Validation: CPU2 read-only exit0/5.695s;2x8000 guide vertices,284571 right dense, original native unchanged,0 writes/binds/fits/renders.
 
 Limits: Data enables local authoring; no new art or motion acceptance.
+
+
+Finding: Six observed local palm/thenar/dorsal/cuff/cap Inflate brush supports repair actual achieved guide anatomy while retaining91% guide points and untouched dense selected UV/PBR. Reuse successful rest binding on both sides, no new bind or solve.
+
+Validation: Root full author/freeze sources and exact pins reviewed; world-space outward brush normals account for reflection, finite corrected areas pass; saved aids hidden and final exact7 actual meshes asserted.
+
+Limits: Local edits unexecuted; actual selected-PBR wearing and bilateral clothed grip remain open.

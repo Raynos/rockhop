@@ -1,0 +1,461 @@
+{
+  "acceptedArt": false,
+  "operation": "FROZEN_SIX_LOCAL_ANATOMICAL_INFLATE_EDITS",
+  "recipeSHA256": "6f1e1372b7d37728c1597aeb436c034453249ca9e1e688f9aa277fed7a97b42d",
+  "auditSHA256": "73aca5e009dba934d79356ba820c14579c84870af04753ff1fb10eb9887ecc55",
+  "method": "Compact geodesic Inflate brush on actual saved selected guide; unchanged topology.",
+  "falloffMeters": 0.012,
+  "easeMeters": 0.003,
+  "hands": {
+    "R": {
+      "actualGuide": {
+        "path": "harness/out/rider-rebuild/glove-anatomical04/solved03/guide-R.npz",
+        "sha256": "e1133259db52fdc830c3a561e26d5ae9c0a8ec0939e0359bebdb07f54229592e"
+      },
+      "offsets": {
+        "path": "assets/blender/rider-rebuild/glove-anatomical04/local-offsets04-R.npz",
+        "sha256": "0a5ec5afeabaa1b4e1af0404dc46cbffd575efc17b9a63c206c1593bba9ecff3"
+      },
+      "patches": [
+        {
+          "name": "central-palmar-between-finger-bases",
+          "observedRightWearerVertices": [
+            379,
+            382,
+            409,
+            487,
+            488,
+            489,
+            642,
+            643,
+            652,
+            653
+          ],
+          "originalSelectedGuideCoreVertices": [
+            1836,
+            2001,
+            2039,
+            2304,
+            2530,
+            2615,
+            2616,
+            2684,
+            2738,
+            2857,
+            2956,
+            3047,
+            3525,
+            3526,
+            3569,
+            3598,
+            3686,
+            3840,
+            3841,
+            3883,
+            3956,
+            4063,
+            4133,
+            4214,
+            4240,
+            4294,
+            5931,
+            5960,
+            6029
+          ],
+          "mode": "INFLATE",
+          "depthMeters": 0.009068294534901012,
+          "actualOutsideCoreCount": 11,
+          "maximumMeasuredCoreCrossingMeters": 0.004951140580722376,
+          "supportedVertices": 180,
+          "falloffMeters": 0.012
+        },
+        {
+          "name": "thumb-root-thenar",
+          "observedRightWearerVertices": [
+            317,
+            321,
+            322,
+            685,
+            686,
+            692
+          ],
+          "originalSelectedGuideCoreVertices": [
+            6428,
+            6608,
+            6609,
+            6648,
+            6663,
+            6757,
+            6927,
+            6969,
+            6970,
+            7158,
+            7203,
+            7209,
+            7253,
+            7268,
+            7273,
+            7275,
+            7294,
+            7487
+          ],
+          "mode": "INFLATE",
+          "depthMeters": 0.006804208909120255,
+          "actualOutsideCoreCount": 6,
+          "maximumMeasuredCoreCrossingMeters": 0.0037458121401280483,
+          "supportedVertices": 190,
+          "falloffMeters": 0.012
+        },
+        {
+          "name": "dorsal-small-spot",
+          "observedRightWearerVertices": [
+            579
+          ],
+          "originalSelectedGuideCoreVertices": [
+            5381,
+            5528,
+            5820
+          ],
+          "mode": "INFLATE",
+          "depthMeters": 0.0036091325836901103,
+          "actualOutsideCoreCount": 1,
+          "maximumMeasuredCoreCrossingMeters": 0.0005818784144007816,
+          "supportedVertices": 50,
+          "falloffMeters": 0.012
+        },
+        {
+          "name": "dorsal-cuff-small-spot",
+          "observedRightWearerVertices": [
+            446,
+            519
+          ],
+          "originalSelectedGuideCoreVertices": [
+            1778,
+            2213,
+            2263,
+            2341,
+            2481,
+            2609
+          ],
+          "mode": "INFLATE",
+          "depthMeters": 0.004384729077008673,
+          "actualOutsideCoreCount": 2,
+          "maximumMeasuredCoreCrossingMeters": 0.001371520697887724,
+          "supportedVertices": 87,
+          "falloffMeters": 0.012
+        },
+        {
+          "name": "pinky-cap",
+          "observedRightWearerVertices": [
+            224,
+            225,
+            226,
+            271,
+            272,
+            273,
+            274,
+            276,
+            277,
+            278,
+            279,
+            280,
+            480
+          ],
+          "originalSelectedGuideCoreVertices": [
+            97,
+            111,
+            124,
+            137,
+            139,
+            160,
+            179,
+            180,
+            230,
+            245,
+            248,
+            249,
+            264,
+            265,
+            282,
+            284,
+            315,
+            337,
+            418,
+            419
+          ],
+          "mode": "INFLATE",
+          "depthMeters": 0.005416644575732118,
+          "actualOutsideCoreCount": 16,
+          "maximumMeasuredCoreCrossingMeters": 0.0022825770986229232,
+          "supportedVertices": 106,
+          "falloffMeters": 0.012
+        },
+        {
+          "name": "ring-cap",
+          "observedRightWearerVertices": [
+            49,
+            215,
+            216,
+            217,
+            219,
+            479
+          ],
+          "originalSelectedGuideCoreVertices": [
+            2210,
+            2245,
+            2400,
+            2401,
+            2402,
+            2474,
+            2502,
+            2505,
+            2549,
+            2550,
+            2551,
+            2590,
+            2636,
+            2658,
+            2756
+          ],
+          "mode": "INFLATE",
+          "depthMeters": 0.0034831062748587197,
+          "actualOutsideCoreCount": 8,
+          "maximumMeasuredCoreCrossingMeters": 0.0004018945507561255,
+          "supportedVertices": 105,
+          "falloffMeters": 0.012
+        }
+      ],
+      "changedVertices": 718,
+      "unchangedVertices": 7282,
+      "maximumOffsetMeters": 0.009068294534901012,
+      "minimumCorrectedTriangleCrossSourceUnits": 6.565212062258853e-06
+    },
+    "L": {
+      "actualGuide": {
+        "path": "harness/out/rider-rebuild/glove-anatomical04/solved03/guide-L.npz",
+        "sha256": "8970b831aecf794dc22da4d37d0989aad35d2ebb241d09ce674675117e96ed4b"
+      },
+      "offsets": {
+        "path": "assets/blender/rider-rebuild/glove-anatomical04/local-offsets04-L.npz",
+        "sha256": "273c74a0182c9973ebc9d5f2b76192570cb964f1c060f062b71eec466d1b9d73"
+      },
+      "patches": [
+        {
+          "name": "central-palmar-between-finger-bases",
+          "observedRightWearerVertices": [
+            379,
+            382,
+            409,
+            487,
+            488,
+            489,
+            642,
+            643,
+            652,
+            653
+          ],
+          "originalSelectedGuideCoreVertices": [
+            1836,
+            2001,
+            2039,
+            2304,
+            2530,
+            2615,
+            2616,
+            2684,
+            2738,
+            2857,
+            2956,
+            3047,
+            3525,
+            3526,
+            3569,
+            3598,
+            3686,
+            3840,
+            3841,
+            3883,
+            3956,
+            4063,
+            4133,
+            4214,
+            4240,
+            4294,
+            5931,
+            5960,
+            6029
+          ],
+          "mode": "INFLATE",
+          "depthMeters": 0.00868533539749543,
+          "actualOutsideCoreCount": 11,
+          "maximumMeasuredCoreCrossingMeters": 0.005450421547636171,
+          "supportedVertices": 177,
+          "falloffMeters": 0.012
+        },
+        {
+          "name": "thumb-root-thenar",
+          "observedRightWearerVertices": [
+            317,
+            321,
+            322,
+            685,
+            686,
+            692
+          ],
+          "originalSelectedGuideCoreVertices": [
+            6428,
+            6608,
+            6609,
+            6648,
+            6663,
+            6757,
+            6927,
+            6969,
+            6970,
+            7158,
+            7203,
+            7209,
+            7253,
+            7268,
+            7273,
+            7275,
+            7294,
+            7487
+          ],
+          "mode": "INFLATE",
+          "depthMeters": 0.006783410045106616,
+          "actualOutsideCoreCount": 6,
+          "maximumMeasuredCoreCrossingMeters": 0.00372509888932183,
+          "supportedVertices": 190,
+          "falloffMeters": 0.012
+        },
+        {
+          "name": "dorsal-small-spot",
+          "observedRightWearerVertices": [
+            579
+          ],
+          "originalSelectedGuideCoreVertices": [
+            5381,
+            5528,
+            5820
+          ],
+          "mode": "INFLATE",
+          "depthMeters": 0.0036703422942893802,
+          "actualOutsideCoreCount": 1,
+          "maximumMeasuredCoreCrossingMeters": 0.0006430469445530302,
+          "supportedVertices": 50,
+          "falloffMeters": 0.012
+        },
+        {
+          "name": "dorsal-cuff-small-spot",
+          "observedRightWearerVertices": [
+            446,
+            519
+          ],
+          "originalSelectedGuideCoreVertices": [
+            1778,
+            2213,
+            2263,
+            2341,
+            2481,
+            2609
+          ],
+          "mode": "INFLATE",
+          "depthMeters": 0.0039827521460777116,
+          "actualOutsideCoreCount": 2,
+          "maximumMeasuredCoreCrossingMeters": 0.0009707186493927909,
+          "supportedVertices": 87,
+          "falloffMeters": 0.012
+        },
+        {
+          "name": "pinky-cap",
+          "observedRightWearerVertices": [
+            224,
+            225,
+            226,
+            271,
+            272,
+            273,
+            274,
+            276,
+            277,
+            278,
+            279,
+            280,
+            480
+          ],
+          "originalSelectedGuideCoreVertices": [
+            97,
+            111,
+            124,
+            137,
+            139,
+            160,
+            179,
+            180,
+            230,
+            245,
+            248,
+            249,
+            264,
+            265,
+            282,
+            284,
+            315,
+            337,
+            418,
+            419
+          ],
+          "mode": "INFLATE",
+          "depthMeters": 0.005491496097966082,
+          "actualOutsideCoreCount": 16,
+          "maximumMeasuredCoreCrossingMeters": 0.0023549351047870612,
+          "supportedVertices": 106,
+          "falloffMeters": 0.012
+        },
+        {
+          "name": "ring-cap",
+          "observedRightWearerVertices": [
+            49,
+            215,
+            216,
+            217,
+            219,
+            479
+          ],
+          "originalSelectedGuideCoreVertices": [
+            2210,
+            2245,
+            2400,
+            2401,
+            2402,
+            2474,
+            2502,
+            2505,
+            2549,
+            2550,
+            2551,
+            2590,
+            2636,
+            2658,
+            2756
+          ],
+          "mode": "INFLATE",
+          "depthMeters": 0.0034883094239582337,
+          "actualOutsideCoreCount": 7,
+          "maximumMeasuredCoreCrossingMeters": 0.0004355686610580399,
+          "supportedVertices": 105,
+          "falloffMeters": 0.012
+        }
+      ],
+      "changedVertices": 715,
+      "unchangedVertices": 7285,
+      "maximumOffsetMeters": 0.008685335397495431,
+      "minimumCorrectedTriangleCrossSourceUnits": 4.614672834581686e-06
+    }
+  },
+  "limits": [
+    "Local brush source is not wearing-fit or art acceptance.",
+    "No final appearance geometry is replaced; untouched dense selected UV/PBR follows existing binding."
+  ]
+}

@@ -1505,3 +1505,5 @@ October8 actual selected boot sculpt PBR exit0/14.972s: root2views keep genuine 
 October8 one bounded actual-native boot probe source reviewed to distinguish distal toe under-carving from visible proximal outer-wall exposure. No model edits or new art acceptance; local anatomical correction depends on actual result.
 
 October8 whole jeans editable8fbc94e5 saved, direct4K gate exit1/48.942s before0bakes. Pelvis both pass; root localizes621far to rearunderbody and R48miss/12cross to frontcrotch sideplane. Preserve working capture, local source-semantic correction next; no globalray increase or full outfit acceptance.
+
+October8 one local selected-glove guide repair frozen from actual palm/thenar/tip crossings: six compact anatomical Inflate supports,91% guide points exact, original dense appearance/UV retained. Reuses successful rest binding with0newbinds/solves, saves actual paired guides before transfer. Root fullsource/pins reviewed; actual wearing/grip unexecuted.
