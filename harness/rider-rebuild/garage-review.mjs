@@ -8,6 +8,7 @@ import { preview } from 'vite';
 import { webkit } from 'playwright';
 import { witnessGlbResponse } from './glb-response-witness.mjs';
 import { inspectPreparedRiderMaterials } from './inspect-prepared-materials.mjs';
+import { inspectActualCuffFragment } from './inspect-posed-cuffs.mjs';
 
 const arg = (name, fallback = '') => process.argv.find(value => value.startsWith(`--${name}=`))?.slice(name.length + 3) ?? fallback;
 const build = path.resolve(arg('build')), out = path.resolve(arg('out'));
@@ -43,6 +44,12 @@ try {
       report.materialProbe = await page.evaluate(inspectPreparedRiderMaterials);
       report.materialProbeRecipeSHA256 = crypto.createHash('sha256')
         .update(fs.readFileSync(new URL('./inspect-prepared-materials.mjs', import.meta.url))).digest('hex');
+    }
+    if (name === 'garage-front' && arg('cuff-probe')) {
+      report.posedCuffProbe = await page.evaluate(inspectActualCuffFragment);
+      report.posedCuffProbeRecipeSHA256 = crypto.createHash('sha256')
+        .update(fs.readFileSync(new URL('./inspect-posed-cuffs.mjs', import.meta.url))).digest('hex');
+      report.probeLimit = 'Read-only synchronous surface inspection stalls this diagnostic capture; use separate uninterrupted films for moving art.';
     }
     await page.screenshot({ path: path.join(out, name + '.png') });
   };
