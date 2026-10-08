@@ -1,0 +1,15 @@
+00:07.042  blend            | Read blend: "/Users/raynos/projects/games/rockhop/harness/out/rider-rebuild/selected-complete-engine01/merge02/complete-selected-native75.blend"
+Traceback (most recent call last):
+  File "/Users/raynos/projects/games/rockhop/assets/blender/rider-rebuild/selected-complete-engine01/export-private.py", line 172, in <module>
+    if __name__ == '__main__': main()
+                               ~~~~^^
+  File "/Users/raynos/projects/games/rockhop/assets/blender/rider-rebuild/selected-complete-engine01/export-private.py", line 93, in main
+    assert native_rest == contract['nativeRest']['bones'], 'Fresh native75 contract must match actual source rest'
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Fresh native75 contract must match actual source rest
+
+Error: script failed, file: 'assets/blender/rider-rebuild/selected-complete-engine01/export-private.py', exiting.
+Blender 5.2.1 LTS (hash 9e2066aef7ef built 2026-08-25 01:35:57)
+scripts disabled for "/Users/raynos/projects/games/rockhop/harness/out/rider-rebuild/selected-complete-engine01/merge02/complete-selected-native75.blend", skipping 'RIG-RiderMetarig_ui.py'
+
+Blender quit

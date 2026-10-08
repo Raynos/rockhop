@@ -89,7 +89,8 @@ def main():
     contract = json.loads(pin(manifest['baseContract']).read_text())
     native_rest = [{'name': b.name, 'parent': b.parent.name if b.parent else None,
                     'head': list(b.head_local), 'tail': list(b.tail_local),
-                    'matrix': [list(row) for row in b.matrix_local]} for b in rig.data.bones]
+                    'matrix': [list(row) for row in b.matrix_local],
+                    'useConnect': b.use_connect, 'useDeform': b.use_deform} for b in rig.data.bones]
     assert native_rest == contract['nativeRest']['bones'], 'Fresh native75 contract must match actual source rest'
     for obj in visible:
         helper['mesh_four'](obj, rig, require_four=obj != body)

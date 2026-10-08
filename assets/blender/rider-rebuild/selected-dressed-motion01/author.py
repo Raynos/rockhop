@@ -59,7 +59,8 @@ def main():
     assert all(layer.material_override is None for layer in scene.view_layers)
     rows = [{'name': b.name, 'parent': b.parent.name if b.parent else None,
              'head': list(b.head_local), 'tail': list(b.tail_local),
-             'matrix': [list(r) for r in b.matrix_local]} for b in rig.data.bones]
+             'matrix': [list(r) for r in b.matrix_local],
+             'useConnect': b.use_connect, 'useDeform': b.use_deform} for b in rig.data.bones]
     assert rows == contract['nativeRest']['bones'], 'Exact corrected75 native rest required'
     names = [b.name for b in rig.data.bones]; meshes = [bpy.data.objects[n] for n in sorted(EXPECTED)]
     full_reference = bpy.data.objects['RiderBody__FullAnatomyReference']; assert full_reference.hide_render
