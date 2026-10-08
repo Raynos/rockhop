@@ -24,6 +24,9 @@ export function selectedRiderAliases(metadata) {
 export function privateEnginePlugin(metadata) {
   const touched = new Set();
   const aliases = selectedRiderAliases(metadata);
+  const preserveImages = metadata.selectedRiderSource?.texturePolicy === 'preserve-authored-images';
+  if (metadata.selectedRiderSource?.texturePolicy && !preserveImages) throw new Error('Private rider: unknown texture policy');
+  if (preserveImages && !Object.keys(aliases).length) throw new Error('Private rider: authored images require exact selected source aliases');
   return {
     name: 'rockhop:private-first-principles-rider', enforce: 'pre',
     generateBundle: { order: 'post', handler(_options, bundle) {
@@ -54,6 +57,15 @@ export function privateEnginePlugin(metadata) {
             `  url = modelAssetUrl((${JSON.stringify(aliases)})[url] ?? url);`);
           touched.add('source-aliases');
         }
+        if (preserveImages) {
+          const shrinkMarker = '          shrinkTextures(g.scene);';
+          if (code.split(shrinkMarker).length !== 2) throw new Error('Private rider build: texture preparation changed');
+          // Review the selected source at its authored resolution. Other models
+          // retain the ordinary game budget; no maps are synthesized or upscaled.
+          code = code.replace(shrinkMarker,
+            `          if (url !== modelAssetUrl(${JSON.stringify(metadata.selectedRiderSource.canonicalLogical)})) shrinkTextures(g.scene);`);
+          touched.add('authored-images');
+        }
         touched.add('metadata');
         return { code: `export const privateRiderMetadata = {}; let privateRiderRequest;
           function loadPrivateRiderMetadata() {
@@ -75,6 +87,7 @@ export function privateEnginePlugin(metadata) {
     buildEnd(error) {
       if (!error && (!touched.has('rider') || !touched.has('parts') || !touched.has('metadata'))) throw new Error('Private rider build did not consume all scoped substitutions');
       if (!error && Object.keys(aliases).length && !touched.has('source-aliases')) throw new Error('Private rider build did not consume selected source aliases');
+      if (!error && preserveImages && !touched.has('authored-images')) throw new Error('Private rider build did not preserve authored images');
     },
   };
 }

@@ -1571,3 +1571,5 @@ October8 actualcomplete selectedGarage02 loads7parts/exactsource andplayed17.04s
 October8 freshAstra07 parentreproduced selectedcuff5.80/5.90mmhoodieoverlap atrest,100%forearmfields; FOUR/runtime notorigin. Concretebilateralproximalguidecufftuck assigned, fingers/PBR unchanged. ActualcorrectedGarage pending;0/6.
 
 October8 selectedPBRbyteexact/UV centers valid; preparedruntime material/texture probe added to existingGarage harness before anyshaderguess. Actualprobe next; allR0-R5open0/6.
+
+October8 Garage03 prepared maps retain blue/high roughness but selected4K intake reduced images to1024/256. Private selected-source policy now preserves authored dimensions; actual before/after next, chrome cause unproven. AllR0-R5open0/6.

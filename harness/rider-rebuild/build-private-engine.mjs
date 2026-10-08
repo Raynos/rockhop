@@ -34,7 +34,8 @@ const endpointIds = [first(metadata.specification.roles.head), ...['left', 'righ
 })];
 const endpointNames = new Set(endpointIds.map(id => metadata.specification.jointNames[id]));
 const runtimeMetadata = { sourceSHA256: metadata.sourceSHA256, metadataSHA256: metadata.metadataSHA256,
-  selectedRiderSource: { modelSlots: Object.keys(mapping), canonicalLogical, sourceSHA256: metadata.sourceSHA256 },
+  selectedRiderSource: { modelSlots: Object.keys(mapping), canonicalLogical, sourceSHA256: metadata.sourceSHA256,
+    texturePolicy: 'preserve-authored-images' },
   specification: metadata.specification, driver: metadata.driver,
   nativeRest: { frame: metadata.nativeRest.frame, bones: metadata.nativeRest.bones.filter(row => endpointNames.has(row.name))
     .map(({ name, head, tail }) => ({ name, head, tail })) } };
@@ -60,6 +61,7 @@ fs.writeFileSync(path.join(out, 'rider-rebuild-inputs.json'), JSON.stringify({
   releaseBuild: false, source, contract, sourceSHA256: sha(sourceBytes), metadataSHA256: sha(metadataBytes),
   actualBuildRecipe: { path: originalPath, sha256: sha(original) },
   runtimeMetadataSHA256: sha(JSON.stringify(runtimeMetadata)),
+  selectedRiderSource: runtimeMetadata.selectedRiderSource,
   poseCalibration: calibrationPath ? { path: calibrationPath, sha256: sha(fs.readFileSync(calibrationPath)), driver: calibration.driver } : null,
   adapter: ['private-rider.mjs', 'private-engine-plugin.mjs', 'new-humanoid-contract.mjs', 'anthropometric-inverse.mjs'].map(name => {
     const file = path.join(root, 'harness/rider-rebuild', name); return { path: file, sha256: sha(fs.readFileSync(file)) };
