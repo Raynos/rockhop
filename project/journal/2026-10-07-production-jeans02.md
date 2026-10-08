@@ -9,3 +9,9 @@ Finding: Local seam/support reconstruction now saves a real native without rerun
 Validation: Author exit0 in2.338s; parent native hash match,2031 changedvertices; outside positions/UV/fields/body/rest assertions exact.
 
 Limits: Actual fit uninspected, no maps or moving art acceptance.
+
+Finding: The local anterior seam repair removes the front skin wedge in actual saved-native rest views.
+
+Validation: Parent viewed all three front/rear/profile PNGs; readonly exit0 in5.374s, native unchanged.
+
+Limits: Rest baseline admits first selected-material transfer only; movement, material and complete outfit unaccepted.
