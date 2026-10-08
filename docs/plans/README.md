@@ -1725,3 +1725,5 @@ Private corrective integration source checkpoint plus actual diagnostic08 emissi
 Native07 parser source repair replaces unsupported ** with pow(), adds per-curve failure attribution and tiny synthetic13driver probe. Parent source reviewed;150algebra/subsetcases pass; actualBlender parser/dependency probe pending before fullimport retry.
 
 Actual diagnostic08 build01 fails unchanged normalJSbudget by114B:717938/717824,exit1/7.559s. No playable result yet; permanent quaternion scratch reuse and redundant world-update removal under explicit current-matrices contract next; historical pinned helper retained.
+
+Fresh Astra19 correction verified against actualauthor05/corrective02 sources: allow regional pelvis/thigh weight editing, smooth whole-face body transition and deliberate posed sculpt; stop vertex-only corrective06 expansion. Preserve selected appearance and verify newlyauthoredFOUR transport. Actualdresseddiagnostic film first; cuff09one structuralattempt remains.

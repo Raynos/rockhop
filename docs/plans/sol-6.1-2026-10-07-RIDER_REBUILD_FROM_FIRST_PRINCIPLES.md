@@ -679,11 +679,18 @@ face mask, as specified below.
   pelvis-only and runtime minimum-gap fitting. Actual saved-pose
   [skin decomposition](../evidence/rider-rebuild/selected-seated-author05/diagnostic01/FINDING.md)
   shows an18.6mm source edge stretched to62.2mm, primarily from changing
-  thigh/pelvis weights. Construct a localized pose-space corrective over
-  posterior/crotch/upper thighs; preserve selected rest shape, UVs/materials
-  and anatomical core IDs. Activate from actual joint flex for generic seated
-  and both-bike motions. Judge the complete dressed moving result and finite
-  body/saddle/self surfaces before export promotion. Production LOD, full
+  thigh/pelvis weights. Correct that demonstrated regional weight transition
+  before authoring a posed volume corrective. Original FOUR is not an artistic
+  constraint: retain immutable sources, but author a declared derivative with
+  coherent pelvis/thigh anchors and smooth connected mesh-ring transitions
+  across lower gluteal fold, crotch and medial upper thigh. Preserve selected
+  appearance, UVs/materials and anatomical landmark identities. Recompute all
+  inverse-skin deltas from the edited weights; old corrective06 deltas cannot
+  be reused against new weights. Exact native/GLB/GPU parity applies to the
+  newly authored derivative, not permanently to defective original weights.
+  The saved author04 pose is rejected evidence, not a final anatomical pose.
+  Judge complete dressed motion and finite body/saddle/self surfaces before
+  promotion; keep all six milestones open. Production LOD, full
   surfaces, anatomy, deep motion and physical-device gates remain open0/6.
   An outside artist is optional; no external-resource wait blocks this work.
 
@@ -753,3 +760,35 @@ failure remains retained. Run the next silent ship gate after the third actual
 construction mutation. Existing-player checks do not qualify this rider.
 AllR0–R5 remain open, accepted0/6; no normal-player promotion, full ship,
 stranger or device acceptance. Artists remain optional.
+
+
+### October8 fresh Astra construction correction after corrective06
+
+The actual corrective02 diagnostic finishes but fails50new jeans self-crossings,
+82body/jeans crossings and550jeans/saddle crossings. Approximately79–85%of the
+small posterior cores reaching the support band does not qualify its surrounding
+shape. Stop extending that vertex-only reconstruction or adjusting its height
+bands. One prepared actual Garage rest/key/rest film remains useful to judge it.
+
+The independent review identifies left native edge8574–8575/right10452–10453:
+18.591mm at rest becomes62.235/62.211mm at the rejected key. The abrupt thigh/pelvis
+weight gradient materially contributes; replacing it by a common average would
+instead compress the edge to14.512/14.537mm. Weight averaging alone is therefore
+not the proposed fix. Author the broad anatomical transition, then the residual
+posed volume, using ordinary native weight/sculpt operations on selected meshes.
+
+All82new body/garment crossings involve eight coarse waistband triangles. Their
+native vertices are3255–3258,3277–3278 and6977–6980,6999–7000. Include whole incident
+faces in a smooth coupled body transition. Preserve continuous body volume inside
+the clothing; locally refine derivative body topology only if its straight face
+chords cannot follow the required curvature. Do not hide or delete new crossings.
+
+Next construction deliverable is an editable selected native master with explicit
+anatomical selection groups, the regional weight edit and seated corrective,
+followed by matching complete dressed standing/seated/return Garage playback with
+an unobscured posterior/profile view. Existing limb/contact controls support pose
+authoring; finite palms/soles/saddle and whole-surface anatomy must all agree.
+Cuff09's source-owned inner-return replacement remains one justified independent
+construction attempt. Stop if it fails; another radial fitting variant is not the
+next action. Preparations, control fixtures and the isolated phone comparison do
+not complete rider milestones.
