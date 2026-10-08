@@ -1523,3 +1523,5 @@ October8 selected-denim whole transfer local continuation frozen from saved8fbc:
 October8 actual original dense hoodie source-pose transport saves complete dressed nativea0e7f1e CPU2exit0/23.855s. Full original topology/UV/4KPBR retained, wearer75 unchanged. Rest surface review and final shared75 garment binding/motion remain unaccepted.
 
 October8 selected boot pair source frozen: retain actual successful curved right pre-cavity surface, author own-side selected left and native75 binding. Stop hidden-body cavity/ease campaign; exact topology outfit masks and actual surface/motion review next. Root read source, AST/17pins pass; not executed or accepted.
+
+October8 required current-player silentMetal gate16 after third construction mutation passes11/11 CPU2guardexit0/6.336s, exactfinish/hash andonetickrestart. Existing player only; new selected rider remains unaccepted0/6.
