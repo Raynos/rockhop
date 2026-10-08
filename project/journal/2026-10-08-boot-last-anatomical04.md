@@ -26,3 +26,10 @@ Finding: Actual selected-upper guide sculpt, dense transfer and continuous cavit
 Validation: CPU2 exit1/74.907s; nativec6d121b3,4537 free guide points move,96813 sole points/113385 tread triangles exact. Cavity result watertight;47/3821 witness samples fail.
 
 Limits: No left/fit/motion acceptance; actual PBR shape review next before deciding local cavity repair.
+
+
+Finding: Actual two-view PBR retains selected curved leather/laces/seams/tread; previous box wall gone. Keep form improvement, reject medial/upperforefoot skin exposure.
+
+Validation: CPU2 render exit0/14.972s; root viewed both.47 leather intersections at toes alone do not explain all visible instep exposure; exterior enclosure must also be checked.
+
+Limits: No whole boot wearing or motion acceptance. Original stock immutable, derivative sole may change if anatomical evidence requires.

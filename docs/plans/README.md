@@ -1499,3 +1499,5 @@ October8 actual boot selected-upper sculpt/cavity/PBR saved nativec6d121b3, CPU2
 October8 one whole original-selected4K jeans transfer source frozen after successful pelvis: actual measured cuffs/crotch, existing1691→26063 projection lineage and four semantic capture regions. Parent source/18pins read; saves native before gate/maps. No whole art/normal/fit/motion acceptance.
 
 October8 current-player silent Metal gate15 after actual construction cadence and hostload60.21→3.57 passes11/11, exit0/5.533s, one-tickrestart5.94ms and deterministic finish/hash unchanged. Prior gate14 timing failure retained. Existing-player safeguard only; rider unaccepted.
+
+October8 actual selected boot sculpt PBR exit0/14.972s: root2views keep genuine curved leather/laces/seams/tread (box wall gone), reject actual medial/upperforefoot skin exposure. Local outer-enclosure and toe cavity repair next; exact derivative sole not sacred if anatomy requires. No wearing/motion acceptance.
