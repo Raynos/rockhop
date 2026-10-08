@@ -1673,3 +1673,5 @@ October8 actual native07 exits1/23.769s before sleeve construction: full dense l
 October8 offline seated author04 source frozen after fresh Astra xhigh review: two collision-gate bugs corrected, six crossing fixtures and19 source pins pass. One guarded four-control solve per bike next; no pose/model/engine or seated-art acceptance yet.
 
 October8 isolated preview uploaded READY; deployment-scoped share access retrieves actual version/catalog without login. Comparison harness now accepts a private URL file for the same actual headless old/new switching test; no token enters committed evidence, remote played verification remains pending.
+
+October8 actual offline author04 fails both bikes in1.677s:~97% footprint overlap but~2% within1mm band,23mm mean hover and4.3mm minima penetration; many new jeans/saddle/self crossings. Fixed limbs pass but no pose promotion. Astra inspects actual residual/geometry before another solve;0/6.
