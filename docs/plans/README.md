@@ -1335,3 +1335,5 @@ October 7 hoodie02 original-PBR inspection source: frozen actual dense helper ve
 October 7 saved hoodie patched-target review rejected: parent inspected actualfront/back/profile; substantial bilateral underarm skin remains despite createdquadgrids. ReadonlyCPU2exit0 in8.222s, source unchanged. One local axilla exterior/ease correction before actualdonor/bake; no whole garment solver or appearance/motion acceptance.
 
 October 7 selected glove03 source-rest rig checkpoint: parent actualcontrol/projectionplots and full author/controls inspected; AST and10input/fourrecipe pins match. Continuous normalized overlapweights and actualposecontrol/UV/shared75 assertions replace retired categoricalwarp. Source unexecuted; actualbilateral originalPBRfit45+15minute block next, no artacceptance.
+
+October 7 required playergate06:10/11 under actualhostload52.71/18cores; readiness315.87ms exceeds300afterautosampling. Exactphysicsfinish/hash/restart pass, sourcefingerprintunchanged. Failure retained before contention inspection/quieter rerun; no waiver/newrider/release verdict.

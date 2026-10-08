@@ -9,3 +9,9 @@ Finding: Required existing-player partial Metal gate passes with no new selected
 Validation: Silent headless11/11, exit0 in9.723s; finish/hash exact, restart one tick. Actual source-stamp warning retained.
 
 Limits: Not a new rider/device/full release verdict.
+
+Finding: Preserve required Metal timing failure under concurrent host load rather than overwrite it.
+
+Validation: 10/11exit1 in12.104s; readyP50315.87ms exceeds300, actualload52.71/18cores. Exactfinish/hash/restart pass; sourcefingerprintfd8fe7c2 unchanged.
+
+Limits: No timing waiver or new rider verdict. Quieter-condition retry pending.
