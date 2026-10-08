@@ -1,0 +1,461 @@
+{
+  "status": "SOURCE REPAIR FROZEN; NO BLENDER RUN",
+  "accepted": false,
+  "authorScriptSHA256": "659dad0c4cfb5140b4be180c05534459ceb4b4eda0049478500ab92032fe6f15",
+  "recipeSHA256": "236488c3e30add7f20f7422e1eb7e9a2234cc7b96976ea4103c1b12d4115da3f",
+  "syntaxParsed": true,
+  "executedStages": [],
+  "sourcePins": [
+    {
+      "path": "harness/out/rider-rebuild/native-hand-repair01/native02/anatomical-hand-rig.blend",
+      "sha256": "42fca617ea8d246a6c3e3ca68a90cd3cb5f3ce8b9bb78130e0e2bbd65f605fac"
+    },
+    {
+      "path": "docs/evidence/rider-rebuild/native-hand-repair01/native02/native-body.npz",
+      "sha256": "e62e9969503b7761e99463eccc3ca7be39e0c230a2948f2f87a224db52d0f9a2"
+    },
+    {
+      "path": "assets/blender/hero-remaster/rider/finish-2026-10-05/wardrobe/data/prep02/jeans/cleaned-donor.npz",
+      "sha256": "c38413a36d564d97f106ebde13bb240d4c7075078ce463f30234a97c0f3d2237"
+    },
+    {
+      "path": "assets/blender/hero-remaster/generation-comparison-2026-10-03/user-agent2/items01/references/jeans-reference01.png",
+      "sha256": "fcbe0655f3b56b50e7c1fbd6a168a89f222486f16e8d23f1b96266110a83b7bf"
+    },
+    {
+      "path": "assets/blender/hero-remaster/rider/finish-2026-10-05/wardrobe/data/prep02/jeans/baseColorTexture.png",
+      "sha256": "29a166cd304c492a025ea15f5949da0b8540e1ce11de196c2ed0b5afec50e810"
+    },
+    {
+      "path": "assets/blender/hero-remaster/rider/finish-2026-10-05/wardrobe/data/prep02/jeans/metallicRoughnessTexture.png",
+      "sha256": "ebd8ead6d0a1b1bfdada88e16c550781848932832859733e8b00c9ccb7ede516"
+    }
+  ],
+  "actualFirstShape": {
+    "actualFirstShape": "harness/out/rider-rebuild/production-jeans01/authored03/production-jeans.blend",
+    "sha256": "c72c31ac322a06e68cdac41323079f23915a8ea8a56bc344bbf0099110073bd5",
+    "targetedShapeRepair": 1,
+    "bodyBoundary": "Actual unchanged body10582; lower-body section observations recorded in repair-source01.json",
+    "donorProjection": "Exterior front/lateral panels below .79m; no pelvis/saddle or posterior leg projection",
+    "bodyFinish": "Regional NEAREST_SURFACEPOINT / OUTSIDE, 4mm offset; central saddle excluded",
+    "nativeSkin": "Retain garment FULL attributes/arrays; explicitly normalize strongest FOUR native deform groups and record removed mass before composition"
+  },
+  "cageVertices": 1691,
+  "cageQuads": 1608,
+  "subdivision2Triangles": 51456,
+  "nonmanifoldEdges": 0,
+  "boundaryCycles": [
+    48,
+    48,
+    72
+  ],
+  "repeatedFaceVertices": 0,
+  "saddleControls": {
+    "frontY": -0.162,
+    "backY": 0.145,
+    "bottomZ": 0.79,
+    "status": "First targeted author03 shape repair. Explicit saddle bridge around unchanged wearer; actual saved native three-view review required before bake."
+  },
+  "saddleActualCageBounds": {
+    "min": [
+      0.0,
+      -0.162,
+      0.79
+    ],
+    "max": [
+      0.0,
+      0.145,
+      0.91
+    ]
+  },
+  "bodySectionObservations": [
+    {
+      "z": 0.114,
+      "observedRightHalfBodyXYZMin": [
+        0.14992853999137878,
+        0.014691999182105064,
+        0.11400000005960464
+      ],
+      "observedRightHalfBodyXYZMax": [
+        0.21363867819309235,
+        0.10107854753732681,
+        0.11400000005960464
+      ],
+      "authoredRing": [
+        0.114,
+        0.178,
+        0.061,
+        0.077,
+        0.081
+      ]
+    },
+    {
+      "z": 0.145,
+      "observedRightHalfBodyXYZMin": [
+        0.1481953114271164,
+        0.022145817056298256,
+        0.14499999582767487
+      ],
+      "observedRightHalfBodyXYZMax": [
+        0.20876169204711914,
+        0.10141417384147644,
+        0.14499999582767487
+      ],
+      "authoredRing": [
+        0.145,
+        0.177,
+        0.059,
+        0.075,
+        0.077
+      ]
+    },
+    {
+      "z": 0.19,
+      "observedRightHalfBodyXYZMin": [
+        0.14048868417739868,
+        0.02350519225001335,
+        0.1899999976158142
+      ],
+      "observedRightHalfBodyXYZMax": [
+        0.21426646411418915,
+        0.10444701462984085,
+        0.1899999976158142
+      ],
+      "authoredRing": [
+        0.19,
+        0.177,
+        0.061,
+        0.075,
+        0.075
+      ]
+    },
+    {
+      "z": 0.28,
+      "observedRightHalfBodyXYZMin": [
+        0.11908886581659317,
+        0.00772776547819376,
+        0.2800000011920929
+      ],
+      "observedRightHalfBodyXYZMax": [
+        0.21968719363212585,
+        0.11287901550531387,
+        0.2800000011920929
+      ],
+      "authoredRing": [
+        0.28,
+        0.169,
+        0.06,
+        0.076,
+        0.078
+      ]
+    },
+    {
+      "z": 0.39,
+      "observedRightHalfBodyXYZMin": [
+        0.10768979042768478,
+        -0.009591899812221527,
+        0.38999998569488525
+      ],
+      "observedRightHalfBodyXYZMax": [
+        0.21763837337493896,
+        0.11045866459608078,
+        0.38999998569488525
+      ],
+      "authoredRing": [
+        0.39,
+        0.163,
+        0.05,
+        0.077,
+        0.08
+      ]
+    },
+    {
+      "z": 0.475,
+      "observedRightHalfBodyXYZMin": [
+        0.09028446674346924,
+        -0.043201327323913574,
+        0.4749999940395355
+      ],
+      "observedRightHalfBodyXYZMax": [
+        0.19820579886436462,
+        0.08085722476243973,
+        0.4749999940395355
+      ],
+      "authoredRing": [
+        0.475,
+        0.144,
+        0.019,
+        0.078,
+        0.084
+      ]
+    },
+    {
+      "z": 0.505,
+      "observedRightHalfBodyXYZMin": [
+        0.0791381374001503,
+        -0.05688020959496498,
+        0.5049999952316284
+      ],
+      "observedRightHalfBodyXYZMax": [
+        0.194661483168602,
+        0.07146429270505905,
+        0.5049999952316284
+      ],
+      "authoredRing": [
+        0.505,
+        0.137,
+        0.007,
+        0.079,
+        0.091
+      ]
+    },
+    {
+      "z": 0.535,
+      "observedRightHalfBodyXYZMin": [
+        0.07203686237335205,
+        -0.0669889971613884,
+        0.5350000262260437
+      ],
+      "observedRightHalfBodyXYZMax": [
+        0.1903918981552124,
+        0.0665038675069809,
+        0.5350000262260437
+      ],
+      "authoredRing": [
+        0.535,
+        0.131,
+        0,
+        0.08,
+        0.096
+      ]
+    },
+    {
+      "z": 0.565,
+      "observedRightHalfBodyXYZMin": [
+        0.06557514518499374,
+        -0.07595481723546982,
+        0.5649999976158142
+      ],
+      "observedRightHalfBodyXYZMax": [
+        0.18900573253631592,
+        0.06406175345182419,
+        0.5649999976158142
+      ],
+      "authoredRing": [
+        0.565,
+        0.127,
+        -0.006,
+        0.083,
+        0.098
+      ]
+    },
+    {
+      "z": 0.605,
+      "observedRightHalfBodyXYZMin": [
+        0.05647430568933487,
+        -0.08757710456848145,
+        0.6050000190734863
+      ],
+      "observedRightHalfBodyXYZMax": [
+        0.19295991957187653,
+        0.06663823872804642,
+        0.6050000190734863
+      ],
+      "authoredRing": [
+        0.605,
+        0.125,
+        -0.01,
+        0.086,
+        0.103
+      ]
+    },
+    {
+      "z": 0.69,
+      "observedRightHalfBodyXYZMin": [
+        0.027580279856920242,
+        -0.11090823262929916,
+        0.6899999976158142
+      ],
+      "observedRightHalfBodyXYZMax": [
+        0.2006133645772934,
+        0.07032214850187302,
+        0.6899999976158142
+      ],
+      "authoredRing": [
+        0.69,
+        0.114,
+        -0.02,
+        0.098,
+        0.111
+      ]
+    },
+    {
+      "z": 0.77,
+      "observedRightHalfBodyXYZMin": [
+        0.0087473439052701,
+        -0.12327925115823746,
+        0.7699999809265137
+      ],
+      "observedRightHalfBodyXYZMax": [
+        0.19943340122699738,
+        0.06307492405176163,
+        0.7699999809265137
+      ],
+      "authoredRing": [
+        0.77,
+        0.104,
+        -0.023,
+        0.11,
+        0.12
+      ]
+    },
+    {
+      "z": 0.83,
+      "observedRightHalfBodyXYZMin": [
+        6.245425902307034e-05,
+        -0.12420032918453217,
+        0.8299999833106995
+      ],
+      "observedRightHalfBodyXYZMax": [
+        0.19301936030387878,
+        0.09631845355033875,
+        0.8299999833106995
+      ],
+      "authoredRing": [
+        0.83,
+        0.099,
+        -0.015,
+        0.119,
+        0.14
+      ]
+    },
+    {
+      "z": 0.91,
+      "observedRightHalfBodyXYZMin": [
+        5.505469016497955e-05,
+        -0.13328516483306885,
+        0.9100000262260437
+      ],
+      "observedRightHalfBodyXYZMax": [
+        0.17347250878810883,
+        0.11300837993621826,
+        0.9100000262260437
+      ],
+      "authoredRing": [
+        0.91,
+        0.098,
+        -0.01,
+        0.13,
+        0.165
+      ]
+    },
+    {
+      "z": 0.957,
+      "observedRightHalfBodyXYZMin": [
+        3.367761382833123e-05,
+        -0.1308310329914093,
+        0.9570000171661377
+      ],
+      "observedRightHalfBodyXYZMax": [
+        0.16960150003433228,
+        0.10013645887374878,
+        0.9570000171661377
+      ],
+      "authoredRing": [
+        0.957,
+        0.194,
+        0.149,
+        0.145
+      ]
+    },
+    {
+      "z": 0.996,
+      "observedRightHalfBodyXYZMin": [
+        1.4766326785320416e-05,
+        -0.13772158324718475,
+        0.9959999918937683
+      ],
+      "observedRightHalfBodyXYZMax": [
+        0.16592101752758026,
+        0.08309630304574966,
+        0.9959999918937683
+      ],
+      "authoredRing": [
+        0.996,
+        0.19,
+        0.146,
+        0.124
+      ]
+    },
+    {
+      "z": 1.021,
+      "observedRightHalfBodyXYZMin": [
+        0.0038303653709590435,
+        -0.14066928625106812,
+        1.0210000276565552
+      ],
+      "observedRightHalfBodyXYZMax": [
+        0.16211281716823578,
+        0.07386191934347153,
+        1.0210000276565552
+      ],
+      "authoredRing": [
+        1.021,
+        0.183,
+        0.144,
+        0.122
+      ]
+    },
+    {
+      "z": 1.047,
+      "observedRightHalfBodyXYZMin": [
+        6.690803274977952e-06,
+        -0.14199107885360718,
+        1.0470000505447388
+      ],
+      "observedRightHalfBodyXYZMax": [
+        0.1582534909248352,
+        0.07039094716310501,
+        1.0470000505447388
+      ],
+      "authoredRing": [
+        1.047,
+        0.18,
+        0.14,
+        0.119
+      ]
+    },
+    {
+      "z": 1.055,
+      "observedRightHalfBodyXYZMin": [
+        3.7369343772297725e-05,
+        -0.14128351211547852,
+        1.0549999475479126
+      ],
+      "observedRightHalfBodyXYZMax": [
+        0.15791580080986023,
+        0.06949185580015182,
+        1.0549999475479126
+      ],
+      "authoredRing": [
+        1.055,
+        0.18,
+        0.14,
+        0.119
+      ]
+    }
+  ],
+  "sectionMethod": "Cheap immutable-array observation: intersect native body triangles with each authored horizontal ring plane; report right-half lower-body extents. Direct artist controls, not registration or body editing.",
+  "nativeSkinPolicy": {
+    "fullInitialization": "Barycentric native body FOUR with authored 80mm hip bridge; complete generated garment FULL retained",
+    "conditionedNativeGroups": "Stable strongest-four normalization",
+    "report": "Maximum/mean removed mass, row counts, influence counts, NPZ hash, native FULL attributes",
+    "motionAcceptance": false
+  },
+  "limits": [
+    "Source topology and source pins only; actual subdivided fitted shape unrun.",
+    "Selected original dense UV/maps/lattice rows unchanged. No maps baked.",
+    "Unchanged body/shared75 and complete visible wearer remain required.",
+    "Parent must inspect same three saved-native views before bake."
+  ]
+}

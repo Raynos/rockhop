@@ -138,87 +138,87 @@
     ],
     [
       0.19,
-      0.173,
-      0.053,
+      0.177,
+      0.061,
       0.075,
       0.075
     ],
     [
       0.28,
-      0.163,
-      0.041,
+      0.169,
+      0.06,
       0.076,
       0.078
     ],
     [
       0.39,
-      0.15,
-      0.024,
+      0.163,
+      0.05,
       0.077,
       0.08
     ],
     [
       0.475,
-      0.14,
-      0.013,
+      0.144,
+      0.019,
       0.078,
       0.084
     ],
     [
       0.505,
       0.137,
-      0.008,
+      0.007,
       0.079,
       0.091
     ],
     [
       0.535,
-      0.135,
-      0.004,
+      0.131,
+      0,
       0.08,
       0.096
     ],
     [
       0.565,
-      0.132,
-      0,
+      0.127,
+      -0.006,
       0.083,
       0.098
     ],
     [
       0.605,
-      0.129,
-      -0.005,
+      0.125,
+      -0.01,
       0.086,
       0.103
     ],
     [
       0.69,
-      0.121,
-      -0.013,
-      0.092,
+      0.114,
+      -0.02,
+      0.098,
       0.111
     ],
     [
       0.77,
-      0.114,
-      -0.018,
-      0.103,
+      0.104,
+      -0.023,
+      0.11,
       0.12
     ],
     [
       0.83,
-      0.108,
-      -0.021,
-      0.11,
-      0.13
+      0.099,
+      -0.015,
+      0.119,
+      0.14
     ],
     [
       0.91,
-      0.104,
-      -0.021,
-      0.147,
-      0.137
+      0.098,
+      -0.01,
+      0.13,
+      0.165
     ]
   ],
   "pelvisRings": [
@@ -226,7 +226,7 @@
       0.957,
       0.194,
       0.149,
-      0.128
+      0.145
     ],
     [
       0.996,
@@ -269,5 +269,20 @@
     "phoneAcceptance": false
   },
   "authoredInput": "",
-  "authoredInputSha256": ""
+  "authoredInputSha256": "",
+  "saddle": {
+    "frontY": -0.162,
+    "backY": 0.145,
+    "bottomZ": 0.79,
+    "status": "First targeted author03 shape repair. Explicit saddle bridge around unchanged wearer; actual saved native three-view review required before bake."
+  },
+  "repairAuthority": {
+    "actualFirstShape": "harness/out/rider-rebuild/production-jeans01/authored03/production-jeans.blend",
+    "sha256": "c72c31ac322a06e68cdac41323079f23915a8ea8a56bc344bbf0099110073bd5",
+    "targetedShapeRepair": 1,
+    "bodyBoundary": "Actual unchanged body10582; lower-body section observations recorded in repair-source01.json",
+    "donorProjection": "Exterior front/lateral panels below .79m; no pelvis/saddle or posterior leg projection",
+    "bodyFinish": "Regional NEAREST_SURFACEPOINT / OUTSIDE, 4mm offset; central saddle excluded",
+    "nativeSkin": "Retain garment FULL attributes/arrays; explicitly normalize strongest FOUR native deform groups and record removed mass before composition"
+  }
 }

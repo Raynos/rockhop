@@ -70,7 +70,10 @@ def production_surface(spec):
                 if level==len(spec['legRings'])-1 and quarter+quarter//2 <= k <= count-quarter-quarter//2:
                     # Inner arc is the authored inseam saddle, not a figure-eight
                     # pinched single point. Front/back endpoints end at pelvis.
-                    x=0; zz=z-.085*max(0,-math.cos(theta))**2
+                    saddle=spec['saddle']
+                    t=(k-(quarter+quarter//2))/(count-3*quarter)
+                    x=0; y=saddle['frontY']+(saddle['backY']-saddle['frontY'])*t
+                    zz=z-(z-saddle['bottomZ'])*math.sin(math.pi*t)**2
                     key=k
                     if key in shared: ids.append(shared[key]); continue
                     shared[key]=len(v)
@@ -107,6 +110,7 @@ def author(spec,out):
     native=pin(spec['native']); densepath=pin(spec['dense']); bodypath=pin(spec['body'])
     bpy.ops.wm.open_mainfile(filepath=str(native))
     body=bpy.data.objects['RiderBody']; rig=bpy.data.objects['RiderSkeleton']; before=signature(body,rig)
+    assert len(body.data.vertices)==10582 and len(rig.data.bones)==75, 'Changed wearer/shared75 authority'
     # Isolate inherited coarse clothing only in this derivative scene.
     for old in list(bpy.data.objects):
         if old not in (body,rig) and old.name.startswith(('RiderJeans','RiderHoodie','RiderGlove','RiderBoot')):
@@ -173,17 +177,32 @@ def author(spec,out):
     sw.vertex_group=group.name
     assert sw.vertex_group==group.name=='SelectedSculptProjection', 'Projection group binding absent'
     for vertex in target.data.vertices:
-        z=vertex.co.z
+        p=vertex.co; z=p.z
         # Keep waist/crotch/cuffs authored. Source projection owns selected folds
         # on broad exterior thigh/knee/shin panels where those forms are real.
         ease=max(0,min(1,(z-.145)/.05,(.96-z)/.09))
-        inside=abs(vertex.co.x)<.065 and z>.72
-        group.add([vertex.index],0 if inside else .78*ease,'REPLACE')
+        # Pelvis/saddle and posterior legs exposed the unchanged wearer in
+        # author03. Donor folds now own only useful exterior front/side panels.
+        centre_y=float(np.interp(z,[r[0] for r in spec['legRings']],[r[2] for r in spec['legRings']]))
+        useful=z<.79 and abs(p.x)>.09 and p.y<centre_y+.025
+        group.add([vertex.index],.78*ease if useful else 0,'REPLACE')
     active(target); bpy.ops.object.modifier_apply(modifier=sw.name)
     # Modifier application can replace RNA data: reacquire, never skip absence.
     projected_group=target.vertex_groups.get('SelectedSculptProjection')
     assert projected_group is not None, 'Applied projection lost its named group'
     target.vertex_groups.remove(projected_group)
+    # Ordinary outside-only cleanup retains loose authored points. The shared
+    # saddle is excluded: a nearest-body point cannot design crotch ease.
+    exterior=target.vertex_groups.new(name='BodyOutsideFinish')
+    for vertex in target.data.vertices:
+        p=vertex.co
+        exterior.add([vertex.index],0 if abs(p.x)<.085 and p.z>.72 else 1,'REPLACE')
+    finish=target.modifiers.new('Regional unchanged body outside finish','SHRINKWRAP')
+    finish.target=body; finish.wrap_method='NEAREST_SURFACEPOINT'; finish.wrap_mode='OUTSIDE'
+    finish.offset=.004; finish.vertex_group=exterior.name
+    active(target); bpy.ops.object.modifier_apply(modifier=finish.name)
+    exterior=target.vertex_groups.get('BodyOutsideFinish'); assert exterior is not None
+    target.vertex_groups.remove(exterior)
     # Restricted body-nearest initialization, then deliberate hip/knee field
     # transitions. Opposite-side leg and upper-body groups cannot leak across.
     source=np.load(bodypath); bv=source['vertices']; bf=source['faces']; coeff=source['nativeCoefficients']; names=source['jointNames'].tolist()
@@ -196,7 +215,7 @@ def author(spec,out):
         mask=(coeff[:,cols].sum(1)>.25)&(bv[:,2]>.10)&(bv[:,2]<1.13)
         if sign: mask&=bv[:,0]*sign>=-.008
         rows=np.flatnonzero(mask[bf].all(1)); trees[side]=(BVHTree.FromPolygons([Vector(p) for p in bv],bf[rows].tolist(),all_triangles=True),rows,allowed)
-    groups={n:target.vertex_groups.new(name=n) for n in sorted(pelvis|{n for n in names if n.startswith(('DEF-thigh','DEF-shin'))})}
+    full=np.zeros((len(target.data.vertices),len(names)),dtype=np.float64)
     for vertex in target.data.vertices:
         p=vertex.co; side='pelvis' if p.z>.95 else ('L' if p.x>=0 else 'R'); tree,rows,allowed=trees[side]
         hit,normal,local,distance=tree.find_nearest(p); tri=bv[bf[rows[local]]]
@@ -211,13 +230,34 @@ def author(spec,out):
         if .87<p.z<.95:
             t=(p.z-.87)/.08; mass=sum(row.values()); row={n:w*(1-t) for n,w in row.items()}; row['DEF-spine']=row.get('DEF-spine',0)+mass*t
         total=sum(row.values()); assert total>0
-        for n,w in row.items(): groups[n].add([vertex.index],w/total,'REPLACE')
+        for n,w in row.items(): full[vertex.index,names.index(n)]=w/total
+    # Explicit native conditioning, before composition. Retain every authored
+    # FULL coefficient as an attribute and a lossless array; deform groups use
+    # normalized FOUR. Removed mass is diagnostic, not motion acceptance.
+    order=np.argsort(-full,axis=1,kind='stable')[:,:4]
+    four=np.zeros_like(full)
+    np.put_along_axis(four,order,np.take_along_axis(full,order,axis=1),axis=1)
+    removed=full.sum(1)-four.sum(1); assert np.all(four.sum(1)>0)
+    four/=four.sum(1)[:,None]
+    target['full_field_joint_names']=json.dumps(names)
+    for col,n in enumerate(names):
+        if np.any(full[:,col]):
+            attr=target.data.attributes.new(name='FULL::'+n,type='FLOAT',domain='POINT')
+            attr.data.foreach_set('value',full[:,col].astype(np.float32))
+        ids=np.flatnonzero(four[:,col]>0)
+        if len(ids):
+            group=target.vertex_groups.new(name=n)
+            for vertex in ids: group.add([int(vertex)],float(four[vertex,col]),'REPLACE')
+    assert np.all(np.count_nonzero(four,axis=1)<=4) and np.max(abs(four.sum(1)-1))<1e-12
     target.parent=rig; target.matrix_parent_inverse=Matrix.Identity(4)
     arm=target.modifiers.new('Shared75 selected jeans deformation','ARMATURE'); arm.object=rig; arm.use_deform_preserve_volume=False
     reference.hide_render=True; reference.hide_set(True); cage.hide_render=True; cage.hide_set(True)
     assert signature(body,rig)==before
     out.mkdir(parents=True); bpy.ops.wm.save_as_mainfile(filepath=str(out/'production-jeans.blend'))
-    report={'accepted':False,'stage':'editable authored source; bake still required','bodyAnd75RestUntouched':True,'nativeSha256':SHA(native),'denseSha256':SHA(densepath),'vertices':len(target.data.vertices),'faces':len(target.data.polygons),'triangles':sum(len(p.vertices)-2 for p in target.data.polygons),'uvLayer':target.data.uv_layers.active.name,'sourceBlendSha256':SHA(out/'production-jeans.blend'),'controls':spec['cuff'],'structuralPolicy':'One authored pass; at most one targeted repair. No body hiding.'}
+    fields=out/'production-jeans-fields.npz'
+    np.savez_compressed(fields,fullCoefficients=full,fourCoefficients=four,removedFourMass=removed,jointNames=np.asarray(names))
+    skin={'initialization':'Native body FOUR barycentric interpolation plus authored hip bridge produces garment FULL','nativeFullAttributes':[a.name for a in target.data.attributes if a.name.startswith('FULL::')],'maximumFullInfluences':int(np.count_nonzero(full,axis=1).max()),'maximumFourInfluences':int(np.count_nonzero(four,axis=1).max()),'maximumRemovedMass':float(removed.max()),'meanRemovedMass':float(removed.mean()),'rowsWithRemovedMass':int(np.count_nonzero(removed>1e-12)),'fields':{'path':str(fields.relative_to(ROOT)),'sha256':SHA(fields)},'motionAcceptance':False}
+    report={'accepted':False,'stage':'editable authored source; bake still required','bodyAnd75RestUntouched':True,'nativeSha256':SHA(native),'denseSha256':SHA(densepath),'vertices':len(target.data.vertices),'faces':len(target.data.polygons),'triangles':sum(len(p.vertices)-2 for p in target.data.polygons),'uvLayer':target.data.uv_layers.active.name,'sourceBlendSha256':SHA(out/'production-jeans.blend'),'controls':spec['cuff'],'saddleControls':spec['saddle'],'skinConditioning':skin,'structuralPolicy':'First actual shape, one targeted repair consumed by this candidate. No body hiding.'}
     (out/'report.json').write_text(json.dumps(report,indent=2)+'\n')
 
 def bake(spec,out):

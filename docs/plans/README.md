@@ -1273,3 +1273,5 @@ October 7 diagnostic renderer source checkpoint: pinned native plus exact actual
 October 7 handedness follow-up: complete left/right region-authored glove meshes now save with distinct anatomy and side-specific digit fields. Boots remain opposite-handed mirrored geometry with rejected forefoot fit; handedness does not establish anatomical fit or moving quality.
 
 October 7 hoodie exact-boundary source checkpoint: live Edit Mode BMesh selection verifies intended boundary edge pairs before Grid Fill; records actual added faces and stops the operator route if a correctly selected patch is unusable. Parent source/AST/five pins match. Shape controls unchanged; unexecuted.
+
+October 7 jeans targeted-repair source checkpoint: explicit front/back saddle ease, body-informed posterior rings, restricted selected fold projection and regional OUTSIDE finishing excluding crotch. Parent source/AST/frozen pins checked; FULL attributes retained and FOUR loss reported. Author04 unexecuted, no bake or art acceptance.

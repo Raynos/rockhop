@@ -37,3 +37,9 @@ Finding: actual saved jeans shape fails rest coverage at saddle, buttocks and po
 Validation: parent viewed front/back/profile actual-native renders; guardexit0 in7.709s, fullwearer visible and exactpins/images retained.
 
 Limits: negative staticdiagnosis only; one targetedshape repair available. No fulloutfit or engine acceptance.
+
+Finding: Author03 exposed saddle, buttocks and rear legs. Author actual crotch ease and body-informed rings directly, preserve selected exterior folds without projecting the pelvis or rear leg inward.
+
+Validation: Parent reviewed changed author/recipe source, parsed AST and rehashed frozen source plus seven authority inputs. Builder's retained topology check reports 1691 vertices, 1608 quads and boundary cycles 48/48/72. Runtime unexecuted.
+
+Limits: One targeted repair candidate, no acceptance. Regional OUTSIDE finishing preserves loose points and excludes the saddle; FULL/FOUR conditioning loss must be measured in the actual run and moving clips.
