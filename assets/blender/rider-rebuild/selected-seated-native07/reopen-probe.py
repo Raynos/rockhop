@@ -44,7 +44,8 @@ def main():
     assert default_values == [0., 0.], ('Saved rest key is not exactly zero', default_values)
     curves = list(rig.animation_data.drivers)
     for name in ('RiderJeans', 'RiderBody'): curves += list(bpy.data.objects[name].data.shape_keys.animation_data.drivers)
-    assert len(curves) == 13 and all(curve.driver.is_simple_expression for curve in curves)
+    assert len(curves) == 13, ('Unexpected native driver count', len(curves))
+    source['check_driver_graph'](curves, require_valid=False)
     role = lambda name: contract['specification']['jointNames'][
         (contract['specification']['roles'][name][0] if isinstance(contract['specification']['roles'][name], list) else contract['specification']['roles'][name])]
     roles = {'pelvis': role('pelvis'), 'L': role('thighLeft'), 'R': role('thighRight')}

@@ -57,6 +57,21 @@ def install_driver(owner, data_path, expression, variables, rig):
     return curve
 
 
+def check_driver_graph(curves, require_valid=True):
+    failures = []
+    for curve in curves:
+        driver = curve.driver
+        if driver.is_simple_expression and (driver.is_valid or not require_valid): continue
+        failures.append({'owner': curve.id_data.name, 'dataPath': curve.data_path,
+            'expression': driver.expression, 'valid': driver.is_valid, 'simple': driver.is_simple_expression,
+            'variables': [{'name': variable.name, 'type': variable.type,
+                'targets': [{'id': target.id.name if target.id else None, 'path': target.data_path,
+                    'bone': target.bone_target, 'space': target.transform_space,
+                    'rotationMode': target.rotation_mode, 'transform': target.transform_type}
+                    for target in variable.targets]} for variable in driver.variables]})
+    assert not failures, 'Built-in driver failures: '+json.dumps(failures, sort_keys=True)
+
+
 def probe_driver_graph(rig, roles, activation, blocks, maths, curves):
     saved = {bone.name: bone.matrix_basis.copy() for bone in rig.pose.bones}
     saved_world = rig.matrix_world.copy()
@@ -73,7 +88,7 @@ def probe_driver_graph(rig, roles, activation, blocks, maths, curves):
             bpy.context.view_layer.update()
             world = [tuple((rig.matrix_world @ rig.pose.bones[roles[key]].matrix).to_quaternion()) for key in ('pelvis', 'L', 'R')]
             expected = maths['expected_weight'](world, activation); actual = [float(block.value) for block in blocks]
-            assert all(curve.driver.is_valid and curve.driver.is_simple_expression for curve in curves), 'Built-in driver graph invalid or requires Python execution'
+            check_driver_graph(curves)
             residual = max(abs(weight-expected) for weight in actual)
             assert residual < 2e-5, ('Driver parity needs parent probe', t, expected, actual, residual)
             probes.append({'t': t, 'commonRigRotation': rotated, 'expected': expected, 'actual': actual, 'maximumResidual': residual})

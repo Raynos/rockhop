@@ -72,4 +72,6 @@ def graph(activation, roles):
     return rows
 
 
-SHAPE_EXPRESSION = 'max(0,1-x)**4*(4*x+1)'
+# Blender's BLI_expr_pylike parser supports pow(), but not Python's **.
+# source/blender/blenlib/intern/expr_pylike_eval.cc: builtin_ops / parse_mul.
+SHAPE_EXPRESSION = 'pow(max(0,1-x),4)*(4*x+1)'

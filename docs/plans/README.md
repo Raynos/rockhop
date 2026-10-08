@@ -1721,3 +1721,5 @@ Diagnostic08 source checkpoint appends actual75jointTRS rest/key/rest clip to fa
 Current-source gate31 afterthirdconstruction passes silentMetal --dev11/11: exactgoldenfinish/hash,20one-tickrestarts, syncedframeP955.75ms. Originalplayer partialgate only; native driver repair and full-outfit failedshape playback next.
 
 Private corrective integration source checkpoint plus actual diagnostic08 emission:17tests pass, native75controlfixture morph0/1/0, originalBIN preserved,225TRS/zeroweighttracks. FAILED requires explicit isolated diagnostic and cannotentercomparison; actualGarage build/play next.
+
+Native07 parser source repair replaces unsupported ** with pow(), adds per-curve failure attribution and tiny synthetic13driver probe. Parent source reviewed;150algebra/subsetcases pass; actualBlender parser/dependency probe pending before fullimport retry.
