@@ -1515,3 +1515,5 @@ October8 actual boot read-only probe exit0/7.355s distinguishes toe cavity and i
 October8 actual local04 bilateral selected glove native saved CPU2exit0/62.47s, both284571dense vertices transfer warning-free on shared75. Keep editable original-PBR pair, pending actual masked surface and moving grip review; outfit/player unaccepted.
 
 October8 independent Astra05 production correction adopted after parent primary-source verification: exact-topology outfit body-face masks, full reference retained; stop hidden-body enclosure-only campaigns. Continuous selected silhouette/openings/dressed motion remain mandatory. Bilateral glove local04 saved; actual equipped complete Garage result next. Rider0/6.
+
+October8 original selected dense hoodie source-pose transport frozen: conventional7bone editable authoring aid preserves full topology/UV/original4KPBR; final wearer75 untouched. Root source and six pins verified; actual fit/rig/motion remain unaccepted.

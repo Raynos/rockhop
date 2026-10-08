@@ -1,0 +1,144 @@
+{
+  "accepted": false,
+  "stage": "FROZEN_ACTUAL_SELECTED_SOURCE_POSE_TRANSPORT_READY_PARENT_CPU2_NO_JOB",
+  "sources": [
+    {
+      "path": "assets/blender/rider-rebuild/shoulder-cage05/author-lattice-negative-do-not-run.py",
+      "sha256": "5731dba67f0de28dd7634357b8d8690d973a6f7f4ec5baf273544806eb704b4b",
+      "AST": "PASS",
+      "execute": false
+    },
+    {
+      "path": "assets/blender/rider-rebuild/shoulder-cage05/author.py",
+      "sha256": "aa6db68a7664b98b3fe043f457676e0231c4230b1a77de1d5e3514b2fa0a9d04",
+      "AST": "PASS",
+      "execute": true
+    },
+    {
+      "path": "assets/blender/rider-rebuild/shoulder-cage05/prepare-controls-coherent-lattice-negative.py",
+      "sha256": "522fb9a4b2551ecb6904cde63bc0dec6ef03ead80290cbaa4ff514fe40fbb648",
+      "AST": "PASS",
+      "execute": false
+    },
+    {
+      "path": "assets/blender/rider-rebuild/shoulder-cage05/prepare-controls-radial-transition-negative.py",
+      "sha256": "974689b6fd29efb5401a8247fac9a2774a5bbda18bedff6fad87002573d8162f",
+      "AST": "PASS",
+      "execute": false
+    },
+    {
+      "path": "assets/blender/rider-rebuild/shoulder-cage05/prepare_controls.py",
+      "sha256": "d516c9bae729455ac4147e42d13159cfffa02f72d4a00b7817b95947485dcedb",
+      "AST": "PASS",
+      "execute": false
+    }
+  ],
+  "controls": {
+    "path": "assets/blender/rider-rebuild/shoulder-cage05/controls.json",
+    "sha256": "1abbc0ce87917b1c9ff968ef9088c9ea6b706c5ee9c3accee7a036f312916f67"
+  },
+  "pins": [
+    {
+      "key": "incomingNative",
+      "path": "harness/out/rider-rebuild/hoodie-shoulder-anatomical04/corrected04/selected-tailored-outfit.blend",
+      "sha256": "baedfa57a5c60ecac292fbc9dc50c6f9cfc77a7d62cddbb7d37fd638a210adcc"
+    },
+    {
+      "key": "incomingReceipt",
+      "path": "harness/out/rider-rebuild/hoodie-shoulder-anatomical04/corrected04/author.json",
+      "sha256": "af79f1d5c36fc87ee14c0bfbaaf81717469ed077b771e31b211aeb48aa9de283"
+    },
+    {
+      "key": "originalDensePBR",
+      "path": ".tmp/generation-comparison-2026-10-03/user-agent2/qualified-hunyuan-paint06/paint/painted.glb",
+      "sha256": "800d7a9717757b90b296a78c605cddb698c68d399a96e403aa381103e77d2eba"
+    },
+    {
+      "key": "canonicalBodyArrays",
+      "path": "docs/evidence/rider-rebuild/native-hand-repair01/native02/native-body.npz",
+      "sha256": "e62e9969503b7761e99463eccc3ca7be39e0c230a2948f2f87a224db52d0f9a2"
+    },
+    {
+      "key": "originalSelectedCompact",
+      "path": "assets/blender/hero-remaster/rider/anatomical-foundation-2026-10-03/user-agent1/selected-hoodie25/crease-normal-candidate.blend",
+      "sha256": "c732d98076f6b9b1a209a45e8a0cddf793484807ea8b3ae9011fa4f82c151df0"
+    },
+    {
+      "key": "signatureHelper",
+      "path": "assets/blender/rider-rebuild/production-hoodie01/author.py",
+      "sha256": "078da52b40e1f5049759314c1794ba6559ac1dae90d79294672c674f2095d14a"
+    }
+  ],
+  "rejectedCheapLatticeDrafts": [
+    {
+      "path": "assets/blender/rider-rebuild/shoulder-cage05/controls-radial-transition-negative.json",
+      "sha256": "f142c7316000a2f17cf3278beab747104cef2dcaa0273253612ccb7ca15f3dda",
+      "stage": "REJECTED_COARSE_CAGE_TRANSITION_BEFORE_BLENDER",
+      "cellCornerDeterminants": {
+        "count": 768,
+        "nonpositive": 34,
+        "minimum": -0.0007629374970743706
+      },
+      "limits": "Cheap rectangular cage diagnostic, not actual mesh fold or clearance measurement. Neither lattice author ran."
+    },
+    {
+      "path": "assets/blender/rider-rebuild/shoulder-cage05/controls-coherent-lattice-negative.json",
+      "sha256": "0f67eeeff9c571fc73a780d162f7f910f45a3b32dadc6a9a47c93029abed1fa4",
+      "stage": "REJECTED_COARSE_CAGE_TRANSITION_BEFORE_BLENDER",
+      "cellCornerDeterminants": {
+        "count": 768,
+        "nonpositive": 31,
+        "minimum": -0.000542649055232466
+      },
+      "limits": "Cheap rectangular cage diagnostic, not actual mesh fold or clearance measurement. Neither lattice author ran."
+    }
+  ],
+  "command": [
+    "/Applications/Blender.app/Contents/MacOS/Blender",
+    "-b",
+    "-t",
+    "2",
+    "--python-exit-code",
+    "1",
+    "--python",
+    "assets/blender/rider-rebuild/shoulder-cage05/author.py",
+    "--",
+    "assets/blender/rider-rebuild/shoulder-cage05/controls.json",
+    "harness/out/rider-rebuild/shoulder-cage05/authored01"
+  ],
+  "guardSeconds": 600,
+  "originalReferenceEvidence": [
+    {
+      "path": ".tmp/generation-comparison-2026-10-03/user-agent2/qualified-hunyuan-paint06/paint/actual-returned-pbr-views/albedo-00.png",
+      "observed": "Rounded original sleeve caps, continuous shoulder slope and armholes."
+    },
+    {
+      "path": ".tmp/generation-comparison-2026-10-03/user-agent2/qualified-hunyuan-paint06/paint/actual-returned-pbr-views/albedo-02.png",
+      "observed": "Original rear shoulder form and chosen PBR are coherent."
+    }
+  ],
+  "actualNewNativeSaved": false,
+  "noBlenderOrRenderJobExecuted": true,
+  "transport": "Conventional temporary7-bone garment-only source-pose armature with preserve-volume. Measured actual sleeve section frames map to canonical rest arm/wrist landmarks. Visible evaluated original-PBR derivative saved; editable original+authoring aid hidden.",
+  "preservation": "Actual selected original716971 vertices/921722 polygons and every UV corner/PBR map retained. Author guards original UV/topology before/after evaluation and body/rest75 exact. Current failedbaedfa57 garment stays hidden toggleable reference.",
+  "limits": [
+    "One frozen garment-only authoring armature pose, no outside/projection/patch/atlas/gain search.",
+    "Original mesh topology, UVs and packed original4K maps remain exact; object affine and one source-pose transport change positions.",
+    "Source has original interior surfaces; no new thickness or new interior is inferred.",
+    "Visible evaluated derivative is saved before field transfer; original selected surface plus temporary7-bone rig remains an editable hidden authoring aid, never a second final skeleton.",
+    "15mm cap longitudinal ease is an artist control, not proven clearance.",
+    "Static unrigged dense working context. Full native75 binding and neutral/reach/raised/return clip remain pending rest-fit judgment.",
+    "Current body/rest75 and every other visible garment remain untouched. AllR0\u2013R5 open. No player export."
+  ],
+  "references": [
+    {
+      "title": "Blender official Lattice Modifier manual",
+      "url": "https://docs.blender.org/manual/en/4.4/modeling/modifiers/deform/lattice.html"
+    },
+    {
+      "title": "Blender official Armature Modifier preserve-volume",
+      "url": "https://docs.blender.org/manual/en/5.1/modeling/modifiers/deform/armature.html"
+    }
+  ],
+  "sourceWeightWrites": "Temporary7-bone source-pose weights only:4096 integer units per row, largest-column residual repair, exact row sum. Bulk group writes preserve original mesh topology/UV/custom normals. Wearer75 untouched."
+}
