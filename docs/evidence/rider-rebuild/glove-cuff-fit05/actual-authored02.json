@@ -1,0 +1,298 @@
+{
+  "acceptedArt": false,
+  "operation": "BILATERAL_LOCAL_PROXIMAL_CUFF_RADIAL_TAPER",
+  "recipeSHA256": "0ae6d20fe4cdb9826804b81b95d99cb361422f2afd3df50f5241dab6e85014dd",
+  "controlsSHA256": "7816db05902dfce7be0d2b18e556a2c2dbf067c69fac1f658bbf4a11d81cb6ea",
+  "sourceMaster": {
+    "path": "harness/out/rider-rebuild/selected-complete-engine01/engine03/rider-private-masked.blend",
+    "sha256": "fdff3433c26c345d6f0555f196033f5ba76791d5d566b448991bd1fab2eff384"
+  },
+  "parentNative": {
+    "path": "harness/out/rider-rebuild/selected-complete-engine01/engine03/rider-private-masked.blend",
+    "sha256": "fdff3433c26c345d6f0555f196033f5ba76791d5d566b448991bd1fab2eff384"
+  },
+  "sourceFullGloves": {
+    "path": "harness/out/rider-rebuild/glove-anatomical04/local04/editable-selected-bilateral-gloves.blend",
+    "sha256": "fa21e40445bfb2dcd75789674adcea28ef7af7877d4ef74b22ac55bafc683d59"
+  },
+  "changedPositionObjects": [
+    "ActualSelectedGlove.L",
+    "ActualSelectedGlove.R"
+  ],
+  "guidesSavedBeforeDenseTransfer": {
+    "path": "harness/out/rider-rebuild/glove-cuff-fit05/authored02/editable-cuff-guides-before-transfer.blend",
+    "sha256": "a7823f08498e9863a9130cba710f5e84ff7afdc7960f02f64c81877eba722ed0"
+  },
+  "newBindCalls": 0,
+  "newWeightComputations": 0,
+  "bakesExecuted": 0,
+  "hands": {
+    "L": {
+      "guide": {
+        "offsets": {
+          "path": "assets/blender/rider-rebuild/glove-cuff-fit05/cuff-offsets-L.npz",
+          "sha256": "6b62ac418cef22373884cf6ccb37847fd5b6cca2e6e4d3f699a5680e8393d8f8"
+        },
+        "previousLocalOffsets": {
+          "path": "assets/blender/rider-rebuild/glove-anatomical04/local-offsets04-L.npz",
+          "sha256": "273c74a0182c9973ebc9d5f2b76192570cb964f1c060f062b71eec466d1b9d73"
+        },
+        "axialTaperStations": [
+          [
+            0.03013073575199084,
+            0.2251148623160126
+          ],
+          [
+            0.03449692565252262,
+            0.18163927757933002
+          ],
+          [
+            0.04748343060231515,
+            0.047137112323318235
+          ]
+        ],
+        "changedGuideVertices": 334,
+        "maximumWorldOffsetM": 0.0091723062525747,
+        "existingLocal04EditedVerticesExactlyUntouched": true,
+        "minimumTriangleCrossSourceUnits": 4.614672834581686e-06,
+        "orientationRepair": {
+          "reducedGuideVertices": [
+            5132,
+            5206,
+            5797,
+            5807,
+            5835,
+            5836
+          ],
+          "passes": 2,
+          "measuredControlsExactlyUnchanged": true,
+          "maximumWorldOffsetReductionM": 0.0017316928931494957,
+          "minimumOriginalVsCorrectedFloat32TriangleNormalDot": 0.009507895268662343
+        },
+        "hoodieWitnessMeasurements": [
+          {
+            "face": 26383,
+            "point": [
+              0.400029315110342,
+              -0.08738494020957646,
+              0.9802773778040653
+            ],
+            "distance": 0.005801868258436835,
+            "signedNormalDistance": 0.0058018682584368335,
+            "guideVertex": 5713,
+            "world": [
+              0.4046258846876851,
+              -0.08963809360122815,
+              0.9830080413136522
+            ],
+            "brushWeight": 1.0,
+            "radialNormalProjectionM": 0.04019983098230382
+          },
+          {
+            "face": 28534,
+            "point": [
+              0.4038543424065632,
+              -0.08091156292825288,
+              0.9764089444108033
+            ],
+            "distance": 0.006518235655781265,
+            "signedNormalDistance": 0.006518235655781267,
+            "guideVertex": 5187,
+            "world": [
+              0.40997272606983554,
+              -0.0824917980063248,
+              0.9780075796135095
+            ],
+            "brushWeight": 1.0,
+            "radialNormalProjectionM": 0.035618419740431874
+          },
+          {
+            "face": 24389,
+            "point": [
+              0.3968503904977638,
+              -0.07854245566249339,
+              0.990977861194492
+            ],
+            "distance": 5.722384321693402e-05,
+            "signedNormalDistance": 5.7223843216934025e-05,
+            "guideVertex": 4968,
+            "world": [
+              0.3968932788836259,
+              -0.07856338374627214,
+              0.9910094391915788
+            ],
+            "brushWeight": 1.0,
+            "radialNormalProjectionM": 0.03303604668304197
+          }
+        ]
+      },
+      "denseMovedVertices": 12907,
+      "maximumDenseWorldOffsetM": 0.009172296251707021,
+      "nonCuffDensePositionsExactlyUnchanged": true,
+      "fullFieldsTopologyUVPBRDigest": "4cc037a4b7e71e8026ee652f49c11680f38bb052086741865aceab32a043b2a7",
+      "denseCuffWitnessAfter": {
+        "nativeVertex": 199533,
+        "point": [
+          0.4004480838775635,
+          -0.08365736156702042,
+          0.979461133480072
+        ],
+        "nearestHoodie": [
+          0.40155503153800964,
+          -0.08410504460334778,
+          0.9800029993057251
+        ],
+        "signedNormalDistanceM": -0.0013112482411088422,
+        "distanceM": 0.001311248168349266
+      }
+    },
+    "R": {
+      "guide": {
+        "offsets": {
+          "path": "assets/blender/rider-rebuild/glove-cuff-fit05/cuff-offsets-R.npz",
+          "sha256": "40c6b3d34853ad287b6506a46b60937881fbf10e287dd6c273ee91d5dc0d1e4c"
+        },
+        "previousLocalOffsets": {
+          "path": "assets/blender/rider-rebuild/glove-anatomical04/local-offsets04-R.npz",
+          "sha256": "0a5ec5afeabaa1b4e1af0404dc46cbffd575efc17b9a63c206c1593bba9ecff3"
+        },
+        "axialTaperStations": [
+          [
+            0.030104318291596342,
+            0.1730532780737147
+          ],
+          [
+            0.034321131991464,
+            0.18817770085057192
+          ],
+          [
+            0.04744979316154316,
+            0.06872045599510937
+          ]
+        ],
+        "changedGuideVertices": 334,
+        "maximumWorldOffsetM": 0.008393257554183502,
+        "existingLocal04EditedVerticesExactlyUntouched": true,
+        "minimumTriangleCrossSourceUnits": 6.565212062258853e-06,
+        "orientationRepair": {
+          "reducedGuideVertices": [
+            5043,
+            5064,
+            5065,
+            5132
+          ],
+          "passes": 2,
+          "measuredControlsExactlyUnchanged": true,
+          "maximumWorldOffsetReductionM": 0.0011616352438546217,
+          "minimumOriginalVsCorrectedFloat32TriangleNormalDot": 0.22229378660446528
+        },
+        "hoodieWitnessMeasurements": [
+          {
+            "face": 10151,
+            "point": [
+              -0.4003966212022687,
+              -0.08766426432987759,
+              0.9792290089660617
+            ],
+            "distance": 0.005913833108935544,
+            "signedNormalDistance": 0.005913712463165502,
+            "guideVertex": 5713,
+            "world": [
+              -0.40464946572670707,
+              -0.08965298210711961,
+              0.9828250814199728
+            ],
+            "brushWeight": 1.0,
+            "radialNormalProjectionM": 0.03939740165628115
+          },
+          {
+            "face": 8222,
+            "point": [
+              -0.40598442562238146,
+              -0.08139736960206691,
+              0.9752326595817485
+            ],
+            "distance": 0.004811714157463276,
+            "signedNormalDistance": 0.004811145901054958,
+            "guideVertex": 5187,
+            "world": [
+              -0.40986033352051365,
+              -0.0823964134684761,
+              0.9779032105457481
+            ],
+            "brushWeight": 1.0,
+            "radialNormalProjectionM": 0.03646938082482684
+          },
+          {
+            "face": 13146,
+            "point": [
+              -0.3964641605715909,
+              -0.07831551126621042,
+              0.9907804577712097
+            ],
+            "distance": 0.0007610210618846774,
+            "signedNormalDistance": 0.0007610210618846773,
+            "guideVertex": 4968,
+            "world": [
+              -0.39710228990994306,
+              -0.0786117434934117,
+              0.991070613715029
+            ],
+            "brushWeight": 1.0,
+            "radialNormalProjectionM": 0.03290171796947313
+          }
+        ]
+      },
+      "denseMovedVertices": 12905,
+      "maximumDenseWorldOffsetM": 0.008399986261243208,
+      "nonCuffDensePositionsExactlyUnchanged": true,
+      "fullFieldsTopologyUVPBRDigest": "8a9e1cf66c192e358cb1117e875759d716eb6f490111b565851b6b2fbec66304",
+      "denseCuffWitnessAfter": {
+        "nativeVertex": 199531,
+        "point": [
+          -0.4002681076526642,
+          -0.083472341299057,
+          0.9791962504386902
+        ],
+        "nearestHoodie": [
+          -0.4013477861881256,
+          -0.08390145748853683,
+          0.9800459742546082
+        ],
+        "signedNormalDistanceM": -0.001439401603420265,
+        "distanceM": 0.0014394016470760107
+      }
+    }
+  },
+  "limits": [
+    "Unaccepted bilateral cuff source; parent judges actual Garage and wrist/grip motion.",
+    "Nearest surface signs are local diagnostics, not a universal containment or device gate."
+  ],
+  "native": {
+    "path": "harness/out/rider-rebuild/glove-cuff-fit05/authored02/complete-selected-cuff-fit05.blend",
+    "sha256": "6a3fcb82e605cc361b3c2b4d3edfd53d588322c0bb677141f4777664e96ebce3"
+  },
+  "visibleMeshes": [
+    "ActualSelectedBoot.L",
+    "ActualSelectedBoot.R",
+    "ActualSelectedGlove.L",
+    "ActualSelectedGlove.R",
+    "RiderBody",
+    "RiderHoodie",
+    "RiderJeans"
+  ],
+  "protectedPartFingerprints": {
+    "RiderBody__FullAnatomyReference": "1ec85510396dd3ef9c5358fa60213d772ae555f9f28d14b949ee6ea6ebe646fc",
+    "ActualSelectedBoot.L": "30802e52b526fd6df820dd4509e3492d8f18ff1abb6952e8f0daf67da21e48ec",
+    "ActualSelectedBoot.R": "56ac0b44f71cc4823d2df1dba8a3583a2a54a7346333c8dd22d95e1c58ebbe9a",
+    "RiderJeans": "cf774a259e6259508ee5c0a240999cfcc3fcf82dd88b32073e9e132d670ce2d7",
+    "RiderBody": "d473be44d788bfd9364a108e57fb9976a9b7bcca7f4e3ff16d1990072bcdd5f6",
+    "RiderHoodie": "98fd77532f4dc018445c95c85562669facf4150a5120062ec2484a1c28e74748"
+  },
+  "renderGloveTopologyUVPBRAndDeliveryFieldsUnchanged": {
+    "L": "09f12d1fce754924843b9ec1df35fc91f3c456db7abb173c79645ad159804402",
+    "R": "a5569bcde04954ce3df9940c70c4e56ab14528dc2ef56979eb7f3dd233ca89e5"
+  },
+  "exact75RestUnchanged": true,
+  "status": "ACTUAL_SELECTED_CUFF_NATIVE_SAVED_PLAYED_REVIEW_PENDING"
+}

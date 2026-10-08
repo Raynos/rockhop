@@ -1585,3 +1585,5 @@ October8 selected already-masked shape-only reexport source reviewed: independen
 October8 cuffauthor01 stopped41.530s at Blender library-name listmutation afterdense transfer, no correctedfinalsave. Fixrequest-list alias only; measuredcontrols/binding unchanged. Actualrerun next,all0/6open.
 
 October8 actualGarage05 provesselected4096²intake/residentpolicy: broadwhite/chrome denimgone withsame7d826source/materialscalars.19.84sorbit playedtoend484frames;parentkeepspolicy. Cuffrepair/completegeneric/ride next;all0/6open.
+
+October8 actualcuff05 saved6a3fcb82 in52.310s: knownlobes now1.31/1.44mm insideactualsleeve, unchangednoncuffdensepositions/otherfive/fullreference/75rest/deliveryfields;0newbindsweightsbakes. Readyexactmaskedreexport thenGarage/gripreview;all0/6open.
