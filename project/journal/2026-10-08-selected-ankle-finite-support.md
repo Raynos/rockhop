@@ -15,3 +15,9 @@ Finding: Derive a private source-bound contact overlay from the actual fixture, 
 Validation: Parent full source review and deterministic generator execution pass; both bike target arrays exactly match, original20degree torso bound retained.
 
 Limits: The unchanged three-candidate solver must still pass actual both-bike replay and moving review. Source/physics/player assets unchanged.
+
+Finding: Keep the actual selected-rider ankle contact as a limited private both-bike played baseline.
+
+Validation: Parent views both natural-playback chronologies and Pro worst frame; all192 physical witnesses per run exact, zero supported gaps above1cm. Rookie hand/sole maxima1.456/0.0041mm; Pro2.392/3.401mm. Parent verifies retained hashes/roundtrips.
+
+Limits: Point/edge geometry, cuffs, hands, neck, deep seated motion, full surfaces, LOD and devices remain unaccepted; allR0–R5 open0/6.

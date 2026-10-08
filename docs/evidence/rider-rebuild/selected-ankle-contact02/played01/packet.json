@@ -1,0 +1,411 @@
+{
+  "accepted": false,
+  "sourceSHA256": "72b90e8790f8490743a75f8b70791aa21edfee6234cec609093e9b62e08d4bfd",
+  "contractSHA256": "2aa39bc8c15738b4ecbd2aac08fd61375e0aa8fd45a0ee2ac3046f577b019728",
+  "calibration": {
+    "path": "assets/blender/rider-rebuild/selected-ankle-contact02/engine05-contact-calibration03.json",
+    "sha256": "b5fb15d7f68b46915d0fc3919620c3aaabc8b819636a930df45766cc3bc6aedd"
+  },
+  "milestones": {
+    "accepted": 0,
+    "total": 6,
+    "open": [
+      "R0",
+      "R1",
+      "R2",
+      "R3",
+      "R4",
+      "R5"
+    ]
+  },
+  "parentJudgment": "KEEP limited private contact baseline after both natural-playback chronologies and Pro presented frame at2.333s. Complete selected outfit retained through riding/lean/wheelie/crash/return; no gross new outfit loss. No broad art, surface, anatomical range, LOD or device acceptance.",
+  "phaseRule": "Supported iff debug.physicalPose===true and state.faulted===null; stale released/crash contact diagnostics excluded.",
+  "runs": {
+    "pro": {
+      "source": {
+        "sha256": "72b90e8790f8490743a75f8b70791aa21edfee6234cec609093e9b62e08d4bfd",
+        "metadataSHA256": "2aa39bc8c15738b4ecbd2aac08fd61375e0aa8fd45a0ee2ac3046f577b019728"
+      },
+      "bike": "pro",
+      "baseline": {
+        "path": "harness/out/rider-rebuild/selected-complete-engine01/ride03-pro-side/report.json",
+        "sha256": "eff5ca35e0ce954683d34c12d151670f37cd70e9110d894b01f7c5f56d42b365",
+        "bytes": 4640180
+      },
+      "physicsReplay": {
+        "comparedSamples": 192,
+        "hashMismatches": [],
+        "stateMismatches": [],
+        "tickMismatches": [],
+        "inputMismatches": [],
+        "allPhysicalWitnessesExact": true
+      },
+      "metrics": {
+        "samples": 192,
+        "supported": 108,
+        "releasedOrCrash": 84,
+        "allBoneFinite": true,
+        "supportedOver1cm": [],
+        "maximumHandGap": {
+          "metres": 0.0023916447383802576,
+          "index": 30,
+          "mediaTimeS": 2.5,
+          "simulationTimeS": 2.5833333333333335,
+          "tick": 310
+        },
+        "maximumSoleGap": {
+          "metres": 0.0034008821189831107,
+          "index": 28,
+          "mediaTimeS": 2.3333333333333335,
+          "simulationTimeS": 2.4166666666666665,
+          "tick": 290
+        },
+        "maximumXYCOMResidualM": 6.690589257974618e-06,
+        "maximumAbsLateralResidualM": 0.000273316910437962,
+        "finalPoseSolveElapsedMs": {
+          "min": 1,
+          "median": 2,
+          "p95": 4,
+          "max": 4
+        },
+        "chosenFlexRadians": {
+          "min": -0.3490658503988659,
+          "median": 0,
+          "p95": 0,
+          "max": 0
+        }
+      },
+      "maximumXYZCOMResidualM": 0.0002733169235211685,
+      "maximumXYZCOMIndex": 31,
+      "continuity": {
+        "supportedAdvancingPairs": 101,
+        "phaseOrResetTransitions": 13,
+        "maximumLocalAnglePair": {
+          "before": 155,
+          "after": 156,
+          "mediaTimeS": 13,
+          "simulationTimeS": 0.7333333333333333,
+          "tickDelta": 10,
+          "maximumLocalAngleRadians": {
+            "value": 1.4759444076981012,
+            "id": "DEF-upper_arm.L"
+          },
+          "maximumWorldDeltaM": {
+            "value": 0.5521659049173863,
+            "id": "DEF-hand.L"
+          }
+        },
+        "limits": "12fps only. World deltas include locomotion. Old matching baseline has no jointPose; cannot attribute large local arm rotations to calibration. Between-sample continuity and anatomy remain unqualified."
+      },
+      "playback": {
+        "ended": true,
+        "durationS": 16,
+        "finalMediaTimeS": 16,
+        "wallSeconds": 16.065,
+        "muted": true,
+        "volume": 0,
+        "playbackRate": 1,
+        "capturedCallbacks": 192,
+        "firstMediaTimeS": 0,
+        "lastMediaTimeS": 15.916666666666666,
+        "maximumMediaGapS": 0.08333333333333393,
+        "maximumWallGapMs": 102,
+        "callbackOmissions": [],
+        "countScope": "Captured callbacks/PNGs, not encoded-frame count"
+      }
+    },
+    "rookie": {
+      "source": {
+        "sha256": "72b90e8790f8490743a75f8b70791aa21edfee6234cec609093e9b62e08d4bfd",
+        "metadataSHA256": "2aa39bc8c15738b4ecbd2aac08fd61375e0aa8fd45a0ee2ac3046f577b019728"
+      },
+      "bike": "rookie",
+      "baseline": {
+        "path": "harness/out/rider-rebuild/selected-complete-engine01/ride02-rookie-side/report.json",
+        "sha256": "01c8a965cc605efa285298ef465c1ace63f7892630f8dfc602ce08c1c3a54a14",
+        "bytes": 4527481
+      },
+      "physicsReplay": {
+        "comparedSamples": 192,
+        "hashMismatches": [],
+        "stateMismatches": [],
+        "tickMismatches": [],
+        "inputMismatches": [],
+        "allPhysicalWitnessesExact": true
+      },
+      "metrics": {
+        "samples": 192,
+        "supported": 192,
+        "releasedOrCrash": 0,
+        "allBoneFinite": true,
+        "supportedOver1cm": [],
+        "maximumHandGap": {
+          "metres": 0.0014564057231997148,
+          "index": 19,
+          "mediaTimeS": 1.5833333333333333,
+          "simulationTimeS": 1.6666666666666667,
+          "tick": 200
+        },
+        "maximumSoleGap": {
+          "metres": 4.094235276674685e-06,
+          "index": 38,
+          "mediaTimeS": 3.1666666666666665,
+          "simulationTimeS": 3.25,
+          "tick": 390
+        },
+        "maximumXYCOMResidualM": 9.50017894302417e-07,
+        "maximumAbsLateralResidualM": 0.00017351094239508513,
+        "finalPoseSolveElapsedMs": {
+          "min": 0,
+          "median": 1,
+          "p95": 3,
+          "max": 4
+        },
+        "chosenFlexRadians": {
+          "min": -0.3490658503988659,
+          "median": 0,
+          "p95": 0,
+          "max": 0
+        }
+      },
+      "maximumXYZCOMResidualM": 0.00017351106437104717,
+      "maximumXYZCOMIndex": 30,
+      "continuity": {
+        "supportedAdvancingPairs": 191,
+        "phaseOrResetTransitions": 0,
+        "maximumLocalAnglePair": {
+          "before": 113,
+          "after": 114,
+          "mediaTimeS": 9.5,
+          "simulationTimeS": 9.583333333333334,
+          "tickDelta": 10,
+          "maximumLocalAngleRadians": {
+            "value": 1.6314864501163693,
+            "id": "DEF-upper_arm.L"
+          },
+          "maximumWorldDeltaM": {
+            "value": 1.3743155959123807,
+            "id": "DEF-thigh.R"
+          }
+        },
+        "limits": "12fps only. World deltas include locomotion. Old matching baseline has no jointPose; cannot attribute large local arm rotations to calibration. Between-sample continuity and anatomy remain unqualified."
+      },
+      "playback": {
+        "ended": true,
+        "durationS": 16,
+        "finalMediaTimeS": 16,
+        "wallSeconds": 16.058,
+        "muted": true,
+        "volume": 0,
+        "playbackRate": 1,
+        "capturedCallbacks": 191,
+        "firstMediaTimeS": 0,
+        "lastMediaTimeS": 15.916666666666666,
+        "maximumMediaGapS": 0.16666666666666607,
+        "maximumWallGapMs": 161,
+        "callbackOmissions": [
+          {
+            "beforeMediaTimeS": 14.833333333333334,
+            "afterMediaTimeS": 15,
+            "beforePresentedCounter": 179,
+            "afterPresentedCounter": 181
+          }
+        ],
+        "countScope": "Captured callbacks/PNGs, not encoded-frame count"
+      }
+    }
+  },
+  "files": [
+    {
+      "source": "harness/out/rider-rebuild/selected-ankle-contact02/ride-pro01/report.json",
+      "path": "pro/report.json.gz",
+      "sourceSHA256": "381a5100549d751c66136c789c1739f06584691a5ac7c9c504dd103fbd58f696",
+      "sourceBytes": 12045180,
+      "storedSHA256": "26d6deea03c8cdbe80da4c5d29d32ed52326cfe2830735c33d9c912c5bae2da7",
+      "storedBytes": 2380548,
+      "encoding": "gzip; filename empty; mtime=0; level6"
+    },
+    {
+      "source": "harness/out/rider-rebuild/selected-ankle-contact02/pro-comparison01.json",
+      "path": "pro/comparison.json.gz",
+      "sourceSHA256": "4bf7abcd6d88d7c9e1a732ec7a03db9f4a90e34972188a5d51aeb995243d467b",
+      "sourceBytes": 65721,
+      "storedSHA256": "e3d9f10069e0e9cd2be4baad06ee863f3bbec9afd71d2c3c6cf1a9701a6b8f57",
+      "storedBytes": 8029,
+      "encoding": "gzip; filename empty; mtime=0; level6"
+    },
+    {
+      "source": "harness/out/rider-rebuild/selected-ankle-contact02/pro-play01/playback.json",
+      "path": "pro/playback.json.gz",
+      "sourceSHA256": "4a4626bd05b5cb7a96d6c06158956aa261959ab02ed6c73e69560e4fd112ce0a",
+      "sourceBytes": 67595,
+      "storedSHA256": "7de4275e6749a33b6f458e21f217636609ad99ae0ce16ef0997bd23dfce4c967",
+      "storedBytes": 11309,
+      "encoding": "gzip; filename empty; mtime=0; level6"
+    },
+    {
+      "source": "harness/out/rider-rebuild/selected-ankle-contact02/ride-pro01/ride-played.mp4",
+      "path": "pro/ride-played.mp4",
+      "sourceSHA256": "b89e8152a2cfb113d6b46f7b0b1125efc87ff414422d2293d1c6ac0b57da28be",
+      "sourceBytes": 25239778,
+      "storedSHA256": "b89e8152a2cfb113d6b46f7b0b1125efc87ff414422d2293d1c6ac0b57da28be",
+      "storedBytes": 25239778,
+      "encoding": "original bytes"
+    },
+    {
+      "source": "harness/out/rider-rebuild/selected-ankle-contact02/ride-pro01/ride-proxy.mp4",
+      "path": "pro/ride-proxy.mp4",
+      "sourceSHA256": "2a0172981ce742718aa4ce0acd116582409aa88e27ebd271325efbdf3824e4d5",
+      "sourceBytes": 5223929,
+      "storedSHA256": "2a0172981ce742718aa4ce0acd116582409aa88e27ebd271325efbdf3824e4d5",
+      "storedBytes": 5223929,
+      "encoding": "original bytes"
+    },
+    {
+      "source": "harness/out/rider-rebuild/selected-ankle-contact02/pro-presented-chronology.jpg",
+      "path": "pro/presented-chronology.jpg",
+      "sourceSHA256": "dafa1f943533a0861bfbf5d33162989b75871991b536b737e327d23f9038ed6d",
+      "sourceBytes": 704403,
+      "storedSHA256": "dafa1f943533a0861bfbf5d33162989b75871991b536b737e327d23f9038ed6d",
+      "storedBytes": 704403,
+      "encoding": "original bytes"
+    },
+    {
+      "source": "harness/out/rider-rebuild/selected-ankle-contact02/ride-rookie01/report.json",
+      "path": "rookie/report.json.gz",
+      "sourceSHA256": "5bd343d1a484c3f81b05c7a37957cbd92a6d957a447ebbd729ce5aecb7a0e375",
+      "sourceBytes": 11923048,
+      "storedSHA256": "7229a2022a6351fe90c371962eb36dd50813116dceed80cab3a38e83cd9c7fbf",
+      "storedBytes": 2347110,
+      "encoding": "gzip; filename empty; mtime=0; level6"
+    },
+    {
+      "source": "harness/out/rider-rebuild/selected-ankle-contact02/rookie-comparison01.json",
+      "path": "rookie/comparison.json.gz",
+      "sourceSHA256": "119670171e20e52bf93fda3b5010ba6b3305459f8a2c78d53552a9000b190160",
+      "sourceBytes": 97575,
+      "storedSHA256": "337e5f768e30136f8abd55cc25541030b8057bcb5cb7a78ae2fa8bccffb84f6a",
+      "storedBytes": 11168,
+      "encoding": "gzip; filename empty; mtime=0; level6"
+    },
+    {
+      "source": "harness/out/rider-rebuild/selected-ankle-contact02/rookie-play01/playback.json",
+      "path": "rookie/playback.json.gz",
+      "sourceSHA256": "d814a576e1f3d8434b4c102c9aff703abf7c11fa181b229cc79cfae41970e861",
+      "sourceBytes": 67818,
+      "storedSHA256": "4715bbf0d7ed9b64542db0b8f964feaffed31222a62a4568c3f9ac588bbb8410",
+      "storedBytes": 11240,
+      "encoding": "gzip; filename empty; mtime=0; level6"
+    },
+    {
+      "source": "harness/out/rider-rebuild/selected-ankle-contact02/ride-rookie01/ride-played.mp4",
+      "path": "rookie/ride-played.mp4",
+      "sourceSHA256": "4562982a03f946cd022e570ace40f4ddd3b532734f446d4121ce910753f8cd3c",
+      "sourceBytes": 23553241,
+      "storedSHA256": "4562982a03f946cd022e570ace40f4ddd3b532734f446d4121ce910753f8cd3c",
+      "storedBytes": 23553241,
+      "encoding": "original bytes"
+    },
+    {
+      "source": "harness/out/rider-rebuild/selected-ankle-contact02/ride-rookie01/ride-proxy.mp4",
+      "path": "rookie/ride-proxy.mp4",
+      "sourceSHA256": "bd6ac542a669a01d1c3a7c1effe522006c3580e09ec0e716916c2ab2c970c6bf",
+      "sourceBytes": 5551641,
+      "storedSHA256": "bd6ac542a669a01d1c3a7c1effe522006c3580e09ec0e716916c2ab2c970c6bf",
+      "storedBytes": 5551641,
+      "encoding": "original bytes"
+    },
+    {
+      "source": "harness/out/rider-rebuild/selected-ankle-contact02/rookie-presented-chronology.jpg",
+      "path": "rookie/presented-chronology.jpg",
+      "sourceSHA256": "32b034678f8c3047859c4d42d2b3d09bf63449a6ae8251bfde9f9a0fa6296b18",
+      "sourceBytes": 670830,
+      "storedSHA256": "32b034678f8c3047859c4d42d2b3d09bf63449a6ae8251bfde9f9a0fa6296b18",
+      "storedBytes": 670830,
+      "encoding": "original bytes"
+    },
+    {
+      "source": "harness/out/rider-rebuild/selected-ankle-contact02/actual-frame-near2.333.jpg",
+      "path": "pro/actual-frame-near2.333.jpg",
+      "sourceSHA256": "51df02f22b016bd699349708347c7139e2d156bd7cfb352d5f8cee2f0077e78d",
+      "sourceBytes": 124421,
+      "storedSHA256": "51df02f22b016bd699349708347c7139e2d156bd7cfb352d5f8cee2f0077e78d",
+      "storedBytes": 124421,
+      "encoding": "original bytes"
+    },
+    {
+      "source": "harness/out/rider-rebuild/selected-ankle-contact02/game10/rider-rebuild-inputs.json",
+      "path": "build10-inputs.json.gz",
+      "sourceSHA256": "7ebb56d803932efb510633adb21cc234c0d9c16f6f6c661418f9263da1ebfaa6",
+      "sourceBytes": 4595,
+      "storedSHA256": "7169abc076db1c4cbd39f6447250c202c61d94314eecc95aa7eef53f14dff4a1",
+      "storedBytes": 1530,
+      "encoding": "gzip; filename empty; mtime=0; level6"
+    },
+    {
+      "source": "docs/evidence/rider-rebuild/selected-ankle-contact02/build-guard10/guard.json",
+      "path": "guards/build-guard10.json.gz",
+      "sourceSHA256": "98790a31e6e3869ea24a9f9c5a8f32e9d30794c90b1c1b87e54bdcad8ceac85c",
+      "sourceBytes": 2191,
+      "storedSHA256": "fb7ccb5ce45a5623b0771c17d59a9cd7218228be2e7beb5d45bb9860f487649d",
+      "storedBytes": 782,
+      "encoding": "gzip; filename empty; mtime=0; level6"
+    },
+    {
+      "source": "docs/evidence/rider-rebuild/selected-ankle-contact02/ride-pro-guard01/guard.json",
+      "path": "guards/ride-pro-guard01.json.gz",
+      "sourceSHA256": "c1b58208d9b2388141751ba69a96e4e9ba8181f9277c210538f6d7b80af70c09",
+      "sourceBytes": 4657,
+      "storedSHA256": "e2df7e3cae14a4fae98ae9c67fb4216c936e8c5ea06fdc2744bbcdcc0103a4cc",
+      "storedBytes": 1088,
+      "encoding": "gzip; filename empty; mtime=0; level6"
+    },
+    {
+      "source": "docs/evidence/rider-rebuild/selected-ankle-contact02/ride-rookie-guard01/guard.json",
+      "path": "guards/ride-rookie-guard01.json.gz",
+      "sourceSHA256": "5f308c95570a971be70e6639c1f1c286bc061b2f0a61b19aacc11afeea29447a",
+      "sourceBytes": 4010,
+      "storedSHA256": "42057133644a447294db77c6f299a69023e3725a8554e0b896c184f77b604dd8",
+      "storedBytes": 964,
+      "encoding": "gzip; filename empty; mtime=0; level6"
+    },
+    {
+      "source": "docs/evidence/rider-rebuild/selected-ankle-contact02/pro-proxy-guard01/guard.json",
+      "path": "guards/pro-proxy-guard01.json.gz",
+      "sourceSHA256": "788635ee0a30aa20131407923e80b3e2fc8bdc0326ae2ce01dbd4abe57057594",
+      "sourceBytes": 1535,
+      "storedSHA256": "ad7df9c8519f8690e473ca780848ea69af5ac57cadbb859b307ca60da907852f",
+      "storedBytes": 679,
+      "encoding": "gzip; filename empty; mtime=0; level6"
+    },
+    {
+      "source": "docs/evidence/rider-rebuild/selected-ankle-contact02/rookie-proxy-guard01/guard.json",
+      "path": "guards/rookie-proxy-guard01.json.gz",
+      "sourceSHA256": "9356d70d4e2470eb030a6aa36a9f13440937e13601336d735b734513c367846e",
+      "sourceBytes": 1431,
+      "storedSHA256": "2deb82015c87d29d0ae6f352f6f1b1fe86f20c440fbe5188230369c995ba10a6",
+      "storedBytes": 657,
+      "encoding": "gzip; filename empty; mtime=0; level6"
+    },
+    {
+      "source": "docs/evidence/rider-rebuild/selected-ankle-contact02/pro-play-guard01/guard.json",
+      "path": "guards/pro-play-guard01.json.gz",
+      "sourceSHA256": "f6c46298ee7c9f37f59adf431c575d47a1cf6c74f96fbb18e800255e89f56c25",
+      "sourceBytes": 2965,
+      "storedSHA256": "004463a562b90d5ea4bb7233054e213239a6b30dad34bfe49c77514496ec5008",
+      "storedBytes": 828,
+      "encoding": "gzip; filename empty; mtime=0; level6"
+    },
+    {
+      "source": "docs/evidence/rider-rebuild/selected-ankle-contact02/rookie-play-guard01/guard.json",
+      "path": "guards/rookie-play-guard01.json.gz",
+      "sourceSHA256": "fa22f1990e3dd41e4169d6763351381c631bf0d13d7e132a0e327d11a802a897",
+      "sourceBytes": 2962,
+      "storedSHA256": "694a6ea94377cae5ec13d49eba7b1bc1ece16375ebef71e33a2c4c421eb2dce4",
+      "storedBytes": 780,
+      "encoding": "gzip; filename empty; mtime=0; level6"
+    }
+  ],
+  "retention": "Original films/proxies/JPG bytes copied. JSON bytes compressed with Python gzip.GzipFile(filename=\"\",mtime=0,compresslevel=6) and decompression equality verified. No video re-encode or pose/time/camera injection.",
+  "costScope": "elapsedMs statistics describe the reported final pose solve only, not complete frame/CPU/GPU cost."
+}
