@@ -1591,3 +1591,5 @@ October8 actualcuff05 saved6a3fcb82 in52.310s: knownlobes now1.31/1.44mm insidea
 October8 correctedmaskedexport04 stoppedbeforeexport: fingerprintomittedencodedcustom_normal INT16_2D. Addexact2componentint16format; source/tolerance unchanged. Actualrerun next;all0/6open.
 
 October8 correctedcuff maskedexport05 succeeds86.479s: native95a4f14e/GLB72b90e87, independentprotectedsourceexact, maskbytesexact/no reconditioning, decodedFOURmax1.1921e-7. Actualgeneric/Garage/ride next;all0/6open.
+
+October8 requiredcurrent-player gate19passes11/11 in6.331s: boot/byteidenticalclear/crash/onetickrestart, restartframeP95 7.38ms. Existingplayeronly, doesnotacceptselectedrider; all0/6open.
