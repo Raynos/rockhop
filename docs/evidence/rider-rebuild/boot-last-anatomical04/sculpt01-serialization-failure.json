@@ -1,0 +1,38 @@
+{
+  "accepted": false,
+  "status": "ACTUAL_SCULPT01_SERIALIZATION_FAILURE_PRESERVED",
+  "actualSourceSHA256": "2c966f042cfef8fd09fb3f12393ce175fe3a38f2e6f2e20a45d13143690e0818",
+  "actualWorkingNative": {
+    "path": "harness/out/rider-rebuild/boot-last-anatomical04/sculpt01/failed-in-memory.blend",
+    "sha256": "789d4a29b65f02c04cd99abd0ab0e61422d12172a178d6b89a83af792f428b9d",
+    "bytes": 424099133
+  },
+  "lastPersistedReport": {
+    "path": "harness/out/rider-rebuild/boot-last-anatomical04/sculpt01/report.json",
+    "sha256": "b71513cc12418b60c45a96f4718996896c095eea12fd4dfbc94e861eef9f388c",
+    "bytes": 17001
+  },
+  "workerLog": {
+    "path": "docs/evidence/rider-rebuild/boot-last-anatomical04/sculpt-guard01/worker.log",
+    "sha256": "83f01aa6810efd36a9e424f25a0bf9b178b8c5438f3d5fc434890ecfae377fc6",
+    "bytes": 3781
+  },
+  "actualError": "TypeError: Object of type float32 is not JSON serializable",
+  "failurePoint": "write_receipt at sculpture line273 before solved-guide snapshot; exception receipt serialization failed again. failed-in-memory.blend did save. No failure.json exists.",
+  "observedBeforeFailure": {
+    "side": "R",
+    "guideVertices": 12204,
+    "guideTriangles": 24436,
+    "connectedComponents": 1,
+    "boundaryEdges": 0,
+    "nonManifoldEdges": 0,
+    "zeroAreaFaces": 0,
+    "inactiveCotangentTriangles": 0,
+    "unanchoredZeroActiveIncidentVertices": 0,
+    "nativeModifierStageLogsEmpty": true,
+    "LNotAuthored": true
+  },
+  "smallestFix": "Convert completed numeric_movement_floor expression to Python float, preserving its exact computed value; no anatomy/solve/threshold changes.",
+  "lightweightValidation": "Bundled Python3.13/NumPy scalar regression: prior expression is numpy.float32; float(result) preserves exact value and JSON serialization succeeds. AST/13pins/diff-check pass. No Blender/model job.",
+  "nextFrozenCheckpoint": "docs/evidence/rider-rebuild/boot-last-anatomical04/sculpt02-source-checkpoint.json"
+}

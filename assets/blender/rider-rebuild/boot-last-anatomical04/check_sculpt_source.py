@@ -48,7 +48,7 @@ report=dict(accepted=False,status='ONE_SELECTED_SURFACE_SCULPT_SOURCE_READY_UNEX
     recipeSHA256=sha(source),controlsSHA256=sha(controls),
     noBlenderModelBakeRenderOrDenseArrayJobExecuted=True,
     command=['/Applications/Blender.app/Contents/MacOS/Blender','-b','-t','2','--python-exit-code','1',
-             '--python',str(source.relative_to(ROOT)),'--','harness/out/rider-rebuild/boot-last-anatomical04/sculpt01'],
+             '--python',str(source.relative_to(ROOT)),'--','harness/out/rider-rebuild/boot-last-anatomical04/sculpt02'],
     leaseRequirement='Parent original serial CPU2/model/memory guard,180second cap. Source never launches itself.',
     supportedBounds=c['limits'],
     runtimeGates=[
@@ -79,6 +79,6 @@ report=dict(accepted=False,status='ONE_SELECTED_SURFACE_SCULPT_SOURCE_READY_UNEX
       'Guide is a hidden derivative authoring tool; it never replaces the dense selected exterior.',
       'Inner-quarter chart transfer is honest original PBR ancestry, not a new coherent baked lining.',
       c['motionRequired']])
-output=ROOT/'docs/evidence/rider-rebuild/boot-last-anatomical04/sculpt-source-checkpoint.json'
+output=ROOT/'docs/evidence/rider-rebuild/boot-last-anatomical04/sculpt02-source-checkpoint.json'
 output.write_text(json.dumps(report,indent=2)+'\n')
 print(json.dumps(dict(status=report['status'],pins=len(rows),recipeSHA256=report['recipeSHA256'],controlsSHA256=report['controlsSHA256'])))

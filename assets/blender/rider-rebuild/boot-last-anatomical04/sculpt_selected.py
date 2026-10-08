@@ -261,7 +261,7 @@ def sculpture(source, side, frame, origin, receipt, old, checkpoint):
     anchor_errors=np.linalg.norm(solved[anchor]-targets_world[anchor],axis=1)
     # This threshold distinguishes a genuine free solve from float roundoff,
     # rather than declaring an anatomical fit or anchor-convergence tolerance.
-    numeric_movement_floor=32.*np.finfo(np.float32).eps*float(np.ptp(guide_before,axis=0).max())
+    numeric_movement_floor=float(32.*np.finfo(np.float32).eps*float(np.ptp(guide_before,axis=0).max()))
     moved_free=int(np.sum(moved[free]>numeric_movement_floor))
     receipt['laplacianSolveWitness']=dict(boundFlag=bool(lap.is_bind),anchors=int(anchor.sum()),
         freeVertices=int(free.sum()),freeVerticesMovedAboveRoundoff=moved_free,

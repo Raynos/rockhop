@@ -12,3 +12,10 @@ Finding: Replace rejected box exterior UNION with ordinary selected-upper guide 
 Validation: Root read full successor source and required saved finite guide before warning/topology/transfer guards; residuals report-only, native C-level errors captured. AST and13pins pass. No new boot sculpt executed.
 
 Limits: Named strengths are authoring controls, not fit; actual original-PBR wearing shape and played ankle/bike motion required. Old cavity source-identity assertion does not prove visible tread loss.
+
+
+Finding: Actual boot selected-upper solve attempt stops serializing a NumPy float32 movement witness. Wrap completed expression in Pythonfloat, preserve exact value and all anatomy/solver controls.
+
+Validation: CPU2 exit1/15.94s, failed-in-memory native789d4a29 saved. Root reviewed one-expression fix; guide12204v24436tris connected/manifold, zero inactive cotangent triangles. Exact scalar JSON regression/AST/13pins pass.
+
+Limits: Actual achieved solve metrics not persisted; no selected boot shape or motion acceptance.
