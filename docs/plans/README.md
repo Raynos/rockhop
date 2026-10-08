@@ -1809,3 +1809,5 @@ Anatomical09 transport02 actual8.829s:2,356 newnative rows exact; selected357,24
 Production25 selected-source full/realLOD derivative source checkpointed: actual boundary identity and barycentric/source-surface/FOUR diagnostic gates; separate selected-source cagebake. First boundedgeometryfamily=stableL/Rboots only,8k each/1mm, nobake.100kfull/45kLOD/60MiB allocations unproved; no compact output or runtime/device/art pass yet.
 
 24h finish plan now distinguishes rejectedauthor01 from mechanicallypassedauthor02/actualloader result, pendingdressedplayback/posedvolume, cuffidentity-provedconstruction, lowerhemrepair, boots-firstproduction and native03controls. AllR0–R5 open; targetOct9 14:05Panama remains stretch, no gatewaiver.
+
+Support02 dressedGarage capture0errors/onebootnav; parentplays28s silent1x naturalend/all63samples+fullprofiles. Selectedoutfit retained, seatedlowerglute/thighshelf/cuffspikes/anklestrip stillREJECTED.59.636developmentrenderFPS/25captureFPS; noGPU/devicepass. Sharedcageposedvolume+cuff/hemconstructionnext.
