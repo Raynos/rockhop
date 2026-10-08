@@ -1,0 +1,111 @@
+{
+  "accepted": false,
+  "status": "GAMEPLAY08_SOURCE_READY_ACTUAL_CAPTURE_PINS_PENDING",
+  "sourcePins": [
+    {
+      "path": "assets/blender/rider-rebuild/selected-seated-anatomical09/append-measured-gameplay08.py",
+      "sha256": "2399678e7c7fff60f2bc7a3aa609dc439e869a5dc6d6287d8b94f1c98180d1a5"
+    },
+    {
+      "path": "assets/blender/rider-rebuild/selected-seated-anatomical09/run-measured-gameplay08.sh",
+      "sha256": "72087625235d75fdc819a3e2df27523212dc1563ed5c8b6c6e168ed0e9e96b02"
+    }
+  ],
+  "knownInputPins": {
+    "native": {
+      "path": "harness/out/rider-rebuild/selected-seated-anatomical09/authored02/selected-anatomical09-weight-only.blend",
+      "sha256": "4a330ae8a5e93c00a1492dbfd28923ff29796650bbae1dacfadc5fcf00a627a0"
+    },
+    "contract": {
+      "path": "harness/out/rider-rebuild/selected-complete-engine01/engine05/rider-contract.json",
+      "sha256": "2aa39bc8c15738b4ecbd2aac08fd61375e0aa8fd45a0ee2ac3046f577b019728"
+    },
+    "inspectionHelper": {
+      "path": "assets/blender/rider-rebuild/selected-seated-anatomical09/sculpt-reference05.py",
+      "sha256": "57ced8447bc80ab541b4240739364f31e4e54c3f13504434b9ddc33466ae3425"
+    },
+    "sculptRecipe": {
+      "path": "assets/blender/rider-rebuild/selected-seated-anatomical09/sculpt03.py",
+      "sha256": "42d7b7cdfb7dea91025b5fe7911409413e352b9623a91df85580f2d2af5d9a5d"
+    },
+    "baseRecipe": {
+      "path": "assets/blender/rider-rebuild/selected-seated-anatomical09/author.py",
+      "sha256": "a862eab5ecc2cd0065fa2d9ca98b7a6d80e2cd94a11800b17364ae3749cca585"
+    },
+    "gameplayConverter": {
+      "path": "assets/blender/rider-rebuild/selected-authoring-motion11/gameplay_convert02.mjs",
+      "sha256": "84ee2f2d11c448666a06ed427dde09793a071e7868cbd2e03b4450b8d07ecfb6"
+    }
+  },
+  "pendingActualInputPins": [
+    "gameplayReceipt",
+    "gameplayPoses"
+  ],
+  "inputSchema": {
+    "accepted": false,
+    "pins": "Exactly native,contract,inspectionHelper,sculptRecipe,baseRecipe,gameplayReceipt,gameplayPoses,gameplayConverter. All real {path,sha256}; no placeholder pins."
+  },
+  "sourceContract": {
+    "upstream": "assets/blender/rider-rebuild/selected-authoring-motion11/gameplay_convert02.mjs",
+    "status": "MEASURED_GAMEPLAY_NATIVE_POSES_UNACCEPTED",
+    "outputs": [
+      "receipt.json",
+      "measured-gameplay-native-world.json"
+    ],
+    "actions": [
+      "RiderGameplayLeanRookie",
+      "RiderGameplayLeanPro"
+    ],
+    "fps": 24,
+    "seconds": 10,
+    "frameRange": [
+      1,
+      241
+    ],
+    "sourceTicks": "0,5,...1200 from actually simulated fixed120Hz gameplay",
+    "inputOrder": [
+      "neutral",
+      "forward",
+      "backward",
+      "neutral-return"
+    ],
+    "surfaceWitnessFrames": [
+      1,
+      49,
+      121,
+      193,
+      241
+    ],
+    "physicsAuthority": "Every sample physicalPose=true, stageClip=null, actual frame.riderBody COM/relative torso angle; source converter independently checks local hierarchy and COM/angle provenance.",
+    "coordinates": "Row-major inverse(C) * inverse(captured RiderSkeleton matrixWorld) * captured bone.matrixWorld. Intake uses original native rest convert_local_to_pose to derive basis TRS.",
+    "endpointMeaning": "Observed real physics endpoints; commanded extrema do not establish equilibrium/profile extrema.",
+    "recipePins": "Converter input recipes pins commonBuild, controls, gameplayControls and gameplayConverter; intake verifies all actual files.",
+    "fieldPresence": "Preserve explicit crashStateMeasured/ragdollStateMeasured; assert frame values only when actually measured. Actual report fault history checked separately."
+  },
+  "construction": "Original selected7 visible meshes plus full reference; preserve Basis/topology/UV/maps/materials/all vertex-group names+fields/rest/source actions. A09_SeatedVolume only, if present, receives new zero-value action. No new shape or rig replacement.",
+  "checkpointBeforeQualifiers": "Uncompressed UNACCEPTED-selected-full-gameplay-actions.blend and checkpoint.json saved, then that actual file reopened before every-frame matrix and protected-field qualification.",
+  "qualifiers": "Native75 every recorded frame within unchanged0.1mm affine bound inside2m; exact original fields/actions/keys/rest; declared full-reference/Body/Jeans native surface arrays; parent full-dressed played review still pending.",
+  "memory": "Uncompressed native save avoids parent-observed compressed-save memory spike without changing data or guard bounds. Streaming complete vertex-group hash avoids millions of retained Python weight dictionaries; hide meshes only during native75 replay and restore all visibility.",
+  "guard": {
+    "path": "assets/blender/hero-remaster/generation-comparison-2026-10-03/user-agent2/run_bounded96.py",
+    "sha256": "cf8acd15d8b7484480bee74d23892be815d955ffd87115d3da8ed228ffb3d916"
+  },
+  "parentCommand": "bash assets/blender/rider-rebuild/selected-seated-anatomical09/run-measured-gameplay08.sh ACTUAL_INPUT.json FRESH_IGNORED_OUTPUT FRESH_EVIDENCE_GUARD",
+  "lightweightInputCommand": "python3 assets/blender/rider-rebuild/selected-seated-anatomical09/append-measured-gameplay08.py --validate-input ACTUAL_INPUT.json",
+  "validation": {
+    "pythonAST": "PASS",
+    "bashSyntax": "PASS",
+    "whitespace": "PASS",
+    "frozen07Unchanged": true,
+    "knownNativeAndContractSHA256": "PASS actual files",
+    "actualInputValidation": "Pending real successful captures/conversion; no synthetic output pins",
+    "nativeReplay": "Not run; parent CPU2 lane only",
+    "converterSchema": "Matches frozen converter84ee2f2d with explicit crash/ragdoll field-presence flags. Converter builder reports3 coordinate/provenance regressions PASS; native08 has not run."
+  },
+  "limits": [
+    "Source checkpoint only; no captured input, native output, moving-art or device acceptance.",
+    "Replay does not replace the live game physics driver.",
+    "No new coupled Body/Jeans sculpt until parent judges actual complete-outfit gameplay film."
+  ],
+  "noHeavyJobByBuilder": true
+}

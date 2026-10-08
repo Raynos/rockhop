@@ -1905,3 +1905,5 @@ Gameplay lean film retains actual crash/ragdoll fields and labels the held input
 Actual gameplay capture01 admitted at51GiB but crossed65GiB during startup after18.091s; no motion receipt or completed film. Retained actual failure; shared growth is not isolated to rider/browser. Retry requires greater headroom, with unchanged selected source and safety limits.
 
 Native gameplay02 source reconstructs live controls from exact captured physical75 frames with source-normalized rest targets and analytic IK warm-start. Parent reviewed source and3coordinate/authority regressions pass. Actual conversion/live controls/readback and complete dressed finite contacts remain unmeasured; not new game clips.
+
+Native gameplay08 full-dressed intake is frozen after parent review: append actual measured75 actions to all7selected meshes, deactivate rejected volume, uncompressed-save/reopen before qualifiers. Known master/recipe pins and AST/Bash syntax pass. Actual capture pins and native replay pending; no geometry/appearance acceptance.
