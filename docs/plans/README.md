@@ -1453,3 +1453,5 @@ October8 current-player Metal gate13 exit0/8.18s,11/11 checks; recorded finish/h
 October8 one selected-boot anatomical regional CSG source is frozen: asymmetric exterior last, continuous eased canonical foot cavity, unchanged original selected exterior outside bounded replacements. Parent source/AST/11pins pass;180second CPU2 attempt next, actual geometry saved before review. No fit/art acceptance.
 
 October8 one jeans material correction source is frozen: separate editable projection receiver and cage from40 actual original-source envelope witnesses. Wearing9565 unchanged; save geometry then physical-source capture gate before six isolated1024 map bakes. Parent reviewed source/pins; no corrected outcome or garment acceptance yet.
+
+October8 actual boot regional CSG exit1/42.63s after saved right union/cavity. Parent rejected two saved-native views: blunt box-like outer quarter/forefoot; protected rear tread also changed. Keep saved negative/cavity evidence, stop unchanged outer-last rerun. No left/material/fit/motion acceptance.
