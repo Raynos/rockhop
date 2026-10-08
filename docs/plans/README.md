@@ -1511,3 +1511,5 @@ October8 one local selected-glove guide repair frozen from actual palm/thenar/ti
 October8 fresh Astra05 source/images review confirmed rectangular hoodie patch introduces14–87mm corner mismatches; parent independently reproduced all8 and stopped zipper method. Owner now restores genuine original rounded sleeve-cap via broad editable source cage/actual arm centers. Complete dressed rest/played reach next; no art acceptance.
 
 October8 actual boot read-only probe exit0/7.355s distinguishes toe cavity and insufficient selected exterior:70cavity-outside,39noouterexit,146outerwall<4mm samples. Specific local toe/forefoot source repair delegated, preserved actual leather form. No geometry or art/motion acceptance.
+
+October8 actual local04 bilateral selected glove native saved CPU2exit0/62.47s, both284571dense vertices transfer warning-free on shared75. Keep editable original-PBR pair, pending actual masked surface and moving grip review; outfit/player unaccepted.

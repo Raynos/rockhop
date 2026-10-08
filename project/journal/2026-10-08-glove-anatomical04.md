@@ -59,3 +59,10 @@ Finding: Six observed local palm/thenar/dorsal/cuff/cap Inflate brush supports r
 Validation: Root full author/freeze sources and exact pins reviewed; world-space outward brush normals account for reflection, finite corrected areas pass; saved aids hidden and final exact7 actual meshes asserted.
 
 Limits: Local edits unexecuted; actual selected-PBR wearing and bilateral clothed grip remain open.
+
+
+Finding: Actual local04 selected glove pair saves successfully using existing successful rest binding for both anatomically placed hands.
+
+Validation: CPU2 exit0/62.47s; each284571dense vertices moves, both native modifier logs empty, shared75 and originalPBR preserved. Native fa21e40445bf retained.
+
+Limits: Parent masked surface and moving grip/release judgment pending;7visible dressed context retains earlier unqualified other garments. No player promotion.
