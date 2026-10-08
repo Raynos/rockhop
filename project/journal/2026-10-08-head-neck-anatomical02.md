@@ -21,3 +21,7 @@ Limits: Shape and independent saved readback pending; connected inner-head sourc
 Finding: Actual broad neck profiles substantially reduce the previous throat shelf and posterior stump/notch; keep as a rest-only authoring improvement.
 Validation: Read-only CPU2 render exit0 in7.185s; parent viewed all4 new images and2 old matched profiles; native unchanged.
 Limits: Residual nape bulge, albedo patching and shading/hair seams remain. Independent readback, clothed head motion and collar clearance untested; no art gate pass.
+
+Finding: Independent saved native retains exact canonical/hand fields and75 rest with one closed connected component; saved upper-normal comparison remains failed.
+Validation: CPU2 readback exit0 in1.516s;6753canonical/1446hand rows, zero boundary/nonmanifold/loose; normalmax0.01461224 versus2e-6 retained.
+Limits: No normal waiver or art acceptance. A confirmed underjaw upper-field jump must be conditioned before the clothed stress action.

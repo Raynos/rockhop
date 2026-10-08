@@ -1419,3 +1419,5 @@ October 8 actual jeans pelvis transfer: CPU2 exit0 in52.414s, three1024 maps/six
 October 8 broad anatomical neck native saved9023618821: CPU2 exit0 in5.064s;19authored sections, exact enclosed inner-rim cap, no ear/exterior-layer deletion. Worker reports zero boundary/nonmanifold/loose and exact retained hands/rest75. Actual matched profiles and independent readback pending; no art/motion acceptance.
 
 October 8 broad-neck actual matched review: parent keeps9023618821 as rest-only authoring improvement over the old throat shelf/posterior stump; all4 new views and2old profiles inspected. Residual nape bulge/albedo/shading seams remain. Readback and clothed head-turn/nod next; no art or rider gate acceptance.
+
+October 8 broad-neck saved readback: one closed connected component,6753canonical/1446hand fields and75 rest exact; CPU2 exit0 in1.516s. Historical upper-normal residual0.01461224 versus2e-6 remains failed/unwaived. Analytic underjaw field discontinuity confirmed; one endpoint conditioning before clothed head stress, no extra known-bad clip.

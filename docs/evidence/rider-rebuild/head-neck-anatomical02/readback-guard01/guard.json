@@ -1,0 +1,52 @@
+{
+  "accepted": false,
+  "lock": "/Users/raynos/projects/localai/.model.lock",
+  "method": "lockf -k",
+  "command": [
+    "/Applications/Blender.app/Contents/MacOS/Blender",
+    "-b",
+    "-t",
+    "2",
+    "--python-exit-code",
+    "1",
+    "--python",
+    "assets/blender/rider-rebuild/head-neck-anatomical02/verify.py",
+    "--",
+    "harness/out/rider-rebuild/head-neck-anatomical02/native02"
+  ],
+  "controllerPID": 79423,
+  "pollSeconds": 1,
+  "startAnonymousBelowGiB": 55,
+  "stopAnonymousGiB": 65,
+  "stopAnonymousPlusWiredGiB": 96,
+  "limitSeconds": 90.0,
+  "guardSHA256": "cf8acd15d8b7484480bee74d23892be815d955ffd87115d3da8ed228ffb3d916",
+  "status": "worker returned; review pending",
+  "samples": [
+    {
+      "seconds": 0,
+      "anonymousGiB": 26.4,
+      "wiredGiB": 6.3,
+      "freeGiB": 44.9
+    },
+    {
+      "seconds": 0.03,
+      "anonymousGiB": 26.4,
+      "wiredGiB": 6.2,
+      "freeGiB": 44.9
+    },
+    {
+      "seconds": 1.065,
+      "anonymousGiB": 26.4,
+      "wiredGiB": 6.5,
+      "freeGiB": 44.6
+    }
+  ],
+  "physicalMemoryBytes": 137438953472,
+  "requiredPhysicalMemoryBytes": 137438953472,
+  "scope": "Future explicitly invoked owned Rockhop job only",
+  "pressureOrSwapLimits": "No separate pressure/swap gate exists in the pinned original guard; none altered",
+  "ownedChildPID": 79432,
+  "exitCode": 0,
+  "elapsedSeconds": 1.516
+}
