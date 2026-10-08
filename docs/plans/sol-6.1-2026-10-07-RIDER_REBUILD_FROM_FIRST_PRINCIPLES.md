@@ -637,14 +637,17 @@ face mask, as specified below.
   baseline, not GPU vertex parity, finite grip or an art/device pass.
 - Next visible result: fresh user-assigned Astra12 xhigh owns actual local
   garment construction, with separate engine intake and deep-crouch builders.
-  [Parent reproduced the causal topology faults](../evidence/rider-rebuild/glove-over-sleeve08/topology-finding03/FINDING.md):
-  selected hoodie terminals are closed caps, not annular knit walls; the
-  radial-layer chart creates new full-construction folds. Glove inner return
-  and axial floor cross visible wrist faces, so hidden-body exemptions do not
-  apply. Replace these defective derivative openings with real local topology,
-  preserving selected exterior ribs/band/lip/fingers and original PBR.
-  Original donors stay immutable; local UV/fields require honest ancestry.
-  No further cap-as-wall fitting or radial-padding campaign. Keep the actual
+  [Full original-source sections](../evidence/rider-rebuild/astra-character-construction12/source-topology01/source-topology.json)
+  correct the earlier sealed-cap inference: eight sections have nested,
+  oppositely wound inner/outer contours. A boundary-free thick garment can
+  have a turned annular lip; a single distal contour does not prove a cap.
+  The derivative radial-layer folds and glove return/floor crossings remain
+  measured faults. Astra12 will retain the genuine paired walls and rebuild
+  a local annular hem at section7, with explicit terminal detail loss and
+  original exterior/UV/PBR ancestry. The right contour is not star-shaped,
+  so sorting vertices by angle is invalid. Keep donors immutable; inspect
+  actual saved construction and dense geometry before export. No further
+  ambiguous-layer collapse or radial-padding campaign. Keep the actual
   selected Garage/game baseline private while the complete repaired model is
   built, exported and played. [Current Garage photos/orbit](../evidence/rider-rebuild/garage-progress-2026-10-08/FINDING.md)
   show the latest integrated outfit before this repair. The newer [both-bike
