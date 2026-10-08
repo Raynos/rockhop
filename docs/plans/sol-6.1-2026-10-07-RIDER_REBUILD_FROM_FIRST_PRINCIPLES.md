@@ -647,7 +647,12 @@ face mask, as specified below.
   No further cap-as-wall fitting or radial-padding campaign. Keep the actual
   selected Garage/game baseline private while the complete repaired model is
   built, exported and played. [Current Garage photos/orbit](../evidence/rider-rebuild/garage-progress-2026-10-08/FINDING.md)
-  show the latest integrated outfit before this repair. Production LOD, full
+  show the latest integrated outfit before this repair. The newer [both-bike
+  Garage orbit](../evidence/rider-rebuild/selected-seated-garage01/played01/FINDING.md)
+  defaults to neutral native75 riding IK on the selected bike. Both UI choices,
+  original outfit and palm/sole targets pass five snapshots; parent viewed
+  natural films. Standing clips require explicit selection. Exact saddle and
+  full surface contact remain unmeasured. Production LOD, full
   surfaces, anatomy, deep motion and physical-device gates remain open0/6.
   An outside artist is optional; no external-resource wait blocks this work.
 

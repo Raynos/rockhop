@@ -1,0 +1,45 @@
+{
+  "accepted": false,
+  "lock": "/Users/raynos/projects/localai/.model.lock",
+  "method": "lockf -k",
+  "command": [
+    "python3",
+    "-c",
+    "import subprocess; from pathlib import Path; base=Path(\"harness/out/rider-rebuild/selected-seated-garage01/played01\"); [(subprocess.run([\"ffmpeg\",\"-v\",\"error\",\"-y\",\"-threads\",\"2\",\"-i\",str(base/bike/\"garage-played.mp4\"),\"-an\",\"-vf\",\"scale=640:-2\",\"-c:v\",\"libx264\",\"-threads\",\"2\",\"-crf\",\"18\",\"-pix_fmt\",\"yuv420p\",str(base/bike/\"garage-proxy.mp4\")],check=True)) for bike in [\"rookie\",\"pro\"]]"
+  ],
+  "controllerPID": 50004,
+  "pollSeconds": 1,
+  "startAnonymousBelowGiB": 55,
+  "stopAnonymousGiB": 65,
+  "stopAnonymousPlusWiredGiB": 96,
+  "limitSeconds": 120.0,
+  "guardSHA256": "cf8acd15d8b7484480bee74d23892be815d955ffd87115d3da8ed228ffb3d916",
+  "status": "worker returned; review pending",
+  "samples": [
+    {
+      "seconds": 0,
+      "anonymousGiB": 34.0,
+      "wiredGiB": 8.6,
+      "freeGiB": 28.2
+    },
+    {
+      "seconds": 0.034,
+      "anonymousGiB": 34.0,
+      "wiredGiB": 8.6,
+      "freeGiB": 28.2
+    },
+    {
+      "seconds": 1.062,
+      "anonymousGiB": 34.4,
+      "wiredGiB": 8.2,
+      "freeGiB": 28.1
+    }
+  ],
+  "physicalMemoryBytes": 137438953472,
+  "requiredPhysicalMemoryBytes": 137438953472,
+  "scope": "Future explicitly invoked owned Rockhop job only",
+  "pressureOrSwapLimits": "No separate pressure/swap gate exists in the pinned original guard; none altered",
+  "ownedChildPID": 50008,
+  "exitCode": 0,
+  "elapsedSeconds": 1.552
+}
