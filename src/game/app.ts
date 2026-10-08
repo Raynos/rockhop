@@ -1327,7 +1327,11 @@ export class App {
     sp.pollMs = sp.advanceMs = 0;
     this.game.lastAdvance.ticks = 0;
     this.game.lastAdvance.physicsMs = 0;
-    const meterVisible = this.screen === 'run' && !this.pause.visible && this.game.phase() !== 'finished' && !this.onboard.visible;
+    const meterVisible = this.screen === 'garage'
+      || (this.screen === 'run' && !this.pause.visible && this.game.phase() !== 'finished' && !this.onboard.visible);
+    if (this.fpsEl.hidden === meterVisible) {
+      this.fpsWindowAt = 0; this.fpsFrames = 0; this.fpsWorstMs = 0;
+    }
     this.fpsEl.hidden = !meterVisible;
     this.perf.root.hidden = !meterVisible || !this.perf.expanded;
     const { frame, meta } = this.mux.poll();
