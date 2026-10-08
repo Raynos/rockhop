@@ -1507,3 +1507,5 @@ October8 one bounded actual-native boot probe source reviewed to distinguish dis
 October8 whole jeans editable8fbc94e5 saved, direct4K gate exit1/48.942s before0bakes. Pelvis both pass; root localizes621far to rearunderbody and R48miss/12cross to frontcrotch sideplane. Preserve working capture, local source-semantic correction next; no globalray increase or full outfit acceptance.
 
 October8 one local selected-glove guide repair frozen from actual palm/thenar/tip crossings: six compact anatomical Inflate supports,91% guide points exact, original dense appearance/UV retained. Reuses successful rest binding with0newbinds/solves, saves actual paired guides before transfer. Root fullsource/pins reviewed; actual wearing/grip unexecuted.
+
+October8 fresh Astra05 source/images review confirmed rectangular hoodie patch introduces14–87mm corner mismatches; parent independently reproduced all8 and stopped zipper method. Owner now restores genuine original rounded sleeve-cap via broad editable source cage/actual arm centers. Complete dressed rest/played reach next; no art acceptance.

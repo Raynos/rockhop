@@ -12,3 +12,10 @@ Finding: Resharpen active construction using actual saved/PBR results: retain co
 Validation: Parent actual four-view hoodie/three-view glove/six-view jeans judgments and actual run receipts linked in plan. Existing-player gate14 timing failure retained.
 
 Limits: AllR0–R5 open; next milestone complete selected dressed movement and Garage, no completed rider claim.
+
+
+Finding: Targeted fresh Astra05 independently traces visible hoodie plates to14–87mm misplaced corners and one-strip gap fill. Stop rectangular patch, restore rounded selected sleeve form through broad editable cage.
+
+Validation: Root independently reproduced all8 actual corner errors and judged4 actual PBR views; original sleeve-center landmarks now measured by owner. Concrete source cage result delegated.
+
+Limits: Advisory applied to next construction, not completed hoodie or motion.
