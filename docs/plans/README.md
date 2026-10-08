@@ -1291,3 +1291,5 @@ October 7 glove fresh bake intake: immutable original geometry/report retained, 
 October 7 actual jeans targeted repair review: parent viewed front/back/profile. Buttock and posterior-leg exposure improves; triangular front crotch skin exposure remains, so rest coverage rejected before maps. Next is direct local sagittal saddle reconstruction around actual underside, retaining useful leg fit. No further broad ring/projection tuning.
 
 October 7 hoodie author03: exact live left boundary selection now creates324+289 real quads; right cut branches before right selection. Parent worker/diagnostic review verifies left API fix, not a completed garment. Preserved unpatched fit remains; direct regional perimeter repair next, no bake.
+
+October 7 direct selected boot sculpt source checkpoint: retain all original dense forefoot vertices/faces/corner UV/4K PBR and useful selected rear; local medial toe Grab, ball width and dorsal lift with coherent L/R transform. Parent source/AST/eight pins checked; no third lattice, run unexecuted and all art gates open.

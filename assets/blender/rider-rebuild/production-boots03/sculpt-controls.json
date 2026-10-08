@@ -1,0 +1,117 @@
+{
+  "accepted": false,
+  "status": "SOURCE_READY_NO_AUTHORING_RUN",
+  "inputs": {
+    "wearer": {
+      "path": "harness/out/rider-rebuild/native-hand-repair01/native02/anatomical-hand-rig.blend",
+      "sha256": "42fca617ea8d246a6c3e3ca68a90cd3cb5f3ce8b9bb78130e0e2bbd65f605fac"
+    },
+    "bodyArrays": {
+      "path": "harness/out/rider-rebuild/native-hand-repair01/native02/native-body.npz",
+      "sha256": "e62e9969503b7761e99463eccc3ca7be39e0c230a2948f2f87a224db52d0f9a2"
+    },
+    "originalPainted": {
+      "path": ".tmp/generation-comparison-2026-10-03/user-agent2/items01/boots/paint01/painted.glb",
+      "sha256": "b8dbd980f4d5a6a46b86db6f315ac630be07c538382a24fa5a2d2002a7d97d8c"
+    },
+    "dense": {
+      "path": "assets/blender/hero-remaster/rider/finish-2026-10-05/wardrobe/data/prep02/boots/cleaned-donor.npz",
+      "sha256": "9849de6444632c2dcd1e1d76fda42ac27a7cbe8c7d2c0263ab2082e24b94777f"
+    },
+    "albedo": {
+      "path": "assets/blender/hero-remaster/rider/finish-2026-10-05/wardrobe/data/prep02/boots/baseColorTexture.png",
+      "sha256": "5bda21b0d584f91aad83d310b868be6a575d28eddb1170e01e65c0b2071f4044"
+    },
+    "metallicRoughness": {
+      "path": "assets/blender/hero-remaster/rider/finish-2026-10-05/wardrobe/data/prep02/boots/metallicRoughnessTexture.png",
+      "sha256": "4017261b5f233cba5780578691a1508382295db4b157c4d175ad905bc98e5c30"
+    },
+    "actualFootOutline": {
+      "path": "docs/evidence/rider-rebuild/production-boots02/target-foot-outline.json",
+      "sha256": "cfb4d1eb6d5e10cc88d73f406c936712c6d607b97145ef819b6e78789b07e978"
+    },
+    "retainedRear": {
+      "path": "harness/out/rider-rebuild/production-boots01/authored02/authored-dense-reference.npz",
+      "sha256": "acfe97c0f7b71c0050d524c0cb215bec55ad1f32c3a91803b0e9108778fcece5"
+    }
+  },
+  "directSculpt": {
+    "toeDriftStartSourceX": -0.233,
+    "noseSourceX": -0.998534,
+    "ballSourceX": -0.6,
+    "ballBrushRadiusSource": 0.19,
+    "ballWidthPivotSourceZ": -0.014,
+    "dorsalGrabSourceX": [
+      -1.02,
+      -0.9,
+      -0.74,
+      -0.6,
+      -0.45,
+      -0.3,
+      -0.16
+    ],
+    "unmovedWeltSourceY": -0.41,
+    "fullyDorsalSourceY": -0.2,
+    "originalToeFullBeforeSourceX": -0.3,
+    "retainedRearFullAfterSourceX": -0.16
+  },
+  "sides": {
+    "R": {
+      "scales": [
+        0.14056909034106965,
+        0.14056909034106965,
+        0.16438766951140235
+      ],
+      "offset": [
+        -0.08128336905415504,
+        0.05563332703983855,
+        -0.0011018276093284706
+      ],
+      "mirrorWidth": 1,
+      "distalMedialGrabM": 0.031,
+      "ballWidthGain": 0.055,
+      "dorsalGrabM": [
+        0.013,
+        0.013,
+        0.014,
+        0.017,
+        0.022,
+        0.029,
+        0.029
+      ]
+    },
+    "L": {
+      "scales": [
+        0.14058819083389493,
+        0.14058819083389493,
+        0.16439210534119386
+      ],
+      "offset": [
+        -0.08126428515648462,
+        0.055641158241896915,
+        0.004003620287578529
+      ],
+      "mirrorWidth": -1,
+      "distalMedialGrabM": 0.0308,
+      "ballWidthGain": 0.055,
+      "dorsalGrabM": [
+        0.013,
+        0.013,
+        0.014,
+        0.017,
+        0.022,
+        0.029,
+        0.029
+      ]
+    }
+  },
+  "execution": {
+    "threads": 2,
+    "parentHeavyLeaseRequired": true,
+    "candidateRuns": 1,
+    "bake": false,
+    "decimate": false,
+    "nativeOutput": "harness/out/rider-rebuild/production-boots03/sculpt01",
+    "scope": "Original dense selected source sculpture only; not mobile/player delivery, appearance or fit acceptance"
+  }
+}
