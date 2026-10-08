@@ -646,9 +646,13 @@ face mask, as specified below.
   oppositely wound inner/outer contours. A boundary-free thick garment can
   have a turned annular lip; a single distal contour does not prove a cap.
   The derivative radial-layer folds and glove return/floor crossings remain
-  measured faults. Astra12 will retain the genuine paired walls and rebuild
-  a local annular hem at section7, with explicit terminal detail loss and
-  original exterior/UV/PBR ancestry. The right contour is not star-shaped,
+  measured faults. Native06 remains rejected. The [actual ownership proof](../evidence/rider-rebuild/astra-character-construction12/ownership01/FINDING.md)
+  identifies all six retained crossing witnesses in the original inner wall.
+  Native07 therefore retains the selected exterior and reconstructs only the
+  proven inner band, with explicit1mm lining and sewn proximal/distal joins.
+  Original exterior/UV/PBR ancestry remains required. Saved source adjacency
+  disproves the coincident-proximal-ring hypothesis; do not alter that join
+  without an actual failed construction witness. The right contour is not star-shaped,
   so sorting vertices by angle is invalid. Keep donors immutable; inspect
   actual saved construction and dense geometry before export. No further
   ambiguous-layer collapse or radial-padding campaign. Keep the actual
@@ -660,14 +664,30 @@ face mask, as specified below.
   original outfit and palm/sole targets pass five snapshots; parent viewed
   natural films. Standing clips require explicit selection. [Finite saddle
   measurements](../evidence/rider-rebuild/selected-seated-garage01/seat-contact01/FINDING.md)
-  identify a distal medial-thigh witness, not posterior support. A reviewed
-  posterior patch/fit and full surface contact remain open. Production LOD, full
+  identify a distal medial-thigh witness, not posterior support. The [frozen
+  bilateral posterior cores](../evidence/rider-rebuild/selected-posterior-support03/README.md)
+  now replace that minimum as the offline authoring target. Fit pelvisX/Y,
+  tilt and spinal flex against finite saddle area while fixing limbs; preserve
+  the same anatomical core IDs throughout. Stop iterative runtime minimum-gap
+  fitting. Author04 is source preparation until guarded solve and dressed
+  both-bike playback demonstrate actual sitting. Full surface contact remains
+  open. Production LOD, full
   surfaces, anatomy, deep motion and physical-device gates remain open0/6.
   An outside artist is optional; no external-resource wait blocks this work.
 
 ### Direct phone comparison requested October8 (ask348)
 
 Add **Mustard · Remastered** as a sixth Garage choice in the actual game review build. Preserve all five original riders and their original driver; the original Mustard must remain instantly selectable for comparison. Only the sixth slot uses the selected high-resolution source and native75 driver. Load that large candidate on demand, retain the authored maps, show real Garage performance and verify old→new→old swaps before delivering a phone-accessible preview. This user-authorized comparison is review access, not finished art or normal-player promotion.
+
+The final comparison build08 passes the unchanged701KiB normal-JavaScript
+budget at717742B; its optional selected driver is10809B. Actual headless
+phone-layout old→new→old→new capture02 measures selected59.7renderFPS and
+72ms repeat selection with no repeated selected-model download. This is a
+desktop WebKit proxy, not physical-phone qualification. The selected source
+remains357281284B, full/LOD slots honestly alias the same high-resolution GLB,
+and first selection requires that download. Keep the candidate private until
+played review and an isolated, accessible preview are delivered. No rider
+milestone passes from packaging or comparison performance.
 
 ### Equipped-outfit body masks adopted after independent Astra05 review
 

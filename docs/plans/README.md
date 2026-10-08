@@ -1659,3 +1659,5 @@ October8 actual phone-layout comparison capture01 passes four old/new visits, ex
 October8 actual sleeve ownership proof passes4.256s: exactly exterior/interior oriented annuli per side, all eligible faces accounted; all six saved native06 crossing faces are inner. Parent verifies pins/topology. Replace proven hidden inner band while retaining selected exterior; no new model or art pass, native06 remains rejected.
 
 October8 bilateral posterior source candidates frozen: explicit8-quad cores/24-quad contexts, exact original IDs/fields/body references; old thigh-edge minimum excluded. Parent reviews source/diagrams and pin/disk receipts. Offline pelvisXY/tilt/flex authoring next; no seated pose or art acceptance, R0–R5 remain0/6.
+
+October8 production correction: native07 replaces proven hidden inner sleeve band; fixed bilateral posterior cores feed offline author04, runtime minimum-gap iteration stopped. Comparison build08/capture02 pass packaging and desktop phone-layout switching only; all rider gates remain0/6.
