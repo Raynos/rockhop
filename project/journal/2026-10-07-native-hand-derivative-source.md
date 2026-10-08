@@ -17,3 +17,9 @@ Finding: Native build01 exits before automatic binding on an untouched distal re
 Validation: Guard exit 1 in 1.17 seconds; empty output directory and original native SHA verified by parent. Diagnostic source pin and AST pass; it has not executed.
 
 Limits: No new rig, field, master, GLB or moving pass. No invariant changes authorized from this unexplained comparison.
+
+Finding: No-op edits preserve all 75 rest records. The proposed parent changes recompute six unchanged descendant global matrices while their edit records and endpoints remain exact. The intended derivative needs explicit 14-record rest lineage, not a false eight-record preservation claim.
+
+Validation: Actual diagnostic exited 0 in 1.59 seconds. Parent rehashed every input and independently compared all NPZ arrays: exactly four heads/four tails/fourteen matrices differ, no-op double/float32 arrays exact and body geometry/fields unchanged.
+
+Limits: No bind, new master, GLB or anatomical/moving acceptance. Controls and inverse binds must derive from the measured new authority.

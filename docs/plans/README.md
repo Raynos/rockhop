@@ -1185,3 +1185,5 @@ October 7 native hand build01 stops before heat binding: an untouched middle dis
 October 7 actual-boot semantic classifier source is checkpointed: empty shaft seeds, upward ingress and source-face ray visibility distinguish real inner material from exterior/detail. All original faces stay intact; visibility alone never authorizes removal. AST and analytical winding/boundary controls pass; actual classifier remains unexecuted.
 
 October 7 pure complete selected-source assembler checkpoint: parent reran18guard tests. It requires actual seven-part inventory, pinned new rig/fields/operators, supported original artwork and actual sole patches. Declared finger ranges remain pending, with fresh native/GPU/contact calibration required. No native assembly or player promotion has run.
+
+October 7 independent edit diagnostic resolves hand build failure: no-op preserves all75rest records exactly; four head/four tail/eight authored-roll corrections recompute six descendant matrices (max4.172e-7) without editing their endpoints/rolls. Record all14actual rest changes explicitly and derive new controls/binds; no blanket tolerance or art acceptance.
