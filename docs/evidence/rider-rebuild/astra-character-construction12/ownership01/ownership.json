@@ -1,0 +1,202 @@
+{
+  "acceptedArt": false,
+  "recipeSHA256": "9e9bb168ca306edefa8945cd2de1a550c3ef1403cf4e86a7d5cb0b249cb7d9ca",
+  "source": {
+    "path": ".tmp/generation-comparison-2026-10-03/user-agent2/qualified-hunyuan-paint06/paint/painted.glb",
+    "sha256": "800d7a9717757b90b296a78c605cddb698c68d399a96e403aa381103e77d2eba"
+  },
+  "topology": {
+    "path": "harness/out/rider-rebuild/astra-character-construction12/source-topology01/source-topology.json",
+    "sha256": "76d06c7abd4ca8908936f0ae25857e1aaf154c3679e55c10034c72edead8cfd7"
+  },
+  "hands": {
+    "L": {
+      "side": "L",
+      "lowerSourceAxialM": 0.08364879539055416,
+      "upperSourceAxialM": 0.2112120899223957,
+      "method": "Source oriented contour seeds at BOTH annulus planes, connected by exact-position-weld source face adjacency only where shared edges have positive length inside both axial cuts.",
+      "nonmanifoldEdges": 0,
+      "wallTopology": {
+        "outer": {
+          "vertices": 11413,
+          "edges": 33285,
+          "polygons": 21872,
+          "eulerCharacteristic": 0,
+          "boundaryLoops": 2,
+          "boundaryLoopCutPlanes": [
+            [
+              0
+            ],
+            [
+              1
+            ]
+          ],
+          "nonmanifoldEdges": 0,
+          "inconsistentOrientedEdges": 0,
+          "badBoundaryVertexDegrees": [],
+          "allClippedFacesPositiveArea": true
+        },
+        "inner": {
+          "vertices": 10054,
+          "edges": 29383,
+          "polygons": 19329,
+          "eulerCharacteristic": 0,
+          "boundaryLoops": 2,
+          "boundaryLoopCutPlanes": [
+            [
+              0
+            ],
+            [
+              1
+            ]
+          ],
+          "nonmanifoldEdges": 0,
+          "inconsistentOrientedEdges": 0,
+          "badBoundaryVertexDegrees": [],
+          "allClippedFacesPositiveArea": true
+        }
+      },
+      "allEligibleFacesAccountedFor": true,
+      "excludedPositionDegenerateSourceFaces": [
+        910041,
+        910051,
+        910053,
+        911066
+      ],
+      "outerComponent": 0,
+      "innerComponent": 1,
+      "components": [
+        {
+          "index": 0,
+          "sourceFaces": 21872,
+          "sourceVertices": 17402,
+          "boundarySeedCounts": {
+            "outer0": 364,
+            "inner0": 0,
+            "outer7": 281,
+            "inner7": 0
+          },
+          "sourceAxialRangeM": [
+            0.07965213114565073,
+            0.21478590669201855
+          ],
+          "ownership": "outer"
+        },
+        {
+          "index": 1,
+          "sourceFaces": 19329,
+          "sourceVertices": 15391,
+          "boundarySeedCounts": {
+            "outer0": 0,
+            "inner0": 319,
+            "outer7": 0,
+            "inner7": 199
+          },
+          "sourceAxialRangeM": [
+            0.08022465432472192,
+            0.21490437509843419
+          ],
+          "ownership": "inner"
+        }
+      ],
+      "arrays": {
+        "path": "harness/out/rider-rebuild/astra-character-construction12/ownership01/sleeve-L-ownership.npz",
+        "sha256": "a57802832f03c8cd333483b20df7222cadd355c09e754cab56e4363f2cf56b74"
+      }
+    },
+    "R": {
+      "side": "R",
+      "lowerSourceAxialM": 0.08661375308077979,
+      "upperSourceAxialM": 0.2312832439756171,
+      "method": "Source oriented contour seeds at BOTH annulus planes, connected by exact-position-weld source face adjacency only where shared edges have positive length inside both axial cuts.",
+      "nonmanifoldEdges": 0,
+      "wallTopology": {
+        "outer": {
+          "vertices": 12701,
+          "edges": 37110,
+          "polygons": 24409,
+          "eulerCharacteristic": 0,
+          "boundaryLoops": 2,
+          "boundaryLoopCutPlanes": [
+            [
+              0
+            ],
+            [
+              1
+            ]
+          ],
+          "nonmanifoldEdges": 0,
+          "inconsistentOrientedEdges": 0,
+          "badBoundaryVertexDegrees": [],
+          "allClippedFacesPositiveArea": true
+        },
+        "inner": {
+          "vertices": 11324,
+          "edges": 33216,
+          "polygons": 21892,
+          "eulerCharacteristic": 0,
+          "boundaryLoops": 2,
+          "boundaryLoopCutPlanes": [
+            [
+              0
+            ],
+            [
+              1
+            ]
+          ],
+          "nonmanifoldEdges": 0,
+          "inconsistentOrientedEdges": 0,
+          "badBoundaryVertexDegrees": [],
+          "allClippedFacesPositiveArea": true
+        }
+      },
+      "allEligibleFacesAccountedFor": true,
+      "excludedPositionDegenerateSourceFaces": [
+        5892,
+        5912,
+        5913,
+        6879
+      ],
+      "outerComponent": 0,
+      "innerComponent": 1,
+      "components": [
+        {
+          "index": 0,
+          "sourceFaces": 24409,
+          "sourceVertices": 19284,
+          "boundarySeedCounts": {
+            "outer0": 367,
+            "inner0": 0,
+            "outer7": 296,
+            "inner7": 0
+          },
+          "sourceAxialRangeM": [
+            0.08269726653530202,
+            0.234978999717246
+          ],
+          "ownership": "outer"
+        },
+        {
+          "index": 1,
+          "sourceFaces": 21892,
+          "sourceVertices": 17543,
+          "boundarySeedCounts": {
+            "outer0": 0,
+            "inner0": 326,
+            "outer7": 0,
+            "inner7": 181
+          },
+          "sourceAxialRangeM": [
+            0.08342112348183846,
+            0.2345495961581715
+          ],
+          "ownership": "inner"
+        }
+      ],
+      "arrays": {
+        "path": "harness/out/rider-rebuild/astra-character-construction12/ownership01/sleeve-R-ownership.npz",
+        "sha256": "520ef840975d39e483aaf5844095d5f3b7ba1e6c0e48a91e6ddfd272469a34c7"
+      }
+    }
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "accepted": false,
+  "lock": "/Users/raynos/projects/localai/.model.lock",
+  "method": "lockf -k",
+  "command": [
+    "/Users/raynos/projects/localai/runtime/unimate/.venv/bin/python",
+    "assets/blender/rider-rebuild/astra-character-construction12/sleeve-ownership.py",
+    "harness/out/rider-rebuild/astra-character-construction12/ownership01"
+  ],
+  "controllerPID": 69449,
+  "pollSeconds": 1,
+  "startAnonymousBelowGiB": 55,
+  "stopAnonymousGiB": 65,
+  "stopAnonymousPlusWiredGiB": 96,
+  "limitSeconds": 300.0,
+  "guardSHA256": "cf8acd15d8b7484480bee74d23892be815d955ffd87115d3da8ed228ffb3d916",
+  "status": "worker returned; review pending",
+  "samples": [
+    {
+      "seconds": 0,
+      "anonymousGiB": 45.0,
+      "wiredGiB": 9.6,
+      "freeGiB": 18.2
+    },
+    {
+      "seconds": 0.045,
+      "anonymousGiB": 45.0,
+      "wiredGiB": 9.6,
+      "freeGiB": 18.2
+    },
+    {
+      "seconds": 1.086,
+      "anonymousGiB": 45.3,
+      "wiredGiB": 9.6,
+      "freeGiB": 17.9
+    },
+    {
+      "seconds": 2.126,
+      "anonymousGiB": 45.2,
+      "wiredGiB": 9.3,
+      "freeGiB": 19.3
+    },
+    {
+      "seconds": 3.18,
+      "anonymousGiB": 44.0,
+      "wiredGiB": 9.5,
+      "freeGiB": 20.3
+    },
+    {
+      "seconds": 4.222,
+      "anonymousGiB": 43.8,
+      "wiredGiB": 9.5,
+      "freeGiB": 20.5
+    }
+  ],
+  "physicalMemoryBytes": 137438953472,
+  "requiredPhysicalMemoryBytes": 137438953472,
+  "scope": "Future explicitly invoked owned Rockhop job only",
+  "pressureOrSwapLimits": "No separate pressure/swap gate exists in the pinned original guard; none altered",
+  "ownedChildPID": 69454,
+  "exitCode": 0,
+  "elapsedSeconds": 4.256
+}

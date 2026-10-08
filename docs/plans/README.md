@@ -1655,3 +1655,5 @@ October8 actual comparison build08 passes final emitted normal JS717742/717824B 
 October8 phone preview staging source checkpoint: parent-reviewed static helper retains exact selected/original assets, final budget and existing headers while excluding private build receipts.9/9fixture tests pass. Actual phone-layout capture is running; staging/upload/public access and device/art acceptance remain pending.
 
 October8 actual phone-layout comparison capture01 passes four old/new visits, exact sources/pooled instances, one selected357281284Bdownload and zero repeat requests; selected59.608/60.013renderFPS, repeat148.274ms. Parent rejects oversized counter obscuring head; compact one-line overlay source next, all measurement fields retained. No played art/physical-phone or seating acceptance.
+
+October8 actual sleeve ownership proof passes4.256s: exactly exterior/interior oriented annuli per side, all eligible faces accounted; all six saved native06 crossing faces are inner. Parent verifies pins/topology. Replace proven hidden inner band while retaining selected exterior; no new model or art pass, native06 remains rejected.
