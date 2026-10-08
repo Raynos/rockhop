@@ -1,0 +1,18 @@
+00:10.435  blend            | Read blend: "/Users/raynos/projects/games/rockhop/harness/out/rider-rebuild/selected-complete-engine01/engine05/rider-private-masked.blend"
+CONSTRUCT full dense cuff L
+Traceback (most recent call last):
+  File "/Users/raynos/projects/games/rockhop/assets/blender/rider-rebuild/astra-character-construction12/construct07.py", line 441, in <module>
+    main()
+    ~~~~^^
+  File "/Users/raynos/projects/games/rockhop/assets/blender/rider-rebuild/astra-character-construction12/construct07.py", line 385, in main
+    row = full_cuff(surgery, dumps[side], placement['hands'][side], profiles[side], wearers[side], settings)
+  File "/Users/raynos/projects/games/rockhop/assets/blender/rider-rebuild/astra-character-construction12/construct07.py", line 155, in full_cuff
+    assert hit is not None and body is not None, ('Dense cuff bearing missing actual triangle surface', face.tolist(), bary.tolist())
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('Dense cuff bearing missing actual triangle surface', [46711, 48112, 46712], [0.05, 0.9, 0.05])
+
+Error: script failed, file: 'assets/blender/rider-rebuild/astra-character-construction12/construct07.py', exiting.
+Blender 5.2.1 LTS (hash 9e2066aef7ef built 2026-08-25 01:35:57)
+scripts disabled for "/Users/raynos/projects/games/rockhop/harness/out/rider-rebuild/selected-complete-engine01/engine05/rider-private-masked.blend", skipping 'RIG-RiderMetarig_ui.py'
+
+Blender quit

@@ -1667,3 +1667,5 @@ October8 native07 source checkpoint frozen and unaccepted: owned inner-wall repl
 October8 preview staging corrects a false positive on bundled Sentry file:// scheme detection while retaining concrete file-URI/local-path exclusion;10 targeted tests pass. Actual isolated upload remains pending, no production promotion.
 
 October8 actual comparison capture02 played silently to natural end using bounded63-PNG review; old/new source identities and59.7renderFPS remain distinct from25FPS recording. Garage-only movie and selected front photo retained; cuffs/seating and physical-phone acceptance remain open, preview upload pending.
+
+October8 actual native07 exits1/23.769s before sleeve construction: full dense left cuff bearing lacks cuff or wearer ray hit. No saved new native; exact-ray diagnosis delegated, no skipped samples or unchanged rerun. Selected baseline and0/6 rider gates unchanged.
