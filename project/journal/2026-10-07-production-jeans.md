@@ -43,3 +43,9 @@ Finding: Author03 exposed saddle, buttocks and rear legs. Author actual crotch e
 Validation: Parent reviewed changed author/recipe source, parsed AST and rehashed frozen source plus seven authority inputs. Builder's retained topology check reports 1691 vertices, 1608 quads and boundary cycles 48/48/72. Runtime unexecuted.
 
 Limits: One targeted repair candidate, no acceptance. Regional OUTSIDE finishing preserves loose points and excludes the saddle; FULL/FOUR conditioning loss must be measured in the actual run and moving clips.
+
+Finding: The targeted saddle/rear-leg repair saves the real editable jeans before maps.
+
+Validation: Author04 exit0 in7.431s, native hash parent checked, body/rest in-memory unchanged; FULL attributes and explicit FOUR removed mass retained.
+
+Limits: Saved actual fit is uninspected; no bake, moving parity or art acceptance.

@@ -1277,3 +1277,5 @@ October 7 hoodie exact-boundary source checkpoint: live Edit Mode BMesh selectio
 October 7 jeans targeted-repair source checkpoint: explicit front/back saddle ease, body-informed posterior rings, restricted selected fold projection and regional OUTSIDE finishing excluding crotch. Parent source/AST/frozen pins checked; FULL attributes retained and FOUR loss reported. Author04 unexecuted, no bake or art acceptance.
 
 October 7 actual glove geometry diagnostic: parent viewed three right-hand native rest views. Visible shell encloses hand/thumb; angular panel and seam artifacts remain. Bilateral shape, selected materials and played grip remain unaccepted. Read-only CPU2 renderer exit0 in5.443s, source unchanged.
+
+October 7 actual targeted jeans repair checkpoint: author04 exit0 in7.431s, pinned editable native saved before maps. Body/shared75 signature preserved; FULL retained and FOUR reduction measured (max removed mass5.76%). Parent three-view fit review pending, no bake or art acceptance.

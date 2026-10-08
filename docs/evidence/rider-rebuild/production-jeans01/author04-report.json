@@ -1,0 +1,54 @@
+{
+  "accepted": false,
+  "stage": "editable authored source; bake still required",
+  "bodyAnd75RestUntouched": true,
+  "nativeSha256": "42fca617ea8d246a6c3e3ca68a90cd3cb5f3ce8b9bb78130e0e2bbd65f605fac",
+  "denseSha256": "c38413a36d564d97f106ebde13bb240d4c7075078ce463f30234a97c0f3d2237",
+  "vertices": 26063,
+  "faces": 25728,
+  "triangles": 51456,
+  "uvLayer": "SelectedDenimProductionAtlas",
+  "sourceBlendSha256": "49a84af7397d2db7ceb40326d6bc883d64c091d63323d55bab165775b44c327c",
+  "controls": {
+    "frontZ": 0.125,
+    "backZ": 0.103,
+    "actualBootCollarZ": 0.09419,
+    "actualBootFrontTongueZ": 0.14438,
+    "status": "Provisional actual boot landmarks; confirm collar X/Y extents with boot candidate. This is not a uniform .16m hem.",
+    "footYawDegrees": 26.16
+  },
+  "saddleControls": {
+    "frontY": -0.162,
+    "backY": 0.145,
+    "bottomZ": 0.79,
+    "status": "First targeted author03 shape repair. Explicit saddle bridge around unchanged wearer; actual saved native three-view review required before bake."
+  },
+  "skinConditioning": {
+    "initialization": "Native body FOUR barycentric interpolation plus authored hip bridge produces garment FULL",
+    "nativeFullAttributes": [
+      "FULL::DEF-spine",
+      "FULL::DEF-pelvis.L",
+      "FULL::DEF-pelvis.R",
+      "FULL::DEF-spine.001",
+      "FULL::DEF-thigh.L",
+      "FULL::DEF-thigh.L.001",
+      "FULL::DEF-shin.L",
+      "FULL::DEF-shin.L.001",
+      "FULL::DEF-thigh.R",
+      "FULL::DEF-thigh.R.001",
+      "FULL::DEF-shin.R",
+      "FULL::DEF-shin.R.001"
+    ],
+    "maximumFullInfluences": 5,
+    "maximumFourInfluences": 4,
+    "maximumRemovedMass": 0.05762596515593865,
+    "meanRemovedMass": 0.00012544167412599714,
+    "rowsWithRemovedMass": 251,
+    "fields": {
+      "path": "harness/out/rider-rebuild/production-jeans01/authored04/production-jeans-fields.npz",
+      "sha256": "28d337f56a7e963f8ae533a72bf060d40b5d18e956c154b61e2dc995c20bd679"
+    },
+    "motionAcceptance": false
+  },
+  "structuralPolicy": "First actual shape, one targeted repair consumed by this candidate. No body hiding."
+}
