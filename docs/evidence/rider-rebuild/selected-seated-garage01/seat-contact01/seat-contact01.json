@@ -1,0 +1,2714 @@
+{
+  "accepted": false,
+  "recipeSHA256": "3ef02fb39518573e16016b54977b8430e272f06723c12671262b18dd3ad94fb6",
+  "inputs": {
+    "build": {
+      "path": "harness/out/rider-rebuild/selected-seated-garage01/build01/rider-rebuild-inputs.json",
+      "sha256": "24b24f9afd4b8383cd3243cfe3c3ea8a51aef5d8502549db8b60886a2e0f303a"
+    },
+    "contract": {
+      "path": "harness/out/rider-rebuild/selected-complete-engine01/engine05/rider-contract.json",
+      "sha256": "2aa39bc8c15738b4ecbd2aac08fd61375e0aa8fd45a0ee2ac3046f577b019728"
+    },
+    "source": {
+      "path": "/Users/raynos/projects/games/rockhop/harness/out/rider-rebuild/selected-complete-engine01/engine05/rider.glb",
+      "sha256": "72b90e8790f8490743a75f8b70791aa21edfee6234cec609093e9b62e08d4bfd"
+    },
+    "components": {
+      "path": "docs/evidence/hero-remaster/user-agent3-qa-2026-10-03/bike-target-bindings04/source-components.json",
+      "sha256": "7bcfc8dc519fb82af2c21cbc1b19cbd3833c203c975b286a15277c31bf27a852"
+    },
+    "calibration": {
+      "path": "/Users/raynos/projects/games/rockhop/assets/blender/rider-rebuild/selected-ankle-contact02/engine05-contact-calibration03.json",
+      "sha256": "b5fb15d7f68b46915d0fc3919620c3aaabc8b819636a930df45766cc3bc6aedd"
+    },
+    "surfaceHelper": {
+      "path": "assets/blender/rider-rebuild/selected-ankle-contact02/surface.mjs",
+      "sha256": "54aa653151e73dcbb067a729dfc5756574f139e1053d97bf3a4e308fd803959d"
+    }
+  },
+  "method": "Recorded native75 local TRS; decoded source FOUR skinning; exact selected saddle component triangles; downward jeans/upward saddle finite XZ footprint extrema.",
+  "classification": "All downward selected jeans triangles over the finite saddle are candidates. Posterior/buttock identity requires parent review of explicit source/native triangle witnesses; no bone label establishes support.",
+  "limits": [
+    "Five captured poses per bike, not continuous motion or cloth dynamics.",
+    "Signed bike-up gap and projected overlap are geometry only; no support force/contact-area or seated-art acceptance.",
+    "Vertical faces/projection degeneracies follow the existing finiteSupport helper. No closed-volume/global collision proof.",
+    "No pose correction, source mesh change, root offset, limb stretching or physical COM mutation."
+  ],
+  "bikes": [
+    {
+      "name": "rookie",
+      "report": {
+        "path": "harness/out/rider-rebuild/selected-seated-garage01/played01/rookie/report.json",
+        "sha256": "d10868792db1acaed7073faa9f99ce0e7bda60f626f28fafd8aac9d5dd5dc700"
+      },
+      "bike": {
+        "path": "public/models/bike-rookie.glb",
+        "sha256": "e55919d60267849358ef5e97f4731f42fac6eb2835b9998e1d146d056c0f10f7"
+      },
+      "saddleSource": {
+        "component": 3,
+        "node": "bodywork",
+        "nodeIndex": 13,
+        "sourceMeshIndex": 0,
+        "primitiveIndex": 0,
+        "sourceTriangleOrdinals": [
+          260,
+          261,
+          262,
+          263,
+          264,
+          265,
+          266,
+          267,
+          268,
+          269,
+          270,
+          271,
+          272,
+          273,
+          274,
+          275,
+          276,
+          277,
+          278,
+          279,
+          280,
+          281,
+          282,
+          283,
+          284,
+          285,
+          286,
+          287,
+          288,
+          289,
+          290,
+          291,
+          292,
+          293,
+          294,
+          295,
+          296,
+          297,
+          298,
+          299,
+          300,
+          301,
+          302,
+          303,
+          304,
+          305,
+          306,
+          307,
+          308,
+          309,
+          310,
+          311,
+          312,
+          313,
+          314,
+          315,
+          316,
+          317,
+          318,
+          319,
+          320,
+          321,
+          322,
+          323,
+          324,
+          325,
+          326,
+          327,
+          328,
+          329,
+          330,
+          331,
+          332,
+          333,
+          334,
+          335,
+          336,
+          337,
+          338,
+          339,
+          340,
+          341,
+          342,
+          343,
+          344,
+          345,
+          346,
+          347,
+          348,
+          349,
+          350,
+          351,
+          352,
+          353,
+          354,
+          355,
+          356,
+          357,
+          358,
+          359,
+          360,
+          361,
+          362,
+          363,
+          364,
+          365,
+          366,
+          367,
+          368,
+          369,
+          370,
+          371,
+          372,
+          373,
+          374,
+          375
+        ],
+        "allTriangles": 116,
+        "upwardTriangles": 48,
+        "classification": "Previously parent-selected saddle shell; source hash exactly matches this played bike."
+      },
+      "snapshots": [
+        {
+          "name": "garage-front",
+          "riderStageTime": 1.9169999999999985,
+          "skeletalWitnesses": {
+            "toleranceM": 0.00001,
+            "carrierBike": [
+              -0.30367986641085304,
+              0.748946173889514,
+              2.465190328815662e-32
+            ],
+            "carrierResidualM": 2.2887833992611187e-16,
+            "sides": [
+              {
+                "side": "left",
+                "hipBike": [
+                  -0.3151674914856146,
+                  0.7252521443123513,
+                  -0.10006147650341748
+                ],
+                "ankleBike": [
+                  -0.22779187952017446,
+                  0.19535175950537076,
+                  -0.15618141322905715
+                ],
+                "palmBike": [
+                  0.26999997818626503,
+                  0.7799999986781991,
+                  -0.3300000041478799
+                ],
+                "selectedSoleBike": [
+                  -0.1400018767679012,
+                  0.03476319316064147,
+                  -0.14722718206188426
+                ],
+                "reconstructedSoleErrM": 0.0000033919326668045807,
+                "recordedSoleErrM": 0.0000033919326667426834
+              },
+              {
+                "side": "right",
+                "hipBike": [
+                  -0.3151674898641329,
+                  0.7252521434891257,
+                  0.10006147595782731
+                ],
+                "ankleBike": [
+                  -0.22779187241567175,
+                  0.19339549899075514,
+                  0.15618136868601798
+                ],
+                "palmBike": [
+                  0.26999979305680105,
+                  0.7800001800111337,
+                  0.32999999198703783
+                ],
+                "selectedSoleBike": [
+                  -0.13939383345835538,
+                  0.0369675891770862,
+                  0.1438054876250452
+                ],
+                "reconstructedSoleErrM": 0.0000034460008557176706,
+                "recordedSoleErrM": 0.0000034460008557253515
+              }
+            ]
+          },
+          "overlap": true,
+          "comparedTrianglePairs": 5340,
+          "downwardJeansTriangles": 22961,
+          "minimumSignedBikeUpGapM": -0.06872361167983398,
+          "witness": {
+            "jeansTriangleRow": 34636,
+            "jeansDecodedVertexRows": [
+              5181,
+              5182,
+              21742
+            ],
+            "jeansNativeVertexIDs": [
+              5010,
+              5011,
+              21331
+            ],
+            "jeansBarycentric": [
+              0.04041020043583664,
+              1.0896758336399845e-14,
+              0.9595897995641525
+            ],
+            "jeansPointBike": [
+              -0.07203807686760312,
+              0.5427785785170244,
+              0.047893852930606565
+            ],
+            "jeansNormalBike": [
+              0.030327443159532258,
+              -0.49286525660806385,
+              -0.8695769575029416
+            ],
+            "jeansNamedFOUR": [
+              [
+                [
+                  "DEF-thigh.R.001",
+                  0.9396937489509583
+                ],
+                [
+                  "DEF-shin.R",
+                  0.0340442955493927
+                ],
+                [
+                  "DEF-thigh.R",
+                  0.026261968538165092
+                ]
+              ],
+              [
+                [
+                  "DEF-thigh.R.001",
+                  0.9384996294975281
+                ],
+                [
+                  "DEF-shin.R",
+                  0.03569547086954117
+                ],
+                [
+                  "DEF-thigh.R",
+                  0.0258049126714468
+                ]
+              ],
+              [
+                [
+                  "DEF-thigh.R.001",
+                  0.9397224187850952
+                ],
+                [
+                  "DEF-thigh.R",
+                  0.054221756756305695
+                ],
+                [
+                  "DEF-shin.R",
+                  0.006055849138647318
+                ]
+              ]
+            ],
+            "saddleTriangleRow": 271,
+            "saddleDecodedVertexRows": [
+              271,
+              296,
+              274
+            ],
+            "saddleBarycentric": [
+              -5.3013149425851225e-15,
+              0.24504881217824967,
+              0.7549511878217556
+            ],
+            "saddlePointBike": [
+              -0.07203807686760312,
+              0.6115021901968584,
+              0.047893852930606565
+            ],
+            "saddleNormalBike": [
+              -0.05198523585498362,
+              0.5233887691522161,
+              0.8505067498723511
+            ],
+            "normalsOpposition": 0.9991177911892271,
+            "polygonXZ": [
+              [
+                -0.07219539127521526,
+                0.047921914419531975
+              ],
+              [
+                -0.07278794996799343,
+                0.04777617799239874
+              ],
+              [
+                -0.07203807686760312,
+                0.047893852930606565
+              ]
+            ],
+            "projectedAreaM2": 1.977725944818376e-8,
+            "posteriorClassification": "PARENT_REVIEW_REQUIRED"
+          },
+          "existingContactDiagnostics": {
+            "gripErrM": [
+              2.2243900377598124e-8,
+              2.743969812280076e-7
+            ],
+            "soleErrM": [
+              0.0000033919326667426834,
+              0.0000034460008557253515
+            ],
+            "anthropometry": {
+              "hips": [
+                -0.303679866410853,
+                0.7489461738895142
+              ],
+              "residualM": 6.426745248892323e-11,
+              "com": [
+                -0.15873411705709606,
+                0.8198353593035723,
+                0.0000066353925125715515
+              ],
+              "iterations": 3,
+              "converged": true,
+              "requestedCOM": [
+                -0.1587341171195792,
+                0.8198353592885336,
+                0
+              ],
+              "physicsDimensions": "XY",
+              "measuredCOM": [
+                -0.15873411705709606,
+                0.8198353593035723,
+                0.0000066353925125715515
+              ],
+              "lateralResidualM": 0.0000066353925125715515,
+              "carrierAngle": 1.1293568778580116,
+              "spineFlexRadians": 0,
+              "elapsedMs": 2,
+              "articulationRule": "Least evaluated flex: <=1mm + XY convergence; else least max gap",
+              "candidateCount": 1,
+              "candidates": [
+                {
+                  "flex": 0,
+                  "gapM": 0.0000034460008557253515,
+                  "armGapM": 2.743969812280076e-7,
+                  "legGapM": 0.0000034460008557253515,
+                  "reach": 0.9909080492075248,
+                  "comResidualM": 6.426745248892323e-11
+                }
+              ],
+              "palmForwardBike": [
+                1,
+                -0.25,
+                0
+              ],
+              "contactLimit": "Socket-only; glove/bar/finger surfaces unqualified"
+            }
+          }
+        },
+        {
+          "name": "garage-orbit-1",
+          "riderStageTime": 3.9509999999999925,
+          "skeletalWitnesses": {
+            "toleranceM": 0.00001,
+            "carrierBike": [
+              -0.3024420965417473,
+              0.7474340873688063,
+              1.232595164407831e-32
+            ],
+            "carrierResidualM": 1.2412670766236366e-16,
+            "sides": [
+              {
+                "side": "left",
+                "hipBike": [
+                  -0.3136184027448589,
+                  0.7235916305508515,
+                  -0.10006147650341748
+                ],
+                "ankleBike": [
+                  -0.2277918793309642,
+                  0.19535176526957562,
+                  -0.15618140793881852
+                ],
+                "palmBike": [
+                  0.2699999771078984,
+                  0.7799999985194814,
+                  -0.3300000065185155
+                ],
+                "selectedSoleBike": [
+                  -0.14000187991990762,
+                  0.034763195197773517,
+                  -0.14722717660101747
+                ],
+                "reconstructedSoleErrM": 0.0000033975931704225922,
+                "recordedSoleErrM": 0.0000033975931703255646
+              },
+              {
+                "side": "right",
+                "hipBike": [
+                  -0.31361840111273404,
+                  0.7235916297489339,
+                  0.10006147595782731
+                ],
+                "ankleBike": [
+                  -0.22779187194685585,
+                  0.19339550454472584,
+                  0.15618136310225483
+                ],
+                "palmBike": [
+                  0.2699997858814489,
+                  0.7800001738446238,
+                  0.3299999946633403
+                ],
+                "selectedSoleBike": [
+                  -0.13939383617389645,
+                  0.036967590901182346,
+                  0.14380548191039594
+                ],
+                "reconstructedSoleErrM": 0.000003451692590955017,
+                "recordedSoleErrM": 0.0000034516925909164515
+              }
+            ]
+          },
+          "overlap": true,
+          "comparedTrianglePairs": 5317,
+          "downwardJeansTriangles": 22939,
+          "minimumSignedBikeUpGapM": -0.06991547764977823,
+          "witness": {
+            "jeansTriangleRow": 34626,
+            "jeansDecodedVertexRows": [
+              21741,
+              21742,
+              21745
+            ],
+            "jeansNativeVertexIDs": [
+              21330,
+              21331,
+              21334
+            ],
+            "jeansBarycentric": [
+              0.2234669798576825,
+              0.7765330201423182,
+              -7.710248704795167e-16
+            ],
+            "jeansPointBike": [
+              -0.07071520550510925,
+              0.5421015597800508,
+              0.04765788128216171
+            ],
+            "jeansNormalBike": [
+              0.008301663811268371,
+              -0.4622462847494508,
+              -0.8867127238363586
+            ],
+            "jeansNamedFOUR": [
+              [
+                [
+                  "DEF-thigh.R.001",
+                  0.939780056476593
+                ],
+                [
+                  "DEF-thigh.R",
+                  0.0547788068652153
+                ],
+                [
+                  "DEF-shin.R",
+                  0.005441147834062576
+                ]
+              ],
+              [
+                [
+                  "DEF-thigh.R.001",
+                  0.9397224187850952
+                ],
+                [
+                  "DEF-thigh.R",
+                  0.054221756756305695
+                ],
+                [
+                  "DEF-shin.R",
+                  0.006055849138647318
+                ]
+              ],
+              [
+                [
+                  "DEF-thigh.R.001",
+                  0.8978285193443298
+                ],
+                [
+                  "DEF-thigh.R",
+                  0.10081411898136139
+                ],
+                [
+                  "DEF-shin.R",
+                  0.0013573785545304418
+                ]
+              ]
+            ],
+            "saddleTriangleRow": 271,
+            "saddleDecodedVertexRows": [
+              271,
+              296,
+              274
+            ],
+            "saddleBarycentric": [
+              5.440092820663267e-15,
+              0.23040426866264185,
+              0.7695957313373527
+            ],
+            "saddlePointBike": [
+              -0.07071520550510925,
+              0.612017037429829,
+              0.04765788128216171
+            ],
+            "saddleNormalBike": [
+              -0.05198523585498362,
+              0.5233887691522161,
+              0.8505067498723511
+            ],
+            "normalsOpposition": 0.9965212347919383,
+            "polygonXZ": [
+              [
+                -0.06964536789497318,
+                0.046591992915426636
+              ],
+              [
+                -0.07071520550510925,
+                0.04765788128216171
+              ],
+              [
+                -0.0715597090209065,
+                0.04780852244984446
+              ],
+              [
+                -0.0773542557299237,
+                0.046123005033475925
+              ],
+              [
+                -0.0748890640591493,
+                0.04557666525779079
+              ]
+            ],
+            "projectedAreaM2": 0.000008191347237927488,
+            "posteriorClassification": "PARENT_REVIEW_REQUIRED"
+          },
+          "existingContactDiagnostics": {
+            "gripErrM": [
+              2.3848087932988862e-8,
+              2.758571859096419e-7
+            ],
+            "soleErrM": [
+              0.0000033975931703255646,
+              0.0000034516925909164515
+            ],
+            "anthropometry": {
+              "hips": [
+                -0.30244209654174736,
+                0.7474340873688065
+              ],
+              "residualM": 2.046429609025784e-8,
+              "com": [
+                -0.15873413203288445,
+                0.8198353452749423,
+                0.0000066481182479107524
+              ],
+              "iterations": 3,
+              "converged": true,
+              "requestedCOM": [
+                -0.1587341171195792,
+                0.8198353592885336,
+                0
+              ],
+              "physicsDimensions": "XY",
+              "measuredCOM": [
+                -0.15873413203288445,
+                0.8198353452749423,
+                0.0000066481182479107524
+              ],
+              "lateralResidualM": 0.0000066481182479107524,
+              "carrierAngle": 1.1424547925144568,
+              "spineFlexRadians": 0,
+              "elapsedMs": 2,
+              "articulationRule": "Least evaluated flex: <=1mm + XY convergence; else least max gap",
+              "candidateCount": 1,
+              "candidates": [
+                {
+                  "flex": 0,
+                  "gapM": 0.0000034516925909164515,
+                  "armGapM": 2.758571859096419e-7,
+                  "legGapM": 0.0000034516925909164515,
+                  "reach": 0.9973449929177125,
+                  "comResidualM": 2.046429609025784e-8
+                }
+              ],
+              "palmForwardBike": [
+                1,
+                -0.25,
+                0
+              ],
+              "contactLimit": "Socket-only; glove/bar/finger surfaces unqualified"
+            }
+          }
+        },
+        {
+          "name": "garage-orbit-2",
+          "riderStageTime": 5.950999999999997,
+          "skeletalWitnesses": {
+            "toleranceM": 0.00001,
+            "carrierBike": [
+              -0.30366118424678906,
+              0.7489282174724989,
+              1.232595164407831e-32
+            ],
+            "carrierResidualM": 2.220446049250313e-16,
+            "sides": [
+              {
+                "side": "left",
+                "hipBike": [
+                  -0.315144671551697,
+                  0.7252321822180567,
+                  -0.10006147650341748
+                ],
+                "ankleBike": [
+                  -0.22779187952101623,
+                  0.1953517595857479,
+                  -0.15618141315900677
+                ],
+                "palmBike": [
+                  0.2699999781737878,
+                  0.7799999986768601,
+                  -0.33000000417303893
+                ],
+                "selectedSoleBike": [
+                  -0.1400018768145707,
+                  0.034763193194492364,
+                  -0.1472271819961484
+                ],
+                "reconstructedSoleErrM": 0.0000033920035413590546,
+                "recordedSoleErrM": 0.0000033920035414435487
+              },
+              {
+                "side": "right",
+                "hipBike": [
+                  -0.3151446699300715,
+                  0.7252321813951143,
+                  0.10006147595782731
+                ],
+                "ankleBike": [
+                  -0.22779187241279733,
+                  0.19339549906889741,
+                  0.15618136861222578
+                ],
+                "palmBike": [
+                  0.2699997929709833,
+                  0.7800001799428125,
+                  0.3299999920213755
+                ],
+                "selectedSoleBike": [
+                  -0.13939383349927237,
+                  0.0369675892075062,
+                  0.14380548755604516
+                ],
+                "reconstructedSoleErrM": 0.0000034460718214300197,
+                "recordedSoleErrM": 0.0000034460718214427302
+              }
+            ]
+          },
+          "overlap": true,
+          "comparedTrianglePairs": 5338,
+          "downwardJeansTriangles": 22961,
+          "minimumSignedBikeUpGapM": -0.06873940189019234,
+          "witness": {
+            "jeansTriangleRow": 34636,
+            "jeansDecodedVertexRows": [
+              5181,
+              5182,
+              21742
+            ],
+            "jeansNativeVertexIDs": [
+              5010,
+              5011,
+              21331
+            ],
+            "jeansBarycentric": [
+              0.03930371808313175,
+              1.1391938156652782e-14,
+              0.9606962819168569
+            ],
+            "jeansPointBike": [
+              -0.07203426332202072,
+              0.5427642724973792,
+              0.0478931726765297
+            ],
+            "jeansNormalBike": [
+              0.030334311299150443,
+              -0.4928742097931817,
+              -0.8695716433271918
+            ],
+            "jeansNamedFOUR": [
+              [
+                [
+                  "DEF-thigh.R.001",
+                  0.9396937489509583
+                ],
+                [
+                  "DEF-shin.R",
+                  0.0340442955493927
+                ],
+                [
+                  "DEF-thigh.R",
+                  0.026261968538165092
+                ]
+              ],
+              [
+                [
+                  "DEF-thigh.R.001",
+                  0.9384996294975281
+                ],
+                [
+                  "DEF-shin.R",
+                  0.03569547086954117
+                ],
+                [
+                  "DEF-thigh.R",
+                  0.0258049126714468
+                ]
+              ],
+              [
+                [
+                  "DEF-thigh.R.001",
+                  0.9397224187850952
+                ],
+                [
+                  "DEF-thigh.R",
+                  0.054221756756305695
+                ],
+                [
+                  "DEF-shin.R",
+                  0.006055849138647318
+                ]
+              ]
+            ],
+            "saddleTriangleRow": 271,
+            "saddleDecodedVertexRows": [
+              271,
+              296,
+              274
+            ],
+            "saddleBarycentric": [
+              2.3037127760972e-15,
+              0.24500659519796444,
+              0.7549934048020333
+            ],
+            "saddlePointBike": [
+              -0.07203426332202072,
+              0.6115036743875716,
+              0.0478931726765297
+            ],
+            "saddleNormalBike": [
+              -0.05198523585498362,
+              0.5233887691522161,
+              0.8505067498723511
+            ],
+            "normalsOpposition": 0.9991183144852787,
+            "polygonXZ": [
+              [
+                -0.07218726999027403,
+                0.047920465757893806
+              ],
+              [
+                -0.07276361091726367,
+                0.047778714633410366
+              ],
+              [
+                -0.07203426332202072,
+                0.0478931726765297
+              ]
+            ],
+            "projectedAreaM2": 1.8709493546011785e-8,
+            "posteriorClassification": "PARENT_REVIEW_REQUIRED"
+          },
+          "existingContactDiagnostics": {
+            "gripErrM": [
+              2.2260918710308817e-8,
+              2.744159033275716e-7
+            ],
+            "soleErrM": [
+              0.0000033920035414435487,
+              0.0000034460718214427302
+            ],
+            "anthropometry": {
+              "hips": [
+                -0.30366118424678906,
+                0.7489282174724987
+              ],
+              "residualM": 5.322694073002165e-11,
+              "com": [
+                -0.15873411706667806,
+                0.8198353592944139,
+                0.00000663540591599272
+              ],
+              "iterations": 3,
+              "converged": true,
+              "requestedCOM": [
+                -0.1587341171195792,
+                0.8198353592885336,
+                0
+              ],
+              "physicsDimensions": "XY",
+              "measuredCOM": [
+                -0.15873411706667806,
+                0.8198353592944139,
+                0.00000663540591599272
+              ],
+              "lateralResidualM": 0.00000663540591599272,
+              "carrierAngle": 1.1295315039049618,
+              "spineFlexRadians": 0,
+              "elapsedMs": 2,
+              "articulationRule": "Least evaluated flex: <=1mm + XY convergence; else least max gap",
+              "candidateCount": 1,
+              "candidates": [
+                {
+                  "flex": 0,
+                  "gapM": 0.0000034460718214427302,
+                  "armGapM": 2.744159033275716e-7,
+                  "legGapM": 0.0000034460718214427302,
+                  "reach": 0.9909944333150481,
+                  "comResidualM": 5.322694073002165e-11
+                }
+              ],
+              "palmForwardBike": [
+                1,
+                -0.25,
+                0
+              ],
+              "contactLimit": "Socket-only; glove/bar/finger surfaces unqualified"
+            }
+          }
+        },
+        {
+          "name": "garage-orbit-3",
+          "riderStageTime": 7.957999999999998,
+          "skeletalWitnesses": {
+            "toleranceM": 0.00001,
+            "carrierBike": [
+              -0.3033172998797044,
+              0.7485839501934972,
+              2.465190328815662e-32
+            ],
+            "carrierResidualM": 1.2412670766236366e-16,
+            "sides": [
+              {
+                "side": "left",
+                "hipBike": [
+                  -0.3147229979285951,
+                  0.7248503744098256,
+                  -0.10006147650341744
+                ],
+                "ankleBike": [
+                  -0.2277918795257633,
+                  0.19535176108478278,
+                  -0.15618141184207018
+                ],
+                "palmBike": [
+                  0.2699999779330854,
+                  0.7799999986491329,
+                  -0.33000000466754814
+                ],
+                "selectedSoleBike": [
+                  -0.1400018776762616,
+                  0.03476319380948131,
+                  -0.14722718073987479
+                ],
+                "reconstructedSoleErrM": 0.0000033933485373057814,
+                "recordedSoleErrM": 0.0000033933485372995138
+              },
+              {
+                "side": "right",
+                "hipBike": [
+                  -0.31472299630427897,
+                  0.7248503735922068,
+                  0.10006147595782727
+                ],
+                "ankleBike": [
+                  -0.22779187234771525,
+                  0.19339550052419582,
+                  0.1561813672244818
+                ],
+                "palmBike": [
+                  0.26999979132646207,
+                  0.7800001786127528,
+                  0.32999999267161745
+                ],
+                "selectedSoleBike": [
+                  -0.13939383425270746,
+                  0.036967589755736746,
+                  0.14380548623812098
+                ],
+                "reconstructedSoleErrM": 0.000003447419510384938,
+                "recordedSoleErrM": 0.000003447419510387717
+              }
+            ]
+          },
+          "overlap": true,
+          "comparedTrianglePairs": 5333,
+          "downwardJeansTriangles": 22950,
+          "minimumSignedBikeUpGapM": -0.06903725468600275,
+          "witness": {
+            "jeansTriangleRow": 34636,
+            "jeansDecodedVertexRows": [
+              5181,
+              5182,
+              21742
+            ],
+            "jeansNativeVertexIDs": [
+              5010,
+              5011,
+              21331
+            ],
+            "jeansBarycentric": [
+              0.01861799562160778,
+              1.4360690284185813e-14,
+              0.9813820043783779
+            ],
+            "jeansPointBike": [
+              -0.07196360663912581,
+              0.5424939185186954,
+              0.047880569052013315
+            ],
+            "jeansNormalBike": [
+              0.03047324230455111,
+              -0.49304381161625505,
+              -0.8694706328165218
+            ],
+            "jeansNamedFOUR": [
+              [
+                [
+                  "DEF-thigh.R.001",
+                  0.9396937489509583
+                ],
+                [
+                  "DEF-shin.R",
+                  0.0340442955493927
+                ],
+                [
+                  "DEF-thigh.R",
+                  0.026261968538165092
+                ]
+              ],
+              [
+                [
+                  "DEF-thigh.R.001",
+                  0.9384996294975281
+                ],
+                [
+                  "DEF-shin.R",
+                  0.03569547086954117
+                ],
+                [
+                  "DEF-thigh.R",
+                  0.0258049126714468
+                ]
+              ],
+              [
+                [
+                  "DEF-thigh.R.001",
+                  0.9397224187850952
+                ],
+                [
+                  "DEF-thigh.R",
+                  0.054221756756305695
+                ],
+                [
+                  "DEF-shin.R",
+                  0.006055849138647318
+                ]
+              ]
+            ],
+            "saddleTriangleRow": 271,
+            "saddleDecodedVertexRows": [
+              271,
+              296,
+              274
+            ],
+            "saddleBarycentric": [
+              -5.023759186428833e-15,
+              0.24422440662191705,
+              0.755775593378088
+            ],
+            "saddlePointBike": [
+              -0.07196360663912581,
+              0.6115311732046982,
+              0.047880569052013315
+            ],
+            "saddleNormalBike": [
+              -0.05198523585498362,
+              0.5233887691522161,
+              0.8505067498723511
+            ],
+            "normalsOpposition": 0.9991283944146534,
+            "polygonXZ": [
+              [
+                -0.07203608289500925,
+                0.04789349724900874
+              ],
+              [
+                -0.0723091599083422,
+                0.04782630499770207
+              ],
+              [
+                -0.07196360663912581,
+                0.047880569052013315
+              ]
+            ],
+            "projectedAreaM2": 4.200118111164289e-9,
+            "posteriorClassification": "PARENT_REVIEW_REQUIRED"
+          },
+          "existingContactDiagnostics": {
+            "gripErrM": [
+              2.259556526058668e-8,
+              2.7477420928303483e-7
+            ],
+            "soleErrM": [
+              0.0000033933485372995138,
+              0.000003447419510387717
+            ],
+            "anthropometry": {
+              "hips": [
+                -0.30331729987970435,
+                0.7485839501934971
+              ],
+              "residualM": 3.703962549370213e-10,
+              "com": [
+                -0.15873411736503673,
+                0.8198353590111458,
+                0.00000663609801560992
+              ],
+              "iterations": 3,
+              "converged": true,
+              "requestedCOM": [
+                -0.1587341171195792,
+                0.8198353592885336,
+                0
+              ],
+              "physicsDimensions": "XY",
+              "measuredCOM": [
+                -0.15873411736503673,
+                0.8198353590111458,
+                0.00000663609801560992
+              ],
+              "lateralResidualM": 0.00000663609801560992,
+              "carrierAngle": 1.1328116988956292,
+              "spineFlexRadians": 0,
+              "elapsedMs": 2,
+              "articulationRule": "Least evaluated flex: <=1mm + XY convergence; else least max gap",
+              "candidateCount": 1,
+              "candidates": [
+                {
+                  "flex": 0,
+                  "gapM": 0.000003447419510387717,
+                  "armGapM": 2.7477420928303483e-7,
+                  "legGapM": 0.000003447419510387717,
+                  "reach": 0.99261495233721,
+                  "comResidualM": 3.703962549370213e-10
+                }
+              ],
+              "palmForwardBike": [
+                1,
+                -0.25,
+                0
+              ],
+              "contactLimit": "Socket-only; glove/bar/finger surfaces unqualified"
+            }
+          }
+        },
+        {
+          "name": "garage-orbit-4",
+          "riderStageTime": 9.93399999999997,
+          "skeletalWitnesses": {
+            "toleranceM": 0.00001,
+            "carrierBike": [
+              -0.30253048566531804,
+              0.747594129177144,
+              1.232595164407831e-32
+            ],
+            "carrierResidualM": 2.220446049250313e-16,
+            "sides": [
+              {
+                "side": "left",
+                "hipBike": [
+                  -0.31373492860106256,
+                  0.7237648818965143,
+                  -0.10006147650341751
+                ],
+                "ankleBike": [
+                  -0.22779187938328746,
+                  0.19535176478910046,
+                  -0.1561814084218046
+                ],
+                "palmBike": [
+                  0.26999997722482616,
+                  0.7799999985419023,
+                  -0.33000000623914194
+                ],
+                "selectedSoleBike": [
+                  -0.14000187968535477,
+                  0.034763195087127524,
+                  -0.14722717717161363
+                ],
+                "reconstructedSoleErrM": 0.000003397031383708846,
+                "recordedSoleErrM": 0.0000033970313835375668
+              },
+              {
+                "side": "right",
+                "hipBike": [
+                  -0.31373492696988553,
+                  0.7237648810926707,
+                  0.10006147595782734
+                ],
+                "ankleBike": [
+                  -0.22779187202453535,
+                  0.19339550408941628,
+                  0.15618136361360577
+                ],
+                "palmBike": [
+                  0.2699997866310264,
+                  0.7800001745434488,
+                  0.329999994409933
+                ],
+                "selectedSoleBike": [
+                  -0.13939383597942168,
+                  0.03696759082684378,
+                  0.14380548250526112
+                ],
+                "reconstructedSoleErrM": 0.000003451124356062469,
+                "recordedSoleErrM": 0.0000034511243560470486
+              }
+            ]
+          },
+          "overlap": true,
+          "comparedTrianglePairs": 5319,
+          "downwardJeansTriangles": 22938,
+          "minimumSignedBikeUpGapM": -0.06980584809562251,
+          "witness": {
+            "jeansTriangleRow": 34626,
+            "jeansDecodedVertexRows": [
+              21741,
+              21742,
+              21745
+            ],
+            "jeansNativeVertexIDs": [
+              21330,
+              21331,
+              21334
+            ],
+            "jeansBarycentric": [
+              0.18485115766924443,
+              0.8151488423307558,
+              -2.843095452811798e-16
+            ],
+            "jeansPointBike": [
+              -0.07091906421089689,
+              0.5421318497297919,
+              0.04769424526751842
+            ],
+            "jeansNormalBike": [
+              0.008205236132272737,
+              -0.46218181383437695,
+              -0.8867472272642183
+            ],
+            "jeansNamedFOUR": [
+              [
+                [
+                  "DEF-thigh.R.001",
+                  0.939780056476593
+                ],
+                [
+                  "DEF-thigh.R",
+                  0.0547788068652153
+                ],
+                [
+                  "DEF-shin.R",
+                  0.005441147834062576
+                ]
+              ],
+              [
+                [
+                  "DEF-thigh.R.001",
+                  0.9397224187850952
+                ],
+                [
+                  "DEF-thigh.R",
+                  0.054221756756305695
+                ],
+                [
+                  "DEF-shin.R",
+                  0.006055849138647318
+                ]
+              ],
+              [
+                [
+                  "DEF-thigh.R.001",
+                  0.8978285193443298
+                ],
+                [
+                  "DEF-thigh.R",
+                  0.10081411898136139
+                ],
+                [
+                  "DEF-shin.R",
+                  0.0013573785545304418
+                ]
+              ]
+            ],
+            "saddleTriangleRow": 271,
+            "saddleDecodedVertexRows": [
+              271,
+              296,
+              274
+            ],
+            "saddleBarycentric": [
+              6.2727600891321345e-15,
+              0.23266103963265844,
+              0.7673389603673353
+            ],
+            "saddlePointBike": [
+              -0.07091906421089689,
+              0.6119376978254144,
+              0.04769424526751842
+            ],
+            "saddleNormalBike": [
+              -0.05198523585498362,
+              0.5233887691522161,
+              0.8505067498723511
+            ],
+            "normalsOpposition": 0.9965118240217047,
+            "polygonXZ": [
+              [
+                -0.06979561346184637,
+                0.046575497505884744
+              ],
+              [
+                -0.07091906421089689,
+                0.04769424526751842
+              ],
+              [
+                -0.0716176448245154,
+                0.047818856944542264
+              ],
+              [
+                -0.07740757257888685,
+                0.046134821200002896
+              ],
+              [
+                -0.07491973758173538,
+                0.04558346317360716
+              ]
+            ],
+            "projectedAreaM2": 0.000008101056186413536,
+            "posteriorClassification": "PARENT_REVIEW_REQUIRED"
+          },
+          "existingContactDiagnostics": {
+            "gripErrM": [
+              2.3659279031012662e-8,
+              2.75722656478715e-7
+            ],
+            "soleErrM": [
+              0.0000033970313835375668,
+              0.0000034511243560470486
+            ],
+            "anthropometry": {
+              "hips": [
+                -0.30253048566531804,
+                0.7475941291771442
+              ],
+              "residualM": 1.1264763501435709e-8,
+              "com": [
+                -0.1587341253145962,
+                0.8198353515595884,
+                0.000006645078651658972
+              ],
+              "iterations": 3,
+              "converged": true,
+              "requestedCOM": [
+                -0.1587341171195792,
+                0.8198353592885336,
+                0
+              ],
+              "physicsDimensions": "XY",
+              "measuredCOM": [
+                -0.1587341253145962,
+                0.8198353515595884,
+                0.000006645078651658972
+              ],
+              "lateralResidualM": 0.000006645078651658972,
+              "carrierAngle": 1.141274355192244,
+              "spineFlexRadians": 0,
+              "elapsedMs": 2,
+              "articulationRule": "Least evaluated flex: <=1mm + XY convergence; else least max gap",
+              "candidateCount": 1,
+              "candidates": [
+                {
+                  "flex": 0,
+                  "gapM": 0.0000034511243560470486,
+                  "armGapM": 2.75722656478715e-7,
+                  "legGapM": 0.0000034511243560470486,
+                  "reach": 0.9967701114951837,
+                  "comResidualM": 1.1264763501435709e-8
+                }
+              ],
+              "palmForwardBike": [
+                1,
+                -0.25,
+                0
+              ],
+              "contactLimit": "Socket-only; glove/bar/finger surfaces unqualified"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "pro",
+      "report": {
+        "path": "harness/out/rider-rebuild/selected-seated-garage01/played01/pro/report.json",
+        "sha256": "509a8ea3c2c4fbe51d9eef4ee829e761441b26aab55d7bc262e824a116ff142d"
+      },
+      "bike": {
+        "path": "public/models/bike-pro.glb",
+        "sha256": "0acc9ac86eeca76cc1812f8870eab36e2e25ca76d6a5cbe86d4a46a36cc12a86"
+      },
+      "saddleSource": {
+        "component": 3,
+        "node": "bodywork",
+        "nodeIndex": 13,
+        "sourceMeshIndex": 0,
+        "primitiveIndex": 0,
+        "sourceTriangleOrdinals": [
+          260,
+          261,
+          262,
+          263,
+          264,
+          265,
+          266,
+          267,
+          268,
+          269,
+          270,
+          271,
+          272,
+          273,
+          274,
+          275,
+          276,
+          277,
+          278,
+          279,
+          280,
+          281,
+          282,
+          283,
+          284,
+          285,
+          286,
+          287,
+          288,
+          289,
+          290,
+          291,
+          292,
+          293,
+          294,
+          295,
+          296,
+          297,
+          298,
+          299,
+          300,
+          301,
+          302,
+          303,
+          304,
+          305,
+          306,
+          307,
+          308,
+          309,
+          310,
+          311,
+          312,
+          313,
+          314,
+          315,
+          316,
+          317,
+          318,
+          319,
+          320,
+          321,
+          322,
+          323,
+          324,
+          325,
+          326,
+          327,
+          328,
+          329,
+          330,
+          331,
+          332,
+          333,
+          334,
+          335,
+          336,
+          337,
+          338,
+          339,
+          340,
+          341,
+          342,
+          343,
+          344,
+          345,
+          346,
+          347,
+          348,
+          349,
+          350,
+          351,
+          352,
+          353,
+          354,
+          355,
+          356,
+          357,
+          358,
+          359,
+          360,
+          361,
+          362,
+          363,
+          364,
+          365,
+          366,
+          367,
+          368,
+          369,
+          370,
+          371,
+          372,
+          373,
+          374,
+          375
+        ],
+        "allTriangles": 116,
+        "upwardTriangles": 48,
+        "classification": "Previously parent-selected saddle shell; source hash exactly matches this played bike."
+      },
+      "snapshots": [
+        {
+          "name": "garage-front",
+          "riderStageTime": 1.8969999999999985,
+          "skeletalWitnesses": {
+            "toleranceM": 0.00001,
+            "carrierBike": [
+              -0.30365309610190205,
+              0.7489204228211808,
+              2.465190328815662e-32
+            ],
+            "carrierResidualM": 1.1102230246251565e-16,
+            "sides": [
+              {
+                "side": "left",
+                "hipBike": [
+                  -0.3151347895581284,
+                  0.7252235183220905,
+                  -0.10006147650341748
+                ],
+                "ankleBike": [
+                  -0.22779187952136407,
+                  0.19535175962057547,
+                  -0.15618141312863823
+                ],
+                "palmBike": [
+                  0.2699999781683691,
+                  0.779999998676275,
+                  -0.33000000418397907
+                ],
+                "selectedSoleBike": [
+                  -0.14000187683477933,
+                  0.03476319320913543,
+                  -0.14722718196761983
+                ],
+                "reconstructedSoleErrM": 0.000003392034285804249,
+                "recordedSoleErrM": 0.0000033920342857691026
+              },
+              {
+                "side": "right",
+                "hipBike": [
+                  -0.3151347879364407,
+                  0.7252235174992708,
+                  0.10006147595782731
+                ],
+                "ankleBike": [
+                  -0.2277918724115343,
+                  0.19339549910275391,
+                  0.15618136858023424
+                ],
+                "palmBike": [
+                  0.2699997929337312,
+                  0.7800001799131234,
+                  0.3299999920362694
+                ],
+                "selectedSoleBike": [
+                  -0.13939383351698714,
+                  0.036967589220658764,
+                  0.14380548752610087
+                ],
+                "reconstructedSoleErrM": 0.0000034461026070637974,
+                "recordedSoleErrM": 0.0000034461026069433053
+              }
+            ]
+          },
+          "overlap": true,
+          "comparedTrianglePairs": 5340,
+          "downwardJeansTriangles": 22961,
+          "minimumSignedBikeUpGapM": -0.06874624889189263,
+          "witness": {
+            "jeansTriangleRow": 34636,
+            "jeansDecodedVertexRows": [
+              5181,
+              5182,
+              21742
+            ],
+            "jeansNativeVertexIDs": [
+              5010,
+              5011,
+              21331
+            ],
+            "jeansBarycentric": [
+              0.038824204504154344,
+              1.0896583633737048e-14,
+              0.9611757954958348
+            ],
+            "jeansPointBike": [
+              -0.07203261164013182,
+              0.542758068312414,
+              0.047892878052192764
+            ],
+            "jeansNormalBike": [
+              0.030337303511632125,
+              -0.4928780931847639,
+              -0.8695693378185516
+            ],
+            "jeansNamedFOUR": [
+              [
+                [
+                  "DEF-thigh.R.001",
+                  0.9396937489509583
+                ],
+                [
+                  "DEF-shin.R",
+                  0.0340442955493927
+                ],
+                [
+                  "DEF-thigh.R",
+                  0.026261968538165092
+                ]
+              ],
+              [
+                [
+                  "DEF-thigh.R.001",
+                  0.9384996294975281
+                ],
+                [
+                  "DEF-shin.R",
+                  0.03569547086954117
+                ],
+                [
+                  "DEF-thigh.R",
+                  0.0258049126714468
+                ]
+              ],
+              [
+                [
+                  "DEF-thigh.R.001",
+                  0.9397224187850952
+                ],
+                [
+                  "DEF-thigh.R",
+                  0.054221756756305695
+                ],
+                [
+                  "DEF-shin.R",
+                  0.006055849138647318
+                ]
+              ]
+            ],
+            "saddleTriangleRow": 271,
+            "saddleDecodedVertexRows": [
+              271,
+              296,
+              274
+            ],
+            "saddleBarycentric": [
+              -6.189493362285248e-15,
+              0.2449883106330539,
+              0.7550116893669523
+            ],
+            "saddlePointBike": [
+              -0.07203261164013182,
+              0.6115043172043066,
+              0.047892878052192764
+            ],
+            "saddleNormalBike": [
+              -0.05198523585498362,
+              0.5233887691522161,
+              0.8505067498723511
+            ],
+            "normalsOpposition": 0.9991185417090303,
+            "polygonXZ": [
+              [
+                -0.0721837514788431,
+                0.047919838131530446
+              ],
+              [
+                -0.07275306403398506,
+                0.047779814198523375
+              ],
+              [
+                -0.07203261164013182,
+                0.047892878052192764
+              ]
+            ],
+            "projectedAreaM2": 1.82559531524025e-8,
+            "posteriorClassification": "PARENT_REVIEW_REQUIRED"
+          },
+          "existingContactDiagnostics": {
+            "gripErrM": [
+              2.2268319060570893e-8,
+              2.744241109227813e-7
+            ],
+            "soleErrM": [
+              0.0000033920342857691026,
+              0.0000034461026069433053
+            ],
+            "anthropometry": {
+              "hips": [
+                -0.30365309610190205,
+                0.7489204228211807
+              ],
+              "residualM": 4.863938076316344e-11,
+              "com": [
+                -0.1587341170709723,
+                0.8198353592903109,
+                0.000006635412373427133
+              ],
+              "iterations": 3,
+              "converged": true,
+              "requestedCOM": [
+                -0.1587341171195792,
+                0.8198353592885336,
+                0
+              ],
+              "physicsDimensions": "XY",
+              "measuredCOM": [
+                -0.1587341170709723,
+                0.8198353592903109,
+                0.000006635412373427133
+              ],
+              "lateralResidualM": 0.000006635412373427133,
+              "carrierAngle": 1.129607204998418,
+              "spineFlexRadians": 0,
+              "elapsedMs": 2,
+              "articulationRule": "Least evaluated flex: <=1mm + XY convergence; else least max gap",
+              "candidateCount": 1,
+              "candidates": [
+                {
+                  "flex": 0,
+                  "gapM": 0.0000034461026069433053,
+                  "armGapM": 2.744241109227813e-7,
+                  "legGapM": 0.0000034461026069433053,
+                  "reach": 0.9910318778177643,
+                  "comResidualM": 4.863938076316344e-11
+                }
+              ],
+              "palmForwardBike": [
+                1,
+                -0.25,
+                0
+              ],
+              "contactLimit": "Socket-only; glove/bar/finger surfaces unqualified"
+            }
+          }
+        },
+        {
+          "name": "garage-orbit-1",
+          "riderStageTime": 3.880999999999993,
+          "skeletalWitnesses": {
+            "toleranceM": 0.00001,
+            "carrierBike": [
+              -0.3024438450648555,
+              0.747437518903532,
+              1.232595164407831e-32
+            ],
+            "carrierResidualM": 1.2412670766236366e-16,
+            "sides": [
+              {
+                "side": "left",
+                "hipBike": [
+                  -0.3136207377257965,
+                  0.7235953370002843,
+                  -0.10006147650341744
+                ],
+                "ankleBike": [
+                  -0.22779187933219516,
+                  0.19535176525972525,
+                  -0.15618140794891067
+                ],
+                "palmBike": [
+                  0.26999997711041274,
+                  0.779999998519981,
+                  -0.3300000065124381
+                ],
+                "selectedSoleBike": [
+                  -0.14000187991522003,
+                  0.03476319519576679,
+                  -0.1472271766132322
+                ],
+                "reconstructedSoleErrM": 0.0000033975812484962157,
+                "recordedSoleErrM": 0.00000339758124854516
+              },
+              {
+                "side": "right",
+                "hipBike": [
+                  -0.31362073609369134,
+                  0.7235953361983265,
+                  0.10006147595782727
+                ],
+                "ankleBike": [
+                  -0.2277918719486163,
+                  0.19339550453542545,
+                  0.15618136311294625
+                ],
+                "palmBike": [
+                  0.26999978589747725,
+                  0.7800001738597484,
+                  0.32999999465801605
+                ],
+                "selectedSoleBike": [
+                  -0.13939383617004758,
+                  0.03696759089996551,
+                  0.14380548192312267
+                ],
+                "reconstructedSoleErrM": 0.000003451680519521914,
+                "recordedSoleErrM": 0.0000034516805196039257
+              }
+            ]
+          },
+          "overlap": true,
+          "comparedTrianglePairs": 5317,
+          "downwardJeansTriangles": 22939,
+          "minimumSignedBikeUpGapM": -0.06991317685469955,
+          "witness": {
+            "jeansTriangleRow": 34626,
+            "jeansDecodedVertexRows": [
+              21741,
+              21742,
+              21745
+            ],
+            "jeansNativeVertexIDs": [
+              21330,
+              21331,
+              21334
+            ],
+            "jeansBarycentric": [
+              0.22266897589236512,
+              0.7773310241076351,
+              -3.329777688774402e-16
+            ],
+            "jeansPointBike": [
+              -0.07071941096726012,
+              0.5421022238547247,
+              0.04765863144568051
+            ],
+            "jeansNormalBike": [
+              0.008299523237060442,
+              -0.462244916519914,
+              -0.8867134571356944
+            ],
+            "jeansNamedFOUR": [
+              [
+                [
+                  "DEF-thigh.R.001",
+                  0.939780056476593
+                ],
+                [
+                  "DEF-thigh.R",
+                  0.0547788068652153
+                ],
+                [
+                  "DEF-shin.R",
+                  0.005441147834062576
+                ]
+              ],
+              [
+                [
+                  "DEF-thigh.R.001",
+                  0.9397224187850952
+                ],
+                [
+                  "DEF-thigh.R",
+                  0.054221756756305695
+                ],
+                [
+                  "DEF-shin.R",
+                  0.006055849138647318
+                ]
+              ],
+              [
+                [
+                  "DEF-thigh.R.001",
+                  0.8978285193443298
+                ],
+                [
+                  "DEF-thigh.R",
+                  0.10081411898136139
+                ],
+                [
+                  "DEF-shin.R",
+                  0.0013573785545304418
+                ]
+              ]
+            ],
+            "saddleTriangleRow": 271,
+            "saddleDecodedVertexRows": [
+              271,
+              296,
+              274
+            ],
+            "saddleBarycentric": [
+              -6.13398221105399e-15,
+              0.23045082426526334,
+              0.7695491757347428
+            ],
+            "saddlePointBike": [
+              -0.07071941096726012,
+              0.6120154007094243,
+              0.04765863144568051
+            ],
+            "saddleNormalBike": [
+              -0.05198523585498362,
+              0.5233887691522161,
+              0.8505067498723511
+            ],
+            "normalsOpposition": 0.9965210310737449,
+            "polygonXZ": [
+              [
+                -0.06964846501041584,
+                0.04659165070947905
+              ],
+              [
+                -0.07071941096726012,
+                0.04765863144568051
+              ],
+              [
+                -0.07156089899544546,
+                0.04780873471557303
+              ],
+              [
+                -0.07735535013376661,
+                0.0461232475770303
+              ],
+              [
+                -0.07488969081259741,
+                0.045576804159906316
+              ]
+            ],
+            "projectedAreaM2": 0.000008189557453606739,
+            "posteriorClassification": "PARENT_REVIEW_REQUIRED"
+          },
+          "existingContactDiagnostics": {
+            "gripErrM": [
+              2.384398269647117e-8,
+              2.758543804168795e-7
+            ],
+            "soleErrM": [
+              0.00000339758124854516,
+              0.0000034516805196039257
+            ],
+            "anthropometry": {
+              "hips": [
+                -0.30244384506485544,
+                0.7474375189035322
+              ],
+              "residualM": 2.0189947595025803e-8,
+              "com": [
+                -0.15873413183251361,
+                0.819835345462343,
+                0.000006648046012090562
+              ],
+              "iterations": 3,
+              "converged": true,
+              "requestedCOM": [
+                -0.1587341171195792,
+                0.8198353592885336,
+                0
+              ],
+              "physicsDimensions": "XY",
+              "measuredCOM": [
+                -0.15873413183251361,
+                0.819835345462343,
+                0.000006648046012090562
+              ],
+              "lateralResidualM": 0.000006648046012090562,
+              "carrierAngle": 1.142430195166334,
+              "spineFlexRadians": 0,
+              "elapsedMs": 2,
+              "articulationRule": "Least evaluated flex: <=1mm + XY convergence; else least max gap",
+              "candidateCount": 1,
+              "candidates": [
+                {
+                  "flex": 0,
+                  "gapM": 0.0000034516805196039257,
+                  "armGapM": 2.758543804168795e-7,
+                  "legGapM": 0.0000034516805196039257,
+                  "reach": 0.9973330327608981,
+                  "comResidualM": 2.0189947595025803e-8
+                }
+              ],
+              "palmForwardBike": [
+                1,
+                -0.25,
+                0
+              ],
+              "contactLimit": "Socket-only; glove/bar/finger surfaces unqualified"
+            }
+          }
+        },
+        {
+          "name": "garage-orbit-2",
+          "riderStageTime": 5.847,
+          "skeletalWitnesses": {
+            "toleranceM": 0.00001,
+            "carrierBike": [
+              -0.3037896183999952,
+              0.7490503809590707,
+              1.232595164407831e-32
+            ],
+            "carrierResidualM": 1.2412670766236366e-16,
+            "sides": [
+              {
+                "side": "left",
+                "hipBike": [
+                  -0.31530139847650857,
+                  0.7253680777152615,
+                  -0.10006147650341753
+                ],
+                "ankleBike": [
+                  -0.22779187951421467,
+                  0.19535175903503574,
+                  -0.15618141363802085
+                ],
+                "palmBike": [
+                  0.2699999782585233,
+                  0.7799999986857775,
+                  -0.3300000040030605
+                ],
+                "selectedSoleBike": [
+                  -0.14000187649398155,
+                  0.03476319296105149,
+                  -0.14722718244378025
+                ],
+                "reconstructedSoleErrM": 0.0000033915200397887118,
+                "recordedSoleErrM": 0.0000033915200398075455
+              },
+              {
+                "side": "right",
+                "hipBike": [
+                  -0.31530139685586717,
+                  0.7253680768903827,
+                  0.10006147595782736
+                ],
+                "ankleBike": [
+                  -0.2277918724314105,
+                  0.19339549853330526,
+                  0.1561813691167862
+                ],
+                "palmBike": [
+                  0.26999979355485326,
+                  0.7800001804056441,
+                  0.3299999917870547
+                ],
+                "selectedSoleBike": [
+                  -0.13939383321800775,
+                  0.0369675889973142,
+                  0.14380548802597454
+                ],
+                "reconstructedSoleErrM": 0.0000034455877839763803,
+                "recordedSoleErrM": 0.0000034455877838795454
+              }
+            ]
+          },
+          "overlap": true,
+          "comparedTrianglePairs": 5342,
+          "downwardJeansTriangles": 22965,
+          "minimumSignedBikeUpGapM": -0.06863152317986143,
+          "witness": {
+            "jeansTriangleRow": 34636,
+            "jeansDecodedVertexRows": [
+              5181,
+              5182,
+              21742
+            ],
+            "jeansNativeVertexIDs": [
+              5010,
+              5011,
+              21331
+            ],
+            "jeansBarycentric": [
+              0.046880770429079115,
+              5.448733471512672e-15,
+              0.9531192295709154
+            ],
+            "jeansPointBike": [
+              -0.0720604395490866,
+              0.5428619637031223,
+              0.04789784194946578
+            ],
+            "jeansNormalBike": [
+              0.03028825377913967,
+              -0.49281310869854594,
+              -0.8696078780564753
+            ],
+            "jeansNamedFOUR": [
+              [
+                [
+                  "DEF-thigh.R.001",
+                  0.9396937489509583
+                ],
+                [
+                  "DEF-shin.R",
+                  0.0340442955493927
+                ],
+                [
+                  "DEF-thigh.R",
+                  0.026261968538165092
+                ]
+              ],
+              [
+                [
+                  "DEF-thigh.R.001",
+                  0.9384996294975281
+                ],
+                [
+                  "DEF-shin.R",
+                  0.03569547086954117
+                ],
+                [
+                  "DEF-thigh.R",
+                  0.0258049126714468
+                ]
+              ],
+              [
+                [
+                  "DEF-thigh.R.001",
+                  0.9397224187850952
+                ],
+                [
+                  "DEF-thigh.R",
+                  0.054221756756305695
+                ],
+                [
+                  "DEF-shin.R",
+                  0.006055849138647318
+                ]
+              ]
+            ],
+            "saddleTriangleRow": 271,
+            "saddleDecodedVertexRows": [
+              271,
+              296,
+              274
+            ],
+            "saddleBarycentric": [
+              1.2490009027033011e-15,
+              0.24529637310623972,
+              0.754703626893759
+            ],
+            "saddlePointBike": [
+              -0.0720604395490866,
+              0.6114934868829838,
+              0.04789784194946578
+            ],
+            "saddleNormalBike": [
+              -0.05198523585498362,
+              0.5233887691522161,
+              0.8505067498723511
+            ],
+            "normalsOpposition": 0.999114758429358,
+            "polygonXZ": [
+              [
+                -0.07224294540351871,
+                0.04793039704782394
+              ],
+              [
+                -0.07293033603991961,
+                0.04776136091035989
+              ],
+              [
+                -0.0720604395490866,
+                0.04789784194946578
+              ]
+            ],
+            "projectedAreaM2": 2.6614077238253445e-8,
+            "posteriorClassification": "PARENT_REVIEW_REQUIRED"
+          },
+          "existingContactDiagnostics": {
+            "gripErrM": [
+              2.2145958574221007e-8,
+              2.7428679775468945e-7
+            ],
+            "soleErrM": [
+              0.0000033915200398075455,
+              0.0000034455877838795454
+            ],
+            "anthropometry": {
+              "hips": [
+                -0.30378961839999513,
+                0.7490503809590708
+              ],
+              "residualM": 1.2608521562513775e-10,
+              "com": [
+                -0.1587341170091986,
+                0.8198353593494729,
+                0.0000066353539216229725
+              ],
+              "iterations": 3,
+              "converged": true,
+              "requestedCOM": [
+                -0.1587341171195792,
+                0.8198353592885336,
+                0
+              ],
+              "physicsDimensions": "XY",
+              "measuredCOM": [
+                -0.1587341170091986,
+                0.8198353593494729,
+                0.0000066353539216229725
+              ],
+              "lateralResidualM": 0.0000066353539216229725,
+              "carrierAngle": 1.128337170412521,
+              "spineFlexRadians": 0,
+              "elapsedMs": 2,
+              "articulationRule": "Least evaluated flex: <=1mm + XY convergence; else least max gap",
+              "candidateCount": 1,
+              "candidates": [
+                {
+                  "flex": 0,
+                  "gapM": 0.0000034455877838795454,
+                  "armGapM": 2.7428679775468945e-7,
+                  "legGapM": 0.0000034455877838795454,
+                  "reach": 0.9904034086361994,
+                  "comResidualM": 1.2608521562513775e-10
+                }
+              ],
+              "palmForwardBike": [
+                1,
+                -0.25,
+                0
+              ],
+              "contactLimit": "Socket-only; glove/bar/finger surfaces unqualified"
+            }
+          }
+        },
+        {
+          "name": "garage-orbit-3",
+          "riderStageTime": 7.813000000000012,
+          "skeletalWitnesses": {
+            "toleranceM": 0.00001,
+            "carrierBike": [
+              -0.3030851386714672,
+              0.7483320624176553,
+              2.465190328815662e-32
+            ],
+            "carrierResidualM": 5.551115123125783e-17,
+            "sides": [
+              {
+                "side": "left",
+                "hipBike": [
+                  -0.3144360462356787,
+                  0.7245722336108125,
+                  -0.10006147650341751
+                ],
+                "ankleBike": [
+                  -0.2277918795139523,
+                  0.19535176212390612,
+                  -0.15618141091390256
+                ],
+                "palmBike": [
+                  0.2699999777551693,
+                  0.7799999986261246,
+                  -0.33000000504493976
+                ],
+                "selectedSoleBike": [
+                  -0.14000187826168542,
+                  0.034763194212735354,
+                  -0.147227179825604
+                ],
+                "reconstructedSoleErrM": 0.000003394314297931606,
+                "recordedSoleErrM": 0.0000033943142979475172
+              },
+              {
+                "side": "right",
+                "hipBike": [
+                  -0.31443604460948044,
+                  0.7245722327969436,
+                  0.10006147595782734
+                ],
+                "ankleBike": [
+                  -0.22779187228674463,
+                  0.1933955015300687,
+                  0.15618136624576978
+                ],
+                "palmBike": [
+                  0.2699997901252825,
+                  0.7800001776139078,
+                  0.32999999313559203
+                ],
+                "selectedSoleBike": [
+                  -0.1393938347616964,
+                  0.03696759010877451,
+                  0.14380548527999135
+                ],
+                "reconstructedSoleErrM": 0.000003448388564837337,
+                "recordedSoleErrM": 0.000003448388564823898
+              }
+            ]
+          },
+          "overlap": true,
+          "comparedTrianglePairs": 5331,
+          "downwardJeansTriangles": 22945,
+          "minimumSignedBikeUpGapM": -0.06924849319658966,
+          "witness": {
+            "jeansTriangleRow": 34636,
+            "jeansDecodedVertexRows": [
+              5181,
+              5182,
+              21742
+            ],
+            "jeansNativeVertexIDs": [
+              5010,
+              5011,
+              21331
+            ],
+            "jeansBarycentric": [
+              0.0042008445690981154,
+              -5.693880586352324e-15,
+              0.9957991554309076
+            ],
+            "jeansPointBike": [
+              -0.07191521420592922,
+              0.5423015138199473,
+              0.047871936888253926
+            ],
+            "jeansNormalBike": [
+              0.030584889999102503,
+              -0.49316508042418483,
+              -0.8693979341785611
+            ],
+            "jeansNamedFOUR": [
+              [
+                [
+                  "DEF-thigh.R.001",
+                  0.9396937489509583
+                ],
+                [
+                  "DEF-shin.R",
+                  0.0340442955493927
+                ],
+                [
+                  "DEF-thigh.R",
+                  0.026261968538165092
+                ]
+              ],
+              [
+                [
+                  "DEF-thigh.R.001",
+                  0.9384996294975281
+                ],
+                [
+                  "DEF-shin.R",
+                  0.03569547086954117
+                ],
+                [
+                  "DEF-thigh.R",
+                  0.0258049126714468
+                ]
+              ],
+              [
+                [
+                  "DEF-thigh.R.001",
+                  0.9397224187850952
+                ],
+                [
+                  "DEF-thigh.R",
+                  0.054221756756305695
+                ],
+                [
+                  "DEF-shin.R",
+                  0.006055849138647318
+                ]
+              ]
+            ],
+            "saddleTriangleRow": 271,
+            "saddleDecodedVertexRows": [
+              271,
+              296,
+              274
+            ],
+            "saddleBarycentric": [
+              4.884981308350689e-15,
+              0.24368868930739485,
+              0.7563113106926003
+            ],
+            "saddlePointBike": [
+              -0.07191521420592922,
+              0.611550007016537,
+              0.047871936888253926
+            ],
+            "saddleNormalBike": [
+              -0.05198523585498362,
+              0.5233887691522161,
+              0.8505067498723511
+            ],
+            "normalsOpposition": 0.9991358384962141,
+            "polygonXZ": [
+              [
+                -0.07193156694587886,
+                0.04787485386348818
+              ],
+              [
+                -0.07199319368568262,
+                0.04785968596530626
+              ],
+              [
+                -0.07191521420592922,
+                0.047871936888253926
+              ]
+            ],
+            "projectedAreaM2": 2.1390018424029267e-10,
+            "posteriorClassification": "PARENT_REVIEW_REQUIRED"
+          },
+          "existingContactDiagnostics": {
+            "gripErrM": [
+              2.2851070897867547e-8,
+              2.750294844340373e-7
+            ],
+            "soleErrM": [
+              0.0000033943142979475172,
+              0.000003448388564823898
+            ],
+            "anthropometry": {
+              "hips": [
+                -0.30308513867146714,
+                0.7483320624176553
+              ],
+              "residualM": 1.009744031359468e-9,
+              "com": [
+                -0.15873411783082914,
+                0.8198353585718003,
+                0.000006637224904896665
+              ],
+              "iterations": 3,
+              "converged": true,
+              "requestedCOM": [
+                -0.1587341171195792,
+                0.8198353592885336,
+                0
+              ],
+              "physicsDimensions": "XY",
+              "measuredCOM": [
+                -0.15873411783082914,
+                0.8198353585718003,
+                0.000006637224904896665
+              ],
+              "lateralResidualM": 0.000006637224904896665,
+              "carrierAngle": 1.1351189860166426,
+              "spineFlexRadians": 0,
+              "elapsedMs": 2,
+              "articulationRule": "Least evaluated flex: <=1mm + XY convergence; else least max gap",
+              "candidateCount": 1,
+              "candidates": [
+                {
+                  "flex": 0,
+                  "gapM": 0.000003448388564823898,
+                  "armGapM": 2.750294844340373e-7,
+                  "legGapM": 0.000003448388564823898,
+                  "reach": 0.9937520904056327,
+                  "comResidualM": 1.009744031359468e-9
+                }
+              ],
+              "palmForwardBike": [
+                1,
+                -0.25,
+                0
+              ],
+              "contactLimit": "Socket-only; glove/bar/finger surfaces unqualified"
+            }
+          }
+        },
+        {
+          "name": "garage-orbit-4",
+          "riderStageTime": 9.729999999999995,
+          "skeletalWitnesses": {
+            "toleranceM": 0.00001,
+            "carrierBike": [
+              -0.30271645854614715,
+              0.747875664879315,
+              0
+            ],
+            "carrierResidualM": 2.220446049250313e-16,
+            "sides": [
+              {
+                "side": "left",
+                "hipBike": [
+                  -0.31397388164494194,
+                  0.7240714007101273,
+                  -0.10006147650341748
+                ],
+                "ankleBike": [
+                  -0.22779187945254617,
+                  0.1953517638503074,
+                  -0.15618140932630864
+                ],
+                "palmBike": [
+                  0.269999977428816,
+                  0.7799999985774095,
+                  -0.3300000057664843
+                ],
+                "selectedSoleBike": [
+                  -0.1400018792017951,
+                  0.034763194816721465,
+                  -0.14722717817977335
+                ],
+                "reconstructedSoleErrM": 0.0000033960171736001712,
+                "recordedSoleErrM": 0.0000033960171735994047
+              },
+              {
+                "side": "right",
+                "hipBike": [
+                  -0.313973880015557,
+                  0.7240713999026571,
+                  0.10006147595782731
+                ],
+                "ankleBike": [
+                  -0.2277918721414319,
+                  0.1933955031927619,
+                  0.1561813645699235
+                ],
+                "palmBike": [
+                  0.2699997879581196,
+                  0.7800001757424914,
+                  0.32999999394181306
+                ],
+                "selectedSoleBike": [
+                  -0.13939383557075277,
+                  0.03696759061799107,
+                  0.14380548355792894
+                ],
+                "reconstructedSoleErrM": 0.0000034501011148937585,
+                "recordedSoleErrM": 0.0000034501011148417456
+              }
+            ]
+          },
+          "overlap": true,
+          "comparedTrianglePairs": 5323,
+          "downwardJeansTriangles": 22940,
+          "minimumSignedBikeUpGapM": -0.0696026661806377,
+          "witness": {
+            "jeansTriangleRow": 34626,
+            "jeansDecodedVertexRows": [
+              21741,
+              21742,
+              21745
+            ],
+            "jeansNativeVertexIDs": [
+              21330,
+              21331,
+              21334
+            ],
+            "jeansBarycentric": [
+              0.11069227421704597,
+              0.8893077257829534,
+              7.185167495767903e-16
+            ],
+            "jeansPointBike": [
+              -0.07131211118566215,
+              0.5421820620113544,
+              0.04776435634950358
+            ],
+            "jeansNormalBike": [
+              0.008050715553352482,
+              -0.4620654845140435,
+              -0.8868092658513901
+            ],
+            "jeansNamedFOUR": [
+              [
+                [
+                  "DEF-thigh.R.001",
+                  0.939780056476593
+                ],
+                [
+                  "DEF-thigh.R",
+                  0.0547788068652153
+                ],
+                [
+                  "DEF-shin.R",
+                  0.005441147834062576
+                ]
+              ],
+              [
+                [
+                  "DEF-thigh.R.001",
+                  0.9397224187850952
+                ],
+                [
+                  "DEF-thigh.R",
+                  0.054221756756305695
+                ],
+                [
+                  "DEF-shin.R",
+                  0.006055849138647318
+                ]
+              ],
+              [
+                [
+                  "DEF-thigh.R.001",
+                  0.8978285193443298
+                ],
+                [
+                  "DEF-thigh.R",
+                  0.10081411898136139
+                ],
+                [
+                  "DEF-shin.R",
+                  0.0013573785545304418
+                ]
+              ]
+            ],
+            "saddleTriangleRow": 271,
+            "saddleDecodedVertexRows": [
+              271,
+              296,
+              274
+            ],
+            "saddleBarycentric": [
+              -5.662137425588298e-15,
+              0.23701217587222212,
+              0.7629878241277835
+            ],
+            "saddlePointBike": [
+              -0.07131211118566215,
+              0.6117847281919921,
+              0.04776435634950358
+            ],
+            "saddleNormalBike": [
+              -0.05198523585498362,
+              0.5233887691522161,
+              0.8505067498723511
+            ],
+            "normalsOpposition": 0.9964956700103216,
+            "polygonXZ": [
+              [
+                -0.07008578404736679,
+                0.04654410601199131
+              ],
+              [
+                -0.07131211118566215,
+                0.04776435634950358
+              ],
+              [
+                -0.07173044599446311,
+                0.04783897823431672
+              ],
+              [
+                -0.07751152438550334,
+                0.046157859167955735
+              ],
+              [
+                -0.07498014513105503,
+                0.04559685079264557
+              ]
+            ],
+            "projectedAreaM2": 0.000007906616250230982,
+            "posteriorClassification": "PARENT_REVIEW_REQUIRED"
+          },
+          "existingContactDiagnostics": {
+            "gripErrM": [
+              2.3339546890515023e-8,
+              2.754702958686425e-7
+            ],
+            "soleErrM": [
+              0.0000033960171735994047,
+              0.0000034501011148417456
+            ],
+            "anthropometry": {
+              "hips": [
+                -0.30271645854614715,
+                0.7478756648793152
+              ],
+              "residualM": 4.395057394672151e-9,
+              "com": [
+                -0.15873412029962852,
+                0.8198353562547545,
+                0.000006641083089552104
+              ],
+              "iterations": 3,
+              "converged": true,
+              "requestedCOM": [
+                -0.1587341171195792,
+                0.8198353592885336,
+                0
+              ],
+              "physicsDimensions": "XY",
+              "measuredCOM": [
+                -0.15873412029962852,
+                0.8198353562547545,
+                0.000006641083089552104
+              ],
+              "lateralResidualM": 0.000006641083089552104,
+              "carrierAngle": 1.1390498649293757,
+              "spineFlexRadians": 0,
+              "elapsedMs": 1,
+              "articulationRule": "Least evaluated flex: <=1mm + XY convergence; else least max gap",
+              "candidateCount": 1,
+              "candidates": [
+                {
+                  "flex": 0,
+                  "gapM": 0.0000034501011148417456,
+                  "armGapM": 2.754702958686425e-7,
+                  "legGapM": 0.0000034501011148417456,
+                  "reach": 0.9956827014122666,
+                  "comResidualM": 4.395057394672151e-9
+                }
+              ],
+              "palmForwardBike": [
+                1,
+                -0.25,
+                0
+              ],
+              "contactLimit": "Socket-only; glove/bar/finger surfaces unqualified"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}
