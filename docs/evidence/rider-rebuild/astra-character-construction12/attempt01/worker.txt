@@ -1,0 +1,19 @@
+00:10.143  blend            | Read blend: "/Users/raynos/projects/games/rockhop/harness/out/rider-rebuild/selected-complete-engine01/engine05/rider-private-masked.blend"
+CONSTRUCT sleeve L
+Traceback (most recent call last):
+  File "/Users/raynos/projects/games/rockhop/assets/blender/rider-rebuild/astra-character-construction12/construct.py", line 644, in <module>
+    main()
+    ~~~~^^
+  File "/Users/raynos/projects/games/rockhop/assets/blender/rider-rebuild/astra-character-construction12/construct.py", line 593, in main
+    report['hands'][side] = {'sleeve': sleeve(hoodie, controls, side, profiles[side], settings)}
+                                       ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/raynos/projects/games/rockhop/assets/blender/rider-rebuild/astra-character-construction12/construct.py", line 408, in sleeve
+    assert hit is not None and hit > .005, ('Source sleeve section misses outer shell', side, i, j, hit)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('Source sleeve section misses outer shell', 'L', 29, 23, None)
+
+Error: script failed, file: 'assets/blender/rider-rebuild/astra-character-construction12/construct.py', exiting.
+Blender 5.2.1 LTS (hash 9e2066aef7ef built 2026-08-25 01:35:57)
+scripts disabled for "/Users/raynos/projects/games/rockhop/harness/out/rider-rebuild/selected-complete-engine01/engine05/rider-private-masked.blend", skipping 'RIG-RiderMetarig_ui.py'
+
+Blender quit
