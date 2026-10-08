@@ -1,0 +1,466 @@
+{
+  "accepted": false,
+  "status": "ONE_WHOLE_SELECTED4K_CORRESPONDENCE_PARENT_REVIEW_PENDING",
+  "authorSHA256": "7f76608226fd9119d611f6e6cbda530764823312e9c2556693fe0026ab2f42b2",
+  "intakeSHA256": "588bcfeb20a7acf5c79c125cff38cef159679fe44d710f152eebb6bb27b83322",
+  "capture": [
+    {
+      "region": "pelvis-front",
+      "coveredSamples": 262848,
+      "noHit": 0,
+      "oppositePhysicalRegion": 0,
+      "wrongSide": 0,
+      "excessiveDistance": 0,
+      "firstHitMetres": {
+        "min": 0.003133425721898675,
+        "median": 0.025044748559594154,
+        "p95": 0.037156070768833156,
+        "max": 0.045469123870134354
+      },
+      "UVOverlapPixels": 0,
+      "boundarySamples": 14,
+      "path": "harness/out/rider-rebuild/production-jeans02/whole-correspondence02/authored02/pelvis-front-direct-capture.npz",
+      "sha256": "69ac0d00f0b3d6c6daa3ef7d45dbac06cb0d618e8d9078626d3bdc0d4cbca35d",
+      "passed": true
+    },
+    {
+      "region": "pelvis-rear",
+      "coveredSamples": 267174,
+      "noHit": 0,
+      "oppositePhysicalRegion": 0,
+      "wrongSide": 0,
+      "excessiveDistance": 0,
+      "firstHitMetres": {
+        "min": 0.0007945966208353639,
+        "median": 0.02602951880544424,
+        "p95": 0.043443707562983026,
+        "max": 0.06819073855876923
+      },
+      "UVOverlapPixels": 0,
+      "boundarySamples": 23,
+      "path": "harness/out/rider-rebuild/production-jeans02/whole-correspondence02/authored02/pelvis-rear-direct-capture.npz",
+      "sha256": "87aa5342d6a41eda95f20c2b3b40c8af3fc57070807355074c4a602d8ab7b188",
+      "passed": true
+    },
+    {
+      "region": "lower-L",
+      "coveredSamples": 2681463,
+      "noHit": 0,
+      "oppositePhysicalRegion": 0,
+      "wrongSide": 0,
+      "excessiveDistance": 0,
+      "firstHitMetres": {
+        "min": 0.003391808830201626,
+        "median": 0.014249389059841633,
+        "p95": 0.028422175161540504,
+        "max": 0.08812277019023895
+      },
+      "UVOverlapPixels": 526,
+      "boundarySamples": 162,
+      "path": "harness/out/rider-rebuild/production-jeans02/whole-correspondence02/authored02/lower-L-direct-capture.npz",
+      "sha256": "0b1129075de6c6cab90e024f1028845e8a7335e47b4d86127686ce1ae137f896",
+      "passed": true,
+      "base80mmExceeded": 231,
+      "semanticallyApprovedRearUnderbody": 231
+    },
+    {
+      "region": "lower-R",
+      "coveredSamples": 2357320,
+      "noHit": 0,
+      "oppositePhysicalRegion": 0,
+      "wrongSide": 0,
+      "excessiveDistance": 0,
+      "firstHitMetres": {
+        "min": 6.624083198403241e-06,
+        "median": 0.013887536711990833,
+        "p95": 0.028196537308394904,
+        "max": 0.09543788433074951
+      },
+      "UVOverlapPixels": 459,
+      "boundarySamples": 150,
+      "path": "harness/out/rider-rebuild/production-jeans02/whole-correspondence02/authored02/lower-R-direct-capture.npz",
+      "sha256": "d04a9d99ea08dd9aedd1b2ef16f530a09fa28c66a7d2ec904430ce50811542e6",
+      "passed": true,
+      "base80mmExceeded": 390,
+      "semanticallyApprovedRearUnderbody": 390
+    }
+  ],
+  "regionalBakes": [
+    {
+      "region": "pelvis-front",
+      "map": "albedo",
+      "path": "harness/out/rider-rebuild/production-jeans02/whole-correspondence02/authored02/pelvis-front-albedo.png",
+      "sha256": "b0cd8736a2101d2e01c58d691a60a5e838d3763710fd1db3df5b4b58adb99d5f",
+      "coveredNearZeroRGB": 0
+    },
+    {
+      "region": "pelvis-rear",
+      "map": "albedo",
+      "path": "harness/out/rider-rebuild/production-jeans02/whole-correspondence02/authored02/pelvis-rear-albedo.png",
+      "sha256": "97f5aad2c500c175e5d128e19ed9e0c6a1bf8d9fca69509e5011b7fb8f03ffcf",
+      "coveredNearZeroRGB": 0
+    },
+    {
+      "region": "lower-L",
+      "map": "albedo",
+      "path": "harness/out/rider-rebuild/production-jeans02/whole-correspondence02/authored02/lower-L-albedo.png",
+      "sha256": "0ed9623fc8c8bb1244f0286806fe675eece32634829f7d89dbd7646da7bda80d",
+      "coveredNearZeroRGB": 0
+    },
+    {
+      "region": "lower-R",
+      "map": "albedo",
+      "path": "harness/out/rider-rebuild/production-jeans02/whole-correspondence02/authored02/lower-R-albedo.png",
+      "sha256": "54e7232fddbfabc9450e52689b9bc062750c9c95bef16be028b5c5d7b58fa720",
+      "coveredNearZeroRGB": 0
+    },
+    {
+      "region": "pelvis-front",
+      "map": "metallicRoughness",
+      "path": "harness/out/rider-rebuild/production-jeans02/whole-correspondence02/authored02/pelvis-front-metallicRoughness.png",
+      "sha256": "c342d62952e2be0cebc9f1506b148ab3f2e95db8292972b3108c2a240262b203",
+      "coveredNearZeroRGB": 0
+    },
+    {
+      "region": "pelvis-rear",
+      "map": "metallicRoughness",
+      "path": "harness/out/rider-rebuild/production-jeans02/whole-correspondence02/authored02/pelvis-rear-metallicRoughness.png",
+      "sha256": "e52188220d4808d072cf2601c55581abc7fe93c7abba8a41a94d6017d78ffcbd",
+      "coveredNearZeroRGB": 0
+    },
+    {
+      "region": "lower-L",
+      "map": "metallicRoughness",
+      "path": "harness/out/rider-rebuild/production-jeans02/whole-correspondence02/authored02/lower-L-metallicRoughness.png",
+      "sha256": "6edd6608b695d1206c30d2b88a3a344c9a63dcb57f03e1e0604f82026aa118eb",
+      "coveredNearZeroRGB": 0
+    },
+    {
+      "region": "lower-R",
+      "map": "metallicRoughness",
+      "path": "harness/out/rider-rebuild/production-jeans02/whole-correspondence02/authored02/lower-R-metallicRoughness.png",
+      "sha256": "ed1480261e9c71944b64b3dc29ce425808c0e81c8c8140c1ff1651d442bfa14f",
+      "coveredNearZeroRGB": 0
+    },
+    {
+      "region": "pelvis-front",
+      "map": "normal",
+      "path": "harness/out/rider-rebuild/production-jeans02/whole-correspondence02/authored02/pelvis-front-normal.png",
+      "sha256": "8857d153f4e49dc9b30706b1808d6783593054fc04302a3ccde419c1c2030a7e",
+      "coveredNearZeroRGB": 0
+    },
+    {
+      "region": "pelvis-rear",
+      "map": "normal",
+      "path": "harness/out/rider-rebuild/production-jeans02/whole-correspondence02/authored02/pelvis-rear-normal.png",
+      "sha256": "6ef8018c8145eb088abe8c5254a112aa0ab7b87de25d4c5916a819c5da6574d4",
+      "coveredNearZeroRGB": 0
+    },
+    {
+      "region": "lower-L",
+      "map": "normal",
+      "path": "harness/out/rider-rebuild/production-jeans02/whole-correspondence02/authored02/lower-L-normal.png",
+      "sha256": "b96a64c3ccb05e428b43d30e266054d0e8a0cd2ef9bb07556d62354360de61b8",
+      "coveredNearZeroRGB": 0
+    },
+    {
+      "region": "lower-R",
+      "map": "normal",
+      "path": "harness/out/rider-rebuild/production-jeans02/whole-correspondence02/authored02/lower-R-normal.png",
+      "sha256": "ea0a0555b3e29062d483de8d7f22f0dea23f8336785628728a326f4003410b5c",
+      "coveredNearZeroRGB": 0
+    }
+  ],
+  "maps": {
+    "albedo": {
+      "path": "harness/out/rider-rebuild/production-jeans02/whole-correspondence02/authored02/albedo.png",
+      "sha256": "46ba462131c78e58e1adbc79558e59a4d8798d483e9c9e2440ba5eaa907a6f27",
+      "size": 4096,
+      "coveredNearZeroRGB": 0
+    },
+    "metallicRoughness": {
+      "path": "harness/out/rider-rebuild/production-jeans02/whole-correspondence02/authored02/metallicRoughness.png",
+      "sha256": "4dfa7b1c8505d965036b3231252045ecdcd3a60fc41f191b86ae40c4fd28f4df",
+      "size": 4096,
+      "coveredNearZeroRGB": 0
+    },
+    "normal": {
+      "path": "harness/out/rider-rebuild/production-jeans02/whole-correspondence02/authored02/normal.png",
+      "sha256": "a2de41d3d92e7ab1d2f8c7d10628d07a0e1d9c5c89cfda05685ff200868c972b",
+      "size": 4096,
+      "coveredNearZeroRGB": 0
+    }
+  },
+  "limits": [
+    "ONE continuation from actual8fbc saved whole correspondence; do not rebuild whole controls/pipeline. Original failed report/arrays remain immutable. No automatic job/retry, settings sweep, source fit or source cut enlargement.",
+    "Reflect only positive-X paired proxy/cage vertices incident to original right front crotch faces19514/19515/19516 onto their own negative-X side. Vertex move<20mm,<=16vertices per derivative, boundedXYZ scope; every working pelvis boundary vertex is excluded. All other positions, UV/fields/topology and other regional geometries must stay exact. Record old/new nativevertex IDs and every incident originalface.",
+    "The621 actual >80mm hits are correct own-side rear underside cloth: sourceY+.059..+.086,Z.812..+.826, outward geometric normalsYpositive/Znegative and normal.dot(ray)<0. Frozen11 receiverface IDs plus exact originalsourceface lists, proxy/cage/hit bounds, normal direction, and<=100mm qualify ONLY these local first hits. This corrects an arbitrary global80mm semantic threshold for real underbody geometry, not Blender max_ray_distance. Keep80mm everywhere else. The actual cage/rays for these faces remain unchanged.",
+    "Save actual local correspondence native BEFORE repeatdirectcapture/maps. Four regional4096 sample gates must pass no miss/wrongphysicalregion/wrongside/disalloweddistance before twelve selected4K map calls. Persist base80mm and locallyapproved masks; no synthetic fill.",
+    "Canonical wearing target9565 positions/topology/UV/FULL/FOUR, original selected dense/UV/maps and body10582/shared75/rest remain exact. Working pelvis, whole lowerL and right selectedsource/UVreceiver are signature checked before/after. Only actual right correspondence derivatives change.",
+    "Reuse frozen whole selected-material bake/composite statements and original helpers. Exact originalUV overlap is retained and reported; source projection-frame normal application and actual mapped appearance still need parent review.",
+    "Save whole-selected-jeans.blend, packed actual4096 albedo/MR/source-derivednormal, exact fields/modifier75/material pins and context-unit.json including actual local proxy/cage edit aids. Parent merges core into1ad5 through existing assembler; fit/art/moving/engine/player/device gates remain open."
+  ],
+  "authoredNative": {
+    "path": "harness/out/rider-rebuild/production-jeans02/whole-correspondence02/authored02/local-whole-correspondence-before-maps.blend",
+    "sha256": "dbdd756f46245359a9d11e680f8c6fbe8c0441fff045e7253eec272f46ec1ce6"
+  },
+  "wearingTargetSourceStateSHA256": [
+    "b6574d4404b6a6dfdc474d3fab3381ed41818b5dc3091b6a34cfee708b3b62ca",
+    "abd6b247f5845617000781bb3a8ef5b07df32d42f86e2c03785b4c00ce123f4a"
+  ],
+  "body75StateSHA256": "2294c25dafe2d6e74d0e0c9e7a7e7bb3c8937f17c8b5faab3cd661e565afda99",
+  "localPairedOwnSideCorrection": [
+    {
+      "object": "RLowerProjectionReceiver",
+      "changes": [
+        {
+          "vertex": 0,
+          "nativeVertex": 644,
+          "old": [
+            0.0035475168842822313,
+            -0.10416830331087112,
+            0.8191872835159302
+          ],
+          "new": [
+            -0.0035475168842822313,
+            -0.10416830331087112,
+            0.8191872835159302
+          ]
+        },
+        {
+          "vertex": 2498,
+          "nativeVertex": 8535,
+          "old": [
+            0.005098944529891014,
+            -0.11649980396032333,
+            0.8261871933937073
+          ],
+          "new": [
+            -0.005098944529891014,
+            -0.11649980396032333,
+            0.8261871933937073
+          ]
+        },
+        {
+          "vertex": 2499,
+          "nativeVertex": 8536,
+          "old": [
+            0.004353074356913567,
+            -0.11033151298761368,
+            0.8223411440849304
+          ],
+          "new": [
+            -0.004353074356913567,
+            -0.11033151298761368,
+            0.8223411440849304
+          ]
+        }
+      ],
+      "otherPositionsExact": true,
+      "excludedWorkingPelvisNativeVertexIDs": [],
+      "incidentOriginalReceiverFaces": [
+        19514,
+        19515,
+        19516,
+        19533
+      ]
+    },
+    {
+      "object": "RLowerAuthoredCage",
+      "changes": [
+        {
+          "vertex": 0,
+          "nativeVertex": 644,
+          "old": [
+            0.003395860781893134,
+            -0.10416830331087112,
+            0.8091872334480286
+          ],
+          "new": [
+            -0.003395860781893134,
+            -0.10416830331087112,
+            0.8091872334480286
+          ]
+        },
+        {
+          "vertex": 2484,
+          "nativeVertex": 5576,
+          "old": [
+            0.0011031519388779998,
+            -0.10273220390081406,
+            0.8094416856765747
+          ],
+          "new": [
+            -0.0011031519388779998,
+            -0.10273220390081406,
+            0.8094416856765747
+          ]
+        },
+        {
+          "vertex": 2498,
+          "nativeVertex": 8535,
+          "old": [
+            0.004829409997910261,
+            -0.11649980396032333,
+            0.8161872029304504
+          ],
+          "new": [
+            -0.004829409997910261,
+            -0.11649980396032333,
+            0.8161872029304504
+          ]
+        },
+        {
+          "vertex": 2499,
+          "nativeVertex": 8536,
+          "old": [
+            0.004141444806009531,
+            -0.11033151298761368,
+            0.8123410940170288
+          ],
+          "new": [
+            -0.004141444806009531,
+            -0.11033151298761368,
+            0.8123410940170288
+          ]
+        },
+        {
+          "vertex": 9482,
+          "nativeVertex": 22569,
+          "old": [
+            0.0014931783080101013,
+            -0.11495602875947952,
+            0.8165874481201172
+          ],
+          "new": [
+            -0.0014931783080101013,
+            -0.11495602875947952,
+            0.8165874481201172
+          ]
+        },
+        {
+          "vertex": 9483,
+          "nativeVertex": 22570,
+          "old": [
+            0.0014139162376523018,
+            -0.1088438630104065,
+            0.8126929402351379
+          ],
+          "new": [
+            -0.0014139162376523018,
+            -0.1088438630104065,
+            0.8126929402351379
+          ]
+        }
+      ],
+      "otherPositionsExact": true,
+      "excludedWorkingPelvisNativeVertexIDs": [],
+      "incidentOriginalReceiverFaces": [
+        19506,
+        19507,
+        19513,
+        19514,
+        19515,
+        19516,
+        19533,
+        19534
+      ]
+    }
+  ],
+  "sourceGeometryUnchanged": true,
+  "workingPelvisGeometryExact": true,
+  "UVAtlas": {
+    "coveredPixels": 5568805,
+    "overlapPixels": 985,
+    "maximumMultiplicity": 4,
+    "policy": "Original UV retained. Highest original face ID owns conflicts, matching ordinary last-face atlas writes. Raw regional maps and exact conflict mask persist; no UV/material acceptance inferred."
+  },
+  "actualBakeSettings": {
+    "useCage": true,
+    "maximumRayMetres": 0,
+    "explicitSemanticCaptureGateMetres": 0.08,
+    "localKnownRearUnderbodyGateMetres": 0.1,
+    "localGateMeaning": "Measured legitimate own-side first hits, frozen receiver/source faces, position and outward-normal checks; not Blender max_ray_distance.",
+    "marginPixels": 16
+  },
+  "resultNative": {
+    "path": "harness/out/rider-rebuild/production-jeans02/whole-correspondence02/authored02/whole-selected-jeans.blend",
+    "sha256": "41fbd25d2c126866398e68e4d81a2e082adce796280bbcb61fe37a52d159c4ef"
+  },
+  "finishedGarment": {
+    "object": "RiderJeans",
+    "vertices": 26063,
+    "polygons": 25728,
+    "stateSHA256": "b6574d4404b6a6dfdc474d3fab3381ed41818b5dc3091b6a34cfee708b3b62ca",
+    "material": "OriginalSelectedWholeJeansPBR4K",
+    "packedMapSHA256": {
+      "albedo": "46ba462131c78e58e1adbc79558e59a4d8798d483e9c9e2440ba5eaa907a6f27",
+      "metallicRoughness": "4dfa7b1c8505d965036b3231252045ecdcd3a60fc41f191b86ae40c4fd28f4df",
+      "normal": "a2de41d3d92e7ab1d2f8c7d10628d07a0e1d9c5c89cfda05685ff200868c972b"
+    },
+    "modifier": {
+      "name": "Shared75 selected jeans deformation",
+      "type": "ARMATURE",
+      "target": "RiderSkeleton",
+      "bones": 75,
+      "preserveVolume": false
+    },
+    "fields": {
+      "path": "harness/out/rider-rebuild/production-jeans02/whole-correspondence02/authored02/production-jeans-fields.npz",
+      "sha256": "28d337f56a7e963f8ae533a72bf060d40b5d18e956c154b61e2dc995c20bd679"
+    }
+  },
+  "wearingGeometryUVFullFourAnd75Exact": true,
+  "originalSelectedSourceGeometryUVMapsExact": true,
+  "dressedContext": {
+    "native": {
+      "path": "harness/out/rider-rebuild/hoodie-shoulder-anatomical04/authored01/selected-panel-outfit.blend",
+      "sha256": "1ad5c5aa21553bbb3eb84898572200b2d4418e81e1e1995d774a763707f0124f"
+    },
+    "assembler": {
+      "path": "assets/blender/rider-rebuild/production-authoring01/assemble.py",
+      "sha256": "81572a2f88c431ebe52bd3f11bd358eff9a772d73f8db1bcb61751d3287f86b0"
+    },
+    "parentMergeAfterSavedCoreNative": true,
+    "unitFile": "context-unit.json",
+    "requiredWholeDressedMotionAndEngine": "OPEN; no approval inferred from source or stills"
+  },
+  "photos": [
+    {
+      "variant": "mappedWholeJeans",
+      "view": "front",
+      "path": "harness/out/rider-rebuild/production-jeans02/whole-correspondence02/authored02/mappedWholeJeans-front.png",
+      "sha256": "0fa22db42bfd16cb0913acaffb5505ee9773aa9613af587ae013af12453580b2"
+    },
+    {
+      "variant": "mappedWholeJeans",
+      "view": "back",
+      "path": "harness/out/rider-rebuild/production-jeans02/whole-correspondence02/authored02/mappedWholeJeans-back.png",
+      "sha256": "e4acdd64f0764a2558ab64cbd41c5c83ec1df21d1d856de8d004a9b68d990fa5"
+    },
+    {
+      "variant": "mappedWholeJeans",
+      "view": "profile",
+      "path": "harness/out/rider-rebuild/production-jeans02/whole-correspondence02/authored02/mappedWholeJeans-profile.png",
+      "sha256": "258f3920d0e50886be77b023356af2af3edc65b9c66b95c8ac40abb1ce0da757"
+    },
+    {
+      "variant": "originalSelectedWholeJeans",
+      "view": "front",
+      "path": "harness/out/rider-rebuild/production-jeans02/whole-correspondence02/authored02/originalSelectedWholeJeans-front.png",
+      "sha256": "d70e75272e738c3ab16284d88a341a13f685f0100fc3975d8285c59cd6f8a063"
+    },
+    {
+      "variant": "originalSelectedWholeJeans",
+      "view": "back",
+      "path": "harness/out/rider-rebuild/production-jeans02/whole-correspondence02/authored02/originalSelectedWholeJeans-back.png",
+      "sha256": "3d891ff4852635bb876353e6b93fd64a2df9a0b211402d99af962b6e08af6afe"
+    },
+    {
+      "variant": "originalSelectedWholeJeans",
+      "view": "profile",
+      "path": "harness/out/rider-rebuild/production-jeans02/whole-correspondence02/authored02/originalSelectedWholeJeans-profile.png",
+      "sha256": "55fdb8409a9d9d37d16a63e5e7f6099e93ea9448cd1609f1317a56e8c63615fb"
+    }
+  ]
+}

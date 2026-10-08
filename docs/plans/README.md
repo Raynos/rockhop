@@ -1541,3 +1541,5 @@ October8 corrected original hoodie source transport saves CPU2exit0/17.009s afte
 October8 complete selected outfit merge/private engine source reviewed and frozen: smooth native-body face-interpolated hoodie fields, exact75/sourcePBR, full anatomy reference preserved, production renderbody masks/FOUR and decoded GLB intake. Actual corrected hoodie/wholejeans results and dressed Garage/motion remain pending. No normal-player changes.
 
 October8 parent actual4viewPBR keeps corrected original hoodie shape: proper hanging sleeves and rounded shoulders after verified source-rest fix, nooldplates/inversion. Skin islands need equipped-mask surface review; finalnative75/fulloutfit motion/Garage unaccepted.
+
+October8 actual whole selected4Kdenim transfer succeeds CPU2exit0/195.636s:4capture regions clean,621legitunderbodyhits retained,12bakes/3maps4096 with0coveredblack, originalwearer/source/shared75 exact. Parent6viewsKEEPselectedbaseline, upperthigh region seam/detail/motion open. Complete equipped outfit/Garage next.
