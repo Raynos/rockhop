@@ -1,0 +1,80 @@
+{
+  "acceptedArt": false,
+  "status": "FROZEN_SOURCE_ONLY_ONE_LOCAL_HEM_CANDIDATE",
+  "files": [
+    {
+      "path": "assets/blender/rider-rebuild/selected-ankle-overlap26/author.py",
+      "sha256": "f2702c5eee222066187abc4ffd1ac0a9c87764b474e0a283203b77c6fbe1b70b"
+    },
+    {
+      "path": "assets/blender/rider-rebuild/selected-ankle-overlap26/input.json",
+      "sha256": "9b65da37c33e6fd1d1f10d20bf10219acb5079fbdbc734de7e05af9ef747ec14"
+    },
+    {
+      "path": "assets/blender/rider-rebuild/selected-ankle-overlap26/hem-selection.npz",
+      "sha256": "0c5948cd601a011ee580455336565f64f4a5503bd56d5a88e0103f1c46c54af7"
+    }
+  ],
+  "parentInvocation": [
+    "/Applications/Blender.app/Contents/MacOS/Blender",
+    "-b",
+    "-t",
+    "2",
+    "--python-exit-code",
+    "1",
+    "--python",
+    "assets/blender/rider-rebuild/selected-ankle-overlap26/author.py",
+    "--",
+    "assets/blender/rider-rebuild/selected-ankle-overlap26/input.json",
+    "harness/out/rider-rebuild/selected-ankle-overlap26/authored01"
+  ],
+  "sourceChecks": {
+    "syntaxCompiled": true,
+    "exactNativeEndpointOwnershipFixture": true,
+    "radialSectionClippingFixture": true,
+    "actualDecodedSelectedHemSections": {
+      "L": {
+        "nativeVertices": 1724,
+        "hemZRangeM": [
+          0.10303159619315179,
+          0.12495593062563383
+        ],
+        "sectionRadiusRangeM": [
+          0.07278552385497389,
+          0.08061331475359083
+        ]
+      },
+      "R": {
+        "nativeVertices": 1717,
+        "hemZRangeM": [
+          0.10303159619880695,
+          0.12495593357171038
+        ],
+        "sectionRadiusRangeM": [
+          0.07278553123249429,
+          0.08061329286748894
+        ]
+      }
+    },
+    "allMeasuredHemsBelowFullDisplacementBoundary145mm": true,
+    "nativeExecution": false
+  },
+  "boundedWork": {
+    "retainedPoses": 25,
+    "sourceHemSections": 96,
+    "posedBootCollarSections": 2400,
+    "storedPosedHemSections": 2400,
+    "maximumRadialQueries": 86025,
+    "denseChecks": 150,
+    "sourceEnvelopeBootPositionBytesPerSide": 183271800,
+    "nativeWallTimeMeasured": false,
+    "nativePeakMemoryMeasured": false,
+    "executionAuthority": "Parent CPU2 guarded single attempt only; source cardinalities are not runtime or peak-memory guarantees."
+  },
+  "integration": "Position patch only: require exact source polygon topology and beforeLocal on frozen lower IDs; reject overlap with native22 weights or nonzero existing corrective deltas. Apply equal delta to Basis and all keys, preserve current rig/actions/fields/maps, recompute incident corners only.",
+  "limits": [
+    "Tiny positive smoothstep falloff near fixed20cm boundary can expose an infeasible tailoring region by amplifying required radial displacement. A failure preserves witness and stops; no bound expansion or automatic second variant.",
+    "The actual native run must byte-match decoded IDs/positions before construction. Source fixture success is not native geometry, contact, moving art or complete ankle-envelope acceptance.",
+    "Retained generic witnesses and played poses do not replace forthcoming native controls and dense motion midpoint qualification."
+  ]
+}

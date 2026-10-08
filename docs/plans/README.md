@@ -1827,3 +1827,5 @@ Sculpt03 source checkpoint: one editable shared Body/Jeans posed cage, fresh inv
 Gate34 actualMetal partialboot/clear/crash/restart PASS11/11, unchangedhardwarelimits and exact8.591666666666667finish/hash622bb2554e0f9a26. Firstinvocation refusedheadroom/nochild; retry0/10.773s. Existingplayeronly, not newrider/device/fullrelease. Nextsculptconstructionmayproceed.
 
 PrivateGarage source now accepts only the explicitlypinned UNACCEPTED_POSED_VOLUME derivative: originalweightpins plus sevenfreshshapepins, actualLINEAR mesh-array tracks and fiveBody/Jeans targetchecks; failedcorrectivehelper staysabsent. FourCPUchecksPASS; no actualsculpt/film/artpassyet.
+
+Hem26 freezes one actualselected lower-hem tailoring source:1724L/1717Rvertices, sourcecollarsections,25retainedposes, positionpatchintegration preserving currentmasterweights/keys/rig. Sourcepins/ASTPASS; nativegeometry/time/memory/contact/artremainunmeasured. No cuff or upperJeans ownership overlap.

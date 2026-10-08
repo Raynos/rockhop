@@ -1,0 +1,59 @@
+{
+  "acceptedArt": false,
+  "master": {
+    "path": "harness/out/rider-rebuild/selected-complete-engine01/engine05/rider-private-masked.blend",
+    "sha256": "95a4f14e06fb52cc055df6d1446a035d8cd3d35180d565ad52f3a70b3b05664b"
+  },
+  "genericReceipt": {
+    "path": "harness/out/rider-rebuild/selected-generic-envelope02/authored01/motion.json",
+    "sha256": "c22ba747d07f041aa4d88a36dce454a51d63978a327f35ae859af87c8ef3fab1"
+  },
+  "upperSelection": {
+    "path": "assets/blender/rider-rebuild/selected-seated-anatomical09/selection.json",
+    "sha256": "13a58ef7033085beee5af31eee64e3a0af809281a0cea36efb3886652bc4b739"
+  },
+  "triangleHelper": {
+    "path": "assets/blender/rider-rebuild/glove-over-sleeve08/author.py",
+    "sha256": "42d428f600bdbd82c37d0024f147d57a29a1301560bc9a1fa3cd86389685d3d2"
+  },
+  "playedReports": [
+    {
+      "path": "harness/out/rider-rebuild/selected-seated-garage01/played01/rookie/report.json",
+      "sha256": "d10868792db1acaed7073faa9f99ce0e7bda60f626f28fafd8aac9d5dd5dc700"
+    },
+    {
+      "path": "harness/out/rider-rebuild/selected-seated-garage01/played01/pro/report.json",
+      "sha256": "509a8ea3c2c4fbe51d9eef4ee829e761441b26aab55d7bc262e824a116ff142d"
+    },
+    {
+      "path": "harness/out/rider-rebuild/selected-seated-anatomical09/played01/report.json",
+      "sha256": "cb8f6c58a1a7da39e5f10d286a535d84b3fa24bf4ee7f6e1315aa36ca1ecd727"
+    }
+  ],
+  "settings": {
+    "fixedAboveZ": 0.2,
+    "fullThroughZ": 0.145,
+    "preservedHemDetailHeightM": 0.008,
+    "sectionDirections": 48,
+    "requiredAxialOverlapM": 0.012,
+    "clothBootGapM": 0.0025,
+    "maximumExtensionM": 0.045,
+    "maximumRadialTailoringM": 0.012,
+    "maximumShaftRadiusM": 0.15
+  },
+  "limits": [
+    "One bounded source-preserving lower-hem warp, not a parameter search.",
+    "All positions outside exact lower20cm, all weights, topology, UV and other objects remain unchanged.",
+    "Bounded extension and radial tailoring preserve selected cuff folds through a common smooth lower-band displacement; actual posed triangle and moving detail judgments are mandatory.",
+    "48 actual triangle-plane collar sections and every retained pose are measured. 9 retained generic witnesses plus15 played Garage snapshots and neutral form the explicit sampled envelope; the newer controls/midpoints still require qualification."
+  ],
+  "hemSelection": {
+    "path": "assets/blender/rider-rebuild/selected-ankle-overlap26/hem-selection.npz",
+    "sha256": "0c5948cd601a011ee580455336565f64f4a5503bd56d5a88e0103f1c46c54af7"
+  },
+  "selectionDecodedFrom": {
+    "path": "harness/out/rider-rebuild/selected-complete-engine01/engine05/rider.glb",
+    "sha256": "72b90e8790f8490743a75f8b70791aa21edfee6234cec609093e9b62e08d4bfd"
+  },
+  "selectionAuthority": "Exact decoded engine05 native IDs/positions; actual native run must match them byte-exact before authoring. This is not a native execution result."
+}
