@@ -1,10 +1,10 @@
 {
   "accepted": false,
-  "stage": "EXPANDED_SEWN_SOURCE_READY_FIXED_ANATOMICAL_LANDMARK_PREDICTION_CLEAR",
+  "stage": "EXPANDED_SEWN_SOURCE_GROUP_LOOKUP_REPAIRED_READY_NO_JOB_EXECUTED",
   "sources": [
     {
       "path": "assets/blender/rider-rebuild/hoodie-shoulder-anatomical04/correction03/author.py",
-      "sha256": "a4cd0abcd0f7449a2473178fb52ec23b643c8ee06db62d17fabb6e79a922eccb",
+      "sha256": "c17f511db6e092a7068a0d2ef7079915bf51dbe06ed4e76bda929ace981421f3",
       "AST": "PASS"
     },
     {
@@ -21,6 +21,12 @@
       "path": "assets/blender/rider-rebuild/hoodie-shoulder-anatomical04/correction03/tailored_pattern.py",
       "sha256": "a1c7140837993c499fc14a1009e8d23135d1204937a67a9636d1125eb39eefad",
       "AST": "PASS"
+    },
+    {
+      "path": "assets/blender/rider-rebuild/hoodie-shoulder-anatomical04/correction03/author-before-group-lookup-failure.py",
+      "sha256": "a4cd0abcd0f7449a2473178fb52ec23b643c8ee06db62d17fabb6e79a922eccb",
+      "AST": "PASS",
+      "status": "ACTUAL_FAILED_SOURCE_PRESERVED_DO_NOT_EXECUTE"
     }
   ],
   "controls": {
@@ -128,7 +134,7 @@
     "assets/blender/rider-rebuild/hoodie-shoulder-anatomical04/correction03/author.py",
     "--",
     "assets/blender/rider-rebuild/hoodie-shoulder-anatomical04/correction03/controls.json",
-    "harness/out/rider-rebuild/hoodie-shoulder-anatomical04/corrected03"
+    "harness/out/rider-rebuild/hoodie-shoulder-anatomical04/corrected04"
   ],
   "guardSeconds": 600,
   "geometryNativeSavedBeforeTextureTransfer": true,
@@ -140,5 +146,27 @@
     "Existing original4K PBR outside cut remains exact. Local genuine derivative atlas uses continuous actual donor identity and source triangle/UV sampling.",
     "One fixed construction; parent judges. Body75 unchanged; full new fields interpolated without FOUR trimming. All R0\u2013R5 open.",
     "Triangle intersections and moving wearing are not proved by vertex/center parity or regular-quad fan checks. Parent judges actual saved geometry and PBR views."
-  ]
+  ],
+  "previousCheckpointSHA256": "d7d89ea3b1f9016bb6b9593e181d209f94796061192969c062ab2d843c35aafc",
+  "previousSourceReadyStage": "EXPANDED_SEWN_SOURCE_READY_FIXED_ANATOMICAL_LANDMARK_PREDICTION_CLEAR",
+  "actualFailedAuthor": {
+    "source": {
+      "path": "assets/blender/rider-rebuild/hoodie-shoulder-anatomical04/correction03/author-before-group-lookup-failure.py",
+      "sha256": "a4cd0abcd0f7449a2473178fb52ec23b643c8ee06db62d17fabb6e79a922eccb"
+    },
+    "guard": {
+      "path": "docs/evidence/rider-rebuild/hoodie-shoulder-anatomical04/correction03/author-guard01/guard.json",
+      "sha256": "85ccff9a82752278dda3fd2f30453ce1bbc1c52c1be51c56747200b367c818e2"
+    },
+    "worker": {
+      "path": "docs/evidence/rider-rebuild/hoodie-shoulder-anatomical04/correction03/author-guard01/worker.log",
+      "sha256": "ed7d1d484965f63f41729cc33ffd8898efedeef467c26b9e9f8d515dad15dc93"
+    },
+    "exitCode": 1,
+    "elapsedSeconds": 7.219,
+    "failure": "KeyError missing actual target group DEF-spine.005 in full75 name lookup",
+    "geometryNativeSaved": false,
+    "otherObservedWorkerCauses": []
+  },
+  "minimalRepair": "Append only missing named native bone groups whose entire incoming field column is exactly zero, before BMesh authoring. Existing groups/weights/rig/rest untouched; record created names."
 }

@@ -16,3 +16,10 @@ Finding: Replace failed boundary-constrained axilla with expanded anatomical sew
 Validation: Root read author and fixed pattern sources, verified14pins and numeric prediction:0 opposed regular quads,0 generated points and0 new face centers inside body. Actual native/PBR job pending.
 
 Limits: Parity predictions do not prove triangle intersections, attractive silhouette or moving fit. Initial invalid landmark retained.
+
+
+Finding: Actual hoodie job stops before save because garment omits inactive native75 groups. Append only names whose incoming full-field columns are exactly zero.
+
+Validation: CPU2 exit1/7.219s, KeyError DEF-spine.005; root reviewed minimal diff, unchanged shape controls and protected existing group weights/indices. Source/pins pass; no rerun yet.
+
+Limits: No actual tailored geometry or map saved by this failed run.

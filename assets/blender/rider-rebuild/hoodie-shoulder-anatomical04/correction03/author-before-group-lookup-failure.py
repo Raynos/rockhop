@@ -32,18 +32,6 @@ def main():
  old_rows={v.index:tuple(sorted((g.group,g.weight)for g in v.groups))for v in mesh.vertices}
  old_uv={(p.index,mesh.loops[lid].vertex_index):tuple(mesh.uv_layers.active.data[lid].uv)for p in mesh.polygons for lid in p.loop_indices}
  old_material=[p.material_index for p in mesh.polygons]
- # The full75 array includes inactive zero columns. The actual garment may
- # omit their named groups. Append zero-weight native slots without touching
- # any existing weight, group index, armature or native rest bone.
- created_native_groups=[];group_indices=[]
- for column,name in enumerate(fields['jointNames']):
-  name=str(name);assert name in rig.data.bones
-  group=obj.vertex_groups.get(name)
-  if group is None:
-   assert np.all(fields['fields'][:,column]==0.),('Missing group has nonzero incoming field',name)
-   group=obj.vertex_groups.new(name=name);created_native_groups.append(name)
-  group_indices.append(group.index)
- assert len(group_indices)==75
  results=[];raw=d['actual_donor_display_xyz']
  for spec in c['panels']:
   sidecut=next(s for s in cut['sides']if s['side']==spec['side']);boundary=sidecut['orientedBoundaryCycles'][spec['boundaryCycle']]
@@ -60,6 +48,7 @@ def main():
  for f in bm.faces:f[input_face]=f.index
  by_input={v.index:v for v in bm.verts};removed={fi for s in cut['sides']for fi in s['actualExpandedFaceIds']};assert len(removed)==2743
  bmesh.ops.delete(bm,geom=[bm.faces[fi]for fi in sorted(removed)],context='FACES')
+ group_indices=[obj.vertex_groups[str(name)].index for name in fields['jointNames']];assert len(group_indices)==75
  records=[]
  for spec,result in results:
   generated=[]
@@ -119,7 +108,7 @@ def main():
   for g in v.groups:
    if g.group in index:native_fields[v.index,index[g.group]]=g.weight
  np.savez_compressed(out/'tailored-native-fields.npz',vertices=np.asarray([v.co[:]for v in mesh.vertices]),fields=native_fields,jointNames=fields['jointNames'])
- receipt={'accepted':False,'stage':'EXPANDED_ANATOMICAL_SEWN_JOIN_AND_ORIGINAL_PBR_TRANSFER_SAVED','native':{'path':str(native.relative_to(ROOT)),'sha256':sha(native)},'geometryBeforeTransfer':{'path':str(shape_native.relative_to(ROOT)),'sha256':sha(shape_native)},'recipeSHA256':sha(__file__),'controlsSHA256':sha(cp),'incomingNative':c['incomingNative'],'targetObject':obj.name,'bodyAnd75RigSignature':before_body,'bodyAnd75RigUnchanged':True,'visibleMeshes':visible,'removedJoinAndSupportFaces':len(removed),'vertices':len(mesh.vertices),'polygons':len(mesh.polygons),'panels':records,'properCutRetainedPositionsUVMaterialsFieldsExact':True,'coupledTrueExteriorInterior':True,'createdNativeGroupsWithZeroIncomingWeights':created_native_groups,'originalPBRTransferMaps':mapreports,'limits':c['limits']}
+ receipt={'accepted':False,'stage':'EXPANDED_ANATOMICAL_SEWN_JOIN_AND_ORIGINAL_PBR_TRANSFER_SAVED','native':{'path':str(native.relative_to(ROOT)),'sha256':sha(native)},'geometryBeforeTransfer':{'path':str(shape_native.relative_to(ROOT)),'sha256':sha(shape_native)},'recipeSHA256':sha(__file__),'controlsSHA256':sha(cp),'incomingNative':c['incomingNative'],'targetObject':obj.name,'bodyAnd75RigSignature':before_body,'bodyAnd75RigUnchanged':True,'visibleMeshes':visible,'removedJoinAndSupportFaces':len(removed),'vertices':len(mesh.vertices),'polygons':len(mesh.polygons),'panels':records,'properCutRetainedPositionsUVMaterialsFieldsExact':True,'coupledTrueExteriorInterior':True,'originalPBRTransferMaps':mapreports,'limits':c['limits']}
  (out/'author.json').write_text(json.dumps(receipt,indent=2)+'\n')
  for row in pins:pin(row)
  print('ACTUAL_EXPANDED_SEWN_HOODIE_AND_SOURCE_PBR_SAVED',flush=True)
