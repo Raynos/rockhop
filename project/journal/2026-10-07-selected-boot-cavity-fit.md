@@ -1,0 +1,3 @@
+Finding: The intended-final selected boot fit retains the actual exterior and collar while reconstructing only certified inner space around the complete foot. A coherent obstacle displacement, bounded strain and full material/body/self assays precede native save. Actual dense clipping/detail pairing is a separate unit after the stable native/collar checkpoint, with appearance explicitly pending.
+Validation: Parent independently reproduces actual contour rays, harmonic known solution, orientation identity/fold rejection and exact closest-triangle barycentrics; all four source hashes and ASTs agree.
+Limits: Actual fit, full-surface room, native collar/sole, dense transfer/bake, moving art and engine remain unexecuted. No placeholder appearance or player promotion.
