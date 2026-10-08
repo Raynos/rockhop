@@ -14,11 +14,22 @@ Current selected-source validation: glove03 author02 now saves both original-PBR
 hands in native6ef266a0. R keeps original source handedness; L reflects sourceX
 and reverses face plus UV-corner winding. Both use their own anatomical controls.
 Parent inspected all8 actual views and rejected both surfaces for exposed
-palm/dorsum/web/tips and flared cuffs. Correct handedness is established; actual
-selected glove surface fit and shared75 moving grip are not accepted.
+palm/dorsum/web/tips and flared cuffs. Opposite handedness was established, but anatomical assignment was not. The
+October8 correction below supersedes the earlier claim of correct assignment;
+selected glove fit and shared75 moving grip remain unaccepted.
 
 The current selected boot pair also has opposite handedness and consistent
 winding. Reused negative-transverse camera labels were misleading: that view
 shows R lateral and L medial. It does not establish an only-left failure.
 Actual bilateral local repair still fails enclosure. Both exact source/native
 packages preserve the failed work for expert tailoring; no accepted pair exists.
+
+October8 anatomical correction: the actual original orbit000 shows the padded
+knuckle side (source+Z); orbit024 shows the smooth palm (source−Z). The old
+placement maps source+Z toward positive canonical MCP palm curl on BOTH hands.
+Thus the pair was mirrored but assigned incorrectly. Correct assignment uses
+the original source forL and reflection forR, reversing source face and UV
+corner order together. Root viewed both original images and inspected the
+canonical signed curl calculation in the [orientation proof](../glove-anatomical04/orientation-proof02.json).
+The corrected dorsal opposes palm curl. This corrects source assignment before
+a sculpt job; it does not certify actual fit, sculpted shape or moving grip.

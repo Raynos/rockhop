@@ -1459,3 +1459,5 @@ October8 actual boot regional CSG exit1/42.63s after saved right union/cavity. P
 October8 actual glove dorsal/palm and independent signed-MCP check correct assignment: originalL/reflectedR with face/UV corner reversal together. One ordinary original-selected-surface Laplacian sculpt source is frozen with303 anatomical handles per hand and semantic75 binding; parent read source/pins, no job/fit/grip acceptance yet.
 
 October8 actual jeans proxy/cage saved nativebecb, then exit1/17.994s before maps: edited polygons independently tessellate differently. Freeze correspondence-only triangles once before cloning; wearing/source/cage/ray/map controls unchanged. Fresh paired-triangle check next; no capture/appearance acceptance.
+
+October8 Astra04 followthrough reconciled into sole rider plan: saved selected outfit, improved anatomical neck and played clothed turn/nod retained; hoodie axilla/boot exterior rejected, failed predicted hoodie surface stopped. Glove mirror audit corrected using actual dorsal/palm and signed curl: originalL/reflectedR. Actual jeans correspondence and properly assigned glove sculpt next; all0/6 milestones open.
