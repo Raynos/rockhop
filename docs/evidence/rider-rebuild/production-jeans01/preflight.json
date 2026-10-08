@@ -18,7 +18,7 @@
   "executedStages": [],
   "review": "Structural draft only; neither fitted nor textured nor accepted",
   "verifiedSourcePins": 6,
-  "authorScriptSha256": "c3218bbe0d0bb2f0fb4807f8658c214db4716ace5b4363d69c47d69456acf535",
+  "authorScriptSha256": "79a6719e16f0a8b371da992108a5499658f81db08d9850f53472f3bef4ab002c",
   "recipeSha256": "66c1f4084e806eb465cd5201e9821b4de43c2c7f1ee8f87b92366fcb17e0753b",
   "syntaxParsed": true,
   "sourceUVConvention": "Immutable raw glTF TEXCOORD_0: V flip only when assigning Blender corners",
@@ -43,5 +43,34 @@
     "workerSha256": "fb3b558246b5845fc7c896309a71bc3e52328d3bc4b1123e0e33344b03767e81"
   },
   "setupReview": "This is the only modifier vertex_group setter. All skin groups are explicitly created before population; Lattice/Armature object setters point to existing objects. No other analogous nonexistent-group setter exists.",
-  "diagnosisCorrection": "First stale-RNA-only explanation was incomplete; author02 proved the requested name absent. Source setup now creates group before validated modifier setter. No fitted result has yet been saved."
+  "diagnosisCorrection": "First stale-RNA-only explanation was incomplete; author02 proved the requested name absent. Source setup now creates group before validated modifier setter. No fitted result has yet been saved.",
+  "latticeSetupCorrection": {
+    "diagnosis": "Blender undeformed coordinates span resolution-1 per axis; prior fixed scale gave 2.24x.76x9.7m cage",
+    "intendedWorldBounds": [
+      [
+        -0.28,
+        -0.205,
+        0.096
+      ],
+      [
+        0.28,
+        0.175,
+        1.066
+      ]
+    ],
+    "resolution": [
+      5,
+      3,
+      11
+    ],
+    "expectedActualObjectScale": [
+      0.14,
+      0.19,
+      0.097
+    ],
+    "implementation": "Derive actual scale from measured undeformed co extents; displacements divide by actual scale; assert computed undeformed world bounds",
+    "rowControlsChanged": false,
+    "heavyRun": false
+  },
+  "canonicalTargetSetup": "In derivative only rename/hide inherited RiderJeans/Hoodie/Glove/Boot prefixes as HistoricalReference_; assert complete visible body and exact new RiderJeans name. Bake validates new production marker and actual dense SHA on pinned authored blend."
 }

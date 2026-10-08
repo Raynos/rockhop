@@ -17,3 +17,9 @@ Finding: second author run disproved the stale-handle-only diagnosis. Blender cl
 Validation: actual exit1 in6.273s before save and exact trace retained; parent reviews corrected setter order, syntax and refreshed source hash. No shape controls changed.
 
 Limits: setup correction remains unexecuted; no fitted garment or material result.
+
+Finding: Derive the physical cage from actual lattice extents, retain authored row deltas and isolate inherited coarse clothing. Exact target ownership and saved source markers prevent baking an old garment.
+
+Validation: parent reviews the concrete source correction; AST, 6 input pins and refreshed source hashes match.
+
+Limits: repaired author source is unexecuted and unaccepted; no map or moving-art acceptance.

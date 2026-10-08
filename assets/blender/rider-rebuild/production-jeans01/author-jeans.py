@@ -107,6 +107,12 @@ def author(spec,out):
     native=pin(spec['native']); densepath=pin(spec['dense']); bodypath=pin(spec['body'])
     bpy.ops.wm.open_mainfile(filepath=str(native))
     body=bpy.data.objects['RiderBody']; rig=bpy.data.objects['RiderSkeleton']; before=signature(body,rig)
+    # Isolate inherited coarse clothing only in this derivative scene.
+    for old in list(bpy.data.objects):
+        if old not in (body,rig) and old.name.startswith(('RiderJeans','RiderHoodie','RiderGlove','RiderBoot')):
+            old.name='HistoricalReference_'+old.name; old.hide_render=True; old.hide_set(True)
+    assert bpy.data.objects.get('RiderJeans') is None, 'Historical jeans retained canonical name'
+    assert not body.hide_get() and not body.hide_render, 'Complete wearer must remain visible'
     dense=dict(np.load(densepath)); points=dense['vertices'].astype(float)
     # Source is Y up/+Z forward. One fixed ordinary affine sets its modelling
     # space; an explicit 5x3x11 artist lattice supplies subsequent large edits.
@@ -127,15 +133,34 @@ def author(spec,out):
     lattice=bpy.data.lattices.new('AuthoredJeansLargeFormCage'); lattice.points_u=5; lattice.points_v=3; lattice.points_w=11
     lattice.interpolation_type_u='KEY_BSPLINE'; lattice.interpolation_type_v='KEY_LINEAR'; lattice.interpolation_type_w='KEY_LINEAR'
     cage=bpy.data.objects.new('EditableSelectedJeansLattice',lattice); bpy.context.collection.objects.link(cage)
-    cage.location=(0,-.015,.581); cage.scale=(.56,.38,.97)
+    # Blender undeformed coordinates span resolution-1, not a unit cube.
+    undeformed=np.array([tuple(p.co) for p in lattice.points],dtype=float)
+    local_min,local_max=undeformed.min(0),undeformed.max(0)
+    physical_size=np.array([.56,.38,.97]); physical_center=np.array([0,-.015,.581])
+    assert np.all(local_max>local_min), 'Collapsed undeformed lattice extent'
+    actual_scale=physical_size/(local_max-local_min)
+    cage.scale=tuple(actual_scale)
+    cage.location=tuple(physical_center-(local_min+local_max)*.5*actual_scale)
+    bpy.context.view_layer.update()
+    cm=np.asarray([list(row) for row in cage.matrix_world])
+    undeformed_world=np.einsum('ni,ji->nj',undeformed,cm[:3,:3])+cm[:3,3]
+    expected_min=physical_center-physical_size*.5; expected_max=physical_center+physical_size*.5
+    assert np.max(np.abs(undeformed_world.min(0)-expected_min))<1e-6
+    assert np.max(np.abs(undeformed_world.max(0)-expected_max))<1e-6
+    cage['undeformedWorldBounds']=[float(v) for v in np.concatenate((undeformed_world.min(0),undeformed_world.max(0)))]
+    cage['intendedWorldSize']=[float(v) for v in physical_size]
     for k,p in enumerate(lattice.points):
         z=k//15; x=k%5; y=(k//5)%3
         delta=spec['latticeRows'][z]
         depth=delta['frontDelta']*(1-y/2)+delta['backDelta']*(y/2)
-        p.co_deform=p.co+Vector(((x-2)*delta['spread']/.56,(delta['forwardShift']+depth)/.38,0))
+        physical_delta=np.array([(x-2)*delta['spread'],delta['forwardShift']+depth,0])
+        p.co_deform=p.co+Vector(tuple(physical_delta/actual_scale))
     mod=reference.modifiers.new('Authored selected large-form fit','LATTICE'); mod.object=cage
-    target=production_surface(spec); atlas(target)
+    target=production_surface(spec)
+    assert target.name=='RiderJeans' and bpy.data.objects['RiderJeans']==target, 'Authored jeans lost canonical object name'
+    atlas(target)
     target['selectedAppearanceAuthority']=spec['dense']['sha256']; target['unaccepted']=True
+    target['productionJeansRecipe']='rockhop-authored-selected-jeans-v1'
     # Two subdiv levels supply deformation loops and actual geometric folds.
     subdiv=target.modifiers.new('Production joint and fold tessellation','SUBSURF'); subdiv.levels=2
     active(target); bpy.ops.object.modifier_apply(modifier=subdiv.name)
@@ -201,6 +226,9 @@ def bake(spec,out):
     bpy.ops.wm.open_mainfile(filepath=str(authored))
     target=bpy.data.objects['RiderJeans']; source=bpy.data.objects['AlignedSelectedDenseJeans']
     rig=bpy.data.objects['RiderSkeleton']; body=bpy.data.objects['RiderBody']; before=signature(body,rig)
+    assert target.name=='RiderJeans' and target.get('productionJeansRecipe')=='rockhop-authored-selected-jeans-v1'
+    assert target.get('selectedAppearanceAuthority')==spec['dense']['sha256'], 'Bake target is not this authored selected garment'
+    assert not body.hide_get() and not body.hide_render, 'Complete wearer must remain visible'
     scene=bpy.context.scene; scene.render.engine='CYCLES'; scene.cycles.device='CPU'; scene.cycles.samples=1
     scene.render.bake.use_selected_to_active=True; scene.render.bake.use_cage=True; scene.render.bake.cage_extrusion=.018; scene.render.bake.max_ray_distance=.045; scene.render.bake.margin=16
     out.mkdir(parents=True); dg=bpy.context.evaluated_depsgraph_get(); sm=bpy.data.meshes.new_from_object(source.evaluated_get(dg)); source.data=sm

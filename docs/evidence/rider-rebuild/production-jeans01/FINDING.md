@@ -56,3 +56,33 @@ All R0–R5 remain open. Parent judges the complete neutral/reach/crouch/standin
 ride/seated-ride/return film and actual Garage/game, with selected material and
 separate complete-body controls. Source provenance and static topology do not
 accept fit, selected appearance, motion or player promotion.
+
+## Ordinary lattice coordinate setup correction
+
+Parent actual boot-native inspection finds Blender's undeformed lattice point
+coordinates span resolution-1 per axis. The jeans5x3x11 lattice therefore had
+a2.24x0.76x9.7m world cage under its former fixed object scale, rather than the
+intended0.56x0.38x0.97m. The corrected source derives object scale from the actual
+undeformed point extents and intended bounds; physical row displacements divide
+by that actual scale. Computed undeformed world bounds must equal
+[-0.28,-0.205,0.096] to[0.28,0.175,1.066] within float32 transform rounding.
+The expected scale for these measured Blender coordinates is[0.14,0.19,0.097].
+
+Row controls, intended physical cage, source pins and fitting mechanism remain
+unchanged. The named-group creation-order correction also remains. This is
+source setup evidence; no corrected-lattice author trial, saved fitted model,
+bake or art acceptance exists yet. The actual boot authored01 candidate is
+reported grossly exposed and cannot freeze cuff fit; intended short collar and
+tongue landmarks remain provisional until the boot parent's next decision.
+
+## Canonical new production target, no inherited coarse overlap
+
+Only in the derivative scene, inherited RiderJeans/Hoodie/Glove/Boot objects
+are renamed under HistoricalReference_ and hidden as obsolete construction
+controls. The complete RiderBody and shared rig are neither renamed nor hidden.
+The new production target must own the exact RiderJeans name before atlas/fit;
+Blender's automatic .001 suffix is not admitted. It receives a production-recipe
+marker and actual dense-source SHA. The separately pinned bake stage validates
+both markers on that exact target and asserts the body remains visible. No old
+coarse same-name object can silently receive the selected-material bake. These
+source guards have not run; no native candidate or fit/art acceptance exists.
