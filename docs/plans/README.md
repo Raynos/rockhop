@@ -1769,3 +1769,5 @@ Anatomical09weighttransport/sourceGaragebranch checkpoint: appendactualnewnative
 Cuffidentity02sourceproof retainsoriginalfloat32cutter and its existing1e-7planeidentity: exactcutancestry/negative-band equalityproven, offendingfloat64slivernative216827identified. Parentcompleteprobe/source review pass; sixdownstreamfloorpredicates unified tooriginalidentity only, nophysicalclearance/radiuschange. Actualnativeproof queued, nocandidate.
 
 Actualweighttransport01SUCCESS1.978s/GLB2d9423d7, preservedselectedappearance/rest/BIN; native-Three4witnessmax6.919e-7m, ULP≤2. TargetedFOURreduction FAIL: seatedmax21.252mm/neighbourjump32.648, asym17.552/25.287. Parentrejectsfieldbeforesculpt; one anatomicalsupportcorrection assigned22, noSmoothsweep/canon. Actualdressedweight-onlyGaragefilm next.
+
+Actual anatomical09 dressedGarage exits0/35.494s, zero errors/one navigation after optimizer repair; parent played28.76s silent1x/all63samples+fullprofiles. Selectedidentity intact, seatedfold/shelf/cuffspikes/anklestrip remain rejected. Development59.685renderFPS/25FPScapture; no production/devicepass. Semantic support correction precedes sculpt.

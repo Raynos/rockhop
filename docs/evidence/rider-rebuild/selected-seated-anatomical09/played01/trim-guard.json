@@ -1,0 +1,77 @@
+{
+  "accepted": false,
+  "lock": "/Users/raynos/projects/localai/.model.lock",
+  "method": "lockf -k",
+  "command": [
+    "/opt/homebrew/bin/ffmpeg",
+    "-v",
+    "error",
+    "-threads",
+    "2",
+    "-ss",
+    "8.202627209",
+    "-i",
+    "harness/out/rider-rebuild/selected-seated-anatomical09/played01/garage-played.mp4",
+    "-an",
+    "-c:v",
+    "libx264",
+    "-threads",
+    "2",
+    "-preset",
+    "veryfast",
+    "-crf",
+    "20",
+    "-fps_mode",
+    "passthrough",
+    "-movflags",
+    "+faststart",
+    "harness/out/rider-rebuild/selected-seated-anatomical09/played01/garage-only.mp4"
+  ],
+  "controllerPID": 15017,
+  "pollSeconds": 1,
+  "startAnonymousBelowGiB": 55,
+  "stopAnonymousGiB": 65,
+  "stopAnonymousPlusWiredGiB": 96,
+  "limitSeconds": 30.0,
+  "guardSHA256": "cf8acd15d8b7484480bee74d23892be815d955ffd87115d3da8ed228ffb3d916",
+  "status": "worker returned; review pending",
+  "samples": [
+    {
+      "seconds": 0,
+      "anonymousGiB": 36.8,
+      "wiredGiB": 8.5,
+      "freeGiB": 36.3
+    },
+    {
+      "seconds": 0.057,
+      "anonymousGiB": 36.9,
+      "wiredGiB": 8.5,
+      "freeGiB": 36.1
+    },
+    {
+      "seconds": 1.106,
+      "anonymousGiB": 36.9,
+      "wiredGiB": 8.6,
+      "freeGiB": 36.0
+    },
+    {
+      "seconds": 2.197,
+      "anonymousGiB": 37.4,
+      "wiredGiB": 8.8,
+      "freeGiB": 35.3
+    },
+    {
+      "seconds": 3.268,
+      "anonymousGiB": 37.4,
+      "wiredGiB": 8.0,
+      "freeGiB": 36.1
+    }
+  ],
+  "physicalMemoryBytes": 137438953472,
+  "requiredPhysicalMemoryBytes": 137438953472,
+  "scope": "Future explicitly invoked owned Rockhop job only",
+  "pressureOrSwapLimits": "No separate pressure/swap gate exists in the pinned original guard; none altered",
+  "ownedChildPID": 15024,
+  "exitCode": 0,
+  "elapsedSeconds": 4.082
+}
