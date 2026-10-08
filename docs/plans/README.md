@@ -1895,3 +1895,5 @@ Ask356 prioritizes actual gameplay forward-standing/back-seated leans and simula
 Required original-player gate37 passes10/11 but boot.readyP50 fails326.49ms against unchanged300ms; exact finish/hash, crash and restart pass. Actual failure retained, no release verdict. Prior gate36pass is historical; current readiness regression remains open while independent rider construction proceeds.
 
 Actual-gameplay lean capture source now rejects authored stage clips and follows simulated rider COM/torso on the selected source. Continuous real-time120Hz held inputs cover neutral/forward/back/return with FPS overlay and full native endpoint witnesses; eight CPU checks pass. Actual capture/fit and device gates remain pending, not substituted by native clips.
+
+Actual gameplay capture now records exact24Hz native75/bike/simulated-state witnesses for native reconstruction, without changing physics or pose. Eight source checks pass; actual held-lean capture and visual acceptance remain pending.

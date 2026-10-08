@@ -42,8 +42,9 @@ try {
     const id = Array.isArray(candidate.roles.pelvis) ? candidate.roles.pelvis[0] : candidate.roles.pelvis;
     const pelvis = r.debug.rider.binding.byId.get(id);
     const p = pelvis.getWorldPosition(new r.debug.THREE.Vector3());
-    r.setCameraOverride({ mode: 'orbit', x: p.x, y: p.y + .12, yaw: 1.4, pitch: .08,
-      dist: 4.6, screenX: .5, screenY: .5 });
+    window.__gameplayLeanCamera = { mode: 'orbit', x: p.x, y: p.y + .12, yaw: 1.4, pitch: .08,
+      dist: 4.6, screenX: .5, screenY: .5 };
+    r.setCameraOverride(window.__gameplayLeanCamera);
     t.render(true);
   }, bike);
   report.readyOffsetSeconds = (performance.now() - started) / 1000;
@@ -54,13 +55,35 @@ try {
       ({ throttle: 0, brake: 1, lean: phase.lean, hop: false, restart: false })));
     const endpoints = new Map(); let end = 0;
     for (const phase of phases) { end += phase.ticks; endpoints.set(end, phase.name); }
-    const samples = [], faults = [], started = performance.now(); let tick = 0, maximumCatchupTicks = 0;
+    const samples = [], faults = [], motionSamples = [], started = performance.now(); let tick = 0, maximumCatchupTicks = 0;
+    const joints = [...rider.binding.byId], originalUpdate = rider.update;
+    const rootBone = joints.find(([, bone]) => !bone.parent?.isBone)[1];
+    let latestFrame;
+    rider.update = function (frame) {
+      const result = originalUpdate.call(this, frame);
+      latestFrame = { bikeX: frame.bikeX, bikeY: frame.bikeY, bikeAngle: frame.bikeAngle,
+        tSim: frame.tSim, rider: structuredClone(frame.rider), riderBody: structuredClone(frame.riderBody) };
+      return result;
+    };
+    const motionSnapshot = () => {
+      const phase = tick <= 240 ? 'neutral' : tick <= 600 ? 'forward' : tick <= 960 ? 'backward' : 'neutral-return';
+      motionSamples.push({ tick, timeSeconds: tick / 120, phase,
+        input: inputs[Math.max(0, tick - 1)], frame: structuredClone(latestFrame),
+        debug: { physicalPose: rider.debug.physicalPose, stageClip: rider.debug.stageClip,
+          allBoneFinite: rider.debug.allBoneFinite, gripErr: structuredClone(rider.debug.gripErr),
+          soleErr: structuredClone(rider.debug.soleErr), anthropometry: structuredClone(rider.debug.anthropometry), stance: structuredClone(rider.debug.stance) },
+        bikeFrameWorld: rider.bike.frame.matrixWorld.toArray(), skeletonWorld: rootBone.parent.matrixWorld.toArray(),
+        joints: joints.map(([id, bone]) => ({ id, name: bone.name, position: bone.position.toArray(),
+          quaternion: bone.quaternion.toArray(), scale: bone.scale.toArray(), worldMatrix: bone.matrixWorld.toArray() })) });
+    };
     const snapshot = name => ({ name, tick, state: structuredClone(t.getState()),
       hash: t.hashState(), debug: structuredClone(rider.debug),
       joints: [...rider.binding.byId].map(([id, bone]) => ({ id, position: bone.position.toArray(),
         quaternion: bone.quaternion.toArray(), scale: bone.scale.toArray() })) });
-    samples.push(snapshot('initial'));
-    await new Promise((resolve, reject) => {
+    // Force a draw of the existing state so the observer has an actual initial frame.
+    window.__render.setCameraOverride(window.__gameplayLeanCamera);
+    t.render(true); t.render(true); motionSnapshot(); samples.push(snapshot('initial'));
+    try { await new Promise((resolve, reject) => {
       function frame() {
         try {
           const wanted = Math.min(inputs.length, Math.floor((performance.now() - started) * .12));
@@ -69,15 +92,19 @@ try {
             t.setInput(inputs[tick]); t.step(1); tick++;
             const state = t.getState();
             if (state.faulted && faults.length < 16) faults.push({ tick, faulted: state.faulted });
-            if (endpoints.has(tick)) { t.render(true); samples.push(snapshot(endpoints.get(tick))); }
+            if (tick % 5 === 0) { t.render(true); t.render(true); motionSnapshot(); }
+            if (endpoints.has(tick)) samples.push(snapshot(endpoints.get(tick)));
           }
           t.render(true);
           if (tick === inputs.length) resolve(); else requestAnimationFrame(frame);
         } catch (error) { reject(error); }
       }
       requestAnimationFrame(frame);
-    });
-    return { samples, faults, ticks: tick, maximumCatchupTicks,
+    }); } finally { rider.update = originalUpdate; }
+    return { samples, faults, motionSamples,
+      jointOrder: joints.map(([id, bone]) => ({ id, loadedName: bone.name })),
+      localTRSConvention: 'local translationXYZ / quaternionXYZW / scaleXYZ; original native75 hierarchy; bike matrixWorld is column-major Three.js',
+      ticks: tick, maximumCatchupTicks,
       wallSeconds: (performance.now() - started) / 1000, finalHash: t.hashState(), inputs };
   }, phases);
   report.performance = await page.evaluate(() => window.__garageCaptureMeter.stop());
@@ -88,6 +115,12 @@ try {
   assert.equal(report.played.ticks, 1200);
   assert(report.played.samples.every(row => row.debug.physicalPose && row.debug.stageClip === null
     && row.debug.allBoneFinite), 'Every endpoint uses actual simulated rider state and finite native75');
+  assert.equal(report.played.motionSamples.length, 241);
+  assert(report.played.motionSamples.every((row, i) => row.tick === i * 5 && row.debug.physicalPose
+    && row.debug.stageClip === null && row.joints.length === 75
+    && row.joints.every(j => [...j.position, ...j.quaternion, ...j.scale, ...j.worldMatrix].every(Number.isFinite))),
+    'All exact24Hz physics samples retain physical driver and finite original75 transforms');
+  report.performanceLimit = 'Additional24Hz exact-state witness draws are included; this capture is not a normal-player FPS benchmark.';
   assert.deepEqual(report.played.faults, [], 'Held lean sequence stays live; failures remain evidence');
 } catch (error) { report.failure = error.stack; process.exitCode = 1; }
 finally {
