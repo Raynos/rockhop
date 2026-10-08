@@ -1563,3 +1563,5 @@ October8 required silentMetal currentplayergate18 passes11/11, exactfinish/hash/
 October8 actualmaskedselected export03 succeeds: exact7parts/75, strictdecodedFOURmax1.1921e-7, fullreference unchanged, original4KPBR. Nativefdff343/GLB7d826b8; fullPBR/actualGarage/game next, allR0-R5open0/6.
 
 October8 parentviewsactualcompletePBRfront/rear/bothprofiles: originalselectedall4garments coherentbaseline, earlierskinislands/upwardsleevesgone. Staticonly; denimthighseam/cuffs/bootform andmovingGarage/game remainopen0/6.
+
+October8 actualGarage01 source-capture stops on WebKit341MiB inspectorcacheeviction; sharedlocalHTTPstream witness replacescachedependency with explicit scope andstrictselectedSHA. ActualGarage retry next;0/6.

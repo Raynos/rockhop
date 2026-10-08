@@ -1,0 +1,3 @@
+Actual Garage01 harness exits before first snapshot: WebKit inspector evicts 341MiB selected GLB, response.body rejects asynchronously. Replace body-cache hashing with bounded-memory streaming of the same immutable localhost build URL, correlate status/content length and assert selected source SHA. Explicitly label independent server-byte witness; do not claim browser body readback. Catch asynchronous witness failure immediately so cleanup/report runs. Reuse helper in actual ride harness.
+
+Validation: Actual guardexit1/3.181s retained; no selected Garage art captured. Node syntax checks pass for helper/Garage; actual rerun required. No model/material/rig/game build changed.

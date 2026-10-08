@@ -6,12 +6,13 @@ import assert from 'node:assert/strict';
 import { spawnSync } from 'node:child_process';
 import { preview } from 'vite';
 import { webkit } from 'playwright';
+import { witnessGlbResponse } from './glb-response-witness.mjs';
 
 const arg = (name, fallback = '') => process.argv.find(value => value.startsWith(`--${name}=`))?.slice(name.length + 3) ?? fallback;
 const build = path.resolve(arg('build')), out = path.resolve(arg('out'));
 assert(arg('contract'), 'Pass the exact selected rider contract');
 const contractPath = path.resolve(arg('contract')), contractBytes = fs.readFileSync(contractPath);
-const expected = JSON.parse(contractBytes).specification.meshNames;
+const contract = JSON.parse(contractBytes), expected = contract.specification.meshNames;
 const required = ['RiderBody', 'RiderHoodie', 'RiderJeans', 'ActualSelectedGlove.L', 'ActualSelectedGlove.R', 'ActualSelectedBoot.L', 'ActualSelectedBoot.R'];
 for (const name of required) assert(Object.values(expected).includes(name), `Missing selected dressed object ${name}`);
 assert(!fs.existsSync(out), 'Use a fresh output directory');
@@ -21,10 +22,11 @@ const server = await preview({ configFile: false, root: process.cwd(), build: { 
 const browser = await webkit.launch({ headless: true });
 const context = await browser.newContext({ viewport: { width: 1440, height: 900 }, deviceScaleFactor: 1, recordVideo: { dir: out, size: { width: 1440, height: 900 } } });
 await context.addInitScript(() => localStorage.setItem('rockhop.onboarded', '1'));
-const page = await context.newPage(), responses = [];
+const page = await context.newPage(), responses = [], witnesses = new Map();
 page.on('pageerror', error => report.errors.push(error.message));
 page.on('response', response => {
-  if (response.url().endsWith('.glb')) responses.push(response.body().then(bytes => report.loaded.push({ url: response.url(), status: response.status(), sha256: crypto.createHash('sha256').update(bytes).digest('hex') })));
+  if (response.url().endsWith('.glb')) responses.push(witnessGlbResponse(response, witnesses)
+    .then(row => report.loaded.push(row)).catch(error => report.errors.push(error.message)));
 });
 try {
   await page.goto(server.resolvedUrls.local[0] + '?audio=0&sw=0');
@@ -50,6 +52,7 @@ try {
   }
   await Promise.all(responses);
   assert.deepEqual(report.errors, []);
+  assert(report.loaded.some(row => row.sha256 === contract.glbSHA256), 'Exact selected GLB served by actual build');
   for (const row of report.snapshots) {
     assert.deepEqual(row.debug.candidate?.authorMeshRoles, expected, 'Exact selected source object inventory loaded');
     const visible = new Set(row.debug.candidate.visibleMeshes.filter(mesh => mesh.skinned && mesh.triangles > 0).map(mesh => mesh.name));

@@ -1,0 +1,53 @@
+{
+  "accepted": false,
+  "lock": "/Users/raynos/projects/localai/.model.lock",
+  "method": "lockf -k",
+  "command": [
+    "node",
+    "harness/rider-rebuild/garage-review.mjs",
+    "--build=harness/out/rider-rebuild/selected-complete-engine01/game01",
+    "--contract=harness/out/rider-rebuild/selected-complete-engine01/engine03/rider-contract.json",
+    "--out=harness/out/rider-rebuild/selected-complete-engine01/garage01"
+  ],
+  "controllerPID": 96788,
+  "pollSeconds": 1,
+  "startAnonymousBelowGiB": 55,
+  "stopAnonymousGiB": 65,
+  "stopAnonymousPlusWiredGiB": 96,
+  "limitSeconds": 300.0,
+  "guardSHA256": "cf8acd15d8b7484480bee74d23892be815d955ffd87115d3da8ed228ffb3d916",
+  "status": "worker returned; review pending",
+  "samples": [
+    {
+      "seconds": 0,
+      "anonymousGiB": 34.2,
+      "wiredGiB": 9.4,
+      "freeGiB": 25.8
+    },
+    {
+      "seconds": 0.055,
+      "anonymousGiB": 34.4,
+      "wiredGiB": 9.4,
+      "freeGiB": 25.6
+    },
+    {
+      "seconds": 1.104,
+      "anonymousGiB": 34.2,
+      "wiredGiB": 9.5,
+      "freeGiB": 25.7
+    },
+    {
+      "seconds": 2.16,
+      "anonymousGiB": 33.3,
+      "wiredGiB": 9.6,
+      "freeGiB": 26.4
+    }
+  ],
+  "physicalMemoryBytes": 137438953472,
+  "requiredPhysicalMemoryBytes": 137438953472,
+  "scope": "Future explicitly invoked owned Rockhop job only",
+  "pressureOrSwapLimits": "No separate pressure/swap gate exists in the pinned original guard; none altered",
+  "ownedChildPID": 96793,
+  "exitCode": 1,
+  "elapsedSeconds": 3.181
+}

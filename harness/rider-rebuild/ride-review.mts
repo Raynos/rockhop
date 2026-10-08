@@ -3,10 +3,10 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import assert from 'node:assert/strict';
-import crypto from 'node:crypto';
 import { spawnSync } from 'node:child_process';
 import { preview } from 'vite';
 import { webkit } from 'playwright';
+import { witnessGlbResponse } from './glb-response-witness.mjs';
 import { decodeJSON, expandFrames } from '../../src/core/replay';
 const arg = (name: string, fallback = '') => process.argv.find(value => value.startsWith(`--${name}=`))?.slice(name.length + 3) ?? fallback;
 const build = path.resolve(arg('build')), out = path.resolve(arg('out'));
@@ -22,9 +22,11 @@ const server = await preview({ configFile: false, root: process.cwd(), build: { 
 const browser = await webkit.launch({ headless: true });
 const page = await browser.newPage({ viewport: { width: 1440, height: 900 }, deviceScaleFactor: 1 });
 const responses: Promise<void>[] = [];
+const witnesses = new Map();
 page.on('pageerror', error => report.errors.push(error.message));
 page.on('response', response => {
-  if (response.url().endsWith('.glb')) responses.push(response.body().then(bytes => report.loaded.push({ url: response.url(), status: response.status(), sha256: crypto.createHash('sha256').update(bytes).digest('hex') })));
+  if (response.url().endsWith('.glb')) responses.push(witnessGlbResponse(response, witnesses)
+    .then(row => { report.loaded.push(row); }).catch(error => { report.errors.push(error.message); }));
 });
 try {
   await page.goto(server.resolvedUrls!.local[0] + `?harness=1&audio=0&sw=0&outfit=street-mustard&physics=${recording.header.physics ?? 'v1'}&hz=${recording.header.physicsHz}`);
@@ -53,6 +55,8 @@ try {
     await page.screenshot({ path: path.join(out, 'frames', `${String(i).padStart(4, '0')}.png`) });
   }
   await Promise.all(responses); assert.deepEqual(report.errors, []);
+  const source = JSON.parse(fs.readFileSync(path.join(build, 'rider-rebuild-inputs.json'), 'utf8'));
+  assert(report.loaded.some((row: any) => row.sha256 === source.sourceSHA256), 'Exact selected GLB served by actual build');
   assert(report.samples.every((row: any) => row.debug.allBoneFinite), 'Complete hierarchy finite');
   const encoded = spawnSync('ffmpeg', ['-v', 'error', '-y', '-framerate', String(fps), '-i', path.join(out, 'frames/%04d.png'), '-an', '-c:v', 'libx264', '-crf', '18', '-pix_fmt', 'yuv420p', path.join(out, 'ride-played.mp4')], { encoding: 'utf8' });
   assert.equal(encoded.status, 0, encoded.stderr);
