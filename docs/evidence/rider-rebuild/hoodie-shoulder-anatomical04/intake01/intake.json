@@ -1,0 +1,338 @@
+{
+  "accepted": false,
+  "stage": "MINIMAL_COMPACT_AND_SELECTED_PANEL_TOPOLOGY_UV_INTAKE_ONLY",
+  "recipeSHA256": "052cb315b3fa2fea4ac8993d4d1035a765fdfdcec850f38f51517d688e51c2d2",
+  "inputsSHA256": "848f858d5f8f06fd9e81e612ae205e2dba4540cafb772ef4ddd3b61b288ec6ac",
+  "inputs": {
+    "schemaVersion": 1,
+    "accepted": false,
+    "stage": "SOURCE_ONLY_MINIMAL_PANEL_INTAKE",
+    "targetNative": {
+      "path": "harness/out/rider-rebuild/production-hoodie01/regional-repair01/authored-hoodie.blend",
+      "sha256": "fd7761d7b7c9794cb5871945515d992052424b52ddc83f289522dae942d05f3c"
+    },
+    "targetReceipt": {
+      "path": "harness/out/rider-rebuild/production-hoodie01/regional-repair01/author.json",
+      "sha256": "95663c7336d3c98f59a527d20a2ac3b2e656ccb5a5b9159922a2bf51496412c1"
+    },
+    "selectedNative": {
+      "path": "assets/blender/hero-remaster/rider/anatomical-foundation-2026-10-03/user-agent1/selected-hoodie25/crease-normal-candidate.blend",
+      "sha256": "c732d98076f6b9b1a209a45e8a0cddf793484807ea8b3ae9011fa4f82c151df0"
+    },
+    "selectedObject": "Actual selected donor, compact interior flow, unaccepted",
+    "bodyArrays": {
+      "path": "docs/evidence/rider-rebuild/native-hand-repair01/native02/native-body.npz",
+      "sha256": "e62e9969503b7761e99463eccc3ca7be39e0c230a2948f2f87a224db52d0f9a2"
+    },
+    "workingContext": {
+      "path": "harness/out/rider-rebuild/production-authoring01/working01/editable-real-source-outfit.blend",
+      "sha256": "9cedbcdbe0a953d116bafc80b41f8adb0538f21c1ecfca20598f3f079952aaf4"
+    },
+    "frozenAuthorHelpers": {
+      "path": "assets/blender/rider-rebuild/production-hoodie01/author.py",
+      "sha256": "078da52b40e1f5049759314c1794ba6559ac1dae90d79294672c674f2095d14a"
+    },
+    "priorLocalDiagnosis": {
+      "path": "harness/out/rider-rebuild/production-hoodie02/local-outside01/trial01/diagnosis.json",
+      "sha256": "f2daf9f158a7e9e917dd2ac9de32b1fb783782b05a38f32dbc3f17c768a667f5"
+    },
+    "selectedToWearerRows": [
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        -1,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ]
+    ],
+    "outputRoot": "harness/out/rider-rebuild/hoodie-shoulder-anatomical04",
+    "limits": [
+      "Readonly two-mesh arrays for one deliberate cloth-panel authoring correction.",
+      "No native save, fit, projection, outside modifier, normal displacement, sweep, dense generation or render.",
+      "Old selected rig/weights are not imported as authority or consumed. Current rest75/canonical anatomy unchanged."
+    ],
+    "originalDensePBR": {
+      "path": ".tmp/generation-comparison-2026-10-03/user-agent2/qualified-hunyuan-paint06/paint/painted.glb",
+      "sha256": "800d7a9717757b90b296a78c605cddb698c68d399a96e403aa381103e77d2eba"
+    }
+  },
+  "target": {
+    "object": "RiderHoodie",
+    "vertices": 12898,
+    "polygons": 19793,
+    "corners": 64881,
+    "uvLayers": [
+      "UVMap"
+    ],
+    "attributes": [
+      {
+        "name": "actual_donor_display_xyz",
+        "domain": "POINT",
+        "type": "FLOAT_VECTOR",
+        "arrayKey": "attribute_0"
+      },
+      {
+        "name": "simplified_donor_polygon",
+        "domain": "FACE",
+        "type": "INT",
+        "arrayKey": "attribute_1"
+      },
+      {
+        "name": "source22_polygon_id",
+        "domain": "FACE",
+        "type": "INT",
+        "arrayKey": "attribute_2"
+      },
+      {
+        "name": "_HOODIE_PATCH",
+        "domain": "FACE",
+        "type": "INT",
+        "arrayKey": "attribute_3"
+      },
+      {
+        "name": "UVMap",
+        "domain": "CORNER",
+        "type": "FLOAT2"
+      },
+      {
+        "name": ".select_vert",
+        "domain": "POINT",
+        "type": "BOOLEAN"
+      },
+      {
+        "name": ".select_edge",
+        "domain": "EDGE",
+        "type": "BOOLEAN"
+      },
+      {
+        "name": "sharp_edge",
+        "domain": "EDGE",
+        "type": "BOOLEAN",
+        "arrayKey": "attribute_7"
+      },
+      {
+        "name": ".select_poly",
+        "domain": "FACE",
+        "type": "BOOLEAN"
+      },
+      {
+        "name": ".uv_select_vert",
+        "domain": "CORNER",
+        "type": "BOOLEAN"
+      },
+      {
+        "name": ".uv_select_edge",
+        "domain": "CORNER",
+        "type": "BOOLEAN"
+      },
+      {
+        "name": ".uv_select_face",
+        "domain": "FACE",
+        "type": "BOOLEAN"
+      },
+      {
+        "name": "position",
+        "domain": "POINT",
+        "type": "FLOAT_VECTOR",
+        "arrayKey": "attribute_12"
+      },
+      {
+        "name": ".edge_verts",
+        "domain": "EDGE",
+        "type": "INT32_2D"
+      },
+      {
+        "name": ".corner_vert",
+        "domain": "CORNER",
+        "type": "INT"
+      },
+      {
+        "name": ".corner_edge",
+        "domain": "CORNER",
+        "type": "INT"
+      }
+    ],
+    "materials": [
+      "Material_0"
+    ],
+    "originalObjectMatrix": [
+      [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "arrayFrame": "Current wearer native rest",
+    "npz": {
+      "path": "harness/out/rider-rebuild/hoodie-shoulder-anatomical04/intake01/compact-target.npz",
+      "sha256": "05cc42d26b59f05674fafe5cbfa105a06b523b2a9ec7ca2a79ece692fbd0a838"
+    }
+  },
+  "selectedSource": {
+    "object": "Actual selected donor, compact interior flow, unaccepted",
+    "vertices": 12430,
+    "polygons": 19878,
+    "corners": 64115,
+    "uvLayers": [
+      "UVMap"
+    ],
+    "attributes": [
+      {
+        "name": "actual_donor_display_xyz",
+        "domain": "POINT",
+        "type": "FLOAT_VECTOR",
+        "arrayKey": "attribute_0"
+      },
+      {
+        "name": "simplified_donor_polygon",
+        "domain": "FACE",
+        "type": "INT",
+        "arrayKey": "attribute_1"
+      },
+      {
+        "name": "source22_polygon_id",
+        "domain": "FACE",
+        "type": "INT",
+        "arrayKey": "attribute_2"
+      },
+      {
+        "name": "UVMap",
+        "domain": "CORNER",
+        "type": "FLOAT2"
+      },
+      {
+        "name": ".select_vert",
+        "domain": "POINT",
+        "type": "BOOLEAN"
+      },
+      {
+        "name": ".select_edge",
+        "domain": "EDGE",
+        "type": "BOOLEAN"
+      },
+      {
+        "name": ".select_poly",
+        "domain": "FACE",
+        "type": "BOOLEAN"
+      },
+      {
+        "name": "sharp_face",
+        "domain": "FACE",
+        "type": "BOOLEAN",
+        "arrayKey": "attribute_7"
+      },
+      {
+        "name": ".uv_select_vert",
+        "domain": "CORNER",
+        "type": "BOOLEAN"
+      },
+      {
+        "name": ".uv_select_edge",
+        "domain": "CORNER",
+        "type": "BOOLEAN"
+      },
+      {
+        "name": ".uv_select_face",
+        "domain": "FACE",
+        "type": "BOOLEAN"
+      },
+      {
+        "name": "position",
+        "domain": "POINT",
+        "type": "FLOAT_VECTOR",
+        "arrayKey": "attribute_11"
+      },
+      {
+        "name": ".edge_verts",
+        "domain": "EDGE",
+        "type": "INT32_2D"
+      },
+      {
+        "name": ".corner_vert",
+        "domain": "CORNER",
+        "type": "INT"
+      },
+      {
+        "name": ".corner_edge",
+        "domain": "CORNER",
+        "type": "INT"
+      },
+      {
+        "name": "sharp_edge",
+        "domain": "EDGE",
+        "type": "BOOLEAN",
+        "arrayKey": "attribute_15"
+      }
+    ],
+    "materials": [
+      "Material_0.001"
+    ],
+    "originalObjectMatrix": [
+      [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "arrayFrame": "Current wearer frame; selected source rotated -90deg Z only",
+    "npz": {
+      "path": "harness/out/rider-rebuild/hoodie-shoulder-anatomical04/intake01/selected25-source.npz",
+      "sha256": "5ccc4a69b2c2912d761babf8bde8f2ca5916d4896e816fc4ee33ae3ca34366c0"
+    }
+  },
+  "bodyAnd75RestUnchanged": true,
+  "targetUnchanged": true,
+  "nativeSaved": false,
+  "next": "Choose explicit chest/back/upperarm seam boundaries and selected chart landmarks; author ONE bilateral axillary panel baseline before any PBR transfer.",
+  "limits": [
+    "Readonly two-mesh arrays for one deliberate cloth-panel authoring correction.",
+    "No native save, fit, projection, outside modifier, normal displacement, sweep, dense generation or render.",
+    "Old selected rig/weights are not imported as authority or consumed. Current rest75/canonical anatomy unchanged."
+  ]
+}

@@ -1421,3 +1421,5 @@ October 8 broad anatomical neck native saved9023618821: CPU2 exit0 in5.064s;19au
 October 8 broad-neck actual matched review: parent keeps9023618821 as rest-only authoring improvement over the old throat shelf/posterior stump; all4 new views and2old profiles inspected. Residual nape bulge/albedo/shading seams remain. Readback and clothed head-turn/nod next; no art or rider gate acceptance.
 
 October 8 broad-neck saved readback: one closed connected component,6753canonical/1446hand fields and75 rest exact; CPU2 exit0 in1.516s. Historical upper-normal residual0.01461224 versus2e-6 remains failed/unwaived. Analytic underjaw field discontinuity confirmed; one endpoint conditioning before clothed head stress, no extra known-bad clip.
+
+October 8 hoodie panel intake completed read-only in8.26s: actual compact target/source polygons, cornerUV, axillary patch and source chart IDs available, original target/body75 unchanged. Builder now authors one bilateral gusset/support-loop correction; dense frozen placement is appearance reference, not wearing-shape authority. No fit acceptance.

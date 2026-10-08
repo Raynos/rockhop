@@ -1,0 +1,59 @@
+{
+  "accepted": false,
+  "stage": "ONE_PANEL_CORRECTION_RECIPE_AND_MINIMAL_EXTRACTION_SOURCE_READY",
+  "pythonASTPassed": true,
+  "explicitInputPinsPassed": 8,
+  "noHeavyJobExecutedByBuilder": true,
+  "sourceSHA256": "052cb315b3fa2fea4ac8993d4d1035a765fdfdcec850f38f51517d688e51c2d2",
+  "inputsSHA256": "848f858d5f8f06fd9e81e612ae205e2dba4540cafb772ef4ddd3b61b288ec6ac",
+  "recipeSHA256": "c75f536ed118b4850adcf059419e965b0f6863c5595e8446a10db51173996841",
+  "viewedEvidence": [
+    {
+      "path": "harness/out/rider-rebuild/production-assembly01/authoring01-full-outfit/front.png",
+      "sha256": "67be0866989cd42ba39f20d5be759f94ef6f03aab20dea86a47a1c169f551d09"
+    },
+    {
+      "path": "harness/out/rider-rebuild/production-assembly01/authoring01-full-outfit/rear.png",
+      "sha256": "57800b287649390d4420666ef9ac06a68929429c3abd58862bcf79d78382708d"
+    },
+    {
+      "path": "harness/out/rider-rebuild/production-assembly01/authoring01-full-outfit/left-profile.png",
+      "sha256": "1aeb552a71aa8c55dc5bcf6f6e7e37823c4bf0f73dff45fe4cb22661fe24e4c0"
+    },
+    {
+      "path": "harness/out/rider-rebuild/production-assembly01/authoring01-full-outfit/right-profile.png",
+      "sha256": "7906f8d3fb4c48928dd2578bc31efa4aad3650a610c039bc0f9446e8136f9b53"
+    },
+    {
+      "path": "harness/out/rider-rebuild/production-assembly01/hoodie-patched01/front.png",
+      "sha256": "0508f45bb95044894452f2ce8f6887260b7618e9c4f91e85f9a11149d06f35b6"
+    },
+    {
+      "path": "harness/out/rider-rebuild/production-assembly01/hoodie-patched01/back.png",
+      "sha256": "4669bbae41570a73293712283d2de0080739cc2083c0884ccf92604ffac9d72d"
+    },
+    {
+      "path": "harness/out/rider-rebuild/production-assembly01/hoodie-patched01/profile.png",
+      "sha256": "6feb00ec554b009886baa3306ce712d0478515e4c661e55c8a06739d77162526"
+    }
+  ],
+  "decision": "Actual compactfd is better clothing baseline than frozen dense-placement context. Reconstruct bilateral axillary cloth panels with deliberate seam/ease controls; no evidence warrants anatomicalbody shrink.",
+  "minimalExtractionRequested": "One readonly12.9kcompact+12.4kselected mesh polygon/UV/lineage intake; existing canonicalbody arrays suffice. No model/render/bake/native save.",
+  "command": [
+    "/Applications/Blender.app/Contents/MacOS/Blender",
+    "-b",
+    "-t",
+    "2",
+    "--python-exit-code",
+    "1",
+    "--python",
+    "assets/blender/rider-rebuild/hoodie-shoulder-anatomical04/extract_panel_intake.py",
+    "--",
+    "assets/blender/rider-rebuild/hoodie-shoulder-anatomical04/inputs.json",
+    "harness/out/rider-rebuild/hoodie-shoulder-anatomical04/intake01"
+  ],
+  "limits": [
+    "Panel-authoring execution source waits exact seam/chart IDs, not another fit-setting campaign.",
+    "Parent controls serial CPU2 lease and judges. Original files untouched. All R0\u2013R5 open."
+  ]
+}
