@@ -17,3 +17,10 @@ Finding: Actual lattice extents now set the cage scale and physical lift. Place 
 Validation: parent reviews the concrete source correction; AST, 6 input pins and refreshed source hashes match.
 
 Limits: repaired author source is unexecuted and unaccepted; no map or moving-art acceptance.
+
+
+Finding: The actual saved boot exposes an outer toe and replaces the rounded toe with a tall wall. Stop this cage mechanism before baking; its one targeted shape repair has been consumed.
+
+Validation: Parent viewed actual production lateral/three-quarter and dense three-quarter PNGs; negative judgment matches saved exit0 author02. No bake.
+
+Limits: diagnostic unaccepted construction only; source appearance, full-outfit played motion and real Garage/game remain open.
