@@ -1469,3 +1469,5 @@ October8 bilateral selected glove sculpt saved native277f but solver warnings on
 October8 current-player gate14 exit1/15.317s,10/11: boot ready348.24ms exceeds300ms under actual60.21load/18cores after resample. Replay finish/hash and restart8.51ms remain correct. Failure retained, no blind retry or selected-rider/release acceptance.
 
 October8 actual jeans paired-triangle capture succeeds CPU2 exit0/79.503s: six matched source/wearing views show original fly/pockets/waist without black blocks. Keep correspondence baseline for whole selected4K transfer; 1024 pelvis-only shape/detail and all moving/in-engine rider acceptance remain open.
+
+October8 glove solver failure independently traced to float-epsilon cotangent areas:542 unanchored zero columns per placed dense hand. Freeze one selected-derived guide in original units then dense Surface Deform, preserve solved native before postgate. Root read source/pins; actual wearing/PBR/grip unaccepted.

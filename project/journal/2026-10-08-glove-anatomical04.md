@@ -17,3 +17,10 @@ Finding: Blender returns exit0 and bound flags while Laplacian solver reports fa
 Validation: CPU2 exit0/48.472s, warnings on both hands. Parent inspected three R PBR views: finger/thenar exposure and needle triangles; palm view occluded by actual jeans. Correct original appearance assignment retained.
 
 Limits: Reject actual shape/solver; no left/cuff/motion campaign. Coarse selected-source guide in original units is next supported correction, not a successful result.
+
+
+Finding: Dense Laplacian failure has a measured numerical cause: Blender float-epsilon cotangent gate leaves542 unanchored zero columns per placed hand. Use actual selected-derived8000-vertex guide in original units, transfer to unchanged selected dense stock with Surface Deform.
+
+Validation: Root read official5.2.1 equation and independently reproduced area audit; guide has zero suppressed triangles/zero inactive vertices. Root read whole source and required save-before-postgate plus report-only residual. Sources compile and exact pins pass.
+
+Limits: Frozen unexecuted guide remedy; modifier success and anatomical target ownership cannot prove selected-PBR wearing fit or grip.

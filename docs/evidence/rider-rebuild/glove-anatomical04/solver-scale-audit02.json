@@ -1,0 +1,127 @@
+{
+  "acceptedArt": false,
+  "operation": "READ_ONLY_COTANGENT_AREA_GATE_AUDIT",
+  "recipeSHA256": "1b1db0ff1a47536e39774346ff0a4de2b8e691f9979a9c915da6e0e189f6542b",
+  "controlsSHA256": "1fa7e6f75da3fe2e41815de6436f737af1b565216bed27e07b41942b6cbed0dd",
+  "float32Epsilon": 1.1920928955078125e-07,
+  "cases": {
+    "R_world_float32": {
+      "trianglesSuppressedByCotangentGate": 125781,
+      "verticesWithZeroActiveIncidentTriangles": 543,
+      "unanchoredZeroColumns": 542,
+      "unanchoredZeroColumnExamples": [
+        1552,
+        1937,
+        1943,
+        1962,
+        1970,
+        2368,
+        2789,
+        3532,
+        4341,
+        5256,
+        5449,
+        5932,
+        6402,
+        7923,
+        8443,
+        8974,
+        8981,
+        9507,
+        9514,
+        9521,
+        10060,
+        10067,
+        10075,
+        11368
+      ],
+      "minimumTriangleCrossMagnitude": 1.4843810249433147e-14
+    },
+    "L_world_float32": {
+      "trianglesSuppressedByCotangentGate": 125783,
+      "verticesWithZeroActiveIncidentTriangles": 543,
+      "unanchoredZeroColumns": 542,
+      "unanchoredZeroColumnExamples": [
+        1552,
+        1937,
+        1943,
+        1962,
+        1970,
+        2368,
+        2789,
+        3532,
+        4341,
+        5256,
+        5449,
+        5932,
+        6402,
+        7923,
+        8443,
+        8974,
+        8981,
+        9507,
+        9514,
+        9521,
+        10060,
+        10067,
+        10075,
+        11368
+      ],
+      "minimumTriangleCrossMagnitude": 1.7785758963154673e-14
+    },
+    "original_source_units": {
+      "trianglesSuppressedByCotangentGate": 7485,
+      "verticesWithZeroActiveIncidentTriangles": 1,
+      "unanchoredZeroColumns": 1,
+      "unanchoredZeroColumnExamples": [
+        186732
+      ],
+      "minimumTriangleCrossMagnitude": 9.965361869035405e-13
+    }
+  },
+  "primaryBlenderVersion": "v5.2.1",
+  "primarySource": [
+    {
+      "url": "https://raw.githubusercontent.com/blender/blender/v5.2.1/source/blender/blenlib/intern/math_geom.cc",
+      "sha256": "3d7559d04f8d28e71e9a3d98d519a6c020763fe7119855f6c90f1712b5fce958",
+      "lines": [
+        202,
+        216
+      ],
+      "meaning": "Cotangent weight is zero unless triangle cross magnitude exceeds FLT_EPSILON."
+    },
+    {
+      "url": "https://raw.githubusercontent.com/blender/blender/v5.2.1/source/blender/modifiers/intern/MOD_laplaciandeform.cc",
+      "sha256": "d56f120e37066fe9a892ec4090fffec03e149f82c115a6ea8356330a4e8d2096",
+      "lines": [
+        291,
+        292,
+        413,
+        722,
+        723
+      ],
+      "meaning": "Modifier assembles cotangent least-squares system; failed solve emits observed warning."
+    },
+    {
+      "url": "https://raw.githubusercontent.com/blender/blender/v5.2.1/intern/eigen/intern/linear_solver.cc",
+      "sha256": "886e3061226fef8e10106b86d9e535c18782368999bcb8089363a1589c377e32",
+      "lines": [
+        284,
+        298
+      ],
+      "meaning": "Least-squares uses M transpose M followed by sparse LU."
+    }
+  ],
+  "guide": {
+    "path": "assets/blender/hero-remaster/rider/finish-2026-10-05/wardrobe/data/prep02/gloves/retopology-prototype.npz",
+    "sha256": "746c99bb9fc109492b27e6e9bd3d7281bf3d4799488cb0d6beebf2804d8a6c5e",
+    "measurement": {
+      "trianglesSuppressedByCotangentGate": 0,
+      "verticesWithZeroActiveIncidentTriangles": 0,
+      "unanchoredZeroColumns": 0,
+      "unanchoredZeroColumnExamples": [],
+      "minimumTriangleCrossMagnitude": 8.307260941364802e-06
+    }
+  },
+  "finding": "Both world-scale systems contain542 unanchored vertices whose every incident cotangent triangle is suppressed: zero Laplacian columns make the normal matrix singular. The selected coarse guide has no suppressed triangle in source units."
+}
