@@ -1,0 +1,85 @@
+{
+  "accepted": false,
+  "status": "REJECTED_COMBINED_MODEL_REQUIRES_GEOMETRY_CORRECTION",
+  "native": {
+    "path": "harness/out/rider-rebuild/glove-over-sleeve08/authored03/UNACCEPTED-editable-selected-gauntlet-over-sleeve.blend",
+    "sha256": "13d0017e0ccb160f2cc550f3104c8206ea3954136807525a4c489cac41f8f2f1",
+    "bytes": 775852259,
+    "retained": false,
+    "reason": "Ignored editable native; hash-only evidence, saved before all ten dense checks."
+  },
+  "guideNative": {
+    "path": "harness/out/rider-rebuild/glove-over-sleeve08/authored03/editable-original-gauntlet-guides.blend",
+    "sha256": "d92ff1e3fc8bc5a72914bc9e3228e5187e7858092fbb5e03019c368ade7dc96d",
+    "retained": false
+  },
+  "sourceMaster": {
+    "path": "harness/out/rider-rebuild/selected-complete-engine01/engine05/rider-private-masked.blend",
+    "sha256": "95a4f14e06fb52cc055df6d1446a035d8cd3d35180d565ad52f3a70b3b05664b"
+  },
+  "recipeSHA256": "42d428f600bdbd82c37d0024f147d57a29a1301560bc9a1fa3cd86389685d3d2",
+  "volumeRecipeSHA256": "17e852072061fd2e0ce9791a596c156a63cf9a11c640e96d37933922557873d7",
+  "inputSHA256": "912e724a6d296709c92a4c48704f5be490e7f228cdfe55b84814e76c85224eed",
+  "guard": {
+    "exitCode": 1,
+    "elapsedSeconds": 39.648
+  },
+  "workerStream": "Exact existing worker.log retained as worker.txt; stdout/stderr are combined in this original capture, not reconstructed separately.",
+  "files": [
+    {
+      "originalPath": "harness/out/rider-rebuild/glove-over-sleeve08/authored03/construction.json",
+      "retainedPath": "construction.json.gz",
+      "originalSHA256": "579e5cd05bde2f66d99906f42c057c89dc37b5c54f5affde9c26357773e39990",
+      "originalBytes": 34857,
+      "storedSHA256": "e455ed7c1e1b95e11474dc6ebf9f66ab91bec7643585b361406034d498c51339",
+      "storedBytes": 7369,
+      "encoding": "gzip;empty filename;mtime0;level6"
+    },
+    {
+      "originalPath": "harness/out/rider-rebuild/glove-over-sleeve08/authored03/actual-guide-L.npz",
+      "retainedPath": "actual-guide-L.npz",
+      "originalSHA256": "47fbfa44284dd835982dc78e13af0ce7e40358dab4105005045cefd1efc910de",
+      "originalBytes": 259194,
+      "storedSHA256": "47fbfa44284dd835982dc78e13af0ce7e40358dab4105005045cefd1efc910de",
+      "storedBytes": 259194,
+      "encoding": "exact original bytes"
+    },
+    {
+      "originalPath": "harness/out/rider-rebuild/glove-over-sleeve08/authored03/actual-guide-R.npz",
+      "retainedPath": "actual-guide-R.npz",
+      "originalSHA256": "a2c45c488668b9dffe9efb72c6a0bfc1a36c8e5c435daa98556261892308d5f1",
+      "originalBytes": 259461,
+      "storedSHA256": "a2c45c488668b9dffe9efb72c6a0bfc1a36c8e5c435daa98556261892308d5f1",
+      "storedBytes": 259461,
+      "encoding": "exact original bytes"
+    },
+    {
+      "originalPath": "harness/out/rider-rebuild/glove-over-sleeve08/authored03/actual-hoodie-wrists.npz",
+      "retainedPath": "actual-hoodie-wrists.npz",
+      "originalSHA256": "b30a1299e1291895a91ff267d20a14d752a2a6c3236c45e2a112cb26913dd1bd",
+      "originalBytes": 2258233,
+      "storedSHA256": "b30a1299e1291895a91ff267d20a14d752a2a6c3236c45e2a112cb26913dd1bd",
+      "storedBytes": 2258233,
+      "encoding": "exact original bytes"
+    },
+    {
+      "originalPath": "docs/evidence/rider-rebuild/glove-over-sleeve08/author-guard03/guard.json",
+      "retainedPath": "guard.json.gz",
+      "originalSHA256": "a49ee4a1cf771e5269d1d340df4621ebca2d86121bbd1ad871d25adaae163d45",
+      "originalBytes": 5464,
+      "storedSHA256": "0e6324e40beff600a2d135bc5b189b2ab45151e264b3e8fae21e475d3bb25703",
+      "storedBytes": 1077,
+      "encoding": "gzip;empty filename;mtime0;level6"
+    },
+    {
+      "originalPath": "docs/evidence/rider-rebuild/glove-over-sleeve08/author-guard03/worker.log",
+      "retainedPath": "worker.txt",
+      "originalSHA256": "2557336aea6bd27677a5dff6bd31d3cb285a9cb18cdcf812b350e647ee409573",
+      "originalBytes": 19850,
+      "storedSHA256": "2557336aea6bd27677a5dff6bd31d3cb285a9cb18cdcf812b350e647ee409573",
+      "storedBytes": 19850,
+      "encoding": "exact original bytes"
+    }
+  ],
+  "limits": "Only four sleeve degenerate faces per side are classified inherited by actual baseline comparison; do not generalize that classification to strict intersections. Local cuff self-cross pass is not full-guide, complete-model or art acceptance. R0\u2013R5 remain open; no normal player promotion."
+}
