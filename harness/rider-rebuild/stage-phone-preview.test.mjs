@@ -82,6 +82,16 @@ test('stage the actual comparison outputs with final budget and private-file gua
     assert.equal(JSON.parse(fs.readFileSync(path.join(out1, '.vercel/output/builds.json'))).target, 'preview');
     assert.deepEqual(Object.keys(JSON.parse(fs.readFileSync(path.join(out1, '.vercel/project.json')))), ['projectId', 'orgId', 'projectName']);
   });
+  await t.test('allow bundled Sentry file scheme detection, reject a concrete file URI', async () => {
+    const relative = 'assets/sentry.js';
+    write('build/' + relative, 'function normalizeStackTracePath(path){return path?.startsWith("file://")?path.slice(7):path}');
+    loads.items.push({ path: './' + relative }); write('build/load-manifest.json', loads);
+    const staged = await stagePhonePreview({ build, out: path.join(base, 'stage-sentry'), root });
+    assert(staged.files.some(row => row.path === relative));
+    write('build/' + relative, 'const receipt = "file:///tmp/local-receipt.json";');
+    await rejected('reject-file-uri', /Local machine path/);
+    loads.items.pop(); write('build/load-manifest.json', loads);
+  });
   await t.test('reject unfinalized measurements before writing output', async () => {
     const marker = measurements.measurement; delete measurements.measurement;
     write('build/rider-comparison-js.json', measurements);

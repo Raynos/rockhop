@@ -164,7 +164,7 @@ export async function stagePhonePreview({ build, out, root = repo }) {
         bytes += chunk.length; digest.update(chunk);
         if (text) {
           const sample = tail + chunk.toString('utf8');
-          assert(!/(?:\/(?:Users|home)\/[^/\s"']+\/|\/private\/var\/|file:\/\/)/.test(sample), `Local machine path in public text: ${relative}`);
+          assert(!/(?:\/(?:Users|home)\/[^/\s"']+\/|\/private\/var\/|file:\/\/[^\s"'`<>]+)/.test(sample), `Local machine path in public text: ${relative}`);
           tail = sample.slice(-512);
         }
         callback(null, chunk);

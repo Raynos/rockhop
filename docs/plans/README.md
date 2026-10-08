@@ -1663,3 +1663,5 @@ October8 bilateral posterior source candidates frozen: explicit8-quad cores/24-q
 October8 production correction: native07 replaces proven hidden inner sleeve band; fixed bilateral posterior cores feed offline author04, runtime minimum-gap iteration stopped. Comparison build08/capture02 pass packaging and desktop phone-layout switching only; all rider gates remain0/6.
 
 October8 native07 source checkpoint frozen and unaccepted: owned inner-wall replacement, full dense cuff bearings, exact selected exterior ancestry; actual guarded construction is next, no export/promotion or art pass.
+
+October8 preview staging corrects a false positive on bundled Sentry file:// scheme detection while retaining concrete file-URI/local-path exclusion;10 targeted tests pass. Actual isolated upload remains pending, no production promotion.
