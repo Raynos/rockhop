@@ -1,0 +1,434 @@
+{
+  "acceptedArt": false,
+  "operation": "SELECTED_SURFACE_ANATOMICAL_LAPLACIAN_SCULPT",
+  "controlsSHA256": "1fa7e6f75da3fe2e41815de6436f737af1b565216bed27e07b41942b6cbed0dd",
+  "recipeSHA256": "0bbd19fe7d26e399f4a3a4e54a47db5430bcbdc4e3ea328a73acc014e2ebe7ce",
+  "pins": {
+    "nativeArrays": {
+      "path": "docs/evidence/rider-rebuild/native-hand-repair01/native02/native-body.npz",
+      "sha256": "e62e9969503b7761e99463eccc3ca7be39e0c230a2948f2f87a224db52d0f9a2"
+    },
+    "handL": {
+      "path": "docs/evidence/rider-rebuild/glove-native02-fit/target01/native-hand-L.npz",
+      "sha256": "d175eb289e270d83f5dfef0617a8a8396e1841a27b6de450bfa1cb4bc10a1e1d"
+    },
+    "handR": {
+      "path": "docs/evidence/rider-rebuild/glove-native02-fit/target01/native-hand-R.npz",
+      "sha256": "2e3cd9f16768fa063de77a73eb102abfc841b16abcc11c8339b793558707c210"
+    },
+    "denseSelected": {
+      "path": "assets/blender/hero-remaster/rider/finish-2026-10-05/wardrobe/data/prep02/gloves/cleaned-donor.npz",
+      "sha256": "f07a705f334d3d2b802fa7d23baec3e9cd54b211d160b7bbd6ab2c9f4a96541c"
+    },
+    "baseColor": {
+      "path": "assets/blender/hero-remaster/rider/finish-2026-10-05/wardrobe/data/prep02/gloves/baseColorTexture.png",
+      "sha256": "9633beec8bf2bb3bd73918589b931d2fc4f33f8e3e702415094ed173a129f95c"
+    },
+    "metallicRoughness": {
+      "path": "assets/blender/hero-remaster/rider/finish-2026-10-05/wardrobe/data/prep02/gloves/metallicRoughnessTexture.png",
+      "sha256": "a7a712769a73844a9560d4bef1d163ce3fb8721e388d1a7ecfa07a3515280e67"
+    },
+    "selectedOriginal": {
+      "path": ".tmp/generation-comparison-2026-10-03/user-agent2/items01/gloves/paint01/painted.glb",
+      "sha256": "890f8693256347156c20f82a62dd79e2145cf511e7a85eb5239089644a20bfea"
+    },
+    "reference": {
+      "path": "assets/blender/hero-remaster/generation-comparison-2026-10-03/user-agent2/items01/references/gloves-reference01.png",
+      "sha256": "070c5fc70f1cc17e1697cc88ffb91b71bbdba35003ee3113a94e4a1b9b36adb2"
+    },
+    "native": {
+      "path": "harness/out/rider-rebuild/production-authoring01/conditioned-neck02/editable-real-source-outfit.blend",
+      "sha256": "860d310b639e36e8093d63c6aaf3075a123d03dcbed0557aa99b5a65db80c5b6"
+    },
+    "actualDigitControls": {
+      "path": "docs/evidence/rider-rebuild/native-hand-repair01/verify-native02/digit-controls.json",
+      "sha256": "2995c37fa2db51a37257bf62e6efc79437c115818e6d412326a68dbdded03e4d"
+    },
+    "originalOrbit": {
+      "path": ".tmp/generation-comparison-2026-10-03/user-agent2/items01/gloves/orbit02/orbit.json",
+      "sha256": "f2778d258e5c574e2d5a80824fe5fdc57dfddbb23e16a57261fa470c94bc6ddd"
+    },
+    "originalOrbitRecipe": {
+      "path": "assets/blender/hero-remaster/generation-comparison-2026-10-03/user-agent2/items01/recipes/orbit_item.py",
+      "sha256": "dba99522d972a986f1513a803253a8c4bef5d77d84559f451ce8cba5ae6e5a78"
+    },
+    "originalDorsalView": {
+      "path": ".tmp/generation-comparison-2026-10-03/user-agent2/items01/gloves/orbit02/frames/000.png",
+      "sha256": "16339ea5d4f8113c2079fe07e6079a6f529ed8a5e48803392fc1f8782b069771"
+    },
+    "originalPalmView": {
+      "path": ".tmp/generation-comparison-2026-10-03/user-agent2/items01/gloves/orbit02/frames/024.png",
+      "sha256": "1821a28f42cf5ce594a81a84a43c910fcbc298c7b07d67b647ca656f0fc083fa"
+    },
+    "fittedR": {
+      "path": "harness/out/rider-rebuild/glove-anatomical04/extract01/fitted-R.npz",
+      "sha256": "e0667f6d10e6ebb554beb95cd499b6dd24c9eebda4e416fcea3c1d3a72418d7f"
+    },
+    "fittedL": {
+      "path": "harness/out/rider-rebuild/glove-anatomical04/extract01/fitted-L.npz",
+      "sha256": "ede52151af23c7a9cec61f32da92b9ec5c333566957e56b6562971c2bf28a64e"
+    }
+  },
+  "bodyAndMasterBefore": "9ea1d0d63d061f5ad4e8b55680065a8e69bec9e3b5bce465ae1b61f24da8a90f",
+  "hands": {
+    "R": {
+      "object": "Gloves__AnatomicallySculptedSelected.R",
+      "negativeControl": "Gloves__SelectedFittedSource.R",
+      "editableSculpt": "Gloves__EditableSelectedLaplacianSculpt.R",
+      "vertexCount": 284571,
+      "triangleCount": 569142,
+      "sourceCornerUVByteParity": true,
+      "handleCount": 303,
+      "maximumHandleResidualMeters": 3.3830095176044125e-08,
+      "reflectionFromSelectedSource": true,
+      "faceAndUVCornerWindingReversedTogether": true,
+      "selectedFaceOrderByteParity": true,
+      "signedMCPPalmCurlChecks": [
+        {
+          "joint": "DEF-f_pinky.01.R",
+          "palmCurlDirection": [
+            0.8361128938152164,
+            0.15527457742011047,
+            -0.5261226419789884
+          ],
+          "selectedDorsalDotPalmCurl": -0.9565088181416379
+        },
+        {
+          "joint": "DEF-f_ring.01.R",
+          "palmCurlDirection": [
+            0.9258532140655802,
+            0.18134929514517306,
+            -0.33152414565878
+          ],
+          "selectedDorsalDotPalmCurl": -0.9367992496519245
+        },
+        {
+          "joint": "DEF-f_middle.01.R",
+          "palmCurlDirection": [
+            0.9159253910060191,
+            0.1602947744173206,
+            -0.3679487238800692
+          ],
+          "selectedDorsalDotPalmCurl": -0.9486161391774969
+        },
+        {
+          "joint": "DEF-f_index.01.R",
+          "palmCurlDirection": [
+            0.9034071557610325,
+            0.1469133000554861,
+            -0.4028299804961996
+          ],
+          "selectedDorsalDotPalmCurl": -0.956411437749589
+        }
+      ],
+      "bounds": [
+        [
+          -0.4799753725528717,
+          -0.21183395385742188,
+          0.7523111701011658
+        ],
+        [
+          -0.34593942761421204,
+          -0.011963790282607079,
+          1.0008130073547363
+        ]
+      ],
+      "binding": {
+        "sharedRig": "RiderSkeleton",
+        "jointNames": [
+          "DEF-spine",
+          "DEF-pelvis.L",
+          "DEF-pelvis.R",
+          "DEF-spine.001",
+          "DEF-spine.002",
+          "DEF-spine.003",
+          "DEF-shoulder.L",
+          "DEF-upper_arm.L",
+          "DEF-upper_arm.L.001",
+          "DEF-forearm.L",
+          "DEF-forearm.L.001",
+          "DEF-hand.L",
+          "DEF-palm.01.L",
+          "DEF-f_index.01.L",
+          "DEF-f_index.02.L",
+          "DEF-f_index.03.L",
+          "DEF-palm.02.L",
+          "DEF-f_middle.01.L",
+          "DEF-f_middle.02.L",
+          "DEF-f_middle.03.L",
+          "DEF-palm.03.L",
+          "DEF-f_ring.01.L",
+          "DEF-f_ring.02.L",
+          "DEF-f_ring.03.L",
+          "DEF-palm.04.L",
+          "DEF-f_pinky.01.L",
+          "DEF-f_pinky.02.L",
+          "DEF-f_pinky.03.L",
+          "DEF-thumb.01.L",
+          "DEF-thumb.02.L",
+          "DEF-thumb.03.L",
+          "PalmSocket.L",
+          "DEF-shoulder.R",
+          "DEF-upper_arm.R",
+          "DEF-upper_arm.R.001",
+          "DEF-forearm.R",
+          "DEF-forearm.R.001",
+          "DEF-hand.R",
+          "DEF-palm.01.R",
+          "DEF-f_index.01.R",
+          "DEF-f_index.02.R",
+          "DEF-f_index.03.R",
+          "DEF-palm.02.R",
+          "DEF-f_middle.01.R",
+          "DEF-f_middle.02.R",
+          "DEF-f_middle.03.R",
+          "DEF-palm.03.R",
+          "DEF-f_ring.01.R",
+          "DEF-f_ring.02.R",
+          "DEF-f_ring.03.R",
+          "DEF-palm.04.R",
+          "DEF-f_pinky.01.R",
+          "DEF-f_pinky.02.R",
+          "DEF-f_pinky.03.R",
+          "DEF-thumb.01.R",
+          "DEF-thumb.02.R",
+          "DEF-thumb.03.R",
+          "PalmSocket.R",
+          "DEF-spine.004",
+          "DEF-spine.005",
+          "DEF-spine.006",
+          "DEF-thigh.L",
+          "DEF-thigh.L.001",
+          "DEF-shin.L",
+          "DEF-shin.L.001",
+          "DEF-foot.L",
+          "DEF-toe.L",
+          "SoleSocket.L",
+          "DEF-thigh.R",
+          "DEF-thigh.R.001",
+          "DEF-shin.R",
+          "DEF-shin.R.001",
+          "DEF-foot.R",
+          "DEF-toe.R",
+          "SoleSocket.R"
+        ],
+        "normalizedWeightMaximumResidual": 1.7881393432617188e-07,
+        "candidateDomainCounts": {
+          "0": 17666,
+          "1": 23010,
+          "2": 28427,
+          "3": 28383,
+          "4": 21243,
+          "-1": 64754,
+          "5": 6196,
+          "6": 2029,
+          "7": 1473,
+          "8": 1944,
+          "9": 2434,
+          "-2": 87012
+        },
+        "webCandidateDomains": {
+          "5": "pinky/ring",
+          "6": "ring/middle",
+          "7": "middle/index",
+          "8": "index/thumb"
+        },
+        "thenarCandidateDomain": 9,
+        "maximumNativeTransferDistanceMeters": 0.08120763301849365,
+        "thumbControls": [
+          "DEF-thumb.01.R",
+          "DEF-thumb.02.R",
+          "DEF-thumb.03.R"
+        ],
+        "limits": [
+          "Weight transfer is unqualified until bilateral moving grip/release review."
+        ]
+      }
+    },
+    "L": {
+      "object": "Gloves__AnatomicallySculptedSelected.L",
+      "negativeControl": "Gloves__SelectedFittedSource.L",
+      "editableSculpt": "Gloves__EditableSelectedLaplacianSculpt.L",
+      "vertexCount": 284571,
+      "triangleCount": 569142,
+      "sourceCornerUVByteParity": true,
+      "handleCount": 303,
+      "maximumHandleResidualMeters": 3.255554471579707e-08,
+      "reflectionFromSelectedSource": false,
+      "faceAndUVCornerWindingReversedTogether": false,
+      "selectedFaceOrderByteParity": true,
+      "signedMCPPalmCurlChecks": [
+        {
+          "joint": "DEF-f_pinky.01.L",
+          "palmCurlDirection": [
+            -0.8379331209547262,
+            0.15454000490605402,
+            -0.5234362154940265
+          ],
+          "selectedDorsalDotPalmCurl": -0.9575122574201635
+        },
+        {
+          "joint": "DEF-f_ring.01.L",
+          "palmCurlDirection": [
+            -0.9259726032664324,
+            0.180988697928061,
+            -0.3313877324559421
+          ],
+          "selectedDorsalDotPalmCurl": -0.9373099931002349
+        },
+        {
+          "joint": "DEF-f_middle.01.L",
+          "palmCurlDirection": [
+            -0.9180652491031066,
+            0.1622059448763632,
+            -0.36172562783968903
+          ],
+          "selectedDorsalDotPalmCurl": -0.9476340608064928
+        },
+        {
+          "joint": "DEF-f_index.01.L",
+          "palmCurlDirection": [
+            -0.9035384096852552,
+            0.14654248195533584,
+            -0.4026706386189712
+          ],
+          "selectedDorsalDotPalmCurl": -0.956945021581363
+        }
+      ],
+      "bounds": [
+        [
+          0.34590184688568115,
+          -0.21181386709213257,
+          0.7524882555007935
+        ],
+        [
+          0.47992298007011414,
+          -0.01198821421712637,
+          1.0007926225662231
+        ]
+      ],
+      "binding": {
+        "sharedRig": "RiderSkeleton",
+        "jointNames": [
+          "DEF-spine",
+          "DEF-pelvis.L",
+          "DEF-pelvis.R",
+          "DEF-spine.001",
+          "DEF-spine.002",
+          "DEF-spine.003",
+          "DEF-shoulder.L",
+          "DEF-upper_arm.L",
+          "DEF-upper_arm.L.001",
+          "DEF-forearm.L",
+          "DEF-forearm.L.001",
+          "DEF-hand.L",
+          "DEF-palm.01.L",
+          "DEF-f_index.01.L",
+          "DEF-f_index.02.L",
+          "DEF-f_index.03.L",
+          "DEF-palm.02.L",
+          "DEF-f_middle.01.L",
+          "DEF-f_middle.02.L",
+          "DEF-f_middle.03.L",
+          "DEF-palm.03.L",
+          "DEF-f_ring.01.L",
+          "DEF-f_ring.02.L",
+          "DEF-f_ring.03.L",
+          "DEF-palm.04.L",
+          "DEF-f_pinky.01.L",
+          "DEF-f_pinky.02.L",
+          "DEF-f_pinky.03.L",
+          "DEF-thumb.01.L",
+          "DEF-thumb.02.L",
+          "DEF-thumb.03.L",
+          "PalmSocket.L",
+          "DEF-shoulder.R",
+          "DEF-upper_arm.R",
+          "DEF-upper_arm.R.001",
+          "DEF-forearm.R",
+          "DEF-forearm.R.001",
+          "DEF-hand.R",
+          "DEF-palm.01.R",
+          "DEF-f_index.01.R",
+          "DEF-f_index.02.R",
+          "DEF-f_index.03.R",
+          "DEF-palm.02.R",
+          "DEF-f_middle.01.R",
+          "DEF-f_middle.02.R",
+          "DEF-f_middle.03.R",
+          "DEF-palm.03.R",
+          "DEF-f_ring.01.R",
+          "DEF-f_ring.02.R",
+          "DEF-f_ring.03.R",
+          "DEF-palm.04.R",
+          "DEF-f_pinky.01.R",
+          "DEF-f_pinky.02.R",
+          "DEF-f_pinky.03.R",
+          "DEF-thumb.01.R",
+          "DEF-thumb.02.R",
+          "DEF-thumb.03.R",
+          "PalmSocket.R",
+          "DEF-spine.004",
+          "DEF-spine.005",
+          "DEF-spine.006",
+          "DEF-thigh.L",
+          "DEF-thigh.L.001",
+          "DEF-shin.L",
+          "DEF-shin.L.001",
+          "DEF-foot.L",
+          "DEF-toe.L",
+          "SoleSocket.L",
+          "DEF-thigh.R",
+          "DEF-thigh.R.001",
+          "DEF-shin.R",
+          "DEF-shin.R.001",
+          "DEF-foot.R",
+          "DEF-toe.R",
+          "SoleSocket.R"
+        ],
+        "normalizedWeightMaximumResidual": 1.7881393432617188e-07,
+        "candidateDomainCounts": {
+          "0": 17666,
+          "1": 23010,
+          "2": 28427,
+          "3": 28383,
+          "4": 21243,
+          "-1": 64754,
+          "5": 6196,
+          "6": 2029,
+          "7": 1473,
+          "8": 1944,
+          "9": 2434,
+          "-2": 87012
+        },
+        "webCandidateDomains": {
+          "5": "pinky/ring",
+          "6": "ring/middle",
+          "7": "middle/index",
+          "8": "index/thumb"
+        },
+        "thenarCandidateDomain": 9,
+        "maximumNativeTransferDistanceMeters": 0.0811682716012001,
+        "thumbControls": [
+          "DEF-thumb.01.L",
+          "DEF-thumb.02.L",
+          "DEF-thumb.03.L"
+        ],
+        "limits": [
+          "Weight transfer is unqualified until bilateral moving grip/release review."
+        ]
+      }
+    }
+  },
+  "bakesExecuted": 0,
+  "newPlayerAssets": 0,
+  "limits": [
+    "Actual PBR views and bilateral moving art remain parent review.",
+    "Dense selected derivative is an editable master; runtime topology is not qualified.",
+    "No static control/UV/rig assertion confers wearing fit or art acceptance."
+  ],
+  "native": {
+    "path": "harness/out/rider-rebuild/glove-anatomical04/sculpt01/editable-selected-bilateral-gloves.blend",
+    "sha256": "277f07b0c43f93955b82ede95444f308bddb61049b7f8e2f706b0fe5613015b0"
+  }
+}
