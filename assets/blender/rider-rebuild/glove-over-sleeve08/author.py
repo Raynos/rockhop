@@ -88,8 +88,9 @@ def strict_cross(a, b):
     return False
 
 
-def intersections(a, af, b=None, bf=None):
+def intersections(a, af, b=None, bf=None, changed_vertices=None):
     self_test = b is None
+    assert changed_vertices is None or self_test
     if self_test:
         b, bf = a, af
     assert np.isfinite(a).all() and np.isfinite(b).all()
@@ -98,15 +99,42 @@ def intersections(a, af, b=None, bf=None):
         assert np.all(areas > 1e-14), 'A constructed face degenerates'
     tree_a = BVHTree.FromPolygons([Vector(p) for p in a], af.tolist(), all_triangles=True)
     tree_b = tree_a if self_test else BVHTree.FromPolygons([Vector(p) for p in b], bf.tolist(), all_triangles=True)
-    tested = 0
+    tested, inherited_count, construction_count = 0, 0, 0
+    first_inherited, first_construction = None, None
     for i, j in tree_a.overlap(tree_b):
         if self_test and i >= j:
             continue
         tested += 1
         if strict_cross(a[af[i]], b[bf[j]]):
-            return {'passed': False, 'firstStrictCrossingTriangles': [int(i), int(j)],
-                    'firstTriangleVertexIds': af[i].tolist(), 'secondTriangleVertexIds': bf[j].tolist(),
-                    'testedBroadphasePairs': tested}
+            witness = {'triangles': [int(i), int(j)], 'firstTriangleVertexIds': af[i].tolist(),
+                       'secondTriangleVertexIds': bf[j].tolist()}
+            if changed_vertices is None:
+                return {'passed': False, 'firstStrictCrossingTriangles': witness['triangles'],
+                        'firstTriangleVertexIds': witness['firstTriangleVertexIds'],
+                        'secondTriangleVertexIds': witness['secondTriangleVertexIds'],
+                        'testedBroadphasePairs': tested}
+            # Inspect the whole control mesh. A moved cuff versus any retained
+            # wrist/finger face fails; only unchanged/unchanged pairs are
+            # reported as inherited failures rather than new construction.
+            touches_construction = (np.any(changed_vertices[af[i]])
+                                    or np.any(changed_vertices[bf[j]]))
+            if touches_construction:
+                construction_count += 1
+                if first_construction is None:
+                    first_construction = witness
+            else:
+                inherited_count += 1
+                if first_inherited is None:
+                    first_inherited = witness
+    if changed_vertices is not None:
+        return {'passed': construction_count == 0,
+                'scope': 'Construction gate on every pair touching a changed vertex; inherited retained-hand failures remain open',
+                'fullGuideHasNoStrictCrossings': construction_count+inherited_count == 0,
+                'constructionStrictCrossings': construction_count,
+                'firstConstructionStrictCrossing': first_construction,
+                'inheritedUnchangedStrictCrossings': inherited_count,
+                'firstInheritedUnchangedStrictCrossing': first_inherited,
+                'allBroadphasePairsInspected': True, 'testedBroadphasePairs': tested}
     return {'passed': True, 'testedBroadphasePairs': tested, 'strictCrossings': 0}
 
 
@@ -191,9 +219,12 @@ def main():
         guides.append(guide)
         # Full control mesh includes cuff versus retained wrist/finger pairs.
         gf = faces(guide)
-        gate = intersections(candidate, gf)
+        arrays = out/f'actual-guide-{side}.npz'
+        np.savez_compressed(arrays, worldXYZ=candidate, faces=gf, alpha=alpha)
+        gate = intersections(candidate, gf, changed_vertices=alpha > 0)
         report['hands'][side] = {'hoodie': cloth, 'transverseSourceVolumeAffine': transverse,
             'sourceCuffScaleMPerSourceUnit': scale, 'guideSelfIntersection': gate,
+            'actualGuideArrays': {'path': str(arrays.relative_to(ROOT)), 'sha256': sha(arrays)},
             'guideChangedVertices': int(np.sum(alpha > 0)), 'originalCuffWallsBandLipTopologyRetained': True}
         pending[side] = (dump, profile, scale, basis_x, basis_z, transverse, hood_ids)
     # Preserve a genuinely editable source even if a control geometry gate

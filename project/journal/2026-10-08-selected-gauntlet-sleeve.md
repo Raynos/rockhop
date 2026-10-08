@@ -9,3 +9,9 @@ Finding: Actual source construction hits inherited retained-finger crossings bef
 Validation: Guard exit1/29.465s; parent verifies both crossing pairs lie entirely beyond sourceY−.35 and are unchanged. Actual required X scales1.02420/1.02292, Z1.
 
 Limits: No new cuff-clear verdict, dense transport, complete new native or moving pass. Correct pair ownership in the gate while retaining inherited defects as open.
+
+Finding: Correct the full-control gate to keep inherited finger failures separate while checking every changed-cuff pair.
+
+Validation: Parent reviews the entire diff; AST and builder actual inherited-pair regression pass. Actual guide arrays will be saved before the next gate; geometry and parameters unchanged.
+
+Limits: This source correction grants no cuff, complete-guide or moving-art pass; actual rerun remains required.
