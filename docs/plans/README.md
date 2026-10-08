@@ -1855,3 +1855,5 @@ Motion11 transport source freezes the exact six saved native actions and selecte
 Volume04 actual dressed Garage film is played30.4s to natural end: selected appearance retained, modest posterior improvement, but inflated upperthigh/glute, wrist spikes and ankle strips remain REJECTED as finished art. Capture errors0; development59.459renderFPS/25captureFPS. Fresh wardrobe28 succeeds retired23; new measured seated controls and coupled sculpt are next, no normal-Garage/contact/device pass.
 
 Reference04 source carries the saved cage onto the hidden full wearer using its own full named operators and fresh inverse; visible keys/Basis/maps/rest/weights are protected. Original full-reference Basis/triangles/available IDs are retained as readonly witnesses. Actual native execution and complete contacts remain pending.
+
+Glove recovery source now saves both actual completed selected gloves before any sleeve edit, checking protected geometry including hoodie and native75 rest against pre-glove signatures. Source hashes/AST and parent control-flow review pass; guarded native checkpoint and geometry/art review remain pending.

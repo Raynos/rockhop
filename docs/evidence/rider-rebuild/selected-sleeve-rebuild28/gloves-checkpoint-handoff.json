@@ -1,0 +1,31 @@
+{
+  "status": "FROZEN_SOURCE_ONLY_GLOVES_CHECKPOINT_NOT_RUN",
+  "acceptedArt": false,
+  "sourcePins": [
+    {
+      "path": "assets/blender/rider-rebuild/selected-sleeve-tailoring27/gloves_only.py",
+      "sha256": "279e936f3ab107434557e8efbb7d0a3b1525b9b7aeb6c6a7c63084b3bbb4455a"
+    },
+    {
+      "path": "assets/blender/rider-rebuild/selected-sleeve-tailoring27/checkpoint.py",
+      "sha256": "d45d46b46cc621fb6a116f6677bafaa642989e6664f6da6a919d46b70b4b2419"
+    },
+    {
+      "path": "assets/blender/rider-rebuild/selected-cuff-topology10/construct10.py",
+      "sha256": "906c4df1c117d183b9b117fe03a27d2f96c82f65f1abc45ae9fd6e9e7e29aa0e"
+    }
+  ],
+  "invocation": "/Applications/Blender.app/Contents/MacOS/Blender -b -t 2 --python-exit-code 1 --python assets/blender/rider-rebuild/selected-sleeve-tailoring27/gloves_only.py -- harness/out/rider-rebuild/astra-cuff-bearing18/authored27-gloves-only",
+  "admission": "Parent serial heavy-job admission; CPU2; unchanged 300-second wall guard and host memory guard. Prior both-glove execution approximately 80 seconds; checkpoint save cost unmeasured.",
+  "review": "Exact cuff10 import unchanged. First full_cuff callback records protected mesh signatures (including complete original hoodie) and native75 rest before glove mutations, using existing pinned geometry/rest helpers. First sleeve callback verifies those signatures still match before saving actual completed gloves and exits0 before hoodie edits. checkpoint.py is exact-SHA pinned.",
+  "validation": [
+    "AST parse passed for wrapper/helper/cuff10",
+    "Read-only control-flow review: no sleeve code executes before checkpoint",
+    "Read-only review: Surgery(hoodie) reads mesh data, and original hoodie geometry/UV/weights/maps are checked unchanged after it."
+  ],
+  "limits": [
+    "Native checkpoint not yet executed",
+    "No native geometry or moving-art qualification claimed",
+    "Extra two full protected fingerprint passes use existing helper; incremental cost unmeasured."
+  ]
+}
