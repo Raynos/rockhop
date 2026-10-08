@@ -1,0 +1,17 @@
+00:10.283  blend            | Read blend: "/Users/raynos/projects/games/rockhop/harness/out/rider-rebuild/selected-complete-engine01/engine05/rider-private-masked.blend"
+Traceback (most recent call last):
+  File "/Users/raynos/projects/games/rockhop/assets/blender/rider-rebuild/selected-seated-native07/import-native.py", line 196, in <module>
+    if __name__ == '__main__': main()
+                               ~~~~^^
+  File "/Users/raynos/projects/games/rockhop/assets/blender/rider-rebuild/selected-seated-native07/import-native.py", line 170, in main
+    probes = probe_driver_graph(rig, roles, activation, blocks, maths, curves)
+  File "/Users/raynos/projects/games/rockhop/assets/blender/rider-rebuild/selected-seated-native07/import-native.py", line 76, in probe_driver_graph
+    assert all(curve.driver.is_valid and curve.driver.is_simple_expression for curve in curves), 'Built-in driver graph invalid or requires Python execution'
+           ~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Built-in driver graph invalid or requires Python execution
+
+Error: script failed, file: 'assets/blender/rider-rebuild/selected-seated-native07/import-native.py', exiting.
+Blender 5.2.1 LTS (hash 9e2066aef7ef built 2026-08-25 01:35:57)
+scripts disabled for "/Users/raynos/projects/games/rockhop/harness/out/rider-rebuild/selected-complete-engine01/engine05/rider-private-masked.blend", skipping 'RIG-RiderMetarig_ui.py'
+
+Blender quit
