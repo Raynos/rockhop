@@ -106,7 +106,10 @@ function stripShippedCssComments(): Plugin {
  * (`assets/audio-offline-*.js`: the harness hook `__rockhop.audio.renderOffline`; a player's DSP is the
  * worklet asset). Phase `dev`: not streamed, not warmed.
  */
-const DEV_CHUNK = /^assets\/(retired|audio-offline|legacy-physics)-[\w-]+\.js$/;
+// rider-review is emitted only by the isolated sixth-rider review build.
+// Its native driver is lazy on review choice; normal builds never import it.
+// Review manifests report its bytes separately from the unchanged player cap.
+const DEV_CHUNK = /^assets\/(retired|audio-offline|legacy-physics|rider-review)-[\w-]+\.js$/;
 // Loaded only after a fatal error, never during normal play or boot.
 const CRASH_REPORT_CHUNK = /^assets\/sentry-errors-[\w-]+\.js$/;
 
