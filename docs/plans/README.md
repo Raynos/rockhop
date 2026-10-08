@@ -1807,3 +1807,5 @@ Gate33 metal03: explicit verified AppleM5Max Metal WebGL2, original11/11 boot/cl
 Anatomical09 transport02 actual8.829s:2,356 newnative rows exact; selected357,243,920Bprefix/rest/maps/75binds exact. Three witnesses≤0.000678mm, decodedtriangle FOURloss≤0.03183mm/edgejump≤0.04694mm; unchanged0.1mm bound. Mechanicaldropout fixed, dressedseated shape stillunaccepted; Garageplaynext.
 
 Production25 selected-source full/realLOD derivative source checkpointed: actual boundary identity and barycentric/source-surface/FOUR diagnostic gates; separate selected-source cagebake. First boundedgeometryfamily=stableL/Rboots only,8k each/1mm, nobake.100kfull/45kLOD/60MiB allocations unproved; no compact output or runtime/device/art pass yet.
+
+24h finish plan now distinguishes rejectedauthor01 from mechanicallypassedauthor02/actualloader result, pendingdressedplayback/posedvolume, cuffidentity-provedconstruction, lowerhemrepair, boots-firstproduction and native03controls. AllR0–R5 open; targetOct9 14:05Panama remains stretch, no gatewaiver.

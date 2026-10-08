@@ -45,17 +45,28 @@ Animationlead24 supplies separate native controls/actions and runtime delivery.
 Parent schedules heavy jobs serially, integrates handoffs and judges played
 complete outfits. Lightweight preparation proceeds concurrently.
 
-Actual anatomical09 transport and dressed Garage playback are complete, but
-its FOUR field is rejected: seated full-versus-FOUR displacement reaches
-21.252mm and adjacent displacement jumps32.648mm; asymmetric losses remain
-centimetre scale. The dressed clip retains an inflated glute/upper-thigh fold,
-cuff spikes and exposed ankle strip. Nativelead22 makes one anatomically
-consistent support correction before coupled sculpt. Coalescing equivalent
-regional bones requires measured skin operators across the declared control
-envelope; names or equal rotations alone are insufficient. Animationlead24
-keeps the same semantics and measures all authored samples. No smoothing sweep.
-Cuff reconstruction resumes only after actual native proof of consistent source
-floor identity; physical clearance/radius/dense gates remain unchanged.
+Anatomical09 author01 was rejected: rank reduction caused21.252mm seated
+full-versus-FOUR displacement. Author02 now passes the mechanical repair: zero
+rank pruning, measured-equivalent regional support, native loss≤0.031893mm
+across six both-bike/asymmetric cases; actual loader/exporter-triangle loss
+≤0.03183mm and edge jump≤0.04694mm, under the unchanged0.1mm bound. Selected
+rest meshes, UV/maps and75 inverse binds remain exact. Actual dressed Garage
+capture02 finishes with zero errors; parent continuous playback is pending.
+This clears the weight defect, not seated shape/contact or moving-art gates.
+Nativelead22 now constructs shared Body/Jeans posed volume with fresh inverse
+skin against these frozen weights. No old corrective06 deltas or brush sweep.
+
+Cuff10 has actual native source-floor identity proof and frozen construction
+source; construction and dense/art judgment remain pending. Wardrobelead23
+also tailors the lower Jeans hem to the selected boot collar: the hem follows
+the shin, the boot follows the foot, and ~9mm rest-range overlap is insufficient.
+No masking or whole-boot/sole movement may hide that defect. Production25 begins
+with stable bilateral boots geometry; selected-source baking follows geometry.
+Motion11 native controls failed two early construction checks. Source03 fixes
+measured source-base normalization and checks all75 neutral skin operators
+against the unchanged physical bound; native03 and actions remain unaccepted.
+All new actions must preserve measured regional operator equivalence. Shared
+host headroom serializes actual heavy jobs; lightweight authoring runs in parallel.
 
 Production geometry and missing actions start now, alongside fit work. Preserve
 selected appearance through compact deliberate derivatives and verified detail
