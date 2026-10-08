@@ -32,12 +32,16 @@ page.on('response', response => {
     .then(row => report.loaded.push(row)).catch(error => report.errors.push(error.message)));
 });
 try {
-  await page.goto(development.server.resolvedUrls.local[0] + '?harness=1&audio=0&sw=0&outfit=street-mustard&physics=v2&hz=120');
-  await page.waitForFunction(() => window.__rockhop?.ready, null, { timeout: 120000 });
+  await page.goto(development.server.resolvedUrls.local[0] + '?harness=1&audio=0&sw=0&outfit=street-mustard&physics=v2&hz=120&track=b1-first-ride');
+  await page.waitForFunction(() => window.__rockhop?.ready && window.__rockhop.info().trackId === 'b1-first-ride', null, { timeout: 120000 });
   await page.evaluate(async bike => {
     const t = window.__rockhop, r = window.__render;
-    t.setBike(bike); await r.whenReady(); await t.loadTrack('b1-first-ride', 138717428);
-    await r.whenReady(); t.setQuality('high'); await r.whenReady(); t.skipCountdown(); t.render(true);
+    // Main already loads this registered track; avoid warming and discarding flat-test.
+    if (bike !== 'rookie') { t.setBike(bike); await t.loadTrack('b1-first-ride', 138717428); }
+    await r.whenReady();
+    const info = t.info();
+    if (info.trackId !== 'b1-first-ride' || info.seed !== 138717428 || info.bike !== bike)
+      throw new Error('Initial track/seed/physics bike differs from measured preflight'); t.setQuality('high'); await r.whenReady(); t.skipCountdown(); t.render(true);
     const candidate = r.debug.rider.debug.candidate;
     const id = Array.isArray(candidate.roles.pelvis) ? candidate.roles.pelvis[0] : candidate.roles.pelvis;
     const pelvis = r.debug.rider.binding.byId.get(id);
