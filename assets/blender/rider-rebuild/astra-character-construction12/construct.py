@@ -473,7 +473,7 @@ def annular_hem(surgery, boundary, profile):
             'innerCavityAreaM2': areas[inner_index], 'outerAreaM2': areas[outer_index]}
 
 
-def contour_center(points, faces, head, axis, u, v, station):
+def contour_center(points, faces, face_sources, head, axis, u, v, station):
     """Find an interior point of the actual selected sleeve plane contour.
 
     Vertex-band bounding boxes are not contours and can put the origin outside
@@ -482,9 +482,10 @@ def contour_center(points, faces, head, axis, u, v, station):
     """
     scalar = np.sum((points-head)*axis, axis=1)-station
     distances = scalar[faces]
-    active = faces[(distances.min(axis=1) <= 0) & (distances.max(axis=1) >= 0)]
-    segments = []
-    for face in active:
+    active_ids = np.flatnonzero((distances.min(axis=1) <= 0) & (distances.max(axis=1) >= 0))
+    segments, segment_sources = [], []
+    for face_id in active_ids:
+        face = faces[face_id]
         intersections = []
         for a, b in zip(face, np.roll(face, -1)):
             da, db = scalar[a], scalar[b]
@@ -500,9 +501,17 @@ def contour_center(points, faces, head, axis, u, v, station):
         intersections = list(dict.fromkeys(tuple(p) for p in intersections))
         assert len(intersections) <= 2, ('Coplanar source triangle needs explicit section handling', station, face.tolist())
         if len(intersections) == 2 and np.linalg.norm(np.subtract(*intersections)) > 1e-9:
-            segments.append(intersections)
+            normal = np.cross(points[face[1]]-points[face[0]], points[face[2]]-points[face[0]])
+            direction = np.cross(normal, axis)
+            planar_direction = np.array([np.sum(direction*u), np.sum(direction*v)])
+            if np.sum((np.asarray(intersections[1])-intersections[0])*planar_direction) < 0:
+                intersections.reverse()
+            segments.append(intersections); segment_sources.append(int(face_sources[face_id]))
     assert len(segments) >= 8, ('Insufficient actual source contour', station, len(segments))
     endpoints, indices = np.unique(np.round(np.asarray(segments).reshape(-1, 2), 8), axis=0, return_inverse=True)
+    edge_segments = defaultdict(list)
+    for index, (a, b) in enumerate(indices.reshape(-1, 2)):
+        edge_segments[tuple(sorted((int(a), int(b))))].append(index)
     unique_edges = np.unique(np.sort(indices.reshape(-1, 2), axis=1), axis=0)
     unique_edges = unique_edges[unique_edges[:, 0] != unique_edges[:, 1]]
     adjacency = defaultdict(list)
@@ -511,7 +520,7 @@ def contour_center(points, faces, head, axis, u, v, station):
     assert all(len(row) == 2 for row in adjacency.values()), ('Actual source contour is not closed', station,
         {'exactPlaneVertexIds': np.flatnonzero(scalar == 0)[:12].tolist(),
          'badEndpointDegrees': [(int(i), len(row), endpoints[i].tolist()) for i, row in adjacency.items() if len(row) != 2][:12]})
-    unseen, loops = set(adjacency), []
+    unseen, loops, loop_sources, signed_areas = set(adjacency), [], [], []
     while unseen:
         first = min(unseen); chain = [first]; previous, current = None, first
         while True:
@@ -521,11 +530,24 @@ def contour_center(points, faces, head, axis, u, v, station):
             assert following not in chain
             chain.append(following); previous, current = current, following
         unseen.difference_update(chain); loops.append(endpoints[chain])
+        member_segments = [i for a, b in zip(chain, chain[1:]+chain[:1]) for i in edge_segments[tuple(sorted((a, b)))]]
+        oriented = np.asarray(segments)[member_segments]
+        signed_areas.append(float(np.sum(oriented[:, 0, 0]*oriented[:, 1, 1]-oriented[:, 1, 0]*oriented[:, 0, 1])/2))
+        loop_sources.append(sorted({segment_sources[i] for i in member_segments}))
     areas = [abs(np.sum(p[:, 0]*np.roll(p[:, 1], -1)-np.roll(p[:, 0], -1)*p[:, 1]))/2 for p in loops]
-    assert len(loops) == 2, ('Source sleeve fitting requires the measured real annulus', station, areas)
-    outer_index = int(np.argmax(areas)); inner_index = 1-outer_index
-    outer, polygon = loops[outer_index], loops[inner_index]
-    assert all(point_inside(point, outer) for point in polygon), ('Source inner contour is not contained by exterior', station)
+    assert len(loops) >= 2, ('Source sleeve lacks a measured cavity/exterior pair', station, areas)
+    outer_index = int(np.argmax(areas)); outer = loops[outer_index]
+    inner_candidates = [i for i, loop in enumerate(loops) if i != outer_index
+                        and signed_areas[i]*signed_areas[outer_index] < 0
+                        and all(point_inside(point, outer) for point in loop)]
+    assert inner_candidates, ('No opposite-wound contained cavity contour', station, areas, signed_areas)
+    inner_index = max(inner_candidates, key=lambda i: areas[i]); polygon = loops[inner_index]
+    extra_loops = [{'loop': i, 'areaM2': areas[i], 'signedAreaM2FromSourceWinding': signed_areas[i],
+                    'insideDominantOuter': all(point_inside(p, outer) for p in loop),
+                    'insideDominantCavity': all(point_inside(p, polygon) for p in loop),
+                    'sourceTriangleIds': loop_sources[i],
+                    'treatment': 'Every source face and vertex retained; same positive map continues outside the dominant pair bearings; actual post-save geometry checks remain authoritative'}
+                   for i, loop in enumerate(loops) if i not in (outer_index, inner_index)]
     cross = polygon[:, 0]*np.roll(polygon[:, 1], -1)-np.roll(polygon[:, 0], -1)*polygon[:, 1]
     assert abs(cross.sum()) > 1e-10
     centroid = np.sum((polygon+np.roll(polygon, -1, axis=0))*cross[:, None], axis=0)/(3*cross.sum())
@@ -551,7 +573,11 @@ def contour_center(points, faces, head, axis, u, v, station):
     return centroid, {'stationM': float(station), 'loops': len(loops), 'edges': len(polygon),
                       'interiorCenterUV': centroid.tolist(), 'minimumBoundaryDistanceM': clearance(centroid),
                       'exactPlaneVertexCount': int(np.sum(scalar == 0)), 'method': method,
-                      'outerAreaM2': areas[outer_index], 'innerAreaM2': areas[inner_index]}, (outer, polygon)
+                      'outerAreaM2': areas[outer_index], 'innerAreaM2': areas[inner_index],
+                      'outerSignedAreaM2': signed_areas[outer_index], 'innerSignedAreaM2': signed_areas[inner_index],
+                      'dominantOuterSourceTriangleIds': loop_sources[outer_index],
+                      'dominantCavitySourceTriangleIds': loop_sources[inner_index],
+                      'additionalClosedContours': extra_loops}, (outer, polygon)
 
 
 def sleeve(surgery, controls, side, profile, settings):
@@ -573,11 +599,13 @@ def sleeve(surgery, controls, side, profile, settings):
     delta = xyz-head
     planar = np.column_stack((np.sum(delta*u, axis=1), np.sum(delta*v, axis=1)))
     local_faces = np.asarray(surgery.faces)
-    local_faces = local_faces[np.any(selected[local_faces], axis=1)]
+    local_mask = np.any(selected[local_faces], axis=1)
+    local_sources = np.asarray(surgery.face_sources)[local_mask]
+    local_faces = local_faces[local_mask]
     centers, section_receipts, source_contours = [], [], []
     for index, station in enumerate(stations):
         actual_station = station-1e-5 if index == len(stations)-1 else station
-        center, receipt, contours = contour_center(xyz, local_faces, head, axis, u, v, actual_station)
+        center, receipt, contours = contour_center(xyz, local_faces, local_sources, head, axis, u, v, actual_station)
         centers.append(center); section_receipts.append(receipt); source_contours.append(contours)
     centers = np.asarray(centers)
     angles = np.arange(96)*2*np.pi/96
