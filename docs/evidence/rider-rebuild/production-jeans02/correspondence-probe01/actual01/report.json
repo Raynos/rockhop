@@ -1,0 +1,121 @@
+{
+  "accepted": false,
+  "status": "PELVIS_ONLY_ACTUAL_PBR_PROBE_AND_MATCHED_VIEWS_SAVED_PARENT_REVIEW_PENDING",
+  "native": {
+    "path": "harness/out/rider-rebuild/production-jeans02/authored01/production-jeans.blend",
+    "sha256": "956548765454fe683952801f5ba401ed82f481489a256cf48039c459850e5c95"
+  },
+  "probeSHA256": "2b69b1ec2c1e8ac6c4a01fc98217a5e6391f203e983d88542a12448c15d81aa2",
+  "intakeSHA256": "17a96e5ee6dac08d5dbead34a3023aca2b75982fce0a75d8801e0a7c15d45b1a",
+  "maps": {
+    "albedo": {
+      "path": "harness/out/rider-rebuild/production-jeans02/correspondence-probe01/authored01/albedo.png",
+      "sha256": "9d2a7a47765f043cc224b7d2b2ce7b4946b7bb7ee447ce79d4f722ab24ef2310",
+      "size": 1024,
+      "rawAlphaBelowHalfPixels": 4829,
+      "rawNearZeroRGBPixels": 1005801,
+      "statisticsMeaning": "Raw atlas diagnostics include intentionally unbaked leg UV/background; not global ray-hit or failure counts"
+    },
+    "metallicRoughness": {
+      "path": "harness/out/rider-rebuild/production-jeans02/correspondence-probe01/authored01/metallicRoughness.png",
+      "sha256": "53eeade19fa78f3cad5b62e24f821a9cb7746a9290abedd49176a086c2c1f0a2",
+      "size": 1024,
+      "rawAlphaBelowHalfPixels": 4829,
+      "rawNearZeroRGBPixels": 1005801,
+      "statisticsMeaning": "Raw atlas diagnostics include intentionally unbaked leg UV/background; not global ray-hit or failure counts"
+    },
+    "normal": {
+      "path": "harness/out/rider-rebuild/production-jeans02/correspondence-probe01/authored01/normal.png",
+      "sha256": "382f11c813ab40c3a7e915ce61b6460c9ed4a6db0024f1b58dabcb6ffd54f799",
+      "size": 1024,
+      "rawAlphaBelowHalfPixels": 0,
+      "rawNearZeroRGBPixels": 0,
+      "statisticsMeaning": "Raw atlas diagnostics include intentionally unbaked leg UV/background; not global ray-hit or failure counts"
+    }
+  },
+  "photos": [
+    {
+      "variant": "mappedPelvis",
+      "view": "front",
+      "path": "harness/out/rider-rebuild/production-jeans02/correspondence-probe01/authored01/mappedPelvis-front.png",
+      "sha256": "b617d3275e5cb2a40f5e6ddce8de6e744237f3d69b4c6b6db5e8e2143ec12d7e"
+    },
+    {
+      "variant": "mappedPelvis",
+      "view": "back",
+      "path": "harness/out/rider-rebuild/production-jeans02/correspondence-probe01/authored01/mappedPelvis-back.png",
+      "sha256": "086b69a953f5e6b11ccc7fa8791d8a7b6d9791d054fb971b5ee09f4169005895"
+    },
+    {
+      "variant": "mappedPelvis",
+      "view": "profile",
+      "path": "harness/out/rider-rebuild/production-jeans02/correspondence-probe01/authored01/mappedPelvis-profile.png",
+      "sha256": "3d6f79194c28b9d961196231418c766be99004eda25a75096caae4acc1aefbda"
+    },
+    {
+      "variant": "originalSelectedPelvis",
+      "view": "front",
+      "path": "harness/out/rider-rebuild/production-jeans02/correspondence-probe01/authored01/originalSelectedPelvis-front.png",
+      "sha256": "6f71da9eb9bf6b18f0c03abd3cae9b4de615b2c64c20928ef5d2562e73d5309b"
+    },
+    {
+      "variant": "originalSelectedPelvis",
+      "view": "back",
+      "path": "harness/out/rider-rebuild/production-jeans02/correspondence-probe01/authored01/originalSelectedPelvis-back.png",
+      "sha256": "4e0a85aeb31b7c0d3c7729c76c6dba32e71b937e7b5c6af4af45e8eff2e7acff"
+    },
+    {
+      "variant": "originalSelectedPelvis",
+      "view": "profile",
+      "path": "harness/out/rider-rebuild/production-jeans02/correspondence-probe01/authored01/originalSelectedPelvis-profile.png",
+      "sha256": "a3fd963b39e12b54755c8255cc6eeb497b084a2e03ddf54b9c8220356d643001"
+    }
+  ],
+  "coverage": "Pelvis only: receiver centres Z>.84; original selected source centres Z>.80",
+  "unprobed": [
+    "Left leg",
+    "Right leg",
+    "Underbody saddle belowZ.84"
+  ],
+  "limits": [
+    "First correspondence sample only; no whole-garment/PBR/fit/motion/player acceptance.",
+    "Dense-source body enclosure is not a selected-to-active prerequisite.",
+    "Configured rays remain unproved; no geometry/cage/ray escalation or retry."
+  ],
+  "actualBakeSettings": {
+    "useSelectedToActive": true,
+    "useCage": false,
+    "extrusionMetres": 0.017999999225139618,
+    "maximumRayMetres": 0.04500000178813934,
+    "marginPixels": 16
+  },
+  "sourceFaces": 222598,
+  "receiverFaces": 7008,
+  "regionalBakes": [
+    {
+      "region": "pelvis",
+      "map": "albedo",
+      "kind": "EMIT"
+    },
+    {
+      "region": "pelvis",
+      "map": "metallicRoughness",
+      "kind": "EMIT"
+    },
+    {
+      "region": "pelvis",
+      "map": "normal",
+      "kind": "NORMAL"
+    }
+  ],
+  "resultNative": {
+    "path": "harness/out/rider-rebuild/production-jeans02/correspondence-probe01/authored01/pelvis-correspondence-probe.blend",
+    "sha256": "4b6ffd7e4fd9ff333cca0535a895ed209307724b76dae6617cb83a7153ff6859"
+  },
+  "targetGeometryUVFullFourExact": true,
+  "originalSourceGeometryUVFieldsMapsExact": true,
+  "bodyAnd75RestUntouched": true,
+  "targetStateSHA256": "b6574d4404b6a6dfdc474d3fab3381ed41818b5dc3091b6a34cfee708b3b62ca",
+  "originalSourceStateSHA256": "abd6b247f5845617000781bb3a8ef5b07df32d42f86e2c03785b4c00ce123f4a",
+  "body75StateSHA256": "2294c25dafe2d6e74d0e0c9e7a7e7bb3c8937f17c8b5faab3cd661e565afda99"
+}

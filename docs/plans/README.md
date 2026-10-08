@@ -1413,3 +1413,5 @@ October 8 corrected current-player gate10: explicit Metal,11/11 checks pass in6.
 October 8 actual complete selected-outfit four-view review: original appearance retained, gross fit REJECTED at hoodie shoulders/upperarms, denim inner thighs, gloves and boot openings. Read-only CPU2 render26.631s, parent viewed all4, native unchanged. Deliberate shoulder-panel and boot-last/topology authors assigned; material receiver probe and neck cleanup continue. No moving/Garage/device acceptance.
 
 October 8 actual head-shell diagnostic: zero exact paired triangleUV signatures across99914 source triangles; paired-UV deletion hypothesis rejected. Exit0 in1.071s, geometry unchanged. One justified topology-based interior cleanup/closure required before broad neck; no saved candidate or art acceptance.
+
+October 8 actual jeans pelvis transfer: CPU2 exit0 in52.414s, three1024 maps/sixmatched views saved; parent rejects broad black waist/seat transfer despite recognizable selected detail elsewhere. Original target/source/body75 exact checks pass. One directed-ray/correspondence diagnostic assigned; no full bake or blind ray escalation.

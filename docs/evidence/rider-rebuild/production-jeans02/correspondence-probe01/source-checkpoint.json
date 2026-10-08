@@ -1,0 +1,53 @@
+{
+  "accepted": false,
+  "status": "ONE PELVIS CORRESPONDENCE PROBE SOURCE FROZEN; NO BLENDER CALL",
+  "probeSHA256": "2b69b1ec2c1e8ac6c4a01fc98217a5e6391f203e983d88542a12448c15d81aa2",
+  "intakeSHA256": "17a96e5ee6dac08d5dbead34a3023aca2b75982fce0a75d8801e0a7c15d45b1a",
+  "syntaxParsed": true,
+  "verifiedInputPinRows": 9,
+  "verifiedMatchedActualPhotoPins": 6,
+  "native": {
+    "path": "harness/out/rider-rebuild/production-jeans02/authored01/production-jeans.blend",
+    "sha256": "956548765454fe683952801f5ba401ed82f481489a256cf48039c459850e5c95"
+  },
+  "region": {
+    "receiverFaceCentreZGreaterThan": 0.84,
+    "originalSelectedSourceFaceCentreZGreaterThan": 0.8,
+    "leftAndRightLegs": "UNPROBED; no full-nine-bake admission"
+  },
+  "resolution": 1024,
+  "maps": [
+    "actual selected albedo",
+    "actual selected metallicRoughness",
+    "tangent normal from original evaluated dense geometry"
+  ],
+  "unchangedSettings": {
+    "selectedToActive": true,
+    "useCage": false,
+    "extrusionMetres": 0.018,
+    "maximumRayMetres": 0.045,
+    "marginPixels": 16,
+    "normalSpace": "TANGENT"
+  },
+  "correspondenceEvidence": {
+    "front": "Original selected fly stays on front centre; front pockets occupy the corresponding lateral hip/waist region of the enclosing target. Target has no preexisting pocket UV content; this probe must demonstrate transfer.",
+    "back": "Original paired rear pockets and centre seat seam match target side/height broadly; source waist contour and target hip fullness differ.",
+    "profile": "Original outer seam lies on the lateral silhouette; compact receiver is smoother and generally broader at hip. Exact feature/ray correspondence remains unproved.",
+    "sourceBodyIntersections": "Retained as negative source-fit evidence, not a selected-to-active entrance gate. Failed OUTSIDE derivative is excluded."
+  },
+  "reuse": "Frozen existing regional_copy/selected_maps/shape/aim helpers; no new correspondence solver or outside operation",
+  "nextActualJob": "Three pelvis-only1024 bakes, save actual mapped regional native, six close matched original-source/mapped-target views, raw atlas maps and actual report",
+  "canonicalPreservationAssertions": [
+    "Target geometry/UV/FULL/FOUR",
+    "Original aligned selected source geometry/UV/fields/PBR",
+    "Complete body10582/shared75 rests",
+    "Input nativeSHA unchanged"
+  ],
+  "stagesExecuted": [],
+  "limits": [
+    "Parent source checkpoint/soleCPU2 lease required;600s proposed total.",
+    "Only pelvis UV covered. Leg UV/background raw statistics are not failed whole-garment transfer or usable leg materials.",
+    "No geometry/cage/ray changes, failed OUTSIDE source, full9bakes, final4K, fit/moving/player acceptance.",
+    "Parent alone judges actual correspondence and mapped detail."
+  ]
+}

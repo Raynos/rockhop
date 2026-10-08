@@ -1,0 +1,75 @@
+{
+  "schema": "rockhop-jeans-pelvis-correspondence-probe-v1",
+  "accepted": false,
+  "native": {
+    "path": "harness/out/rider-rebuild/production-jeans02/authored01/production-jeans.blend",
+    "sha256": "956548765454fe683952801f5ba401ed82f481489a256cf48039c459850e5c95"
+  },
+  "nativeFields": {
+    "path": "harness/out/rider-rebuild/production-jeans02/authored01/production-jeans-fields.npz",
+    "sha256": "28d337f56a7e963f8ae533a72bf060d40b5d18e956c154b61e2dc995c20bd679"
+  },
+  "dense": {
+    "path": "assets/blender/hero-remaster/rider/finish-2026-10-05/wardrobe/data/prep02/jeans/cleaned-donor.npz",
+    "sha256": "c38413a36d564d97f106ebde13bb240d4c7075078ce463f30234a97c0f3d2237"
+  },
+  "maps": {
+    "albedo": {
+      "path": "assets/blender/hero-remaster/rider/finish-2026-10-05/wardrobe/data/prep02/jeans/baseColorTexture.png",
+      "sha256": "29a166cd304c492a025ea15f5949da0b8540e1ce11de196c2ed0b5afec50e810",
+      "size": [
+        4096,
+        4096
+      ]
+    },
+    "metallicRoughness": {
+      "path": "assets/blender/hero-remaster/rider/finish-2026-10-05/wardrobe/data/prep02/jeans/metallicRoughnessTexture.png",
+      "sha256": "ebd8ead6d0a1b1bfdada88e16c550781848932832859733e8b00c9ccb7ede516",
+      "size": [
+        4096,
+        4096
+      ]
+    }
+  },
+  "helpers": {
+    "pbr": {
+      "path": "assets/blender/rider-rebuild/production-jeans02/bake.py",
+      "sha256": "04932927ae9e4477cf72b132cc6bd936a44f65a4db800fee2b2d4ef860a9fdc9"
+    },
+    "localAuthor": {
+      "path": "assets/blender/rider-rebuild/production-jeans02/author.py",
+      "sha256": "62a850e4ea78b98022352aede1b6e3de52496ebcb7ff83b169db9789e7610bd0"
+    },
+    "originalAuthor": {
+      "path": "assets/blender/rider-rebuild/production-jeans01/author-jeans.py",
+      "sha256": "659dad0c4cfb5140b4be180c05534459ceb4b4eda0049478500ab92032fe6f15"
+    }
+  },
+  "matchedInspection": {
+    "path": "harness/out/rider-rebuild/production-jeans02/donor-review01/report.json",
+    "sha256": "86612a9b915d00d7d963443c2907a2a9f2245a8760bcc5cffc82027f80365600"
+  },
+  "region": "pelvis",
+  "resolution": 1024,
+  "regionalIsolation": {
+    "receiverFaceCentreZGreaterThan": 0.84,
+    "originalSelectedSourceFaceCentreZGreaterThan": 0.8,
+    "leftAndRightLegs": "UNPROBED; no full-nine-bake admission"
+  },
+  "bakeSettings": {
+    "selectedToActive": true,
+    "useCage": false,
+    "extrusionMetres": 0.018,
+    "maximumRayMetres": 0.045,
+    "marginPixels": 16,
+    "normalSpace": "TANGENT"
+  },
+  "scope": "Three actual selected-source maps and six close matched source/receiver views; no geometry/ray/cage change, full bake,4K, motion or player admission",
+  "correspondenceObservation": {
+    "front": "Original selected fly stays on front centre; front pockets occupy the corresponding lateral hip/waist region of the enclosing target. Target has no preexisting pocket UV content; this probe must demonstrate transfer.",
+    "back": "Original paired rear pockets and centre seat seam match target side/height broadly; source waist contour and target hip fullness differ.",
+    "profile": "Original outer seam lies on the lateral silhouette; compact receiver is smoother and generally broader at hip. Exact feature/ray correspondence remains unproved.",
+    "sourceBodyIntersections": "Retained as negative source-fit evidence, not a selected-to-active entrance gate. Failed OUTSIDE derivative is excluded."
+  },
+  "runtime": "Parent retains sole serial CPU2 lease;600s total proposed job. No automatic retry."
+}
