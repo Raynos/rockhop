@@ -31,3 +31,10 @@ Finding: Actual source-unit guide solve succeeds for both hands; right original 
 Validation: CPU2 exit1/25.378s; both actual guides saved, no Laplacian errors, all7697 free vertices move on each. Actual left C warning retained; no bypass.
 
 Limits: Right actual PBR review pending; left source-specific bind defect under diagnosis; no bilateral fit/grip acceptance.
+
+
+Finding: Right original-PBR guide transfer is coherent, but actual palm/thenar and tips still expose skin.
+
+Validation: Root viewed all3 actual saved-native PBR views from CPU2 exit0/21.033s; prior spikes gone, straight palm view occluded by jeans.
+
+Limits: Retain solved form only; no wearing fit or motion acceptance. Local anatomical repair follows actual defects.
