@@ -1369,3 +1369,5 @@ October 7 exact selected glove expert-tailoring package: parent archive/manifest
 October 7 exact selected hoodie expert-tailoring package: parent archive/manifest/all38 original source+ZIPmember pins match; originalUV/PBR/body75/currentrejectednative and actualnegativeviews preserved. Preparation only; artist not contacted, no delivered repair/art acceptance.
 
 October 7 handedness finding updated with actual selected glove03 bilateral native/views and boot camera correction: oppositehanded pair construction verified, both surface fits remain rejected; original mirrored source is intentional, no accepted moving pair.
+
+October 7 exact selected denim expert-tailoring package: parent archive/manifest/all72 original source+ZIPmember pins match; actual compact9565/faileddense5115/lineage/original4K/negativeviews/body75 preserved. Preparation only, no artist contacted or repair/art acceptance.

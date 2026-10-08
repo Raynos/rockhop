@@ -35,3 +35,7 @@ Limits: Source only, no actual operation or donor fit accepted; unsafe displacem
 Finding: The single actual selected denim outside operation is unsafe and stops before original-PBR views/bake.
 Validation: CPU2 exit1 in10.491s;51newcollapses/3716over90degree face rotations/2loosepoints moved; failednative and lineage independently rehashed.
 Limits: No guard waiver/retry/bake/acceptance; exact expert-tailoring package pending.
+
+Finding: Exact selected denim expert-tailoring package preserves original appearance and failed editable work.
+Validation: Parent reads complete brief/source and independently rehashes archive/manifest/all72 original sources+ZIPmembers; CRC passes.
+Limits: Packaging is preparation only; no artist contacted or repair/art/motion delivered, allR0-R5open.
