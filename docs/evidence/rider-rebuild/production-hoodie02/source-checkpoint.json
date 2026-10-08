@@ -1,0 +1,179 @@
+{
+  "accepted": false,
+  "stage": "SOURCE_ONLY_AST_AND_ACTUAL_ORIGINAL_PBR_INTAKE_PASSED",
+  "pythonASTPassed": true,
+  "allInputPinsPassed": true,
+  "noHeavyJobExecuted": true,
+  "authorTargetGeometrySHA256": "a14be0885afce9d274bab4d29f7adf0410ca49c31f70014c0244da000e829b07",
+  "bodyAnd75RigSignature": "556f40171244d1875e5aaf931f2b4a0bcfd39ceba3fcc4af46dc0febdeafa8e2",
+  "sources": {
+    "assets/blender/rider-rebuild/production-hoodie02/check_source.py": "6da9638fe056278858dc53407371d856610f21333d392b115f66324e6b4277cd",
+    "assets/blender/rider-rebuild/production-hoodie02/controls.json": "59d3519fea9f365d2be1d7a649131cef1324f03978069af42783c2c835f5b796",
+    "assets/blender/rider-rebuild/production-hoodie02/prepare_dense.py": "389d0a8dce879a372c0f76599ad5bb3e091081f5721fd18ed67667ee8e966558"
+  },
+  "controls": {
+    "schemaVersion": 1,
+    "accepted": false,
+    "stage": "SOURCE_ONLY_NO_NATIVE_RUN",
+    "pins": {
+      "frozenInputs": {
+        "path": "assets/blender/rider-rebuild/production-hoodie01/inputs.json",
+        "sha256": "ae90f988b1a3b5f020d540cddd677a8a6286e6e2e3e7afb08733b5b7470aff28"
+      },
+      "baseAuthor": {
+        "path": "assets/blender/rider-rebuild/production-hoodie01/author.py",
+        "sha256": "078da52b40e1f5049759314c1794ba6559ac1dae90d79294672c674f2095d14a"
+      },
+      "repairAuthor": {
+        "path": "assets/blender/rider-rebuild/production-hoodie01/repair_axilla.py",
+        "sha256": "48fe9bd0b6e72e5ad8484f5b9a7ba50f75538cf402b6d3a314065fc03d92c2a5"
+      },
+      "authorReceipt": {
+        "path": "harness/out/rider-rebuild/production-hoodie01/regional-repair01/author.json",
+        "sha256": "95663c7336d3c98f59a527d20a2ac3b2e656ccb5a5b9159922a2bf51496412c1"
+      },
+      "authoredNative": {
+        "path": "harness/out/rider-rebuild/production-hoodie01/regional-repair01/authored-hoodie.blend",
+        "sha256": "fd7761d7b7c9794cb5871945515d992052424b52ddc83f289522dae942d05f3c"
+      },
+      "historicalFrameRecipe": {
+        "path": "assets/blender/hero-remaster/rider/anatomical-foundation-2026-10-03/user-agent1/construct_selected_hoodie.py",
+        "sha256": "95c555e656e889f00d59a7295e89021cc822c34c34e87bd2cfa24e131cf2d1f9"
+      }
+    },
+    "gltfToBlenderRows": [
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        -1
+      ],
+      [
+        0,
+        1,
+        0
+      ]
+    ],
+    "selectedNativeToCurrentRows": [
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        -1,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ]
+    ],
+    "originalPositionVertices": 716971,
+    "originalImagesExpectedPixels": [
+      4096,
+      4096
+    ],
+    "denseObjectName": "ActualSelectedOriginalDenseHoodieFittedPBR",
+    "targetObjectName": "RiderHoodie",
+    "outputRoot": "harness/out/rider-rebuild/production-hoodie02",
+    "limits": [
+      "Frozen actual donor and frozen fit_point only. No target geometry/UV/material changes.",
+      "Save fitted original dense PBR before parent matched views or atlas/bake.",
+      "All R0\u2013R5 open. Parent alone judges; no player export or promotion."
+    ]
+  },
+  "originalGLTF": {
+    "positionAccessor": {
+      "componentType": 5126,
+      "type": "VEC3",
+      "byteOffset": 0,
+      "bufferView": 1,
+      "count": 716971,
+      "max": [
+        0.9711880087852478,
+        0.8439239859580994,
+        0.3457750082015991
+      ],
+      "min": [
+        -0.9990940093994141,
+        -0.8586069941520691,
+        -0.3680169880390167
+      ]
+    },
+    "identityNode": {
+      "name": "painted.obj",
+      "mesh": 0
+    },
+    "materials": [
+      {
+        "pbrMetallicRoughness": {
+          "baseColorTexture": {
+            "index": 0
+          },
+          "roughnessFactor": 1.0,
+          "metallicFactor": 1.0,
+          "metallicRoughnessTexture": {
+            "index": 1
+          }
+        },
+        "alphaMode": "OPAQUE",
+        "doubleSided": false
+      }
+    ],
+    "images": [
+      {
+        "pixels": [
+          4096,
+          4096
+        ],
+        "embeddedPNG_SHA256": "1eb934f396df30e3cd881211ff4e195c4460f8fa8db5bfa22ddb3b5ef28e5d09",
+        "bytes": 10002352,
+        "gltfImage": {
+          "bufferView": 2,
+          "mimeType": "image/png"
+        }
+      },
+      {
+        "pixels": [
+          4096,
+          4096
+        ],
+        "embeddedPNG_SHA256": "2e598ae796f89acf741389a67635d4fa7b8d99f2ba39b0e46d0516c95db6dfae",
+        "bytes": 6925436,
+        "gltfImage": {
+          "bufferView": 3,
+          "mimeType": "image/png"
+        }
+      }
+    ]
+  },
+  "axisEvidence": [
+    "Identity original glTF node; Y-up positions are converted by Blender to (X,-Z,Y).",
+    "Historical frame recipe explicitly records imported donor (X,-Z,Y).",
+    "Frozen original dense controls use this Blender frame directly.",
+    "Authored selectedNative -90\u00b0 Z cancels historical anatomical display +90\u00b0 Z.",
+    "Runtime prep asserts imported world bounds match raw accessor conversion before fitting."
+  ],
+  "readiness": {
+    "next": "Parent checkpoint then bounded serial CPU2 fitted-native preparation.",
+    "nativeOutput": "Fresh harness/out/rider-rebuild/production-hoodie02/prebake01/fitted-original-dense-pbr.blend",
+    "parentReviewBeforeBake": true,
+    "cpuThreads": 2,
+    "guardSecondsAllowedWhenAssigned": [
+      180,
+      600
+    ]
+  },
+  "limits": [
+    "Frozen actual donor and frozen fit_point only. No target geometry/UV/material changes.",
+    "Save fitted original dense PBR before parent matched views or atlas/bake.",
+    "All R0\u2013R5 open. Parent alone judges; no player export or promotion."
+  ]
+}
