@@ -1779,3 +1779,5 @@ Actual cuffidentity02 nativeprobe exits0/23.669s: originalfloat32 source/cutter 
 Motion11source frozen: nativeFK/palmsoleIK/poles/digitcontrols and sixgeneric authoredscores, full75 visualbake/operator assertions, source-only five trajectorytests. Parentreview complete; boundednativeexecution next; no garment/art/devicepass.
 
 Actual motion11native01 FAIL7.094s: neutralnativecontrol restheads residual588.666mm exceedsunchanged0.1mmgate, no actions/native/exportsaved. Animationlead24 diagnosing perbone/mechanismrest setup, one supported correction; no poleanglesweep. Countsfirstconstruction sincegate32.
+
+Motion11neutralprobe source frozen to locateactual588.666mmsetup failure usingeverydeform/control/mechanism rest/pose matrix; no actions/angle campaign/save. Nativeexecution pending.
