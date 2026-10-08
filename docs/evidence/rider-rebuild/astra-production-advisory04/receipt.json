@@ -1,0 +1,79 @@
+{
+  "schema": "rider-independent-advisory04",
+  "model": "gpt-6-astra",
+  "reasoningEffort": "high",
+  "createdUTC": "2026-10-08T07:13:57.875683+00:00",
+  "accepted": false,
+  "windowUTC": [
+    "2026-10-07T19:07:00Z",
+    "2026-10-08T07:07:00Z"
+  ],
+  "windowLastCommit": "af51d28c9",
+  "commitCount": 200,
+  "commitSpanSeconds": 32839,
+  "commitTypes": {
+    "design": 112,
+    "docs": 76,
+    "fix": 5,
+    "feat": 6,
+    "test": 1
+  },
+  "numstatChangedLines": {
+    "evidence": 589096,
+    "assetScriptsData": 26059,
+    "harness": 2038,
+    "planAskQueue": 1185,
+    "journal": 1251,
+    "other": 85
+  },
+  "scope": "14 actual stills viewed; source scripts and existing findings read; no geometry changed or art accepted",
+  "observedImageHashes": {
+    "docs/evidence/rider-rebuild/production-face01/profile-review01/left-profile.png": "cb8cc94f336f825d123a4f2fbdc4f9903b50620d70bf148efe88460d08781299",
+    "docs/evidence/rider-rebuild/production-face01/profile-review01/rear.png": "f40cc34fc1a870954cbf999e9a8ccea3dffd3a7a358d5ef84243cd7b6a2bbc61",
+    "docs/evidence/rider-rebuild/production-gloves03/surface-review01/R-front.png": "82270e49dec2eb10d99628bc349a89c6cf9e2a985caec3365b90ca0386d3605c",
+    "docs/evidence/rider-rebuild/production-gloves03/surface-review01/R-thumb-web.png": "27b2a1caac112ec80ea473cc40617b279349a8d21dd73b514579a7cf1a6ab2bb",
+    "docs/evidence/rider-rebuild/production-gloves03/surface-review01/L-rear.png": "5914b21a5bb70b6033b276ba889e7ba8353f204abe0c9d3d98303c5a94d18b99",
+    "docs/evidence/rider-rebuild/production-gloves03/surface-review01/L-thumb-web.png": "fd918d253f1cec94f785fbdbcf23d511e9f832f715d8874207ca84c35f5f4d4c",
+    "docs/evidence/rider-rebuild/production-hoodie02/target-review01/front.png": "0508f45bb95044894452f2ce8f6887260b7618e9c4f91e85f9a11149d06f35b6",
+    "docs/evidence/rider-rebuild/production-hoodie02/target-review01/back.png": "4669bbae41570a73293712283d2de0080739cc2083c0884ccf92604ffac9d72d",
+    "docs/evidence/rider-rebuild/production-boots03/local-repair-review01/R/sculpted-selected-lateral.png": "fa982beb40d8ea8e750f184bac999e15f9bad249a166348d1ba45902e7c95ccf",
+    "docs/evidence/rider-rebuild/production-boots03/local-repair-review01/L/sculpted-selected-lateral.png": "c79e2efc32adc866f569c49accb669bbc236846c703f3a04027adbebc5e9ad55",
+    "docs/evidence/rider-rebuild/production-jeans02/donor-review01/actualTarget-front.png": "b6cbbee99357b5278668c71d36294a01e4b9101120305a227773da0794db764e",
+    "docs/evidence/rider-rebuild/production-jeans02/donor-review01/actualAlignedSelectedDonor-front.png": "5dc7d9aaabbb363abc7811a8e71ea0aad0d6da34855d56b98e1142ea85a50255",
+    "docs/evidence/rider-rebuild/production-jeans02/donor-review01/actualAlignedSelectedDonor-back.png": "661089d2f96b9066bf5e26eb78a0e28c870f2b58c517f28b8bd9baf6eae51069",
+    "docs/evidence/rider-rebuild/production-jeans02/donor-review01/actualTarget-back.png": "c7346450f98623bc10ab745c4bca315a65d73e5ac9eb1dec23c9d78dcc24e95e"
+  },
+  "keyInputHashes": {
+    "assets/blender/rider-rebuild/construction02/build-selected-face01.py": "c58e38f94db9c66d29763c679a3f205096b4ab8493eb52f543650b469f89d8cd",
+    "assets/blender/rider-rebuild/production-assembly01/compose.py": "b9ac11e54d14492c4e6f0ed556fc0cf249ed2feb0ecf2cfa2e29d2994e7eabe7",
+    "assets/blender/rider-rebuild/production-hoodie02/local-outside01/finish.py": "ad7ae108b4e73162ada91d40210ea4c713d75617090df787cf4d529d907f6157",
+    "assets/blender/rider-rebuild/production-jeans02/bake.py": "04932927ae9e4477cf72b132cc6bd936a44f65a4db800fee2b2d4ef860a9fdc9",
+    "assets/blender/rider-rebuild/production-boots03/sculpt_selected_forefoot.py": "038aa2c55539c292d99d4de1ca62b8100d2bf7a7b6cc6bfb2042026eb05d0d38",
+    "harness/out/rider-rebuild/native-hand-repair01/native02/anatomical-hand-rig.blend": "42fca617ea8d246a6c3e3ca68a90cd3cb5f3ce8b9bb78130e0e2bbd65f605fac"
+  },
+  "officialResearch": {
+    "url": "https://docs.blender.org/manual/en/latest/render/cycles/baking.html",
+    "retrieval": "curl HTTPS success; Selected to Active/Cage section read",
+    "htmlSHA256": "95841eb0e0a9340c55c7f2ed4a922ee8aff9ca0ba44486c5ad1fd8452471506d",
+    "inference": "A selected high-poly bake source need not itself enclose the body; semantic source/receiver correspondence and valid bake rays remain required."
+  },
+  "playback": {
+    "harness": "harness/rider-finish/play-film.mjs",
+    "movies": [
+      "docs/evidence/rider-rebuild/engine-review01/garage-played.mp4",
+      "docs/evidence/rider-rebuild/engine-review01/ride-played.mp4"
+    ],
+    "exitCode": 1,
+    "error": "page.evaluate: Target page, context or browser has been closed; WebKit process killed signal9",
+    "completedFilms": 0,
+    "retries": 0,
+    "motionJudgment": false
+  },
+  "limits": [
+    "Current42f full dressed film absent from inspected evidence",
+    "Commit timing is not active labor time",
+    "Local authoring feasibility is a reasoned next route, not demonstrated success",
+    "External artist may be needed; absent human permission/resource is not established as exclusive prerequisite",
+    "No plan/ask/queue edit; no commit; no model mutation"
+  ]
+}
