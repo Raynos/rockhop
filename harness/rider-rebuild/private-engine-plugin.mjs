@@ -5,6 +5,7 @@ import { createHash } from 'node:crypto';
 
 const runtime = fileURLToPath(new URL('./private-rider.mjs', import.meta.url));
 const comparisonLoader = fileURLToPath(new URL('./private-comparison-loader.mjs', import.meta.url));
+const correctiveModule = fileURLToPath(new URL('../../assets/blender/rider-rebuild/selected-seated-corrective06/apply-morph.mjs', import.meta.url));
 const reviewModules = ['private-comparison-loader.mjs', 'private-rider.mjs', 'new-humanoid-contract.mjs', 'anthropometric-inverse.mjs']
   .map(name => fileURLToPath(new URL(name, import.meta.url)));
 export const comparisonRider = {
@@ -81,10 +82,12 @@ export function selectedRiderAliases(metadata) {
 /** Compile-time substitution in a private build, never writes player sources. */
 export function privateEnginePlugin(metadata) {
   const touched = new Set();
+  const nativeModules = metadata.corrective ? [...reviewModules, correctiveModule] : reviewModules;
   const resolvedChunks = new Map();
   const aliases = selectedRiderAliases(metadata);
   const comparison = metadata.comparison === true;
   if (comparison && metadata.releaseBuild !== false) throw new Error('Private comparison must declare releaseBuild false');
+  if (comparison && metadata.qualificationState?.startsWith('FAILED')) throw new Error('Failed corrective cannot enter the comparison');
   if (comparison && (Object.keys(aliases).length !== 2 || ![comparisonRider.full, comparisonRider.lod].every(slot => aliases[slot] === comparisonRider.full))) {
     throw new Error('Private comparison requires only the new full/LOD selected slots');
   }
@@ -96,7 +99,7 @@ export function privateEnginePlugin(metadata) {
     name: 'rockhop:private-first-principles-rider', enforce: 'pre',
     async buildStart() {
       if (!comparison) return;
-      for (const source of ['three', '@sentry/browser', ...reviewModules]) {
+      for (const source of ['three', '@sentry/browser', ...nativeModules]) {
         const resolved = await this.resolve(source);
         if (!resolved || resolved.external) throw new Error(`Private comparison module unresolved: ${source}`);
         resolvedChunks.set(source, resolved.id);
@@ -111,7 +114,7 @@ export function privateEnginePlugin(metadata) {
         if (!id) throw new Error(`Private comparison vendor chunk changed: ${source}`);
         roots.set(id, name);
       }
-      for (const source of reviewModules) {
+      for (const source of nativeModules) {
         const id = resolvedChunks.get(source);
         if (!id) throw new Error('Private comparison native module unresolved');
         roots.set(id, 'rider-review');
@@ -139,8 +142,8 @@ export function privateEnginePlugin(metadata) {
       if (comparison) {
         const chunks = Object.values(bundle).filter(item => item.type === 'chunk');
         const reviews = chunks.filter(chunk => chunk.name === 'rider-review');
-        if (reviews.length !== 1 || reviews[0].isEntry || Object.keys(reviews[0].modules).length !== reviewModules.length
-          || Object.keys(reviews[0].modules).some(id => !reviewModules.some(source => resolvedChunks.get(source) === id))) {
+        if (reviews.length !== 1 || reviews[0].isEntry || Object.keys(reviews[0].modules).length !== nativeModules.length
+          || Object.keys(reviews[0].modules).some(id => !nativeModules.some(source => resolvedChunks.get(source) === id))) {
           throw new Error('Private comparison needs one exact native75 review chunk');
         }
         const review = reviews[0], pending = chunks.filter(chunk => chunk.isEntry).map(chunk => chunk.fileName), seen = new Set();
@@ -183,6 +186,16 @@ export function privateEnginePlugin(metadata) {
     } },
     transform(code, id) {
       const normalized = id.split('?')[0].replaceAll(path.sep, '/');
+      if (metadata.corrective && normalized === runtime.replaceAll(path.sep, '/')) {
+        code = replaceOnce(code, "import * as THREE from 'three';",
+          `import { prepareSeatedCorrective } from ${JSON.stringify(correctiveModule)};\nimport * as THREE from 'three';`);
+        code = replaceOnce(code, '      this.anthropometry = calibrateAnthropometry(this, metadata);',
+          '      this.anthropometry = calibrateAnthropometry(this, metadata);\n      this.applyPoseCorrective = prepareSeatedCorrective(this, { activation: metadata.corrective });');
+        code = replaceOnce(code, '      this.debug.allBoneFinite =',
+          '      this.debug.correctiveWeight = this.applyPoseCorrective();\n      this.debug.allBoneFinite =');
+        touched.add('corrective');
+        return { code, map: null };
+      }
       if (comparison) {
         const changed = comparisonSource(code, normalized);
         if (changed !== null) { touched.add(normalized.slice(normalized.lastIndexOf('/src/') + 5)); return { code: changed, map: null }; }
@@ -286,6 +299,7 @@ function rememberPrivateAuthoredImages(root: THREE.Object3D) {
       return null;
     },
     buildEnd(error) {
+      if (!error && metadata.corrective && !touched.has('corrective')) throw new Error('Private build did not activate the declared pose corrective');
       if (!error && (!touched.has('rider') || !touched.has('parts') || !touched.has('metadata'))) throw new Error('Private rider build did not consume all scoped substitutions');
       if (!error && Object.keys(aliases).length && !touched.has('source-aliases')) throw new Error('Private rider build did not consume selected source aliases');
       if (!error && preserveImages && !touched.has('authored-images')) throw new Error('Private rider build did not preserve authored images');

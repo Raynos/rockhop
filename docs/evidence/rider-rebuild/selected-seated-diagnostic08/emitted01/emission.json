@@ -1,0 +1,79 @@
+{
+  "accepted": false,
+  "status": "FAILED_CORRECTIVE_GATES",
+  "previewClip": "DiagnosticRestKey",
+  "durationSeconds": 6,
+  "timesSeconds": [
+    0,
+    1,
+    2,
+    4,
+    5,
+    6
+  ],
+  "schedule": [
+    "rest",
+    "rest",
+    "authored-key",
+    "authored-key",
+    "rest",
+    "rest"
+  ],
+  "sourcePins": {
+    "rider": {
+      "path": "harness/out/rider-rebuild/selected-seated-corrective06/constructed02/rider.glb",
+      "sha256": "2e1b46948be713ede443bc9f159301f876c09aadc331ac25bf477c0d5124cf1a"
+    },
+    "contract": {
+      "path": "harness/out/rider-rebuild/selected-seated-corrective06/constructed02/rider-contract.json",
+      "sha256": "94a2d4b3e6449bc914f22082eeaac247bca1420002af6261faebc76e81fd9c88"
+    },
+    "author": {
+      "path": "harness/out/rider-rebuild/selected-seated-author04/authored01/rookie.json",
+      "sha256": "9d59ba63e99c8d017e7f8c8c4dfbfde0859aafd3ea6d2383c734dec259ec5f8a"
+    },
+    "corrective": {
+      "path": "harness/out/rider-rebuild/selected-seated-corrective06/constructed02/corrective.json",
+      "sha256": "a9b78bd1e5b038db5d196149da71e027a84e77134928e961148a098d8abfdf52"
+    },
+    "engineContract": {
+      "path": "harness/out/rider-rebuild/selected-complete-engine01/engine05/rider-contract.json",
+      "sha256": "2aa39bc8c15738b4ecbd2aac08fd61375e0aa8fd45a0ee2ac3046f577b019728"
+    },
+    "engineRider": {
+      "path": "harness/out/rider-rebuild/selected-complete-engine01/engine05/rider.glb",
+      "sha256": "72b90e8790f8490743a75f8b70791aa21edfee6234cec609093e9b62e08d4bfd"
+    }
+  },
+  "recipeSHA256": "8c1f734c5020d141e8947245884fb845cd8a3c2a60ebbff585aafc6e6c7cb548",
+  "outputSHA256": "ea79c0ee4c6cbd45d21e3709977b945764c5dbcfb05e38d0fe8a1ebe484ae8da",
+  "originalBinarySHA256": "bfec983836132c4829ea67576345c96be6d732ac4abcf3a8e35a2429eb2ce528",
+  "originalBinaryBytesPreserved": 358843832,
+  "appendedAnimationBytes": 18024,
+  "maximumFloat32Residual": 2.9781656918359545e-08,
+  "inverseBindSHA256": "c7dcc9f84c9819ae55e090c5a6c1d216f602d437175cf9e562466e2c9ab2f39f",
+  "endpointActivation": [
+    {
+      "endpoint": "source-rest",
+      "weight": 0,
+      "distancesRadians": [
+        1.4389939230285136,
+        1.4348383003605734
+      ]
+    },
+    {
+      "endpoint": "authored-key",
+      "weight": 0.9999999999999957,
+      "distancesRadians": [
+        0,
+        4.2146848510894035e-08
+      ]
+    }
+  ],
+  "channels": 225,
+  "weightChannels": 0,
+  "limits": [
+    "Failed diagnostic only; no contact, generic motion, moving-art or human acceptance.",
+    "Actual Garage clip/helper/render/video verification remains parent-run. No runtime pose or camera injection."
+  ]
+}

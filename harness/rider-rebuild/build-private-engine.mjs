@@ -17,6 +17,10 @@ for (const name of ['source', 'contract', 'out']) if (!arg(name)) throw new Erro
 if (out === root || out === path.join(root, 'public') || fs.existsSync(path.join(out, 'hero-review.json'))) throw new Error('Use a fresh private output directory');
 const sourceBytes = fs.readFileSync(source), metadataBytes = fs.readFileSync(contract);
 const metadata = { ...JSON.parse(metadataBytes), sourceSHA256: sha(sourceBytes), metadataSHA256: sha(metadataBytes) };
+const failedDiagnostic = metadata.qualificationState?.startsWith('FAILED') === true;
+if (failedDiagnostic && (!process.argv.includes('--allow-failed-diagnostic') || comparison)) {
+  throw new Error('Failed models require an explicit isolated diagnostic build; comparison promotion is forbidden');
+}
 const sourceTriangles = comparison ? (() => {
   const document = JSON.parse(sourceBytes.subarray(20, 20 + sourceBytes.readUInt32LE(12)));
   return document.meshes.flatMap(mesh => mesh.primitives).reduce((sum, primitive) => sum + ((primitive.mode ?? 4) === 4
@@ -53,6 +57,10 @@ const runtimeMetadata = { sourceSHA256: metadata.sourceSHA256, metadataSHA256: m
   nativeRest: { frame: metadata.nativeRest.frame, bones: metadata.nativeRest.bones.filter(row => endpointNames.has(row.name))
     .map(({ name, head, tail }) => ({ name, head, tail })) } };
 if (comparison) { runtimeMetadata.comparison = true; runtimeMetadata.releaseBuild = false; }
+if (metadata.corrective) {
+  runtimeMetadata.corrective = metadata.corrective;
+  runtimeMetadata.qualificationState = metadata.qualificationState;
+}
 if (arg('garage-clip')) runtimeMetadata.previewClip = arg('garage-clip');
 if (arg('near-similarity')) metadata.driver.nearSimilarityTolerance = Number(arg('near-similarity'));
 const originalPath = path.join(root, 'harness/hero-remaster/build.mts'), original = fs.readFileSync(originalPath, 'utf8');
@@ -73,11 +81,15 @@ fs.mkdirSync(out, { recursive: true });
 const driverPath = path.join(out, '.private-build-driver.mts'), mappingPath = path.join(out, '.private-models.json');
 fs.writeFileSync(driverPath, generated); fs.writeFileSync(mappingPath, JSON.stringify(mapping, null, 2));
 fs.writeFileSync(path.join(out, 'rider-rebuild-inputs.json'), JSON.stringify({
-  releaseBuild: false, source, contract, sourceSHA256: sha(sourceBytes), metadataSHA256: sha(metadataBytes),
+  releaseBuild: false, failedDiagnostic, source, contract, sourceSHA256: sha(sourceBytes), metadataSHA256: sha(metadataBytes),
   comparison: comparison ? { ...comparisonRider, sourceBytes: sourceBytes.length, sourceTriangles, lodAliasesFull: true,
     limits: 'High-resolution selected full asset for both detail slots; phone memory, performance and art unaccepted. Original five riders/bytes/drivers retained.' } : null,
   actualBuildRecipe: { path: originalPath, sha256: sha(original) },
   runtimeMetadataSHA256: sha(JSON.stringify(runtimeMetadata)),
+  correctiveAdapter: metadata.corrective ? (() => {
+    const file = path.join(root, 'assets/blender/rider-rebuild/selected-seated-corrective06/apply-morph.mjs');
+    return { path: file, sha256: sha(fs.readFileSync(file)) };
+  })() : null,
   selectedRiderSource: runtimeMetadata.selectedRiderSource,
   poseCalibration: calibrationPath ? { path: calibrationPath, sha256: sha(fs.readFileSync(calibrationPath)), driver: calibration.driver } : null,
   adapter: ['private-comparison-loader.mjs', 'private-rider.mjs', 'private-engine-plugin.mjs', 'new-humanoid-contract.mjs', 'anthropometric-inverse.mjs'].map(name => {

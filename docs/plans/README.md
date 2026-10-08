@@ -1719,3 +1719,5 @@ Native corrective07 actualimport01 failed exit1/26.545s at live built-in driver 
 Diagnostic08 source checkpoint appends actual75jointTRS rest/key/rest clip to failedcorrective02, retainingoriginalBIN/calibration/activation/FAILED. Parent source/2fixtures reviewed; emission and actualGarage movingjudgment next, no shape acceptance.
 
 Current-source gate31 afterthirdconstruction passes silentMetal --dev11/11: exactgoldenfinish/hash,20one-tickrestarts, syncedframeP955.75ms. Originalplayer partialgate only; native driver repair and full-outfit failedshape playback next.
+
+Private corrective integration source checkpoint plus actual diagnostic08 emission:17tests pass, native75controlfixture morph0/1/0, originalBIN preserved,225TRS/zeroweighttracks. FAILED requires explicit isolated diagnostic and cannotentercomparison; actualGarage build/play next.
