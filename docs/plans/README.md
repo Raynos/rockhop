@@ -1611,3 +1611,5 @@ October8 actualrideharness supports bothauthored bikes through existinggamechoic
 October8 existingcontinuousnativePBRrenderer nowaccepts declared145/193frameactions withoutduplicatepipeline; both remainunaccepted,all0/6open.
 
 October8 wristidentity remainsunresolved: actualoldglovebounds rejectblackpixelrays. Read-onlyprobe bypassesglovebroadphase withcurrent-skinnedtrianglepath andretainsactualpalettes; noassetedit. All0/6open.
+
+October8 actualselectedgame05 ride played16s/192presentedframes. Solewitnessmax3.75micrometers;56/192handsocketgaps>1cm,worst57.335mm withmissingtorsoflexbound. Correctsupportedsource-boundtorsoarticulation thenRookie/Prosideviews. All0/6open.
