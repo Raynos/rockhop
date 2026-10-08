@@ -1,0 +1,206 @@
+{
+  "accepted": false,
+  "stage": "EXPANDED_ANATOMICAL_SEWN_JOIN_AND_ORIGINAL_PBR_TRANSFER_SAVED",
+  "native": {
+    "path": "harness/out/rider-rebuild/hoodie-shoulder-anatomical04/corrected04/selected-tailored-outfit.blend",
+    "sha256": "baedfa57a5c60ecac292fbc9dc50c6f9cfc77a7d62cddbb7d37fd638a210adcc"
+  },
+  "geometryBeforeTransfer": {
+    "path": "harness/out/rider-rebuild/hoodie-shoulder-anatomical04/corrected04/tailored-geometry-before-transfer.blend",
+    "sha256": "709c3cce4e19e76ce1a67b37b58f911744d788fe638f6f8a58602073c4256530"
+  },
+  "recipeSHA256": "c17f511db6e092a7068a0d2ef7079915bf51dbe06ed4e76bda929ace981421f3",
+  "controlsSHA256": "475e71ff094ca1616ba198b79e5c099135154a338652cecb75b95f0dd4840ec3",
+  "incomingNative": {
+    "path": "harness/out/rider-rebuild/hoodie-shoulder-anatomical04/authored01/selected-panel-outfit.blend",
+    "sha256": "1ad5c5aa21553bbb3eb84898572200b2d4418e81e1e1995d774a763707f0124f"
+  },
+  "targetObject": "Hoodie__RiderHoodie",
+  "bodyAnd75RigSignature": "50ff787c680d754368deaca8efbbb488a23e50a932b47d49abc86fe587345bb2",
+  "bodyAnd75RigUnchanged": true,
+  "visibleMeshes": [
+    "Boots__LocallyRepairedSelectedDenseBoot.L",
+    "Boots__LocallyRepairedSelectedDenseBoot.R",
+    "Gloves__SelectedFittedSource.L",
+    "Gloves__SelectedFittedSource.R",
+    "Hoodie__RiderHoodie",
+    "Jeans__AlignedSelectedDenseJeans",
+    "RiderBody"
+  ],
+  "removedJoinAndSupportFaces": 2743,
+  "vertices": 13663,
+  "polygons": 20358,
+  "panels": [
+    {
+      "role": 1,
+      "side": "L",
+      "interior": false,
+      "sourceComponent": "L-10628",
+      "vertices": 561,
+      "regularQuads": 512,
+      "transitionTriangles": 185,
+      "anatomicalAnchorInputVertices": [
+        844,
+        2529,
+        2479,
+        3035,
+        230,
+        4666
+      ]
+    },
+    {
+      "role": 2,
+      "side": "L",
+      "interior": true,
+      "sourceComponent": "L-12275",
+      "vertices": 561,
+      "regularQuads": 512,
+      "transitionTriangles": 189,
+      "anatomicalAnchorInputVertices": [
+        2115,
+        2093,
+        1406,
+        1292,
+        5696,
+        2037
+      ]
+    },
+    {
+      "role": 3,
+      "side": "R",
+      "interior": false,
+      "sourceComponent": "R-3568",
+      "vertices": 561,
+      "regularQuads": 512,
+      "transitionTriangles": 186,
+      "anatomicalAnchorInputVertices": [
+        2611,
+        3327,
+        1083,
+        4106,
+        3449,
+        2946
+      ]
+    },
+    {
+      "role": 4,
+      "side": "R",
+      "interior": true,
+      "sourceComponent": "R-3146",
+      "vertices": 561,
+      "regularQuads": 512,
+      "transitionTriangles": 188,
+      "anatomicalAnchorInputVertices": [
+        3750,
+        4271,
+        756,
+        73,
+        5188,
+        2888
+      ]
+    }
+  ],
+  "properCutRetainedPositionsUVMaterialsFieldsExact": true,
+  "coupledTrueExteriorInterior": true,
+  "createdNativeGroupsWithZeroIncomingWeights": [
+    "DEF-spine.005",
+    "DEF-spine.006",
+    "DEF-hand.L",
+    "DEF-thumb.01.L",
+    "DEF-thumb.02.L",
+    "DEF-thumb.03.L",
+    "DEF-palm.01.L",
+    "DEF-f_index.01.L",
+    "DEF-f_index.02.L",
+    "DEF-f_index.03.L",
+    "DEF-palm.02.L",
+    "DEF-f_middle.01.L",
+    "DEF-f_middle.02.L",
+    "DEF-f_middle.03.L",
+    "DEF-palm.03.L",
+    "DEF-f_ring.01.L",
+    "DEF-f_ring.02.L",
+    "DEF-f_ring.03.L",
+    "DEF-palm.04.L",
+    "DEF-f_pinky.01.L",
+    "DEF-f_pinky.02.L",
+    "DEF-f_pinky.03.L",
+    "PalmSocket.L",
+    "DEF-hand.R",
+    "DEF-thumb.01.R",
+    "DEF-thumb.02.R",
+    "DEF-thumb.03.R",
+    "DEF-palm.01.R",
+    "DEF-f_index.01.R",
+    "DEF-f_index.02.R",
+    "DEF-f_index.03.R",
+    "DEF-palm.02.R",
+    "DEF-f_middle.01.R",
+    "DEF-f_middle.02.R",
+    "DEF-f_middle.03.R",
+    "DEF-palm.03.R",
+    "DEF-f_ring.01.R",
+    "DEF-f_ring.02.R",
+    "DEF-f_ring.03.R",
+    "DEF-palm.04.R",
+    "DEF-f_pinky.01.R",
+    "DEF-f_pinky.02.R",
+    "DEF-f_pinky.03.R",
+    "PalmSocket.R",
+    "DEF-pelvis.L",
+    "DEF-pelvis.R",
+    "DEF-thigh.L",
+    "DEF-thigh.L.001",
+    "DEF-shin.L",
+    "DEF-shin.L.001",
+    "DEF-foot.L",
+    "DEF-toe.L",
+    "SoleSocket.L",
+    "DEF-thigh.R",
+    "DEF-thigh.R.001",
+    "DEF-shin.R",
+    "DEF-shin.R.001",
+    "DEF-foot.R",
+    "DEF-toe.R",
+    "SoleSocket.R"
+  ],
+  "originalPBRTransferMaps": [
+    {
+      "sourcePackedSHA256": "1eb934f396df30e3cd881211ff4e195c4460f8fa8db5bfa22ddb3b5ef28e5d09",
+      "sourceImage": "Image_0",
+      "sourceSize": [
+        4096,
+        4096
+      ],
+      "derivative": "ActualSelectedHoodiePanelTransfer04_0",
+      "size": [
+        1024,
+        1024
+      ],
+      "PNG_SHA256": "1043b6f3c371cbc986e2bdf3a2550d4b8cae4fdaf87c4feeb02089f15308f807",
+      "colorSpace": "sRGB"
+    },
+    {
+      "sourcePackedSHA256": "2e598ae796f89acf741389a67635d4fa7b8d99f2ba39b0e46d0516c95db6dfae",
+      "sourceImage": "Image_1",
+      "sourceSize": [
+        4096,
+        4096
+      ],
+      "derivative": "ActualSelectedHoodiePanelTransfer04_1",
+      "size": [
+        1024,
+        1024
+      ],
+      "PNG_SHA256": "d3e041b2dd52604390c309a2bf329836662f120c436c552b53ac30f860975b39",
+      "colorSpace": "Non-Color"
+    }
+  ],
+  "limits": [
+    "Expanded cut consumes2743 failed/support faces; useful garment outside proper cut remains exact.",
+    "Front/rear cloth panels share explicit lower underarm seam; true exterior and interior share one midcloth form with2mm structural thickness.",
+    "Structural cloth thickness is not a body fit/normal-displacement campaign. No body projection, mean-inset, gain sweep or generation.",
+    "Existing original4K PBR outside cut remains exact. Local genuine derivative atlas uses continuous actual donor identity and source triangle/UV sampling.",
+    "One fixed construction; parent judges. Body75 unchanged; full new fields interpolated without FOUR trimming. All R0\u2013R5 open."
+  ]
+}

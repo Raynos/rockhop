@@ -1481,3 +1481,5 @@ October8 boot selected-upper sculpt source replaces rejected box UNION: source-d
 October8 root actual right glove guide02 PBR review exit0/21.033s: selected ribs/padding coherent and prior needle triangles gone; keep solved form, reject palm/thenar/tip skin exposure. Straight palm view occluded by jeans. Local anatomical repair before bilateral grip; no wearing art acceptance.
 
 October8 actual tailored hoodie job exit1/7.219s before save: full75 array names include absent zero-weight garment groups. Minimal repair creates only missing names with exactly-zero incoming columns; shape/source/rest75 unchanged. Fresh corrected04 native/PBR run next; no result acceptance.
+
+October8 actual tailored hoodie and genuine local selected-PBR transfer saved CPU2 exit0/26.275s, nativebaedfa57 in complete seven-mesh outfit. Outside garment/body75 unchanged. Root matched PBR judgment and complete clothed movement next; save is not art acceptance.

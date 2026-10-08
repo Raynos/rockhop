@@ -23,3 +23,10 @@ Finding: Actual hoodie job stops before save because garment omits inactive nati
 Validation: CPU2 exit1/7.219s, KeyError DEF-spine.005; root reviewed minimal diff, unchanged shape controls and protected existing group weights/indices. Source/pins pass; no rerun yet.
 
 Limits: No actual tailored geometry or map saved by this failed run.
+
+
+Finding: Actual expanded anatomical hoodie join and original-PBR local transfer now save successfully in complete selected outfit.
+
+Validation: CPU2 exit0/26.275s; nativebaedfa57 and prior geometry709c3cce saved, complete body/rest75/outside garment preserved,7 visible actual meshes.
+
+Limits: Save is not art acceptance; matched actual PBR views and dressed motion next.
