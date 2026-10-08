@@ -33,3 +33,9 @@ Finding: Current selected dense forefoot already has ample crown/sole width; obs
 Validation: Parent full source/controls read, AST/zeroMatMult and11input pins exact; sole/welt/rear/height/longitudinal equality guards are explicit. Each side will receive separate actual PBR views.
 
 Limits: Unexecuted one targeted local correction, no new warp/lattice/bake or shape/art acceptance.
+
+Finding: Separate actual bilateral views reject the one local forefoot repair. The left medial upper/ankle has large exposure; prior tiny partner view did not establish coverage.
+
+Validation: Parent viewed all8original/repaired genuinePBRPNGs; CPU2exit0 in25.658s, actualnative hash exact. Same negative-transverse camera is Rlateral/Lmedial, recorded explicitly.
+
+Limits: Rest rejection ends this local repair mechanism; exact character-artist package next, no further gain/lattice campaign or bake.

@@ -1,0 +1,149 @@
+{
+  "accepted": false,
+  "status": "UNACCEPTED_CURRENT_SOURCE_LOCAL_REPAIR_REST_REVIEW_PENDING",
+  "recipeSHA256": "26db7784e69d09b3975df605daca4289d6c8e09878d8e4c31594de55ed286cef",
+  "controlsSHA256": "0a2e33be70cc5dc7d32069670212fff539e72af74e6d780b9494158d4761b4a0",
+  "inputs": {
+    "wearer": {
+      "path": "harness/out/rider-rebuild/native-hand-repair01/native02/anatomical-hand-rig.blend",
+      "sha256": "42fca617ea8d246a6c3e3ca68a90cd3cb5f3ce8b9bb78130e0e2bbd65f605fac"
+    },
+    "bodyArrays": {
+      "path": "harness/out/rider-rebuild/native-hand-repair01/native02/native-body.npz",
+      "sha256": "e62e9969503b7761e99463eccc3ca7be39e0c230a2948f2f87a224db52d0f9a2"
+    },
+    "originalPainted": {
+      "path": ".tmp/generation-comparison-2026-10-03/user-agent2/items01/boots/paint01/painted.glb",
+      "sha256": "b8dbd980f4d5a6a46b86db6f315ac630be07c538382a24fa5a2d2002a7d97d8c"
+    },
+    "dense": {
+      "path": "assets/blender/hero-remaster/rider/finish-2026-10-05/wardrobe/data/prep02/boots/cleaned-donor.npz",
+      "sha256": "9849de6444632c2dcd1e1d76fda42ac27a7cbe8c7d2c0263ab2082e24b94777f"
+    },
+    "albedo": {
+      "path": "assets/blender/hero-remaster/rider/finish-2026-10-05/wardrobe/data/prep02/boots/baseColorTexture.png",
+      "sha256": "5bda21b0d584f91aad83d310b868be6a575d28eddb1170e01e65c0b2071f4044"
+    },
+    "metallicRoughness": {
+      "path": "assets/blender/hero-remaster/rider/finish-2026-10-05/wardrobe/data/prep02/boots/metallicRoughnessTexture.png",
+      "sha256": "4017261b5f233cba5780578691a1508382295db4b157c4d175ad905bc98e5c30"
+    },
+    "actualFootOutline": {
+      "path": "docs/evidence/rider-rebuild/production-boots03/target-foot-outline.json",
+      "sha256": "cfb4d1eb6d5e10cc88d73f406c936712c6d607b97145ef819b6e78789b07e978"
+    },
+    "currentSculptR": {
+      "path": "harness/out/rider-rebuild/production-boots03/sculpt02/direct-sculpt-source-R.npz",
+      "sha256": "bbb0d4c50317bd241d62698d34af5f085f5439300c23de0584c595d197c1a98e"
+    },
+    "currentSculptL": {
+      "path": "harness/out/rider-rebuild/production-boots03/sculpt02/direct-sculpt-source-L.npz",
+      "sha256": "075a56259e970229dd7d60547442128cdf7798d01a9f24a4bdb8015768693eab"
+    },
+    "frozenAuthorHelpers": {
+      "path": "assets/blender/rider-rebuild/production-boots03/sculpt_selected_forefoot.py",
+      "sha256": "038aa2c55539c292d99d4de1ca62b8100d2bf7a7b6cc6bfb2042026eb05d0d38"
+    },
+    "currentSectionStudy": {
+      "path": "docs/evidence/rider-rebuild/production-boots03/current-sculpt02-sections.json",
+      "sha256": "40730502871548b294b20b8d690dfd8d704ab817fb1b4244c3e71bd19460514c"
+    }
+  },
+  "sides": {
+    "R": {
+      "originalDenseVertices": 305453,
+      "heldVertices": 278733,
+      "retainedRearVertices": 231302,
+      "heldMaximumSourceDelta": 0.0,
+      "maximumTransverseDeltaM": 0.007991719183453814,
+      "brushes": [
+        {
+          "name": "lateral upper flank",
+          "requestedPeakTransverseM": -0.008,
+          "actualMaximumAbsoluteTransverseM": 0.007991720691175305
+        },
+        {
+          "name": "medial ball upper",
+          "requestedPeakTransverseM": 0.0055,
+          "actualMaximumAbsoluteTransverseM": 0.005497516550876671
+        },
+        {
+          "name": "distal medial upper",
+          "requestedPeakTransverseM": 0.006,
+          "actualMaximumAbsoluteTransverseM": 0.005974434987931128
+        }
+      ],
+      "faces": 610934,
+      "reflectedFaceAndUVCornerOrderTogether": false,
+      "nativeBounds": [
+        [
+          -0.29570285079304554,
+          -0.1525734467393433,
+          -0.02324392833672847
+        ],
+        [
+          -0.13667360757795632,
+          0.1222273256775087,
+          0.14437221877580342
+        ]
+      ]
+    },
+    "L": {
+      "originalDenseVertices": 305453,
+      "heldVertices": 278735,
+      "retainedRearVertices": 231302,
+      "heldMaximumSourceDelta": 0.0,
+      "maximumTransverseDeltaM": 0.009045126805515976,
+      "brushes": [
+        {
+          "name": "lateral upper flank",
+          "requestedPeakTransverseM": 0.0045,
+          "actualMaximumAbsoluteTransverseM": 0.0044919968454859
+        },
+        {
+          "name": "medial ball upper",
+          "requestedPeakTransverseM": -0.0085,
+          "actualMaximumAbsoluteTransverseM": 0.008495711915071622
+        },
+        {
+          "name": "distal medial upper",
+          "requestedPeakTransverseM": -0.009,
+          "actualMaximumAbsoluteTransverseM": 0.00898006081501552
+        }
+      ],
+      "faces": 610934,
+      "reflectedFaceAndUVCornerOrderTogether": true,
+      "nativeBounds": [
+        [
+          0.13926211319004259,
+          -0.15120973216662442,
+          -0.023246814956395648
+        ],
+        [
+          0.2983589333789628,
+          0.12354050320519037,
+          0.1443921077962685
+        ]
+      ]
+    }
+  },
+  "noVerticalLift": true,
+  "bodyAndRest75Unchanged": true,
+  "denseTopologyPreserved": true,
+  "uvPolicy": "Raw corner UV unchanged; copied Blender V flip; reflected L face/UV corners reverse together",
+  "selectedMaterials": "Unchanged byte-exact original 4K albedo + metallicRoughness",
+  "native": {
+    "path": "harness/out/rider-rebuild/production-boots03/local-repair01/local-upper-repair-selected-source.blend",
+    "sha256": "abf70643fce7b054f0c302906b7b26c0ed953bb32cde011e9fec8dcbf64ceba9"
+  },
+  "views": [
+    "L/original-selected-lateral.png",
+    "L/original-selected-toe-threequarter.png",
+    "L/sculpted-selected-lateral.png",
+    "L/sculpted-selected-toe-threequarter.png",
+    "R/original-selected-lateral.png",
+    "R/original-selected-toe-threequarter.png",
+    "R/sculpted-selected-lateral.png",
+    "R/sculpted-selected-toe-threequarter.png"
+  ]
+}
