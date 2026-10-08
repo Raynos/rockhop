@@ -1709,3 +1709,5 @@ Corrective06 actualconstruct01 fails in1.065s at bodycage native4620,183.346mm l
 Corrective06 body-region source fixed from actual thumb4620 FOUR: positive pelvis/thigh/pelvisbranch membership, arm/hand descendants excluded, exactzero protected deltas. Parent25pins/4fixtures/syntax pass; unchanged60mmcage/allfinalgates. Actualconstruct02 next; no modelpass.
 
 Corrective06 actualconstruct02 completes finite failed diagnostic in4.859s: default0/originalBIN, exactzero929arm/hand deltas,55body/7005activejeans. Posterior core band~85% but final50self/82layer/550jeans-saddle crossings. Keep current phonepreview baseline; parent actualdressedmovingdiagnostic next before geometrychanges.
+
+Native seated corrective07 source checkpoint: exactnativeID shape import,13built-in quaternion drivers/noautoexecution, protectedrest/UV/PBR/Four/75bone fingerprints, script-disabled savedreopen probe. Parent150algebra cases/AST/source review pass; actualBlender pending; failedgeometry retained.
