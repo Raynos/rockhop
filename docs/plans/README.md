@@ -1575,3 +1575,5 @@ October8 selectedPBRbyteexact/UV centers valid; preparedruntime material/texture
 October8 Garage03 prepared maps retain blue/high roughness but selected4K intake reduced images to1024/256. Private selected-source policy now preserves authored dimensions; actual before/after next, chrome cause unproven. AllR0-R5open0/6.
 
 October8 Astra07 supported proximal selected-glove cuff taper source reviewed/pinned:334/8000 guideverts perhand, preserve all prior anatomical edits/UV/PBR/fields and otherfiveparts. ActualCPU2dense transfer/completeGarage judgment next;0/6open.
+
+October8 Garage04 exposed second resident low-tier texture shrink after loader policy. Private intake now protects exact selected texture objects through all later budget passes; genuine4K before/after still pending. All0/6open.

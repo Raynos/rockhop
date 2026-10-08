@@ -63,7 +63,24 @@ export function privateEnginePlugin(metadata) {
           // Review the selected source at its authored resolution. Other models
           // retain the ordinary game budget; no maps are synthesized or upscaled.
           code = code.replace(shrinkMarker,
-            `          if (url !== modelAssetUrl(${JSON.stringify(metadata.selectedRiderSource.canonicalLogical)})) shrinkTextures(g.scene);`);
+            `          if (url === modelAssetUrl(${JSON.stringify(metadata.selectedRiderSource.canonicalLogical)})) rememberPrivateAuthoredImages(g.scene);
+          shrinkTextures(g.scene);`);
+          const textureMarker = '        if (!t || done.has(t)) continue;';
+          if (code.split(textureMarker).length !== 2) throw new Error('Private rider build: resident texture budget changed');
+          code = `const privateAuthoredImages = new WeakSet<object>();
+function rememberPrivateAuthoredImages(root: THREE.Object3D) {
+  root.traverse(object => {
+    const mesh = object as THREE.Mesh;
+    if (!mesh.isMesh) return;
+    for (const material of Array.isArray(mesh.material) ? mesh.material : [mesh.material]) {
+      for (const value of Object.values(material)) {
+        const texture = value as THREE.Texture;
+        if (texture?.isTexture) privateAuthoredImages.add(texture);
+      }
+    }
+  });
+}\n` + code.replace(textureMarker,
+            '        if (!t || done.has(t) || privateAuthoredImages.has(t)) continue;');
           touched.add('authored-images');
         }
         touched.add('metadata');
