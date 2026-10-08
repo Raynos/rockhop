@@ -1,0 +1,98 @@
+{
+  "status": "FROZEN_SOURCE_ONLY_OWNED_BAKE_MESH_LIFETIME",
+  "acceptedArt": false,
+  "nativeRunExecuted": false,
+  "sourcePins": {
+    "bake.py": {
+      "path": "assets/blender/rider-rebuild/selected-production-bake32/bake.py",
+      "sha256": "ad70468bc2cdf50b2e582835bf390b1e63ebab2b3b8736e96067405e23604652"
+    },
+    "check_lifetime.py": {
+      "path": "assets/blender/rider-rebuild/selected-production-bake32/check_lifetime.py",
+      "sha256": "9fbd5dedce89a361f10704678f2e0b4f9788c6871a6c9b176196acb0f7470893"
+    },
+    "input.template.json": {
+      "path": "assets/blender/rider-rebuild/selected-production-bake32/input.template.json",
+      "sha256": "ce1cc7cdd2f6575461f9ccad29d1ee2906f5435486ad3c5f8a69a1872ea065d2"
+    },
+    "lifetime.py": {
+      "path": "assets/blender/rider-rebuild/selected-production-bake32/lifetime.py",
+      "sha256": "da4b1f82bd9858bbd9ca7cb966655d05fffc01aed28a935362fd58cfdf50439d"
+    },
+    "policy.json": {
+      "path": "assets/blender/rider-rebuild/selected-production-bake32/policy.json",
+      "sha256": "33e9a65a3a177eb5db6b084661d206cd43750f076cc0e0c5b808083e6ec3a49d"
+    }
+  },
+  "frozenPins": {
+    "productionBake": {
+      "path": "assets/blender/rider-rebuild/selected-rider-production25/bake.py",
+      "sha256": "6e3a32a515a48ef9e85710aaf0fab97869a56ec3c158d2b19f3979eaf42331f9"
+    },
+    "productionInput": {
+      "path": "assets/blender/rider-rebuild/selected-rider-production25/input.json",
+      "sha256": "49702808cf80ec8ad7104f2681c02b758e97d19f11a386e9b27ca53f8c0f6449"
+    },
+    "lifetime": {
+      "path": "assets/blender/rider-rebuild/selected-production-bake32/lifetime.py",
+      "sha256": "da4b1f82bd9858bbd9ca7cb966655d05fffc01aed28a935362fd58cfdf50439d"
+    }
+  },
+  "finding": "Frozen25 source.copy/data.copy creates one dense donor Mesh and one cage Mesh for each of eight boot bake calls. It removes their Objects but not those copied Mesh IDs. Unreferenced copies therefore accumulate until process exit and can be included in the working Main. The wrapper explicitly frees only its own registered zero-user copies after each corresponding Object removal.",
+  "behavior": "The imported recipe receives a module-local bpy proxy whose only interception is data.objects.remove. Actual bpy and all bpy.ops functions are unchanged. Donor/cage creation still uses the exact frozen functions. Track actual copied IDs, reject source aliasing and changed data, require zero users after object deletion, then meshes.remove(mesh, do_unlink=False). No global purge or fake-user clearing. Resolve current Main dynamically after open_mainfile. Explicit __getitem__ forwards the exact frozen source/target named lookups to the current object collection; no additional special protocols are introduced.",
+  "expectedActualReleaseCounts": {
+    "donorMeshes": 8,
+    "cageMeshes": 8,
+    "total": 16
+  },
+  "validation": {
+    "fixtures": {
+      "path": "docs/evidence/rider-rebuild/selected-production-bake32/lifetime-fixtures.json",
+      "sha256": "32968551955d197a7bb28906641fdff7d1761a991ae4ebc9a3dd3e42e55e45ba"
+    },
+    "pythonAST": "PASS all three Python sources",
+    "actualBake": "NOT RUN",
+    "memorySavingMeasured": false,
+    "frozenObjectCollectionAPI": {
+      "source": "assets/blender/rider-rebuild/selected-rider-production25/bake.py",
+      "uses": [
+        {
+          "line": 124,
+          "operation": "target lookup by name"
+        },
+        {
+          "line": 133,
+          "operation": "target and donor-source lookup by name"
+        },
+        {
+          "line": 139,
+          "operation": "cage and donor Object removal"
+        },
+        {
+          "line": 156,
+          "operation": "source lookup by name to hide"
+        }
+      ],
+      "delegation": "Explicit __getitem__ plus remove interception; no other collection protocols required by the frozen source. Eight fixtures include actual two-boot source/target lookup expressions before and after Main replacement."
+    }
+  },
+  "nextInput": "After actual successful family31 full geometry exists, copy input.template.json into harness/out/rider-rebuild/selected-production-bake32/boots-full01.input.json and fill geometryReport with its real production.json path/SHA256. Null geometryReport is deliberately non-executable; no placeholder success or native pin is accepted.",
+  "nextParentGuardCommand": "/Users/raynos/projects/localai/runtime/unimate/.venv/bin/python assets/blender/hero-remaster/generation-comparison-2026-10-03/user-agent2/run_bounded96.py --out docs/evidence/rider-rebuild/selected-production-bake32/boots-full-guard01 --limit-seconds 180 -- /Applications/Blender.app/Contents/MacOS/Blender -b -t 2 --python-exit-code 1 --python assets/blender/rider-rebuild/selected-production-bake32/bake.py -- harness/out/rider-rebuild/selected-production-bake32/boots-full01.input.json harness/out/rider-rebuild/selected-rider-production25/full-boots-bake32",
+  "guardRecipe": {
+    "path": "assets/blender/hero-remaster/generation-comparison-2026-10-03/user-agent2/run_bounded96.py",
+    "sha256": "cf8acd15d8b7484480bee74d23892be815d955ffd87115d3da8ed228ffb3d916"
+  },
+  "guardLock": {
+    "method": "lockf -k",
+    "path": "/Users/raynos/projects/localai/.model.lock"
+  },
+  "wallLimitSeconds": 180,
+  "threads": 2,
+  "unchanged": "Source selected geometry/fields/maps, cage distances, albedo/normal/roughness/metallic passes, atlas sizes, samples, original skin-map bake rejection, save mode, and existing frozen25 gates. The geometry input SHA remains the original25 input; wrapper identity and lifetime receipt are added separately.",
+  "limits": [
+    "Requires actual successful31 geometry; no bake input or native result has been invented.",
+    "Actual operation comprises eight original CPU bake calls. Wall time is unmeasured;180seconds is a bound, not a completion claim.",
+    "The fix removes one proven accumulation mechanism; no claim about all peak allocations, complete rider art/shading, source/contact preservation under movement, runtime timing or physical devices.",
+    "Frozen25 and frozen31 are unchanged. This source unit is independently reviewable and must be committed separately."
+  ]
+}
