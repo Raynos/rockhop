@@ -1279,3 +1279,5 @@ October 7 jeans targeted-repair source checkpoint: explicit front/back saddle ea
 October 7 actual glove geometry diagnostic: parent viewed three right-hand native rest views. Visible shell encloses hand/thumb; angular panel and seam artifacts remain. Bilateral shape, selected materials and played grip remain unaccepted. Read-only CPU2 renderer exit0 in5.443s, source unchanged.
 
 October 7 actual targeted jeans repair checkpoint: author04 exit0 in7.431s, pinned editable native saved before maps. Body/shared75 signature preserved; FULL retained and FOUR reduction measured (max removed mass5.76%). Parent three-view fit review pending, no bake or art acceptance.
+
+October 7 advisory implementation correction: official Blender API distinguishes OUTSIDE (outside constraint) from OUTSIDE_SURFACE (offset surface constraint). Targeted jeans source uses OUTSIDE to preserve authored ease and excludes saddle. No fit acceptance inferred from modifier enum.
