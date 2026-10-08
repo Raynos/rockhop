@@ -1,6 +1,7 @@
 /** Read-only selected jeans / actual finite saddle measurement from played Garage TRS.
  * node harness/rider-rebuild/seat-contact-review.mjs --build-inputs=JSON --contract=JSON
  *   --components=JSON --rookie-report=JSON --pro-report=JSON --out=FRESH_JSON
+ * Optional --regional-lineage=JSON from seat-regional-lineage.py adds the exact existing pelvis-rear region.
  * No controller, pose, geometry, image or physics writes. Parent executes under lease.
  */
 import fs from 'node:fs';
@@ -31,6 +32,35 @@ assert.deepEqual(calibration.driver, inputs.poseCalibration.driver, 'Embedded bu
 const driver = { ...contract.driver, ...calibration.driver };
 const placement = M().makeRotationFromQuaternion(new Quaternion().fromArray(driver.assetToBikeQuaternionXYZW));
 const ids = Object.keys(contract.specification.jointNames).sort();
+let regionalLineage = null, regionalRows = null;
+if (arg('regional-lineage')) {
+  regionalLineage = file('regional-lineage'); const lineage = regionalLineage.value;
+  assert.equal(lineage.region, 'pelvis-rear'); assert.equal(lineage.object, jeansName);
+  assert.equal(lineage.regionalReceiverNativePositionsAndFaceMembershipExact, true);
+  const context = JSON.parse(pinned(lineage.sourceContext)), report = JSON.parse(pinned(lineage.sourceReport));
+  assert.deepEqual(lineage.sourceNative, context.native); assert.deepEqual(lineage.sourceNative, report.resultNative);
+  const capture = report.capture.find(row => row.region === 'pelvis-rear');
+  assert.equal(capture.sha256, lineage.directCapture.sha256); assert.equal(capture.path, lineage.directCapture.path);
+  assert(capture.passed);
+  const sourcePositions = new Map(lineage.nativeRestPositions);
+  for (let row = 0; row < jeans.position.count; row++) {
+    const expected = sourcePositions.get(jeans.nativeID(row)); if (!expected) continue;
+    const actual = jeans.position.row(row), exported = [expected[0], expected[2], -expected[1]];
+    assert(actual.every((value, axis) => value === exported[axis]), 'Regional native rest positions changed');
+  }
+  const key = ids => [...ids].sort((a, b) => a - b).join(',');
+  const sourceTriangles = new Map(lineage.nativeTriangles.map(row => [key(row.nativeVertexIDs), row]));
+  assert.equal(sourceTriangles.size, lineage.nativeTriangles.length);
+  const seen = new Set(); regionalRows = [];
+  for (let row = 0; row < jeans.indices.count / 3; row++) {
+    const nativeIDs = [0, 1, 2].map(axis => jeans.nativeID(jeans.indices.get(row * 3 + axis)));
+    const identity = key(nativeIDs), original = sourceTriangles.get(identity); if (!original) continue;
+    assert(!seen.has(identity), 'Duplicate current native regional triangle'); seen.add(identity);
+    assert([0, 1, 2].some(offset => nativeIDs.every((id, axis) => id === original.nativeVertexIDs[(axis + offset) % 3])), 'Regional triangle winding changed');
+    regionalRows.push(row);
+  }
+  assert.equal(seen.size, sourceTriangles.size, 'Original regional native triangles missing from current GLB');
+}
 const restLocal = document.nodes.map(node => node.matrix ? M().fromArray(node.matrix)
   : M().compose(V(node.translation ?? [0, 0, 0]), new Quaternion().fromArray(node.rotation ?? [0, 0, 0, 1]), V(node.scale ?? [1, 1, 1])));
 const names = new Map(document.nodes.map((node, index) => [node.name, index]));
@@ -39,6 +69,10 @@ const output = { accepted: false, recipeSHA256: sha(fs.readFileSync(new URL(impo
     calibration: { path: inputs.poseCalibration.path, sha256: inputs.poseCalibration.sha256 },
     surfaceHelper: { path: 'assets/blender/rider-rebuild/selected-ankle-contact02/surface.mjs', sha256: sha(fs.readFileSync(new URL('../../assets/blender/rider-rebuild/selected-ankle-contact02/surface.mjs', import.meta.url))) } },
   method: 'Recorded native75 local TRS; decoded source FOUR skinning; exact selected saddle component triangles; downward jeans/upward saddle finite XZ footprint extrema.',
+  regionalLineage: regionalLineage ? { receipt: regionalLineage.pin, sourceNative: regionalLineage.value.sourceNative,
+    directCapture: regionalLineage.value.directCapture, originalPolygonIDs: regionalLineage.value.originalPolygonIDs,
+    currentDecodedTriangleRows: regionalRows, exactNativeTriangleWindingAndRestPositions: true,
+    classification: regionalLineage.value.classification } : null,
   classification: 'All downward selected jeans triangles over the finite saddle are candidates. Posterior/buttock identity requires parent review of explicit source/native triangle witnesses; no bone label establishes support.',
   limits: ['Five captured poses per bike, not continuous motion or cloth dynamics.',
     'Signed bike-up gap and projected overlap are geometry only; no support force/contact-area or seated-art acceptance.',
@@ -113,6 +147,19 @@ function overlapPolygon(a, b) {
   return { polygonXZ: polygon, projectedAreaM2: area };
 }
 
+function witnessRecord(witness, vertices, upward) {
+  const cloth = triangle(vertices, witness.bootVertexRows, witness.bootTriangleRow);
+  const target = upward.find(row => row.row === witness.pegTriangleRow); assert(target);
+  return { jeansTriangleRow: witness.bootTriangleRow, jeansDecodedVertexRows: witness.bootVertexRows,
+    jeansNativeVertexIDs: witness.bootNativeIDs, jeansBarycentric: witness.bootBarycentric,
+    jeansPointBike: witness.bootPoint, jeansNormalBike: witness.bootNormal,
+    jeansNamedFOUR: witness.bootVertexRows.map(index => jeans.fields(index)),
+    saddleTriangleRow: witness.pegTriangleRow, saddleDecodedVertexRows: witness.pegVertexRows,
+    saddleBarycentric: witness.pegBarycentric, saddlePointBike: witness.pegPoint, saddleNormalBike: witness.pegNormal,
+    normalsOpposition: -V(witness.bootNormal).dot(V(witness.pegNormal)),
+    ...overlapPolygon(cloth, target), posteriorClassification: 'PARENT_REVIEW_REQUIRED' };
+}
+
 for (const bikeName of ['rookie', 'pro']) {
   const played = file(`${bikeName}-report`), report = played.value;
   assert.equal(report.requestedBike, bikeName); assert.equal(report.requestedClip, null); assert.deepEqual(report.errors, []);
@@ -144,19 +191,24 @@ for (const bikeName of ['rookie', 'pro']) {
     catch (error) { if (!error.message.includes('footprints do not overlap')) throw error;
       bikeResult.snapshots.push({ name: snapshot.name, riderStageTime: snapshot.riderStageTime, skeletalWitnesses, overlap: false }); continue; }
     const witness = measured.minimum;
-    const cloth = triangle(vertices, witness.bootVertexRows, witness.bootTriangleRow);
-    const target = upward.find(row => row.row === witness.pegTriangleRow); assert(target);
+    let regionalPosterior = null;
+    if (regionalRows) {
+      const surface = { ...jeans, indices: { count: regionalRows.length * 3,
+        get: index => jeans.indices.get(regionalRows[Math.floor(index / 3)] * 3 + index % 3) } };
+      try {
+        const measured = finiteSupport(surface, vertices, all, upward);
+        measured.minimum.bootTriangleRow = regionalRows[measured.minimum.bootTriangleRow];
+        regionalPosterior = { overlap: true, minimumSignedBikeUpGapM: measured.minimum.gapM,
+          comparedTrianglePairs: measured.compared, downwardRegionalTriangles: measured.downwardRigidTriangles,
+          witness: witnessRecord(measured.minimum, vertices, upward),
+          classification: 'Exact existing pelvis-rear transfer region; actual posterior support patch remains parent-reviewed.' };
+      } catch (error) { if (!error.message.includes('footprints do not overlap')) throw error;
+        regionalPosterior = { overlap: false, classification: 'No downward existing pelvis-rear triangle overlaps the finite upward saddle footprint.' }; }
+    }
     bikeResult.snapshots.push({ name: snapshot.name, riderStageTime: snapshot.riderStageTime, skeletalWitnesses, overlap: true,
       comparedTrianglePairs: measured.compared, downwardJeansTriangles: measured.downwardRigidTriangles,
       minimumSignedBikeUpGapM: witness.gapM,
-      witness: { jeansTriangleRow: witness.bootTriangleRow, jeansDecodedVertexRows: witness.bootVertexRows,
-        jeansNativeVertexIDs: witness.bootNativeIDs, jeansBarycentric: witness.bootBarycentric,
-        jeansPointBike: witness.bootPoint, jeansNormalBike: witness.bootNormal,
-        jeansNamedFOUR: witness.bootVertexRows.map(index => jeans.fields(index)),
-        saddleTriangleRow: witness.pegTriangleRow, saddleDecodedVertexRows: witness.pegVertexRows,
-        saddleBarycentric: witness.pegBarycentric, saddlePointBike: witness.pegPoint, saddleNormalBike: witness.pegNormal,
-        normalsOpposition: -V(witness.bootNormal).dot(V(witness.pegNormal)),
-        ...overlapPolygon(cloth, target), posteriorClassification: 'PARENT_REVIEW_REQUIRED' },
+      witness: witnessRecord(witness, vertices, upward), regionalPosterior,
       existingContactDiagnostics: { gripErrM: snapshot.debug.gripErr, soleErrM: snapshot.debug.soleErr,
         anthropometry: snapshot.debug.anthropometry } });
   }
