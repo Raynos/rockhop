@@ -1909,3 +1909,5 @@ Native gameplay02 source reconstructs live controls from exact captured physical
 Native gameplay08 full-dressed intake is frozen after parent review: append actual measured75 actions to all7selected meshes, deactivate rejected volume, uncompressed-save/reopen before qualifiers. Known master/recipe pins and AST/Bash syntax pass. Actual capture pins and native replay pending; no geometry/appearance acceptance.
 
 Glove memory03 source preserves exact constructors/protected checks and saves native uncompressed to avoid Zstd buffers. Parent reviewed and reran7save-wrapper+4lifetime fixtures; actual memory improvement/reopen unmeasured. Frozen sources preserved, no geometry or memory-guard relaxation.
+
+Actual lean preflight fixes test input: full brake engages reverse and faults rookie/pro at887/770ticks. Same1200tick lean sequence with brake0 has0faults and byte-identical fresh trajectories on both, ≈0.306m bikeX range with real COM/derived-pose motion. Capture now uses corrected real inputs; selected-source rendered/native art still pending.

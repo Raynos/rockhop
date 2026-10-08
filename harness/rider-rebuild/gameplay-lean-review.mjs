@@ -52,7 +52,7 @@ try {
   report.played = await page.evaluate(async phases => {
     const t = window.__rockhop, rider = window.__render.debug.rider;
     const inputs = phases.flatMap(phase => Array.from({ length: phase.ticks }, () =>
-      ({ throttle: 0, brake: 1, lean: phase.lean, hop: false, restart: false })));
+      ({ throttle: 0, brake: 0, lean: phase.lean, hop: false, restart: false })));
     const endpoints = new Map(); let end = 0;
     for (const phase of phases) { end += phase.ticks; endpoints.set(end, phase.name); }
     const samples = [], faults = [], motionSamples = [], started = performance.now(); let tick = 0, maximumCatchupTicks = 0;

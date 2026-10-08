@@ -1,0 +1,1046 @@
+{
+  "accepted": false,
+  "status": "HELD_GAMEPLAY_PHYSICS_PREFLIGHT_FAILED",
+  "method": "Actual createBikePhysics default v2; compiled registered track; direct120Hz steps; actual FrameBuilder alpha1 view. Two fresh deterministic runs per bike.",
+  "trackId": "b1-first-ride",
+  "seed": 138717428,
+  "physicsHz": 120,
+  "phases": [
+    {
+      "name": "neutral",
+      "ticks": 240,
+      "lean": 0
+    },
+    {
+      "name": "forward",
+      "ticks": 360,
+      "lean": 1
+    },
+    {
+      "name": "backward",
+      "ticks": 360,
+      "lean": -1
+    },
+    {
+      "name": "neutral-return",
+      "ticks": 240,
+      "lean": 0
+    }
+  ],
+  "constantInput": {
+    "throttle": 0,
+    "brake": 1,
+    "hop": false,
+    "restart": false
+  },
+  "inputSHA256": "3802f6fd75a1b4fdfdac8700ff67dc8a6c7655706697bc96868c65e5a320d21f",
+  "compiledTrackSHA256": "9b22479484bc39570e6b0830582ccfade27717294a19b219552d25c2bad0daf8",
+  "sourcePins": [
+    {
+      "path": "harness/rider-rebuild/gameplay-lean-physics-check.ts",
+      "sha256": "3bada34668aaee163c03da83638b937a290f0d0763c273ff3fa165780a1ad28b"
+    },
+    {
+      "path": "src/physics/index.ts",
+      "sha256": "36c7ae2948508ceba4657b3d64f088ff50e65ea1a450c2018332c25b49f786cb"
+    },
+    {
+      "path": "src/physics/v2/bike.ts",
+      "sha256": "519dd15990b427bdbc66810d14c29866b443a31b9a87a68d84114144dd8c21a9"
+    },
+    {
+      "path": "src/physics/v2/tuning.ts",
+      "sha256": "9e972b943eb3a49c17caaef20c64e62dc6a15dd43fd23b0778b5b879fa85ef3a"
+    },
+    {
+      "path": "src/physics/v2/rider.ts",
+      "sha256": "9414b044a9175f00a8af3d25d080550fedf6668404ab9a0731de4eec0fc62489"
+    },
+    {
+      "path": "src/physics/v2/engine.ts",
+      "sha256": "087797ef768af3f5f292df8d4583bf2d553d98d68311f8b3522c135bbd32beaa"
+    },
+    {
+      "path": "src/physics/v2/tyre.ts",
+      "sha256": "335b249e98295f708da1d3899527d09bd00b2a6b391de39b5e1fbfc7251b9498"
+    },
+    {
+      "path": "src/physics/collision.ts",
+      "sha256": "50dc3d78a86d991164e6f391af29b491437c47245a8d75835891141669dfaf2c"
+    },
+    {
+      "path": "src/physics/tuning.ts",
+      "sha256": "745b4b6edcad08df9cdaffbc16d740bb3887adc5f3de8d67a69462dbc863d6a0"
+    },
+    {
+      "path": "src/physics/dmath.ts",
+      "sha256": "b0f5e4536ba39ad4d1e53e4da9a9b89412f75594e206815e7ccc08f726f2893e"
+    },
+    {
+      "path": "src/core/rng.ts",
+      "sha256": "776d0713e1a6714809ee97311d228f5bd33fef592b8ae60aba9d806f08312fd3"
+    },
+    {
+      "path": "src/core/hash.ts",
+      "sha256": "f758f4dfb8bcb640f4b6ce2db7700643fc17f13a4fe7fe27d4de8e12ae7ae2a0"
+    },
+    {
+      "path": "src/core/riderGeometry.ts",
+      "sha256": "c613269c62a3f7f5e8e0c004bd7775e9f593ee92dfc24b111ede825ea9516011"
+    },
+    {
+      "path": "src/render/frame.ts",
+      "sha256": "c3460d6c2a0e0d4ccb5cd6bab24054e18ebbd9bc6e2ef0d0315b813285cd6d6a"
+    },
+    {
+      "path": "src/tracks/compile.ts",
+      "sha256": "9d3d1cac3cf06757e45be212e6a172f13307212bcb95607cedac43c39af48d32"
+    },
+    {
+      "path": "src/tracks/courses/beginner.ts",
+      "sha256": "929d70d78610f750708f1f14cd1686c45184b7c00ee98281752828f1513589a8"
+    },
+    {
+      "path": "src/tracks/author.ts",
+      "sha256": "71f398b332c412e31e7e34fbe5e8670539abb0e858815e9ac19fe1d402b9e1b3"
+    },
+    {
+      "path": "src/tracks/geometry.ts",
+      "sha256": "2698b394fb49145642576251ad56900e37ecc281f7a6cd30210fd643515e0be9"
+    },
+    {
+      "path": "src/tracks/kinds.ts",
+      "sha256": "ad003037d4e3c8e2363e759f445accc1f49ae94901af6826ef611580e53dadf0"
+    }
+  ],
+  "results": [
+    {
+      "bike": "rookie",
+      "steppedTicks": 1200,
+      "faultedTicks": 314,
+      "firstFaults": [
+        {
+          "tick": 887,
+          "reason": "out-of-bounds"
+        },
+        {
+          "tick": 888,
+          "reason": "out-of-bounds"
+        },
+        {
+          "tick": 889,
+          "reason": "out-of-bounds"
+        },
+        {
+          "tick": 890,
+          "reason": "out-of-bounds"
+        },
+        {
+          "tick": 891,
+          "reason": "out-of-bounds"
+        },
+        {
+          "tick": 892,
+          "reason": "out-of-bounds"
+        },
+        {
+          "tick": 893,
+          "reason": "out-of-bounds"
+        },
+        {
+          "tick": 894,
+          "reason": "out-of-bounds"
+        },
+        {
+          "tick": 895,
+          "reason": "out-of-bounds"
+        },
+        {
+          "tick": 896,
+          "reason": "out-of-bounds"
+        },
+        {
+          "tick": 897,
+          "reason": "out-of-bounds"
+        },
+        {
+          "tick": 898,
+          "reason": "out-of-bounds"
+        },
+        {
+          "tick": 899,
+          "reason": "out-of-bounds"
+        },
+        {
+          "tick": 900,
+          "reason": "out-of-bounds"
+        },
+        {
+          "tick": 901,
+          "reason": "out-of-bounds"
+        },
+        {
+          "tick": 902,
+          "reason": "out-of-bounds"
+        }
+      ],
+      "finite": true,
+      "allBodyAndDrawnPresent": true,
+      "poseIdsObserved": [
+        "back",
+        "forward"
+      ],
+      "ranges": {
+        "comWorldX": {
+          "minimum": -12.0662232393889,
+          "maximum": 0.4838272748830158,
+          "excursion": 12.550050514271916
+        },
+        "comWorldY": {
+          "minimum": -7.224959077902147,
+          "maximum": 1.3183449940199268,
+          "excursion": 8.543304071922075
+        },
+        "comChassisX": {
+          "minimum": -38.3671121944248,
+          "maximum": 55.939291940466106,
+          "excursion": 94.3064041348909
+        },
+        "comChassisY": {
+          "minimum": -64.09298886580271,
+          "maximum": 46.682984816504586,
+          "excursion": 110.7759736823073
+        },
+        "drawnHipX": {
+          "minimum": -42.34171642244425,
+          "maximum": 60.58331779129732,
+          "excursion": 102.92503421374157
+        },
+        "drawnHipY": {
+          "minimum": -68.55543558174269,
+          "maximum": 51.62905957077999,
+          "excursion": 120.18449515252267
+        },
+        "torsoRadians": {
+          "minimum": -14.92847886235803,
+          "maximum": 1.1344640137963142,
+          "excursion": 16.062942876154345
+        },
+        "effectiveLean": {
+          "minimum": -1,
+          "maximum": 1,
+          "excursion": 2
+        },
+        "bikeX": {
+          "minimum": -11.879392553103727,
+          "maximum": 0.6244619704208535,
+          "excursion": 12.50385452352458
+        },
+        "bikeY": {
+          "minimum": -71.94681345216054,
+          "maximum": 0.5768388001301092,
+          "excursion": 72.52365225229065
+        }
+      },
+      "samples": [
+        {
+          "name": "initial",
+          "tick": 0,
+          "timeSeconds": 0,
+          "commandedLean": 0,
+          "physicsHash": "53ffa642f34ac573",
+          "faulted": null,
+          "finished": false,
+          "finishTime": null,
+          "bike": {
+            "pos": {
+              "x": 0.5921550723081759,
+              "y": 0.4916785695390017
+            },
+            "vel": {
+              "x": 0,
+              "y": 0
+            },
+            "angle": 0.023977002138789442,
+            "angVel": 0
+          },
+          "rider": {
+            "lean": -0.009900315489308488,
+            "crouch": 0.058376073018405014,
+            "torsoPitch": 0,
+            "armExtend": 0.2136970680045652
+          },
+          "riderBody": {
+            "pos": {
+              "x": 0.4838272748830158,
+              "y": 1.0815735361460224
+            },
+            "angle": 0.023977002138789442,
+            "vel": {
+              "x": 0,
+              "y": 0
+            },
+            "angVel": 0,
+            "drawn": {
+              "pose": "back",
+              "blend": 0.009900315489308488,
+              "hips": {
+                "x": -0.3421900893970258,
+                "y": 0.7094128962402796
+              },
+              "torso": 1.1344640137963142,
+              "head": 1.4835298641951802
+            }
+          },
+          "renderFrameBody": {
+            "present": true,
+            "relX": -0.0941541025736934,
+            "relY": 0.5923225373829929,
+            "relAngle": 0,
+            "relUp": 0,
+            "angVel": 0,
+            "drawn": {
+              "present": true,
+              "pose": "back",
+              "blend": 0.009900315489308488,
+              "hipY": 0.7094128962402796,
+              "torso": 1.1344640137963142
+            }
+          }
+        },
+        {
+          "name": "neutral",
+          "tick": 240,
+          "timeSeconds": 2,
+          "commandedLean": 0,
+          "physicsHash": "c4382b9839376f1b",
+          "faulted": null,
+          "finished": false,
+          "finishTime": null,
+          "bike": {
+            "pos": {
+              "x": -1.2085279981175707,
+              "y": 0.4897545696007182
+            },
+            "vel": {
+              "x": -2.393006193780255,
+              "y": -0.0032285649158265177
+            },
+            "angle": 0.03405898399217856,
+            "angVel": 0.017845973314397166
+          },
+          "rider": {
+            "lean": -0.48242193353382545,
+            "crouch": 0.0360380062177712,
+            "torsoPitch": 0.017360073933443132,
+            "armExtend": 1
+          },
+          "riderBody": {
+            "pos": {
+              "x": -1.48162321699617,
+              "y": 1.0375361343358696
+            },
+            "angle": -0.419633402939847,
+            "vel": {
+              "x": -2.4050883003543118,
+              "y": -0.009218193573468952
+            },
+            "angVel": 0.012682300654356516,
+            "drawn": {
+              "pose": "back",
+              "blend": 0.48242193353382545,
+              "hips": {
+                "x": -0.6025460013592417,
+                "y": 0.7209675336711656
+              },
+              "torso": 0.6807716268642887,
+              "head": 1.1221571795732121
+            }
+          },
+          "renderFrameBody": {
+            "present": true,
+            "relX": -0.2542835602864792,
+            "relY": 0.5567634257079693,
+            "relAngle": -0.45369238693202557,
+            "relUp": -0.0010367926140434419,
+            "angVel": 0.012682300654356516,
+            "drawn": {
+              "present": true,
+              "pose": "back",
+              "blend": 0.48242193353382545,
+              "hipY": 0.7209675336711656,
+              "torso": 0.6807716268642887
+            }
+          }
+        },
+        {
+          "name": "forward",
+          "tick": 600,
+          "timeSeconds": 5,
+          "commandedLean": 1,
+          "physicsHash": "39fdafbbc09fac16",
+          "faulted": null,
+          "finished": false,
+          "finishTime": null,
+          "bike": {
+            "pos": {
+              "x": -7.315861055059236,
+              "y": 0.4883162733052742
+            },
+            "vel": {
+              "x": -2.439917465604547,
+              "y": -0.00014153282809886383
+            },
+            "angle": -0.040341810305063314,
+            "angVel": -0.0006237655994327832
+          },
+          "rider": {
+            "lean": 1,
+            "crouch": 0.05837030847087199,
+            "torsoPitch": 0.000057501711258844956,
+            "armExtend": 0
+          },
+          "riderBody": {
+            "pos": {
+              "x": -7.207126961205903,
+              "y": 1.230361586874079
+            },
+            "angle": -0.33710528485535823,
+            "vel": {
+              "x": -2.4398608342514416,
+              "y": -0.0000707342185509809
+            },
+            "angVel": -0.00014451332192572932,
+            "drawn": {
+              "pose": "forward",
+              "blend": 1,
+              "hips": {
+                "x": -0.14636765100925606,
+                "y": 0.9522721494857296
+              },
+              "torso": 0.8377005392460193,
+              "head": 1.2356586093852298
+            }
+          },
+          "renderFrameBody": {
+            "present": true,
+            "relX": 0.07871829342957232,
+            "relY": 0.745826910774254,
+            "relAngle": -0.29676347455029495,
+            "relUp": 0.0001221267615054226,
+            "angVel": -0.00014451332192572932,
+            "drawn": {
+              "present": true,
+              "pose": "forward",
+              "blend": 1,
+              "hipY": 0.9522721494857296,
+              "torso": 0.8377005392460193
+            }
+          }
+        },
+        {
+          "name": "backward",
+          "tick": 960,
+          "timeSeconds": 8,
+          "commandedLean": -1,
+          "physicsHash": "dc6c3c1a4d10c7b3",
+          "faulted": "out-of-bounds",
+          "finished": true,
+          "finishTime": null,
+          "bike": {
+            "pos": {
+              "x": -11.280592520148282,
+              "y": -16.86356387583032
+            },
+            "vel": {
+              "x": 0.9425877988067186,
+              "y": -17.505456892430438
+            },
+            "angle": 10.101691139205231,
+            "angVel": 6.204125131438995
+          },
+          "rider": {
+            "lean": -1,
+            "crouch": 1,
+            "torsoPitch": 0.9,
+            "armExtend": 1
+          },
+          "riderBody": {
+            "pos": {
+              "x": -12.0662232393889,
+              "y": -7.224959077902147
+            },
+            "angle": 5.819067467017918,
+            "vel": {
+              "x": 0,
+              "y": 0
+            },
+            "angVel": 0,
+            "drawn": {
+              "pose": "back",
+              "blend": 1,
+              "hips": {
+                "x": -5.886744702623532,
+                "y": -8.702022498320948
+              },
+              "torso": -3.1481596583909988,
+              "head": -2.868906978071906
+            }
+          },
+          "renderFrameBody": {
+            "present": true,
+            "relX": -5.425116780449756,
+            "relY": -8.005499734316464,
+            "relAngle": -4.282623672187313,
+            "relUp": 19.421997567533303,
+            "angVel": 0,
+            "drawn": {
+              "present": true,
+              "pose": "back",
+              "blend": 1,
+              "hipY": -8.702022498320948,
+              "torso": -3.1481596583909988
+            }
+          }
+        },
+        {
+          "name": "neutral-return",
+          "tick": 1200,
+          "timeSeconds": 10,
+          "commandedLean": 0,
+          "physicsHash": "3509c10ee074be34",
+          "faulted": "out-of-bounds",
+          "finished": true,
+          "finishTime": null,
+          "bike": {
+            "pos": {
+              "x": -9.827991733413773,
+              "y": -71.94681345216054
+            },
+            "vel": {
+              "x": 0.9847455255678912,
+              "y": -37.31746560719659
+            },
+            "angle": 21.882010343172265,
+            "angVel": 5.6115902602064
+          },
+          "rider": {
+            "lean": 1,
+            "crouch": 1,
+            "torsoPitch": 0.9,
+            "armExtend": 1
+          },
+          "riderBody": {
+            "pos": {
+              "x": -12.0662232393889,
+              "y": -7.224959077902147
+            },
+            "angle": 5.819067467017918,
+            "vel": {
+              "x": 0,
+              "y": 0
+            },
+            "angVel": 0,
+            "drawn": {
+              "pose": "forward",
+              "blend": 1,
+              "hips": {
+                "x": 10.01501460284543,
+                "y": -68.55543558174269
+              },
+              "torso": -14.92847886235803,
+              "head": -14.649226182038936
+            }
+          },
+          "renderFrameBody": {
+            "present": true,
+            "relX": 9.274529215283094,
+            "relY": -64.09298886580271,
+            "relAngle": -16.062942876154345,
+            "relUp": -89.03303674258063,
+            "angVel": 0,
+            "drawn": {
+              "present": true,
+              "pose": "forward",
+              "blend": 1,
+              "hipY": -68.55543558174269,
+              "torso": -14.92847886235803
+            }
+          }
+        }
+      ],
+      "finalHash": "3509c10ee074be34",
+      "physicsAndDerivedPoseTrajectorySHA256": "e57fe6926cc682612a236b82b468a07cf0e79ee8c52ada8b994bb264bdefbebc",
+      "repeatTrajectoryByteIdentical": true,
+      "repeatFinalHash": "3509c10ee074be34",
+      "comAndDrawnPoseVary": true
+    },
+    {
+      "bike": "pro",
+      "steppedTicks": 1200,
+      "faultedTicks": 431,
+      "firstFaults": [
+        {
+          "tick": 770,
+          "reason": "out-of-bounds"
+        },
+        {
+          "tick": 771,
+          "reason": "out-of-bounds"
+        },
+        {
+          "tick": 772,
+          "reason": "out-of-bounds"
+        },
+        {
+          "tick": 773,
+          "reason": "out-of-bounds"
+        },
+        {
+          "tick": 774,
+          "reason": "out-of-bounds"
+        },
+        {
+          "tick": 775,
+          "reason": "out-of-bounds"
+        },
+        {
+          "tick": 776,
+          "reason": "out-of-bounds"
+        },
+        {
+          "tick": 777,
+          "reason": "out-of-bounds"
+        },
+        {
+          "tick": 778,
+          "reason": "out-of-bounds"
+        },
+        {
+          "tick": 779,
+          "reason": "out-of-bounds"
+        },
+        {
+          "tick": 780,
+          "reason": "out-of-bounds"
+        },
+        {
+          "tick": 781,
+          "reason": "out-of-bounds"
+        },
+        {
+          "tick": 782,
+          "reason": "out-of-bounds"
+        },
+        {
+          "tick": 783,
+          "reason": "out-of-bounds"
+        },
+        {
+          "tick": 784,
+          "reason": "out-of-bounds"
+        },
+        {
+          "tick": 785,
+          "reason": "out-of-bounds"
+        }
+      ],
+      "finite": true,
+      "allBodyAndDrawnPresent": true,
+      "poseIdsObserved": [
+        "back",
+        "forward"
+      ],
+      "ranges": {
+        "comWorldX": {
+          "minimum": -13.17174636390921,
+          "maximum": 0.48228004558713183,
+          "excursion": 13.65402640949634
+        },
+        "comWorldY": {
+          "minimum": -6.8278973688894515,
+          "maximum": 1.329249419485296,
+          "excursion": 8.157146788374748
+        },
+        "comChassisX": {
+          "minimum": -57.1155762364524,
+          "maximum": 81.4368903048003,
+          "excursion": 138.5524665412527
+        },
+        "comChassisY": {
+          "minimum": -51.014964356611955,
+          "maximum": 68.68246924323604,
+          "excursion": 119.697433599848
+        },
+        "drawnHipX": {
+          "minimum": -62.29807233359241,
+          "maximum": 86.28480715576617,
+          "excursion": 148.5828794893586
+        },
+        "drawnHipY": {
+          "minimum": -53.48031189810155,
+          "maximum": 73.97007405494979,
+          "excursion": 127.45038595305134
+        },
+        "torsoRadians": {
+          "minimum": -15.201423898738316,
+          "maximum": 1.1344640137963142,
+          "excursion": 16.33588791253463
+        },
+        "effectiveLean": {
+          "minimum": -1,
+          "maximum": 1,
+          "excursion": 2
+        },
+        "bikeX": {
+          "minimum": -18.89447582692423,
+          "maximum": 0.6243272888208404,
+          "excursion": 19.51880311574507
+        },
+        "bikeY": {
+          "minimum": -93.08469578802044,
+          "maximum": 0.5818908023051043,
+          "excursion": 93.66658659032555
+        }
+      },
+      "samples": [
+        {
+          "name": "initial",
+          "tick": 0,
+          "timeSeconds": 0,
+          "commandedLean": 0,
+          "physicsHash": "a54c2bf845b48492",
+          "faulted": null,
+          "finished": false,
+          "finishTime": null,
+          "bike": {
+            "pos": {
+              "x": 0.5909643150709541,
+              "y": 0.5030795216390321
+            },
+            "vel": {
+              "x": 0,
+              "y": 0
+            },
+            "angle": 0.024563902385287984,
+            "angVel": 0
+          },
+          "rider": {
+            "lean": -0.00946643003894021,
+            "crouch": 0.05448355857716969,
+            "torsoPitch": 0,
+            "armExtend": 0.21271956525695443
+          },
+          "riderBody": {
+            "pos": {
+              "x": 0.48228004558713183,
+              "y": 1.0940786631693007
+            },
+            "angle": 0.024563902385287984,
+            "vel": {
+              "x": 0,
+              "y": 0
+            },
+            "angVel": 0,
+            "drawn": {
+              "pose": "back",
+              "blend": 0.00946643003894021,
+              "hips": {
+                "x": -0.34205719467721296,
+                "y": 0.7109214212048023
+              },
+              "torso": 1.1344640137963142,
+              "head": 1.4835298641951802
+            }
+          },
+          "renderFrameBody": {
+            "present": true,
+            "relX": -0.09413569653621867,
+            "relY": 0.5934902917153636,
+            "relAngle": 0,
+            "relUp": 0,
+            "angVel": 0,
+            "drawn": {
+              "present": true,
+              "pose": "back",
+              "blend": 0.00946643003894021,
+              "hipY": 0.7109214212048023,
+              "torso": 1.1344640137963142
+            }
+          }
+        },
+        {
+          "name": "neutral",
+          "tick": 240,
+          "timeSeconds": 2,
+          "commandedLean": 0,
+          "physicsHash": "1647e49a58f82f89",
+          "faulted": null,
+          "finished": false,
+          "finishTime": null,
+          "bike": {
+            "pos": {
+              "x": -1.7826333012836186,
+              "y": 0.5009945635136017
+            },
+            "vel": {
+              "x": -2.911115577147231,
+              "y": 0.0017532133284277657
+            },
+            "angle": 0.03372041353273034,
+            "angVel": 0.007475063053005063
+          },
+          "rider": {
+            "lean": -0.48741093384435746,
+            "crouch": 0.03535587044822708,
+            "torsoPitch": 0.01628997635359697,
+            "armExtend": 1
+          },
+          "riderBody": {
+            "pos": {
+              "x": -2.0558072965467984,
+              "y": 1.0490644017993485
+            },
+            "angle": -0.41890187581944904,
+            "vel": {
+              "x": -2.9165970192791995,
+              "y": -0.0011290806449509763
+            },
+            "angVel": 0.0037058992457038174,
+            "drawn": {
+              "pose": "back",
+              "blend": 0.48741093384435746,
+              "hips": {
+                "x": -0.6026836910018929,
+                "y": 0.7210087674016825
+              },
+              "torso": 0.6818417244441348,
+              "head": 1.123991632567234
+            }
+          },
+          "renderFrameBody": {
+            "present": true,
+            "relX": -0.25454106209804495,
+            "relY": 0.5569680664388323,
+            "relAngle": -0.4526222893521794,
+            "relUp": -0.0007931434913500896,
+            "angVel": 0.0037058992457038174,
+            "drawn": {
+              "present": true,
+              "pose": "back",
+              "blend": 0.48741093384435746,
+              "hipY": 0.7210087674016825,
+              "torso": 0.6818417244441348
+            }
+          }
+        },
+        {
+          "name": "forward",
+          "tick": 600,
+          "timeSeconds": 5,
+          "commandedLean": 1,
+          "physicsHash": "0736a6a077ad210c",
+          "faulted": null,
+          "finished": false,
+          "finishTime": null,
+          "bike": {
+            "pos": {
+              "x": -9.25469621905675,
+              "y": 0.5015293103514407
+            },
+            "vel": {
+              "x": -2.93407187284878,
+              "y": -0.0005597131693564409
+            },
+            "angle": -0.025224879982932123,
+            "angVel": -0.001167768209479521
+          },
+          "rider": {
+            "lean": 1,
+            "crouch": 0.05448516682465192,
+            "torsoPitch": 0.00003788775559210311,
+            "armExtend": 0
+          },
+          "riderBody": {
+            "pos": {
+              "x": -9.15745300619723,
+              "y": 1.2463060114923257
+            },
+            "angle": -0.3219687405775603,
+            "vel": {
+              "x": -2.9336446352320484,
+              "y": -0.0005754109597418736
+            },
+            "angVel": -0.000618074558780912,
+            "drawn": {
+              "pose": "forward",
+              "blend": 1,
+              "hips": {
+                "x": -0.14632749854573882,
+                "y": 0.9537103471695588
+              },
+              "torso": 0.837720153201686,
+              "head": 1.2356703777586298
+            }
+          },
+          "renderFrameBody": {
+            "present": true,
+            "relX": 0.0784273662060817,
+            "relY": 0.7469924532681159,
+            "relAngle": -0.2967438605946282,
+            "relUp": 0.00008666806331745924,
+            "angVel": -0.000618074558780912,
+            "drawn": {
+              "present": true,
+              "pose": "forward",
+              "blend": 1,
+              "hipY": 0.9537103471695588,
+              "torso": 0.837720153201686
+            }
+          }
+        },
+        {
+          "name": "backward",
+          "tick": 960,
+          "timeSeconds": 8,
+          "commandedLean": -1,
+          "physicsHash": "8ba644eaf1a02bf4",
+          "faulted": "out-of-bounds",
+          "finished": true,
+          "finishTime": null,
+          "bike": {
+            "pos": {
+              "x": -16.429426835078534,
+              "y": -41.38026486400797
+            },
+            "vel": {
+              "x": -1.8218400908119767,
+              "y": -29.44807650171828
+            },
+            "angle": 13.708998724741669,
+            "angVel": 5.256454434174896
+          },
+          "rider": {
+            "lean": 1,
+            "crouch": 0,
+            "torsoPitch": 0.9,
+            "armExtend": 1
+          },
+          "riderBody": {
+            "pos": {
+              "x": -13.17174636390921,
+              "y": -6.8278973688894515
+            },
+            "angle": 4.649440809954639,
+            "vel": {
+              "x": 0,
+              "y": 0
+            },
+            "angVel": 0,
+            "drawn": {
+              "pose": "forward",
+              "blend": 1,
+              "hips": {
+                "x": 36.16195169814239,
+                "y": 12.994997278322275
+              },
+              "torso": -7.925093900990715,
+              "head": -7.645841220671624
+            }
+          },
+          "renderFrameBody": {
+            "present": true,
+            "relX": 32.785856160836865,
+            "relY": 11.382715729160433,
+            "relAngle": -9.05955791478703,
+            "relUp": -161.7677468228572,
+            "angVel": 0,
+            "drawn": {
+              "present": true,
+              "pose": "forward",
+              "blend": 1,
+              "hipY": 12.994997278322275,
+              "torso": -7.925093900990715
+            }
+          }
+        },
+        {
+          "name": "neutral-return",
+          "tick": 1200,
+          "timeSeconds": 10,
+          "commandedLean": 0,
+          "physicsHash": "b6a42ec00b8cf42d",
+          "faulted": "out-of-bounds",
+          "finished": true,
+          "finishTime": null,
+          "bike": {
+            "pos": {
+              "x": -18.89447582692423,
+              "y": -93.08469578802044
+            },
+            "vel": {
+              "x": 0,
+              "y": 0
+            },
+            "angle": 20.98532872248927,
+            "angVel": 0
+          },
+          "rider": {
+            "lean": 1,
+            "crouch": 1,
+            "torsoPitch": 0.9,
+            "armExtend": 1
+          },
+          "riderBody": {
+            "pos": {
+              "x": -13.17174636390921,
+              "y": -6.8278973688894515
+            },
+            "angle": 4.649440809954639,
+            "vel": {
+              "x": 0,
+              "y": 0
+            },
+            "angVel": 0,
+            "drawn": {
+              "pose": "forward",
+              "blend": 1,
+              "hips": {
+                "x": 73.78608046419077,
+                "y": -53.48031189810155
+              },
+              "torso": -15.201423898738316,
+              "head": -14.922171218419221
+            }
+          },
+          "renderFrameBody": {
+            "present": true,
+            "relX": 69.78866897798719,
+            "relY": -51.014964356611955,
+            "relAngle": -16.33588791253463,
+            "relUp": 0,
+            "angVel": 0,
+            "drawn": {
+              "present": true,
+              "pose": "forward",
+              "blend": 1,
+              "hipY": -53.48031189810155,
+              "torso": -15.201423898738316
+            }
+          }
+        }
+      ],
+      "finalHash": "b6a42ec00b8cf42d",
+      "physicsAndDerivedPoseTrajectorySHA256": "416d52d833ae71c0610e914a0efffe16943ec4e88950b5c397b76ad8ca3853a0",
+      "repeatTrajectoryByteIdentical": true,
+      "repeatFinalHash": "b6a42ec00b8cf42d",
+      "comAndDrawnPoseVary": true
+    }
+  ],
+  "wallSeconds": 0.20865362500000004,
+  "limits": [
+    "Physics-only, no GPU/Blender/browser/selected mesh load. No rendered/native75/art or contact acceptance.",
+    "Direct physics preflight does not establish complete browser Game/render equivalence; actual captured gameplay remains required.",
+    "Observed derived pose variation does not establish equilibrium profile extrema, garment fit or seating quality."
+  ]
+}
