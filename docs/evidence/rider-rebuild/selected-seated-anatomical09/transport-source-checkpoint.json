@@ -1,0 +1,48 @@
+{
+  "accepted": false,
+  "status": "SOURCE_ONLY_PARENT_TRANSPORT_PENDING",
+  "files": {
+    "assets/blender/rider-rebuild/selected-seated-anatomical09/transport.mjs": "a55538b70e34aa0786231299f312e269be2ca0cb1895446600e01d87e4c1b1d6",
+    "assets/blender/rider-rebuild/selected-seated-anatomical09/run-transport.sh": "cbd8404a8ff717ff6c9c07cb02c50cc478a54eabf858f3b17d10c691dc769d2f"
+  },
+  "validation": {
+    "nodeCheck": "pass",
+    "bashSyntax": "pass",
+    "actualSourceReadOnlyPreflight": {
+      "editedIDsSeen": 2356,
+      "oldNativeVsOriginalGLBUniqueIDsRounded": 323,
+      "oldMaximumCoefficientULP": 2,
+      "oldMaximumCoefficientAbsoluteDifference": 1.1920928955078125e-07
+    },
+    "exportRun": false,
+    "heavyJobRun": false
+  },
+  "schema": {
+    "qualificationState": "UNACCEPTED_WEIGHT_INTERVENTION",
+    "previewClip": "Anatomical09WeightRestKey",
+    "diagnosticMotion": {
+      "kind": "native-weight-only",
+      "status": "UNACCEPTED_WEIGHT_INTERVENTION"
+    },
+    "weightDerivative": {
+      "kind": "native-regional-weight-only",
+      "sourcePins": [
+        "native",
+        "nativeReceipt",
+        "authoredRows",
+        "engineRider"
+      ]
+    },
+    "corrective": null,
+    "driver.garagePositionBike": [
+      0,
+      0,
+      0
+    ]
+  },
+  "limits": [
+    "Actual new changed native FOUR byte equality is separate from old engine05 native/export rounding and actual Three normalization.",
+    "Full-authored/Four displacement and topology-support-switch metrics are prepared for one seated and one diagnostic asymmetrical pose; no result exists yet.",
+    "GPU positions remain unmeasured; sampled actual Three CPU positions must stay within0.1mm of native witnesses."
+  ]
+}

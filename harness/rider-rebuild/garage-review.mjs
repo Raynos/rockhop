@@ -113,6 +113,10 @@ try {
         clipTime: rider.clip ? ((rider.stageTime % rider.clip.duration) + rider.clip.duration) % rider.clip.duration : null,
         correctiveTargets: rider.binding.meshes.filter(({ mesh }) => mesh.morphTargetDictionary?.SelectedSeatedCorrective06 !== undefined)
           .map(({ role, mesh }) => ({ role, name: mesh.name, weight: mesh.morphTargetInfluences[mesh.morphTargetDictionary.SelectedSeatedCorrective06] })),
+        runtimeCorrectiveInstalled: typeof rider.applyPoseCorrective === 'function',
+        actualMorphTargetCounts: rider.binding.meshes.map(({ role, mesh }) => ({ role,
+          positions: mesh.geometry.morphAttributes.position?.length ?? 0,
+          normals: mesh.geometry.morphAttributes.normal?.length ?? 0 })),
         boneLocalTRS };
     });
     assert.equal(diagnostic.boneLocalTRS.length, 75, 'Capture every actual native75 local TRS');
@@ -132,9 +136,16 @@ try {
       if (development) {
         assert(diagnostic.attachedToBikeFrame, 'Diagnostic remains attached to actual bike frame');
         assert.deepEqual(diagnostic.placementBike, [0, 0, 0], 'Saved author clip uses declared bike-local origin');
-        assert.equal(diagnostic.correctiveTargets.length, 5, 'Actual Jeans plus four Body corrective primitives');
-        assert(Number.isFinite(diagnostic.debug.correctiveWeight), 'Actual runtime corrective weight is finite');
-        for (const target of diagnostic.correctiveTargets) assert.equal(target.weight, diagnostic.debug.correctiveWeight);
+        if (development.receipt.diagnosticKind === 'native-weight-only') {
+          assert.equal(diagnostic.runtimeCorrectiveInstalled, false, 'Weight-only source has no corrective helper');
+          assert.equal(diagnostic.debug.correctiveWeight, undefined);
+          assert.equal(diagnostic.correctiveTargets.length, 0);
+          for (const target of diagnostic.actualMorphTargetCounts) assert.equal(target.positions + target.normals, 0, 'Weight-only source has no morph targets');
+        } else {
+          assert.equal(diagnostic.correctiveTargets.length, 5, 'Actual Jeans plus four Body corrective primitives');
+          assert(Number.isFinite(diagnostic.debug.correctiveWeight), 'Actual runtime corrective weight is finite');
+          for (const target of diagnostic.correctiveTargets) assert.equal(target.weight, diagnostic.debug.correctiveWeight);
+        }
       }
     } else {
       assert.equal(diagnostic.debug.stageClip, 'Riding IK/breathing', 'Default Garage uses the riding solver');
@@ -234,7 +245,7 @@ try {
     assert(report.clipCoverage.continuousRiderSeconds >= first.clipDuration, 'Continuous Garage film covers at least one whole native action cycle');
     assert(report.snapshots.every(row => row.clipDuration === first.clipDuration), 'Actual clip duration stays unchanged through orbit');
   }
-  if (development) report.correctiveCoverage = { minimumObserved: Math.min(...report.snapshots.map(row => row.debug.correctiveWeight)),
+  if (development?.receipt.diagnosticKind === 'failed-corrective') report.correctiveCoverage = { minimumObserved: Math.min(...report.snapshots.map(row => row.debug.correctiveWeight)),
     maximumObserved: Math.max(...report.snapshots.map(row => row.debug.correctiveWeight)),
     meaning: 'Five actual moving-frame readbacks; extrema are observed samples, not a claim that every endpoint was sampled.' };
 } catch (error) { report.failure = error.stack; process.exitCode = 1; }

@@ -35,17 +35,40 @@ export function observePrivateReloads(hot, events) {
   };
 }
 
+/** Exactly two declared unaccepted source diagnostics; neither enters comparison. */
+export function sourceDiagnosticKind(metadata, clip, allowFailedDiagnostic) {
+  assert(allowFailedDiagnostic, 'Unaccepted source requires --allow-failed-diagnostic');
+  assert.equal(metadata.accepted, false);
+  assert.equal(metadata.previewClip, clip); assert.equal(metadata.diagnosticMotion?.previewClip, clip);
+  assert.equal(metadata.diagnosticMotion?.accepted, false);
+  if (clip === 'Anatomical09WeightRestKey') {
+    assert.equal(metadata.qualificationState, 'UNACCEPTED_WEIGHT_INTERVENTION');
+    assert.equal(metadata.diagnosticMotion.status, 'UNACCEPTED_WEIGHT_INTERVENTION');
+    assert.equal(metadata.diagnosticMotion.kind, 'native-weight-only');
+    assert.equal(metadata.weightDerivative?.kind, 'native-regional-weight-only');
+    assert.equal(metadata.corrective, undefined, 'Weight-only source cannot reuse a corrective');
+    return 'native-weight-only';
+  }
+  assert.equal(clip, 'DiagnosticRestKey', 'Unknown source diagnostic clip');
+  assert.equal(metadata.qualificationState, 'FAILED_CORRECTIVE_GATES');
+  assert.equal(metadata.diagnosticMotion.status, 'FAILED_CORRECTIVE_GATES');
+  assert(metadata.corrective, 'Corrective diagnostic requires its declared activation');
+  return 'failed-corrective';
+}
+
 export async function createPrivateDevReview({ source, contractPath, allowFailedDiagnostic = false, comparison = false, clip }) {
   assert(!comparison, 'Source-mode diagnostic cannot enter comparison');
   const root = process.cwd(); source = path.resolve(source); contractPath = path.resolve(contractPath);
   const contractBytes = fs.readFileSync(contractPath), metadata = JSON.parse(contractBytes);
   const failed = typeof metadata.qualificationState === 'string' && metadata.qualificationState.startsWith('FAILED');
-  assert(!failed || allowFailedDiagnostic, 'FAILED source requires --allow-failed-diagnostic');
-  assert.equal(clip, 'DiagnosticRestKey', 'Source review currently supports only the declared diagnostic clip');
-  assert.equal(metadata.previewClip, clip); assert.equal(metadata.diagnosticMotion?.previewClip, clip);
-  assert.equal(metadata.diagnosticMotion?.accepted, false);
-  assert.equal(metadata.diagnosticMotion?.status, 'FAILED_CORRECTIVE_GATES');
-  assert(failed, 'Keep the diagnostic source explicitly FAILED');
+  const diagnosticKind = sourceDiagnosticKind(metadata, clip, allowFailedDiagnostic);
+  if (diagnosticKind === 'native-weight-only') {
+    for (const name of ['nativeReceipt', 'authoredRows']) {
+      const pin = metadata.weightDerivative.sourcePins?.[name];
+      assert(pin && typeof pin.path === 'string' && /^[a-f0-9]{64}$/.test(pin.sha256), `Declare weight source ${name}`);
+      assert.equal(await hashFile(path.resolve(root, pin.path)), pin.sha256, `Weight source changed: ${name}`);
+    }
+  }
   const sourceStat = fs.statSync(source), sourceSHA256 = await hashFile(source);
   assert.deepEqual(identity(fs.statSync(source)), identity(sourceStat), 'Selected source changed while hashing');
   assert.equal(metadata.glbSHA256, sourceSHA256); assert.equal(metadata.diagnosticMotion.outputSHA256, sourceSHA256);
@@ -149,11 +172,11 @@ export async function createPrivateDevReview({ source, contractPath, allowFailed
   const server = await createServer({ configFile: path.join(root, 'vite.config.ts'), root,
     plugins: [plugin, privateEnginePlugin(metadata)], server: { host: '127.0.0.1', port: 0, open: false }, logLevel: 'warn' });
   try { await server.listen(); } catch (error) { await server.close(); throw error; }
-  return { server, catalog, receipt: { mode: 'actual-vite-development-source', releaseBuild: false, failedDiagnostic: failed,
+  return { server, catalog, receipt: { mode: 'actual-vite-development-source', releaseBuild: false, failedDiagnostic: failed, diagnosticKind,
     source: { path: source, bytes: sourceStat.size, sha256: sourceSHA256, url: selectedURL },
     contract: { path: contractPath, sha256: sha(contractBytes) }, runtimeMetadataSHA256: sha(JSON.stringify(metadata)),
     runtime: { qualificationState: metadata.qualificationState, previewClip: metadata.previewClip,
-      driver: metadata.driver, corrective: metadata.corrective, selectedRiderSource: metadata.selectedRiderSource },
+      driver: metadata.driver, corrective: metadata.corrective, weightDerivative: metadata.weightDerivative, selectedRiderSource: metadata.selectedRiderSource },
     catalogSHA256: sha(catalogBytes), placement, pins, optimizeDepsInclude: server.config.optimizeDeps.include, serverEvents,
     performanceMeaning: 'Actual rendered-frame measurements from a Vite development server; not a production build or production performance qualification. Production bundle gates remain open.' } };
 }
