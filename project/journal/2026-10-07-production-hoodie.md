@@ -19,3 +19,10 @@ Finding: identify actual grid additions by polygon vertex cycles, not propagated
 Validation: parent source review, AST, frozen source hash and five input pins pass. Actual author rerun remains unexecuted.
 
 Limits: API bookkeeping correction only; selected shape controls unchanged, fit and moving art open.
+
+
+Finding: actual hoodie Grid Fill creates zero faces despite FINISHED, so selection bookkeeping is proved misleading and no patch is built.
+
+Validation: exit1 after1.629s,72boundaryvertices,0newfaces,12selectedexistingtriangles; parent rehashed preserved fit and inspected exact diagnostics.
+
+Limits: no completed rigged hoodie or bake; actual Edit Mode boundary selection must create a real patch before fit review.

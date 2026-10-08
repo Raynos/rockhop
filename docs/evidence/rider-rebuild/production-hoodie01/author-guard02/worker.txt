@@ -1,0 +1,21 @@
+00:00.910  blend            | Read blend: "/Users/raynos/projects/games/rockhop/harness/out/rider-rebuild/native-hand-repair01/native02/anatomical-hand-rig.blend"
+Traceback (most recent call last):
+  File "/Users/raynos/projects/games/rockhop/assets/blender/rider-rebuild/production-hoodie01/author.py", line 612, in <module>
+    main()
+    ~~~~^^
+  File "/Users/raynos/projects/games/rockhop/assets/blender/rider-rebuild/production-hoodie01/author.py", line 602, in main
+    author(spec, out)
+    ~~~~~~^^^^^^^^^^^
+  File "/Users/raynos/projects/games/rockhop/assets/blender/rider-rebuild/production-hoodie01/author.py", line 427, in author
+    topology = rebuild_axilla(obj, spec, targets, patch_diagnostics)
+  File "/Users/raynos/projects/games/rockhop/assets/blender/rider-rebuild/production-hoodie01/author.py", line 262, in rebuild_axilla
+    assert new_faces and all(len(f.vertices) == 4 for f in new_faces), \
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('Axilla grid did not create quad deformation loops', 'L')
+Info: Saved as "proportional-fit-before-patch.blend"
+
+Error: script failed, file: 'assets/blender/rider-rebuild/production-hoodie01/author.py', exiting.
+Blender 5.2.1 LTS (hash 9e2066aef7ef built 2026-08-25 01:35:57)
+scripts disabled for "/Users/raynos/projects/games/rockhop/harness/out/rider-rebuild/native-hand-repair01/native02/anatomical-hand-rig.blend", skipping 'RIG-RiderMetarig_ui.py'
+
+Blender quit

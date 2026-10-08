@@ -1,0 +1,30 @@
+{
+  "accepted": false,
+  "stage": "AXILLA_TOPOLOGY_FAILED_FITTED_NATIVE_PRESERVED",
+  "recipeSHA256": "4bd21f23efc5eb6096e51b17e036b43061394a059f62f9e5d0a834cb2300bfc2",
+  "fittedNative": {
+    "path": "/Users/raynos/projects/games/rockhop/harness/out/rider-rebuild/production-hoodie01/author02/proportional-fit-before-patch.blend",
+    "sha256": "d04701f0c3fdaa270e8a30c62da7c707a1a9ed99e466003f4bd3cddc1fa655b2"
+  },
+  "gridFillDiagnostics": [
+    {
+      "side": "L",
+      "boundaryVertices": 72,
+      "operatorResult": [
+        "FINISHED"
+      ],
+      "existingPolygonsBefore": 19330,
+      "actualAddedPolygons": 0,
+      "actualAddedQuads": 0,
+      "actualAddedNonQuads": 0,
+      "selectedExistingPolygons": 12,
+      "selectedExistingTriangles": 12,
+      "selectedActualAddedPolygons": 0,
+      "faceIdentity": "Unordered polygon vertex cycles absent before grid fill"
+    }
+  ],
+  "failure": {
+    "type": "AssertionError",
+    "message": "('Axilla grid did not create quad deformation loops', 'L')"
+  }
+}

@@ -1,4 +1,4 @@
-# Selected hoodie author source — unaccepted API correction
+# Selected hoodie author source — two unaccepted author failures
 
 `assets/blender/rider-rebuild/production-hoodie01/author.py` clones the actual
 selected25 mesh/materials into the complete native02 wearer. Source masters are
@@ -23,9 +23,11 @@ Frozen first author trial `author01` exited 1 after 1.747 seconds, after saving
 the actual proportional fit. Grid fill returned successfully, but the old
 selected-face check included non-quads. The source-only API correction records
 polygon vertex cycles before grid fill and checks only genuinely added cycles.
-Its next execution will record existing selected triangles separately from
-actual added quads/non-quads, so selection bookkeeping is measured rather than
-assumed. No fit, topology control or previous failure artifact was changed.
+The second frozen execution recorded 12 existing selected triangles and zero
+added faces for its first 72-vertex boundary, despite a `FINISHED` operator
+result. Thus selection bookkeeping was misleading, but no actual quad patch
+was produced. Both actual fitted natives and failure receipts are retained.
+No fit, topology control or previous failure artifact was changed.
 
 The complete body remains visible and its vertices, polygons, fields and rig
 rest are fingerprinted before/after. Hood/collar volume, torso folds, cuffs, hem
@@ -60,8 +62,9 @@ and grants a bounded serial CPU2 lease. Each fresh output leaf is private.
 ```
 
 Validation: Python AST parsed; all five immutable input hashes match the
-[source receipt](source-checkpoint.json). The bookkeeping correction is unexecuted;
-the [first failed trial](author01-result.json) and its actual saved fit are retained.
+[source receipt](source-checkpoint.json). The [first failed trial](author01-result.json)
+and [second failed trial](author02-result.json) retain their actual saved fits.
+No rigged completed author native exists; no third experiment was launched.
 No dense bake, collision claim, moving-art judgment or normal-player promotion.
 The parent alone judges played complete-outfit native and actual Garage/game
 evidence. One authored pass and at most one shape repair remain the limit.

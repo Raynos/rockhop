@@ -1,0 +1,59 @@
+{
+  "accepted": false,
+  "sourceFrozenSHA256": "4bd21f23efc5eb6096e51b17e036b43061394a059f62f9e5d0a834cb2300bfc2",
+  "controlsSHA256": "ae90f988b1a3b5f020d540cddd677a8a6286e6e2e3e7afb08733b5b7470aff28",
+  "authorExitCode": 1,
+  "elapsedSeconds": 1.629,
+  "workerTextSHA256": "c56513b7db37f3cf7f70999f69e5b83c3f628b2d77786e2e7f30ceade350eb0d",
+  "fitBeforePatch": {
+    "accepted": false,
+    "stage": "SELECTED_FIT_SAVED_BEFORE_AXILLA_TOPOLOGY",
+    "native": {
+      "path": "/Users/raynos/projects/games/rockhop/harness/out/rider-rebuild/production-hoodie01/author02/proportional-fit-before-patch.blend",
+      "sha256": "d04701f0c3fdaa270e8a30c62da7c707a1a9ed99e466003f4bd3cddc1fa655b2"
+    },
+    "targetObject": "RiderHoodie",
+    "targetGeometrySHA256": "6dad7faf39459c017e93571783da4b1bc50227da4cf9295510bce729215f4ff0",
+    "recipeSHA256": "4bd21f23efc5eb6096e51b17e036b43061394a059f62f9e5d0a834cb2300bfc2",
+    "sourceNativeSHA256": "c732d98076f6b9b1a209a45e8a0cddf793484807ea8b3ae9011fa4f82c151df0",
+    "bodyAnd75RigUnchanged": true,
+    "limits": [
+      "Unrigged proportional fit only; topology, bake and motion remain pending."
+    ]
+  },
+  "patchFailure": {
+    "accepted": false,
+    "stage": "AXILLA_TOPOLOGY_FAILED_FITTED_NATIVE_PRESERVED",
+    "recipeSHA256": "4bd21f23efc5eb6096e51b17e036b43061394a059f62f9e5d0a834cb2300bfc2",
+    "fittedNative": {
+      "path": "/Users/raynos/projects/games/rockhop/harness/out/rider-rebuild/production-hoodie01/author02/proportional-fit-before-patch.blend",
+      "sha256": "d04701f0c3fdaa270e8a30c62da7c707a1a9ed99e466003f4bd3cddc1fa655b2"
+    },
+    "gridFillDiagnostics": [
+      {
+        "side": "L",
+        "boundaryVertices": 72,
+        "operatorResult": [
+          "FINISHED"
+        ],
+        "existingPolygonsBefore": 19330,
+        "actualAddedPolygons": 0,
+        "actualAddedQuads": 0,
+        "actualAddedNonQuads": 0,
+        "selectedExistingPolygons": 12,
+        "selectedExistingTriangles": 12,
+        "selectedActualAddedPolygons": 0,
+        "faceIdentity": "Unordered polygon vertex cycles absent before grid fill"
+      }
+    ],
+    "failure": {
+      "type": "AssertionError",
+      "message": "('Axilla grid did not create quad deformation loops', 'L')"
+    }
+  },
+  "finding": "First observed boundary has 72 vertices; operator reports FINISHED but adds 0 faces. The 12 selected existing polygons are all triangles. New-face cycle bookkeeping proves selection includes existing triangles, but no actual quad patch was made. No success or purely-bookkeeping recovery can be claimed.",
+  "heavyLeaseReleased": true,
+  "bakeExecuted": false,
+  "shapeChanged": false,
+  "additionalExperimentLaunched": false
+}

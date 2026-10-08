@@ -1263,3 +1263,5 @@ October 7 required current-player Metal check02: silent boot/clear/crash/restart
 October 7 hoodie source correction: actual added polygon cycles replace selection state as the grid-face identity. Receipts distinguish existing selected triangles from new quads. Parent AST, frozen source and five input pins pass; no shape control change or executed rerun yet.
 
 October 7 connected glove-region source checkpoint: parent reviewed direct face-region pads/ribs, independent L/R hands, distal cuff fields and early-save architecture. Frozen source/AST/all11 input pins match. Actual Blender author is unexecuted; selected appearance and FULL/FOUR deformation remain open.
+
+October 7 hoodie author02 failure: actual diagnostics prove Grid Fill created zero faces despite FINISHED and selected12 existing triangles. Selected proportional fit d04701f0…655b2 remains preserved. No rigged hoodie or bake. Correct actual Edit Mode boundary selection before any further shape claim.
