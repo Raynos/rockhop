@@ -1473,3 +1473,5 @@ October8 actual jeans paired-triangle capture succeeds CPU2 exit0/79.503s: six m
 October8 glove solver failure independently traced to float-epsilon cotangent areas:542 unanchored zero columns per placed dense hand. Freeze one selected-derived guide in original units then dense Surface Deform, preserve solved native before postgate. Root read source/pins; actual wearing/PBR/grip unaccepted.
 
 October8 proper expanded hoodie axilla pattern frozen: coupled front/rear sewn panels replace2743 failed/support faces, keep outside selected PBR/geometry. Correct measured airspace seam gives0 predicted quad-fan/body-point/body-center failures. Root source/pins read; actual native/PBR still unexecuted and unaccepted.
+
+October8 actual selected-source-unit guide solves both hands with7697 moving nonanchors each; right dense transfer saved. Left SurfaceDeform rejects invalid polygons, actual exit1/25.378s. Keep recoverable guides/right result, diagnose specific left target defect; PBR fit/grip and player unaccepted.

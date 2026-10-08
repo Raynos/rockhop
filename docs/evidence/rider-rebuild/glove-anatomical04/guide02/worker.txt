@@ -1,0 +1,23 @@
+00:02.835  blend            | Read blend: "/Users/raynos/projects/games/rockhop/harness/out/rider-rebuild/production-authoring01/conditioned-neck02/editable-real-source-outfit.blend"
+Blender 5.2.1 LTS (hash 9e2066aef7ef built 2026-08-25 01:35:57)
+scripts disabled for "/Users/raynos/projects/games/rockhop/harness/out/rider-rebuild/production-authoring01/conditioned-neck02/editable-real-source-outfit.blend", skipping 'RIG-RiderMetarig_ui.py'
+Info: Saved as "guide-sculpt-R.blend"
+{"savedActualGuide": "R", "nonanchorMovementRMS": 0.15691338302103428}
+Info: Saved as "editable-selected-bilateral-gloves.blend"
+Info: Saved as "guide-sculpt-L.blend"
+{"savedActualGuide": "L", "nonanchorMovementRMS": 0.15645970365624134}
+Traceback (most recent call last):
+  File "/Users/raynos/projects/games/rockhop/assets/blender/rider-rebuild/glove-anatomical04/author_guide02.py", line 251, in <module>
+    main()
+    ~~~~^^
+  File "/Users/raynos/projects/games/rockhop/assets/blender/rider-rebuild/glove-anatomical04/author_guide02.py", line 239, in main
+    report['hands'][side] = author(side, control, frozen, guide, dense, native, core, out, rig)
+                            ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/raynos/projects/games/rockhop/assets/blender/rider-rebuild/glove-anatomical04/author_guide02.py", line 183, in author
+    assert transfer.is_bound, 'Dense selected Surface Deform did not bind'
+           ^^^^^^^^^^^^^^^^^
+AssertionError: Dense selected Surface Deform did not bind
+
+Error: script failed, file: 'assets/blender/rider-rebuild/glove-anatomical04/author_guide02.py', exiting.
+
+Blender quit

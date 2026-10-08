@@ -24,3 +24,10 @@ Finding: Dense Laplacian failure has a measured numerical cause: Blender float-e
 Validation: Root read official5.2.1 equation and independently reproduced area audit; guide has zero suppressed triangles/zero inactive vertices. Root read whole source and required save-before-postgate plus report-only residual. Sources compile and exact pins pass.
 
 Limits: Frozen unexecuted guide remedy; modifier success and anatomical target ownership cannot prove selected-PBR wearing fit or grip.
+
+
+Finding: Actual source-unit guide solve succeeds for both hands; right original dense SurfaceDeform transfers/saves. Left transfer rejects invalid target polygons.
+
+Validation: CPU2 exit1/25.378s; both actual guides saved, no Laplacian errors, all7697 free vertices move on each. Actual left C warning retained; no bypass.
+
+Limits: Right actual PBR review pending; left source-specific bind defect under diagnosis; no bilateral fit/grip acceptance.
