@@ -1849,3 +1849,5 @@ Gate35 actual Metal passes replay/crash/restart but fails ready P50319.03ms agai
 Native action review source now requires the exact six successful native records and seven source pins, uses declared beside-bike presentation, holds the initial frame2s and clamps the five one-shot actions to retain root travel. Six CPU checks pass. Actual native-action transport and dressed played review remain pending.
 
 Volume04 actual transport passes4.48s with exact original BIN/maps/rest/75binds and all66,663 exported Body/Jeans rows. Both-bike native endpoints and byte-identical return pass unchanged bounds. Fresh dressed Garage playback is next; full anatomical companion/contact/shading/device and art remain open.
+
+Motion11 transport source freezes the exact six saved native actions and selected weight02 dressed rider. Parent source review, syntax and11actual input pins pass. Original meshes/maps/BIN/rest/binds must stay exact; actual transport and dressed action playback remain pending.

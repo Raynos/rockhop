@@ -1,0 +1,122 @@
+{
+  "accepted": false,
+  "status": "SOURCE_FROZEN_TRANSPORT_NOT_EXECUTED",
+  "recipe": {
+    "path": "assets/blender/rider-rebuild/selected-authoring-motion11/transport.mjs",
+    "sha256": "81bbdfa70375d66bded9ee69c6870c07c65bbb0b9777153285fbd3121b6721c8"
+  },
+  "input": {
+    "path": "assets/blender/rider-rebuild/selected-authoring-motion11/transport-weight02.input.json",
+    "sha256": "303588ec73ab8194bb10cf74c5af59eef434ee18b86685130896874e3c95abfa"
+  },
+  "nativeReceipt": {
+    "path": "harness/out/rider-rebuild/selected-authoring-motion11/native05/receipt.json",
+    "sha256": "42b8e87174d4fddd535a4aa1ed68075456ee19765ada3cd07e10ef53b4954f45"
+  },
+  "nativeConstructionStatus": "NATIVE_CONTROL_ACTION_PACKAGE_UNACCEPTED",
+  "selectedRider": {
+    "path": "harness/out/rider-rebuild/selected-seated-anatomical09/transport02/rider.glb",
+    "sha256": "ff9d78e2c5c40a4be1218b57611c5e71db10a2de7b636ec1589358176f907a0f"
+  },
+  "selectedContract": {
+    "path": "harness/out/rider-rebuild/selected-seated-anatomical09/transport02/rider-contract.json",
+    "sha256": "98fc88c05d2ae45112f94aed28704a02867513bd10483fd86fdc5d60b03558ba"
+  },
+  "invocation": [
+    "node",
+    "--import",
+    "tsx",
+    "assets/blender/rider-rebuild/selected-authoring-motion11/transport.mjs",
+    "assets/blender/rider-rebuild/selected-authoring-motion11/transport-weight02.input.json",
+    "harness/out/rider-rebuild/selected-authoring-motion11/transport01"
+  ],
+  "parentGuard": {
+    "required": true,
+    "wallLimitSeconds": 180,
+    "estimatedWallSeconds": [
+      30,
+      90
+    ],
+    "estimateIsMeasured": false,
+    "memoryNote": "Complete selected 358 MB GLB is decoded through the production CPU loader; parent serial headroom guard remains required."
+  },
+  "lightweightValidation": {
+    "syntax": "node --check: exit 0",
+    "dependencyImports": "node --import tsx module import: exit 0 without invoking main",
+    "all11InputSHA256Pins": "streamed and verified against actual local artifacts",
+    "actualTransport": "NOT_EXECUTED",
+    "actualGaragePlayback": "NOT_EXECUTED",
+    "artAcceptance": "OPEN",
+    "deviceAcceptance": "OPEN"
+  },
+  "actions": [
+    {
+      "name": "RiderIdle",
+      "seconds": 3.0,
+      "nativeFrames": 73,
+      "runtimeKeysAndMidpoints": 145,
+      "leadInSeconds": 2,
+      "playback": "LOOP"
+    },
+    {
+      "name": "RiderWalk",
+      "seconds": 1.25,
+      "nativeFrames": 31,
+      "runtimeKeysAndMidpoints": 61,
+      "leadInSeconds": 2,
+      "playback": "ONCE"
+    },
+    {
+      "name": "RiderJog",
+      "seconds": 0.75,
+      "nativeFrames": 19,
+      "runtimeKeysAndMidpoints": 37,
+      "leadInSeconds": 2,
+      "playback": "ONCE"
+    },
+    {
+      "name": "RiderTurn90",
+      "seconds": 3.0,
+      "nativeFrames": 73,
+      "runtimeKeysAndMidpoints": 145,
+      "leadInSeconds": 2,
+      "playback": "ONCE"
+    },
+    {
+      "name": "RiderJumpLand",
+      "seconds": 2.5,
+      "nativeFrames": 61,
+      "runtimeKeysAndMidpoints": 121,
+      "leadInSeconds": 2,
+      "playback": "ONCE"
+    },
+    {
+      "name": "RiderRangeOfMotion",
+      "seconds": 12.0,
+      "nativeFrames": 289,
+      "runtimeKeysAndMidpoints": 577,
+      "leadInSeconds": 2,
+      "playback": "ONCE"
+    }
+  ],
+  "outputContract": {
+    "qualificationState": "UNACCEPTED_NATIVE_ACTION_LIBRARY",
+    "previewClip": "RiderIdle",
+    "nativeAuthoringMotion": {
+      "accepted": false,
+      "kind": "native-control-action-library",
+      "actions": "Exact six successful native receipt records, including independent native support witnesses",
+      "presentation": {
+        "positionBike": [
+          -0.6,
+          -0.34,
+          0.65
+        ],
+        "meaning": "Generic action inspection beside bike using existing standing-clip Garage presentation; not normal Garage seated riding"
+      }
+    }
+  },
+  "preservation": "Selected GLB meshes, images, materials, attributes, skin weights, original BIN bytes, original accessors, original actions, named hierarchy and inverse binds preserved. Base contract driver, diagnosticMotion and weight/shape derivatives retained unchanged.",
+  "guardedProof": "Before writing: successful native receipt, exact source pins, all original 75 hierarchy/native rest/named inverse binds, native keys and runtime midpoint paired skin operators. After writing: full dressed production loader, all six clips, every native key and runtime midpoint, all 75 skin-operator affine bounds and corner points, paired support bounds. Original 0.1 mm limit retained.",
+  "baseRebind": "A later actual volume derivative may replace only sourceGLB/sourceContract pins in a new input file after parent source review. Current manifest pins actual weight02."
+}
