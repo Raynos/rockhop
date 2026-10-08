@@ -38,3 +38,14 @@ export const inspectPreparedRiderMaterials = () => {
   });
   return rows;
 };
+
+/** Cheap inventory once per review; kept out of the player controller bundle. */
+export const inspectRiderMaterialInventory = () => window.__render.debug.rider.materials.map(material => ({
+  name: material.name, baseColor: material.color?.toArray(),
+  roughness: material.roughness, metalness: material.metalness,
+  maps: Object.fromEntries(['map', 'normalMap', 'roughnessMap', 'metalnessMap'].map(key => {
+    const texture = material[key], data = texture?.source?.data;
+    return [key, texture ? { loaded: !!data, width: data?.width ?? null, height: data?.height ?? null,
+      colorSpace: texture.colorSpace } : null];
+  })),
+}));

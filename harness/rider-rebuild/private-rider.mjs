@@ -17,15 +17,15 @@ const sanitize = name => THREE.PropertyBinding.sanitizeNodeName(name);
 
 function loadedSpecification(metadata, scene) {
   const spec = structuredClone(metadata.specification ?? metadata.spec);
-  fail(spec, 'Missing author specification');
+  fail(spec, 'Author specification required');
   spec.jointNames = Object.fromEntries(Object.entries(spec.jointNames).map(([id, name]) => [id, sanitize(name)]));
   const parts = {};
   // A declared author object can become a Group of material primitives in GLTFLoader.
   // Resolve its exact node, then enumerate its actual descendants; never infer roles.
   for (const [role, name] of Object.entries(spec.meshNames)) {
-    const nodes = []; scene.traverse(node => { if (node.name === sanitize(name)) nodes.push(node); });
-    fail(nodes.length === 1, `Missing/ambiguous declared object ${name}`);
-    const skins = []; nodes[0].traverse(node => { if (node.isSkinnedMesh) skins.push(node); });
+    const nodes = scene.getObjectsByProperty('name', sanitize(name));
+    fail(nodes.length === 1, `Object ${name}: expected one node`);
+    const skins = nodes[0].getObjectsByProperty('isSkinnedMesh', true);
     skins.forEach((skin, index) => { parts[skins.length === 1 ? role : `${role}.primitive${index}`] = skin.name; });
   }
   spec.meshNames = parts;
@@ -37,7 +37,7 @@ function loadedSpecification(metadata, scene) {
 function alignPalm(forward, normal, wantedForward, wantedNormal) {
   const basis = (f, n) => {
     const x = f.clone().normalize(), y = n.clone().addScaledVector(x, -n.dot(x)).normalize();
-    fail(x.lengthSq() > 0.99 && y.lengthSq() > 0.99, 'Degenerate palm orientation');
+    fail(x.lengthSq() > 0.99 && y.lengthSq() > 0.99, 'Degenerate palm axes');
     return new THREE.Matrix4().makeBasis(x, y, V().crossVectors(x, y));
   };
   return Q().setFromRotationMatrix(basis(wantedForward, wantedNormal).multiply(basis(forward, normal).invert()));
@@ -68,14 +68,14 @@ export function createPrivateRiderClass(metadata) {
     soleFrames = new Map();
 
     constructor(gltf, lib) {
-      fail(metadata.driver?.assetToBikeQuaternionXYZW?.length === 4, 'Declare asset-to-bike orientation');
+      fail(metadata.driver?.assetToBikeQuaternionXYZW?.length === 4, 'assetToBikeQuaternionXYZW required');
       this.source = gltf;
       this.scene = cloneSkeleton(gltf.scene);
       this.binding = bindHumanoidContract(this.scene, captureHumanoidContract(this.scene, loadedSpecification(metadata, this.scene)));
       this.roles = this.binding.contract.roles;
       this.driver = metadata.driver;
       for (const role of ['pelvis', 'trunk', 'head', ...SIDES.flatMap(side => ['upperArm', 'forearm', 'wrist', 'thigh', 'shin', 'foot'].map(role => role + suffix(side)))]) {
-        fail(ids(this.roles[role]).length, `Missing calibrated role ${role}`);
+        fail(ids(this.roles[role]).length, `Role ${role} required`);
       }
       const materialCopies = new Map();
       this.scene.traverse(node => {
@@ -106,15 +106,9 @@ export function createPrivateRiderClass(metadata) {
         roles: structuredClone(this.roles), meshRoles: this.binding.meshes.map(({ role, mesh }) => ({ role, name: mesh.name })),
         authorMeshRoles: structuredClone((metadata.specification ?? metadata.spec).meshNames), visibleMeshes: [],
         jointNames: Object.fromEntries([...this.binding.byId].map(([id, bone]) => [id, bone.name])),
-        contractSchema: this.binding.contract.schema, geometry: 'author FOUR unchanged; no legacy sleeve conditioning',
+        contractSchema: this.binding.contract.schema, geometry: 'Unchanged author FOUR',
         massApproximation: this.anthropometry.approximation,
-        materials: this.materials.map(material => ({ name: material.name, baseColor: material.color?.toArray(),
-          roughness: material.roughness, metalness: material.metalness,
-          maps: Object.fromEntries(['map', 'normalMap', 'roughnessMap', 'metalnessMap'].map(key => {
-            const texture = material[key], data = texture?.source?.data;
-            return [key, texture ? { loaded: !!data, width: data?.width ?? null, height: data?.height ?? null,
-              colorSpace: texture.colorSpace } : null];
-          })) })),
+
       };
       this.scene.traverse(node => {
         if (node.isMesh) this.debug.candidate.visibleMeshes.push({ name: node.name, skinned: !!node.isSkinnedMesh, triangles: (node.geometry.index?.count ?? node.geometry.attributes.position.count) / 3 });
@@ -122,11 +116,11 @@ export function createPrivateRiderClass(metadata) {
       const selectedClip = metadata.previewClip ?? (typeof location === 'object' ? new URLSearchParams(location.search).get('riderClip') : null) ?? this.driver.garageClip;
       if (selectedClip) {
         const clip = gltf.animations.find(item => item.name === selectedClip);
-        fail(clip, `Missing explicitly requested clip ${selectedClip}`);
+        fail(clip, `Clip ${selectedClip} required`);
         this.clip = clip;
         this.clipTracks = clip.tracks.map(track => {
           const parsed = THREE.PropertyBinding.parseTrackName(track.name), node = this.binding.exact(parsed.nodeName);
-          fail(['position', 'quaternion', 'scale'].includes(parsed.propertyName), `Unsupported stored clip property ${track.name}`);
+          fail(['position', 'quaternion', 'scale'].includes(parsed.propertyName), `Invalid clip property ${track.name}`);
           return { node, property: parsed.propertyName, interpolant: track.createInterpolant(), original: node[parsed.propertyName].clone() };
         });
       }
@@ -155,43 +149,46 @@ export function createPrivateRiderClass(metadata) {
     position(id) { return this.toBike(this.bone(id).getWorldPosition(V())); }
 
     calibrateSide(side) {
-      const s = suffix(side), upper = this.role('upperArm' + s), forearm = this.role('forearm' + s), wrist = this.role('wrist' + s);
-      const thigh = this.role('thigh' + s), shin = this.role('shin' + s), foot = this.role('foot' + s);
-      this.limbs.set('arm' + s, { upper, lower: forearm, end: wrist, upperIds: ids(this.roles['upperArm' + s]), lowerIds: ids(this.roles['forearm' + s]),
-        lengths: [this.restP.get(upper).distanceTo(this.restP.get(forearm)), this.restP.get(forearm).distanceTo(this.restP.get(wrist))] });
-      this.limbs.set('leg' + s, { upper: thigh, lower: shin, end: foot, upperIds: ids(this.roles['thigh' + s]), lowerIds: ids(this.roles['shin' + s]),
-        lengths: [this.restP.get(thigh).distanceTo(this.restP.get(shin)), this.restP.get(shin).distanceTo(this.restP.get(foot))] });
-      const hand = this.binding.contract.hands[side]; fail(hand, `Missing ${side} hand calibration`);
+      const s = suffix(side), wrist = this.role('wrist' + s), foot = this.role('foot' + s);
+      const limb = (kind, upperRole, lowerRole, end) => {
+        const upperIds = ids(this.roles[upperRole + s]), lowerIds = ids(this.roles[lowerRole + s]);
+        const upper = first(upperIds), lower = first(lowerIds);
+        this.limbs.set(kind + s, { upper, lower, end, upperIds, lowerIds,
+          lengths: [this.restP.get(upper).distanceTo(this.restP.get(lower)), this.restP.get(lower).distanceTo(this.restP.get(end))] });
+      };
+      limb('arm', 'upperArm', 'forearm', wrist);
+      limb('leg', 'thigh', 'shin', foot);
+      const hand = this.binding.contract.hands[side]; fail(hand, `Hand ${side} required`);
       const axes = hand.axesInWrist, wristQ = this.restQ.get(wrist);
       const forward = V().fromArray(axes.forward).applyQuaternion(wristQ), normal = V().fromArray(axes.normal).applyQuaternion(wristQ);
       const alignment = alignPalm(forward, normal, V().fromArray(this.driver.palmForwardBike ?? [1, -0.25, 0]), V().fromArray(this.driver.palmNormalBike ?? [0, -1, 0]));
       const socketLocalQ = Q().setFromRotationMatrix(new THREE.Matrix4().fromArray(hand.socketInWrist)).normalize();
       this.handTargets.set(side, this.driver.gripSocketQuaternionBike?.[side]
         ? Q().fromArray(this.driver.gripSocketQuaternionBike[side]).normalize() : alignment.multiply(wristQ).multiply(socketLocalQ).normalize());
-      const soleName = this.driver.soleSocketNames?.[side]; fail(soleName, `Missing ${side} sole socket`);
+      const soleName = this.driver.soleSocketNames?.[side]; fail(soleName, `Sole socket ${side} required`);
       const sole = this.binding.exact(sanitize(soleName)), footBone = this.bone(foot);
       footBone.updateWorldMatrix(true, true);
       const selected = this.driver.selectedSoleInFoot?.[side];
       const selectedPeg = this.driver.selectedPegSurfaceBike?.[side];
-      fail(!!selected === !!selectedPeg, `Incomplete ${side} selected sole calibration`);
+      fail(!!selected === !!selectedPeg, `Sole/peg pair ${side} required`);
       if (selected) {
-        fail(selected.length === 16 && selected.every(Number.isFinite), `Invalid ${side} selected sole frame`);
-        fail(selectedPeg.length === 3 && selectedPeg.every(Number.isFinite), `Invalid ${side} finite peg target`);
+        fail(selected.length === 16 && selected.every(Number.isFinite), `Invalid selectedSoleInFoot.${side}`);
+        fail(selectedPeg.length === 3 && selectedPeg.every(Number.isFinite), `Invalid selectedPegSurfaceBike.${side}`);
       }
       const local = selected ? new THREE.Matrix4().fromArray(selected)
         : footBone.matrixWorld.clone().invert().multiply(sole.matrixWorld);
-      fail(Math.abs(local.determinant()) > 1e-6, `Singular ${side} sole frame`);
+      fail(Math.abs(local.determinant()) > 1e-6, `Singular sole ${side}`);
       const targetQ = this.driver.soleQuaternionBike?.[side] ? Q().fromArray(this.driver.soleQuaternionBike[side]).normalize()
         : this.restQ.get(foot).clone().multiply(Q().setFromRotationMatrix(local).normalize()).normalize();
       this.soleFrames.set(side, { node: sole, local, targetQ, selectedPeg });
       this.debug.soleContactDefinition.push(selected
-        ? 'Source-bound rigid selected outer-sole witness to finite peg point; whole contact remains unqualified'
-        : 'Inherited anatomy socket center; selected boot surface contact unqualified');
-      fail(this.driver.sideZ?.[side] === -1 || this.driver.sideZ?.[side] === 1, `Declare ${side} lateral sign`);
+        ? 'Selected sole witness/finite peg; surfaces unqualified'
+        : 'Anatomy socket; boot surfaces unqualified');
+      fail(this.driver.sideZ?.[side] === -1 || this.driver.sideZ?.[side] === 1, `sideZ.${side} must be +/-1`);
       for (const id of Object.values(hand.digits).flat()) {
         const flex = this.driver.digitFlex?.[side]?.[id];
-        fail(flex?.axisLocal?.length === 3 && Number.isFinite(flex.maxRadians), `Missing anatomical flex axis/limit ${id}`);
-        fail(Math.abs(V().fromArray(flex.axisLocal).length() - 1) < 1e-5, `Nonunit flex axis ${id}`);
+        fail(flex?.axisLocal?.length === 3 && Number.isFinite(flex.maxRadians), `digitFlex.${id} required`);
+        fail(Math.abs(V().fromArray(flex.axisLocal).length() - 1) < 1e-5, `Nonunit digitFlex.${id}`);
       }
     }
 
@@ -207,7 +204,7 @@ export function createPrivateRiderClass(metadata) {
     aim(group, referenceEnd, directionBike) {
       const list = ids(group); if (!list.length) return;
       const restDirection = this.restP.get(referenceEnd).clone().sub(this.restP.get(list[0])).normalize();
-      fail(restDirection.lengthSq() > 0.99 && directionBike.lengthSq() > 1e-12, 'Invalid measured segment axis');
+      fail(restDirection.lengthSq() > 0.99 && directionBike.lengthSq() > 1e-12, 'Invalid rest/aim axes');
       const swing = Q().setFromUnitVectors(restDirection, directionBike.clone().normalize()), frameQ = this.frameQ();
       for (const id of list) this.setWorld(id, frameQ.clone().multiply(swing).multiply(this.restQ.get(id)));
     }
@@ -217,7 +214,7 @@ export function createPrivateRiderClass(metadata) {
       const start = this.position(upper), target = this.toBike(V().setFromMatrixPosition(targetWorld));
       const ray = target.clone().sub(start), distance = ray.length(); ray.normalize();
       const pole = poleBike.clone().sub(start).addScaledVector(ray, -poleBike.clone().sub(start).dot(ray));
-      fail(distance > 1e-7 && pole.lengthSq() > 1e-10, 'Degenerate anatomical IK pole'); pole.normalize();
+      fail(distance > 1e-7 && pole.lengthSq() > 1e-10, 'Invalid IK pole'); pole.normalize();
       const reachable = Math.max(Math.abs(a - b) + 1e-7, Math.min(a + b - 1e-7, distance));
       const along = (a * a + reachable * reachable - b * b) / (2 * reachable);
       const middle = start.clone().addScaledVector(ray, along).addScaledVector(pole, Math.sqrt(Math.max(0, a * a - along * along)));
@@ -248,8 +245,8 @@ export function createPrivateRiderClass(metadata) {
       const p = this.physicsTarget(frame), started = performance.now();
       const bound = this.driver.maxSpineFlexRadians ?? 0, candidates = [];
       const refinement = { iterations: 0, bracketWidthRadians: null,
-        rule: 'Conditional arm/leg contact-gap crossover; not a global minimum or anatomical range proof' };
-      fail(Number.isFinite(bound) && bound >= 0 && bound <= Math.PI / 9, 'Spine flex exceeds declared anatomical bound');
+        rule: 'Gap crossover; optimum/range unqualified' };
+      fail(Number.isFinite(bound) && bound >= 0 && bound <= Math.PI / 9, 'maxSpineFlexRadians outside 0..pi/9');
       const evaluate = (hips, flex) => {
         resetHumanoidPose(this.binding); this.debug.fullResetCount++;
         this.poseFromHips(frame, p, hips, flex);
@@ -291,13 +288,13 @@ export function createPrivateRiderClass(metadata) {
       this.debug.anthropometry = { ...inverse, requestedCOM: p.requestedCOM.toArray(),
         physicsDimensions: 'XY', measuredCOM: measuredCOM.toArray(), lateralResidualM: measuredCOM.z - p.requestedCOM.z,
         carrierAngle: p.torsoAngle, spineFlexRadians: best.flex, elapsedMs: performance.now() - started,
-        articulationRule: `${candidates.length} actual-contact candidates; least evaluated flex at <=1 mm socket-center error, otherwise least evaluated maximum gap`,
+        articulationRule: 'Least evaluated flex: <=1mm + XY convergence; else least max gap',
         candidateCount: candidates.length, refinement,
         candidates: candidates.map(({ flex, gapM, armGapM, legGapM, reach, inverse }) => ({ flex, gapM, armGapM, legGapM, reach, comResidualM: inverse.residualM })),
         palmForwardBike: this.driver.palmForwardBike ?? [1, -0.25, 0],
-        contactLimit: 'Socket center residual only; no glove surface/bar radius or phalange penetration qualification' };
+        contactLimit: 'Socket-only; glove/bar/finger surfaces unqualified' };
       this.debug.physicalPose = !this.stage && !!frame.riderBody.present;
-      this.debug.stageClip = this.stage ? 'measured riding IK + breathing' : null;
+      this.debug.stageClip = this.stage ? 'Riding IK/breathing' : null;
       Object.assign(this.debug.stance, { on: true, pose: frame.rider.lean < 0 ? 'back' : frame.rider.lean > 0 ? 'forward' : 'seated', blend: Math.abs(frame.rider.lean), lean: frame.rider.lean });
     }
 
@@ -307,7 +304,7 @@ export function createPrivateRiderClass(metadata) {
       // The declared trunk also contains the pelvis; extra spinal flex must never
       // overwrite the fixed physical pelvis carrier orientation.
       const trunk = ids(this.roles.trunk).filter(id => !ids(this.roles.pelvis).includes(id)), head = this.role('head');
-      fail(trunk.length > 0, 'Missing anatomical spine above pelvis');
+      fail(trunk.length > 0, 'Spine above pelvis required');
       this.aim(this.roles.pelvis, trunk.at(-1), torso);
       this.aim(trunk, head, V(Math.cos(p.torsoAngle + spineFlex), Math.sin(p.torsoAngle + spineFlex), 0));
       const neck = ids(this.roles.neck);
@@ -345,7 +342,7 @@ export function createPrivateRiderClass(metadata) {
     beginRelease(frame) {
       this.scene.updateWorldMatrix(true, true);
       const pelvis = frame.ragdoll.find(body => body.id === 'pelvis');
-      fail(pelvis, 'Missing ragdoll pelvis');
+      fail(pelvis, 'Ragdoll pelvis required');
       this.release = {
         time: frame.tSim, angles: new Map(frame.ragdoll.map(body => [body.id, body.angle])),
         locals: new Map([...this.binding.byId].map(([id, bone]) => [id, { p: bone.position.clone(), q: bone.quaternion.clone(), s: bone.scale.clone() }])),
@@ -396,7 +393,7 @@ export function createPrivateRiderClass(metadata) {
       else this.poseRiding(frame);
       this.scene.updateWorldMatrix(true, true);
       this.debug.allBoneFinite = [...this.binding.byId.values()].every(bone => bone.matrixWorld.elements.every(Number.isFinite));
-      fail(this.debug.allBoneFinite, 'Nonfinite joint transform');
+      fail(this.debug.allBoneFinite, 'Nonfinite joint matrix');
     }
 
     dispose() { for (const material of this.materials) material.dispose(); }

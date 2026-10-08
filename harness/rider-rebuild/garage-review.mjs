@@ -7,7 +7,7 @@ import { spawnSync } from 'node:child_process';
 import { preview } from 'vite';
 import { webkit } from 'playwright';
 import { witnessGlbResponse } from './glb-response-witness.mjs';
-import { inspectPreparedRiderMaterials } from './inspect-prepared-materials.mjs';
+import { inspectPreparedRiderMaterials, inspectRiderMaterialInventory } from './inspect-prepared-materials.mjs';
 import { inspectActualCuffFragment } from './inspect-posed-cuffs.mjs';
 import { identifyActualWristFragment } from './identify-wrist-fragment.mjs';
 
@@ -60,6 +60,7 @@ try {
     }
     await page.screenshot({ path: path.join(out, name + '.png') });
   };
+  report.materialInventory = await page.evaluate(inspectRiderMaterialInventory);
   await inspect('garage-front');
   const box = await page.locator('.garage-stage').boundingBox();
   assert(box);
