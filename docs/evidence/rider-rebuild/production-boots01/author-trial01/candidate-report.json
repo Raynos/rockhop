@@ -1,0 +1,129 @@
+{
+  "accepted": false,
+  "status": "UNACCEPTED_FITTED_WEIGHTED_BOOTS_MAPS_PENDING",
+  "appearanceStatus": "PENDING_ACTUAL_BAKE_AND_PARENT_PLAYED_JUDGMENT",
+  "controlsSHA256": "c1da92db5bfb8d32c48e097bc3fa4ab5dfbb7363c0c3dd2306670314656314cd",
+  "recipeSHA256": "bc18fa3c22fa0602fdc87adf0d02ce2e0282162c5fa03a90160981d1f83c775a",
+  "sourceInputs": {
+    "anatomical-hand-rig.blend": {
+      "path": "harness/out/rider-rebuild/native-hand-repair01/native02/anatomical-hand-rig.blend",
+      "sha256": "42fca617ea8d246a6c3e3ca68a90cd3cb5f3ce8b9bb78130e0e2bbd65f605fac"
+    },
+    "native-body.npz": {
+      "path": "harness/out/rider-rebuild/native-hand-repair01/native02/native-body.npz",
+      "sha256": "e62e9969503b7761e99463eccc3ca7be39e0c230a2948f2f87a224db52d0f9a2"
+    },
+    "cleaned-donor.npz": {
+      "path": "assets/blender/hero-remaster/rider/finish-2026-10-05/wardrobe/data/prep02/boots/cleaned-donor.npz",
+      "sha256": "9849de6444632c2dcd1e1d76fda42ac27a7cbe8c7d2c0263ab2082e24b94777f"
+    },
+    "baseColorTexture.png": {
+      "path": "assets/blender/hero-remaster/rider/finish-2026-10-05/wardrobe/data/prep02/boots/baseColorTexture.png",
+      "sha256": "5bda21b0d584f91aad83d310b868be6a575d28eddb1170e01e65c0b2071f4044"
+    },
+    "metallicRoughnessTexture.png": {
+      "path": "assets/blender/hero-remaster/rider/finish-2026-10-05/wardrobe/data/prep02/boots/metallicRoughnessTexture.png",
+      "sha256": "4017261b5f233cba5780578691a1508382295db4b157c4d175ad905bc98e5c30"
+    },
+    "retopology-prototype.npz": {
+      "path": "assets/blender/hero-remaster/rider/finish-2026-10-05/wardrobe/data/prep02/boots/retopology-prototype.npz",
+      "sha256": "d420da6bc7db4fa02ea095266dc174ff07cd3fb657cb0b01b91a319aa6b17853"
+    },
+    "source-semantic-witness.npz": {
+      "path": "docs/evidence/rider-rebuild/boot-cavity-rebuild01/classification01/source-semantic-witness.npz",
+      "sha256": "f6ff1252fb6a92d47d600e2c3b3c678c7f4a7cce86184be8d9936d416fce3526"
+    },
+    "bake_fitted_detail.py": {
+      "path": "assets/blender/rider-rebuild/donor-detail-transfer01/bake_fitted_detail.py",
+      "sha256": "fe6b428145a8770f1be81fec8560a0b7e3b31492b0aade02f83947e68869648c"
+    }
+  },
+  "boots": [
+    {
+      "side": "R",
+      "vertices": 8259,
+      "triangles": 16482,
+      "bounds": [
+        [
+          -0.307454913854599,
+          -0.140248104929924,
+          0.0002503714058548212
+        ],
+        [
+          -0.13606175780296326,
+          0.12244539707899094,
+          0.14924663305282593
+        ]
+      ],
+      "collarBandBounds": [
+        [
+          -0.24875807762145996,
+          -0.016830336302518845,
+          0.08500506728887558
+        ],
+        [
+          -0.14960354566574097,
+          0.11519654095172882,
+          0.10399667173624039
+        ]
+      ],
+      "fieldsSumMaximumError": 0.0,
+      "rigidSoleVertices": 3525,
+      "arrays": {
+        "path": "/Users/raynos/projects/games/rockhop/harness/out/rider-rebuild/production-boots01/authored01/production-boot-R.npz",
+        "sha256": "6123cd5a6f0955b289edef74f471eeaa68e4113c3b1a08a605cd8f4ef5a6beed"
+      }
+    },
+    {
+      "side": "L",
+      "vertices": 8259,
+      "triangles": 16482,
+      "bounds": [
+        [
+          0.13865023851394653,
+          -0.13896819949150085,
+          0.0002517642278689891
+        ],
+        [
+          0.3100583255290985,
+          0.12375858426094055,
+          0.1492682695388794
+        ]
+      ],
+      "collarBandBounds": [
+        [
+          0.1521936058998108,
+          -0.01553349755704403,
+          0.08501797169446945
+        ],
+        [
+          0.2513546943664551,
+          0.11650899797677994,
+          0.10399842262268066
+        ]
+      ],
+      "fieldsSumMaximumError": 0.0,
+      "rigidSoleVertices": 3524,
+      "arrays": {
+        "path": "/Users/raynos/projects/games/rockhop/harness/out/rider-rebuild/production-boots01/authored01/production-boot-L.npz",
+        "sha256": "82166b89d8a45cebd618fefe122cb4b825419e17cbaf29ed9396878c2929d96f"
+      }
+    }
+  ],
+  "sourceSelection": {
+    "kept": 470963,
+    "removedHiddenShaftFloor": 139971
+  },
+  "atlasStatus": "PENDING_NEW_COHERENT_PRODUCTION_ATLAS",
+  "sourceUVPolicy": "Original immutable glTF TEXCOORD_0; Blender donor uses copied UV with V=1-V",
+  "bodyAnd75RestUntouched": true,
+  "geometryNative": {
+    "path": "/Users/raynos/projects/games/rockhop/harness/out/rider-rebuild/production-boots01/authored01/geometry-appearance-pending.blend",
+    "sha256": "50a48ea58c0e1bb90b747772e0bf2d4c4fc5c2d2d559334afa6aedfbfab71719"
+  },
+  "quickActualSourceFitComparisonRendered": true,
+  "authorNative": {
+    "path": "/Users/raynos/projects/games/rockhop/harness/out/rider-rebuild/production-boots01/authored01/author-checked-appearance-pending.blend",
+    "sha256": "2fa8cb66e31ee8f43b2437ea889de6142f7d53efbb88422546a2835e9b63c958"
+  }
+}
