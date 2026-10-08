@@ -1587,3 +1587,5 @@ October8 cuffauthor01 stopped41.530s at Blender library-name listmutation afterd
 October8 actualGarage05 provesselected4096²intake/residentpolicy: broadwhite/chrome denimgone withsame7d826source/materialscalars.19.84sorbit playedtoend484frames;parentkeepspolicy. Cuffrepair/completegeneric/ride next;all0/6open.
 
 October8 actualcuff05 saved6a3fcb82 in52.310s: knownlobes now1.31/1.44mm insideactualsleeve, unchangednoncuffdensepositions/otherfive/fullreference/75rest/deliveryfields;0newbindsweightsbakes. Readyexactmaskedreexport thenGarage/gripreview;all0/6open.
+
+October8 correctedmaskedexport04 stoppedbeforeexport: fingerprintomittedencodedcustom_normal INT16_2D. Addexact2componentint16format; source/tolerance unchanged. Actualrerun next;all0/6open.

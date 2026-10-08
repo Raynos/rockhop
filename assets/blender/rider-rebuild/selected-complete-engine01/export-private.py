@@ -126,7 +126,8 @@ def part_fingerprint(obj, helper, allow_positions=False):
                'FLOAT2': ('vector', 2, np.float32), 'FLOAT_COLOR': ('color', 4, np.float32),
                'BYTE_COLOR': ('color', 4, np.float32), 'INT8': ('value', 1, np.int32),
                'QUATERNION': ('value', 4, np.float32), 'FLOAT4X4': ('value', 16, np.float32),
-               'INT32_2D': ('value', 2, np.int32)}
+               'INT32_2D': ('value', 2, np.int32),
+               'INT16_2D': ('value', 2, np.int16)}
     for attr in mesh.attributes:
         if allow_positions and attr.name == 'position': continue
         assert attr.data_type in formats, ('Unsupported immutable attribute', obj.name, attr.name, attr.data_type)
