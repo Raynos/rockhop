@@ -49,3 +49,9 @@ Finding: The targeted saddle/rear-leg repair saves the real editable jeans befor
 Validation: Author04 exit0 in7.431s, native hash parent checked, body/rest in-memory unchanged; FULL attributes and explicit FOUR removed mass retained.
 
 Limits: Saved actual fit is uninspected; no bake, moving parity or art acceptance.
+
+Finding: Rear coverage improves in actual author04, but a front crotch skin wedge remains. A direct local saddle reconstruction is needed.
+
+Validation: Parent viewed all three actual-native fit renders; guardexit0 in6.230s, full wearer visible, source unchanged.
+
+Limits: Candidate remains rejected before maps; no moving or engine acceptance.
