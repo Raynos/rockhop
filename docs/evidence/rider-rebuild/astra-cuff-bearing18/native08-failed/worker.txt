@@ -1,0 +1,19 @@
+00:10.312  blend            | Read blend: "/Users/raynos/projects/games/rockhop/harness/out/rider-rebuild/selected-complete-engine01/engine05/rider-private-masked.blend"
+CONSTRUCT full dense cuff L
+FINITE_RAY_FALLBACK {"label": "sourceCuff.L", "worldOrigin": [0.37358276399939433, -0.050405402888074484, 0.9835874089282829], "direction": [-0.5970519446976704, 0.6657119264646673, -0.4476121158943663], "triangleId": 118895, "distanceM": 0.030310016494677457}
+Traceback (most recent call last):
+  File "/Users/raynos/projects/games/rockhop/assets/blender/rider-rebuild/astra-cuff-bearing18/construct08.py", line 449, in <module>
+    main()
+    ~~~~^^
+  File "/Users/raynos/projects/games/rockhop/assets/blender/rider-rebuild/astra-cuff-bearing18/construct08.py", line 392, in main
+    row = full_cuff(surgery, dumps[side], placement['hands'][side], profiles[side], wearers[side], settings)
+  File "/Users/raynos/projects/games/rockhop/assets/blender/rider-rebuild/astra-cuff-bearing18/construct08.py", line 165, in full_cuff
+    assert required <= settings['maximumCuffScale'], ('Full dense cuff fit exceeds selected identity bound', required, witness)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('Full dense cuff fit exceeds selected identity bound', 1.542114486752631, {'sourceParentVertexIds': [106802, 106804, 107801], 'barycentric': [0.9, 0.05, 0.05], 'sourceY': -0.9782567203044892, 'nativeAxialM': 0.0626179806888103, 'cavityRadiusM': 0.020927002653479576, 'wearerRadiusM': 0.025771833956241608})
+
+Error: script failed, file: 'assets/blender/rider-rebuild/astra-cuff-bearing18/construct08.py', exiting.
+Blender 5.2.1 LTS (hash 9e2066aef7ef built 2026-08-25 01:35:57)
+scripts disabled for "/Users/raynos/projects/games/rockhop/harness/out/rider-rebuild/selected-complete-engine01/engine05/rider-private-masked.blend", skipping 'RIG-RiderMetarig_ui.py'
+
+Blender quit
