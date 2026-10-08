@@ -1261,3 +1261,5 @@ October 7 fresh Astra construction advisory02 adopted: parent replay/pins confir
 October 7 required current-player Metal check02: silent boot/clear/crash/restart passes11/11, byte-identical goldenfinish/hash and1tickrestart. Guardexit0 in5.552s. Existing-player baseline only; new clothes and full rider acceptance remain open.
 
 October 7 hoodie source correction: actual added polygon cycles replace selection state as the grid-face identity. Receipts distinguish existing selected triangles from new quads. Parent AST, frozen source and five input pins pass; no shape control change or executed rerun yet.
+
+October 7 connected glove-region source checkpoint: parent reviewed direct face-region pads/ribs, independent L/R hands, distal cuff fields and early-save architecture. Frozen source/AST/all11 input pins match. Actual Blender author is unexecuted; selected appearance and FULL/FOUR deformation remain open.
