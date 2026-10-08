@@ -1427,3 +1427,5 @@ October 8 hoodie panel intake completed read-only in8.26s: actual compact target
 October 8 boot anatomical extraction exit0/17.818s: actual bilateral boot topology, foot-local sections and selected PBR ancestry preserved. One necessary forefoot/medial-quarter replacement is being authored; repeated displacement repair stopped. Unaccepted, no player promotion.
 
 October 8 actual neck endpoint correction saved e68b5c41; independent readback passes exact geometry/PBR/rest75/6753canonical/1446hands.491 final edges fieldjump L1 1.120521→0 by actual joint-plane C2 transition,1394newneck vertices only. Historical saved-normal failure remains. Next clothed turn/nod; no art/motion acceptance.
+
+October 8 required construction-round gate11: explicit Metal11/11, exit0/7.182s, exact finish/hash, restart7.19ms. Existing player only; remastered rider art remains unaccepted.
