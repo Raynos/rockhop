@@ -279,7 +279,7 @@ finally {
   }
   const video = page.video(); await context.close(); await browser.close();
   const videoPath = await video.path();
-  const encoded = spawnSync('ffmpeg', ['-v', 'error', '-y', '-i', videoPath, '-an', '-c:v', 'libx264', '-crf', '18', '-pix_fmt', 'yuv420p', '-fps_mode', 'passthrough', path.join(out, 'garage-played.mp4')], { encoding: 'utf8' });
+  const encoded = spawnSync('ffmpeg', ['-v', 'error', '-y', '-threads', '2', '-i', videoPath, '-an', '-c:v', 'libx264', '-threads', '2', '-crf', '18', '-pix_fmt', 'yuv420p', '-fps_mode', 'passthrough', path.join(out, 'garage-played.mp4')], { encoding: 'utf8' });
   report.encoding = { exitCode: encoded.status, stderr: encoded.stderr };
   const probeVideo = file => {
     const result = spawnSync('ffprobe', ['-v', 'error', '-select_streams', 'v:0',
