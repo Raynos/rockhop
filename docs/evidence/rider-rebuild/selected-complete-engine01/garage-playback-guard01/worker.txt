@@ -1,0 +1,15 @@
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+page.evaluate: Target page, context or browser has been closed
+Browser logs:
+
+<launching> /Users/raynos/Library/Caches/ms-playwright/webkit-2336/pw_run.sh --inspector-pipe --headless --no-startup-window
+<launched> pid=15344
+[pid=15344][err] /Users/raynos/Library/Caches/ms-playwright/webkit-2336/pw_run.sh: line 7: 15350 Killed: 9               DYLD_FRAMEWORK_PATH="$DYLIB_PATH" DYLD_LIBRARY_PATH="$DYLIB_PATH" "$PLAYWRIGHT" "$@"
+    at /Users/raynos/projects/games/rockhop/harness/rider-finish/play-film.mjs:45:31 {
+  log: []
+}
+
+Node.js v24.18.1

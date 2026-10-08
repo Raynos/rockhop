@@ -1,0 +1,55 @@
+{
+  "accepted": false,
+  "lock": "/Users/raynos/projects/localai/.model.lock",
+  "method": "lockf -k",
+  "command": [
+    "ffmpeg",
+    "-y",
+    "-hide_banner",
+    "-loglevel",
+    "error",
+    "-i",
+    "harness/out/rider-rebuild/selected-complete-engine01/garage02/garage-played.mp4",
+    "-vf",
+    "scale=640:-2",
+    "-c:v",
+    "libx264",
+    "-threads",
+    "2",
+    "-crf",
+    "18",
+    "-pix_fmt",
+    "yuv420p",
+    "-an",
+    "harness/out/rider-rebuild/selected-complete-engine01/garage02/garage-review-proxy.mp4"
+  ],
+  "controllerPID": 29044,
+  "pollSeconds": 1,
+  "startAnonymousBelowGiB": 55,
+  "stopAnonymousGiB": 65,
+  "stopAnonymousPlusWiredGiB": 96,
+  "limitSeconds": 45.0,
+  "guardSHA256": "cf8acd15d8b7484480bee74d23892be815d955ffd87115d3da8ed228ffb3d916",
+  "status": "worker returned; review pending",
+  "samples": [
+    {
+      "seconds": 0,
+      "anonymousGiB": 27.6,
+      "wiredGiB": 8.2,
+      "freeGiB": 39.5
+    },
+    {
+      "seconds": 0.05,
+      "anonymousGiB": 27.6,
+      "wiredGiB": 8.2,
+      "freeGiB": 39.5
+    }
+  ],
+  "physicalMemoryBytes": 137438953472,
+  "requiredPhysicalMemoryBytes": 137438953472,
+  "scope": "Future explicitly invoked owned Rockhop job only",
+  "pressureOrSwapLimits": "No separate pressure/swap gate exists in the pinned original guard; none altered",
+  "ownedChildPID": 29056,
+  "exitCode": 0,
+  "elapsedSeconds": 0.996
+}

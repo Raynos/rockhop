@@ -1,0 +1,143 @@
+{
+  "accepted": false,
+  "lock": "/Users/raynos/projects/localai/.model.lock",
+  "method": "lockf -k",
+  "command": [
+    "node",
+    "harness/rider-rebuild/garage-review.mjs",
+    "--build=harness/out/rider-rebuild/selected-complete-engine01/game01",
+    "--contract=harness/out/rider-rebuild/selected-complete-engine01/engine03/rider-contract.json",
+    "--out=harness/out/rider-rebuild/selected-complete-engine01/garage02"
+  ],
+  "controllerPID": 13188,
+  "pollSeconds": 1,
+  "startAnonymousBelowGiB": 55,
+  "stopAnonymousGiB": 65,
+  "stopAnonymousPlusWiredGiB": 96,
+  "limitSeconds": 300.0,
+  "guardSHA256": "cf8acd15d8b7484480bee74d23892be815d955ffd87115d3da8ed228ffb3d916",
+  "status": "worker returned; review pending",
+  "samples": [
+    {
+      "seconds": 0,
+      "anonymousGiB": 27.5,
+      "wiredGiB": 8.2,
+      "freeGiB": 36.6
+    },
+    {
+      "seconds": 0.073,
+      "anonymousGiB": 27.7,
+      "wiredGiB": 8.2,
+      "freeGiB": 36.4
+    },
+    {
+      "seconds": 1.137,
+      "anonymousGiB": 27.5,
+      "wiredGiB": 8.2,
+      "freeGiB": 36.6
+    },
+    {
+      "seconds": 2.19,
+      "anonymousGiB": 29.7,
+      "wiredGiB": 8.8,
+      "freeGiB": 33.9
+    },
+    {
+      "seconds": 3.246,
+      "anonymousGiB": 31.3,
+      "wiredGiB": 8.9,
+      "freeGiB": 32.4
+    },
+    {
+      "seconds": 4.301,
+      "anonymousGiB": 31.7,
+      "wiredGiB": 8.6,
+      "freeGiB": 32.2
+    },
+    {
+      "seconds": 5.362,
+      "anonymousGiB": 33.4,
+      "wiredGiB": 9.0,
+      "freeGiB": 30.2
+    },
+    {
+      "seconds": 6.416,
+      "anonymousGiB": 33.5,
+      "wiredGiB": 10.0,
+      "freeGiB": 29.1
+    },
+    {
+      "seconds": 7.482,
+      "anonymousGiB": 34.4,
+      "wiredGiB": 10.1,
+      "freeGiB": 28.1
+    },
+    {
+      "seconds": 8.553,
+      "anonymousGiB": 34.4,
+      "wiredGiB": 11.2,
+      "freeGiB": 27.0
+    },
+    {
+      "seconds": 9.619,
+      "anonymousGiB": 34.8,
+      "wiredGiB": 11.0,
+      "freeGiB": 26.8
+    },
+    {
+      "seconds": 10.684,
+      "anonymousGiB": 35.4,
+      "wiredGiB": 10.6,
+      "freeGiB": 26.6
+    },
+    {
+      "seconds": 11.756,
+      "anonymousGiB": 35.8,
+      "wiredGiB": 10.2,
+      "freeGiB": 26.6
+    },
+    {
+      "seconds": 12.818,
+      "anonymousGiB": 35.9,
+      "wiredGiB": 10.3,
+      "freeGiB": 26.4
+    },
+    {
+      "seconds": 13.888,
+      "anonymousGiB": 36.2,
+      "wiredGiB": 10.2,
+      "freeGiB": 26.3
+    },
+    {
+      "seconds": 14.968,
+      "anonymousGiB": 36.0,
+      "wiredGiB": 10.7,
+      "freeGiB": 26.0
+    },
+    {
+      "seconds": 16.04,
+      "anonymousGiB": 36.2,
+      "wiredGiB": 10.6,
+      "freeGiB": 26.2
+    },
+    {
+      "seconds": 17.12,
+      "anonymousGiB": 31.9,
+      "wiredGiB": 9.5,
+      "freeGiB": 31.9
+    },
+    {
+      "seconds": 18.178,
+      "anonymousGiB": 33.5,
+      "wiredGiB": 8.8,
+      "freeGiB": 31.2
+    }
+  ],
+  "physicalMemoryBytes": 137438953472,
+  "requiredPhysicalMemoryBytes": 137438953472,
+  "scope": "Future explicitly invoked owned Rockhop job only",
+  "pressureOrSwapLimits": "No separate pressure/swap gate exists in the pinned original guard; none altered",
+  "ownedChildPID": 13197,
+  "exitCode": 0,
+  "elapsedSeconds": 18.577
+}

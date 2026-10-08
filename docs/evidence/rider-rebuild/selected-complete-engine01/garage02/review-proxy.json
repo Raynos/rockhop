@@ -1,0 +1,13 @@
+{
+  "source": {
+    "path": "harness/out/rider-rebuild/selected-complete-engine01/garage02/garage-played.mp4",
+    "sha256": "8c6e39501d024b4b929f8e5d2d0062a94faec7d5ac83e457b6ab5d7f49e50f56"
+  },
+  "reviewProxy": {
+    "path": "harness/out/rider-rebuild/selected-complete-engine01/garage02/garage-review-proxy.mp4",
+    "sha256": "f97a13f3e1b221daccf0c8251f5ebb6d83b9da5d3339f5c73bf8562c61a20317"
+  },
+  "operation": "ffmpeg scale640:-2, same continuous frames/duration, noaudio, no pose/content edits",
+  "reason": "Full1440x900 presented-PNG retention killed WebKit readback; actualGaragecapture successful. Reducedreviewcopy avoids cache pressure; fulloriginal retained.",
+  "accepted": false
+}

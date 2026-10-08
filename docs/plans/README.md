@@ -1565,3 +1565,5 @@ October8 actualmaskedselected export03 succeeds: exact7parts/75, strictdecodedFO
 October8 parentviewsactualcompletePBRfront/rear/bothprofiles: originalselectedall4garments coherentbaseline, earlierskinislands/upwardsleevesgone. Staticonly; denimthighseam/cuffs/bootform andmovingGarage/game remainopen0/6.
 
 October8 actualGarage01 source-capture stops on WebKit341MiB inspectorcacheeviction; sharedlocalHTTPstream witness replacescachedependency with explicit scope andstrictselectedSHA. ActualGarage retry next;0/6.
+
+October8 actualcomplete selectedGarage02 loads7parts/exactsource andplayed17.04sproxytoend/402presentedframes. Parentrejectscuffprojections andbroadjeanschrome; sourcePBRtransportexactbutruntime4Kmapsdownsampled1024/512. TargetedAstra07cuff/runtimePBRdiagnosis active;allR0-R5open0/6.

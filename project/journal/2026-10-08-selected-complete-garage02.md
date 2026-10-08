@@ -1,0 +1,3 @@
+Finding: ActualselectedcompleteGarage loadsall7parts andplaysorbit; preserveconstructionbut rejectcurrentartacceptanceforcuffprojections/jeanschrome.
+Validation: Buildexit0/11.424s, Garageexit0/18.577s/fivesnapshots/noerrors, selectedsourceHTTPstreamSHAexact; reducedactualmovieplays17.04s toend/402presentedframes. Parentreviews12frames+5originalsnapshots. Fullresreadbackkilled9 retained.
+Limits: Currenttextures1024/512 despite4Ksource; runtimePBR/cufflayerdiagnosis next. Fullgeneric/bikeextremes/contacts/GPU/device remainopen0/6.
