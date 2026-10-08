@@ -1,0 +1,18 @@
+00:00.612  blend            | Read blend: "/Users/raynos/projects/games/rockhop/harness/out/rider-rebuild/native-hand-repair01/native02/anatomical-hand-rig.blend"
+00:00.690  blend            | Read blend: "/Users/raynos/projects/games/rockhop/harness/out/rider-rebuild/production-face01/native01/selected-face-native75.blend"
+{"protectedDonorTriangles": 66364, "actualPositionUVNormalMaximumErrors": [0.0, 0.0, 0.014612238520047997]}
+Traceback (most recent call last):
+  File "/Users/raynos/projects/games/rockhop/assets/blender/rider-rebuild/production-face01/verify_selected_face.py", line 202, in <module>
+    main()
+    ~~~~^^
+  File "/Users/raynos/projects/games/rockhop/assets/blender/rider-rebuild/production-face01/verify_selected_face.py", line 159, in main
+    assert protected == 66364 and np.all(errors < [2e-7, 2e-7, 2e-6]), ('Actual donor readback errors', protected, errors.tolist())
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('Actual donor readback errors', 66364, [0.0, 0.0, 0.014612238520047997])
+
+Error: script failed, file: 'assets/blender/rider-rebuild/production-face01/verify_selected_face.py', exiting.
+Blender 5.2.1 LTS (hash 9e2066aef7ef built 2026-08-25 01:35:57)
+scripts disabled for "/Users/raynos/projects/games/rockhop/harness/out/rider-rebuild/native-hand-repair01/native02/anatomical-hand-rig.blend", skipping 'RIG-RiderMetarig_ui.py'
+scripts disabled for "/Users/raynos/projects/games/rockhop/harness/out/rider-rebuild/production-face01/native01/selected-face-native75.blend", skipping 'RIG-RiderMetarig_ui.py'
+
+Blender quit
