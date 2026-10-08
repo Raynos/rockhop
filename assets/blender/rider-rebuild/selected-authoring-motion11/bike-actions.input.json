@@ -1,0 +1,65 @@
+{
+  "accepted": false,
+  "status": "SOURCE_ONLY_NATIVE_BIKE_ACTIONS_UNEXECUTED",
+  "pins": {
+    "native": {
+      "path": "harness/out/rider-rebuild/selected-seated-anatomical09/authored02/selected-anatomical09-weight-only.blend",
+      "sha256": "4a330ae8a5e93c00a1492dbfd28923ff29796650bbae1dacfadc5fcf00a627a0"
+    },
+    "weightReceipt": {
+      "path": "harness/out/rider-rebuild/selected-seated-anatomical09/authored02/receipt.json",
+      "sha256": "b7eefbb2f18df361948a64af54a4eff52426a41b88a1aa6ae3808fc484d709e5"
+    },
+    "contract": {
+      "path": "harness/out/rider-rebuild/selected-complete-engine01/engine05/rider-contract.json",
+      "sha256": "2aa39bc8c15738b4ecbd2aac08fd61375e0aa8fd45a0ee2ac3046f577b019728"
+    },
+    "bikeContext": {
+      "path": "docs/evidence/rider-rebuild/selected-authoring-motion11/bike-context01.json",
+      "sha256": "3762e8e00ba0d4ce0a78e3a8fdb56a5f9798129d6faa02866d60209492a4f9e5"
+    },
+    "patches": {
+      "path": "docs/evidence/rider-rebuild/selected-posterior-support03/source-patches.json",
+      "sha256": "d5945cbf5eb83d348ef8bf1db6024a29390d6dca174988136f1b8c8fb9bbeb24"
+    },
+    "controls": {
+      "path": "assets/blender/rider-rebuild/selected-authoring-motion11/controls.py",
+      "sha256": "b5b77c1af0442b87d4730834baf1e76bfae737a4531daad5e1aeada79293fd21"
+    },
+    "commonBuild": {
+      "path": "assets/blender/rider-rebuild/selected-authoring-motion11/build.py",
+      "sha256": "5b0c4d282b9003fc0968df84972d009d9d9e4b1b1b06bffb80b11dbd475cf003"
+    },
+    "bikeAction": {
+      "path": "assets/blender/rider-rebuild/selected-authoring-motion11/bike_action.py",
+      "sha256": "e21addaa3a25beeb51ca99023faaa817b5fa8e7da3418b56e3f64a2ba75ea851"
+    },
+    "bikeBuild": {
+      "path": "assets/blender/rider-rebuild/selected-authoring-motion11/bike_build.py",
+      "sha256": "ef0b4659ce547fdad0e296c5656811cdc767a7305025489a1b26ddee2a5dac75"
+    },
+    "contactCheck": {
+      "path": "assets/blender/rider-rebuild/selected-authoring-motion11/bike_contact_check.py",
+      "sha256": "2170594a30cfa937c85c87a70cc680a0cb25418405126908befeb3eff89b460e"
+    },
+    "surfaceRecipe": {
+      "path": "assets/blender/rider-rebuild/selected-authoring-motion11/bike_surfaces.mjs",
+      "sha256": "9f8cdc685967e1d53f9069e522f1b7725574b0519524a06e5e1100f731c8c1ba"
+    },
+    "gripSelection": {
+      "path": "docs/evidence/hero-remaster/one-rider-v2/rig-adapter01/bike-grip-surface02/report.json",
+      "sha256": "65a910f11f4b008b93baade11008119d7781fbf1126f0fdd00487b9f06d4b394"
+    }
+  },
+  "shapeActivation": 0,
+  "intendedClips": [
+    "RiderBikeSeatedLeanRookie",
+    "RiderBikeSeatedLeanPro"
+  ],
+  "contactPolicy": "Fixed measured palm and finite boot contact frames. Fixed bilateral posterior core IDs. Pelvis X/Y follows finite core centroids; final torso elbow-flex target has a strict geometry bracket. Joint, surface and art acceptance remain separate.",
+  "limits": [
+    "No rejected author04 pose or corrective activation imported. No source mesh/rest/weight/object transform edits.",
+    "Finite surface checks must evaluate actual full anatomical reference and all dressed bearing regions before support can be accepted.",
+    "Current source defaults are one authored movement score, not played art success."
+  ]
+}

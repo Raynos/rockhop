@@ -1,0 +1,124 @@
+{
+  "accepted": false,
+  "status": "SOURCE_FROZEN_NATIVE_BIKE_AND_FINITE_CHECKS_NOT_EXECUTED",
+  "input": {
+    "path": "assets/blender/rider-rebuild/selected-authoring-motion11/bike-actions.input.json",
+    "sha256": "cacddd35a4b19d5353a358b0cdc93e3a34e9523dc80d324addd22008ef3995ae"
+  },
+  "sources": {
+    "bikeAction": {
+      "path": "assets/blender/rider-rebuild/selected-authoring-motion11/bike_action.py",
+      "sha256": "e21addaa3a25beeb51ca99023faaa817b5fa8e7da3418b56e3f64a2ba75ea851"
+    },
+    "bikeBuild": {
+      "path": "assets/blender/rider-rebuild/selected-authoring-motion11/bike_build.py",
+      "sha256": "ef0b4659ce547fdad0e296c5656811cdc767a7305025489a1b26ddee2a5dac75"
+    },
+    "contactCheck": {
+      "path": "assets/blender/rider-rebuild/selected-authoring-motion11/bike_contact_check.py",
+      "sha256": "2170594a30cfa937c85c87a70cc680a0cb25418405126908befeb3eff89b460e"
+    },
+    "surfaceRecipe": {
+      "path": "assets/blender/rider-rebuild/selected-authoring-motion11/bike_surfaces.mjs",
+      "sha256": "9f8cdc685967e1d53f9069e522f1b7725574b0519524a06e5e1100f731c8c1ba"
+    }
+  },
+  "lightweightValidation": {
+    "pythonAST": "Three new native Python modules PASS",
+    "javascriptSyntax": "bike_surfaces.mjs node --check PASS",
+    "score": "2401 time samples, exact neutral/forward/backward endpoints PASS",
+    "actualBlenderConstruction": "NOT_EXECUTED",
+    "actualFiniteContacts": "NOT_EXECUTED",
+    "movingArt": "UNACCEPTED"
+  },
+  "invocations": [
+    [
+      "blender",
+      "-b",
+      "-t",
+      "2",
+      "--python-exit-code",
+      "1",
+      "--python",
+      "assets/blender/rider-rebuild/selected-authoring-motion11/bike_build.py",
+      "--",
+      "assets/blender/rider-rebuild/selected-authoring-motion11/bike-actions.input.json",
+      "harness/out/rider-rebuild/selected-authoring-motion11/bike-native01"
+    ],
+    [
+      "node",
+      "assets/blender/rider-rebuild/selected-authoring-motion11/bike_surfaces.mjs",
+      "harness/out/rider-rebuild/selected-authoring-motion11/bike-finite-surfaces01.json"
+    ],
+    [
+      "blender",
+      "-b",
+      "-t",
+      "2",
+      "--python-exit-code",
+      "1",
+      "--python",
+      "assets/blender/rider-rebuild/selected-authoring-motion11/bike_contact_check.py",
+      "--",
+      "assets/blender/rider-rebuild/selected-authoring-motion11/bike-actions.input.json",
+      "harness/out/rider-rebuild/selected-authoring-motion11/bike-native01",
+      "harness/out/rider-rebuild/selected-authoring-motion11/bike-finite-surfaces01.json",
+      "harness/out/rider-rebuild/selected-authoring-motion11/bike-contact01.json"
+    ]
+  ],
+  "parentScheduling": {
+    "guardAllNativeJobs": true,
+    "nativeConstructionWallCapSeconds": 180,
+    "constructionEstimatedSeconds": [
+      45,
+      120
+    ],
+    "estimateMeasured": false,
+    "finiteContactWallCapSeconds": 180,
+    "fullSelectedFiniteChecksHeadroomRequired": true,
+    "serialOnly": true
+  },
+  "authoring": {
+    "clips": [
+      "RiderBikeSeatedLeanRookie",
+      "RiderBikeSeatedLeanPro"
+    ],
+    "secondsEach": 10,
+    "fps": 24,
+    "framesEach": 241,
+    "phases": "Seated hold; forward lean; seated; backward lean; seated return. Quintic transitions.",
+    "pelvisPitchDegrees": [
+      25,
+      35,
+      25,
+      15,
+      25
+    ],
+    "elbowFlexDegrees": [
+      75,
+      95,
+      75,
+      55,
+      75
+    ],
+    "shapeActivation": 0,
+    "normalPlayerPromotionAllowed": false
+  },
+  "mechanism": "Two pelvis translations are located by the same fixed finite surface cores against the actual saddle. The source rest patch gives the starting position. A local two-coordinate Newton step has seven-iteration/4cm-step/15cm-total stop losses. Chest pitch solves one static FK reach bracket; knee/elbow poles use exact source segment lengths. There is no mesh/object translation, vertex edit, old author04 root or corrective activation.",
+  "checks": "Original 75 rest unchanged. Native limb lengths/targets, palm/sole affine frames and regional paired skin operators retain the original 0.1 mm gates. Every action frame is baked to the unchanged source 75 and independently replayed. Full-reference and dressed finite measurements are separate, explicitly unaccepted results.",
+  "partialCheckpoint": "First actual seated native controls and all75 world matrices are saved per bike before later lean poses. Every completed full control action is also recoverable.",
+  "anatomyLeadHandoff": {
+    "initialPose": "bike-native01/{rookie,pro}-first-seated-pose.json",
+    "editableControls": "bike-native01/{rookie,pro}-first-seated-controls.blend",
+    "completeControls": "bike-native01/{rookie,pro}-editable-controls.blend",
+    "allNamedMatrices": "bike-native01/bike-action-matrices.npz",
+    "matrixConvention": "row-major native world, meters; native X left, -Y forward, Z up; names exactly original75",
+    "supportSource": "bike-native01/finite-core-source.json contains actual weight02 Basis points/named fields and fixed underside triangle IDs",
+    "requiredNext": "Native lead27 refits coupled full reference/render body/jeans under the actual new editable pose only after construction and dressed/finite review. Existing author04-specific volume is not activated."
+  },
+  "finiteWitnessLimits": [
+    "The full source anatomical reference retains and evaluates its own named skin field; no rendered FOUR substitution.",
+    "Actual original jeans/boots/gloves/reference bearing regions are evaluated; finite positive areas, 1mm gap bands and native triangle crossings are reported.",
+    "Grip surface samples and four key poses per bike do not establish full finger wrap, continuous collision/contact, GPU parity, normals, mobile or art acceptance."
+  ]
+}
