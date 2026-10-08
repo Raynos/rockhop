@@ -53,11 +53,16 @@ def main():
     original_four=json.loads((ROOT/'harness/out/rider-rebuild/construction01/rig04/weights-four.json').read_text())
     for i in np.flatnonzero(~changed):assert full[i]==original_full[i] and four[i]==original_four[i]
     native_rest=builder.rest(rig);rest={row['name']:row for row in native_rest}
+    authority=report['nativeRestLineage']['diagnosticArrays']
+    assert sha(authority['path'])==authority['sha256']
+    diagnostic=dict(np.load(authority['path']))
     for i,name in enumerate(names):
         row=rest[name]
         assert np.array_equal(row['head'],arrays['jointHeads'][i])
         assert np.array_equal(row['tail'],arrays['jointTails'][i])
         assert np.array_equal(row['matrix'],arrays['jointMatrices'][i])
+        for field,plural in [('head','heads'),('tail','tails'),('matrix','matrices')]:
+            assert np.array_equal(row[field],diagnostic['correction_result_'+plural+'_double'][i])
     geom=load_module('geometry_checks',ROOT/'assets/blender/rider-rebuild/glove-charts01/geometry-checks.py')
     certificates=[]
     for side in ('L','R'):
@@ -259,6 +264,7 @@ def main():
         'exportTriangleWindingAndOriginalPolygonLoopCornerLineageExact':True,
         'exportOriginalUVCornerMaximum':uv_error,'nativeTriangulationLineage':report['nativeTriangulationLineage'],
         'bodyModifierOperators':report['bodyModifierOperators'],
+        'nativeRestLineage':report['nativeRestLineage'],'independentAll75RestRecordsEqualPinnedDiagnostic':True,
         'exportCutoff':cutoff,'exportCutoffComparison':'DROP coefficient <= cutoff, normalize retained native float32 named coefficients',
         'maximumRemovedExportCutoffMass':float(removed_cutoff_mass.max()),
         'maximumNativeVsDecodedNamedCoefficientDelta':maximum_named_delta,

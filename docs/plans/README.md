@@ -1187,3 +1187,5 @@ October 7 actual-boot semantic classifier source is checkpointed: empty shaft se
 October 7 pure complete selected-source assembler checkpoint: parent reran18guard tests. It requires actual seven-part inventory, pinned new rig/fields/operators, supported original artwork and actual sole patches. Declared finger ranges remain pending, with fresh native/GPU/contact calibration required. No native assembly or player promotion has run.
 
 October 7 independent edit diagnostic resolves hand build failure: no-op preserves all75rest records exactly; four head/four tail/eight authored-roll corrections recompute six descendant matrices (max4.172e-7) without editing their endpoints/rolls. Record all14actual rest changes explicitly and derive new controls/binds; no blanket tolerance or art acceptance.
+
+October 7 native hand rest repair now pins all75 actual records to the measured edit diagnostic: four head/four tail changes, eight authored frames plus six explicit descendant matrix recompositions, and61 untouched records exact. Parent source checks pass without widened tolerance. The new bind and independent saved-native proof remain pending and unaccepted.

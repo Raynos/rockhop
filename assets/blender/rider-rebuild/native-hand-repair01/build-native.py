@@ -76,6 +76,14 @@ def main():
     assert sha(correction_path) == '4047b86c8935a303d0158fedb83d3a8cfc2032162f86d8756dc4e9023f2be623'
     correction = json.loads(correction_path.read_text())
     extra_pins=[{'path':str(correction_path.relative_to(ROOT)),'sha256':sha(correction_path)}]
+    diagnostic_base=ROOT/'docs/evidence/rider-rebuild/native-hand-repair01/edit-roundtrip01'
+    for filename,digest in {'edit-roundtrip.json':'f36b6d1873fd46bf4efb82c9d9d1f1077d51ad2c3e8195e15e52915e034c5a22',
+                           'rest-byte-comparison.npz':'bbb8ae3342b471852baf46a2e49513acca5ab0bf74ba419f6f4ced41bbfa3731'}.items():
+        record={'path':str((diagnostic_base/filename).relative_to(ROOT)),'sha256':digest}
+        pin(record);extra_pins.append(record)
+    expected_rest=dict(np.load(diagnostic_base/'rest-byte-comparison.npz'))
+    assert np.array_equal(expected_rest['jointNames'],proposal['jointNames'])
+    descendants={'DEF-'+stem+'.'+side for side in ('L','R') for stem in ('f_middle.03','f_pinky.02','f_pinky.03')}
     exporter=Path('/Applications/Blender.app/Contents/Resources/5.2/scripts/addons_core/io_scene_gltf2/blender/exp')
     for filename,digest in {'primitive_extract.py':'55e14cbe849b0c4ec5545c85a1aae3d8c2c7d65eade67de43eb1a43b05738684',
                            'primitive_attributes.py':'815331d39cdf06e73ae110e9921ebfc8cb37825290843cbcbf4d1a7559899e5d'}.items():
@@ -90,6 +98,9 @@ def main():
     assert set(names) == set(b.name for b in rig.data.bones)
     assert body.matrix_world.is_identity and rig.matrix_world.is_identity
     source_rest = {r['name']:r for r in rest(rig)}
+    for i,name in enumerate(names):
+        for field,plural in [('head','heads'),('tail','tails'),('matrix','matrices')]:
+            assert np.array_equal(source_rest[name][field],expected_rest['correction_source_'+plural+'_double'][i])
     old_native = coefficients(body,names)
     for obj in list(bpy.data.objects):
         if obj not in (body,rig): bpy.data.objects.remove(obj,do_unlink=True)
@@ -124,8 +135,15 @@ def main():
     for name,row in corrected_rest.items():
         assert row['parent'] == source_rest[name]['parent']
         assert row['useConnect'] == source_rest[name]['useConnect']
-        if name not in affected:
+        if name not in affected | descendants:
             assert row == source_rest[name], ('Untouched rest changed',name)
+        # The measured six descendant recompositions are explicit lineage,
+        # never a widened tolerance. Every actual record must match the pinned
+        # prior fresh-load diagnostic byte-for-byte, including all61 others.
+        i=names.index(name)
+        for field,plural in [('head','heads'),('tail','tails'),('matrix','matrices')]:
+            assert np.array_equal(row[field],expected_rest['correction_result_'+plural+'_double'][i]),('New rest differs from measured authority',name,field)
+        assert row['useDeform']==source_rest[name]['useDeform']
         frame = np.array(row['matrix'])[:3,:3]
         if name in affected:
             assert abs(np.linalg.det(frame)-1) < 1e-6
@@ -193,6 +211,7 @@ def main():
     assert active_uv is not None
     triangle_uv=np.array([[list(active_uv.data[loop].uv) for loop in loops] for loops in source_loops],dtype=np.float32)
     rows=rest(rig); by_name={r['name']:r for r in rows}
+    assert by_name==corrected_rest, 'Binding changed the measured rest authority'
     np.savez_compressed(out/'native-body.npz',vertices=vertices,faces=faces,nativeCoefficients=new_native,
         originalNativeCoefficients=old_native,jointNames=np.array(names),
         jointHeads=np.array([by_name[n]['head'] for n in names]),jointTails=np.array([by_name[n]['tail'] for n in names]),
@@ -238,7 +257,12 @@ def main():
         'glb':{'path':str(out/'native-body.glb'),'sha256':sha(out/'native-body.glb')},
         'recipeSHA256':sha(__file__),'correctionSHA256':sha(correction_path),
         'sourcePins':receipt['inputs']+[receipt['arrays']]+extra_pins, 'geometryAndSourceIDSHA256':before_geometry,
-        'bodyVertices':10582,'skeletonJoints':75,'affectedRestFrames':sorted(affected),
+        'bodyVertices':10582,'skeletonJoints':75,'affectedRestFrames':sorted(affected|descendants),
+        'nativeRestLineage':{'authoredAffectedFrames':sorted(affected),
+            'measuredDescendantMatrixRecompositions':sorted(descendants),'all75ActualRecordsEqualPinnedDiagnostic':True,
+            'unchangedOtherRecords':61,'originalRest':source_rest,'actualRest':corrected_rest,
+            'diagnosticArrays':{'path':str(diagnostic_base/'rest-byte-comparison.npz'),
+                                'sha256':sha(diagnostic_base/'rest-byte-comparison.npz')}},
         'bodyModifierOperators':modifiers,
         'nativeTriangulationLineage':{'triangles':len(faces),'sourcePolygons':len(body.data.polygons),
             'sourceUVLayer':active_uv.name,'everyTriangleAndUVCornerHasOriginalPolygonLoopAncestry':True,

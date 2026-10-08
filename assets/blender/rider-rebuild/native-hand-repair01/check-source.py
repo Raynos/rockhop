@@ -20,6 +20,14 @@ proposal = np.load(BASE / 'medial-correction01/proposed-joints.npz')
 correction = json.loads((BASE / 'medial-correction01/medial-correction.json').read_text())
 assert hashlib.sha256((BASE / 'medial-correction01/medial-correction.json').read_bytes()).hexdigest() == '4047b86c8935a303d0158fedb83d3a8cfc2032162f86d8756dc4e9023f2be623'
 names = proposal['jointNames'].tolist()
+diagnostic_path=ROOT/'docs/evidence/rider-rebuild/native-hand-repair01/edit-roundtrip01/rest-byte-comparison.npz'
+assert hashlib.sha256(diagnostic_path.read_bytes()).hexdigest()=='bbb8ae3342b471852baf46a2e49513acca5ab0bf74ba419f6f4ced41bbfa3731'
+diagnostic=dict(np.load(diagnostic_path))
+assert np.array_equal(diagnostic['jointNames'],proposal['jointNames'])
+for field in ('heads','tails','matrices'):
+    assert np.array_equal(diagnostic['noOp_source_'+field+'_double'],diagnostic['noOp_result_'+field+'_double'])
+scope={field:[names[i] for i in np.flatnonzero(np.any(diagnostic['correction_source_'+field+'_double']!=diagnostic['correction_result_'+field+'_double'],axis=tuple(range(1,diagnostic['correction_source_'+field+'_double'].ndim))))] for field in ('heads','tails','matrices')}
+assert len(scope['heads'])==4 and len(scope['tails'])==4 and len(scope['matrices'])==14
 frames = []
 for side in ('L', 'R'):
     for stem in ('palm.04', 'f_pinky.01', 'f_middle.01', 'f_middle.02'):
@@ -40,4 +48,4 @@ assert all(abs(sum(w for _, w in row)-1) < 1e-15 for row in full[1:] + four[1:])
 print(json.dumps({'status':'SOURCE_MATH_ONLY_PASS','sourcePins':len(receipt['inputs'])+1,
     'properAffectedFrames':frames,'domain':1446,'verbatimRows':9136,
     'checks':['zero-alpha identity, unnormalized preservation, normalization, stable top4 tie, removed mass, proper anatomical frames'],
-    'acceptedArt':False}))
+    'nativeRestDiagnosticScope':scope,'acceptedArt':False}))

@@ -23,3 +23,8 @@ Finding: No-op edits preserve all 75 rest records. The proposed parent changes r
 Validation: Actual diagnostic exited 0 in 1.59 seconds. Parent rehashed every input and independently compared all NPZ arrays: exactly four heads/four tails/fourteen matrices differ, no-op double/float32 arrays exact and body geometry/fields unchanged.
 
 Limits: No bind, new master, GLB or anatomical/moving acceptance. Controls and inverse binds must derive from the measured new authority.
+
+
+Finding: The native repair now requires every actual rest record to match the independently measured edit diagnostic exactly. Four head and four tail changes author eight frames; six descendant recompositions are explicit lineage, with the remaining 61 records exact. Binding is forbidden from changing this authority.
+Validation: Parent independently reran warning-as-error source math checks (11 input pins, 1446 changing and 9136 verbatim rows), confirmed the measured 4/4/14 scope and parsed all six recipes.
+Limits: Native binding, saved-native proof, glove fitting and played anatomy remain unexecuted; no player assets are promoted.

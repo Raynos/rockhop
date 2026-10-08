@@ -2,8 +2,11 @@
 
 The frozen combined04 master remains the input authority. The builder makes a
 fresh body-plus75-joint derivative; exactly four proposed heads, four parent
-tails and eight affected rest frames change. Other native rest records, body
-coordinates, polygon topology and source-ID attributes remain exact. The full
+tails and eight authored rest frames change. The committed native edit
+diagnostic establishes six descendant matrix recompositions, now recorded
+explicitly. Every actual75rest record must match that pinned diagnostic
+byte-for-byte;61other records, body coordinates, polygon topology and source-ID
+attributes remain exact. The full
 Rigify author source and every original garment remain untouched.
 
 Conventional native automatic binding uses a temporary exact body copy and
@@ -45,13 +48,15 @@ ordered options alongside one linear ARMATURE. Native triangle corners retain
 explicit original polygon/loop ancestry; independent export checks require
 matching oriented triangles and original corner UVs. Reopened operator rows
 must equal the builder receipt. Proper-frame determinant checks apply strictly
-to the eight newly computed frames; all other source rest matrices remain exact.
+to the eight newly computed frames; the six measured descendant matrix changes
+are exact diagnostic lineage and61other rest records remain exact.
 No anatomical joint-range certification is asserted by the provisional maxima.
 
 Parent checkpoint and explicit heavy-run lease are required before either
 Blender process. Each must use the canonical OS lock, two threads, fresh guard
-output and the128GiB bounded launcher. This unit has not executed heat binding,
-native mutation, rendering, glove fitting or player promotion.
+output and the128GiB bounded launcher. Native01aborted before heat binding;
+the subsequent read-only diagnostic established the exact descendant cause.
+No native master, heat bind, rendering, glove fit or player promotion exists.
 
 After independent native proof, refresh actual hand target arrays from the new
 master; preserve geometric web/branch surface roots separately from MCP joint
