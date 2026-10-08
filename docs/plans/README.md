@@ -1843,3 +1843,5 @@ Volume03 transport stops before output because543 moved native Body IDs are abse
 Motion11 native05 saves all six editable control actions and native75 bake/export. Actual contact≤0.090460mm, regional difference≤0.000530mm and clone bake≤0.025975mm under unchanged0.1mm bounds; guard0/23.813s. Selected dressed transport, garment envelopes, bike actions and art/device acceptance remain open.
 
 Volume04 source now distinguishes543 pre-existing unused Body vertices from rendered geometry: original export exactly covers all32,412 Body and26,063 Jeans face IDs, and every primitive row must stay exact. Five fixtures pass. No new mask is added; full anatomical companion sculpt/contact and actual dressed review remain open.
+
+Gate35 actual Metal passes replay/crash/restart but fails ready P50319.03ms against unchanged300ms;10/11, not accepted. Existing player fingerprint remains fd8fe7c2. Failure and no-child headroom refusal are preserved before retry; no threshold/backend changes.
