@@ -545,3 +545,7 @@ Status: **open** (nobody on it) · **in flight** (owner named) · **needs pick**
 | 348 | Add the selected new rider as a separately named sixth Garage rider so the user can quickly compare it with original Mustard on a phone. | **active — separate comparison slot** | Keep the original Mustard intact. Use the actual selected high-resolution rider and existing Garage selection; measure mobile loading/rendering and keep unfinished art explicitly in review. |
 
 | 345 | Show an FPS counter in the actual Garage rotation video and make the rotation smooth; distinguish game performance from recording artifacts. | **active — Garage performance/recording correction** | Capture actual render/RAF timing and encoded presentation timing, use continuous orbit rather than four discontinuous review steps. No invented FPS or generic asset replacement. |
+
+| 349 | Send the new Garage video capture when available. | **done — new video delivered inline, 2026-10-08** | [Played FPS film](../evidence/rider-rebuild/garage-fps-2026-10-08/played01/FINDING.md): continuous18second orbit,59.454actual renderFPS and25FPS video; natural playback reviewed. Seating/cuffs remain unfinished. |
+
+| 350 | Remove the loading screen from the new Garage video. | **done — Garage-only clip delivered, 2026-10-08** | [Garage-only rotation](../evidence/rider-rebuild/garage-fps-2026-10-08/played01/garage-rotation.mp4):9.6s loading/menu prefix removed from already played source;21.2s/530frames/25FPS, full orbit and actual counter retained. |

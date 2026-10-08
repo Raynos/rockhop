@@ -1,0 +1,5 @@
+Actual original selected high-resolution rider played in the real Garage with one18second continuous360degree pointer orbit and visible measured render counter. Actual1088Three-rendered frames over18.300s:59.454FPS,16ms median/27msP95/81msmaximum intervals. No skipped render submissions. Recorder and final video are25FPS, not60FPS; no interpolation. There were722pointer moves, maximum1.926pxstep,52.2ms total quarter inspection pause.
+
+Silent640px proxy played naturally at rate1 to30.8s end in30.868s with no seek or stalls after startup. Parent inspected played front/side/rear views: selected hoodie, denim, black gloves/boots and face persist; posterior seating and cuff defects remain unaccepted. This demonstrates capture/pacing correction on this desktop WebKit run, not phone60FPS or finished art. Full1440x900film delivered inline.
+
+User requested removal of the loading screen. `garage-rotation.mp4` is the contiguous9.6–30.8s interval of the already played source,21.2seconds/530frames at25FPS. Parent visually inspected the played9.6s start frame as Garage with the counter; the full continuous orbit follows. Trimmed clip delivered inline.
