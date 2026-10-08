@@ -39,3 +39,9 @@ Finding: Separate actual bilateral views reject the one local forefoot repair. T
 Validation: Parent viewed all8original/repaired genuinePBRPNGs; CPU2exit0 in25.658s, actualnative hash exact. Same negative-transverse camera is Rlateral/Lmedial, recorded explicitly.
 
 Limits: Rest rejection ends this local repair mechanism; exact character-artist package next, no further gain/lattice campaign or bake.
+
+Finding: Stop the rejected bounded sculpt mechanism with a concrete selected-source character-artist package. Correct camera labels: negative transverse is right lateral and left medial, so only-left failure is not established.
+
+Validation: Parent rehashed archive, manifest and all38original/ZIP members; inspected frame/winding evidence and actual failed views. Exact native, both arrays, original4Kmaps, wearer/shared75 and bike/motion envelope included.
+
+Limits: No artist contacted, new shape or moving art accepted. Open-mesh signed volume is not a closed-surface fitting proof; the unshown right medial side remains unqualified.

@@ -1,0 +1,68 @@
+{
+  "accepted": false,
+  "status": "READ_ONLY_FRAME_CAMERA_WINDING_REVIEW_NO_BLENDER",
+  "sides": {
+    "R": {
+      "footFrameDeterminant": 1.0000000000000002,
+      "maximumFootFrameDifferenceFromRecordedOutline": 0.0,
+      "sourceToNativeAffineDeterminant": 0.0032482459634162546,
+      "facesAndUVCornerOrderReversed": false,
+      "signedRestMeshVolumeAfterDeclaredWindingM3": 0.00149756798550242,
+      "bigToeMedialTransverseSign": 1,
+      "negativeTransverseCameraSees": "lateral",
+      "heelFootRestHead": [
+        -0.17842541635036469,
+        0.061458803713321686,
+        0.13223673403263092
+      ],
+      "toeFootRestHead": [
+        -0.2422541081905365,
+        -0.06846315413713455,
+        0.032175302505493164
+      ]
+    },
+    "L": {
+      "footFrameDeterminant": 1.0,
+      "maximumFootFrameDifferenceFromRecordedOutline": 0.0,
+      "sourceToNativeAffineDeterminant": -0.0032492164394378295,
+      "facesAndUVCornerOrderReversed": true,
+      "signedRestMeshVolumeAfterDeclaredWindingM3": 0.0014986762186352412,
+      "bigToeMedialTransverseSign": -1,
+      "negativeTransverseCameraSees": "medial",
+      "heelFootRestHead": [
+        0.1784254014492035,
+        0.06145881116390228,
+        0.1322368085384369
+      ],
+      "toeFootRestHead": [
+        0.2422541230916977,
+        -0.06846317648887634,
+        0.03217528760433197
+      ]
+    }
+  },
+  "cameraConclusion": "Same negative-transverse offset shows R anatomical lateral but L anatomical medial. Files named lateral are coordinate-negative views, not anatomically matched lateral views. Large L image exposure cannot be read as proof L alone is malformed; the opposite R medial side was not shown.",
+  "geometryConclusion": "No basic double-mirror/frame sign error found in executed recipe and current arrays; useful rear is nearly mirrored within about3mm transverse placement. Camera-side difference explains much apparent asymmetry, but exposed skin is actual retained selected geometry/body mismatch and remains rejected. No all-around/pose acceptance.",
+  "poseEvidence": "Pinned wearer builder clears animation and sets all 75 pose-bone matrix_basis to identity before save; author and repair recipes contain no pose-bone writes or frame_set. Rest-only views, no bike/ankle motion tested.",
+  "R_vs_anatomically_mirrored_L_correspondingVertexDifferenceM": {
+    "retainedRearMaximumByLongHeightTransverse": [
+      3.768260172365423e-05,
+      1.988902046506924e-05,
+      0.0029034796402510055
+    ],
+    "allMaximumByLongHeightTransverse": [
+      3.768260172365423e-05,
+      1.988902046506924e-05,
+      0.0031019052163057115
+    ],
+    "transverse95Percentile": 0.0029950270245484413
+  },
+  "sculpt_selected_forefoot.py": {
+    "poseAttributeMentions": 0,
+    "frameSetCalls": 0
+  },
+  "repair_current_forefoot.py": {
+    "poseAttributeMentions": 0,
+    "frameSetCalls": 0
+  }
+}

@@ -1,0 +1,86 @@
+{
+  "accepted": false,
+  "status": "REQUIRED_ARTIST_DELIVERY_ENVELOPE_NOT_PERFORMED",
+  "wearerAuthority": {
+    "native": "wearer/anatomical-hand-rig.blend",
+    "bodyArrays": "wearer/native-body.npz",
+    "restJoints": 75,
+    "bodyVertices": 10582,
+    "bodyOrRestChangesAllowed": false
+  },
+  "restReview": {
+    "anatomicalLateralCameraTransverseSign": {
+      "R": -1,
+      "L": 1
+    },
+    "anatomicalMedialCameraTransverseSign": {
+      "R": 1,
+      "L": -1
+    },
+    "requiredViews": [
+      "matched lateral R/L",
+      "matched medial R/L",
+      "top",
+      "toe/front",
+      "heel/back",
+      "all-around"
+    ],
+    "completeBodyAndFeetVisible": true,
+    "knownCurrentCameraLabels": "Both supplied lateral files are negative-transverse views; R lateral / L medial, not anatomical matched lateral"
+  },
+  "constructionIntent": {
+    "selectedBlackBootDetailRequired": true,
+    "soleContact": "Actual finished outer outsole surface against fixed bike footpeg, not old floor/axis/socket residual",
+    "sameNative75ForBodyAndBothBoots": true,
+    "denseSourceIsNotMobileProductionMesh": true
+  },
+  "continuousDressedCheckpoint": [
+    "neutral",
+    "forward reach",
+    "crouch",
+    "supported forward-standing ride",
+    "supported back-seated ride",
+    "return"
+  ],
+  "footLocalReview": [
+    "ankle dorsiflexion/plantarflexion",
+    "ankle inversion/eversion within declared rig limits",
+    "toe articulation within declared rig limits",
+    "collar/lower-shin transition",
+    "boot/jeans overlap",
+    "sole/welt support and slip"
+  ],
+  "actualBikeEnvelope": {
+    "bikes": [
+      "fixed Rookie",
+      "fixed Pro"
+    ],
+    "states": [
+      "standing",
+      "seated",
+      "lean both directions",
+      "compress",
+      "hop",
+      "landing",
+      "crash release",
+      "instant restart/reacquire support"
+    ],
+    "contactEvidence": "Played complete selected outfit and close feet through continuous transitions; actual surface-to-peg support, no foot hiding or bike resizing",
+    "bikeFiles": "bike/bike-rookie.glb and bike/bike-pro.glb are exact current normal assets, in their original authored glTF frames; packaged frame/profile source is context, not a new accepted rider adapter"
+  },
+  "engineAndRelease": [
+    "same-source native to GLB to GPU position/normal/tangent/skin parity",
+    "actual Garage and gameplay selected outfit played review",
+    "physical landscape iPhone Safari and desktop sustained pacing",
+    "bot and stranger attempts-to-clear/restart latency",
+    "deterministic recorded input replay",
+    "checked deployment and live SHA"
+  ],
+  "acceptedGates": 0,
+  "parentAloneJudgesArtAndMotion": true,
+  "limits": [
+    "Supplied current native is a rejected rest-fit control, not the required delivery.",
+    "No motion clip or actual current shared75 bike-contact qualification is packaged as passed.",
+    "Old construction/solver pose matrices were intentionally not substituted for a current accepted envelope."
+  ]
+}
