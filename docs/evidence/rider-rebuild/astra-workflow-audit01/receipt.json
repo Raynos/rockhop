@@ -1,0 +1,158 @@
+{
+  "schema": "rockhop-independent-workflow-audit-v1",
+  "createdUTC": "2026-10-08T01:04:24.452495+00:00",
+  "agent": "Codex / gpt-6-astra",
+  "reasoning": "high",
+  "status": "RECOMMENDATION_ONLY_NO_CANDIDATE_ACCEPTED",
+  "allProductionGatesOpen": true,
+  "authority": "Parent judges and commits. No implementation, master, public asset or plan edits by auditor.",
+  "inspection": {
+    "actualAssemblyImagesViewed": 3,
+    "additionalSourceOrReferenceImagesViewed": 3,
+    "filmsPlayed": 0,
+    "sourceCodeRead": true,
+    "heavyJobsRun": 0,
+    "nativeMasterLoaded": false,
+    "nativeMasterSHAOnly": true
+  },
+  "facts": [
+    "Visible rest assembly has leg/hip and foot exposures and absent gloves.",
+    "Current fitting scripts expressly retain original production exterior topology.",
+    "Active plan expressly authorizes production topology replacement with selected appearance transfer."
+  ],
+  "inferences": [
+    "Topology preservation is turning authoring into registration research.",
+    "New fitted deformation surfaces with selected detail transfer are a more practical production route."
+  ],
+  "notEstablished": [
+    "Current coherent wearer is artistically accepted.",
+    "Any pending solver necessarily fails.",
+    "New topology automatically preserves appearance.",
+    "A final garment or dressed Garage candidate exists."
+  ],
+  "sourceRetrievalNote": "Primary sources read through web search results. Some direct Blender open requests returned 402; no inaccessible page content assumed.",
+  "sources": [
+    {
+      "title": "Blender retopology",
+      "url": "https://docs.blender.org/manual/en/5.0/modeling/meshes/retopology.html",
+      "supports": "Automatic remeshing does not reliably produce deformation topology; manual retopology creates a new mesh matching shape."
+    },
+    {
+      "title": "Blender Studio shirt/pants retopology",
+      "url": "https://studio.blender.org/training/stylized-character-workflow/5e70a5b3db0e8bc0c8b226ec/",
+      "supports": "Clothing retopology and modeled folds; author explains avoiding dynamic cloth to simplify animation."
+    },
+    {
+      "title": "Tides of Tomorrow production artist",
+      "url": "https://www.marvelousdesigner.com/en/learn/userspotlight/post/9aba618a803e4e5eb7adb3f7ac375ee9",
+      "supports": "Primary interview describes silhouette, sculpt, retopology, high-to-low bake and game integration."
+    },
+    {
+      "title": "Mesh Deform",
+      "url": "https://docs.blender.org/manual/en/latest/modeling/modifiers/deform/mesh_deform.html",
+      "supports": "Built-in closed deformation cage with binding costs and limitations."
+    },
+    {
+      "title": "Cycles baking",
+      "url": "https://docs.blender.org/manual/en/4.4/render/cycles/baking.html",
+      "supports": "Selected-to-active baking with explicit cage and ray controls."
+    },
+    {
+      "title": "Data Transfer",
+      "url": "https://docs.blender.org/manual/id/5.0/modeling/modifiers/modify/data_transfer.html",
+      "supports": "Vertex groups and interpolated source mappings supported."
+    },
+    {
+      "title": "Corrective shape drivers",
+      "url": "https://docs.staging.blender.org/manual/en/latest/animation/drivers/workflow_examples.html",
+      "supports": "Official joint corrective examples."
+    },
+    {
+      "title": "glTF export",
+      "url": "https://docs.blender.org/manual/en/5.1/addons/import_export/scene_gltf2.html",
+      "supports": "Morph targets and bone/shape-key animation export; arbitrary live driver system not promised."
+    }
+  ],
+  "pins": [
+    {
+      "path": "AGENTS.md",
+      "bytes": 4638,
+      "sha256": "a5499649458b335667a16848f204a6841f4ac78c8cea80f1e82db04e99b38294"
+    },
+    {
+      "path": "docs/plans/sol-6.1-2026-10-07-RIDER_REBUILD_FROM_FIRST_PRINCIPLES.md",
+      "bytes": 26856,
+      "sha256": "1b9831bdb1b6e97f1a591378b675f498500d391bd28fac3f35c4f8ed5ea9b404"
+    },
+    {
+      "path": "docs/evidence/rider-rebuild/construction02/selected-progress01/FINDING.md",
+      "bytes": 1254,
+      "sha256": "ae211ad79cbfefcaf4020fd8deccda11d714237f8afd89288f76974615cbce74"
+    },
+    {
+      "path": "docs/evidence/rider-rebuild/construction02/selected-progress01/standing-front.png",
+      "bytes": 971347,
+      "sha256": "3231a48887b2c6e24a6a2006a4419e438377d91e1c3ad3f8e7ffcfda938d1747"
+    },
+    {
+      "path": "docs/evidence/rider-rebuild/construction02/selected-progress01/standing-profile.png",
+      "bytes": 914042,
+      "sha256": "23e495a7c857f8721e5b587578f9c0c628f166bd762d6256d4ef881e36924c6d"
+    },
+    {
+      "path": "docs/evidence/rider-rebuild/construction02/selected-progress01/forward-lean.png",
+      "bytes": 950825,
+      "sha256": "0f19b037218deace99f9a12c61454296664192fd1c977a6b55f6da05d45e2e13"
+    },
+    {
+      "path": "docs/evidence/rider-rebuild/boot-cavity-rebuild01/original-lateral-profile.png",
+      "bytes": 435314,
+      "sha256": "f69e8b3e46f3a99eadba6efff3b8d8032a8cb697280288ff360ea18b2c59f89b"
+    },
+    {
+      "path": "assets/blender/hero-remaster/generation-comparison-2026-10-03/user-agent2/items01/references/jeans-reference01.png",
+      "bytes": 2203602,
+      "sha256": "fcbe0655f3b56b50e7c1fbd6a168a89f222486f16e8d23f1b96266110a83b7bf"
+    },
+    {
+      "path": "assets/blender/hero-remaster/generation-comparison-2026-10-03/user-agent2/items01/references/gloves-reference01.png",
+      "bytes": 1535204,
+      "sha256": "070c5fc70f1cc17e1697cc88ffb91b71bbdba35003ee3113a94e4a1b9b36adb2"
+    },
+    {
+      "path": "assets/blender/rider-rebuild/jeans-fit01/register-sections.py",
+      "bytes": 20490,
+      "sha256": "d1c631bd0210ed76ee2adc8df58b7b46cdce001487a0495fe708a97bd099b8dc"
+    },
+    {
+      "path": "assets/blender/rider-rebuild/glove-native02-fit/fit-exterior.py",
+      "bytes": 15959,
+      "sha256": "0e06e2775f1f7fc1e4a507b47e45c35c7840e9a94061c0052ab6b2d313feeb43"
+    },
+    {
+      "path": "assets/blender/rider-rebuild/boot-cavity-rebuild01/fit-selected-chart02.py",
+      "bytes": 24725,
+      "sha256": "b767525fae924b95fc183ec92cd0f3b34ffd866d3efbdd1826a0f339a1e927f1"
+    },
+    {
+      "path": "docs/evidence/hero-remaster/audit-2026-10-07-agent2/wardrobe/AUDIT.md",
+      "bytes": 11038,
+      "sha256": "74f077d3c80b04f0cc09803825943177b9056b9dc661b228a538ee5c631fc6bd"
+    },
+    {
+      "path": "docs/evidence/hero-remaster/handoff-2026-10-07/HANDOFF.md",
+      "bytes": 23647,
+      "sha256": "7c0cb053e8b0b863117c01d636a6a54d9f25bafd21fba54995c36c73f7429b31"
+    },
+    {
+      "path": "harness/out/rider-rebuild/native-hand-repair01/native02/anatomical-hand-rig.blend",
+      "bytes": 6647381,
+      "sha256": "42fca617ea8d246a6c3e3ca68a90cd3cb5f3ce8b9bb78130e0e2bbd65f605fac"
+    },
+    {
+      "path": "docs/evidence/rider-rebuild/astra-workflow-audit01/FINDING.md",
+      "bytes": 16938,
+      "sha256": "1d57ad79604771d03df1867d1bd0e8c52f58d5ac5fdd1b554b3fd0ca512abcb0"
+    }
+  ]
+}
