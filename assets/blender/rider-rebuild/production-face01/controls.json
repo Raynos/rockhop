@@ -1,0 +1,69 @@
+{
+  "schema": "rockhop-selected-face-native75-v1",
+  "accepted": false,
+  "status": "SOURCE_PREPARED_UNEXECUTED_PARENT_LEASE_REQUIRED",
+  "inputs": {
+    "native": {
+      "path": "harness/out/rider-rebuild/native-hand-repair01/native02/anatomical-hand-rig.blend",
+      "sha256": "42fca617ea8d246a6c3e3ca68a90cd3cb5f3ce8b9bb78130e0e2bbd65f605fac"
+    },
+    "arrays": {
+      "path": "harness/out/rider-rebuild/native-hand-repair01/native02/native-body.npz",
+      "sha256": "e62e9969503b7761e99463eccc3ca7be39e0c230a2948f2f87a224db52d0f9a2"
+    },
+    "full": {
+      "path": "harness/out/rider-rebuild/native-hand-repair01/native02/weights-full.json",
+      "sha256": "f053270921aa3f2db0f353e107646e066ccaba2333148fe31667d492684c5024"
+    },
+    "four": {
+      "path": "harness/out/rider-rebuild/native-hand-repair01/native02/weights-four.json",
+      "sha256": "3fae5dba9d5b5c3b2785fd9e05319d95de22d337678d1c807fcba02bdf9382ac"
+    },
+    "builder": {
+      "path": "assets/blender/rider-rebuild/construction02/build-selected-face01.py",
+      "sha256": "c58e38f94db9c66d29763c679a3f205096b4ab8493eb52f543650b469f89d8cd"
+    },
+    "donor": {
+      "path": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/rig-adapter01/body-bind11/rider.glb",
+      "sha256": "b7f4f22790124c664f9907104e5b17b77775b4c5c995f715d62be640bbcc8754"
+    }
+  },
+  "construction": {
+    "bodyCutNativeZ": 1.505,
+    "sourceCutY": 1.56,
+    "uniformScale": 0.9766420600440662,
+    "properFrame": "[-rawZ,-(rawX-.65),rawY]",
+    "expectedOriginalVertices": 10582,
+    "expectedRestBones": 75,
+    "expectedBelowCutRows": 6933,
+    "expectedHandDomainRows": 1446,
+    "expectedProtectedDonorTriangles": 66364,
+    "reuseExistingConstructionUnchanged": true,
+    "face03IsInput": false
+  },
+  "execution": {
+    "threads": 2,
+    "heavyTrialLimit": 1,
+    "parentLeaseRequired": true,
+    "out": "harness/out/rider-rebuild/production-face01/native01",
+    "checkOnlyCommand": "blender -b -t 2 --python-exit-code 1 --python assets/blender/rider-rebuild/production-face01/integrate_selected_face.py -- harness/out/rider-rebuild/production-face01/native01",
+    "independentCommand": "blender -b -t 2 --python-exit-code 1 --python assets/blender/rider-rebuild/production-face01/verify_selected_face.py -- harness/out/rider-rebuild/production-face01/native01",
+    "renderCommand": null,
+    "saveBeforeReview": true,
+    "noRetryBeforeParentCheckpoint": true
+  },
+  "contract": {
+    "candidateKind": "explicit joined-face derivative of native42f; canonical10582 remains authoritative",
+    "garmentReceiptsRepinned": false,
+    "normalPlayerPromotion": false,
+    "fullFourRecordPolicy": "Original full/four files remain immutable, keyed by original source ID; candidate native fields preserve every below-cut row exactly. No candidate full/four inventory or canonicalization is claimed.",
+    "limits": [
+      "One source intake and one unchanged construction; no generation or body/rig/garment refit.",
+      "No face03 body, old hand geometry, old rig or old wardrobe is imported.",
+      "Native closure and source retention do not certify neck shape, shading continuity, face likeness or moving art.",
+      "Existing compose build-selected/preserve-selected routes support the derivative; original garment body receipts remain pinned to canonical10582/native42f.",
+      "The unchanged builder replaces non-donor corner normals with geometric vertex normals; lower-body shading-normal parity is not claimed.",
+      "Face-only evidence cannot satisfy complete dressed R1 or remove an artist blocker."
+    ]
+  }
+}
