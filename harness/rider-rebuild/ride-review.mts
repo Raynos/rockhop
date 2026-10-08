@@ -1,4 +1,6 @@
-/** Actual recorded game inputs, complete dressed rider and measured joint debug. */
+/** Actual recorded game inputs, complete dressed rider and measured joint debug.
+ * Optional --bike=rookie|pro uses the existing game-supported bike choice.
+ */
 /* oxlint-disable typescript/no-explicit-any -- read-only renderer evidence. */
 import fs from 'node:fs';
 import path from 'node:path';
@@ -11,13 +13,25 @@ import { decodeJSON, expandFrames } from '../../src/core/replay';
 const arg = (name: string, fallback = '') => process.argv.find(value => value.startsWith(`--${name}=`))?.slice(name.length + 3) ?? fallback;
 const build = path.resolve(arg('build')), out = path.resolve(arg('out'));
 assert(!fs.existsSync(out), 'Fresh output required');
-fs.mkdirSync(path.join(out, 'frames'), { recursive: true });
 const recording = decodeJSON(fs.readFileSync(arg('recording', 'harness/inputs/b1-first-ride/bot-3.json'), 'utf8'));
+const bike = arg('bike', recording.header.bike ?? 'rookie');
+assert(bike === 'rookie' || bike === 'pro', '--bike must be rookie or pro');
+const source = JSON.parse(fs.readFileSync(path.join(build, 'rider-rebuild-inputs.json'), 'utf8'));
+const catalog = JSON.parse(fs.readFileSync(path.join(build, 'model-catalog.json'), 'utf8'));
+const bikeAssets = Object.fromEntries(['rookie', 'pro'].map(choice => [choice,
+  catalog.models.find((row: any) => row.logical === `models/bike-${choice}.glb`)]));
+assert(bikeAssets.rookie && bikeAssets.pro, 'Both authored bike catalogue pins required');
+fs.mkdirSync(path.join(out, 'frames'), { recursive: true });
 const inputs = expandFrames(recording), fps = 12, stride = recording.header.physicsHz / fps;
 assert(Number.isInteger(stride));
 const count = Math.min(Math.floor(inputs.length / stride), Math.round(Number(arg('seconds', '16')) * fps));
 const yaw = Number(arg('yaw', '1.4'));
-const report: any = { build, fps, stride, count, errors: [], loaded: [], samples: [], scope: 'Actual recorded game inputs; camera follows declared pelvis; no pose injection or physics mutation' };
+const report: any = { build, fps, stride, count, errors: [], loaded: [], samples: [],
+  selectedRiderSource: { sha256: source.sourceSHA256, metadataSHA256: source.metadataSHA256 },
+  bikeSelection: { requested: bike, recorded: recording.header.bike ?? 'rookie',
+    overridden: !!arg('bike'), inputRecordingUnchanged: true, assets: bikeAssets,
+    path: 'Existing __rockhop.setBike -> Game.setBike, also used by Garage choice' },
+  scope: 'Actual recorded game inputs and supported bike choice; camera follows declared pelvis; no pose injection or physics mutation' };
 const server = await preview({ configFile: false, root: process.cwd(), build: { outDir: build }, preview: { host: '127.0.0.1', port: 0 }, logLevel: 'warn' });
 const browser = await webkit.launch({ headless: true });
 const page = await browser.newPage({ viewport: { width: 1440, height: 900 }, deviceScaleFactor: 1 });
@@ -31,11 +45,13 @@ page.on('response', response => {
 try {
   await page.goto(server.resolvedUrls!.local[0] + `?harness=1&audio=0&sw=0&outfit=street-mustard&physics=${recording.header.physics ?? 'v1'}&hz=${recording.header.physicsHz}`);
   await page.waitForFunction(() => (window as any).__rockhop?.ready, null, { timeout: 120000 });
-  await page.evaluate(async header => {
+  report.bikeSelection.effective = await page.evaluate(async ({ header, bike }) => {
     const t = (window as any).__rockhop, r = (window as any).__render;
-    t.setBike(header.bike ?? 'rookie'); await r.whenReady();
+    t.setBike(bike); await r.whenReady();
     await t.loadTrack(header.trackId, header.seed); await r.whenReady(); t.setQuality('high'); await r.whenReady(); t.skipCountdown();
-  }, recording.header);
+    return t.info().bike;
+  }, { header: recording.header, bike });
+  assert.equal(report.bikeSelection.effective, bike, 'Actual game selected requested bike');
   for (let i = 0; i < count; i++) {
     const sample = await page.evaluate(({ input, yaw }) => {
       const t = (window as any).__rockhop, r = (window as any).__render, d = r.debug;
@@ -55,8 +71,8 @@ try {
     await page.screenshot({ path: path.join(out, 'frames', `${String(i).padStart(4, '0')}.png`) });
   }
   await Promise.all(responses); assert.deepEqual(report.errors, []);
-  const source = JSON.parse(fs.readFileSync(path.join(build, 'rider-rebuild-inputs.json'), 'utf8'));
   assert(report.loaded.some((row: any) => row.sha256 === source.sourceSHA256), 'Exact selected GLB served by actual build');
+  assert(report.loaded.some((row: any) => row.sha256 === bikeAssets[bike].sha256), 'Exact selected authored bike GLB served by actual build');
   assert(report.samples.every((row: any) => row.debug.allBoneFinite), 'Complete hierarchy finite');
   const encoded = spawnSync('ffmpeg', ['-v', 'error', '-y', '-framerate', String(fps), '-i', path.join(out, 'frames/%04d.png'), '-an', '-c:v', 'libx264', '-crf', '18', '-pix_fmt', 'yuv420p', path.join(out, 'ride-played.mp4')], { encoding: 'utf8' });
   assert.equal(encoded.status, 0, encoded.stderr);
