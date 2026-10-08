@@ -1625,3 +1625,5 @@ October8 actualnative193 saved e17f9093 withunchangedselectedoutfit/75rest/field
 October8 parent-reviewed final cuff06 source uses the measured connected bilateral guide sector, preserves original anatomy/lip/fields/PBR and stops on orientation or fragment-containment failure. Freeze/native/export/played judgment pending; all0/6open.
 
 October8 originalselected Rookie/Prosidefilms playednatural16s each: Rookie0/192supported>1cm;Pro2/108supportedfailures,84released excluded,worstsole16.451mm. Preservebothfilms/reportsbeforeboundedcoupledtorsoevaluation. No wholecontact/artpass;all0/6open.
+
+October8 native193 originalselected clothed crouch/rise/armsup fullfilm rendered and playednatural8.042s; parentkeeps moderatefull-viewbaseline. Repeat190/193presentedcallbacks,omissionsretained;profiles/hands/deepseated/engineparity stillopen,all0/6open.
