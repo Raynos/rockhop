@@ -635,6 +635,10 @@ face mask, as specified below.
   TRS match source exactly at five actual times per clip; integer-frame native
   world-matrix transport also passes. This is a limited moving integration
   baseline, not GPU vertex parity, finite grip or an art/device pass.
+  [Deep217 clothed crouch/rise](../evidence/rider-rebuild/selected-deep-crouch03/played01/FINDING.md)
+  now plays a full9-second diagnostic cycle on the unchanged original outfit;
+  all217 decoded native-world frames pass and original BIN/PBR/rest stay exact.
+  The bike obscures the deepest posterior/knee view, so deep art remains open.
 - Next visible result: fresh user-assigned Astra12 xhigh owns actual local
   garment construction, with separate engine intake and deep-crouch builders.
   [Full original-source sections](../evidence/rider-rebuild/astra-character-construction12/source-topology01/source-topology.json)
@@ -654,8 +658,10 @@ face mask, as specified below.
   Garage orbit](../evidence/rider-rebuild/selected-seated-garage01/played01/FINDING.md)
   defaults to neutral native75 riding IK on the selected bike. Both UI choices,
   original outfit and palm/sole targets pass five snapshots; parent viewed
-  natural films. Standing clips require explicit selection. Exact saddle and
-  full surface contact remain unmeasured. Production LOD, full
+  natural films. Standing clips require explicit selection. [Finite saddle
+  measurements](../evidence/rider-rebuild/selected-seated-garage01/seat-contact01/FINDING.md)
+  identify a distal medial-thigh witness, not posterior support. A reviewed
+  posterior patch/fit and full surface contact remain open. Production LOD, full
   surfaces, anatomy, deep motion and physical-device gates remain open0/6.
   An outside artist is optional; no external-resource wait blocks this work.
 
