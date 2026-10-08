@@ -1,0 +1,140 @@
+{
+  "accepted": false,
+  "status": "DIRECT_DENSE_SCULPT_SAVED_VISIBLE_REST_EXPOSURE_REMAINS",
+  "guardStatus": "worker returned; review pending",
+  "exitCode": 0,
+  "elapsedSeconds": 13.684,
+  "heavyLeaseReleased": true,
+  "recipeSHA256": "038aa2c55539c292d99d4de1ca62b8100d2bf7a7b6cc6bfb2042026eb05d0d38",
+  "controlsSHA256": "27cb9d6d5e047f9f7a9303a8bd550a26e674c30de7808d055ca050fd0e20d1ce",
+  "controlChangeSinceCheckpoint": false,
+  "bodyAndRest75Unchanged": true,
+  "denseTopologyPreserved": true,
+  "sides": {
+    "R": {
+      "originalVertexCount": 305453,
+      "retainedRearVertices": 231302,
+      "changedForefootVertices": 74151,
+      "retainedRearMaximumDeltaSource": 0.0,
+      "maximumMedialGrabM": 0.03099999949336052,
+      "faces": 610934,
+      "reflectedFaceAndUVCornerOrderTogether": false,
+      "nativeBounds": [
+        [
+          -0.29570285079304554,
+          -0.1525734467393433,
+          -0.02324392833672847
+        ],
+        [
+          -0.13667360757795632,
+          0.1222273256775087,
+          0.14437221877580342
+        ]
+      ],
+      "medialBigToeTransverseSign": 1,
+      "material": "byte-exact selected 4096 albedo + metallicRoughness; no bake"
+    },
+    "L": {
+      "originalVertexCount": 305453,
+      "retainedRearVertices": 231302,
+      "changedForefootVertices": 74151,
+      "retainedRearMaximumDeltaSource": 0.0,
+      "maximumMedialGrabM": 0.030799999833106995,
+      "faces": 610934,
+      "reflectedFaceAndUVCornerOrderTogether": true,
+      "nativeBounds": [
+        [
+          0.13926211319004259,
+          -0.15120973216662442,
+          -0.023246814956395648
+        ],
+        [
+          0.2983589333789628,
+          0.12354050320519037,
+          0.1443921077962685
+        ]
+      ],
+      "medialBigToeTransverseSign": -1,
+      "material": "byte-exact selected 4096 albedo + metallicRoughness; no bake"
+    }
+  },
+  "uvPolicy": "Raw corner UV unchanged; copied V=1-V; negative determinant L face/UV corners both reversed",
+  "native": {
+    "path": "harness/out/rider-rebuild/production-boots03/sculpt02/direct-selected-source-sculpt.blend",
+    "sha256": "1ba3ac9e8200ed536edec7637450388d1c0bc5a1e73ec035e4e33bc8b8aad446"
+  },
+  "originalAndSculptViewsBuilderViewed": 4,
+  "builderObservedTells": [
+    "Unchanged original selected source exposes dorsal foot and toes substantially.",
+    "Sculpted selected source still exposes skin at outer forefoot side and a small distal spot in both views.",
+    "Original selected rounded cap/welt/outsole/laces remain recognizable; diagonal crown folds/bumps visible.",
+    "Parent art verdict remains pending; these rest diagnostic stills cannot accept motion."
+  ],
+  "bakeRun": false,
+  "decimationRun": false,
+  "motionRun": false,
+  "acceptedGates": 0,
+  "evidenceViews": [
+    "docs/evidence/rider-rebuild/production-boots03/sculpt02/original-selected-lateral.png",
+    "docs/evidence/rider-rebuild/production-boots03/sculpt02/original-selected-toe-threequarter.png",
+    "docs/evidence/rider-rebuild/production-boots03/sculpt02/sculpted-selected-lateral.png",
+    "docs/evidence/rider-rebuild/production-boots03/sculpt02/sculpted-selected-toe-threequarter.png"
+  ],
+  "files": [
+    {
+      "path": "docs/evidence/rider-rebuild/production-boots03/sculpt-guard02/guard.json",
+      "bytes": 2682,
+      "sha256": "c4f7398856a8879ddace642f0d89ae2f082b920043a164f680a9218810abfd6c"
+    },
+    {
+      "path": "docs/evidence/rider-rebuild/production-boots03/sculpt-guard02/worker.log",
+      "bytes": 2044,
+      "sha256": "31254417c3c03c096eac6b4121a303baa4e15b1b3deb2a5ace9fb68efc78f212"
+    },
+    {
+      "path": "harness/out/rider-rebuild/production-boots03/sculpt02/direct-sculpt-source-L.npz",
+      "bytes": 4004434,
+      "sha256": "075a56259e970229dd7d60547442128cdf7798d01a9f24a4bdb8015768693eab"
+    },
+    {
+      "path": "harness/out/rider-rebuild/production-boots03/sculpt02/direct-sculpt-source-R.npz",
+      "bytes": 4004437,
+      "sha256": "bbb0d4c50317bd241d62698d34af5f085f5439300c23de0584c595d197c1a98e"
+    },
+    {
+      "path": "harness/out/rider-rebuild/production-boots03/sculpt02/direct-selected-source-sculpt.blend",
+      "bytes": 82772338,
+      "sha256": "1ba3ac9e8200ed536edec7637450388d1c0bc5a1e73ec035e4e33bc8b8aad446"
+    },
+    {
+      "path": "harness/out/rider-rebuild/production-boots03/sculpt02/direct-selected-source-sculpt.blend1",
+      "bytes": 82769134,
+      "sha256": "5d0fec79dfe415fea28b2b4f4985cf1345330da44c520365911e3ea45f32620e"
+    },
+    {
+      "path": "harness/out/rider-rebuild/production-boots03/sculpt02/original-selected-lateral.png",
+      "bytes": 543409,
+      "sha256": "76ae8262eadb203f8e708e60ea9eb45394758318dca422d7f3b5604beb55a128"
+    },
+    {
+      "path": "harness/out/rider-rebuild/production-boots03/sculpt02/original-selected-toe-threequarter.png",
+      "bytes": 536145,
+      "sha256": "03e8b1cdab072a83e7b43d73ed22a37999d2d3c9e4a9e0640d376bf1e35bb716"
+    },
+    {
+      "path": "harness/out/rider-rebuild/production-boots03/sculpt02/report.json",
+      "bytes": 4066,
+      "sha256": "844c053b40a5be1865726b72efa26eab4820e8f607c899d29b629ff3255e9b85"
+    },
+    {
+      "path": "harness/out/rider-rebuild/production-boots03/sculpt02/sculpted-selected-lateral.png",
+      "bytes": 555430,
+      "sha256": "1c6643f6f7acd619cd042393677934f7dc83fa84a35f5517f628d19e56c19ce9"
+    },
+    {
+      "path": "harness/out/rider-rebuild/production-boots03/sculpt02/sculpted-selected-toe-threequarter.png",
+      "bytes": 553188,
+      "sha256": "1cc55b1f02d15d21da7d319e8b741297f5183e063b982b49f84794ba930dc0c4"
+    }
+  ]
+}

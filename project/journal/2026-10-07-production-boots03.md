@@ -15,3 +15,9 @@ Finding: Coerce the determinant comparison to Python bool so direct boot sculptu
 Validation: Parent checked one-line source diff, AST and refreshed hash. All sculpt controls unchanged; corrected run unexecuted.
 
 Limits: No rendered shape or art acceptance; fresh sculpt02 output required.
+
+Finding: Direct selected-source sculpt retains rounded toe/leather/laces and greatly reduces body exposure; outer flank and distal spot still fail enclosure.
+
+Validation: Actual runexit0 in13.684s, parent native hash and all four matched PNG inspections; dense topology/UV/source maps/body/shared75 preserved.
+
+Limits: Rest fit rejected. One targeted local flank repair justified by current actual sections, no moving or mobile acceptance.
