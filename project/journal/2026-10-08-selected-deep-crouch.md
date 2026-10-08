@@ -5,3 +5,7 @@ Limits: This is unaccepted source, with stated artistic depth/timing and landmar
 Finding: Actual deep217 action saved on complete selected engine05, with44.9475cm derived hip drop and protected outfit/rest unchanged.
 Validation: CPU2exit0/190.491s, finite217×75 world matrices and exact source-bound archive bytes; maximum direct finite sole residual2.317µm and evaluated1.333µm.
 Limits: Construction only; no played dressed/GPU, skin deformation, comfort or device acceptance.
+
+Finding: Single-action rig export and exact named75 transport deliver deep217 without re-exporting selected geometry or falsifying historical145/193 provenance. Original engine05 lacks optional sourceSHA alias, so glbSHA is mandatory and any present alias must match.
+Validation: Parent reviewed both complete sources and one-line alias correction; AST/small pins and actual absent-alias validation pass. Actual rig export pending.
+Limits: Offline export/transport source checkpoint only; all moving deformation/GPU and device gates remain open.
