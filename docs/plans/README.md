@@ -1513,3 +1513,5 @@ October8 fresh Astra05 source/images review confirmed rectangular hoodie patch i
 October8 actual boot read-only probe exit0/7.355s distinguishes toe cavity and insufficient selected exterior:70cavity-outside,39noouterexit,146outerwall<4mm samples. Specific local toe/forefoot source repair delegated, preserved actual leather form. No geometry or art/motion acceptance.
 
 October8 actual local04 bilateral selected glove native saved CPU2exit0/62.47s, both284571dense vertices transfer warning-free on shared75. Keep editable original-PBR pair, pending actual masked surface and moving grip review; outfit/player unaccepted.
+
+October8 independent Astra05 production correction adopted after parent primary-source verification: exact-topology outfit body-face masks, full reference retained; stop hidden-body enclosure-only campaigns. Continuous selected silhouette/openings/dressed motion remain mandatory. Bilateral glove local04 saved; actual equipped complete Garage result next. Rider0/6.

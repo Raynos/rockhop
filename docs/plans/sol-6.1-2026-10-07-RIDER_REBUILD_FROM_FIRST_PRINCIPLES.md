@@ -549,43 +549,63 @@ transport contract; update adapters and qualification if they must change.
 A source conservation check must not prohibit the reconstruction being attempted.
 
 The working scene contains all seven actual selected-source meshes and genuine
-PBR. The latest construction save is hoodie nativebaedfa57; its shoulder join
-is rejected. A saved complete scene is useful authoring context, not a completed
-rider. Static dense jeans/gloves remain rejected references until replaced by
-judged wearing derivatives.
+PBR. Complete saved scenes remain unaccepted authoring contexts. Keep original
+stock and reference body; judge the equipped outfit using its production body
+face mask, as specified below.
 
 - Head/neck: retain broad neck sculpt90236188 and endpoint-field correction
-  e68b5c41. The72frame clothed turn/nod was rendered and played silently to
-  natural end. RearC7, mottled shading, hair seam and historical corner-normal
-  residual remain open. This limited neck test does not qualify the outfit.
-- Hoodie: retain useful selected hood/chest/outer sleeves. Stop correction03's
-  rectangular ruled-depth surface and one-strip zipper: actual four-view PBR
-  judgment rejects shoulder shelves and ragged rear joins despite zero predicted
-  point/center/fan defects. Fresh targeted Astra review must specify a source-
-  informed sleeve-cap/armhole with actual boundary and tangent continuity. Do
-  not tune depth/bridge gains or animate this visibly failed join.
-- Jeans: retain actual working wearer95654876. Authored paired-triangle pelvis
-  correspondence succeeds CPU2 exit0/79.503s: original fly/pockets/waist transfer
-  without previous black blocks; all direct regional samples hit the intended
-  source. Root judged all six views. This1024 pelvis baseline permits one whole
-  selected4K source-aware transfer, not final shape, normal or moving acceptance.
-  Lower correspondence follows measured original cuffs/crotch and existing
-  native lineage; no global ray increase or source-encloses-body prerequisite.
-- Gloves: original source belongs onL, reflectedR reverses faces and UV corners
-  together. Dense Laplacian failure is measured: Blender's cotangent epsilon
-  leaves542 unanchored zero columns per placed hand. A selected-derived coarse
-  guide in original units solves both hands; actual right dense transfer keeps
-  coherent original ribs/padding without previous spikes. Root rejects actual
-  palm/thenar/tip skin exposure. Diagnose achieved saved coordinates and author
-  local anatomy corrections; do not confuse target positions with achieved fit.
-  Left SurfaceDeform warning has an unproven generic angular predicate; preserve
-  successful binding and source ancestry, never waive modifier warnings.
-- Boots: stop rejected rectangular exterior UNION. Selected-upper guide sculpt
-  retains original curved dense appearance, sole and UV before own-side cavity.
-  A JSON NumPy-scalar error was corrected without numerical/anatomical changes;
-  fresh actual sculpt02 is in progress. Save geometry before postgates. Actual
-  original-PBR shape and played ankle/toe/bike judgment remain mandatory; an
-  empty cavity alone does not establish enclosure or attractive footwear.
+  e68b5c41. The72frame clothed turn/nod played silently to natural end. RearC7,
+  shading, hair seam and historical corner-normal residual remain open.
+- Hoodie: stop the rejected rectangular ruled-depth patch and one-strip zipper.
+  Parent reproduced Astra05's87mm corner displacement. Use conventional broad
+  source-pose transport of the original rounded selected dense surface, keeping
+  full topology/UV/original4KPBR and an editable modeling aid. Final garment
+  joins the shared75 after actual complete-outfit rest review. No shelf tuning.
+- Jeans: actual pelvis1024 correspondence transfers original fly/pockets/waist
+  without previous black blocks. Whole4K run saves8fbc94e5 before stopping with
+  0bakes: three right crotch projection faces cross the centerline;621 legitimate
+  rear-underbody first hits exceed an arbitrary80mm diagnostic bound. Repair
+  only those projection/cage faces and use exact source-face/normal/position
+  evidence for the local rear hits. Preserve successful pelvis and wearing mesh.
+- Gloves: original source isL, reflectedR reverses faces/UV corners together.
+  Source-unit coarse guide removes the actual dense cotangent singularity.
+  Actual local04 now saves both selected dense gloves warning-free using the
+  existing successful rest binding, on shared75, retaining original pads/ribs/PBR.
+  Judge masked continuous surfaces and bilateral grip next. Hidden-body crossings
+  do not warrant another inflation campaign; surface holes and poor motion do.
+- Boots: actual selected guide sculpt retains curved leather, laces and tread;
+  parent rejects former box UNION. Sculpt02 body crossings trigger diagnostic
+  review, not an unmasked-enclosure prerequisite. Use the continuous pre-cavity
+  selected surface, produce the anatomical opposite pair and shared75 binding,
+  then judge masked actual surface, ankle/toe movement and bike contacts. Stop
+  cavity/ease iterations that only remove invisible reference-body intersections.
+
+### Equipped-outfit body masks adopted after independent Astra05 review
+
+Parent verified the primary production workflows: [Epic MetaHuman Body Hidden
+Face Map](https://dev.epicgames.com/documentation/metahuman/testing-and-configuring-your-parametric-outfit-asset?lang=en-US)
+removes clothing-covered body faces at assembly; [Reallusion outfit face
+hiding](https://manual.reallusion.com/Character-Creator-4/Content/ENU/4.0/08_Cloth/Hiding_Body_Meshes_by_Faces.htm)
+requires refinement around openings. This supersedes earlier blanket complete
+body-enclosure requirements for opaque equipped garments in this plan.
+
+Keep the full immutable reference body for anatomy, fitting and shared75 rigging.
+Author garment-linked hidden body polygon/triangle IDs against exact topology;
+the render derivative retains original positions, skin, bind matrices, UVs and
+materials. Union equipped masks, restore faces when clothing is removed, and
+reject stale topology hashes. Preserve neckline, wrist and ankle opening skin
+with overlap beneath the garment. Masks must be independent of camera and pose
+and apply consistently to actual export/render passes.
+
+Replacement visible gate: no unintended skin islands or missing-body holes in
+the dressed movement envelope; credible selected silhouette, continuous opaque
+surface, deformation and contacts. Hidden-body intersection counts remain
+labelled diagnostics, except where simulation/collision or visible anatomy
+requires them. A masked skin island becoming background reveals a real garment
+hole and still fails. Masks never excuse hoodie plates, incomplete thumb webs,
+collapsed boots, poor weighting, cloth intersections or failed grip. Apply this
+now to the complete selected outfit and actual Garage/movement preview; do not
+conduct another prerequisite unmasked millimetre-clearance campaign.
 
 The next visible deliverable remains the complete selected dressed master with
 supported garment repairs, then continuous clothed reach/crouch/both supported
@@ -595,12 +615,10 @@ or rig is allowed where anatomy supports it. Original selected stock is immutabl
 defective derivative boundaries are not. Final coherent maps/four-weight/export
 conditions remain delivery gates, not prerequisites for editable construction.
 
-Current-player silent Metal gate13 passed11/11 with byte-identical recorded
-finish/hash. Gate14 retains10/11: boot-ready348.241ms exceeds300ms amid actual
-host load60.21, while deterministic finish and one-tick restart pass. Its built-in
-resampling already ran; no blind retry. A meaningful host-load change or the
-next required construction cadence permits a fresh silent gate. Existing-player
-checks do not qualify the remastered rider. AllR0–R5 remain open, accepted0/6;
-no player promotion, full ship, stranger or device acceptance. Artists remain
-optional; report specific autonomous failures without inventing an external-only
-prerequisite.
+Current-player silent Metal gate15 passed11/11 after meaningful host-load
+reduction: boot209.813ms, identical finish8.591666666666667/hash622bb2554e0f9a26,
+one-tick restart5.94ms. Gate14 timing failure remains retained. Run the next
+silent ship gate after the third actual construction mutation. Existing-player
+checks do not qualify this rider. AllR0–R5 remain open, accepted0/6; no normal
+player promotion, full ship, stranger or device acceptance. Artists remain
+optional; report actual failures without inventing an external prerequisite.

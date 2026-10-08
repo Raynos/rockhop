@@ -1,0 +1,20 @@
+{
+  "acceptedRider": false,
+  "adviser": "gpt-6-astra high fresh independent05",
+  "primarySourcesVerifiedByParent": [
+    {
+      "url": "https://dev.epicgames.com/documentation/metahuman/testing-and-configuring-your-parametric-outfit-asset?lang=en-US",
+      "claim": "Body Hidden Face Map removes always-clothed body faces at assembly."
+    },
+    {
+      "url": "https://manual.reallusion.com/Character-Creator-4/Content/ENU/4.0/08_Cloth/Hiding_Body_Meshes_by_Faces.htm",
+      "claim": "Outfit-linked body face hiding requires finer control near openings and matching body generation."
+    }
+  ],
+  "change": "Use exact topology equipped body masks and masked actual dressed surface/motion gate; stop hidden-body enclosure-only rounds.",
+  "limits": [
+    "No wardrobe art or motion passes from this advice.",
+    "Actual masked surfaces must distinguish skin intersections from garment holes.",
+    "Full reference body retained; original selected appearance/shared rig mandatory."
+  ]
+}
