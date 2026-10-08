@@ -1,0 +1,69 @@
+{
+  "schema": "selected-gameplay-metal-source29-v1",
+  "status": "SOURCE_ONLY_UNACCEPTED_NOT_EXECUTED",
+  "accepted": false,
+  "reason": "One explicit desktop Metal alternative after WebKit capture02 stopped at the unchanged memory guard before motion. Memory benefit remains unmeasured; phone qualification remains separate.",
+  "sourcePins": [
+    {
+      "path": "harness/rider-rebuild/gameplay-lean-review.mjs",
+      "sha256": "6f9cb91a11631772374810597ff558b03e6aca4fec7c25066fa2f781f39e9ee2"
+    },
+    {
+      "path": "harness/lib/browser.ts",
+      "sha256": "145a81eec1c13f7c87a2910827f3cb5132b0ba2c80c494d7c42bd17fd017ca7d"
+    },
+    {
+      "path": "harness/rider-rebuild/private-dev-review.mjs",
+      "sha256": "33e966d66cd2d0b77e6b797f3b957935ef0010fd46c623ca605d74e9a221303b"
+    },
+    {
+      "path": "harness/rider-rebuild/glb-response-witness.mjs",
+      "sha256": "531b7bb0d2791c670966ab315b82a3fa5b27fe7bafaed898ebd7b966300c7438"
+    },
+    {
+      "path": "harness/out/rider-rebuild/selected-authoring-motion11/gameplay-source-calibrated09/rider-contract.json",
+      "sha256": "b7554ed11b8a84f6fc38b5e56a75bc2d690780ce6580c95dc95b91cab10effa8"
+    }
+  ],
+  "selectedGLBSHA256": "ff9d78e2c5c40a4be1218b57611c5e71db10a2de7b636ec1589358176f907a0f",
+  "behavior": {
+    "defaultBackend": "webkit",
+    "optionalBackend": "metal",
+    "metalHelper": "harness/lib/browser.ts launchBrowser",
+    "environment": "TRIALS_BROWSER_BACKEND=metal only during launch in this capture child; previous value restored in finally",
+    "hardwareProof": "Helper WebGL2 probe and actual game renderer must contain Metal and exclude SwiftShader/llvmpipe/software; no software fallback",
+    "reportFields": [
+      "browser.backend",
+      "browser.version",
+      "browser.renderer",
+      "browser.flagSet",
+      "browser.helper.path",
+      "browser.helper.sha256",
+      "browser.probe"
+    ],
+    "probeLifecycle": "Close helper probe context before creating recorded1440x900 context",
+    "cleanup": "Launch/context/page creation now inside capture try; independent context/video/browser/server cleanup and failure report attempted."
+  },
+  "preserved": "Exact camera setup,held brake0 neutral240/forward360/back360/neutral240 sequence,120Hz physics,241 native75 samples,asset/contact assertions and1440x900 video retained. Source block equality to preceding HEAD checked; no parser/decode/asset/contract/physics changes.",
+  "validation": {
+    "syntax": "node --check harness/rider-rebuild/gameplay-lean-review.mjs PASS",
+    "regressionCommand": "node --import tsx --test harness/rider-rebuild/private-volume.test.mjs harness/rider-rebuild/private-source-alias.test.mjs",
+    "regressions": {
+      "passed": 8,
+      "failed": 0,
+      "skipped": 0
+    },
+    "mockedLifecycleChecks": [
+      "default WebKit launch failure closes server/writes report even with inherited backend variable",
+      "Metal launch failure restores child env/closes server/writes report",
+      "Metal capture-context failure closes probe and helper browser/server",
+      "Software probe rejects and closes helper browser/server"
+    ],
+    "mockedLifecyclePassed": 4,
+    "helperImport": "Existing TypeScript module imported without launching browser",
+    "lint": "PASS with temporary config extending repository rules and readonly window/document/requestAnimationFrame for serialized page.evaluate callbacks; no rules disabled. Plain invocation flags these existing browser globals.",
+    "diffCheck": "PASS",
+    "browserOrBlenderRun": false
+  },
+  "parentNextAction": "Review and commit source before one bounded --backend=metal attempt under original admission/stop/wall guards. Actual film,renderer report,memory benefit,finite contact and art remain unmeasured."
+}

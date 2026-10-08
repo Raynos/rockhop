@@ -4,6 +4,7 @@ import path from 'node:path';
 import assert from 'node:assert/strict';
 import crypto from 'node:crypto';
 import { webkit } from 'playwright';
+import { register } from 'tsx/esm/api';
 import { createPrivateDevReview } from './private-dev-review.mjs';
 import { witnessGlbResponse } from './glb-response-witness.mjs';
 import { installGarageCaptureMeter } from './garage-capture-meter.mjs';
@@ -12,28 +13,61 @@ const arg = name => process.argv.find(value => value.startsWith(`--${name}=`))?.
 const source = arg('source'), contractPath = arg('contract'), out = path.resolve(arg('out') ?? '');
 assert(source && contractPath && arg('out'), 'Pass --source, --contract and fresh --out');
 const bike = arg('bike') ?? 'rookie'; assert(['rookie', 'pro'].includes(bike));
+const backend = arg('backend') ?? 'webkit';
+assert(['webkit', 'metal'].includes(backend), 'Pass --backend=webkit|metal');
 await fs.mkdir(out, { recursive: false });
 const contract = JSON.parse(await fs.readFile(contractPath));
 const development = await createPrivateDevReview({ source, contractPath, allowFailedDiagnostic: true });
-assert.equal(development.receipt.diagnosticKind, 'actual-gameplay-lean');
 const phases = [{ name: 'neutral', ticks: 240, lean: 0 }, { name: 'forward', ticks: 360, lean: 1 },
   { name: 'backward', ticks: 360, lean: -1 }, { name: 'neutral-return', ticks: 240, lean: 0 }];
 const report = { accepted: false, status: 'UNACCEPTED_ACTUAL_GAMEPLAY_LEAN', bike,
   source: development.receipt, phases, errors: [], loaded: [],
+  browser: { backend, version: null, renderer: null, flagSet: backend === 'webkit' ? 'webkit-default' : null, helper: null },
   method: 'Continuous real-time fixed120Hz game inputs; simulated COM/torso drives selected rider. No pose, joint, animation-clock or physics-state injection.' };
-const browser = await webkit.launch({ headless: true });
-const context = await browser.newContext({ viewport: { width: 1440, height: 900 },
-  recordVideo: { dir: out, size: { width: 1440, height: 900 } } });
-const page = await context.newPage(), responses = [], witnesses = new Map();
-const started = performance.now();
-page.on('pageerror', error => report.errors.push(error.message));
-page.on('response', response => {
-  if (response.url().endsWith('.glb')) responses.push(witnessGlbResponse(response, witnesses)
-    .then(row => report.loaded.push(row)).catch(error => report.errors.push(error.message)));
-});
+let browser, context, page, launched;
+const responses = [], witnesses = new Map();
 try {
+  assert.equal(development.receipt.diagnosticKind, 'actual-gameplay-lean');
+  if (backend === 'metal') {
+    const helperURL = new URL('../lib/browser.ts', import.meta.url);
+    report.browser.helper = { path: 'harness/lib/browser.ts',
+      sha256: crypto.createHash('sha256').update(await fs.readFile(helperURL)).digest('hex') };
+    register();
+    const { launchBrowser } = await import(helperURL.href);
+    const previousBackend = process.env.TRIALS_BROWSER_BACKEND;
+    try {
+      // This capture child alone selects Metal; restore its environment after launch.
+      process.env.TRIALS_BROWSER_BACKEND = 'metal';
+      launched = await launchBrowser({ width: 1440, height: 900 });
+    } finally {
+      if (previousBackend === undefined) delete process.env.TRIALS_BROWSER_BACKEND;
+      else process.env.TRIALS_BROWSER_BACKEND = previousBackend;
+    }
+    browser = launched.browser;
+    Object.assign(report.browser, { version: browser.version(), flagSet: launched.flagSet,
+      probe: launched.probe, renderer: launched.probe.renderer });
+    assert(launched.probe.ok && launched.probe.kind === 'webgl2' && /Metal/.test(launched.probe.renderer)
+      && !/swiftshader|llvmpipe|software/i.test(launched.probe.renderer), 'Actual Metal WebGL2 required; no software fallback');
+    await launched.context.close(); // Retire the helper probe before the recorded context.
+  } else browser = await webkit.launch({ headless: true });
+  report.browser.version = browser.version();
+  context = await browser.newContext({ viewport: { width: 1440, height: 900 },
+    recordVideo: { dir: out, size: { width: 1440, height: 900 } } });
+  page = await context.newPage();
+  const started = performance.now();
+  page.on('pageerror', error => report.errors.push(error.message));
+  page.on('response', response => {
+    if (response.url().endsWith('.glb')) responses.push(witnessGlbResponse(response, witnesses)
+      .then(row => report.loaded.push(row)).catch(error => report.errors.push(error.message)));
+  });
   await page.goto(development.server.resolvedUrls.local[0] + '?harness=1&audio=0&sw=0&outfit=street-mustard&physics=v2&hz=120&track=b1-first-ride');
   await page.waitForFunction(() => window.__rockhop?.ready && window.__rockhop.info().trackId === 'b1-first-ride', null, { timeout: 120000 });
+  report.browser.renderer = await page.evaluate(() => {
+    const gl = window.__render.debug.renderer.getContext(), extension = gl.getExtension('WEBGL_debug_renderer_info');
+    return String(gl.getParameter(extension ? extension.UNMASKED_RENDERER_WEBGL : gl.RENDERER));
+  });
+  if (backend === 'metal') assert(/Metal/.test(report.browser.renderer)
+    && !/swiftshader|llvmpipe|software/i.test(report.browser.renderer), 'Actual game renderer must use Metal');
   await page.evaluate(async bike => {
     const t = window.__rockhop, r = window.__render;
     // Main already loads this registered track; avoid warming and discarding flat-test.
@@ -133,9 +167,16 @@ try {
   assert.deepEqual(report.played.faults, [], 'Held lean sequence stays live; failures remain evidence');
 } catch (error) { report.failure = error.stack; process.exitCode = 1; }
 finally {
-  const video = page.video();
-  await context.close(); if (video) await video.saveAs(path.join(out, 'gameplay-played.webm'));
-  await browser.close(); await development.server.close();
+  const cleanup = async (name, close) => {
+    try { await close(); } catch (error) {
+      report.errors.push(`${name}: ${error.message}`); report.failure ??= error.stack; process.exitCode = 1;
+    }
+  };
+  const video = page?.video();
+  await cleanup('context close', () => context?.close());
+  if (video) await cleanup('video save', () => video.saveAs(path.join(out, 'gameplay-played.webm')));
+  await cleanup('browser close', () => launched ? launched.close() : browser?.close());
+  await cleanup('server close', () => development.server.close());
   report.recipeSHA256 = crypto.createHash('sha256').update(await fs.readFile(new URL(import.meta.url))).digest('hex');
   await fs.writeFile(path.join(out, 'report.json'), JSON.stringify(report, null, 2) + '\n');
   console.log(JSON.stringify({ out, ticks: report.played?.ticks, failure: report.failure }));
