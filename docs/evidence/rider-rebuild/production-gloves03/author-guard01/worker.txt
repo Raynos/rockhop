@@ -1,0 +1,20 @@
+00:01.304  blend            | Read blend: "/Users/raynos/projects/games/rockhop/harness/out/rider-rebuild/native-hand-repair01/native02/anatomical-hand-rig.blend"
+/Users/raynos/projects/games/rockhop/assets/blender/rider-rebuild/production-gloves03/author.py:60: DeprecationWarning: 'Material.use_nodes' is expected to be removed in Blender 6.0
+  mat.use_nodes = True
+Traceback (most recent call last):
+  File "/Users/raynos/projects/games/rockhop/assets/blender/rider-rebuild/production-gloves03/author.py", line 324, in <module>
+    main()
+    ~~~~^^
+  File "/Users/raynos/projects/games/rockhop/assets/blender/rider-rebuild/production-gloves03/author.py", line 308, in main
+    report['hands'][side] = author_hand(side, dense, native, np.load(paths['hand' + side]), control, mat, out)
+                            ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/raynos/projects/games/rockhop/assets/blender/rider-rebuild/production-gloves03/author.py", line 251, in author_hand
+    assert max(control_residuals) < 1e-5, ('Actual posed controls missed target', control_residuals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('Actual posed controls missed target', [2.0336127376491101e-07, 0.07091496767029876, 0.03755686874372536, 0.03636778140906589, 0.02565905940699134, 0.034706220725484516, 0.0030829333696719705, 0.015935276412679764, 0.010415581375154429, 3.0719530773294423e-08, 0.012664273455223108, 0.0205686877515841, 0.016167415203235908, 0.029125663429607256, 0.001402165140624464, 0.00670008740938204, 0.0025866819653032505, 0.03420777013125322, 0.03703347734646345, 0.007984612323969196])
+
+Error: script failed, file: 'assets/blender/rider-rebuild/production-gloves03/author.py', exiting.
+Blender 5.2.1 LTS (hash 9e2066aef7ef built 2026-08-25 01:35:57)
+scripts disabled for "/Users/raynos/projects/games/rockhop/harness/out/rider-rebuild/native-hand-repair01/native02/anatomical-hand-rig.blend", skipping 'RIG-RiderMetarig_ui.py'
+
+Blender quit

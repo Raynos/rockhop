@@ -1337,3 +1337,5 @@ October 7 saved hoodie patched-target review rejected: parent inspected actualfr
 October 7 selected glove03 source-rest rig checkpoint: parent actualcontrol/projectionplots and full author/controls inspected; AST and10input/fourrecipe pins match. Continuous normalized overlapweights and actualposecontrol/UV/shared75 assertions replace retired categoricalwarp. Source unexecuted; actualbilateral originalPBRfit45+15minute block next, no artacceptance.
 
 October 7 required playergate06:10/11 under actualhostload52.71/18cores; readiness315.87ms exceeds300afterautosampling. Exactphysicsfinish/hash/restart pass, sourcefingerprintunchanged. Failure retained before contention inspection/quieter rerun; no waiver/newrider/release verdict.
+
+October 7 glove03 actualauthor01 failed: CPU2exit1 in6.218s before fittednative/views; actualposedchildren/metacarpals miss targets up to70.915mm despite rootmatching. Preserve exactfailure; diagnose ordinaryBlenderparent/scale/posematrixsemantics with anatomicalcontrols fixed, keepassertion/tolerance and addpartialnative failure preservation. No sourcefit/artaccepted.
