@@ -1,0 +1,95 @@
+{
+  "acceptedArt": false,
+  "operation": "ONE_ORIGINAL_SELECTED_GAUNTLET_OVER_ANATOMICALLY_TAILORED_SLEEVE",
+  "master": {
+    "path": "harness/out/rider-rebuild/selected-complete-engine01/engine05/rider-private-masked.blend",
+    "sha256": "95a4f14e06fb52cc055df6d1446a035d8cd3d35180d565ad52f3a70b3b05664b"
+  },
+  "sourceGLB": {
+    "path": "harness/out/rider-rebuild/selected-complete-engine01/engine05/rider.glb",
+    "sha256": "72b90e8790f8490743a75f8b70791aa21edfee6234cec609093e9b62e08d4bfd"
+  },
+  "placement": {
+    "path": "assets/blender/rider-rebuild/glove-anatomical04/controls-orientation02.json",
+    "sha256": "1fa7e6f75da3fe2e41815de6436f737af1b565216bed27e07b41942b6cbed0dd"
+  },
+  "originalGloveGuide": {
+    "path": "assets/blender/hero-remaster/rider/finish-2026-10-05/wardrobe/data/prep02/gloves/retopology-prototype.npz",
+    "sha256": "746c99bb9fc109492b27e6e9bd3d7281bf3d4799488cb0d6beebf2804d8a6c5e"
+  },
+  "originalGloveDense": {
+    "path": "assets/blender/hero-remaster/rider/finish-2026-10-05/wardrobe/data/prep02/gloves/cleaned-donor.npz",
+    "sha256": "f07a705f334d3d2b802fa7d23baec3e9cd54b211d160b7bbd6ab2c9f4a96541c"
+  },
+  "originalHoodie": {
+    "path": ".tmp/generation-comparison-2026-10-03/user-agent2/qualified-hunyuan-paint06/paint/painted.glb",
+    "sha256": "800d7a9717757b90b296a78c605cddb698c68d399a96e403aa381103e77d2eba"
+  },
+  "hoodieSourceFrames": {
+    "path": "assets/blender/rider-rebuild/shoulder-cage05/controls.json",
+    "sha256": "1abbc0ce87917b1c9ff968ef9088c9ea6b706c5ee9c3accee7a036f312916f67"
+  },
+  "currentInspection": {
+    "path": "harness/out/rider-rebuild/glove-cuff-construction07/inspection01/inspection.json",
+    "sha256": "f63d348852db5abbe5686d486edbb22a65af76842a3a069631c4aa8da3c450b3"
+  },
+  "restHelper": {
+    "path": "assets/blender/rider-rebuild/production-authoring01/assemble.py",
+    "sha256": "81572a2f88c431ebe52bd3f11bd358eff9a772d73f8db1bcb61751d3287f86b0"
+  },
+  "geometryHelper": {
+    "path": "assets/blender/rider-rebuild/head-neck-anatomical02/author-clothed-neck-motion.py",
+    "sha256": "86cd010c88ad10cf3d5c925a133cdaafab760ac72a30a1e487d782a562fc71b2"
+  },
+  "fixedHelper": {
+    "path": "assets/blender/rider-rebuild/glove-cuff-fit05/author.py",
+    "sha256": "0ae6d20fe4cdb9826804b81b95d99cb361422f2afd3df50f5241dab6e85014dd"
+  },
+  "guideArrays": {
+    "L": {
+      "path": "harness/out/rider-rebuild/glove-cuff-construction07/inspection01/guide-L.npz",
+      "sha256": "d1ee463c6442248bc39e1e4af9a78ca3592a9ddcd5df8fe3e2036aaaa149befd"
+    },
+    "R": {
+      "path": "harness/out/rider-rebuild/glove-cuff-construction07/inspection01/guide-R.npz",
+      "sha256": "7ccece21db14c5283b1c4b7fd6994e9d5dc68e4ca012c933db151731eb179591"
+    }
+  },
+  "sourceObjects": {
+    "guides": {
+      "L": "Gloves__CuffFit05Guide.L",
+      "R": "Gloves__CuffFit05Guide.R"
+    },
+    "fullFields": {
+      "L": "Gloves__CuffFit05FullFieldReference.L",
+      "R": "Gloves__CuffFit05FullFieldReference.R"
+    },
+    "boundDense": "Gloves__CuffFit05BoundDenseSource.R",
+    "boundDriver": "Gloves__CuffFit05BoundDriver.R"
+  },
+  "authoring": {
+    "gloveFullSourceY": -0.65,
+    "gloveAnatomicalJoinY": -0.35,
+    "clothInnerEaseM": 0.0015,
+    "clothTerminalWallM": 0.003,
+    "garmentSeparationM": 0.001,
+    "sleeveNativeTransitionM": 0.1,
+    "sleeveNativeFullConstructionM": 0.08,
+    "bodyProfileStations": 25,
+    "bodyProfileAngles": 64,
+    "sourceSleeveSections": 20,
+    "maximumTransverseSourceScale": 1.5
+  },
+  "limits": [
+    "One unaccepted combined local construction candidate, not a radial offset campaign or normal-player asset.",
+    "Original entire gauntlet walls, lip, raised band and handle topology are transported together from selected source; never use local04 as original.",
+    "The original-source cuff volume has positive transverse scale and monotone axial coordinates; the anatomical wrist join must still pass actual geometry checks.",
+    "The terminal selected hoodie uses its original source sleeve chart around actual forearm centerline, with explicit thin knit wall and axial overlap inside the gauntlet.",
+    "Original topology, corner UVs, all native75 fields and packed maps retained; direct original vertex ancestry, zero new binds/correspondences.",
+    "Current equipped mask, original reference anatomy, native75 rest and other four visible parts stay exact.",
+    "Self-crossing, body layering, and sleeve/glove intersection checks precede keeping a saved candidate. Full played art and generic/bike motion remain parent gates.",
+    "The usable open inner-cavity section at original source Y=-.65 seats the sleeve. The pinched axial floor near Y=-.58 belongs to the anatomical wrist join, not the aperture-radius constraint.",
+    "Opposed rays through the actual open inner-cavity loops at source Y=-.65 and -.70 determine one transverse affine frame with translation; either transverse axis above 1.5 stops before producing a giant cuff. This is an explicit source-identity guard, not clearance or art acceptance.",
+    "Full 16k control faces are checked; dense self-intersection checks cover cuff/wrist/join and immediate retained neighbours, not distant unchanged finger pairs."
+  ]
+}
