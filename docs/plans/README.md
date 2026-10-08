@@ -1865,3 +1865,5 @@ Reference04 actual fails49.591s at exact saved-cage state equality after native 
 Motion11 actual selected dressed transport passes7.737s: all six native actions load across10 skinned meshes, original BIN/images/meshes/weights/rest/75binds preserved. Native-key operator bound≤0.031727mm and regional difference≤0.000478mm under unchanged0.1mm. Actual dressed range playback is next; bike/art/GPU/device gates remain open.
 
 Gate36 actual Metal partial boot/clear/crash/restart passes11/11 in7.411s, unchangedfd8fe7c2: ready268.416ms, first421.055ms, restart5.90ms, exactfinish/hash. Prior gate35 failure retained; original thresholds unchanged. Partial existing-player check only, no new rider/full release/device acceptance.
+
+Motion11 actual dressed Range Garage film captures the full12s action and plays27.24s to natural end/errors0. Selected clothes/face/hair move together; cuff flaps remain defective and bike occludes deep-crouch hips/knees, so no lower-body/contact/art gate passes. Development59.729FPS/25captureFPS. New measured seated/lean native source is next.

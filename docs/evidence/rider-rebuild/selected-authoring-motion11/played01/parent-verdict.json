@@ -1,0 +1,53 @@
+{
+  "accepted": false,
+  "status": "DRESSED_NATIVE_RANGE_PLAYED_ART_AND_CONTACT_OPEN",
+  "sourceGLBSHA256": "e6687601a2ab4dc8ba11c7b409381beb4642a49b4c7a7a37e2593d0474451e8a",
+  "capture": {
+    "exitCode": 0,
+    "seconds": 42.185,
+    "errors": [],
+    "mainNavigations": 1,
+    "clipCoverage": {
+      "name": "RiderRangeOfMotion",
+      "durationSeconds": 12,
+      "firstRiderStageTime": 1.8883399999999992,
+      "beforeFinalWaitStageTime": 20.171939999999978,
+      "nativeAction": true,
+      "actionEpochStageTime": 0.022659999999999854,
+      "leadInSeconds": 2,
+      "additionalWaitRequired": false,
+      "lastRiderStageTime": 20.171939999999978,
+      "continuousRiderSeconds": 18.28359999999998
+    }
+  },
+  "parentPlayback": {
+    "seconds": 27.24,
+    "naturalEnd": true,
+    "silent1x": true,
+    "seeks": 0,
+    "midPlaybackStalls": 0,
+    "capturedPresentedPNGs": 63,
+    "review": "Four chronological sheets and full T/overhead/reach/crouch frames inspected"
+  },
+  "visibleFinding": "Actual selected hoodie, jeans, black gloves, boots, face and hair move together through arm ranges and asymmetric bends. Cuff spikes/flaps remain visibly defective.",
+  "acceptanceLimits": [
+    "Deep crouch hips/knees are obscured by bike from this orbit: no lower-body art/contact pass.",
+    "Beside-bike generic inspection is explicit; it does not represent normal seated Garage riding.",
+    "Other five native actions pass actual CPU transport but have not yet received dressed moving art judgment.",
+    "Head/neck, complete garment envelope, foot/finger support, bike actions, GPU and physical device gates remain open."
+  ],
+  "developmentRender": {
+    "frames": 1090,
+    "fps": 59.7286456392609,
+    "intervalMs": {
+      "p50": 16.599999999998545,
+      "p95": 25.639999999999418,
+      "maximum": 86.15999999999985
+    }
+  },
+  "captureFPS": 25,
+  "rawVideo": {
+    "path": "harness/out/rider-rebuild/selected-authoring-motion11/played01/garage-played.mp4",
+    "sha256": "b83e6494e31945e307e6ccba05273f289191486a65ca37f090dee15e35d4289c"
+  }
+}
