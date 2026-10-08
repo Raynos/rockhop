@@ -1,0 +1,14 @@
+Traceback (most recent call last):
+  File "/Users/raynos/projects/games/rockhop/assets/blender/rider-rebuild/head-neck-anatomical02/diagnose_shell.py", line 84, in <module>
+    if __name__=='__main__':main()
+                            ~~~~^^
+  File "/Users/raynos/projects/games/rockhop/assets/blender/rider-rebuild/head-neck-anatomical02/diagnose_shell.py", line 71, in main
+    degenerate=sum(abs(float(np.cross(uv[i,1]-uv[i,0],uv[i,2]-uv[i,0])))<1e-12 for i in indexes)
+  File "/Users/raynos/projects/games/rockhop/assets/blender/rider-rebuild/head-neck-anatomical02/diagnose_shell.py", line 71, in <genexpr>
+    degenerate=sum(abs(float(np.cross(uv[i,1]-uv[i,0],uv[i,2]-uv[i,0])))<1e-12 for i in indexes)
+                             ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/lib/python3.14/site-packages/numpy/_core/numeric.py", line 1680, in cross
+    raise ValueError(
+    ...<2 lines>...
+    )
+ValueError: Both input arrays must be (arrays of) 3-dimensional vectors, but they are 2 and 2 dimensional instead.

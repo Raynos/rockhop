@@ -1,0 +1,39 @@
+{
+  "accepted": false,
+  "lock": "/Users/raynos/projects/localai/.model.lock",
+  "method": "lockf -k",
+  "command": [
+    "/opt/homebrew/bin/python3",
+    "assets/blender/rider-rebuild/head-neck-anatomical02/diagnose_shell.py",
+    "harness/out/rider-rebuild/head-neck-anatomical02/shell-diagnostic01"
+  ],
+  "controllerPID": 54337,
+  "pollSeconds": 1,
+  "startAnonymousBelowGiB": 55,
+  "stopAnonymousGiB": 65,
+  "stopAnonymousPlusWiredGiB": 96,
+  "limitSeconds": 60.0,
+  "guardSHA256": "cf8acd15d8b7484480bee74d23892be815d955ffd87115d3da8ed228ffb3d916",
+  "status": "worker returned; review pending",
+  "samples": [
+    {
+      "seconds": 0,
+      "anonymousGiB": 39.8,
+      "wiredGiB": 10.7,
+      "freeGiB": 20.5
+    },
+    {
+      "seconds": 0.05,
+      "anonymousGiB": 39.8,
+      "wiredGiB": 10.7,
+      "freeGiB": 20.5
+    }
+  ],
+  "physicalMemoryBytes": 137438953472,
+  "requiredPhysicalMemoryBytes": 137438953472,
+  "scope": "Future explicitly invoked owned Rockhop job only",
+  "pressureOrSwapLimits": "No separate pressure/swap gate exists in the pinned original guard; none altered",
+  "ownedChildPID": 54350,
+  "exitCode": 1,
+  "elapsedSeconds": 0.672
+}

@@ -5,3 +5,7 @@ Limits: Unexecuted oneCPU2construction before actualprofiles; no anatomy/art/out
 Finding: First bounded build stopped at connected selected-scan interior before generating neck surface.
 Validation: CPU2 guard exit1 in2.85s; no native candidate saved.
 Limits: Exterior construction and art remain untested; scoped cleanup diagnosis next.
+
+Finding: Raw triangle/UV pairing can identify the donor inner shell without changing geometry.
+Validation: Parent read diagnostic; first metadata run exited1 in0.672s on removed NumPy2D cross API. Explicit determinant correction passes AST.
+Limits: No topology result or deletion yet; corrected diagnostic pending.
