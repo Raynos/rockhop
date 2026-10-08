@@ -1,0 +1,17 @@
+{
+  "accepted": false,
+  "status": "SOURCE_PREPARED_PARENT_SERIAL_LEASE_REQUIRED",
+  "recipe": {
+    "path": "assets/blender/rider-rebuild/head-neck-anatomical02/build.py",
+    "sha256": "2f21f8712cbd75f12acfad916d59f0b58483272823cae1736388a366cfff4322"
+  },
+  "AST": "PASS",
+  "command": "blender -b -t 2 --python-exit-code 1 --python assets/blender/rider-rebuild/head-neck-anatomical02/build.py -- harness/out/rider-rebuild/head-neck-anatomical02/native01",
+  "sourcePins": {
+    "native42f": "42fca617ea8d246a6c3e3ca68a90cd3cb5f3ce8b9bb78130e0e2bbd65f605fac",
+    "selectedDonor": "b7f4f22790124c664f9907104e5b17b77775b4c5c995f715d62be640bbcc8754",
+    "nativeArrays": "e62e9969503b7761e99463eccc3ca7be39e0c230a2948f2f87a224db52d0f9a2"
+  },
+  "method": "19 new circumferential sections,144 samples per section,manual broad throat/SCM/nape cross-sections,actual canonical shoulders/lower body and genuine selected submental/mastoid rim; oblique upper cut and nonplanar lower cut; Catmull derivatives give continuous longitudinal section tangents",
+  "materials": "Unique new UV chart from per-area barycentric source-neck texture projection; no one-upper-UV extrusion. Geometry review remains independent of PBR."
+}
