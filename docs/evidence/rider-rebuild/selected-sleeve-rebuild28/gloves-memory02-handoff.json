@@ -1,0 +1,53 @@
+{
+  "status": "FROZEN_MEMORY_LIFETIME_WRAPPER_SOURCE_ONLY",
+  "acceptedArt": false,
+  "nativeRunExecuted": false,
+  "sourcePins": [
+    {
+      "path": "assets/blender/rider-rebuild/selected-sleeve-tailoring27/gloves_only02.py",
+      "sha256": "61ade7d9c46b60fbbc28a8a1869e86eb67eecb6524b5808c9390c37cdbef2e4b"
+    },
+    {
+      "path": "assets/blender/rider-rebuild/selected-sleeve-tailoring27/memory_lifetime.py",
+      "sha256": "e91325cce045c41373e557f3b92332b8779e0374c7c917133365036f6f8dcb90"
+    },
+    {
+      "path": "assets/blender/rider-rebuild/selected-sleeve-tailoring27/check_memory_lifetime.py",
+      "sha256": "4aa7cbfe306bf695eac70da2a28648c4018bcc6bfa58b5dd259f7719e32360d6"
+    },
+    {
+      "path": "assets/blender/rider-rebuild/selected-sleeve-tailoring27/gloves_only.py",
+      "sha256": "279e936f3ab107434557e8efbb7d0a3b1525b9b7aeb6c6a7c63084b3bbb4455a"
+    },
+    {
+      "path": "assets/blender/rider-rebuild/selected-sleeve-tailoring27/checkpoint.py",
+      "sha256": "d45d46b46cc621fb6a116f6677bafaa642989e6664f6da6a919d46b70b4b2419"
+    }
+  ],
+  "actualPredecessorFailure": {
+    "output": "harness/out/rider-rebuild/astra-cuff-bearing18/authored27-gloves-only",
+    "elapsedSeconds": 68.447,
+    "reason": "Unchanged65GiB anonymous memory guard stopped child after left ancestry and during right. No actual native checkpoint saved.",
+    "outputPreserved": true
+  },
+  "method": [
+    "Skip only the unused hoodie Surgery scratch; the actual original hoodie object is still verified by the pinned protected geometry/UV/weight/map fingerprint before native save.",
+    "Release glove Python construction scratch only after unchanged Surgery.finish has completed actual mesh/ancestry and returned actual arrays/report. The obj attribute remains available to the unchanged caller.",
+    "No geometry, source, map, material, weight, rig, profile, contact method, field target or Blender datablock is changed or removed."
+  ],
+  "fixtureReceipt": {
+    "path": "docs/evidence/rider-rebuild/selected-sleeve-rebuild28/gloves-memory02-fixtures.json",
+    "sha256": "2b023324a772b8366f1d83a9de83119cff950206e15f321b627bb1ae58650910"
+  },
+  "validation": [
+    "All5Python source ASTs pass",
+    "4behavior fixtures pass on the exact memory_lifetime helper",
+    "Original gloves_only.py/checkpoint.py and frozen sleeve28 files remain unchanged"
+  ],
+  "nextParentGuardedInvocation": "/Applications/Blender.app/Contents/MacOS/Blender -b -t 2 --python-exit-code 1 --python assets/blender/rider-rebuild/selected-sleeve-tailoring27/gloves_only02.py -- harness/out/rider-rebuild/astra-cuff-bearing18/authored28-gloves-only",
+  "parentAdmission": "Retain original CPU2,300-second wall and65GiB anonymous/host-headroom guard. New actual peak and runtime are unmeasured. Do not weaken admission or memory limits.",
+  "limits": [
+    "No native run or measured memory reduction yet.",
+    "The saved checkpoint remains unaccepted and requires sleeve construction, actual dense gates and played art/motion review."
+  ]
+}
