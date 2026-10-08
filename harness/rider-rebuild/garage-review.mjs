@@ -11,10 +11,14 @@ import { inspectPreparedRiderMaterials, inspectRiderMaterialInventory } from './
 import { inspectActualCuffFragment } from './inspect-posed-cuffs.mjs';
 import { identifyActualWristFragment } from './identify-wrist-fragment.mjs';
 import { installGarageCaptureMeter } from './garage-capture-meter.mjs';
+import { createPrivateDevReview } from './private-dev-review.mjs';
 
 const arg = (name, fallback = '') => process.argv.find(value => value.startsWith(`--${name}=`))?.slice(name.length + 3) ?? fallback;
-const build = path.resolve(arg('build')), out = path.resolve(arg('out'));
-const requestedClip = arg('clip');
+const devSource = arg('dev-source');
+assert(devSource || arg('build'), 'Pass --build or --dev-source');
+assert(!(devSource && arg('build')), 'Choose one review server mode');
+assert(arg('out'), 'Pass a fresh --out capture directory');
+const build = devSource ? null : path.resolve(arg('build')), out = path.resolve(arg('out'));
 const requestedBike = arg('bike', 'rookie');
 const orbitSeconds = Number(arg('orbit-seconds', '18'));
 assert(Number.isFinite(orbitSeconds) && orbitSeconds >= 16 && orbitSeconds <= 60, '--orbit-seconds must be 16–60 real seconds');
@@ -28,15 +32,19 @@ assert(['rookie', 'pro'].includes(requestedBike), '--bike must be rookie or pro'
 assert(arg('contract'), 'Pass the exact selected rider contract');
 const contractPath = path.resolve(arg('contract')), contractBytes = fs.readFileSync(contractPath);
 const contract = JSON.parse(contractBytes), expected = contract.specification.meshNames;
-const catalog = JSON.parse(fs.readFileSync(path.join(build, 'model-catalog.json')));
-const bikeAsset = catalog.models.find(row => row.logical === `models/bike-${requestedBike}.glb`);
-assert(bikeAsset, 'Selected authored bike catalogue pin required');
+const requestedClip = arg('clip', devSource ? contract.previewClip ?? '' : '');
 const required = ['RiderBody', 'RiderHoodie', 'RiderJeans', 'ActualSelectedGlove.L', 'ActualSelectedGlove.R', 'ActualSelectedBoot.L', 'ActualSelectedBoot.R'];
 for (const name of required) assert(Object.values(expected).includes(name), `Missing selected dressed object ${name}`);
 assert(!fs.existsSync(out), 'Use a fresh output directory');
 fs.mkdirSync(out, { recursive: true });
-const report = { build, requestedClip: requestedClip || null, requestedBike, bikeAsset, contract: { path: contractPath, sha256: crypto.createHash('sha256').update(contractBytes).digest('hex'), expectedObjects: expected }, recipeSHA256: crypto.createHash('sha256').update(fs.readFileSync(new URL(import.meta.url))).digest('hex'), errors: [], loaded: [], snapshots: [], audio: 'silent webdriver; audio=0', review: 'Actual Garage UI, selected native clip or riding IK with breathing, pointer-driven orbit; no pose injection' };
-const server = await preview({ configFile: false, root: process.cwd(), build: { outDir: build }, preview: { host: '127.0.0.1', port: 0 }, logLevel: 'warn' });
+const development = devSource ? await createPrivateDevReview({ source: devSource, contractPath,
+  allowFailedDiagnostic: process.argv.includes('--allow-failed-diagnostic'), comparison: process.argv.includes('--comparison'), clip: requestedClip }) : null;
+const catalog = development?.catalog ?? JSON.parse(fs.readFileSync(path.join(build, 'model-catalog.json')));
+const bikeAsset = catalog.models.find(row => row.logical === `models/bike-${requestedBike}.glb`);
+assert(bikeAsset, 'Selected authored bike catalogue pin required');
+const report = { build, mode: development ? 'actual-vite-development-source' : 'production-build-preview', development: development?.receipt ?? null,
+  requestedClip: requestedClip || null, requestedBike, bikeAsset, contract: { path: contractPath, sha256: crypto.createHash('sha256').update(contractBytes).digest('hex'), expectedObjects: expected }, recipeSHA256: crypto.createHash('sha256').update(fs.readFileSync(new URL(import.meta.url))).digest('hex'), errors: [], loaded: [], snapshots: [], audio: 'silent webdriver; audio=0', review: 'Actual Garage UI, selected native clip or riding IK with breathing, pointer-driven orbit; no pose injection' };
+const server = development?.server ?? await preview({ configFile: false, root: process.cwd(), build: { outDir: build }, preview: { host: '127.0.0.1', port: 0 }, logLevel: 'warn' });
 const browser = await webkit.launch({ headless: true });
 const context = await browser.newContext({ viewport: { width: 1440, height: 900 }, deviceScaleFactor: 1, recordVideo: { dir: out, size: { width: 1440, height: 900 } } });
 await context.addInitScript(() => {
@@ -46,7 +54,10 @@ await context.addInitScript(() => {
     version: 1, wallet: 0, medals: {}, proOwned: true, equipped: 'rookie',
   }));
 });
+const videoStartEpochMs = Date.now(), videoStartMonotonicMs = performance.now();
 const page = await context.newPage(), responses = [], witnesses = new Map();
+report.videoTimeline = { pageCreationEpochMs: videoStartEpochMs, pageCreationMonotonicMs: videoStartMonotonicMs,
+  meaning: 'Recording begins during newPage; ready offset is measured from immediately before page creation. Raw full recording is retained; offset permits a separate Garage-only presentation trim.' };
 page.on('pageerror', error => report.errors.push(error.message));
 page.on('response', response => {
   if (response.url().endsWith('.glb')) responses.push(witnessGlbResponse(response, witnesses)
@@ -62,6 +73,8 @@ try {
   await page.locator('button[data-outfit=street-mustard]').click();
   await page.evaluate(async () => window.__render.whenReady());
   await page.locator(`button[data-bike=${requestedBike}][aria-pressed=true]`).waitFor();
+  Object.assign(report.videoTimeline, { garageReadyEpochMs: Date.now(),
+    garageReadyOffsetSeconds: (performance.now() - videoStartMonotonicMs) / 1000 });
   report.frameMeter = await page.evaluate(installGarageCaptureMeter);
   report.frameMeterRecipeSHA256 = crypto.createHash('sha256')
     .update(fs.readFileSync(new URL('./garage-capture-meter.mjs', import.meta.url))).digest('hex');
@@ -82,6 +95,8 @@ try {
         stageTime: renderer.stageTime, riderStageTime: rider.stageTime,
         clipDuration: rider.clip?.duration ?? null,
         clipTime: rider.clip ? ((rider.stageTime % rider.clip.duration) + rider.clip.duration) % rider.clip.duration : null,
+        correctiveTargets: rider.binding.meshes.filter(({ mesh }) => mesh.morphTargetDictionary?.SelectedSeatedCorrective06 !== undefined)
+          .map(({ role, mesh }) => ({ role, name: mesh.name, weight: mesh.morphTargetInfluences[mesh.morphTargetDictionary.SelectedSeatedCorrective06] })),
         boneLocalTRS };
     });
     assert.equal(diagnostic.boneLocalTRS.length, 75, 'Capture every actual native75 local TRS');
@@ -98,6 +113,13 @@ try {
       assert(Number.isFinite(diagnostic.riderStageTime), 'Actual rider stage clock is finite');
       const authored = contract.genericActions?.[requestedClip];
       if (authored) assert(Math.abs(diagnostic.clipDuration - authored.durationSeconds) < 1e-6, 'Actual clip duration matches source-bound action');
+      if (development) {
+        assert(diagnostic.attachedToBikeFrame, 'Diagnostic remains attached to actual bike frame');
+        assert.deepEqual(diagnostic.placementBike, [0, 0, 0], 'Saved author clip uses declared bike-local origin');
+        assert.equal(diagnostic.correctiveTargets.length, 5, 'Actual Jeans plus four Body corrective primitives');
+        assert(Number.isFinite(diagnostic.debug.correctiveWeight), 'Actual runtime corrective weight is finite');
+        for (const target of diagnostic.correctiveTargets) assert.equal(target.weight, diagnostic.debug.correctiveWeight);
+      }
     } else {
       assert.equal(diagnostic.debug.stageClip, 'Riding IK/breathing', 'Default Garage uses the riding solver');
       assert(diagnostic.attachedToBikeFrame, 'Selected rider attached to actual bike frame');
@@ -196,6 +218,9 @@ try {
     assert(report.clipCoverage.continuousRiderSeconds >= first.clipDuration, 'Continuous Garage film covers at least one whole native action cycle');
     assert(report.snapshots.every(row => row.clipDuration === first.clipDuration), 'Actual clip duration stays unchanged through orbit');
   }
+  if (development) report.correctiveCoverage = { minimumObserved: Math.min(...report.snapshots.map(row => row.debug.correctiveWeight)),
+    maximumObserved: Math.max(...report.snapshots.map(row => row.debug.correctiveWeight)),
+    meaning: 'Five actual moving-frame readbacks; extrema are observed samples, not a claim that every endpoint was sampled.' };
 } catch (error) { report.failure = error.stack; process.exitCode = 1; }
 finally {
   try { report.actualFramePerformance = await page.evaluate(() => window.__garageCaptureMeter?.stop() ?? null); }
@@ -217,8 +242,11 @@ finally {
   };
   report.videoRates = { source: probeVideo(videoPath), encoded: probeVideo(path.join(out, 'garage-played.mp4')),
     meaning: 'Stream frame rates are encoding/capture cadence, independent of actual game render FPS; no interpolation or requested60fps upsampling.' };
+  report.rawVideoPath = videoPath;
+  if (development) report.actualFramePerformanceScope = development.receipt.performanceMeaning;
   if (encoded.status !== 0 || report.videoRates.encoded.exitCode !== 0) process.exitCode = 1;
-  await new Promise(resolve => server.httpServer.close(resolve));
+  if (development) await server.close();
+  else await new Promise(resolve => server.httpServer.close(resolve));
   fs.writeFileSync(path.join(out, 'report.json'), JSON.stringify(report, null, 2) + '\n');
   console.log(JSON.stringify({ out, snapshots: report.snapshots.length, errors: report.errors, failure: report.failure }));
 }
