@@ -15,3 +15,9 @@ Finding: The local anterior seam repair removes the front skin wedge in actual s
 Validation: Parent viewed all three front/rear/profile PNGs; readonly exit0 in5.374s, native unchanged.
 
 Limits: Rest baseline admits first selected-material transfer only; movement, material and complete outfit unaccepted.
+
+Finding: Consume exact admitted local-gusset native for genuine selected denim material transfer, first inspecting saved aligned donor in six matched views. Old fixed4096/old-marker baker is incompatible.
+
+Validation: Parent full new baker read, AST and7input pins match; exact saved marker and packed4Kmap checks execute on reopen. Original canonical source/UV/FULL/FOUR and body75 preservation explicit; copied isolated regions and persistent failures provided.
+
+Limits: Source only; no donor view, transfer or material/motion acceptance. Final4K admission remains separate from1024/2048 firstreview.

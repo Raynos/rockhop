@@ -1,0 +1,81 @@
+{
+  "schema": "rockhop-jeans02-actual-selected-pbr-v1",
+  "accepted": false,
+  "native": {
+    "path": "harness/out/rider-rebuild/production-jeans02/authored01/production-jeans.blend",
+    "sha256": "956548765454fe683952801f5ba401ed82f481489a256cf48039c459850e5c95"
+  },
+  "nativeFields": {
+    "path": "harness/out/rider-rebuild/production-jeans02/authored01/production-jeans-fields.npz",
+    "sha256": "28d337f56a7e963f8ae533a72bf060d40b5d18e956c154b61e2dc995c20bd679"
+  },
+  "dense": {
+    "path": "assets/blender/hero-remaster/rider/finish-2026-10-05/wardrobe/data/prep02/jeans/cleaned-donor.npz",
+    "sha256": "c38413a36d564d97f106ebde13bb240d4c7075078ce463f30234a97c0f3d2237"
+  },
+  "targetMarker": "rockhop-native-local-gusset-v2",
+  "helpers": {
+    "localAuthor": {
+      "path": "assets/blender/rider-rebuild/production-jeans02/author.py",
+      "sha256": "62a850e4ea78b98022352aede1b6e3de52496ebcb7ff83b169db9789e7610bd0"
+    },
+    "originalAuthor": {
+      "path": "assets/blender/rider-rebuild/production-jeans01/author-jeans.py",
+      "sha256": "659dad0c4cfb5140b4be180c05534459ceb4b4eda0049478500ab92032fe6f15"
+    }
+  },
+  "maps": {
+    "albedo": {
+      "path": "assets/blender/hero-remaster/rider/finish-2026-10-05/wardrobe/data/prep02/jeans/baseColorTexture.png",
+      "sha256": "29a166cd304c492a025ea15f5949da0b8540e1ce11de196c2ed0b5afec50e810",
+      "size": [
+        4096,
+        4096
+      ]
+    },
+    "metallicRoughness": {
+      "path": "assets/blender/hero-remaster/rider/finish-2026-10-05/wardrobe/data/prep02/jeans/metallicRoughnessTexture.png",
+      "sha256": "ebd8ead6d0a1b1bfdada88e16c550781848932832859733e8b00c9ccb7ede516",
+      "size": [
+        4096,
+        4096
+      ]
+    }
+  },
+  "inspectionAdmission": {
+    "parentViewedMatchedDonor": false,
+    "approvedForFirstTransfer": false,
+    "receipt": {
+      "path": "",
+      "sha256": ""
+    }
+  },
+  "final4KAdmission": {
+    "approved": false,
+    "firstTransferReceipt": {
+      "path": "",
+      "sha256": ""
+    }
+  },
+  "bakeSettings": {
+    "extrusionMetres": 0.018,
+    "maximumRayMetres": 0.045,
+    "marginPixels": 16,
+    "policy": "Selected-to-active; use_cage false. Settings are recorded, not claimed as proved coverage/correspondence. Inspect actual aligned donor against body/target first; no automatic ray escalation or retry."
+  },
+  "outputPolicy": {
+    "firstReviewResolutions": [
+      1024,
+      2048
+    ],
+    "finalMasterResolution": 4096,
+    "firstReviewPath": "harness/out/rider-rebuild/production-jeans02/first-review1024-01",
+    "finalMasterPath": "harness/out/rider-rebuild/production-jeans02/master4096-01",
+    "matchedDonorInspectionPath": "harness/out/rider-rebuild/production-jeans02/donor-review01"
+  },
+  "limits": [
+    "No geometry reconstruction in material transfer.",
+    "Original selected dense, original corner UV/maps and native FULL/FOUR/body/shared75 are protected.",
+    "No positive art, movement or player acceptance from static review/bake execution."
+  ]
+}
