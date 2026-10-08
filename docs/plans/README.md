@@ -1857,3 +1857,5 @@ Volume04 actual dressed Garage film is played30.4s to natural end: selected appe
 Reference04 source carries the saved cage onto the hidden full wearer using its own full named operators and fresh inverse; visible keys/Basis/maps/rest/weights are protected. Original full-reference Basis/triangles/available IDs are retained as readonly witnesses. Actual native execution and complete contacts remain pending.
 
 Glove recovery source now saves both actual completed selected gloves before any sleeve edit, checking protected geometry including hoodie and native75 rest against pre-glove signatures. Source hashes/AST and parent control-flow review pass; guarded native checkpoint and geometry/art review remain pending.
+
+Reference04 actual fails49.591s at exact saved-cage state equality after native full-field inverse/target checks. No native candidate or full surface/reopen pass is claimed. Native27 diagnoses the actual cage-state change and adds recovery evidence before retry; complete wearer/contact remains open.
