@@ -1,0 +1,18 @@
+00:00.632  blend            | Read blend: "/Users/raynos/projects/games/rockhop/harness/out/rider-rebuild/production-gloves02/authored01/authored-geometry.blend"
+Traceback (most recent call last):
+  File "/Users/raynos/projects/games/rockhop/assets/blender/rider-rebuild/production-gloves02/author.py", line 251, in <module>
+    if __name__ == '__main__': main()
+                               ~~~~^^
+  File "/Users/raynos/projects/games/rockhop/assets/blender/rider-rebuild/production-gloves02/author.py", line 236, in main
+    report['hands'][side]['textures'] = bake(bpy.context.scene, target, donor, texture_out, material, color, mr, args.bake_resolution)
+                                        ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/raynos/projects/games/rockhop/assets/blender/rider-rebuild/production-gloves02/appearance.py", line 124, in bake
+    scene.render.bake.use_cage = True; scene.render.bake.cage_object = cage.name
+                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: bpy_struct: item.attr = val: BakeSettings.cage_object expected a Object type, not str
+
+Error: script failed, file: 'assets/blender/rider-rebuild/production-gloves02/author.py', exiting.
+Blender 5.2.1 LTS (hash 9e2066aef7ef built 2026-08-25 01:35:57)
+scripts disabled for "/Users/raynos/projects/games/rockhop/harness/out/rider-rebuild/production-gloves02/authored01/authored-geometry.blend", skipping 'RIG-RiderMetarig_ui.py'
+
+Blender quit

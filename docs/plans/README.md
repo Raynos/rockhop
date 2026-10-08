@@ -1281,3 +1281,5 @@ October 7 actual glove geometry diagnostic: parent viewed three right-hand nativ
 October 7 actual targeted jeans repair checkpoint: author04 exit0 in7.431s, pinned editable native saved before maps. Body/shared75 signature preserved; FULL retained and FOUR reduction measured (max removed mass5.76%). Parent three-view fit review pending, no bake or art acceptance.
 
 October 7 advisory implementation correction: official Blender API distinguishes OUTSIDE (outside constraint) from OUTSIDE_SURFACE (offset surface constraint). Targeted jeans source uses OUTSIDE to preserve authored ease and excludes saddle. No fit acceptance inferred from modifier enum.
+
+October 7 first actual glove selected-map attempt: exit1 in5.771s before textures; Blender BakeSettings.cage_object expects Object rather than name string. Native unchanged; no appearance or moving acceptance. Exact failure retained before compatibility correction.

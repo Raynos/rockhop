@@ -18,3 +18,9 @@ Finding: Actual authored right glove encloses the visible hand but angular panel
 Validation: Parent viewed all three actual saved-native rest renders; CPU2 renderer exit0 in5.443s and native hash unchanged.
 
 Limits: Left-hand shape and selected material/played grip remain unproven; no player export.
+
+Finding: Selected-material bake stops before textures at cage object API assignment.
+
+Validation: Parent read actual TypeError; exit1 in5.771s, complete native unchanged, no completed sides or textures.
+
+Limits: Failure says nothing about eventual map alignment; appearance and moving grip remain open.
