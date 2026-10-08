@@ -1813,3 +1813,5 @@ Production25 selected-source full/realLOD derivative source checkpointed: actual
 Support02 dressedGarage capture0errors/onebootnav; parentplays28s silent1x naturalend/all63samples+fullprofiles. Selectedoutfit retained, seatedlowerglute/thighshelf/cuffspikes/anklestrip stillREJECTED.59.636developmentrenderFPS/25captureFPS; noGPU/devicepass. Sharedcageposedvolume+cuff/hemconstructionnext.
 
 Motion11 native03 fails9.152s: added-rest physicalchecks pass; all75 neutral skinoperator checks expose wrongIKroll/bend(71.599mmheadresidual/7.136mbound). Noactions/native/export. Lead24 correctsactualpoleconvention fromrecordedmatrices; no boundchange/sweep. Firstconstructionaftergate33.
+
+Cuff10 actualfails79.961s afterbothglovesurfaceconstruction: leftsleeve fixedproximal exteriorboundary violatesactualcontact. Numericflooridentity repaired; no savednative/report/artpass. Lead23 replacesarbitraryimmutableboundary with deliberateadjacentsleevetailoring; no radius/ease/densegate relaxation. Secondconstructionaftergate33.
