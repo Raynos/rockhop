@@ -1229,3 +1229,5 @@ October 7 production third-round silent headless baseline: verified ANGLE Metal 
 October 7 first authored-jeans trial exits1 after5.433s before native save: Blender modifier application invalidates a retained temporary vertex-group handle. Parent verifies the minimal named-group reacquisition repair and unchanged fitting recipe; actual guard/worker retained. No garment fit/bake/art result, fresh author trial pending.
 
 October 7 selected-boot author checkpoint: deliberate lattice fit of the actual selected dense boot, simplified predominantly rigid derivative and ordinary selected-PBR/normal transfer replace cavity solvers. Both weighted boots save before maps; source comparison retains the complete visible body. Parent AST/eight pins/frozen hashes agree; no execution or art acceptance.
+
+October 7 second jeans author trial exits1 in6.273s before save and disproves the stale-handle-only diagnosis: modifier binding was assigned before the group existed. Corrected source creates the named group first and asserts binding/presence before/after apply; fitting controls unchanged. Actual trace retained; repaired author and art remain unaccepted.

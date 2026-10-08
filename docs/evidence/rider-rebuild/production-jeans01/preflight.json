@@ -18,7 +18,7 @@
   "executedStages": [],
   "review": "Structural draft only; neither fitted nor textured nor accepted",
   "verifiedSourcePins": 6,
-  "authorScriptSha256": "b54c69f7b6a3e4dc310f67a906e78079485aa36795b03075e8f882dc670f48f2",
+  "authorScriptSha256": "c3218bbe0d0bb2f0fb4807f8658c214db4716ace5b4363d69c47d69456acf535",
   "recipeSha256": "66c1f4084e806eb465cd5201e9821b4de43c2c7f1ee8f87b92366fcb17e0753b",
   "syntaxParsed": true,
   "sourceUVConvention": "Immutable raw glTF TEXCOORD_0: V flip only when assigning Blender corners",
@@ -33,7 +33,7 @@
     "DEF-shin.R.001"
   ],
   "numpyProjectionPolicy": "Explicit einsum/component sums; no @ projections or warning filters",
-  "codeRepair": "Reacquire SelectedSculptProjection RNA group after modifier_apply; no fitting controls changed",
+  "codeRepair": "Create explicitly named projection group before modifier binding; assert exact name/binding; reacquire/assert after apply",
   "retainedHandleReview": "Other mesh modifier apply retains only Object RNA, not mesh/vertex-group data. Bake source data/material reacquired after new_from_object; bmesh layers read before to_mesh/free.",
   "actualTrial01": {
     "exitCode": 1,
@@ -41,5 +41,7 @@
     "savedCandidate": false,
     "guardSha256": "1e8fc79c4f5055a4ef8fcd9030b15f5d30e8d487044a88c77c719fdb785f1bc4",
     "workerSha256": "fb3b558246b5845fc7c896309a71bc3e52328d3bc4b1123e0e33344b03767e81"
-  }
+  },
+  "setupReview": "This is the only modifier vertex_group setter. All skin groups are explicitly created before population; Lattice/Armature object setters point to existing objects. No other analogous nonexistent-group setter exists.",
+  "diagnosisCorrection": "First stale-RNA-only explanation was incomplete; author02 proved the requested name absent. Source setup now creates group before validated modifier setter. No fitted result has yet been saved."
 }

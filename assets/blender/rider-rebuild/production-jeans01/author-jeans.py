@@ -142,7 +142,11 @@ def author(spec,out):
     sw=target.modifiers.new('Selected sculpt major folds','SHRINKWRAP'); sw.target=reference; sw.wrap_method='NEAREST_SURFACEPOINT'; sw.offset=.0015
     # Selected sculpt projection is bounded by the authored fitted form;
     # neither source projection nor body-derived shell becomes appearance alone.
-    sw.vertex_group='SelectedSculptProjection'; group=target.vertex_groups.new(name=sw.vertex_group)
+    # Blender validates this setter against existing groups: create first.
+    group=target.vertex_groups.new(name='SelectedSculptProjection')
+    assert group.name=='SelectedSculptProjection', 'Projection group name changed'
+    sw.vertex_group=group.name
+    assert sw.vertex_group==group.name=='SelectedSculptProjection', 'Projection group binding absent'
     for vertex in target.data.vertices:
         z=vertex.co.z
         # Keep waist/crotch/cuffs authored. Source projection owns selected folds
@@ -151,8 +155,10 @@ def author(spec,out):
         inside=abs(vertex.co.x)<.065 and z>.72
         group.add([vertex.index],0 if inside else .78*ease,'REPLACE')
     active(target); bpy.ops.object.modifier_apply(modifier=sw.name)
-    # Modifier application can replace RNA data: reacquire the named group.
-    target.vertex_groups.remove(target.vertex_groups['SelectedSculptProjection'])
+    # Modifier application can replace RNA data: reacquire, never skip absence.
+    projected_group=target.vertex_groups.get('SelectedSculptProjection')
+    assert projected_group is not None, 'Applied projection lost its named group'
+    target.vertex_groups.remove(projected_group)
     # Restricted body-nearest initialization, then deliberate hip/knee field
     # transitions. Opposite-side leg and upper-body groups cannot leak across.
     source=np.load(bodypath); bv=source['vertices']; bf=source['faces']; coeff=source['nativeCoefficients']; names=source['jointNames'].tolist()
