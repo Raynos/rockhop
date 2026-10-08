@@ -1,0 +1,102 @@
+{
+  "candidate": {
+    "path": "harness/out/rider-rebuild/selected-deep-crouch03/authored01/selected-deep-fixed-sole217.blend",
+    "sha256": "7e89485d46bb9a03ce2ea05f0a80fbc1cf17fd75f7c67ab295e26af49d681a7c"
+  },
+  "sourceNative": {
+    "path": "harness/out/rider-rebuild/selected-complete-engine01/engine05/rider-private-masked.blend",
+    "sha256": "95a4f14e06fb52cc055df6d1446a035d8cd3d35180d565ad52f3a70b3b05664b"
+  },
+  "action": "UnacceptedSelectedDeepFixedSoleCrouchRise217",
+  "fps": 24,
+  "frameRange": [
+    1,
+    217
+  ],
+  "nativeMatrices": {
+    "path": "harness/out/rider-rebuild/selected-deep-crouch03/authored01/native-world-matrices.npz",
+    "sha256": "16333401825785c168d170ec56dac42abf6a758bd9fe8b6ce0c4cbc85b0b22b9",
+    "space": "X-left,-Y-forward,Z-up"
+  },
+  "sourceDerivedTargets": {
+    "ownSideLegs": {
+      "left": {
+        "femurM": 0.3867097396595634,
+        "shinM": 0.4170344122518073,
+        "forefootBearing": [
+          0.23029130697250366,
+          -0.0340101532638073,
+          -0.02048517018556595
+        ],
+        "derivedKnee": [
+          0.1392434537410736,
+          -0.03401016443967819,
+          0.5363013744354248
+        ]
+      },
+      "right": {
+        "femurM": 0.3867097976851296,
+        "shinM": 0.41703443025700754,
+        "forefootBearing": [
+          -0.22769363224506378,
+          -0.0353035032749176,
+          -0.020482655614614487
+        ],
+        "derivedKnee": [
+          -0.13924343883991241,
+          -0.035303495824337006,
+          0.5359935164451599
+        ]
+      }
+    },
+    "restHipCenter": [
+      0.0,
+      -0.018959034234285355,
+      0.9274623394012451
+    ],
+    "deepHipCenter": [
+      -3.989060104458986e-08,
+      0.3462642431259155,
+      0.47798705101013184
+    ],
+    "hipDropM": 0.4494752883911133,
+    "hipBelowKneeFemurFraction": 0.15,
+    "supportLandmarkCenter": [
+      0.001297513721510768,
+      0.0023255622945725918,
+      -0.020404839888215065
+    ],
+    "depthMeaning": "Hip-below-knee fraction is an authored depth choice, not a derived anatomical limit",
+    "derivedTorsoPitchDegrees": 40.425493529351684,
+    "torsoProjectionMeaning": "Neck-base landmark over finite sole bearing centroid; not tissue COM or comfort qualification"
+  },
+  "peakJointAngles": {
+    "left": {
+      "kneeFlexionDegrees": 111.20461347196073,
+      "hipSwingFromRestDegrees": 141.07291277797776,
+      "ankleSwingFromRestDegrees": 23.4788965077766,
+      "hipSagittalFlexionDegrees": 139.14364060329186,
+      "ankleDorsiflexionFromVerticalDegrees": 27.38671009480026
+    },
+    "right": {
+      "kneeFlexionDegrees": 111.20462713233907,
+      "hipSwingFromRestDegrees": 141.07666938202127,
+      "ankleSwingFromRestDegrees": 23.4788965077766,
+      "hipSagittalFlexionDegrees": 139.13956977285025,
+      "ankleDorsiflexionFromVerticalDegrees": 27.381582026837762
+    }
+  },
+  "maximumResiduals": {
+    "segmentLengthM": 3.8661110535187504e-07,
+    "ankleTargetM": 1.9702383851835364e-06,
+    "wristTargetM": 6.583969774876647e-07,
+    "soleFrameM": 2.163248843740883e-06,
+    "soleFrameRadians": 0.0,
+    "directNativeSolePointM": 2.3171642547198346e-06,
+    "evaluatedSolePointM": 1.332911003177319e-06
+  },
+  "exact75TRSKeyedEveryFrame": true,
+  "neutralBasisReturnExact": true,
+  "acceptedArt": false,
+  "movingReviewPassed": false
+}

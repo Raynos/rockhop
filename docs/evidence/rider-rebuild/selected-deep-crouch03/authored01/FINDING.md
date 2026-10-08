@@ -1,0 +1,5 @@
+Actual deep217 action authored on the complete selected engine05 native: CPU2guardexit0/190.491s, separate native7e89485d retained with original body/clothes/fields/rest geometry fingerprints unchanged. This uses protected current body/boots/native75 while cuff surgery proceeds, without claiming the future repaired sleeve as its source.
+
+Derived hip drop0.449475m, knee flexion111.205degrees, torso pitch40.4255degrees; artistic depth/timing remain explicitly declared. Maximum actual finite native boot support LBS residual2.317µm; independently Blender-evaluated six-station support residual1.333µm. Every217frame×75world matrix is finite and exact matrix bytes match the motion receipt; neutral basis returns exactly.
+
+Keep as an unaccepted motion construction checkpoint. Full clothed moving deformation, skin/clipping quality, actual engine/GPU playback and devices remain unreviewed. No claim of anatomical comfort, saddle contact or completed rider. New target cuff transport must separately preserve action provenance and exact native75 rest/bind.
