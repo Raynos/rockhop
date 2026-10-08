@@ -31,3 +31,7 @@ Limits: One conventional dense outside finishing source follows; no new lattice 
 Finding: The actual selected dense denim source needs its own bounded enclosure correction before transfer.
 Validation: Parent read complete source/intake, AST parses and all ten original native/map/helper pins match; only derivative receives one12mm OUTSIDE operation.
 Limits: Source only, no actual operation or donor fit accepted; unsafe displacement/triangle changes stop without retries.
+
+Finding: The single actual selected denim outside operation is unsafe and stops before original-PBR views/bake.
+Validation: CPU2 exit1 in10.491s;51newcollapses/3716over90degree face rotations/2loosepoints moved; failednative and lineage independently rehashed.
+Limits: No guard waiver/retry/bake/acceptance; exact expert-tailoring package pending.

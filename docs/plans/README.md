@@ -1359,3 +1359,5 @@ October 7 actual selected denim donor: parent-reviewed one OUTSIDE12mm derivativ
 October 7 glove03 parent all8 bilateral originalPBR views REJECT: exposed palm/dorsum/web/tips and flaredcuffs despite correct joint residuals. Oppositehanded geometry verified; broad surface fit failure ends this fitting mechanism. Exact artist package pending, no bake/retopo/player acceptance.
 
 October 7 single actual hoodie localOUTSIDE finish stops exit1 in1.032s at moved-point scope/loose guard vertex12473; no unexpected intakeboundary, no editednative saved. Preserve exact source/body75/negativeviews for expert tailoring; no retry/bake/acceptance.
+
+October 7 one actual selected dense denim OUTSIDEpass FAIL exit1 in10.491s:51newcollapsedtriangles/3716over90deg rotations/2loosepoints moved; actualnative5115aec7+lineage saved and parentrehashed. No retry/bake/fit acceptance; exact expert-tailoring package pending.
