@@ -1,0 +1,13 @@
+# Shape-only re-export of the already-masked selected rider
+
+Status: source checkpoint, unexecuted. All R0–R5 remain open. This is private review infrastructure, not a completed rider.
+
+`export-private.py` now has an explicit `alreadyMasked: true` intake. The existing unmasked merge/mask path retains its mask and FOUR/cutoff conditioning. Both paths use one transport finalizer and the existing strict decoded source-FOUR comparison (maximum named coefficient residual below `2e-5`).
+
+The masked intake opens the pinned parent export native, fingerprints its actual data, then independently opens the corrected native and compares them. Only positions on `ActualSelectedGlove.L` and `.R` may change. Both actual glove position hashes must differ and remain finite. The other five visible meshes and hidden `RiderBody__FullAnatomyReference` retain positions and corner normals exactly. All eight checked meshes retain topology, UVs, mesh attributes, material indices, smoothing, named vertex groups and coefficients, object transforms/parent, relevant modifier settings, material graphs/defaults and packed selected image bytes. The actual 75-bone rest, parent relationships and connect/deform flags match the parent contract exactly. Hidden additional authoring guides/references are permitted and never selected for GLB export.
+
+No mask helper, largest-FOUR pruning or coefficient normalization runs on the masked branch. Every existing delivery coefficient must already exceed Blender's fixed `.0001` export cutoff. Saved `_NATIVE_ID` attributes must already be exact point indices; they are checked without rewriting. The parent's body mask manifest and receipt are copied byte for byte, preserving the original coverage/source lineage. A fresh contract records the new actual GLB SHA while all moving, GPU, contact and device qualification remains explicitly open.
+
+`masked-reexport-template.json` pins the current engine03 parent export, native, contract and mask files. It deliberately has `ready: false` and unresolved corrected-native/receipt hashes. After successful cuff authoring, copy it to a concrete input, pin the actual `complete-selected-cuff-fit05.blend` and `report.json`, and set `ready: true`. The receipt must name `sourceMaster`, `native`, `visibleMeshes`, `exact75RestUnchanged: true`, and `acceptedArt: false`, as the cuff05 author supplies.
+
+Run only through the parent's serialized CPU2/global-lease guard, into a fresh child directory of `harness/out/rider-rebuild/selected-complete-engine01`. This source change received Python syntax/AST checks only. No Blender execution, render, moving review or engine acceptance is claimed here.

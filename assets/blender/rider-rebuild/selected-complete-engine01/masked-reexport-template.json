@@ -1,0 +1,43 @@
+{
+  "accepted": false,
+  "ready": false,
+  "alreadyMasked": true,
+  "status": "TEMPLATE_AWAITING_ACTUAL_CORRECTED_NATIVE_AND_RECEIPT",
+  "mergeHelper": {
+    "path": "assets/blender/rider-rebuild/selected-complete-engine01/merge.py",
+    "sha256": "af7609a2ebf19f3a9e4ba2cf548c79c57c2353c0d19d147a4471533a7c8d3add"
+  },
+  "parentExportReceipt": {
+    "path": "harness/out/rider-rebuild/selected-complete-engine01/engine03/export.json",
+    "sha256": "66984c6495bbfb33db8f7dc6f704b8cf2086129076326983194b4bfaeba1bc4b"
+  },
+  "parentNative": {
+    "path": "harness/out/rider-rebuild/selected-complete-engine01/engine03/rider-private-masked.blend",
+    "sha256": "fdff3433c26c345d6f0555f196033f5ba76791d5d566b448991bd1fab2eff384"
+  },
+  "baseContract": {
+    "path": "harness/out/rider-rebuild/selected-complete-engine01/engine03/rider-contract.json",
+    "sha256": "719209bfee6f9010ef5e1a7ed54bba68905d3b2a2f78b792cd9c1f4af252c3f0"
+  },
+  "bodyMaskManifest": {
+    "path": "harness/out/rider-rebuild/selected-complete-engine01/engine03/body-mask-manifest.json",
+    "sha256": "378ef7ff41964c525f68bd48c810e5a80668786433ec37152b6af7bdc5066dd7"
+  },
+  "bodyMaskReceipt": {
+    "path": "harness/out/rider-rebuild/selected-complete-engine01/engine03/body-mask-receipt.json",
+    "sha256": "eae58c8982241fb3fed0fe3f838c5014495742386b1f17cec0da056d1e701978"
+  },
+  "native": {
+    "path": "harness/out/rider-rebuild/glove-cuff-fit05/authored01/complete-selected-cuff-fit05.blend",
+    "sha256": "REPLACE_AFTER_SUCCESSFUL_AUTHORING"
+  },
+  "correctedNativeReceipt": {
+    "path": "harness/out/rider-rebuild/glove-cuff-fit05/authored01/report.json",
+    "sha256": "REPLACE_AFTER_SUCCESSFUL_AUTHORING"
+  },
+  "limits": [
+    "Template is deliberately not ready. Pin actual successful corrected-native and receipt; then set ready true.",
+    "Only the two selected glove positions may differ from the pinned already-masked parent; original mask JSON and current FOUR coefficients remain exact.",
+    "All R0-R5 open. Strict source transport is not moving art, GPU parity, contacts or device acceptance."
+  ]
+}

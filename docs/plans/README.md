@@ -1579,3 +1579,5 @@ October8 Astra07 supported proximal selected-glove cuff taper source reviewed/pi
 October8 Garage04 exposed second resident low-tier texture shrink after loader policy. Private intake now protects exact selected texture objects through all later budget passes; genuine4K before/after still pending. All0/6open.
 
 October8 selected cuff taper localorientation correction reviewed:6L/4Rnoncontrol amplitude reductions, measuredcontrols/prioranatomicaledits exact;float32orientation positive. Actualdense transfer next;all0/6open.
+
+October8 selected already-masked shape-only reexport source reviewed: independentparent/current fingerprints, only2glovepositions allowed, originalmask/FOUR preservedexact; commonstrictfinalizer. Actualcorrectednative pins/runtime next;all0/6open.

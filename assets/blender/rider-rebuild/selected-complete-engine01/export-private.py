@@ -4,6 +4,7 @@ Parent CPU2 only, after source checkpoint and moving shape judgment.
 blender -b -t 2 --python-exit-code 1 --python export-private.py -- MANIFEST FRESH_OUT
 Normal player models/catalogs are never written.
 """
+import hashlib
 import json
 import runpy
 import struct
@@ -84,59 +85,184 @@ def four_readback(document, raw, meshes, helper):
             'limits': 'Source transport fields only; native-vs-actual-GPU moving parity remains open.'}
 
 
-def main():
-    args = sys.argv[sys.argv.index('--')+1:]; assert len(args) == 2
-    manifest_path, out = (Path(value).resolve() for value in args)
-    manifest = json.loads(manifest_path.read_text())
-    assert manifest['accepted'] is False and manifest.get('ready') is True and not out.exists()
-    assert out.is_relative_to(ROOT/'harness/out/rider-rebuild/selected-complete-engine01')
-    # Use the already reviewed small merge helpers for pinning and FOUR intake.
-    helper_path = ROOT/manifest['mergeHelper']['path']
-    import hashlib
-    assert hashlib.sha256(helper_path.read_bytes()).hexdigest() == manifest['mergeHelper']['sha256']
-    helper = runpy.run_path(str(helper_path))
-    pin, sha = helper['pin'], helper['sha']
-    for row in helper['pins'](manifest): pin(row)
-    merged = json.loads(pin(manifest['mergeReceipt']).read_text())
-    assert merged['native'] == manifest['native'] and merged['visibleMeshes'] == sorted(helper['EXPECTED'])
-    assert merged['recipeSHA256'] == manifest['mergeHelper']['sha256']
-    bpy.ops.wm.open_mainfile(filepath=str(pin(manifest['native'])))
-    body, rig = bpy.data.objects['RiderBody'], bpy.data.objects['RiderSkeleton']
-    assert len(rig.data.bones) == 75 and rig.animation_data is None
+def native_rest(rig):
+    return [{'name': b.name, 'parent': b.parent.name if b.parent else None,
+             'head': list(b.head_local), 'tail': list(b.tail_local),
+             'matrix': [list(row) for row in b.matrix_local],
+             'useConnect': b.use_connect, 'useDeform': b.use_deform} for b in rig.data.bones]
+
+
+def scalar_rna(value):
+    """Transport-relevant scalar RNA; datablock pointers are named separately."""
+    result = {}
+    for prop in value.bl_rna.properties:
+        if prop.identifier == 'rna_type' or prop.is_readonly: continue
+        if prop.type not in {'BOOLEAN', 'INT', 'FLOAT', 'ENUM', 'STRING'}: continue
+        item = getattr(value, prop.identifier)
+        result[prop.identifier] = sorted(item) if isinstance(item, set) else list(item) if getattr(prop, 'is_array', False) else item
+    return result
+
+
+def part_fingerprint(obj, helper, allow_positions=False):
+    """Hash actual native data, independent of the correcting builder's receipt."""
+    np = helper['np']; mesh = obj.data
+    assert obj.type == 'MESH' and not mesh.shape_keys and obj.animation_data is None
+    digest = hashlib.sha256()
+    def array(label, collection, property_name, width, dtype):
+        values = np.empty(len(collection)*width, dtype=dtype)
+        collection.foreach_get(property_name, values)
+        digest.update(label.encode()); digest.update(values.tobytes())
+    if not allow_positions: array('positions', mesh.vertices, 'co', 3, np.float32)
+    for label, collection, prop, width, dtype in [
+        ('edgeVertices', mesh.edges, 'vertices', 2, np.int32),
+        ('cornerVertices', mesh.loops, 'vertex_index', 1, np.int32),
+        ('polygonStart', mesh.polygons, 'loop_start', 1, np.int32),
+        ('polygonSizes', mesh.polygons, 'loop_total', 1, np.int32),
+        ('polygonMaterial', mesh.polygons, 'material_index', 1, np.int32),
+        ('polygonSmooth', mesh.polygons, 'use_smooth', 1, np.bool_)]:
+        array(label, collection, prop, width, dtype)
+    formats = {'FLOAT': ('value', 1, np.float32), 'INT': ('value', 1, np.int32),
+               'BOOLEAN': ('value', 1, np.bool_), 'FLOAT_VECTOR': ('vector', 3, np.float32),
+               'FLOAT2': ('vector', 2, np.float32), 'FLOAT_COLOR': ('color', 4, np.float32),
+               'BYTE_COLOR': ('color', 4, np.float32), 'INT8': ('value', 1, np.int32),
+               'QUATERNION': ('value', 4, np.float32), 'FLOAT4X4': ('value', 16, np.float32),
+               'INT32_2D': ('value', 2, np.int32)}
+    for attr in mesh.attributes:
+        if allow_positions and attr.name == 'position': continue
+        assert attr.data_type in formats, ('Unsupported immutable attribute', obj.name, attr.name, attr.data_type)
+        digest.update(json.dumps([attr.name, attr.domain, attr.data_type]).encode())
+        field, width, dtype = formats[attr.data_type]
+        array('attribute', attr.data, field, width, dtype)
+    # Preserve exact UV layers and their active selection, including legacy UV RNA.
+    for uv in mesh.uv_layers:
+        digest.update(json.dumps([uv.name, uv.active_render, uv.active_clone]).encode())
+        array('uv', uv.data, 'uv', 2, np.float32)
+    if not allow_positions:
+        array('evaluatedCornerNormals', mesh.corner_normals, 'vector', 3, np.float32)
+    digest.update(json.dumps([g.name for g in obj.vertex_groups]).encode())
+    for vertex in mesh.vertices:
+        digest.update(struct.pack('<I', len(vertex.groups)))
+        for group in vertex.groups: digest.update(struct.pack('<If', group.group, group.weight))
+    materials = []
+    for mat in mesh.materials:
+        assert mat and mat.use_nodes
+        nodes = []
+        for node in mat.node_tree.nodes:
+            row = {'name': node.name, 'type': node.bl_idname, 'settings': scalar_rna(node),
+                   'inputs': [{'identifier': socket.identifier, 'type': socket.type,
+                               'default': scalar_rna(socket).get('default_value')} for socket in node.inputs]}
+            if node.type == 'TEX_IMAGE' and node.image:
+                image = node.image; assert image.packed_file, ('Unpacked selected map', image.name)
+                row['image'] = {'name': image.name, 'size': list(image.size),
+                                'colorSpace': image.colorspace_settings.name,
+                                'alphaMode': image.alpha_mode,
+                                'sha256': hashlib.sha256(image.packed_file.data).hexdigest()}
+            nodes.append(row)
+        materials.append({'name': mat.name, 'settings': scalar_rna(mat), 'nodes': nodes,
+            'links': [[link.from_node.name, link.from_socket.identifier,
+                       link.to_node.name, link.to_socket.identifier] for link in mat.node_tree.links]})
+    transforms = {'world': [list(row) for row in obj.matrix_world],
+                  'parentInverse': [list(row) for row in obj.matrix_parent_inverse],
+                  'parent': obj.parent.name if obj.parent else None,
+                  'modifiers': [{'settings': scalar_rna(mod),
+                                 'object': mod.object.name if hasattr(mod, 'object') and mod.object else None}
+                                for mod in obj.modifiers],
+                  'materials': materials, 'hideRender': obj.hide_render,
+                  'customProperties': {key: obj[key] for key in obj.keys()
+                                       if isinstance(obj[key], (str, int, float, bool))}}
+    digest.update(json.dumps(transforms, sort_keys=True).encode())
+    return {'sha256': digest.hexdigest(), 'vertices': len(mesh.vertices),
+            'polygons': len(mesh.polygons), 'positionChangesAllowed': allow_positions}
+
+
+def masked_state(helper, contract):
+    rig = bpy.data.objects['RiderSkeleton']
+    assert len(rig.data.bones) == 75 and rig.animation_data is None and rig.matrix_world.is_identity
     assert all(b.matrix_basis.is_identity for b in rig.pose.bones)
-    visible = [o for o in bpy.context.scene.objects if o.type == 'MESH' and not o.hide_render]
-    assert {o.name for o in visible} == helper['EXPECTED']
-    contract = json.loads(pin(manifest['baseContract']).read_text())
-    native_rest = [{'name': b.name, 'parent': b.parent.name if b.parent else None,
-                    'head': list(b.head_local), 'tail': list(b.tail_local),
-                    'matrix': [list(row) for row in b.matrix_local],
-                    'useConnect': b.use_connect, 'useDeform': b.use_deform} for b in rig.data.bones]
-    assert native_rest == contract['nativeRest']['bones'], 'Fresh native75 contract must match actual source rest'
+    assert native_rest(rig) == contract['nativeRest']['bones'], 'Exact saved native75 rest changed'
+    visible = [obj for obj in bpy.context.scene.objects if obj.type == 'MESH' and not obj.hide_render]
+    assert {obj.name for obj in visible} == helper['EXPECTED'] and len(visible) == 7
+    reference = bpy.data.objects['RiderBody__FullAnatomyReference']
+    body = bpy.data.objects['RiderBody']
+    assert reference.hide_render and body['outfitFullBodyReference'] == reference.name
     for obj in visible:
-        helper['mesh_four'](obj, rig, require_four=obj != body)
-        arms = [m for m in obj.modifiers if m.type == 'ARMATURE']
-        assert len(arms) == 1 and arms[0].object == rig and not arms[0].use_deform_preserve_volume
         assert obj.matrix_world.is_identity
-    full_body_fields = helper['mesh_four'](body, rig, require_four=False)
-    mask = runpy.run_path(str(pin(manifest['maskHelper'])))
-    render_body, mask_manifest, mask_receipt = mask['freeze_and_apply'](
-        body, rig, ['hoodie', 'jeans', 'gloves', 'boots'], manifest['native'])
-    body.name = 'RiderBody__FullAnatomyReference'
-    render_body.name = 'RiderBody'
-    render_body['outfitFullBodyReference'] = body.name
-    mask_receipt.update(renderBody=render_body.name, fullBodyReference=body.name)
-    body_four = helper['limit_four'](render_body, rig)
-    assert helper['mesh_four'](body, rig, require_four=False) == full_body_fields
-    meshes = [render_body]+[o for o in visible if o != body]
-    assert {o.name for o in meshes} == helper['EXPECTED']
-    cutoff_conditioning = [export_cutoff(obj, rig, helper) for obj in meshes]
-    assert helper['mesh_four'](body, rig, require_four=False) == full_body_fields
+        arms = [mod for mod in obj.modifiers if mod.type == 'ARMATURE']
+        assert len(arms) == 1 and arms[0].object == rig and not arms[0].use_deform_preserve_volume
+        assert all(mod.type in {'ARMATURE', 'TRIANGULATE'} for mod in obj.modifiers)
+        rows = helper['mesh_four'](obj, rig)
+        assert all(weight > .0001 for row in rows for _, weight in row), ('Saved export cutoff unstable', obj.name)
+    states = {obj.name: part_fingerprint(obj, helper, obj.name.startswith('ActualSelectedGlove.'))
+              for obj in visible+[reference]}
+    positions = {}
+    for obj in visible:
+        if not obj.name.startswith('ActualSelectedGlove.'): continue
+        values = helper['np'].empty(len(obj.data.vertices)*3, dtype=helper['np'].float32)
+        obj.data.vertices.foreach_get('co', values)
+        assert helper['np'].isfinite(values).all()
+        positions[obj.name] = hashlib.sha256(values.tobytes()).hexdigest()
+    return rig, visible, states, positions
+
+
+def intake_masked(manifest, manifest_path, out, helper):
+    """Validate a shape-only derivative, without mask, prune or weight writes."""
+    pin = helper['pin']
+    parent_path = pin(manifest['parentExportReceipt'])
+    parent = json.loads(parent_path.read_text())
+    corrected = json.loads(pin(manifest['correctedNativeReceipt']).read_text())
+    assert parent['accepted'] is False and parent['rigAndContractExactNative75'] is True
+    assert parent['decodedFourQualification']['decodedSourceFOURMatchesSavedNative'] is True
+    assert parent['native'] == manifest['parentNative'] == corrected['sourceMaster']
+    assert corrected['native'] == manifest['native'] and corrected['exact75RestUnchanged'] is True
+    assert corrected.get('acceptedArt') is False and corrected['visibleMeshes'] == sorted(helper['EXPECTED'])
+    assert Path(parent['native']['path']).parent == Path(manifest['baseContract']['path']).parent
+    for key, filename in [('bodyMaskManifest', 'body-mask-manifest.json'),
+                          ('bodyMaskReceipt', parent['bodyMaskReceipt'])]:
+        assert pin(manifest[key]) == parent_path.parent/filename
+    contract = json.loads(pin(manifest['baseContract']).read_text())
+    assert contract['glbSHA256'] == parent['glb']['sha256']
+    bpy.ops.wm.open_mainfile(filepath=str(pin(manifest['parentNative'])))
+    _, _, before, before_positions = masked_state(helper, contract)
+    bpy.ops.wm.open_mainfile(filepath=str(pin(manifest['native'])))
+    rig, meshes, after, after_positions = masked_state(helper, contract)
+    assert before == after, ('Shape-only masked export changed protected native data',
+                             [name for name in before if before[name] != after[name]])
+    assert all(before_positions[name] != after_positions[name] for name in before_positions), 'Expected bilateral shape correction is absent'
+    qualification = {'glovePositionHashesBefore': before_positions, 'glovePositionHashesAfter': after_positions,
+                     'parentExportReceipt': manifest['parentExportReceipt'],
+                     'parentNative': manifest['parentNative'], 'correctedNativeReceipt': manifest['correctedNativeReceipt'],
+                     'protectedNativeFingerprints': after, 'bodyMaskAppliedAgain': False,
+                     'weightPruningOrNormalizationPerformed': False,
+                     'allowedPositionObjects': ['ActualSelectedGlove.L', 'ActualSelectedGlove.R'],
+                     'fullAnatomyReferenceAndOtherFiveMeshesExact': True,
+                     'allSevenTopologyUVPBRAndDeliveryFieldsExact': True,
+                     'savedPointNativeIDsValidatedByFinalizer': True,
+                     'exportCutoffStableWithoutMutation': True}
+    conditioning = [{'object': obj.name, 'cutoff': .0001, 'changedRows': 0,
+                     'maximumRemovedMass': 0., 'method': 'Assert existing saved delivery coefficients; no mutation'}
+                    for obj in meshes]
+    finalize(manifest, manifest_path, out, helper, rig, meshes, contract,
+             json.loads(pin(manifest['bodyMaskManifest']).read_text()),
+             json.loads(pin(manifest['bodyMaskReceipt']).read_text()),
+             {'method': 'Existing masked body FOUR preserved exactly; no conditioning',
+              'fullAnatomyReferenceChanged': False}, conditioning, qualification)
+
+
+def finalize(manifest, manifest_path, out, helper, rig, meshes, contract, mask_manifest, mask_receipt, body_four, cutoff_conditioning, masked_qualification=None):
+    """One strict transport finalizer for fresh masks and shape-only corrections."""
+    pin, sha = helper['pin'], helper['sha']
     for obj in meshes:
         attribute = obj.data.attributes.get('_NATIVE_ID')
         if attribute is None:
+            assert not manifest.get('alreadyMasked'), ('Missing saved native identity', obj.name)
             attribute = obj.data.attributes.new('_NATIVE_ID', 'INT', 'POINT')
         assert attribute.domain == 'POINT' and attribute.data_type == 'INT'
-        attribute.data.foreach_set('value', list(range(len(obj.data.vertices))))
+        if manifest.get('alreadyMasked'):
+            values = helper['np'].empty(len(obj.data.vertices), dtype=helper['np'].int32)
+            attribute.data.foreach_get('value', values)
+            assert helper['np'].array_equal(values, helper['np'].arange(len(values))), ('Changed native identity', obj.name)
+        else:
+            attribute.data.foreach_set('value', list(range(len(obj.data.vertices))))
     contract['accepted'] = False
     contract['specification']['meshNames'] = {o.name: o.name for o in meshes}
     contract['driver']['nearSimilarityTolerance'] = 1e-4
@@ -147,8 +273,12 @@ def main():
     for key in ('glbSHA256', 'exportedObjectMeshes', 'sourceSHA256', 'metadataSHA256', 'genericAction'):
         contract.pop(key, None)
     out.mkdir(parents=True)
-    (out/'body-mask-manifest.json').write_text(json.dumps(mask_manifest, indent=2)+'\n')
-    (out/'body-mask-receipt.json').write_text(json.dumps(mask_receipt, indent=2)+'\n')
+    if manifest.get('alreadyMasked'):
+        (out/'body-mask-manifest.json').write_bytes(pin(manifest['bodyMaskManifest']).read_bytes())
+        (out/'body-mask-receipt.json').write_bytes(pin(manifest['bodyMaskReceipt']).read_bytes())
+    else:
+        (out/'body-mask-manifest.json').write_text(json.dumps(mask_manifest, indent=2)+'\n')
+        (out/'body-mask-receipt.json').write_text(json.dumps(mask_receipt, indent=2)+'\n')
     bpy.ops.object.select_all(action='DESELECT')
     rig.hide_set(False); rig.select_set(True)
     for obj in meshes: obj.hide_set(False); obj.select_set(True)
@@ -183,6 +313,7 @@ def main():
         'bodyMaskReceipt': 'body-mask-receipt.json', 'renderBodyFourConditioning': body_four,
         'renderDeliveryExportCutoffConditioning': cutoff_conditioning,
         'decodedFourQualification': decoded_four,
+        'alreadyMaskedReexport': masked_qualification,
         'objects': sorted(helper['EXPECTED']),
         'rigAndContractExactNative75': True, 'normalPlayerAssetsWritten': False,
         'limits': ['Structural export intake only. All R0-R5 remain open.',
@@ -191,6 +322,60 @@ def main():
                    'No old combined04 calibration transferred across corrected finger rest frames.']}
     (out/'export.json').write_text(json.dumps(report, indent=2)+'\n')
     print(json.dumps({'native': report['native'], 'glb': report['glb']}), flush=True)
+
+
+
+def main():
+    args = sys.argv[sys.argv.index('--')+1:]; assert len(args) == 2
+    manifest_path, out = (Path(value).resolve() for value in args)
+    manifest = json.loads(manifest_path.read_text())
+    assert manifest['accepted'] is False and manifest.get('ready') is True and not out.exists()
+    assert out.is_relative_to(ROOT/'harness/out/rider-rebuild/selected-complete-engine01')
+    # Use the already reviewed small merge helpers for pinning and FOUR intake.
+    helper_path = ROOT/manifest['mergeHelper']['path']
+    import hashlib
+    assert hashlib.sha256(helper_path.read_bytes()).hexdigest() == manifest['mergeHelper']['sha256']
+    helper = runpy.run_path(str(helper_path))
+    pin, sha = helper['pin'], helper['sha']
+    for row in helper['pins'](manifest): pin(row)
+    if manifest.get('alreadyMasked'):
+        intake_masked(manifest, manifest_path, out, helper)
+        return
+    merged = json.loads(pin(manifest['mergeReceipt']).read_text())
+    assert merged['native'] == manifest['native'] and merged['visibleMeshes'] == sorted(helper['EXPECTED'])
+    assert merged['recipeSHA256'] == manifest['mergeHelper']['sha256']
+    bpy.ops.wm.open_mainfile(filepath=str(pin(manifest['native'])))
+    body, rig = bpy.data.objects['RiderBody'], bpy.data.objects['RiderSkeleton']
+    assert len(rig.data.bones) == 75 and rig.animation_data is None
+    assert all(b.matrix_basis.is_identity for b in rig.pose.bones)
+    visible = [o for o in bpy.context.scene.objects if o.type == 'MESH' and not o.hide_render]
+    assert {o.name for o in visible} == helper['EXPECTED']
+    contract = json.loads(pin(manifest['baseContract']).read_text())
+    native_rest = [{'name': b.name, 'parent': b.parent.name if b.parent else None,
+                    'head': list(b.head_local), 'tail': list(b.tail_local),
+                    'matrix': [list(row) for row in b.matrix_local],
+                    'useConnect': b.use_connect, 'useDeform': b.use_deform} for b in rig.data.bones]
+    assert native_rest == contract['nativeRest']['bones'], 'Fresh native75 contract must match actual source rest'
+    for obj in visible:
+        helper['mesh_four'](obj, rig, require_four=obj != body)
+        arms = [m for m in obj.modifiers if m.type == 'ARMATURE']
+        assert len(arms) == 1 and arms[0].object == rig and not arms[0].use_deform_preserve_volume
+        assert obj.matrix_world.is_identity
+    full_body_fields = helper['mesh_four'](body, rig, require_four=False)
+    mask = runpy.run_path(str(pin(manifest['maskHelper'])))
+    render_body, mask_manifest, mask_receipt = mask['freeze_and_apply'](
+        body, rig, ['hoodie', 'jeans', 'gloves', 'boots'], manifest['native'])
+    body.name = 'RiderBody__FullAnatomyReference'
+    render_body.name = 'RiderBody'
+    render_body['outfitFullBodyReference'] = body.name
+    mask_receipt.update(renderBody=render_body.name, fullBodyReference=body.name)
+    body_four = helper['limit_four'](render_body, rig)
+    assert helper['mesh_four'](body, rig, require_four=False) == full_body_fields
+    meshes = [render_body]+[o for o in visible if o != body]
+    assert {o.name for o in meshes} == helper['EXPECTED']
+    cutoff_conditioning = [export_cutoff(obj, rig, helper) for obj in meshes]
+    assert helper['mesh_four'](body, rig, require_four=False) == full_body_fields
+    finalize(manifest, manifest_path, out, helper, rig, meshes, contract, mask_manifest, mask_receipt, body_four, cutoff_conditioning)
 
 
 if __name__ == '__main__': main()
