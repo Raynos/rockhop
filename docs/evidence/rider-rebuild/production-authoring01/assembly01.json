@@ -1,0 +1,1024 @@
+{
+  "accepted": false,
+  "stage": "PRIVATE_EDITABLE_REAL_SOURCE_OUTFIT_SAVED_BEFORE_REVIEW",
+  "native": {
+    "path": "harness/out/rider-rebuild/production-authoring01/working01/editable-real-source-outfit.blend",
+    "sha256": "9cedbcdbe0a953d116bafc80b41f8adb0538f21c1ecfca20598f3f079952aaf4"
+  },
+  "recipeSHA256": "81572a2f88c431ebe52bd3f11bd358eff9a772d73f8db1bcb61751d3287f86b0",
+  "manifestSHA256": "6282595333fad0cfdc5f2becc784ff3cb86c8acecf723ade6a17343db73431f1",
+  "bodyCandidate": {
+    "native": {
+      "path": "harness/out/rider-rebuild/production-face01/native01/selected-face-native75.blend",
+      "sha256": "6c80f6e8acc9b50c1d3cc30c92ca70e65148d84be6315e2100584b6f573953e4"
+    },
+    "bodyObject": "RiderBody",
+    "rigObject": "RiderSkeleton",
+    "status": "REJECTED_NECK_CURRENT_CONTEXT_ONLY_REPLACE_EXPLICIT_PIN",
+    "receipt": {
+      "path": "docs/evidence/rider-rebuild/production-face01/native01/report.json",
+      "sha256": "b6d8809fc8e2c368f3e30d158875d6bcbc6f78dd7e19b9b5569a12e9b9d24b0f"
+    },
+    "verdict": {
+      "path": "docs/evidence/rider-rebuild/production-face01/profile-review01/parent-verification.json",
+      "sha256": "fc6683e4886c298daae7d31b963300ef8db11ae64c33b3547476f13be85255b6"
+    }
+  },
+  "canonicalSource": {
+    "path": "harness/out/rider-rebuild/native-hand-repair01/native02/anatomical-hand-rig.blend",
+    "sha256": "42fca617ea8d246a6c3e3ca68a90cd3cb5f3ce8b9bb78130e0e2bbd65f605fac"
+  },
+  "visibleBodyVertices": 41775,
+  "visibleMeshes": [
+    "Boots__LocallyRepairedSelectedDenseBoot.L",
+    "Boots__LocallyRepairedSelectedDenseBoot.R",
+    "Gloves__SelectedFittedSource.L",
+    "Gloves__SelectedFittedSource.R",
+    "Hoodie__ActualOriginalDensePBR_FrozenFitContext",
+    "Jeans__AlignedSelectedDenseJeans",
+    "RiderBody"
+  ],
+  "bodyAnd75RigUnchangedByAssembly": true,
+  "bodyAnd75RigSignature": "d8866a04a9813996501691622a9089235cfa206687f015be964aaf356b705da1",
+  "canonical75RestExact": true,
+  "units": [
+    {
+      "part": "Hoodie",
+      "source": {
+        "path": "harness/out/rider-rebuild/production-hoodie01/regional-repair01/authored-hoodie.blend",
+        "sha256": "fd7761d7b7c9794cb5871945515d992052424b52ddc83f289522dae942d05f3c"
+      },
+      "status": "PATCHED_COMPACT_DERIVATIVE_REJECTED_FIT_REFERENCE; ACTUAL_DENSE_PRIMARY_UNREVIEWED",
+      "objects": [
+        {
+          "object": "Hoodie__RiderHoodie",
+          "sourceObject": "RiderHoodie",
+          "role": "TOGGLEABLE_CURRENT_WORK_REFERENCE",
+          "type": "MESH",
+          "vertices": 12898,
+          "polygons": 19793,
+          "matrixWorld": [
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "modifiers": [
+            {
+              "name": "Shared75SelectedHoodieSkin",
+              "type": "ARMATURE",
+              "target": "RiderSkeleton",
+              "viewport": true,
+              "render": true
+            }
+          ],
+          "packedMaps": {
+            "Image_0": {
+              "pixels": [
+                4096,
+                4096
+              ],
+              "sha256": "1eb934f396df30e3cd881211ff4e195c4460f8fa8db5bfa22ddb3b5ef28e5d09"
+            },
+            "Image_1": {
+              "pixels": [
+                4096,
+                4096
+              ],
+              "sha256": "2e598ae796f89acf741389a67635d4fa7b8d99f2ba39b0e46d0516c95db6dfae"
+            }
+          },
+          "visible": false
+        }
+      ],
+      "dependencyObjects": [
+        "Hoodie__RiderSkeleton.001"
+      ],
+      "equalRestNative75ModifierTargetsRebound": [
+        {
+          "object": "RiderHoodie",
+          "modifier": "Shared75SelectedHoodieSkin"
+        }
+      ]
+    },
+    {
+      "part": "Jeans",
+      "source": {
+        "path": "harness/out/rider-rebuild/production-jeans02/authored01/production-jeans.blend",
+        "sha256": "956548765454fe683952801f5ba401ed82f481489a256cf48039c459850e5c95"
+      },
+      "status": "ACTUAL_ALIGNED_DENSE_ORIGINAL_PBR_LATTICE_WORKING_CONTEXT; COMPACT_TARGET_UNBAKED",
+      "objects": [
+        {
+          "object": "Jeans__AlignedSelectedDenseJeans",
+          "sourceObject": "AlignedSelectedDenseJeans",
+          "role": "VISIBLE_ACTUAL_SOURCE_CONTEXT",
+          "type": "MESH",
+          "vertices": 420800,
+          "polygons": 841644,
+          "matrixWorld": [
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "modifiers": [
+            {
+              "name": "Authored selected large-form fit",
+              "type": "LATTICE",
+              "target": "Jeans__EditableSelectedJeansLattice",
+              "viewport": true,
+              "render": true
+            }
+          ],
+          "packedMaps": {
+            "baseColorTexture.png": {
+              "pixels": [
+                4096,
+                4096
+              ],
+              "sha256": "29a166cd304c492a025ea15f5949da0b8540e1ce11de196c2ed0b5afec50e810"
+            },
+            "metallicRoughnessTexture.png": {
+              "pixels": [
+                4096,
+                4096
+              ],
+              "sha256": "ebd8ead6d0a1b1bfdada88e16c550781848932832859733e8b00c9ccb7ede516"
+            }
+          },
+          "visible": true
+        },
+        {
+          "object": "Jeans__RiderJeans",
+          "sourceObject": "RiderJeans",
+          "role": "TOGGLEABLE_CURRENT_WORK_REFERENCE",
+          "type": "MESH",
+          "vertices": 26063,
+          "polygons": 25728,
+          "matrixWorld": [
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "modifiers": [
+            {
+              "name": "Shared75 selected jeans deformation",
+              "type": "ARMATURE",
+              "target": "RiderSkeleton",
+              "viewport": true,
+              "render": true
+            }
+          ],
+          "packedMaps": {},
+          "visible": false
+        },
+        {
+          "object": "Jeans__EditableSelectedJeansLattice",
+          "sourceObject": "EditableSelectedJeansLattice",
+          "role": "EDITABLE_MODELING_AID",
+          "type": "LATTICE",
+          "vertices": null,
+          "polygons": null,
+          "matrixWorld": [
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "modifiers": [],
+          "packedMaps": {},
+          "visible": false
+        },
+        {
+          "object": "Jeans__Jeans02GussetEditableCage",
+          "sourceObject": "Jeans02GussetEditableCage",
+          "role": "EDITABLE_MODELING_AID",
+          "type": "MESH",
+          "vertices": 1691,
+          "polygons": 1608,
+          "matrixWorld": [
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "modifiers": [
+            {
+              "name": "Editable gusset subdivision",
+              "type": "SUBSURF",
+              "target": null,
+              "viewport": true,
+              "render": true
+            }
+          ],
+          "packedMaps": {},
+          "visible": false
+        },
+        {
+          "object": "Jeans__Jeans02GussetControlReference",
+          "sourceObject": "Jeans02GussetControlReference",
+          "role": "EDITABLE_MODELING_AID",
+          "type": "MESH",
+          "vertices": 1691,
+          "polygons": 1608,
+          "matrixWorld": [
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "modifiers": [
+            {
+              "name": "Editable gusset subdivision",
+              "type": "SUBSURF",
+              "target": null,
+              "viewport": true,
+              "render": true
+            }
+          ],
+          "packedMaps": {},
+          "visible": false
+        }
+      ],
+      "dependencyObjects": [
+        "Jeans__RiderSkeleton.001"
+      ],
+      "equalRestNative75ModifierTargetsRebound": [
+        {
+          "object": "RiderJeans",
+          "modifier": "Shared75 selected jeans deformation"
+        }
+      ]
+    },
+    {
+      "part": "Gloves",
+      "source": {
+        "path": "docs/evidence/rider-rebuild/production-gloves03/author02/fitted-source-L.blend",
+        "sha256": "6ef266a0597bfa88d1c108854c14d6d7c7756e53fd08f54c1c168951683c1ca8"
+      },
+      "status": "ACTUAL_FITTED_ORIGINAL_PBR_STATIC_CONTEXT; OFFLINE_RIGS_MODELING_AIDS_ONLY",
+      "objects": [
+        {
+          "object": "Gloves__SelectedFittedSource.L",
+          "sourceObject": "SelectedFittedSource.L",
+          "role": "VISIBLE_ACTUAL_SOURCE_CONTEXT",
+          "type": "MESH",
+          "vertices": 284571,
+          "polygons": 569142,
+          "matrixWorld": [
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "modifiers": [],
+          "packedMaps": {
+            "baseColorTexture.png.001": {
+              "pixels": [
+                4096,
+                4096
+              ],
+              "sha256": "9633beec8bf2bb3bd73918589b931d2fc4f33f8e3e702415094ed173a129f95c"
+            },
+            "metallicRoughnessTexture.png.001": {
+              "pixels": [
+                4096,
+                4096
+              ],
+              "sha256": "a7a712769a73844a9560d4bef1d163ce3fb8721e388d1a7ecfa07a3515280e67"
+            }
+          },
+          "visible": true
+        },
+        {
+          "object": "Gloves__SelectedFittedSource.R",
+          "sourceObject": "SelectedFittedSource.R",
+          "role": "VISIBLE_ACTUAL_SOURCE_CONTEXT",
+          "type": "MESH",
+          "vertices": 284571,
+          "polygons": 569142,
+          "matrixWorld": [
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "modifiers": [],
+          "packedMaps": {
+            "baseColorTexture.png.001": {
+              "pixels": [
+                4096,
+                4096
+              ],
+              "sha256": "9633beec8bf2bb3bd73918589b931d2fc4f33f8e3e702415094ed173a129f95c"
+            },
+            "metallicRoughnessTexture.png.001": {
+              "pixels": [
+                4096,
+                4096
+              ],
+              "sha256": "a7a712769a73844a9560d4bef1d163ce3fb8721e388d1a7ecfa07a3515280e67"
+            }
+          },
+          "visible": true
+        },
+        {
+          "object": "Gloves__SelectedSourceRest.L",
+          "sourceObject": "SelectedSourceRest.L",
+          "role": "TOGGLEABLE_CURRENT_WORK_REFERENCE",
+          "type": "MESH",
+          "vertices": 284571,
+          "polygons": 569142,
+          "matrixWorld": [
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "modifiers": [
+            {
+              "name": "OfflineSourceRestPose",
+              "type": "ARMATURE",
+              "target": "Gloves__GloveSourceAuthoringRig.L",
+              "viewport": true,
+              "render": true
+            }
+          ],
+          "packedMaps": {
+            "baseColorTexture.png.001": {
+              "pixels": [
+                4096,
+                4096
+              ],
+              "sha256": "9633beec8bf2bb3bd73918589b931d2fc4f33f8e3e702415094ed173a129f95c"
+            },
+            "metallicRoughnessTexture.png.001": {
+              "pixels": [
+                4096,
+                4096
+              ],
+              "sha256": "a7a712769a73844a9560d4bef1d163ce3fb8721e388d1a7ecfa07a3515280e67"
+            }
+          },
+          "visible": false
+        },
+        {
+          "object": "Gloves__SelectedSourceRest.R",
+          "sourceObject": "SelectedSourceRest.R",
+          "role": "TOGGLEABLE_CURRENT_WORK_REFERENCE",
+          "type": "MESH",
+          "vertices": 284571,
+          "polygons": 569142,
+          "matrixWorld": [
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "modifiers": [
+            {
+              "name": "OfflineSourceRestPose",
+              "type": "ARMATURE",
+              "target": "Gloves__GloveSourceAuthoringRig.R",
+              "viewport": true,
+              "render": true
+            }
+          ],
+          "packedMaps": {
+            "baseColorTexture.png.001": {
+              "pixels": [
+                4096,
+                4096
+              ],
+              "sha256": "9633beec8bf2bb3bd73918589b931d2fc4f33f8e3e702415094ed173a129f95c"
+            },
+            "metallicRoughnessTexture.png.001": {
+              "pixels": [
+                4096,
+                4096
+              ],
+              "sha256": "a7a712769a73844a9560d4bef1d163ce3fb8721e388d1a7ecfa07a3515280e67"
+            }
+          },
+          "visible": false
+        },
+        {
+          "object": "Gloves__GloveSourceAuthoringRig.L",
+          "sourceObject": "GloveSourceAuthoringRig.L",
+          "role": "EDITABLE_MODELING_AID",
+          "type": "ARMATURE",
+          "vertices": null,
+          "polygons": null,
+          "matrixWorld": [
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "modifiers": [],
+          "packedMaps": {},
+          "visible": false
+        },
+        {
+          "object": "Gloves__GloveSourceAuthoringRig.R",
+          "sourceObject": "GloveSourceAuthoringRig.R",
+          "role": "EDITABLE_MODELING_AID",
+          "type": "ARMATURE",
+          "vertices": null,
+          "polygons": null,
+          "matrixWorld": [
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "modifiers": [],
+          "packedMaps": {},
+          "visible": false
+        }
+      ],
+      "dependencyObjects": [],
+      "equalRestNative75ModifierTargetsRebound": []
+    },
+    {
+      "part": "Boots",
+      "source": {
+        "path": "harness/out/rider-rebuild/production-boots03/local-repair01/local-upper-repair-selected-source.blend",
+        "sha256": "abf70643fce7b054f0c302906b7b26c0ed953bb32cde011e9fec8dcbf64ceba9"
+      },
+      "status": "ACTUAL_LOCAL_SELECTED_DENSE_ORIGINAL_PBR; FIT_UNACCEPTED_NATIVE75_MODIFIER_MODELING_CONTEXT",
+      "objects": [
+        {
+          "object": "Boots__LocallyRepairedSelectedDenseBoot.L",
+          "sourceObject": "LocallyRepairedSelectedDenseBoot.L",
+          "role": "VISIBLE_ACTUAL_SOURCE_CONTEXT",
+          "type": "MESH",
+          "vertices": 305453,
+          "polygons": 610934,
+          "matrixWorld": [
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "modifiers": [
+            {
+              "name": "Actual unchanged native75 shared wearer",
+              "type": "ARMATURE",
+              "target": "RiderSkeleton",
+              "viewport": true,
+              "render": true
+            }
+          ],
+          "packedMaps": {
+            "baseColorTexture.png.002": {
+              "pixels": [
+                4096,
+                4096
+              ],
+              "sha256": "5bda21b0d584f91aad83d310b868be6a575d28eddb1170e01e65c0b2071f4044"
+            },
+            "metallicRoughnessTexture.png.002": {
+              "pixels": [
+                4096,
+                4096
+              ],
+              "sha256": "4017261b5f233cba5780578691a1508382295db4b157c4d175ad905bc98e5c30"
+            }
+          },
+          "visible": true
+        },
+        {
+          "object": "Boots__LocallyRepairedSelectedDenseBoot.R",
+          "sourceObject": "LocallyRepairedSelectedDenseBoot.R",
+          "role": "VISIBLE_ACTUAL_SOURCE_CONTEXT",
+          "type": "MESH",
+          "vertices": 305453,
+          "polygons": 610934,
+          "matrixWorld": [
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "modifiers": [
+            {
+              "name": "Actual unchanged native75 shared wearer",
+              "type": "ARMATURE",
+              "target": "RiderSkeleton",
+              "viewport": true,
+              "render": true
+            }
+          ],
+          "packedMaps": {
+            "baseColorTexture.png.002": {
+              "pixels": [
+                4096,
+                4096
+              ],
+              "sha256": "5bda21b0d584f91aad83d310b868be6a575d28eddb1170e01e65c0b2071f4044"
+            },
+            "metallicRoughnessTexture.png.002": {
+              "pixels": [
+                4096,
+                4096
+              ],
+              "sha256": "4017261b5f233cba5780578691a1508382295db4b157c4d175ad905bc98e5c30"
+            }
+          },
+          "visible": true
+        },
+        {
+          "object": "Boots__UnchangedOriginalSelectedBoot.L",
+          "sourceObject": "UnchangedOriginalSelectedBoot.L",
+          "role": "TOGGLEABLE_CURRENT_WORK_REFERENCE",
+          "type": "MESH",
+          "vertices": 305453,
+          "polygons": 610934,
+          "matrixWorld": [
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "modifiers": [],
+          "packedMaps": {
+            "baseColorTexture.png.002": {
+              "pixels": [
+                4096,
+                4096
+              ],
+              "sha256": "5bda21b0d584f91aad83d310b868be6a575d28eddb1170e01e65c0b2071f4044"
+            },
+            "metallicRoughnessTexture.png.002": {
+              "pixels": [
+                4096,
+                4096
+              ],
+              "sha256": "4017261b5f233cba5780578691a1508382295db4b157c4d175ad905bc98e5c30"
+            }
+          },
+          "visible": false
+        },
+        {
+          "object": "Boots__UnchangedOriginalSelectedBoot.R",
+          "sourceObject": "UnchangedOriginalSelectedBoot.R",
+          "role": "TOGGLEABLE_CURRENT_WORK_REFERENCE",
+          "type": "MESH",
+          "vertices": 305453,
+          "polygons": 610934,
+          "matrixWorld": [
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "modifiers": [],
+          "packedMaps": {
+            "baseColorTexture.png.002": {
+              "pixels": [
+                4096,
+                4096
+              ],
+              "sha256": "5bda21b0d584f91aad83d310b868be6a575d28eddb1170e01e65c0b2071f4044"
+            },
+            "metallicRoughnessTexture.png.002": {
+              "pixels": [
+                4096,
+                4096
+              ],
+              "sha256": "4017261b5f233cba5780578691a1508382295db4b157c4d175ad905bc98e5c30"
+            }
+          },
+          "visible": false
+        }
+      ],
+      "dependencyObjects": [
+        "Boots__RiderSkeleton.001"
+      ],
+      "equalRestNative75ModifierTargetsRebound": [
+        {
+          "object": "LocallyRepairedSelectedDenseBoot.L",
+          "modifier": "Actual unchanged native75 shared wearer"
+        },
+        {
+          "object": "LocallyRepairedSelectedDenseBoot.R",
+          "modifier": "Actual unchanged native75 shared wearer"
+        }
+      ]
+    }
+  ],
+  "hoodieDense": {
+    "object": {
+      "object": "Hoodie__ActualOriginalDensePBR_FrozenFitContext",
+      "sourceObject": "Original selected GLB mesh",
+      "role": "STATIC_ACTUAL_PBR_FROZEN_FIT_CONTEXT",
+      "type": "MESH",
+      "vertices": 716971,
+      "polygons": 921722,
+      "matrixWorld": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "modifiers": [],
+      "packedMaps": {
+        "Image_0.001": {
+          "pixels": [
+            4096,
+            4096
+          ],
+          "sha256": "1eb934f396df30e3cd881211ff4e195c4460f8fa8db5bfa22ddb3b5ef28e5d09"
+        },
+        "Image_1.001": {
+          "pixels": [
+            4096,
+            4096
+          ],
+          "sha256": "2e598ae796f89acf741389a67635d4fa7b8d99f2ba39b0e46d0516c95db6dfae"
+        }
+      },
+      "visible": true
+    },
+    "input": {
+      "path": ".tmp/generation-comparison-2026-10-03/user-agent2/qualified-hunyuan-paint06/paint/painted.glb",
+      "sha256": "800d7a9717757b90b296a78c605cddb698c68d399a96e403aa381103e77d2eba"
+    },
+    "importedBounds": [
+      [
+        -0.9990940093994141,
+        -0.3457750082015991,
+        -0.8586069941520691
+      ],
+      [
+        0.9711880087852478,
+        0.3680169880390167,
+        0.8439239859580994
+      ]
+    ],
+    "fittedBounds": [
+      [
+        -0.4181117117404938,
+        -0.1842895746231079,
+        0.8286390900611877
+      ],
+      [
+        0.4064866304397583,
+        0.18187816441059113,
+        1.5831472873687744
+      ]
+    ],
+    "unrigged": true,
+    "noOutsideFinishOrBake": true
+  },
+  "limits": [
+    "Private editable working context only; zero art/motion/fit/final delivery gates accepted.",
+    "Original source files immutable. No bake, retopology, weight conditioning, solver, generation, render or player export.",
+    "Unrigged dense sources and offline rigs are modeling context; no shared75 moving claim.",
+    "Exactly one visible joined body candidate; canonical42f remains authority pin. New neck candidate replaces explicit bodyCandidate pin after parent review.",
+    "All R0\u2013R5 open; parent alone judges."
+  ]
+}

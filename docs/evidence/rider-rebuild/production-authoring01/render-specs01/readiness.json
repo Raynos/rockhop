@@ -1,0 +1,94 @@
+{
+  "accepted": false,
+  "stage": "SAVED_NATIVE_EXACT_HASH_MATCHED_CAMERA_SPECS_READY_NO_RENDER",
+  "native": {
+    "path": "harness/out/rider-rebuild/production-authoring01/working01/editable-real-source-outfit.blend",
+    "sha256": "9cedbcdbe0a953d116bafc80b41f8adb0538f21c1ecfca20598f3f079952aaf4"
+  },
+  "assemblyReceiptSHA256": "5ab1613ca5c542aa66c226d466132c825f64daef680f2817b6351eb3a6ff5764",
+  "writerSHA256": "47159a8f3af5db8849f65f766afb740fa2a7b0eabe4468e100a819cd35f8b5e8",
+  "renderer": {
+    "path": "assets/blender/rider-rebuild/production-assembly01/render.py",
+    "sha256": "e50dd77cfa8ebf4f8a1efbfa81beeaea4e224cdef3b4fd82fe99bb81fd771e4b"
+  },
+  "allSevenVisibleMeshes": [
+    "Boots__LocallyRepairedSelectedDenseBoot.L",
+    "Boots__LocallyRepairedSelectedDenseBoot.R",
+    "Gloves__SelectedFittedSource.L",
+    "Gloves__SelectedFittedSource.R",
+    "Hoodie__ActualOriginalDensePBR_FrozenFitContext",
+    "Jeans__AlignedSelectedDenseJeans",
+    "RiderBody"
+  ],
+  "specs": [
+    {
+      "spec": {
+        "path": "docs/evidence/rider-rebuild/production-authoring01/render-specs01/full-outfit.json",
+        "sha256": "bb644eda23d14ff33723d76cdf0549075caff5a367c572fb50d65949baab7f60"
+      },
+      "output": "harness/out/rider-rebuild/production-assembly01/authoring01-full-outfit",
+      "views": 4,
+      "command": [
+        "/Applications/Blender.app/Contents/MacOS/Blender",
+        "-b",
+        "-t",
+        "2",
+        "--python-exit-code",
+        "1",
+        "--python",
+        "assets/blender/rider-rebuild/production-assembly01/render.py",
+        "--",
+        "docs/evidence/rider-rebuild/production-authoring01/render-specs01/full-outfit.json",
+        "harness/out/rider-rebuild/production-assembly01/authoring01-full-outfit"
+      ]
+    },
+    {
+      "spec": {
+        "path": "docs/evidence/rider-rebuild/production-authoring01/render-specs01/head-hoodie.json",
+        "sha256": "7ac143787836a817334430b6b0206a6aef2d7c904a9a81a2e9fea912550adf7d"
+      },
+      "output": "harness/out/rider-rebuild/production-assembly01/authoring01-head-hoodie",
+      "views": 4,
+      "command": [
+        "/Applications/Blender.app/Contents/MacOS/Blender",
+        "-b",
+        "-t",
+        "2",
+        "--python-exit-code",
+        "1",
+        "--python",
+        "assets/blender/rider-rebuild/production-assembly01/render.py",
+        "--",
+        "docs/evidence/rider-rebuild/production-authoring01/render-specs01/head-hoodie.json",
+        "harness/out/rider-rebuild/production-assembly01/authoring01-head-hoodie"
+      ]
+    },
+    {
+      "spec": {
+        "path": "docs/evidence/rider-rebuild/production-authoring01/render-specs01/jeans-boots.json",
+        "sha256": "0719100ca41004a1889bb4816866620c9eec45a2b5c60422d7986ad6375e9012"
+      },
+      "output": "harness/out/rider-rebuild/production-assembly01/authoring01-jeans-boots",
+      "views": 4,
+      "command": [
+        "/Applications/Blender.app/Contents/MacOS/Blender",
+        "-b",
+        "-t",
+        "2",
+        "--python-exit-code",
+        "1",
+        "--python",
+        "assets/blender/rider-rebuild/production-assembly01/render.py",
+        "--",
+        "docs/evidence/rider-rebuild/production-authoring01/render-specs01/jeans-boots.json",
+        "harness/out/rider-rebuild/production-assembly01/authoring01-jeans-boots"
+      ]
+    }
+  ],
+  "studio": "Existing matched neutral PBR: Cycles CPU2,12samples,640square,AgX; unchanged key/fill/rim.",
+  "limits": [
+    "Parent controls serial CPU2 execution and judges. No render executed by spec writer.",
+    "Existing renderer confines fresh outputs to production-assembly01; source master remains in production-authoring01.",
+    "All R0\u2013R5 open. Private working context; no final outfit or motion claim."
+  ]
+}

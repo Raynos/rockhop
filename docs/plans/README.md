@@ -1403,3 +1403,5 @@ October 8 first real-source assembly stopped before save: Blender append mutates
 October 8 working-master append API corrected: requested names remain immutable; Blender receives a copied list. Parent reviewed correction and exact-hash render-spec writer, AST and22 pins pass. One corrected assembly remains pending; no outfit accepted.
 
 October 8 raw donor-shell diagnostic prepared for exact paired-UV layer identification. First metadata-only run stopped on removed NumPy2D cross API; explicit determinant correction reviewed and AST passes. No geometry changed, no deletion authorized by normal sign alone.
+
+October 8 real-source editable outfit saved: guarded CPU2 job exit0 in25.184s; native9cedbcdbe includes original selected hoodie/denim/two gloves/two boots PBR and one joined head/body, exact75 rest and unchanged body. Static context only; actual full-outfit views next, all fit/motion gates open.
