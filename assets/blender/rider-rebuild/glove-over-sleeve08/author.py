@@ -88,34 +88,68 @@ def strict_cross(a, b):
     return False
 
 
-def intersections(a, af, b=None, bf=None, changed_vertices=None):
+def intersections(a, af, b=None, bf=None, changed_vertices=None,
+                  baseline_a=None, baseline_b=None, face_ids_a=None, face_ids_b=None):
     self_test = b is None
     assert changed_vertices is None or self_test
     if self_test:
-        b, bf = a, af
+        b, bf, baseline_b, face_ids_b = a, af, baseline_a, face_ids_a
     assert np.isfinite(a).all() and np.isfinite(b).all()
-    for p, f in ((a, af), (b, bf)):
-        areas = np.linalg.norm(np.cross(p[f[:, 1]]-p[f[:, 0]], p[f[:, 2]]-p[f[:, 0]]), axis=1)
-        assert np.all(areas > 1e-14), 'A constructed face degenerates'
-    tree_a = BVHTree.FromPolygons([Vector(p) for p in a], af.tolist(), all_triangles=True)
-    tree_b = tree_a if self_test else BVHTree.FromPolygons([Vector(p) for p in b], bf.tolist(), all_triangles=True)
+    face_ids_a = np.arange(len(af)) if face_ids_a is None else np.asarray(face_ids_a)
+    face_ids_b = np.arange(len(bf)) if face_ids_b is None else np.asarray(face_ids_b)
+    degenerates = []
+
+    def usable(points, triangles, baseline, native_ids, label):
+        cross = np.linalg.norm(np.cross(points[triangles[:, 1]]-points[triangles[:, 0]],
+                                        points[triangles[:, 2]]-points[triangles[:, 0]]), axis=1)
+        invalid = np.flatnonzero(cross <= 1e-14)
+        if len(invalid):
+            first = int(invalid[0])
+            witness = {'input': label, 'subsetTriangleId': first,
+                       'nativeLoopTriangleId': int(native_ids[first]),
+                       'nativeVertexIds': triangles[first].tolist(),
+                       'triangleAreaM2': float(cross[first]/2.),
+                       'worldXYZ': points[triangles[first]].tolist(),
+                       'degenerateFaceCount': len(invalid),
+                       'crossMagnitudeThresholdM2': 1e-14}
+            if baseline is not None:
+                assert baseline.shape == points.shape
+                old = np.linalg.norm(np.cross(baseline[triangles[:, 1]]-baseline[triangles[:, 0]],
+                                              baseline[triangles[:, 2]]-baseline[triangles[:, 0]]), axis=1)
+                witness.update(baselineTriangleAreaM2=float(old[first]/2.),
+                    baselineAlsoDegenerate=bool(old[first] <= 1e-14),
+                    firstFaceExactlyUnchanged=bool(np.array_equal(points[triangles[first]], baseline[triangles[first]])),
+                    baselineWorldXYZ=baseline[triangles[first]].tolist(),
+                    inheritedDegenerateFaceCount=int(np.sum(old[invalid] <= 1e-14)),
+                    newDegenerateFaceCount=int(np.sum(old[invalid] > 1e-14)))
+            degenerates.append(witness)
+        return np.flatnonzero(cross > 1e-14)
+
+    valid_a = usable(a, af, baseline_a, face_ids_a, 'A')
+    valid_b = valid_a if self_test else usable(b, bf, baseline_b, face_ids_b, 'B')
+    summary = {'degenerateDiagnostics': degenerates,
+               'allDegeneratesRemainFailed': True,
+               'limits': 'Only nondegenerate triangles enter the crossing broadphase; all reported degenerate faces remain failures, including inherited ones.'}
+    if not len(valid_a) or not len(valid_b):
+        return {'passed': False, 'testedBroadphasePairs': 0, **summary}
+    tree_a = BVHTree.FromPolygons([Vector(p) for p in a], af[valid_a].tolist(), all_triangles=True)
+    tree_b = tree_a if self_test else BVHTree.FromPolygons([Vector(p) for p in b], bf[valid_b].tolist(), all_triangles=True)
     tested, inherited_count, construction_count = 0, 0, 0
     first_inherited, first_construction = None, None
-    for i, j in tree_a.overlap(tree_b):
+    for ia, ib in tree_a.overlap(tree_b):
+        i, j = int(valid_a[ia]), int(valid_b[ib])
         if self_test and i >= j:
             continue
         tested += 1
         if strict_cross(a[af[i]], b[bf[j]]):
-            witness = {'triangles': [int(i), int(j)], 'firstTriangleVertexIds': af[i].tolist(),
+            witness = {'triangles': [int(face_ids_a[i]), int(face_ids_b[j])],
+                       'subsetTriangles': [i, j], 'firstTriangleVertexIds': af[i].tolist(),
                        'secondTriangleVertexIds': bf[j].tolist()}
             if changed_vertices is None:
                 return {'passed': False, 'firstStrictCrossingTriangles': witness['triangles'],
                         'firstTriangleVertexIds': witness['firstTriangleVertexIds'],
                         'secondTriangleVertexIds': witness['secondTriangleVertexIds'],
-                        'testedBroadphasePairs': tested}
-            # Inspect the whole control mesh. A moved cuff versus any retained
-            # wrist/finger face fails; only unchanged/unchanged pairs are
-            # reported as inherited failures rather than new construction.
+                        'testedBroadphasePairs': tested, **summary}
             touches_construction = (np.any(changed_vertices[af[i]])
                                     or np.any(changed_vertices[bf[j]]))
             if touches_construction:
@@ -127,15 +161,15 @@ def intersections(a, af, b=None, bf=None, changed_vertices=None):
                 if first_inherited is None:
                     first_inherited = witness
     if changed_vertices is not None:
-        return {'passed': construction_count == 0,
-                'scope': 'Construction gate on every pair touching a changed vertex; inherited retained-hand failures remain open',
+        return {'passed': construction_count == 0 and not degenerates,
+                'scope': 'Construction gate on every pair touching a changed vertex; inherited retained-hand crossings remain open; all degenerates remain failed',
                 'fullGuideHasNoStrictCrossings': construction_count+inherited_count == 0,
                 'constructionStrictCrossings': construction_count,
                 'firstConstructionStrictCrossing': first_construction,
                 'inheritedUnchangedStrictCrossings': inherited_count,
                 'firstInheritedUnchangedStrictCrossing': first_inherited,
-                'allBroadphasePairsInspected': True, 'testedBroadphasePairs': tested}
-    return {'passed': True, 'testedBroadphasePairs': tested, 'strictCrossings': 0}
+                'allBroadphasePairsInspected': True, 'testedBroadphasePairs': tested, **summary}
+    return {'passed': not degenerates, 'testedBroadphasePairs': tested, 'strictCrossings': 0, **summary}
 
 
 def main():
@@ -173,6 +207,7 @@ def main():
     body_faces = faces(body)
     hoodie = bpy.data.objects['RiderHoodie']
     _, hoodie_world = points(hoodie)
+    hoodie_baseline = hoodie_world.copy()
     assert len(hoodie_world) == len(original_hoodie)
     hoodie_faces = faces(hoodie)
     settings = control['authoring']
@@ -235,6 +270,7 @@ def main():
     (out/'construction.json').write_text(json.dumps(report, indent=2)+'\n')
     assert all(r['guideSelfIntersection']['passed'] for r in report['hands'].values()), 'Control cuff self-crossing; stop before dense transport'
     hoodie_actual = set_world(hoodie, hoodie_world)
+    dense_inputs = {}
     for side in ('L', 'R'):
         dump, profile, scale, basis_x, basis_z, transverse, hood_ids = pending[side]
         glove = bpy.data.objects['ActualSelectedGlove.'+side]
@@ -251,37 +287,66 @@ def main():
         set_world(reference, actual)
         reference.hide_render = True
         reference.hide_set(True)
-        gf = faces(glove)
-        # Include retained proximal neighbours beyond the changed join. This
-        # local dense check does not qualify distant unchanged finger pairs.
-        gf = gf[np.any(original_glove['vertices'][gf, 1]
-                       < settings['gloveAnatomicalJoinY']+.03, axis=1)]
-        hf = hoodie_faces[np.any(np.isin(hoodie_faces, hood_ids), axis=1)]
+        glove_faces = faces(glove)
+        # Include retained proximal neighbours beyond the changed join.
+        gf_ids = np.flatnonzero(np.any(original_glove['vertices'][glove_faces, 1]
+                       < settings['gloveAnatomicalJoinY']+.03, axis=1))
+        gf = glove_faces[gf_ids]
+        hf_ids = np.flatnonzero(np.any(np.isin(hoodie_faces, hood_ids), axis=1))
+        hf = hoodie_faces[hf_ids]
         axial = np.sum((body_world-profile.wrist)*profile.axis, axis=1)
-        bf = body_faces[np.any((axial[body_faces] >= 0) & (axial[body_faces] <= .1), axis=1)]
+        bf_ids = np.flatnonzero(np.any((axial[body_faces] >= 0) & (axial[body_faces] <= .1), axis=1))
+        bf = body_faces[bf_ids]
         cuff_axial = np.sum((actual-profile.wrist)*profile.axis, axis=1)
-        proximal_faces = gf[np.all(cuff_axial[gf] >= 0, axis=1)]
-        report['hands'][side].update(denseSelfIntersection=intersections(actual, gf),
-            sleeveSelfIntersection=intersections(hoodie_actual, hf),
-            gloveSleeveIntersection=intersections(actual, gf, hoodie_actual, hf),
-            cuffWearerIntersection=intersections(actual, proximal_faces, body_world, bf),
-            sleeveWearerIntersection=intersections(hoodie_actual, hf, body_world, bf),
-            denseChangedVertices=int(np.sum(alpha > 0)))
+        proximal = np.all(cuff_axial[gf] >= 0, axis=1)
+        dense_inputs[side] = (actual, before, gf, gf_ids, hf, hf_ids, bf, bf_ids,
+                             gf[proximal], gf_ids[proximal])
+        report['hands'][side]['denseChangedVertices'] = int(np.sum(alpha > 0))
     assert protected == {o.name: geometry(o) for o in unchanged}
     assert rest(rig) == rest_before
     assert fixed_before == {o.name: fixed(o) for o in edited}
     assert {o.name for o in bpy.context.scene.objects if o.type == 'MESH' and not o.hide_render} == EXPECTED
     report.update(exact75RestUnchanged=True, protectedGeometry=protected,
                   editedTopologyUVPBRAndAllSkinFieldsUnchanged=fixed_before)
+    all_hood_ids = np.unique(np.concatenate([pending[side][-1] for side in ('L', 'R')]))
+    crop_face_ids = np.flatnonzero(np.any(np.isin(hoodie_faces, all_hood_ids), axis=1))
+    crop_vertex_ids = np.unique(hoodie_faces[crop_face_ids])
+    remap = np.full(len(hoodie_actual), -1, dtype=np.int32)
+    remap[crop_vertex_ids] = np.arange(len(crop_vertex_ids))
+    crop_path = out/'actual-hoodie-wrists.npz'
+    np.savez_compressed(crop_path, nativeVertexIds=crop_vertex_ids,
+        nativeLoopTriangleIds=crop_face_ids, faces=remap[hoodie_faces[crop_face_ids]],
+        worldXYZ=hoodie_actual[crop_vertex_ids], baselineWorldXYZ=hoodie_baseline[crop_vertex_ids],
+        changedMask=np.isin(crop_vertex_ids, all_hood_ids))
+    report['actualHoodieWristArrays'] = {'path': str(crop_path.relative_to(ROOT)), 'sha256': sha(crop_path)}
+    report.update(status='UNACCEPTED_COMPLETE_EDITABLE_CANDIDATE_DENSE_CHECKS_PENDING',
+                  geometryGatesEvaluated=False, geometryGatesPassed=False)
+    native = out/'UNACCEPTED-editable-selected-gauntlet-over-sleeve.blend'
+    bpy.ops.wm.save_as_mainfile(filepath=str(native), compress=True)
+    report['native'] = {'path': str(native.relative_to(ROOT)), 'sha256': sha(native)}
+    report_path = out/'construction.json'
+    report_path.write_text(json.dumps(report, indent=2)+'\n')
+    for side in ('L', 'R'):
+        actual, before, gf, gid, hf, hid, bf, bid, proximal, pid = dense_inputs[side]
+        checks = [
+            ('denseSelfIntersection', lambda: intersections(actual, gf, baseline_a=before, face_ids_a=gid)),
+            ('sleeveSelfIntersection', lambda: intersections(hoodie_actual, hf, baseline_a=hoodie_baseline, face_ids_a=hid)),
+            ('gloveSleeveIntersection', lambda: intersections(actual, gf, hoodie_actual, hf,
+                baseline_a=before, baseline_b=hoodie_baseline, face_ids_a=gid, face_ids_b=hid)),
+            ('cuffWearerIntersection', lambda: intersections(actual, proximal, body_world, bf,
+                baseline_a=before, baseline_b=body_world, face_ids_a=pid, face_ids_b=bid)),
+            ('sleeveWearerIntersection', lambda: intersections(hoodie_actual, hf, body_world, bf,
+                baseline_a=hoodie_baseline, baseline_b=body_world, face_ids_a=hid, face_ids_b=bid))]
+        for name, check in checks:
+            report['hands'][side][name] = check()
+            report_path.write_text(json.dumps(report, indent=2)+'\n')
     gates = [r[k]['passed'] for r in report['hands'].values() for k in (
         'denseSelfIntersection', 'sleeveSelfIntersection', 'gloveSleeveIntersection',
         'cuffWearerIntersection', 'sleeveWearerIntersection')]
+    report['geometryGatesEvaluated'] = True
     report['geometryGatesPassed'] = all(gates)
     report['status'] = 'UNACCEPTED_COMBINED_MODEL_MOVING_REVIEW_PENDING' if all(gates) else 'REJECTED_COMBINED_MODEL_REQUIRES_GEOMETRY_CORRECTION'
-    native = out/'editable-selected-gauntlet-over-sleeve.blend'
-    bpy.ops.wm.save_as_mainfile(filepath=str(native), compress=True)
-    report['native'] = {'path': str(native.relative_to(ROOT)), 'sha256': sha(native)}
-    (out/'construction.json').write_text(json.dumps(report, indent=2)+'\n')
+    report_path.write_text(json.dumps(report, indent=2)+'\n')
     print(json.dumps({'native': report['native'], 'status': report['status'], 'hands': report['hands']}), flush=True)
     assert all(gates), 'Saved explicitly rejected geometry; do not export or promote'
 

@@ -21,3 +21,9 @@ Finding: Coherent cuff control construction has zero new strict crossings; dense
 Validation: Actual guard exit1/25.232s; full-guide pair counts and actual arrays retained. Inherited finger counts904/875 stay open.
 
 Limits: Complete dense candidate and earlier dense-check result were not saved; diagnose exact original/current sleeve areas before geometry tuning.
+
+Finding: Preserve the complete dense candidate before diagnostics and retain each exact geometry failure instead of losing the model at the first assertion.
+
+Validation: Parent full diff review and AST pass; builder diagnostic regressions distinguish original/current degenerate faces and retain other crossings. Geometry and authoring parameters unchanged.
+
+Limits: All degenerate faces still fail; no clearance, complete-guide, moving-art or promotion permission follows from saving an unaccepted candidate.
