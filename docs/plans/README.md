@@ -1697,3 +1697,5 @@ Remote phone preview verification01 failed at unchanged memory guard46.696s with
 Active rider plan corrected to actual failures: stop pelvis-only seated fitting after quantified thigh/pelvis skin distortion; build generic pose-space posterior corrective. Corrected cuff query now exposes local aperture/ease failure, not permission for uniform enlargement. Local comparison/movie pass; isolated upload remains remotely unverified. R0–R5open0/6.
 
 Current-source player gate30: explicit silent Metal --dev boot/clear/crash/restart passes11/11, exact8.591666666666667finish/hash622bb2554e0f9a26, one-tick restart and5.97ms synced-frame P95. Retain default-SwiftShader timeout and stale-dist baseline separately. No selected rider/ship/device pass.
+
+Ask348 delivered: isolated uploaded six-choice Garage passes actual silent WebKit phone-layout old→new→old→new, selected source/native75/meshroles and resident instances,483submitted frames0invalid/0errors. Scoped share link and Garage-only movie delivered in chat.357MBfirst download and full/LODalias honest; physical phone, seating/cuffs and all rider milestones remain open.
