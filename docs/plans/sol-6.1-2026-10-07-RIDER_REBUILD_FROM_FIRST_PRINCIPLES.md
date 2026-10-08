@@ -637,8 +637,14 @@ face mask, as specified below.
   transitions/profiles and proper finite boot/peg support. The actual cuff dump
   identifies outer wall versus inner return; explicit connected boundaries
   must precede a welded local replacement, not another sector deformation.
-  Preserve the selected strap/palm/fingers and original PBR. Proper production
-  topology/LOD/detail transfer follows the stable construction envelope; do not
+  [Focused Astra11](../evidence/rider-rebuild/astra-cuff-boundary11/FINDING.md)
+  proves the proposed fixed patch join already crosses both sleeves. Parent
+  chooses glove-over-sleeve: preserve the selected flared wall pair/band/lip,
+  tailor and axially seat the hoodie wrist transition inside its opening, and
+  author the adjacent join coherently. Local04 is already distorted; original
+  selected sculpture remains the shape reference. Sparse rays are constraints,
+  not clearance proof. Preserve fingers/palm and PBR; no sector retry. Proper
+  production topology/LOD/detail transfer follows the stable envelope; do not
   spend another advisory interval polishing a dense-only preview. Physical
   device, finite contacts and release gates remain independent. All R0–R5 stay
   open; no normal-player promotion.
