@@ -4,11 +4,19 @@ export function identifyActualWristFragment() {
   const camera = rig.camera, rect = renderer.domElement.getBoundingClientRect();
   const meshes = []; scene.traverseVisible(node => { if (node.isMesh) meshes.push(node); });
   const ray = new THREE.Raycaster(); ray.layers.mask = camera.layers.mask;
-  const pixels = [[788, 372], [790, 370], [793, 367], [794, 362], [797, 375]];
+  const pixels = [[790, 370], [793, 367], [794, 362]];
   const rows = pixels.map(([x, y]) => {
     ray.setFromCamera(new THREE.Vector2((x - rect.x) / rect.width * 2 - 1,
       1 - (y - rect.y) / rect.height * 2), camera);
-    const hits = ray.intersectObjects(meshes, false);
+    // Animated SkinnedMesh bounds can predate this pose. Bypass only glove
+    // broadphase; installed Three's triangle path still uses current skinning.
+    const gloves = meshes.filter(mesh => /^ActualSelectedGlove[LR]/.test(mesh.name));
+    const hits = ray.intersectObjects(meshes.filter(mesh => !gloves.includes(mesh)), false);
+    for (const mesh of gloves) {
+      const localRay = ray.ray.clone().applyMatrix4(mesh.matrixWorld.clone().invert());
+      mesh._computeIntersections(ray, hits, localRay);
+    }
+    hits.sort((a, b) => a.distance-b.distance);
     return { pixel: [x, y], hits: hits.slice(0, 3).map(hit => {
       const mesh = hit.object, attrs = mesh.geometry.attributes, lineage = [];
       for (let node = mesh; node; node = node.parent) lineage.push(node.name || node.type);
@@ -34,5 +42,11 @@ export function identifyActualWristFragment() {
   });
   return { acceptedArt: false, stageTime: window.__render.stageTime, visibleMeshes: meshes.length,
     cameraWorld: camera.matrixWorld.toArray(), rows,
+    skinFrames: meshes.filter(mesh => /^(ActualSelectedGlove[LR]|RiderHoodie)$/.test(mesh.name)).map(mesh => ({
+      name: mesh.name, matrixWorld: mesh.matrixWorld.toArray(), bindMatrix: mesh.bindMatrix.toArray(),
+      bindMatrixInverse: mesh.bindMatrixInverse.toArray(), bones: mesh.skeleton.bones.map((bone, i) => ({
+        name: bone.name, skinMatrix: bone.matrixWorld.clone().multiply(mesh.skeleton.boneInverses[i]).toArray(),
+      })),
+    })),
     limits: ['Synchronous source identity only; no posed/rest clearance or moving-art acceptance.'] };
 }
