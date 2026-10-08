@@ -1631,3 +1631,5 @@ October8 native193 originalselected clothed crouch/rise/armsup fullfilm rendered
 October8 cuff06 final offset mechanism rejected before native output. Parent verified Astra09 new LEFT self-crossing faces4985/5324; fixed-frame normal turns alone are not inversion proof. Stop offset campaigns; coherent local cuff construction next. Selected source95a4/72b90 unchanged, all0/6open.
 
 October8 selected native145 close-hands film rendered and played6.042s; parent keeps actual dark-glove curl/release baseline, cuff ridge unresolved.142/145callbacks retained; finite-bar wrap and bilateral profiles still open,all0/6open.
+
+Historical rider audit, October 8 (ask346): dedicated remaster began September30 (8elapsed days/9calendar dates); predecessor hero build is recorded September15 (23elapsed days). Snapshot b4efa15145 has1093unique commits touching the six dedicated remaster/rebuild source/evidence/harness roots. Original pre-campaign game rider is the September17Astra Street Mustard family, with original Garage capture retained. Counts measure history, not agent-days or accepted improvements; current execution remains separate.
