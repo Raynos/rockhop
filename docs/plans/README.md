@@ -1227,3 +1227,5 @@ October 7 selected-glove author checkpoint: both shaped gloves, selected-style p
 October 7 production third-round silent headless baseline: verified ANGLE Metal passes11/11 coldboot/clear/crash/restart checks, exact8.591666666666667 finish/hash622bb2554e0f9a26 and one-tick restart. Ready147.14ms/firstframe774.96ms/restartframeP95 7.03ms. Existing player build only; new selected outfit/full ship/device acceptance remain open.
 
 October 7 first authored-jeans trial exits1 after5.433s before native save: Blender modifier application invalidates a retained temporary vertex-group handle. Parent verifies the minimal named-group reacquisition repair and unchanged fitting recipe; actual guard/worker retained. No garment fit/bake/art result, fresh author trial pending.
+
+October 7 selected-boot author checkpoint: deliberate lattice fit of the actual selected dense boot, simplified predominantly rigid derivative and ordinary selected-PBR/normal transfer replace cavity solvers. Both weighted boots save before maps; source comparison retains the complete visible body. Parent AST/eight pins/frozen hashes agree; no execution or art acceptance.

@@ -1,0 +1,200 @@
+{
+  "schema": "rockhop-authored-selected-boots-v1",
+  "accepted": false,
+  "appearanceStatus": "PENDING_ACTUAL_BAKE_AND_PARENT_PLAYED_JUDGMENT",
+  "inputs": {
+    "anatomical-hand-rig.blend": {
+      "path": "harness/out/rider-rebuild/native-hand-repair01/native02/anatomical-hand-rig.blend",
+      "sha256": "42fca617ea8d246a6c3e3ca68a90cd3cb5f3ce8b9bb78130e0e2bbd65f605fac"
+    },
+    "native-body.npz": {
+      "path": "harness/out/rider-rebuild/native-hand-repair01/native02/native-body.npz",
+      "sha256": "e62e9969503b7761e99463eccc3ca7be39e0c230a2948f2f87a224db52d0f9a2"
+    },
+    "cleaned-donor.npz": {
+      "path": "assets/blender/hero-remaster/rider/finish-2026-10-05/wardrobe/data/prep02/boots/cleaned-donor.npz",
+      "sha256": "9849de6444632c2dcd1e1d76fda42ac27a7cbe8c7d2c0263ab2082e24b94777f"
+    },
+    "baseColorTexture.png": {
+      "path": "assets/blender/hero-remaster/rider/finish-2026-10-05/wardrobe/data/prep02/boots/baseColorTexture.png",
+      "sha256": "5bda21b0d584f91aad83d310b868be6a575d28eddb1170e01e65c0b2071f4044"
+    },
+    "metallicRoughnessTexture.png": {
+      "path": "assets/blender/hero-remaster/rider/finish-2026-10-05/wardrobe/data/prep02/boots/metallicRoughnessTexture.png",
+      "sha256": "4017261b5f233cba5780578691a1508382295db4b157c4d175ad905bc98e5c30"
+    },
+    "retopology-prototype.npz": {
+      "path": "assets/blender/hero-remaster/rider/finish-2026-10-05/wardrobe/data/prep02/boots/retopology-prototype.npz",
+      "sha256": "d420da6bc7db4fa02ea095266dc174ff07cd3fb657cb0b01b91a319aa6b17853"
+    },
+    "source-semantic-witness.npz": {
+      "path": "docs/evidence/rider-rebuild/boot-cavity-rebuild01/classification01/source-semantic-witness.npz",
+      "sha256": "f6ff1252fb6a92d47d600e2c3b3c678c7f4a7cce86184be8d9936d416fce3526"
+    },
+    "bake_fitted_detail.py": {
+      "path": "assets/blender/rider-rebuild/donor-detail-transfer01/bake_fitted_detail.py",
+      "sha256": "fe6b428145a8770f1be81fec8560a0b7e3b31492b0aade02f83947e68869648c"
+    }
+  },
+  "authoring": {
+    "sourceLandmarks": {
+      "toeX": -0.998534,
+      "heelX": 0.973729,
+      "plantarBottomY": -0.561128,
+      "visibleCollarY": 0.18,
+      "frontTongueY": 0.537,
+      "innerShaftDeleteBelowY": 0.18
+    },
+    "sourceLattice": {
+      "bounds": [
+        [
+          -1.02,
+          -0.56,
+          -0.4
+        ],
+        [
+          1.0,
+          0.64,
+          0.38
+        ]
+      ],
+      "resolution": [
+        5,
+        9,
+        3
+      ],
+      "interpolation": "LINEAR",
+      "liftYByVThenU": [
+        [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0.25,
+          0.25,
+          0.16,
+          0.025,
+          0
+        ],
+        [
+          0.2,
+          0.2,
+          0.12,
+          0.015,
+          0
+        ],
+        [
+          0.12,
+          0.12,
+          0.065,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "transverseScaleByU": [
+        1.16,
+        1.12,
+        1.03,
+        1.0,
+        1.0
+      ]
+    },
+    "targetSides": {
+      "L": {
+        "scales": [
+          0.14058819083389493,
+          0.14058819083389493,
+          0.16439210534119386
+        ],
+        "offset": [
+          -0.08126428515648462,
+          0.06888797319829257,
+          0.004003620287578529
+        ],
+        "mirrorWidth": -1
+      },
+      "R": {
+        "scales": [
+          0.14056909034106965,
+          0.14056909034106965,
+          0.16438766951140235
+        ],
+        "offset": [
+          -0.08128336905415504,
+          0.06887725537656703,
+          -0.0011018276093284706
+        ],
+        "mirrorWidth": 1
+      }
+    },
+    "productionDecimateRatio": 0.035,
+    "toeMaximumWeight": 0.08,
+    "toeBlendLocalX": [
+      -0.105,
+      -0.165
+    ],
+    "shinMaximumWeight": 0.12,
+    "shinBlendHeightM": [
+      0.08,
+      0.14
+    ],
+    "soleRigidBelowHeightM": 0.026,
+    "mapSize": 4096,
+    "bakeCageOffsetM": 0.0035,
+    "maximumBakeRayDistanceM": 0.012,
+    "marginPixels": 16,
+    "retainedVisibleCollarDepth": "Original selected inner collar above authored .18 source station; no fabricated shoe interior.",
+    "sourceUVConvention": "Raw glTF TEXCOORD_0; assign a copy to Blender with V=1-V, never edit originals"
+  },
+  "execution": {
+    "threads": 2,
+    "heavyTrialLimit": 1,
+    "targetedRepairLimit": 1,
+    "parentLeaseRequired": true,
+    "out": "harness/out/rider-rebuild/production-boots01/authored01",
+    "stages": [
+      "author: save both fitted weighted boots and quick actual-source comparison",
+      "bake: read pinned author native, write actual 4K selected maps to fresh bake01"
+    ],
+    "authorCommand": "blender -b -t 2 --python-exit-code 1 --python assets/blender/rider-rebuild/production-boots01/author_selected_boots.py -- author harness/out/rider-rebuild/production-boots01/authored01",
+    "bakeCommand": "blender -b -t 2 --python-exit-code 1 --python assets/blender/rider-rebuild/production-boots01/author_selected_boots.py -- bake harness/out/rider-rebuild/production-boots01/authored01"
+  }
+}
