@@ -1531,3 +1531,5 @@ October8 actual original hoodie7bone transport PBR rejected: sleeves swing upwar
 October8 read-only actual saved hoodie source-frame probe frozen: rawGLTF sleeve centers independently match controls; fresh Astra predicts zero-length editbone matrix-before-length loses source direction. Verify actual saved rest frames before one minimal correction, not more garment gain tuning.
 
 October8 exact-input equipped body mask implementation frozen and parent reviewed: original body/shared75 preserved, render face subset with topology/skin/UV/material/source-triangle ancestry guards and measured normal residual. First actual selected-glove mask unexecuted; no wardrobe acceptance.
+
+October8 actual selected curved boot pair saves CPU2exit0/147.646s, own-side native75 foot/toe/shin binding and originalUV/PBR retained. No further cavity/inflation. Masked actual complete surface/ankle/toe/bike review remains pending; rider0/6.

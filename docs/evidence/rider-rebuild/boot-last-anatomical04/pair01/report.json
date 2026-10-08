@@ -1,0 +1,836 @@
+{
+  "accepted": false,
+  "status": "UNACCEPTED_SAVED_SELECTED_WHOLE_PAIR_MASKED_REVIEW_AND_PLAYED_GATES_PENDING",
+  "inputs": {
+    "accepted": false,
+    "stage": "PAIRED_ACTUAL_SELECTED_SURFACE_SCULPT_AND_NATIVE75_BINDING",
+    "workingOutfit": {
+      "path": "harness/out/rider-rebuild/production-authoring01/working01/editable-real-source-outfit.blend",
+      "sha256": "9cedbcdbe0a953d116bafc80b41f8adb0538f21c1ecfca20598f3f079952aaf4"
+    },
+    "canonicalArrays": {
+      "path": "harness/out/rider-rebuild/native-hand-repair01/native02/native-body.npz",
+      "sha256": "e62e9969503b7761e99463eccc3ca7be39e0c230a2948f2f87a224db52d0f9a2"
+    },
+    "selectedOriginal": {
+      "path": ".tmp/generation-comparison-2026-10-03/user-agent2/items01/boots/paint01/painted.glb",
+      "sha256": "b8dbd980f4d5a6a46b86db6f315ac630be07c538382a24fa5a2d2002a7d97d8c"
+    },
+    "selectedMaps": {
+      "baseColorTexture.png": {
+        "path": "assets/blender/hero-remaster/rider/finish-2026-10-05/wardrobe/data/prep02/boots/baseColorTexture.png",
+        "sha256": "5bda21b0d584f91aad83d310b868be6a575d28eddb1170e01e65c0b2071f4044"
+      },
+      "metallicRoughnessTexture.png": {
+        "path": "assets/blender/hero-remaster/rider/finish-2026-10-05/wardrobe/data/prep02/boots/metallicRoughnessTexture.png",
+        "sha256": "4017261b5f233cba5780578691a1508382295db4b157c4d175ad905bc98e5c30"
+      }
+    },
+    "extraction": {
+      "path": "docs/evidence/rider-rebuild/boot-last-anatomical04/extraction01/report.json",
+      "sha256": "2637a3bc61ff530c58cf567515263bcaca97ae39101c0fdf9509d39aead94f7b"
+    },
+    "sections": {
+      "R": {
+        "path": "docs/evidence/rider-rebuild/boot-last-anatomical04/extraction01/R-sections.json",
+        "sha256": "13d560988cc06288a1470fe95b8288508a9abf81223466ef6912959291f5a855"
+      },
+      "L": {
+        "path": "docs/evidence/rider-rebuild/boot-last-anatomical04/extraction01/L-sections.json",
+        "sha256": "dcdb49845f87f0b48fc1e29b8c1ea7a4f342b7f86c48210410726be4a2d4ca87"
+      }
+    },
+    "readOnlyHelpers": {
+      "path": "assets/blender/rider-rebuild/boot-last-anatomical04/extract_region.py",
+      "sha256": "cf6511b8e2a37bf3549de3a87d25dc1310de77e63b231ac07e4a09f53eaa9fbd"
+    },
+    "readOnlyInputs": {
+      "path": "assets/blender/rider-rebuild/boot-last-anatomical04/inputs.json",
+      "sha256": "75c0a8502370de935e44ce70f4a458a00d33efa44146001996bdc6628eb9b01a"
+    },
+    "reviewRenderer": {
+      "path": "assets/blender/rider-rebuild/production-assembly01/render.py",
+      "sha256": "e50dd77cfa8ebf4f8a1efbfa81beeaea4e224cdef3b4fd82fe99bb81fd771e4b"
+    },
+    "objects": {
+      "body": "RiderBody",
+      "rig": "RiderSkeleton",
+      "boots": {
+        "R": "Boots__LocallyRepairedSelectedDenseBoot.R",
+        "L": "Boots__LocallyRepairedSelectedDenseBoot.L"
+      }
+    },
+    "cavityLongitudinalStepM": 0.003,
+    "cavityRingSamples": 96,
+    "innerEaseM": 0.004,
+    "minimumMeasuredClearanceM": 0.0025,
+    "cavityTopM": 0.2,
+    "coverageThroughHeightM": 0.107,
+    "UVRayReachM": 0.065,
+    "minimumDonorNormalDot": 0.1,
+    "limits": {
+      "maxOriginalFacesPerBoot": 610934,
+      "maxOperandFaces": 18000,
+      "maxResultFacesPerBoot": 950000,
+      "parentGuardSeconds": 180,
+      "noFallback": true,
+      "noFullBootRemesh": true,
+      "laplacianOnlyOnSelectedSourceUnitGuide": true
+    },
+    "outputRoot": "harness/out/rider-rebuild/boot-last-anatomical04",
+    "status": "UNEXECUTED_SOURCE_ONLY_NOT_ACCEPTED",
+    "motionRequired": "Actual original-PBR rest views can reject only. Parent plays ankle/toe, complete outfit and fixedRookie/Pro supported bike motion before any art/fit acceptance.",
+    "legacyHelpers": {
+      "path": "assets/blender/rider-rebuild/boot-last-anatomical04/author_region.py",
+      "sha256": "1b307138bbb4314d5e2485f8b60512b5f799bac8eeb4b39eb7364979dbd79689"
+    },
+    "guideRatio": 0.04,
+    "maxGuideVertices": 16000,
+    "laplacianIterations": 8,
+    "protectedSoleThroughHeightM": 0.006,
+    "sourceUpperBlendHeightM": 0.018,
+    "method": "Retain actual improved selected R sculpt before cavity cutting; author own selected L with same proven guide/SurfaceDeform anatomy and opposite medial sign. Bind both actual selected surfaces to unchanged native75. No new cavity, inflation or clearance-preview gate.",
+    "handles": [
+      {
+        "name": "heel-rear-quarter",
+        "center": [
+          0.036,
+          0.075,
+          0
+        ],
+        "radius": [
+          0.019,
+          0.037,
+          0.035
+        ],
+        "axes": [
+          0
+        ],
+        "delta": [
+          0.014,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "medial-quarter",
+        "center": [
+          -0.012,
+          0.07,
+          0.03
+        ],
+        "radius": [
+          0.063,
+          0.034,
+          0.016
+        ],
+        "axes": [
+          2
+        ],
+        "delta": [
+          0,
+          0,
+          0.013
+        ]
+      },
+      {
+        "name": "medial-collar",
+        "center": [
+          -0.008,
+          0.105,
+          0.031
+        ],
+        "radius": [
+          0.05,
+          0.022,
+          0.018
+        ],
+        "axes": [
+          1,
+          2
+        ],
+        "delta": [
+          0,
+          0.012,
+          0.013
+        ]
+      },
+      {
+        "name": "lateral-quarter",
+        "center": [
+          -0.01,
+          0.073,
+          -0.047
+        ],
+        "radius": [
+          0.044,
+          0.025,
+          0.009
+        ],
+        "axes": [
+          2
+        ],
+        "delta": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "lateral-collar",
+        "center": [
+          -0.01,
+          0.105,
+          -0.046
+        ],
+        "radius": [
+          0.04,
+          0.022,
+          0.012
+        ],
+        "axes": [
+          1,
+          2
+        ],
+        "delta": [
+          0,
+          0.008,
+          0
+        ]
+      },
+      {
+        "name": "ankle-front-tongue",
+        "center": [
+          -0.066,
+          0.075,
+          -0.004
+        ],
+        "radius": [
+          0.018,
+          0.025,
+          0.028
+        ],
+        "axes": [
+          0
+        ],
+        "delta": [
+          -0.014,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "tongue-crown",
+        "center": [
+          -0.055,
+          0.123,
+          -0.003
+        ],
+        "radius": [
+          0.024,
+          0.023,
+          0.025
+        ],
+        "axes": [
+          0
+        ],
+        "delta": [
+          -0.01,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "ball-lateral",
+        "center": [
+          -0.145,
+          0.026,
+          -0.048
+        ],
+        "radius": [
+          0.023,
+          0.017,
+          0.014
+        ],
+        "axes": [
+          2
+        ],
+        "delta": [
+          0,
+          0,
+          -0.009
+        ]
+      },
+      {
+        "name": "ball-medial",
+        "center": [
+          -0.145,
+          0.026,
+          0.049
+        ],
+        "radius": [
+          0.023,
+          0.017,
+          0.014
+        ],
+        "axes": [
+          2
+        ],
+        "delta": [
+          0,
+          0,
+          0.008
+        ]
+      },
+      {
+        "name": "ball-crown",
+        "center": [
+          -0.145,
+          0.052,
+          0
+        ],
+        "radius": [
+          0.02,
+          0.01,
+          0.018
+        ],
+        "axes": [
+          1
+        ],
+        "delta": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "instep-crown",
+        "center": [
+          -0.105,
+          0.07,
+          0
+        ],
+        "radius": [
+          0.018,
+          0.012,
+          0.018
+        ],
+        "axes": [
+          1
+        ],
+        "delta": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "hallux-medial",
+        "center": [
+          -0.198,
+          0.022,
+          0.046
+        ],
+        "radius": [
+          0.02,
+          0.014,
+          0.012
+        ],
+        "axes": [
+          2
+        ],
+        "delta": [
+          0,
+          0,
+          0.006
+        ]
+      },
+      {
+        "name": "hallux-crown",
+        "center": [
+          -0.199,
+          0.034,
+          0.031
+        ],
+        "radius": [
+          0.019,
+          0.01,
+          0.016
+        ],
+        "axes": [
+          1
+        ],
+        "delta": [
+          0,
+          0.004,
+          0
+        ]
+      },
+      {
+        "name": "lateral-toe",
+        "center": [
+          -0.182,
+          0.024,
+          -0.023
+        ],
+        "radius": [
+          0.02,
+          0.015,
+          0.014
+        ],
+        "axes": [
+          2
+        ],
+        "delta": [
+          0,
+          0,
+          -0.003
+        ]
+      }
+    ],
+    "handleRationale": "Local [longitudinal,height,medial] metres; medial is +T on R and -T on L. Measured ankle inner deficit8.6mm medial and9.8mm rear plus4mm ease motivates13/14mm handles. Source has sufficient curved instep/ball crown heights, held there; lower ball flanks widen8/9mm, medial hallux6mm and crown4mm. These are explicit artist constraints, not certified final fit. Source sole vertices at/below6mm are exact. The source guide only is decimated; final exterior retains610934 selected triangles before cavity cutting.",
+    "sourceUnitAffineControls": {
+      "path": "assets/blender/rider-rebuild/production-boots03/repair-controls.json",
+      "sha256": "0a2e33be70cc5dc7d32069670212fff539e72af74e6d780b9494158d4761b4a0"
+    },
+    "anchorResidualPolicy": "Report-only least-squares residual; no microscopic convergence or art-fit threshold.",
+    "nativeModifierLogPolicy": "Capture native stdout/stderr per bind/evaluation/apply stage; persist raw logs/hashes and warning/error lines, replay into parent worker log. Reject actual native modifier warnings after saving finite moving guide.",
+    "retainedNative": {
+      "path": "harness/out/rider-rebuild/boot-last-anatomical04/sculpt02/anatomical-selected-boots.blend",
+      "sha256": "c6d121b3ffb0b64c330f12d161f30567d6da6c4de0457517097a0b2c99fcb4d9"
+    },
+    "retainedReport": {
+      "path": "harness/out/rider-rebuild/boot-last-anatomical04/sculpt02/report.json",
+      "sha256": "16b3321d4b45f35cf953f2f27ed4f3ac9d2dad555d823fc8a80609c6c50b24b0"
+    },
+    "sculptHelpers": {
+      "path": "assets/blender/rider-rebuild/boot-last-anatomical04/sculpt_selected.py",
+      "sha256": "93215774cf4b6c0fa62cf40b06b99759bf5640f1928c291913a08a1d81060936"
+    },
+    "sculptHelperInputs": {
+      "path": "assets/blender/rider-rebuild/boot-last-anatomical04/sculpt-inputs.json",
+      "sha256": "8bc1e8cf0318a7f4677a7a0d9b4be8417cfeab832ce365dc340d0979ab265759"
+    },
+    "pairedRSource": "Boot04SelectedSurfaceSculpt.R",
+    "previewBodyPolicy": "Full canonical body/weights/UV/rest/pose preserved as source reference. Parent supplies clothing-covered body-face mask for actual surface review before judging garment holes. Body crossing/cavity-clearance samples remain diagnostics rather than preview blockers.",
+    "pendingGates": "Masked original-PBR whole pair, then clothed ankle/toe/full-outfit/bike played motion; parent alone judges. No bake/player/export/release change."
+  },
+  "recipeSHA256": "6e126be49425506b7038d3230e1d3837f2346a8b56cf3abd537dd13905921be4",
+  "controlsSHA256": "fa50fe61b69a8f3c272605249e6f165f086ec7e1d84b6fe0a9ed49cbfc523ff1",
+  "sides": {
+    "R": {
+      "source": "Boots__LocallyRepairedSelectedDenseBoot.R",
+      "side": "R",
+      "medialLocalTSign": 1,
+      "acceptedArt": false,
+      "bodyCoveredFaceMaskPending": true,
+      "retainedActualSelectedSculpt": {
+        "native": {
+          "path": "harness/out/rider-rebuild/boot-last-anatomical04/sculpt02/anatomical-selected-boots.blend",
+          "sha256": "c6d121b3ffb0b64c330f12d161f30567d6da6c4de0457517097a0b2c99fcb4d9"
+        },
+        "object": "Boot04SelectedSurfaceSculpt.R",
+        "noAdditionalGeometryChange": true
+      },
+      "target": "Boot04PairedSelected.R",
+      "sculptObject": "Boot04PairedSelected.R",
+      "topology": {
+        "vertices": 305453,
+        "faces": 610934,
+        "connectedComponents": 1,
+        "boundaryEdges": 0,
+        "nonManifoldEdges": 0,
+        "zeroAreaFaces": 0
+      },
+      "binding": {
+        "sharedRig": "RiderSkeleton",
+        "nativeBones": 75,
+        "groups": [
+          "DEF-foot.R",
+          "DEF-toe.R",
+          "DEF-shin.R.001"
+        ],
+        "maximumWeightSumError": 2.9802322387695312e-08,
+        "maximumInfluences": 2,
+        "geometryAndUVUnchangedByBind": true
+      }
+    },
+    "L": {
+      "source": "Boots__LocallyRepairedSelectedDenseBoot.L",
+      "side": "L",
+      "medialLocalTSign": -1,
+      "acceptedArt": false,
+      "bodyCoveredFaceMaskPending": true,
+      "sourceUnitGuideAffine": {
+        "sourceScale": [
+          0.14058819083389493,
+          0.14058819083389493,
+          0.16439210534119386
+        ],
+        "mirrorWidth": -1,
+        "maximumRestRoundTripErrorM": 4.824660879143572e-09
+      },
+      "nativeModifierLogs": [
+        {
+          "stage": "L-guide-decimate",
+          "path": "harness/out/rider-rebuild/boot-last-anatomical04/pair01/L-guide-decimate.native-modifier.log",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "bytes": 0,
+          "warningOrErrorLines": []
+        },
+        {
+          "stage": "L-laplacian-bind",
+          "path": "harness/out/rider-rebuild/boot-last-anatomical04/pair01/L-laplacian-bind.native-modifier.log",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "bytes": 0,
+          "warningOrErrorLines": []
+        },
+        {
+          "stage": "L-surface-bind",
+          "path": "harness/out/rider-rebuild/boot-last-anatomical04/pair01/L-surface-bind.native-modifier.log",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "bytes": 0,
+          "warningOrErrorLines": []
+        },
+        {
+          "stage": "L-laplacian-evaluate",
+          "path": "harness/out/rider-rebuild/boot-last-anatomical04/pair01/L-laplacian-evaluate.native-modifier.log",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "bytes": 0,
+          "warningOrErrorLines": []
+        },
+        {
+          "stage": "L-surface-apply",
+          "path": "harness/out/rider-rebuild/boot-last-anatomical04/pair01/L-surface-apply.native-modifier.log",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "bytes": 0,
+          "warningOrErrorLines": []
+        }
+      ],
+      "nativeModifierWarnings": [],
+      "guideTopology": {
+        "vertices": 12204,
+        "faces": 24436,
+        "connectedComponents": 1,
+        "boundaryEdges": 0,
+        "nonManifoldEdges": 0,
+        "zeroAreaFaces": 0
+      },
+      "handles": [
+        {
+          "name": "heel-rear-quarter",
+          "guideVertices": 497,
+          "semanticCenterM": [
+            0.036,
+            0.075,
+            0.0
+          ],
+          "semanticDeltaM": [
+            0.014,
+            0.0,
+            0.0
+          ],
+          "axes": [
+            0
+          ]
+        },
+        {
+          "name": "medial-quarter",
+          "guideVertices": 655,
+          "semanticCenterM": [
+            -0.012,
+            0.07,
+            0.03
+          ],
+          "semanticDeltaM": [
+            0.0,
+            0.0,
+            0.013
+          ],
+          "axes": [
+            2
+          ]
+        },
+        {
+          "name": "medial-collar",
+          "guideVertices": 255,
+          "semanticCenterM": [
+            -0.008,
+            0.105,
+            0.031
+          ],
+          "semanticDeltaM": [
+            0.0,
+            0.012,
+            0.013
+          ],
+          "axes": [
+            1,
+            2
+          ]
+        },
+        {
+          "name": "lateral-quarter",
+          "guideVertices": 254,
+          "semanticCenterM": [
+            -0.01,
+            0.073,
+            -0.047
+          ],
+          "semanticDeltaM": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "axes": [
+            2
+          ]
+        },
+        {
+          "name": "lateral-collar",
+          "guideVertices": 191,
+          "semanticCenterM": [
+            -0.01,
+            0.105,
+            -0.046
+          ],
+          "semanticDeltaM": [
+            0.0,
+            0.008,
+            0.0
+          ],
+          "axes": [
+            1,
+            2
+          ]
+        },
+        {
+          "name": "ankle-front-tongue",
+          "guideVertices": 516,
+          "semanticCenterM": [
+            -0.066,
+            0.075,
+            -0.004
+          ],
+          "semanticDeltaM": [
+            -0.014,
+            0.0,
+            0.0
+          ],
+          "axes": [
+            0
+          ]
+        },
+        {
+          "name": "tongue-crown",
+          "guideVertices": 204,
+          "semanticCenterM": [
+            -0.055,
+            0.123,
+            -0.003
+          ],
+          "semanticDeltaM": [
+            -0.01,
+            0.0,
+            0.0
+          ],
+          "axes": [
+            0
+          ]
+        },
+        {
+          "name": "ball-lateral",
+          "guideVertices": 48,
+          "semanticCenterM": [
+            -0.145,
+            0.026,
+            -0.048
+          ],
+          "semanticDeltaM": [
+            0.0,
+            0.0,
+            -0.009
+          ],
+          "axes": [
+            2
+          ]
+        },
+        {
+          "name": "ball-medial",
+          "guideVertices": 66,
+          "semanticCenterM": [
+            -0.145,
+            0.026,
+            0.049
+          ],
+          "semanticDeltaM": [
+            0.0,
+            0.0,
+            0.008
+          ],
+          "axes": [
+            2
+          ]
+        },
+        {
+          "name": "ball-crown",
+          "guideVertices": 32,
+          "semanticCenterM": [
+            -0.145,
+            0.052,
+            0.0
+          ],
+          "semanticDeltaM": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "axes": [
+            1
+          ]
+        },
+        {
+          "name": "instep-crown",
+          "guideVertices": 143,
+          "semanticCenterM": [
+            -0.105,
+            0.07,
+            0.0
+          ],
+          "semanticDeltaM": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "axes": [
+            1
+          ]
+        },
+        {
+          "name": "hallux-medial",
+          "guideVertices": 66,
+          "semanticCenterM": [
+            -0.198,
+            0.022,
+            0.046
+          ],
+          "semanticDeltaM": [
+            0.0,
+            0.0,
+            0.006
+          ],
+          "axes": [
+            2
+          ]
+        },
+        {
+          "name": "hallux-crown",
+          "guideVertices": 41,
+          "semanticCenterM": [
+            -0.199,
+            0.034,
+            0.031
+          ],
+          "semanticDeltaM": [
+            0.0,
+            0.004,
+            0.0
+          ],
+          "axes": [
+            1
+          ]
+        },
+        {
+          "name": "lateral-toe",
+          "guideVertices": 24,
+          "semanticCenterM": [
+            -0.182,
+            0.024,
+            -0.023
+          ],
+          "semanticDeltaM": [
+            0.0,
+            0.0,
+            -0.003
+          ],
+          "axes": [
+            2
+          ]
+        }
+      ],
+      "cotangentConditioning": {
+        "sourceUnitTriangles": 24436,
+        "inactiveTriangles": 0,
+        "unanchoredZeroActiveIncidentVertices": 0,
+        "FLTEpsilon": 1.1920928955078125e-07
+      },
+      "laplacianSolveWitness": {
+        "boundFlag": true,
+        "anchors": 7492,
+        "freeVertices": 4712,
+        "freeVerticesMovedAboveRoundoff": 4712,
+        "numericalMovementFloorM": 1.048364083544584e-06,
+        "maxDisplacementM": 0.032239513871274016,
+        "maxAnchorTargetErrorM": 0.009359022570870955,
+        "anchorTargetErrorQuantilesM": [
+          0.0,
+          3.9549561199471575e-05,
+          0.0020093058997695313,
+          0.009359022570870955
+        ],
+        "anchorResidualPolicy": "Report-only least-squares residual; parent judges actual anatomical guide and dense sculpt. No microscopic fit guard.",
+        "allFinite": true
+      },
+      "solvedGuideObject": "Boot04ActualSolvedGuideSnapshot.L",
+      "guideObject": "Boot04SelectedSourceLaplacianGuide.L",
+      "solvedGuideTopology": {
+        "vertices": 12204,
+        "faces": 24436,
+        "connectedComponents": 1,
+        "boundaryEdges": 0,
+        "nonManifoldEdges": 0,
+        "zeroAreaFaces": 0
+      },
+      "denseSculpt": {
+        "vertices": 305453,
+        "faces": 610934,
+        "exactSoleVertices": 96809,
+        "maxProtectedSoleDisplacementM": 0.0,
+        "maxSelectedDisplacementM": 0.03234973372436405,
+        "UVExact": true
+      },
+      "sculptObject": "Boot04PairedSelected.L",
+      "target": "Boot04PairedSelected.L",
+      "topology": {
+        "vertices": 305453,
+        "faces": 610934,
+        "connectedComponents": 1,
+        "boundaryEdges": 0,
+        "nonManifoldEdges": 0,
+        "zeroAreaFaces": 0
+      },
+      "binding": {
+        "sharedRig": "RiderSkeleton",
+        "nativeBones": 75,
+        "groups": [
+          "DEF-foot.L",
+          "DEF-toe.L",
+          "DEF-shin.L.001"
+        ],
+        "maximumWeightSumError": 2.9802322387695312e-08,
+        "maximumInfluences": 3,
+        "geometryAndUVUnchangedByBind": true
+      }
+    }
+  },
+  "coveredBodyFaceMaskPending": true,
+  "canonicalWholeBodyPreserved": true,
+  "priorCavityFailureRetainedAsDiagnostic": {
+    "path": "harness/out/rider-rebuild/boot-last-anatomical04/sculpt02/report.json",
+    "sha256": "16b3321d4b45f35cf953f2f27ed4f3ac9d2dad555d823fc8a80609c6c50b24b0"
+  },
+  "native": {
+    "path": "harness/out/rider-rebuild/boot-last-anatomical04/pair01/paired-selected-boots.blend",
+    "sha256": "5263a76c17ec69c0eb2d7e8546991105c3ffd4398dc389fb88e7c1e71e05a37f"
+  }
+}
