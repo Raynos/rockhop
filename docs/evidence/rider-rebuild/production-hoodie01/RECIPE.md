@@ -29,6 +29,14 @@ result. Thus selection bookkeeping was misleading, but no actual quad patch
 was produced. Both actual fitted natives and failure receipts are retained.
 No fit, topology control or previous failure artifact was changed.
 
+The next source-only API correction enters Edit Mode before selecting anything,
+deselects the live BMesh, selects the exact boundary edges and their endpoints,
+flushes/updates, and asserts actual selected edge IDs/count/pairs against the
+intended loop. It records that selection alongside the actual added faces.
+This correction is unexecuted. If the explicitly selected real boundary still
+creates no usable quad patch, this operator route stops; the local quad region
+must be directly authored rather than trying further selection settings.
+
 The complete body remains visible and its vertices, polygons, fields and rig
 rest are fingerprinted before/after. Hood/collar volume, torso folds, cuffs, hem
 and mustard fabric come from the actual selected mesh; this is no generic shell.
@@ -64,7 +72,8 @@ and grants a bounded serial CPU2 lease. Each fresh output leaf is private.
 Validation: Python AST parsed; all five immutable input hashes match the
 [source receipt](source-checkpoint.json). The [first failed trial](author01-result.json)
 and [second failed trial](author02-result.json) retain their actual saved fits.
-No rigged completed author native exists; no third experiment was launched.
+No rigged completed author native exists; the live BMesh selection correction
+is unexecuted and no third experiment was launched.
 No dense bake, collision claim, moving-art judgment or normal-player promotion.
 The parent alone judges played complete-outfit native and actual Garage/game
 evidence. One authored pass and at most one shape repair remain the limit.

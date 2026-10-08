@@ -1,8 +1,8 @@
 {
   "accepted": false,
-  "stage": "EXECUTED_API_BOOKKEEPING_TRIAL_FAILED",
+  "stage": "UNEXECUTED_EDIT_BMESH_SELECTION_CORRECTION",
   "ASTParsed": true,
-  "sourceSHA256": "4bd21f23efc5eb6096e51b17e036b43061394a059f62f9e5d0a834cb2300bfc2",
+  "sourceSHA256": "078da52b40e1f5049759314c1794ba6559ac1dae90d79294672c674f2095d14a",
   "controlsSHA256": "ae90f988b1a3b5f020d540cddd677a8a6286e6e2e3e7afb08733b5b7470aff28",
   "inputs": [
     {
@@ -36,22 +36,17 @@
       "matched": true
     }
   ],
-  "BlenderExecuted": true,
-  "firstAuthorTrial": "author01 exited1 after1.747s and preserved actual proportional fit; prior result and guard unchanged",
-  "apiCorrectionExecuted": true,
+  "currentSourceExecuted": false,
+  "selectionCorrectionExecuted": false,
+  "priorTrials": [
+    "author01 failed after saving fit",
+    "author02 added zero faces despite FINISHED, selecting twelve existing triangles; fit saved"
+  ],
   "shapeControlsChanged": false,
+  "priorFitAndFailureArtifactsChanged": false,
   "actualDenseBakeExists": false,
   "movingArtJudged": false,
-  "targetNameGuard": "Rename/hide only pre-existing coarse RiderHoodie meshes, exact selected target name asserted; bake checks saved geometry and immutable source lineage",
-  "portProtection": "Authored collar/hem/cuff spatial controls only; local generated underarm boundary holes may join quad patch",
-  "failurePreservation": "Actual proportional-fit-before-patch.blend and pinned fit receipt saved before topology; patch exception writes explicit failure receipt and raises",
-  "newFaceBookkeeping": "Record unordered polygon vertex cycles before grid fill; only cycles absent afterward are new faces; receipt diagnoses selected-existing triangles separately from actual added quads/nonquads",
-  "actualFittedGeometryExists": true,
-  "actualRiggedAuthoredNativeExists": false,
-  "secondAuthorTrial": {
-    "result": "author02 exited1 after1.629s; actual proportional fit saved, grid fill added0faces and selected12existingtriangles",
-    "resultReceipt": "docs/evidence/rider-rebuild/production-hoodie01/author02-result.json",
-    "leaseReleased": true
-  },
-  "additionalExperimentLaunched": false
+  "selectionCorrection": "Enter Edit Mode, deselect live BMesh, select exact actual boundary edges and endpoints, flush/update and assert actual edge IDs/count/pairs equal intended loop before grid fill",
+  "newFaceBookkeeping": "Only cycles absent before fill are added faces; actual selected-edge and added-face diagnostics retained in success/failure receipts",
+  "haltPolicy": "If explicit real boundary selection creates no usable patch, stop grid-fill operator route and directly author local quad region; no further selection-settings retry"
 }

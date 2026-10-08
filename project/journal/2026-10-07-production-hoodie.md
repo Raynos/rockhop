@@ -26,3 +26,10 @@ Finding: actual hoodie Grid Fill creates zero faces despite FINISHED, so selecti
 Validation: exit1 after1.629s,72boundaryvertices,0newfaces,12selectedexistingtriangles; parent rehashed preserved fit and inspected exact diagnostics.
 
 Limits: no completed rigged hoodie or bake; actual Edit Mode boundary selection must create a real patch before fit review.
+
+
+Finding: select exact boundary edges/endpoints in live Edit Mode BMesh before the operator, rather than inherited Object Mode flags. Witness exact boundary edge pairs and real added faces.
+
+Validation: parent reviewed source, parsed AST and rehashed frozen source plus five immutable input pins. No shape/control change; corrected author unexecuted.
+
+Limits: a correctly selected unusable patch stops the operator route; no repeated selection campaign or art acceptance.

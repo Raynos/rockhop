@@ -1271,3 +1271,5 @@ October 7 connected gloves actual author01: exit0 in2.888s saves both glove mesh
 October 7 diagnostic renderer source checkpoint: pinned native plus exact actual meshes, complete visible body and explicit garment framing; fixed silent CPU2 studio stills or saved-action film. Parent source/AST checked; unexecuted, no art judgment or source mutation.
 
 October 7 handedness follow-up: complete left/right region-authored glove meshes now save with distinct anatomy and side-specific digit fields. Boots remain opposite-handed mirrored geometry with rejected forefoot fit; handedness does not establish anatomical fit or moving quality.
+
+October 7 hoodie exact-boundary source checkpoint: live Edit Mode BMesh selection verifies intended boundary edge pairs before Grid Fill; records actual added faces and stops the operator route if a correctly selected patch is unusable. Parent source/AST/five pins match. Shape controls unchanged; unexecuted.

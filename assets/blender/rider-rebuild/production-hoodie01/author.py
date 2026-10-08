@@ -229,13 +229,42 @@ def rebuild_axilla(obj, spec, targets, diagnostics):
             before_cycles = {tuple(sorted(face.vertices)) for face in obj.data.polygons}
             active(obj)
             bpy.context.tool_settings.mesh_select_mode = (False, True, False)
-            for v in obj.data.vertices: v.select = False
-            for e in obj.data.edges: e.select = False
-            for f in obj.data.polygons: f.select = False
             selected = set(ids)
-            for edge in obj.data.edges:
-                if set(edge.vertices).issubset(selected): edge.select = True
             bpy.ops.object.mode_set(mode='EDIT')
+            edit = bmesh.from_edit_mesh(obj.data)
+            edit.verts.ensure_lookup_table()
+            edit.verts.index_update()
+            edit.edges.ensure_lookup_table()
+            edit.edges.index_update()
+            edit.select_history.clear()
+            for face in edit.faces: face.select_set(False)
+            for edge in edit.edges: edge.select_set(False)
+            for vertex in edit.verts: vertex.select_set(False)
+            edit.select_mode = {'EDGE'}
+            intended_pairs = {tuple(sorted((a, b))) for a, b in zip(ids, ids[1:]+ids[:1])}
+            by_pair = {tuple(sorted(v.index for v in edge.verts)): edge for edge in edit.edges}
+            selected_edges = [by_pair[pair] for pair in sorted(intended_pairs)]
+            assert len(intended_pairs) == len(ids) and all(e.is_boundary for e in selected_edges), \
+                ('Authored loop does not identify exact actual boundary edges', side)
+            for edge in selected_edges:
+                for vertex in edge.verts: vertex.select_set(True)
+                edge.select_set(True)
+            edit.select_flush_mode()
+            bmesh.update_edit_mesh(obj.data, loop_triangles=False, destructive=False)
+            actual_edges = [edge for edge in edit.edges if edge.select]
+            actual_pairs = {tuple(sorted(v.index for v in edge.verts)) for edge in actual_edges}
+            selection_record = {'side': side, 'boundaryVertices': len(ids),
+                                'selectionMethod': 'Explicit live Edit Mode BMesh boundary edges/endpoints',
+                                'intendedBoundaryEdgeIDs': sorted(edge.index for edge in selected_edges),
+                                'selectedEdgeIDs': sorted(edge.index for edge in actual_edges),
+                                'intendedBoundaryEdges': len(intended_pairs),
+                                'selectedEdges': len(actual_edges),
+                                'selectedBoundaryEdges': sum(e.is_boundary for e in actual_edges),
+                                'selectedEdgePairsMatchIntended': actual_pairs == intended_pairs}
+            diagnostics.append(selection_record)
+            assert len(actual_edges) == len(ids) and actual_pairs == intended_pairs \
+                and all(edge.is_boundary for edge in actual_edges), \
+                ('Edit Mode selection differs from exact authored boundary', selection_record)
             result = bpy.ops.mesh.fill_grid(span=max(1, len(ids)//4), offset=0,
                                             use_interp_simple=False)
             bpy.ops.object.mode_set(mode='OBJECT')
@@ -245,8 +274,7 @@ def rebuild_axilla(obj, spec, targets, diagnostics):
                          if tuple(sorted(face.vertices)) not in before_cycles]
             existing_selected = [face for face in obj.data.polygons if face.select
                                  and tuple(sorted(face.vertices)) in before_cycles]
-            diagnostics.append({'side': side, 'boundaryVertices': len(ids),
-                                'operatorResult': sorted(result),
+            selection_record.update({'operatorResult': sorted(result),
                                 'existingPolygonsBefore': len(before_cycles),
                                 'actualAddedPolygons': len(new_faces),
                                 'actualAddedQuads': sum(len(f.vertices) == 4 for f in new_faces),
@@ -430,6 +458,11 @@ def author(spec, out):
             'accepted': False, 'stage': 'AXILLA_TOPOLOGY_FAILED_FITTED_NATIVE_PRESERVED',
             'recipeSHA256': sha(__file__), 'fittedNative': fitted['native'],
             'gridFillDiagnostics': patch_diagnostics,
+            'operatorRouteMustStop': any(d.get('selectedEdgePairsMatchIntended') is True
+                                        and 'operatorResult' in d
+                                        and (d.get('actualAddedPolygons') == 0
+                                             or d.get('actualAddedNonQuads', 0) > 0)
+                                        for d in patch_diagnostics),
             'failure': {'type': type(error).__name__, 'message': str(error)}}, indent=2)+'\n')
         raise
     rows = skin(obj, body, rig, spec, targets)
