@@ -1,0 +1,90 @@
+{
+  "accepted": false,
+  "lock": "/Users/raynos/projects/localai/.model.lock",
+  "method": "lockf -k",
+  "command": [
+    "/opt/homebrew/bin/pnpm",
+    "harness:gate",
+    "--only=boot,clear,crash,restart",
+    "--quick",
+    "--jobs=1",
+    "--quiet-timing"
+  ],
+  "controllerPID": 54114,
+  "pollSeconds": 1,
+  "startAnonymousBelowGiB": 55,
+  "stopAnonymousGiB": 65,
+  "stopAnonymousPlusWiredGiB": 96,
+  "limitSeconds": 240.0,
+  "guardSHA256": "cf8acd15d8b7484480bee74d23892be815d955ffd87115d3da8ed228ffb3d916",
+  "status": "worker returned; review pending",
+  "samples": [
+    {
+      "seconds": 0,
+      "anonymousGiB": 38.4,
+      "wiredGiB": 8.1,
+      "freeGiB": 23.7
+    },
+    {
+      "seconds": 0.058,
+      "anonymousGiB": 38.4,
+      "wiredGiB": 8.1,
+      "freeGiB": 23.7
+    },
+    {
+      "seconds": 1.119,
+      "anonymousGiB": 39.2,
+      "wiredGiB": 7.9,
+      "freeGiB": 23.0
+    },
+    {
+      "seconds": 2.178,
+      "anonymousGiB": 39.7,
+      "wiredGiB": 7.8,
+      "freeGiB": 22.4
+    },
+    {
+      "seconds": 3.234,
+      "anonymousGiB": 39.3,
+      "wiredGiB": 7.7,
+      "freeGiB": 22.9
+    },
+    {
+      "seconds": 4.3,
+      "anonymousGiB": 40.3,
+      "wiredGiB": 7.7,
+      "freeGiB": 21.9
+    },
+    {
+      "seconds": 5.353,
+      "anonymousGiB": 40.5,
+      "wiredGiB": 7.9,
+      "freeGiB": 20.9
+    },
+    {
+      "seconds": 6.402,
+      "anonymousGiB": 40.2,
+      "wiredGiB": 7.9,
+      "freeGiB": 21.8
+    },
+    {
+      "seconds": 7.455,
+      "anonymousGiB": 39.6,
+      "wiredGiB": 7.8,
+      "freeGiB": 22.4
+    },
+    {
+      "seconds": 8.513,
+      "anonymousGiB": 39.7,
+      "wiredGiB": 8.0,
+      "freeGiB": 22.3
+    }
+  ],
+  "physicalMemoryBytes": 137438953472,
+  "requiredPhysicalMemoryBytes": 137438953472,
+  "scope": "Future explicitly invoked owned Rockhop job only",
+  "pressureOrSwapLimits": "No separate pressure/swap gate exists in the pinned original guard; none altered",
+  "ownedChildPID": 54122,
+  "exitCode": 0,
+  "elapsedSeconds": 9.213
+}
