@@ -35,9 +35,11 @@ def main():
     args = sys.argv[sys.argv.index('--')+1:]; assert len(args) == 3
     receipt_path, out = (Path(p).resolve() for p in args[:2]); view = args[2]
     assert view in VIEWS and not out.exists()
-    assert out.is_relative_to(ROOT/'harness/out/rider-rebuild/selected-dressed-motion01')
+    assert any(out.is_relative_to(ROOT/'harness/out/rider-rebuild'/scope)
+               for scope in ('selected-dressed-motion01', 'selected-generic-envelope02'))
     receipt_sha = sha(receipt_path); receipt = json.loads(receipt_path.read_text())
-    assert receipt['accepted'] is False and receipt['frameRange'] == [1, 145] and receipt['fps'] == 24
+    assert receipt['accepted'] is False and receipt['frameRange'] in ([1, 145], [1, 193]) and receipt['fps'] == 24
+    first, last = receipt['frameRange']; count = last-first+1
     native = ROOT/receipt['candidate']['path']; assert sha(native) == receipt['candidate']['sha256']
     bpy.ops.wm.open_mainfile(filepath=str(native)); scene = bpy.context.scene
     rig = bpy.data.objects['RiderSkeleton']; assert len(rig.data.bones) == 75
@@ -63,24 +65,24 @@ def main():
     scene.collection.objects.link(camera); scene.camera = camera; camera.data.type = 'ORTHO'
     position, focus, scale = VIEWS[view]; camera.location = position; camera.data.ortho_scale = scale; aim(camera, focus)
     out.mkdir(parents=True); frames = out/'frames'; frames.mkdir(); start = time.monotonic()
-    for index, frame in enumerate(range(1, 146)):
+    for index, frame in enumerate(range(first, last+1)):
         scene.frame_set(frame); bpy.context.view_layer.update()
         scene.render.filepath = str(frames/f'{index:04d}.png'); bpy.ops.render.render(write_still=True)
-        if (index+1)%12 == 0: print('DRESSED_MOVIE_PROGRESS', index+1, 145, round(time.monotonic()-start, 3), flush=True)
+        if (index+1)%12 == 0: print('DRESSED_MOVIE_PROGRESS', index+1, count, round(time.monotonic()-start, 3), flush=True)
     movie = out/(view+'.mp4')
     subprocess.run(['ffmpeg', '-y', '-hide_banner', '-loglevel', 'error', '-framerate', '24', '-i', str(frames/'%04d.png'),
                     '-c:v', 'libx264', '-threads', '2', '-pix_fmt', 'yuv420p', '-an', str(movie)], check=True)
     probe = json.loads(subprocess.check_output(['ffprobe', '-v', 'error', '-count_frames', '-show_streams', '-of', 'json', str(movie)]))
     video = [s for s in probe['streams'] if s['codec_type'] == 'video']; assert len(video) == 1
     assert not [s for s in probe['streams'] if s['codec_type'] == 'audio']
-    assert int(video[0]['nb_read_frames']) == 145 and video[0]['avg_frame_rate'] == '24/1'
+    assert int(video[0]['nb_read_frames']) == count and video[0]['avg_frame_rate'] == '24/1'
     assert sha(native) == receipt['candidate']['sha256'] and sha(receipt_path) == receipt_sha
-    report = {'accepted': False, 'movie': {'path': str(movie.relative_to(ROOT)), 'sha256': sha(movie), 'frames': 145, 'fps': 24, 'audioStreams': 0},
+    report = {'accepted': False, 'movie': {'path': str(movie.relative_to(ROOT)), 'sha256': sha(movie), 'frames': count, 'fps': 24, 'audioStreams': 0},
               'native': receipt['candidate'], 'motionReceipt': {'path': str(receipt_path), 'sha256': receipt_sha},
               'recipeSHA256': sha(__file__), 'engine': 'BLENDER_EEVEE', 'threads': 2, 'continuousFrames': True,
               'visibleMeshes': visible, 'view': view, 'cameraPosition': position, 'focus': focus, 'orthoScale': scale,
               'elapsedSeconds': time.monotonic()-start, 'limits': ['Parent alone judges played art; all R0-R5 open.',
-                  'Generic reach/curl only; actual Garage/ride remains required for bike contacts and crouch/extremes.',
+                  'Declared native action only; actual Garage/ride remains required for bike contacts and extremes.',
                   'Hands view crops other garments; full view and both profiles are independent required reviews.',
                   'No native save, source geometry/PBR mutation, export, browser or audio.']}
     (out/'render.json').write_text(json.dumps(report, indent=2)+'\n'); print(json.dumps(report['movie']), flush=True)
