@@ -1,0 +1,39 @@
+{
+  "accepted": false,
+  "status": "FAILED_CONSTRUCTION",
+  "phase": "actual source body/garment cage",
+  "inputSHA256": "ef4227a393a320feb84d36800f93db784496d381c81d47da07942ae58da903cf",
+  "error": "AssertionError [ERR_ASSERTION]: Body outside source garment cage: native=4620, distanceM=0.18334605097160306, jeansNative=22415,22416,5526",
+  "witness": {
+    "bodyNativeID": 4620,
+    "bodyRestPoint": [
+      0.1072281450033189,
+      0.9185570478439331,
+      0.39062923192977916
+    ],
+    "cageNativeIDs": [
+      22415,
+      22416,
+      5526
+    ],
+    "cageRestPoints": [
+      [
+        0.05607999861240393,
+        0.8877317309379578,
+        0.2168047577142716
+      ],
+      [
+        0.060837440192699495,
+        0.8877317309379578,
+        0.21557225286960607
+      ],
+      [
+        0.05978694930672652,
+        0.9045000672340393,
+        0.2140031903982163
+      ]
+    ],
+    "cageDistanceM": 0.18334605097160306
+  },
+  "stack": "AssertionError [ERR_ASSERTION]: Body outside source garment cage: native=4620, distanceM=0.18334605097160306, jeansNative=22415,22416,5526\n    at file:///Users/raynos/projects/games/rockhop/assets/blender/rider-rebuild/selected-seated-corrective06/construct.mjs:159:3\n    at Array.map (<anonymous>)\n    at file:///Users/raynos/projects/games/rockhop/assets/blender/rider-rebuild/selected-seated-corrective06/construct.mjs:153:37"
+}

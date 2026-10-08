@@ -1703,3 +1703,5 @@ Ask348 delivered: isolated uploaded six-choice Garage passes actual silent WebKi
 Sixth comparison plan status reconciled after remote actual runtime pass67d5ce606: selected native75/source/roles, old/new resident switching and483render submissions verified, scoped phone link/movie delivered. Prior memory/CORS causes not isolated;357MBfirst load, productionLOD and physical-phone/art gates remain open.
 
 Selected seated corrective06 source checkpoint: full upper-jeans differential reconstruction, rigid selected anatomical support cores, actual saddle/bodycage, exact inverse-skin morph and hip-flex activation. Parent24pins/3fixtures/syntax pass. One guarded actual construction next; no newmodel/Blender/art/Pro/genericmotion pass yet.
+
+Corrective06 actualconstruct01 fails in1.065s at bodycage native4620,183.346mm lateral distance after jeansreconstruction. Y-only body selection is not anatomical membership; inspect native skin roles and retain60mm correspondence bound before correction. No model or moving verdict.
