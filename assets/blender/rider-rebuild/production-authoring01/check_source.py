@@ -35,8 +35,8 @@ for source in HERE.glob('*.py'):
 assert manifest['canonical']['sha256']=='42fca617ea8d246a6c3e3ca68a90cd3cb5f3ce8b9bb78130e0e2bbd65f605fac'
 assert manifest['bodyCandidate']['native']['sha256']=='6c80f6e8acc9b50c1d3cc30c92ca70e65148d84be6315e2100584b6f573953e4'
 assert {u['part'] for u in manifest['units']}=={'Hoodie','Jeans','Gloves','Boots'}
-report={'accepted':False,'stage':'PRIVATE_EDITABLE_ASSEMBLY_SOURCE_READY_NO_BLENDER_JOB',
-        'pythonASTPassed':True,'explicitSourcePinsPassed':len(rows),'noHeavyJobExecuted':True,
+report={'accepted':False,'stage':'PRIVATE_EDITABLE_ASSEMBLY_SOURCE_READY_PENDING_EXECUTION',
+        'pythonASTPassed':True,'explicitSourcePinsPassed':len(rows),'noHeavyJobExecutedByThisChecker':True,
         'sourceFiles':{str(p.relative_to(ROOT)):sha(p) for p in HERE.iterdir() if p.is_file()},
         'method':['Open explicit joined selected-head/body6c80 as current REJECTED context; one visible body only.',
                   'Compare its75 rest records with canonical42f rig; body and rest remain unchanged.',
@@ -51,4 +51,4 @@ report={'accepted':False,'stage':'PRIVATE_EDITABLE_ASSEMBLY_SOURCE_READY_NO_BLEN
                                 'Original packed PBR bytes and original dense hoodie importer axes.'],
         'limits':manifest['limits']}
 (ROOT/'docs/evidence/rider-rebuild/production-authoring01/source-checkpoint.json').write_text(json.dumps(report,indent=2)+'\n')
-print(json.dumps({k:report[k] for k in ('stage','pythonASTPassed','explicitSourcePinsPassed','noHeavyJobExecuted','sourceFiles')},indent=2))
+print(json.dumps({k:report[k] for k in ('stage','pythonASTPassed','explicitSourcePinsPassed','noHeavyJobExecutedByThisChecker','sourceFiles')},indent=2))

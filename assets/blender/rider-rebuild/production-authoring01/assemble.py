@@ -77,12 +77,12 @@ def record(obj,source_name,role):
 
 
 def append_unit(unit,rig,canonical_rest):
-    requested = unit['visible']+unit['reference']+unit['editingAids']
+    requested = tuple(unit['visible']+unit['reference']+unit['editingAids'])
     assert len(requested)==len(set(requested))
     before = set(bpy.data.objects)
     with bpy.data.libraries.load(str(pin(unit['native'])),link=False) as (available,selected):
         assert set(requested)<=set(available.objects), ('Actual source object absent',unit['part'],set(requested)-set(available.objects))
-        selected.objects = requested
+        selected.objects = list(requested)
     mapping = dict(zip(requested,selected.objects))
     new = set(bpy.data.objects)-before
     assert all(o is not None for o in mapping.values())

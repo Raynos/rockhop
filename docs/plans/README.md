@@ -1399,3 +1399,5 @@ October 8 real-source working master recipe ready: one joined body, original sel
 October 8 human resource queue corrected after Astra04: artist assistance is optional rather than a prerequisite for already-authorized scoped construction. HR-27 remains an unanswered resource-identity request; no artist contacted and no rider gate accepted.
 
 October 8 first real-source assembly stopped before save: Blender append mutates its requested object list, corrupting the reused name mapping. CPU2 job exited1 in4.246s; explicit copied-name-list correction assigned. No native or outfit result yet.
+
+October 8 working-master append API corrected: requested names remain immutable; Blender receives a copied list. Parent reviewed correction and exact-hash render-spec writer, AST and22 pins pass. One corrected assembly remains pending; no outfit accepted.

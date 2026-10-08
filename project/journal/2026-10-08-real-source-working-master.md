@@ -5,3 +5,7 @@ Limits: Current body, glove, boot and hoodie fit remain rejected or unreviewed. 
 Finding: Actual assembly exposed Blender append-list mutation before save.
 Validation: CPU2 guard exit1 in4.246s; no working native saved.
 Limits: Source-only checks did not exercise Blender API semantics; correct name-list ownership before one retry.
+
+Finding: Freeze requested source names as a tuple and give Blender a separate append list.
+Validation: Parent reviewed exact two-line correction and render-spec writer; AST and22 source pins pass.
+Limits: Corrected assembly is unexecuted; render specs require an actual saved native hash.

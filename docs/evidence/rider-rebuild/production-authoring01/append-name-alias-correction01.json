@@ -1,0 +1,25 @@
+{
+  "accepted": false,
+  "stage": "APPEND_NAME_ALIAS_SOURCE_CORRECTED_NO_RETRY",
+  "failure": {
+    "guardSHA256": "52ab6716a23146189f4e624a878115b7959925a0ac1f9a7b5d56000b887e6c2d",
+    "exitCode": 1,
+    "elapsedSeconds": 4.246,
+    "workerLogSHA256": "d11dd6388d21e4f95249fb6aa4f9771bfb88684e73f0096e0e8351cd59a9be94",
+    "nativeSaved": false
+  },
+  "finding": "Blender libraries load mutates its supplied selected.objects list into Object references; reused requested names must remain immutable.",
+  "correction": "Requested names are now a tuple; libraries.load receives a separate list. No geometry/material/rig/placement policy change.",
+  "assembleSHA256": "81572a2f88c431ebe52bd3f11bd358eff9a772d73f8db1bcb61751d3287f86b0",
+  "inputsSHA256": "6282595333fad0cfdc5f2becc784ff3cb86c8acecf723ade6a17343db73431f1",
+  "sourceCheckpointSHA256": "46a9288c299f0dc98b3df4efc8122247f1c111cef4508a3a52f42a2165693f53",
+  "checks": [
+    "Python AST passed",
+    "All22 source/map/receipt pins unchanged",
+    "Two-line append correction reviewed; no retry executed by builder"
+  ],
+  "limits": [
+    "Parent controls next serial CPU2 retry. No saved working native yet.",
+    "Render spec writer waits for actual saved receipt and exact native hash."
+  ]
+}
