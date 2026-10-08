@@ -475,6 +475,15 @@ complete and archived. All R0–R5 and the original complete rider objective rem
 open until their actual requirements are proved.
 
 
+The [13:02UTC fresh Astra10 review](../evidence/rider-rebuild/astra-production-advisory10/FINDING.md)
+is adopted after parent verification of the twelve-hour commit counts, exact
+COM diagnostic and played results. Keep the complete selected rider; stop
+fragmented proxy and narrative campaigns. Combine each concrete correction with
+its targeted result, keep required journals/status short and link machine data
+once. Existing player gates do not qualify this rider. Cuff construction proceeds
+alongside actual Garage clip integration, rather than blocking the whole review.
+
+
 ### Actual construction advisory 02 adopted
 
 Parent verified the [fresh Astra-6 high construction advisory](../evidence/rider-rebuild/astra-construction-advisory02/FINDING.md): eight exact source pins and the retained thumb replay match. The failed sample is thumb panel one, not the earlier pinky failure. The valid outward thenar surface is excluded by isolated-tip labels. Parent inspected the actual boot and jeans views and agrees with their negative fit findings. No moving art or anatomy milestone passes.
@@ -589,31 +598,40 @@ face mask, as specified below.
   areas disappear with unchanged source maps, UVs and material scalars. Keep this
   measured correction. Native/GPU normal parity and final mobile budget remain
   open; do not introduce guessed roughness or tangent changes.
-- Cuff correction: actual cuff05 native6a3fcb82 reuses saved dense binding,
-  changing only proximal glove positions. Known rest lobes now lie1.31/1.44mm
-  inside the actual sleeves. Garage still shows a smaller black fragment.
-  Fresh Astra08 and parent identify stale animated raycast bounds; bypassing
-  diagnostic glove bounds hits actual right-glove triangles239604/287214 at
-  the black pixels. Preserve fields/digits/PBR; inspect these exact rest/posed
-  sectors before the second and final bounded cuff repair. No blind taper.
-- Actual ride: complete selected game05 played16seconds/192presented frames,
-  no errors or seeks/stalls. Source-bound sole witnesses stay within3.75micrometers
-  of finite pegs on Rookie; this is not whole-foot contact qualification.
-  Missing new-rig torso range leaves56/192hand socket samples beyond1cm,
-  worst57.335mm. One source-bound overlay enables the existing<=20degree upper
-  spine evaluation, re-solving unchanged physical COM with fixed limb lengths.
-  Judge chosen flex, actual surfaces and anatomy on Rookie/Pro side films;
-  do not transfer retired rig calibration or stretch limbs to fit.
-- Native movement: actual complete selected145 reach/grip/release actionc44002c9
-  rendered and played6.042seconds/all145frames. Parent keeps full-view
-  construction baseline: outfit remains together without gross collapse or
-  skin islands. Close bilateral hands/profiles remain required. Separate193
-  fixed-foot crouch/rise/overhead source is ready; actual author/film pending.
-- Next visible result: corrected supported side-view game ride on both bikes,
-  then continuous native crouch/rise/overhead and closer grip review. Stop on
-  observed dressed failures before detail campaigns. Dense preview establishes
-  appearance only; mobile topology, moving GPU parity, finite contacts, complete
-  generic/bike envelope and physical device/release gates remain open.
+- Cuff correction: useful cuff05 native6a3fcb82 preserves selected fingers,
+  fields and PBR. Parent reproduced Astra08's remaining rest-fit sector and
+  negligible weight contribution. Final cuff06 radial-sector deformation is
+  stopped: [Astra09 witness](../evidence/rider-rebuild/astra-cuff-topology09/FINDING.md)
+  independently proves a new self-crossing. A negative fixed-frame normal dot
+  alone is not an inversion proof. Construct a coherent local cuff wall with
+  circumferential loops, allowing axial/tangential shaping and explicit local
+  topology/UV/field changes where needed. Gate the control surface before new
+  correspondence. No third offset campaign or generic glove substitution.
+- Actual ride: source-bound torso articulation played in Rookie/Pro side films.
+  Rookie has zero supported samples above1cm out of192, maximum hand2.289mm
+  and sole1.029mm. Pro retains two supported sole failures out of108; exclude
+  its84 released/crash samples. A coupled hand/foot refinement uses at most11
+  candidates within the same20degree envelope; actual Pro failure-neighbourhood
+  continuity, surfaces and solve cost remain to be judged before adoption.
+  Preserve fixed limb lengths and physical X/Y COM at the existing tolerance.
+  Report actual lateral COM separately; the approximate physical inverse only
+  solves X/Y, and the old XYZ assertion already fails the baseline by12.764um.
+  Do not enlarge an XYZ epsilon, symmetrize anatomy or add an unneeded lateral
+  solve. Marker results do not qualify full contact or anatomical comfort.
+- Native movement: original selected145 reach/curl/release full and close-hands
+  films played to natural end. Parent keeps the construction baseline; the
+  black textured fingers remain attached and articulate, but cuff detail and
+  finite-bar wrap remain open. Original selected193 moderate12cm fixed-foot
+  crouch/rise/arms-up film also played. These limited movements do not qualify
+  deep seated motion, full humanoid range or engine/native clip parity.
+- Next visible result: one integrated private movement review using existing
+  films, corrected supported Rookie/Pro side sequences and missing deep seated
+  transitions/profiles. Export the same named native actions into actual Garage.
+  Choose one observed dressed correction from that complete review. Proper
+  production topology/LOD with selected-detail transfer follows the stable
+  construction envelope; do not spend another advisory interval polishing a
+  dense-only preview. Physical device, finite contacts and release gates remain
+  independent. All R0–R5 stay open; no normal-player promotion.
 
 ### Equipped-outfit body masks adopted after independent Astra05 review
 
