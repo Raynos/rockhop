@@ -1,0 +1,170 @@
+{
+  "accepted": false,
+  "sourceSHA256": "72b90e8790f8490743a75f8b70791aa21edfee6234cec609093e9b62e08d4bfd",
+  "driver": {
+    "selectedSoleInFoot": {
+      "left": [
+        0.8975303643469126,
+        0.36272044659805347,
+        -0.250744924549961,
+        0,
+        -0.000011922172697831096,
+        -0.5686238719816684,
+        -0.8225976315321484,
+        0,
+        -0.44095240506314376,
+        0.7383092149795747,
+        -0.5103527860688362,
+        0,
+        -0.05235997464081325,
+        0.15793517341686877,
+        0.07675143313008201,
+        1
+      ],
+      "right": [
+        0.8975305573301833,
+        -0.36272031841205016,
+        0.2507451057104126,
+        0,
+        0.000012216941659826562,
+        -0.5686238257826277,
+        -0.822597829058586,
+        0,
+        0.4409525866068953,
+        0.738309751455613,
+        -0.510352828207052,
+        0,
+        0.05353920697509551,
+        0.15284020113463367,
+        0.07880607433039638,
+        1
+      ]
+    },
+    "selectedPegSurfaceBike": {
+      "left": [
+        -0.13999998569488525,
+        0.03476396006679536,
+        -0.1472298914723396
+      ],
+      "right": [
+        -0.13939194298160484,
+        0.03696837826282751,
+        0.14380825861101523
+      ]
+    },
+    "maxSpineFlexRadians": 0.3490658503988659,
+    "soleQuaternionBike": {
+      "left": [
+        0.028692741367344322,
+        0.7065212444384618,
+        -0.02868951866462518,
+        0.7065276847150056
+      ],
+      "right": [
+        0.01796777460196808,
+        0.7068816925313459,
+        -0.017971241469481727,
+        0.7068751419592559
+      ]
+    }
+  },
+  "bikes": [
+    {
+      "path": "public/models/bike-rookie.glb",
+      "sha256": "e55919d60267849358ef5e97f4731f42fac6eb2835b9998e1d146d056c0f10f7"
+    },
+    {
+      "path": "public/models/bike-pro.glb",
+      "sha256": "0acc9ac86eeca76cc1812f8870eab36e2e25ca76d6a5cbe86d4a46a36cc12a86"
+    }
+  ],
+  "evidence": [
+    {
+      "bike": "rookie",
+      "path": "docs/evidence/rider-rebuild/selected-contact01/parent-source03.json",
+      "sha256": "672356eb018ad03f20aa97db46975c5755e18e9c59e8a4058b5d7291d45040cd"
+    },
+    {
+      "bike": "pro",
+      "path": "docs/evidence/rider-rebuild/selected-contact01/parent-pro-source04.json",
+      "sha256": "7ca96a7faf473d1bc0bcefa837887c17383ba089d7566e6182e7db9ade78e053"
+    }
+  ],
+  "limits": "One source-derived static ankle/finite-peg candidate. Actual fixed-length sole gaps remain 1.396/3.330 mm at Pro sample28; new bearing normal opposition 0.8486/0.9654 is point/edge support, not qualified moving contact. Full both-bike replay, ankle range, whole surfaces and selected art remain unaccepted; no player promotion.",
+  "calibration": {
+    "qualification": "SOURCE_DERIVED_ANKLE_CONTACT_CANDIDATE_MOVING_CONTACT_AND_ART_UNACCEPTED",
+    "soleCalibration": {
+      "path": "harness/out/rider-rebuild/selected-ankle-contact02/fixture02.json",
+      "sha256": "88236ba3996639e4fde8f1ec3207af0dfe4b7c3b4520abe367de96e6044ea545"
+    },
+    "rationale": "The actual fixture rotates the source foot/frame/normal about the anatomical ankle by the single measured sole-normal/peg-normal pitch, then settles actual rigid sole triangles against actual finite peg triangles. Copy those exact proposed contact frames; do not copy unreachable inverse ankle positions or claim zero gap. The previous torso envelope and existing three-candidate COM solver remain unchanged.",
+    "selection": "Existing poseRiding evaluates zero, the signed bound and one interpolated candidate, re-solving the same physical COM at every candidate. It selects the least absolute flex among the evaluated candidates with <=1 mm contact residual; otherwise the smallest observed gap.",
+    "invariants": "Keep the exact75 rest, authored segment lengths, physical pelvis carrier, physical COM target, collision proxy, physics state, source garment fields and all selected textures unchanged. Existing upper-spine rotations and COM inverse only.",
+    "driverBindings": [
+      "selectedSoleInFoot",
+      "selectedPegSurfaceBike",
+      "maxSpineFlexRadians",
+      "soleQuaternionBike"
+    ],
+    "nextJudgment": "Fresh actual Rookie and Pro recorded input clips, side yaw=0, including chosen flex, grip/sole/COM residuals, limb lengths and complete selected moving appearance.",
+    "previousSoleCalibration": {
+      "path": "assets/blender/rider-rebuild/selected-complete-engine01/engine05-sole-calibration.json",
+      "sha256": "7c2b1043a3e6cf19149d3b8188a49d19831483723e262b65d2e9be7729e753ef"
+    },
+    "generation": {
+      "fixture": {
+        "path": "harness/out/rider-rebuild/selected-ankle-contact02/fixture02.json",
+        "sha256": "88236ba3996639e4fde8f1ec3207af0dfe4b7c3b4520abe367de96e6044ea545"
+      },
+      "previous": {
+        "path": "assets/blender/rider-rebuild/selected-complete-engine01/engine05-contact-calibration02.json",
+        "sha256": "1dd8883351254041c2a5352833e453707737b0fe0a53fc050784bd0e63a3d5f7"
+      },
+      "controller": {
+        "path": "harness/rider-rebuild/private-rider.mjs",
+        "sha256": "399cab638028adbaa2efaa5b96aa412f7db09180bfb8ee89ab39cffeb5c9a33b"
+      },
+      "recipe": {
+        "path": "assets/blender/rider-rebuild/selected-ankle-contact02/generate-calibration.mjs",
+        "sha256": "09e7b6d8e7a437a3bf1d49afe2e766b2316605fc2621bb8c1f1e86ec6a87cd4d"
+      },
+      "derivation": "selectedSoleInFoot=pro.sides.proposed.soleInFoot; selectedPegSurfaceBike=contactPointBike; soleQuaternionBike=normalized quaternion from soleFrameBike, matching existing controller extraction.",
+      "bothBikeProposedContactRowsByteIdentical": true,
+      "fixedFixtureSample": {
+        "index": 28,
+        "tick": 290,
+        "time": 2.4166666666666665,
+        "recordedPhysicalPose": true,
+        "recordedFault": null,
+        "requestedCOM": [
+          0.01427911321953168,
+          0.9798432642760275,
+          0
+        ],
+        "fixedCarrierAngle": 0.9019180376069247,
+        "fixedSpineFlexRadians": -0.3315043923908312,
+        "recordedHips": [
+          -0.10258159870588046,
+          1.0114604018590507
+        ]
+      },
+      "fixtureResiduals": {
+        "soleErrM": [
+          0.0013963108783660722,
+          0.003329736786549957
+        ],
+        "legDemand": [
+          1.0017370749815027,
+          1.0041424731651307
+        ],
+        "inverseXYResidualM": 2.9117345231450892e-8,
+        "residualXYZM": [
+          2.1770700860124226e-8,
+          1.9335365974981755e-8,
+          -0.000009210052196438091
+        ]
+      },
+      "nextJudgment": "Actual full Rookie and Pro recorded replays through unchanged three-candidate solver; moving contact and selected appearance judged by parent."
+    }
+  }
+}

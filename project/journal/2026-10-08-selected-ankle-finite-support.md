@@ -9,3 +9,9 @@ Finding: Actual ankle/finite-peg geometry reduces the failing Pro fixture sole g
 Validation: Guarded actual source fixture succeeds3.338s; parent reads exact witnesses, verifies barycentric sums and settlement equality, all75 finite and exact toe localTRS. Initial receipt-directory failure retained.
 
 Limits: Positive realized support gap and fixed-length reach deficit remain; fixture is not a full replay, contact-area, anatomical-range or moving-art pass.
+
+Finding: Derive a private source-bound contact overlay from the actual fixture, including exact sole frames, finite peg points and sole orientation.
+
+Validation: Parent full source review and deterministic generator execution pass; both bike target arrays exactly match, original20degree torso bound retained.
+
+Limits: The unchanged three-candidate solver must still pass actual both-bike replay and moving review. Source/physics/player assets unchanged.
