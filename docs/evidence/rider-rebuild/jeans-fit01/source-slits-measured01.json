@@ -1,0 +1,446 @@
+{
+  "accepted": false,
+  "status": "MEASURED_ORIGINAL_C_TOPOLOGY_WITH_COMPLETE_MATERIAL_VISIBILITY",
+  "recipeSHA256": "b0a4436eeb349a0a59a822e787f25107db294df469ddc3ef7f00d3a2f0a8536d",
+  "rawReport": {
+    "path": "harness/out/rider-rebuild/jeans-source-slits01/source-material-sections.json",
+    "sha256": "fde750c0c11144120cf4e2b5a2061c89a0279c0be91b124a2fb23d30ebb97194"
+  },
+  "rawPolygons": {
+    "path": "harness/out/rider-rebuild/jeans-source-slits01/actual-section-polygons.npz",
+    "sha256": "99513a036bbf0621eed7c77dd573f0a0f1e953821eda962c4dc252711c6167d5"
+  },
+  "guard": {
+    "path": "harness/out/rider-rebuild/jeans-source-slits01-guard/guard.json",
+    "sha256": "1a76dbe891f6debae73e29ad16e0a16a5b79cd958e196a8e4146b81e62a5c0a7",
+    "exitCode": 0,
+    "elapsedSeconds": 2.708,
+    "peakAnonymousGiB": 49.6
+  },
+  "sources": {
+    "compact": {
+      "path": "assets/blender/hero-remaster/rider/finish-2026-10-05/wardrobe/data/prep02/jeans/retopology-prototype.npz",
+      "sha256": "6907492293a23765f49b41a64a65cbdf18a6e10b15cfd183416113352f759a49",
+      "topology": {
+        "vertices": 7978,
+        "triangles": 16000,
+        "boundaryEdges": 0,
+        "nonmanifoldEdges": 0,
+        "bounds": [
+          [
+            -0.4793980121612549,
+            -0.9991949796676636,
+            -0.2962520122528076
+          ],
+          [
+            0.4518660008907318,
+            0.973272979259491,
+            0.2748430073261261
+          ]
+        ]
+      },
+      "sha256After": "6907492293a23765f49b41a64a65cbdf18a6e10b15cfd183416113352f759a49",
+      "sections": [
+        {
+          "sourceY": 0.605,
+          "contourCount": 2,
+          "center": [
+            0.001082667743544681,
+            -0.024674232463354463
+          ],
+          "centerAuthority": "ACTUAL_NESTED_CAVITY_CENTROID",
+          "contourMaterialOccupancyAtCenter": [
+            true,
+            true
+          ],
+          "materialParityAtCenter": 0,
+          "completeAngularMaterialVisibility": {
+            "eventDirections": 338,
+            "gapIntervals": [],
+            "totalGapRadians": 0.0,
+            "method": "Float64 actual-segment angular cone event arrangement; no gap-grid approximation"
+          },
+          "sampledRays": 720,
+          "sampledGapRays": 0,
+          "actualMaterialCrossingCounts": [
+            2,
+            4
+          ],
+          "witnessPrefix": "compact-section-0",
+          "contours": [
+            {
+              "areaM2": 0.3224638386655681,
+              "centroid": [
+                0.0009233986187031718,
+                0.605,
+                -0.0254973495521158
+              ],
+              "pointCount": 147,
+              "polygonWitnessKey": "compact-0.605-0",
+              "ancestryWitnessPrefix": "compact-section-0-contour-0"
+            },
+            {
+              "areaM2": 0.2960515459072848,
+              "centroid": [
+                0.001082667743544681,
+                0.605,
+                -0.024674232463354463
+              ],
+              "pointCount": 133,
+              "polygonWitnessKey": "compact-0.605-1",
+              "ancestryWitnessPrefix": "compact-section-0-contour-1"
+            }
+          ]
+        },
+        {
+          "sourceY": 0.6416666666666666,
+          "contourCount": 1,
+          "center": [
+            0.0011713200650568343,
+            -0.027870019173208898
+          ],
+          "centerAuthority": "INTERPOLATED_MEASURED_NEIGHBOUR_CAVITY_PROPOSAL",
+          "contourMaterialOccupancyAtCenter": [
+            false
+          ],
+          "materialParityAtCenter": 0,
+          "completeAngularMaterialVisibility": {
+            "eventDirections": 338,
+            "gapIntervals": [],
+            "totalGapRadians": 0.0,
+            "method": "Float64 actual-segment angular cone event arrangement; no gap-grid approximation"
+          },
+          "sampledRays": 720,
+          "sampledGapRays": 0,
+          "actualMaterialCrossingCounts": [
+            2,
+            4
+          ],
+          "witnessPrefix": "compact-section-1",
+          "contours": [
+            {
+              "areaM2": 0.028462888384578777,
+              "centroid": [
+                -0.0012282376081605689,
+                0.6416666666666666,
+                -0.057586244033357506
+              ],
+              "pointCount": 278,
+              "polygonWitnessKey": "compact-0.6416666666666666-0",
+              "ancestryWitnessPrefix": "compact-section-1-contour-0"
+            }
+          ]
+        },
+        {
+          "sourceY": 0.6783333333333333,
+          "contourCount": 1,
+          "center": [
+            0.0012599723865689878,
+            -0.031065805883063347
+          ],
+          "centerAuthority": "INTERPOLATED_MEASURED_NEIGHBOUR_CAVITY_PROPOSAL",
+          "contourMaterialOccupancyAtCenter": [
+            false
+          ],
+          "materialParityAtCenter": 0,
+          "completeAngularMaterialVisibility": {
+            "eventDirections": 340,
+            "gapIntervals": [],
+            "totalGapRadians": 0.0,
+            "method": "Float64 actual-segment angular cone event arrangement; no gap-grid approximation"
+          },
+          "sampledRays": 720,
+          "sampledGapRays": 0,
+          "actualMaterialCrossingCounts": [
+            2,
+            4
+          ],
+          "witnessPrefix": "compact-section-2",
+          "contours": [
+            {
+              "areaM2": 0.028483380398672847,
+              "centroid": [
+                0.0014828272821375077,
+                0.6783333333333333,
+                -0.06299145306147176
+              ],
+              "pointCount": 275,
+              "polygonWitnessKey": "compact-0.6783333333333333-0",
+              "ancestryWitnessPrefix": "compact-section-2-contour-0"
+            }
+          ]
+        },
+        {
+          "sourceY": 0.715,
+          "contourCount": 2,
+          "center": [
+            0.0013486247080811411,
+            -0.034261592592917785
+          ],
+          "centerAuthority": "ACTUAL_NESTED_CAVITY_CENTROID",
+          "contourMaterialOccupancyAtCenter": [
+            true,
+            true
+          ],
+          "materialParityAtCenter": 0,
+          "completeAngularMaterialVisibility": {
+            "eventDirections": 332,
+            "gapIntervals": [],
+            "totalGapRadians": 0.0,
+            "method": "Float64 actual-segment angular cone event arrangement; no gap-grid approximation"
+          },
+          "sampledRays": 720,
+          "sampledGapRays": 0,
+          "actualMaterialCrossingCounts": [
+            2,
+            4
+          ],
+          "witnessPrefix": "compact-section-3",
+          "contours": [
+            {
+              "areaM2": 0.3076809041282391,
+              "centroid": [
+                0.0012522466157502557,
+                0.715,
+                -0.035806188092970974
+              ],
+              "pointCount": 151,
+              "polygonWitnessKey": "compact-0.715-0",
+              "ancestryWitnessPrefix": "compact-section-3-contour-0"
+            },
+            {
+              "areaM2": 0.27713526161556934,
+              "centroid": [
+                0.0013486247080811411,
+                0.715,
+                -0.034261592592917785
+              ],
+              "pointCount": 119,
+              "polygonWitnessKey": "compact-0.715-1",
+              "ancestryWitnessPrefix": "compact-section-3-contour-1"
+            }
+          ]
+        }
+      ]
+    },
+    "dense": {
+      "path": "assets/blender/hero-remaster/rider/finish-2026-10-05/wardrobe/data/prep02/jeans/cleaned-donor.npz",
+      "sha256": "c38413a36d564d97f106ebde13bb240d4c7075078ce463f30234a97c0f3d2237",
+      "topology": {
+        "vertices": 420800,
+        "triangles": 841644,
+        "boundaryEdges": 0,
+        "nonmanifoldEdges": 0,
+        "bounds": [
+          [
+            -0.4803119897842407,
+            -0.9994540214538574,
+            -0.29757800698280334
+          ],
+          [
+            0.4520139992237091,
+            0.9737979769706726,
+            0.2754310071468353
+          ]
+        ]
+      },
+      "sha256After": "c38413a36d564d97f106ebde13bb240d4c7075078ce463f30234a97c0f3d2237",
+      "sections": [
+        {
+          "sourceY": 0.605,
+          "contourCount": 2,
+          "center": [
+            0.0010691456697736021,
+            -0.024894509455423635
+          ],
+          "centerAuthority": "ACTUAL_NESTED_CAVITY_CENTROID",
+          "contourMaterialOccupancyAtCenter": [
+            true,
+            true
+          ],
+          "materialParityAtCenter": 0,
+          "completeAngularMaterialVisibility": {
+            "eventDirections": 2402,
+            "gapIntervals": [],
+            "totalGapRadians": 0.0,
+            "method": "Float64 actual-segment angular cone event arrangement; no gap-grid approximation"
+          },
+          "sampledRays": 720,
+          "sampledGapRays": 0,
+          "actualMaterialCrossingCounts": [
+            2,
+            4
+          ],
+          "witnessPrefix": "dense-section-0",
+          "contours": [
+            {
+              "areaM2": 0.32278464030014276,
+              "centroid": [
+                0.001146522925885715,
+                0.605,
+                -0.025440979567385526
+              ],
+              "pointCount": 1016,
+              "polygonWitnessKey": "dense-0.605-0",
+              "ancestryWitnessPrefix": "dense-section-0-contour-0"
+            },
+            {
+              "areaM2": 0.29676359857587314,
+              "centroid": [
+                0.0010691456697736021,
+                0.605,
+                -0.024894509455423635
+              ],
+              "pointCount": 957,
+              "polygonWitnessKey": "dense-0.605-1",
+              "ancestryWitnessPrefix": "dense-section-0-contour-1"
+            }
+          ]
+        },
+        {
+          "sourceY": 0.6416666666666666,
+          "contourCount": 1,
+          "center": [
+            0.0011509272843234527,
+            -0.028219965292355643
+          ],
+          "centerAuthority": "INTERPOLATED_MEASURED_NEIGHBOUR_CAVITY_PROPOSAL",
+          "contourMaterialOccupancyAtCenter": [
+            false
+          ],
+          "materialParityAtCenter": 0,
+          "completeAngularMaterialVisibility": {
+            "eventDirections": 2399,
+            "gapIntervals": [],
+            "totalGapRadians": 0.0,
+            "method": "Float64 actual-segment angular cone event arrangement; no gap-grid approximation"
+          },
+          "sampledRays": 720,
+          "sampledGapRays": 0,
+          "actualMaterialCrossingCounts": [
+            2,
+            4
+          ],
+          "witnessPrefix": "dense-section-1",
+          "contours": [
+            {
+              "areaM2": 0.02865692674203138,
+              "centroid": [
+                -0.0006135959762832248,
+                0.6416666666666666,
+                -0.0588060123667819
+              ],
+              "pointCount": 1967,
+              "polygonWitnessKey": "dense-0.6416666666666666-0",
+              "ancestryWitnessPrefix": "dense-section-1-contour-0"
+            }
+          ]
+        },
+        {
+          "sourceY": 0.6783333333333333,
+          "contourCount": 1,
+          "center": [
+            0.0012327088988733036,
+            -0.03154542112928767
+          ],
+          "centerAuthority": "INTERPOLATED_MEASURED_NEIGHBOUR_CAVITY_PROPOSAL",
+          "contourMaterialOccupancyAtCenter": [
+            false
+          ],
+          "materialParityAtCenter": 0,
+          "completeAngularMaterialVisibility": {
+            "eventDirections": 2375,
+            "gapIntervals": [],
+            "totalGapRadians": 0.0,
+            "method": "Float64 actual-segment angular cone event arrangement; no gap-grid approximation"
+          },
+          "sampledRays": 720,
+          "sampledGapRays": 0,
+          "actualMaterialCrossingCounts": [
+            2,
+            4
+          ],
+          "witnessPrefix": "dense-section-2",
+          "contours": [
+            {
+              "areaM2": 0.02837183216320885,
+              "centroid": [
+                0.00174064488559186,
+                0.6783333333333333,
+                -0.06269077772173198
+              ],
+              "pointCount": 1942,
+              "polygonWitnessKey": "dense-0.6783333333333333-0",
+              "ancestryWitnessPrefix": "dense-section-2-contour-0"
+            }
+          ]
+        },
+        {
+          "sourceY": 0.715,
+          "contourCount": 2,
+          "center": [
+            0.0013144905134231542,
+            -0.034870876966219676
+          ],
+          "centerAuthority": "ACTUAL_NESTED_CAVITY_CENTROID",
+          "contourMaterialOccupancyAtCenter": [
+            true,
+            true
+          ],
+          "materialParityAtCenter": 0,
+          "completeAngularMaterialVisibility": {
+            "eventDirections": 2342,
+            "gapIntervals": [],
+            "totalGapRadians": 0.0,
+            "method": "Float64 actual-segment angular cone event arrangement; no gap-grid approximation"
+          },
+          "sampledRays": 720,
+          "sampledGapRays": 0,
+          "actualMaterialCrossingCounts": [
+            2,
+            4
+          ],
+          "witnessPrefix": "dense-section-3",
+          "contours": [
+            {
+              "areaM2": 0.30839562627305833,
+              "centroid": [
+                0.0012506307101353442,
+                0.715,
+                -0.03607389965577806
+              ],
+              "pointCount": 998,
+              "polygonWitnessKey": "dense-0.715-0",
+              "ancestryWitnessPrefix": "dense-section-3-contour-0"
+            },
+            {
+              "areaM2": 0.2777963164056886,
+              "centroid": [
+                0.0013144905134231542,
+                0.715,
+                -0.034870876966219676
+              ],
+              "pointCount": 915,
+              "polygonWitnessKey": "dense-0.715-1",
+              "ancestryWitnessPrefix": "dense-section-3-contour-1"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "finding": "Both original dense and compact retain genuine C material topology at the same two source pelvis planes, with wearer-air centre and zero actual angular visibility gaps. Nested-cavity-only fitting was structurally incorrect for this selected garment. Preserve C topology and fit actual first material crossings with source face witnesses.",
+  "nextConstruction": "Source-only registration repair after parent checkpoint; cuff coordinates remain pending actual boot exterior/collar.",
+  "limits": [
+    "No source fit, body change, native garment, bake, or moving-art acceptance.",
+    "Failed-plane centres interpolate genuine measured neighbouring cavities; they are proposals, not fictitious nested contours.",
+    "Directional gaps are retained explicitly, with actual original face/edge witnesses.",
+    "No deformation, body collision/clearance, distortion, native fields, UV/bake, garment motion or Garage/game acceptance.",
+    "The centre of a C section is explicitly proposed from measured neighbouring empty cavities, then actual plane material occupancy and angular visibility are checked.",
+    "Float64 event arrangement describes these four actual source planes; it does not establish every longitudinal plane or final 3D wearer containment."
+  ],
+  "evidenceWitness": {
+    "path": "docs/evidence/rider-rebuild/jeans-fit01/source-slits-witness01.npz",
+    "sha256": "b9485050377e4c16442aea93ef20ef746250e7aff51abaa457c9ab5aadc7d835"
+  }
+}
