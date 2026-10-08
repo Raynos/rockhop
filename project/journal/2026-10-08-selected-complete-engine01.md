@@ -25,3 +25,7 @@ Limits: Maskedexport/completeplayed/Garage stillpending; allR0-R5open.
 Finding: Actual export02 catches installed glTF fixed1e-4 weight cutoff. Mirror cutoff and renormalize only seven deliverycopies before native save; retain original/fullreference.
 Validation: Actualguardexit1/38.987s, exactinstalledprimarysource read; revisedASTpass. Strict decoded2e-5 check retained.
 Limits: Partialexport02 unqualified; successfulexport/playedGarage pending.
+
+Finding: Actual masked export03 saves all7 selected meshes andexact75 with original4KPBR; fullanatomy remainsimmutable. Nativefdff343/GLB7d826b8.
+Validation: CPU2 guardexit0/63.844s; decodednamedFOURmax1.1920928955078125e-7, sourcecutofflossmax0.000210335. Actualmask normalreencodingmax0.000510302 retained; notbyteidentical. Full7PBR andnativegeneric inputs bind actualsavedmaster.
+Limits: Exportinputqualificationonly, notnativeGPUmovingparity/art/device. CompleteplayedGarage/game next; allR0-R5open.

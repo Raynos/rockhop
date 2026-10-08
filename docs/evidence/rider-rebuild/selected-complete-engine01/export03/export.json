@@ -1,0 +1,145 @@
+{
+  "accepted": false,
+  "status": "PRIVATE_SELECTED_MASKED_ENGINE_EXPORT_REVIEW_PENDING",
+  "native": {
+    "path": "harness/out/rider-rebuild/selected-complete-engine01/engine03/rider-private-masked.blend",
+    "sha256": "fdff3433c26c345d6f0555f196033f5ba76791d5d566b448991bd1fab2eff384"
+  },
+  "glb": {
+    "path": "harness/out/rider-rebuild/selected-complete-engine01/engine03/rider.glb",
+    "sha256": "7d826b835ca07c7c584d6b3a9606e9e89780f1c7b92e4030e1f1b58aff4127ed"
+  },
+  "recipeSHA256": "c8a310e27b3008ce7c55c0b398e6f4906c4217f75446efe096ec8b97b688a476",
+  "manifestSHA256": "150e90e2ee693e80a2e0092baf0eafae3762490d992e5347f92c9ebe8876e640",
+  "bodyMaskReceipt": "body-mask-receipt.json",
+  "renderBodyFourConditioning": {
+    "method": "Largest FOUR source coefficients, normalized on render derivative only",
+    "sourceMaximumPositiveInfluences": 5,
+    "sourceRowsAboveFour": 16,
+    "maximumRemovedMass": 0.03507433086633682,
+    "fullAnatomyReferenceChanged": false
+  },
+  "renderDeliveryExportCutoffConditioning": [
+    {
+      "object": "RiderBody",
+      "cutoff": 0.0001,
+      "changedRows": 19,
+      "maximumRemovedMass": 9.411774954060093e-05,
+      "method": "Mirror installed glTF fixed cutoff then normalize before native save/export"
+    },
+    {
+      "object": "ActualSelectedGlove.L",
+      "cutoff": 0.0001,
+      "changedRows": 6485,
+      "maximumRemovedMass": 0.0002093246002914384,
+      "method": "Mirror installed glTF fixed cutoff then normalize before native save/export"
+    },
+    {
+      "object": "ActualSelectedGlove.R",
+      "cutoff": 0.0001,
+      "changedRows": 6536,
+      "maximumRemovedMass": 0.00021033502343925647,
+      "method": "Mirror installed glTF fixed cutoff then normalize before native save/export"
+    },
+    {
+      "object": "ActualSelectedBoot.L",
+      "cutoff": 0.0001,
+      "changedRows": 2835,
+      "maximumRemovedMass": 9.99874755507335e-05,
+      "method": "Mirror installed glTF fixed cutoff then normalize before native save/export"
+    },
+    {
+      "object": "ActualSelectedBoot.R",
+      "cutoff": 0.0001,
+      "changedRows": 2779,
+      "maximumRemovedMass": 9.999828034779057e-05,
+      "method": "Mirror installed glTF fixed cutoff then normalize before native save/export"
+    },
+    {
+      "object": "RiderJeans",
+      "cutoff": 0.0001,
+      "changedRows": 13,
+      "maximumRemovedMass": 9.915579721564427e-05,
+      "method": "Mirror installed glTF fixed cutoff then normalize before native save/export"
+    },
+    {
+      "object": "RiderHoodie",
+      "cutoff": 0.0001,
+      "changedRows": 5147,
+      "maximumRemovedMass": 0.00017620524886297062,
+      "method": "Mirror installed glTF fixed cutoff then normalize before native save/export"
+    }
+  ],
+  "decodedFourQualification": {
+    "decodedSourceFOURMatchesSavedNative": true,
+    "objects": [
+      {
+        "object": "ActualSelectedBoot.L",
+        "decodedPrimitiveRows": 466146,
+        "nativeSurfaceVertexIDs": 305453,
+        "maximumNamedWeightResidual": 0.0,
+        "maximumNativePositiveInfluences": 2
+      },
+      {
+        "object": "ActualSelectedBoot.R",
+        "decodedPrimitiveRows": 466146,
+        "nativeSurfaceVertexIDs": 305453,
+        "maximumNamedWeightResidual": 0.0,
+        "maximumNativePositiveInfluences": 2
+      },
+      {
+        "object": "ActualSelectedGlove.L",
+        "decodedPrimitiveRows": 439646,
+        "nativeSurfaceVertexIDs": 284571,
+        "maximumNamedWeightResidual": 1.1920928955078125e-07,
+        "maximumNativePositiveInfluences": 4
+      },
+      {
+        "object": "ActualSelectedGlove.R",
+        "decodedPrimitiveRows": 439646,
+        "nativeSurfaceVertexIDs": 284571,
+        "maximumNamedWeightResidual": 1.1920928955078125e-07,
+        "maximumNativePositiveInfluences": 4
+      },
+      {
+        "object": "RiderBody",
+        "decodedPrimitiveRows": 40189,
+        "nativeSurfaceVertexIDs": 32412,
+        "maximumNamedWeightResidual": 1.1920928955078125e-07,
+        "maximumNativePositiveInfluences": 4
+      },
+      {
+        "object": "RiderHoodie",
+        "decodedPrimitiveRows": 2761252,
+        "nativeSurfaceVertexIDs": 716971,
+        "maximumNamedWeightResidual": 1.1920928955078125e-07,
+        "maximumNativePositiveInfluences": 4
+      },
+      {
+        "object": "RiderJeans",
+        "decodedPrimitiveRows": 26474,
+        "nativeSurfaceVertexIDs": 26063,
+        "maximumNamedWeightResidual": 1.1920928955078125e-07,
+        "maximumNativePositiveInfluences": 4
+      }
+    ],
+    "limits": "Source transport fields only; native-vs-actual-GPU moving parity remains open."
+  },
+  "objects": [
+    "ActualSelectedBoot.L",
+    "ActualSelectedBoot.R",
+    "ActualSelectedGlove.L",
+    "ActualSelectedGlove.R",
+    "RiderBody",
+    "RiderHoodie",
+    "RiderJeans"
+  ],
+  "rigAndContractExactNative75": true,
+  "normalPlayerAssetsWritten": false,
+  "limits": [
+    "Structural export intake only. All R0-R5 remain open.",
+    "Actual Garage/game continuous motion, GPU parity and device performance require parent judgment.",
+    "Original4K maps embedded; this dense private preview does not meet a shipping performance gate.",
+    "No old combined04 calibration transferred across corrected finger rest frames."
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "accepted": false,
+  "ready": true,
+  "mode": "stills",
+  "objects": [
+    "RiderBody",
+    "RiderHoodie",
+    "RiderJeans",
+    "ActualSelectedGlove.L",
+    "ActualSelectedGlove.R",
+    "ActualSelectedBoot.L",
+    "ActualSelectedBoot.R"
+  ],
+  "bodyObject": "RiderBody",
+  "rigObject": "RiderSkeleton",
+  "focus": [
+    0,
+    -0.025,
+    0.9
+  ],
+  "orthoScale": 2.12,
+  "views": {
+    "front": [
+      0,
+      -4,
+      1.0
+    ],
+    "rear": [
+      0,
+      4,
+      1.0
+    ],
+    "left-profile": [
+      -4,
+      0,
+      1.0
+    ],
+    "right-profile": [
+      4,
+      0,
+      1.0
+    ]
+  },
+  "renderer": {
+    "path": "assets/blender/rider-rebuild/production-assembly01/render.py",
+    "sha256": "e50dd77cfa8ebf4f8a1efbfa81beeaea4e224cdef3b4fd82fe99bb81fd771e4b"
+  },
+  "limits": [
+    "Actual all7 selected PBR static diagnostic only; continuous native and actual Garage/game must follow. AllR0-R5open."
+  ],
+  "expectedRenderOutput": "harness/out/rider-rebuild/production-assembly01/selected-complete-masked01",
+  "native": {
+    "path": "harness/out/rider-rebuild/selected-complete-engine01/engine03/rider-private-masked.blend",
+    "sha256": "fdff3433c26c345d6f0555f196033f5ba76791d5d566b448991bd1fab2eff384"
+  }
+}

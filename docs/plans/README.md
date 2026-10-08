@@ -1559,3 +1559,5 @@ October8 exact native-rest intake schema corrected to includeuseConnect/useDefor
 October8 actualexport02 decoder catches Blender fixed1e-4 coefficientcutoff; deliverycopies now mirror cutoff before nativesave, strictdecodedFOUR preserved. Actualengine03 pending;0/6.
 
 October8 required silentMetal currentplayergate18 passes11/11, exactfinish/hash/one-tickrestart. Selectedcompleteexport native/decodedFOURpasses, art/game/device remainunaccepted0/6.
+
+October8 actualmaskedselected export03 succeeds: exact7parts/75, strictdecodedFOURmax1.1921e-7, fullreference unchanged, original4KPBR. Nativefdff343/GLB7d826b8; fullPBR/actualGarage/game next, allR0-R5open0/6.
