@@ -1527,3 +1527,5 @@ October8 selected boot pair source frozen: retain actual successful curved right
 October8 required current-player silentMetal gate16 after third construction mutation passes11/11 CPU2guardexit0/6.336s, exactfinish/hash andonetickrestart. Existing player only; new selected rider remains unaccepted0/6.
 
 October8 actual original hoodie7bone transport PBR rejected: sleeves swing upward besidehead and expose front/rear armholes despite exactUV/PBR/matrix checks. Stop integration; diagnose actual source-coordinate/bindframes with fresh Astra06. Source/native/evidence preserved; no rider acceptance.
+
+October8 read-only actual saved hoodie source-frame probe frozen: rawGLTF sleeve centers independently match controls; fresh Astra predicts zero-length editbone matrix-before-length loses source direction. Verify actual saved rest frames before one minimal correction, not more garment gain tuning.
