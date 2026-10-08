@@ -74,7 +74,9 @@ concurrently. These are final-intent selected assets; no generic substitutions.
   fit continuous sleeves/shoulder into a genuinely healthy exterior region and
   replace defective inward surfaces. The old independent-sheet preparation is
   rejected. Glove-only recovery source preserves both finished native gloves
-  before any sleeve edit; its actual guarded run is active. Sleeve28 now uses
+  before any sleeve edit; actual run01 stopped after68.447s at shared-memory
+  guard, with no saved native. A reduced-memory wrapper removes unused hoodie
+  copies and finished-glove scratch. Sleeve28 now uses
   one continuous field for both retained cloth walls, followed by new lining.
   Five fixtures pass, including complete curved two-wall contact; actual dense
   and moving gates remain pending.
