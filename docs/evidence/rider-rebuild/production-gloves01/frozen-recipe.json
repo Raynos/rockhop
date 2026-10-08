@@ -1,7 +1,7 @@
 {
-  "status": "SOURCE_CHECKPOINT_BEFORE_HEAVY_TRIAL",
+  "status": "ONE_TARGETED_SHAPE_REPAIR_SOURCE_BEFORE_HEAVY_TRIAL",
   "acceptedArt": false,
-  "executedHeavyJobs": 0,
+  "executedHeavyJobs": 1,
   "trialBudget": {
     "cpuThreads": 2,
     "authoredPasses": 1,
@@ -10,7 +10,7 @@
   "sourceFiles": [
     {
       "path": "assets/blender/rider-rebuild/production-gloves01/author.py",
-      "sha256": "83078faf903a7a012aea3b8f56cc7746bc44e03d08f45fa8d17589584156200e"
+      "sha256": "661880dd0ccb75738341ace95343cfbf46c11b202d0643dae520a6afcb8e8d59"
     },
     {
       "path": "assets/blender/rider-rebuild/production-gloves01/inputs.json",
@@ -18,7 +18,7 @@
     },
     {
       "path": "docs/evidence/rider-rebuild/production-gloves01/CONSTRUCTION.md",
-      "sha256": "4438e566b58cb4a9da585e0eef1f9669990efd93fa8e077aa70ea219b62e7fa3"
+      "sha256": "0b51848c33f2a0b57b3288d70af9b3a2862cff02c9bd9f3a12866d3766695946"
     }
   ],
   "sourcePins": {
@@ -76,5 +76,16 @@
     "selectedSource": 4096,
     "firstLookDerivative": 1024,
     "final4KMasterBake": "NOT_EXECUTED"
+  },
+  "executedGeometryPasses": 1,
+  "executedTargetedShapeRepairs": 0,
+  "targetedShapeRepairSourceAuthored": true,
+  "actualFirstPassFailure": {
+    "path": "docs/evidence/rider-rebuild/production-gloves01/author-trial01.json",
+    "sha256": "81b249b8c89f0e892b17b6467437111f49d44eac47ae08e3d7944efb8a5574c0"
+  },
+  "currentRayDiagnosisAuthority": {
+    "path": "docs/evidence/rider-rebuild/production-gloves01/pinky-probe-diagnosis01.json",
+    "sha256": "4f7e990c2641236cdcc897011c5a98d451afc4eea87cb3e38b6fe437a253ae88"
   }
 }

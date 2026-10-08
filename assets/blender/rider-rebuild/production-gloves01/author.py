@@ -24,6 +24,21 @@ ROOT = Path(__file__).resolve().parents[4]
 HERE = Path(__file__).resolve().parent
 DIGITS = ('pinky', 'ring', 'middle', 'index', 'thumb')
 sha = lambda path: hashlib.sha256(Path(path).read_bytes()).hexdigest()
+# Artist controls in meters, informed by actual R/L geometric web starts and
+# the selected narrow stitched panels. These are construction decisions, not
+# measured bilateral fit/clearance results. Every panel uses its own real hand.
+FINGER_TAILORING = {
+    'R': {'pinky': (.049, (.0074, .0070, .0064)),
+          'ring': (.049, (.0090, .0086, .0078)),
+          'middle': (.047, (.0096, .0094, .0085)),
+          'index': (.043, (.0090, .0084, .0070)),
+          'thumb': (.050, (.0100, .0092, .0078))},
+    'L': {'pinky': (.0495, (.0074, .0070, .0064)),
+          'ring': (.049, (.0090, .0086, .0078)),
+          'middle': (.0475, (.0096, .0094, .0085)),
+          'index': (.043, (.0090, .0084, .0070)),
+          'thumb': (.050, (.0100, .0092, .0078))},
+}
 
 
 def unit(value):
@@ -93,9 +108,18 @@ class HandAuthor:
             ease[mask] *= .72 + .28 * taper
         self.scaffold = v + n * ease[:, None]
         self.bvh = BVHTree.FromPolygons(self.scaffold.tolist(), f.tolist(), all_triangles=True)
-        self.digit_bvh = {digit: BVHTree.FromPolygons(self.scaffold.tolist(),
-            f[np.max(masses[f, i], axis=1) > .08].tolist(), all_triangles=True)
-            for i, digit in enumerate(DIGITS)}
+        # Existing named geometric tip-branch vertex IDs are support only.
+        # They came with the actual hand target; skin weights do not own faces.
+        geometric_seeds = hand['sourceHandBranchSeeds']
+        self.digit_bvh = {}
+        self.support_counts = {}
+        for i, digit in enumerate(DIGITS):
+            own = np.any(geometric_seeds[f] == i, axis=1)
+            unrelated = np.any((geometric_seeds[f] >= 0) & (geometric_seeds[f] != i), axis=1)
+            support = f[own & ~unrelated]
+            assert len(support), ('Missing existing geometric support', side, digit)
+            self.digit_bvh[digit] = BVHTree.FromPolygons(self.scaffold.tolist(), support.tolist(), all_triangles=True)
+            self.support_counts[digit] = len(support)
         shell_fields = [self.paint(p, DIGITS[int(label)] if label >= 0 else None) for p, label in zip(v, labels)]
         self.append('tailored-shell', self.scaffold, f, shell_fields)
 
@@ -151,7 +175,10 @@ class HandAuthor:
 
     def surface(self, p, outward, digit=None):
         bvh = self.digit_bvh[digit] if digit else self.bvh
-        hit, normal, _, _ = bvh.ray_cast(Vector(p + outward * .06), Vector(-outward), .12)
+        # Bounded dorsal projection onto the finger's own geometric support.
+        # The former60mm cross-palm width ray began inside the proximal web.
+        radius = .024 if digit else .06
+        hit, normal, _, _ = bvh.ray_cast(Vector(p + outward * radius), Vector(-outward), radius * 2)
         if hit is None or np.dot(normal, outward) < .1:
             raise RuntimeError(f'{self.side}: authored panel ray misses its hand at {p}')
         return np.array(hit), unit(normal)
@@ -201,6 +228,17 @@ class HandAuthor:
                     faces.append([a, b, b + 6, a + 6])
         self.append(name, vertices, faces, fields)
 
+    def finger_station(self, digit, distance):
+        chain = self.chain(digit)
+        lengths = np.array([np.linalg.norm(self.tail(b) - self.head(b)) for b in chain])
+        starts = np.r_[0, np.cumsum(lengths)]
+        segment = min(2, int(np.searchsorted(starts, distance, side='right') - 1))
+        along = unit(self.tail(chain[segment]) - self.head(chain[segment]))
+        center = self.head(chain[segment]) + along * (distance - starts[segment])
+        across = unit(self.radial - along * np.dot(self.radial, along))
+        outward = unit(self.dorsal - along * np.dot(self.dorsal, along))
+        return center, along, across, outward, float(starts[-1])
+
     def construct(self):
         width = np.linalg.norm(self.head('DEF-f_index.01.' + self.side) - self.head('DEF-f_pinky.01.' + self.side))
         self.panel('selected-knuckle-pad', self.wrist + self.forward * .061, self.forward, self.radial, self.dorsal,
@@ -210,28 +248,25 @@ class HandAuthor:
         self.panel('selected-palm-grip-pad', self.wrist + self.forward * .043, self.forward, self.radial, -self.dorsal,
                    .042, width * .55, height=.001)
         for digit in DIGITS:
-            chain = self.chain(digit)
-            for segment in (0, 1, 2):
-                a, b = self.head(chain[segment]), self.tail(chain[segment])
-                along = unit(b - a)
-                across = unit(self.radial - along * np.dot(self.radial, along))
-                outward = unit(self.dorsal - along * np.dot(self.dorsal, along))
-                # Width is fitted to each actual digit's two radial surfaces.
-                mid = (a + b) / 2
-                plus, _ = self.surface(mid, across, digit)
-                minus, _ = self.surface(mid, -across, digit)
-                finger_width = min(.017, np.linalg.norm(plus - minus))
-                self.panel(f'{digit}-segment{segment + 1}-leather-panel', mid, along, across, outward,
-                           np.linalg.norm(b - a) * .62, finger_width * .48, digit, .00065)
-                if segment < 2:
-                    # Three narrow articulated ribs sit before the joint.
-                    for rib in range(3):
-                        c = b - along * (.004 + rib * .0021)
-                        path = []
-                        for x in np.linspace(-.28, .28, 9):
-                            q, n = self.surface(c + across * x * finger_width, outward, digit)
-                            path.append(q + n * .0007)
-                        self.tube(f'{digit}-joint{segment + 1}-rib{rib + 1}', np.array(path), .00065, digit)
+            web_start, widths = FINGER_TAILORING[self.side][digit]
+            total = self.finger_station(digit, web_start)[-1]
+            available = total - web_start
+            assert available > .025, ('Tailored finger panel room', self.side, digit)
+            # Three individually shaped pads start beyond the actual visible web,
+            # independent of where a proximal bone happens to divide the palm.
+            for panel, fraction in enumerate((.17, .53, .84)):
+                center, along, across, outward, _ = self.finger_station(digit, web_start + available * fraction)
+                self.panel(f'{digit}-visible{panel + 1}-leather-panel', center, along, across, outward,
+                           available * (.23 if panel < 2 else .20), widths[panel], digit, .00065)
+            for band, fraction in enumerate((.35, .69)):
+                for rib in range(3):
+                    station = web_start + available * fraction + (rib - 1) * .0018
+                    c, _, across, outward, _ = self.finger_station(digit, station)
+                    path = []
+                    for x in np.linspace(-.46, .46, 9):
+                        q, n = self.surface(c + across * x * widths[band], outward, digit)
+                        path.append(q + n * .0007)
+                    self.tube(f'{digit}-visible-joint{band + 1}-rib{rib + 1}', np.array(path), .00065, digit)
         boundary = self.hand['cuffBoundaryEdges']
         adjacency = {}
         for a, b in boundary:
@@ -472,7 +507,9 @@ def main():
             report['hands'][side] = {'vertices': len(target.data.vertices), 'polygons': len(target.data.polygons),
                                     'authoredFeatures': author.features, 'textures': {},
                                     'actualTargetGeometry': records['hand' + side], 'donorAppearanceReflected': side == 'L',
-                                    'sharedArmature': rig.name, 'newUV': target.data.uv_layers.active.name}
+                                    'sharedArmature': rig.name, 'newUV': target.data.uv_layers.active.name,
+                                    'artistFingerTailoringControls': FINGER_TAILORING[side],
+                                    'existingGeometricFingerSupportTriangles': author.support_counts}
         report['bodyAndRestBefore'] = before
         report['bodyAndRestAfter'] = body_signature(body_obj, rig)
         assert report['bodyAndRestAfter'] == before

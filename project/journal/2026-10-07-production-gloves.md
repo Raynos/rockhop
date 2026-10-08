@@ -11,3 +11,9 @@ Finding: first geometry pass stops at a proximal pinky width probe before native
 Validation: actual guard exit1 in1.348s, byte-identical trace and same full/filtered hitface1313 at69.3495mm with normal dot−.96288 retained.
 
 Limits: no anatomy defect proved, no saved glove or bake. Use explicit tailored finger widths/web starts and local actual surface support, then one controlled shape repair.
+
+Finding: Replace long cross-palm width probes with explicit bilateral web starts and widths, and bounded local dorsal support from existing geometric finger seeds. Retain selected pads, panels, seams, closure and actual dense paint.
+
+Validation: parent reviews the concrete source correction; AST, 11 input pins and refreshed source hashes match.
+
+Limits: repaired author source is unexecuted and unaccepted; no map or moving-art acceptance.

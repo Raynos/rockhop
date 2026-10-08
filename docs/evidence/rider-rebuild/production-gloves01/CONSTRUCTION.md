@@ -1,11 +1,12 @@
-# Authored selected glove: frozen first pass, unaccepted
+# Authored selected glove: narrow finger-panel repair, unaccepted
 
 The corrected native02 hand is a construction guide. `author.py` builds a
 separate production object for each actual hand, deliberately tailors dorsal,
 palm, finger and distal allowance, then models the selected glove's knuckle pad,
 lower back panel, palm grip pad, leather finger panels, articulated joint ribs,
 raised sewn edges, cuff lip and closure strap. This is executable modeling
-source, not another correspondence proposal. No heavy trial has run yet.
+source, not another correspondence proposal. The first geometry trial failed
+before saving. The narrow source-only repair remains unexecuted.
 
 The immutable selected high-resolution paint authority is the original
 `painted.glb` (SHA256 `890f8693256347156c20f82a62dd79e2145cf511e7a85eb5239089644a20bfea`).
@@ -26,6 +27,17 @@ data supplies only high-sculpt anatomical routing and source landmark positions.
 There is no root filtration, homology proof, ray/contact optimizer, ARAP,
 original-face constraint or fabrication-lining requirement. A persistent
 structural failure calls for rebuilding the region, not additional solvers.
+
+Current panel authority is `PINKY-PROBE-DIAGNOSIS01.md`: the failed cross-palm
+width probe hit a real exit face, then rejected its normal. Its origin was
+inside the complete palm/web interval; no bone defect was established. The
+source-only repair removes opposite long radial width rays. Explicit artist
+controls give each actual finger its visible-web start and three pad widths;
+panels/rib bands lie along the available visible finger arc. Existing geometric
+tip-branch vertex IDs from each actual hand restrict bounded local dorsal
+projection to its own finger. Skin coefficients no longer own these surfaces.
+This reuses existing hand construction support and introduces no chart solver.
+Controls are modeling decisions, not measured bilateral fit/clearance success.
 
 New coherent runtime corner UVs are unwrapped in Blender. A separate explicit
 cage per hand bakes selected dense base color, packed metallic/roughness, and
@@ -62,21 +74,23 @@ or finite-handlebar calibration. The parent must inspect the textured output
 against the selected source, play movement, integrate the pair into the dressed
 master, and judge actual Garage/game motion.
 
-Validation before trial: Python syntax compiles; owned diff passes whitespace
+Validation of source-only repair: Python syntax compiles; owned diff passes whitespace
 checks; all eleven source pin bytes were read and hashed. Owned three-dimensional
 NumPy matrix projections use explicit sums/einsum, with no warning filters.
-Blender modeling,
-bake, saved-body/rest identity and played appearance remain unexecuted.
+The first model pass exited1 in1.348seconds and saved no complete mesh. Repaired
+Blender modeling, bake, saved-body/rest identity and played appearance remain
+unexecuted. Original failure and exact diagnostic evidence remain intact.
 
 Run only after the parent checkpoints this source and grants one serial CPU2
 bounded trial lease:
 
 ```sh
-blender --background --threads 2 --python assets/blender/rider-rebuild/production-gloves01/author.py -- harness/out/rider-rebuild/production-gloves01/authored01
+blender --background --threads 2 --python assets/blender/rider-rebuild/production-gloves01/author.py -- harness/out/rider-rebuild/production-gloves01/authored02 --stage geometry
 ```
 
 The same output can be staged explicitly with `--stage geometry` first, then
 `--stage bake`, under the parent's serial lease.
 
-At most one targeted repair of the same mechanism follows this pass. Nothing
+This is the one targeted shape-repair source; it has not run. A persistent
+structural failure requires rebuilding the region. Nothing
 is copied to normal-player assets and no artistic/release gate is claimed.
