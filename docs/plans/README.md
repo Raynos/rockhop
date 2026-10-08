@@ -1581,3 +1581,5 @@ October8 Garage04 exposed second resident low-tier texture shrink after loader p
 October8 selected cuff taper localorientation correction reviewed:6L/4Rnoncontrol amplitude reductions, measuredcontrols/prioranatomicaledits exact;float32orientation positive. Actualdense transfer next;all0/6open.
 
 October8 selected already-masked shape-only reexport source reviewed: independentparent/current fingerprints, only2glovepositions allowed, originalmask/FOUR preservedexact; commonstrictfinalizer. Actualcorrectednative pins/runtime next;all0/6open.
+
+October8 cuffauthor01 stopped41.530s at Blender library-name listmutation afterdense transfer, no correctedfinalsave. Fixrequest-list alias only; measuredcontrols/binding unchanged. Actualrerun next,all0/6open.

@@ -121,7 +121,9 @@ def main():
     names = ['Gloves__LocalAnatomicalGuide04.'+s for s in ('L','R')]+['Gloves__LocallySculptedSelected04.'+s for s in ('L','R')]+[source_name,driver_name]
     # The saved checkpoint supplies the permanent edited guides, actual stock
     # transfer binding and original FULL fields; all imported aids remain hidden.
-    with bpy.data.libraries.load(str(checkpoint),link=False) as (_,loaded): loaded.objects = names
+    # Blender replaces requested strings with loaded datablocks in-place.
+    # Keep the immutable name list separate from that mutable request list.
+    with bpy.data.libraries.load(str(checkpoint),link=False) as (_,loaded): loaded.objects = list(names)
     imported = dict(zip(names,loaded.objects)); imported_rigs = set()
     for old_name, obj in imported.items():
         assert obj is not None; scene.collection.objects.link(obj); obj.hide_render=True; obj.hide_set(True)

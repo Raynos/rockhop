@@ -1,0 +1,19 @@
+00:15.933  blend            | Read blend: "/Users/raynos/projects/games/rockhop/harness/out/rider-rebuild/glove-anatomical04/local04/editable-selected-bilateral-gloves.blend"
+/Users/raynos/projects/games/rockhop/assets/blender/rider-rebuild/glove-cuff-fit05/author.py:44: DeprecationWarning: 'Material.use_nodes' is expected to be removed in Blender 6.0
+  assert mat and mat.use_nodes
+Blender 5.2.1 LTS (hash 9e2066aef7ef built 2026-08-25 01:35:57)
+scripts disabled for "/Users/raynos/projects/games/rockhop/harness/out/rider-rebuild/glove-anatomical04/local04/editable-selected-bilateral-gloves.blend", skipping 'RIG-RiderMetarig_ui.py'
+00:28.077  blend            | Read blend: "/Users/raynos/projects/games/rockhop/harness/out/rider-rebuild/selected-complete-engine01/engine03/rider-private-masked.blend"
+Traceback (most recent call last):
+  File "/Users/raynos/projects/games/rockhop/assets/blender/rider-rebuild/glove-cuff-fit05/author.py", line 159, in <module>
+    if __name__ == '__main__': main()
+                               ~~~~^^
+  File "/Users/raynos/projects/games/rockhop/assets/blender/rider-rebuild/glove-cuff-fit05/author.py", line 128, in main
+    if old_name.startswith('Gloves__LocalAnatomicalGuide04.'):
+       ^^^^^^^^^^^^^^^^^^^
+AttributeError: 'Object' object has no attribute 'startswith'
+
+Error: script failed, file: 'assets/blender/rider-rebuild/glove-cuff-fit05/author.py', exiting.
+scripts disabled for "/Users/raynos/projects/games/rockhop/harness/out/rider-rebuild/selected-complete-engine01/engine03/rider-private-masked.blend", skipping 'RIG-RiderMetarig_ui.py'
+
+Blender quit
