@@ -1701,3 +1701,5 @@ Current-source player gate30: explicit silent Metal --dev boot/clear/crash/resta
 Ask348 delivered: isolated uploaded six-choice Garage passes actual silent WebKit phone-layout old→new→old→new, selected source/native75/meshroles and resident instances,483submitted frames0invalid/0errors. Scoped share link and Garage-only movie delivered in chat.357MBfirst download and full/LODalias honest; physical phone, seating/cuffs and all rider milestones remain open.
 
 Sixth comparison plan status reconciled after remote actual runtime pass67d5ce606: selected native75/source/roles, old/new resident switching and483render submissions verified, scoped phone link/movie delivered. Prior memory/CORS causes not isolated;357MBfirst load, productionLOD and physical-phone/art gates remain open.
+
+Selected seated corrective06 source checkpoint: full upper-jeans differential reconstruction, rigid selected anatomical support cores, actual saddle/bodycage, exact inverse-skin morph and hip-flex activation. Parent24pins/3fixtures/syntax pass. One guarded actual construction next; no newmodel/Blender/art/Pro/genericmotion pass yet.
