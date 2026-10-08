@@ -788,7 +788,15 @@ anatomical selection groups, the regional weight edit and seated corrective,
 followed by matching complete dressed standing/seated/return Garage playback with
 an unobscured posterior/profile view. Existing limb/contact controls support pose
 authoring; finite palms/soles/saddle and whole-surface anatomy must all agree.
-Cuff09's source-owned inner-return replacement remains one justified independent
-construction attempt. Stop if it fails; another radial fitting variant is not the
-next action. Preparations, control fixtures and the isolated phone comparison do
-not complete rider milestones.
+The actual [dressed diagnostic film](../evidence/rider-rebuild/selected-seated-diagnostic08/played-dev01/FINDING.md)
+has now played to end. Posterior shelf/squared fold, cuff projections and ankle
+exposure remain rejected. Its development capture has six browser errors, so
+useful moving observations do not constitute a green capture or device gate.
+The [anatomical09 native weight intervention](../evidence/rider-rebuild/selected-seated-anatomical09/HANDOFF.md)
+is source-reviewed and executing; judge its actual saved result before sculpting.
+
+Cuff09's one actual reconstruction [failed before candidate creation](../evidence/rider-rebuild/astra-cuff-bearing18/failed09/FINDING.md):
+the clipped outer floor has multiple boundary loops where the source assumed one.
+Stop that recipe. Resolve exact actual topology/ownership before another cuff
+construction; do not delete loops or retry radial fitting constants. Preparations,
+control fixtures and the isolated phone comparison do not complete milestones.
