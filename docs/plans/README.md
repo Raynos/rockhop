@@ -1445,3 +1445,5 @@ October 8 actual bilateral hoodie topology saved in complete dressed native1ad5c
 October 8 actual compact hoodie matched review: chest/deltoid coverage improved, but new axillary panels pinched/jagged with skin exposure, rejected. Eight PBR views inspected; full/close CPU2 exit0/19.149s/17.591s. Correct explicit anatomical seam corners/interior after saved-data check, not a gain sweep. All art gates open.
 
 October 8 glove actual-surface extraction exit0/7.689s, original native unchanged. Builder authors explicit anatomical surface handles for one ordinary selected-mesh sculpt and semantic shared75 skin transfer; failed source-rest scale/envelope method stays retired. No fit/grip acceptance.
+
+October8 saved hoodie panel readback exit0/10.396s preserves native1ad5 and actual shape/UV lineage. Correct cross-island panel interpolation and supported concave underarm geometry while retaining improved chest coverage. Construction remains unaccepted.
