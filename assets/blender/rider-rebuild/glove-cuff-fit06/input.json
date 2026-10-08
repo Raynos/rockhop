@@ -1,0 +1,101 @@
+{
+  "placement": {
+    "path": "assets/blender/rider-rebuild/glove-anatomical04/controls-orientation02.json",
+    "sha256": "1fa7e6f75da3fe2e41815de6436f737af1b565216bed27e07b41942b6cbed0dd"
+  },
+  "guideHelpers": {
+    "path": "assets/blender/rider-rebuild/glove-anatomical04/author_guide02.py",
+    "sha256": "4a1bd17b7dd3c766749419bf8d5d4e0d0f4b478bcd2b6ffa00eb6fed9bc13851"
+  },
+  "fingerprintHelper": {
+    "path": "assets/blender/rider-rebuild/head-neck-anatomical02/author-clothed-neck-motion.py",
+    "sha256": "86cd010c88ad10cf3d5c925a133cdaafab760ac72a30a1e487d782a562fc71b2"
+  },
+  "restHelper": {
+    "path": "assets/blender/rider-rebuild/production-authoring01/assemble.py",
+    "sha256": "81572a2f88c431ebe52bd3f11bd358eff9a772d73f8db1bcb61751d3287f86b0"
+  },
+  "sourceGuide": {
+    "path": "assets/blender/hero-remaster/rider/finish-2026-10-05/wardrobe/data/prep02/gloves/retopology-prototype.npz",
+    "sha256": "746c99bb9fc109492b27e6e9bd3d7281bf3d4799488cb0d6beebf2804d8a6c5e"
+  },
+  "localControls": {
+    "path": "assets/blender/rider-rebuild/glove-anatomical04/local-controls04.json",
+    "sha256": "554c62be5670fabac22f8d98b48a6cd8db79d1dd39ec525b390d86a26073c9b9"
+  },
+  "acceptedArt": false,
+  "ready": false,
+  "operation": "FINAL_CONNECTED_MEASURED_CUFF_SECTOR",
+  "master": {
+    "path": "harness/out/rider-rebuild/selected-complete-engine01/engine05/rider-private-masked.blend",
+    "sha256": "95a4f14e06fb52cc055df6d1446a035d8cd3d35180d565ad52f3a70b3b05664b"
+  },
+  "fullGloves": {
+    "path": "harness/out/rider-rebuild/selected-complete-engine01/engine05/rider-private-masked.blend",
+    "sha256": "95a4f14e06fb52cc055df6d1446a035d8cd3d35180d565ad52f3a70b3b05664b"
+  },
+  "sourceGLB": {
+    "path": "harness/out/rider-rebuild/selected-complete-engine01/engine05/rider.glb",
+    "sha256": "72b90e8790f8490743a75f8b70791aa21edfee6234cec609093e9b62e08d4bfd"
+  },
+  "diagnosis": {
+    "path": "docs/evidence/rider-rebuild/astra-cuff-motion08/receipt.json",
+    "sha256": "0496b43c46ab0a5962ed8cc261cba0da5ecc9aa5022ca57f7d961a01e2a5d582"
+  },
+  "parentReceipt": {
+    "path": "harness/out/rider-rebuild/glove-cuff-fit05/authored02/report.json",
+    "sha256": "f2f6075e782a43f9626a72b021bffaaf6d2cde6ddd55ed4424b2f81e248cf257"
+  },
+  "sectorControls": [
+    3384,
+    3593,
+    3635,
+    4118
+  ],
+  "oldLipAnchors": [
+    5713,
+    5187,
+    4968
+  ],
+  "falloffMeters": 0.025,
+  "sourceObjects": {
+    "guides": {
+      "L": "Gloves__CuffFit05Guide.L",
+      "R": "Gloves__CuffFit05Guide.R"
+    },
+    "fullFields": {
+      "L": "Gloves__CuffFit05FullFieldReference.L",
+      "R": "Gloves__CuffFit05FullFieldReference.R"
+    },
+    "boundDense": "Gloves__CuffFit05BoundDenseSource.R",
+    "boundDriver": "Gloves__CuffFit05BoundDriver.R"
+  },
+  "hands": {
+    "L": {
+      "priorCuffOffsets": {
+        "path": "assets/blender/rider-rebuild/glove-cuff-fit05/cuff-offsets-L.npz",
+        "sha256": "6b62ac418cef22373884cf6ccb37847fd5b6cca2e6e4d3f699a5680e8393d8f8"
+      },
+      "previousLocalOffsets": {
+        "path": "assets/blender/rider-rebuild/glove-anatomical04/local-offsets04-L.npz",
+        "sha256": "273c74a0182c9973ebc9d5f2b76192570cb964f1c060f062b71eec466d1b9d73"
+      }
+    },
+    "R": {
+      "priorCuffOffsets": {
+        "path": "assets/blender/rider-rebuild/glove-cuff-fit05/cuff-offsets-R.npz",
+        "sha256": "40c6b3d34853ad287b6506a46b60937881fbf10e287dd6c273ee91d5dc0d1e4c"
+      },
+      "previousLocalOffsets": {
+        "path": "assets/blender/rider-rebuild/glove-anatomical04/local-offsets04-R.npz",
+        "sha256": "0a5ec5afeabaa1b4e1af0404dc46cbffd575efc17b9a63c206c1593bba9ecff3"
+      }
+    }
+  },
+  "limits": [
+    "Second and final bounded cuff geometry mechanism. Any guide/dense orientation reversal stops, without repairs or tuning.",
+    "Original local04 anatomy and old05 lip controls remain exact; no binds, weights, UV/PBR, rigs, or masks change.",
+    "25mm intrinsic perimeter inherits the prior bounded brush support; measured newcontrols receive fullstrength with no axial attenuation.",
+    "Source preparation is not moving art acceptance; parent must judge actual Garage/grip after strict export."
+  ]
+}
