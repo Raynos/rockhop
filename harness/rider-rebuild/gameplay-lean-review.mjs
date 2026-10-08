@@ -15,6 +15,8 @@ assert(source && contractPath && arg('out'), 'Pass --source, --contract and fres
 const bike = arg('bike') ?? 'rookie'; assert(['rookie', 'pro'].includes(bike));
 const backend = arg('backend') ?? 'webkit';
 assert(['webkit', 'metal'].includes(backend), 'Pass --backend=webkit|metal');
+const cameraYaw = Number(arg('camera-yaw') ?? 1.4);
+assert(Number.isFinite(cameraYaw) && Math.abs(cameraYaw) <= Math.PI, 'Camera yaw must be finite radians within ±pi');
 await fs.mkdir(out, { recursive: false });
 const contract = JSON.parse(await fs.readFile(contractPath));
 const development = await createPrivateDevReview({ source, contractPath, allowFailedDiagnostic: true });
@@ -68,7 +70,7 @@ try {
   });
   if (backend === 'metal') assert(/Metal/.test(report.browser.renderer)
     && !/swiftshader|llvmpipe|software/i.test(report.browser.renderer), 'Actual game renderer must use Metal');
-  await page.evaluate(async bike => {
+  report.camera = await page.evaluate(async ({ bike, cameraYaw }) => {
     const t = window.__rockhop, r = window.__render;
     // Main already loads this registered track; avoid warming and discarding flat-test.
     if (bike !== 'rookie') { t.setBike(bike); await t.loadTrack('b1-first-ride', 138717428); }
@@ -80,11 +82,12 @@ try {
     const id = Array.isArray(candidate.roles.pelvis) ? candidate.roles.pelvis[0] : candidate.roles.pelvis;
     const pelvis = r.debug.rider.binding.byId.get(id);
     const p = pelvis.getWorldPosition(new r.debug.THREE.Vector3());
-    window.__gameplayLeanCamera = { mode: 'orbit', x: p.x, y: p.y + .12, yaw: 1.4, pitch: .08,
+    window.__gameplayLeanCamera = { mode: 'orbit', x: p.x, y: p.y + .12, yaw: cameraYaw, pitch: .08,
       dist: 4.6, screenX: .5, screenY: .5 };
     r.setCameraOverride(window.__gameplayLeanCamera);
     t.render(true);
-  }, bike);
+    return structuredClone(window.__gameplayLeanCamera);
+  }, { bike, cameraYaw });
   report.readyOffsetSeconds = (performance.now() - started) / 1000;
   await page.evaluate(installGarageCaptureMeter);
   report.played = await page.evaluate(async phases => {
