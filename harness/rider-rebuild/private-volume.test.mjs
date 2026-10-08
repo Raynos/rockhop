@@ -82,3 +82,13 @@ test('native seated bike actions require origin placement and matching bike sour
   }
   assert.throws(() => sourceDiagnosticKind({ ...declared, corrective: {} }, names[0], true));
 });
+
+test('actual gameplay review cannot silently select an authored stage action', () => {
+  const physical = { accepted: false, qualificationState: 'UNACCEPTED_GAMEPLAY_LEAN_REVIEW',
+    gameplayLeanReview: { accepted: false, kind: 'simulated-rider-com-and-torso' } };
+  assert.equal(sourceDiagnosticKind(physical, undefined, true), 'actual-gameplay-lean');
+  assert.throws(() => sourceDiagnosticKind(physical, 'RiderBikeSeatedLeanRookie', true));
+  for (const inherited of [{ previewClip: 'DiagnosticRestKey' }, { nativeAuthoringMotion: {} }, { corrective: {} }]) {
+    assert.throws(() => sourceDiagnosticKind({ ...physical, ...inherited }, undefined, true));
+  }
+});

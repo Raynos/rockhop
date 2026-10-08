@@ -1893,3 +1893,5 @@ Nativebike01 actual fails first sole-frame affine gate0.114114/0.113078mm agains
 Ask356 prioritizes actual gameplay forward-standing/back-seated leans and simulated COM/torso consumption. Displayed stand-up/rest and native01 seat-held score are not gameplay coverage; native01 sole affine failure retained. Lead24 builds actual gameplay02 controls; new native lead29 succeeds retired27 and replays the complete selected outfit before sculpt. Generic objectives remain open afterward.
 
 Required original-player gate37 passes10/11 but boot.readyP50 fails326.49ms against unchanged300ms; exact finish/hash, crash and restart pass. Actual failure retained, no release verdict. Prior gate36pass is historical; current readiness regression remains open while independent rider construction proceeds.
+
+Actual-gameplay lean capture source now rejects authored stage clips and follows simulated rider COM/torso on the selected source. Continuous real-time120Hz held inputs cover neutral/forward/back/return with FPS overlay and full native endpoint witnesses; eight CPU checks pass. Actual capture/fit and device gates remain pending, not substituted by native clips.

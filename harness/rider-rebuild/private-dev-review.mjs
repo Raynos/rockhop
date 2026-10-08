@@ -41,6 +41,14 @@ export const isNativeActionDiagnostic = kind => ['native-authoring-motion11', 'n
 export function sourceDiagnosticKind(metadata, clip, allowFailedDiagnostic) {
   assert(allowFailedDiagnostic, 'Unaccepted source requires --allow-failed-diagnostic');
   assert.equal(metadata.accepted, false);
+  if (metadata.qualificationState === 'UNACCEPTED_GAMEPLAY_LEAN_REVIEW') {
+    assert(!clip && metadata.previewClip === undefined, 'Gameplay review cannot select a stage clip');
+    assert.equal(metadata.nativeAuthoringMotion, undefined, 'Gameplay follows simulated rider state');
+    assert.equal(metadata.corrective, undefined, 'Gameplay review cannot reuse the failed corrective');
+    assert.equal(metadata.gameplayLeanReview?.accepted, false);
+    assert.equal(metadata.gameplayLeanReview.kind, 'simulated-rider-com-and-torso');
+    return 'actual-gameplay-lean';
+  }
   if (metadata.qualificationState === 'UNACCEPTED_NATIVE_BIKE_ACTION_LIBRARY') {
     const library = metadata.nativeAuthoringMotion;
     assert.equal(library?.accepted, false);
@@ -106,6 +114,13 @@ export async function createPrivateDevReview({ source, contractPath, allowFailed
   const contractBytes = fs.readFileSync(contractPath), metadata = JSON.parse(contractBytes);
   const failed = typeof metadata.qualificationState === 'string' && metadata.qualificationState.startsWith('FAILED');
   const diagnosticKind = sourceDiagnosticKind(metadata, clip, allowFailedDiagnostic);
+  const gameplay = diagnosticKind === 'actual-gameplay-lean';
+  if (gameplay) {
+    const expected = ['src/core/riderGeometry.ts', 'src/game/game.ts', 'src/render/frame.ts', 'harness/rider-rebuild/private-rider.mjs'];
+    const pins = metadata.gameplayLeanReview.sourcePins;
+    assert.deepEqual(pins.map(row => row.path), expected, 'Actual gameplay source identities required');
+    for (const pin of pins) assert.equal(await hashFile(path.resolve(root, pin.path)), pin.sha256, 'Gameplay source changed: ' + pin.path);
+  }
   if (metadata.weightDerivative) {
     for (const name of ['nativeReceipt', 'authoredRows']) {
       const pin = metadata.weightDerivative.sourcePins?.[name];
@@ -153,7 +168,7 @@ export async function createPrivateDevReview({ source, contractPath, allowFailed
   assert.equal(metadata.glbSHA256, sourceSHA256);
   const nativeLibrary = isNativeActionDiagnostic(diagnosticKind);
   let author, authorPin, authorPath, authorRecipe, authorCode;
-  if (!nativeLibrary) {
+  if (!nativeLibrary && !gameplay) {
     assert.equal(metadata.diagnosticMotion.outputSHA256, sourceSHA256);
     authorPin = metadata.diagnosticMotion.sourcePins.author;
     authorPath = path.resolve(root, authorPin.path);
@@ -188,7 +203,8 @@ export async function createPrivateDevReview({ source, contractPath, allowFailed
   metadata.driver = { ...metadata.driver, garagePositionBike: positionBike };
   if (nativeLibrary) metadata.previewClip = clip;
   metadata.releaseBuild = false;
-  const placement = nativeLibrary ? { clip, positionBike, presentation: metadata.nativeAuthoringMotion.presentation,
+  const placement = gameplay ? { positionBike: [0, 0, 0],
+    why: 'Actual gameplay consumes simulated rider COM and torso through the selected native physical driver; no stage clip or injected pose.' } : nativeLibrary ? { clip, positionBike, presentation: metadata.nativeAuthoringMotion.presentation,
     why: diagnosticKind === 'native-authoring-bike11'
       ? 'Native seated and lean actions use their declared actual bike-local origin, with old diagnostic sculpt inactive.'
       : 'Generic native action inspection beside the actual bike; not normal Garage seated riding.' } :
