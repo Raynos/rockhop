@@ -1,0 +1,24 @@
+00:00.590  blend            | Read blend: "/Users/raynos/projects/games/rockhop/harness/out/rider-rebuild/native-hand-repair01/native02/anatomical-hand-rig.blend"
+Traceback (most recent call last):
+  File "/Users/raynos/projects/games/rockhop/assets/blender/rider-rebuild/production-gloves01/author.py", line 551, in <module>
+    main()
+    ~~~~^^
+  File "/Users/raynos/projects/games/rockhop/assets/blender/rider-rebuild/production-gloves01/author.py", line 506, in main
+    target = author.construct()
+  File "/Users/raynos/projects/games/rockhop/assets/blender/rider-rebuild/production-gloves01/author.py", line 259, in construct
+    self.panel(f'{digit}-visible{panel + 1}-leather-panel', center, along, across, outward,
+    ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+               available * (.23 if panel < 2 else .20), widths[panel], digit, .00065)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/raynos/projects/games/rockhop/assets/blender/rider-rebuild/production-gloves01/author.py", line 196, in panel
+    q, n = self.surface(p, outward, digit)
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "/Users/raynos/projects/games/rockhop/assets/blender/rider-rebuild/production-gloves01/author.py", line 183, in surface
+    raise RuntimeError(f'{self.side}: authored panel ray misses its hand at {p}')
+RuntimeError: R: authored panel ray misses its hand at [-0.38028483 -0.15183215  0.88416905]
+
+Error: script failed, file: 'assets/blender/rider-rebuild/production-gloves01/author.py', exiting.
+Blender 5.2.1 LTS (hash 9e2066aef7ef built 2026-08-25 01:35:57)
+scripts disabled for "/Users/raynos/projects/games/rockhop/harness/out/rider-rebuild/native-hand-repair01/native02/anatomical-hand-rig.blend", skipping 'RIG-RiderMetarig_ui.py'
+
+Blender quit

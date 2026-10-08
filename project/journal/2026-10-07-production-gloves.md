@@ -17,3 +17,10 @@ Finding: Replace long cross-palm width probes with explicit bilateral web starts
 Validation: parent reviews the concrete source correction; AST, 11 input pins and refreshed source hashes match.
 
 Limits: repaired author source is unexecuted and unaccepted; no map or moving-art acceptance.
+
+
+Finding: the targeted glove panel repair still fails before saving a native. Its dorsal ray mechanism is retired as primary construction.
+
+Validation: actual exit1 after3.524s; guard/worker bytes retained and no complete glove/native output.
+
+Limits: no bake or art judgment. Next mechanism is authored finger regions or artist handoff.

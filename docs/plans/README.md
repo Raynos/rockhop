@@ -1247,3 +1247,5 @@ October 7 selected hoodie author checkpoint: Parent reviewed the frozen selected
 October 7 boots actual author02 finding: The actual saved boot exposes an outer toe and replaces the rounded toe with a tall wall. Stop this cage mechanism before baking; its one targeted shape repair has been consumed. Parent viewed actual production lateral/three-quarter and dense three-quarter PNGs; negative judgment matches saved exit0 author02. No bake. R0-R5 remain open.
 
 October 7 jeans actual author03 finding: Correct lattice dimensions and group binding now produce a real editable jeans mesh on the shared wearer; its physical fit can finally be inspected. Author03 exit0 in5.514s, actual native SHA c72c31ac322a06e68cdac41323079f23915a8ea8a56bc344bbf0099110073bd5 rehashed; in-memory body75 signature passed. Read-only renderer AST passes; renderer not yet executed. R0-R5 remain open.
+
+October 7 glove author02 actual failure: the one targeted panel-placement repair exits1 after3.524s before saving a native. Stop the dorsal-ray construction mechanism; deliberate finger-region authoring or artist package is next. No bake, assembled output or art acceptance.
