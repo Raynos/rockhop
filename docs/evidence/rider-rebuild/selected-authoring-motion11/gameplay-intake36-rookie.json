@@ -1,0 +1,343 @@
+{
+  "accepted": false,
+  "status": "ACTUAL_ROOKIE_INTAKE_PASS_PRO_AND_NATIVE_PENDING",
+  "report": {
+    "path": "harness/out/rider-rebuild/selected-authoring-motion11/gameplay-played03/report.json",
+    "sha256": "ff5b387f89316ff8ad11a68de0b69fd899dddeff1fcf999a00cd7f59e5e3fcf3"
+  },
+  "selectedContract": {
+    "path": "harness/out/rider-rebuild/selected-authoring-motion11/gameplay-source-calibrated09/rider-contract.json",
+    "sha256": "b7554ed11b8a84f6fc38b5e56a75bc2d690780ce6580c95dc95b91cab10effa8"
+  },
+  "selectedGLB": {
+    "path": "harness/out/rider-rebuild/selected-seated-anatomical09/transport02/rider.glb",
+    "sha256": "ff9d78e2c5c40a4be1218b57611c5e71db10a2de7b636ec1589358176f907a0f"
+  },
+  "sources": {
+    "native": {
+      "path": "harness/out/rider-rebuild/selected-seated-anatomical09/authored02/selected-anatomical09-weight-only.blend",
+      "sha256": "4a330ae8a5e93c00a1492dbfd28923ff29796650bbae1dacfadc5fcf00a627a0"
+    },
+    "contract": {
+      "path": "harness/out/rider-rebuild/selected-complete-engine01/engine05/rider-contract.json",
+      "sha256": "2aa39bc8c15738b4ecbd2aac08fd61375e0aa8fd45a0ee2ac3046f577b019728"
+    },
+    "inspectionHelper": {
+      "path": "assets/blender/rider-rebuild/selected-seated-anatomical09/sculpt-reference05.py",
+      "sha256": "57ced8447bc80ab541b4240739364f31e4e54c3f13504434b9ddc33466ae3425"
+    },
+    "sculptRecipe": {
+      "path": "assets/blender/rider-rebuild/selected-seated-anatomical09/sculpt03.py",
+      "sha256": "42d7b7cdfb7dea91025b5fe7911409413e352b9623a91df85580f2d2af5d9a5d"
+    },
+    "baseRecipe": {
+      "path": "assets/blender/rider-rebuild/selected-seated-anatomical09/author.py",
+      "sha256": "a862eab5ecc2cd0065fa2d9ca98b7a6d80e2cd94a11800b17364ae3749cca585"
+    },
+    "gameplayConverter": {
+      "path": "assets/blender/rider-rebuild/selected-authoring-motion11/gameplay_convert02.mjs",
+      "sha256": "84ee2f2d11c448666a06ed427dde09793a071e7868cbd2e03b4450b8d07ecfb6"
+    },
+    "gameplayControls": {
+      "path": "assets/blender/rider-rebuild/selected-authoring-motion11/gameplay_controls02.py",
+      "sha256": "9e3251cee5e94e2a427512202b2d0d6fcbde5f9e32f0d9597133982ac1ce044c"
+    },
+    "nativeAppend": {
+      "path": "assets/blender/rider-rebuild/selected-seated-anatomical09/append-measured-gameplay08.py",
+      "sha256": "2399678e7c7fff60f2bc7a3aa609dc439e869a5dc6d6287d8b94f1c98180d1a5"
+    }
+  },
+  "actualCapture": {
+    "bike": "rookie",
+    "ticks": 1200,
+    "native75Samples": 241,
+    "finalHash": "a0fa0c4b1b76ba5e",
+    "errors": 0,
+    "faults": 0
+  },
+  "conversion": {
+    "frozenConverterUnchanged": true,
+    "hierarchyMaximumAffineBoundWithin2mM": 0,
+    "comProvenanceMaximumM": 2.2887833992611187e-16,
+    "allPhysicalPose": true,
+    "allStageClipNull": true,
+    "all75Finite": true,
+    "allCrashedFalse": true,
+    "allFaultedFalse": true,
+    "allRagdollNull": true,
+    "ragdollArrayMeasured": false
+  },
+  "nativeAncestry": {
+    "selectedNativeMatchesCapturedWeightDerivative": true,
+    "nativeRestMatchesCanonicalEngine05": true,
+    "protectedMeshes": [
+      "ActualSelectedGlove.L",
+      "ActualSelectedGlove.R",
+      "ActualSelectedBoot.L",
+      "ActualSelectedBoot.R",
+      "RiderJeans",
+      "RiderBody",
+      "RiderHoodie",
+      "RiderBody__FullAnatomyReference"
+    ],
+    "sourceNativeReceipt": {
+      "path": "harness/out/rider-rebuild/selected-seated-anatomical09/authored02/receipt.json",
+      "sha256": "b7eefbb2f18df361948a64af54a4eff52426a41b88a1aa6ae3808fc484d709e5"
+    },
+    "fullReference": "RiderBody__FullAnatomyReference",
+    "allKnownPinsChecked": true
+  },
+  "phases": [
+    {
+      "phase": "neutral",
+      "commandedLean": 0,
+      "samples": 49,
+      "ticks": [
+        0,
+        240
+      ],
+      "effectiveLeanRange": [
+        -0.009900315489308488,
+        0.03692882288909533
+      ],
+      "maximumGripSocketGapM": 2.7052306711395756e-7,
+      "maximumSelectedSoleGapM": 0.000003475509703203391
+    },
+    {
+      "phase": "forward",
+      "commandedLean": 1,
+      "samples": 72,
+      "ticks": [
+        245,
+        600
+      ],
+      "effectiveLeanRange": [
+        0.4606558078354878,
+        1
+      ],
+      "maximumGripSocketGapM": 0.0009199447955176385,
+      "maximumSelectedSoleGapM": 0.0000029830443344207206
+    },
+    {
+      "phase": "backward",
+      "commandedLean": -1,
+      "samples": 72,
+      "ticks": [
+        605,
+        960
+      ],
+      "effectiveLeanRange": [
+        -1,
+        0.23924057204024304
+      ],
+      "maximumGripSocketGapM": 3.383097372126944e-7,
+      "maximumSelectedSoleGapM": 0.000004024735311893587
+    },
+    {
+      "phase": "neutral-return",
+      "commandedLean": 0,
+      "samples": 48,
+      "ticks": [
+        965,
+        1200
+      ],
+      "effectiveLeanRange": [
+        -0.28165989360735944,
+        0.7370394386785335
+      ],
+      "maximumGripSocketGapM": 2.750855791739129e-7,
+      "maximumSelectedSoleGapM": 0.0000036272131211991347
+    }
+  ],
+  "physicalSolve": {
+    "convergedSamples": 241,
+    "xyCOMMaximumResidualM": 8.047659172714377e-7,
+    "lateralCOMMaximumAbsoluteResidualM": 0.0000776095703238556,
+    "spineFlexRadiansRange": [
+      -0.3490658503988659,
+      0
+    ],
+    "worstGrip": {
+      "tick": 350,
+      "phase": "forward",
+      "gapsM": [
+        0.0009168904358261366,
+        0.0009199447955176385
+      ],
+      "anthropometry": {
+        "hips": [
+          -0.10967559599241253,
+          0.9688318288478773
+        ],
+        "residualM": 6.767248563746276e-7,
+        "com": [
+          0.014392283659502514,
+          0.9583670713522452,
+          -0.00001721228525669626
+        ],
+        "iterations": 2,
+        "converged": true,
+        "requestedCOM": [
+          0.014392885359563734,
+          0.9583667616530887,
+          0
+        ],
+        "physicsDimensions": "XY",
+        "measuredCOM": [
+          0.014392283659502514,
+          0.9583670713522452,
+          -0.00001721228525669626
+        ],
+        "lateralResidualM": -0.00001721228525669626,
+        "carrierAngle": 0.834575187918081,
+        "spineFlexRadians": -0.05765268786848624,
+        "elapsedMs": 3.989999771118164,
+        "articulationRule": "Least evaluated flex: <=1mm + XY convergence; else least max gap",
+        "candidateCount": 3,
+        "candidates": [
+          {
+            "flex": 0,
+            "gapM": 0.007958772528874756,
+            "armGapM": 0.007958772528874756,
+            "legGapM": 0.0000017885660986667614,
+            "reach": 1.0148857434261889,
+            "comResidualM": 1.5887967578656775e-7
+          },
+          {
+            "flex": -0.3490658503988659,
+            "gapM": 9.391205716854152e-7,
+            "armGapM": 2.1254499660544482e-7,
+            "legGapM": 9.391205716854152e-7,
+            "reach": 0.9864648733432412,
+            "comResidualM": 5.588011417301316e-11
+          },
+          {
+            "flex": -0.05765268786848624,
+            "gapM": 0.0009199447955176385,
+            "armGapM": 0.0009199447955176385,
+            "legGapM": 0.0000016912301529439874,
+            "reach": 1.00172016892167,
+            "comResidualM": 6.767248563746276e-7
+          }
+        ],
+        "palmForwardBike": [
+          1,
+          -0.25,
+          0
+        ],
+        "contactLimit": "Socket-only; glove/bar/finger surfaces unqualified"
+      }
+    }
+  },
+  "limbs": [
+    {
+      "kind": "arm",
+      "side": "Left",
+      "bones": [
+        "DEF-upper_arm.L",
+        "DEF-forearm.L",
+        "DEF-hand.L"
+      ],
+      "restLengthsM": [
+        0.2747018553769975,
+        0.2599380814947015
+      ],
+      "maximumLengthResidualM": 1.9634838599458249e-7,
+      "smallestOuterReachMargin": {
+        "tick": 250,
+        "maximumLengthResidualM": 1.947835236992823e-7,
+        "outerReachMarginM": 4.5460739506175685e-8
+      }
+    },
+    {
+      "kind": "leg",
+      "side": "Left",
+      "bones": [
+        "DEF-thigh.L",
+        "DEF-shin.L",
+        "DEF-foot.L"
+      ],
+      "restLengthsM": [
+        0.38670973832274536,
+        0.4170344077405438
+      ],
+      "maximumLengthResidualM": 8.145958321215119e-7,
+      "smallestOuterReachMargin": {
+        "tick": 270,
+        "maximumLengthResidualM": 1.1598192267703311e-7,
+        "outerReachMarginM": 0.004541250212491632
+      }
+    },
+    {
+      "kind": "arm",
+      "side": "Right",
+      "bones": [
+        "DEF-upper_arm.R",
+        "DEF-forearm.R",
+        "DEF-hand.R"
+      ],
+      "restLengthsM": [
+        0.2747018379508429,
+        0.25993798481110986
+      ],
+      "maximumLengthResidualM": 2.8810886876229347e-7,
+      "smallestOuterReachMargin": {
+        "tick": 250,
+        "maximumLengthResidualM": 2.3198512083544287e-7,
+        "outerReachMarginM": 2.8265946461214497e-7
+      }
+    },
+    {
+      "kind": "leg",
+      "side": "Right",
+      "bones": [
+        "DEF-thigh.R",
+        "DEF-shin.R",
+        "DEF-foot.R"
+      ],
+      "restLengthsM": [
+        0.3867097990853596,
+        0.41703443750333574
+      ],
+      "maximumLengthResidualM": 8.439622316558371e-7,
+      "smallestOuterReachMargin": {
+        "tick": 270,
+        "maximumLengthResidualM": 1.517144406770754e-7,
+        "outerReachMarginM": 0.0026047695990326636
+      }
+    }
+  ],
+  "regionalOperatorChecks": [
+    {
+      "first": "DEF-pelvis.L",
+      "second": "DEF-spine",
+      "maximumFrobeniusAffineBoundWithin2mM": 3.8114037421058993e-7
+    },
+    {
+      "first": "DEF-pelvis.R",
+      "second": "DEF-spine",
+      "maximumFrobeniusAffineBoundWithin2mM": 7.00472877680092e-7
+    },
+    {
+      "first": "DEF-thigh.L.001",
+      "second": "DEF-thigh.L",
+      "maximumFrobeniusAffineBoundWithin2mM": 8.837313744214585e-8
+    },
+    {
+      "first": "DEF-thigh.R.001",
+      "second": "DEF-thigh.R",
+      "maximumFrobeniusAffineBoundWithin2mM": 1.8020212146906033e-7
+    }
+  ],
+  "interpretation": [
+    "No actual converter data-shape, rest ancestry, physics-authority or 0.1mm source-length incompatibility found. Frozen sources are unchanged.",
+    "Largest hand socket gap occurs in forward tick350: source runtime selects least flex meeting its existing 1mm contact policy, reach1.00172016892167; selected arm is near full extension.",
+    "Captured left arm outer reach margin reaches approximately45.5nm. Blender Float32 and live IK pole reconstruction must be measured at those frames; no tolerance relaxation or hypothetical repair.",
+    "Full-master08 saves keyed native75 actions. Palm/sole/pole live controls are authored separately by gameplay_controls02; a unified complete-outfit live-control master is not yet established."
+  ],
+  "limits": [
+    "Rookie actual report only. No Pro report, successful two-bike package, Blender execution, native precision pass, finite clothing/body contacts, moving-art verdict or device approval.",
+    "Socket gaps do not qualify glove/bar, boot/peg surface contact or posterior/saddle anatomy.",
+    "Source .1mm replay/rest/field gates and original parent serial CPU2 memory guard remain unchanged."
+  ]
+}

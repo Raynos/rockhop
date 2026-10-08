@@ -1,0 +1,89 @@
+{
+  "accepted": false,
+  "status": "UNIFIED_FULL_LIVE_CONTROL_SOURCE_ONLY_PREREQUISITES_PENDING",
+  "sources": [
+    {
+      "path": "assets/blender/rider-rebuild/selected-seated-anatomical09/integrate-gameplay-controls09.py",
+      "sha256": "7ca456f4bae47bb70df989102212a39dfcb74f59ce32c9601083c1679871127c"
+    },
+    {
+      "path": "assets/blender/rider-rebuild/selected-seated-anatomical09/test_gameplay_controls09.py",
+      "sha256": "7b66f66c8ed53a4696c6b4579e987ec83f70170500b4bc66eab87d2a94669f33"
+    },
+    {
+      "path": "assets/blender/rider-rebuild/selected-seated-anatomical09/run-gameplay-controls09.sh",
+      "sha256": "8da3ee3a0af26a2460881905047c82b59f107d9ecc5083a23e16c8baa38936a2"
+    }
+  ],
+  "actualRookieIntake": {
+    "path": "docs/evidence/rider-rebuild/selected-authoring-motion11/gameplay-intake36-rookie.json",
+    "sha256": "6517ead91e61c210b5b9c1b67b3fac1fc8c1aecf3b1034b1a6c0086be83e72b7"
+  },
+  "qualifiedRecipesRequired": {
+    "fullRecipe": {
+      "path": "assets/blender/rider-rebuild/selected-seated-anatomical09/append-measured-gameplay08.py",
+      "sha256": "2399678e7c7fff60f2bc7a3aa609dc439e869a5dc6d6287d8b94f1c98180d1a5"
+    },
+    "gameplayControlsRecipe": {
+      "path": "assets/blender/rider-rebuild/selected-authoring-motion11/gameplay_controls02.py",
+      "sha256": "9e3251cee5e94e2a427512202b2d0d6fcbde5f9e32f0d9597133982ac1ce044c"
+    },
+    "controlsRecipe": {
+      "path": "assets/blender/rider-rebuild/selected-authoring-motion11/controls.py",
+      "sha256": "b5b77c1af0442b87d4730834baf1e76bfae737a4531daad5e1aeada79293fd21"
+    },
+    "commonBuildRecipe": {
+      "path": "assets/blender/rider-rebuild/selected-authoring-motion11/build.py",
+      "sha256": "5b0c4d282b9003fc0968df84972d009d9d9e4b1b1b06bffb80b11dbd475cf003"
+    }
+  },
+  "inputSchema": {
+    "accepted": false,
+    "pins": "Exactly fullReceipt,fullNative,fullInput,fullRecipe,controlsReceipt,gameplayControlsRecipe,controlsRecipe,commonBuildRecipe. Actual {path,sha256} only. No input created before both full and control passes."
+  },
+  "prerequisites": [
+    "Actual successful Rookie and Pro capture reports converted together by frozen gameplay_convert02.mjs.",
+    "Actual controls02 receipt status NATIVE_MEASURED_GAMEPLAY_ACTIONS_UNACCEPTED with both saved live-action readbacks and fresh native bake under unchanged0.1mm.",
+    "Actual full native08 receipt status SELECTED_FULL_GAMEPLAY_REPLAY_PASS_ART_PENDING, complete selected7 meshes/fullreference/sourcefields/maps/actions/rest exact after save/reopen."
+  ],
+  "construction": [
+    "Open actual passed fullnative08. Retain the same RiderSkeleton object, armature datablock and original75 exact rest bones; every new bone is nondeforming.",
+    "Use the actual pinned controls.install recipe to add qualified control/MCH structure onto the original rig. Append each actual saved Author gameplay action unchanged from the corresponding controls02 native.",
+    "Compare full added/native rest, authored bone settings, all control constraints, actual self-targeted drivers, finger properties/UI and action curves against each actual appended source control rig before save.",
+    "Preserve protected whole-outfit/fullreference fingerprints, every original vertex-group field, key coordinates, original actions, original armature modifiers and map bytes.",
+    "Save complete selected full live controls uncompressed before later qualification, reopen it, replay all482x75 poses directly against both captured native matrices and qualified controls arrays."
+  ],
+  "precision": {
+    "affineBoundWithin2mM": 0.0001,
+    "everyCapturedKeyRequired": true,
+    "boundsUnchanged": true,
+    "capturedBetweenKeyPhysics": "Not measured or inferred."
+  },
+  "validation": {
+    "pythonAST": "PASS",
+    "bashSyntax": "PASS",
+    "intakeRegressionTests": 6,
+    "intakeRegressionOutcome": "PASS",
+    "whitespace": "PASS",
+    "actualNativeRun": "NOT RUN; prerequisite actual results absent",
+    "sourceContractReview": "Parent full source review PASS, six CPU tests rerun PASS underPython3.9; default Python compatibility repaired before freeze. Actual prerequisites and native execution remain pending.",
+    "pythonRuntime": "3.9.6"
+  },
+  "guard": {
+    "path": "assets/blender/hero-remaster/generation-comparison-2026-10-03/user-agent2/run_bounded96.py",
+    "sha256": "cf8acd15d8b7484480bee74d23892be815d955ffd87115d3da8ed228ffb3d916"
+  },
+  "parentCommand": "bash assets/blender/rider-rebuild/selected-seated-anatomical09/run-gameplay-controls09.sh ACTUAL_INPUT.json FRESH_NATIVE_OUT FRESH_GUARD_OUT",
+  "inputValidationCommand": "python3 assets/blender/rider-rebuild/selected-seated-anatomical09/integrate-gameplay-controls09.py --validate-input ACTUAL_INPUT.json",
+  "limits": [
+    "Source checkpoint, not a native control or complete-rider pass. Parent serial CPU2 scheduling and original memory/time guard remain required.",
+    "Native08 baked gameplay keys and all original actions remain unchanged as inactive data; playing deform-only actions requires disabling live constraints/finger drivers. No action-switch UI/system added.",
+    "No selected mesh rebuild, appearance substitute, texture edit, rig replacement, threshold relaxation, player promotion, push or deploy.",
+    "Moving art, complete body/clothing contact, physical devices and original goal remain unaccepted."
+  ],
+  "sourceCorrection": {
+    "reason": "Default documented python3 is3.9 and has no hashlib.file_digest.",
+    "implementation": "Exposed first_pin uses hashlib.sha256 with1MiB chunked reads; exact digest/path checks retained.",
+    "newRegression": "Temporary file verifies a correct real SHA256, rejects changed source bytes and refuses outside-repository traversal."
+  }
+}
