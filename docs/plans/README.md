@@ -1367,3 +1367,5 @@ October 7 production route updated from actual bounded outcomes: boot/glove surf
 October 7 exact selected glove expert-tailoring package: parent archive/manifest/all55 original source+ZIPmember pins match; originalUV/PBR/body75/currentrejectednative and actualnegativeviews preserved. Preparation only; artist not contacted, no delivered repair/art acceptance.
 
 October 7 exact selected hoodie expert-tailoring package: parent archive/manifest/all38 original source+ZIPmember pins match; originalUV/PBR/body75/currentrejectednative and actualnegativeviews preserved. Preparation only; artist not contacted, no delivered repair/art acceptance.
+
+October 7 handedness finding updated with actual selected glove03 bilateral native/views and boot camera correction: oppositehanded pair construction verified, both surface fits remain rejected; original mirrored source is intentional, no accepted moving pair.

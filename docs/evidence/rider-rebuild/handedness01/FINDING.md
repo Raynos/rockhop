@@ -9,3 +9,16 @@ Limits: mirroring proves opposite handedness, not that an asymmetric original sh
 Validation: parent executed the retained array check against actual saved boot arrays and immutable L/R hand targets; source mirror and side construction code inspected. No Blender job, art acceptance or normal-player promotion.
 
 Follow-up validation: parent rehashed the saved complete glove native and inspected both recorded target identities and side-specific field names. This updates the earlier unsaved-mesh limitation; it does not accept shape, material or animation quality.
+
+Current selected-source validation: glove03 author02 now saves both original-PBR
+hands in native6ef266a0. R keeps original source handedness; L reflects sourceX
+and reverses face plus UV-corner winding. Both use their own anatomical controls.
+Parent inspected all8 actual views and rejected both surfaces for exposed
+palm/dorsum/web/tips and flared cuffs. Correct handedness is established; actual
+selected glove surface fit and shared75 moving grip are not accepted.
+
+The current selected boot pair also has opposite handedness and consistent
+winding. Reused negative-transverse camera labels were misleading: that view
+shows R lateral and L medial. It does not establish an only-left failure.
+Actual bilateral local repair still fails enclosure. Both exact source/native
+packages preserve the failed work for expert tailoring; no accepted pair exists.
