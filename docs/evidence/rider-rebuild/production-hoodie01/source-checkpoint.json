@@ -1,0 +1,46 @@
+{
+  "accepted": false,
+  "stage": "UNEXECUTED_SOURCE_CHECKPOINT",
+  "ASTParsed": true,
+  "sourceSHA256": "b6f7cde052fa33e4fcf8390bfe62eca71ce3e330bb993d1a8610ecbd49bb960d",
+  "controlsSHA256": "ae90f988b1a3b5f020d540cddd677a8a6286e6e2e3e7afb08733b5b7470aff28",
+  "inputs": [
+    {
+      "key": "selectedNative",
+      "path": "assets/blender/hero-remaster/rider/anatomical-foundation-2026-10-03/user-agent1/selected-hoodie25/crease-normal-candidate.blend",
+      "sha256": "c732d98076f6b9b1a209a45e8a0cddf793484807ea8b3ae9011fa4f82c151df0",
+      "matched": true
+    },
+    {
+      "key": "originalDensePaint",
+      "path": ".tmp/generation-comparison-2026-10-03/user-agent2/qualified-hunyuan-paint06/paint/painted.glb",
+      "sha256": "800d7a9717757b90b296a78c605cddb698c68d399a96e403aa381103e77d2eba",
+      "matched": true
+    },
+    {
+      "key": "nativeMaster",
+      "path": "harness/out/rider-rebuild/native-hand-repair01/native02/anatomical-hand-rig.blend",
+      "sha256": "42fca617ea8d246a6c3e3ca68a90cd3cb5f3ce8b9bb78130e0e2bbd65f605fac",
+      "matched": true
+    },
+    {
+      "key": "nativeArrays",
+      "path": "docs/evidence/rider-rebuild/native-hand-repair01/native02/native-body.npz",
+      "sha256": "e62e9969503b7761e99463eccc3ca7be39e0c230a2948f2f87a224db52d0f9a2",
+      "matched": true
+    },
+    {
+      "key": "geometricControlReceipt",
+      "path": "docs/evidence/rider-rebuild/construction02/selected-wardrobe01/report.json",
+      "sha256": "2880f5edb2290d2c85e78cd2bee0fe3344a330b17f853f9df20d1b94c14463c4",
+      "matched": true
+    }
+  ],
+  "BlenderExecuted": false,
+  "actualFittedGeometryExists": false,
+  "actualDenseBakeExists": false,
+  "movingArtJudged": false,
+  "targetNameGuard": "Rename/hide only pre-existing coarse RiderHoodie meshes, exact selected target name asserted; bake checks saved geometry and immutable source lineage",
+  "portProtection": "Authored collar/hem/cuff spatial controls only; local generated underarm boundary holes may join quad patch",
+  "failurePreservation": "Actual proportional-fit-before-patch.blend and pinned fit receipt saved before topology; patch exception writes explicit failure receipt and raises"
+}

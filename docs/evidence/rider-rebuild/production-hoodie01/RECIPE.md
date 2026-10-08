@@ -1,0 +1,57 @@
+# Selected hoodie author source — unexecuted and unaccepted
+
+`assets/blender/rider-rebuild/production-hoodie01/author.py` clones the actual
+selected25 mesh/materials into the complete native02 wearer. Source masters are
+immutable. It rotates source +X front to wearer -Y front, proportionally edits
+thorax/hem/hood and sleeves around explicit shoulder/elbow/cuff controls, removes
+two local underarm regions and grid-fills welded quad patches. The sleeve brush
+uses axial position and distance to both arm segments; there is no abs(X)-only
+torso/sleeve split. The old landmark receipt supplies geometric source controls,
+never new rig authority or old skin. All deformation fields use the shared75 rig.
+Any pre-existing coarse `RiderHoodie` mesh is renamed as a hidden historical
+reference. The selected mesh's exact name is asserted; baking checks its saved
+geometry hash and source/recipe lineage before changing UVs or materials.
+
+Port protection uses explicit collar, hem and cuff spatial controls. Generated
+holes in the local underarm region may join the cut and welded quad patch;
+the eleven historical boundary components are not all treated as real ports.
+`proportional-fit-before-patch.blend` preserves the actual selected fit before
+any underarm edit. A topology exception writes `patch-failure.json` naming that
+preserved editable native and the concrete exception, then stops the run.
+
+The complete body remains visible and its vertices, polygons, fields and rig
+rest are fingerprinted before/after. Hood/collar volume, torso folds, cuffs, hem
+and mustard fabric come from the actual selected mesh; this is no generic shell.
+Native `authored-hoodie.blend` is saved before any new maps. New underarm geometry
+is explicitly marked as awaiting material transfer, so the author stage cannot
+serve as a finished textured garment or a whole-outfit review.
+
+The separate bake stage imports the actual original dense painted GLB, aligns
+it with ordinary authored torso/arm controls, unwraps the production mesh and
+uses Blender Selected to Active rays for 2K base color, roughness, metallic and
+tangent normal. It saves an editable master with packed actual maps and the
+aligned dense source retained as a hidden reference. Hiding this reference never
+hides the wearer. Material misses, seams, deep fold fidelity and dense alignment
+require actual comparison before adoption. No bake result presently exists.
+
+The two commands below are admitted only after the parent checkpoints source
+and grants a bounded serial CPU2 lease. Each fresh output leaf is private.
+
+```sh
+/Applications/Blender.app/Contents/MacOS/Blender -b -t 2 --python-exit-code 1 \
+  --python assets/blender/rider-rebuild/production-hoodie01/author.py -- \
+  assets/blender/rider-rebuild/production-hoodie01/inputs.json \
+  harness/out/rider-rebuild/production-hoodie01/author01 author
+
+/Applications/Blender.app/Contents/MacOS/Blender -b -t 2 --python-exit-code 1 \
+  --python assets/blender/rider-rebuild/production-hoodie01/author.py -- \
+  assets/blender/rider-rebuild/production-hoodie01/inputs.json \
+  harness/out/rider-rebuild/production-hoodie01/bake01 bake \
+  harness/out/rider-rebuild/production-hoodie01/author01
+```
+
+Validation: Python AST parsed; all five immutable input hashes match the
+[source receipt](source-checkpoint.json). No Blender execution, fitted mesh,
+dense bake, collision claim, moving-art judgment or normal-player promotion.
+The parent alone judges played complete-outfit native and actual Garage/game
+evidence. One authored pass and at most one shape repair remain the limit.
