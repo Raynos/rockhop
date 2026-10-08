@@ -1679,3 +1679,5 @@ October8 actual offline author04 fails both bikes in1.677s:~97% footprint overla
 October8 exact cuff ray replay isolates float32 world-coordinate grazing miss: float64 and wrist-relative source intersections exist; wearer hits remain. Freeze diagnostic before actual Blender BVH confirmation; no sample skipped and native07 remains failed.
 
 October8 saved-TRS seated shape diagnostic frozen: per-bone weighted readback, area stretch and gap distribution will test structural LBS distortion before any pose-space corrective; no second optimizer retune or art acceptance.
+
+October8 actual Blender confirms cuff precision diagnosis in1.169s: world cuff misses, wrist-local cuff41.087783873mm matches double actual triangle; wearer valid. Native08 will condition before Vector conversion, retain every bearing/check; no model pass.

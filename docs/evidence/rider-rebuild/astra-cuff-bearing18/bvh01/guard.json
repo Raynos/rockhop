@@ -1,0 +1,53 @@
+{
+  "accepted": false,
+  "lock": "/Users/raynos/projects/localai/.model.lock",
+  "method": "lockf -k",
+  "command": [
+    "/Applications/Blender.app/Contents/MacOS/Blender",
+    "-b",
+    "-t",
+    "2",
+    "--python-exit-code",
+    "1",
+    "--python",
+    "assets/blender/rider-rebuild/astra-cuff-bearing18/inspect_bearing.py",
+    "--",
+    "harness/out/rider-rebuild/astra-cuff-bearing18/bvh01.json",
+    "--bvh"
+  ],
+  "controllerPID": 8887,
+  "pollSeconds": 1,
+  "startAnonymousBelowGiB": 55,
+  "stopAnonymousGiB": 65,
+  "stopAnonymousPlusWiredGiB": 96,
+  "limitSeconds": 45.0,
+  "guardSHA256": "cf8acd15d8b7484480bee74d23892be815d955ffd87115d3da8ed228ffb3d916",
+  "status": "worker returned; review pending",
+  "samples": [
+    {
+      "seconds": 0,
+      "anonymousGiB": 47.7,
+      "wiredGiB": 9.4,
+      "freeGiB": 22.2
+    },
+    {
+      "seconds": 0.048,
+      "anonymousGiB": 47.7,
+      "wiredGiB": 9.4,
+      "freeGiB": 22.2
+    },
+    {
+      "seconds": 1.082,
+      "anonymousGiB": 48.1,
+      "wiredGiB": 9.6,
+      "freeGiB": 21.8
+    }
+  ],
+  "physicalMemoryBytes": 137438953472,
+  "requiredPhysicalMemoryBytes": 137438953472,
+  "scope": "Future explicitly invoked owned Rockhop job only",
+  "pressureOrSwapLimits": "No separate pressure/swap gate exists in the pinned original guard; none altered",
+  "ownedChildPID": 8891,
+  "exitCode": 0,
+  "elapsedSeconds": 1.169
+}
