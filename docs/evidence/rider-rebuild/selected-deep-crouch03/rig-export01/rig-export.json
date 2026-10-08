@@ -1,0 +1,90 @@
+{
+  "accepted": false,
+  "native": {
+    "path": "harness/out/rider-rebuild/selected-deep-crouch03/rig-export01/native75-deep217-rig.blend",
+    "sha256": "0d38f8eff8831a276923d53bf4964c09ed2be7e685c0c5b24e60d920f41c6838"
+  },
+  "recipeSHA256": "c3bde3070457f9d98a20245743d21ad175e0459ab1bbc87407a77af5dd70dd80",
+  "inputSHA256": "abbd43be24fadc24c228a1a6edb38010dfcf56d3f3a67c0706bbb75c85e9fa2a",
+  "historicalExporter": {
+    "path": "assets/blender/rider-rebuild/selected-garage-actions01/author.py",
+    "sha256": "98198da80f1d5b83c5dcf8929c65346c709d0ba3a85960702f1e4072e3d6cfd2"
+  },
+  "motionProvenance": {
+    "sourceAuthor": {
+      "path": "assets/blender/rider-rebuild/selected-deep-crouch03/author.py",
+      "sha256": "96f0bfc45415ecd94cdb8430359a0f1d94f607a0369b33b36ea6de702d696e38"
+    },
+    "sourceConfig": {
+      "path": "assets/blender/rider-rebuild/selected-deep-crouch03/engine05-input01.json",
+      "sha256": "80acead6a9bcb4c25d5ad650b59e52fbc97e3bda90ea727e8cceddc6628e324d"
+    },
+    "motionReceipt": {
+      "path": "harness/out/rider-rebuild/selected-deep-crouch03/authored01/motion.json",
+      "sha256": "a3dcc67325e324477d507e49d9618306bdab0ac7f344c1175fd46e68ea51d68d"
+    },
+    "candidate": {
+      "path": "harness/out/rider-rebuild/selected-deep-crouch03/authored01/selected-deep-fixed-sole217.blend",
+      "sha256": "7e89485d46bb9a03ce2ea05f0a80fbc1cf17fd75f7c67ab295e26af49d681a7c"
+    },
+    "nativeMatrices": {
+      "path": "harness/out/rider-rebuild/selected-deep-crouch03/authored01/native-world-matrices.npz",
+      "sha256": "16333401825785c168d170ec56dac42abf6a758bd9fe8b6ce0c4cbc85b0b22b9"
+    }
+  },
+  "sourceNative": {
+    "path": "harness/out/rider-rebuild/selected-complete-engine01/engine05/rider-private-masked.blend",
+    "sha256": "95a4f14e06fb52cc055df6d1446a035d8cd3d35180d565ad52f3a70b3b05664b"
+  },
+  "sourceContract": {
+    "path": "harness/out/rider-rebuild/selected-complete-engine01/engine05/rider-contract.json",
+    "sha256": "2aa39bc8c15738b4ecbd2aac08fd61375e0aa8fd45a0ee2ac3046f577b019728"
+  },
+  "rigOnlyNoMeshes": true,
+  "exact75Rest": true,
+  "maximumSavedNativeMatrixResidual": 0.0,
+  "actions": [
+    {
+      "name": "UnacceptedSelectedDeepFixedSoleCrouchRise217",
+      "slot": "OBRiderSkeleton",
+      "frameRange": [
+        1,
+        217
+      ],
+      "frames": 217,
+      "fps": 24,
+      "seconds": 9.0,
+      "sourceCurveSHA256": "294231a1ec45b15b42ca8c09032928841e469d00ffeddba06a23bc465442babf"
+    }
+  ],
+  "exportOptions": {
+    "filepath": "/Users/raynos/projects/games/rockhop/harness/out/rider-rebuild/selected-deep-crouch03/rig-export01/rig-actions.glb",
+    "export_format": "GLB",
+    "use_selection": true,
+    "export_yup": true,
+    "export_animations": true,
+    "export_animation_mode": "ACTIONS",
+    "export_anim_single_armature": true,
+    "export_frame_range": false,
+    "export_frame_step": 1,
+    "export_force_sampling": true,
+    "export_optimize_animation_size": false,
+    "export_optimize_animation_keep_anim_armature": true,
+    "export_anim_slide_to_zero": true,
+    "export_sampling_interpolation_fallback": "LINEAR",
+    "export_merge_animation": "NONE",
+    "export_rest_position_armature": true,
+    "export_def_bones": true,
+    "export_skins": true,
+    "export_leaf_bone": false,
+    "export_armature_object_remove": false,
+    "export_hierarchy_flatten_bones": false,
+    "export_hierarchy_flatten_objs": false,
+    "export_bake_animation": false,
+    "export_pointer_animation": false,
+    "export_current_frame": false
+  },
+  "limits": [
+    "One new deep217 action; full dressed played motion, Garage/GPU contacts and devices remain unaccepted."
+  ]
+}
