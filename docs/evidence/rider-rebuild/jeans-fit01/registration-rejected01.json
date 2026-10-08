@@ -1,0 +1,40 @@
+{
+  "accepted": false,
+  "status": "REJECTED_SECTION_CHART_REGISTRATION",
+  "error": "AssertionError: No measured nested source cavity",
+  "executedRecipeSHA256": "d636f2fb250d8ef60ce5ecd78ab398e64eaf12359f46b304ce49cce1018870a4",
+  "inputs": [
+    {
+      "path": "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/finish-2026-10-05/wardrobe/data/prep02/jeans/retopology-prototype.npz",
+      "sha256": "6907492293a23765f49b41a64a65cbdf18a6e10b15cfd183416113352f759a49"
+    },
+    {
+      "path": "/Users/raynos/projects/games/rockhop/docs/evidence/rider-rebuild/glove-charts01/target01/native-body.npz",
+      "sha256": "b34897b3c1fe810d7bd77806a1635f8132b3a43e66986986c218ab23cfad2f45"
+    },
+    {
+      "path": "/Users/raynos/projects/games/rockhop/assets/blender/rider-rebuild/glove-charts01/audit-hand-anatomy.py",
+      "sha256": "1bf0cd59073c83381980801a40a31b5b7f0837750034e2c8db8a616d6711f303"
+    }
+  ],
+  "completedCharts": [
+    "left",
+    "right"
+  ],
+  "failedChart": "pelvis",
+  "nativeOrCandidateProduced": false,
+  "registrationWitness": {
+    "path": "harness/out/rider-rebuild/jeans-section-register01/registration.json",
+    "sha256": "7e6e3ae8f69bfa263a3d59e5df131aee8268d0b9d919b5ca28fb14f72b282c4a"
+  },
+  "guardWitness": {
+    "path": "harness/out/rider-rebuild/jeans-section-register01-guard/guard.json",
+    "sha256": "9115b5f70512bcf221ae2701824e65b2bdc0e4674460e11ebcedf4ed4880bfd7"
+  },
+  "cause": "Source pelvis planes Y=.6416667 and .6783333 have a single connected material contour instead of two nested cavity/exterior contours. The closed-cavity assumption does not represent this actual slit/fly source structure.",
+  "limits": [
+    "No fitted candidate or native exported.",
+    "One material contour does not prove the donor exterior is visually unusable; distinguish actual dense slit/fly from compact topology.",
+    "Original body/source bytes remain pinned; no skipped-plane or fake enclosure acceptance."
+  ]
+}
