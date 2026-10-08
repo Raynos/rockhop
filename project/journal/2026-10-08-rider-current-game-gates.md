@@ -17,3 +17,9 @@ Finding: Required current-player gate remained deterministic after three saved c
 Validation: Gate12 launched no child because anonymous memory58GiB exceeded55GiB start bound. After memory returned34.2GiB, fresh silent Metal gate13 exit0/8.18s and11/11 checks passed. Replay finish/hash exact.
 
 Limits: Current player only, no selected-rider or device acceptance; refused guard retained.
+
+Finding: Required third-construction-round current-player gate14 preserves exact replay but fails boot timing under actual host load.
+
+Validation: Silent Metal exit1/15.317s,10/11 checks; boot ready348.24ms exceeds300ms with loadavg60.21/18cores after built-in resample. Exact recorded finish/hash and one-tick restart pass; restart frame8.51ms.
+
+Limits: Failed timing retained; no blind retry or release/new-rider acceptance. Current player source fingerprint unchanged.
