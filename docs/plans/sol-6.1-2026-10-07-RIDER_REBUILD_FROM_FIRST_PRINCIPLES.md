@@ -88,8 +88,9 @@ concurrently. These are final-intent selected assets; no generic substitutions.
   action library, preserves one-shot root travel and includes a 2-second lead-in.
   Six CPU checks pass. The actual volume film reports 59.459 development render
   FPS and 25 capture FPS with no errors; this is not a GPU/physical-phone pass.
-  Gate35 retains the unchanged original-player ready-time failure (319.03 ms
-  against 300 ms). Release remains open while isolated construction proceeds.
+  Gate35 retains the original-player ready-time failure (319.03 ms against
+  300 ms). Later gate36 passes all 11 unchanged partial checks, ready 268.416 ms,
+  exact replay and restart 5.90 ms. Full release/new-rider/device gates stay open.
 
 Keep production geometry and missing actions moving alongside fit work. Preserve
 selected appearance through compact deliberate derivatives and measured detail

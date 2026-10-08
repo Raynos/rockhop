@@ -1863,3 +1863,5 @@ Reference04 actual fails49.591s at exact saved-cage state equality after native 
 24h finish status now records six saved native actions, actual dressed volume04 played rejection and fresh wardrobe28 replacing retired23. Whole-sleeve exterior fit and new measured seated controls supersede doomed local-boundary/author04 iterations. All six acceptance gates and the original-player boot timing failure remain open; targetOctober9 14:05Panama is still a stretch.
 
 Motion11 actual selected dressed transport passes7.737s: all six native actions load across10 skinned meshes, original BIN/images/meshes/weights/rest/75binds preserved. Native-key operator bound≤0.031727mm and regional difference≤0.000478mm under unchanged0.1mm. Actual dressed range playback is next; bike/art/GPU/device gates remain open.
+
+Gate36 actual Metal partial boot/clear/crash/restart passes11/11 in7.411s, unchangedfd8fe7c2: ready268.416ms, first421.055ms, restart5.90ms, exactfinish/hash. Prior gate35 failure retained; original thresholds unchanged. Partial existing-player check only, no new rider/full release/device acceptance.
