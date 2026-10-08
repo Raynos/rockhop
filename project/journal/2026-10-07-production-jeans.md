@@ -30,3 +30,10 @@ Finding: Correct lattice dimensions and group binding now produce a real editabl
 Validation: Author03 exit0 in5.514s, actual native SHA c72c31ac322a06e68cdac41323079f23915a8ea8a56bc344bbf0099110073bd5 rehashed; in-memory body75 signature passed. Read-only renderer AST passes; renderer not yet executed.
 
 Limits: diagnostic unaccepted construction only; source appearance, full-outfit played motion and real Garage/game remain open.
+
+
+Finding: actual saved jeans shape fails rest coverage at saddle, buttocks and posterior legs; stop before any bake.
+
+Validation: parent viewed front/back/profile actual-native renders; guardexit0 in7.709s, fullwearer visible and exactpins/images retained.
+
+Limits: negative staticdiagnosis only; one targetedshape repair available. No fulloutfit or engine acceptance.

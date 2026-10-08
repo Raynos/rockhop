@@ -1251,3 +1251,5 @@ October 7 jeans actual author03 finding: Correct lattice dimensions and group bi
 October 7 glove author02 actual failure: the one targeted panel-placement repair exits1 after3.524s before saving a native. Stop the dorsal-ray construction mechanism; deliberate finger-region authoring or artist package is next. No bake, assembled output or art acceptance.
 
 October 7 hoodie author01 actual finding: proportional selected fit native f96061420…97701 is preserved before grid-fill returns FINISHED and the selected-face quad assertion fails. No completed rigged hoodie or bake. Correct new-face bookkeeping next; physical fit and moving review remain open.
+
+October 7 actual jeans shape rejected: parent viewed saved-native front/back/profile; saddle, buttocks and rear knees/calves visibly penetrate. No bake admitted. First shape result has one targeted authored repair available; actual body envelope and saddle design take precedence over inward donor fold projection.
