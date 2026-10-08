@@ -1,0 +1,201 @@
+{
+  "acceptedArt": false,
+  "status": "READ_ONLY_PLANE_IDENTITY_DIAGNOSIS",
+  "recipeSHA256": "93e41f890e7c2ded60cc3b276d3b5f3fec42e383f8c3a7b141d9f59f13cf6433",
+  "baseCutterSHA256": "5d13de71e8d724f01cdbd9aa4d0d18e3d351c58f58cc4513d98f5a325f9d1361",
+  "originalDonorSHA256": "f07a705f334d3d2b802fa7d23baec3e9cd54b211d160b7bbd6ab2c9f4a96541c",
+  "modes": {
+    "originalFloat32": {
+      "originalSignedZeroIds": [
+        216827
+      ],
+      "newCutVertices": 1809,
+      "existingFloorGraph": {
+        "edgeCount": 1810,
+        "componentVertexCounts": [
+          1029,
+          781
+        ],
+        "degrees": [
+          2
+        ],
+        "nonRingVertices": []
+      },
+      "ancestryTaggedFloorGraph": {
+        "edgeCount": 1810,
+        "componentVertexCounts": [
+          1029,
+          781
+        ],
+        "degrees": [
+          2
+        ],
+        "nonRingVertices": []
+      },
+      "legacyPlaneIdsEqualTaggedIds": true,
+      "legacyBandEqualsTaggedNegativeSide": true,
+      "legacyBandTriangles": 112594,
+      "taggedBandTriangles": 112594,
+      "extraLegacyPlaneIds": [],
+      "maximumNewCutDistanceFromLiteralPlane": 8.344650270775134e-08
+    },
+    "rejectedExactFloat64": {
+      "originalSignedZeroIds": [],
+      "newCutVertices": 1812,
+      "existingFloorGraph": {
+        "edgeCount": 1816,
+        "componentVertexCounts": [
+          1032,
+          781
+        ],
+        "degrees": [
+          2,
+          3,
+          4
+        ],
+        "nonRingVertices": [
+          {
+            "id": 286241,
+            "neighbors": [
+              216827,
+              286240,
+              286249
+            ],
+            "source": [
+              0.1232990026473999,
+              -0.65,
+              -0.3384159702379798
+            ],
+            "original": false,
+            "parents": [
+              216827,
+              216826,
+              -1
+            ],
+            "coefficients": [
+              0.9999923950035102,
+              7.604996489771832e-06,
+              0.0
+            ]
+          },
+          {
+            "id": 286249,
+            "neighbors": [
+              216827,
+              286241,
+              286248
+            ],
+            "source": [
+              0.12329959541559275,
+              -0.65,
+              -0.3384154172603688
+            ],
+            "original": false,
+            "parents": [
+              218046,
+              216827,
+              -1
+            ],
+            "coefficients": [
+              0.00011299435038769623,
+              0.9998870056496123,
+              0.0
+            ]
+          },
+          {
+            "id": 216827,
+            "neighbors": [
+              286233,
+              286240,
+              286241,
+              286249
+            ],
+            "source": [
+              0.1232990026473999,
+              -0.6499999761581421,
+              -0.3384160101413727
+            ],
+            "original": true,
+            "parents": [
+              216827,
+              -1,
+              -1
+            ],
+            "coefficients": [
+              1.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "id": 286240,
+            "neighbors": [
+              216827,
+              286233,
+              286241
+            ],
+            "source": [
+              0.12329895928641538,
+              -0.65,
+              -0.3384160101413727
+            ],
+            "original": false,
+            "parents": [
+              216827,
+              215589,
+              -1
+            ],
+            "coefficients": [
+              0.9999917360494107,
+              8.263950589271927e-06,
+              0.0
+            ]
+          },
+          {
+            "id": 286233,
+            "neighbors": [
+              216827,
+              286232,
+              286240
+            ],
+            "source": [
+              0.11805199831724168,
+              -0.65,
+              -0.3428582642671109
+            ],
+            "original": false,
+            "parents": [
+              215590,
+              215589,
+              -1
+            ],
+            "coefficients": [
+              0.8467914625612252,
+              0.15320853743877488,
+              0.0
+            ]
+          }
+        ]
+      },
+      "ancestryTaggedFloorGraph": {
+        "edgeCount": 1812,
+        "componentVertexCounts": [
+          1031,
+          781
+        ],
+        "degrees": [
+          2
+        ],
+        "nonRingVertices": []
+      },
+      "legacyPlaneIdsEqualTaggedIds": false,
+      "legacyBandEqualsTaggedNegativeSide": false,
+      "legacyBandTriangles": 112599,
+      "taggedBandTriangles": 112596,
+      "extraLegacyPlaneIds": [
+        216827
+      ],
+      "maximumNewCutDistanceFromLiteralPlane": 1.1102230246251565e-16
+    }
+  }
+}
