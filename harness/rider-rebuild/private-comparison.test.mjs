@@ -30,6 +30,7 @@ test('comparison appends a separately normalized sixth preset and keeps all orig
   const api = await evaluate(urls);
   original.forEach(id => assert.equal(api.riderUrl(id), `models/rider-${id}.glb`));
   assert.deepEqual(api.heroFiles(comparisonRider.id, 'pro'), ['models/bike-pro.glb', 'models/bike-pro-lod.glb', comparisonRider.full, comparisonRider.lod]);
+  assert.deepEqual(Object.keys(api.HERO_FILES_BY_OUTFIT_CLASS).sort(), [...original].sort(), 'Eager boot inventory remains the original five');
 });
 
 test('comparison wrapper uses legacy driver for originals and selected driver only for tagged documents', async () => {

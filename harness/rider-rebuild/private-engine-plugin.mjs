@@ -38,26 +38,22 @@ function comparisonSource(code, id) {
     return replaceOnce(code, "  if (value === 'street')", `  if (value === '${outfit}') return '${outfit}';\n  if (value === 'street')`);
   }
   if (id.endsWith('/src/render/hero/urls.ts')) {
-    code = replaceOnce(code, '  rider: {', `  rider: {\n    '${outfit}': '${full}',`);
-    code = replaceOnce(code, 'export const HERO_FILES_BY_OUTFIT_CLASS = {',
-      `export const HERO_FILES_BY_OUTFIT_CLASS = {\n  '${outfit}': { rookie: heroFiles('${outfit}', 'rookie'), pro: heroFiles('${outfit}', 'pro') },`);
-    return replaceOnce(code, 'export const HERO_FILES_BY_OUTFIT = {',
-      `export const HERO_FILES_BY_OUTFIT = {\n  '${outfit}': [...HERO_FILES_BY_OUTFIT_CLASS['${outfit}'].rookie, ...HERO_FILES_BY_OUTFIT_CLASS['${outfit}'].pro],`);
+    // The existing tables remain the five-outfit eager boot inventory. The
+    // sixth pair is requested directly by setModels when selected.
+    return replaceOnce(code, '  rider: {', `  rider: {\n    '${outfit}': '${full}',`);
   }
   if (id.endsWith('/src/ui/garage.ts')) return replaceOnce(code, 'export const OUTFIT_SWATCH: Record<RiderOutfit, string> = {',
     `export const OUTFIT_SWATCH: Record<RiderOutfit, string> = {\n  '${outfit}': '#d6a021',`);
-  if (id.endsWith('/src/render/index.ts') || id.endsWith('/src/boot/asset-totals.ts')) {
-    const marker = 'Object.values(HERO_FILES_BY_OUTFIT_CLASS).flatMap';
-    code = replaceOnce(code, marker, `Object.entries(HERO_FILES_BY_OUTFIT_CLASS).filter(([outfit]) => outfit !== '${outfit}').map(([, value]) => value).flatMap`);
-    if (id.endsWith('/src/render/index.ts')) {
+  if (id.endsWith('/src/boot/asset-totals.ts')) return replaceOnce(code,
+    '(typeof HERO_FILES_BY_OUTFIT)[RiderOutfit][number]', `(typeof HERO_FILES_BY_OUTFIT)[Exclude<RiderOutfit, '${outfit}'>][number]`);
+  if (id.endsWith('/src/render/index.ts')) {
       code = replaceOnce(code, '    const files = HERO_FILE_SET.filter',
-        `    const inventory = this.riderOutfit === '${outfit}' ? [...HERO_FILE_SET, ...heroPair(this.riderOutfit, this.bikeClass, 'full'), ...heroPair(this.riderOutfit, this.bikeClass, 'lod')] : HERO_FILE_SET;\n    const files = inventory.filter`);
+        `    const inventory = this.riderOutfit === '${outfit}' ? [...HERO_FILE_SET, '${full}', '${comparisonRider.lod}'] : HERO_FILE_SET;\n    const files = inventory.filter`);
       // The review source is fetched on choice, outside the unchanged original
       // boot-byte bucket, including when the private preference was persisted.
       code = replaceOnce(code, 'loadGltf(f, false, bytes)', `loadGltf(f, false, f.includes('rider-${outfit}') ? undefined : bytes)`);
       code = replaceOnce(code, "    return (this.heroDocUrl.get(doc!) ?? '').endsWith('-lod.glb');",
         "    return !doc?.scene.userData.privateSelectedRider && (this.heroDocUrl.get(doc!) ?? '').endsWith('-lod.glb');");
-    }
     return code;
   }
   if (id.endsWith('/src/boot/offline-pack.ts')) return replaceOnce(code, '    if (heroes.has(logical)',
@@ -219,7 +215,9 @@ export class GltfRider extends OriginalGltfRider {
           // Canonicalize logical names before immutable URL resolution and the
           // existing cache. Ten source slots then share one parsed document,
           // maps and retry lifecycle; bikes keep their original logical URLs.
-          code = code.replace(cacheMarker,
+          // Comparison's two catalog entries already share the same immutable
+          // URL. The original URL-keyed loader cache supplies the single parse.
+          if (!comparison) code = code.replace(cacheMarker,
             `  url = modelAssetUrl((${JSON.stringify(aliases)})[url] ?? url);`);
           touched.add('source-aliases');
         }
@@ -253,20 +251,25 @@ function rememberPrivateAuthoredImages(root: THREE.Object3D) {
           touched.add('authored-images');
         }
         touched.add('metadata');
-        const ready = comparison
-          ? `export let privateSelectedRiderClass;
+        const loader = comparison
+          ? `export let privateSelectedRiderClass; let privateRiderRequest;
           function loadPrivateSelectedRider() {
-            return loadPrivateRiderMetadata().then(() => import(${JSON.stringify(runtime)})).then(module => {
-              return privateSelectedRiderClass ??= module.createPrivateRiderClass(privateRiderMetadata);
-            });
-          }\n` : '';
-        return { code: ready + `export const privateRiderMetadata = {}; let privateRiderRequest;
+            return privateRiderRequest ??= Promise.all([
+              fetch(new URL('model-catalog.json', document.baseURI)).then(response => {
+                if (!response.ok) throw new Error('Private rider metadata HTTP ' + response.status); return response.json();
+              }), import(${JSON.stringify(runtime)})
+            ]).then(([value, module]) => {
+              if (!value.privateRiderMetadata) throw new Error('Private rider metadata missing');
+              return privateSelectedRiderClass = module.createPrivateRiderClass(value.privateRiderMetadata);
+            }).catch(error => { privateRiderRequest = null; throw error; });
+          }\n` : `export const privateRiderMetadata = {}; let privateRiderRequest;
           function loadPrivateRiderMetadata() {
             return privateRiderRequest ??= fetch(new URL('model-catalog.json', document.baseURI))
               .then(response => { if (!response.ok) throw new Error('Private rider metadata HTTP ' + response.status); return response.json(); })
               .then(value => { if (!value.privateRiderMetadata) throw new Error('Private rider metadata missing'); return Object.assign(privateRiderMetadata, value.privateRiderMetadata); })
               .catch(error => { privateRiderRequest = null; throw error; });
-          }\n` +
+          }\n`;
+        return { code: loader +
           code.replace(marker, comparison
             ? '              if (g.scene.userData.privateSelectedRider) void loadPrivateSelectedRider().then(() => resolve(g), () => resolve(null)); else resolve(g);'
             : '              void loadPrivateRiderMetadata().then(() => resolve(g), () => resolve(null));'), map: null };
