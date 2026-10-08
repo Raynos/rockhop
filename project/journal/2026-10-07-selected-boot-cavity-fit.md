@@ -1,3 +1,8 @@
 Finding: The intended-final selected boot fit retains the actual exterior and collar while reconstructing only certified inner space around the complete foot. A coherent obstacle displacement, bounded strain and full material/body/self assays precede native save. Actual dense clipping/detail pairing is a separate unit after the stable native/collar checkpoint, with appearance explicitly pending.
 Validation: Parent independently reproduces actual contour rays, harmonic known solution, orientation identity/fold rejection and exact closest-triangle barycentrics; all four source hashes and ASTs agree.
 Limits: Actual fit, full-surface room, native collar/sole, dense transfer/bake, moving art and engine remain unexecuted. No placeholder appearance or player promotion.
+
+
+Finding: The first inner-only boot fit correctly retains the source opening and real short collar, but the global nearest-body escape field distorts the sole and fails before native save. The source inner cut has 4360 vertices/8652 triangles and one 98-edge boundary. Rim error remains 4.164mm; principal stretch spans .000114 to16.1146, with the worst uncut source face729 showing inconsistent upper/lower escape directions.
+Validation: Guard exits1 in3.707s; parent independently reproduces the affine reference and all principal strains from retained actual geometry. Collar .09421784m is measured. Source/target centre-angle proxies do not alone establish the failure cause.
+Limits: No qualified rest boot/native/bake or jeans cuff authority. All actual partial geometry and witnesses are preserved; no automatic retry, relaxed threshold or player promotion.
