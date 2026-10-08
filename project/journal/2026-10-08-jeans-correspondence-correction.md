@@ -9,3 +9,10 @@ Finding: Actual correspondence geometry saves, but Blender chooses different tes
 Validation: CPU2 exit1/17.994s after nativebecb saved; no bake executed. Parent read source and added a fixed triangulation step; AST passes. Wearing target, original source and all authored capture/map controls unchanged.
 
 Limits: This is a specific pairing repair, not a successful cage capture or fitted garment. Fresh guarded actual result pending.
+
+
+Finding: Actual paired-triangle receiver/cage succeeds: selected pelvis fly, pockets and waist now transfer without black blocks.
+
+Validation: CPU2 exit0/79.503s; root viewed all six actual original/mapped views; front16425/rear16694 capture samples have zero missing or semantic failures. Wearing/source geometry and native75 remain exact.
+
+Limits: Admit material-correspondence baseline only; 1024 pelvis probe, flattened contour/proportions/blur remain, no whole4K fit or moving acceptance.

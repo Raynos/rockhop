@@ -1467,3 +1467,5 @@ October8 hoodie ruled correction02 stopped before author/atlas job: identical-fu
 October8 bilateral selected glove sculpt saved native277f but solver warnings on both hands invalidate exit0/boundflag. Parent rejected R actual-PBR finger/thenar exposure and needle triangles; palm camera occluded. Keep corrected anatomical assignment/original appearance, stop motion campaign. Clean selected-source guide deformation next; no fit/grip acceptance.
 
 October8 current-player gate14 exit1/15.317s,10/11: boot ready348.24ms exceeds300ms under actual60.21load/18cores after resample. Replay finish/hash and restart8.51ms remain correct. Failure retained, no blind retry or selected-rider/release acceptance.
+
+October8 actual jeans paired-triangle capture succeeds CPU2 exit0/79.503s: six matched source/wearing views show original fly/pockets/waist without black blocks. Keep correspondence baseline for whole selected4K transfer; 1024 pelvis-only shape/detail and all moving/in-engine rider acceptance remain open.
