@@ -1733,3 +1733,5 @@ Corrective runtime02 source uses cached quaternion/node/morph slots with explici
 Actual Blender native-driver probe passes13built-in curves/sixposes withautoexecdisabled; original**negativecontrol rejected, maxkernelresidual1.729e-6,exit0/1.258s. Fullselectednative importretry now supported; no art verdict.
 
 Diagnostic08 productionbundle02 stillfails140Bover(717964/717824),exit1/5.153s. Stopbundle-tuningloop. Permanent actualsource devGarage harness next, no budgetwaiver; source-author bike-origin placement mustoverridegenericoffbikeclipoffset. Production/artgatesremainopen.
+
+Native cuff09 source frozen/reviewed: cavity-rooted inward return replaced by0.8mmlining, bothrealboundarycircuits1688/71 sewn, connectedselectedexterior retained. Parent4pins/AST/source review pass; actualCPU2constructor/sixdensegates pending; unchanged1.5identityguard.
