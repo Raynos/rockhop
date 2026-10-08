@@ -1797,3 +1797,5 @@ Transport02source frozen againstactualnative4a330ae8/receiptb7eefbb2/rows60a5fb7
 Motionnative02FAIL6.643s beforeconstraints/save atnew2e−6addedrest componentassertion; sole.L1.657009e−5/lengtherror1.34e−8m. Originalneutral/actiongates unreached. Lead24measuresnormalization/alladdedframes againstexisting0.1mmphysicalbound, no arbitrarytolerancesweep. Thirdconstruction: shipgate33 next.
 
 Shipgate33 interrupted41.436s atunchangedhostanonymous65.2GiBguardbound. Clear/replayhash andcrash/restarttocontrol passed, boot/fullrestart incomplete. ConcurrentotherVercelcheckoutbuild observed(contributionunmeasured); nounownedkill/boundchange. Retryoncewhenoriginalstartbound permits; no playerpass/constructiongateclear.
+
+Gate33 software02 completed44.501s:8/11 pass; default SwiftShader fails boot/first-frame/restart timing. Actual failure retained. Product fd8fe7c2 unchanged; next invocation explicitly requests verified Metal like passed gate32, without limit changes. Construction gate remains pending.
