@@ -19,3 +19,10 @@ Finding: Correct source rest frames now persist in actual selected hoodie deriva
 Validation: CPU2exit0/17.009s; allseven actual source head/tail/matrix assertions pass before posing. Exact original selected topology/UV/4KPBR and wearer75 remain preserved.
 
 Limits: Actual complete outfit PBR surface and final shared75 binding/motion remain unaccepted.
+
+
+Finding: Actual corrected original hoodie hangs correctly with rounded selected shoulders and continuous sleeve form, without old upward inversion or analytic plates.
+
+Validation: CPU2renderexit0/29.459s; root viewed allfouractualPBRangles. Keep source shape for complete equipped candidate; actual source restframe fix visibly changes intended garment geometry.
+
+Limits: Unmasked chest/back/sleeve skin islands remain; masked surface/continuous clothing and native75 moving judgment required. No art or player acceptance.

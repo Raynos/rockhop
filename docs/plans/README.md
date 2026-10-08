@@ -1539,3 +1539,5 @@ October8 fresh Astra06 diagnosis independently confirmed in actual savednative C
 October8 corrected original hoodie source transport saves CPU2exit0/17.009s after actual seven restframe endpoint/matrix assertions pass. Selected original topology/UV/4KPBR and body75 exact. Actual PBR review and finalgarmentbinding/motion remain pending.
 
 October8 complete selected outfit merge/private engine source reviewed and frozen: smooth native-body face-interpolated hoodie fields, exact75/sourcePBR, full anatomy reference preserved, production renderbody masks/FOUR and decoded GLB intake. Actual corrected hoodie/wholejeans results and dressed Garage/motion remain pending. No normal-player changes.
+
+October8 parent actual4viewPBR keeps corrected original hoodie shape: proper hanging sleeves and rounded shoulders after verified source-rest fix, nooldplates/inversion. Skin islands need equipped-mask surface review; finalnative75/fulloutfit motion/Garage unaccepted.
