@@ -1891,3 +1891,5 @@ Glove checkpoint memory02 source removes unused dense hoodie Surgery and release
 Nativebike01 actual fails first sole-frame affine gate0.114114/0.113078mm against unchanged0.1mm after9.67s; no first seated native saved. Source01/failure retained. User correctly requires real gameplay forward/back leans; seat-held source01 is a baseline only. Lead24 now derives source02 from actual simulated COM/torso and fixes precision without widening bounds.
 
 Ask356 prioritizes actual gameplay forward-standing/back-seated leans and simulated COM/torso consumption. Displayed stand-up/rest and native01 seat-held score are not gameplay coverage; native01 sole affine failure retained. Lead24 builds actual gameplay02 controls; new native lead29 succeeds retired27 and replays the complete selected outfit before sculpt. Generic objectives remain open afterward.
+
+Required original-player gate37 passes10/11 but boot.readyP50 fails326.49ms against unchanged300ms; exact finish/hash, crash and restart pass. Actual failure retained, no release verdict. Prior gate36pass is historical; current readiness regression remains open while independent rider construction proceeds.
