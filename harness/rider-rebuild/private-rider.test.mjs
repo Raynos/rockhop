@@ -171,6 +171,26 @@ test('actual crash releases both contacts and restart restores the exact ride po
   assert.equal(snapshot(rider), expected);
 });
 
+test('Garage defaults to seated contact IK even when the source declares a preview clip', { skip }, async () => {
+  loaded ??= await loadRigAt(pathToFileURL(source), true);
+  const Rider = createPrivateRiderClass({ ...metadata, driver: { ...metadata.driver, garageClip: 'implicit-standing-action' } });
+  const rider = new Rider(loaded, { complete() {} }), frame = new THREE.Group();
+  rider.attach({ frame }); rider.setStage(true); rider.setStageTime(0);
+  const f = poseFrame(1), before = JSON.stringify(f);
+  rider.update(f);
+  assert.equal(JSON.stringify(f), before, 'Garage leaves the physical frame unchanged');
+  assert.equal(rider.clip, undefined);
+  assert.deepEqual(rider.placement.position.toArray(), [0, 0, 0]);
+  assert.equal(rider.debug.stageClip, 'Riding IK/breathing');
+  assert.equal(rider.debug.stance.pose, 'seated');
+  assert.equal(rider.debug.stance.lean, 0);
+  assert.ok(rider.debug.allBoneFinite);
+  for (const residual of [...rider.debug.gripErr, ...rider.debug.soleErr]) assert.ok(Number.isFinite(residual));
+  assert.deepEqual(rider.debug.handOnGrip, rider.debug.gripErr.map(error => error < 0.01));
+  assert.deepEqual(rider.debug.footOnPeg, rider.debug.soleErr.map(error => error < 0.01));
+  rider.dispose();
+});
+
 test('actual named authored clip drives complete rig in Garage without stale contact claims', { skip }, async () => {
   const selected = loaded?.animations[0]?.name ?? (await loadRigAt(pathToFileURL(source), true)).animations[0].name;
   const Rider = createPrivateRiderClass({ ...metadata, previewClip: selected });

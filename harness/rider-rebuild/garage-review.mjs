@@ -14,18 +14,29 @@ import { identifyActualWristFragment } from './identify-wrist-fragment.mjs';
 const arg = (name, fallback = '') => process.argv.find(value => value.startsWith(`--${name}=`))?.slice(name.length + 3) ?? fallback;
 const build = path.resolve(arg('build')), out = path.resolve(arg('out'));
 const requestedClip = arg('clip');
+const requestedBike = arg('bike', 'rookie');
+assert(['rookie', 'pro'].includes(requestedBike), '--bike must be rookie or pro');
 assert(arg('contract'), 'Pass the exact selected rider contract');
 const contractPath = path.resolve(arg('contract')), contractBytes = fs.readFileSync(contractPath);
 const contract = JSON.parse(contractBytes), expected = contract.specification.meshNames;
+const catalog = JSON.parse(fs.readFileSync(path.join(build, 'model-catalog.json')));
+const bikeAsset = catalog.models.find(row => row.logical === `models/bike-${requestedBike}.glb`);
+assert(bikeAsset, 'Selected authored bike catalogue pin required');
 const required = ['RiderBody', 'RiderHoodie', 'RiderJeans', 'ActualSelectedGlove.L', 'ActualSelectedGlove.R', 'ActualSelectedBoot.L', 'ActualSelectedBoot.R'];
 for (const name of required) assert(Object.values(expected).includes(name), `Missing selected dressed object ${name}`);
 assert(!fs.existsSync(out), 'Use a fresh output directory');
 fs.mkdirSync(out, { recursive: true });
-const report = { build, requestedClip: requestedClip || null, contract: { path: contractPath, sha256: crypto.createHash('sha256').update(contractBytes).digest('hex'), expectedObjects: expected }, recipeSHA256: crypto.createHash('sha256').update(fs.readFileSync(new URL(import.meta.url))).digest('hex'), errors: [], loaded: [], snapshots: [], audio: 'silent webdriver; audio=0', review: 'Actual Garage UI, selected native clip or riding IK with breathing, pointer-driven orbit; no pose injection' };
+const report = { build, requestedClip: requestedClip || null, requestedBike, bikeAsset, contract: { path: contractPath, sha256: crypto.createHash('sha256').update(contractBytes).digest('hex'), expectedObjects: expected }, recipeSHA256: crypto.createHash('sha256').update(fs.readFileSync(new URL(import.meta.url))).digest('hex'), errors: [], loaded: [], snapshots: [], audio: 'silent webdriver; audio=0', review: 'Actual Garage UI, selected native clip or riding IK with breathing, pointer-driven orbit; no pose injection' };
 const server = await preview({ configFile: false, root: process.cwd(), build: { outDir: build }, preview: { host: '127.0.0.1', port: 0 }, logLevel: 'warn' });
 const browser = await webkit.launch({ headless: true });
 const context = await browser.newContext({ viewport: { width: 1440, height: 900 }, deviceScaleFactor: 1, recordVideo: { dir: out, size: { width: 1440, height: 900 } } });
-await context.addInitScript(() => localStorage.setItem('rockhop.onboarded', '1'));
+await context.addInitScript(() => {
+  localStorage.setItem('rockhop.onboarded', '1');
+  // Isolated review profile owns both bikes; selection still uses actual UI.
+  localStorage.setItem('rockhop.economy.v1', JSON.stringify({
+    version: 1, wallet: 0, medals: {}, proOwned: true, equipped: 'rookie',
+  }));
+});
 const page = await context.newPage(), responses = [], witnesses = new Map();
 page.on('pageerror', error => report.errors.push(error.message));
 page.on('response', response => {
@@ -38,8 +49,10 @@ try {
   await page.goto(server.resolvedUrls.local[0] + '?' + query);
   await page.locator('.menu-screen.live .menu-item[data-id=garage]').click({ timeout: 120000 });
   await page.waitForSelector('.garage-screen.live');
+  await page.locator(`button[data-bike=${requestedBike}]`).click();
   await page.locator('button[data-outfit=street-mustard]').click();
   await page.evaluate(async () => window.__render.whenReady());
+  await page.locator(`button[data-bike=${requestedBike}][aria-pressed=true]`).waitFor();
   await page.waitForTimeout(1500);
   const inspect = async name => {
     // Five cheap read-only witnesses only; no per-frame pose readback or clock injection.
@@ -51,6 +64,8 @@ try {
         scale: bone.scale.toArray(),
       }));
       return { debug: structuredClone(rider.debug), render: renderer.debugInfo(),
+        attachedToBikeFrame: rider.placement.parent === rider.bike?.frame,
+        placementBike: rider.placement.position.toArray(),
         stageTime: renderer.stageTime, riderStageTime: rider.stageTime,
         clipDuration: rider.clip?.duration ?? null,
         clipTime: rider.clip ? ((rider.stageTime % rider.clip.duration) + rider.clip.duration) % rider.clip.duration : null,
@@ -70,6 +85,13 @@ try {
       assert(Number.isFinite(diagnostic.riderStageTime), 'Actual rider stage clock is finite');
       const authored = contract.genericActions?.[requestedClip];
       if (authored) assert(Math.abs(diagnostic.clipDuration - authored.durationSeconds) < 1e-6, 'Actual clip duration matches source-bound action');
+    } else {
+      assert.equal(diagnostic.debug.stageClip, 'Riding IK/breathing', 'Default Garage uses the riding solver');
+      assert(diagnostic.attachedToBikeFrame, 'Selected rider attached to actual bike frame');
+      assert.deepEqual(diagnostic.placementBike, [0, 0, 0], 'No isolated animation offset');
+      assert(diagnostic.debug.handOnGrip.every(Boolean), 'Both hands reach actual grips');
+      assert(diagnostic.debug.footOnPeg.every(Boolean), 'Both soles reach selected peg targets');
+      assert.equal(diagnostic.debug.stance.pose, 'seated', 'Neutral seated Garage stance');
     }
     report.snapshots.push({ name, ...diagnostic });
     if (name === 'garage-front' && arg('material-probe')) {
@@ -119,6 +141,7 @@ try {
   await Promise.all(responses);
   assert.deepEqual(report.errors, []);
   assert(report.loaded.some(row => row.sha256 === contract.glbSHA256), 'Exact selected GLB served by actual build');
+  assert(report.loaded.some(row => row.sha256 === bikeAsset.sha256), 'Exact selected bike GLB served by actual build');
   for (const row of report.snapshots) {
     assert.deepEqual(row.debug.candidate?.authorMeshRoles, expected, 'Exact selected source object inventory loaded');
     const visible = new Set(row.debug.candidate.visibleMeshes.filter(mesh => mesh.skinned && mesh.triangles > 0).map(mesh => mesh.name));

@@ -113,7 +113,9 @@ export function createPrivateRiderClass(metadata) {
       this.scene.traverse(node => {
         if (node.isMesh) this.debug.candidate.visibleMeshes.push({ name: node.name, skinned: !!node.isSkinnedMesh, triangles: (node.geometry.index?.count ?? node.geometry.attributes.position.count) / 3 });
       });
-      const selectedClip = metadata.previewClip ?? (typeof location === 'object' ? new URLSearchParams(location.search).get('riderClip') : null) ?? this.driver.garageClip;
+      // Garage defaults to the selected bike's contact solver. Authored actions
+      // are diagnostic overrides, never an implicit source-contract default.
+      const selectedClip = metadata.previewClip ?? (typeof location === 'object' ? new URLSearchParams(location.search).get('riderClip') : null);
       if (selectedClip) {
         const clip = gltf.animations.find(item => item.name === selectedClip);
         fail(clip, `Clip ${selectedClip} required`);
@@ -282,7 +284,8 @@ export function createPrivateRiderClass(metadata) {
         contactLimit: 'Socket-only; glove/bar/finger surfaces unqualified' };
       this.debug.physicalPose = !this.stage && !!frame.riderBody.present;
       this.debug.stageClip = this.stage ? 'Riding IK/breathing' : null;
-      Object.assign(this.debug.stance, { on: true, pose: frame.rider.lean < 0 ? 'back' : frame.rider.lean > 0 ? 'forward' : 'seated', blend: Math.abs(frame.rider.lean), lean: frame.rider.lean });
+      const lean = this.stage ? 0 : frame.rider.lean;
+      Object.assign(this.debug.stance, { on: true, pose: lean < 0 ? 'back' : lean > 0 ? 'forward' : 'seated', blend: Math.abs(lean), lean });
     }
 
     poseFromHips(frame, p, hips, spineFlex = 0) {

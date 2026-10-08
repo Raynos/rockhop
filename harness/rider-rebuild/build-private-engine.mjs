@@ -42,7 +42,7 @@ const runtimeMetadata = { sourceSHA256: metadata.sourceSHA256, metadataSHA256: m
   specification: metadata.specification, driver: metadata.driver,
   nativeRest: { frame: metadata.nativeRest.frame, bones: metadata.nativeRest.bones.filter(row => endpointNames.has(row.name))
     .map(({ name, head, tail }) => ({ name, head, tail })) } };
-if (arg('garage-clip')) metadata.driver.garageClip = arg('garage-clip');
+if (arg('garage-clip')) runtimeMetadata.previewClip = arg('garage-clip');
 if (arg('near-similarity')) metadata.driver.nearSimilarityTolerance = Number(arg('near-similarity'));
 const originalPath = path.join(root, 'harness/hero-remaster/build.mts'), original = fs.readFileSync(originalPath, 'utf8');
 const pluginPath = path.join(root, 'harness/rider-rebuild/private-engine-plugin.mjs');
