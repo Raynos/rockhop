@@ -1,0 +1,1 @@
+Current existing-player gate22 passes11/11: cold boot, byte-identical8.591666666666667s clear/hash622bb2554e0f9a26, real crash and one-tick instant restart. Restart frameP95=5.540ms. Actual guarded run exits0 in5.165s. This does not qualify the selected rider or a physical device.
