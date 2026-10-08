@@ -665,6 +665,10 @@ face mask, as specified below.
   surfaces, anatomy, deep motion and physical-device gates remain open0/6.
   An outside artist is optional; no external-resource wait blocks this work.
 
+### Direct phone comparison requested October8 (ask348)
+
+Add **Mustard · Remastered** as a sixth Garage choice in the actual game review build. Preserve all five original riders and their original driver; the original Mustard must remain instantly selectable for comparison. Only the sixth slot uses the selected high-resolution source and native75 driver. Load that large candidate on demand, retain the authored maps, show real Garage performance and verify old→new→old swaps before delivering a phone-accessible preview. This user-authorized comparison is review access, not finished art or normal-player promotion.
+
 ### Equipped-outfit body masks adopted after independent Astra05 review
 
 Parent verified the primary production workflows: [Epic MetaHuman Body Hidden
