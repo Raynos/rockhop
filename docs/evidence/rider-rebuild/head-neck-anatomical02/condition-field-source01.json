@@ -1,0 +1,30 @@
+{
+  "accepted": false,
+  "status": "SOURCE_PREPARED_PARENT_SERIAL_LEASE_REQUIRED",
+  "recipes": [
+    {
+      "path": "assets/blender/rider-rebuild/head-neck-anatomical02/condition-upper-neck-field.py",
+      "sha256": "5ea5f55e6a80813082cde34600b960245c20f24af122811b6dbc5c24cbc64b86"
+    },
+    {
+      "path": "assets/blender/rider-rebuild/head-neck-anatomical02/verify-conditioned-field.py",
+      "sha256": "66909710a67d10200ba7475481ed7785112ea7bf8a46a2f5b488afc18c76f7f5"
+    },
+    {
+      "path": "assets/blender/rider-rebuild/head-neck-anatomical02/author-clothed-neck-motion.py",
+      "sha256": "86cd010c88ad10cf3d5c925a133cdaafab760ac72a30a1e487d782a562fc71b2"
+    },
+    {
+      "path": "assets/blender/rider-rebuild/head-neck-anatomical02/render-clothed-neck-motion.py",
+      "sha256": "d178225175029a800896cc54787953ac6de2ec5891dcd1420f88a69b64124434"
+    }
+  ],
+  "AST": "PASS",
+  "conditionCommand": "blender -b -t 2 --python-exit-code 1 --python assets/blender/rider-rebuild/head-neck-anatomical02/condition-upper-neck-field.py -- docs/evidence/rider-rebuild/head-neck-anatomical02/condition-field-config01.json harness/out/rider-rebuild/head-neck-anatomical02/conditioned01",
+  "readbackCommand": "blender -b -t 2 --python-exit-code 1 --python assets/blender/rider-rebuild/head-neck-anatomical02/verify-conditioned-field.py -- harness/out/rider-rebuild/head-neck-anatomical02/conditioned01",
+  "basis": "Actual middle-neck joint transverse-plane intersection defines t0(u) on actual authored UV surface. Quintic C2 blend reaches actual last authored row t.95 then head1 plateau to t1; lower field untouched, no fallback on invalid intersections.",
+  "limits": [
+    "Geometry/PBR/rest/canonical/hands unchanged must pass actual saved readback.",
+    "Original902 retained; no moving/art, normal residual, clothing universal or release acceptance."
+  ]
+}

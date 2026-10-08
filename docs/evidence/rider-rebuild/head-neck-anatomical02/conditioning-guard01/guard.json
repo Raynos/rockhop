@@ -1,0 +1,59 @@
+{
+  "accepted": false,
+  "lock": "/Users/raynos/projects/localai/.model.lock",
+  "method": "lockf -k",
+  "command": [
+    "/Applications/Blender.app/Contents/MacOS/Blender",
+    "-b",
+    "-t",
+    "2",
+    "--python-exit-code",
+    "1",
+    "--python",
+    "assets/blender/rider-rebuild/head-neck-anatomical02/condition-upper-neck-field.py",
+    "--",
+    "docs/evidence/rider-rebuild/head-neck-anatomical02/condition-field-config01.json",
+    "harness/out/rider-rebuild/head-neck-anatomical02/conditioned01"
+  ],
+  "controllerPID": 83950,
+  "pollSeconds": 1,
+  "startAnonymousBelowGiB": 55,
+  "stopAnonymousGiB": 65,
+  "stopAnonymousPlusWiredGiB": 96,
+  "limitSeconds": 180.0,
+  "guardSHA256": "cf8acd15d8b7484480bee74d23892be815d955ffd87115d3da8ed228ffb3d916",
+  "status": "worker returned; review pending",
+  "samples": [
+    {
+      "seconds": 0,
+      "anonymousGiB": 48.3,
+      "wiredGiB": 7.5,
+      "freeGiB": 17.3
+    },
+    {
+      "seconds": 0.057,
+      "anonymousGiB": 48.3,
+      "wiredGiB": 7.6,
+      "freeGiB": 17.2
+    },
+    {
+      "seconds": 1.111,
+      "anonymousGiB": 48.2,
+      "wiredGiB": 7.6,
+      "freeGiB": 17.4
+    },
+    {
+      "seconds": 2.16,
+      "anonymousGiB": 49.2,
+      "wiredGiB": 7.7,
+      "freeGiB": 17.1
+    }
+  ],
+  "physicalMemoryBytes": 137438953472,
+  "requiredPhysicalMemoryBytes": 137438953472,
+  "scope": "Future explicitly invoked owned Rockhop job only",
+  "pressureOrSwapLimits": "No separate pressure/swap gate exists in the pinned original guard; none altered",
+  "ownedChildPID": 83955,
+  "exitCode": 0,
+  "elapsedSeconds": 2.388
+}

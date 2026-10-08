@@ -25,3 +25,9 @@ Limits: Residual nape bulge, albedo patching and shading/hair seams remain. Inde
 Finding: Independent saved native retains exact canonical/hand fields and75 rest with one closed connected component; saved upper-normal comparison remains failed.
 Validation: CPU2 readback exit0 in1.516s;6753canonical/1446hand rows, zero boundary/nonmanifold/loose; normalmax0.01461224 versus2e-6 retained.
 Limits: No normal waiver or art acceptance. A confirmed underjaw upper-field jump must be conditioned before the clothed stress action.
+
+Finding: The actual anatomical middle-neck plane now defines a C2 upper field transition. All491 upper edge intervals reach the genuine selected head1 anchor without the prior1.120521L1 discontinuity.
+
+Validation: Conditioning CPU2 exit0/2.388s, independent saved readback exit0/2.226s;1394newneck fields changed,6753canonical/1446hands, geometry/UV/corner normals/PBR/rest75 exact. Fieldsum maximumerror9.984e-8.
+
+Limits: Historical saved-normal residual remains failed; C7 and albedo issues remain. Actual clothed motion is next, not accepted by this field check.

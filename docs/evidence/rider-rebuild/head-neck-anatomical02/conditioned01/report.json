@@ -1,0 +1,91 @@
+{
+  "accepted": false,
+  "status": "UNACCEPTED_ENDPOINT_CONDITIONED_FIELD_DERIVATIVE_SAVED",
+  "candidate": {
+    "path": "harness/out/rider-rebuild/head-neck-anatomical02/conditioned01/selected-head-neck-conditioned.blend",
+    "sha256": "e68b5c41072e3dd6eee0a71ee938efd57c2889217e2efa7f4c203054869cf85e"
+  },
+  "sourceNative": {
+    "path": "harness/out/rider-rebuild/head-neck-anatomical02/native02/selected-head-anatomical-neck.blend",
+    "sha256": "9023618821cfb4e0c2725f0dfb970ac898d7e38d94a4c30be9863515c938307c"
+  },
+  "sourceReadback": {
+    "path": "harness/out/rider-rebuild/head-neck-anatomical02/native02/independent-verification.json",
+    "sha256": "d4dede83c1a56807cb6312ce4819020d1e873b429f22dab2244b6b31ed453cf7"
+  },
+  "recipeSHA256": "5ea5f55e6a80813082cde34600b960245c20f24af122811b6dbc5c24cbc64b86",
+  "configSHA256": "720803e18376f4fcf03ed81bff9a292e39d266ab968f026d7b6eaa902f61d3c2",
+  "geometryUVActualCornerNormalsPackedPBRSignatureUnchanged": "0a7f1575183746c2642ff74294035d40614f72bfe1f76a5eec9c9329b6e0d862",
+  "all75RestRecordsUnchanged": true,
+  "canonicalRetainedNamedFieldRowsUnchanged": 6753,
+  "originalSourceRowsEdited": 0,
+  "changedNewNeckVertices": 1394,
+  "actualUpperHead1Anchors": 347,
+  "actualFinalRowPlateauT": 0.95,
+  "lowerAuthoredRowsUnchanged": 1379,
+  "anatomicalPlane": {
+    "originJoint": "DEF-spine.005 head (=DEF-spine.004 tail)",
+    "origin": [
+      -1.378020564182382e-16,
+      -0.008426213636994362,
+      1.5172983407974243
+    ],
+    "axis": [
+      1.556597741125148e-15,
+      -0.08716700971126556,
+      0.9961937069892883
+    ],
+    "axisLandmarks": [
+      "DEF-spine.004 head",
+      "DEF-spine.006 head"
+    ],
+    "UVIntersectionSegments": 318
+  },
+  "actualAnatomicalOnsetTRange": [
+    0.325797501959502,
+    0.7311314537077346
+  ],
+  "blend": "quintic smootherstep10x\u00b3\u221215x\u2074+6x\u2075 from actual plane t0(u) to actual last row; final row\u2192upper head1 anchor is constant; C2 endpoint derivatives zero",
+  "beforeEndpointFieldJump": {
+    "all": {
+      "edges": 491,
+      "maxL1": 1.120521366596222,
+      "maxLInfinity": 0.560260683298111
+    },
+    "anterior": {
+      "edges": 257,
+      "maxL1": 1.120521366596222,
+      "maxLInfinity": 0.560260683298111
+    },
+    "posterior": {
+      "edges": 234,
+      "maxL1": 0.3965463452041149,
+      "maxLInfinity": 0.1982731819152832
+    }
+  },
+  "afterEndpointFieldJump": {
+    "all": {
+      "edges": 491,
+      "maxL1": 0.0,
+      "maxLInfinity": 0.0
+    },
+    "anterior": {
+      "edges": 257,
+      "maxL1": 0.0,
+      "maxLInfinity": 0.0
+    },
+    "posterior": {
+      "edges": 234,
+      "maxL1": 0.0,
+      "maxLInfinity": 0.0
+    }
+  },
+  "maximumFieldSumError": 9.984069038182497e-08,
+  "maximumNativeInfluences": 5,
+  "limits": [
+    "No geometry/material/rest correction or new art acceptance.",
+    "Independent saved readback and clothed actual stress remain required.",
+    "Known C7 bulge, right-neck albedo/shading/hair seam and historical saved normal residual remain open.",
+    "New named field inventory is derivative; original canonical FULL/FOUR files remain immutable and are not redefined."
+  ]
+}

@@ -1425,3 +1425,5 @@ October 8 broad-neck saved readback: one closed connected component,6753canonica
 October 8 hoodie panel intake completed read-only in8.26s: actual compact target/source polygons, cornerUV, axillary patch and source chart IDs available, original target/body75 unchanged. Builder now authors one bilateral gusset/support-loop correction; dense frozen placement is appearance reference, not wearing-shape authority. No fit acceptance.
 
 October 8 boot anatomical extraction exit0/17.818s: actual bilateral boot topology, foot-local sections and selected PBR ancestry preserved. One necessary forefoot/medial-quarter replacement is being authored; repeated displacement repair stopped. Unaccepted, no player promotion.
+
+October 8 actual neck endpoint correction saved e68b5c41; independent readback passes exact geometry/PBR/rest75/6753canonical/1446hands.491 final edges fieldjump L1 1.120521→0 by actual joint-plane C2 transition,1394newneck vertices only. Historical saved-normal failure remains. Next clothed turn/nod; no art/motion acceptance.
