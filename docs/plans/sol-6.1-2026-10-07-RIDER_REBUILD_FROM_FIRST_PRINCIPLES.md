@@ -2,6 +2,8 @@
 
 Created: 2026-10-07 · writer: Codex / gpt-6.1-sol · asks312/317–322.
 **Status: active; replacement authorized by the user; accepted milestones 0/6.**
+Current construction authority: [Astra workflow correction below](#astra-workflow-correction-and-advisory-cadence).
+Pending donor-registration experiments are historical controls, not the next production route.
 Execution owner: rider remodel agent #2, session01a117db-406b-7b70-a14f-d614b1d8f6e5.
 Release authority: [FINISH_TO_PUBLISH](sol-6.1-2026-09-29-FINISH_TO_PUBLISH.md).
 Bars: [mission, especially person/contact and phone pacing](../mission.md).
@@ -389,3 +391,81 @@ Keep original4K maps and high-resolution source meshes intact; final4K derivativ
 maps retain measured original appearance. Validate texture reconstruction and
 seam continuity, not only UV bounds. Shape fit and appearance reconstruction
 have separate gates. All R0–R5 remain open.
+
+## Astra workflow correction and advisory cadence
+
+The [independent Astra-6 high audit](../evidence/rider-rebuild/astra-workflow-audit01/FINDING.md)
+for ask332 identifies a process error: appearance preservation became preservation
+of failed generated topology. This plan already permits new production topology.
+The parent adopts the correction; no garment or artistic milestone is accepted.
+
+Stop the pending jeans section-registration, glove root/ARAP and boot cavity-chart
+campaigns as the production route. Keep their sources, measurements and failed
+evidence intact as historical controls. Do not run them under renamed recipes.
+The proposed hoodie geometric intake may supply useful source data, but a new
+anatomy-detection or fitting framework is not a prerequisite to modeling it.
+These decisions supersede earlier prescriptions to retain every compact source
+vertex/face or reconstruct complete internal garment cavities before assembly.
+Original master files and selected appearance remain protected.
+
+Use the coherent native02 wearer and shared75 rig as the current construction
+foundation, with its anatomical moving review still open. Author in one master
+scene with the complete body and adjacent garments visible. Fit large forms and
+make deformation topology deliberately, then transfer selected detail and skin:
+
+1. Fit the selected compact boot silhouette against heel, sole plane, toe box and
+   ankle landmarks. Retain useful laces, tongue, outsole and collar; replace bad
+   production regions. Model visible collar depth without a fabrication lining.
+   Keep sole/heel attachment predominantly rigid to the foot and deliberately
+   limit toe/ankle flex. Establish real boot height and jeans overlap together.
+2. Model continuous selected jeans pelvis/crotch and leg surfaces with waist,
+   hip, knee and cuff loops around this wearer and these actual boots. Retain
+   selected denim shape, fly, pockets, seams and major folds. Fit/sculpt the dense
+   appearance source to the same shape; replace malformed generated material
+   surfaces instead of solving their cavity correspondence.
+3. Keep usable selected25 hoodie regions. Use direct proportional edits or an
+   authored simple cage around shoulder, armhole, elbow, cuff, hem and hood.
+   Rebuild the axilla and joint loops where needed; no lateral-only sleeve split.
+4. Author separate articulated glove surfaces using the anatomical hand as a
+   topology guide. Shape each finger, thumb/web, pads and cuff to the selected
+   black glove. Preserve or rebuild its stitched panels and strap. Uniformly
+   inflated skin is only a scaffold and cannot be delivered as the selected glove.
+5. Give changed production surfaces coherent UVs and bake the aligned actual
+   dense albedo, roughness/metallic and tangent-normal detail with ordinary
+   controlled cages. Retain silhouette folds and distinct parts in geometry.
+   Inspect one textured derivative against its selected source before repeating
+   the transfer. No flat palette, generic shell or borrowed invalid compact UVs.
+6. Initialize compatible weights by anatomical region, then author joint/digit
+   transitions. Add limited correctives only for observed residual defects and
+   prove one through the engine before relying on Blender drivers. Integrate all
+   seven actual parts and play the complete textured outfit in both Blender and
+   the actual Garage/game before a long animation/detail campaign.
+
+The next builder deliverable is editable fitted garment geometry with recognizable
+selected detail, followed by the full-outfit neutral/reach/crouch/standing-ride/
+seated-ride/return film. Gross rest exposure or lost source identity rejects a
+candidate immediately; static correctness cannot accept movement. Parent alone
+judges played art. Numerical witnesses diagnose actual defects; fixed universal
+padding, preservation of every generated face and exhaustive hidden-interior
+certification are not entrance requirements for an unaccepted construction
+review. Existing native/GLB/GPU, contact, deterministic replay, mobile and release
+requirements remain intact. No unfinished normal-player promotion.
+
+Allow one authored pass and at most one targeted repair of the same mechanism.
+Persistent structural failure requires rebuilding that region; persistent loss
+of selected appearance requires correcting the sculpt/bake. If the agents cannot
+author the required art, report that and prepare the exact wearer/donor package
+for a character artist rather than continuing solver preparation as progress.
+
+Asks333–334 add **a fresh Astra-6 high advisory every six hours**, reviewing the
+previous twelve hours while this rider goal is active. The thread heartbeat is
+`rider-astra-6-production-advisory`. Spawn the adviser with no inherited builder
+history; supply the original objective, current plan and current evidence paths.
+It inspects actual results and work, challenges assumptions and wasted effort,
+and recommends concrete keep/stop/change decisions and the shortest proper next
+deliverable. The parent verifies that advice against evidence, autonomously
+updates this plan, stops ineffective work and implements supported corrections
+before resuming substantial build work. A report alone is not follow-through.
+Do not resume a paused goal; stop the recurring advisory when this plan is truly
+complete and archived. All R0–R5 and the original complete rider objective remain
+open until their actual requirements are proved.
