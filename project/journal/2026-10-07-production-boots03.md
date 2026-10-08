@@ -21,3 +21,9 @@ Finding: Direct selected-source sculpt retains rounded toe/leather/laces and gre
 Validation: Actual runexit0 in13.684s, parent native hash and all four matched PNG inspections; dense topology/UV/source maps/body/shared75 preserved.
 
 Limits: Rest fit rejected. One targeted local flank repair justified by current actual sections, no moving or mobile acceptance.
+
+Finding: Version the actual bilateral foot outline beside the direct selected boot author instead of referencing an untracked fallback path.
+
+Validation: Parent rehashed exact6504-byte copy; SHA cfb4d1eb6d5e10cc88d73f406c936712c6d607b97145ef819b6e78789b07e978 matches original.
+
+Limits: Inventory only; outline does not certify shoe fit or authorize a new sculpt run.

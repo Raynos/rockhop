@@ -1311,3 +1311,5 @@ October 7 current-player baseline: initial portable SwiftShader9/11 timing failu
 October 7 actual complete selected hoodie checkpoint: direct regional repair exit0 in3.084s,1035 new welded quads and five local right fan faces absorbed. Parent actual native hash matches, full body/shared75 unchanged. Patch material/UV rebake, moving fit and assembled hem overlap remain unaccepted.
 
 October 7 actual direct selected boot sculpt review: parent viewed all four genuine-PBR original/sculpt views and rehashed native. Rounded toe/detail now retained, but outer flank/distal skin still exposed; rest enclosure rejected. CPU2 exit0 in13.684s, source topology/UV/body75 preserved. Next one local flank repair from current sections, no whole crown/lattice change.
+
+October 7 boot target inventory: exact bilateral unchanged-body forefoot outline now versioned beside direct selected sculpt; parent copy hash matches. Inventory only, no geometry/fit/art change.
