@@ -1,0 +1,49 @@
+{
+  "accepted": false,
+  "status": "ONE_REGIONAL_CSG_AUTHOR_SOURCE_READY_UNEXECUTED",
+  "pythonASTPassed": true,
+  "explicitSourcePinsPassed": 11,
+  "noBlenderModelBakeRenderOrDenseArrayJobExecuted": true,
+  "recipeSHA256": "1b307138bbb4314d5e2485f8b60512b5f799bac8eeb4b39eb7364979dbd79689",
+  "controlsSHA256": "1d7dd6b43bcd650e4c70808a4f716ebec939cd94652bf223ccbf2bd84a4baf0f",
+  "command": [
+    "/Applications/Blender.app/Contents/MacOS/Blender",
+    "-b",
+    "-t",
+    "2",
+    "--python-exit-code",
+    "1",
+    "--python",
+    "assets/blender/rider-rebuild/boot-last-anatomical04/author_region.py",
+    "--",
+    "harness/out/rider-rebuild/boot-last-anatomical04/author01"
+  ],
+  "leaseRequirement": "Parent original CPU2/model lock/memory guard; unchanged180second job limit. This recipe never launches itself.",
+  "supportedInputBounds": {
+    "maxOriginalFacesPerBoot": 610934,
+    "maxOperandFaces": 18000,
+    "maxResultFacesPerBoot": 950000,
+    "parentGuardSeconds": 180,
+    "noFallback": true,
+    "noFullBootRemesh": true
+  },
+  "runtimeGates": [
+    "Exact actual selected mesh/UV/material state from successful extraction.",
+    "One connected watertight last/foot-cavity result, no zero-area faces.",
+    "Below-collar canonical foot contained by solid before cavity carving.",
+    "Canonical foot vertices and triangle centroids outside leather, measured>=2.5mm clearance.",
+    "Surviving original source faces keep exact cornerUV and sourceface ancestry.",
+    "Original rear tread held; selected lace/tongue and genuine4K maps retained.",
+    "All added exterior corners have same-side facing actual-source UV correspondence.",
+    "Whole working wearer/weights/UV/rest75/pose remains identical.",
+    "Native saved after union and cavity, before post-CSG/PBR gates; failures remain unaccepted."
+  ],
+  "reviewContract": "Generated matched source/new original-PBR rest specs for both anatomical sides, toe, heel and top. Parent renders/plays separately; no art acceptance from numeric gates or stills.",
+  "limits": [
+    "No heavy job executed by source checker.",
+    "180second guard is a stopping limit, not a benchmark or prediction.",
+    "No fallback Boolean solver, full-boot remesh, bake, mobile final or player export.",
+    "New-region UVs are explicit original-map correspondence preview; final coherent unwrap/bake remains required.",
+    "Actual original-PBR rest views can reject only. Parent plays ankle/toe, complete outfit and fixedRookie/Pro supported bike motion before any art/fit acceptance."
+  ]
+}

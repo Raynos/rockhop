@@ -1,0 +1,203 @@
+{
+  "accepted": false,
+  "stage": "ONE_REGIONAL_CSG_ANATOMICAL_LAST_SOURCE",
+  "workingOutfit": {
+    "path": "harness/out/rider-rebuild/production-authoring01/working01/editable-real-source-outfit.blend",
+    "sha256": "9cedbcdbe0a953d116bafc80b41f8adb0538f21c1ecfca20598f3f079952aaf4"
+  },
+  "canonicalArrays": {
+    "path": "harness/out/rider-rebuild/native-hand-repair01/native02/native-body.npz",
+    "sha256": "e62e9969503b7761e99463eccc3ca7be39e0c230a2948f2f87a224db52d0f9a2"
+  },
+  "selectedOriginal": {
+    "path": ".tmp/generation-comparison-2026-10-03/user-agent2/items01/boots/paint01/painted.glb",
+    "sha256": "b8dbd980f4d5a6a46b86db6f315ac630be07c538382a24fa5a2d2002a7d97d8c"
+  },
+  "selectedMaps": {
+    "baseColorTexture.png": {
+      "path": "assets/blender/hero-remaster/rider/finish-2026-10-05/wardrobe/data/prep02/boots/baseColorTexture.png",
+      "sha256": "5bda21b0d584f91aad83d310b868be6a575d28eddb1170e01e65c0b2071f4044"
+    },
+    "metallicRoughnessTexture.png": {
+      "path": "assets/blender/hero-remaster/rider/finish-2026-10-05/wardrobe/data/prep02/boots/metallicRoughnessTexture.png",
+      "sha256": "4017261b5f233cba5780578691a1508382295db4b157c4d175ad905bc98e5c30"
+    }
+  },
+  "extraction": {
+    "path": "docs/evidence/rider-rebuild/boot-last-anatomical04/extraction01/report.json",
+    "sha256": "2637a3bc61ff530c58cf567515263bcaca97ae39101c0fdf9509d39aead94f7b"
+  },
+  "sections": {
+    "R": {
+      "path": "docs/evidence/rider-rebuild/boot-last-anatomical04/extraction01/R-sections.json",
+      "sha256": "13d560988cc06288a1470fe95b8288508a9abf81223466ef6912959291f5a855"
+    },
+    "L": {
+      "path": "docs/evidence/rider-rebuild/boot-last-anatomical04/extraction01/L-sections.json",
+      "sha256": "dcdb49845f87f0b48fc1e29b8c1ea7a4f342b7f86c48210410726be4a2d4ca87"
+    }
+  },
+  "readOnlyHelpers": {
+    "path": "assets/blender/rider-rebuild/boot-last-anatomical04/extract_region.py",
+    "sha256": "cf6511b8e2a37bf3549de3a87d25dc1310de77e63b231ac07e4a09f53eaa9fbd"
+  },
+  "readOnlyInputs": {
+    "path": "assets/blender/rider-rebuild/boot-last-anatomical04/inputs.json",
+    "sha256": "75c0a8502370de935e44ce70f4a458a00d33efa44146001996bdc6628eb9b01a"
+  },
+  "reviewRenderer": {
+    "path": "assets/blender/rider-rebuild/production-assembly01/render.py",
+    "sha256": "e50dd77cfa8ebf4f8a1efbfa81beeaea4e224cdef3b4fd82fe99bb81fd771e4b"
+  },
+  "objects": {
+    "body": "RiderBody",
+    "rig": "RiderSkeleton",
+    "boots": {
+      "R": "Boots__LocallyRepairedSelectedDenseBoot.R",
+      "L": "Boots__LocallyRepairedSelectedDenseBoot.L"
+    }
+  },
+  "profilesLongBottomRoofLateralWidthMedialWidthM": [
+    [
+      0.06,
+      0.011,
+      0.058,
+      0.012,
+      0.012
+    ],
+    [
+      0.055,
+      -0.006,
+      0.094,
+      0.032,
+      0.029
+    ],
+    [
+      0.045,
+      -0.006,
+      0.112,
+      0.047,
+      0.043
+    ],
+    [
+      0.025,
+      -0.006,
+      0.112,
+      0.052,
+      0.044
+    ],
+    [
+      0.01,
+      -0.006,
+      0.112,
+      0.055,
+      0.046
+    ],
+    [
+      -0.025,
+      -0.006,
+      0.114,
+      0.056,
+      0.048
+    ],
+    [
+      -0.05,
+      -0.006,
+      0.115,
+      0.056,
+      0.046
+    ],
+    [
+      -0.075,
+      -0.006,
+      0.089,
+      0.058,
+      0.047
+    ],
+    [
+      -0.105,
+      -0.02,
+      0.071,
+      0.062,
+      0.05
+    ],
+    [
+      -0.125,
+      -0.019,
+      0.064,
+      0.063,
+      0.058
+    ],
+    [
+      -0.145,
+      -0.0175,
+      0.049,
+      0.059,
+      0.059
+    ],
+    [
+      -0.165,
+      -0.014,
+      0.045,
+      0.055,
+      0.057
+    ],
+    [
+      -0.185,
+      -0.0115,
+      0.0375,
+      0.038,
+      0.06
+    ],
+    [
+      -0.205,
+      -0.007,
+      0.033,
+      0.018,
+      0.058
+    ],
+    [
+      -0.215,
+      -0.004,
+      0.028,
+      -0.007,
+      0.054
+    ],
+    [
+      -0.222,
+      0.004,
+      0.019,
+      -0.019,
+      0.04
+    ],
+    [
+      -0.225,
+      0.009,
+      0.011,
+      -0.027,
+      0.03
+    ]
+  ],
+  "profileRationale": "Independent authored shoe last: actual foot ball +-50.1mm; distal hallux medial bias;6-10mm gross upper allowance. Roof remains below original selected crown at -.105/-.145/-.185/-.205, retaining original toe/lace relief where useful. Outer solid stops at112-115mm quarter height, while original tongue extends144mm. New rear quarter is allowed because measured inner cavity rear is9.8mm short at80mm high. Rear tread below-12mm and behind-.105 is protected. New material extent is only CSG union difference, not replacement of the whole selected boot.",
+  "outerRingSamples": 96,
+  "outerLongitudinalStepM": 0.003,
+  "cavityLongitudinalStepM": 0.003,
+  "cavityRingSamples": 96,
+  "innerEaseM": 0.004,
+  "minimumMeasuredClearanceM": 0.0025,
+  "cavityTopM": 0.2,
+  "coverageThroughHeightM": 0.107,
+  "UVRayReachM": 0.065,
+  "minimumDonorNormalDot": 0.1,
+  "limits": {
+    "maxOriginalFacesPerBoot": 610934,
+    "maxOperandFaces": 18000,
+    "maxResultFacesPerBoot": 950000,
+    "parentGuardSeconds": 180,
+    "noFallback": true,
+    "noFullBootRemesh": true
+  },
+  "outputRoot": "harness/out/rider-rebuild/boot-last-anatomical04",
+  "status": "UNEXECUTED_SOURCE_ONLY_NOT_ACCEPTED",
+  "motionRequired": "Actual original-PBR rest views can reject only. Parent plays ankle/toe, complete outfit and fixedRookie/Pro supported bike motion before any art/fit acceptance."
+}

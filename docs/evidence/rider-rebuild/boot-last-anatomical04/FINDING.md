@@ -1,37 +1,38 @@
-# Actual boot region extraction precedes one new-topology author
+# Actual cavity data grounds one regional selected-boot reconstruction
 
-Source checkpoint only; no geometry, bake, render, pose or native-save job has
-run in this lane. Parent owns the serial CPU2 lease and all art judgments.
+Parent extraction exit0 in17.818s: both305,453-vertex/610,934-triangle selected
+boots have one connected watertight component. At80mm height, R inner-cavity
+medial extent is25.03mm versus the actual foot33.67mm; rear extent is30.49mm
+versus40.26mm. The source really has an ankle cavity, and its vertical sections
+are U-shaped shell contours. An ellipse-fill would erase that cavity. The L
+measurements reverse medial sign and confirm the same construction requirement.
 
-The actual original-PBR repaired views retain the chosen black leather boot,
-rounded toe, tongue/laces, collar, heel and welt/outsole. They also show real
-skin exposure. `local-repair-review01/L/sculpted-selected-lateral.png` views
-**L medial**, with exposure from the medial ankle/quarter through forefoot and
-toe. Its toe-threequarter view confirms the same regions. The corresponding
-negative-transverse R views show **R lateral**, with smaller exposure; this
-does not qualify the unseen R medial side. A forefoot-only repair that freezes
-the defective quarter would knowingly leave the demonstrated failure.
+Actual original-PBR negative views remain authoritative: negative-T R is
+anatomical lateral; negative-T L is medial. L medial and toe-threequarter show
+ankle/quarter, ball and distal exposure. R lateral shows smaller exposure and
+cannot qualify its unseen medial surface. The three-displacement repair is closed.
 
-The earlier three-control sculpt/repair is closed. The next author must replace
-the necessary connected forefoot/medial-quarter surface and matching sole
-perimeter, using a real asymmetric cavity/last around each canonical foot.
-Useful genuine selected rear, collar, tongue/laces and exterior detail remain
-the design authority. New derivative topology, UV and weights are permitted;
-original selected GLB/maps and canonical wearer remain immutable.
+`author_region.py` now prepares one deliberate CSG derivative: retain the actual
+selected boot, UNION an explicit asymmetric outer shoe last only where its volume
+is deficient, then DIFFERENCE one continuous anatomical foot/ankle cavity.
+The outer sections span necessary forefoot, matching sole perimeter and ankle
+quarters, including the measured rear deficiency. Source toe/lace crown is higher
+than the authored last where useful; selected rear tread below-12mm/behind-.105m
+is protected. No source-position fitting, full-boot remesh or generic replacement.
 
-Existing point bounds do not reveal actual lining/cavity topology or which
-cut loops cross the original tongue/laces. The parent requested one read-only
-extraction before a grounded author recipe. `extract_region.py` reads the exact
-working native9ced and actual selected boot objects. It measures longitudinal
-ankle/quarter/ball/toe planes and heights bracketing the canonical132mm ankle,
-with actual triangle IDs, connected components, open/branched/closed section
-curves, original packed4K PBR and sourceUV hashes. Displayed foot coordinates
-must match canonical42f through retained source IDs, accounting for the selected
-head integration's reindexing. It does not infer inner/outer semantics from a
-nearest-normal sign or alter any source.
+The cavity uses actual own-side canonical foot sections, a joined toe chamber
+and4mm declared ease. Actual coverage is tested before carving. After carving,
+vertex/triangle-centroid leather parity and>=2.5mm nearest clearance, one connected
+watertight result, exact surviving original UV, source-face/new-corner ancestry
+and unchanged wearer/UV/weights/shared75 are mandatory. New exterior corners use
+same-side facing selected source triangles; genuinely new lining explicitly uses
+the actual original inner-quarter PBR. All original4K maps remain genuine. New UV
+correspondence is an authoring preview requiring final regional unwrap/bake.
 
-Validation: ordinary Python AST and all11 exact input hashes pass. The command
-and unresolved runtime intake are in `source-checkpoint.json`. The extraction
-is unexecuted; no cut boundary, new boot, fit, selected-detail transfer or motion
-acceptance is claimed. Its one result will determine the necessary reconstruction
-region; it is not a new solver or a replacement for actual authored geometry.
+Validation: AST/all11 author input pins pass. The exact one-run command is in
+`author-source-checkpoint.json`; the parent's existing180s CPU2/memory guard
+remains required. Operand/result-count bounds stop expansion; no solver fallback.
+Native saves follow union and cavity before later gates, preserving actual failures.
+Matched source/new PBR rest-view specs are generated after success. Authoring is
+unexecuted and unaccepted; parent plays actual ankle/toe/full-outfit/fixed-bike
+motion before any fit/art verdict. No bake, render, player or release change.
