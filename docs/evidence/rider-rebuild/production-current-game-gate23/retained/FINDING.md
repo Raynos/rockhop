@@ -1,0 +1,1 @@
+Existing-player gate23 passes11/11: silent boot, exact8.591666666666667s clear/hash622bb2554e0f9a26, real crash and one-tick restart. Restart frameP95=5.730ms; actual guard exits0 in5.654s. This qualifies neither the selected rider nor physical devices.
