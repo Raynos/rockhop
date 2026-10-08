@@ -5,3 +5,10 @@ Finding: replace the failed ray-stamped pads with explicit connected actual hand
 Validation: parent reviewed author/region/appearance source and frozen selections, parsed all Python ASTs and rehashed every frozen file plus eleven actual input pins. Array construction covers all62 regions.
 
 Limits: no actual Blender mesh saved or textured yet; FULL/FOUR reduction risk is measured but moving-art and body/native/engine proof remain open. No normal-player promotion.
+
+
+Finding: connected-region author saves both real glove meshes, fields, UVs and review action before dense appearance.
+
+Validation: actual exit0 after2.888s, early saves preserved; parent rehashed complete native and retained exact guard/worker/report. Body/rest in-memory signature passed.
+
+Limits: shape and selected material transfer unreviewed; moving art/native/GLB/GPU and full rider gates remain open.

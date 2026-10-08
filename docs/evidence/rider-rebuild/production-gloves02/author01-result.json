@@ -1,0 +1,221 @@
+{
+  "status": "worker returned; review pending",
+  "acceptedArt": false,
+  "executedGeometryPasses": 1,
+  "executedBakes": 0,
+  "guard": {
+    "accepted": false,
+    "lock": "/Users/raynos/projects/localai/.model.lock",
+    "method": "lockf -k",
+    "command": [
+      "/Applications/Blender.app/Contents/MacOS/Blender",
+      "-b",
+      "-t",
+      "2",
+      "--python-exit-code",
+      "1",
+      "--python",
+      "assets/blender/rider-rebuild/production-gloves02/author.py",
+      "--",
+      "harness/out/rider-rebuild/production-gloves02/authored01",
+      "--stage",
+      "geometry"
+    ],
+    "controllerPID": 97714,
+    "pollSeconds": 1,
+    "startAnonymousBelowGiB": 55,
+    "stopAnonymousGiB": 65,
+    "stopAnonymousPlusWiredGiB": 96,
+    "limitSeconds": 180.0,
+    "guardSHA256": "cf8acd15d8b7484480bee74d23892be815d955ffd87115d3da8ed228ffb3d916",
+    "status": "worker returned; review pending",
+    "samples": [
+      {
+        "seconds": 0,
+        "anonymousGiB": 24.1,
+        "wiredGiB": 6.5,
+        "freeGiB": 43.7
+      },
+      {
+        "seconds": 0.039,
+        "anonymousGiB": 24.1,
+        "wiredGiB": 6.5,
+        "freeGiB": 43.7
+      },
+      {
+        "seconds": 1.093,
+        "anonymousGiB": 24.3,
+        "wiredGiB": 6.5,
+        "freeGiB": 42.9
+      },
+      {
+        "seconds": 2.129,
+        "anonymousGiB": 26.3,
+        "wiredGiB": 6.7,
+        "freeGiB": 40.5
+      }
+    ],
+    "physicalMemoryBytes": 137438953472,
+    "requiredPhysicalMemoryBytes": 137438953472,
+    "scope": "Future explicitly invoked owned Rockhop job only",
+    "pressureOrSwapLimits": "No separate pressure/swap gate exists in the pinned original guard; none altered",
+    "ownedChildPID": 97718,
+    "exitCode": 0,
+    "elapsedSeconds": 2.888
+  },
+  "files": [
+    {
+      "path": "harness/out/rider-rebuild/production-gloves02/authored01/GloveProduction.L-fields.npz",
+      "sha256": "e05fb90c4259720cec86206121041522cd136fb5c0cf42498140f8829a85b91b",
+      "bytes": 1562210
+    },
+    {
+      "path": "harness/out/rider-rebuild/production-gloves02/authored01/GloveProduction.R-fields.npz",
+      "sha256": "6e0db4381a2936ed62e91a7bd88a85e983070bccaf7b0e56eedcb1a02045cadd",
+      "bytes": 1535981
+    },
+    {
+      "path": "harness/out/rider-rebuild/production-gloves02/authored01/authored-geometry.blend",
+      "sha256": "43de777b789e9111ec927a1f6c6aaef09af4768043b1d862eb285763291ad10d",
+      "bytes": 8923713
+    },
+    {
+      "path": "harness/out/rider-rebuild/production-gloves02/authored01/authored-regions-L.blend",
+      "sha256": "7f5369df02f49d536001d36c637d7e07a4ef14fa161e1b55070e7504e4fd7e46",
+      "bytes": 8917387
+    },
+    {
+      "path": "harness/out/rider-rebuild/production-gloves02/authored01/authored-regions-L.json",
+      "sha256": "65f49c2b798bf3bd5f39d55e91b742bb5ea5e1e0da3d9dbc553276c759bd0a17",
+      "bytes": 57049
+    },
+    {
+      "path": "harness/out/rider-rebuild/production-gloves02/authored01/authored-regions-R.blend",
+      "sha256": "e29fd4e23ba2fb3c7671793ad9b2d357bb32991ab4382c1daf0b9fad51c8c04b",
+      "bytes": 7823020
+    },
+    {
+      "path": "harness/out/rider-rebuild/production-gloves02/authored01/authored-regions-R.json",
+      "sha256": "179600b156eb1e5db2ddedeb83ebbe028ff95f22638df7eed5690c2bcd3127e8",
+      "bytes": 31691
+    },
+    {
+      "path": "harness/out/rider-rebuild/production-gloves02/authored01/geometry-report.json",
+      "sha256": "9176c4eca38281962e64aa30df0429787c8ee34d7979f9d1539ce400c303ccb2",
+      "bytes": 57307
+    },
+    {
+      "path": "harness/out/rider-rebuild/production-gloves02/authored01/unfinished-shells.blend",
+      "sha256": "b883de66b9aff8d4d174b75f6c4a4ed1da625b16e040b2fe4c618b57118820c2",
+      "bytes": 6737506
+    },
+    {
+      "path": "harness/out/rider-rebuild/production-gloves02/authored01/unfinished-shells.json",
+      "sha256": "aee127c2621b13839f93c6cc0addbf73ee9dd644ea8fecd3bc6fcbb7ac33e8cf",
+      "bytes": 6328
+    }
+  ],
+  "worker": {
+    "path": "docs/evidence/rider-rebuild/production-gloves02/author-guard01/worker.txt",
+    "sha256": "f552ae961609aa43249d9a6b5c21dd226fb2c0f7a065eba6cc8babf451f60821"
+  },
+  "native": {
+    "path": "harness/out/rider-rebuild/production-gloves02/authored01/authored-geometry.blend",
+    "sha256": "43de777b789e9111ec927a1f6c6aaef09af4768043b1d862eb285763291ad10d"
+  },
+  "geometryReport": {
+    "path": "harness/out/rider-rebuild/production-gloves02/authored01/geometry-report.json",
+    "sha256": "9176c4eca38281962e64aa30df0429787c8ee34d7979f9d1539ce400c303ccb2"
+  },
+  "bodyAndRestUnchanged": true,
+  "hands": {
+    "R": {
+      "vertices": 17538,
+      "polygons": 24252,
+      "textures": {},
+      "sharedArmature": "RiderSkeleton",
+      "nativeFullFieldAttributes": [
+        "FULL::DEF-forearm.R.001",
+        "FULL::DEF-hand.R",
+        "FULL::DEF-palm.01.R",
+        "FULL::DEF-f_index.01.R",
+        "FULL::DEF-f_index.02.R",
+        "FULL::DEF-f_index.03.R",
+        "FULL::DEF-palm.02.R",
+        "FULL::DEF-f_middle.01.R",
+        "FULL::DEF-f_middle.02.R",
+        "FULL::DEF-f_middle.03.R",
+        "FULL::DEF-palm.03.R",
+        "FULL::DEF-f_ring.01.R",
+        "FULL::DEF-f_ring.02.R",
+        "FULL::DEF-f_ring.03.R",
+        "FULL::DEF-palm.04.R",
+        "FULL::DEF-f_pinky.01.R",
+        "FULL::DEF-f_pinky.02.R",
+        "FULL::DEF-f_pinky.03.R",
+        "FULL::DEF-thumb.01.R",
+        "FULL::DEF-thumb.02.R",
+        "FULL::DEF-thumb.03.R"
+      ],
+      "maxFourReductionMass": 0.12618130752353796,
+      "fields": {
+        "path": "harness/out/rider-rebuild/production-gloves02/authored01/GloveProduction.R-fields.npz",
+        "sha256": "6e0db4381a2936ed62e91a7bd88a85e983070bccaf7b0e56eedcb1a02045cadd"
+      },
+      "newUV": "SelectedBakeUV",
+      "actualTargetGeometry": {
+        "path": "docs/evidence/rider-rebuild/glove-native02-fit/target01/native-hand-R.npz",
+        "sha256": "2e3cd9f16768fa063de77a73eb102abfc841b16abcc11c8339b793558707c210"
+      },
+      "donorAppearanceReflected": false,
+      "thumbRootIncludesFace279": true
+    },
+    "L": {
+      "vertices": 17820,
+      "polygons": 24544,
+      "textures": {},
+      "sharedArmature": "RiderSkeleton",
+      "nativeFullFieldAttributes": [
+        "FULL::DEF-forearm.L.001",
+        "FULL::DEF-hand.L",
+        "FULL::DEF-palm.01.L",
+        "FULL::DEF-f_index.01.L",
+        "FULL::DEF-f_index.02.L",
+        "FULL::DEF-f_index.03.L",
+        "FULL::DEF-palm.02.L",
+        "FULL::DEF-f_middle.01.L",
+        "FULL::DEF-f_middle.02.L",
+        "FULL::DEF-f_middle.03.L",
+        "FULL::DEF-palm.03.L",
+        "FULL::DEF-f_ring.01.L",
+        "FULL::DEF-f_ring.02.L",
+        "FULL::DEF-f_ring.03.L",
+        "FULL::DEF-palm.04.L",
+        "FULL::DEF-f_pinky.01.L",
+        "FULL::DEF-f_pinky.02.L",
+        "FULL::DEF-f_pinky.03.L",
+        "FULL::DEF-thumb.01.L",
+        "FULL::DEF-thumb.02.L",
+        "FULL::DEF-thumb.03.L"
+      ],
+      "maxFourReductionMass": 0.1329302129527692,
+      "fields": {
+        "path": "harness/out/rider-rebuild/production-gloves02/authored01/GloveProduction.L-fields.npz",
+        "sha256": "e05fb90c4259720cec86206121041522cd136fb5c0cf42498140f8829a85b91b"
+      },
+      "newUV": "SelectedBakeUV",
+      "actualTargetGeometry": {
+        "path": "docs/evidence/rider-rebuild/glove-native02-fit/target01/native-hand-L.npz",
+        "sha256": "d175eb289e270d83f5dfef0617a8a8396e1841a27b6de450bfa1cb4bc10a1e1d"
+      },
+      "donorAppearanceReflected": true,
+      "thumbRootIncludesFace279": true
+    }
+  },
+  "reviewAction": "GloveReviewOpenFistSpreadApproxGripReturn",
+  "limits": [
+    "Selected dense material transfer and played appearance are pending.",
+    "No fully dressed art, finite handlebar grip or mobile acceptance.",
+    "Native hand articulation remains subject to parent moving review."
+  ]
+}

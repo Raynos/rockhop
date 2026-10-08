@@ -1,0 +1,2476 @@
+{
+  "acceptedArt": false,
+  "status": "BOTH_REGION_GLOVES_FIELDS_UV_ACTION_SAVED_BEFORE_DENSE_BAKE",
+  "sourcePins": {
+    "nativeMaster": {
+      "path": "harness/out/rider-rebuild/native-hand-repair01/native02/anatomical-hand-rig.blend",
+      "sha256": "42fca617ea8d246a6c3e3ca68a90cd3cb5f3ce8b9bb78130e0e2bbd65f605fac"
+    },
+    "nativeArrays": {
+      "path": "docs/evidence/rider-rebuild/native-hand-repair01/native02/native-body.npz",
+      "sha256": "e62e9969503b7761e99463eccc3ca7be39e0c230a2948f2f87a224db52d0f9a2"
+    },
+    "handL": {
+      "path": "docs/evidence/rider-rebuild/glove-native02-fit/target01/native-hand-L.npz",
+      "sha256": "d175eb289e270d83f5dfef0617a8a8396e1841a27b6de450bfa1cb4bc10a1e1d"
+    },
+    "handR": {
+      "path": "docs/evidence/rider-rebuild/glove-native02-fit/target01/native-hand-R.npz",
+      "sha256": "2e3cd9f16768fa063de77a73eb102abfc841b16abcc11c8339b793558707c210"
+    },
+    "denseSelected": {
+      "path": "assets/blender/hero-remaster/rider/finish-2026-10-05/wardrobe/data/prep02/gloves/cleaned-donor.npz",
+      "sha256": "f07a705f334d3d2b802fa7d23baec3e9cd54b211d160b7bbd6ab2c9f4a96541c"
+    },
+    "baseColor": {
+      "path": "assets/blender/hero-remaster/rider/finish-2026-10-05/wardrobe/data/prep02/gloves/baseColorTexture.png",
+      "sha256": "9633beec8bf2bb3bd73918589b931d2fc4f33f8e3e702415094ed173a129f95c"
+    },
+    "metallicRoughness": {
+      "path": "assets/blender/hero-remaster/rider/finish-2026-10-05/wardrobe/data/prep02/gloves/metallicRoughnessTexture.png",
+      "sha256": "a7a712769a73844a9560d4bef1d163ce3fb8721e388d1a7ecfa07a3515280e67"
+    },
+    "selectedOriginal": {
+      "path": ".tmp/generation-comparison-2026-10-03/user-agent2/items01/gloves/paint01/painted.glb",
+      "sha256": "890f8693256347156c20f82a62dd79e2145cf511e7a85eb5239089644a20bfea"
+    },
+    "sourceDetailCage": {
+      "path": "docs/evidence/rider-rebuild/glove-charts01/atlas01/source-atlas.npz",
+      "sha256": "3ef1d2672f07c9a766bcda579dec342cd06e0e987a6f06494045ffb015a28635"
+    },
+    "actualDigitControls": {
+      "path": "docs/evidence/rider-rebuild/native-hand-repair01/verify-native02/digit-controls.json",
+      "sha256": "2995c37fa2db51a37257bf62e6efc79437c115818e6d412326a68dbdded03e4d"
+    },
+    "reference": {
+      "path": "assets/blender/hero-remaster/generation-comparison-2026-10-03/user-agent2/items01/references/gloves-reference01.png",
+      "sha256": "070c5fc70f1cc17e1697cc88ffb91b71bbdba35003ee3113a94e4a1b9b36adb2"
+    }
+  },
+  "sourceFiles": {
+    "author.py": "0867ac412dee6005fb032c0cdef727fc0c1be1e49bf0b6a6eb8055db9e99a9cf",
+    "check_source.py": "efaf739e22ed27e5875612173eb5df294f6025f2f033949464911b0cd2b2b9d7",
+    "freeze_regions.py": "67404060619ec8adfc5ae59813705cf18cf0e3a3aadb07ee7b1456b2228eb311",
+    "region_geometry.py": "b94782453716307301ea0b14b5aa1cc744bbd7b07dc8aae305928216c1570ba3",
+    "appearance.py": "2c6694f90d9e1f2c10607beaac9e02c986af8ba24b5e489a90bfbab5c93e6be0",
+    "inputs.json": "bb8b6a8cfedee058b4f7e88247f675fd73cc5c63edf91fcaaba579b26ac99e10",
+    "face-regions.json": "317e4a7338305d8ba1ef3be7b1d26365714d9cc2935fc20e741018af63deca8f"
+  },
+  "hands": {
+    "R": {
+      "vertices": 17538,
+      "polygons": 24252,
+      "authoredFeatures": [
+        {
+          "name": "tailored-shell",
+          "vertices": 763,
+          "faces": 1484
+        },
+        {
+          "name": "selected-knuckle-leather-pad",
+          "vertices": 623,
+          "faces": 1044,
+          "sourceFaceIds": [
+            338,
+            339,
+            340,
+            341,
+            365,
+            367,
+            375,
+            379,
+            380,
+            381,
+            382,
+            383,
+            385,
+            386,
+            387,
+            388,
+            604,
+            605,
+            613,
+            617,
+            620,
+            621,
+            678,
+            680,
+            683,
+            728,
+            731,
+            736,
+            737,
+            1081,
+            1083,
+            1084,
+            1108,
+            1110,
+            1116,
+            1120,
+            1121,
+            1122,
+            1123,
+            1124,
+            1126,
+            1127,
+            1128,
+            1343,
+            1344,
+            1345,
+            1353,
+            1357,
+            1360,
+            1361,
+            1418,
+            1420,
+            1423,
+            1439,
+            1469,
+            1472,
+            1476,
+            1477,
+            1478
+          ],
+          "connectedSourceFaces": 59,
+          "subdividedTopTriangles": 944,
+          "boundaryEdges": 100,
+          "sculptedLiftMeters": [
+            0.00042,
+            0.0025199999999999997
+          ],
+          "insetMeters": 0.0007,
+          "ribCount": 0
+        },
+        {
+          "name": "selected-knuckle-leather-pad-sewn-edge",
+          "vertices": 600,
+          "faces": 600
+        },
+        {
+          "name": "selected-back-textile-panel",
+          "vertices": 397,
+          "faces": 648,
+          "sourceFaceIds": [
+            359,
+            360,
+            389,
+            390,
+            392,
+            423,
+            424,
+            443,
+            445,
+            446,
+            449,
+            676,
+            681,
+            682,
+            700,
+            733,
+            734,
+            1101,
+            1102,
+            1129,
+            1130,
+            1131,
+            1133,
+            1163,
+            1183,
+            1185,
+            1186,
+            1189,
+            1416,
+            1421,
+            1422,
+            1441,
+            1450,
+            1470,
+            1474,
+            1479
+          ],
+          "connectedSourceFaces": 36,
+          "subdividedTopTriangles": 576,
+          "boundaryEdges": 72,
+          "sculptedLiftMeters": [
+            0.00042,
+            0.00097
+          ],
+          "insetMeters": 0.0007,
+          "ribCount": 0
+        },
+        {
+          "name": "selected-back-textile-panel-sewn-edge",
+          "vertices": 432,
+          "faces": 432
+        },
+        {
+          "name": "selected-palm-grip-pad",
+          "vertices": 625,
+          "faces": 1056,
+          "sourceFaceIds": [
+            320,
+            321,
+            322,
+            323,
+            324,
+            325,
+            326,
+            400,
+            410,
+            414,
+            497,
+            520,
+            533,
+            534,
+            544,
+            545,
+            553,
+            554,
+            595,
+            611,
+            691,
+            692,
+            693,
+            710,
+            711,
+            712,
+            717,
+            722,
+            724,
+            1062,
+            1063,
+            1064,
+            1065,
+            1066,
+            1067,
+            1068,
+            1069,
+            1140,
+            1150,
+            1154,
+            1259,
+            1273,
+            1274,
+            1275,
+            1283,
+            1284,
+            1293,
+            1294,
+            1351,
+            1368,
+            1432,
+            1433,
+            1434,
+            1451,
+            1452,
+            1453,
+            1458,
+            1459,
+            1463,
+            1465
+          ],
+          "connectedSourceFaces": 60,
+          "subdividedTopTriangles": 960,
+          "boundaryEdges": 96,
+          "sculptedLiftMeters": [
+            0.00042,
+            0.00142
+          ],
+          "insetMeters": 0.0007,
+          "ribCount": 0
+        },
+        {
+          "name": "selected-palm-grip-pad-sewn-edge",
+          "vertices": 576,
+          "faces": 576
+        },
+        {
+          "name": "selected-thumb-thenar-web-panel",
+          "vertices": 495,
+          "faces": 788,
+          "sourceFaceIds": [
+            275,
+            276,
+            278,
+            279,
+            280,
+            353,
+            354,
+            357,
+            358,
+            372,
+            373,
+            374,
+            377,
+            378,
+            379,
+            384,
+            705,
+            706,
+            707,
+            726,
+            727,
+            728,
+            729,
+            1021,
+            1022,
+            1023,
+            1095,
+            1096,
+            1097,
+            1099,
+            1100,
+            1114,
+            1118,
+            1119,
+            1120,
+            1125,
+            1446,
+            1447,
+            1448,
+            1467,
+            1468,
+            1469,
+            1470
+          ],
+          "connectedSourceFaces": 43,
+          "subdividedTopTriangles": 688,
+          "boundaryEdges": 100,
+          "sculptedLiftMeters": [
+            0.00042,
+            0.00157
+          ],
+          "insetMeters": 0.0007,
+          "ribCount": 0
+        },
+        {
+          "name": "selected-thumb-thenar-web-panel-sewn-edge",
+          "vertices": 600,
+          "faces": 600
+        },
+        {
+          "name": "selected-thumb-palm-thenar-pad",
+          "vertices": 341,
+          "faces": 504,
+          "sourceFaceIds": [
+            313,
+            314,
+            315,
+            316,
+            318,
+            502,
+            503,
+            702,
+            703,
+            713,
+            715,
+            730,
+            1055,
+            1056,
+            1057,
+            1058,
+            1059,
+            1061,
+            1134,
+            1240,
+            1241,
+            1242,
+            1444,
+            1456,
+            1462,
+            1471
+          ],
+          "connectedSourceFaces": 26,
+          "subdividedTopTriangles": 416,
+          "boundaryEdges": 88,
+          "sculptedLiftMeters": [
+            0.00042,
+            0.00142
+          ],
+          "insetMeters": 0.0007,
+          "ribCount": 0
+        },
+        {
+          "name": "selected-thumb-palm-thenar-pad-sewn-edge",
+          "vertices": 528,
+          "faces": 528
+        },
+        {
+          "name": "pinky-leather-panel1",
+          "vertices": 139,
+          "faces": 188,
+          "sourceFaceIds": [
+            71,
+            72,
+            73,
+            144,
+            145,
+            146,
+            814,
+            815,
+            816
+          ],
+          "connectedSourceFaces": 9,
+          "subdividedTopTriangles": 144,
+          "boundaryEdges": 44,
+          "sculptedLiftMeters": [
+            0.00042,
+            0.00107
+          ],
+          "insetMeters": 0.0007,
+          "ribCount": 0
+        },
+        {
+          "name": "pinky-leather-panel1-sewn-edge",
+          "vertices": 264,
+          "faces": 264
+        },
+        {
+          "name": "pinky-leather-panel2",
+          "vertices": 97,
+          "faces": 128,
+          "sourceFaceIds": [
+            61,
+            62,
+            63,
+            804,
+            805,
+            806
+          ],
+          "connectedSourceFaces": 6,
+          "subdividedTopTriangles": 96,
+          "boundaryEdges": 32,
+          "sculptedLiftMeters": [
+            0.00042,
+            0.00107
+          ],
+          "insetMeters": 0.0007,
+          "ribCount": 0
+        },
+        {
+          "name": "pinky-leather-panel2-sewn-edge",
+          "vertices": 192,
+          "faces": 192
+        },
+        {
+          "name": "pinky-leather-panel3",
+          "vertices": 235,
+          "faces": 380,
+          "sourceFaceIds": [
+            243,
+            244,
+            248,
+            249,
+            250,
+            255,
+            256,
+            257,
+            465,
+            466,
+            986,
+            988,
+            991,
+            992,
+            993,
+            997,
+            998,
+            999,
+            1000,
+            1206,
+            1207
+          ],
+          "connectedSourceFaces": 21,
+          "subdividedTopTriangles": 336,
+          "boundaryEdges": 44,
+          "sculptedLiftMeters": [
+            0.00042,
+            0.00107
+          ],
+          "insetMeters": 0.0007,
+          "ribCount": 0
+        },
+        {
+          "name": "pinky-leather-panel3-sewn-edge",
+          "vertices": 264,
+          "faces": 264
+        },
+        {
+          "name": "pinky-joint-rib-band1",
+          "vertices": 421,
+          "faces": 664,
+          "sourceFaceIds": [
+            144,
+            145,
+            146,
+            804,
+            805,
+            806,
+            887,
+            888,
+            889
+          ],
+          "connectedSourceFaces": 9,
+          "subdividedTopTriangles": 576,
+          "boundaryEdges": 88,
+          "sculptedLiftMeters": [
+            0.0007,
+            0.00137631700352447
+          ],
+          "insetMeters": 0.00025,
+          "ribCount": 3
+        },
+        {
+          "name": "pinky-joint-rib-band2",
+          "vertices": 421,
+          "faces": 664,
+          "sourceFaceIds": [
+            61,
+            62,
+            63,
+            243,
+            244,
+            245,
+            986,
+            987,
+            988
+          ],
+          "connectedSourceFaces": 9,
+          "subdividedTopTriangles": 576,
+          "boundaryEdges": 88,
+          "sculptedLiftMeters": [
+            0.0007,
+            0.0013554645102281456
+          ],
+          "insetMeters": 0.00025,
+          "ribCount": 3
+        },
+        {
+          "name": "ring-leather-panel1",
+          "vertices": 141,
+          "faces": 200,
+          "sourceFaceIds": [
+            56,
+            57,
+            92,
+            128,
+            129,
+            739,
+            799,
+            800,
+            835,
+            871
+          ],
+          "connectedSourceFaces": 10,
+          "subdividedTopTriangles": 160,
+          "boundaryEdges": 40,
+          "sculptedLiftMeters": [
+            0.00042,
+            0.00107
+          ],
+          "insetMeters": 0.0007,
+          "ribCount": 0
+        },
+        {
+          "name": "ring-leather-panel1-sewn-edge",
+          "vertices": 240,
+          "faces": 240
+        },
+        {
+          "name": "ring-leather-panel2",
+          "vertices": 139,
+          "faces": 188,
+          "sourceFaceIds": [
+            138,
+            139,
+            140,
+            881,
+            882,
+            883,
+            923,
+            924,
+            925
+          ],
+          "connectedSourceFaces": 9,
+          "subdividedTopTriangles": 144,
+          "boundaryEdges": 44,
+          "sculptedLiftMeters": [
+            0.00042,
+            0.00107
+          ],
+          "insetMeters": 0.0007,
+          "ribCount": 0
+        },
+        {
+          "name": "ring-leather-panel2-sewn-edge",
+          "vertices": 264,
+          "faces": 264
+        },
+        {
+          "name": "ring-leather-panel3",
+          "vertices": 341,
+          "faces": 568,
+          "sourceFaceIds": [
+            34,
+            35,
+            36,
+            37,
+            38,
+            39,
+            40,
+            41,
+            168,
+            169,
+            170,
+            171,
+            459,
+            460,
+            461,
+            462,
+            777,
+            778,
+            779,
+            780,
+            781,
+            782,
+            783,
+            784,
+            911,
+            912,
+            913,
+            914,
+            1200,
+            1201,
+            1202,
+            1203
+          ],
+          "connectedSourceFaces": 32,
+          "subdividedTopTriangles": 512,
+          "boundaryEdges": 56,
+          "sculptedLiftMeters": [
+            0.00042,
+            0.00107
+          ],
+          "insetMeters": 0.0007,
+          "ribCount": 0
+        },
+        {
+          "name": "ring-leather-panel3-sewn-edge",
+          "vertices": 336,
+          "faces": 336
+        },
+        {
+          "name": "ring-joint-rib-band1",
+          "vertices": 633,
+          "faces": 1104,
+          "sourceFaceIds": [
+            46,
+            47,
+            48,
+            92,
+            128,
+            138,
+            139,
+            140,
+            739,
+            789,
+            790,
+            791,
+            835,
+            871,
+            882,
+            883
+          ],
+          "connectedSourceFaces": 16,
+          "subdividedTopTriangles": 1024,
+          "boundaryEdges": 80,
+          "sculptedLiftMeters": [
+            0.0007,
+            0.0014477275704169077
+          ],
+          "insetMeters": 0.00025,
+          "ribCount": 3
+        },
+        {
+          "name": "ring-joint-rib-band2",
+          "vertices": 549,
+          "faces": 920,
+          "sourceFaceIds": [
+            35,
+            39,
+            40,
+            179,
+            180,
+            181,
+            182,
+            778,
+            782,
+            783,
+            923,
+            924,
+            925
+          ],
+          "connectedSourceFaces": 13,
+          "subdividedTopTriangles": 832,
+          "boundaryEdges": 88,
+          "sculptedLiftMeters": [
+            0.0007,
+            0.00144829507981215
+          ],
+          "insetMeters": 0.00025,
+          "ribCount": 3
+        },
+        {
+          "name": "middle-leather-panel1",
+          "vertices": 141,
+          "faces": 200,
+          "sourceFaceIds": [
+            120,
+            121,
+            122,
+            645,
+            863,
+            864,
+            865,
+            1385,
+            1386,
+            1387
+          ],
+          "connectedSourceFaces": 10,
+          "subdividedTopTriangles": 160,
+          "boundaryEdges": 40,
+          "sculptedLiftMeters": [
+            0.00042,
+            0.00107
+          ],
+          "insetMeters": 0.0007,
+          "ribCount": 0
+        },
+        {
+          "name": "middle-leather-panel1-sewn-edge",
+          "vertices": 240,
+          "faces": 240
+        },
+        {
+          "name": "middle-leather-panel2",
+          "vertices": 129,
+          "faces": 192,
+          "sourceFaceIds": [
+            78,
+            79,
+            86,
+            87,
+            666,
+            820,
+            821,
+            822,
+            829,
+            830
+          ],
+          "connectedSourceFaces": 10,
+          "subdividedTopTriangles": 160,
+          "boundaryEdges": 32,
+          "sculptedLiftMeters": [
+            0.00042,
+            0.00107
+          ],
+          "insetMeters": 0.0007,
+          "ribCount": 0
+        },
+        {
+          "name": "middle-leather-panel2-sewn-edge",
+          "vertices": 192,
+          "faces": 192
+        },
+        {
+          "name": "middle-leather-panel3",
+          "vertices": 263,
+          "faces": 420,
+          "sourceFaceIds": [
+            225,
+            226,
+            227,
+            230,
+            231,
+            232,
+            237,
+            238,
+            239,
+            456,
+            457,
+            458,
+            968,
+            969,
+            973,
+            974,
+            975,
+            980,
+            981,
+            982,
+            1197,
+            1198,
+            1199
+          ],
+          "connectedSourceFaces": 23,
+          "subdividedTopTriangles": 368,
+          "boundaryEdges": 52,
+          "sculptedLiftMeters": [
+            0.00042,
+            0.00107
+          ],
+          "insetMeters": 0.0007,
+          "ribCount": 0
+        },
+        {
+          "name": "middle-leather-panel3-sewn-edge",
+          "vertices": 312,
+          "faces": 312
+        },
+        {
+          "name": "middle-joint-rib-band1",
+          "vertices": 505,
+          "faces": 848,
+          "sourceFaceIds": [
+            86,
+            87,
+            658,
+            661,
+            664,
+            666,
+            829,
+            830,
+            1398,
+            1401,
+            1404,
+            1406
+          ],
+          "connectedSourceFaces": 12,
+          "subdividedTopTriangles": 768,
+          "boundaryEdges": 80,
+          "sculptedLiftMeters": [
+            0.0007,
+            0.0014450202612632155
+          ],
+          "insetMeters": 0.00025,
+          "ribCount": 3
+        },
+        {
+          "name": "middle-joint-rib-band2",
+          "vertices": 505,
+          "faces": 848,
+          "sourceFaceIds": [
+            77,
+            78,
+            79,
+            225,
+            226,
+            227,
+            820,
+            821,
+            822,
+            968,
+            969,
+            970
+          ],
+          "connectedSourceFaces": 12,
+          "subdividedTopTriangles": 768,
+          "boundaryEdges": 80,
+          "sculptedLiftMeters": [
+            0.0007,
+            0.001443061417696981
+          ],
+          "insetMeters": 0.00025,
+          "ribCount": 3
+        },
+        {
+          "name": "index-leather-panel1",
+          "vertices": 169,
+          "faces": 240,
+          "sourceFaceIds": [
+            94,
+            95,
+            101,
+            102,
+            668,
+            669,
+            672,
+            675,
+            837,
+            838,
+            1408,
+            1415
+          ],
+          "connectedSourceFaces": 12,
+          "subdividedTopTriangles": 192,
+          "boundaryEdges": 48,
+          "sculptedLiftMeters": [
+            0.00042,
+            0.00107
+          ],
+          "insetMeters": 0.0007,
+          "ribCount": 0
+        },
+        {
+          "name": "index-leather-panel1-sewn-edge",
+          "vertices": 288,
+          "faces": 288
+        },
+        {
+          "name": "index-leather-panel2",
+          "vertices": 153,
+          "faces": 208,
+          "sourceFaceIds": [
+            93,
+            107,
+            109,
+            114,
+            115,
+            116,
+            117,
+            858,
+            859,
+            860
+          ],
+          "connectedSourceFaces": 10,
+          "subdividedTopTriangles": 160,
+          "boundaryEdges": 48,
+          "sculptedLiftMeters": [
+            0.00042,
+            0.00107
+          ],
+          "insetMeters": 0.0007,
+          "ribCount": 0
+        },
+        {
+          "name": "index-leather-panel2-sewn-edge",
+          "vertices": 288,
+          "faces": 288
+        },
+        {
+          "name": "index-leather-panel3",
+          "vertices": 251,
+          "faces": 412,
+          "sourceFaceIds": [
+            208,
+            212,
+            213,
+            215,
+            216,
+            218,
+            219,
+            220,
+            221,
+            468,
+            470,
+            950,
+            951,
+            955,
+            957,
+            958,
+            959,
+            961,
+            962,
+            963,
+            964,
+            1209,
+            1211
+          ],
+          "connectedSourceFaces": 23,
+          "subdividedTopTriangles": 368,
+          "boundaryEdges": 44,
+          "sculptedLiftMeters": [
+            0.00042,
+            0.00107
+          ],
+          "insetMeters": 0.0007,
+          "ribCount": 0
+        },
+        {
+          "name": "index-leather-panel3-sewn-edge",
+          "vertices": 264,
+          "faces": 264
+        },
+        {
+          "name": "index-joint-rib-band1",
+          "vertices": 505,
+          "faces": 848,
+          "sourceFaceIds": [
+            93,
+            107,
+            109,
+            668,
+            669,
+            672,
+            836,
+            850,
+            852,
+            1408,
+            1409,
+            1412
+          ],
+          "connectedSourceFaces": 12,
+          "subdividedTopTriangles": 768,
+          "boundaryEdges": 80,
+          "sculptedLiftMeters": [
+            0.0007,
+            0.0014466246479518307
+          ],
+          "insetMeters": 0.00025,
+          "ribCount": 3
+        },
+        {
+          "name": "index-joint-rib-band2",
+          "vertices": 549,
+          "faces": 920,
+          "sourceFaceIds": [
+            114,
+            115,
+            116,
+            117,
+            207,
+            213,
+            214,
+            858,
+            859,
+            860,
+            950,
+            956,
+            957
+          ],
+          "connectedSourceFaces": 13,
+          "subdividedTopTriangles": 832,
+          "boundaryEdges": 88,
+          "sculptedLiftMeters": [
+            0.0007,
+            0.0014493290573589696
+          ],
+          "insetMeters": 0.00025,
+          "ribCount": 3
+        },
+        {
+          "name": "thumb-leather-panel1",
+          "vertices": 97,
+          "faces": 128,
+          "sourceFaceIds": [
+            275,
+            276,
+            280,
+            1018,
+            1019,
+            1022
+          ],
+          "connectedSourceFaces": 6,
+          "subdividedTopTriangles": 96,
+          "boundaryEdges": 32,
+          "sculptedLiftMeters": [
+            0.00042,
+            0.00107
+          ],
+          "insetMeters": 0.0007,
+          "ribCount": 0
+        },
+        {
+          "name": "thumb-leather-panel1-sewn-edge",
+          "vertices": 192,
+          "faces": 192
+        },
+        {
+          "name": "thumb-leather-panel2",
+          "vertices": 55,
+          "faces": 68,
+          "sourceFaceIds": [
+            297,
+            298,
+            1041
+          ],
+          "connectedSourceFaces": 3,
+          "subdividedTopTriangles": 48,
+          "boundaryEdges": 20,
+          "sculptedLiftMeters": [
+            0.00042,
+            0.00107
+          ],
+          "insetMeters": 0.0007,
+          "ribCount": 0
+        },
+        {
+          "name": "thumb-leather-panel2-sewn-edge",
+          "vertices": 120,
+          "faces": 120
+        },
+        {
+          "name": "thumb-leather-panel3",
+          "vertices": 235,
+          "faces": 380,
+          "sourceFaceIds": [
+            262,
+            263,
+            264,
+            299,
+            300,
+            301,
+            308,
+            309,
+            310,
+            471,
+            473,
+            1005,
+            1006,
+            1007,
+            1042,
+            1043,
+            1051,
+            1052,
+            1053,
+            1212,
+            1214
+          ],
+          "connectedSourceFaces": 21,
+          "subdividedTopTriangles": 336,
+          "boundaryEdges": 44,
+          "sculptedLiftMeters": [
+            0.00042,
+            0.00107
+          ],
+          "insetMeters": 0.0007,
+          "ribCount": 0
+        },
+        {
+          "name": "thumb-leather-panel3-sewn-edge",
+          "vertices": 264,
+          "faces": 264
+        },
+        {
+          "name": "thumb-joint-rib-band1",
+          "vertices": 353,
+          "faces": 576,
+          "sourceFaceIds": [
+            275,
+            276,
+            287,
+            288,
+            1018,
+            1019,
+            1030,
+            1031
+          ],
+          "connectedSourceFaces": 8,
+          "subdividedTopTriangles": 512,
+          "boundaryEdges": 64,
+          "sculptedLiftMeters": [
+            0.0007,
+            0.001443986508046371
+          ],
+          "insetMeters": 0.00025,
+          "ribCount": 3
+        },
+        {
+          "name": "thumb-joint-rib-band2",
+          "vertices": 245,
+          "faces": 376,
+          "sourceFaceIds": [
+            264,
+            297,
+            298,
+            299,
+            1041
+          ],
+          "connectedSourceFaces": 5,
+          "subdividedTopTriangles": 320,
+          "boundaryEdges": 56,
+          "sculptedLiftMeters": [
+            0.0007,
+            0.001448433581222403
+          ],
+          "insetMeters": 0.00025,
+          "ribCount": 3
+        },
+        {
+          "name": "selected-cuff-closure-strap",
+          "vertices": 111,
+          "faces": 148,
+          "sourceFaceIds": [
+            428,
+            585,
+            1168,
+            1225,
+            1325,
+            1328,
+            1330
+          ],
+          "connectedSourceFaces": 7,
+          "subdividedTopTriangles": 112,
+          "boundaryEdges": 36,
+          "sculptedLiftMeters": [
+            0.00042,
+            0.0022199999999999998
+          ],
+          "insetMeters": 0.0006,
+          "ribCount": 0
+        },
+        {
+          "name": "selected-cuff-closure-strap-sewn-edge",
+          "vertices": 216,
+          "faces": 216
+        },
+        {
+          "name": "selected-cuff-lip",
+          "vertices": 240,
+          "faces": 240
+        }
+      ],
+      "textures": {},
+      "sharedArmature": "RiderSkeleton",
+      "nativeFullFieldAttributes": [
+        "FULL::DEF-forearm.R.001",
+        "FULL::DEF-hand.R",
+        "FULL::DEF-palm.01.R",
+        "FULL::DEF-f_index.01.R",
+        "FULL::DEF-f_index.02.R",
+        "FULL::DEF-f_index.03.R",
+        "FULL::DEF-palm.02.R",
+        "FULL::DEF-f_middle.01.R",
+        "FULL::DEF-f_middle.02.R",
+        "FULL::DEF-f_middle.03.R",
+        "FULL::DEF-palm.03.R",
+        "FULL::DEF-f_ring.01.R",
+        "FULL::DEF-f_ring.02.R",
+        "FULL::DEF-f_ring.03.R",
+        "FULL::DEF-palm.04.R",
+        "FULL::DEF-f_pinky.01.R",
+        "FULL::DEF-f_pinky.02.R",
+        "FULL::DEF-f_pinky.03.R",
+        "FULL::DEF-thumb.01.R",
+        "FULL::DEF-thumb.02.R",
+        "FULL::DEF-thumb.03.R"
+      ],
+      "maxFourReductionMass": 0.12618130752353796,
+      "fields": {
+        "path": "harness/out/rider-rebuild/production-gloves02/authored01/GloveProduction.R-fields.npz",
+        "sha256": "6e0db4381a2936ed62e91a7bd88a85e983070bccaf7b0e56eedcb1a02045cadd"
+      },
+      "newUV": "SelectedBakeUV",
+      "actualTargetGeometry": {
+        "path": "docs/evidence/rider-rebuild/glove-native02-fit/target01/native-hand-R.npz",
+        "sha256": "2e3cd9f16768fa063de77a73eb102abfc841b16abcc11c8339b793558707c210"
+      },
+      "donorAppearanceReflected": false,
+      "thumbRootIncludesFace279": true
+    },
+    "L": {
+      "vertices": 17820,
+      "polygons": 24544,
+      "authoredFeatures": [
+        {
+          "name": "tailored-shell",
+          "vertices": 763,
+          "faces": 1484
+        },
+        {
+          "name": "selected-knuckle-leather-pad",
+          "vertices": 619,
+          "faces": 1020,
+          "sourceFaceIds": [
+            338,
+            340,
+            341,
+            365,
+            367,
+            373,
+            377,
+            378,
+            379,
+            380,
+            381,
+            383,
+            384,
+            385,
+            598,
+            599,
+            600,
+            608,
+            612,
+            615,
+            616,
+            673,
+            675,
+            678,
+            724,
+            727,
+            731,
+            732,
+            733,
+            1076,
+            1077,
+            1078,
+            1079,
+            1105,
+            1113,
+            1117,
+            1118,
+            1119,
+            1120,
+            1121,
+            1123,
+            1124,
+            1125,
+            1344,
+            1345,
+            1353,
+            1357,
+            1360,
+            1361,
+            1418,
+            1420,
+            1423,
+            1438,
+            1468,
+            1471,
+            1476,
+            1477
+          ],
+          "connectedSourceFaces": 57,
+          "subdividedTopTriangles": 912,
+          "boundaryEdges": 108,
+          "sculptedLiftMeters": [
+            0.00042,
+            0.0025199999999999997
+          ],
+          "insetMeters": 0.0007,
+          "ribCount": 0
+        },
+        {
+          "name": "selected-knuckle-leather-pad-sewn-edge",
+          "vertices": 648,
+          "faces": 648
+        },
+        {
+          "name": "selected-back-textile-panel",
+          "vertices": 435,
+          "faces": 684,
+          "sourceFaceIds": [
+            358,
+            359,
+            387,
+            388,
+            390,
+            420,
+            439,
+            441,
+            442,
+            445,
+            671,
+            676,
+            677,
+            696,
+            725,
+            729,
+            730,
+            734,
+            1097,
+            1098,
+            1127,
+            1128,
+            1130,
+            1161,
+            1162,
+            1182,
+            1184,
+            1185,
+            1188,
+            1416,
+            1421,
+            1422,
+            1440,
+            1449,
+            1469,
+            1473,
+            1478
+          ],
+          "connectedSourceFaces": 37,
+          "subdividedTopTriangles": 592,
+          "boundaryEdges": 92,
+          "sculptedLiftMeters": [
+            0.00042,
+            0.00097
+          ],
+          "insetMeters": 0.0007,
+          "ribCount": 0
+        },
+        {
+          "name": "selected-back-textile-panel-sewn-edge",
+          "vertices": 552,
+          "faces": 552
+        },
+        {
+          "name": "selected-palm-grip-pad",
+          "vertices": 639,
+          "faces": 1076,
+          "sourceFaceIds": [
+            319,
+            320,
+            321,
+            322,
+            323,
+            324,
+            325,
+            326,
+            397,
+            407,
+            411,
+            514,
+            528,
+            529,
+            538,
+            539,
+            548,
+            549,
+            606,
+            623,
+            687,
+            688,
+            689,
+            706,
+            707,
+            708,
+            713,
+            714,
+            718,
+            720,
+            1058,
+            1059,
+            1060,
+            1061,
+            1062,
+            1063,
+            1064,
+            1138,
+            1148,
+            1152,
+            1237,
+            1260,
+            1273,
+            1274,
+            1275,
+            1284,
+            1285,
+            1293,
+            1294,
+            1335,
+            1351,
+            1431,
+            1432,
+            1433,
+            1450,
+            1451,
+            1452,
+            1454,
+            1457,
+            1462,
+            1464
+          ],
+          "connectedSourceFaces": 61,
+          "subdividedTopTriangles": 976,
+          "boundaryEdges": 100,
+          "sculptedLiftMeters": [
+            0.00042,
+            0.00142
+          ],
+          "insetMeters": 0.0007,
+          "ribCount": 0
+        },
+        {
+          "name": "selected-palm-grip-pad-sewn-edge",
+          "vertices": 600,
+          "faces": 600
+        },
+        {
+          "name": "selected-thumb-thenar-web-panel",
+          "vertices": 469,
+          "faces": 760,
+          "sourceFaceIds": [
+            276,
+            278,
+            279,
+            280,
+            352,
+            353,
+            354,
+            356,
+            357,
+            371,
+            375,
+            376,
+            377,
+            382,
+            701,
+            702,
+            703,
+            722,
+            723,
+            724,
+            1016,
+            1017,
+            1018,
+            1091,
+            1092,
+            1095,
+            1096,
+            1110,
+            1111,
+            1112,
+            1115,
+            1116,
+            1117,
+            1118,
+            1122,
+            1445,
+            1446,
+            1447,
+            1466,
+            1467,
+            1468,
+            1469
+          ],
+          "connectedSourceFaces": 42,
+          "subdividedTopTriangles": 672,
+          "boundaryEdges": 88,
+          "sculptedLiftMeters": [
+            0.00042,
+            0.00157
+          ],
+          "insetMeters": 0.0007,
+          "ribCount": 0
+        },
+        {
+          "name": "selected-thumb-thenar-web-panel-sewn-edge",
+          "vertices": 528,
+          "faces": 528
+        },
+        {
+          "name": "selected-thumb-palm-thenar-pad",
+          "vertices": 357,
+          "faces": 536,
+          "sourceFaceIds": [
+            312,
+            313,
+            314,
+            315,
+            316,
+            317,
+            318,
+            495,
+            496,
+            497,
+            699,
+            711,
+            717,
+            726,
+            1051,
+            1052,
+            1053,
+            1054,
+            1056,
+            1131,
+            1236,
+            1242,
+            1243,
+            1442,
+            1443,
+            1453,
+            1455,
+            1470
+          ],
+          "connectedSourceFaces": 28,
+          "subdividedTopTriangles": 448,
+          "boundaryEdges": 88,
+          "sculptedLiftMeters": [
+            0.00042,
+            0.00142
+          ],
+          "insetMeters": 0.0007,
+          "ribCount": 0
+        },
+        {
+          "name": "selected-thumb-palm-thenar-pad-sewn-edge",
+          "vertices": 528,
+          "faces": 528
+        },
+        {
+          "name": "pinky-leather-panel1",
+          "vertices": 125,
+          "faces": 168,
+          "sourceFaceIds": [
+            71,
+            72,
+            73,
+            145,
+            809,
+            810,
+            811,
+            884
+          ],
+          "connectedSourceFaces": 8,
+          "subdividedTopTriangles": 128,
+          "boundaryEdges": 40,
+          "sculptedLiftMeters": [
+            0.00042,
+            0.00107
+          ],
+          "insetMeters": 0.0007,
+          "ribCount": 0
+        },
+        {
+          "name": "pinky-leather-panel1-sewn-edge",
+          "vertices": 240,
+          "faces": 240
+        },
+        {
+          "name": "pinky-leather-panel2",
+          "vertices": 97,
+          "faces": 128,
+          "sourceFaceIds": [
+            61,
+            62,
+            63,
+            799,
+            800,
+            801
+          ],
+          "connectedSourceFaces": 6,
+          "subdividedTopTriangles": 96,
+          "boundaryEdges": 32,
+          "sculptedLiftMeters": [
+            0.00042,
+            0.00107
+          ],
+          "insetMeters": 0.0007,
+          "ribCount": 0
+        },
+        {
+          "name": "pinky-leather-panel2-sewn-edge",
+          "vertices": 192,
+          "faces": 192
+        },
+        {
+          "name": "pinky-leather-panel3",
+          "vertices": 235,
+          "faces": 380,
+          "sourceFaceIds": [
+            243,
+            248,
+            249,
+            250,
+            254,
+            255,
+            256,
+            257,
+            461,
+            462,
+            981,
+            982,
+            983,
+            986,
+            987,
+            988,
+            993,
+            994,
+            995,
+            1205,
+            1206
+          ],
+          "connectedSourceFaces": 21,
+          "subdividedTopTriangles": 336,
+          "boundaryEdges": 44,
+          "sculptedLiftMeters": [
+            0.00042,
+            0.00107
+          ],
+          "insetMeters": 0.0007,
+          "ribCount": 0
+        },
+        {
+          "name": "pinky-leather-panel3-sewn-edge",
+          "vertices": 264,
+          "faces": 264
+        },
+        {
+          "name": "pinky-joint-rib-band1",
+          "vertices": 421,
+          "faces": 664,
+          "sourceFaceIds": [
+            62,
+            63,
+            144,
+            145,
+            146,
+            799,
+            882,
+            883,
+            884
+          ],
+          "connectedSourceFaces": 9,
+          "subdividedTopTriangles": 576,
+          "boundaryEdges": 88,
+          "sculptedLiftMeters": [
+            0.0007,
+            0.0013622761220530542
+          ],
+          "insetMeters": 0.00025,
+          "ribCount": 3
+        },
+        {
+          "name": "pinky-joint-rib-band2",
+          "vertices": 441,
+          "faces": 720,
+          "sourceFaceIds": [
+            61,
+            243,
+            244,
+            245,
+            799,
+            800,
+            801,
+            981,
+            982,
+            983
+          ],
+          "connectedSourceFaces": 10,
+          "subdividedTopTriangles": 640,
+          "boundaryEdges": 80,
+          "sculptedLiftMeters": [
+            0.0007,
+            0.001446210666535607
+          ],
+          "insetMeters": 0.00025,
+          "ribCount": 3
+        },
+        {
+          "name": "ring-leather-panel1",
+          "vertices": 141,
+          "faces": 200,
+          "sourceFaceIds": [
+            56,
+            57,
+            92,
+            128,
+            735,
+            794,
+            795,
+            830,
+            866,
+            1479
+          ],
+          "connectedSourceFaces": 10,
+          "subdividedTopTriangles": 160,
+          "boundaryEdges": 40,
+          "sculptedLiftMeters": [
+            0.00042,
+            0.00107
+          ],
+          "insetMeters": 0.0007,
+          "ribCount": 0
+        },
+        {
+          "name": "ring-leather-panel1-sewn-edge",
+          "vertices": 240,
+          "faces": 240
+        },
+        {
+          "name": "ring-leather-panel2",
+          "vertices": 127,
+          "faces": 180,
+          "sourceFaceIds": [
+            138,
+            139,
+            140,
+            180,
+            876,
+            877,
+            878,
+            919,
+            920
+          ],
+          "connectedSourceFaces": 9,
+          "subdividedTopTriangles": 144,
+          "boundaryEdges": 36,
+          "sculptedLiftMeters": [
+            0.00042,
+            0.00107
+          ],
+          "insetMeters": 0.0007,
+          "ribCount": 0
+        },
+        {
+          "name": "ring-leather-panel2-sewn-edge",
+          "vertices": 216,
+          "faces": 216
+        },
+        {
+          "name": "ring-leather-panel3",
+          "vertices": 341,
+          "faces": 568,
+          "sourceFaceIds": [
+            34,
+            35,
+            36,
+            37,
+            38,
+            39,
+            40,
+            41,
+            168,
+            169,
+            170,
+            171,
+            455,
+            456,
+            457,
+            458,
+            772,
+            773,
+            774,
+            775,
+            776,
+            777,
+            778,
+            779,
+            906,
+            907,
+            908,
+            909,
+            1199,
+            1200,
+            1201,
+            1202
+          ],
+          "connectedSourceFaces": 32,
+          "subdividedTopTriangles": 512,
+          "boundaryEdges": 56,
+          "sculptedLiftMeters": [
+            0.00042,
+            0.00107
+          ],
+          "insetMeters": 0.0007,
+          "ribCount": 0
+        },
+        {
+          "name": "ring-leather-panel3-sewn-edge",
+          "vertices": 336,
+          "faces": 336
+        },
+        {
+          "name": "ring-joint-rib-band1",
+          "vertices": 677,
+          "faces": 1176,
+          "sourceFaceIds": [
+            46,
+            47,
+            48,
+            92,
+            128,
+            139,
+            140,
+            735,
+            784,
+            785,
+            786,
+            830,
+            866,
+            876,
+            877,
+            878,
+            1479
+          ],
+          "connectedSourceFaces": 17,
+          "subdividedTopTriangles": 1088,
+          "boundaryEdges": 88,
+          "sculptedLiftMeters": [
+            0.0007,
+            0.0014433203569377525
+          ],
+          "insetMeters": 0.00025,
+          "ribCount": 3
+        },
+        {
+          "name": "ring-joint-rib-band2",
+          "vertices": 505,
+          "faces": 848,
+          "sourceFaceIds": [
+            35,
+            39,
+            40,
+            180,
+            181,
+            182,
+            773,
+            778,
+            917,
+            918,
+            919,
+            920
+          ],
+          "connectedSourceFaces": 12,
+          "subdividedTopTriangles": 768,
+          "boundaryEdges": 80,
+          "sculptedLiftMeters": [
+            0.0007,
+            0.0014484056373563709
+          ],
+          "insetMeters": 0.00025,
+          "ribCount": 3
+        },
+        {
+          "name": "middle-leather-panel1",
+          "vertices": 141,
+          "faces": 200,
+          "sourceFaceIds": [
+            120,
+            121,
+            122,
+            640,
+            641,
+            858,
+            859,
+            860,
+            1385,
+            1387
+          ],
+          "connectedSourceFaces": 10,
+          "subdividedTopTriangles": 160,
+          "boundaryEdges": 40,
+          "sculptedLiftMeters": [
+            0.00042,
+            0.00107
+          ],
+          "insetMeters": 0.0007,
+          "ribCount": 0
+        },
+        {
+          "name": "middle-leather-panel1-sewn-edge",
+          "vertices": 240,
+          "faces": 240
+        },
+        {
+          "name": "middle-leather-panel2",
+          "vertices": 153,
+          "faces": 208,
+          "sourceFaceIds": [
+            78,
+            79,
+            86,
+            87,
+            661,
+            815,
+            816,
+            817,
+            824,
+            825
+          ],
+          "connectedSourceFaces": 10,
+          "subdividedTopTriangles": 160,
+          "boundaryEdges": 48,
+          "sculptedLiftMeters": [
+            0.00042,
+            0.00107
+          ],
+          "insetMeters": 0.0007,
+          "ribCount": 0
+        },
+        {
+          "name": "middle-leather-panel2-sewn-edge",
+          "vertices": 288,
+          "faces": 288
+        },
+        {
+          "name": "middle-leather-panel3",
+          "vertices": 263,
+          "faces": 420,
+          "sourceFaceIds": [
+            225,
+            226,
+            230,
+            231,
+            232,
+            237,
+            238,
+            239,
+            452,
+            453,
+            454,
+            963,
+            964,
+            965,
+            968,
+            969,
+            970,
+            975,
+            976,
+            977,
+            1196,
+            1197,
+            1198
+          ],
+          "connectedSourceFaces": 23,
+          "subdividedTopTriangles": 368,
+          "boundaryEdges": 52,
+          "sculptedLiftMeters": [
+            0.00042,
+            0.00107
+          ],
+          "insetMeters": 0.0007,
+          "ribCount": 0
+        },
+        {
+          "name": "middle-leather-panel3-sewn-edge",
+          "vertices": 312,
+          "faces": 312
+        },
+        {
+          "name": "middle-joint-rib-band1",
+          "vertices": 505,
+          "faces": 848,
+          "sourceFaceIds": [
+            86,
+            87,
+            653,
+            656,
+            659,
+            661,
+            824,
+            825,
+            1398,
+            1401,
+            1404,
+            1406
+          ],
+          "connectedSourceFaces": 12,
+          "subdividedTopTriangles": 768,
+          "boundaryEdges": 80,
+          "sculptedLiftMeters": [
+            0.0007,
+            0.0014483610253429443
+          ],
+          "insetMeters": 0.00025,
+          "ribCount": 3
+        },
+        {
+          "name": "middle-joint-rib-band2",
+          "vertices": 505,
+          "faces": 848,
+          "sourceFaceIds": [
+            77,
+            78,
+            79,
+            225,
+            226,
+            227,
+            815,
+            816,
+            817,
+            963,
+            964,
+            965
+          ],
+          "connectedSourceFaces": 12,
+          "subdividedTopTriangles": 768,
+          "boundaryEdges": 80,
+          "sculptedLiftMeters": [
+            0.0007,
+            0.001444867482851614
+          ],
+          "insetMeters": 0.00025,
+          "ribCount": 3
+        },
+        {
+          "name": "index-leather-panel1",
+          "vertices": 155,
+          "faces": 220,
+          "sourceFaceIds": [
+            94,
+            95,
+            663,
+            667,
+            670,
+            832,
+            833,
+            840,
+            1408,
+            1409,
+            1415
+          ],
+          "connectedSourceFaces": 11,
+          "subdividedTopTriangles": 176,
+          "boundaryEdges": 44,
+          "sculptedLiftMeters": [
+            0.00042,
+            0.00107
+          ],
+          "insetMeters": 0.0007,
+          "ribCount": 0
+        },
+        {
+          "name": "index-leather-panel1-sewn-edge",
+          "vertices": 264,
+          "faces": 264
+        },
+        {
+          "name": "index-leather-panel2",
+          "vertices": 153,
+          "faces": 208,
+          "sourceFaceIds": [
+            93,
+            107,
+            109,
+            115,
+            116,
+            117,
+            843,
+            853,
+            854,
+            855
+          ],
+          "connectedSourceFaces": 10,
+          "subdividedTopTriangles": 160,
+          "boundaryEdges": 48,
+          "sculptedLiftMeters": [
+            0.00042,
+            0.00107
+          ],
+          "insetMeters": 0.0007,
+          "ribCount": 0
+        },
+        {
+          "name": "index-leather-panel2-sewn-edge",
+          "vertices": 288,
+          "faces": 288
+        },
+        {
+          "name": "index-leather-panel3",
+          "vertices": 263,
+          "faces": 420,
+          "sourceFaceIds": [
+            207,
+            208,
+            212,
+            213,
+            214,
+            215,
+            216,
+            218,
+            219,
+            220,
+            221,
+            464,
+            466,
+            946,
+            950,
+            953,
+            954,
+            956,
+            957,
+            958,
+            959,
+            1208,
+            1210
+          ],
+          "connectedSourceFaces": 23,
+          "subdividedTopTriangles": 368,
+          "boundaryEdges": 52,
+          "sculptedLiftMeters": [
+            0.00042,
+            0.00107
+          ],
+          "insetMeters": 0.0007,
+          "ribCount": 0
+        },
+        {
+          "name": "index-leather-panel3-sewn-edge",
+          "vertices": 312,
+          "faces": 312
+        },
+        {
+          "name": "index-joint-rib-band1",
+          "vertices": 549,
+          "faces": 920,
+          "sourceFaceIds": [
+            93,
+            107,
+            109,
+            663,
+            664,
+            667,
+            831,
+            843,
+            845,
+            847,
+            1408,
+            1409,
+            1412
+          ],
+          "connectedSourceFaces": 13,
+          "subdividedTopTriangles": 832,
+          "boundaryEdges": 88,
+          "sculptedLiftMeters": [
+            0.0007,
+            0.0014470841107750514
+          ],
+          "insetMeters": 0.00025,
+          "ribCount": 3
+        },
+        {
+          "name": "index-joint-rib-band2",
+          "vertices": 505,
+          "faces": 848,
+          "sourceFaceIds": [
+            115,
+            116,
+            117,
+            207,
+            213,
+            214,
+            853,
+            854,
+            855,
+            945,
+            951,
+            952
+          ],
+          "connectedSourceFaces": 12,
+          "subdividedTopTriangles": 768,
+          "boundaryEdges": 80,
+          "sculptedLiftMeters": [
+            0.0007,
+            0.001449639185722678
+          ],
+          "insetMeters": 0.00025,
+          "ribCount": 3
+        },
+        {
+          "name": "thumb-leather-panel1",
+          "vertices": 97,
+          "faces": 128,
+          "sourceFaceIds": [
+            275,
+            276,
+            279,
+            280,
+            1013,
+            1014
+          ],
+          "connectedSourceFaces": 6,
+          "subdividedTopTriangles": 96,
+          "boundaryEdges": 32,
+          "sculptedLiftMeters": [
+            0.00042,
+            0.00107
+          ],
+          "insetMeters": 0.0007,
+          "ribCount": 0
+        },
+        {
+          "name": "thumb-leather-panel1-sewn-edge",
+          "vertices": 192,
+          "faces": 192
+        },
+        {
+          "name": "thumb-leather-panel2",
+          "vertices": 55,
+          "faces": 68,
+          "sourceFaceIds": [
+            298,
+            1035,
+            1036
+          ],
+          "connectedSourceFaces": 3,
+          "subdividedTopTriangles": 48,
+          "boundaryEdges": 20,
+          "sculptedLiftMeters": [
+            0.00042,
+            0.00107
+          ],
+          "insetMeters": 0.0007,
+          "ribCount": 0
+        },
+        {
+          "name": "thumb-leather-panel2-sewn-edge",
+          "vertices": 120,
+          "faces": 120
+        },
+        {
+          "name": "thumb-leather-panel3",
+          "vertices": 219,
+          "faces": 348,
+          "sourceFaceIds": [
+            263,
+            264,
+            299,
+            300,
+            308,
+            309,
+            310,
+            467,
+            469,
+            1001,
+            1002,
+            1037,
+            1038,
+            1039,
+            1046,
+            1047,
+            1048,
+            1211,
+            1213
+          ],
+          "connectedSourceFaces": 19,
+          "subdividedTopTriangles": 304,
+          "boundaryEdges": 44,
+          "sculptedLiftMeters": [
+            0.00042,
+            0.00107
+          ],
+          "insetMeters": 0.0007,
+          "ribCount": 0
+        },
+        {
+          "name": "thumb-leather-panel3-sewn-edge",
+          "vertices": 264,
+          "faces": 264
+        },
+        {
+          "name": "thumb-joint-rib-band1",
+          "vertices": 353,
+          "faces": 576,
+          "sourceFaceIds": [
+            275,
+            276,
+            287,
+            288,
+            1013,
+            1014,
+            1025,
+            1026
+          ],
+          "connectedSourceFaces": 8,
+          "subdividedTopTriangles": 512,
+          "boundaryEdges": 64,
+          "sculptedLiftMeters": [
+            0.0007,
+            0.0014463030597787992
+          ],
+          "insetMeters": 0.00025,
+          "ribCount": 3
+        },
+        {
+          "name": "thumb-joint-rib-band2",
+          "vertices": 245,
+          "faces": 376,
+          "sourceFaceIds": [
+            298,
+            1002,
+            1035,
+            1036,
+            1037
+          ],
+          "connectedSourceFaces": 5,
+          "subdividedTopTriangles": 320,
+          "boundaryEdges": 56,
+          "sculptedLiftMeters": [
+            0.0007,
+            0.0014497319692513564
+          ],
+          "insetMeters": 0.00025,
+          "ribCount": 3
+        },
+        {
+          "name": "selected-cuff-closure-strap",
+          "vertices": 139,
+          "faces": 188,
+          "sourceFaceIds": [
+            424,
+            471,
+            479,
+            580,
+            583,
+            585,
+            1167,
+            1325,
+            1327
+          ],
+          "connectedSourceFaces": 9,
+          "subdividedTopTriangles": 144,
+          "boundaryEdges": 44,
+          "sculptedLiftMeters": [
+            0.00042,
+            0.0022199999999999998
+          ],
+          "insetMeters": 0.0006,
+          "ribCount": 0
+        },
+        {
+          "name": "selected-cuff-closure-strap-sewn-edge",
+          "vertices": 264,
+          "faces": 264
+        },
+        {
+          "name": "selected-cuff-lip",
+          "vertices": 240,
+          "faces": 240
+        }
+      ],
+      "textures": {},
+      "sharedArmature": "RiderSkeleton",
+      "nativeFullFieldAttributes": [
+        "FULL::DEF-forearm.L.001",
+        "FULL::DEF-hand.L",
+        "FULL::DEF-palm.01.L",
+        "FULL::DEF-f_index.01.L",
+        "FULL::DEF-f_index.02.L",
+        "FULL::DEF-f_index.03.L",
+        "FULL::DEF-palm.02.L",
+        "FULL::DEF-f_middle.01.L",
+        "FULL::DEF-f_middle.02.L",
+        "FULL::DEF-f_middle.03.L",
+        "FULL::DEF-palm.03.L",
+        "FULL::DEF-f_ring.01.L",
+        "FULL::DEF-f_ring.02.L",
+        "FULL::DEF-f_ring.03.L",
+        "FULL::DEF-palm.04.L",
+        "FULL::DEF-f_pinky.01.L",
+        "FULL::DEF-f_pinky.02.L",
+        "FULL::DEF-f_pinky.03.L",
+        "FULL::DEF-thumb.01.L",
+        "FULL::DEF-thumb.02.L",
+        "FULL::DEF-thumb.03.L"
+      ],
+      "maxFourReductionMass": 0.1329302129527692,
+      "fields": {
+        "path": "harness/out/rider-rebuild/production-gloves02/authored01/GloveProduction.L-fields.npz",
+        "sha256": "e05fb90c4259720cec86206121041522cd136fb5c0cf42498140f8829a85b91b"
+      },
+      "newUV": "SelectedBakeUV",
+      "actualTargetGeometry": {
+        "path": "docs/evidence/rider-rebuild/glove-native02-fit/target01/native-hand-L.npz",
+        "sha256": "d175eb289e270d83f5dfef0617a8a8396e1841a27b6de450bfa1cb4bc10a1e1d"
+      },
+      "donorAppearanceReflected": true,
+      "thumbRootIncludesFace279": true
+    }
+  },
+  "textureResolution": {
+    "selectedPaintSource": 4096,
+    "firstLookDerivative": 1024,
+    "final4KMasterBake": "NOT_EXECUTED"
+  },
+  "bodyAndRestBefore": "dacd5fdef071b681a0d4ce2db3abbb9187fe3b243cbf60b2d2fee7f57dda1395",
+  "limits": [
+    "Selected dense material transfer and played appearance are pending.",
+    "No fully dressed art, finite handlebar grip or mobile acceptance.",
+    "Native hand articulation remains subject to parent moving review."
+  ],
+  "native": {
+    "path": "harness/out/rider-rebuild/production-gloves02/authored01/authored-geometry.blend",
+    "sha256": "43de777b789e9111ec927a1f6c6aaef09af4768043b1d862eb285763291ad10d"
+  },
+  "bodyAndRestAfter": "dacd5fdef071b681a0d4ce2db3abbb9187fe3b243cbf60b2d2fee7f57dda1395",
+  "reviewAction": "GloveReviewOpenFistSpreadApproxGripReturn"
+}
