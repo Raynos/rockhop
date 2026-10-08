@@ -1,7 +1,7 @@
 # Rebuild one dressed rider from first principles
 
 Created: 2026-10-07 · writer: Codex / gpt-6.1-sol · asks312/317–322.
-**Status: uncompleted; selected rider played in private Garage and game; original4K shading fixed; cuff, supported reach and motion review active; accepted milestones0/6.**
+**Status: uncompleted; selected rider and original actions played in actual private Garage/game; both-bike contact proxy improved from real sole geometry; coherent cuff/sleeve and full motion/art review active; accepted milestones0/6.**
 Current construction authority: [Astra workflow correction below](#astra-workflow-correction-and-advisory-cadence).
 Pending donor-registration experiments are historical controls, not the next production route.
 Execution owner: rider remodel agent #2, session01a117db-406b-7b70-a14f-d614b1d8f6e5.
@@ -607,20 +607,23 @@ face mask, as specified below.
   circumferential loops, allowing axial/tangential shaping and explicit local
   topology/UV/field changes where needed. Gate the control surface before new
   correspondence. No third offset campaign or generic glove substitution.
-- Actual ride: source-bound torso articulation played in Rookie/Pro side films.
-  Rookie has zero supported samples above1cm out of192, maximum hand2.289mm
-  and sole1.029mm. Baseline Pro retains two supported sole failures out of108;
-  exclude its84 released/crash samples. The extra conditional torso search is
-  [rejected after actual Pro playback](../evidence/rider-rebuild/selected-complete-engine01/coupled-played04/FINDING.md):
-  one supported failure remains, hand gap worsens and reported solveP95 rises
-  4→16ms. The three-candidate baseline is restored; eight source checks pass.
-  Preserve fixed limbs and physical X/Y COM at the existing tolerance, reporting
-  finite lateral COM separately. Do not enlarge XYZ epsilon, symmetrize anatomy,
-  add lateral physics or increase the20degree spine envelope. Next assess a
-  real contact-preserving ankle/boot pitch from actual sole/peg geometry; its
-  inherited fixed sole orientation is unqualified, and no successful new DOF
-  or anatomical range is inferred. Sampled arm jumps need baseline witnesses
-  before attribution. Markers do not qualify full contact or comfort.
+- Actual ride: [source-derived ankle/finite-peg calibration03 now plays on
+  both actual bikes](../evidence/rider-rebuild/selected-ankle-contact02/played01/FINDING.md).
+  Parent keeps the complete selected outfit as a limited private baseline.
+  Rookie192 supported samples have maximum hand1.456mm/sole0.0041mm;
+  Pro108 supported have hand2.392mm/sole3.401mm, excluding84 released/crash
+  samples. Neither has supported gaps above1cm; all192 physics states, hashes,
+  ticks and inputs match each same-bike baseline exactly.
+  The extra Pro torso search remains rejected after worsening hand gap and
+  reported final-solveP95 from4 to16ms. Three candidates remain unchanged;
+  current final-solveP95 is3ms Rookie/4ms Pro, not whole-frame/GPU cost.
+  Preserve fixed limbs and physical X/Y COM at the existing tolerance; actual
+  maximum lateral residual is0.174/0.273mm, not exact XYZ COM. Keep the20degree
+  evaluation envelope; no new anatomical-range claim. Finite bearing is still
+  point/edge geometry, and whole boot/peg and glove/bar contact remain open.
+  Large sampled arm jumps coincide with recorded lean reversals and consistent
+  sampled bend planes; twelve-fps witnesses do not prove finer continuity or
+  justify an IK edit. Deep seated appearance and production/device gates follow.
 - Native movement: original selected145 reach/curl/release full and close-hands
   films played to natural end. Parent keeps the construction baseline; the
   black textured fingers remain attached and articulate, but cuff detail and
