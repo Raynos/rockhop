@@ -1,0 +1,115 @@
+{
+  "acceptedArt": false,
+  "operation": "IDENTIFY_PHYSICAL_CUFF_LAYERS_AND_CONSTRUCTION_BLOCK",
+  "inspectionSHA256": "f63d348852db5abbe5686d486edbb22a65af76842a3a069631c4aa8da3c450b3",
+  "guideArraysSHA256": "d1ee463c6442248bc39e1e4af9a78ca3592a9ddcd5df8fe3e2036aaaa149befd",
+  "masterSHA256": "95a4f14e06fb52cc055df6d1446a035d8cd3d35180d565ad52f3a70b3b05664b",
+  "crossingWitnessLayers": [
+    {
+      "guideFace": 4985,
+      "guideVertexIds": [
+        2291,
+        2445,
+        2603
+      ],
+      "physicalLayerInterpretation": "palm-side outer cuff wall",
+      "sourceXYZ": [
+        [
+          -0.34366199374198914,
+          -0.6797239780426025,
+          0.21249400079250336
+        ],
+        [
+          -0.3226749897003174,
+          -0.6870480179786682,
+          0.22823399305343628
+        ],
+        [
+          -0.30168798565864563,
+          -0.6807109713554382,
+          0.22298699617385864
+        ]
+      ],
+      "currentWorldXYZ": [
+        [
+          0.4178911424720171,
+          -0.04274694206030405,
+          0.9637986273678513
+        ],
+        [
+          0.41902488944027916,
+          -0.04464219327531671,
+          0.9655490815056053
+        ],
+        [
+          0.4189770311158445,
+          -0.04726399025322023,
+          0.9645413876537345
+        ]
+      ],
+      "sourceNormal": [
+        -0.11588448764533717,
+        0.8324403727183933,
+        0.541861431910078
+      ]
+    },
+    {
+      "guideFace": 5324,
+      "guideVertexIds": [
+        2515,
+        2670,
+        2667
+      ],
+      "physicalLayerInterpretation": "opposed inner cuff return",
+      "sourceXYZ": [
+        [
+          -0.3121820092201233,
+          -0.6742079854011536,
+          0.1797579973936081
+        ],
+        [
+          -0.29119500517845154,
+          -0.6689609885215759,
+          0.1795250028371811
+        ],
+        [
+          -0.29119500517845154,
+          -0.7056879997253418,
+          0.2070859968662262
+        ]
+      ],
+      "currentWorldXYZ": [
+        [
+          0.4147079620716975,
+          -0.045431128285963004,
+          0.9614912358538765
+        ],
+        [
+          0.41515687747436714,
+          -0.04784469119366454,
+          0.9610697995462569
+        ],
+        [
+          0.41568933800166075,
+          -0.04770604003149331,
+          0.9666259569322929
+        ]
+      ],
+      "sourceNormal": [
+        0.1397958431938447,
+        -0.5943253534505393,
+        -0.7919813738160852
+      ]
+    }
+  ],
+  "evidence": "Opposed source normals on separate nested positive-Z cuff sheets identify the outer wall and inner return crossed by the rejected cuff06 edit. The measured before-plane separation is retained in the independently reproduced Astra09 receipt.",
+  "oneBlock": "Cannot reliably choose and reconnect a feature-preserving welded two-layer cuff patch across the generated oblique rim/strap connections without a manually authored boundary and layer selection.",
+  "neededAuthoringInput": "A selected set of outer-wall, inner-return and rim faces with explicit ordered retained boundary loops around the palm-side cuff defect; preserve fingers, palm, pads, ribs, major strap appearance and useful old lip. This is a modeling selection, not another numeric offset target.",
+  "geometryEdited": false,
+  "authorRecipeWritten": false,
+  "bindingsExecuted": 0,
+  "limits": [
+    "The layer identification is a local physical interpretation supported by original glove views and source sheet normals, not a global topology classification.",
+    "No cuff reconstruction or moving art acceptance is claimed."
+  ]
+}
