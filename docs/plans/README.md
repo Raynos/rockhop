@@ -1267,3 +1267,5 @@ October 7 connected glove-region source checkpoint: parent reviewed direct face-
 October 7 hoodie author02 failure: actual diagnostics prove Grid Fill created zero faces despite FINISHED and selected12 existing triangles. Selected proportional fit d04701f0…655b2 remains preserved. No rigged hoodie or bake. Correct actual Edit Mode boundary selection before any further shape claim.
 
 October 7 connected gloves actual author01: exit0 in2.888s saves both glove meshes, FULL/FOUR fields, UVs and review action, with early shell/per-hand checkpoints. Parent native pin matches43de777b…ad10d; actual shape inspection and selected maps are next. No selected appearance or moving art acceptance.
+
+October 7 diagnostic renderer source checkpoint: pinned native plus exact actual meshes, complete visible body and explicit garment framing; fixed silent CPU2 studio stills or saved-action film. Parent source/AST checked; unexecuted, no art judgment or source mutation.
