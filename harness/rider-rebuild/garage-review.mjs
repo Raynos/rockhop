@@ -9,6 +9,7 @@ import { webkit } from 'playwright';
 import { witnessGlbResponse } from './glb-response-witness.mjs';
 import { inspectPreparedRiderMaterials } from './inspect-prepared-materials.mjs';
 import { inspectActualCuffFragment } from './inspect-posed-cuffs.mjs';
+import { identifyActualWristFragment } from './identify-wrist-fragment.mjs';
 
 const arg = (name, fallback = '') => process.argv.find(value => value.startsWith(`--${name}=`))?.slice(name.length + 3) ?? fallback;
 const build = path.resolve(arg('build')), out = path.resolve(arg('out'));
@@ -50,6 +51,12 @@ try {
       report.posedCuffProbeRecipeSHA256 = crypto.createHash('sha256')
         .update(fs.readFileSync(new URL('./inspect-posed-cuffs.mjs', import.meta.url))).digest('hex');
       report.probeLimit = 'Read-only synchronous surface inspection stalls this diagnostic capture; use separate uninterrupted films for moving art.';
+    }
+    if (name === 'garage-front' && arg('identity-probe')) {
+      report.wristFragmentIdentity = await page.evaluate(identifyActualWristFragment);
+      report.wristFragmentIdentityRecipeSHA256 = crypto.createHash('sha256')
+        .update(fs.readFileSync(new URL('./identify-wrist-fragment.mjs', import.meta.url))).digest('hex');
+      report.probeLimit = 'Synchronous read-only scene identity; separate uninterrupted films judge moving art.';
     }
     await page.screenshot({ path: path.join(out, name + '.png') });
   };
