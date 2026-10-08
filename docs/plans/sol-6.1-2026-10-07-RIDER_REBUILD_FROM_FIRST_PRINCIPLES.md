@@ -1,7 +1,7 @@
 # Rebuild one dressed rider from first principles
 
 Created: 2026-10-07 · writer: Codex / gpt-6.1-sol · asks312/317–322.
-**Status: blocked on a capable character sculpting/tailoring resource; accepted milestones 0/6.**
+**Status: uncompleted; scoped anatomical authoring/correspondence review active; accepted milestones 0/6.**
 Current construction authority: [Astra workflow correction below](#astra-workflow-correction-and-advisory-cadence).
 Pending donor-registration experiments are historical controls, not the next production route.
 Execution owner: rider remodel agent #2, session01a117db-406b-7b70-a14f-d614b1d8f6e5.
@@ -502,18 +502,20 @@ Keep complete saved hoodie fd7761d7, locally reconstructed jeans95654876 and dir
 
 ### Bounded construction outcomes: mechanisms stopped
 
-Actual review of the saved selected sources ends the current automated fitting
-block. The next production step for these failed regions is expert tailoring
-of the exact selected sources and saved native work. No renamed solver, weaker
-guard, fresh generation campaign or blind bake follows these failures.
+Actual review rejects the saved construction mechanisms. It does not exhaust
+ordinary scoped topology/sculpt/UV/weight authoring. Preserve immutable sources
+and failed controls; new derivative regions may be replaced deliberately.
+No renamed projection solver, weaker final acceptance, generation campaign or
+blind bake follows these failures. Fresh Astra04 correction below supersedes
+the earlier claim that an external artist is the only admissible next step.
 
 | Family | Actual finding | Next admissible work |
 | --- | --- | --- |
-| Boots | Original selected bilateral local sculpt still exposes inner-foot/ankle skin; camera labels confused R lateral with L medial. Opposite handedness/winding is correct, enclosure is not. | [Verified exact artist package](../evidence/rider-rebuild/production-boots03/artist-handoff01/FINDING.md); expert cavity/upper tailoring and both medial/lateral played review. |
-| Gloves | Corrected standard offline rig places both joint controls within10um, but all8 actual original-PBR views show broad palm/dorsum/web/tip exposure and flared cuffs. | [Actual bilateral rejection](../evidence/rider-rebuild/production-gloves03/surface-review01/FINDING.md); exact selected-source package, expert shape/weights/clearance tailoring. No local15minute correction is justified for this broad failure. |
-| Hoodie | Actual local OUTSIDE operation violates the existing preservation predicate at scoped patch vertex12473 and stops before saving a corrected target. Original patched source still fails the matched views. | [Exact failure](../evidence/rider-rebuild/production-hoodie02/local-outside01/actual01/FINDING.md); package original source/PBR, unchanged native, patch/scope lineage and rejected views for expert underarm tailoring. |
-| Jeans | Compact local gusset encloses the body, but the actual selected dense donor penetrates it. Its single OUTSIDE finish introduces51collapsed triangles and3716face-normal rotations over90degrees, stopping before views/bake. | [Exact failed native/lineage](../evidence/rider-rebuild/production-jeans02/dense-fit01/actual01/FINDING.md); package compact target and genuine dense donor for expert detail-source fitting. |
-| Head/neck | Actual selected face/native75 profiles show a hard anterior throat shelf and posterior neck projection/notch; closed topology does not create anatomical continuity. Independent saved corner normals also fail preservation. | [Four actual rejected views](../evidence/rider-rebuild/production-face01/profile-review01/FINDING.md) and [verified exact sculpt package](../evidence/rider-rebuild/production-face01/artist-handoff01/FINDING.md); require expert anatomical sculpting. Stop this joining mechanism and park the unexecuted normal diagnostic; normal tuning cannot fix the silhouette. |
+| Boots | Original selected bilateral local sculpt still exposes inner-foot/ankle skin; camera labels confused R lateral with L medial. Opposite handedness/winding is correct, enclosure is not. | [Verified exact sources](../evidence/rider-rebuild/production-boots03/artist-handoff01/FINDING.md); replace the malformed local forefoot/sole topology if needed, retaining useful selected heel/quarters/design. Opposite handedness alone does not certify the last. No repeat of the three-control displacement method. |
+| Gloves | Corrected standard offline rig places both joint controls within10um, but all8 actual original-PBR views show broad palm/dorsum/web/tip exposure and flared cuffs. | [Actual bilateral rejection](../evidence/rider-rebuild/production-gloves03/surface-review01/FINDING.md); broader anatomical glove topology/shape/weights authoring is needed, not another local registration tweak. Preserve selected design/maps; capability remains unproven. |
+| Hoodie | Actual local OUTSIDE operation violates the existing preservation predicate at scoped patch vertex12473 and stops before saving a corrected target. Original patched source still fails the matched views. | [Exact aborted operation](../evidence/rider-rebuild/production-hoodie02/local-outside01/actual01/FINDING.md); no corrected surface was saved, so this is not a visual rejection of conventional tailoring. Permit deliberate local axilla topology/ease reconstruction; do not rerun OUTSIDE or equate nearest-normal signs with wearing proof. |
+| Jeans | Compact local gusset encloses the body, but the actual selected dense donor penetrates it. Its single OUTSIDE finish introduces51collapsed triangles and3716face-normal rotations over90degrees, stopping before views/bake. | [Failed dense OUTSIDE native](../evidence/rider-rebuild/production-jeans02/dense-fit01/actual01/FINDING.md) remains rejected. The admitted compact target encloses rest; assess actual source/receiver feature correspondence and one isolated pelvis material probe before deciding whether source reshaping is necessary. Bake-source body enclosure is not a prerequisite. |
+| Head/neck | Actual selected face/native75 profiles show a hard anterior throat shelf and posterior neck projection/notch; closed topology does not create anatomical continuity. Independent saved corner normals also fail preservation. | [Actual rejected profiles](../evidence/rider-rebuild/production-face01/profile-review01/FINDING.md) and [preserved sources](../evidence/rider-rebuild/production-face01/artist-handoff01/FINDING.md). Rebuild a broad under-jaw-to-clavicle/trapezius derivative region with deliberate anatomy/UV/weights; source triangles and the18.56mm cut interval are not artistic constraints. No short-bridge or normal sweep. |
 
 A successful joint matrix, topology assertion, modifier invocation or source
 package is not an artistic result. Retain useful original selected geometry,
@@ -530,16 +532,36 @@ qualifies the selected remastered rider. Do not export this failed wardrobe
 into normal player assets or archive this plan as completed.
 
 
-### Construction resource blocker
+### Construction resource blocker reconsidered by Astra04
 
-All five current family mechanisms now have actual negative findings and exact
-verified original-source/editable-native packages. The head profile review also
-fails, so further independent face integration cannot unblock the outfit.
-No capable artist/teammate or demonstrated alternate construction route has
-been supplied. [HR-27](../../project/human-in-the-loop/QUEUE.md) names this resource
-need; the existing user question remains unanswered. No artist was contacted.
-The parent has not produced acceptable autonomous sculpting/tailoring and must
-not disguise more rejected fitting experiments or packaging as a finished rider.
-Resume with a capable construction resource and actual repaired selected geometry,
-then the original dressed native/engine, generic/bike and device gates. All R0–R5
-remain open; this plan is not complete and must not be archived as completed.
+The previous external-only conclusion is superseded by the
+[fresh verified advisory](../evidence/rider-rebuild/astra-production-advisory04/FINDING.md).
+The selected assets genuinely fail current review, but the attempted methods
+preserved defective derivative topology or stopped before a saved correction.
+An artist remains a resource option in HR-27, not a prerequisite for every
+useful authorized production action. Autonomous successful authoring remains
+unproven; do not turn this correction into a claim that the rider is solved.
+
+Preserve original sources/canonical backups. Permit explicit local derivative
+geometry, UV and weight replacement, and justified body/rig changes when actual
+anatomy requires them. Keep useful repaired hands and shared75 as the starting
+transport contract; update adapters and qualification if they must change.
+A source conservation check must not prohibit the reconstruction being attempted.
+
+The next concrete construction block has three owners: one broad anatomical
+selected head/neck derivative; one editable private working scene with actual
+selected sources/current fitted clothes and genuine PBR; and one isolated
+pelvis-only1024 selected jeans material correspondence probe. The working scene
+may contain editable modeling modifiers and incomplete fields/maps, explicitly
+marked as construction references. Final baked-material/four-weight/export
+conditions remain delivery gates, not prerequisites for that authoring context.
+No duplicate visible body/head, generic placeholder, hiding of exposure or
+normal-player promotion is allowed. The partial probe cannot qualify the whole
+jeans, and bake success cannot qualify source correspondence or wearing fit.
+
+Save actual geometry before matched views, reject gross defects early, then
+play the selected head/neck and complete outfit before any art acceptance.
+Count visibly improved saved geometry and dressed movement, not preparation or
+commit volume. If direct authoring cannot produce the requested region, report
+that specific capability limit and use the already-preserved artist sources;
+do not invent another registration/preparation block. AllR0–R5 stay open.
