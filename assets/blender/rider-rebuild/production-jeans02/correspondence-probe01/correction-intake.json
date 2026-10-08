@@ -1,0 +1,111 @@
+{
+  "schema": "rockhop-one-authored-pelvis-correspondence-probe-v1",
+  "accepted": false,
+  "controls": {
+    "path": "assets/blender/rider-rebuild/production-jeans02/correspondence-probe01/correction-controls.json",
+    "sha256": "35ffcc719922467f6b9a1e90a81e7b26b25da0d0d0416d7936ffc485c7a064ef"
+  },
+  "inputs": {
+    "native": {
+      "path": "harness/out/rider-rebuild/production-jeans02/authored01/production-jeans.blend",
+      "sha256": "956548765454fe683952801f5ba401ed82f481489a256cf48039c459850e5c95"
+    },
+    "nativeFields": {
+      "path": "harness/out/rider-rebuild/production-jeans02/authored01/production-jeans-fields.npz",
+      "sha256": "28d337f56a7e963f8ae533a72bf060d40b5d18e956c154b61e2dc995c20bd679"
+    },
+    "originalDense": {
+      "path": "assets/blender/hero-remaster/rider/finish-2026-10-05/wardrobe/data/prep02/jeans/cleaned-donor.npz",
+      "sha256": "c38413a36d564d97f106ebde13bb240d4c7075078ce463f30234a97c0f3d2237"
+    },
+    "probeIntake": {
+      "path": "assets/blender/rider-rebuild/production-jeans02/correspondence-probe01/intake.json",
+      "sha256": "17a96e5ee6dac08d5dbead34a3023aca2b75982fce0a75d8801e0a7c15d45b1a"
+    },
+    "probeSource": {
+      "path": "assets/blender/rider-rebuild/production-jeans02/correspondence-probe01/probe.py",
+      "sha256": "2b69b1ec2c1e8ac6c4a01fc98217a5e6391f203e983d88542a12448c15d81aa2"
+    },
+    "diagnosticSource": {
+      "path": "assets/blender/rider-rebuild/production-jeans02/correspondence-probe01/diagnose.py",
+      "sha256": "b4e8ec5b6e56eb69cbab54c56bc78fbc6c583fda80bdc4773e6042dec3a0d7be"
+    },
+    "diagnosticReport": {
+      "path": "harness/out/rider-rebuild/production-jeans02/correspondence-probe01/diagnostic01/report.json",
+      "sha256": "b4543bb18d69946fe740a1539a7e376a389cf8ffaf1c4b765b1052a959a97667"
+    },
+    "diagnosticArrays": {
+      "path": "harness/out/rider-rebuild/production-jeans02/correspondence-probe01/diagnostic01/directed-correspondence.npz",
+      "sha256": "f6d8a8cf62d4cb6898be494f1baa269d627f5dceb101217787ce54548d7051f8"
+    },
+    "parentVerdict": {
+      "path": "docs/evidence/rider-rebuild/production-jeans02/correspondence-probe01/diagnostic01/parent-verdict.json",
+      "sha256": "835fac47eed9af3f933ec534eae93fc3e0b4ec921c39addee79b76a02b57999c"
+    },
+    "originalEnvelopeReceipt": {
+      "path": "docs/evidence/rider-rebuild/production-jeans02/correspondence-probe01/correction-envelope.json",
+      "sha256": "55b0ec1101fc9762902b0ef8b973ad46e0d4d7c47ed92a3dc53faabc4ebb3d9a"
+    },
+    "guard": {
+      "path": "assets/blender/hero-remaster/generation-comparison-2026-10-03/user-agent2/run_bounded96.py",
+      "sha256": "cf8acd15d8b7484480bee74d23892be815d955ffd87115d3da8ed228ffb3d916"
+    }
+  },
+  "maps": {
+    "albedo": {
+      "path": "assets/blender/hero-remaster/rider/finish-2026-10-05/wardrobe/data/prep02/jeans/baseColorTexture.png",
+      "sha256": "29a166cd304c492a025ea15f5949da0b8540e1ce11de196c2ed0b5afec50e810",
+      "size": [
+        4096,
+        4096
+      ]
+    },
+    "metallicRoughness": {
+      "path": "assets/blender/hero-remaster/rider/finish-2026-10-05/wardrobe/data/prep02/jeans/metallicRoughnessTexture.png",
+      "sha256": "ebd8ead6d0a1b1bfdada88e16c550781848932832859733e8b00c9ccb7ede516",
+      "size": [
+        4096,
+        4096
+      ]
+    }
+  },
+  "normalPolicy": "Real normal bake from original selected shading normals into geometry-derived projection-receiver tangent frame; applied in wearing target tangent frame. No invented neutral normal or alteration of original source normals. Actual mapped result remains unaccepted.",
+  "probe": {
+    "resolution": 1024,
+    "maps": [
+      "albedo",
+      "metallicRoughness",
+      "normal"
+    ],
+    "isolatedPhysicalHalves": [
+      "front",
+      "rear"
+    ],
+    "bakeCalls": 6,
+    "fullGarmentBakes": 0,
+    "explicitCage": true,
+    "maximumRayDistanceMetres": 0,
+    "meaning": "Explicit custom-cage rays, directly checked before bake; max setting is intentionally unbounded, not a cutoff guarantee. No numeric sweep or retry.",
+    "photos": 6,
+    "unprobed": [
+      "Left leg",
+      "Right leg",
+      "Underbody below original receiverZ.84"
+    ]
+  },
+  "limits": [
+    "Original source need not enclose body. No rejected fitted source positions/native are used. Only the original pre-edit evaluated array from its immutable lineage container supplies measured envelope extents, and must exactly match9565 original source at execution.",
+    "Wearing target9565 geometry/topology/UV/FULL/FOUR, original selected dense/UV/PBR, body10582/shared75 and files remain exact. Projection meshes and authored cages are clearly labeled correspondence-only derivatives.",
+    "All forty actual cage/proxy controls and envelope witnesses are frozen before job. Editable actual native must save before capture gate and maps. No fit solver, settings sweep, source deformation or retries.",
+    "Direct capture gate requires no missing interior diagnostic sample, no physical opposite-half/paired-side capture and first hit<=80mm. This is a gate on actual custom-cage capture, not Blender max-ray-distance. Source cut overlap4mm is explicit.",
+    "Python raster/BVH is not byte-identical Cycles; source semantics use actual point positions/original face lineage, not source normal signs. Original diagnostic bounded normal-cross counts did not prove physical cross-panel hits. Actual mapped images/raw maps remain parent review authority.",
+    "One pelvis-only2halvesx3maps probe at1024, three exact-UV composite maps, six close original-source/wearing-receiver views. No whole bake, final4K, fit, motion, player or device acceptance."
+  ],
+  "runtime": {
+    "parentOnly": true,
+    "cpuThreads": 2,
+    "proposedLimitSeconds": 600,
+    "output": "harness/out/rider-rebuild/production-jeans02/correspondence-probe01/cage-probe01",
+    "guardOutput": "docs/evidence/rider-rebuild/production-jeans02/correspondence-probe01/cage-probe-guard01"
+  }
+}

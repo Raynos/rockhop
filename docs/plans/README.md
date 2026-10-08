@@ -1451,3 +1451,5 @@ October8 saved hoodie panel readback exit0/10.396s preserves native1ad5 and actu
 October8 current-player Metal gate13 exit0/8.18s,11/11 checks; recorded finish/hash remain byte-identical after saved neck/outfit/hoodie construction. Gate12 correctly refused memory headroom without launching. Neither accepts the selected rider.
 
 October8 one selected-boot anatomical regional CSG source is frozen: asymmetric exterior last, continuous eased canonical foot cavity, unchanged original selected exterior outside bounded replacements. Parent source/AST/11pins pass;180second CPU2 attempt next, actual geometry saved before review. No fit/art acceptance.
+
+October8 one jeans material correction source is frozen: separate editable projection receiver and cage from40 actual original-source envelope witnesses. Wearing9565 unchanged; save geometry then physical-source capture gate before six isolated1024 map bakes. Parent reviewed source/pins; no corrected outcome or garment acceptance yet.

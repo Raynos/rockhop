@@ -1,0 +1,65 @@
+{
+  "accepted": false,
+  "status": "ONE_AUTHORED_CORRESPONDENCE_SOURCE_READY_NO_BLENDER_CALL",
+  "author": {
+    "path": "assets/blender/rider-rebuild/production-jeans02/correspondence-probe01/correct.py",
+    "sha256": "97353e7bd2dbe7951cd7e1d96a8f7b91d7ac7f5e3033b746b7bc951a2dd8198b"
+  },
+  "intake": {
+    "path": "assets/blender/rider-rebuild/production-jeans02/correspondence-probe01/correction-intake.json",
+    "sha256": "d0bafbe41987707be1a8546b192759dfa177e0b67c484d1f148181b3a1625932"
+  },
+  "controls": {
+    "path": "assets/blender/rider-rebuild/production-jeans02/correspondence-probe01/correction-controls.json",
+    "sha256": "35ffcc719922467f6b9a1e90a81e7b26b25da0d0d0416d7936ffc485c7a064ef"
+  },
+  "envelopeReceipt": {
+    "path": "docs/evidence/rider-rebuild/production-jeans02/correspondence-probe01/correction-envelope.json",
+    "sha256": "55b0ec1101fc9762902b0ef8b973ad46e0d4d7c47ed92a3dc53faabc4ebb3d9a"
+  },
+  "sourceNote": {
+    "path": "docs/evidence/rider-rebuild/production-jeans02/correspondence-probe01/CORRECTION-SOURCE.md",
+    "sha256": "0a4b17140a6f69db086c4d7fb1d2f3ce561ebea196e03d7b18581d6fb0b77af1"
+  },
+  "syntaxParsed": true,
+  "verifiedPinRows": 18,
+  "authoredControlInterpolationAt40AnchorsMaximumErrorMetres": {
+    "proxyPoints": 5.245208734017126e-08,
+    "cagePoints": 5.245208734017126e-08
+  },
+  "all40MeasuredEnvelopeAnchorsInsideAuthoredCageRadius": true,
+  "sourceOnlyStages": [
+    "Read actual diagnostic/report/verdict",
+    "Read only420800 originalEvaluatedPositions; never fittedPositions",
+    "Measured40 angular-height source envelopes and actual sagittal source waist tops",
+    "Authored/froze projection and cage controls",
+    "AST,pins,40anchor interpolation and envelope-radius validation"
+  ],
+  "noHeavyProcessRan": true,
+  "proposedCommand": [
+    "env",
+    "OMP_NUM_THREADS=2",
+    "OPENBLAS_NUM_THREADS=2",
+    "MKL_NUM_THREADS=2",
+    "VECLIB_MAXIMUM_THREADS=2",
+    "NUMEXPR_NUM_THREADS=2",
+    "python3",
+    "assets/blender/hero-remaster/generation-comparison-2026-10-03/user-agent2/run_bounded96.py",
+    "--out",
+    "docs/evidence/rider-rebuild/production-jeans02/correspondence-probe01/cage-probe-guard01",
+    "--limit-seconds",
+    "600",
+    "--",
+    "/Applications/Blender.app/Contents/MacOS/Blender",
+    "-b",
+    "-t",
+    "2",
+    "--python-exit-code",
+    "1",
+    "--python",
+    "assets/blender/rider-rebuild/production-jeans02/correspondence-probe01/correct.py",
+    "--",
+    "assets/blender/rider-rebuild/production-jeans02/correspondence-probe01/correction-intake.json",
+    "harness/out/rider-rebuild/production-jeans02/correspondence-probe01/cage-probe01"
+  ]
+}
