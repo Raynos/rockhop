@@ -1253,3 +1253,5 @@ October 7 glove author02 actual failure: the one targeted panel-placement repair
 October 7 hoodie author01 actual finding: proportional selected fit native f96061420…97701 is preserved before grid-fill returns FINISHED and the selected-face quad assertion fails. No completed rigged hoodie or bake. Correct new-face bookkeeping next; physical fit and moving review remain open.
 
 October 7 actual jeans shape rejected: parent viewed saved-native front/back/profile; saddle, buttocks and rear knees/calves visibly penetrate. No bake admitted. First shape result has one targeted authored repair available; actual body envelope and saddle design take precedence over inward donor fold projection.
+
+October 7 ask337 handedness answered: actual saved boot geometry is oppositely reflected, triangle winding reversed and skin side-specific; gloves author uses different actual L/R hand targets. This does not qualify an asymmetric shoe last or fit both feet, and complete glove meshes remain unsaved.

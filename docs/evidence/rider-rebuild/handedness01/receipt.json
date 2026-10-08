@@ -1,0 +1,106 @@
+{
+  "acceptedArt": false,
+  "boots": {
+    "savedPair": true,
+    "oneSelectedSourceMirroredToOppositeHandedness": true,
+    "mirrorDeterminant": -1.0002987692534682,
+    "maximumSavedMirrorErrorM": 3.8544382630067986e-08,
+    "triangleWindingReversed": true,
+    "sideSpecificSkin": true,
+    "sides": {
+      "L": {
+        "vertices": 10677,
+        "triangles": 21382,
+        "bounds": [
+          [
+            0.13927319645881653,
+            -0.1395929604768753,
+            -0.0232244860380888
+          ],
+          [
+            0.31330054998397827,
+            0.12357127666473389,
+            0.14429740607738495
+          ]
+        ],
+        "sourceToNativeDeterminant": -0.0032492164394378295,
+        "usedJoints": [
+          "DEF-shin.L.001",
+          "DEF-foot.L",
+          "DEF-toe.L"
+        ]
+      },
+      "R": {
+        "vertices": 10677,
+        "triangles": 21382,
+        "bounds": [
+          [
+            -0.310697078704834,
+            -0.14087285101413727,
+            -0.02322160266339779
+          ],
+          [
+            -0.13668480515480042,
+            0.12225809693336487,
+            0.14427752792835236
+          ]
+        ],
+        "sourceToNativeDeterminant": 0.0032482459634162546,
+        "usedJoints": [
+          "DEF-shin.R.001",
+          "DEF-foot.R",
+          "DEF-toe.R"
+        ]
+      }
+    },
+    "limits": [
+      "Current toe fit is rejected. Reflection proves opposite handedness, not correct asymmetrical shoe last or fit to each foot."
+    ]
+  },
+  "gloves": {
+    "distinctActualLeftRightHandTargets": true,
+    "targets": {
+      "L": {
+        "path": "docs/evidence/rider-rebuild/glove-native02-fit/target01/native-hand-L.npz",
+        "sha256": "d175eb289e270d83f5dfef0617a8a8396e1841a27b6de450bfa1cb4bc10a1e1d",
+        "vertices": 763,
+        "triangles": 1484,
+        "bounds": [
+          [
+            0.3626924772877349,
+            -0.18901626765727997,
+            0.7557207942008972
+          ],
+          [
+            0.46372708678245544,
+            -0.0280433253714644,
+            0.9708582724916976
+          ]
+        ]
+      },
+      "R": {
+        "path": "docs/evidence/rider-rebuild/glove-native02-fit/target01/native-hand-R.npz",
+        "sha256": "2e3cd9f16768fa063de77a73eb102abfc841b16abcc11c8339b793558707c210",
+        "vertices": 763,
+        "triangles": 1484,
+        "bounds": [
+          [
+            -0.4638965427875519,
+            -0.18875665962696075,
+            0.7555481791496277
+          ],
+          [
+            -0.362664315235832,
+            -0.02825177987832375,
+            0.9708881201745325
+          ]
+        ]
+      }
+    },
+    "construction": "Each actual hand separately; left appearance donor reflected and winding reversed; side-specific digit bones.",
+    "completeSavedMeshes": false,
+    "limits": [
+      "Latest author02 failed on R before complete bilateral glove meshes were saved. Final thumb placement/fit and skin require actual saved and played verification."
+    ]
+  }
+}
