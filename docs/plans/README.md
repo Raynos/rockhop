@@ -1757,3 +1757,5 @@ Actualanatomical09 nativeweightedit SUCCESS88.992s, saved/reopened d42ff634;2,35
 Cufftopology10 read-onlysource finding: originalfloat32clip yields three nearfloorYvalues; stricterfloat64ownership excludes2,713validpieces andmislabelsinnerboundaryasouter. Exactsourceconversiontofloat64beforeclip preservesoriginalcoordinates andavoids predicateprecisionmismatch; nativeproof next. Noradiusvariant/newcandidate/artpass.
 
 Third-construction playergate32 PASS11/11 afteractualnativeweight09: bootmedian280.67ms, finish8.591666666666667/hash622bb2554e0f9a26bitexact,20one-tickrestarts,P95syncedframe6.07ms; actualguard7.215s. Originalplayerpartialgateonly; no selectedriderart/devicepass. Nativecuffownershipprobe next.
+
+Actualcufftopology10nativeprobe FAIL25.363s: originalfloat32 reproducesfalse513/392outerloops; proposedfloat64sourceclipfailsearlieroriginalfloorloop detector. Nocandidate. Keeporiginalcutter; proveconsistentexistingflooridentitydownstreambeforereconstruction. Sparse sourceproofnotnativeacceptance.

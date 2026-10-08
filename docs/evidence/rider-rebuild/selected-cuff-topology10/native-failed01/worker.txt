@@ -1,0 +1,19 @@
+00:07.752  blend            | Read blend: "/Users/raynos/projects/games/rockhop/harness/out/rider-rebuild/selected-complete-engine01/engine05/rider-private-masked.blend"
+PROBE actual native cuff L
+Traceback (most recent call last):
+  File "/Users/raynos/projects/games/rockhop/assets/blender/rider-rebuild/selected-cuff-topology10/probe_native.py", line 95, in <module>
+    main()
+    ~~~~^^
+  File "/Users/raynos/projects/games/rockhop/assets/blender/rider-rebuild/selected-cuff-topology10/probe_native.py", line 74, in main
+    inner,floor=B.floor_cut(s,dump,settings['gloveFloorCutY'])
+                ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/raynos/projects/games/rockhop/assets/blender/rider-rebuild/astra-character-construction12/construct.py", line 696, in floor_cut
+    assert all(len(n) == 2 for n in adj.values()), 'Cut section is not a family of simple loops'
+           ~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Cut section is not a family of simple loops
+
+Error: script failed, file: 'assets/blender/rider-rebuild/selected-cuff-topology10/probe_native.py', exiting.
+Blender 5.2.1 LTS (hash 9e2066aef7ef built 2026-08-25 01:35:57)
+scripts disabled for "/Users/raynos/projects/games/rockhop/harness/out/rider-rebuild/selected-complete-engine01/engine05/rider-private-masked.blend", skipping 'RIG-RiderMetarig_ui.py'
+
+Blender quit
