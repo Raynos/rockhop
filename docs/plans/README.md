@@ -1583,3 +1583,5 @@ October8 selected cuff taper localorientation correction reviewed:6L/4Rnoncontro
 October8 selected already-masked shape-only reexport source reviewed: independentparent/current fingerprints, only2glovepositions allowed, originalmask/FOUR preservedexact; commonstrictfinalizer. Actualcorrectednative pins/runtime next;all0/6open.
 
 October8 cuffauthor01 stopped41.530s at Blender library-name listmutation afterdense transfer, no correctedfinalsave. Fixrequest-list alias only; measuredcontrols/binding unchanged. Actualrerun next,all0/6open.
+
+October8 actualGarage05 provesselected4096²intake/residentpolicy: broadwhite/chrome denimgone withsame7d826source/materialscalars.19.84sorbit playedtoend484frames;parentkeepspolicy. Cuffrepair/completegeneric/ride next;all0/6open.

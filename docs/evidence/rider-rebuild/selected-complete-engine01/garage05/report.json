@@ -1,0 +1,4656 @@
+{
+  "build": "/Users/raynos/projects/games/rockhop/harness/out/rider-rebuild/selected-complete-engine01/game03",
+  "contract": {
+    "path": "/Users/raynos/projects/games/rockhop/harness/out/rider-rebuild/selected-complete-engine01/engine03/rider-contract.json",
+    "sha256": "719209bfee6f9010ef5e1a7ed54bba68905d3b2a2f78b792cd9c1f4af252c3f0",
+    "expectedObjects": {
+      "RiderBody": "RiderBody",
+      "ActualSelectedGlove.L": "ActualSelectedGlove.L",
+      "ActualSelectedGlove.R": "ActualSelectedGlove.R",
+      "ActualSelectedBoot.L": "ActualSelectedBoot.L",
+      "ActualSelectedBoot.R": "ActualSelectedBoot.R",
+      "RiderJeans": "RiderJeans",
+      "RiderHoodie": "RiderHoodie"
+    }
+  },
+  "recipeSHA256": "52a882c3f75996f061569e5f01b5c2ee61b51093972d3c66bd9c68f2fcffc928",
+  "errors": [],
+  "loaded": [
+    {
+      "url": "http://127.0.0.1:57080/models/98214c3b3099a465/bike-rookie-lod-4ec26ad0a0c08f7e.glb",
+      "status": 200,
+      "sha256": "4ec26ad0a0c08f7ec7e466523b77b4dd5f6378e9b389fade140eb7d08418d36b",
+      "bytes": 870436,
+      "browserContentLength": "870436",
+      "hashScope": "Independent streamed HTTP witness of the same immutable local build URL; browser body cache not read"
+    },
+    {
+      "url": "http://127.0.0.1:57080/models/bb3ec209a0dcc809/bike-pro-lod-37455064bf7b6012.glb",
+      "status": 200,
+      "sha256": "37455064bf7b6012d67e99454cefced5a1aceac3747796f11cdcfe839436a2b7",
+      "bytes": 864844,
+      "browserContentLength": "864844",
+      "hashScope": "Independent streamed HTTP witness of the same immutable local build URL; browser body cache not read"
+    },
+    {
+      "url": "http://127.0.0.1:57080/models/98214c3b3099a465/bike-rookie-e55919d602678493.glb",
+      "status": 200,
+      "sha256": "e55919d60267849358ef5e97f4731f42fac6eb2835b9998e1d146d056c0f10f7",
+      "bytes": 2283036,
+      "browserContentLength": "2283036",
+      "hashScope": "Independent streamed HTTP witness of the same immutable local build URL; browser body cache not read"
+    },
+    {
+      "url": "http://127.0.0.1:57080/models/bb3ec209a0dcc809/bike-pro-0acc9ac86eeca76c.glb",
+      "status": 200,
+      "sha256": "0acc9ac86eeca76cc1812f8870eab36e2e25ca76d6a5cbe86d4a46a36cc12a86",
+      "bytes": 2270540,
+      "browserContentLength": "2270540",
+      "hashScope": "Independent streamed HTTP witness of the same immutable local build URL; browser body cache not read"
+    },
+    {
+      "url": "http://127.0.0.1:57080/models/624657da70e8c78d/c1-harbor-tug-lod-bf0bddee9b84ea3c.glb",
+      "status": 200,
+      "sha256": "bf0bddee9b84ea3c0bafb48b23c766db66e4eb08b7dfac77667684d23ab41b24",
+      "bytes": 213636,
+      "browserContentLength": "213636",
+      "hashScope": "Independent streamed HTTP witness of the same immutable local build URL; browser body cache not read"
+    },
+    {
+      "url": "http://127.0.0.1:57080/models/course-kits/alpine-trees/91ca25d71be698ad/trees-lod-8aa2e8f5f041e852.glb",
+      "status": 200,
+      "sha256": "8aa2e8f5f041e852b861f7dc71c39ebd0cc36cc475986e51b18ed927da5a8d57",
+      "bytes": 169428,
+      "browserContentLength": "169428",
+      "hashScope": "Independent streamed HTTP witness of the same immutable local build URL; browser body cache not read"
+    },
+    {
+      "url": "http://127.0.0.1:57080/models/624657da70e8c78d/c1-harbor-tug-b55802fbb49b8732.glb",
+      "status": 200,
+      "sha256": "b55802fbb49b8732fffb251687a3bf18104c5dfe41ac4e38234f08b3a49fedab",
+      "bytes": 274268,
+      "browserContentLength": "274268",
+      "hashScope": "Independent streamed HTTP witness of the same immutable local build URL; browser body cache not read"
+    },
+    {
+      "url": "http://127.0.0.1:57080/models/course-kits/coast-frontage/918b21884fbf220d/coast-frontage-lod-b614184510f599a3.glb",
+      "status": 200,
+      "sha256": "b614184510f599a3311082152ad2d593b0163b74cceb768ad6307ffc0f888c67",
+      "bytes": 392796,
+      "browserContentLength": "392796",
+      "hashScope": "Independent streamed HTTP witness of the same immutable local build URL; browser body cache not read"
+    },
+    {
+      "url": "http://127.0.0.1:57080/models/course-kits/alpine-trees/91ca25d71be698ad/trees-fab79d15f9a3e120.glb",
+      "status": 200,
+      "sha256": "fab79d15f9a3e120ae33820385276c8f688f2b37af98439a8a3e671143d3ac1a",
+      "bytes": 564700,
+      "browserContentLength": "564700",
+      "hashScope": "Independent streamed HTTP witness of the same immutable local build URL; browser body cache not read"
+    },
+    {
+      "url": "http://127.0.0.1:57080/models/course-kits/coast-frontage/918b21884fbf220d/coast-frontage-95fe300274c04e6e.glb",
+      "status": 200,
+      "sha256": "95fe300274c04e6eebb7e30d20e492729616bdc8a5d6e3bc62d5ae1fc663cb51",
+      "bytes": 950860,
+      "browserContentLength": "950860",
+      "hashScope": "Independent streamed HTTP witness of the same immutable local build URL; browser body cache not read"
+    },
+    {
+      "url": "http://127.0.0.1:57080/models/be4fc3304c6d1aca/rider-street-mustard-7d826b835ca07c7c.glb",
+      "status": 200,
+      "sha256": "7d826b835ca07c7c584d6b3a9606e9e89780f1c7b92e4030e1f1b58aff4127ed",
+      "bytes": 357281284,
+      "browserContentLength": "357281284",
+      "hashScope": "Independent streamed HTTP witness of the same immutable local build URL; browser body cache not read"
+    }
+  ],
+  "snapshots": [
+    {
+      "name": "garage-front",
+      "debug": {
+        "armStretch": [
+          0.9960886309166759,
+          0.9960911338442668
+        ],
+        "legStretch": [
+          0.7141601120293943,
+          0.7141600022853638
+        ],
+        "handOnGrip": [
+          true,
+          true
+        ],
+        "footOnPeg": [
+          true,
+          true
+        ],
+        "wristErr": [
+          2.345391732775972e-8,
+          2.75016720238601e-7
+        ],
+        "gripErr": [
+          2.345391732775972e-8,
+          2.75016720238601e-7
+        ],
+        "gripAngleErr": [
+          1.0745380149674385e-7,
+          1.954268969387413e-7
+        ],
+        "ankleErr": [
+          0.000002577386893852666,
+          0.0000026036495122685073
+        ],
+        "armLen": [
+          0.534639986196624,
+          0.5346397715734006
+        ],
+        "additiveWeight": 0,
+        "physicalPose": false,
+        "comResidual": 4.13844934867481e-9,
+        "ragdollResidual": -1,
+        "ragdollBlend": 0,
+        "ragdollDetail": [],
+        "bones": 75,
+        "clips": [],
+        "stageClip": "measured riding IK + breathing",
+        "stageBlend": 0,
+        "soleErr": [
+          0.000002577386893852666,
+          0.0000026036495122685073
+        ],
+        "stance": {
+          "on": true,
+          "pose": "back",
+          "blend": 0.009900315489308488,
+          "lean": -0.009900315489308488,
+          "land": 0,
+          "extend": 0,
+          "dy": 0,
+          "lag": 0,
+          "limit": 1
+        },
+        "candidate": {
+          "sourceSHA256": "7d826b835ca07c7c584d6b3a9606e9e89780f1c7b92e4030e1f1b58aff4127ed",
+          "metadataSHA256": "719209bfee6f9010ef5e1a7ed54bba68905d3b2a2f78b792cd9c1f4af252c3f0",
+          "roles": {
+            "pelvis": "DEF-spine",
+            "trunk": [
+              "DEF-spine",
+              "DEF-spine.001",
+              "DEF-spine.002",
+              "DEF-spine.003"
+            ],
+            "neck": [
+              "DEF-spine.004",
+              "DEF-spine.005"
+            ],
+            "head": "DEF-spine.006",
+            "upperArmLeft": [
+              "DEF-upper_arm.L",
+              "DEF-upper_arm.L.001"
+            ],
+            "forearmLeft": [
+              "DEF-forearm.L",
+              "DEF-forearm.L.001"
+            ],
+            "thighLeft": [
+              "DEF-thigh.L",
+              "DEF-thigh.L.001"
+            ],
+            "shinLeft": [
+              "DEF-shin.L",
+              "DEF-shin.L.001"
+            ],
+            "shoulderLeft": "DEF-shoulder.L",
+            "wristLeft": "DEF-hand.L",
+            "footLeft": "DEF-foot.L",
+            "toeLeft": "DEF-toe.L",
+            "upperArmRight": [
+              "DEF-upper_arm.R",
+              "DEF-upper_arm.R.001"
+            ],
+            "forearmRight": [
+              "DEF-forearm.R",
+              "DEF-forearm.R.001"
+            ],
+            "thighRight": [
+              "DEF-thigh.R",
+              "DEF-thigh.R.001"
+            ],
+            "shinRight": [
+              "DEF-shin.R",
+              "DEF-shin.R.001"
+            ],
+            "shoulderRight": "DEF-shoulder.R",
+            "wristRight": "DEF-hand.R",
+            "footRight": "DEF-foot.R",
+            "toeRight": "DEF-toe.R"
+          },
+          "meshRoles": [
+            {
+              "role": "RiderBody.primitive0",
+              "name": "female_v006lowresUV__ExactFaceSubset"
+            },
+            {
+              "role": "RiderBody.primitive1",
+              "name": "female_v006lowresUV__ExactFaceSubset_1"
+            },
+            {
+              "role": "RiderBody.primitive2",
+              "name": "female_v006lowresUV__ExactFaceSubset_2"
+            },
+            {
+              "role": "RiderBody.primitive3",
+              "name": "female_v006lowresUV__ExactFaceSubset_3"
+            },
+            {
+              "role": "ActualSelectedGlove.L",
+              "name": "ActualSelectedGloveL"
+            },
+            {
+              "role": "ActualSelectedGlove.R",
+              "name": "ActualSelectedGloveR"
+            },
+            {
+              "role": "ActualSelectedBoot.L",
+              "name": "ActualSelectedBootL"
+            },
+            {
+              "role": "ActualSelectedBoot.R",
+              "name": "ActualSelectedBootR"
+            },
+            {
+              "role": "RiderJeans",
+              "name": "RiderJeans"
+            },
+            {
+              "role": "RiderHoodie",
+              "name": "RiderHoodie"
+            }
+          ],
+          "authorMeshRoles": {
+            "RiderBody": "RiderBody",
+            "ActualSelectedGlove.L": "ActualSelectedGlove.L",
+            "ActualSelectedGlove.R": "ActualSelectedGlove.R",
+            "ActualSelectedBoot.L": "ActualSelectedBoot.L",
+            "ActualSelectedBoot.R": "ActualSelectedBoot.R",
+            "RiderJeans": "RiderJeans",
+            "RiderHoodie": "RiderHoodie"
+          },
+          "visibleMeshes": [
+            {
+              "name": "ActualSelectedBootL",
+              "skinned": true,
+              "triangles": 610934
+            },
+            {
+              "name": "ActualSelectedBootR",
+              "skinned": true,
+              "triangles": 610934
+            },
+            {
+              "name": "ActualSelectedGloveL",
+              "skinned": true,
+              "triangles": 569142
+            },
+            {
+              "name": "ActualSelectedGloveR",
+              "skinned": true,
+              "triangles": 569142
+            },
+            {
+              "name": "female_v006lowresUV__ExactFaceSubset",
+              "skinned": true,
+              "triangles": 778
+            },
+            {
+              "name": "female_v006lowresUV__ExactFaceSubset_1",
+              "skinned": true,
+              "triangles": 58102
+            },
+            {
+              "name": "female_v006lowresUV__ExactFaceSubset_2",
+              "skinned": true,
+              "triangles": 429
+            },
+            {
+              "name": "female_v006lowresUV__ExactFaceSubset_3",
+              "skinned": true,
+              "triangles": 5159
+            },
+            {
+              "name": "RiderHoodie",
+              "skinned": true,
+              "triangles": 921722
+            },
+            {
+              "name": "RiderJeans",
+              "skinned": true,
+              "triangles": 51456
+            }
+          ],
+          "jointNames": {
+            "DEF-spine": "DEF-spine",
+            "DEF-spine.001": "DEF-spine001",
+            "DEF-spine.002": "DEF-spine002",
+            "DEF-spine.003": "DEF-spine003",
+            "DEF-spine.004": "DEF-spine004",
+            "DEF-spine.005": "DEF-spine005",
+            "DEF-spine.006": "DEF-spine006",
+            "DEF-shoulder.L": "DEF-shoulderL",
+            "DEF-upper_arm.L": "DEF-upper_armL",
+            "DEF-upper_arm.L.001": "DEF-upper_armL001",
+            "DEF-forearm.L": "DEF-forearmL",
+            "DEF-forearm.L.001": "DEF-forearmL001",
+            "DEF-hand.L": "DEF-handL",
+            "DEF-thumb.01.L": "DEF-thumb01L",
+            "DEF-thumb.02.L": "DEF-thumb02L",
+            "DEF-thumb.03.L": "DEF-thumb03L",
+            "DEF-palm.01.L": "DEF-palm01L",
+            "DEF-f_index.01.L": "DEF-f_index01L",
+            "DEF-f_index.02.L": "DEF-f_index02L",
+            "DEF-f_index.03.L": "DEF-f_index03L",
+            "DEF-palm.02.L": "DEF-palm02L",
+            "DEF-f_middle.01.L": "DEF-f_middle01L",
+            "DEF-f_middle.02.L": "DEF-f_middle02L",
+            "DEF-f_middle.03.L": "DEF-f_middle03L",
+            "DEF-palm.03.L": "DEF-palm03L",
+            "DEF-f_ring.01.L": "DEF-f_ring01L",
+            "DEF-f_ring.02.L": "DEF-f_ring02L",
+            "DEF-f_ring.03.L": "DEF-f_ring03L",
+            "DEF-palm.04.L": "DEF-palm04L",
+            "DEF-f_pinky.01.L": "DEF-f_pinky01L",
+            "DEF-f_pinky.02.L": "DEF-f_pinky02L",
+            "DEF-f_pinky.03.L": "DEF-f_pinky03L",
+            "PalmSocket.L": "PalmSocketL",
+            "DEF-shoulder.R": "DEF-shoulderR",
+            "DEF-upper_arm.R": "DEF-upper_armR",
+            "DEF-upper_arm.R.001": "DEF-upper_armR001",
+            "DEF-forearm.R": "DEF-forearmR",
+            "DEF-forearm.R.001": "DEF-forearmR001",
+            "DEF-hand.R": "DEF-handR",
+            "DEF-thumb.01.R": "DEF-thumb01R",
+            "DEF-thumb.02.R": "DEF-thumb02R",
+            "DEF-thumb.03.R": "DEF-thumb03R",
+            "DEF-palm.01.R": "DEF-palm01R",
+            "DEF-f_index.01.R": "DEF-f_index01R",
+            "DEF-f_index.02.R": "DEF-f_index02R",
+            "DEF-f_index.03.R": "DEF-f_index03R",
+            "DEF-palm.02.R": "DEF-palm02R",
+            "DEF-f_middle.01.R": "DEF-f_middle01R",
+            "DEF-f_middle.02.R": "DEF-f_middle02R",
+            "DEF-f_middle.03.R": "DEF-f_middle03R",
+            "DEF-palm.03.R": "DEF-palm03R",
+            "DEF-f_ring.01.R": "DEF-f_ring01R",
+            "DEF-f_ring.02.R": "DEF-f_ring02R",
+            "DEF-f_ring.03.R": "DEF-f_ring03R",
+            "DEF-palm.04.R": "DEF-palm04R",
+            "DEF-f_pinky.01.R": "DEF-f_pinky01R",
+            "DEF-f_pinky.02.R": "DEF-f_pinky02R",
+            "DEF-f_pinky.03.R": "DEF-f_pinky03R",
+            "PalmSocket.R": "PalmSocketR",
+            "DEF-pelvis.L": "DEF-pelvisL",
+            "DEF-pelvis.R": "DEF-pelvisR",
+            "DEF-thigh.L": "DEF-thighL",
+            "DEF-thigh.L.001": "DEF-thighL001",
+            "DEF-shin.L": "DEF-shinL",
+            "DEF-shin.L.001": "DEF-shinL001",
+            "DEF-foot.L": "DEF-footL",
+            "DEF-toe.L": "DEF-toeL",
+            "SoleSocket.L": "SoleSocketL",
+            "DEF-thigh.R": "DEF-thighR",
+            "DEF-thigh.R.001": "DEF-thighR001",
+            "DEF-shin.R": "DEF-shinR",
+            "DEF-shin.R.001": "DEF-shinR001",
+            "DEF-foot.R": "DEF-footR",
+            "DEF-toe.R": "DEF-toeR",
+            "SoleSocket.R": "SoleSocketR"
+          },
+          "contractSchema": "rockhop-humanoid-contract-v1",
+          "geometry": "author FOUR unchanged; no legacy sleeve conditioning",
+          "massApproximation": "Adult male segment mass fractions on measured joint centres/head and toe extents; not tissue-density integration",
+          "materials": [
+            {
+              "name": "Exact selected boot original 4096 PBR.001",
+              "baseColor": [
+                1,
+                1,
+                1
+              ],
+              "roughness": 1,
+              "metalness": 1,
+              "maps": {
+                "map": {
+                  "loaded": true,
+                  "width": 4096,
+                  "height": 4096,
+                  "colorSpace": "srgb"
+                },
+                "normalMap": {
+                  "loaded": true,
+                  "width": 2,
+                  "height": 2,
+                  "colorSpace": ""
+                },
+                "roughnessMap": {
+                  "loaded": true,
+                  "width": 4096,
+                  "height": 4096,
+                  "colorSpace": ""
+                },
+                "metalnessMap": {
+                  "loaded": true,
+                  "width": 4096,
+                  "height": 4096,
+                  "colorSpace": ""
+                }
+              }
+            },
+            {
+              "name": "SelectedOriginalGlovePBR03.001",
+              "baseColor": [
+                1,
+                1,
+                1
+              ],
+              "roughness": 1,
+              "metalness": 1,
+              "maps": {
+                "map": {
+                  "loaded": true,
+                  "width": 4096,
+                  "height": 4096,
+                  "colorSpace": "srgb"
+                },
+                "normalMap": {
+                  "loaded": true,
+                  "width": 2,
+                  "height": 2,
+                  "colorSpace": ""
+                },
+                "roughnessMap": {
+                  "loaded": true,
+                  "width": 4096,
+                  "height": 4096,
+                  "colorSpace": ""
+                },
+                "metalnessMap": {
+                  "loaded": true,
+                  "width": 4096,
+                  "height": 4096,
+                  "colorSpace": ""
+                }
+              }
+            },
+            {
+              "name": "RiderWarmSkin",
+              "baseColor": [
+                0.24500000476837158,
+                0.10499999672174454,
+                0.054999999701976776
+              ],
+              "roughness": 0.7200000286102295,
+              "metalness": 0,
+              "maps": {
+                "map": {
+                  "loaded": true,
+                  "width": 2,
+                  "height": 2,
+                  "colorSpace": "srgb"
+                },
+                "normalMap": {
+                  "loaded": true,
+                  "width": 2,
+                  "height": 2,
+                  "colorSpace": ""
+                },
+                "roughnessMap": {
+                  "loaded": true,
+                  "width": 2,
+                  "height": 2,
+                  "colorSpace": ""
+                },
+                "metalnessMap": {
+                  "loaded": true,
+                  "width": 2,
+                  "height": 2,
+                  "colorSpace": ""
+                }
+              }
+            },
+            {
+              "name": "Material.002",
+              "baseColor": [
+                1,
+                1,
+                1
+              ],
+              "roughness": 0.6200000047683716,
+              "metalness": 0,
+              "maps": {
+                "map": {
+                  "loaded": true,
+                  "width": 1024,
+                  "height": 1024,
+                  "colorSpace": "srgb"
+                },
+                "normalMap": {
+                  "loaded": true,
+                  "width": 2,
+                  "height": 2,
+                  "colorSpace": ""
+                },
+                "roughnessMap": {
+                  "loaded": true,
+                  "width": 2,
+                  "height": 2,
+                  "colorSpace": ""
+                },
+                "metalnessMap": {
+                  "loaded": true,
+                  "width": 2,
+                  "height": 2,
+                  "colorSpace": ""
+                }
+              }
+            },
+            {
+              "name": "Anatomically reconstructed cheek skin",
+              "baseColor": [
+                1,
+                1,
+                1
+              ],
+              "roughness": 0.6200000047683716,
+              "metalness": 0,
+              "maps": {
+                "map": {
+                  "loaded": true,
+                  "width": 1024,
+                  "height": 1024,
+                  "colorSpace": "srgb"
+                },
+                "normalMap": {
+                  "loaded": true,
+                  "width": 2,
+                  "height": 2,
+                  "colorSpace": ""
+                },
+                "roughnessMap": {
+                  "loaded": true,
+                  "width": 2,
+                  "height": 2,
+                  "colorSpace": ""
+                },
+                "metalnessMap": {
+                  "loaded": true,
+                  "width": 2,
+                  "height": 2,
+                  "colorSpace": ""
+                }
+              }
+            },
+            {
+              "name": "Selected skin - authored anatomical neck",
+              "baseColor": [
+                1,
+                1,
+                1
+              ],
+              "roughness": 0.6200000047683716,
+              "metalness": 0,
+              "maps": {
+                "map": {
+                  "loaded": true,
+                  "width": 256,
+                  "height": 256,
+                  "colorSpace": "srgb"
+                },
+                "normalMap": {
+                  "loaded": true,
+                  "width": 2,
+                  "height": 2,
+                  "colorSpace": ""
+                },
+                "roughnessMap": {
+                  "loaded": true,
+                  "width": 2,
+                  "height": 2,
+                  "colorSpace": ""
+                },
+                "metalnessMap": {
+                  "loaded": true,
+                  "width": 2,
+                  "height": 2,
+                  "colorSpace": ""
+                }
+              }
+            },
+            {
+              "name": "Material_0.002",
+              "baseColor": [
+                1,
+                1,
+                1
+              ],
+              "roughness": 1,
+              "metalness": 1,
+              "maps": {
+                "map": {
+                  "loaded": true,
+                  "width": 4096,
+                  "height": 4096,
+                  "colorSpace": "srgb"
+                },
+                "normalMap": {
+                  "loaded": true,
+                  "width": 2,
+                  "height": 2,
+                  "colorSpace": ""
+                },
+                "roughnessMap": {
+                  "loaded": true,
+                  "width": 4096,
+                  "height": 4096,
+                  "colorSpace": ""
+                },
+                "metalnessMap": {
+                  "loaded": true,
+                  "width": 4096,
+                  "height": 4096,
+                  "colorSpace": ""
+                }
+              }
+            },
+            {
+              "name": "OriginalSelectedWholeJeansPBR4K",
+              "baseColor": [
+                1,
+                1,
+                1
+              ],
+              "roughness": 1,
+              "metalness": 1,
+              "maps": {
+                "map": {
+                  "loaded": true,
+                  "width": 4096,
+                  "height": 4096,
+                  "colorSpace": "srgb"
+                },
+                "normalMap": {
+                  "loaded": true,
+                  "width": 4096,
+                  "height": 4096,
+                  "colorSpace": ""
+                },
+                "roughnessMap": {
+                  "loaded": true,
+                  "width": 4096,
+                  "height": 4096,
+                  "colorSpace": ""
+                },
+                "metalnessMap": {
+                  "loaded": true,
+                  "width": 4096,
+                  "height": 4096,
+                  "colorSpace": ""
+                }
+              }
+            }
+          ]
+        },
+        "allBoneFinite": true,
+        "fullResetCount": 1396,
+        "anthropometry": {
+          "hips": [
+            -0.30141770306962085,
+            0.7549603932709197
+          ],
+          "residualM": 4.13844934867481e-9,
+          "com": [
+            -0.15873411404349003,
+            0.8198353620570058,
+            5.210239923600368e-7
+          ],
+          "iterations": 3,
+          "converged": true,
+          "requestedCOM": [
+            -0.1587341171195792,
+            0.8198353592885336,
+            0
+          ],
+          "carrierAngle": 1.1290085197619408,
+          "spineFlexRadians": 0,
+          "elapsedMs": 3,
+          "articulationRule": "Three actual-contact candidates; minimum flex at <=1 mm socket-center error",
+          "candidates": [
+            {
+              "flex": 0,
+              "gapM": 0.0000026036495122685073,
+              "reach": 0.9960911338442668,
+              "comResidualM": 4.13844934867481e-9
+            }
+          ],
+          "palmForwardBike": [
+            1,
+            -0.25,
+            0
+          ],
+          "contactLimit": "Socket center residual only; no glove surface/bar radius or phalange penetration qualification"
+        }
+      },
+      "render": {
+        "prepare": [
+          {
+            "step": "art:start",
+            "ms": 146,
+            "bytes": 0
+          },
+          {
+            "step": "hero:bike",
+            "ms": 56,
+            "bytes": 0
+          },
+          {
+            "step": "hero:rider",
+            "ms": 45,
+            "bytes": 0
+          },
+          {
+            "step": "lighting",
+            "ms": 9,
+            "bytes": 0
+          },
+          {
+            "step": "post:create",
+            "ms": 14,
+            "bytes": 0
+          },
+          {
+            "step": "materials",
+            "ms": 2544,
+            "bytes": 27256160.255999994
+          },
+          {
+            "step": "hero:gltf",
+            "ms": 189,
+            "bytes": 0
+          },
+          {
+            "step": "art:settled",
+            "ms": 0,
+            "bytes": 842302
+          },
+          {
+            "step": "shaders",
+            "ms": 1137,
+            "bytes": 0
+          },
+          {
+            "step": "firstframe:post",
+            "ms": 1254,
+            "bytes": 0
+          },
+          {
+            "step": "firstframe:heroes",
+            "ms": 48,
+            "bytes": 0
+          }
+        ],
+        "biome": "coast",
+        "zoom": "idle",
+        "occluder": {
+          "ms": 0,
+          "tested": 0,
+          "hits": 0,
+          "count": 0,
+          "override": "orbit"
+        },
+        "garage": {
+          "on": true,
+          "draws": 14,
+          "hidden": 290,
+          "textureMB": 4.04,
+          "reflection": false
+        },
+        "phase": "menu",
+        "tier": "low",
+        "dpr": 1.5,
+        "devicePixelRatio": 1,
+        "canvasW": 2160,
+        "canvasH": 1350,
+        "calls": 73,
+        "tris": 6871798,
+        "rtMpx": 14.84,
+        "rtMB": 135.5,
+        "rtPasses": "shadow 512×512 | scene:hdr 2160×1350 | composite:graded 2160×1350 | smaa:edges 2160×1350 | smaa:weights 2160×1350 | smaa→canvas 2160×1350",
+        "shadowMap": 512,
+        "heroTris": 3431002,
+        "heroDoc": "bike rider-lod",
+        "riderOutfit": "street-mustard",
+        "riderMaterialVariant": null,
+        "heroShadow": "hero-only",
+        "trackCalls": 13,
+        "trackTris": 70328,
+        "textureGenMs": 463,
+        "passes": 5,
+        "stalePrograms": 1,
+        "stabilized": {
+          "singlePass": 0,
+          "split": 0,
+          "depth": 0
+        },
+        "skippedFrames": 0,
+        "deviceClass": "desktop",
+        "profile": "low",
+        "bloomers": 0,
+        "entryMs": 5359,
+        "entry": {
+          "biome": "coast",
+          "ms": 5359,
+          "compileMs": 5,
+          "textureMs": 11,
+          "warmMs": 21,
+          "textures": 40,
+          "texturesMB": 25.1,
+          "materials": 52,
+          "programs": 34,
+          "programsBefore": 2
+        },
+        "heroSwap": {
+          "loads": [
+            {
+              "url": "models/98214c3b3099a465/bike-rookie-lod-4ec26ad0a0c08f7e.glb",
+              "bytes": 870436,
+              "fetchMs": 32,
+              "parseMs": 143,
+              "prepareMs": 0,
+              "at": 222
+            },
+            {
+              "url": "models/bb3ec209a0dcc809/bike-pro-lod-37455064bf7b6012.glb",
+              "bytes": 864844,
+              "fetchMs": 55,
+              "parseMs": 319,
+              "prepareMs": 0,
+              "at": 223
+            },
+            {
+              "url": "models/bb3ec209a0dcc809/bike-pro-0acc9ac86eeca76c.glb",
+              "bytes": 2270540,
+              "fetchMs": 74,
+              "parseMs": 402,
+              "prepareMs": 0,
+              "at": 222
+            },
+            {
+              "url": "models/98214c3b3099a465/bike-rookie-e55919d602678493.glb",
+              "bytes": 2283036,
+              "fetchMs": 74,
+              "parseMs": 465,
+              "prepareMs": 0,
+              "at": 222
+            },
+            {
+              "url": "models/be4fc3304c6d1aca/rider-street-mustard-7d826b835ca07c7c.glb",
+              "bytes": 357281284,
+              "fetchMs": 1653,
+              "parseMs": 2045,
+              "prepareMs": 0,
+              "at": 222
+            }
+          ],
+          "swaps": [
+            {
+              "at": 7399,
+              "what": "bike:gltf/rider:gltf:rebuild → street-mustard/rookie",
+              "buildMs": 1,
+              "firstFrameMs": 93,
+              "programsAdded": 5,
+              "texturesAdded": 8
+            }
+          ]
+        },
+        "entering": false,
+        "courseAssetsEnabled": false,
+        "courseAssetsMounted": 0,
+        "courseAssetsTextureMB": 0,
+        "retirement": {
+          "requested": 3,
+          "released": 3,
+          "deferred": 0,
+          "pending": 0,
+          "maxPending": 0,
+          "contextLosses": 0
+        },
+        "terminalPrograms": {
+          "deleted": 0,
+          "contextReleased": 0
+        },
+        "art": {
+          "settled": true,
+          "ok": true,
+          "loadMs": 407,
+          "deliveredMB": 0.8,
+          "inWorld": true,
+          "trackComplete": true,
+          "trackIds": 8,
+          "builtAtFrame": 0,
+          "frames": 111
+        }
+      },
+      "stageTime": 1.9459999999999982
+    },
+    {
+      "name": "garage-orbit-1",
+      "debug": {
+        "armStretch": [
+          1.0019286765158175,
+          1.0019311555016026
+        ],
+        "legStretch": [
+          0.7115232423809604,
+          0.7115231331571613
+        ],
+        "handOnGrip": [
+          true,
+          true
+        ],
+        "footOnPeg": [
+          true,
+          true
+        ],
+        "wristErr": [
+          0.0010312592013498924,
+          0.0010328350596292564
+        ],
+        "gripErr": [
+          0.0010312592013498924,
+          0.0010328350596292564
+        ],
+        "gripAngleErr": [
+          1.264405455326821e-7,
+          2.3841857910156266e-7
+        ],
+        "ankleErr": [
+          0.000002586922593966245,
+          0.000002613346104517106
+        ],
+        "armLen": [
+          0.534639986196624,
+          0.5346397715734006
+        ],
+        "additiveWeight": 0,
+        "physicalPose": false,
+        "comResidual": 3.9964229940914304e-8,
+        "ragdollResidual": -1,
+        "ragdollBlend": 0,
+        "ragdollDetail": [],
+        "bones": 75,
+        "clips": [],
+        "stageClip": "measured riding IK + breathing",
+        "stageBlend": 0,
+        "soleErr": [
+          0.000002586922593966245,
+          0.000002613346104517106
+        ],
+        "stance": {
+          "on": true,
+          "pose": "back",
+          "blend": 0.009900315489308488,
+          "lean": -0.009900315489308488,
+          "land": 0,
+          "extend": 0,
+          "dy": 0,
+          "lag": 0,
+          "limit": 1
+        },
+        "candidate": {
+          "sourceSHA256": "7d826b835ca07c7c584d6b3a9606e9e89780f1c7b92e4030e1f1b58aff4127ed",
+          "metadataSHA256": "719209bfee6f9010ef5e1a7ed54bba68905d3b2a2f78b792cd9c1f4af252c3f0",
+          "roles": {
+            "pelvis": "DEF-spine",
+            "trunk": [
+              "DEF-spine",
+              "DEF-spine.001",
+              "DEF-spine.002",
+              "DEF-spine.003"
+            ],
+            "neck": [
+              "DEF-spine.004",
+              "DEF-spine.005"
+            ],
+            "head": "DEF-spine.006",
+            "upperArmLeft": [
+              "DEF-upper_arm.L",
+              "DEF-upper_arm.L.001"
+            ],
+            "forearmLeft": [
+              "DEF-forearm.L",
+              "DEF-forearm.L.001"
+            ],
+            "thighLeft": [
+              "DEF-thigh.L",
+              "DEF-thigh.L.001"
+            ],
+            "shinLeft": [
+              "DEF-shin.L",
+              "DEF-shin.L.001"
+            ],
+            "shoulderLeft": "DEF-shoulder.L",
+            "wristLeft": "DEF-hand.L",
+            "footLeft": "DEF-foot.L",
+            "toeLeft": "DEF-toe.L",
+            "upperArmRight": [
+              "DEF-upper_arm.R",
+              "DEF-upper_arm.R.001"
+            ],
+            "forearmRight": [
+              "DEF-forearm.R",
+              "DEF-forearm.R.001"
+            ],
+            "thighRight": [
+              "DEF-thigh.R",
+              "DEF-thigh.R.001"
+            ],
+            "shinRight": [
+              "DEF-shin.R",
+              "DEF-shin.R.001"
+            ],
+            "shoulderRight": "DEF-shoulder.R",
+            "wristRight": "DEF-hand.R",
+            "footRight": "DEF-foot.R",
+            "toeRight": "DEF-toe.R"
+          },
+          "meshRoles": [
+            {
+              "role": "RiderBody.primitive0",
+              "name": "female_v006lowresUV__ExactFaceSubset"
+            },
+            {
+              "role": "RiderBody.primitive1",
+              "name": "female_v006lowresUV__ExactFaceSubset_1"
+            },
+            {
+              "role": "RiderBody.primitive2",
+              "name": "female_v006lowresUV__ExactFaceSubset_2"
+            },
+            {
+              "role": "RiderBody.primitive3",
+              "name": "female_v006lowresUV__ExactFaceSubset_3"
+            },
+            {
+              "role": "ActualSelectedGlove.L",
+              "name": "ActualSelectedGloveL"
+            },
+            {
+              "role": "ActualSelectedGlove.R",
+              "name": "ActualSelectedGloveR"
+            },
+            {
+              "role": "ActualSelectedBoot.L",
+              "name": "ActualSelectedBootL"
+            },
+            {
+              "role": "ActualSelectedBoot.R",
+              "name": "ActualSelectedBootR"
+            },
+            {
+              "role": "RiderJeans",
+              "name": "RiderJeans"
+            },
+            {
+              "role": "RiderHoodie",
+              "name": "RiderHoodie"
+            }
+          ],
+          "authorMeshRoles": {
+            "RiderBody": "RiderBody",
+            "ActualSelectedGlove.L": "ActualSelectedGlove.L",
+            "ActualSelectedGlove.R": "ActualSelectedGlove.R",
+            "ActualSelectedBoot.L": "ActualSelectedBoot.L",
+            "ActualSelectedBoot.R": "ActualSelectedBoot.R",
+            "RiderJeans": "RiderJeans",
+            "RiderHoodie": "RiderHoodie"
+          },
+          "visibleMeshes": [
+            {
+              "name": "ActualSelectedBootL",
+              "skinned": true,
+              "triangles": 610934
+            },
+            {
+              "name": "ActualSelectedBootR",
+              "skinned": true,
+              "triangles": 610934
+            },
+            {
+              "name": "ActualSelectedGloveL",
+              "skinned": true,
+              "triangles": 569142
+            },
+            {
+              "name": "ActualSelectedGloveR",
+              "skinned": true,
+              "triangles": 569142
+            },
+            {
+              "name": "female_v006lowresUV__ExactFaceSubset",
+              "skinned": true,
+              "triangles": 778
+            },
+            {
+              "name": "female_v006lowresUV__ExactFaceSubset_1",
+              "skinned": true,
+              "triangles": 58102
+            },
+            {
+              "name": "female_v006lowresUV__ExactFaceSubset_2",
+              "skinned": true,
+              "triangles": 429
+            },
+            {
+              "name": "female_v006lowresUV__ExactFaceSubset_3",
+              "skinned": true,
+              "triangles": 5159
+            },
+            {
+              "name": "RiderHoodie",
+              "skinned": true,
+              "triangles": 921722
+            },
+            {
+              "name": "RiderJeans",
+              "skinned": true,
+              "triangles": 51456
+            }
+          ],
+          "jointNames": {
+            "DEF-spine": "DEF-spine",
+            "DEF-spine.001": "DEF-spine001",
+            "DEF-spine.002": "DEF-spine002",
+            "DEF-spine.003": "DEF-spine003",
+            "DEF-spine.004": "DEF-spine004",
+            "DEF-spine.005": "DEF-spine005",
+            "DEF-spine.006": "DEF-spine006",
+            "DEF-shoulder.L": "DEF-shoulderL",
+            "DEF-upper_arm.L": "DEF-upper_armL",
+            "DEF-upper_arm.L.001": "DEF-upper_armL001",
+            "DEF-forearm.L": "DEF-forearmL",
+            "DEF-forearm.L.001": "DEF-forearmL001",
+            "DEF-hand.L": "DEF-handL",
+            "DEF-thumb.01.L": "DEF-thumb01L",
+            "DEF-thumb.02.L": "DEF-thumb02L",
+            "DEF-thumb.03.L": "DEF-thumb03L",
+            "DEF-palm.01.L": "DEF-palm01L",
+            "DEF-f_index.01.L": "DEF-f_index01L",
+            "DEF-f_index.02.L": "DEF-f_index02L",
+            "DEF-f_index.03.L": "DEF-f_index03L",
+            "DEF-palm.02.L": "DEF-palm02L",
+            "DEF-f_middle.01.L": "DEF-f_middle01L",
+            "DEF-f_middle.02.L": "DEF-f_middle02L",
+            "DEF-f_middle.03.L": "DEF-f_middle03L",
+            "DEF-palm.03.L": "DEF-palm03L",
+            "DEF-f_ring.01.L": "DEF-f_ring01L",
+            "DEF-f_ring.02.L": "DEF-f_ring02L",
+            "DEF-f_ring.03.L": "DEF-f_ring03L",
+            "DEF-palm.04.L": "DEF-palm04L",
+            "DEF-f_pinky.01.L": "DEF-f_pinky01L",
+            "DEF-f_pinky.02.L": "DEF-f_pinky02L",
+            "DEF-f_pinky.03.L": "DEF-f_pinky03L",
+            "PalmSocket.L": "PalmSocketL",
+            "DEF-shoulder.R": "DEF-shoulderR",
+            "DEF-upper_arm.R": "DEF-upper_armR",
+            "DEF-upper_arm.R.001": "DEF-upper_armR001",
+            "DEF-forearm.R": "DEF-forearmR",
+            "DEF-forearm.R.001": "DEF-forearmR001",
+            "DEF-hand.R": "DEF-handR",
+            "DEF-thumb.01.R": "DEF-thumb01R",
+            "DEF-thumb.02.R": "DEF-thumb02R",
+            "DEF-thumb.03.R": "DEF-thumb03R",
+            "DEF-palm.01.R": "DEF-palm01R",
+            "DEF-f_index.01.R": "DEF-f_index01R",
+            "DEF-f_index.02.R": "DEF-f_index02R",
+            "DEF-f_index.03.R": "DEF-f_index03R",
+            "DEF-palm.02.R": "DEF-palm02R",
+            "DEF-f_middle.01.R": "DEF-f_middle01R",
+            "DEF-f_middle.02.R": "DEF-f_middle02R",
+            "DEF-f_middle.03.R": "DEF-f_middle03R",
+            "DEF-palm.03.R": "DEF-palm03R",
+            "DEF-f_ring.01.R": "DEF-f_ring01R",
+            "DEF-f_ring.02.R": "DEF-f_ring02R",
+            "DEF-f_ring.03.R": "DEF-f_ring03R",
+            "DEF-palm.04.R": "DEF-palm04R",
+            "DEF-f_pinky.01.R": "DEF-f_pinky01R",
+            "DEF-f_pinky.02.R": "DEF-f_pinky02R",
+            "DEF-f_pinky.03.R": "DEF-f_pinky03R",
+            "PalmSocket.R": "PalmSocketR",
+            "DEF-pelvis.L": "DEF-pelvisL",
+            "DEF-pelvis.R": "DEF-pelvisR",
+            "DEF-thigh.L": "DEF-thighL",
+            "DEF-thigh.L.001": "DEF-thighL001",
+            "DEF-shin.L": "DEF-shinL",
+            "DEF-shin.L.001": "DEF-shinL001",
+            "DEF-foot.L": "DEF-footL",
+            "DEF-toe.L": "DEF-toeL",
+            "SoleSocket.L": "SoleSocketL",
+            "DEF-thigh.R": "DEF-thighR",
+            "DEF-thigh.R.001": "DEF-thighR001",
+            "DEF-shin.R": "DEF-shinR",
+            "DEF-shin.R.001": "DEF-shinR001",
+            "DEF-foot.R": "DEF-footR",
+            "DEF-toe.R": "DEF-toeR",
+            "SoleSocket.R": "SoleSocketR"
+          },
+          "contractSchema": "rockhop-humanoid-contract-v1",
+          "geometry": "author FOUR unchanged; no legacy sleeve conditioning",
+          "massApproximation": "Adult male segment mass fractions on measured joint centres/head and toe extents; not tissue-density integration",
+          "materials": [
+            {
+              "name": "Exact selected boot original 4096 PBR.001",
+              "baseColor": [
+                1,
+                1,
+                1
+              ],
+              "roughness": 1,
+              "metalness": 1,
+              "maps": {
+                "map": {
+                  "loaded": true,
+                  "width": 4096,
+                  "height": 4096,
+                  "colorSpace": "srgb"
+                },
+                "normalMap": {
+                  "loaded": true,
+                  "width": 2,
+                  "height": 2,
+                  "colorSpace": ""
+                },
+                "roughnessMap": {
+                  "loaded": true,
+                  "width": 4096,
+                  "height": 4096,
+                  "colorSpace": ""
+                },
+                "metalnessMap": {
+                  "loaded": true,
+                  "width": 4096,
+                  "height": 4096,
+                  "colorSpace": ""
+                }
+              }
+            },
+            {
+              "name": "SelectedOriginalGlovePBR03.001",
+              "baseColor": [
+                1,
+                1,
+                1
+              ],
+              "roughness": 1,
+              "metalness": 1,
+              "maps": {
+                "map": {
+                  "loaded": true,
+                  "width": 4096,
+                  "height": 4096,
+                  "colorSpace": "srgb"
+                },
+                "normalMap": {
+                  "loaded": true,
+                  "width": 2,
+                  "height": 2,
+                  "colorSpace": ""
+                },
+                "roughnessMap": {
+                  "loaded": true,
+                  "width": 4096,
+                  "height": 4096,
+                  "colorSpace": ""
+                },
+                "metalnessMap": {
+                  "loaded": true,
+                  "width": 4096,
+                  "height": 4096,
+                  "colorSpace": ""
+                }
+              }
+            },
+            {
+              "name": "RiderWarmSkin",
+              "baseColor": [
+                0.24500000476837158,
+                0.10499999672174454,
+                0.054999999701976776
+              ],
+              "roughness": 0.7200000286102295,
+              "metalness": 0,
+              "maps": {
+                "map": {
+                  "loaded": true,
+                  "width": 2,
+                  "height": 2,
+                  "colorSpace": "srgb"
+                },
+                "normalMap": {
+                  "loaded": true,
+                  "width": 2,
+                  "height": 2,
+                  "colorSpace": ""
+                },
+                "roughnessMap": {
+                  "loaded": true,
+                  "width": 2,
+                  "height": 2,
+                  "colorSpace": ""
+                },
+                "metalnessMap": {
+                  "loaded": true,
+                  "width": 2,
+                  "height": 2,
+                  "colorSpace": ""
+                }
+              }
+            },
+            {
+              "name": "Material.002",
+              "baseColor": [
+                1,
+                1,
+                1
+              ],
+              "roughness": 0.6200000047683716,
+              "metalness": 0,
+              "maps": {
+                "map": {
+                  "loaded": true,
+                  "width": 1024,
+                  "height": 1024,
+                  "colorSpace": "srgb"
+                },
+                "normalMap": {
+                  "loaded": true,
+                  "width": 2,
+                  "height": 2,
+                  "colorSpace": ""
+                },
+                "roughnessMap": {
+                  "loaded": true,
+                  "width": 2,
+                  "height": 2,
+                  "colorSpace": ""
+                },
+                "metalnessMap": {
+                  "loaded": true,
+                  "width": 2,
+                  "height": 2,
+                  "colorSpace": ""
+                }
+              }
+            },
+            {
+              "name": "Anatomically reconstructed cheek skin",
+              "baseColor": [
+                1,
+                1,
+                1
+              ],
+              "roughness": 0.6200000047683716,
+              "metalness": 0,
+              "maps": {
+                "map": {
+                  "loaded": true,
+                  "width": 1024,
+                  "height": 1024,
+                  "colorSpace": "srgb"
+                },
+                "normalMap": {
+                  "loaded": true,
+                  "width": 2,
+                  "height": 2,
+                  "colorSpace": ""
+                },
+                "roughnessMap": {
+                  "loaded": true,
+                  "width": 2,
+                  "height": 2,
+                  "colorSpace": ""
+                },
+                "metalnessMap": {
+                  "loaded": true,
+                  "width": 2,
+                  "height": 2,
+                  "colorSpace": ""
+                }
+              }
+            },
+            {
+              "name": "Selected skin - authored anatomical neck",
+              "baseColor": [
+                1,
+                1,
+                1
+              ],
+              "roughness": 0.6200000047683716,
+              "metalness": 0,
+              "maps": {
+                "map": {
+                  "loaded": true,
+                  "width": 256,
+                  "height": 256,
+                  "colorSpace": "srgb"
+                },
+                "normalMap": {
+                  "loaded": true,
+                  "width": 2,
+                  "height": 2,
+                  "colorSpace": ""
+                },
+                "roughnessMap": {
+                  "loaded": true,
+                  "width": 2,
+                  "height": 2,
+                  "colorSpace": ""
+                },
+                "metalnessMap": {
+                  "loaded": true,
+                  "width": 2,
+                  "height": 2,
+                  "colorSpace": ""
+                }
+              }
+            },
+            {
+              "name": "Material_0.002",
+              "baseColor": [
+                1,
+                1,
+                1
+              ],
+              "roughness": 1,
+              "metalness": 1,
+              "maps": {
+                "map": {
+                  "loaded": true,
+                  "width": 4096,
+                  "height": 4096,
+                  "colorSpace": "srgb"
+                },
+                "normalMap": {
+                  "loaded": true,
+                  "width": 2,
+                  "height": 2,
+                  "colorSpace": ""
+                },
+                "roughnessMap": {
+                  "loaded": true,
+                  "width": 4096,
+                  "height": 4096,
+                  "colorSpace": ""
+                },
+                "metalnessMap": {
+                  "loaded": true,
+                  "width": 4096,
+                  "height": 4096,
+                  "colorSpace": ""
+                }
+              }
+            },
+            {
+              "name": "OriginalSelectedWholeJeansPBR4K",
+              "baseColor": [
+                1,
+                1,
+                1
+              ],
+              "roughness": 1,
+              "metalness": 1,
+              "maps": {
+                "map": {
+                  "loaded": true,
+                  "width": 4096,
+                  "height": 4096,
+                  "colorSpace": "srgb"
+                },
+                "normalMap": {
+                  "loaded": true,
+                  "width": 4096,
+                  "height": 4096,
+                  "colorSpace": ""
+                },
+                "roughnessMap": {
+                  "loaded": true,
+                  "width": 4096,
+                  "height": 4096,
+                  "colorSpace": ""
+                },
+                "metalnessMap": {
+                  "loaded": true,
+                  "width": 4096,
+                  "height": 4096,
+                  "colorSpace": ""
+                }
+              }
+            }
+          ]
+        },
+        "allBoneFinite": true,
+        "fullResetCount": 3009,
+        "anthropometry": {
+          "hips": [
+            -0.30062138240095465,
+            0.7531096062404545
+          ],
+          "residualM": 3.9964229940914304e-8,
+          "com": [
+            -0.15873414975174538,
+            0.819835336217309,
+            4.913861059718805e-7
+          ],
+          "iterations": 2,
+          "converged": true,
+          "requestedCOM": [
+            -0.1587341171195792,
+            0.8198353592885336,
+            0
+          ],
+          "carrierAngle": 1.1412924827745157,
+          "spineFlexRadians": 0,
+          "elapsedMs": 2,
+          "articulationRule": "Three actual-contact candidates; minimum flex at <=1 mm socket-center error",
+          "candidates": [
+            {
+              "flex": 0,
+              "gapM": 0.0010328350596292564,
+              "reach": 1.0019311555016026,
+              "comResidualM": 3.9964229940914304e-8
+            }
+          ],
+          "palmForwardBike": [
+            1,
+            -0.25,
+            0
+          ],
+          "contactLimit": "Socket center residual only; no glove surface/bar radius or phalange penetration qualification"
+        }
+      },
+      "render": {
+        "prepare": [
+          {
+            "step": "art:start",
+            "ms": 146,
+            "bytes": 0
+          },
+          {
+            "step": "hero:bike",
+            "ms": 56,
+            "bytes": 0
+          },
+          {
+            "step": "hero:rider",
+            "ms": 45,
+            "bytes": 0
+          },
+          {
+            "step": "lighting",
+            "ms": 9,
+            "bytes": 0
+          },
+          {
+            "step": "post:create",
+            "ms": 14,
+            "bytes": 0
+          },
+          {
+            "step": "materials",
+            "ms": 2544,
+            "bytes": 27256160.255999994
+          },
+          {
+            "step": "hero:gltf",
+            "ms": 189,
+            "bytes": 0
+          },
+          {
+            "step": "art:settled",
+            "ms": 0,
+            "bytes": 842302
+          },
+          {
+            "step": "shaders",
+            "ms": 1137,
+            "bytes": 0
+          },
+          {
+            "step": "firstframe:post",
+            "ms": 1254,
+            "bytes": 0
+          },
+          {
+            "step": "firstframe:heroes",
+            "ms": 48,
+            "bytes": 0
+          }
+        ],
+        "biome": "coast",
+        "zoom": "idle",
+        "occluder": {
+          "ms": 0,
+          "tested": 0,
+          "hits": 0,
+          "count": 0,
+          "override": "orbit"
+        },
+        "garage": {
+          "on": true,
+          "draws": 14,
+          "hidden": 290,
+          "textureMB": 4.04,
+          "reflection": false
+        },
+        "phase": "menu",
+        "tier": "low",
+        "dpr": 1.5,
+        "devicePixelRatio": 1,
+        "canvasW": 2160,
+        "canvasH": 1350,
+        "calls": 71,
+        "tris": 6871784,
+        "rtMpx": 14.84,
+        "rtMB": 135.5,
+        "rtPasses": "shadow 512×512 | scene:hdr 2160×1350 | composite:graded 2160×1350 | smaa:edges 2160×1350 | smaa:weights 2160×1350 | smaa→canvas 2160×1350",
+        "shadowMap": 512,
+        "heroTris": 3431002,
+        "heroDoc": "bike rider-lod",
+        "riderOutfit": "street-mustard",
+        "riderMaterialVariant": null,
+        "heroShadow": "hero-only",
+        "trackCalls": 13,
+        "trackTris": 70328,
+        "textureGenMs": 463,
+        "passes": 5,
+        "stalePrograms": 1,
+        "stabilized": {
+          "singlePass": 0,
+          "split": 0,
+          "depth": 0
+        },
+        "skippedFrames": 0,
+        "deviceClass": "desktop",
+        "profile": "low",
+        "bloomers": 0,
+        "entryMs": 5359,
+        "entry": {
+          "biome": "coast",
+          "ms": 5359,
+          "compileMs": 5,
+          "textureMs": 11,
+          "warmMs": 21,
+          "textures": 40,
+          "texturesMB": 25.1,
+          "materials": 52,
+          "programs": 34,
+          "programsBefore": 2
+        },
+        "heroSwap": {
+          "loads": [
+            {
+              "url": "models/98214c3b3099a465/bike-rookie-lod-4ec26ad0a0c08f7e.glb",
+              "bytes": 870436,
+              "fetchMs": 32,
+              "parseMs": 143,
+              "prepareMs": 0,
+              "at": 222
+            },
+            {
+              "url": "models/bb3ec209a0dcc809/bike-pro-lod-37455064bf7b6012.glb",
+              "bytes": 864844,
+              "fetchMs": 55,
+              "parseMs": 319,
+              "prepareMs": 0,
+              "at": 223
+            },
+            {
+              "url": "models/bb3ec209a0dcc809/bike-pro-0acc9ac86eeca76c.glb",
+              "bytes": 2270540,
+              "fetchMs": 74,
+              "parseMs": 402,
+              "prepareMs": 0,
+              "at": 222
+            },
+            {
+              "url": "models/98214c3b3099a465/bike-rookie-e55919d602678493.glb",
+              "bytes": 2283036,
+              "fetchMs": 74,
+              "parseMs": 465,
+              "prepareMs": 0,
+              "at": 222
+            },
+            {
+              "url": "models/be4fc3304c6d1aca/rider-street-mustard-7d826b835ca07c7c.glb",
+              "bytes": 357281284,
+              "fetchMs": 1653,
+              "parseMs": 2045,
+              "prepareMs": 0,
+              "at": 222
+            }
+          ],
+          "swaps": [
+            {
+              "at": 7399,
+              "what": "bike:gltf/rider:gltf:rebuild → street-mustard/rookie",
+              "buildMs": 1,
+              "firstFrameMs": 93,
+              "programsAdded": 5,
+              "texturesAdded": 8
+            }
+          ]
+        },
+        "entering": false,
+        "courseAssetsEnabled": false,
+        "courseAssetsMounted": 0,
+        "courseAssetsTextureMB": 0,
+        "retirement": {
+          "requested": 3,
+          "released": 3,
+          "deferred": 0,
+          "pending": 0,
+          "maxPending": 0,
+          "contextLosses": 0
+        },
+        "terminalPrograms": {
+          "deleted": 0,
+          "contextReleased": 0
+        },
+        "art": {
+          "settled": true,
+          "ok": true,
+          "loadMs": 407,
+          "deliveredMB": 0.8,
+          "inWorld": true,
+          "trackComplete": true,
+          "trackIds": 8,
+          "builtAtFrame": 0,
+          "frames": 234
+        }
+      },
+      "stageTime": 4.2009999999999925
+    },
+    {
+      "name": "garage-orbit-2",
+      "debug": {
+        "armStretch": [
+          0.9986792215358686,
+          0.9986817144533318
+        ],
+        "legStretch": [
+          0.7130536869609746,
+          0.7130535774348239
+        ],
+        "handOnGrip": [
+          true,
+          true
+        ],
+        "footOnPeg": [
+          true,
+          true
+        ],
+        "wristErr": [
+          2.438779447229609e-8,
+          2.756502365085253e-7
+        ],
+        "gripErr": [
+          2.438779447229609e-8,
+          2.756502365085253e-7
+        ],
+        "gripAngleErr": [
+          1.1151007970493858e-7,
+          2.1073424255447025e-7
+        ],
+        "ankleErr": [
+          0.0000025814083331024232,
+          0.0000026077386088969985
+        ],
+        "armLen": [
+          0.534639986196624,
+          0.5346397715734006
+        ],
+        "additiveWeight": 0,
+        "physicalPose": false,
+        "comResidual": 7.19235076021548e-8,
+        "ragdollResidual": -1,
+        "ragdollBlend": 0,
+        "ragdollDetail": [],
+        "bones": 75,
+        "clips": [],
+        "stageClip": "measured riding IK + breathing",
+        "stageBlend": 0,
+        "soleErr": [
+          0.0000025814083331024232,
+          0.0000026077386088969985
+        ],
+        "stance": {
+          "on": true,
+          "pose": "back",
+          "blend": 0.009900315489308488,
+          "lean": -0.009900315489308488,
+          "land": 0,
+          "extend": 0,
+          "dy": 0,
+          "lag": 0,
+          "limit": 1
+        },
+        "candidate": {
+          "sourceSHA256": "7d826b835ca07c7c584d6b3a9606e9e89780f1c7b92e4030e1f1b58aff4127ed",
+          "metadataSHA256": "719209bfee6f9010ef5e1a7ed54bba68905d3b2a2f78b792cd9c1f4af252c3f0",
+          "roles": {
+            "pelvis": "DEF-spine",
+            "trunk": [
+              "DEF-spine",
+              "DEF-spine.001",
+              "DEF-spine.002",
+              "DEF-spine.003"
+            ],
+            "neck": [
+              "DEF-spine.004",
+              "DEF-spine.005"
+            ],
+            "head": "DEF-spine.006",
+            "upperArmLeft": [
+              "DEF-upper_arm.L",
+              "DEF-upper_arm.L.001"
+            ],
+            "forearmLeft": [
+              "DEF-forearm.L",
+              "DEF-forearm.L.001"
+            ],
+            "thighLeft": [
+              "DEF-thigh.L",
+              "DEF-thigh.L.001"
+            ],
+            "shinLeft": [
+              "DEF-shin.L",
+              "DEF-shin.L.001"
+            ],
+            "shoulderLeft": "DEF-shoulder.L",
+            "wristLeft": "DEF-hand.L",
+            "footLeft": "DEF-foot.L",
+            "toeLeft": "DEF-toe.L",
+            "upperArmRight": [
+              "DEF-upper_arm.R",
+              "DEF-upper_arm.R.001"
+            ],
+            "forearmRight": [
+              "DEF-forearm.R",
+              "DEF-forearm.R.001"
+            ],
+            "thighRight": [
+              "DEF-thigh.R",
+              "DEF-thigh.R.001"
+            ],
+            "shinRight": [
+              "DEF-shin.R",
+              "DEF-shin.R.001"
+            ],
+            "shoulderRight": "DEF-shoulder.R",
+            "wristRight": "DEF-hand.R",
+            "footRight": "DEF-foot.R",
+            "toeRight": "DEF-toe.R"
+          },
+          "meshRoles": [
+            {
+              "role": "RiderBody.primitive0",
+              "name": "female_v006lowresUV__ExactFaceSubset"
+            },
+            {
+              "role": "RiderBody.primitive1",
+              "name": "female_v006lowresUV__ExactFaceSubset_1"
+            },
+            {
+              "role": "RiderBody.primitive2",
+              "name": "female_v006lowresUV__ExactFaceSubset_2"
+            },
+            {
+              "role": "RiderBody.primitive3",
+              "name": "female_v006lowresUV__ExactFaceSubset_3"
+            },
+            {
+              "role": "ActualSelectedGlove.L",
+              "name": "ActualSelectedGloveL"
+            },
+            {
+              "role": "ActualSelectedGlove.R",
+              "name": "ActualSelectedGloveR"
+            },
+            {
+              "role": "ActualSelectedBoot.L",
+              "name": "ActualSelectedBootL"
+            },
+            {
+              "role": "ActualSelectedBoot.R",
+              "name": "ActualSelectedBootR"
+            },
+            {
+              "role": "RiderJeans",
+              "name": "RiderJeans"
+            },
+            {
+              "role": "RiderHoodie",
+              "name": "RiderHoodie"
+            }
+          ],
+          "authorMeshRoles": {
+            "RiderBody": "RiderBody",
+            "ActualSelectedGlove.L": "ActualSelectedGlove.L",
+            "ActualSelectedGlove.R": "ActualSelectedGlove.R",
+            "ActualSelectedBoot.L": "ActualSelectedBoot.L",
+            "ActualSelectedBoot.R": "ActualSelectedBoot.R",
+            "RiderJeans": "RiderJeans",
+            "RiderHoodie": "RiderHoodie"
+          },
+          "visibleMeshes": [
+            {
+              "name": "ActualSelectedBootL",
+              "skinned": true,
+              "triangles": 610934
+            },
+            {
+              "name": "ActualSelectedBootR",
+              "skinned": true,
+              "triangles": 610934
+            },
+            {
+              "name": "ActualSelectedGloveL",
+              "skinned": true,
+              "triangles": 569142
+            },
+            {
+              "name": "ActualSelectedGloveR",
+              "skinned": true,
+              "triangles": 569142
+            },
+            {
+              "name": "female_v006lowresUV__ExactFaceSubset",
+              "skinned": true,
+              "triangles": 778
+            },
+            {
+              "name": "female_v006lowresUV__ExactFaceSubset_1",
+              "skinned": true,
+              "triangles": 58102
+            },
+            {
+              "name": "female_v006lowresUV__ExactFaceSubset_2",
+              "skinned": true,
+              "triangles": 429
+            },
+            {
+              "name": "female_v006lowresUV__ExactFaceSubset_3",
+              "skinned": true,
+              "triangles": 5159
+            },
+            {
+              "name": "RiderHoodie",
+              "skinned": true,
+              "triangles": 921722
+            },
+            {
+              "name": "RiderJeans",
+              "skinned": true,
+              "triangles": 51456
+            }
+          ],
+          "jointNames": {
+            "DEF-spine": "DEF-spine",
+            "DEF-spine.001": "DEF-spine001",
+            "DEF-spine.002": "DEF-spine002",
+            "DEF-spine.003": "DEF-spine003",
+            "DEF-spine.004": "DEF-spine004",
+            "DEF-spine.005": "DEF-spine005",
+            "DEF-spine.006": "DEF-spine006",
+            "DEF-shoulder.L": "DEF-shoulderL",
+            "DEF-upper_arm.L": "DEF-upper_armL",
+            "DEF-upper_arm.L.001": "DEF-upper_armL001",
+            "DEF-forearm.L": "DEF-forearmL",
+            "DEF-forearm.L.001": "DEF-forearmL001",
+            "DEF-hand.L": "DEF-handL",
+            "DEF-thumb.01.L": "DEF-thumb01L",
+            "DEF-thumb.02.L": "DEF-thumb02L",
+            "DEF-thumb.03.L": "DEF-thumb03L",
+            "DEF-palm.01.L": "DEF-palm01L",
+            "DEF-f_index.01.L": "DEF-f_index01L",
+            "DEF-f_index.02.L": "DEF-f_index02L",
+            "DEF-f_index.03.L": "DEF-f_index03L",
+            "DEF-palm.02.L": "DEF-palm02L",
+            "DEF-f_middle.01.L": "DEF-f_middle01L",
+            "DEF-f_middle.02.L": "DEF-f_middle02L",
+            "DEF-f_middle.03.L": "DEF-f_middle03L",
+            "DEF-palm.03.L": "DEF-palm03L",
+            "DEF-f_ring.01.L": "DEF-f_ring01L",
+            "DEF-f_ring.02.L": "DEF-f_ring02L",
+            "DEF-f_ring.03.L": "DEF-f_ring03L",
+            "DEF-palm.04.L": "DEF-palm04L",
+            "DEF-f_pinky.01.L": "DEF-f_pinky01L",
+            "DEF-f_pinky.02.L": "DEF-f_pinky02L",
+            "DEF-f_pinky.03.L": "DEF-f_pinky03L",
+            "PalmSocket.L": "PalmSocketL",
+            "DEF-shoulder.R": "DEF-shoulderR",
+            "DEF-upper_arm.R": "DEF-upper_armR",
+            "DEF-upper_arm.R.001": "DEF-upper_armR001",
+            "DEF-forearm.R": "DEF-forearmR",
+            "DEF-forearm.R.001": "DEF-forearmR001",
+            "DEF-hand.R": "DEF-handR",
+            "DEF-thumb.01.R": "DEF-thumb01R",
+            "DEF-thumb.02.R": "DEF-thumb02R",
+            "DEF-thumb.03.R": "DEF-thumb03R",
+            "DEF-palm.01.R": "DEF-palm01R",
+            "DEF-f_index.01.R": "DEF-f_index01R",
+            "DEF-f_index.02.R": "DEF-f_index02R",
+            "DEF-f_index.03.R": "DEF-f_index03R",
+            "DEF-palm.02.R": "DEF-palm02R",
+            "DEF-f_middle.01.R": "DEF-f_middle01R",
+            "DEF-f_middle.02.R": "DEF-f_middle02R",
+            "DEF-f_middle.03.R": "DEF-f_middle03R",
+            "DEF-palm.03.R": "DEF-palm03R",
+            "DEF-f_ring.01.R": "DEF-f_ring01R",
+            "DEF-f_ring.02.R": "DEF-f_ring02R",
+            "DEF-f_ring.03.R": "DEF-f_ring03R",
+            "DEF-palm.04.R": "DEF-palm04R",
+            "DEF-f_pinky.01.R": "DEF-f_pinky01R",
+            "DEF-f_pinky.02.R": "DEF-f_pinky02R",
+            "DEF-f_pinky.03.R": "DEF-f_pinky03R",
+            "PalmSocket.R": "PalmSocketR",
+            "DEF-pelvis.L": "DEF-pelvisL",
+            "DEF-pelvis.R": "DEF-pelvisR",
+            "DEF-thigh.L": "DEF-thighL",
+            "DEF-thigh.L.001": "DEF-thighL001",
+            "DEF-shin.L": "DEF-shinL",
+            "DEF-shin.L.001": "DEF-shinL001",
+            "DEF-foot.L": "DEF-footL",
+            "DEF-toe.L": "DEF-toeL",
+            "SoleSocket.L": "SoleSocketL",
+            "DEF-thigh.R": "DEF-thighR",
+            "DEF-thigh.R.001": "DEF-thighR001",
+            "DEF-shin.R": "DEF-shinR",
+            "DEF-shin.R.001": "DEF-shinR001",
+            "DEF-foot.R": "DEF-footR",
+            "DEF-toe.R": "DEF-toeR",
+            "SoleSocket.R": "SoleSocketR"
+          },
+          "contractSchema": "rockhop-humanoid-contract-v1",
+          "geometry": "author FOUR unchanged; no legacy sleeve conditioning",
+          "massApproximation": "Adult male segment mass fractions on measured joint centres/head and toe extents; not tissue-density integration",
+          "materials": [
+            {
+              "name": "Exact selected boot original 4096 PBR.001",
+              "baseColor": [
+                1,
+                1,
+                1
+              ],
+              "roughness": 1,
+              "metalness": 1,
+              "maps": {
+                "map": {
+                  "loaded": true,
+                  "width": 4096,
+                  "height": 4096,
+                  "colorSpace": "srgb"
+                },
+                "normalMap": {
+                  "loaded": true,
+                  "width": 2,
+                  "height": 2,
+                  "colorSpace": ""
+                },
+                "roughnessMap": {
+                  "loaded": true,
+                  "width": 4096,
+                  "height": 4096,
+                  "colorSpace": ""
+                },
+                "metalnessMap": {
+                  "loaded": true,
+                  "width": 4096,
+                  "height": 4096,
+                  "colorSpace": ""
+                }
+              }
+            },
+            {
+              "name": "SelectedOriginalGlovePBR03.001",
+              "baseColor": [
+                1,
+                1,
+                1
+              ],
+              "roughness": 1,
+              "metalness": 1,
+              "maps": {
+                "map": {
+                  "loaded": true,
+                  "width": 4096,
+                  "height": 4096,
+                  "colorSpace": "srgb"
+                },
+                "normalMap": {
+                  "loaded": true,
+                  "width": 2,
+                  "height": 2,
+                  "colorSpace": ""
+                },
+                "roughnessMap": {
+                  "loaded": true,
+                  "width": 4096,
+                  "height": 4096,
+                  "colorSpace": ""
+                },
+                "metalnessMap": {
+                  "loaded": true,
+                  "width": 4096,
+                  "height": 4096,
+                  "colorSpace": ""
+                }
+              }
+            },
+            {
+              "name": "RiderWarmSkin",
+              "baseColor": [
+                0.24500000476837158,
+                0.10499999672174454,
+                0.054999999701976776
+              ],
+              "roughness": 0.7200000286102295,
+              "metalness": 0,
+              "maps": {
+                "map": {
+                  "loaded": true,
+                  "width": 2,
+                  "height": 2,
+                  "colorSpace": "srgb"
+                },
+                "normalMap": {
+                  "loaded": true,
+                  "width": 2,
+                  "height": 2,
+                  "colorSpace": ""
+                },
+                "roughnessMap": {
+                  "loaded": true,
+                  "width": 2,
+                  "height": 2,
+                  "colorSpace": ""
+                },
+                "metalnessMap": {
+                  "loaded": true,
+                  "width": 2,
+                  "height": 2,
+                  "colorSpace": ""
+                }
+              }
+            },
+            {
+              "name": "Material.002",
+              "baseColor": [
+                1,
+                1,
+                1
+              ],
+              "roughness": 0.6200000047683716,
+              "metalness": 0,
+              "maps": {
+                "map": {
+                  "loaded": true,
+                  "width": 1024,
+                  "height": 1024,
+                  "colorSpace": "srgb"
+                },
+                "normalMap": {
+                  "loaded": true,
+                  "width": 2,
+                  "height": 2,
+                  "colorSpace": ""
+                },
+                "roughnessMap": {
+                  "loaded": true,
+                  "width": 2,
+                  "height": 2,
+                  "colorSpace": ""
+                },
+                "metalnessMap": {
+                  "loaded": true,
+                  "width": 2,
+                  "height": 2,
+                  "colorSpace": ""
+                }
+              }
+            },
+            {
+              "name": "Anatomically reconstructed cheek skin",
+              "baseColor": [
+                1,
+                1,
+                1
+              ],
+              "roughness": 0.6200000047683716,
+              "metalness": 0,
+              "maps": {
+                "map": {
+                  "loaded": true,
+                  "width": 1024,
+                  "height": 1024,
+                  "colorSpace": "srgb"
+                },
+                "normalMap": {
+                  "loaded": true,
+                  "width": 2,
+                  "height": 2,
+                  "colorSpace": ""
+                },
+                "roughnessMap": {
+                  "loaded": true,
+                  "width": 2,
+                  "height": 2,
+                  "colorSpace": ""
+                },
+                "metalnessMap": {
+                  "loaded": true,
+                  "width": 2,
+                  "height": 2,
+                  "colorSpace": ""
+                }
+              }
+            },
+            {
+              "name": "Selected skin - authored anatomical neck",
+              "baseColor": [
+                1,
+                1,
+                1
+              ],
+              "roughness": 0.6200000047683716,
+              "metalness": 0,
+              "maps": {
+                "map": {
+                  "loaded": true,
+                  "width": 256,
+                  "height": 256,
+                  "colorSpace": "srgb"
+                },
+                "normalMap": {
+                  "loaded": true,
+                  "width": 2,
+                  "height": 2,
+                  "colorSpace": ""
+                },
+                "roughnessMap": {
+                  "loaded": true,
+                  "width": 2,
+                  "height": 2,
+                  "colorSpace": ""
+                },
+                "metalnessMap": {
+                  "loaded": true,
+                  "width": 2,
+                  "height": 2,
+                  "colorSpace": ""
+                }
+              }
+            },
+            {
+              "name": "Material_0.002",
+              "baseColor": [
+                1,
+                1,
+                1
+              ],
+              "roughness": 1,
+              "metalness": 1,
+              "maps": {
+                "map": {
+                  "loaded": true,
+                  "width": 4096,
+                  "height": 4096,
+                  "colorSpace": "srgb"
+                },
+                "normalMap": {
+                  "loaded": true,
+                  "width": 2,
+                  "height": 2,
+                  "colorSpace": ""
+                },
+                "roughnessMap": {
+                  "loaded": true,
+                  "width": 4096,
+                  "height": 4096,
+                  "colorSpace": ""
+                },
+                "metalnessMap": {
+                  "loaded": true,
+                  "width": 4096,
+                  "height": 4096,
+                  "colorSpace": ""
+                }
+              }
+            },
+            {
+              "name": "OriginalSelectedWholeJeansPBR4K",
+              "baseColor": [
+                1,
+                1,
+                1
+              ],
+              "roughness": 1,
+              "metalness": 1,
+              "maps": {
+                "map": {
+                  "loaded": true,
+                  "width": 4096,
+                  "height": 4096,
+                  "colorSpace": "srgb"
+                },
+                "normalMap": {
+                  "loaded": true,
+                  "width": 4096,
+                  "height": 4096,
+                  "colorSpace": ""
+                },
+                "roughnessMap": {
+                  "loaded": true,
+                  "width": 4096,
+                  "height": 4096,
+                  "colorSpace": ""
+                },
+                "metalnessMap": {
+                  "loaded": true,
+                  "width": 4096,
+                  "height": 4096,
+                  "colorSpace": ""
+                }
+              }
+            }
+          ]
+        },
+        "allBoneFinite": true,
+        "fullResetCount": 4642,
+        "anthropometry": {
+          "hips": [
+            -0.3010756253034911,
+            0.7541883265641626
+          ],
+          "residualM": 7.19235076021548e-8,
+          "com": [
+            -0.15873406385416133,
+            0.8198354076185057,
+            5.24506310037743e-7
+          ],
+          "iterations": 3,
+          "converged": true,
+          "requestedCOM": [
+            -0.1587341171195792,
+            0.8198353592885336,
+            0
+          ],
+          "carrierAngle": 1.1343490528383877,
+          "spineFlexRadians": 0,
+          "elapsedMs": 3,
+          "articulationRule": "Three actual-contact candidates; minimum flex at <=1 mm socket-center error",
+          "candidates": [
+            {
+              "flex": 0,
+              "gapM": 0.0000026077386088969985,
+              "reach": 0.9986817144533318,
+              "comResidualM": 7.19235076021548e-8
+            }
+          ],
+          "palmForwardBike": [
+            1,
+            -0.25,
+            0
+          ],
+          "contactLimit": "Socket center residual only; no glove surface/bar radius or phalange penetration qualification"
+        }
+      },
+      "render": {
+        "prepare": [
+          {
+            "step": "art:start",
+            "ms": 146,
+            "bytes": 0
+          },
+          {
+            "step": "hero:bike",
+            "ms": 56,
+            "bytes": 0
+          },
+          {
+            "step": "hero:rider",
+            "ms": 45,
+            "bytes": 0
+          },
+          {
+            "step": "lighting",
+            "ms": 9,
+            "bytes": 0
+          },
+          {
+            "step": "post:create",
+            "ms": 14,
+            "bytes": 0
+          },
+          {
+            "step": "materials",
+            "ms": 2544,
+            "bytes": 27256160.255999994
+          },
+          {
+            "step": "hero:gltf",
+            "ms": 189,
+            "bytes": 0
+          },
+          {
+            "step": "art:settled",
+            "ms": 0,
+            "bytes": 842302
+          },
+          {
+            "step": "shaders",
+            "ms": 1137,
+            "bytes": 0
+          },
+          {
+            "step": "firstframe:post",
+            "ms": 1254,
+            "bytes": 0
+          },
+          {
+            "step": "firstframe:heroes",
+            "ms": 48,
+            "bytes": 0
+          }
+        ],
+        "biome": "coast",
+        "zoom": "idle",
+        "occluder": {
+          "ms": 0,
+          "tested": 0,
+          "hits": 0,
+          "count": 0,
+          "override": "orbit"
+        },
+        "garage": {
+          "on": true,
+          "draws": 14,
+          "hidden": 290,
+          "textureMB": 4.04,
+          "reflection": false
+        },
+        "phase": "menu",
+        "tier": "low",
+        "dpr": 1.5,
+        "devicePixelRatio": 1,
+        "canvasW": 2160,
+        "canvasH": 1350,
+        "calls": 71,
+        "tris": 6871784,
+        "rtMpx": 14.84,
+        "rtMB": 135.5,
+        "rtPasses": "shadow 512×512 | scene:hdr 2160×1350 | composite:graded 2160×1350 | smaa:edges 2160×1350 | smaa:weights 2160×1350 | smaa→canvas 2160×1350",
+        "shadowMap": 512,
+        "heroTris": 3431002,
+        "heroDoc": "bike rider-lod",
+        "riderOutfit": "street-mustard",
+        "riderMaterialVariant": null,
+        "heroShadow": "hero-only",
+        "trackCalls": 13,
+        "trackTris": 70328,
+        "textureGenMs": 463,
+        "passes": 5,
+        "stalePrograms": 1,
+        "stabilized": {
+          "singlePass": 0,
+          "split": 0,
+          "depth": 0
+        },
+        "skippedFrames": 0,
+        "deviceClass": "desktop",
+        "profile": "low",
+        "bloomers": 0,
+        "entryMs": 5359,
+        "entry": {
+          "biome": "coast",
+          "ms": 5359,
+          "compileMs": 5,
+          "textureMs": 11,
+          "warmMs": 21,
+          "textures": 40,
+          "texturesMB": 25.1,
+          "materials": 52,
+          "programs": 34,
+          "programsBefore": 2
+        },
+        "heroSwap": {
+          "loads": [
+            {
+              "url": "models/98214c3b3099a465/bike-rookie-lod-4ec26ad0a0c08f7e.glb",
+              "bytes": 870436,
+              "fetchMs": 32,
+              "parseMs": 143,
+              "prepareMs": 0,
+              "at": 222
+            },
+            {
+              "url": "models/bb3ec209a0dcc809/bike-pro-lod-37455064bf7b6012.glb",
+              "bytes": 864844,
+              "fetchMs": 55,
+              "parseMs": 319,
+              "prepareMs": 0,
+              "at": 223
+            },
+            {
+              "url": "models/bb3ec209a0dcc809/bike-pro-0acc9ac86eeca76c.glb",
+              "bytes": 2270540,
+              "fetchMs": 74,
+              "parseMs": 402,
+              "prepareMs": 0,
+              "at": 222
+            },
+            {
+              "url": "models/98214c3b3099a465/bike-rookie-e55919d602678493.glb",
+              "bytes": 2283036,
+              "fetchMs": 74,
+              "parseMs": 465,
+              "prepareMs": 0,
+              "at": 222
+            },
+            {
+              "url": "models/be4fc3304c6d1aca/rider-street-mustard-7d826b835ca07c7c.glb",
+              "bytes": 357281284,
+              "fetchMs": 1653,
+              "parseMs": 2045,
+              "prepareMs": 0,
+              "at": 222
+            }
+          ],
+          "swaps": [
+            {
+              "at": 7399,
+              "what": "bike:gltf/rider:gltf:rebuild → street-mustard/rookie",
+              "buildMs": 1,
+              "firstFrameMs": 93,
+              "programsAdded": 5,
+              "texturesAdded": 8
+            }
+          ]
+        },
+        "entering": false,
+        "courseAssetsEnabled": false,
+        "courseAssetsMounted": 0,
+        "courseAssetsTextureMB": 0,
+        "retirement": {
+          "requested": 3,
+          "released": 3,
+          "deferred": 0,
+          "pending": 0,
+          "maxPending": 0,
+          "contextLosses": 0
+        },
+        "terminalPrograms": {
+          "deleted": 0,
+          "contextReleased": 0
+        },
+        "art": {
+          "settled": true,
+          "ok": true,
+          "loadMs": 407,
+          "deliveredMB": 0.8,
+          "inWorld": true,
+          "trackComplete": true,
+          "trackIds": 8,
+          "builtAtFrame": 0,
+          "frames": 350
+        }
+      },
+      "stageTime": 6.275999999999983
+    },
+    {
+      "name": "garage-orbit-3",
+      "debug": {
+        "armStretch": [
+          0.9948695294183828,
+          0.9948720360812157
+        ],
+        "legStretch": [
+          0.7146202788652817,
+          0.7146201690351252
+        ],
+        "handOnGrip": [
+          true,
+          true
+        ],
+        "footOnPeg": [
+          true,
+          true
+        ],
+        "wristErr": [
+          2.3119991207463993e-8,
+          2.7472664676640376e-7
+        ],
+        "gripErr": [
+          2.3119991207463993e-8,
+          2.7472664676640376e-7
+        ],
+        "gripAngleErr": [
+          1.0745380149674385e-7,
+          1.9082797281243954e-7
+        ],
+        "ankleErr": [
+          0.000002575670504937002,
+          0.0000026019072902053437
+        ],
+        "armLen": [
+          0.534639986196624,
+          0.5346397715734006
+        ],
+        "additiveWeight": 0,
+        "physicalPose": false,
+        "comResidual": 2.54195181872026e-9,
+        "ragdollResidual": -1,
+        "ragdollBlend": 0,
+        "ragdollDetail": [],
+        "bones": 75,
+        "clips": [],
+        "stageClip": "measured riding IK + breathing",
+        "stageBlend": 0,
+        "soleErr": [
+          0.000002575670504937002,
+          0.0000026019072902053437
+        ],
+        "stance": {
+          "on": true,
+          "pose": "back",
+          "blend": 0.009900315489308488,
+          "lean": -0.009900315489308488,
+          "land": 0,
+          "extend": 0,
+          "dy": 0,
+          "lag": 0,
+          "limit": 1
+        },
+        "candidate": {
+          "sourceSHA256": "7d826b835ca07c7c584d6b3a9606e9e89780f1c7b92e4030e1f1b58aff4127ed",
+          "metadataSHA256": "719209bfee6f9010ef5e1a7ed54bba68905d3b2a2f78b792cd9c1f4af252c3f0",
+          "roles": {
+            "pelvis": "DEF-spine",
+            "trunk": [
+              "DEF-spine",
+              "DEF-spine.001",
+              "DEF-spine.002",
+              "DEF-spine.003"
+            ],
+            "neck": [
+              "DEF-spine.004",
+              "DEF-spine.005"
+            ],
+            "head": "DEF-spine.006",
+            "upperArmLeft": [
+              "DEF-upper_arm.L",
+              "DEF-upper_arm.L.001"
+            ],
+            "forearmLeft": [
+              "DEF-forearm.L",
+              "DEF-forearm.L.001"
+            ],
+            "thighLeft": [
+              "DEF-thigh.L",
+              "DEF-thigh.L.001"
+            ],
+            "shinLeft": [
+              "DEF-shin.L",
+              "DEF-shin.L.001"
+            ],
+            "shoulderLeft": "DEF-shoulder.L",
+            "wristLeft": "DEF-hand.L",
+            "footLeft": "DEF-foot.L",
+            "toeLeft": "DEF-toe.L",
+            "upperArmRight": [
+              "DEF-upper_arm.R",
+              "DEF-upper_arm.R.001"
+            ],
+            "forearmRight": [
+              "DEF-forearm.R",
+              "DEF-forearm.R.001"
+            ],
+            "thighRight": [
+              "DEF-thigh.R",
+              "DEF-thigh.R.001"
+            ],
+            "shinRight": [
+              "DEF-shin.R",
+              "DEF-shin.R.001"
+            ],
+            "shoulderRight": "DEF-shoulder.R",
+            "wristRight": "DEF-hand.R",
+            "footRight": "DEF-foot.R",
+            "toeRight": "DEF-toe.R"
+          },
+          "meshRoles": [
+            {
+              "role": "RiderBody.primitive0",
+              "name": "female_v006lowresUV__ExactFaceSubset"
+            },
+            {
+              "role": "RiderBody.primitive1",
+              "name": "female_v006lowresUV__ExactFaceSubset_1"
+            },
+            {
+              "role": "RiderBody.primitive2",
+              "name": "female_v006lowresUV__ExactFaceSubset_2"
+            },
+            {
+              "role": "RiderBody.primitive3",
+              "name": "female_v006lowresUV__ExactFaceSubset_3"
+            },
+            {
+              "role": "ActualSelectedGlove.L",
+              "name": "ActualSelectedGloveL"
+            },
+            {
+              "role": "ActualSelectedGlove.R",
+              "name": "ActualSelectedGloveR"
+            },
+            {
+              "role": "ActualSelectedBoot.L",
+              "name": "ActualSelectedBootL"
+            },
+            {
+              "role": "ActualSelectedBoot.R",
+              "name": "ActualSelectedBootR"
+            },
+            {
+              "role": "RiderJeans",
+              "name": "RiderJeans"
+            },
+            {
+              "role": "RiderHoodie",
+              "name": "RiderHoodie"
+            }
+          ],
+          "authorMeshRoles": {
+            "RiderBody": "RiderBody",
+            "ActualSelectedGlove.L": "ActualSelectedGlove.L",
+            "ActualSelectedGlove.R": "ActualSelectedGlove.R",
+            "ActualSelectedBoot.L": "ActualSelectedBoot.L",
+            "ActualSelectedBoot.R": "ActualSelectedBoot.R",
+            "RiderJeans": "RiderJeans",
+            "RiderHoodie": "RiderHoodie"
+          },
+          "visibleMeshes": [
+            {
+              "name": "ActualSelectedBootL",
+              "skinned": true,
+              "triangles": 610934
+            },
+            {
+              "name": "ActualSelectedBootR",
+              "skinned": true,
+              "triangles": 610934
+            },
+            {
+              "name": "ActualSelectedGloveL",
+              "skinned": true,
+              "triangles": 569142
+            },
+            {
+              "name": "ActualSelectedGloveR",
+              "skinned": true,
+              "triangles": 569142
+            },
+            {
+              "name": "female_v006lowresUV__ExactFaceSubset",
+              "skinned": true,
+              "triangles": 778
+            },
+            {
+              "name": "female_v006lowresUV__ExactFaceSubset_1",
+              "skinned": true,
+              "triangles": 58102
+            },
+            {
+              "name": "female_v006lowresUV__ExactFaceSubset_2",
+              "skinned": true,
+              "triangles": 429
+            },
+            {
+              "name": "female_v006lowresUV__ExactFaceSubset_3",
+              "skinned": true,
+              "triangles": 5159
+            },
+            {
+              "name": "RiderHoodie",
+              "skinned": true,
+              "triangles": 921722
+            },
+            {
+              "name": "RiderJeans",
+              "skinned": true,
+              "triangles": 51456
+            }
+          ],
+          "jointNames": {
+            "DEF-spine": "DEF-spine",
+            "DEF-spine.001": "DEF-spine001",
+            "DEF-spine.002": "DEF-spine002",
+            "DEF-spine.003": "DEF-spine003",
+            "DEF-spine.004": "DEF-spine004",
+            "DEF-spine.005": "DEF-spine005",
+            "DEF-spine.006": "DEF-spine006",
+            "DEF-shoulder.L": "DEF-shoulderL",
+            "DEF-upper_arm.L": "DEF-upper_armL",
+            "DEF-upper_arm.L.001": "DEF-upper_armL001",
+            "DEF-forearm.L": "DEF-forearmL",
+            "DEF-forearm.L.001": "DEF-forearmL001",
+            "DEF-hand.L": "DEF-handL",
+            "DEF-thumb.01.L": "DEF-thumb01L",
+            "DEF-thumb.02.L": "DEF-thumb02L",
+            "DEF-thumb.03.L": "DEF-thumb03L",
+            "DEF-palm.01.L": "DEF-palm01L",
+            "DEF-f_index.01.L": "DEF-f_index01L",
+            "DEF-f_index.02.L": "DEF-f_index02L",
+            "DEF-f_index.03.L": "DEF-f_index03L",
+            "DEF-palm.02.L": "DEF-palm02L",
+            "DEF-f_middle.01.L": "DEF-f_middle01L",
+            "DEF-f_middle.02.L": "DEF-f_middle02L",
+            "DEF-f_middle.03.L": "DEF-f_middle03L",
+            "DEF-palm.03.L": "DEF-palm03L",
+            "DEF-f_ring.01.L": "DEF-f_ring01L",
+            "DEF-f_ring.02.L": "DEF-f_ring02L",
+            "DEF-f_ring.03.L": "DEF-f_ring03L",
+            "DEF-palm.04.L": "DEF-palm04L",
+            "DEF-f_pinky.01.L": "DEF-f_pinky01L",
+            "DEF-f_pinky.02.L": "DEF-f_pinky02L",
+            "DEF-f_pinky.03.L": "DEF-f_pinky03L",
+            "PalmSocket.L": "PalmSocketL",
+            "DEF-shoulder.R": "DEF-shoulderR",
+            "DEF-upper_arm.R": "DEF-upper_armR",
+            "DEF-upper_arm.R.001": "DEF-upper_armR001",
+            "DEF-forearm.R": "DEF-forearmR",
+            "DEF-forearm.R.001": "DEF-forearmR001",
+            "DEF-hand.R": "DEF-handR",
+            "DEF-thumb.01.R": "DEF-thumb01R",
+            "DEF-thumb.02.R": "DEF-thumb02R",
+            "DEF-thumb.03.R": "DEF-thumb03R",
+            "DEF-palm.01.R": "DEF-palm01R",
+            "DEF-f_index.01.R": "DEF-f_index01R",
+            "DEF-f_index.02.R": "DEF-f_index02R",
+            "DEF-f_index.03.R": "DEF-f_index03R",
+            "DEF-palm.02.R": "DEF-palm02R",
+            "DEF-f_middle.01.R": "DEF-f_middle01R",
+            "DEF-f_middle.02.R": "DEF-f_middle02R",
+            "DEF-f_middle.03.R": "DEF-f_middle03R",
+            "DEF-palm.03.R": "DEF-palm03R",
+            "DEF-f_ring.01.R": "DEF-f_ring01R",
+            "DEF-f_ring.02.R": "DEF-f_ring02R",
+            "DEF-f_ring.03.R": "DEF-f_ring03R",
+            "DEF-palm.04.R": "DEF-palm04R",
+            "DEF-f_pinky.01.R": "DEF-f_pinky01R",
+            "DEF-f_pinky.02.R": "DEF-f_pinky02R",
+            "DEF-f_pinky.03.R": "DEF-f_pinky03R",
+            "PalmSocket.R": "PalmSocketR",
+            "DEF-pelvis.L": "DEF-pelvisL",
+            "DEF-pelvis.R": "DEF-pelvisR",
+            "DEF-thigh.L": "DEF-thighL",
+            "DEF-thigh.L.001": "DEF-thighL001",
+            "DEF-shin.L": "DEF-shinL",
+            "DEF-shin.L.001": "DEF-shinL001",
+            "DEF-foot.L": "DEF-footL",
+            "DEF-toe.L": "DEF-toeL",
+            "SoleSocket.L": "SoleSocketL",
+            "DEF-thigh.R": "DEF-thighR",
+            "DEF-thigh.R.001": "DEF-thighR001",
+            "DEF-shin.R": "DEF-shinR",
+            "DEF-shin.R.001": "DEF-shinR001",
+            "DEF-foot.R": "DEF-footR",
+            "DEF-toe.R": "DEF-toeR",
+            "SoleSocket.R": "SoleSocketR"
+          },
+          "contractSchema": "rockhop-humanoid-contract-v1",
+          "geometry": "author FOUR unchanged; no legacy sleeve conditioning",
+          "massApproximation": "Adult male segment mass fractions on measured joint centres/head and toe extents; not tissue-density integration",
+          "materials": [
+            {
+              "name": "Exact selected boot original 4096 PBR.001",
+              "baseColor": [
+                1,
+                1,
+                1
+              ],
+              "roughness": 1,
+              "metalness": 1,
+              "maps": {
+                "map": {
+                  "loaded": true,
+                  "width": 4096,
+                  "height": 4096,
+                  "colorSpace": "srgb"
+                },
+                "normalMap": {
+                  "loaded": true,
+                  "width": 2,
+                  "height": 2,
+                  "colorSpace": ""
+                },
+                "roughnessMap": {
+                  "loaded": true,
+                  "width": 4096,
+                  "height": 4096,
+                  "colorSpace": ""
+                },
+                "metalnessMap": {
+                  "loaded": true,
+                  "width": 4096,
+                  "height": 4096,
+                  "colorSpace": ""
+                }
+              }
+            },
+            {
+              "name": "SelectedOriginalGlovePBR03.001",
+              "baseColor": [
+                1,
+                1,
+                1
+              ],
+              "roughness": 1,
+              "metalness": 1,
+              "maps": {
+                "map": {
+                  "loaded": true,
+                  "width": 4096,
+                  "height": 4096,
+                  "colorSpace": "srgb"
+                },
+                "normalMap": {
+                  "loaded": true,
+                  "width": 2,
+                  "height": 2,
+                  "colorSpace": ""
+                },
+                "roughnessMap": {
+                  "loaded": true,
+                  "width": 4096,
+                  "height": 4096,
+                  "colorSpace": ""
+                },
+                "metalnessMap": {
+                  "loaded": true,
+                  "width": 4096,
+                  "height": 4096,
+                  "colorSpace": ""
+                }
+              }
+            },
+            {
+              "name": "RiderWarmSkin",
+              "baseColor": [
+                0.24500000476837158,
+                0.10499999672174454,
+                0.054999999701976776
+              ],
+              "roughness": 0.7200000286102295,
+              "metalness": 0,
+              "maps": {
+                "map": {
+                  "loaded": true,
+                  "width": 2,
+                  "height": 2,
+                  "colorSpace": "srgb"
+                },
+                "normalMap": {
+                  "loaded": true,
+                  "width": 2,
+                  "height": 2,
+                  "colorSpace": ""
+                },
+                "roughnessMap": {
+                  "loaded": true,
+                  "width": 2,
+                  "height": 2,
+                  "colorSpace": ""
+                },
+                "metalnessMap": {
+                  "loaded": true,
+                  "width": 2,
+                  "height": 2,
+                  "colorSpace": ""
+                }
+              }
+            },
+            {
+              "name": "Material.002",
+              "baseColor": [
+                1,
+                1,
+                1
+              ],
+              "roughness": 0.6200000047683716,
+              "metalness": 0,
+              "maps": {
+                "map": {
+                  "loaded": true,
+                  "width": 1024,
+                  "height": 1024,
+                  "colorSpace": "srgb"
+                },
+                "normalMap": {
+                  "loaded": true,
+                  "width": 2,
+                  "height": 2,
+                  "colorSpace": ""
+                },
+                "roughnessMap": {
+                  "loaded": true,
+                  "width": 2,
+                  "height": 2,
+                  "colorSpace": ""
+                },
+                "metalnessMap": {
+                  "loaded": true,
+                  "width": 2,
+                  "height": 2,
+                  "colorSpace": ""
+                }
+              }
+            },
+            {
+              "name": "Anatomically reconstructed cheek skin",
+              "baseColor": [
+                1,
+                1,
+                1
+              ],
+              "roughness": 0.6200000047683716,
+              "metalness": 0,
+              "maps": {
+                "map": {
+                  "loaded": true,
+                  "width": 1024,
+                  "height": 1024,
+                  "colorSpace": "srgb"
+                },
+                "normalMap": {
+                  "loaded": true,
+                  "width": 2,
+                  "height": 2,
+                  "colorSpace": ""
+                },
+                "roughnessMap": {
+                  "loaded": true,
+                  "width": 2,
+                  "height": 2,
+                  "colorSpace": ""
+                },
+                "metalnessMap": {
+                  "loaded": true,
+                  "width": 2,
+                  "height": 2,
+                  "colorSpace": ""
+                }
+              }
+            },
+            {
+              "name": "Selected skin - authored anatomical neck",
+              "baseColor": [
+                1,
+                1,
+                1
+              ],
+              "roughness": 0.6200000047683716,
+              "metalness": 0,
+              "maps": {
+                "map": {
+                  "loaded": true,
+                  "width": 256,
+                  "height": 256,
+                  "colorSpace": "srgb"
+                },
+                "normalMap": {
+                  "loaded": true,
+                  "width": 2,
+                  "height": 2,
+                  "colorSpace": ""
+                },
+                "roughnessMap": {
+                  "loaded": true,
+                  "width": 2,
+                  "height": 2,
+                  "colorSpace": ""
+                },
+                "metalnessMap": {
+                  "loaded": true,
+                  "width": 2,
+                  "height": 2,
+                  "colorSpace": ""
+                }
+              }
+            },
+            {
+              "name": "Material_0.002",
+              "baseColor": [
+                1,
+                1,
+                1
+              ],
+              "roughness": 1,
+              "metalness": 1,
+              "maps": {
+                "map": {
+                  "loaded": true,
+                  "width": 4096,
+                  "height": 4096,
+                  "colorSpace": "srgb"
+                },
+                "normalMap": {
+                  "loaded": true,
+                  "width": 2,
+                  "height": 2,
+                  "colorSpace": ""
+                },
+                "roughnessMap": {
+                  "loaded": true,
+                  "width": 4096,
+                  "height": 4096,
+                  "colorSpace": ""
+                },
+                "metalnessMap": {
+                  "loaded": true,
+                  "width": 4096,
+                  "height": 4096,
+                  "colorSpace": ""
+                }
+              }
+            },
+            {
+              "name": "OriginalSelectedWholeJeansPBR4K",
+              "baseColor": [
+                1,
+                1,
+                1
+              ],
+              "roughness": 1,
+              "metalness": 1,
+              "maps": {
+                "map": {
+                  "loaded": true,
+                  "width": 4096,
+                  "height": 4096,
+                  "colorSpace": "srgb"
+                },
+                "normalMap": {
+                  "loaded": true,
+                  "width": 4096,
+                  "height": 4096,
+                  "colorSpace": ""
+                },
+                "roughnessMap": {
+                  "loaded": true,
+                  "width": 4096,
+                  "height": 4096,
+                  "colorSpace": ""
+                },
+                "metalnessMap": {
+                  "loaded": true,
+                  "width": 4096,
+                  "height": 4096,
+                  "colorSpace": ""
+                }
+              }
+            }
+          ]
+        },
+        "allBoneFinite": true,
+        "fullResetCount": 6408,
+        "anthropometry": {
+          "hips": [
+            -0.301633220641888,
+            0.7552660732007342
+          ],
+          "residualM": 2.54195181872026e-9,
+          "com": [
+            -0.1587341152258921,
+            0.8198353609842541,
+            5.211306860998174e-7
+          ],
+          "iterations": 3,
+          "converged": true,
+          "requestedCOM": [
+            -0.1587341171195792,
+            0.8198353592885336,
+            0
+          ],
+          "carrierAngle": 1.1265152525641637,
+          "spineFlexRadians": 0,
+          "elapsedMs": 2,
+          "articulationRule": "Three actual-contact candidates; minimum flex at <=1 mm socket-center error",
+          "candidates": [
+            {
+              "flex": 0,
+              "gapM": 0.0000026019072902053437,
+              "reach": 0.9948720360812157,
+              "comResidualM": 2.54195181872026e-9
+            }
+          ],
+          "palmForwardBike": [
+            1,
+            -0.25,
+            0
+          ],
+          "contactLimit": "Socket center residual only; no glove surface/bar radius or phalange penetration qualification"
+        }
+      },
+      "render": {
+        "prepare": [
+          {
+            "step": "art:start",
+            "ms": 146,
+            "bytes": 0
+          },
+          {
+            "step": "hero:bike",
+            "ms": 56,
+            "bytes": 0
+          },
+          {
+            "step": "hero:rider",
+            "ms": 45,
+            "bytes": 0
+          },
+          {
+            "step": "lighting",
+            "ms": 9,
+            "bytes": 0
+          },
+          {
+            "step": "post:create",
+            "ms": 14,
+            "bytes": 0
+          },
+          {
+            "step": "materials",
+            "ms": 2544,
+            "bytes": 27256160.255999994
+          },
+          {
+            "step": "hero:gltf",
+            "ms": 189,
+            "bytes": 0
+          },
+          {
+            "step": "art:settled",
+            "ms": 0,
+            "bytes": 842302
+          },
+          {
+            "step": "shaders",
+            "ms": 1137,
+            "bytes": 0
+          },
+          {
+            "step": "firstframe:post",
+            "ms": 1254,
+            "bytes": 0
+          },
+          {
+            "step": "firstframe:heroes",
+            "ms": 48,
+            "bytes": 0
+          }
+        ],
+        "biome": "coast",
+        "zoom": "idle",
+        "occluder": {
+          "ms": 0,
+          "tested": 0,
+          "hits": 0,
+          "count": 0,
+          "override": "orbit"
+        },
+        "garage": {
+          "on": true,
+          "draws": 14,
+          "hidden": 290,
+          "textureMB": 4.04,
+          "reflection": false
+        },
+        "phase": "menu",
+        "tier": "low",
+        "dpr": 1.5,
+        "devicePixelRatio": 1,
+        "canvasW": 2160,
+        "canvasH": 1350,
+        "calls": 72,
+        "tris": 6871976,
+        "rtMpx": 14.84,
+        "rtMB": 135.5,
+        "rtPasses": "shadow 512×512 | scene:hdr 2160×1350 | composite:graded 2160×1350 | smaa:edges 2160×1350 | smaa:weights 2160×1350 | smaa→canvas 2160×1350",
+        "shadowMap": 512,
+        "heroTris": 3431002,
+        "heroDoc": "bike rider-lod",
+        "riderOutfit": "street-mustard",
+        "riderMaterialVariant": null,
+        "heroShadow": "hero-only",
+        "trackCalls": 13,
+        "trackTris": 70328,
+        "textureGenMs": 463,
+        "passes": 5,
+        "stalePrograms": 1,
+        "stabilized": {
+          "singlePass": 0,
+          "split": 0,
+          "depth": 0
+        },
+        "skippedFrames": 0,
+        "deviceClass": "desktop",
+        "profile": "low",
+        "bloomers": 0,
+        "entryMs": 5359,
+        "entry": {
+          "biome": "coast",
+          "ms": 5359,
+          "compileMs": 5,
+          "textureMs": 11,
+          "warmMs": 21,
+          "textures": 40,
+          "texturesMB": 25.1,
+          "materials": 52,
+          "programs": 34,
+          "programsBefore": 2
+        },
+        "heroSwap": {
+          "loads": [
+            {
+              "url": "models/98214c3b3099a465/bike-rookie-lod-4ec26ad0a0c08f7e.glb",
+              "bytes": 870436,
+              "fetchMs": 32,
+              "parseMs": 143,
+              "prepareMs": 0,
+              "at": 222
+            },
+            {
+              "url": "models/bb3ec209a0dcc809/bike-pro-lod-37455064bf7b6012.glb",
+              "bytes": 864844,
+              "fetchMs": 55,
+              "parseMs": 319,
+              "prepareMs": 0,
+              "at": 223
+            },
+            {
+              "url": "models/bb3ec209a0dcc809/bike-pro-0acc9ac86eeca76c.glb",
+              "bytes": 2270540,
+              "fetchMs": 74,
+              "parseMs": 402,
+              "prepareMs": 0,
+              "at": 222
+            },
+            {
+              "url": "models/98214c3b3099a465/bike-rookie-e55919d602678493.glb",
+              "bytes": 2283036,
+              "fetchMs": 74,
+              "parseMs": 465,
+              "prepareMs": 0,
+              "at": 222
+            },
+            {
+              "url": "models/be4fc3304c6d1aca/rider-street-mustard-7d826b835ca07c7c.glb",
+              "bytes": 357281284,
+              "fetchMs": 1653,
+              "parseMs": 2045,
+              "prepareMs": 0,
+              "at": 222
+            }
+          ],
+          "swaps": [
+            {
+              "at": 7399,
+              "what": "bike:gltf/rider:gltf:rebuild → street-mustard/rookie",
+              "buildMs": 1,
+              "firstFrameMs": 93,
+              "programsAdded": 5,
+              "texturesAdded": 8
+            }
+          ]
+        },
+        "entering": false,
+        "courseAssetsEnabled": false,
+        "courseAssetsMounted": 0,
+        "courseAssetsTextureMB": 0,
+        "retirement": {
+          "requested": 3,
+          "released": 3,
+          "deferred": 0,
+          "pending": 0,
+          "maxPending": 0,
+          "contextLosses": 0
+        },
+        "terminalPrograms": {
+          "deleted": 0,
+          "contextReleased": 0
+        },
+        "art": {
+          "settled": true,
+          "ok": true,
+          "loadMs": 407,
+          "deliveredMB": 0.8,
+          "inWorld": true,
+          "trackComplete": true,
+          "trackIds": 8,
+          "builtAtFrame": 0,
+          "frames": 487
+        }
+      },
+      "stageTime": 8.695999999999971
+    },
+    {
+      "name": "garage-orbit-4",
+      "debug": {
+        "armStretch": [
+          0.9992793044287842,
+          0.9992817940179367
+        ],
+        "legStretch": [
+          0.7127326410045145,
+          0.7127325315464003
+        ],
+        "handOnGrip": [
+          true,
+          true
+        ],
+        "footOnPeg": [
+          true,
+          true
+        ],
+        "wristErr": [
+          2.4713343398701235e-8,
+          2.7580040117376483e-7
+        ],
+        "gripErr": [
+          2.4713343398701235e-8,
+          2.7580040117376483e-7
+        ],
+        "gripAngleErr": [
+          1.1920928955078128e-7,
+          2.210199382035633e-7
+        ],
+        "ankleErr": [
+          0.000002582530062283801,
+          0.0000026088825237801897
+        ],
+        "armLen": [
+          0.534639986196624,
+          0.5346397715734006
+        ],
+        "additiveWeight": 0,
+        "physicalPose": false,
+        "comResidual": 5.658562634083378e-7,
+        "ragdollResidual": -1,
+        "ragdollBlend": 0,
+        "ragdollDetail": [],
+        "bones": 75,
+        "clips": [],
+        "stageClip": "measured riding IK + breathing",
+        "stageBlend": 0,
+        "soleErr": [
+          0.000002582530062283801,
+          0.0000026088825237801897
+        ],
+        "stance": {
+          "on": true,
+          "pose": "back",
+          "blend": 0.009900315489308488,
+          "lean": -0.009900315489308488,
+          "land": 0,
+          "extend": 0,
+          "dy": 0,
+          "lag": 0,
+          "limit": 1
+        },
+        "candidate": {
+          "sourceSHA256": "7d826b835ca07c7c584d6b3a9606e9e89780f1c7b92e4030e1f1b58aff4127ed",
+          "metadataSHA256": "719209bfee6f9010ef5e1a7ed54bba68905d3b2a2f78b792cd9c1f4af252c3f0",
+          "roles": {
+            "pelvis": "DEF-spine",
+            "trunk": [
+              "DEF-spine",
+              "DEF-spine.001",
+              "DEF-spine.002",
+              "DEF-spine.003"
+            ],
+            "neck": [
+              "DEF-spine.004",
+              "DEF-spine.005"
+            ],
+            "head": "DEF-spine.006",
+            "upperArmLeft": [
+              "DEF-upper_arm.L",
+              "DEF-upper_arm.L.001"
+            ],
+            "forearmLeft": [
+              "DEF-forearm.L",
+              "DEF-forearm.L.001"
+            ],
+            "thighLeft": [
+              "DEF-thigh.L",
+              "DEF-thigh.L.001"
+            ],
+            "shinLeft": [
+              "DEF-shin.L",
+              "DEF-shin.L.001"
+            ],
+            "shoulderLeft": "DEF-shoulder.L",
+            "wristLeft": "DEF-hand.L",
+            "footLeft": "DEF-foot.L",
+            "toeLeft": "DEF-toe.L",
+            "upperArmRight": [
+              "DEF-upper_arm.R",
+              "DEF-upper_arm.R.001"
+            ],
+            "forearmRight": [
+              "DEF-forearm.R",
+              "DEF-forearm.R.001"
+            ],
+            "thighRight": [
+              "DEF-thigh.R",
+              "DEF-thigh.R.001"
+            ],
+            "shinRight": [
+              "DEF-shin.R",
+              "DEF-shin.R.001"
+            ],
+            "shoulderRight": "DEF-shoulder.R",
+            "wristRight": "DEF-hand.R",
+            "footRight": "DEF-foot.R",
+            "toeRight": "DEF-toe.R"
+          },
+          "meshRoles": [
+            {
+              "role": "RiderBody.primitive0",
+              "name": "female_v006lowresUV__ExactFaceSubset"
+            },
+            {
+              "role": "RiderBody.primitive1",
+              "name": "female_v006lowresUV__ExactFaceSubset_1"
+            },
+            {
+              "role": "RiderBody.primitive2",
+              "name": "female_v006lowresUV__ExactFaceSubset_2"
+            },
+            {
+              "role": "RiderBody.primitive3",
+              "name": "female_v006lowresUV__ExactFaceSubset_3"
+            },
+            {
+              "role": "ActualSelectedGlove.L",
+              "name": "ActualSelectedGloveL"
+            },
+            {
+              "role": "ActualSelectedGlove.R",
+              "name": "ActualSelectedGloveR"
+            },
+            {
+              "role": "ActualSelectedBoot.L",
+              "name": "ActualSelectedBootL"
+            },
+            {
+              "role": "ActualSelectedBoot.R",
+              "name": "ActualSelectedBootR"
+            },
+            {
+              "role": "RiderJeans",
+              "name": "RiderJeans"
+            },
+            {
+              "role": "RiderHoodie",
+              "name": "RiderHoodie"
+            }
+          ],
+          "authorMeshRoles": {
+            "RiderBody": "RiderBody",
+            "ActualSelectedGlove.L": "ActualSelectedGlove.L",
+            "ActualSelectedGlove.R": "ActualSelectedGlove.R",
+            "ActualSelectedBoot.L": "ActualSelectedBoot.L",
+            "ActualSelectedBoot.R": "ActualSelectedBoot.R",
+            "RiderJeans": "RiderJeans",
+            "RiderHoodie": "RiderHoodie"
+          },
+          "visibleMeshes": [
+            {
+              "name": "ActualSelectedBootL",
+              "skinned": true,
+              "triangles": 610934
+            },
+            {
+              "name": "ActualSelectedBootR",
+              "skinned": true,
+              "triangles": 610934
+            },
+            {
+              "name": "ActualSelectedGloveL",
+              "skinned": true,
+              "triangles": 569142
+            },
+            {
+              "name": "ActualSelectedGloveR",
+              "skinned": true,
+              "triangles": 569142
+            },
+            {
+              "name": "female_v006lowresUV__ExactFaceSubset",
+              "skinned": true,
+              "triangles": 778
+            },
+            {
+              "name": "female_v006lowresUV__ExactFaceSubset_1",
+              "skinned": true,
+              "triangles": 58102
+            },
+            {
+              "name": "female_v006lowresUV__ExactFaceSubset_2",
+              "skinned": true,
+              "triangles": 429
+            },
+            {
+              "name": "female_v006lowresUV__ExactFaceSubset_3",
+              "skinned": true,
+              "triangles": 5159
+            },
+            {
+              "name": "RiderHoodie",
+              "skinned": true,
+              "triangles": 921722
+            },
+            {
+              "name": "RiderJeans",
+              "skinned": true,
+              "triangles": 51456
+            }
+          ],
+          "jointNames": {
+            "DEF-spine": "DEF-spine",
+            "DEF-spine.001": "DEF-spine001",
+            "DEF-spine.002": "DEF-spine002",
+            "DEF-spine.003": "DEF-spine003",
+            "DEF-spine.004": "DEF-spine004",
+            "DEF-spine.005": "DEF-spine005",
+            "DEF-spine.006": "DEF-spine006",
+            "DEF-shoulder.L": "DEF-shoulderL",
+            "DEF-upper_arm.L": "DEF-upper_armL",
+            "DEF-upper_arm.L.001": "DEF-upper_armL001",
+            "DEF-forearm.L": "DEF-forearmL",
+            "DEF-forearm.L.001": "DEF-forearmL001",
+            "DEF-hand.L": "DEF-handL",
+            "DEF-thumb.01.L": "DEF-thumb01L",
+            "DEF-thumb.02.L": "DEF-thumb02L",
+            "DEF-thumb.03.L": "DEF-thumb03L",
+            "DEF-palm.01.L": "DEF-palm01L",
+            "DEF-f_index.01.L": "DEF-f_index01L",
+            "DEF-f_index.02.L": "DEF-f_index02L",
+            "DEF-f_index.03.L": "DEF-f_index03L",
+            "DEF-palm.02.L": "DEF-palm02L",
+            "DEF-f_middle.01.L": "DEF-f_middle01L",
+            "DEF-f_middle.02.L": "DEF-f_middle02L",
+            "DEF-f_middle.03.L": "DEF-f_middle03L",
+            "DEF-palm.03.L": "DEF-palm03L",
+            "DEF-f_ring.01.L": "DEF-f_ring01L",
+            "DEF-f_ring.02.L": "DEF-f_ring02L",
+            "DEF-f_ring.03.L": "DEF-f_ring03L",
+            "DEF-palm.04.L": "DEF-palm04L",
+            "DEF-f_pinky.01.L": "DEF-f_pinky01L",
+            "DEF-f_pinky.02.L": "DEF-f_pinky02L",
+            "DEF-f_pinky.03.L": "DEF-f_pinky03L",
+            "PalmSocket.L": "PalmSocketL",
+            "DEF-shoulder.R": "DEF-shoulderR",
+            "DEF-upper_arm.R": "DEF-upper_armR",
+            "DEF-upper_arm.R.001": "DEF-upper_armR001",
+            "DEF-forearm.R": "DEF-forearmR",
+            "DEF-forearm.R.001": "DEF-forearmR001",
+            "DEF-hand.R": "DEF-handR",
+            "DEF-thumb.01.R": "DEF-thumb01R",
+            "DEF-thumb.02.R": "DEF-thumb02R",
+            "DEF-thumb.03.R": "DEF-thumb03R",
+            "DEF-palm.01.R": "DEF-palm01R",
+            "DEF-f_index.01.R": "DEF-f_index01R",
+            "DEF-f_index.02.R": "DEF-f_index02R",
+            "DEF-f_index.03.R": "DEF-f_index03R",
+            "DEF-palm.02.R": "DEF-palm02R",
+            "DEF-f_middle.01.R": "DEF-f_middle01R",
+            "DEF-f_middle.02.R": "DEF-f_middle02R",
+            "DEF-f_middle.03.R": "DEF-f_middle03R",
+            "DEF-palm.03.R": "DEF-palm03R",
+            "DEF-f_ring.01.R": "DEF-f_ring01R",
+            "DEF-f_ring.02.R": "DEF-f_ring02R",
+            "DEF-f_ring.03.R": "DEF-f_ring03R",
+            "DEF-palm.04.R": "DEF-palm04R",
+            "DEF-f_pinky.01.R": "DEF-f_pinky01R",
+            "DEF-f_pinky.02.R": "DEF-f_pinky02R",
+            "DEF-f_pinky.03.R": "DEF-f_pinky03R",
+            "PalmSocket.R": "PalmSocketR",
+            "DEF-pelvis.L": "DEF-pelvisL",
+            "DEF-pelvis.R": "DEF-pelvisR",
+            "DEF-thigh.L": "DEF-thighL",
+            "DEF-thigh.L.001": "DEF-thighL001",
+            "DEF-shin.L": "DEF-shinL",
+            "DEF-shin.L.001": "DEF-shinL001",
+            "DEF-foot.L": "DEF-footL",
+            "DEF-toe.L": "DEF-toeL",
+            "SoleSocket.L": "SoleSocketL",
+            "DEF-thigh.R": "DEF-thighR",
+            "DEF-thigh.R.001": "DEF-thighR001",
+            "DEF-shin.R": "DEF-shinR",
+            "DEF-shin.R.001": "DEF-shinR001",
+            "DEF-foot.R": "DEF-footR",
+            "DEF-toe.R": "DEF-toeR",
+            "SoleSocket.R": "SoleSocketR"
+          },
+          "contractSchema": "rockhop-humanoid-contract-v1",
+          "geometry": "author FOUR unchanged; no legacy sleeve conditioning",
+          "massApproximation": "Adult male segment mass fractions on measured joint centres/head and toe extents; not tissue-density integration",
+          "materials": [
+            {
+              "name": "Exact selected boot original 4096 PBR.001",
+              "baseColor": [
+                1,
+                1,
+                1
+              ],
+              "roughness": 1,
+              "metalness": 1,
+              "maps": {
+                "map": {
+                  "loaded": true,
+                  "width": 4096,
+                  "height": 4096,
+                  "colorSpace": "srgb"
+                },
+                "normalMap": {
+                  "loaded": true,
+                  "width": 2,
+                  "height": 2,
+                  "colorSpace": ""
+                },
+                "roughnessMap": {
+                  "loaded": true,
+                  "width": 4096,
+                  "height": 4096,
+                  "colorSpace": ""
+                },
+                "metalnessMap": {
+                  "loaded": true,
+                  "width": 4096,
+                  "height": 4096,
+                  "colorSpace": ""
+                }
+              }
+            },
+            {
+              "name": "SelectedOriginalGlovePBR03.001",
+              "baseColor": [
+                1,
+                1,
+                1
+              ],
+              "roughness": 1,
+              "metalness": 1,
+              "maps": {
+                "map": {
+                  "loaded": true,
+                  "width": 4096,
+                  "height": 4096,
+                  "colorSpace": "srgb"
+                },
+                "normalMap": {
+                  "loaded": true,
+                  "width": 2,
+                  "height": 2,
+                  "colorSpace": ""
+                },
+                "roughnessMap": {
+                  "loaded": true,
+                  "width": 4096,
+                  "height": 4096,
+                  "colorSpace": ""
+                },
+                "metalnessMap": {
+                  "loaded": true,
+                  "width": 4096,
+                  "height": 4096,
+                  "colorSpace": ""
+                }
+              }
+            },
+            {
+              "name": "RiderWarmSkin",
+              "baseColor": [
+                0.24500000476837158,
+                0.10499999672174454,
+                0.054999999701976776
+              ],
+              "roughness": 0.7200000286102295,
+              "metalness": 0,
+              "maps": {
+                "map": {
+                  "loaded": true,
+                  "width": 2,
+                  "height": 2,
+                  "colorSpace": "srgb"
+                },
+                "normalMap": {
+                  "loaded": true,
+                  "width": 2,
+                  "height": 2,
+                  "colorSpace": ""
+                },
+                "roughnessMap": {
+                  "loaded": true,
+                  "width": 2,
+                  "height": 2,
+                  "colorSpace": ""
+                },
+                "metalnessMap": {
+                  "loaded": true,
+                  "width": 2,
+                  "height": 2,
+                  "colorSpace": ""
+                }
+              }
+            },
+            {
+              "name": "Material.002",
+              "baseColor": [
+                1,
+                1,
+                1
+              ],
+              "roughness": 0.6200000047683716,
+              "metalness": 0,
+              "maps": {
+                "map": {
+                  "loaded": true,
+                  "width": 1024,
+                  "height": 1024,
+                  "colorSpace": "srgb"
+                },
+                "normalMap": {
+                  "loaded": true,
+                  "width": 2,
+                  "height": 2,
+                  "colorSpace": ""
+                },
+                "roughnessMap": {
+                  "loaded": true,
+                  "width": 2,
+                  "height": 2,
+                  "colorSpace": ""
+                },
+                "metalnessMap": {
+                  "loaded": true,
+                  "width": 2,
+                  "height": 2,
+                  "colorSpace": ""
+                }
+              }
+            },
+            {
+              "name": "Anatomically reconstructed cheek skin",
+              "baseColor": [
+                1,
+                1,
+                1
+              ],
+              "roughness": 0.6200000047683716,
+              "metalness": 0,
+              "maps": {
+                "map": {
+                  "loaded": true,
+                  "width": 1024,
+                  "height": 1024,
+                  "colorSpace": "srgb"
+                },
+                "normalMap": {
+                  "loaded": true,
+                  "width": 2,
+                  "height": 2,
+                  "colorSpace": ""
+                },
+                "roughnessMap": {
+                  "loaded": true,
+                  "width": 2,
+                  "height": 2,
+                  "colorSpace": ""
+                },
+                "metalnessMap": {
+                  "loaded": true,
+                  "width": 2,
+                  "height": 2,
+                  "colorSpace": ""
+                }
+              }
+            },
+            {
+              "name": "Selected skin - authored anatomical neck",
+              "baseColor": [
+                1,
+                1,
+                1
+              ],
+              "roughness": 0.6200000047683716,
+              "metalness": 0,
+              "maps": {
+                "map": {
+                  "loaded": true,
+                  "width": 256,
+                  "height": 256,
+                  "colorSpace": "srgb"
+                },
+                "normalMap": {
+                  "loaded": true,
+                  "width": 2,
+                  "height": 2,
+                  "colorSpace": ""
+                },
+                "roughnessMap": {
+                  "loaded": true,
+                  "width": 2,
+                  "height": 2,
+                  "colorSpace": ""
+                },
+                "metalnessMap": {
+                  "loaded": true,
+                  "width": 2,
+                  "height": 2,
+                  "colorSpace": ""
+                }
+              }
+            },
+            {
+              "name": "Material_0.002",
+              "baseColor": [
+                1,
+                1,
+                1
+              ],
+              "roughness": 1,
+              "metalness": 1,
+              "maps": {
+                "map": {
+                  "loaded": true,
+                  "width": 4096,
+                  "height": 4096,
+                  "colorSpace": "srgb"
+                },
+                "normalMap": {
+                  "loaded": true,
+                  "width": 2,
+                  "height": 2,
+                  "colorSpace": ""
+                },
+                "roughnessMap": {
+                  "loaded": true,
+                  "width": 4096,
+                  "height": 4096,
+                  "colorSpace": ""
+                },
+                "metalnessMap": {
+                  "loaded": true,
+                  "width": 4096,
+                  "height": 4096,
+                  "colorSpace": ""
+                }
+              }
+            },
+            {
+              "name": "OriginalSelectedWholeJeansPBR4K",
+              "baseColor": [
+                1,
+                1,
+                1
+              ],
+              "roughness": 1,
+              "metalness": 1,
+              "maps": {
+                "map": {
+                  "loaded": true,
+                  "width": 4096,
+                  "height": 4096,
+                  "colorSpace": "srgb"
+                },
+                "normalMap": {
+                  "loaded": true,
+                  "width": 4096,
+                  "height": 4096,
+                  "colorSpace": ""
+                },
+                "roughnessMap": {
+                  "loaded": true,
+                  "width": 4096,
+                  "height": 4096,
+                  "colorSpace": ""
+                },
+                "metalnessMap": {
+                  "loaded": true,
+                  "width": 4096,
+                  "height": 4096,
+                  "colorSpace": ""
+                }
+              }
+            }
+          ]
+        },
+        "allBoneFinite": true,
+        "fullResetCount": 8059,
+        "anthropometry": {
+          "hips": [
+            -0.30105460159415787,
+            0.7539480354325386
+          ],
+          "residualM": 5.658562634083378e-7,
+          "com": [
+            -0.15873369860905961,
+            0.8198357401326695,
+            5.295268592506522e-7
+          ],
+          "iterations": 3,
+          "converged": true,
+          "requestedCOM": [
+            -0.1587341171195792,
+            0.8198353592885336,
+            0
+          ],
+          "carrierAngle": 1.1356052952944662,
+          "spineFlexRadians": 0,
+          "elapsedMs": 2,
+          "articulationRule": "Three actual-contact candidates; minimum flex at <=1 mm socket-center error",
+          "candidates": [
+            {
+              "flex": 0,
+              "gapM": 0.0000026088825237801897,
+              "reach": 0.9992817940179367,
+              "comResidualM": 5.658562634083378e-7
+            }
+          ],
+          "palmForwardBike": [
+            1,
+            -0.25,
+            0
+          ],
+          "contactLimit": "Socket center residual only; no glove surface/bar radius or phalange penetration qualification"
+        }
+      },
+      "render": {
+        "prepare": [
+          {
+            "step": "art:start",
+            "ms": 146,
+            "bytes": 0
+          },
+          {
+            "step": "hero:bike",
+            "ms": 56,
+            "bytes": 0
+          },
+          {
+            "step": "hero:rider",
+            "ms": 45,
+            "bytes": 0
+          },
+          {
+            "step": "lighting",
+            "ms": 9,
+            "bytes": 0
+          },
+          {
+            "step": "post:create",
+            "ms": 14,
+            "bytes": 0
+          },
+          {
+            "step": "materials",
+            "ms": 2544,
+            "bytes": 27256160.255999994
+          },
+          {
+            "step": "hero:gltf",
+            "ms": 189,
+            "bytes": 0
+          },
+          {
+            "step": "art:settled",
+            "ms": 0,
+            "bytes": 842302
+          },
+          {
+            "step": "shaders",
+            "ms": 1137,
+            "bytes": 0
+          },
+          {
+            "step": "firstframe:post",
+            "ms": 1254,
+            "bytes": 0
+          },
+          {
+            "step": "firstframe:heroes",
+            "ms": 48,
+            "bytes": 0
+          }
+        ],
+        "biome": "coast",
+        "zoom": "idle",
+        "occluder": {
+          "ms": 0,
+          "tested": 0,
+          "hits": 0,
+          "count": 0,
+          "override": "orbit"
+        },
+        "garage": {
+          "on": true,
+          "draws": 14,
+          "hidden": 290,
+          "textureMB": 4.04,
+          "reflection": false
+        },
+        "phase": "menu",
+        "tier": "low",
+        "dpr": 1.5,
+        "devicePixelRatio": 1,
+        "canvasW": 2160,
+        "canvasH": 1350,
+        "calls": 73,
+        "tris": 6871798,
+        "rtMpx": 14.84,
+        "rtMB": 135.5,
+        "rtPasses": "shadow 512×512 | scene:hdr 2160×1350 | composite:graded 2160×1350 | smaa:edges 2160×1350 | smaa:weights 2160×1350 | smaa→canvas 2160×1350",
+        "shadowMap": 512,
+        "heroTris": 3431002,
+        "heroDoc": "bike rider-lod",
+        "riderOutfit": "street-mustard",
+        "riderMaterialVariant": null,
+        "heroShadow": "hero-only",
+        "trackCalls": 13,
+        "trackTris": 70328,
+        "textureGenMs": 463,
+        "passes": 5,
+        "stalePrograms": 1,
+        "stabilized": {
+          "singlePass": 0,
+          "split": 0,
+          "depth": 0
+        },
+        "skippedFrames": 0,
+        "deviceClass": "desktop",
+        "profile": "low",
+        "bloomers": 0,
+        "entryMs": 5359,
+        "entry": {
+          "biome": "coast",
+          "ms": 5359,
+          "compileMs": 5,
+          "textureMs": 11,
+          "warmMs": 21,
+          "textures": 40,
+          "texturesMB": 25.1,
+          "materials": 52,
+          "programs": 34,
+          "programsBefore": 2
+        },
+        "heroSwap": {
+          "loads": [
+            {
+              "url": "models/98214c3b3099a465/bike-rookie-lod-4ec26ad0a0c08f7e.glb",
+              "bytes": 870436,
+              "fetchMs": 32,
+              "parseMs": 143,
+              "prepareMs": 0,
+              "at": 222
+            },
+            {
+              "url": "models/bb3ec209a0dcc809/bike-pro-lod-37455064bf7b6012.glb",
+              "bytes": 864844,
+              "fetchMs": 55,
+              "parseMs": 319,
+              "prepareMs": 0,
+              "at": 223
+            },
+            {
+              "url": "models/bb3ec209a0dcc809/bike-pro-0acc9ac86eeca76c.glb",
+              "bytes": 2270540,
+              "fetchMs": 74,
+              "parseMs": 402,
+              "prepareMs": 0,
+              "at": 222
+            },
+            {
+              "url": "models/98214c3b3099a465/bike-rookie-e55919d602678493.glb",
+              "bytes": 2283036,
+              "fetchMs": 74,
+              "parseMs": 465,
+              "prepareMs": 0,
+              "at": 222
+            },
+            {
+              "url": "models/be4fc3304c6d1aca/rider-street-mustard-7d826b835ca07c7c.glb",
+              "bytes": 357281284,
+              "fetchMs": 1653,
+              "parseMs": 2045,
+              "prepareMs": 0,
+              "at": 222
+            }
+          ],
+          "swaps": [
+            {
+              "at": 7399,
+              "what": "bike:gltf/rider:gltf:rebuild → street-mustard/rookie",
+              "buildMs": 1,
+              "firstFrameMs": 93,
+              "programsAdded": 5,
+              "texturesAdded": 8
+            }
+          ]
+        },
+        "entering": false,
+        "courseAssetsEnabled": false,
+        "courseAssetsMounted": 0,
+        "courseAssetsTextureMB": 0,
+        "retirement": {
+          "requested": 3,
+          "released": 3,
+          "deferred": 0,
+          "pending": 0,
+          "maxPending": 0,
+          "contextLosses": 0
+        },
+        "terminalPrograms": {
+          "deleted": 0,
+          "contextReleased": 0
+        },
+        "art": {
+          "settled": true,
+          "ok": true,
+          "loadMs": 407,
+          "deliveredMB": 0.8,
+          "inWorld": true,
+          "trackComplete": true,
+          "trackIds": 8,
+          "builtAtFrame": 0,
+          "frames": 615
+        }
+      },
+      "stageTime": 10.923999999999964
+    }
+  ],
+  "audio": "silent webdriver; audio=0",
+  "review": "Actual Garage UI, selected native clip or riding IK with breathing, pointer-driven orbit; no pose injection",
+  "materialProbe": [
+    {
+      "mesh": "RiderJeans",
+      "material": "OriginalSelectedWholeJeansPBR4K",
+      "uvCount": 26474,
+      "roughness": 1,
+      "metalness": 1,
+      "color": [
+        1,
+        1,
+        1
+      ],
+      "emissive": [
+        0.3,
+        0.4,
+        0.7
+      ],
+      "normalMapType": 0,
+      "normalScale": [
+        1,
+        -1
+      ],
+      "maps": {
+        "map": {
+          "width": 4096,
+          "height": 4096,
+          "flipY": false,
+          "colorSpace": "srgb",
+          "channel": 0,
+          "matrix": [
+            1,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            1
+          ],
+          "repeat": [
+            1,
+            1
+          ],
+          "offset": [
+            0,
+            0
+          ],
+          "alphaZeroRows": 0,
+          "medianRGB": [
+            44,
+            50,
+            68
+          ],
+          "firstSamples": [
+            [
+              77,
+              67,
+              62,
+              255
+            ],
+            [
+              81,
+              68,
+              67,
+              255
+            ],
+            [
+              79,
+              69,
+              65,
+              255
+            ],
+            [
+              76,
+              66,
+              62,
+              255
+            ],
+            [
+              82,
+              77,
+              73,
+              255
+            ],
+            [
+              65,
+              57,
+              55,
+              255
+            ],
+            [
+              53,
+              49,
+              49,
+              255
+            ],
+            [
+              75,
+              67,
+              58,
+              255
+            ]
+          ]
+        },
+        "roughnessMap": {
+          "width": 4096,
+          "height": 4096,
+          "flipY": false,
+          "colorSpace": "",
+          "channel": 0,
+          "matrix": [
+            1,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            1
+          ],
+          "repeat": [
+            1,
+            1
+          ],
+          "offset": [
+            0,
+            0
+          ],
+          "alphaZeroRows": 0,
+          "medianRGB": [
+            255,
+            237,
+            34
+          ],
+          "firstSamples": [
+            [
+              255,
+              221,
+              34,
+              255
+            ],
+            [
+              255,
+              174,
+              18,
+              255
+            ],
+            [
+              255,
+              222,
+              29,
+              255
+            ],
+            [
+              255,
+              219,
+              27,
+              255
+            ],
+            [
+              255,
+              238,
+              40,
+              255
+            ],
+            [
+              255,
+              140,
+              18,
+              255
+            ],
+            [
+              255,
+              232,
+              35,
+              255
+            ],
+            [
+              255,
+              209,
+              20,
+              255
+            ]
+          ]
+        },
+        "metalnessMap": {
+          "width": 4096,
+          "height": 4096,
+          "flipY": false,
+          "colorSpace": "",
+          "channel": 0,
+          "matrix": [
+            1,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            1
+          ],
+          "repeat": [
+            1,
+            1
+          ],
+          "offset": [
+            0,
+            0
+          ],
+          "alphaZeroRows": 0,
+          "medianRGB": [
+            255,
+            237,
+            34
+          ],
+          "firstSamples": [
+            [
+              255,
+              221,
+              34,
+              255
+            ],
+            [
+              255,
+              174,
+              18,
+              255
+            ],
+            [
+              255,
+              222,
+              29,
+              255
+            ],
+            [
+              255,
+              219,
+              27,
+              255
+            ],
+            [
+              255,
+              238,
+              40,
+              255
+            ],
+            [
+              255,
+              140,
+              18,
+              255
+            ],
+            [
+              255,
+              232,
+              35,
+              255
+            ],
+            [
+              255,
+              209,
+              20,
+              255
+            ]
+          ]
+        },
+        "normalMap": {
+          "width": 4096,
+          "height": 4096,
+          "flipY": false,
+          "colorSpace": "",
+          "channel": 0,
+          "matrix": [
+            1,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            1
+          ],
+          "repeat": [
+            1,
+            1
+          ],
+          "offset": [
+            0,
+            0
+          ],
+          "alphaZeroRows": 0,
+          "medianRGB": [
+            129,
+            128,
+            251
+          ],
+          "firstSamples": [
+            [
+              114,
+              140,
+              254,
+              255
+            ],
+            [
+              91,
+              134,
+              249,
+              255
+            ],
+            [
+              109,
+              140,
+              253,
+              255
+            ],
+            [
+              127,
+              130,
+              255,
+              255
+            ],
+            [
+              142,
+              132,
+              254,
+              255
+            ],
+            [
+              171,
+              124,
+              247,
+              255
+            ],
+            [
+              129,
+              106,
+              253,
+              255
+            ],
+            [
+              81,
+              77,
+              235,
+              255
+            ]
+          ]
+        }
+      }
+    }
+  ],
+  "materialProbeRecipeSHA256": "7fd55562b160b24191350059cdac85bcba51b5e810abfcccdbe464703cdcffb5",
+  "encoding": {
+    "exitCode": 0,
+    "stderr": ""
+  }
+}
