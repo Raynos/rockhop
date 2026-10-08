@@ -1379,3 +1379,5 @@ October 7 HR27 files concrete selected-source tailoring resource need after pare
 October 7 independent face foundation intake: parent-reviewed direct existing selected-face builder on current native42f/shared75 derivative, protecting6933original belowcut rows/all1446hand rows without oldface03 import. Sixpins/AST2 pass, actual construction/readback/profile pending; garment tailoring stillrequires expert, allR0-R5open.
 
 October 7 selected face actualnative6c80f6e8 constructed3.368s preserving currentprotected6933bodyrows/all1446hands/all75rest by freshreadback; actual66364donor positionUVerror0 but savedcornernormalvectorerror0.01461223852 fails2e-6. Candidate unaccepted, no waiver/rebuild; normal semantics diagnosis next, wardrobeartist need unchanged.
+
+October 7 actual selected head profile review rejected: parent inspected all4native6c80views; bothprofiles have an anterior throat shelf and posterior neck stump/notch. ReadonlyCPU2exit0/7.682s, native and4image hashes unchanged. Stop current joining mechanism; park unexecuted normal diagnostic, preserve exact source/native for expert anatomical sculpting. No head/outfit/motion acceptance; allR0–R5open.
