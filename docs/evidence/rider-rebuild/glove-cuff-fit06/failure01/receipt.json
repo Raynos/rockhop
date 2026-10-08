@@ -1,0 +1,2340 @@
+{
+  "acceptedArt": false,
+  "operation": "READ_ONLY_REPRODUCTION_FINAL_CUFF_SECTOR_FAILURE",
+  "source": {
+    "path": "assets/blender/rider-rebuild/glove-cuff-fit06/freeze.py",
+    "sha256": "13b4ae6b1649205551f75b117a07285bd1d33a8a870f652335d0f350924a8f38"
+  },
+  "diagnosticSHA256": "1cc17ec9b6c4301e4a5e11b9287a6748536fcbfc4d7c75d5d8bbfe5bd45a9553",
+  "inputSHA256": "bc6351189d26a40c1c4dd1811ed39ef89209555728d3c8720d2300d3dfb69f13",
+  "assertion": "AssertionError(('Final cuff-sector guide has an orientation reversal; stop mechanism', 'L', 14))",
+  "side": "L",
+  "guideTriangles": 16000,
+  "reversedGuideTriangles": 14,
+  "minimumNormalDot": -0.9903332277022872,
+  "finiteArrays": {
+    "points": true,
+    "world": true,
+    "radial": true,
+    "brush": true,
+    "scale": true,
+    "offsets": true,
+    "corrected": true,
+    "normals_before": true,
+    "normals_after": true,
+    "dots": true,
+    "consumedCenterlineFractions": true
+  },
+  "unexpectedNonfinite": false,
+  "explicitThreeTermSumReadbackMaximumResidual": {
+    "world": 1.1102230246251565e-16,
+    "radial": 0.0,
+    "offsets": 1.3877787807814457e-17
+  },
+  "warnings": [
+    {
+      "category": "RuntimeWarning",
+      "message": "divide by zero encountered in matmul",
+      "line": 77
+    },
+    {
+      "category": "RuntimeWarning",
+      "message": "overflow encountered in matmul",
+      "line": 77
+    },
+    {
+      "category": "RuntimeWarning",
+      "message": "invalid value encountered in matmul",
+      "line": 77
+    },
+    {
+      "category": "RuntimeWarning",
+      "message": "divide by zero encountered in matmul",
+      "line": 80
+    },
+    {
+      "category": "RuntimeWarning",
+      "message": "overflow encountered in matmul",
+      "line": 80
+    },
+    {
+      "category": "RuntimeWarning",
+      "message": "invalid value encountered in matmul",
+      "line": 80
+    },
+    {
+      "category": "RuntimeWarning",
+      "message": "divide by zero encountered in matmul",
+      "line": 108
+    },
+    {
+      "category": "RuntimeWarning",
+      "message": "overflow encountered in matmul",
+      "line": 108
+    },
+    {
+      "category": "RuntimeWarning",
+      "message": "invalid value encountered in matmul",
+      "line": 108
+    }
+  ],
+  "protectedDistanceFullStrengthM": 0.015393153454670102,
+  "badTriangleVertices": [
+    2906,
+    3038,
+    3085,
+    3147,
+    3224,
+    3230,
+    3251,
+    3333,
+    3338,
+    3389,
+    3514,
+    3631,
+    3638,
+    3785,
+    3909,
+    3945,
+    4077,
+    4158,
+    4263
+  ],
+  "badTrianglesContainingProtectedVertices": 0,
+  "badTrianglesContainingCenterlineVertices": 0,
+  "rows": [
+    {
+      "guideTriangle": 5973,
+      "guideVertices": [
+        2906,
+        3038,
+        3147
+      ],
+      "normalDot": -0.5854268036636766,
+      "normalBefore": [
+        3.6987762796591994e-05,
+        -0.00021236071114394406,
+        -1.9759275351916017e-05
+      ],
+      "normalAfter": [
+        -4.1856733398404344e-05,
+        5.9635036795846474e-05,
+        -7.023805153849594e-05
+      ],
+      "nativeEdgesBeforeM": [
+        0.002506941445053094,
+        0.0033096259658196596,
+        0.005649411794995562
+      ],
+      "nativeEdgesAfterM": [
+        0.0023033263322239,
+        0.0031759624919313525,
+        0.005437630244682354
+      ],
+      "sourceTriangleAreaBefore": 0.00010823076641682281,
+      "sourceTriangleAreaAfter": 5.060066113291276e-05,
+      "vertices": [
+        {
+          "guideVertex": 2906,
+          "sourceBefore": [
+            -0.26853835582733154,
+            -0.6682916879653931,
+            0.17024169862270355
+          ],
+          "sourceAfterFloat32": [
+            -0.26273465156555176,
+            -0.6765044927597046,
+            0.13236671686172485
+          ],
+          "nativeBefore": [
+            0.41767329390417,
+            -0.0498409056866265,
+            0.9703667188974561
+          ],
+          "nativeAfter": [
+            0.4128136231432578,
+            -0.051002979853589425,
+            0.9687873161993947
+          ],
+          "nativeOffsetM": 0.005240356863187776,
+          "contractionScale": 0.14152355386251886,
+          "brushWeight": 0.42521835165665295,
+          "centerline": false,
+          "nearestCenterlineVertex": 3384,
+          "centerlineDistanceM": 0.013750532802687343,
+          "protected": false,
+          "protection": {
+            "oldLipAnchor": false,
+            "priorLocal04Edited": false,
+            "protectedNonCuff": false
+          },
+          "protectedDistanceM": 0.026568910223229682,
+          "nearestProtectedVertex": 2521,
+          "nearestProtection": {
+            "oldLipAnchor": false,
+            "priorLocal04Edited": true,
+            "protectedNonCuff": false
+          }
+        },
+        {
+          "guideVertex": 3038,
+          "sourceBefore": [
+            -0.25068408250808716,
+            -0.6647635102272034,
+            0.16574473679065704
+          ],
+          "sourceAfterFloat32": [
+            -0.24718517065048218,
+            -0.6736359000205994,
+            0.12553592026233673
+          ],
+          "nativeBefore": [
+            0.41732424284444397,
+            -0.052320297095927226,
+            0.9704913664249677
+          ],
+          "nativeAfter": [
+            0.41216995641828125,
+            -0.05321317897649237,
+            0.9687096941858098
+          ],
+          "nativeOffsetM": 0.005526143325745724,
+          "contractionScale": 0.15237631610279437,
+          "brushWeight": 0.4578263066209163,
+          "centerline": false,
+          "nearestCenterlineVertex": 3384,
+          "centerlineDistanceM": 0.013203638091438184,
+          "protected": false,
+          "protection": {
+            "oldLipAnchor": false,
+            "priorLocal04Edited": false,
+            "protectedNonCuff": false
+          },
+          "protectedDistanceM": 0.029075851668282776,
+          "nearestProtectedVertex": 2521,
+          "nearestProtection": {
+            "oldLipAnchor": false,
+            "priorLocal04Edited": true,
+            "protectedNonCuff": false
+          }
+        },
+        {
+          "guideVertex": 3147,
+          "sourceBefore": [
+            -0.22691991925239563,
+            -0.6611741781234741,
+            0.1716533601284027
+          ],
+          "sourceAfterFloat32": [
+            -0.2271050214767456,
+            -0.674448549747467,
+            0.11287964880466461
+          ],
+          "nativeBefore": [
+            0.4181028860561033,
+            -0.05533315372217608,
+            0.971618324158085
+          ],
+          "nativeAfter": [
+            0.4105784324253354,
+            -0.05595993737918215,
+            0.9688051269227803
+          ],
+          "nativeOffsetM": 0.00805756356452995,
+          "contractionScale": 0.21769921767649342,
+          "brushWeight": 0.6540939650743013,
+          "centerline": false,
+          "nearestCenterlineVertex": 3384,
+          "centerlineDistanceM": 0.009894012125618523,
+          "protected": false,
+          "protection": {
+            "oldLipAnchor": false,
+            "priorLocal04Edited": false,
+            "protectedNonCuff": false
+          },
+          "protectedDistanceM": 0.028769886074480815,
+          "nearestProtectedVertex": 5187,
+          "nearestProtection": {
+            "oldLipAnchor": true,
+            "priorLocal04Edited": false,
+            "protectedNonCuff": false
+          }
+        }
+      ]
+    },
+    {
+      "guideTriangle": 6301,
+      "guideVertices": [
+        3038,
+        3251,
+        3333
+      ],
+      "normalDot": -0.1970027412617979,
+      "normalBefore": [
+        3.604134514656465e-05,
+        -0.00024276720010130148,
+        -0.00010171933618785545
+      ],
+      "normalAfter": [
+        -4.9982602956077926e-05,
+        9.357033659762592e-05,
+        -0.00014753134874823104
+      ],
+      "nativeEdgesBeforeM": [
+        0.004617131787089696,
+        0.0019810905835066263,
+        0.006393385452803387
+      ],
+      "nativeEdgesAfterM": [
+        0.003958840510279026,
+        0.0016365548304953443,
+        0.005436986427960469
+      ],
+      "sourceTriangleAreaBefore": 0.00013283609765374124,
+      "sourceTriangleAreaAfter": 9.08558849947681e-05,
+      "vertices": [
+        {
+          "guideVertex": 3038,
+          "sourceBefore": [
+            -0.25068408250808716,
+            -0.6647635102272034,
+            0.16574473679065704
+          ],
+          "sourceAfterFloat32": [
+            -0.24718517065048218,
+            -0.6736359000205994,
+            0.12553592026233673
+          ],
+          "nativeBefore": [
+            0.41732424284444397,
+            -0.052320297095927226,
+            0.9704913664249677
+          ],
+          "nativeAfter": [
+            0.41216995641828125,
+            -0.05321317897649237,
+            0.9687096941858098
+          ],
+          "nativeOffsetM": 0.005526143325745724,
+          "contractionScale": 0.15237631610279437,
+          "brushWeight": 0.4578263066209163,
+          "centerline": false,
+          "nearestCenterlineVertex": 3384,
+          "centerlineDistanceM": 0.013203638091438184,
+          "protected": false,
+          "protection": {
+            "oldLipAnchor": false,
+            "priorLocal04Edited": false,
+            "protectedNonCuff": false
+          },
+          "protectedDistanceM": 0.029075851668282776,
+          "nearestProtectedVertex": 2521,
+          "nearestProtection": {
+            "oldLipAnchor": false,
+            "priorLocal04Edited": true,
+            "protectedNonCuff": false
+          }
+        },
+        {
+          "guideVertex": 3251,
+          "sourceBefore": [
+            -0.2169390618801117,
+            -0.6583148241043091,
+            0.1623106449842453
+          ],
+          "sourceAfterFloat32": [
+            -0.21875464916229248,
+            -0.6680999398231506,
+            0.11941498517990112
+          ],
+          "nativeBefore": [
+            0.4172125343372253,
+            -0.05689441568621288,
+            0.9711101283103261
+          ],
+          "nativeAfter": [
+            0.41172390656491964,
+            -0.057136761441512855,
+            0.9689906894781657
+          ],
+          "nativeOffsetM": 0.005888614455247459,
+          "contractionScale": 0.16399041386862365,
+          "brushWeight": 0.4927217524543541,
+          "centerline": false,
+          "nearestCenterlineVertex": 3384,
+          "centerlineDistanceM": 0.012621307934018548,
+          "protected": false,
+          "protection": {
+            "oldLipAnchor": false,
+            "priorLocal04Edited": false,
+            "protectedNonCuff": false
+          },
+          "protectedDistanceM": 0.02711400293549028,
+          "nearestProtectedVertex": 5187,
+          "nearestProtection": {
+            "oldLipAnchor": true,
+            "priorLocal04Edited": false,
+            "protectedNonCuff": false
+          }
+        },
+        {
+          "guideVertex": 3333,
+          "sourceBefore": [
+            -0.2033165991306305,
+            -0.658725917339325,
+            0.16811850666999817
+          ],
+          "sourceAfterFloat32": [
+            -0.20830842852592468,
+            -0.6712550520896912,
+            0.11387477815151215
+          ],
+          "nativeBefore": [
+            0.41774647397496656,
+            -0.05847095463400405,
+            0.9721844435850033
+          ],
+          "nativeAfter": [
+            0.4108107287003769,
+            -0.05843232809524044,
+            0.9693980283379322
+          ],
+          "nativeOffsetM": 0.007474635969577332,
+          "contractionScale": 0.20327775821531313,
+          "brushWeight": 0.6107635861147436,
+          "centerline": false,
+          "nearestCenterlineVertex": 3384,
+          "centerlineDistanceM": 0.010640217350511922,
+          "protected": false,
+          "protection": {
+            "oldLipAnchor": false,
+            "priorLocal04Edited": false,
+            "protectedNonCuff": false
+          },
+          "protectedDistanceM": 0.025561566367939246,
+          "nearestProtectedVertex": 5187,
+          "nearestProtection": {
+            "oldLipAnchor": true,
+            "priorLocal04Edited": false,
+            "protectedNonCuff": false
+          }
+        }
+      ]
+    },
+    {
+      "guideTriangle": 6302,
+      "guideVertices": [
+        3038,
+        3333,
+        3147
+      ],
+      "normalDot": -0.983715674992697,
+      "normalBefore": [
+        2.715361380634107e-05,
+        -0.0002234659627902147,
+        2.6539285700621917e-05
+      ],
+      "normalAfter": [
+        -3.9609081664337964e-05,
+        0.00025787712859681733,
+        -7.94009554816455e-05
+      ],
+      "nativeEdgesBeforeM": [
+        0.006393385452803387,
+        0.0032083197065415686,
+        0.0033096259658196596
+      ],
+      "nativeEdgesAfterM": [
+        0.005436986427960469,
+        0.002553078435994174,
+        0.0031759624919313525
+      ],
+      "sourceTriangleAreaBefore": 0.00011333433830265296,
+      "sourceTriangleAreaAfter": 0.00013635798888865104,
+      "vertices": [
+        {
+          "guideVertex": 3038,
+          "sourceBefore": [
+            -0.25068408250808716,
+            -0.6647635102272034,
+            0.16574473679065704
+          ],
+          "sourceAfterFloat32": [
+            -0.24718517065048218,
+            -0.6736359000205994,
+            0.12553592026233673
+          ],
+          "nativeBefore": [
+            0.41732424284444397,
+            -0.052320297095927226,
+            0.9704913664249677
+          ],
+          "nativeAfter": [
+            0.41216995641828125,
+            -0.05321317897649237,
+            0.9687096941858098
+          ],
+          "nativeOffsetM": 0.005526143325745724,
+          "contractionScale": 0.15237631610279437,
+          "brushWeight": 0.4578263066209163,
+          "centerline": false,
+          "nearestCenterlineVertex": 3384,
+          "centerlineDistanceM": 0.013203638091438184,
+          "protected": false,
+          "protection": {
+            "oldLipAnchor": false,
+            "priorLocal04Edited": false,
+            "protectedNonCuff": false
+          },
+          "protectedDistanceM": 0.029075851668282776,
+          "nearestProtectedVertex": 2521,
+          "nearestProtection": {
+            "oldLipAnchor": false,
+            "priorLocal04Edited": true,
+            "protectedNonCuff": false
+          }
+        },
+        {
+          "guideVertex": 3333,
+          "sourceBefore": [
+            -0.2033165991306305,
+            -0.658725917339325,
+            0.16811850666999817
+          ],
+          "sourceAfterFloat32": [
+            -0.20830842852592468,
+            -0.6712550520896912,
+            0.11387477815151215
+          ],
+          "nativeBefore": [
+            0.41774647397496656,
+            -0.05847095463400405,
+            0.9721844435850033
+          ],
+          "nativeAfter": [
+            0.4108107287003769,
+            -0.05843232809524044,
+            0.9693980283379322
+          ],
+          "nativeOffsetM": 0.007474635969577332,
+          "contractionScale": 0.20327775821531313,
+          "brushWeight": 0.6107635861147436,
+          "centerline": false,
+          "nearestCenterlineVertex": 3384,
+          "centerlineDistanceM": 0.010640217350511922,
+          "protected": false,
+          "protection": {
+            "oldLipAnchor": false,
+            "priorLocal04Edited": false,
+            "protectedNonCuff": false
+          },
+          "protectedDistanceM": 0.025561566367939246,
+          "nearestProtectedVertex": 5187,
+          "nearestProtection": {
+            "oldLipAnchor": true,
+            "priorLocal04Edited": false,
+            "protectedNonCuff": false
+          }
+        },
+        {
+          "guideVertex": 3147,
+          "sourceBefore": [
+            -0.22691991925239563,
+            -0.6611741781234741,
+            0.1716533601284027
+          ],
+          "sourceAfterFloat32": [
+            -0.2271050214767456,
+            -0.674448549747467,
+            0.11287964880466461
+          ],
+          "nativeBefore": [
+            0.4181028860561033,
+            -0.05533315372217608,
+            0.971618324158085
+          ],
+          "nativeAfter": [
+            0.4105784324253354,
+            -0.05595993737918215,
+            0.9688051269227803
+          ],
+          "nativeOffsetM": 0.00805756356452995,
+          "contractionScale": 0.21769921767649342,
+          "brushWeight": 0.6540939650743013,
+          "centerline": false,
+          "nearestCenterlineVertex": 3384,
+          "centerlineDistanceM": 0.009894012125618523,
+          "protected": false,
+          "protection": {
+            "oldLipAnchor": false,
+            "priorLocal04Edited": false,
+            "protectedNonCuff": false
+          },
+          "protectedDistanceM": 0.028769886074480815,
+          "nearestProtectedVertex": 5187,
+          "nearestProtection": {
+            "oldLipAnchor": true,
+            "priorLocal04Edited": false,
+            "protectedNonCuff": false
+          }
+        }
+      ]
+    },
+    {
+      "guideTriangle": 6449,
+      "guideVertices": [
+        3338,
+        3085,
+        3230
+      ],
+      "normalDot": -0.1225698671226026,
+      "normalBefore": [
+        -1.0278494789961456e-05,
+        0.0002583730425959052,
+        0.00012280401538511398
+      ],
+      "normalAfter": [
+        0.00010236155731568886,
+        -0.0001251096153569442,
+        0.00019862380515789368
+      ],
+      "nativeEdgesBeforeM": [
+        0.00577456947530049,
+        0.003304107614413222,
+        0.0027390206119111927
+      ],
+      "nativeEdgesAfterM": [
+        0.00538784565015727,
+        0.0034229368388340505,
+        0.0022396736473957995
+      ],
+      "sourceTriangleAreaBefore": 0.00014312852859416254,
+      "sourceTriangleAreaAfter": 0.00012804464089357322,
+      "vertices": [
+        {
+          "guideVertex": 3338,
+          "sourceBefore": [
+            -0.2204769104719162,
+            -0.5350047945976257,
+            0.08285123109817505
+          ],
+          "sourceAfterFloat32": [
+            -0.22116181254386902,
+            -0.5371944308280945,
+            0.07332350313663483
+          ],
+          "nativeBefore": [
+            0.4174770708103213,
+            -0.0631264658899863,
+            0.9525054672081047
+          ],
+          "nativeAfter": [
+            0.4162584820355106,
+            -0.06314424461416071,
+            0.9520236070531857
+          ],
+          "nativeOffsetM": 0.0013105204581100674,
+          "contractionScale": 0.04485899517781585,
+          "brushWeight": 0.13918539933546795,
+          "centerline": false,
+          "nearestCenterlineVertex": 3593,
+          "centerlineDistanceM": 0.018079413697671774,
+          "protected": false,
+          "protection": {
+            "oldLipAnchor": false,
+            "priorLocal04Edited": false,
+            "protectedNonCuff": false
+          },
+          "protectedDistanceM": 0.01028188550663966,
+          "nearestProtectedVertex": 2986,
+          "nearestProtection": {
+            "oldLipAnchor": false,
+            "priorLocal04Edited": true,
+            "protectedNonCuff": false
+          }
+        },
+        {
+          "guideVertex": 3085,
+          "sourceBefore": [
+            -0.25944849848747253,
+            -0.5442308187484741,
+            0.09900043159723282
+          ],
+          "sourceAfterFloat32": [
+            -0.2580673396587372,
+            -0.5470553636550903,
+            0.08613168448209763
+          ],
+          "nativeBefore": [
+            0.41883197037050135,
+            -0.05752320562426501,
+            0.9528421780654959
+          ],
+          "nativeAfter": [
+            0.4171818755120231,
+            -0.05784242200053367,
+            0.9522822616705533
+          ],
+          "nativeOffsetM": 0.0017715015642432183,
+          "contractionScale": 0.05687397051584597,
+          "brushWeight": 0.1764646369510383,
+          "centerline": false,
+          "nearestCenterlineVertex": 3593,
+          "centerlineDistanceM": 0.01589827369264799,
+          "protected": false,
+          "protection": {
+            "oldLipAnchor": false,
+            "priorLocal04Edited": false,
+            "protectedNonCuff": false
+          },
+          "protectedDistanceM": 0.008583186295948581,
+          "nearestProtectedVertex": 2986,
+          "nearestProtection": {
+            "oldLipAnchor": false,
+            "priorLocal04Edited": true,
+            "protectedNonCuff": false
+          }
+        },
+        {
+          "guideVertex": 3230,
+          "sourceBefore": [
+            -0.235121950507164,
+            -0.5416229367256165,
+            0.09554968029260635
+          ],
+          "sourceAfterFloat32": [
+            -0.23513594269752502,
+            -0.5463101863861084,
+            0.07478327304124832
+          ],
+          "nativeBefore": [
+            0.41849230918260216,
+            -0.06075671241531135,
+            0.9534305582464295
+          ],
+          "nativeAfter": [
+            0.4158336141335549,
+            -0.060984753160537454,
+            0.9524386034079348
+          ],
+          "nativeOffsetM": 0.002846864075771643,
+          "contractionScale": 0.09302202378578822,
+          "brushWeight": 0.2886223259414685,
+          "centerline": false,
+          "nearestCenterlineVertex": 3593,
+          "centerlineDistanceM": 0.015340393085760582,
+          "protected": false,
+          "protection": {
+            "oldLipAnchor": false,
+            "priorLocal04Edited": false,
+            "protectedNonCuff": false
+          },
+          "protectedDistanceM": 0.011887293910361803,
+          "nearestProtectedVertex": 2986,
+          "nearestProtection": {
+            "oldLipAnchor": false,
+            "priorLocal04Edited": true,
+            "protectedNonCuff": false
+          }
+        }
+      ]
+    },
+    {
+      "guideTriangle": 6610,
+      "guideVertices": [
+        3333,
+        3224,
+        3147
+      ],
+      "normalDot": -0.9692361117290815,
+      "normalBefore": [
+        2.3104028050724423e-05,
+        -0.00015203820512255106,
+        4.897023226746455e-05
+      ],
+      "normalAfter": [
+        -1.2626638195456508e-05,
+        7.575656798897157e-05,
+        -4.613112809082054e-06
+      ],
+      "nativeEdgesBeforeM": [
+        0.002224814177114085,
+        0.0014786089522206849,
+        0.0032083197065415686
+      ],
+      "nativeEdgesAfterM": [
+        0.0017193400770731608,
+        0.0010665488646780603,
+        0.002553078435994174
+      ],
+      "sourceTriangleAreaBefore": 8.06961826503971e-05,
+      "sourceTriangleAreaAfter": 3.847002208010787e-05,
+      "vertices": [
+        {
+          "guideVertex": 3333,
+          "sourceBefore": [
+            -0.2033165991306305,
+            -0.658725917339325,
+            0.16811850666999817
+          ],
+          "sourceAfterFloat32": [
+            -0.20830842852592468,
+            -0.6712550520896912,
+            0.11387477815151215
+          ],
+          "nativeBefore": [
+            0.41774647397496656,
+            -0.05847095463400405,
+            0.9721844435850033
+          ],
+          "nativeAfter": [
+            0.4108107287003769,
+            -0.05843232809524044,
+            0.9693980283379322
+          ],
+          "nativeOffsetM": 0.007474635969577332,
+          "contractionScale": 0.20327775821531313,
+          "brushWeight": 0.6107635861147436,
+          "centerline": false,
+          "nearestCenterlineVertex": 3384,
+          "centerlineDistanceM": 0.010640217350511922,
+          "protected": false,
+          "protection": {
+            "oldLipAnchor": false,
+            "priorLocal04Edited": false,
+            "protectedNonCuff": false
+          },
+          "protectedDistanceM": 0.025561566367939246,
+          "nearestProtectedVertex": 5187,
+          "nearestProtection": {
+            "oldLipAnchor": true,
+            "priorLocal04Edited": false,
+            "protectedNonCuff": false
+          }
+        },
+        {
+          "guideVertex": 3224,
+          "sourceBefore": [
+            -0.21756133437156677,
+            -0.6581287384033203,
+            0.17669320106506348
+          ],
+          "sourceAfterFloat32": [
+            -0.2200816422700882,
+            -0.6735007166862488,
+            0.10922114551067352
+          ],
+          "nativeBefore": [
+            0.41883206286772473,
+            -0.05653147513783422,
+            0.9720858831337831
+          ],
+          "nativeAfter": [
+            0.4101982042493073,
+            -0.05695561412855216,
+            0.9687653673243873
+          ],
+          "nativeOffsetM": 0.009260087512104047,
+          "contractionScale": 0.24507712271426635,
+          "brushWeight": 0.7363529766257159,
+          "centerline": false,
+          "nearestCenterlineVertex": 3384,
+          "centerlineDistanceM": 0.008415403173397838,
+          "protected": false,
+          "protection": {
+            "oldLipAnchor": false,
+            "priorLocal04Edited": false,
+            "protectedNonCuff": false
+          },
+          "protectedDistanceM": 0.027786380545053332,
+          "nearestProtectedVertex": 5187,
+          "nearestProtection": {
+            "oldLipAnchor": true,
+            "priorLocal04Edited": false,
+            "protectedNonCuff": false
+          }
+        },
+        {
+          "guideVertex": 3147,
+          "sourceBefore": [
+            -0.22691991925239563,
+            -0.6611741781234741,
+            0.1716533601284027
+          ],
+          "sourceAfterFloat32": [
+            -0.2271050214767456,
+            -0.674448549747467,
+            0.11287964880466461
+          ],
+          "nativeBefore": [
+            0.4181028860561033,
+            -0.05533315372217608,
+            0.971618324158085
+          ],
+          "nativeAfter": [
+            0.4105784324253354,
+            -0.05595993737918215,
+            0.9688051269227803
+          ],
+          "nativeOffsetM": 0.00805756356452995,
+          "contractionScale": 0.21769921767649342,
+          "brushWeight": 0.6540939650743013,
+          "centerline": false,
+          "nearestCenterlineVertex": 3384,
+          "centerlineDistanceM": 0.009894012125618523,
+          "protected": false,
+          "protection": {
+            "oldLipAnchor": false,
+            "priorLocal04Edited": false,
+            "protectedNonCuff": false
+          },
+          "protectedDistanceM": 0.028769886074480815,
+          "nearestProtectedVertex": 5187,
+          "nearestProtection": {
+            "oldLipAnchor": true,
+            "priorLocal04Edited": false,
+            "protectedNonCuff": false
+          }
+        }
+      ]
+    },
+    {
+      "guideTriangle": 6715,
+      "guideVertices": [
+        3230,
+        3638,
+        3338
+      ],
+      "normalDot": -0.029748519062457145,
+      "normalBefore": [
+        3.69989511126434e-05,
+        0.0003631826097078017,
+        0.00023195314677160184
+      ],
+      "normalAfter": [
+        0.00019115484551845974,
+        -0.0002413604916352563,
+        0.00032268061300566586
+      ],
+      "nativeEdgesBeforeM": [
+        0.007140007351131178,
+        0.004749491269052781,
+        0.0027390206119111927
+      ],
+      "nativeEdgesAfterM": [
+        0.006588040668853643,
+        0.004857053222917562,
+        0.0022396736473957995
+      ],
+      "sourceTriangleAreaBefore": 0.00021625956202839532,
+      "sourceTriangleAreaAfter": 0.00022300103133018865,
+      "vertices": [
+        {
+          "guideVertex": 3230,
+          "sourceBefore": [
+            -0.235121950507164,
+            -0.5416229367256165,
+            0.09554968029260635
+          ],
+          "sourceAfterFloat32": [
+            -0.23513594269752502,
+            -0.5463101863861084,
+            0.07478327304124832
+          ],
+          "nativeBefore": [
+            0.41849230918260216,
+            -0.06075671241531135,
+            0.9534305582464295
+          ],
+          "nativeAfter": [
+            0.4158336141335549,
+            -0.060984753160537454,
+            0.9524386034079348
+          ],
+          "nativeOffsetM": 0.002846864075771643,
+          "contractionScale": 0.09302202378578822,
+          "brushWeight": 0.2886223259414685,
+          "centerline": false,
+          "nearestCenterlineVertex": 3593,
+          "centerlineDistanceM": 0.015340393085760582,
+          "protected": false,
+          "protection": {
+            "oldLipAnchor": false,
+            "priorLocal04Edited": false,
+            "protectedNonCuff": false
+          },
+          "protectedDistanceM": 0.011887293910361803,
+          "nearestProtectedVertex": 2986,
+          "nearestProtection": {
+            "oldLipAnchor": false,
+            "priorLocal04Edited": true,
+            "protectedNonCuff": false
+          }
+        },
+        {
+          "guideVertex": 3638,
+          "sourceBefore": [
+            -0.1854061484336853,
+            -0.5349945425987244,
+            0.07724102586507797
+          ],
+          "sourceAfterFloat32": [
+            -0.19132302701473236,
+            -0.5408209562301636,
+            0.05293452367186546
+          ],
+          "nativeBefore": [
+            0.4166401082177967,
+            -0.06764712877910134,
+            0.9536974269291109
+          ],
+          "nativeAfter": [
+            0.41353890189870507,
+            -0.06715876290287949,
+            0.952303772717194
+          ],
+          "nativeOffsetM": 0.003434859328742928,
+          "contractionScale": 0.11763695229018946,
+          "brushWeight": 0.3649958300718812,
+          "centerline": false,
+          "nearestCenterlineVertex": 3593,
+          "centerlineDistanceM": 0.01468507001105479,
+          "protected": false,
+          "protection": {
+            "oldLipAnchor": false,
+            "priorLocal04Edited": false,
+            "protectedNonCuff": false
+          },
+          "protectedDistanceM": 0.014310647616508456,
+          "nearestProtectedVertex": 3393,
+          "nearestProtection": {
+            "oldLipAnchor": false,
+            "priorLocal04Edited": false,
+            "protectedNonCuff": true
+          }
+        },
+        {
+          "guideVertex": 3338,
+          "sourceBefore": [
+            -0.2204769104719162,
+            -0.5350047945976257,
+            0.08285123109817505
+          ],
+          "sourceAfterFloat32": [
+            -0.22116181254386902,
+            -0.5371944308280945,
+            0.07332350313663483
+          ],
+          "nativeBefore": [
+            0.4174770708103213,
+            -0.0631264658899863,
+            0.9525054672081047
+          ],
+          "nativeAfter": [
+            0.4162584820355106,
+            -0.06314424461416071,
+            0.9520236070531857
+          ],
+          "nativeOffsetM": 0.0013105204581100674,
+          "contractionScale": 0.04485899517781585,
+          "brushWeight": 0.13918539933546795,
+          "centerline": false,
+          "nearestCenterlineVertex": 3593,
+          "centerlineDistanceM": 0.018079413697671774,
+          "protected": false,
+          "protection": {
+            "oldLipAnchor": false,
+            "priorLocal04Edited": false,
+            "protectedNonCuff": false
+          },
+          "protectedDistanceM": 0.01028188550663966,
+          "nearestProtectedVertex": 2986,
+          "nearestProtection": {
+            "oldLipAnchor": false,
+            "priorLocal04Edited": true,
+            "protectedNonCuff": false
+          }
+        }
+      ]
+    },
+    {
+      "guideTriangle": 6716,
+      "guideVertices": [
+        3638,
+        3230,
+        3389
+      ],
+      "normalDot": -0.04425365501548639,
+      "normalBefore": [
+        4.472605379657324e-05,
+        0.00029214542431144075,
+        0.00022721749810994396
+      ],
+      "normalAfter": [
+        0.00019924953219874197,
+        -0.000308550587574008,
+        0.00032203205982916927
+      ],
+      "nativeEdgesBeforeM": [
+        0.007140007351131178,
+        0.0026941959260746062,
+        0.004706320652290111
+      ],
+      "nativeEdgesAfterM": [
+        0.006588040668853643,
+        0.003139234096041894,
+        0.003970497682823111
+      ],
+      "sourceTriangleAreaBefore": 0.00018639820296992413,
+      "sourceTriangleAreaAfter": 0.00024423783937562826,
+      "vertices": [
+        {
+          "guideVertex": 3638,
+          "sourceBefore": [
+            -0.1854061484336853,
+            -0.5349945425987244,
+            0.07724102586507797
+          ],
+          "sourceAfterFloat32": [
+            -0.19132302701473236,
+            -0.5408209562301636,
+            0.05293452367186546
+          ],
+          "nativeBefore": [
+            0.4166401082177967,
+            -0.06764712877910134,
+            0.9536974269291109
+          ],
+          "nativeAfter": [
+            0.41353890189870507,
+            -0.06715876290287949,
+            0.952303772717194
+          ],
+          "nativeOffsetM": 0.003434859328742928,
+          "contractionScale": 0.11763695229018946,
+          "brushWeight": 0.3649958300718812,
+          "centerline": false,
+          "nearestCenterlineVertex": 3593,
+          "centerlineDistanceM": 0.01468507001105479,
+          "protected": false,
+          "protection": {
+            "oldLipAnchor": false,
+            "priorLocal04Edited": false,
+            "protectedNonCuff": false
+          },
+          "protectedDistanceM": 0.014310647616508456,
+          "nearestProtectedVertex": 3393,
+          "nearestProtection": {
+            "oldLipAnchor": false,
+            "priorLocal04Edited": false,
+            "protectedNonCuff": true
+          }
+        },
+        {
+          "guideVertex": 3230,
+          "sourceBefore": [
+            -0.235121950507164,
+            -0.5416229367256165,
+            0.09554968029260635
+          ],
+          "sourceAfterFloat32": [
+            -0.23513594269752502,
+            -0.5463101863861084,
+            0.07478327304124832
+          ],
+          "nativeBefore": [
+            0.41849230918260216,
+            -0.06075671241531135,
+            0.9534305582464295
+          ],
+          "nativeAfter": [
+            0.4158336141335549,
+            -0.060984753160537454,
+            0.9524386034079348
+          ],
+          "nativeOffsetM": 0.002846864075771643,
+          "contractionScale": 0.09302202378578822,
+          "brushWeight": 0.2886223259414685,
+          "centerline": false,
+          "nearestCenterlineVertex": 3593,
+          "centerlineDistanceM": 0.015340393085760582,
+          "protected": false,
+          "protection": {
+            "oldLipAnchor": false,
+            "priorLocal04Edited": false,
+            "protectedNonCuff": false
+          },
+          "protectedDistanceM": 0.011887293910361803,
+          "nearestProtectedVertex": 2986,
+          "nearestProtection": {
+            "oldLipAnchor": false,
+            "priorLocal04Edited": true,
+            "protectedNonCuff": false
+          }
+        },
+        {
+          "guideVertex": 3389,
+          "sourceBefore": [
+            -0.21512030065059662,
+            -0.5435265302658081,
+            0.09406005591154099
+          ],
+          "sourceAfterFloat32": [
+            -0.2182617485523224,
+            -0.5515462160110474,
+            0.059325944632291794
+          ],
+          "nativeBefore": [
+            0.4180646259325299,
+            -0.06322181358067085,
+            0.9544300856198555
+          ],
+          "nativeAfter": [
+            0.41362332983232947,
+            -0.06320411774519238,
+            0.9526480189228514
+          ],
+          "nativeOffsetM": 0.0047855180641523335,
+          "contractionScale": 0.1570472105743979,
+          "brushWeight": 0.487275264006107,
+          "centerline": false,
+          "nearestCenterlineVertex": 3593,
+          "centerlineDistanceM": 0.012646197159685976,
+          "protected": false,
+          "protection": {
+            "oldLipAnchor": false,
+            "priorLocal04Edited": false,
+            "protectedNonCuff": false
+          },
+          "protectedDistanceM": 0.01458148983643641,
+          "nearestProtectedVertex": 2986,
+          "nearestProtection": {
+            "oldLipAnchor": false,
+            "priorLocal04Edited": true,
+            "protectedNonCuff": false
+          }
+        }
+      ]
+    },
+    {
+      "guideTriangle": 6964,
+      "guideVertices": [
+        3224,
+        3333,
+        3631
+      ],
+      "normalDot": -0.9903332277022872,
+      "normalBefore": [
+        1.6474371909325214e-05,
+        -0.00030579681964404415,
+        4.8665114611878835e-05
+      ],
+      "normalAfter": [
+        -1.3555188669300833e-05,
+        0.0001937519514816355,
+        -5.9204020960379466e-05
+      ],
+      "nativeEdgesBeforeM": [
+        0.002224814177114085,
+        0.004547726231345839,
+        0.0065236242484463785
+      ],
+      "nativeEdgesAfterM": [
+        0.0017193400770731608,
+        0.003510290991925096,
+        0.004992009420363752
+      ],
+      "sourceTriangleAreaBefore": 0.0001550414406008972,
+      "sourceTriangleAreaAfter": 0.000101524231024765,
+      "vertices": [
+        {
+          "guideVertex": 3224,
+          "sourceBefore": [
+            -0.21756133437156677,
+            -0.6581287384033203,
+            0.17669320106506348
+          ],
+          "sourceAfterFloat32": [
+            -0.2200816422700882,
+            -0.6735007166862488,
+            0.10922114551067352
+          ],
+          "nativeBefore": [
+            0.41883206286772473,
+            -0.05653147513783422,
+            0.9720858831337831
+          ],
+          "nativeAfter": [
+            0.4101982042493073,
+            -0.05695561412855216,
+            0.9687653673243873
+          ],
+          "nativeOffsetM": 0.009260087512104047,
+          "contractionScale": 0.24507712271426635,
+          "brushWeight": 0.7363529766257159,
+          "centerline": false,
+          "nearestCenterlineVertex": 3384,
+          "centerlineDistanceM": 0.008415403173397838,
+          "protected": false,
+          "protection": {
+            "oldLipAnchor": false,
+            "priorLocal04Edited": false,
+            "protectedNonCuff": false
+          },
+          "protectedDistanceM": 0.027786380545053332,
+          "nearestProtectedVertex": 5187,
+          "nearestProtection": {
+            "oldLipAnchor": true,
+            "priorLocal04Edited": false,
+            "protectedNonCuff": false
+          }
+        },
+        {
+          "guideVertex": 3333,
+          "sourceBefore": [
+            -0.2033165991306305,
+            -0.658725917339325,
+            0.16811850666999817
+          ],
+          "sourceAfterFloat32": [
+            -0.20830842852592468,
+            -0.6712550520896912,
+            0.11387477815151215
+          ],
+          "nativeBefore": [
+            0.41774647397496656,
+            -0.05847095463400405,
+            0.9721844435850033
+          ],
+          "nativeAfter": [
+            0.4108107287003769,
+            -0.05843232809524044,
+            0.9693980283379322
+          ],
+          "nativeOffsetM": 0.007474635969577332,
+          "contractionScale": 0.20327775821531313,
+          "brushWeight": 0.6107635861147436,
+          "centerline": false,
+          "nearestCenterlineVertex": 3384,
+          "centerlineDistanceM": 0.010640217350511922,
+          "protected": false,
+          "protection": {
+            "oldLipAnchor": false,
+            "priorLocal04Edited": false,
+            "protectedNonCuff": false
+          },
+          "protectedDistanceM": 0.025561566367939246,
+          "nearestProtectedVertex": 5187,
+          "nearestProtection": {
+            "oldLipAnchor": true,
+            "priorLocal04Edited": false,
+            "protectedNonCuff": false
+          }
+        },
+        {
+          "guideVertex": 3631,
+          "sourceBefore": [
+            -0.1693831980228424,
+            -0.6567321419715881,
+            0.16915947198867798
+          ],
+          "sourceAfterFloat32": [
+            -0.1828496903181076,
+            -0.6714276671409607,
+            0.10748091340065002
+          ],
+          "nativeBefore": [
+            0.41780354665537744,
+            -0.06279491590028632,
+            0.9735922488102076
+          ],
+          "nativeAfter": [
+            0.4099313179605319,
+            -0.061753791075867565,
+            0.9701168212614918
+          ],
+          "nativeOffsetM": 0.008668017334837802,
+          "contractionScale": 0.23027780646189483,
+          "brushWeight": 0.6974231516950368,
+          "centerline": false,
+          "nearestCenterlineVertex": 3635,
+          "centerlineDistanceM": 0.00912780602781715,
+          "protected": false,
+          "protection": {
+            "oldLipAnchor": false,
+            "priorLocal04Edited": false,
+            "protectedNonCuff": false
+          },
+          "protectedDistanceM": 0.02133668530068043,
+          "nearestProtectedVertex": 5187,
+          "nearestProtection": {
+            "oldLipAnchor": true,
+            "priorLocal04Edited": false,
+            "protectedNonCuff": false
+          }
+        }
+      ]
+    },
+    {
+      "guideTriangle": 6965,
+      "guideVertices": [
+        3631,
+        3514,
+        3224
+      ],
+      "normalDot": -0.6894224348854137,
+      "normalBefore": [
+        3.9762938502718725e-05,
+        -0.00032538157407557833,
+        0.00019396470362664786
+      ],
+      "normalAfter": [
+        -7.907398633655305e-06,
+        0.0001855340595824373,
+        5.183987316392802e-05
+      ],
+      "nativeEdgesBeforeM": [
+        0.002362428283079602,
+        0.004526504200605513,
+        0.0065236242484463785
+      ],
+      "nativeEdgesAfterM": [
+        0.0018546598443967687,
+        0.003342873208104636,
+        0.004992009420363752
+      ],
+      "sourceTriangleAreaBefore": 0.0001904445892374245,
+      "sourceTriangleAreaAfter": 9.640122751804444e-05,
+      "vertices": [
+        {
+          "guideVertex": 3631,
+          "sourceBefore": [
+            -0.1693831980228424,
+            -0.6567321419715881,
+            0.16915947198867798
+          ],
+          "sourceAfterFloat32": [
+            -0.1828496903181076,
+            -0.6714276671409607,
+            0.10748091340065002
+          ],
+          "nativeBefore": [
+            0.41780354665537744,
+            -0.06279491590028632,
+            0.9735922488102076
+          ],
+          "nativeAfter": [
+            0.4099313179605319,
+            -0.061753791075867565,
+            0.9701168212614918
+          ],
+          "nativeOffsetM": 0.008668017334837802,
+          "contractionScale": 0.23027780646189483,
+          "brushWeight": 0.6974231516950368,
+          "centerline": false,
+          "nearestCenterlineVertex": 3635,
+          "centerlineDistanceM": 0.00912780602781715,
+          "protected": false,
+          "protection": {
+            "oldLipAnchor": false,
+            "priorLocal04Edited": false,
+            "protectedNonCuff": false
+          },
+          "protectedDistanceM": 0.02133668530068043,
+          "nearestProtectedVertex": 5187,
+          "nearestProtection": {
+            "oldLipAnchor": true,
+            "priorLocal04Edited": false,
+            "protectedNonCuff": false
+          }
+        },
+        {
+          "guideVertex": 3514,
+          "sourceBefore": [
+            -0.18411752581596375,
+            -0.6531332731246948,
+            0.17821723222732544
+          ],
+          "sourceAfterFloat32": [
+            -0.1959962099790573,
+            -0.6707673072814941,
+            0.10311219096183777
+          ],
+          "nativeBefore": [
+            0.4191672809302343,
+            -0.060907305728808356,
+            0.973194474928702
+          ],
+          "nativeAfter": [
+            0.409573174360533,
+            -0.0602180213363729,
+            0.969140651395408
+          ],
+          "nativeOffsetM": 0.010438173269402867,
+          "contractionScale": 0.2707302374643799,
+          "brushWeight": 0.8199380494915277,
+          "centerline": false,
+          "nearestCenterlineVertex": 3635,
+          "centerlineDistanceM": 0.006765377744737547,
+          "protected": false,
+          "protection": {
+            "oldLipAnchor": false,
+            "priorLocal04Edited": false,
+            "protectedNonCuff": false
+          },
+          "protectedDistanceM": 0.023594516796938997,
+          "nearestProtectedVertex": 5187,
+          "nearestProtection": {
+            "oldLipAnchor": true,
+            "priorLocal04Edited": false,
+            "protectedNonCuff": false
+          }
+        },
+        {
+          "guideVertex": 3224,
+          "sourceBefore": [
+            -0.21756133437156677,
+            -0.6581287384033203,
+            0.17669320106506348
+          ],
+          "sourceAfterFloat32": [
+            -0.2200816422700882,
+            -0.6735007166862488,
+            0.10922114551067352
+          ],
+          "nativeBefore": [
+            0.41883206286772473,
+            -0.05653147513783422,
+            0.9720858831337831
+          ],
+          "nativeAfter": [
+            0.4101982042493073,
+            -0.05695561412855216,
+            0.9687653673243873
+          ],
+          "nativeOffsetM": 0.009260087512104047,
+          "contractionScale": 0.24507712271426635,
+          "brushWeight": 0.7363529766257159,
+          "centerline": false,
+          "nearestCenterlineVertex": 3384,
+          "centerlineDistanceM": 0.008415403173397838,
+          "protected": false,
+          "protection": {
+            "oldLipAnchor": false,
+            "priorLocal04Edited": false,
+            "protectedNonCuff": false
+          },
+          "protectedDistanceM": 0.027786380545053332,
+          "nearestProtectedVertex": 5187,
+          "nearestProtection": {
+            "oldLipAnchor": true,
+            "priorLocal04Edited": false,
+            "protectedNonCuff": false
+          }
+        }
+      ]
+    },
+    {
+      "guideTriangle": 7055,
+      "guideVertices": [
+        3251,
+        3785,
+        3333
+      ],
+      "normalDot": -0.666579782135031,
+      "normalBefore": [
+        1.8234145748863284e-07,
+        -0.0004276937790914648,
+        -3.070079292566419e-05
+      ],
+      "normalAfter": [
+        -2.83290624976118e-05,
+        0.00014019309078738829,
+        -0.00013325433037358891
+      ],
+      "nativeEdgesBeforeM": [
+        0.008491624978806504,
+        0.006788626825994286,
+        0.0019810905835066263
+      ],
+      "nativeEdgesAfterM": [
+        0.006948387072049477,
+        0.005414504660785482,
+        0.0016365548304953443
+      ],
+      "sourceTriangleAreaBefore": 0.00021439714352587019,
+      "sourceTriangleAreaAfter": 9.77411825304821e-05,
+      "vertices": [
+        {
+          "guideVertex": 3251,
+          "sourceBefore": [
+            -0.2169390618801117,
+            -0.6583148241043091,
+            0.1623106449842453
+          ],
+          "sourceAfterFloat32": [
+            -0.21875464916229248,
+            -0.6680999398231506,
+            0.11941498517990112
+          ],
+          "nativeBefore": [
+            0.4172125343372253,
+            -0.05689441568621288,
+            0.9711101283103261
+          ],
+          "nativeAfter": [
+            0.41172390656491964,
+            -0.057136761441512855,
+            0.9689906894781657
+          ],
+          "nativeOffsetM": 0.005888614455247459,
+          "contractionScale": 0.16399041386862365,
+          "brushWeight": 0.4927217524543541,
+          "centerline": false,
+          "nearestCenterlineVertex": 3384,
+          "centerlineDistanceM": 0.012621307934018548,
+          "protected": false,
+          "protection": {
+            "oldLipAnchor": false,
+            "priorLocal04Edited": false,
+            "protectedNonCuff": false
+          },
+          "protectedDistanceM": 0.02711400293549028,
+          "nearestProtectedVertex": 5187,
+          "nearestProtection": {
+            "oldLipAnchor": true,
+            "priorLocal04Edited": false,
+            "protectedNonCuff": false
+          }
+        },
+        {
+          "guideVertex": 3785,
+          "sourceBefore": [
+            -0.15359149873256683,
+            -0.6579728126525879,
+            0.15792231261730194
+          ],
+          "sourceAfterFloat32": [
+            -0.16855739057064056,
+            -0.6705049872398376,
+            0.10621307045221329
+          ],
+          "nativeBefore": [
+            0.4163645507445892,
+            -0.06495646795286514,
+            0.9736383553288269
+          ],
+          "nativeAfter": [
+            0.40977141420726954,
+            -0.06361307885990872,
+            0.970579767573328
+          ],
+          "nativeOffsetM": 0.007391150270232341,
+          "contractionScale": 0.20144677462817612,
+          "brushWeight": 0.6846970088047968,
+          "centerline": false,
+          "nearestCenterlineVertex": 4118,
+          "centerlineDistanceM": 0.009355378279358395,
+          "protected": false,
+          "protection": {
+            "oldLipAnchor": false,
+            "priorLocal04Edited": false,
+            "protectedNonCuff": false
+          },
+          "protectedDistanceM": 0.01877293954194496,
+          "nearestProtectedVertex": 5187,
+          "nearestProtection": {
+            "oldLipAnchor": true,
+            "priorLocal04Edited": false,
+            "protectedNonCuff": false
+          }
+        },
+        {
+          "guideVertex": 3333,
+          "sourceBefore": [
+            -0.2033165991306305,
+            -0.658725917339325,
+            0.16811850666999817
+          ],
+          "sourceAfterFloat32": [
+            -0.20830842852592468,
+            -0.6712550520896912,
+            0.11387477815151215
+          ],
+          "nativeBefore": [
+            0.41774647397496656,
+            -0.05847095463400405,
+            0.9721844435850033
+          ],
+          "nativeAfter": [
+            0.4108107287003769,
+            -0.05843232809524044,
+            0.9693980283379322
+          ],
+          "nativeOffsetM": 0.007474635969577332,
+          "contractionScale": 0.20327775821531313,
+          "brushWeight": 0.6107635861147436,
+          "centerline": false,
+          "nearestCenterlineVertex": 3384,
+          "centerlineDistanceM": 0.010640217350511922,
+          "protected": false,
+          "protection": {
+            "oldLipAnchor": false,
+            "priorLocal04Edited": false,
+            "protectedNonCuff": false
+          },
+          "protectedDistanceM": 0.025561566367939246,
+          "nearestProtectedVertex": 5187,
+          "nearestProtection": {
+            "oldLipAnchor": true,
+            "priorLocal04Edited": false,
+            "protectedNonCuff": false
+          }
+        }
+      ]
+    },
+    {
+      "guideTriangle": 7056,
+      "guideVertices": [
+        3785,
+        3631,
+        3333
+      ],
+      "normalDot": -0.9727235706688815,
+      "normalBefore": [
+        2.1112876407158865e-05,
+        -0.00039775364754524034,
+        7.358527692069572e-05
+      ],
+      "normalAfter": [
+        -6.118339271665718e-06,
+        5.91053498512073e-05,
+        -2.595733210597473e-05
+      ],
+      "nativeEdgesBeforeM": [
+        0.002597141181825143,
+        0.004547726231345839,
+        0.006788626825994286
+      ],
+      "nativeEdgesAfterM": [
+        0.0019227167138803306,
+        0.003510290991925096,
+        0.005414504660785482
+      ],
+      "sourceTriangleAreaBefore": 0.00020252685665438468,
+      "sourceTriangleAreaAfter": 3.242167310047665e-05,
+      "vertices": [
+        {
+          "guideVertex": 3785,
+          "sourceBefore": [
+            -0.15359149873256683,
+            -0.6579728126525879,
+            0.15792231261730194
+          ],
+          "sourceAfterFloat32": [
+            -0.16855739057064056,
+            -0.6705049872398376,
+            0.10621307045221329
+          ],
+          "nativeBefore": [
+            0.4163645507445892,
+            -0.06495646795286514,
+            0.9736383553288269
+          ],
+          "nativeAfter": [
+            0.40977141420726954,
+            -0.06361307885990872,
+            0.970579767573328
+          ],
+          "nativeOffsetM": 0.007391150270232341,
+          "contractionScale": 0.20144677462817612,
+          "brushWeight": 0.6846970088047968,
+          "centerline": false,
+          "nearestCenterlineVertex": 4118,
+          "centerlineDistanceM": 0.009355378279358395,
+          "protected": false,
+          "protection": {
+            "oldLipAnchor": false,
+            "priorLocal04Edited": false,
+            "protectedNonCuff": false
+          },
+          "protectedDistanceM": 0.01877293954194496,
+          "nearestProtectedVertex": 5187,
+          "nearestProtection": {
+            "oldLipAnchor": true,
+            "priorLocal04Edited": false,
+            "protectedNonCuff": false
+          }
+        },
+        {
+          "guideVertex": 3631,
+          "sourceBefore": [
+            -0.1693831980228424,
+            -0.6567321419715881,
+            0.16915947198867798
+          ],
+          "sourceAfterFloat32": [
+            -0.1828496903181076,
+            -0.6714276671409607,
+            0.10748091340065002
+          ],
+          "nativeBefore": [
+            0.41780354665537744,
+            -0.06279491590028632,
+            0.9735922488102076
+          ],
+          "nativeAfter": [
+            0.4099313179605319,
+            -0.061753791075867565,
+            0.9701168212614918
+          ],
+          "nativeOffsetM": 0.008668017334837802,
+          "contractionScale": 0.23027780646189483,
+          "brushWeight": 0.6974231516950368,
+          "centerline": false,
+          "nearestCenterlineVertex": 3635,
+          "centerlineDistanceM": 0.00912780602781715,
+          "protected": false,
+          "protection": {
+            "oldLipAnchor": false,
+            "priorLocal04Edited": false,
+            "protectedNonCuff": false
+          },
+          "protectedDistanceM": 0.02133668530068043,
+          "nearestProtectedVertex": 5187,
+          "nearestProtection": {
+            "oldLipAnchor": true,
+            "priorLocal04Edited": false,
+            "protectedNonCuff": false
+          }
+        },
+        {
+          "guideVertex": 3333,
+          "sourceBefore": [
+            -0.2033165991306305,
+            -0.658725917339325,
+            0.16811850666999817
+          ],
+          "sourceAfterFloat32": [
+            -0.20830842852592468,
+            -0.6712550520896912,
+            0.11387477815151215
+          ],
+          "nativeBefore": [
+            0.41774647397496656,
+            -0.05847095463400405,
+            0.9721844435850033
+          ],
+          "nativeAfter": [
+            0.4108107287003769,
+            -0.05843232809524044,
+            0.9693980283379322
+          ],
+          "nativeOffsetM": 0.007474635969577332,
+          "contractionScale": 0.20327775821531313,
+          "brushWeight": 0.6107635861147436,
+          "centerline": false,
+          "nearestCenterlineVertex": 3384,
+          "centerlineDistanceM": 0.010640217350511922,
+          "protected": false,
+          "protection": {
+            "oldLipAnchor": false,
+            "priorLocal04Edited": false,
+            "protectedNonCuff": false
+          },
+          "protectedDistanceM": 0.025561566367939246,
+          "nearestProtectedVertex": 5187,
+          "nearestProtection": {
+            "oldLipAnchor": true,
+            "priorLocal04Edited": false,
+            "protectedNonCuff": false
+          }
+        }
+      ]
+    },
+    {
+      "guideTriangle": 7210,
+      "guideVertices": [
+        3909,
+        3514,
+        3631
+      ],
+      "normalDot": -0.7677300842272204,
+      "normalBefore": [
+        3.197155882261882e-05,
+        -0.00016444823881656134,
+        0.00011734767131699186
+      ],
+      "normalAfter": [
+        7.1633826639327935e-06,
+        0.00021672631275571064,
+        1.120323094205844e-05
+      ],
+      "nativeEdgesBeforeM": [
+        0.006521408226002745,
+        0.002362428283079602,
+        0.004263576729744181
+      ],
+      "nativeEdgesAfterM": [
+        0.004846681108607692,
+        0.0018546598443967687,
+        0.003273529969865863
+      ],
+      "sourceTriangleAreaBefore": 0.0001022691055340489,
+      "sourceTriangleAreaAfter": 0.00010856693911524946,
+      "vertices": [
+        {
+          "guideVertex": 3909,
+          "sourceBefore": [
+            -0.13848093152046204,
+            -0.656315803527832,
+            0.16132354736328125
+          ],
+          "sourceAfterFloat32": [
+            -0.16005094349384308,
+            -0.6717206835746765,
+            0.09857171773910522
+          ],
+          "nativeBefore": [
+            0.41677391092686566,
+            -0.06685377768148074,
+            0.9743944818425289
+          ],
+          "nativeAfter": [
+            0.40877899411792695,
+            -0.06478725563737558,
+            0.9705483777229764
+          ],
+          "nativeOffsetM": 0.009109430557596283,
+          "contractionScale": 0.24126546894873657,
+          "brushWeight": 0.8200366832479484,
+          "centerline": false,
+          "nearestCenterlineVertex": 4118,
+          "centerlineDistanceM": 0.006763295424244444,
+          "protected": false,
+          "protection": {
+            "oldLipAnchor": false,
+            "priorLocal04Edited": false,
+            "protectedNonCuff": false
+          },
+          "protectedDistanceM": 0.01707310857093625,
+          "nearestProtectedVertex": 5187,
+          "nearestProtection": {
+            "oldLipAnchor": true,
+            "priorLocal04Edited": false,
+            "protectedNonCuff": false
+          }
+        },
+        {
+          "guideVertex": 3514,
+          "sourceBefore": [
+            -0.18411752581596375,
+            -0.6531332731246948,
+            0.17821723222732544
+          ],
+          "sourceAfterFloat32": [
+            -0.1959962099790573,
+            -0.6707673072814941,
+            0.10311219096183777
+          ],
+          "nativeBefore": [
+            0.4191672809302343,
+            -0.060907305728808356,
+            0.973194474928702
+          ],
+          "nativeAfter": [
+            0.409573174360533,
+            -0.0602180213363729,
+            0.969140651395408
+          ],
+          "nativeOffsetM": 0.010438173269402867,
+          "contractionScale": 0.2707302374643799,
+          "brushWeight": 0.8199380494915277,
+          "centerline": false,
+          "nearestCenterlineVertex": 3635,
+          "centerlineDistanceM": 0.006765377744737547,
+          "protected": false,
+          "protection": {
+            "oldLipAnchor": false,
+            "priorLocal04Edited": false,
+            "protectedNonCuff": false
+          },
+          "protectedDistanceM": 0.023594516796938997,
+          "nearestProtectedVertex": 5187,
+          "nearestProtection": {
+            "oldLipAnchor": true,
+            "priorLocal04Edited": false,
+            "protectedNonCuff": false
+          }
+        },
+        {
+          "guideVertex": 3631,
+          "sourceBefore": [
+            -0.1693831980228424,
+            -0.6567321419715881,
+            0.16915947198867798
+          ],
+          "sourceAfterFloat32": [
+            -0.1828496903181076,
+            -0.6714276671409607,
+            0.10748091340065002
+          ],
+          "nativeBefore": [
+            0.41780354665537744,
+            -0.06279491590028632,
+            0.9735922488102076
+          ],
+          "nativeAfter": [
+            0.4099313179605319,
+            -0.061753791075867565,
+            0.9701168212614918
+          ],
+          "nativeOffsetM": 0.008668017334837802,
+          "contractionScale": 0.23027780646189483,
+          "brushWeight": 0.6974231516950368,
+          "centerline": false,
+          "nearestCenterlineVertex": 3635,
+          "centerlineDistanceM": 0.00912780602781715,
+          "protected": false,
+          "protection": {
+            "oldLipAnchor": false,
+            "priorLocal04Edited": false,
+            "protectedNonCuff": false
+          },
+          "protectedDistanceM": 0.02133668530068043,
+          "nearestProtectedVertex": 5187,
+          "nearestProtection": {
+            "oldLipAnchor": true,
+            "priorLocal04Edited": false,
+            "protectedNonCuff": false
+          }
+        }
+      ]
+    },
+    {
+      "guideTriangle": 7533,
+      "guideVertices": [
+        3785,
+        3945,
+        3631
+      ],
+      "normalDot": -0.6503785142255034,
+      "normalBefore": [
+        -3.846155059505918e-05,
+        -0.00012820674285873856,
+        -3.98953934395152e-05
+      ],
+      "normalAfter": [
+        -2.2334879956176223e-05,
+        0.00020117562463484173,
+        -0.00010537274658162232
+      ],
+      "nativeEdgesBeforeM": [
+        0.0027873112236376295,
+        0.0053012511245712195,
+        0.002597141181825143
+      ],
+      "nativeEdgesAfterM": [
+        0.0027054695515775573,
+        0.004179509350457908,
+        0.0019227167138803306
+      ],
+      "sourceTriangleAreaBefore": 6.983534600457837e-05,
+      "sourceTriangleAreaAfter": 0.00011409852598963575,
+      "vertices": [
+        {
+          "guideVertex": 3785,
+          "sourceBefore": [
+            -0.15359149873256683,
+            -0.6579728126525879,
+            0.15792231261730194
+          ],
+          "sourceAfterFloat32": [
+            -0.16855739057064056,
+            -0.6705049872398376,
+            0.10621307045221329
+          ],
+          "nativeBefore": [
+            0.4163645507445892,
+            -0.06495646795286514,
+            0.9736383553288269
+          ],
+          "nativeAfter": [
+            0.40977141420726954,
+            -0.06361307885990872,
+            0.970579767573328
+          ],
+          "nativeOffsetM": 0.007391150270232341,
+          "contractionScale": 0.20144677462817612,
+          "brushWeight": 0.6846970088047968,
+          "centerline": false,
+          "nearestCenterlineVertex": 4118,
+          "centerlineDistanceM": 0.009355378279358395,
+          "protected": false,
+          "protection": {
+            "oldLipAnchor": false,
+            "priorLocal04Edited": false,
+            "protectedNonCuff": false
+          },
+          "protectedDistanceM": 0.01877293954194496,
+          "nearestProtectedVertex": 5187,
+          "nearestProtection": {
+            "oldLipAnchor": true,
+            "priorLocal04Edited": false,
+            "protectedNonCuff": false
+          }
+        },
+        {
+          "guideVertex": 3945,
+          "sourceBefore": [
+            -0.13399595022201538,
+            -0.6620386838912964,
+            0.15209700167179108
+          ],
+          "sourceAfterFloat32": [
+            -0.15684908628463745,
+            -0.6771218180656433,
+            0.09109864383935928
+          ],
+          "nativeBefore": [
+            0.4152969302158051,
+            -0.06736994409489105,
+            0.974535251741913
+          ],
+          "nativeAfter": [
+            0.40752884145532253,
+            -0.06511977171917226,
+            0.9707222792380519
+          ],
+          "nativeOffsetM": 0.00894121087066561,
+          "contractionScale": 0.24396093625753762,
+          "brushWeight": 0.8291983012836489,
+          "centerline": false,
+          "nearestCenterlineVertex": 4118,
+          "centerlineDistanceM": 0.006568067055720766,
+          "protected": false,
+          "protection": {
+            "oldLipAnchor": false,
+            "priorLocal04Edited": false,
+            "protectedNonCuff": false
+          },
+          "protectedDistanceM": 0.016042161591884402,
+          "nearestProtectedVertex": 5187,
+          "nearestProtection": {
+            "oldLipAnchor": true,
+            "priorLocal04Edited": false,
+            "protectedNonCuff": false
+          }
+        },
+        {
+          "guideVertex": 3631,
+          "sourceBefore": [
+            -0.1693831980228424,
+            -0.6567321419715881,
+            0.16915947198867798
+          ],
+          "sourceAfterFloat32": [
+            -0.1828496903181076,
+            -0.6714276671409607,
+            0.10748091340065002
+          ],
+          "nativeBefore": [
+            0.41780354665537744,
+            -0.06279491590028632,
+            0.9735922488102076
+          ],
+          "nativeAfter": [
+            0.4099313179605319,
+            -0.061753791075867565,
+            0.9701168212614918
+          ],
+          "nativeOffsetM": 0.008668017334837802,
+          "contractionScale": 0.23027780646189483,
+          "brushWeight": 0.6974231516950368,
+          "centerline": false,
+          "nearestCenterlineVertex": 3635,
+          "centerlineDistanceM": 0.00912780602781715,
+          "protected": false,
+          "protection": {
+            "oldLipAnchor": false,
+            "priorLocal04Edited": false,
+            "protectedNonCuff": false
+          },
+          "protectedDistanceM": 0.02133668530068043,
+          "nearestProtectedVertex": 5187,
+          "nearestProtection": {
+            "oldLipAnchor": true,
+            "priorLocal04Edited": false,
+            "protectedNonCuff": false
+          }
+        }
+      ]
+    },
+    {
+      "guideTriangle": 8353,
+      "guideVertices": [
+        4158,
+        4077,
+        4263
+      ],
+      "normalDot": -0.7155488728896856,
+      "normalBefore": [
+        -5.7811978257937824e-05,
+        -0.0001518924041044034,
+        3.467105601551168e-05
+      ],
+      "normalAfter": [
+        8.409444232970742e-06,
+        2.634475960311411e-05,
+        -4.144660556981705e-05
+      ],
+      "nativeEdgesBeforeM": [
+        0.0014820748825546454,
+        0.003585652728470566,
+        0.002498432821873326
+      ],
+      "nativeEdgesAfterM": [
+        0.001221586019042421,
+        0.0030320302184336217,
+        0.0018695571827285773
+      ],
+      "sourceTriangleAreaBefore": 8.308972466548196e-05,
+      "sourceTriangleAreaAfter": 2.491277897040647e-05,
+      "vertices": [
+        {
+          "guideVertex": 4158,
+          "sourceBefore": [
+            -0.11253717541694641,
+            -0.6705559492111206,
+            0.1324811577796936
+          ],
+          "sourceAfterFloat32": [
+            -0.13662494719028473,
+            -0.6827971339225769,
+            0.08439132571220398
+          ],
+          "nativeBefore": [
+            0.4123536385379444,
+            -0.07011516985643709,
+            0.9749972809682089
+          ],
+          "nativeAfter": [
+            0.4062404698760258,
+            -0.06756409548383932,
+            0.9717519017915005
+          ],
+          "nativeOffsetM": 0.007376402111853263,
+          "contractionScale": 0.20974550722559862,
+          "brushWeight": 0.7129035531727268,
+          "centerline": false,
+          "nearestCenterlineVertex": 4118,
+          "centerlineDistanceM": 0.006740506578426777,
+          "protected": false,
+          "protection": {
+            "oldLipAnchor": false,
+            "priorLocal04Edited": false,
+            "protectedNonCuff": false
+          },
+          "protectedDistanceM": 0.011890244791322467,
+          "nearestProtectedVertex": 5187,
+          "nearestProtection": {
+            "oldLipAnchor": true,
+            "priorLocal04Edited": false,
+            "protectedNonCuff": false
+          }
+        },
+        {
+          "guideVertex": 4077,
+          "sourceBefore": [
+            -0.1226891577243805,
+            -0.6663577556610107,
+            0.13394542038440704
+          ],
+          "sourceAfterFloat32": [
+            -0.1446523219347,
+            -0.6785678267478943,
+            0.08545086532831192
+          ],
+          "nativeBefore": [
+            0.4128879485516034,
+            -0.06898224660571865,
+            0.9742051044255212
+          ],
+          "nativeAfter": [
+            0.40671910112406984,
+            -0.06670760667678546,
+            0.9710241577061881
+          ],
+          "nativeOffsetM": 0.007303909463584523,
+          "contractionScale": 0.20930386085745478,
+          "brushWeight": 0.71140244228239,
+          "centerline": false,
+          "nearestCenterlineVertex": 4118,
+          "centerlineDistanceM": 0.008222581460981423,
+          "protected": false,
+          "protection": {
+            "oldLipAnchor": false,
+            "priorLocal04Edited": false,
+            "protectedNonCuff": false
+          },
+          "protectedDistanceM": 0.013372319673877113,
+          "nearestProtectedVertex": 5187,
+          "nearestProtection": {
+            "oldLipAnchor": true,
+            "priorLocal04Edited": false,
+            "protectedNonCuff": false
+          }
+        },
+        {
+          "guideVertex": 4263,
+          "sourceBefore": [
+            -0.10532288253307343,
+            -0.6769545078277588,
+            0.11647876352071762
+          ],
+          "sourceAfterFloat32": [
+            -0.12287803739309311,
+            -0.6848766803741455,
+            0.08585872501134872
+          ],
+          "nativeBefore": [
+            0.410055525188768,
+            -0.07108425960422574,
+            0.9748499491641676
+          ],
+          "nativeAfter": [
+            0.40616713915537617,
+            -0.06917603150317386,
+            0.9726961098906359
+          ],
+          "nativeOffsetM": 0.004837343838151526,
+          "contractionScale": 0.14403398391763103,
+          "brushWeight": 0.4895567980012045,
+          "centerline": false,
+          "nearestCenterlineVertex": 4118,
+          "centerlineDistanceM": 0.009238939400300104,
+          "protected": false,
+          "protection": {
+            "oldLipAnchor": false,
+            "priorLocal04Edited": false,
+            "protectedNonCuff": false
+          },
+          "protectedDistanceM": 0.009893261113072628,
+          "nearestProtectedVertex": 5187,
+          "nearestProtection": {
+            "oldLipAnchor": true,
+            "priorLocal04Edited": false,
+            "protectedNonCuff": false
+          }
+        }
+      ]
+    }
+  ],
+  "recipeOutputWritten": false,
+  "nativeOrRecipeChanged": false,
+  "limits": [
+    "Exact LEFT failure reproduced before any recipe output; RIGHT remains unexecuted.",
+    "No alternate radius, attenuation, control amount, weight or topology experiment was performed.",
+    "This evidence rejects this second/final offset mechanism; it is not permission to weaken the orientation gate."
+  ]
+}

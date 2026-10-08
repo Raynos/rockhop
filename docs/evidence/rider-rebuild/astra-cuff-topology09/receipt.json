@@ -1,0 +1,270 @@
+{
+  "acceptedArt": false,
+  "operation": "READ_ONLY_EXACT_LEFT_CUFF06_NEW_SELF_INTERSECTION_WITNESS",
+  "sources": [
+    {
+      "path": "docs/evidence/rider-rebuild/astra-cuff-topology09/inspect.py",
+      "sha256": "cb3632e84fcb2b14b9073f4854e7b2eb63e0c10999598094d70c0616f1c96787"
+    },
+    {
+      "path": "assets/blender/rider-rebuild/glove-cuff-fit06/freeze.py",
+      "sha256": "13b4ae6b1649205551f75b117a07285bd1d33a8a870f652335d0f350924a8f38"
+    },
+    {
+      "path": "assets/blender/rider-rebuild/glove-cuff-fit06/input.json",
+      "sha256": "bc6351189d26a40c1c4dd1811ed39ef89209555728d3c8720d2300d3dfb69f13"
+    },
+    {
+      "path": "assets/blender/rider-rebuild/glove-cuff-fit05/cuff-offsets-L.npz",
+      "sha256": "6b62ac418cef22373884cf6ccb37847fd5b6cca2e6e4d3f699a5680e8393d8f8"
+    },
+    {
+      "path": "assets/blender/rider-rebuild/glove-anatomical04/controls-orientation02.json",
+      "sha256": "1fa7e6f75da3fe2e41815de6436f737af1b565216bed27e07b41942b6cbed0dd"
+    }
+  ],
+  "exactOriginalAssertion": "AssertionError(('Final cuff-sector guide has an orientation reversal; stop mechanism', 'L', 14))",
+  "triangles": [
+    4985,
+    5324
+  ],
+  "guideVertices": [
+    [
+      2291,
+      2445,
+      2603
+    ],
+    [
+      2515,
+      2670,
+      2667
+    ]
+  ],
+  "before": {
+    "firstTriangleXYZ": [
+      [
+        0.41789114465448896,
+        -0.042746940367169875,
+        0.9637986331149817
+      ],
+      [
+        0.4190248915033808,
+        -0.044642191468600156,
+        0.9655490873247295
+      ],
+      [
+        0.4189770329995335,
+        -0.04726398844285286,
+        0.9645413936847147
+      ]
+    ],
+    "secondTriangleXYZ": [
+      [
+        0.4147079641239597,
+        -0.0454311265214722,
+        0.9614912419246321
+      ],
+      [
+        0.4151568793576708,
+        -0.04784468941568194,
+        0.9610698057889451
+      ],
+      [
+        0.4156893399652652,
+        -0.047706037905814,
+        0.9666259630365553
+      ]
+    ],
+    "firstTriangleSignedDistancesToSecondPlaneM": [
+      -0.003409938133605576,
+      -0.003966932056200752,
+      -0.0034988541129915905
+    ],
+    "firstTriangleStrictlyOnOneSide": true,
+    "edgePlaneSolves": [
+      {
+        "firstTriangleEdge": 1,
+        "tuv": [
+          8.47493908600628,
+          9.005380593397943,
+          -0.13381525573343497
+        ],
+        "strictInteriorCrossing": false,
+        "residualM": 3.261629021661063e-18,
+        "intersectionXYZ": [
+          0.41861929359852745,
+          -0.06686176112126738,
+          0.9570089451082477
+        ]
+      },
+      {
+        "firstTriangleEdge": 2,
+        "tuv": [
+          39.35011611132194,
+          -63.19157927717883,
+          -10.28464384516029
+        ],
+        "strictInteriorCrossing": false,
+        "residualM": 1.2628977532625829e-17,
+        "intersectionXYZ": [
+          0.3762472005381001,
+          0.13048237781569588,
+          0.9353136790228098
+        ]
+      }
+    ],
+    "neighborCrease": {
+      "triangles": [
+        8353,
+        8588
+      ],
+      "sharedVertices": [
+        4158,
+        4263
+      ],
+      "normalDot": 0.8540446440680276,
+      "normalAngleDegrees": 31.345649095740832
+    }
+  },
+  "after": {
+    "firstTriangleXYZ": [
+      [
+        0.4157697300075294,
+        -0.04379711449843382,
+        0.9632794372867802
+      ],
+      [
+        0.4154787212000944,
+        -0.04611585100686544,
+        0.9645928136776756
+      ],
+      [
+        0.4138622592025978,
+        -0.04910096150048922,
+        0.963071623380396
+      ]
+    ],
+    "secondTriangleXYZ": [
+      [
+        0.4147079641239597,
+        -0.0454311265214722,
+        0.9614912419246321
+      ],
+      [
+        0.4151568793576708,
+        -0.04784468941568194,
+        0.9610698057889451
+      ],
+      [
+        0.41439072972662844,
+        -0.04815410662910889,
+        0.9662470518655376
+      ]
+    ],
+    "firstTriangleSignedDistancesToSecondPlaneM": [
+      -0.0015637722724219944,
+      -0.0011229058836490387,
+      0.0011501863942064473
+    ],
+    "firstTriangleStrictlyOnOneSide": false,
+    "edgePlaneSolves": [
+      {
+        "firstTriangleEdge": 1,
+        "tuv": [
+          0.49399925141113366,
+          0.3065299194934339,
+          0.5213176515639283
+        ],
+        "strictInteriorCrossing": true,
+        "residualM": 4.4702800766818725e-19,
+        "intersectionXYZ": [
+          0.4146801901833965,
+          -0.0475904933560951,
+          0.9638413468095656
+        ]
+      },
+      {
+        "firstTriangleEdge": 2,
+        "tuv": [
+          0.42380394674003163,
+          0.17581193190384545,
+          0.36640390013870844
+        ],
+        "strictInteriorCrossing": true,
+        "residualM": 0.0,
+        "intersectionXYZ": [
+          0.4146706528580192,
+          -0.04685317020811285,
+          0.9631596957341091
+        ]
+      }
+    ],
+    "neighborCrease": {
+      "triangles": [
+        8353,
+        8588
+      ],
+      "sharedVertices": [
+        4158,
+        4263
+      ],
+      "normalDot": -0.999937133579647,
+      "normalAngleDegrees": 179.3575352984778
+    }
+  },
+  "originalRecipeWarnings": [
+    {
+      "category": "RuntimeWarning",
+      "message": "divide by zero encountered in matmul",
+      "line": 77
+    },
+    {
+      "category": "RuntimeWarning",
+      "message": "overflow encountered in matmul",
+      "line": 77
+    },
+    {
+      "category": "RuntimeWarning",
+      "message": "invalid value encountered in matmul",
+      "line": 77
+    },
+    {
+      "category": "RuntimeWarning",
+      "message": "divide by zero encountered in matmul",
+      "line": 80
+    },
+    {
+      "category": "RuntimeWarning",
+      "message": "overflow encountered in matmul",
+      "line": 80
+    },
+    {
+      "category": "RuntimeWarning",
+      "message": "invalid value encountered in matmul",
+      "line": 80
+    },
+    {
+      "category": "RuntimeWarning",
+      "message": "divide by zero encountered in matmul",
+      "line": 108
+    },
+    {
+      "category": "RuntimeWarning",
+      "message": "overflow encountered in matmul",
+      "line": 108
+    },
+    {
+      "category": "RuntimeWarning",
+      "message": "invalid value encountered in matmul",
+      "line": 108
+    }
+  ],
+  "recipeOutputWritten": false,
+  "nativeOrRecipeChanged": false,
+  "limits": [
+    "Only LEFT guide faces 4985/5324 and neighboring crease 8353/8588 checked here.",
+    "Before strict plane separation and after two interior edge crossings prove a new self-intersection.",
+    "No complete intersection scan, area-path analysis, RIGHT, dense transfer or animation validation.",
+    "The fixed-frame old/new normal-dot gate is not by itself an inversion proof."
+  ]
+}

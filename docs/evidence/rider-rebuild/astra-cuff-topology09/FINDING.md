@@ -1,0 +1,7 @@
+# Stop cuff06 on an actual new self-crossing
+
+Parent independently ran the fresh Astra09 minimal reproduction with the pinned NumPy environment and two threads: exit0 in0.825s. The exact frozen LEFT guide faces4985 and5324 are strictly separated before editing by3.410–3.967mm from the second triangle plane. After editing, two edges cross the interior, with barycentric coordinates comfortably inside and linear-solve residuals below1e-14m. The adjacent8353/8588 crease reaches179.3575degrees. The final radial-sector method stays rejected; no native or recipe output was written.
+
+A negative dot between old and new normals alone does not prove a local surface inversion. The independently reproduced new self-crossing supplies the actual geometric reason to stop. See `inspect.py` and `receipt.json`; these check one sufficient LEFT witness, not the complete guide, RIGHT, dense transfer or moving appearance.
+
+Keep the useful selected palm, fingers, original leather/PBR and shared rig. Construct a coherent proximal cuff wall with deliberate circumferential loops, allowing axial and tangential shaping. Preserve useful connectivity where it fits; reconnect or rebuild only the cuff strip where needed. Gate connectivity, nondegenerate elements, local fold quality, self-intersections and actual sleeve clearance before new dense correspondence. If topology/UV/fields change locally, identify their ancestry honestly rather than claiming byte identity. No third offset-parameter campaign and no generic glove replacement.
