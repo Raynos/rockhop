@@ -1,4 +1,4 @@
-# Selected hoodie author source — unexecuted and unaccepted
+# Selected hoodie author source — unaccepted API correction
 
 `assets/blender/rider-rebuild/production-hoodie01/author.py` clones the actual
 selected25 mesh/materials into the complete native02 wearer. Source masters are
@@ -19,6 +19,14 @@ the eleven historical boundary components are not all treated as real ports.
 any underarm edit. A topology exception writes `patch-failure.json` naming that
 preserved editable native and the concrete exception, then stops the run.
 
+Frozen first author trial `author01` exited 1 after 1.747 seconds, after saving
+the actual proportional fit. Grid fill returned successfully, but the old
+selected-face check included non-quads. The source-only API correction records
+polygon vertex cycles before grid fill and checks only genuinely added cycles.
+Its next execution will record existing selected triangles separately from
+actual added quads/non-quads, so selection bookkeeping is measured rather than
+assumed. No fit, topology control or previous failure artifact was changed.
+
 The complete body remains visible and its vertices, polygons, fields and rig
 rest are fingerprinted before/after. Hood/collar volume, torso folds, cuffs, hem
 and mustard fabric come from the actual selected mesh; this is no generic shell.
@@ -34,7 +42,8 @@ aligned dense source retained as a hidden reference. Hiding this reference never
 hides the wearer. Material misses, seams, deep fold fidelity and dense alignment
 require actual comparison before adoption. No bake result presently exists.
 
-The two commands below are admitted only after the parent checkpoints source
+The two commands below illustrate the stages; subsequent trials require fresh
+numbered output leaves. They are admitted only after the parent checkpoints source
 and grants a bounded serial CPU2 lease. Each fresh output leaf is private.
 
 ```sh
@@ -51,7 +60,8 @@ and grants a bounded serial CPU2 lease. Each fresh output leaf is private.
 ```
 
 Validation: Python AST parsed; all five immutable input hashes match the
-[source receipt](source-checkpoint.json). No Blender execution, fitted mesh,
-dense bake, collision claim, moving-art judgment or normal-player promotion.
+[source receipt](source-checkpoint.json). The bookkeeping correction is unexecuted;
+the [first failed trial](author01-result.json) and its actual saved fit are retained.
+No dense bake, collision claim, moving-art judgment or normal-player promotion.
 The parent alone judges played complete-outfit native and actual Garage/game
 evidence. One authored pass and at most one shape repair remain the limit.

@@ -146,7 +146,7 @@ def boundary_cycles(edges):
     return result
 
 
-def rebuild_axilla(obj, spec, targets):
+def rebuild_axilla(obj, spec, targets, diagnostics):
     """Replace two local underarm regions; Blender grid fill authors quad loops.
 
     Only authored sleeve/collar/hem aperture regions are protected. Existing
@@ -226,6 +226,7 @@ def rebuild_axilla(obj, spec, targets):
         bm.free()
         generated = 0
         for ids in indices:
+            before_cycles = {tuple(sorted(face.vertices)) for face in obj.data.polygons}
             active(obj)
             bpy.context.tool_settings.mesh_select_mode = (False, True, False)
             for v in obj.data.vertices: v.select = False
@@ -238,11 +239,26 @@ def rebuild_axilla(obj, spec, targets):
             result = bpy.ops.mesh.fill_grid(span=max(1, len(ids)//4), offset=0,
                                             use_interp_simple=False)
             bpy.ops.object.mode_set(mode='OBJECT')
+            # Edge selection can also select existing adjacent triangles. Face
+            # cycles, rather than f.select, identify actual topology additions.
+            new_faces = [face for face in obj.data.polygons
+                         if tuple(sorted(face.vertices)) not in before_cycles]
+            existing_selected = [face for face in obj.data.polygons if face.select
+                                 and tuple(sorted(face.vertices)) in before_cycles]
+            diagnostics.append({'side': side, 'boundaryVertices': len(ids),
+                                'operatorResult': sorted(result),
+                                'existingPolygonsBefore': len(before_cycles),
+                                'actualAddedPolygons': len(new_faces),
+                                'actualAddedQuads': sum(len(f.vertices) == 4 for f in new_faces),
+                                'actualAddedNonQuads': sum(len(f.vertices) != 4 for f in new_faces),
+                                'selectedExistingPolygons': len(existing_selected),
+                                'selectedExistingTriangles': sum(len(f.vertices) == 3 for f in existing_selected),
+                                'selectedActualAddedPolygons': sum(f.select for f in new_faces),
+                                'faceIdentity': 'Unordered polygon vertex cycles absent before grid fill'})
             assert result == {'FINISHED'}, ('Blender quad-grid fill failed', side)
             # Reacquire attributes after edit operations; RNA can be replaced.
             patch = obj.data.attributes.get('_HOODIE_PATCH')
             assert patch is not None
-            new_faces = [f for f in obj.data.polygons if f.select]
             assert new_faces and all(len(f.vertices) == 4 for f in new_faces), \
                 ('Axilla grid did not create quad deformation loops', side)
             for face in new_faces:
@@ -406,12 +422,14 @@ def author(spec, out):
               'bodyAnd75RigUnchanged': True,
               'limits': ['Unrigged proportional fit only; topology, bake and motion remain pending.']}
     (out/'proportional-fit.json').write_text(json.dumps(fitted, indent=2)+'\n')
+    patch_diagnostics = []
     try:
-        topology = rebuild_axilla(obj, spec, targets)
+        topology = rebuild_axilla(obj, spec, targets, patch_diagnostics)
     except Exception as error:
         (out/'patch-failure.json').write_text(json.dumps({
             'accepted': False, 'stage': 'AXILLA_TOPOLOGY_FAILED_FITTED_NATIVE_PRESERVED',
             'recipeSHA256': sha(__file__), 'fittedNative': fitted['native'],
+            'gridFillDiagnostics': patch_diagnostics,
             'failure': {'type': type(error).__name__, 'message': str(error)}}, indent=2)+'\n')
         raise
     rows = skin(obj, body, rig, spec, targets)
@@ -444,6 +462,7 @@ def author(spec, out):
                'targetObject': obj.name, 'targetGeometrySHA256': hoodie_geometry(obj),
                'hiddenHistoricalGarments': historical,
                'underarmPatches': topology,
+               'gridFillDiagnostics': patch_diagnostics,
                'limits': ['Changed axilla UV/material awaits actual dense bake.',
                           'No rest-fit or moving-art acceptance; parent judges full outfit.']}
     (out/'author.json').write_text(json.dumps(receipt, indent=2)+'\n')

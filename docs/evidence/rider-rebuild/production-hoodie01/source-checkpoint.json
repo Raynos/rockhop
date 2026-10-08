@@ -1,8 +1,8 @@
 {
   "accepted": false,
-  "stage": "UNEXECUTED_SOURCE_CHECKPOINT",
+  "stage": "UNEXECUTED_API_BOOKKEEPING_CORRECTION",
   "ASTParsed": true,
-  "sourceSHA256": "b6f7cde052fa33e4fcf8390bfe62eca71ce3e330bb993d1a8610ecbd49bb960d",
+  "sourceSHA256": "4bd21f23efc5eb6096e51b17e036b43061394a059f62f9e5d0a834cb2300bfc2",
   "controlsSHA256": "ae90f988b1a3b5f020d540cddd677a8a6286e6e2e3e7afb08733b5b7470aff28",
   "inputs": [
     {
@@ -37,10 +37,13 @@
     }
   ],
   "BlenderExecuted": false,
-  "actualFittedGeometryExists": false,
+  "firstAuthorTrial": "author01 exited1 after1.747s and preserved actual proportional fit; prior result and guard unchanged",
+  "apiCorrectionExecuted": false,
+  "shapeControlsChanged": false,
   "actualDenseBakeExists": false,
   "movingArtJudged": false,
   "targetNameGuard": "Rename/hide only pre-existing coarse RiderHoodie meshes, exact selected target name asserted; bake checks saved geometry and immutable source lineage",
   "portProtection": "Authored collar/hem/cuff spatial controls only; local generated underarm boundary holes may join quad patch",
-  "failurePreservation": "Actual proportional-fit-before-patch.blend and pinned fit receipt saved before topology; patch exception writes explicit failure receipt and raises"
+  "failurePreservation": "Actual proportional-fit-before-patch.blend and pinned fit receipt saved before topology; patch exception writes explicit failure receipt and raises",
+  "newFaceBookkeeping": "Record unordered polygon vertex cycles before grid fill; only cycles absent afterward are new faces; receipt diagnoses selected-existing triangles separately from actual added quads/nonquads"
 }

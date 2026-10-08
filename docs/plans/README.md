@@ -1259,3 +1259,5 @@ October 7 ask337 handedness answered: actual saved boot geometry is oppositely r
 October 7 fresh Astra construction advisory02 adopted: parent replay/pins confirm thumb support failure; actual boot and jeans views are rejected. Replace glove ray-stamping and boot forefoot/sole locally, repair jeans authored saddle and inward donor projection, correct hoodie new-face bookkeeping. Builders are redirected; complete outfit and all moving gates remain open.
 
 October 7 required current-player Metal check02: silent boot/clear/crash/restart passes11/11, byte-identical goldenfinish/hash and1tickrestart. Guardexit0 in5.552s. Existing-player baseline only; new clothes and full rider acceptance remain open.
+
+October 7 hoodie source correction: actual added polygon cycles replace selection state as the grid-face identity. Receipts distinguish existing selected triangles from new quads. Parent AST, frozen source and five input pins pass; no shape control change or executed rerun yet.

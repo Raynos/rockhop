@@ -12,3 +12,10 @@ Finding: actual selected hoodie fit saves before an axilla new-face assertion st
 Validation: exit1 after1.747s; original frozen recipe preserved, exact guard/worker copied and fitted native SHA rehashed.
 
 Limits: grid geometry not independently measured; fit/bake/played outfit unaccepted.
+
+
+Finding: identify actual grid additions by polygon vertex cycles, not propagated edge-selection state. Only newly created polygons must be quads.
+
+Validation: parent source review, AST, frozen source hash and five input pins pass. Actual author rerun remains unexecuted.
+
+Limits: API bookkeeping correction only; selected shape controls unchanged, fit and moving art open.
