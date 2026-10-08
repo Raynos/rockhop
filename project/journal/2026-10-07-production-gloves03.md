@@ -19,3 +19,7 @@ Limits: API correction only; actual corrected rig and original PBR enclosure une
 Finding: Corrected offline scale inheritance places both original glove source rigs at their unchanged anatomical controls.
 Validation: CPU2 author02 exit0 in10.395s; actual R/L residuals below10um; native source and UV pins match; unchanged complete body/master signature.
 Limits: Unaccepted first fitted-source construction; all-sided material inspection and production articulation pending.
+
+Finding: Correct joint placement leaves broad bilateral original glove surface failure; stop the fitting mechanism.
+Validation: Parent viewed all8 actual originalPBR R/L surfaces; exposed palm/dorsum/web/tips and flaredcuffs rejected, original reflected winding retained.
+Limits: No glove art/motion/bake/engine acceptance; exact expert-tailoring package being prepared.
