@@ -1837,3 +1837,5 @@ Motion11 source05 corrects an impossible asymmetric planted-leg target with20mm 
 Volume03 source pins the actual saved sculpt03 and original weight02 GLB. It appends fresh native-ID Body/Jeans position/normal morphs and a LINEAR rest/key/return diagnostic while preserving the entire source binary prefix. Four fixtures pass; actual loaded/native parity and dressed Garage judgment remain pending.
 
 The 24-hour finish sequence now records actual played rejection, saved shared volume, measured sleeve enclosure defect, five native action checks and the supported range correction. Native lead27 replaces retired lead22. All six rider gates remain open; the next visible result is the fresh dressed Garage volume film.
+
+Volume03 transport stops before output because543 moved native Body IDs are absent from the original pinned weight02 export. No new source ID loss occurred. The artist must prove existing export omission separately while preserving every exported ID; native full-body contact coverage remains required.
