@@ -1671,3 +1671,5 @@ October8 actual comparison capture02 played silently to natural end using bounde
 October8 actual native07 exits1/23.769s before sleeve construction: full dense left cuff bearing lacks cuff or wearer ray hit. No saved new native; exact-ray diagnosis delegated, no skipped samples or unchanged rerun. Selected baseline and0/6 rider gates unchanged.
 
 October8 offline seated author04 source frozen after fresh Astra xhigh review: two collision-gate bugs corrected, six crossing fixtures and19 source pins pass. One guarded four-control solve per bike next; no pose/model/engine or seated-art acceptance yet.
+
+October8 isolated preview uploaded READY; deployment-scoped share access retrieves actual version/catalog without login. Comparison harness now accepts a private URL file for the same actual headless old/new switching test; no token enters committed evidence, remote played verification remains pending.

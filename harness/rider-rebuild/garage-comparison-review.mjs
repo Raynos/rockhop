@@ -1,5 +1,6 @@
 /** Silent WebKit phone-layout comparison of original Mustard and sixth selected outfit.
  * node garage-comparison-review.mjs --build=DIR --source=GLB --contract=JSON --out=FRESH_DIR
+ * Optional --url-file=PRIVATE_FILE verifies an existing isolated HTTPS preview.
  * Parent serialized capture lease only; this is not physical-device acceptance.
  */
 import fs from 'node:fs';
@@ -65,8 +66,14 @@ const report = { accepted: false, build, source: { path: source, sha256: newAsse
     'Source SHA is streamed locally and tied to build catalog/runtime source identity; browser response bodies are never copied or independently rehashed.',
     'Submitted-frame source/visibility guards detect missing/generic rider submissions; pixel appearance and complete moving art require parent movie judgment.'] };
 let phase = 'boot';
-const server = await preview({ configFile: false, root: process.cwd(), build: { outDir: build },
+const remoteFile = arg('url-file');
+const server = remoteFile ? null : await preview({ configFile: false, root: process.cwd(), build: { outDir: build },
   preview: { host: '127.0.0.1', port: 0 }, logLevel: 'warn' });
+const entryURL = new URL(remoteFile ? fs.readFileSync(remoteFile, 'utf8').trim() : server.resolvedUrls.local[0]);
+if (remoteFile) assert(entryURL.protocol === 'https:' && entryURL.hostname.endsWith('.vercel.app'), 'Isolated HTTPS preview required');
+entryURL.searchParams.set('audio', '0'); entryURL.searchParams.set('sw', '0');
+report.deployment = remoteFile ? { origin: entryURL.origin, access: 'Deployment-scoped share cookie; URL token omitted from evidence' } : null;
+const publicBase = entryURL.origin + '/';
 const browser = await webkit.launch({ headless: true });
 const context = await browser.newContext({ viewport: report.device.viewport, screen: report.device.viewport,
   deviceScaleFactor: dpr, userAgent, isMobile: true, hasTouch: true,
@@ -87,7 +94,7 @@ page.on('response', response => {
   if (!started) return;
   pendingHeaders.push((async () => {
     const headers = await response.allHeaders();
-    const row = catalog.models.find(asset => new URL(asset.url, server.resolvedUrls.local[0]).href === response.url());
+    const row = catalog.models.find(asset => new URL(asset.url, publicBase).href === response.url());
     report.requests.push({ phase: started.phase, url: response.url(), status: response.status(),
       logical: row?.logical ?? null, catalogSHA256: row?.sha256 ?? null,
       contentLength: Number(headers['content-length'] ?? 0), responseHeaderWallMs: performance.now() - started.at });
@@ -161,7 +168,7 @@ async function orbit() {
 }
 try {
   const bootAt = performance.now();
-  await page.goto(server.resolvedUrls.local[0] + '?audio=0&sw=0');
+  await page.goto(entryURL.href);
   await page.locator('.menu-screen.live .menu-item[data-id=garage]').tap();
   await page.waitForSelector('.garage-screen.live');
   await page.locator(`button[data-bike=${bike}]`).tap();
@@ -241,7 +248,7 @@ try {
   report.resourceTiming = await page.evaluate(() => performance.getEntriesByType('resource')
     .filter(row => row.name.includes('.glb')).map(row => ({ url: row.name, durationMs: row.duration,
       transferSize: row.transferSize, encodedBodySize: row.encodedBodySize, decodedBodySize: row.decodedBodySize })));
-} catch (error) { report.failure = error.stack; process.exitCode = 1; }
+} catch (error) { report.failure = String(error.stack).replaceAll(entryURL.href, publicBase); process.exitCode = 1; }
 finally {
   try {
     report.presence = await page.evaluate(() => window.__garageComparison?.stop() ?? null);
@@ -259,7 +266,7 @@ finally {
   report.video = { movie: 'garage-comparison.mp4', exitCode: encoded.status, stderr: encoded.stderr,
     raw: probe(raw), encoded: probe(movie), meaning: 'One canonical movie retains all four choices; stream rates are separate from actual render/RAF FPS. No interpolation.' };
   if (encoded.status !== 0 || report.video.encoded.exitCode !== 0) process.exitCode = 1;
-  await new Promise(resolve => server.httpServer.close(resolve));
+  if (server) await new Promise(resolve => server.httpServer.close(resolve));
   fs.writeFileSync(path.join(out, 'report.json'), JSON.stringify(report, null, 2) + '\n');
   console.log(JSON.stringify({ out, choices: report.choices.length, failure: report.failure, errors: report.errors }));
 }
