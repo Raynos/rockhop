@@ -1,0 +1,30 @@
+{
+  "acceptedArt": false,
+  "status": "FROZEN_READ_ONLY_OWNERSHIP_PROBE",
+  "files": {
+    "probe_boundary.py": {
+      "path": "assets/blender/rider-rebuild/selected-cuff-topology10/probe_boundary.py",
+      "sha256": "aac74e41ddfd0169844e95c7b11f1d589b5694b8b67c593070fc34bdeb156d7a"
+    },
+    "probe_native.py": {
+      "path": "assets/blender/rider-rebuild/selected-cuff-topology10/probe_native.py",
+      "sha256": "55bbf549acc1f7891c7c2d092960dc8617bbb59da82f7088c9c5c682515d5312"
+    }
+  },
+  "nativeInvocation": [
+    "/Applications/Blender.app/Contents/MacOS/Blender",
+    "-b",
+    "-t",
+    "2",
+    "--python-exit-code",
+    "1",
+    "--python",
+    "assets/blender/rider-rebuild/selected-cuff-topology10/probe_native.py",
+    "--",
+    "docs/evidence/rider-rebuild/selected-cuff-topology10/native-boundary-probe.json"
+  ],
+  "sourceReplayExecuted": true,
+  "nativeProbeExecuted": false,
+  "constructionPrepared": false,
+  "limits": "Only exact source clipping and read-only native ownership; no radius/contact variant, native save, export or art claim."
+}
