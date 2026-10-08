@@ -1665,3 +1665,5 @@ October8 production correction: native07 replaces proven hidden inner sleeve ban
 October8 native07 source checkpoint frozen and unaccepted: owned inner-wall replacement, full dense cuff bearings, exact selected exterior ancestry; actual guarded construction is next, no export/promotion or art pass.
 
 October8 preview staging corrects a false positive on bundled Sentry file:// scheme detection while retaining concrete file-URI/local-path exclusion;10 targeted tests pass. Actual isolated upload remains pending, no production promotion.
+
+October8 actual comparison capture02 played silently to natural end using bounded63-PNG review; old/new source identities and59.7renderFPS remain distinct from25FPS recording. Garage-only movie and selected front photo retained; cuffs/seating and physical-phone acceptance remain open, preview upload pending.
