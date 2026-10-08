@@ -5,3 +5,9 @@ Finding: checkpoint one continuous authored pelvis/crotch/leg surface with joint
 Validation: parent AST and six original source hashes agree with the frozen receipt; corrected glTF-to-Blender UV convention and all eight same-side split leg bones reviewed. Author and bake are separate stages.
 
 Limits: unexecuted source checkpoint; no fitted, textured or moving-art acceptance. Actual boot/cuff fit and full-outfit review remain required.
+
+Finding: first author run reached selected fold projection but Blender modifier application invalidated the temporary vertex-group handle. Reacquire that group by name; retain all fitting controls.
+
+Validation: actual guard exit1 in5.433s, no saved candidate; byte-identical worker trace retained. Parent verifies the scoped two-line code repair, refreshed source hash and syntax.
+
+Limits: fresh author run is still pending; no observed fit, material or moving-art result.

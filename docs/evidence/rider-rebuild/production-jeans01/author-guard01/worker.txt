@@ -1,0 +1,18 @@
+00:00.830  blend            | Read blend: "/Users/raynos/projects/games/rockhop/harness/out/rider-rebuild/native-hand-repair01/native02/anatomical-hand-rig.blend"
+/Users/raynos/projects/games/rockhop/assets/blender/rider-rebuild/production-jeans01/author-jeans.py:122: DeprecationWarning: 'Material.use_nodes' is expected to be removed in Blender 6.0
+  mat=bpy.data.materials.new('ActualSelectedDenseDenim'); mat.use_nodes=True
+Traceback (most recent call last):
+  File "/Users/raynos/projects/games/rockhop/assets/blender/rider-rebuild/production-jeans01/author-jeans.py", line 250, in <module>
+    (author if stage=='author' else bake)(spec,out)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "/Users/raynos/projects/games/rockhop/assets/blender/rider-rebuild/production-jeans01/author-jeans.py", line 153, in author
+    active(target); bpy.ops.object.modifier_apply(modifier=sw.name); target.vertex_groups.remove(group)
+                                                                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^
+RuntimeError: Error: DeformGroup '' not in object 'RiderJeans'
+
+
+Error: script failed, file: 'assets/blender/rider-rebuild/production-jeans01/author-jeans.py', exiting.
+Blender 5.2.1 LTS (hash 9e2066aef7ef built 2026-08-25 01:35:57)
+scripts disabled for "/Users/raynos/projects/games/rockhop/harness/out/rider-rebuild/native-hand-repair01/native02/anatomical-hand-rig.blend", skipping 'RIG-RiderMetarig_ui.py'
+
+Blender quit

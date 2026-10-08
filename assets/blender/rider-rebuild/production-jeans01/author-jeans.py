@@ -150,7 +150,9 @@ def author(spec,out):
         ease=max(0,min(1,(z-.145)/.05,(.96-z)/.09))
         inside=abs(vertex.co.x)<.065 and z>.72
         group.add([vertex.index],0 if inside else .78*ease,'REPLACE')
-    active(target); bpy.ops.object.modifier_apply(modifier=sw.name); target.vertex_groups.remove(group)
+    active(target); bpy.ops.object.modifier_apply(modifier=sw.name)
+    # Modifier application can replace RNA data: reacquire the named group.
+    target.vertex_groups.remove(target.vertex_groups['SelectedSculptProjection'])
     # Restricted body-nearest initialization, then deliberate hip/knee field
     # transitions. Opposite-side leg and upper-body groups cannot leak across.
     source=np.load(bodypath); bv=source['vertices']; bf=source['faces']; coeff=source['nativeCoefficients']; names=source['jointNames'].tolist()
