@@ -1457,3 +1457,5 @@ October8 one jeans material correction source is frozen: separate editable proje
 October8 actual boot regional CSG exit1/42.63s after saved right union/cavity. Parent rejected two saved-native views: blunt box-like outer quarter/forefoot; protected rear tread also changed. Keep saved negative/cavity evidence, stop unchanged outer-last rerun. No left/material/fit/motion acceptance.
 
 October8 actual glove dorsal/palm and independent signed-MCP check correct assignment: originalL/reflectedR with face/UV corner reversal together. One ordinary original-selected-surface Laplacian sculpt source is frozen with303 anatomical handles per hand and semantic75 binding; parent read source/pins, no job/fit/grip acceptance yet.
+
+October8 actual jeans proxy/cage saved nativebecb, then exit1/17.994s before maps: edited polygons independently tessellate differently. Freeze correspondence-only triangles once before cloning; wearing/source/cage/ray/map controls unchanged. Fresh paired-triangle check next; no capture/appearance acceptance.

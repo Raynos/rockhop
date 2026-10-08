@@ -1,0 +1,34 @@
+{
+  "accepted": false,
+  "status": "FAILED_ACTUAL_AUTHORED_CORRESPONDENCE_NO_RETRY",
+  "authorSHA256": "97353e7bd2dbe7951cd7e1d96a8f7b91d7ac7f5e3033b746b7bc951a2dd8198b",
+  "intakeSHA256": "d0bafbe41987707be1a8546b192759dfa177e0b67c484d1f148181b3a1625932",
+  "controls": {
+    "path": "assets/blender/rider-rebuild/production-jeans02/correspondence-probe01/correction-controls.json",
+    "sha256": "35ffcc719922467f6b9a1e90a81e7b26b25da0d0d0416d7936ffc485c7a064ef"
+  },
+  "capture": [],
+  "regionalBakes": [],
+  "maps": {},
+  "limits": [
+    "Original source need not enclose body. No rejected fitted source positions/native are used. Only the original pre-edit evaluated array from its immutable lineage container supplies measured envelope extents, and must exactly match9565 original source at execution.",
+    "Wearing target9565 geometry/topology/UV/FULL/FOUR, original selected dense/UV/PBR, body10582/shared75 and files remain exact. Projection meshes and authored cages are clearly labeled correspondence-only derivatives.",
+    "All forty actual cage/proxy controls and envelope witnesses are frozen before job. Editable actual native must save before capture gate and maps. No fit solver, settings sweep, source deformation or retries.",
+    "Direct capture gate requires no missing interior diagnostic sample, no physical opposite-half/paired-side capture and first hit<=80mm. This is a gate on actual custom-cage capture, not Blender max-ray-distance. Source cut overlap4mm is explicit.",
+    "Python raster/BVH is not byte-identical Cycles; source semantics use actual point positions/original face lineage, not source normal signs. Original diagnostic bounded normal-cross counts did not prove physical cross-panel hits. Actual mapped images/raw maps remain parent review authority.",
+    "One pelvis-only2halvesx3maps probe at1024, three exact-UV composite maps, six close original-source/wearing-receiver views. No whole bake, final4K, fit, motion, player or device acceptance."
+  ],
+  "authoredNative": {
+    "path": "harness/out/rider-rebuild/production-jeans02/correspondence-probe01/cage-probe01/authored-correspondence.blend",
+    "sha256": "becb3a21d16a08a67cd162e64b879d2e1f516dd5f9aed7694d68d8f3e93df5d0"
+  },
+  "originalEvaluatedSourceArrayExact": true,
+  "wearingTargetSourceStateSHA256": [
+    "b6574d4404b6a6dfdc474d3fab3381ed41818b5dc3091b6a34cfee708b3b62ca",
+    "abd6b247f5845617000781bb3a8ef5b07df32d42f86e2c03785b4c00ce123f4a"
+  ],
+  "body75StateSHA256": "2294c25dafe2d6e74d0e0c9e7a7e7bb3c8937f17c8b5faab3cd661e565afda99",
+  "normalPolicy": "Proxy/cage custom normals reset to geometry-derived automatic normals; original selected source normals unchanged",
+  "error": "AssertionError('Proxy/cage tessellation changed')",
+  "traceback": "Traceback (most recent call last):\n  File \"/Users/raynos/projects/games/rockhop/assets/blender/rider-rebuild/production-jeans02/correspondence-probe01/correct.py\", line 215, in main\n    result, coverage = capture(region, selected, proxy, cage, controls, diag, out)\n                       ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/raynos/projects/games/rockhop/assets/blender/rider-rebuild/production-jeans02/correspondence-probe01/correct.py\", line 74, in capture\n    assert np.array_equal(low['triangles'], shell['triangles']), 'Proxy/cage tessellation changed'\n           ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: Proxy/cage tessellation changed\n"
+}
