@@ -1,0 +1,90 @@
+{
+  "accepted": false,
+  "status": "FAILED_CORRECTIVE_GATES",
+  "neighborhood": {
+    "lowerY": 0.7352388928294291,
+    "upperY": 1.0550000667572021,
+    "fixedBoundaryWidthM": 0.025,
+    "activeJeansVertices": 7005,
+    "anatomicalBodyMembers": 78,
+    "protectedArmHandVertices": 929,
+    "armHandDeltasExactlyZero": true,
+    "bodyCageJointNames": [
+      "DEF-spine",
+      "DEF-thighL",
+      "DEF-thighL001",
+      "DEF-thighR",
+      "DEF-thighR001",
+      "DEF-pelvisL",
+      "DEF-pelvisR"
+    ],
+    "movedBodyVertices": 55,
+    "minimumSourceCavityM": 0.012149937790843845
+  },
+  "checks": [
+    {
+      "t": 0,
+      "weight": 0,
+      "pass": true,
+      "degenerate": 0,
+      "self": 0,
+      "newSelf": 0,
+      "layer": 0,
+      "newLayer": 0
+    },
+    {
+      "t": 0.25,
+      "weight": 0.015624998391741193,
+      "pass": false,
+      "degenerate": 0,
+      "self": 104,
+      "newSelf": 9,
+      "layer": 0,
+      "newLayer": 0
+    },
+    {
+      "t": 0.5,
+      "weight": 0.18749999061404438,
+      "pass": false,
+      "degenerate": 0,
+      "self": 116,
+      "newSelf": 61,
+      "layer": 0,
+      "newLayer": 0
+    },
+    {
+      "t": 0.75,
+      "weight": 0.6328124908794625,
+      "pass": false,
+      "degenerate": 0,
+      "self": 125,
+      "newSelf": 112,
+      "layer": 0,
+      "newLayer": 0
+    },
+    {
+      "t": 1,
+      "weight": 1,
+      "pass": false,
+      "degenerate": 0,
+      "self": 50,
+      "newSelf": 50,
+      "layer": 82,
+      "newLayer": 82,
+      "contact": {
+        "left": {
+          "surfaceAreaM2": 0.0006360084978787968,
+          "bandFraction": 0.8484923170445431,
+          "meanGapM": 0.0009642024329464976
+        },
+        "right": {
+          "surfaceAreaM2": 0.0006360072807812506,
+          "bandFraction": 0.7877866387383325,
+          "meanGapM": 0.0009976045252783788
+        }
+      },
+      "jeansSaddle": 550,
+      "bodySaddle": 0
+    }
+  ]
+}

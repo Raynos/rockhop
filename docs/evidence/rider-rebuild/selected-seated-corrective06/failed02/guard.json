@@ -1,0 +1,65 @@
+{
+  "accepted": false,
+  "lock": "/Users/raynos/projects/localai/.model.lock",
+  "method": "lockf -k",
+  "command": [
+    "node",
+    "--import",
+    "tsx",
+    "assets/blender/rider-rebuild/selected-seated-corrective06/construct.mjs",
+    "--out=harness/out/rider-rebuild/selected-seated-corrective06/constructed02"
+  ],
+  "controllerPID": 8332,
+  "pollSeconds": 1,
+  "startAnonymousBelowGiB": 55,
+  "stopAnonymousGiB": 65,
+  "stopAnonymousPlusWiredGiB": 96,
+  "limitSeconds": 180.0,
+  "guardSHA256": "cf8acd15d8b7484480bee74d23892be815d955ffd87115d3da8ed228ffb3d916",
+  "status": "worker returned; review pending",
+  "samples": [
+    {
+      "seconds": 0,
+      "anonymousGiB": 41.0,
+      "wiredGiB": 9.9,
+      "freeGiB": 30.0
+    },
+    {
+      "seconds": 0.066,
+      "anonymousGiB": 41.1,
+      "wiredGiB": 9.8,
+      "freeGiB": 29.8
+    },
+    {
+      "seconds": 1.124,
+      "anonymousGiB": 42.7,
+      "wiredGiB": 9.5,
+      "freeGiB": 28.6
+    },
+    {
+      "seconds": 2.203,
+      "anonymousGiB": 43.3,
+      "wiredGiB": 9.4,
+      "freeGiB": 28.0
+    },
+    {
+      "seconds": 3.265,
+      "anonymousGiB": 40.8,
+      "wiredGiB": 7.6,
+      "freeGiB": 32.2
+    },
+    {
+      "seconds": 4.331,
+      "anonymousGiB": 41.5,
+      "wiredGiB": 7.5,
+      "freeGiB": 31.3
+    }
+  ],
+  "physicalMemoryBytes": 137438953472,
+  "requiredPhysicalMemoryBytes": 137438953472,
+  "scope": "Future explicitly invoked owned Rockhop job only",
+  "pressureOrSwapLimits": "No separate pressure/swap gate exists in the pinned original guard; none altered",
+  "ownedChildPID": 8347,
+  "exitCode": 2,
+  "elapsedSeconds": 4.859
+}

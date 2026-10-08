@@ -1707,3 +1707,5 @@ Selected seated corrective06 source checkpoint: full upper-jeans differential re
 Corrective06 actualconstruct01 fails in1.065s at bodycage native4620,183.346mm lateral distance after jeansreconstruction. Y-only body selection is not anatomical membership; inspect native skin roles and retain60mm correspondence bound before correction. No model or moving verdict.
 
 Corrective06 body-region source fixed from actual thumb4620 FOUR: positive pelvis/thigh/pelvisbranch membership, arm/hand descendants excluded, exactzero protected deltas. Parent25pins/4fixtures/syntax pass; unchanged60mmcage/allfinalgates. Actualconstruct02 next; no modelpass.
+
+Corrective06 actualconstruct02 completes finite failed diagnostic in4.859s: default0/originalBIN, exactzero929arm/hand deltas,55body/7005activejeans. Posterior core band~85% but final50self/82layer/550jeans-saddle crossings. Keep current phonepreview baseline; parent actualdressedmovingdiagnostic next before geometrychanges.
