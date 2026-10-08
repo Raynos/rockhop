@@ -1,0 +1,44 @@
+{
+  "accepted": false,
+  "status": "REQUIRED_ARTIST_DELIVERY_ENVELOPE_NOT_PERFORMED",
+  "wearerAuthority": {
+    "native": "wearer/anatomical-hand-rig.blend",
+    "bodyArrays": "wearer/native-body.npz",
+    "handTargets": ["wearer/native-hand-R.npz", "wearer/native-hand-L.npz"],
+    "jointControls": "wearer/digit-controls.json",
+    "sharedRestBones": 75,
+    "bodyVertices": 10582,
+    "bodyOrMasterRestChangesAllowed": false
+  },
+  "restReview": {
+    "bothActualHandsIndependentlyFit": true,
+    "requiredViews": ["dorsum", "palm", "radial thumb side", "ulnar side", "thumb web", "finger webs", "fingertips", "cuff all around", "complete body and both hands"],
+    "visibleActualBodyRequired": true,
+    "requiredSurfaceBehavior": ["all fingers and palm enclosed", "coherent thumb/web transition", "selected finger cap lengths preserved", "fitted cuff aperture and hoodie overlap", "selected broad pad/ribs/strap silhouette recognizable"],
+    "currentViews": "Four static world-camera views per side; body object enabled but hand-cropped framing; these reject gross rest defects and do not provide full-body or movement acceptance."
+  },
+  "constructionIntent": {
+    "actualSelectedBlackGloveSourceAndPBRRequired": true,
+    "sourceControlStationsAreEditableHypotheses": true,
+    "derivativeRequiresDeliberateTopologyAndCoherentUV": true,
+    "originalDenseSourceAndCornerUVRemainTransferAuthority": true,
+    "originalNormalMapSupplied": false,
+    "sameUnchangedNative75ForBodyAndBothGloves": true,
+    "offlineSourceRigIsModelingAidOnly": true,
+    "denseSourceIsNotMobileProductionMesh": true
+  },
+  "continuousBilateralHandReview": ["open", "individual finger curls", "full fist", "spread", "thumb abduction/adduction", "thumb opposition to fingertips", "thumb-index web compression", "finite handlebar acquire", "grip", "release", "return"],
+  "continuousDressedCheckpoint": ["neutral", "forward reach", "crouch", "supported forward-standing ride", "supported back-seated ride", "return"],
+  "actualBikeEnvelope": {
+    "bikes": ["fixed Rookie", "fixed Pro"],
+    "states": ["standing", "seated", "lean both directions", "compress", "hop", "landing", "crash release", "instant restart and reacquire grip"],
+    "contactEvidence": "Actual complete selected outfit and close bilateral hand clips through continuous transitions; real palm/finger/thenar surfaces wrap finite bar cylinders without severe penetration, sliding, unsupported grip or hidden fingers.",
+    "targetPolicy": "Read real grip geometry and finite bar extent/radius from actual bike assets in their authored frames. Do not substitute a wrist point error, unbounded line, old approximate-fist action, resized bike or changed wearer.",
+    "bikeFiles": "bike/bike-rookie.glb and bike/bike-pro.glb are exact current assets. Packaged frame/profile sources supply context, not accepted current rider-to-bike calibration."
+  },
+  "engineAndRelease": ["same-source native to GLB to GPU position/normal/tangent/skin parity", "same finger controls and rest used by actual Garage and gameplay", "complete selected outfit played through required actions", "physical landscape iPhone Safari and desktop sustained pacing", "bot and stranger attempts-to-clear and restart latency", "deterministic recorded-input replay", "checked deployment and live SHA"],
+  "artistReturns": ["editable bilateral fitted selected-PBR sculpture with unchanged wearer", "compact final-intent articulated meshes and coherent UV charts", "real source-detail albedo/MR/geometric-normal transfer with provenance", "shared75 fields and observed joint-transition corrections", "all-around rest evidence and continuous native full-motion clips", "same-source engine asset and played actual Garage/game evidence"],
+  "acceptedGates": 0,
+  "parentAloneJudgesArtAndMotion": true,
+  "limits": ["Current posed controls match; the actual glove surface does not fit.", "No current glove containment, articulation, finite-bar grip, complete outfit, engine or release pass is supplied.", "This package is not external artist contact or a new paid engagement."]
+}

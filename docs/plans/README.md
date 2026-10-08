@@ -1363,3 +1363,5 @@ October 7 single actual hoodie localOUTSIDE finish stops exit1 in1.032s at moved
 October 7 one actual selected dense denim OUTSIDEpass FAIL exit1 in10.491s:51newcollapsedtriangles/3716over90deg rotations/2loosepoints moved; actualnative5115aec7+lineage saved and parentrehashed. No retry/bake/fit acceptance; exact expert-tailoring package pending.
 
 October 7 production route updated from actual bounded outcomes: boot/glove surfaces rejected and hoodie/denim local modifiers fail unchanged guards. Stop all four failed fitting mechanisms; retain selected source/native work for exact expert tailoring. Packages are not art delivery; allR0–R5open/0accepted.
+
+October 7 exact selected glove expert-tailoring package: parent archive/manifest/all55 original source+ZIPmember pins match; originalUV/PBR/body75/currentrejectednative and actualnegativeviews preserved. Preparation only; artist not contacted, no delivered repair/art acceptance.

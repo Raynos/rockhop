@@ -23,3 +23,7 @@ Limits: Unaccepted first fitted-source construction; all-sided material inspecti
 Finding: Correct joint placement leaves broad bilateral original glove surface failure; stop the fitting mechanism.
 Validation: Parent viewed all8 actual originalPBR R/L surfaces; exposed palm/dorsum/web/tips and flaredcuffs rejected, original reflected winding retained.
 Limits: No glove art/motion/bake/engine acceptance; exact expert-tailoring package being prepared.
+
+Finding: Exact selected glove tailoring package preserves failed native work and original appearance authority.
+Validation: Parent reads brief/source and independently rehashes archive/manifest/all55 original sources and ZIP members; CRC passes.
+Limits: Preparation only, no character artist contacted or model/art/motion result delivered; allR0-R5open.
