@@ -23,6 +23,47 @@ Facial animation is deferred by the user's scope answer. Facial identity and
 convincing head/neck movement remain required. No additional permission is
 needed for the authorized construction work.
 
+## Current finish sequence — October8,14:05Panama
+
+The [fresh independent Astra6 X-High review](../evidence/rider-rebuild/astra-finish-review24/FINDING.md)
+puts the requested result at roughly40–50%complete, with low confidence; this is
+planning judgment, not acceptance. All six gates remain open.24hours is a stretch
+target, with36–72focused hours the more realistic conditional forecast.
+H0is October8,14:05Panama/19:05UTC; targetfinish October9 at the same time.
+
+| Target | Complete visible deliverable | Owner |
+| --- | --- | --- |
+| H+4 | Selected dressed rider in convincing standing/deepseated/return on both bikes, clean cuff/ankle overlap, unobscured hands/hips/profiles | Nativelead22 + wardrobelead23; parent judges |
+| H+10 | Compact selected-appearance production candidate and genuine full/LOD, compared moving in actualGarage | Wardrobe/productionlead23 + nativelead22 |
+| H+16 | Same master with usable editable Blender controls, complete generic and bike actions, actual consumed engine deformation/contact | Animation/runtimelead24 + nativelead22 |
+| H+24 | Exact candidate reviewed on desktop/physicaliPhone, bot/stranger/replay/restart and checkedrelease/liveSHA | Parent; human/device decisions throughHR-23 |
+
+Nativelead22 is sole writer of the integrated master: final anatomical weights,
+coupled body/jeans posed volume and head/neck. Wardrobelead23 supplies separate
+cuff/ankle patches and compact production meshes/detail transfer/LOD.
+Animationlead24 supplies separate native controls/actions and runtime delivery.
+Parent schedules heavy jobs serially, integrates handoffs and judges played
+complete outfits. Lightweight preparation proceeds concurrently.
+
+Before sculpt, decide anatomical09 from its actual dressed film plus one seated
+and asymmetric full-versus-FOUR displacement/support comparison. Its witness
+stretch improved, but594vertices discard>1%/171discard>5%; adjacent high-loss
+vertices drop different anatomical supports. Freeze the final production FOUR
+before sculpt; allow one deliberate support correction, no smoothing sweep.
+Cuff reconstruction resumes only after actual native proof of consistent source
+floor identity; physical clearance/radius/dense gates remain unchanged.
+
+Production geometry and missing actions start now, alongside fit work. Preserve
+selected appearance through compact deliberate derivatives and verified detail
+transfer; do not retain millions of source triangles as mobile delivery. Existing
+whole-scene500ktri/96MBtexture/16msp95/5MBheapgrowth60s limits stay authoritative.
+Generic delivery includes idle/walk/jog/turn/jump/landing, trueA/T, reaches,
+asymmetric bends and deepcrouch. Bike delivery includes standing/seated/leans,
+compression/hop/landing/crashrelease/instantrestartregrip. None is waived for the
+deadline. If H+4 still needs another solver campaign, replace the defective local
+surface and reforecast; do not spend the day only on seated/cuff diagnostics.
+Prepare phone/stranger review early. Missing human decisions stay explicit.
+
 ## Why the method changes
 
 The [five-day audit](../evidence/hero-remaster/audit-2026-10-07-agent2/README.md)
