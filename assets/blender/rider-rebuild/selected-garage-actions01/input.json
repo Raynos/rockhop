@@ -18,7 +18,7 @@
     "path": "assets/blender/rider-rebuild/selected-complete-engine01/engine05-contact-calibration02.json",
     "sha256": "1dd8883351254041c2a5352833e453707737b0fe0a53fc050784bd0e63a3d5f7"
   },
-  "appendHelperSHA256": "f615f7a55988cf02e61daa6243aae40c792aca489242be1a31b39cc7ed62a62e",
+  "appendHelperSHA256": "a5cee1272e81ada241f38c66ab370949a7deb6ef5eea5088ba4d610a8e1959e8",
   "exporterSources": [
     {
       "path": "/Applications/Blender.app/Contents/Resources/5.2/scripts/addons_core/io_scene_gltf2/__init__.py",
@@ -84,5 +84,25 @@
     "Original selected source BIN bytes and JSON nodes/meshes/images/materials/textures/skins remain exact. Only animation data append and buffer byteLength changes.",
     "Derived calibration source hash rebinds unchanged semantics to unchanged geometry/rest with two added generic actions.",
     "All R0-R5 open. Parent must load/play complete dressed actions in actual Garage and judge actual GPU/native motion parity, contacts, and devices."
-  ]
+  ],
+  "resumeInputs": {
+    "originalInputSHA256": "4eb68fa468e12767509a8f7610887936869fd1b1700d130c7b0cede2dc2aab0f",
+    "originalAppendHelperSHA256": "f615f7a55988cf02e61daa6243aae40c792aca489242be1a31b39cc7ed62a62e",
+    "rigGLB": {
+      "path": "harness/out/rider-rebuild/selected-garage-actions01/export01/rig-actions.glb",
+      "sha256": "ec6a7e45fb0647bedf138705410bfb7a11e043a339cd3ce419b8599c067e5472"
+    },
+    "nativeMatrices": {
+      "path": "harness/out/rider-rebuild/selected-garage-actions01/export01/native-action-matrices.npz",
+      "sha256": "95ab728bf363c83a9a33dda9627aceb2ab755bd362c1a0a55f76af72cc0282e6"
+    },
+    "rigReceipt": {
+      "path": "harness/out/rider-rebuild/selected-garage-actions01/export01/rig-export.json",
+      "sha256": "3761588e2d18b3f0bb986f1cd460cab117f545744580522f367a9b35168d63f9"
+    },
+    "editableNative": {
+      "path": "harness/out/rider-rebuild/selected-garage-actions01/export01/native75-two-original-actions.blend",
+      "sha256": "4f6b806dcf88b2b1b91b680915c1c8a87ddafe018c948fbb187ff4c4ff84b460"
+    }
+  }
 }

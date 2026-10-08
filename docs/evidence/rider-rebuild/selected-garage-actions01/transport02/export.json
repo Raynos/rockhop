@@ -1,0 +1,78 @@
+{
+  "accepted": false,
+  "status": "SAME_SELECTED_RIDER_ORIGINAL_NATIVE_ACTION_TRANSPORT_REVIEW_PENDING",
+  "source": {
+    "path": "harness/out/rider-rebuild/selected-complete-engine01/engine05/rider.glb",
+    "sha256": "72b90e8790f8490743a75f8b70791aa21edfee6234cec609093e9b62e08d4bfd"
+  },
+  "glb": {
+    "path": "harness/out/rider-rebuild/selected-garage-actions01/append02/rider.glb",
+    "sha256": "eaf14d08eb57c4e58edd517d18d1db5cc657149c17c9ae737688724181fc9e1a"
+  },
+  "contract": {
+    "path": "harness/out/rider-rebuild/selected-garage-actions01/append02/rider-contract.json",
+    "sha256": "ecd537a0eba6b82d6b09fbda567cca8f1c278eadb3b643f8d316ba15d3d6ce00"
+  },
+  "calibration": {
+    "path": "harness/out/rider-rebuild/selected-garage-actions01/append02/pose-calibration.json",
+    "sha256": "9d266bcc8d9697801e15b02bb2a5af812fac9f9ef733426b97a184bc48ada21b"
+  },
+  "editableNative": {
+    "path": "harness/out/rider-rebuild/selected-garage-actions01/export01/native75-two-original-actions.blend",
+    "sha256": "4f6b806dcf88b2b1b91b680915c1c8a87ddafe018c948fbb187ff4c4ff84b460"
+  },
+  "recipeSHA256": "a5cee1272e81ada241f38c66ab370949a7deb6ef5eea5088ba4d610a8e1959e8",
+  "inputSHA256": "8ca1d9d938019740fde7e17f073309b9ad6c31dc33d636420541b28308d54db7",
+  "originalRigExport": {
+    "path": "harness/out/rider-rebuild/selected-garage-actions01/export01/rig-export.json",
+    "sha256": "3761588e2d18b3f0bb986f1cd460cab117f545744580522f367a9b35168d63f9",
+    "recipeSHA256": "98198da80f1d5b83c5dcf8929c65346c709d0ba3a85960702f1e4072e3d6cfd2",
+    "inputSHA256": "4eb68fa468e12767509a8f7610887936869fd1b1700d130c7b0cede2dc2aab0f"
+  },
+  "rigOnlySkin75AndNamedInverseBindsExact": true,
+  "maximumNamedInverseBindResidual": 0.0,
+  "originalBINByteLength": 357243920,
+  "originalBINPayloadSHA256": "6b942497c729a5aad117cc89c9d2bb4762632f01bb4f39d13e06f24378a5740e",
+  "originalAllGeometryImageAndSkinBytesExact": true,
+  "originalNodesMeshesImagesMaterialsTexturesSkinsExact": true,
+  "originalAccessorAndBufferViewPrefixExact": true,
+  "rigHierarchyNamesExact": true,
+  "maximumSerializedLocalRestMatrixResidual": 0.0,
+  "actions": [
+    {
+      "name": "UnacceptedSelectedCrouchRiseArmsUp193",
+      "fps": 24,
+      "frameRange": [
+        1,
+        193
+      ],
+      "sampleCountPerChannel": 193,
+      "channels": 225,
+      "startSeconds": 0,
+      "durationSeconds": 8.0,
+      "maximumDecodedNativeWorldMatrixResidual": 4.486543511678098e-06,
+      "sourceSlot": "OBRiderSkeleton"
+    },
+    {
+      "name": "UnacceptedSelectedDressedReachGripRelease145",
+      "fps": 24,
+      "frameRange": [
+        1,
+        145
+      ],
+      "sampleCountPerChannel": 145,
+      "channels": 225,
+      "startSeconds": 0,
+      "durationSeconds": 6.0,
+      "maximumDecodedNativeWorldMatrixResidual": 2.199109543327138e-06,
+      "sourceSlot": "OBRiderSkeleton"
+    }
+  ],
+  "newAnimationBINByteLength": 1009712,
+  "normalPlayerAssetsChanged": false,
+  "limits": [
+    "Complete actual Garage/action playback, moving source-GPU parity, contacts and device gates remain open.",
+    "Only original145/193 authored action transport; no new action, geometry, textures, weights, mask or solver change.",
+    "Calibration semantics copied exactly; source SHA rebound because original complete geometry/rest bytes are unchanged."
+  ]
+}
