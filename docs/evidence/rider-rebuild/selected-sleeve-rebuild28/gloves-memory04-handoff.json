@@ -1,0 +1,91 @@
+{
+  "status": "FROZEN_PENDING_SAVE_AND_SEPARATE_REOPENED_QUALIFIER_SOURCE_ONLY",
+  "acceptedArt": false,
+  "nativeRunExecuted": false,
+  "sourcePins": [
+    {
+      "path": "assets/blender/rider-rebuild/selected-sleeve-tailoring27/gloves_only04.py",
+      "sha256": "c1a98001b74ad0ad445f856a2f423d320bf98ec1b9e315126eba218bb55ce002"
+    },
+    {
+      "path": "assets/blender/rider-rebuild/selected-sleeve-tailoring27/checkpoint04.py",
+      "sha256": "d9e1c4f0b8fee05cae085482490fa4650c994c1dfc6213c234b3988ae3011406"
+    },
+    {
+      "path": "assets/blender/rider-rebuild/selected-sleeve-tailoring27/qualify_checkpoint04.py",
+      "sha256": "c323ab1d04d1b861ed059c4b8293a1782bd87c482e571548c844d0779777fb98"
+    },
+    {
+      "path": "assets/blender/rider-rebuild/selected-sleeve-tailoring27/check_checkpoint04.py",
+      "sha256": "f75b10dd82734243e641fb602918bf43493bc0648f03afd1d750f442e4b8e300"
+    }
+  ],
+  "fixtureReceipt": {
+    "path": "docs/evidence/rider-rebuild/selected-sleeve-rebuild28/gloves-memory04-fixtures.json",
+    "sha256": "6a32c300c4fee4645c7009db7b35da73b80f11c4c6dcbf1f2f4bc213b37d4c78"
+  },
+  "actualPredecessorFinding": {
+    "guard": {
+      "path": "docs/evidence/rider-rebuild/selected-sleeve-rebuild28/gloves-guard03/guard.json",
+      "sha256": "1ef4cead3237527ae29f7f0fc956595b2e6620489884a6a9327bb71e0c54c1d9"
+    },
+    "workerLog": {
+      "path": "docs/evidence/rider-rebuild/selected-sleeve-rebuild28/gloves-guard03/worker.log",
+      "sha256": "2ed50f0d53e994d18519bfebced77334f7111a1c1b16e331feedaac7b3b857af"
+    },
+    "elapsedSeconds": 71.804,
+    "exitCode": -15,
+    "output": "harness/out/rider-rebuild/astra-cuff-bearing18/authored29-gloves-only",
+    "actualOutputFiles": [
+      "ActualSelectedGlove.L-ancestry.npz",
+      "ActualSelectedGlove.R-ancestry.npz"
+    ],
+    "bothGlovesConstructed": true,
+    "bothScratchSetsReleased": true,
+    "unusedHoodieConstructorSkipped": true,
+    "saveEntryReached": false,
+    "stage": "Guard reached during original callback protected geometry after-scan before checkpoint03 save entry. Compression was not reached and is not the established cause."
+  },
+  "method": [
+    "Exact frozen memory02 constructors, lifetime release, selected geometry/maps/skin/source methods remain unchanged.",
+    "Replace only the first sleeve callback: cheap exact75 rest, loaded source pathname, streaming actual sourceMaster SHA plus pinned input/recipe identities, protected object names/types and both actual ancestry files are required before save.",
+    "Persist small expected pre-glove geometry hashes and native rest records; save uncompressed native and explicitly protected-validation-pending receipt. No protected geometry success fields are issued.",
+    "Run qualifier in a separate Blender process: stream-pin-check sourceMaster, saved native, witness, source recipe/helpers and both ancestry files; reopen native with use_scripts=False; compare native75 rest and every protected mesh fingerprint.",
+    "Only successful qualifier writes gloves-only-qualified.json with the legacy compatibility fields required by frozen sleeve28. protectedValidationStage records SEPARATE_REOPENED_NATIVE. Original pending receipt stays unchanged; dense/art/motion gates remain false."
+  ],
+  "validation": [
+    "Four new Python ASTs pass.",
+    "Ten actual helper/wrapper behavior fixtures pass with fake Blender I/O, including same-path source byte mutation rejection in saving and qualification and scripts-disabled reopen.",
+    "Four exact memory02 scratch lifetime fixtures pass again.",
+    "All frozen03 and sleeve28 source pins match. No prior source changed."
+  ],
+  "nextParentGuardedInvocation": "/Applications/Blender.app/Contents/MacOS/Blender -b -t 2 --python-exit-code 1 --python assets/blender/rider-rebuild/selected-sleeve-tailoring27/gloves_only04.py -- harness/out/rider-rebuild/astra-cuff-bearing18/authored30-gloves-only",
+  "separateQualifierInvocation": "/Applications/Blender.app/Contents/MacOS/Blender -b -t 2 --python-exit-code 1 --python assets/blender/rider-rebuild/selected-sleeve-tailoring27/qualify_checkpoint04.py -- harness/out/rider-rebuild/astra-cuff-bearing18/authored30-gloves-only/gloves-only-pending.json",
+  "freezeInputsReceiptAfterQualifierOnly": "harness/out/rider-rebuild/astra-cuff-bearing18/authored30-gloves-only/gloves-only-qualified.json",
+  "parentAdmission": {
+    "threads": 2,
+    "limitSecondsPerProcess": 300,
+    "startAnonymousBelowGiB": 55,
+    "stopAnonymousGiB": 65,
+    "stopAnonymousPlusWiredGiB": 96,
+    "guardSHA256": "cf8acd15d8b7484480bee74d23892be815d955ffd87115d3da8ed228ffb3d916",
+    "freshConstructionOutputRequired": true,
+    "separateSerialProcessesRequired": true
+  },
+  "expectedCost": {
+    "constructionPlanningSeconds": [
+      60,
+      150
+    ],
+    "qualifierPlanningSeconds": [
+      30,
+      120
+    ],
+    "actualRuntimeAndPeakUnmeasured": true
+  },
+  "limits": [
+    "No actual04 save, reopen, protected comparison, memory measurement, dense check or played review has run.",
+    "Raw checkpoint saving still has native allocations and could reach the unchanged guard.",
+    "The pending receipt is deliberately incompatible with frozen sleeve28 input freeze; qualification cannot be inferred from saved native existence."
+  ]
+}

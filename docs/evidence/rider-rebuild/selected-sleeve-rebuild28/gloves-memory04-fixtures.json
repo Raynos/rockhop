@@ -1,0 +1,75 @@
+{
+  "acceptedArt": false,
+  "actualNativeRun": false,
+  "results": {
+    "check_checkpoint04.py": {
+      "passed": true,
+      "actualNativeRun": false,
+      "fixtures": [
+        "Pending save never scans protected geometry and persists expected witness before raw native save",
+        "Only reopened matching native issues separate qualified receipt; pending receipt stays unchanged",
+        "Changed source master bytes at the same path stop qualification before reopen or success receipt",
+        "Reopened geometry mismatch emits no qualified receipt and preserves pending native",
+        "Reopened rest mismatch emits no qualified receipt and preserves pending native",
+        "Missing source witness stops before native save",
+        "Missing master-bytes witness stops before native save",
+        "Missing ancestry witness stops before native save",
+        "Missing rig witness stops before native save",
+        "Actual04 wrapper retains memory02 construction and replaces the after-scan callback with pending save then exit"
+      ],
+      "fixtureFileBytesAreNotNativeBlenderData": true
+    },
+    "check_memory_lifetime.py": {
+      "passed": true,
+      "actualNativeRun": false,
+      "fixtures": [
+        "Existing left instance releases scratch only after successful finish",
+        "Returned actual arrays/report survive scratch release before right construction",
+        "Failed finish preserves diagnostic scratch and propagates failure",
+        "Hoodie sentinel bypasses the original constructor and preserves native object"
+      ],
+      "events": [
+        {
+          "operation": "RELEASE_COMPLETED_GLOVE_PYTHON_SCRATCH",
+          "object": "ActualSelectedGlove.L",
+          "sourceVertices": 284571,
+          "sourceFaces": 569142,
+          "releasedMemberNames": [
+            "fail",
+            "finished",
+            "old_count",
+            "old_face_count",
+            "returned",
+            "scratch",
+            "source"
+          ],
+          "returnedArraysAndReportPreserved": true,
+          "nativeDatablocksRemoved": false
+        },
+        {
+          "operation": "RELEASE_COMPLETED_GLOVE_PYTHON_SCRATCH",
+          "object": "ActualSelectedGlove.R",
+          "sourceVertices": 284571,
+          "sourceFaces": 569142,
+          "releasedMemberNames": [
+            "fail",
+            "finished",
+            "old_count",
+            "old_face_count",
+            "returned",
+            "scratch",
+            "source"
+          ],
+          "returnedArraysAndReportPreserved": true,
+          "nativeDatablocksRemoved": false
+        },
+        {
+          "operation": "SKIP_UNUSED_HOODIE_SURGERY",
+          "object": "RiderHoodie",
+          "nativeObjectUnchanged": true,
+          "scratchArraysAllocated": false
+        }
+      ]
+    }
+  }
+}
