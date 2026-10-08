@@ -1,0 +1,15 @@
+00:00.634  blend            | Read blend: "/Users/raynos/projects/games/rockhop/harness/out/rider-rebuild/construction01/combined04/rider-assembled.blend"
+Traceback (most recent call last):
+  File "/Users/raynos/projects/games/rockhop/assets/blender/rider-rebuild/native-hand-repair01/build-native.py", line 257, in <module>
+    if __name__=='__main__':main()
+                            ~~~~^^
+  File "/Users/raynos/projects/games/rockhop/assets/blender/rider-rebuild/native-hand-repair01/build-native.py", line 128, in main
+    assert row == source_rest[name], ('Untouched rest changed',name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('Untouched rest changed', 'DEF-f_middle.03.L')
+
+Error: script failed, file: 'assets/blender/rider-rebuild/native-hand-repair01/build-native.py', exiting.
+Blender 5.2.1 LTS (hash 9e2066aef7ef built 2026-08-25 01:35:57)
+scripts disabled for "/Users/raynos/projects/games/rockhop/harness/out/rider-rebuild/construction01/combined04/rider-assembled.blend", skipping 'RIG-RiderMetarig_ui.py'
+
+Blender quit

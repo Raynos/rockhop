@@ -1179,3 +1179,5 @@ October 7 actual-jeans fit source replaces sliding per-vertex medians with measu
 October 7 parent actual-original GLB readback confirms exporter cutoff1e-4 and authored bone-local axes: normalized named coefficient error1.017e-7, inverse-bind error2.184e-7. Updated hand verifier retains static triangulation/corner lineage and measures each phalanx response; exact source update checkpoint precedes native execution.
 
 October 7 actual jeans chart registration01 rejected before candidate generation: both leg charts measured, but two pelvis sections form one connected material contour rather than the assumed nested cavity loops. Source slit/fly topology needs explicit dense/compact classification; no source gap is skipped or fabricated enclosure accepted.
+
+October 7 native hand build01 stops before heat binding: an untouched middle distal rest record differs after edit mode. No fields/master/GLB were produced; original master remains exact. A source-pinned no-op-versus-corrected edit diagnostic will measure all endpoint/frame deltas before any rig invariant changes.

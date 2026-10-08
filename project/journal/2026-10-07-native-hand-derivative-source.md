@@ -11,3 +11,9 @@ Finding: Actual original GLB exposes the bone-local basis and low-weight export 
 Validation: Parent independently reproduced original named-coefficient error 1.017e-7 and inverse-bind error 2.184e-7. All five source ASTs pass. Individual phalanx response and static modifier/corner proofs are included for the forthcoming native run.
 
 Limits: Original readback calibrates a verifier; it is not a new rig, anatomy, glove or artwork pass.
+
+Finding: Native build01 exits before automatic binding on an untouched distal rest record. The cause is not established. A no-op edit control compared with the same proposed correction will quantify actual endpoint/frame reconstruction instead of guessing or relaxing invariants.
+
+Validation: Guard exit 1 in 1.17 seconds; empty output directory and original native SHA verified by parent. Diagnostic source pin and AST pass; it has not executed.
+
+Limits: No new rig, field, master, GLB or moving pass. No invariant changes authorized from this unexplained comparison.
