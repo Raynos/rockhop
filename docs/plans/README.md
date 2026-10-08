@@ -1629,3 +1629,5 @@ October8 originalselected Rookie/Prosidefilms playednatural16s each: Rookie0/192
 October8 native193 originalselected clothed crouch/rise/armsup fullfilm rendered and playednatural8.042s; parentkeeps moderatefull-viewbaseline. Repeat190/193presentedcallbacks,omissionsretained;profiles/hands/deepseated/engineparity stillopen,all0/6open.
 
 October8 cuff06 final offset mechanism rejected before native output. Parent verified Astra09 new LEFT self-crossing faces4985/5324; fixed-frame normal turns alone are not inversion proof. Stop offset campaigns; coherent local cuff construction next. Selected source95a4/72b90 unchanged, all0/6open.
+
+October8 selected native145 close-hands film rendered and played6.042s; parent keeps actual dark-glove curl/release baseline, cuff ridge unresolved.142/145callbacks retained; finite-bar wrap and bilateral profiles still open,all0/6open.
