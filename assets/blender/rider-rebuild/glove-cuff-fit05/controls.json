@@ -54,7 +54,7 @@
     "L": {
       "offsets": {
         "path": "assets/blender/rider-rebuild/glove-cuff-fit05/cuff-offsets-L.npz",
-        "sha256": "14a80824a4257292010a7291807a39572c783f9581f35863462b549471ab7271"
+        "sha256": "6b62ac418cef22373884cf6ccb37847fd5b6cca2e6e4d3f699a5680e8393d8f8"
       },
       "previousLocalOffsets": {
         "path": "assets/blender/rider-rebuild/glove-anatomical04/local-offsets04-L.npz",
@@ -78,6 +78,20 @@
       "maximumWorldOffsetM": 0.0091723062525747,
       "existingLocal04EditedVerticesExactlyUntouched": true,
       "minimumTriangleCrossSourceUnits": 4.614672834581686e-06,
+      "orientationRepair": {
+        "reducedGuideVertices": [
+          5132,
+          5206,
+          5797,
+          5807,
+          5835,
+          5836
+        ],
+        "passes": 2,
+        "measuredControlsExactlyUnchanged": true,
+        "maximumWorldOffsetReductionM": 0.0017316928931494957,
+        "minimumOriginalVsCorrectedFloat32TriangleNormalDot": 0.009507895268662343
+      },
       "hoodieWitnessMeasurements": [
         {
           "face": 26383,
@@ -138,7 +152,7 @@
     "R": {
       "offsets": {
         "path": "assets/blender/rider-rebuild/glove-cuff-fit05/cuff-offsets-R.npz",
-        "sha256": "e9fe0168b1d11321bc22e6ba8d1455061fa247d8534d39f58a1262b34d41983c"
+        "sha256": "40c6b3d34853ad287b6506a46b60937881fbf10e287dd6c273ee91d5dc0d1e4c"
       },
       "previousLocalOffsets": {
         "path": "assets/blender/rider-rebuild/glove-anatomical04/local-offsets04-R.npz",
@@ -162,6 +176,18 @@
       "maximumWorldOffsetM": 0.008393257554183502,
       "existingLocal04EditedVerticesExactlyUntouched": true,
       "minimumTriangleCrossSourceUnits": 6.565212062258853e-06,
+      "orientationRepair": {
+        "reducedGuideVertices": [
+          5043,
+          5064,
+          5065,
+          5132
+        ],
+        "passes": 2,
+        "measuredControlsExactlyUnchanged": true,
+        "maximumWorldOffsetReductionM": 0.0011616352438546217,
+        "minimumOriginalVsCorrectedFloat32TriangleNormalDot": 0.22229378660446528
+      },
       "hoodieWitnessMeasurements": [
         {
           "face": 10151,
@@ -220,7 +246,7 @@
       ]
     }
   },
-  "freezeRecipeSHA256": "6b8fd1ec432c4a67f84e8e982d956e7d57072d517325c7ac36e62fe25002bb49",
+  "freezeRecipeSHA256": "f7f97f736a6b4f5932e022974bb9b8772e1013e9d69e47197142c0a688f6e134",
   "limits": [
     "Source brush only, no moving-art acceptance.",
     "Local hoodie planes constrain amount; not watertight containment or body clearance fitting."

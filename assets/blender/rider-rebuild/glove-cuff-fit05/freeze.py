@@ -10,6 +10,7 @@ import json
 import mmap
 import runpy
 import struct
+import sys
 from pathlib import Path
 import numpy as np
 
@@ -46,7 +47,7 @@ def geodesic(points, faces, seeds, radius):
 
 
 def main():
-    assert not (HERE/'controls.json').exists(), 'Frozen controls already exist'
+    assert not (HERE/'controls.json').exists() or sys.argv[1:]==['--replace'], 'Frozen controls already exist; explicit --replace required'
     source = ROOT/'harness/out/rider-rebuild/selected-complete-engine01/engine03/rider.glb'
     assert sha(source) == '7d826b835ca07c7c584d6b3a9606e9e89780f1c7b92e4030e1f1b58aff4127ed'
     frozen = json.loads((OLD/'guide-controls02.json').read_text())
@@ -109,7 +110,25 @@ def main():
         for (a, x), (b, y) in zip(stations, stations[1:]):
             q = np.clip((t-a)/(b-a),0,1); q = q*q*(3-2*q)
             mask = t >= a; fraction[mask] = x*(1-q[mask])+y*q[mask]
-        offsets_world = -radial*(fraction*brush)[:,None]
+        scale = fraction*brush; before_scale = scale.copy()
+        old_normals = np.cross(points[faces[:,1]]-points[faces[:,0]],points[faces[:,2]]-points[faces[:,0]])
+        inverse = np.linalg.inv(linear).T
+        # Reduce only the taper amplitudes incident to a reversed small lip
+        # triangle. A shared minimum restores a locally coherent contraction;
+        # never enlarge the brush, move a measured control or increase an edit.
+        for iteration in range(3):
+            trial = (points+(-radial*scale[:,None])@inverse).astype(np.float32).astype(float)
+            normals = np.cross(trial[faces[:,1]]-trial[faces[:,0]],trial[faces[:,2]]-trial[faces[:,0]])
+            dots = (old_normals*normals).sum(1)/(np.linalg.norm(old_normals,axis=1)*np.linalg.norm(normals,axis=1))
+            bad = faces[dots<=0]
+            if not len(bad): break
+            for triangle in bad:
+                assert not set(map(int,triangle))&set(witnesses), 'Repair may not move measured cuff controls'
+                scale[triangle] = np.minimum(scale[triangle],scale[triangle].min())
+        assert np.all(dots>0), 'Bounded local triangle repair did not pass'
+        assert np.all(scale<=before_scale)
+        repair_ids = np.flatnonzero(scale!=before_scale)
+        offsets_world = -radial*scale[:,None]
         offsets_source = offsets_world@np.linalg.inv(linear).T; corrected = points+offsets_source
         changed = np.linalg.norm(offsets_world,axis=1)>0
         assert np.array_equal(corrected[~changed], points[~changed])
@@ -120,6 +139,9 @@ def main():
         result['hands'][side] = {'offsets':pin(output), 'previousLocalOffsets':pin(local_path), 'axialTaperStations':stations,
             'changedGuideVertices':int(changed.sum()), 'maximumWorldOffsetM':float(np.linalg.norm(offsets_world,axis=1).max()),
             'existingLocal04EditedVerticesExactlyUntouched':True, 'minimumTriangleCrossSourceUnits':float(crosses.min()),
+            'orientationRepair':{'reducedGuideVertices':repair_ids.tolist(),'passes':iteration,
+                'measuredControlsExactlyUnchanged':True,'maximumWorldOffsetReductionM':float(np.max(np.linalg.norm(radial,axis=1)*(before_scale-scale))),
+                'minimumOriginalVsCorrectedFloat32TriangleNormalDot':float(dots.min())},
             'hoodieWitnessMeasurements':observations}
     (HERE/'controls.json').write_text(json.dumps(result,indent=2)+'\n')
     print(json.dumps({s:{k:v for k,v in r.items() if k not in ('offsets','previousLocalOffsets','hoodieWitnessMeasurements')} for s,r in result['hands'].items()},indent=2))

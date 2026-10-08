@@ -18,6 +18,10 @@ Cheap NumPy source preparation ran in0.804s. Both hands change334 of8000 guide
 vertices, with maximum world offsets9.172mm left/8.393mm right. Every vertex
 changed by local04's previous palm/digit/thenar edits is exactly untouched.
 No guide triangle falls below the existing positive cotangent-area gate.
+Final orientation checking found tiny lip triangles reversing under the brush.
+Two bounded reduction passes change only6left/4right taper amplitudes, reducing
+their offsets by at most1.732/1.162mm. All original-vs-corrected float32 triangle
+normal dots are positive; the three measured controls remain exactly unchanged.
 These offsets are source modeling controls; the larger left correction follows
 its actual5187 crossing6.518mm and radial direction, rather than copying a6mm
 world offset or assuming the two sleeves are symmetric.

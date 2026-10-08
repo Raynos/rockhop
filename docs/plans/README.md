@@ -1577,3 +1577,5 @@ October8 Garage03 prepared maps retain blue/high roughness but selected4K intake
 October8 Astra07 supported proximal selected-glove cuff taper source reviewed/pinned:334/8000 guideverts perhand, preserve all prior anatomical edits/UV/PBR/fields and otherfiveparts. ActualCPU2dense transfer/completeGarage judgment next;0/6open.
 
 October8 Garage04 exposed second resident low-tier texture shrink after loader policy. Private intake now protects exact selected texture objects through all later budget passes; genuine4K before/after still pending. All0/6open.
+
+October8 selected cuff taper localorientation correction reviewed:6L/4Rnoncontrol amplitude reductions, measuredcontrols/prioranatomicaledits exact;float32orientation positive. Actualdense transfer next;all0/6open.

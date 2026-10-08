@@ -68,7 +68,11 @@ def main():
         full[side] = bpy.data.objects['Gloves__LocallySculptedSelected04.'+side]
         full_positions[side] = helper['points'](full[side].data); full_fixed[side] = fixed(full[side])
         guide.data.vertices.foreach_set('co',arrays['corrected'].astype(np.float32).ravel()); guide.data.update()
-        helper['positive_cotangent_geometry'](helper['points'](guide.data),arrays['faces'])
+        actual = helper['points'](guide.data); faces = arrays['faces']
+        helper['positive_cotangent_geometry'](actual,faces)
+        before_normals=np.cross(arrays['original'][faces[:,1]]-arrays['original'][faces[:,0]],arrays['original'][faces[:,2]]-arrays['original'][faces[:,0]])
+        after_normals=np.cross(actual[faces[:,1]]-actual[faces[:,0]],actual[faces[:,2]]-actual[faces[:,0]])
+        assert np.all(np.einsum('ij,ij->i',before_normals,after_normals)>0), 'Actual float32 guide reverses an original triangle'
         guides[side] = guide
     source = bpy.data.objects['Gloves__UntouchedSelectedDenseTransfer.R']; driver = bpy.data.objects['Gloves__SelectedGuideTransferDriver.R']
     source_name, driver_name = source.name, driver.name
@@ -80,7 +84,8 @@ def main():
     # evaluation has happened; the selected guides are already editable here.
     bpy.data.libraries.write(str(checkpoint),set(guides.values())|set(full.values())|{source,driver},fake_user=True,compress=True)
     report = {'acceptedArt':False,'operation':control['operation'],'recipeSHA256':sha(__file__),'controlsSHA256':sha(controls_path),
-        'sourceMaster':control['master'],'sourceFullGloves':control['fullGloves'],
+        'sourceMaster':control['master'],'parentNative':control['master'],'sourceFullGloves':control['fullGloves'],
+        'changedPositionObjects':['ActualSelectedGlove.L','ActualSelectedGlove.R'],
         'guidesSavedBeforeDenseTransfer':{'path':str(checkpoint.relative_to(ROOT)),'sha256':sha(checkpoint)},
         'newBindCalls':0,'newWeightComputations':0,'bakesExecuted':0,'hands':{},
         'limits':['Unaccepted bilateral cuff source; parent judges actual Garage and wrist/grip motion.','Nearest surface signs are local diagnostics, not a universal containment or device gate.']}
