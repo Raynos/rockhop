@@ -1755,3 +1755,5 @@ Active production plan reconciles playeddiagnostic rejection, nativeanatomical09
 Actualanatomical09 nativeweightedit SUCCESS88.992s, saved/reopened d42ff634;2,356jeansvertices changed, rest1.335e-7m, protectedappearance/native75/outsideweights exact. Witness62.235→43.524mm stilloverstretched(rest18.591), P95region2.891→2.484/max7.066; FOURdiscardmax15.223%explicit. Unacceptedweight-only; nextactualfullselectedGaragefilm thenposedsculpt. Thirdconstruction sincegate31; gate32next.
 
 Cufftopology10 read-onlysource finding: originalfloat32clip yields three nearfloorYvalues; stricterfloat64ownership excludes2,713validpieces andmislabelsinnerboundaryasouter. Exactsourceconversiontofloat64beforeclip preservesoriginalcoordinates andavoids predicateprecisionmismatch; nativeproof next. Noradiusvariant/newcandidate/artpass.
+
+Third-construction playergate32 PASS11/11 afteractualnativeweight09: bootmedian280.67ms, finish8.591666666666667/hash622bb2554e0f9a26bitexact,20one-tickrestarts,P95syncedframe6.07ms; actualguard7.215s. Originalplayerpartialgateonly; no selectedriderart/devicepass. Nativecuffownershipprobe next.
