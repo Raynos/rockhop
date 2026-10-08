@@ -1899,3 +1899,5 @@ Actual-gameplay lean capture source now rejects authored stage clips and follows
 Actual gameplay capture now records exact24Hz native75/bike/simulated-state witnesses for native reconstruction, without changing physics or pose. Eight source checks pass; actual held-lean capture and visual acceptance remain pending.
 
 Glove memory02 actual run finishes both sides and skips unused hoodie scratch, then hits65GiB memory guard during native save at80.405s. Both ancestry arrays retained; incomplete .blend@ is not a usable master. New uncompressed-save wrapper requested; geometry and guard limits remain unchanged.
+
+Gameplay lean film retains actual crash/ragdoll fields and labels the held input phase. It changes capture annotation only; selected source and simulated driver remain unchanged. Actual continuous capture awaits shared-machine memory admission.

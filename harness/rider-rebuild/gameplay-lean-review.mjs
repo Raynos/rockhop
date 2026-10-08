@@ -56,13 +56,17 @@ try {
     const endpoints = new Map(); let end = 0;
     for (const phase of phases) { end += phase.ticks; endpoints.set(end, phase.name); }
     const samples = [], faults = [], motionSamples = [], started = performance.now(); let tick = 0, maximumCatchupTicks = 0;
+    const label = document.createElement('div');
+    label.style.cssText = 'position:fixed;bottom:24px;left:50%;transform:translateX(-50%);z-index:2147483647;background:#000d;color:white;padding:8px 14px;font:18px monospace';
+    document.body.append(label);
     const joints = [...rider.binding.byId], originalUpdate = rider.update;
     const rootBone = joints.find(([, bone]) => !bone.parent?.isBone)[1];
     let latestFrame;
     rider.update = function (frame) {
       const result = originalUpdate.call(this, frame);
       latestFrame = { bikeX: frame.bikeX, bikeY: frame.bikeY, bikeAngle: frame.bikeAngle,
-        tSim: frame.tSim, rider: structuredClone(frame.rider), riderBody: structuredClone(frame.riderBody) };
+        tSim: frame.tSim, tick: frame.tick, crashed: frame.crashed, faulted: frame.faulted,
+        ragdoll: structuredClone(frame.ragdoll), rider: structuredClone(frame.rider), riderBody: structuredClone(frame.riderBody) };
       return result;
     };
     const motionSnapshot = () => {
@@ -86,6 +90,7 @@ try {
     try { await new Promise((resolve, reject) => {
       function frame() {
         try {
+          label.textContent = tick < 240 ? 'Actual gameplay: neutral' : tick < 600 ? 'Actual gameplay: lean forward' : tick < 960 ? 'Actual gameplay: lean backward' : 'Actual gameplay: return to neutral';
           const wanted = Math.min(inputs.length, Math.floor((performance.now() - started) * .12));
           maximumCatchupTicks = Math.max(maximumCatchupTicks, wanted - tick);
           while (tick < wanted) {
