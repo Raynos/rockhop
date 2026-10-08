@@ -17,3 +17,7 @@ Limits: No deletion or neck candidate; use actual rim topology for one justified
 Finding: Broad anatomical neck derivative now saves after exact enclosed inner-rim closure, without inferred source-face deletion.
 Validation: CPU2 build exit0 in5.064s; native9023618821,38959vertices,5879newneck/339captriangles, zero boundary/nonmanifold/loose, worker retained6753canonical/1446hands/rest75.
 Limits: Shape and independent saved readback pending; connected inner-head source surface retained honestly. No art or moving acceptance.
+
+Finding: Actual broad neck profiles substantially reduce the previous throat shelf and posterior stump/notch; keep as a rest-only authoring improvement.
+Validation: Read-only CPU2 render exit0 in7.185s; parent viewed all4 new images and2 old matched profiles; native unchanged.
+Limits: Residual nape bulge, albedo patching and shading/hair seams remain. Independent readback, clothed head motion and collar clearance untested; no art gate pass.
