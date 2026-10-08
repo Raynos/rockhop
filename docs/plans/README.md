@@ -1839,3 +1839,5 @@ Volume03 source pins the actual saved sculpt03 and original weight02 GLB. It app
 The 24-hour finish sequence now records actual played rejection, saved shared volume, measured sleeve enclosure defect, five native action checks and the supported range correction. Native lead27 replaces retired lead22. All six rider gates remain open; the next visible result is the fresh dressed Garage volume film.
 
 Volume03 transport stops before output because543 moved native Body IDs are absent from the original pinned weight02 export. No new source ID loss occurred. The artist must prove existing export omission separately while preserving every exported ID; native full-body contact coverage remains required.
+
+Motion11 native05 saves all six editable control actions and native75 bake/export. Actual contact≤0.090460mm, regional difference≤0.000530mm and clone bake≤0.025975mm under unchanged0.1mm bounds; guard0/23.813s. Selected dressed transport, garment envelopes, bike actions and art/device acceptance remain open.
