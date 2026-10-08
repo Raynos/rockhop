@@ -1731,3 +1731,5 @@ Fresh Astra19 correction verified against actualauthor05/corrective02 sources: a
 Corrective runtime02 source uses cached quaternion/node/morph slots with explicit matrices-current fastpath, plus shared exact-selectedscene marker across texture rebudgets. Parent19tests pass; historical helperpins/budget unchanged. Actualdiagnostic build02 next, no moving/art verdict.
 
 Actual Blender native-driver probe passes13built-in curves/sixposes withautoexecdisabled; original**negativecontrol rejected, maxkernelresidual1.729e-6,exit0/1.258s. Fullselectednative importretry now supported; no art verdict.
+
+Diagnostic08 productionbundle02 stillfails140Bover(717964/717824),exit1/5.153s. Stopbundle-tuningloop. Permanent actualsource devGarage harness next, no budgetwaiver; source-author bike-origin placement mustoverridegenericoffbikeclipoffset. Production/artgatesremainopen.
