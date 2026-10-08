@@ -1441,3 +1441,5 @@ October 8 jeans interpretation correction:452/1764 bounded opposite-source label
 October 8 actualPBR clothed headturn/nod rendered72frames in42.123s and played silently to3s,65actualpresentedcallbacks/7omissions. Parent retains limited neck improvement; actual dense hoodie gross penetration rejects outfit. One compact panel reconstruction next. No art/Garage/game admission.
 
 October 8 actual bilateral hoodie topology saved in complete dressed native1ad5c5aa, CPU2 exit0/14.759s: four concave panels/two support loops each, original selected4KPBR and wearer75 retained. Actual compact hoodie now visible; original dense remains reference. Matched views next; no fit/art/motion acceptance.
+
+October 8 actual compact hoodie matched review: chest/deltoid coverage improved, but new axillary panels pinched/jagged with skin exposure, rejected. Eight PBR views inspected; full/close CPU2 exit0/19.149s/17.591s. Correct explicit anatomical seam corners/interior after saved-data check, not a gain sweep. All art gates open.
