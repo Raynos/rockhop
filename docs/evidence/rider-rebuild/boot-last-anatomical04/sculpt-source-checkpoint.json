@@ -1,0 +1,63 @@
+{
+  "accepted": false,
+  "status": "ONE_SELECTED_SURFACE_SCULPT_SOURCE_READY_UNEXECUTED",
+  "pythonASTPassed": true,
+  "explicitInputPinsPassed": 13,
+  "recipeSHA256": "2c966f042cfef8fd09fb3f12393ce175fe3a38f2e6f2e20a45d13143690e0818",
+  "controlsSHA256": "8bc1e8cf0318a7f4677a7a0d9b4be8417cfeab832ce365dc340d0979ab265759",
+  "noBlenderModelBakeRenderOrDenseArrayJobExecuted": true,
+  "command": [
+    "/Applications/Blender.app/Contents/MacOS/Blender",
+    "-b",
+    "-t",
+    "2",
+    "--python-exit-code",
+    "1",
+    "--python",
+    "assets/blender/rider-rebuild/boot-last-anatomical04/sculpt_selected.py",
+    "--",
+    "harness/out/rider-rebuild/boot-last-anatomical04/sculpt01"
+  ],
+  "leaseRequirement": "Parent original serial CPU2/model/memory guard,180second cap. Source never launches itself.",
+  "supportedBounds": {
+    "maxOriginalFacesPerBoot": 610934,
+    "maxOperandFaces": 18000,
+    "maxResultFacesPerBoot": 950000,
+    "parentGuardSeconds": 180,
+    "noFallback": true,
+    "noFullBootRemesh": true,
+    "laplacianOnlyOnSelectedSourceUnitGuide": true
+  },
+  "runtimeGates": [
+    "Exact actual selected source geometry/UV/PBR state from extraction.",
+    "Guide only decimation<=16000 vertices; manifold triangulated source-derived guide.",
+    "Guide uses documented original-source affine units, dense selected remains world frame.",
+    "No unanchored guide vertex without active cotangent incident triangle.",
+    "Finite genuine free-surface movement above float-roundoff scale; anchor residuals report-only.",
+    "Freeze actual evaluated moving guide before warning/topology/transfer gates.",
+    "Capture C stdout/stderr for modifier bind/evaluation/apply and reject actual warning/error lines.",
+    "Dense original sole excluded from deform and byte-exact; exterior faces/original corner UV retained before cavity.",
+    "Actual dense transfer saved before sole/UV checks; verified sculpt saved before own-side4mm cavity and UV gates.",
+    "Cavity creates continuous derivative topology with one component and no boundary/nonmanifold/zero-area faces.",
+    "Foot vertices/triangle-centroid outside-leather parity and>=2.5mm measured nearest clearance.",
+    "Surviving selected sculpt corners exact original UV; split faces retain original charts.",
+    "New cavity corners explicitly reference actual same-side original inner-quarter source triangles.",
+    "Real original protected tread triangles unchanged, whole original wearer/rest75/pose/weights/UV hash unchanged.",
+    "Exception receipts persist all completed/partial measurements and fresh native hashes; partial in-memory save separate from last checkpoint."
+  ],
+  "reviewContract": "Matched source/sculpt/cavity original-PBR specs for R/L actual medial, lateral, toe, heel and top. Parent alone judges; cavity emptiness does not prove enclosure or appearance. Full-outfit and played ankle/toe/bike gates remain open.",
+  "primaryMethods": [
+    "https://docs.blender.org/manual/en/latest/modeling/modifiers/deform/laplacian_deform.html",
+    "https://docs.blender.org/api/current/bpy.types.LaplacianDeformModifier.html",
+    "https://docs.blender.org/api/current/bpy.types.SurfaceDeformModifier.html",
+    "https://docs.blender.org/api/current/bpy.ops.object.html#bpy.ops.object.laplaciandeform_bind",
+    "https://docs.blender.org/api/current/bpy.ops.object.html#bpy.ops.object.surfacedeform_bind"
+  ],
+  "limitations": [
+    "180second cap is a stop limit, no benchmark or runtime claim.",
+    "Unexecuted artist handle strengths require actual geometry/PBR review.",
+    "Guide is a hidden derivative authoring tool; it never replaces the dense selected exterior.",
+    "Inner-quarter chart transfer is honest original PBR ancestry, not a new coherent baked lining.",
+    "Actual original-PBR rest views can reject only. Parent plays ankle/toe, complete outfit and fixedRookie/Pro supported bike motion before any art/fit acceptance."
+  ]
+}

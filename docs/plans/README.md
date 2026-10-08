@@ -1475,3 +1475,5 @@ October8 glove solver failure independently traced to float-epsilon cotangent ar
 October8 proper expanded hoodie axilla pattern frozen: coupled front/rear sewn panels replace2743 failed/support faces, keep outside selected PBR/geometry. Correct measured airspace seam gives0 predicted quad-fan/body-point/body-center failures. Root source/pins read; actual native/PBR still unexecuted and unaccepted.
 
 October8 actual selected-source-unit guide solves both hands with7697 moving nonanchors each; right dense transfer saved. Left SurfaceDeform rejects invalid polygons, actual exit1/25.378s. Keep recoverable guides/right result, diagnose specific left target defect; PBR fit/grip and player unaccepted.
+
+October8 boot selected-upper sculpt source replaces rejected box UNION: source-derived guide in original units, actual dense exterior/UV/PBR/sole retained, then continuous own-side foot cavity. Parent full source/pins reviewed; real sculpt saves before postgates, residuals report-only. Actual shape/motion unexecuted and unaccepted.
