@@ -1,0 +1,69 @@
+{
+  "accepted": false,
+  "status": "SOURCE_FROZEN_VOLUME04_NOT_RUN",
+  "finding": "Permit only proven original unused Body vertices; reject every missing face-referenced ID and every missing Jeans ID",
+  "sourcePins": {
+    "assets/blender/rider-rebuild/selected-seated-anatomical09/transport-volume03.mjs": "fc025533e785cfc54c9944efd73c3b2a23fb1b12869e4839fde17412e9db90a3",
+    "assets/blender/rider-rebuild/selected-seated-anatomical09/volume03.input.json": "8d8ef1e445c8b03b0baa0ae9fd169a04d0f91b802c6ce2fec88b938b80396f54",
+    "assets/blender/rider-rebuild/selected-seated-anatomical09/volume-coverage03.mjs": "5d7a36c60c54503adce122100b0e5d91d45bcd7a883dcdeb0d6ccabe24f2d077",
+    "assets/blender/rider-rebuild/selected-seated-anatomical09/test_volume03.mjs": "c7abda6611c56933112ce1d7fb1502b40f8dc417e8d71fb1c17769a877e521b3",
+    "assets/blender/rider-rebuild/selected-seated-anatomical09/run-volume04.sh": "ff4d7fe43f02f2de0eba15c830aa3fdf874ec87dd0c79333486f5209552ba20a",
+    "docs/evidence/rider-rebuild/selected-seated-anatomical09/volume-coverage03.json": "5079ba7f38d02393b3129e3b7f6985a9cec13cc607810fa0dbc9ef2346f62d1f"
+  },
+  "actualInputs": {
+    "native": {
+      "path": "harness/out/rider-rebuild/selected-seated-anatomical09/sculpted03/selected-anatomical09-posed-volume.blend",
+      "sha256": "5145ceb00bac290afbaf8b925b71e77af7d425b6f95237a12d566b1bdae52505"
+    },
+    "nativeReceipt": {
+      "path": "harness/out/rider-rebuild/selected-seated-anatomical09/sculpted03/receipt.json",
+      "sha256": "73e3b43d6264043c6e4dcfcf49f859ec4860ecfb8e60b5c011b9958b01727bff"
+    },
+    "shapeKey": {
+      "path": "harness/out/rider-rebuild/selected-seated-anatomical09/sculpted03/shape-key.json",
+      "sha256": "7190a72b0d4cb78bd9c234d8aa37e6f6aedba1864b7af56f3c380963ece7bc43"
+    },
+    "posedSurfaces": {
+      "path": "harness/out/rider-rebuild/selected-seated-anatomical09/sculpted03/posed-surface-samples.npz",
+      "sha256": "2cbabdbfaf2cfb69705f7dfa987e00b2263ec09248f65d1b9465de032bdfbfaa"
+    },
+    "weightRider": {
+      "path": "harness/out/rider-rebuild/selected-seated-anatomical09/transport02/rider.glb",
+      "sha256": "ff9d78e2c5c40a4be1218b57611c5e71db10a2de7b636ec1589358176f907a0f"
+    },
+    "weightContract": {
+      "path": "harness/out/rider-rebuild/selected-seated-anatomical09/transport02/rider-contract.json",
+      "sha256": "98fc88c05d2ae45112f94aed28704a02867513bd10483fd86fdc5d60b03558ba"
+    },
+    "weightReceipt": {
+      "path": "harness/out/rider-rebuild/selected-seated-anatomical09/transport02/transport.json",
+      "sha256": "0497acb5edf34ca37e6d97b90bac51aaebe47920441568096778d895462166c5"
+    }
+  },
+  "validation": {
+    "fixtures": "5/5 PASS",
+    "syntax": "JS/Bash PASS",
+    "originalEngine05AndTransport02PrimitiveNativeIDRows": "EXACT",
+    "body": {
+      "nativeMoved": 621,
+      "exportedMoved": 78,
+      "unusedMovedAbsentFromOriginalExport": 543,
+      "absentMovedReferencedByNativeTriangles": 0,
+      "nativeFaceIDs": 32412,
+      "exportedIDs": 32412
+    },
+    "jeans": {
+      "nativeMoved": 14807,
+      "exportedMoved": 14807,
+      "absentMoved": 0,
+      "nativeFaceIDs": 26063,
+      "exportedIDs": 26063
+    }
+  },
+  "protection": "Original BIN prefix, primitive native-ID rows, indices, maps, weights, rest and75inversebinds remain exact; no new mask or face removal",
+  "parentCommand": "bash assets/blender/rider-rebuild/selected-seated-anatomical09/run-volume04.sh",
+  "freshOutput": "harness/out/rider-rebuild/selected-seated-anatomical09/volume04",
+  "actualTransportAndMovingArt": "UNMEASURED",
+  "fullAnatomyReferenceLimit": "RiderBody__FullAnatomyReference remains unchanged; hidden companion posed key from its own exact weights/operators and full native Body/Jeans contact proof remain open",
+  "noHeavyJobByBuilder": true
+}

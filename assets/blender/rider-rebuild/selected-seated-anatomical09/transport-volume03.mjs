@@ -13,6 +13,7 @@ import { AnimationMixer, LoopOnce, BufferGeometry, Float32BufferAttribute, Matri
 import { unzipSync } from 'three/addons/libs/fflate.module.js';
 import { loadRigAt } from '../../../../src/render/hero/gltfTestUtils.ts';
 import { appendAnimation, rigIdentity, TIMES } from '../selected-seated-diagnostic08/append-clip.mjs';
+import { nativeTriangleIDs, verifyVolumeCoverage } from './volume-coverage03.mjs';
 
 const ROOT = fileURLToPath(new URL('../../../../', import.meta.url));
 const BASE = 'harness/out/rider-rebuild/selected-seated-anatomical09/';
@@ -22,6 +23,11 @@ const FIXED = {
   weightRider: { path: BASE+'transport02/rider.glb', sha256: 'ff9d78e2c5c40a4be1218b57611c5e71db10a2de7b636ec1589358176f907a0f' },
   weightContract: { path: BASE+'transport02/rider-contract.json', sha256: '98fc88c05d2ae45112f94aed28704a02867513bd10483fd86fdc5d60b03558ba' },
   weightReceipt: { path: BASE+'transport02/transport.json', sha256: '0497acb5edf34ca37e6d97b90bac51aaebe47920441568096778d895462166c5' },
+};
+const MASK_PROVENANCE = {
+  maskRecipe: { path: 'assets/blender/rider-rebuild/outfit-body-mask01/apply.py', sha256: '4cebeafa4a9e8b6b1a4e72bafff549de7a71b2a16cf329a2f6cba03cca574ef1' },
+  exportRecipe: { path: 'assets/blender/rider-rebuild/selected-complete-engine01/export-private.py', sha256: 'b0720a3f492e2b05b1256f4034411d775d6920f3e1cd7c69ccebb5b9b8944cb5' },
+  originalMaskReceipt: { path: 'harness/out/rider-rebuild/selected-complete-engine01/engine05/body-mask-receipt.json', sha256: 'eae58c8982241fb3fed0fe3f838c5014495742386b1f17cec0da056d1e701978' },
 };
 async function sha(filename, range = {}) {
   const hash = crypto.createHash('sha256');
@@ -113,7 +119,9 @@ export function morphFields(ids, positions, normals, indices, rows, tangents = n
   return { POSITION: delta, NORMAL: normal, ...(tangent ? { TANGENT: tangent } : {}), maximumNormalRotationRadians };
 }
 function surfaceArrays(filename) {
-  const archive = unzipSync(fs.readFileSync(filename)), result = {};
+  const archive = unzipSync(fs.readFileSync(filename)), result = {
+    nativeTriangles: Object.fromEntries(OBJECTS.map(name => [name, nativeTriangleIDs(archive, name)])),
+  };
   for (const bike of ['rookie', 'pro']) for (const frame of [1, 31, 61]) for (const name of OBJECTS) {
     const key = `${bike}_${frame}_${name}`, b = Buffer.from(archive[key+'.npy'] ?? []);
     assert.equal(b[0], 0x93); assert.equal(b.toString('ascii', 1, 6), 'NUMPY'); assert.equal(b[6], 1);
@@ -207,7 +215,7 @@ async function main() {
   const arg = name => process.argv.find(v => v.startsWith(`--${name}=`))?.slice(name.length+3);
   assert(arg('input') && arg('out')); const inputPath = path.resolve(arg('input')), out = path.resolve(arg('out'));
   assert(out.startsWith(path.resolve(ROOT, BASE)+path.sep) && !fs.existsSync(out), 'Fresh ignored output only');
-  const input = JSON.parse(await fsp.readFile(inputPath, 'utf8')), pins = validateManifest(input); await checkPins(pins);
+  const input = JSON.parse(await fsp.readFile(inputPath, 'utf8')), pins = validateManifest(input); await checkPins(pins); await checkPins(MASK_PROVENANCE);
   const read = async pin => JSON.parse(await fsp.readFile(path.join(ROOT, pin.path), 'utf8'));
   const [contract, weightReport, native, shape] = await Promise.all(['weightContract', 'weightReceipt', 'nativeReceipt', 'shapeKey'].map(k => read(pins[k])));
   assert.equal(contract.accepted, false); assert.equal(contract.qualificationState, 'UNACCEPTED_WEIGHT_INTERVENTION');
@@ -235,7 +243,7 @@ async function main() {
   const surfaces = surfaceArrays(path.join(ROOT, pins.posedSurfaces.path));
   const source = await glb(path.join(ROOT, pins.weightRider.path)), doc = source.document, original = structuredClone(doc);
   const identity = rigIdentity(doc, contract); let length = source.binLength, primitiveRows = 0, maximumMorphFloat32Residual = 0;
-  const chunks = [], morphSummary = [], touched = [];
+  const chunks = [], morphSummary = [], touched = [], coverage = [], originalIDRows = new Map();
   const attribute = (values, type, width, vertex = false) => {
     assert(values.length%width === 0 && values.every(Number.isFinite)); const buffer = Buffer.alloc(values.length*4);
     values.forEach((v, i) => { buffer.writeFloatLE(v, i*4); maximumMorphFloat32Residual = Math.max(maximumMorphFloat32Residual, Math.abs(v-buffer.readFloatLE(i*4))); });
@@ -248,16 +256,20 @@ async function main() {
   for (const name of OBJECTS) {
     const nodeIndex = doc.nodes.findIndex(n => n.name === name); assert(nodeIndex >= 0);
     const node = doc.nodes[nodeIndex], mesh = doc.meshes[node.mesh]; assert(!mesh.weights && !node.weights && !mesh.extras?.targetNames);
-    touched.push({ nodeIndex, meshIndex: node.mesh }); const seen = new Set();
+    touched.push({ nodeIndex, meshIndex: node.mesh }); const primitiveIDs = [];
     for (const [ordinal, p] of mesh.primitives.entries()) {
       assert(!p.targets); const readAttribute = semantic => accessor(source, p.attributes[semantic]);
       const [nativeIDs, positions, normals, faces] = await Promise.all([readAttribute('_NATIVE_ID'), readAttribute('POSITION'), readAttribute('NORMAL'), accessor(source, p.indices)]);
-      const ids = nativeIDs.flat(); assert(ids.every(id => Number.isInteger(id) && id >= 0)); ids.forEach(id => seen.add(id));
+      const ids = nativeIDs.flat(); assert(ids.every(id => Number.isInteger(id) && id >= 0)); primitiveIDs.push(ids);
       const fields = morphFields(ids, positions, normals, faces.flat(), shape.deltas[name], p.attributes.TANGENT === undefined ? null : await readAttribute('TANGENT'));
       p.targets = [Object.fromEntries(['POSITION', 'NORMAL', 'TANGENT'].filter(k => fields[k]).map(k => [k, attribute(fields[k], 'VEC3', 3, true)]))];
       primitiveRows += ids.length; morphSummary.push({ object: name, primitive: ordinal, primitiveRows: ids.length, attributes: Object.keys(p.targets[0]), maximumNormalRotationRadians: fields.maximumNormalRotationRadians });
     }
-    const absent = shape.deltas[name].filter(row => !seen.has(row.nativeID)); assert.equal(absent.length, 0, `${name}: native sculpt moved an unexported ID`);
+    // Body retains orphan vertices from the original FACES_ONLY outfit mask.
+    // Permit only those proven absent from both original export and all native
+    // faces. Any referenced-ID loss, and every missing Jeans delta, still fails.
+    coverage.push(verifyVolumeCoverage(name, primitiveIDs, surfaces.nativeTriangles[name], shape.deltas[name]));
+    originalIDRows.set(name, primitiveIDs);
     mesh.weights = [0]; mesh.extras = { ...mesh.extras, targetNames: [KEY] };
   }
   const morphBytes = length-source.binLength, appended = appendAnimation(doc, authors.rookie, identity, length);
@@ -280,11 +292,19 @@ async function main() {
   for (const chunk of chunks) await fsp.appendFile(target, chunk);
   const originalBinarySHA256 = await sha(source.filename, {start: source.binOffset, end: source.binOffset+source.binLength-1});
   assert.equal(await sha(target, {start: 28+padded.length, end: 28+padded.length+source.binLength-1}), originalBinarySHA256);
-  await glb(target); const probe = await loadedProbe(target, source, surfaces, authors, primitiveRows), targetSHA256 = await sha(target);
+  const decoded = await glb(target);
+  for (const name of OBJECTS) {
+    const node = decoded.document.nodes.find(n => n.name === name), actualRows = [];
+    for (const p of decoded.document.meshes[node.mesh].primitives) actualRows.push((await accessor(decoded, p.attributes._NATIVE_ID)).flat());
+    assert.deepEqual(actualRows, originalIDRows.get(name), `${name}: any new primitive/native-ID loss is forbidden`);
+  }
+  const probe = await loadedProbe(target, source, surfaces, authors, primitiveRows), targetSHA256 = await sha(target);
   const derivative = { accepted: false, kind: 'native-relative-shape-key', name: KEY, sourcePins: pins,
     native: pins.native, nativeReceipt: pins.nativeReceipt, shapeKey: pins.shapeKey, posedSurfaces: pins.posedSurfaces,
     exactNativeIDMapping: true, movedNativeVertices: native.movedVertices, originalBinarySHA256,
     originalBinaryBytesPreserved: source.binLength, originalRestWeightsMapsUVsAnd75InverseBindsExact: true,
+    nativeExportCoverage: coverage, originalPrimitiveNativeIDRowsExact: true, existingMaskProvenance: MASK_PROVENANCE,
+    fullAnatomyReferenceScope: 'RiderBody__FullAnatomyReference remains unchanged without this sculpt; a fresh companion key from its own saved weights/operators and complete wearer contact proof remain required.',
     morphs: morphSummary, appendedMorphBytes: morphBytes, tangentMorphs: morphSummary.filter(r => r.attributes.includes('TANGENT')).length,
     shadingMethod: 'Rotate original authored split normals by new-versus-base triangle normals; native custom-normal and GPU parity unmeasured.',
     tangentScope: 'Pinned source has no base TANGENT attributes; none invented. Three morph tangent loading unsupported; normal-map tangent basis uses derivatives.',
@@ -300,7 +320,7 @@ async function main() {
   const report = { accepted: false, status: STATUS, recipeSHA256: await sha(fileURLToPath(import.meta.url)), input: {path: path.relative(ROOT, inputPath), sha256: await sha(inputPath)},
     sourcePins: pins, glb: {path: path.relative(ROOT, target), sha256: targetSHA256}, contract: {path: path.relative(ROOT, contractPath), sha256: await sha(contractPath)},
     maximumMorphFloat32Residual, maximumClipFloat32Residual: appended.maximumFloat32Residual, shapeDerivative: derivative, actualGaragePlayed: false };
-  await fsp.writeFile(path.join(out, 'transport.json'), JSON.stringify(report, null, 2)+'\n'); await checkPins(pins);
+  await fsp.writeFile(path.join(out, 'transport.json'), JSON.stringify(report, null, 2)+'\n'); await checkPins(pins); await checkPins(MASK_PROVENANCE);
   console.log(JSON.stringify({status: STATUS, glb: report.glb, contract: report.contract, morphs: morphSummary, allExportedRows: primitiveRows, restReturnByteIdentical: probe.restReturnByteIdentical}));
 }
 if (process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.meta.url)) await main();

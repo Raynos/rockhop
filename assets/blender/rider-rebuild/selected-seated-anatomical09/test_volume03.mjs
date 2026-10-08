@@ -2,6 +2,7 @@
 import assert from 'node:assert/strict';
 import { test } from 'node:test';
 import { morphFields, validateManifest } from './transport-volume03.mjs';
+import { verifyVolumeCoverage } from './volume-coverage03.mjs';
 
 const positions = [[0, 0, 0], [1, 0, 0], [0, 1, 0], [0, 0, 0]];
 const normals = positions.map(() => [0, 0, 1]), ids = [8, 2, 19, 8], faces = [0, 1, 2, 3, 1, 2];
@@ -27,4 +28,12 @@ test('Duplicate IDs or inconsistent coordinate conventions fail closed', () => {
 test('Incomplete and unpinned manifests cannot run', () => {
   assert.throws(() => validateManifest({accepted: false, pins: {}}));
   assert.throws(() => validateManifest({accepted: true, pins: {}}));
+});
+test('Only pre-existing unused Body IDs are permitted; face-ID loss fails', () => {
+  const native = {ids: new Set([8, 2, 19]), triangles: 1, arraySHA256: 'fixture'};
+  const report = verifyVolumeCoverage('RiderBody', [[8, 2, 19, 8]], native, [row(8,[0,0,.25]),row(42,[0,0,.25])]);
+  assert.equal(report.movedExportedNativeIDs,1); assert.deepEqual(report.movedIDsAbsentFromOriginalExport,[42]);
+  assert.throws(() => verifyVolumeCoverage('RiderBody', [[8,2]], native, [row(19,[0,0,.25])]));
+  assert.throws(() => verifyVolumeCoverage('RiderBody', [[8,2,19,42]], native, [row(42,[0,0,.25])]));
+  assert.throws(() => verifyVolumeCoverage('RiderJeans', [[8,2,19]], native, [row(42,[0,0,.25])]));
 });
