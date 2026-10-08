@@ -1537,3 +1537,5 @@ October8 actual selected curved boot pair saves CPU2exit0/147.646s, own-side nat
 October8 fresh Astra06 diagnosis independently confirmed in actual savednative CPU2exit0/6.133s: zero-length editbone matrix-before-length makes six sleeve rest axes +Z (Lupperarm387mm/forearm378mm error). SourceGLTF centers correct. Minimal head/tail initialization and actualrestframe assertions frozen; no gain tuning/regeneration. Corrected actual outfit still pending.
 
 October8 corrected original hoodie source transport saves CPU2exit0/17.009s after actual seven restframe endpoint/matrix assertions pass. Selected original topology/UV/4KPBR and body75 exact. Actual PBR review and finalgarmentbinding/motion remain pending.
+
+October8 complete selected outfit merge/private engine source reviewed and frozen: smooth native-body face-interpolated hoodie fields, exact75/sourcePBR, full anatomy reference preserved, production renderbody masks/FOUR and decoded GLB intake. Actual corrected hoodie/wholejeans results and dressed Garage/motion remain pending. No normal-player changes.
