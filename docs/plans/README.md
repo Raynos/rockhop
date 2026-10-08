@@ -1299,3 +1299,5 @@ October 7 actual bilateral selected-glove map checkpoint: corrected bake exit0 i
 October 7 hoodie direct regional source checkpoint: regular original vertex fans show branching is introduced by the cut. Expand pinched local cut fans and directly author welded Coons quad grids; no fill operator retry. Parent full source/AST/frozen hashes checked. Gross fit unchanged, local topology changes unexecuted and unaccepted.
 
 October 7 direct boot sculpt attempt: NumPy bool receipt serialization fails before paired native save, exit1 in2.431s. Right sculpt arrays preserved; no L/native/views or shape verdict. Exact failure retained before bool coercion compatibility repair.
+
+October 7 boot receipt compatibility source: determinant comparison explicitly coerced to Python bool. Parent one-line diff/AST/hash checked; sculpture controls unchanged and corrected run unexecuted. No shape verdict.

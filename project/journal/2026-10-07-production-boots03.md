@@ -9,3 +9,9 @@ Finding: NumPy boolean receipt serialization stops the direct boot sculpt before
 Validation: Parent read actual worker; exit1 in2.431s, right sculpt arrays exist but no native/views. Exact evidence retained.
 
 Limits: Shape quality unmeasured; this is a concrete report API failure.
+
+Finding: Coerce the determinant comparison to Python bool so direct boot sculpture can save its exact report.
+
+Validation: Parent checked one-line source diff, AST and refreshed hash. All sculpt controls unchanged; corrected run unexecuted.
+
+Limits: No rendered shape or art acceptance; fresh sculpt02 output required.

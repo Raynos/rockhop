@@ -130,7 +130,7 @@ def material():
 def mesh_object(name, source_vertices, dense, body_arrays, side, mat):
     transform, frame, ankle = affine(body_arrays, side)
     vertices = np.einsum('nj,ij->ni', source_vertices, transform[:3, :3]) + transform[:3, 3]
-    reverse = np.linalg.det(transform[:3, :3]) < 0
+    reverse = bool(np.linalg.det(transform[:3, :3]) < 0)
     corner_order = [0, 2, 1] if reverse else [0, 1, 2]
     faces = dense['faces'][:, corner_order]
     uv = dense['originalCornerUV'][:, corner_order].copy()

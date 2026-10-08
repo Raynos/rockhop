@@ -1,8 +1,8 @@
 {
   "accepted": false,
-  "status": "SOURCE_ONLY_NOT_RUN",
+  "status": "SOURCE_READY_SERIALIZATION_REPAIR_NO_GEOMETRY_CHANGE",
   "recipe": "assets/blender/rider-rebuild/production-boots03/sculpt_selected_forefoot.py",
-  "recipeSHA256": "12e0dbdac22198d74015ba471fc9fb25ce14a9d0e0a1ac853bf721d975d36ab3",
+  "recipeSHA256": "038aa2c55539c292d99d4de1ca62b8100d2bf7a7b6cc6bfb2042026eb05d0d38",
   "controlsSHA256": "27cb9d6d5e047f9f7a9303a8bd550a26e674c30de7808d055ca050fd0e20d1ce",
   "astParse": true,
   "matrixMultiplicationOperators": 0,
@@ -18,5 +18,9 @@
   },
   "blenderRun": false,
   "bakeRun": false,
-  "acceptedGates": 0
+  "acceptedGates": 0,
+  "repair": "Cast reflection determinant result to builtin bool for JSON receipt; sculpt controls unchanged",
+  "retryRun": false,
+  "priorRecipeRun": "sculpt01 exited1 after R construction, before native/views; see sculpt01-result.json",
+  "blenderRunScope": "Current bool-repaired recipe only"
 }
