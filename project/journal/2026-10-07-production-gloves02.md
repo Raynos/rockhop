@@ -12,3 +12,9 @@ Finding: connected-region author saves both real glove meshes, fields, UVs and r
 Validation: actual exit0 after2.888s, early saves preserved; parent rehashed complete native and retained exact guard/worker/report. Body/rest in-memory signature passed.
 
 Limits: shape and selected material transfer unreviewed; moving art/native/GLB/GPU and full rider gates remain open.
+
+Finding: Actual authored right glove encloses the visible hand but angular panel seams remain. Keep material transfer diagnostic and appearance unaccepted.
+
+Validation: Parent viewed all three actual saved-native rest renders; CPU2 renderer exit0 in5.443s and native hash unchanged.
+
+Limits: Left-hand shape and selected material/played grip remain unproven; no player export.
