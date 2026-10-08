@@ -45,3 +45,10 @@ Finding: One read-only saved guide/right transfer coordinate extraction enables 
 Validation: Root read bounded extractor and pinned saved native; AST passes. No extraction job yet.
 
 Limits: Arrays only; all wearing and motion acceptance open.
+
+
+Finding: Actual saved bilateral solved guides and successful right dense world geometry extracted for precise palm repair.
+
+Validation: CPU2 read-only exit0/5.695s;2x8000 guide vertices,284571 right dense, original native unchanged,0 writes/binds/fits/renders.
+
+Limits: Data enables local authoring; no new art or motion acceptance.

@@ -1489,3 +1489,5 @@ October8 bounded actual solved-glove coordinate extraction source reviewed for l
 October8 actual hoodie baedfa57 fails parent4-view PBR judgment: stiff front/rear shoulder shelves and ragged rear joins despite clean point/fan prediction. Stop analytic ruled-depth pattern; fresh targeted Astra method review before next construction. Preserved hood/chest/source useful; dressed art0/6.
 
 October8 actual selected-upper boot run exit1/15.94s on JSON NumPyfloat32 witness, saved failed-in-memory789d4a29. One completed-expression Pythonfloat conversion preserves numerical/anatomical controls; fresh sculpt02 source frozen, no boot wearing acceptance.
+
+October8 actual read-only glove solved03 extraction exit0/5.695s supplies both saved8000-point guides and284571-point right dense coordinates. Local palm/thenar/tip authoring uses achieved surface, no inferred target success or new acceptance.
