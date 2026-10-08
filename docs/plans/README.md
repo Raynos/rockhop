@@ -1881,3 +1881,5 @@ Finish sequence16:20Panama records actual six-action selected transport and play
 Glove-only actual run01 reached both cuff stages, then stopped at the unchanged65GiB anonymous guard after68.447s; no native checkpoint/receipt saved. Failure retained. Smaller rig-only bike construction proceeds next; glove retry needs additional headroom, no bounds relaxed.
 
 Reference06 recovery source validates/reuses exact saved05 bytes against original03 with refreshed cage baseline, original fields/keys/actions/native75 and all30 saved full-surface samples. No repeat sculpt or giant resave. Source/pins reviewed; actual reopen and contact/art remain pending.
+
+Private Garage source intake now supports exact two native bike seated/lean actions at bike-local[0,0,0], with per-bike original receipt/export/source pins and old sculpt inactive. Seven CPU checks pass, including swapped bike/offset/sculpt rejection. Actual bike native/export/played evidence remain pending; generic beside-bike presentation stays separate.

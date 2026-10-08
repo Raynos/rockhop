@@ -36,9 +36,29 @@ export function observePrivateReloads(hot, events) {
 }
 
 /** Explicit unaccepted source diagnostics; none enters comparison. */
+export const isNativeActionDiagnostic = kind => ['native-authoring-motion11', 'native-authoring-bike11'].includes(kind);
+
 export function sourceDiagnosticKind(metadata, clip, allowFailedDiagnostic) {
   assert(allowFailedDiagnostic, 'Unaccepted source requires --allow-failed-diagnostic');
   assert.equal(metadata.accepted, false);
+  if (metadata.qualificationState === 'UNACCEPTED_NATIVE_BIKE_ACTION_LIBRARY') {
+    const library = metadata.nativeAuthoringMotion;
+    assert.equal(library?.accepted, false);
+    assert.equal(library.kind, 'native-bike-control-action-library');
+    assert.deepEqual(library.actions.map(action => action.name), ['RiderBikeSeatedLeanRookie', 'RiderBikeSeatedLeanPro']);
+    const action = metadata.genericActions?.[clip];
+    assert(library.actions.some(row => row.name === clip), 'Requested native bike action is declared');
+    assert(action && action.leadInSeconds === 2 && action.durationSeconds === 10);
+    assert.equal(action.playback, 'ONCE');
+    assert.deepEqual(library.presentation.positionBike, [0, 0, 0]);
+    assert.equal(library.shapeActivation, 0, 'New bike controls cannot activate old posed sculpt');
+    assert.deepEqual(library.bikes.map(row => [row.name, row.clip]), [
+      ['rookie', 'RiderBikeSeatedLeanRookie'], ['pro', 'RiderBikeSeatedLeanPro'],
+    ]);
+    for (const bike of library.bikes) assert.deepEqual(bike.bike, library.actions.find(row => row.name === bike.clip).bike);
+    assert.equal(metadata.corrective, undefined, 'Native bike actions cannot reuse the failed corrective');
+    return 'native-authoring-bike11';
+  }
   if (metadata.qualificationState === 'UNACCEPTED_NATIVE_ACTION_LIBRARY') {
     const library = metadata.nativeAuthoringMotion;
     assert.equal(library?.accepted, false);
@@ -100,22 +120,38 @@ export async function createPrivateDevReview({ source, contractPath, allowFailed
       assert.equal(await hashFile(path.resolve(root, pin.path)), pin.sha256, `Volume source changed: ${name}`);
     }
   }
-  if (diagnosticKind === 'native-authoring-motion11') {
+  if (isNativeActionDiagnostic(diagnosticKind)) {
     const library = metadata.nativeAuthoringMotion;
-    for (const name of ['nativeReceipt', 'controlNative', 'bakedNative', 'rigGLB', 'nativeMatrices', 'selectedRider', 'selectedContract']) {
+    const bikeLibrary = diagnosticKind === 'native-authoring-bike11';
+    const extraPins = bikeLibrary ? ['exportReceipt', 'bikeContext', 'controlNativeRookie', 'controlNativePro'] : ['controlNative'];
+    for (const name of ['nativeReceipt', 'bakedNative', 'rigGLB', 'nativeMatrices', 'selectedRider', 'selectedContract', ...extraPins]) {
       const pin = library.sourcePins?.[name];
       assert(pin && typeof pin.path === 'string' && /^[a-f0-9]{64}$/.test(pin.sha256), `Declare native action source ${name}`);
       assert.equal(await hashFile(path.resolve(root, pin.path)), pin.sha256, `Native action source changed: ${name}`);
     }
     const receipt = JSON.parse(fs.readFileSync(path.resolve(root, library.sourcePins.nativeReceipt.path)));
-    assert.equal(receipt.status, 'NATIVE_CONTROL_ACTION_PACKAGE_UNACCEPTED');
-    assert.deepEqual(library.actions, receipt.actions, 'All six actual native action records remain exact');
-    for (const name of ['controlNative', 'bakedNative', 'rigGLB']) assert.deepEqual(library.sourcePins[name], receipt[name]);
+    assert.equal(receipt.status, bikeLibrary ? 'NATIVE_BIKE_ACTIONS_UNACCEPTED' : 'NATIVE_CONTROL_ACTION_PACKAGE_UNACCEPTED');
+    assert.deepEqual(library.actions, receipt.actions, 'Actual native action records remain exact');
+    if (bikeLibrary) {
+      assert.equal(receipt.nativeRestExactlyPreserved, true);
+      for (const name of ['bakedNative', 'nativeMatrices']) assert.deepEqual(library.sourcePins[name], receipt[name]);
+      const exported = JSON.parse(fs.readFileSync(path.resolve(root, library.sourcePins.exportReceipt.path)));
+      assert.equal(exported.status, 'NATIVE_BIKE_ACTION_EXPORT_UNACCEPTED');
+      for (const name of ['nativeReceipt', 'bakedNative', 'nativeMatrices', 'rigGLB']) assert.deepEqual(library.sourcePins[name], exported[name]);
+      assert.deepEqual(exported.actions, receipt.actions);
+      const context = JSON.parse(fs.readFileSync(path.resolve(root, library.sourcePins.bikeContext.path)));
+      for (const [index, bike] of library.bikes.entries()) {
+        assert.deepEqual(library.sourcePins['controlNative' + (index ? 'Pro' : 'Rookie')], receipt.actions[index].controlNative);
+        assert.deepEqual(bike.bike, context.bikes[index].bike);
+        assert.deepEqual(bike.frameOriginFile, context.bikes[index].frameOriginFile);
+        assert.equal(await hashFile(path.resolve(root, bike.bike.path)), bike.bike.sha256);
+      }
+    } else for (const name of ['controlNative', 'bakedNative', 'rigGLB']) assert.deepEqual(library.sourcePins[name], receipt[name]);
   }
   const sourceStat = fs.statSync(source), sourceSHA256 = await hashFile(source);
   assert.deepEqual(identity(fs.statSync(source)), identity(sourceStat), 'Selected source changed while hashing');
   assert.equal(metadata.glbSHA256, sourceSHA256);
-  const nativeLibrary = diagnosticKind === 'native-authoring-motion11';
+  const nativeLibrary = isNativeActionDiagnostic(diagnosticKind);
   let author, authorPin, authorPath, authorRecipe, authorCode;
   if (!nativeLibrary) {
     assert.equal(metadata.diagnosticMotion.outputSHA256, sourceSHA256);
@@ -153,7 +189,9 @@ export async function createPrivateDevReview({ source, contractPath, allowFailed
   if (nativeLibrary) metadata.previewClip = clip;
   metadata.releaseBuild = false;
   const placement = nativeLibrary ? { clip, positionBike, presentation: metadata.nativeAuthoringMotion.presentation,
-    why: 'Generic native action inspection beside the actual bike; not normal Garage seated riding.' } :
+    why: diagnosticKind === 'native-authoring-bike11'
+      ? 'Native seated and lean actions use their declared actual bike-local origin, with old diagnostic sculpt inactive.'
+      : 'Generic native action inspection beside the actual bike; not normal Garage seated riding.' } :
     { clip, positionBike: [0, 0, 0], authorRecipe, authorRecipeSHA256: sha(authorCode),
     authorReceipt: { path: authorPath, sha256: authorPin.sha256 }, frameOriginFile: author.frameOriginFile,
     why: 'Author04 saved local75 TRS under identity actual-bike-local-frame. Bike-file attach_frame_origin is already subtracted from saddle geometry; the standing-clip presentation offset would translate this saved seated pose away from its bike.' };

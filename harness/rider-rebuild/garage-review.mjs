@@ -11,7 +11,7 @@ import { inspectPreparedRiderMaterials, inspectRiderMaterialInventory } from './
 import { inspectActualCuffFragment } from './inspect-posed-cuffs.mjs';
 import { identifyActualWristFragment } from './identify-wrist-fragment.mjs';
 import { installGarageCaptureMeter } from './garage-capture-meter.mjs';
-import { createPrivateDevReview } from './private-dev-review.mjs';
+import { createPrivateDevReview, isNativeActionDiagnostic } from './private-dev-review.mjs';
 
 const arg = (name, fallback = '') => process.argv.find(value => value.startsWith(`--${name}=`))?.slice(name.length + 3) ?? fallback;
 const devSource = arg('dev-source');
@@ -33,6 +33,10 @@ assert(arg('contract'), 'Pass the exact selected rider contract');
 const contractPath = path.resolve(arg('contract')), contractBytes = fs.readFileSync(contractPath);
 const contract = JSON.parse(contractBytes), expected = contract.specification.meshNames;
 const requestedClip = arg('clip', devSource ? contract.previewClip ?? '' : '');
+if (contract.nativeAuthoringMotion?.kind === 'native-bike-control-action-library') {
+  const bike = contract.nativeAuthoringMotion.bikes.find(row => row.clip === requestedClip);
+  assert.equal(bike?.name, requestedBike, 'Native bike clip must match the actual selected Garage bike');
+}
 const required = ['RiderBody', 'RiderHoodie', 'RiderJeans', 'ActualSelectedGlove.L', 'ActualSelectedGlove.R', 'ActualSelectedBoot.L', 'ActualSelectedBoot.R'];
 for (const name of required) assert(Object.values(expected).includes(name), `Missing selected dressed object ${name}`);
 assert(!fs.existsSync(out), 'Use a fresh output directory');
@@ -137,19 +141,19 @@ try {
       if (authored) assert(Math.abs(diagnostic.clipDuration - authored.durationSeconds) < 1e-6, 'Actual clip duration matches source-bound action');
       if (development) {
         assert(diagnostic.attachedToBikeFrame, 'Diagnostic remains attached to actual bike frame');
-        if (development.receipt.diagnosticKind === 'native-authoring-motion11') {
-          assert.deepEqual(diagnostic.placementBike, development.receipt.placement.positionBike, 'Declared generic native action presentation');
+        if (isNativeActionDiagnostic(development.receipt.diagnosticKind)) {
+          assert.deepEqual(diagnostic.placementBike, development.receipt.placement.positionBike, 'Declared native action presentation');
           assert.equal(diagnostic.runtimeCorrectiveInstalled, false, 'Native action has no failed corrective helper');
           assert.equal(diagnostic.correctiveTargets.length, 0);
           assert.equal(diagnostic.volumeTargets.length, contract.shapeDerivative ? 5 : 0);
-          for (const target of diagnostic.volumeTargets) assert.equal(target.weight, 0, 'Generic native actions do not inherit a seated diagnostic morph');
+          for (const target of diagnostic.volumeTargets) assert.equal(target.weight, 0, 'Native actions do not inherit an old seated diagnostic morph');
           for (const target of diagnostic.actualMorphTargetCounts) {
             const volume = diagnostic.volumeTargets.some(value => value.role === target.role);
             assert.equal(target.positions, volume ? 1 : 0);
             assert.equal(target.normals, volume ? 1 : 0);
           }
         } else assert.deepEqual(diagnostic.placementBike, [0, 0, 0], 'Saved author clip uses declared bike-local origin');
-        if (development.receipt.diagnosticKind === 'native-authoring-motion11') {
+        if (isNativeActionDiagnostic(development.receipt.diagnosticKind)) {
           assert.equal(diagnostic.clipTime, diagnostic.debug.stageClipTime, 'Capture actual clamped action clock');
           assert(Number.isFinite(diagnostic.debug.nativeClipElapsed));
         } else if (development.receipt.diagnosticKind === 'native-weight-only') {
@@ -248,7 +252,7 @@ try {
   report.orbit.actualWallSeconds = (performance.now() - orbitAt) / 1000;
   Object.assign(report.orbit, { pointerMoves, maximumPointerStepPx, inspectionPauseMs, pointerDegrees: 360 });
   if (requestedClip) {
-      const first = report.snapshots[0], nativeAction = development?.receipt.diagnosticKind === 'native-authoring-motion11';
+      const first = report.snapshots[0], nativeAction = isNativeActionDiagnostic(development?.receipt.diagnosticKind);
       const target = nativeAction ? first.debug.nativeClipEpoch + 2 + first.clipDuration : first.riderStageTime + first.clipDuration;
       const before = await page.evaluate(() => window.__render.debug.rider.stageTime);
       report.clipCoverage = { name: requestedClip, durationSeconds: first.clipDuration,

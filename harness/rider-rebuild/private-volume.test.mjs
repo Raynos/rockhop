@@ -64,3 +64,21 @@ test('native library intake permits only the six declared actions and exact pres
   assert.throws(() => sourceDiagnosticKind({ ...declared, corrective: {} }, 'RiderJog', true), /failed corrective/);
   assert.throws(() => sourceDiagnosticKind({ ...declared, genericActions: { RiderJog: { playback: 'LOOP', leadInSeconds: 2 } } }, 'RiderJog', true));
 });
+
+test('native seated bike actions require origin placement and matching bike sources', () => {
+  const names = ['RiderBikeSeatedLeanRookie', 'RiderBikeSeatedLeanPro'];
+  const bikes = ['rookie', 'pro'].map((name, index) => ({ name, clip: names[index],
+    bike: { path: `public/models/bike-${name}.glb`, sha256: String(index).repeat(64) } }));
+  const declared = { accepted: false, qualificationState: 'UNACCEPTED_NATIVE_BIKE_ACTION_LIBRARY',
+    nativeAuthoringMotion: { accepted: false, kind: 'native-bike-control-action-library', shapeActivation: 0,
+      presentation: { positionBike: [0,0,0] }, bikes,
+      actions: bikes.map(row => ({ name: row.clip, bike: row.bike })) },
+    genericActions: Object.fromEntries(names.map(name => [name, { durationSeconds: 10, playback: 'ONCE', leadInSeconds: 2 }])) };
+  assert.equal(sourceDiagnosticKind(declared, names[0], true), 'native-authoring-bike11');
+  assert.equal(privateStageClipTime({ name: names[0], duration: 10 }, 100, 1, declared), 10);
+  for (const change of [{ shapeActivation: 1 }, { presentation: { positionBike: [-.6,-.34,.65] } },
+    { bikes: [bikes[1], bikes[0]] }]) {
+    assert.throws(() => sourceDiagnosticKind({ ...declared, nativeAuthoringMotion: { ...declared.nativeAuthoringMotion, ...change } }, names[0], true));
+  }
+  assert.throws(() => sourceDiagnosticKind({ ...declared, corrective: {} }, names[0], true));
+});
