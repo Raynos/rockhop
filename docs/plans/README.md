@@ -1641,3 +1641,5 @@ October8 ask351 hourly audit: independent retained-commit/played-evidence review
 October8 sixth-slot loader cleanup checkpoint: parent-reviewed original-five eager inventory and one cached metadata/optional-driver request pass7/7focused tests. The preceding build was135bytes above the unchanged normal-JS cap; actual rebuild and old/new phone-layout switching follow. Selected source, art/seating and allR0–R5 remain unaccepted.
 
 October8 comparison build03 retained failure:717835B normal-JS versus unchanged717824B cap (11Bover),3.671s. Runtime diagnostic wording shortened with all failure paths retained;7/7tests pass. Next actual build and phone comparison pending; no art promotion.
+
+October8 comparison build04 remains9Babove unchanged JS cap. The selected constructor now relies on the existing tagged-document load promise, which initializes its native driver before resolve and returns null on failure; no generic fallback.7/7focused tests pass; build05 and phone-layout run pending.

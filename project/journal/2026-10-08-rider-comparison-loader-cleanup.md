@@ -9,3 +9,9 @@ Finding: Actual build03 fails only the unchanged normal-JS gate,717835B against7
 Validation: Seven focused comparison tests pass after the wording change. No limit, asset, selection or retry semantics changed.
 
 Limits: Actual build04 pending; comparison source remains unaccepted.
+
+Finding: Actual build04 remains9Bover (717833/717824B), exit1 in6.062s. Remove the redundant constructor driver guard: the tagged GLTF promise already waits for successful driver initialization and resolves null on failure. A missing constructor still throws rather than constructing a generic rider.
+
+Validation: Focused original/selected constructor and full comparison tests pass7/7. Both failure-to-load and original legacy routing remain intact.
+
+Limits: Actual build05 pending; no size-cap increase or runtime fallback.

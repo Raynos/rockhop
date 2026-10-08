@@ -193,10 +193,8 @@ export function privateEnginePlugin(metadata) {
           return { code: `import { privateSelectedRiderClass } from './gltf';\n` + code + `
 export class GltfRider extends OriginalGltfRider {
   constructor(gltf, lib) {
-    if (gltf.scene.userData.privateSelectedRider) {
-      if (!privateSelectedRiderClass) throw new Error('Rider driver missing');
-      return new privateSelectedRiderClass(gltf, lib);
-    }
+    // Tagged documents resolve only after their driver loads successfully.
+    if (gltf.scene.userData.privateSelectedRider) return new privateSelectedRiderClass(gltf, lib);
     super(gltf, lib);
   }
   static [Symbol.hasInstance](instance) {
