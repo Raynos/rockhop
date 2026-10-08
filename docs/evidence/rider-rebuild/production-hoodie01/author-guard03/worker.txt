@@ -1,0 +1,23 @@
+00:00.966  blend            | Read blend: "/Users/raynos/projects/games/rockhop/harness/out/rider-rebuild/native-hand-repair01/native02/anatomical-hand-rig.blend"
+Traceback (most recent call last):
+  File "/Users/raynos/projects/games/rockhop/assets/blender/rider-rebuild/production-hoodie01/author.py", line 645, in <module>
+    main()
+    ~~~~^^
+  File "/Users/raynos/projects/games/rockhop/assets/blender/rider-rebuild/production-hoodie01/author.py", line 635, in main
+    author(spec, out)
+    ~~~~~~^^^^^^^^^^^
+  File "/Users/raynos/projects/games/rockhop/assets/blender/rider-rebuild/production-hoodie01/author.py", line 455, in author
+    topology = rebuild_axilla(obj, spec, targets, patch_diagnostics)
+  File "/Users/raynos/projects/games/rockhop/assets/blender/rider-rebuild/production-hoodie01/author.py", line 215, in rebuild_axilla
+    cycles = boundary_cycles(cuts)
+  File "/Users/raynos/projects/games/rockhop/assets/blender/rider-rebuild/production-hoodie01/author.py", line 140, in boundary_cycles
+    assert len(choices) == 1, ('Axilla cut is not a simple disk boundary',
+           ^^^^^^^^^^^^^^^^^
+AssertionError: ('Axilla cut is not a simple disk boundary', 3, [-0.2438262403011322, -0.09142839908599854, 1.3889098167419434])
+Info: Saved as "proportional-fit-before-patch.blend"
+
+Error: script failed, file: 'assets/blender/rider-rebuild/production-hoodie01/author.py', exiting.
+Blender 5.2.1 LTS (hash 9e2066aef7ef built 2026-08-25 01:35:57)
+scripts disabled for "/Users/raynos/projects/games/rockhop/harness/out/rider-rebuild/native-hand-repair01/native02/anatomical-hand-rig.blend", skipping 'RIG-RiderMetarig_ui.py'
+
+Blender quit

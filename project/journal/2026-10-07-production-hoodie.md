@@ -33,3 +33,9 @@ Finding: select exact boundary edges/endpoints in live Edit Mode BMesh before th
 Validation: parent reviewed source, parsed AST and rehashed frozen source plus five immutable input pins. No shape/control change; corrected author unexecuted.
 
 Limits: a correctly selected unusable patch stops the operator route; no repeated selection campaign or art acceptance.
+
+Finding: Explicit live selection creates613 actual left quads; right regional cut introduces a branching boundary before selection.
+
+Validation: Parent read actual worker and diagnostics; author03 exit1 in1.892s, fitted native preserved.
+
+Limits: Successful left patch not separately saved; final rigged hoodie absent, no bake or moving art acceptance.
