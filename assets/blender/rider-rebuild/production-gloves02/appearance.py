@@ -121,7 +121,7 @@ def bake(scene, target, donor, out, material, color_node, mr_node, resolution):
     cage = target.copy(); cage.data = target.data.copy(); cage.name = target.name + '.BakeCage'
     cage.modifiers.clear(); bpy.context.collection.objects.link(cage)
     for v in cage.data.vertices: v.co += v.normal * .004
-    scene.render.bake.use_cage = True; scene.render.bake.cage_object = cage.name
+    scene.render.bake.use_cage = True; scene.render.bake.cage_object = cage
     cage.hide_render = True; cage.hide_set(True)
     for kind in ('baseColor', 'metallicRoughness', 'normal'):
         image = bpy.data.images.new(target.name + '.' + kind, width=resolution, height=resolution, alpha=False)

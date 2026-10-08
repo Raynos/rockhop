@@ -1283,3 +1283,5 @@ October 7 actual targeted jeans repair checkpoint: author04 exit0 in7.431s, pinn
 October 7 advisory implementation correction: official Blender API distinguishes OUTSIDE (outside constraint) from OUTSIDE_SURFACE (offset surface constraint). Targeted jeans source uses OUTSIDE to preserve authored ease and excludes saddle. No fit acceptance inferred from modifier enum.
 
 October 7 first actual glove selected-map attempt: exit1 in5.771s before textures; Blender BakeSettings.cage_object expects Object rather than name string. Native unchanged; no appearance or moving acceptance. Exact failure retained before compatibility correction.
+
+October 7 glove bake API source correction: actual cage Object replaces string assignment, source/failure lineage refreshed. Parent exact diff/AST/hash checked. Geometry/donor controls unchanged; corrected bake requires fresh explicit intake and remains unexecuted.

@@ -1,0 +1,24 @@
+{
+  "status": "ONLY_BLENDER_CAGE_OBJECT_API_CORRECTION_UNEXECUTED",
+  "acceptedArt": false,
+  "helperPath": "assets/blender/rider-rebuild/production-gloves02/appearance.py",
+  "beforeSHA256": "2c6694f90d9e1f2c10607beaac9e02c986af8ba24b5e489a90bfbab5c93e6be0",
+  "afterSHA256": "e27416a0cdead34065be840d612160835aa3b1f98f0215d1e153c702798e24ea",
+  "exactBefore": "scene.render.bake.cage_object = cage.name",
+  "exactAfter": "scene.render.bake.cage_object = cage",
+  "failureManifest": {
+    "path": "docs/evidence/rider-rebuild/production-gloves02/bake01-failure-frozen.json",
+    "sha256": "1576b029e184f214d8efd9ec232663e94f835cc250b244eda67696c0cb3673ad"
+  },
+  "originalGeometryReport": {
+    "path": "harness/out/rider-rebuild/production-gloves02/authored01/geometry-report.json",
+    "sha256": "9176c4eca38281962e64aa30df0429787c8ee34d7979f9d1539ce400c303ccb2"
+  },
+  "geometryNative": {
+    "path": "harness/out/rider-rebuild/production-gloves02/authored01/authored-geometry.blend",
+    "sha256": "43de777b789e9111ec927a1f6c6aaef09af4768043b1d862eb285763291ad10d"
+  },
+  "geometryAndDonorControlsChanged": false,
+  "heavyJobsExecutedSinceCorrection": 0,
+  "bakeIntakeRequirement": "Create a fresh output with an explicitly amended geometry-report sourceFiles manifest and compatibility provenance; preserve original geometry/report/native unchanged. author.py itself stays unchanged."
+}

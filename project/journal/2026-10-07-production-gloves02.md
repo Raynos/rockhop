@@ -24,3 +24,9 @@ Finding: Selected-material bake stops before textures at cage object API assignm
 Validation: Parent read actual TypeError; exit1 in5.771s, complete native unchanged, no completed sides or textures.
 
 Limits: Failure says nothing about eventual map alignment; appearance and moving grip remain open.
+
+Finding: Blender5.2 bake cage requires an Object pointer; assign actual cage instead of its name.
+
+Validation: Parent inspected exact one-line code diff, parsed AST and matched helper hash. Frozen source and failure lineage refreshed; no geometry or donor control changes.
+
+Limits: Correction unexecuted; fresh bake intake must retain original native/report provenance. No texture or art acceptance.
