@@ -1751,3 +1751,5 @@ Anatomical09 source checkpoint: nativepolygon-neighbor weightbrush in explicitco
 Private source Garage optimizer repair/source checkpoint: explicitlyinclude injectedSkeletonUtils andretain boundedfullerrors/navigation/Vitefullreloadtimes. Existingzeroerrorgate unchanged. Lateoptimizerreload is supportedhypothesis fromfirstcapturetimestamps, not provenrootcause; next actualcapture willresolve. Parentdiff/syntax and17builderfixtures pass; productionunchanged.
 
 Active production plan reconciles playeddiagnostic rejection, nativeanatomical09 executing, and actualcuff09 topologyfailure. No repeatedradialvariant, no acceptancefrom devcapture witherrors; explicitgeometrynextactions retain0/6.
+
+Actualanatomical09 nativeweightedit SUCCESS88.992s, saved/reopened d42ff634;2,356jeansvertices changed, rest1.335e-7m, protectedappearance/native75/outsideweights exact. Witness62.235→43.524mm stilloverstretched(rest18.591), P95region2.891→2.484/max7.066; FOURdiscardmax15.223%explicit. Unacceptedweight-only; nextactualfullselectedGaragefilm thenposedsculpt. Thirdconstruction sincegate31; gate32next.
