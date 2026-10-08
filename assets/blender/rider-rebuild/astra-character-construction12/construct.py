@@ -14,7 +14,7 @@ import bpy
 import numpy as np
 from mathutils import Vector
 from mathutils.bvhtree import BVHTree
-from mathutils.geometry import tessellate_polygon
+from mathutils.geometry import tessellate_polygon, delaunay_2d_cdt
 
 ROOT = Path(__file__).resolve().parents[4]
 HERE = Path(__file__).resolve().parent
@@ -372,6 +372,107 @@ def source_sleeve_frame(original, controls, side):
     return xyz, head, axis, u, v, s, selected
 
 
+def point_inside(point, polygon):
+    a, b = polygon, np.roll(polygon, -1, axis=0)
+    dy = b[:, 1]-a[:, 1]
+    crossing_x = a[:, 0]+(point[1]-a[:, 1])*(b[:, 0]-a[:, 0])/np.where(dy != 0, dy, 1)
+    return bool(np.sum(((a[:, 1] > point[1]) != (b[:, 1] > point[1])) & (point[0] < crossing_x)) % 2)
+
+
+def polygon_ray_hits(polygon, direction):
+    edge = np.roll(polygon, -1, axis=0)-polygon
+    determinant = direction[0]*edge[:, 1]-direction[1]*edge[:, 0]
+    valid = np.abs(determinant) > 1e-15
+    inverse = 1/np.where(valid, determinant, 1)
+    distance = (polygon[:, 0]*edge[:, 1]-polygon[:, 1]*edge[:, 0])*inverse
+    fraction = (polygon[:, 0]*direction[1]-polygon[:, 1]*direction[0])*inverse
+    hits = np.sort(distance[valid & (distance > 0) & (fraction >= 0) & (fraction <= 1)])
+    assert len(hits), 'Ray from verified cavity center missed its actual owned polygon'
+    return hits
+
+
+def annular_hem(surgery, boundary, profile):
+    """Constrained triangulation bridges the real inner/outer cut boundaries.
+
+    Source vertex order remains intact, including non-star folds. No angular
+    sorting or disk cap is used. CDT vertices must retain actual source points.
+    """
+    source = np.asarray(surgery.source)
+    original_ids = sorted({v for _, _, a, b in boundary for v in (a, b)})
+    _, inverse = np.unique(np.round(source[original_ids], 8), axis=0, return_inverse=True)
+    representatives = {}
+    for vertex, identity in zip(original_ids, inverse):
+        representatives.setdefault(int(identity), vertex)
+    native = np.array([representatives[i] for i in range(len(representatives))], dtype=np.int32)
+    lookup = {vertex: int(identity) for vertex, identity in zip(original_ids, inverse)}
+    edges = sorted({tuple(sorted((lookup[a], lookup[b]))) for _, _, a, b in boundary})
+    graph = defaultdict(list)
+    for a, b in edges:
+        graph[a].append(b); graph[b].append(a)
+    assert all(len(row) == 2 for row in graph.values())
+    unseen, loops = set(graph), []
+    while unseen:
+        start = min(unseen); chain = [start]; previous, current = None, start
+        while True:
+            nxt = next(n for n in graph[current] if n != previous)
+            if nxt == start:
+                break
+            assert nxt not in chain
+            chain.append(nxt); previous, current = current, nxt
+        unseen.difference_update(chain); loops.append(chain)
+    assert len(loops) == 2, ('Expected two genuine cuff boundaries', len(loops))
+    world = np.asarray(surgery.world)[native]
+    axial = np.sum((world-profile.wrist)*profile.axis, axis=1)
+    assert np.ptp(axial) < 2e-7, 'Mapped annular hem is not planar'
+    planar = np.column_stack((np.sum((world-profile.wrist)*profile.x, axis=1),
+                              np.sum((world-profile.wrist)*profile.z, axis=1)))
+    areas = [abs(np.sum(planar[loop, 0]*np.roll(planar[loop, 1], -1)-planar[loop, 1]*np.roll(planar[loop, 0], -1)))/2 for loop in loops]
+    outer_index = int(np.argmax(areas)); inner_index = 1-outer_index
+    outer, inner = planar[loops[outer_index]], planar[loops[inner_index]]
+    assert all(point_inside(p, outer) for p in inner), 'Mapped source annulus has lost containment'
+    points_out, edges_out, triangles, vertex_origins, _, _ = delaunay_2d_cdt(
+        [Vector(p) for p in planar], edges, [], 0, 1e-10, True)
+    remap = []
+    merged = 0
+    for vertex, ancestry in zip(points_out, vertex_origins):
+        assert ancestry, 'Crossed annular boundary created a CDT intersection point'
+        if len(ancestry) > 1:
+            assert all(np.array_equal(world[i].astype(np.float32), world[ancestry[0]].astype(np.float32)) for i in ancestry), 'CDT merged distinct source boundary points'
+            merged += len(ancestry)-1
+        remap.append(int(ancestry[0]))
+    uv_at = {}
+    for face_index, k, a, b in boundary:
+        uv_at.setdefault(lookup[a], surgery.uv[face_index][k])
+        uv_at.setdefault(lookup[b], surgery.uv[face_index][(k+1) % 3])
+    kept = []
+    for triangle in triangles:
+        assert len(triangle) == 3
+        ids = [remap[i] for i in triangle]
+        centroid = planar[ids].mean(axis=0)
+        if not point_inside(centroid, outer) or point_inside(centroid, inner):
+            continue
+        face = native[ids].tolist()
+        normal = np.cross(world[ids[1]]-world[ids[0]], world[ids[2]]-world[ids[0]])
+        if float(np.sum(normal*(-profile.axis))) < 0:
+            ids.reverse(); face.reverse()
+        surgery.add_face(face, [uv_at[i] for i in ids], surgery.material[boundary[0][0]])
+        kept.append(face)
+    assert kept
+    # An annular face patch must expose both original rings and no new edge.
+    counts = defaultdict(int)
+    for face in kept:
+        ids = [lookup[v] for v in face]
+        for a, b in zip(ids, ids[1:]+ids[:1]):
+            counts[tuple(sorted((a, b)))] += 1
+    patch_boundary = {edge for edge, count in counts.items() if count == 1}
+    assert patch_boundary == set(edges), 'Annular patch does not preserve every selected boundary edge'
+    assert all(count <= 2 for count in counts.values())
+    return {'sourceBoundaryLoops': 2, 'boundaryVertices': len(native), 'newAnnularTriangles': len(kept),
+            'triangulation': 'Constrained actual planar boundaries; interior cavity triangles excluded',
+            'sameFloat32PositionMerges': merged, 'everyOriginalBoundaryEdgePreserved': True,
+            'innerCavityAreaM2': areas[inner_index], 'outerAreaM2': areas[outer_index]}
+
+
 def contour_center(points, faces, head, axis, u, v, station):
     """Find an interior point of the actual selected sleeve plane contour.
 
@@ -421,8 +522,10 @@ def contour_center(points, faces, head, axis, u, v, station):
             chain.append(following); previous, current = current, following
         unseen.difference_update(chain); loops.append(endpoints[chain])
     areas = [abs(np.sum(p[:, 0]*np.roll(p[:, 1], -1)-np.roll(p[:, 0], -1)*p[:, 1]))/2 for p in loops]
-    assert len(loops) == 1, ('Source sleeve requires explicit multiple-contour interpretation', station, areas)
-    polygon = loops[0]
+    assert len(loops) == 2, ('Source sleeve fitting requires the measured real annulus', station, areas)
+    outer_index = int(np.argmax(areas)); inner_index = 1-outer_index
+    outer, polygon = loops[outer_index], loops[inner_index]
+    assert all(point_inside(point, outer) for point in polygon), ('Source inner contour is not contained by exterior', station)
     cross = polygon[:, 0]*np.roll(polygon[:, 1], -1)-np.roll(polygon[:, 0], -1)*polygon[:, 1]
     assert abs(cross.sum()) > 1e-10
     centroid = np.sum((polygon+np.roll(polygon, -1, axis=0))*cross[:, None], axis=0)/(3*cross.sum())
@@ -447,14 +550,17 @@ def contour_center(points, faces, head, axis, u, v, station):
     assert inside(centroid) and clearance(centroid) > 1e-5
     return centroid, {'stationM': float(station), 'loops': len(loops), 'edges': len(polygon),
                       'interiorCenterUV': centroid.tolist(), 'minimumBoundaryDistanceM': clearance(centroid),
-                      'exactPlaneVertexCount': int(np.sum(scalar == 0)), 'method': method}
+                      'exactPlaneVertexCount': int(np.sum(scalar == 0)), 'method': method,
+                      'outerAreaM2': areas[outer_index], 'innerAreaM2': areas[inner_index]}, (outer, polygon)
 
 
 def sleeve(surgery, controls, side, profile, settings):
     source = np.asarray(surgery.source)
     xyz, head, axis, u, v, s, selected = source_sleeve_frame(source, controls, side)
     tip = float(s[selected].max())
-    cut = tip-settings['sleeveCapRemovalM']
+    section = settings['sourceTopology']['sides'][side]['sections'][7]
+    assert section['closed'] and section['loopCount'] == 2
+    cut = float(section['stationM'])
     f = np.asarray(surgery.faces)
     candidates = np.all(selected[f], axis=1)
     surgery.cut(s-cut, candidates)
@@ -468,24 +574,27 @@ def sleeve(surgery, controls, side, profile, settings):
     planar = np.column_stack((np.sum(delta*u, axis=1), np.sum(delta*v, axis=1)))
     local_faces = np.asarray(surgery.faces)
     local_faces = local_faces[np.any(selected[local_faces], axis=1)]
-    centers, section_receipts = [], []
+    centers, section_receipts, source_contours = [], [], []
     for index, station in enumerate(stations):
         actual_station = station-1e-5 if index == len(stations)-1 else station
-        center, receipt = contour_center(xyz, local_faces, head, axis, u, v, actual_station)
-        centers.append(center); section_receipts.append(receipt)
+        center, receipt, contours = contour_center(xyz, local_faces, head, axis, u, v, actual_station)
+        centers.append(center); section_receipts.append(receipt); source_contours.append(contours)
     centers = np.asarray(centers)
-    original_tree = tree(xyz, local_faces)
     angles = np.arange(96)*2*np.pi/96
-    radii = np.empty((len(stations), len(angles)))
-    for i, station in enumerate(stations):
-        origin = head+station*axis+centers[i, 0]*u+centers[i, 1]*v
-        # Stay inside the retained side of the exact cut.
-        if i == len(stations)-1:
-            origin -= 1e-5*axis
+    inner_radii = np.empty((len(stations), len(angles)))
+    outer_radii = np.empty_like(inner_radii)
+    for i, (outer, inner) in enumerate(source_contours):
         for j, angle in enumerate(angles):
-            hit = hit_radius(original_tree, origin, np.cos(angle)*u+np.sin(angle)*v)
-            assert hit is not None and hit > .005, ('Source sleeve section misses outer shell', side, i, j, hit)
-            radii[i, j] = hit
+            direction = np.array([np.cos(angle), np.sin(angle)])
+            ih = polygon_ray_hits(inner-centers[i], direction)
+            oh = polygon_ray_hits(outer-centers[i], direction)
+            # These are independently owned actual cavity/exterior contours.
+            # Every folded portion between these bearings moves through the
+            # same strictly increasing radius map; no vertex is assigned a wall
+            # label from its radius or collapsed onto a fitted skin surface.
+            inner_radii[i, j] = ih[0]
+            outer_radii[i, j] = oh[-1]
+    assert np.all(inner_radii > 0) and np.all(outer_radii-inner_radii > 1e-5)
     ids = np.flatnonzero(selected & (s <= cut+1e-7))
     center = np.column_stack([np.interp(s[ids], stations, centers[:, j]) for j in range(2)])
     offset = planar[ids]-center
@@ -495,7 +604,9 @@ def sleeve(surgery, controls, side, profile, settings):
     ia = np.floor(angular).astype(int) % len(angles); ib = (ia+1) % len(angles); ta = angular-np.floor(angular)
     upper = np.clip(np.searchsorted(stations, s[ids]), 1, len(stations)-1); lower_i = upper-1
     ts = np.clip((s[ids]-stations[lower_i])/(stations[upper]-stations[lower_i]), 0, 1)
-    ray_radius = (radii[lower_i, ia]*(1-ta)+radii[lower_i, ib]*ta)*(1-ts)+(radii[upper, ia]*(1-ta)+radii[upper, ib]*ta)*ts
+    def lookup(radii):
+        return (radii[lower_i, ia]*(1-ta)+radii[lower_i, ib]*ta)*(1-ts)+(radii[upper, ia]*(1-ta)+radii[upper, ib]*ta)*ts
+    inner_radius, outer_radius = lookup(inner_radii), lookup(outer_radii)
     target_axis = -profile.axis
     target_u = unit(np.array([0., 0., 1.])-target_axis[2]*target_axis)
     target_v = np.cross(target_axis, target_u)
@@ -503,7 +614,10 @@ def sleeve(surgery, controls, side, profile, settings):
     body_angle = np.arctan2(np.sum(direction*profile.z, axis=1), np.sum(direction*profile.x, axis=1))
     native_station = settings['sleeveEndpointM']+(cut-s[ids])/(cut-stations[0])*(settings['sleeveTransitionM']-settings['sleeveEndpointM'])
     body_radius = profile.at(native_station, body_angle)
-    radius_after = radius*(body_radius+settings['sleeveOuterEaseM'])/ray_radius
+    radial_derivative = settings['sleeveWallM']/(outer_radius-inner_radius)
+    assert np.all(radial_derivative > 0)
+    radius_after = body_radius+settings['sleeveInnerEaseM']+(radius-inner_radius)*radial_derivative
+    assert np.all(radius_after > 0), 'Actual annulus map reaches its axis'
     proposed = profile.wrist+native_station[:, None]*profile.axis+radius_after[:, None]*direction
     alpha = smooth((settings['sleeveTransitionM']-native_station)/(settings['sleeveTransitionM']-settings['sleeveFullM']))
     world = np.asarray(surgery.world)
@@ -511,11 +625,13 @@ def sleeve(surgery, controls, side, profile, settings):
     surgery.move(world, ids[alpha > 0])
     edges = [e for e in directed_boundary(surgery) if abs(s[e[2]]-cut) < 1e-7 and abs(s[e[3]]-cut) < 1e-7]
     assert len(edges) > 30, ('No real sleeve opening', side, len(edges))
-    result = lining(surgery, edges, profile.axis, profile.wrist, settings['sleeveWallM'], settings['sleeveReturnM'])
+    result = annular_hem(surgery, edges, profile)
     return {'sourceCutAxialM': cut, 'sourceTipAxialM': tip, 'newHem': result,
-            'cutChoice': 'Authored first-candidate cut removes the selected closed terminal20mm identified by actual section analysis; it is not an anatomically-derived or artist-approved rib boundary. Remaining selected exterior and original PBR ancestry are retained; moving review must judge cuff detail loss.',
+            'cutChoice': 'Rebuild at last measured genuine annulus, source section7. The distal turned/oblique lip is removed, not mislabeled a sealed cap. Parent must judge selected cuff detail loss. Both actual source walls before the plane remain.',
+            'removedSourceAxialLengthM': float(tip-cut),
             'positiveRadiusScaleRange': [float(np.min(radius_after/radius)), float(np.max(radius_after/radius))],
-            'sourceRadialMeaning': 'Actual first ray hit on retained source exterior, never inner/outer layer extrema',
+            'sourceRadialMeaning': 'One positive radius map over the actual material domain, bounded by separately owned nested cavity/exterior polygons; folds retain their vertices/faces and distinct radii. Analytic positivity does not waive dense triangle crossing checks.',
+            'radialMapDerivativeRange': [float(radial_derivative.min()), float(radial_derivative.max())],
             'sourceSectionCenters': section_receipts}
 
 
@@ -640,7 +756,8 @@ def main():
     protected_before = {o.name: geometry(o) for o in protected}
     rest_before = rest(rig)
     out.mkdir(parents=True)
-    settings = config['settings']
+    settings = dict(config['settings'])
+    settings['sourceTopology'] = json.loads(pin(config['sourceTopology']).read_text())
     settings['sourceWrist'] = placement['sourceRest']['wrist']
     body = bpy.data.objects['RiderBody__FullAnatomyReference']
     _, bp = A['points'](body); bf = A['faces'](body)
@@ -665,7 +782,7 @@ def main():
     report = {'acceptedArt': False, 'status': 'UNACCEPTED_LOCAL_GEOMETRY_CONSTRUCTION',
               'sourceMaster': prior['master'], 'visibleMeshes': sorted(VISIBLE), 'objects': {}, 'hands': {},
               'recipeSHA256': sha(__file__), 'inputSHA256': sha(HERE/'input.json'),
-              'newTopology': 'Selected sleeve cap removal, original exterior fitting, actual annular hem; selected glove internal-floor deletion and source-parent lining',
+              'newTopology': 'Selected sleeve distal-lip truncation at measured true annulus, positive mapping of both retained walls, actual annular hem; selected glove internal-floor deletion and source-parent lining',
               'geometryGatesPassed': False, 'movingReviewPassed': False}
     hoodie = Surgery(bpy.data.objects['RiderHoodie'], source_hoodie)
     for side in ('L', 'R'):

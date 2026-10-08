@@ -5,27 +5,27 @@
     "sha256": "912e724a6d296709c92a4c48704f5be490e7f228cdfe55b84814e76c85224eed"
   },
   "settings": {
-    "sleeveCapRemovalM": 0.02,
     "sleeveEndpointM": 0.031,
     "sleeveTransitionM": 0.18,
     "sleeveFullM": 0.13,
     "sleeveOuterEaseM": 0.0045,
-    "sleeveWallM": 0.0015,
-    "sleeveReturnM": 0.006,
+    "sleeveWallM": 0.003,
     "gloveFloorCutY": -0.65,
     "gloveJoinY": -0.35,
     "gloveFullY": -0.65,
     "gloveCavityEaseM": 0.0065,
     "gloveLiningLengthM": 0.027,
-    "maximumCuffScale": 1.5
+    "maximumCuffScale": 1.5,
+    "sleeveInnerEaseM": 0.0015
   },
   "limits": [
     "Unaccepted actual geometry construction, not player promotion or a passing-art claim.",
     "Selected original stock immutable. Only the selected hoodie and bilateral gloves change.",
     "New lining uses original selected boundary UVs and normalized strongest-four source-parent fields; existing skeleton/materials/maps remain.",
-    "Source-positive radial sleeve deformation is one volume map, not min/max radial-layer compression.",
     "Floor selection must find exactly two actual dense source section loops, then a bounded inner connected component. No guessed face deletion.",
-    "Exact visible-wearer checks are required; full hidden anatomy is only a construction reference."
+    "Exact visible-wearer checks are required; full hidden anatomy is only a construction reference.",
+    "Sleeves rebuild at the last measured genuine annulus, retaining separately-owned actual inner/exterior walls; the distal turned/oblique lip is removed and detail loss remains an explicit moving-art question.",
+    "The positive annulus map preserves distinct radii throughout the actual source material domain; retained folds are not sorted, collapsed or relabeled from a radius. Dense new-crossing checks remain mandatory."
   ],
   "volumeHelper": {
     "path": "assets/blender/rider-rebuild/glove-over-sleeve08/volume.py",
@@ -34,5 +34,10 @@
   "intersectionHelper": {
     "path": "assets/blender/rider-rebuild/glove-over-sleeve08/author.py",
     "sha256": "42d428f600bdbd82c37d0024f147d57a29a1301560bc9a1fa3cd86389685d3d2"
-  }
+  },
+  "sourceTopology": {
+    "path": "harness/out/rider-rebuild/astra-character-construction12/source-topology01/source-topology.json",
+    "sha256": "76d06c7abd4ca8908936f0ae25857e1aaf154c3679e55c10034c72edead8cfd7"
+  },
+  "primaryAPIReference": "https://github.com/blender/blender/blob/main/source/blender/python/mathutils/mathutils_geometry.cc"
 }
