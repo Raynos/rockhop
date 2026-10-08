@@ -1623,3 +1623,5 @@ October8 freshAstra08 independentlyverified: actualremainingcuffsector RESToutsi
 October8 actualnative193 saved e17f9093 withunchangedselectedoutfit/75rest/fields/visibility, allTRS/neutralreturn; actualsoletrianglemax1.844micrometers. Continuousclothedartreview next;all0/6open.
 
 October8 parent-reviewed final cuff06 source uses the measured connected bilateral guide sector, preserves original anatomy/lip/fields/PBR and stops on orientation or fragment-containment failure. Freeze/native/export/played judgment pending; all0/6open.
+
+October8 originalselected Rookie/Prosidefilms playednatural16s each: Rookie0/192supported>1cm;Pro2/108supportedfailures,84released excluded,worstsole16.451mm. Preservebothfilms/reportsbeforeboundedcoupledtorsoevaluation. No wholecontact/artpass;all0/6open.
