@@ -34,11 +34,17 @@ def install(rig, contract):
     fk = [*roles['trunk'], *roles['neck'], one(roles['head']), roles['shoulderLeft'], roles['shoulderRight']]
     assert len(fk) == len(set(fk))
     bpy.context.view_layer.objects.active = rig; rig.select_set(True)
-    bpy.ops.object.mode_set(mode='EDIT'); edit = rig.data.edit_bones; controls = []; limbs = []
+    bpy.ops.object.mode_set(mode='EDIT'); edit = rig.data.edit_bones; controls = []; limbs = []; added = {}
 
     def add(name, matrix, length, parent=None):
-        b = edit.new(name); b.matrix = matrix; b.length = length; b.use_deform = False
-        b.parent = edit[parent] if parent else None; b.use_connect = False; return b
+        # EditBone.matrix carries direction/roll, not length. A fresh zero-length
+        # bone cannot retain that direction: establish its tail BEFORE assigning
+        # the desired matrix. Actual neutral-probe01 demonstrated the old failure.
+        assert length > 0
+        b = edit.new(name); b.head = (0, 0, 0); b.tail = (0, length, 0)
+        b.matrix = matrix; b.use_deform = False
+        b.parent = edit[parent] if parent else None; b.use_connect = False
+        added[name] = (matrix.copy(), length); return b
 
     for name in fk:
         parent = edit[name].parent.name if edit[name].parent else None
@@ -72,6 +78,12 @@ def install(rig, contract):
                           'poleAngle': pole_angle, 'lengths': [(middle-start).length, (tip-middle).length]})
     bpy.ops.object.mode_set(mode='OBJECT')
     assert rest_rows(rig, set(names)) == expected, 'Adding controls changed a source rest bone'
+    added_rest_residual = 0.
+    for name, (matrix, length) in added.items():
+        b = rig.data.bones[name]
+        error = max(abs(b.matrix_local[i][j]-matrix[i][j]) for i in range(4) for j in range(4))
+        added_rest_residual = max(added_rest_residual, error)
+        assert error < 2e-6 and abs(b.length-length) < 2e-6, ('Added control rest differs BEFORE constraints', name, error, b.length, length)
 
     def copy(name, target, kind):
         c = rig.pose.bones[name].constraints.new(kind); c.name = 'M11 '+target
@@ -110,7 +122,7 @@ def install(rig, contract):
     residual = max((rig.pose.bones[n].matrix.translation-rest[n].translation).length for n in names)
     assert residual < .0001, ('Native controls failed source rest pose', residual, [{k:l[k] for k in ('kind','side','poleAngle')} for l in limbs])
     return {'names': names, 'controls': controls, 'fk': fk, 'limbs': limbs, 'rest': rest, 'heads': heads,
-            'roles': roles, 'sourceRestResidualM': residual}
+            'roles': roles, 'sourceRestResidualM': residual, 'addedRestMaximumMatrixResidual': added_rest_residual}
 
 
 def set_world(rig, name, matrix):
