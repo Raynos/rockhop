@@ -1,12 +1,12 @@
 {
-  "status": "SOURCE_READY_PARENT_CHECKPOINT_AND_LEASE_PENDING",
+  "status": "OFFLINE_POSE_API_CORRECTION_READY_PARENT_CHECKPOINT_AND_LEASE_PENDING",
   "acceptedArt": false,
-  "blenderJobsRun": 0,
-  "heavyJobsRun": 0,
+  "blenderJobsRun": 1,
+  "heavyJobsRun": 1,
   "bakesRun": 0,
   "sourceFiles": {
     "assets/blender/rider-rebuild/production-gloves03/controls.json": "d75387be9292303338eba6cea238bb65ef8642c051f2742b2f48796f9415c536",
-    "assets/blender/rider-rebuild/production-gloves03/author.py": "c3ef9877ee75a87454d4fb03bf40714d04b4a05565fb73a7f89a68a3c9379ea2",
+    "assets/blender/rider-rebuild/production-gloves03/author.py": "1e8265e0cd5c596d5dd69a20bdc4f0dc6b88f89acc5def8ae6728b4feec24c44",
     "assets/blender/rider-rebuild/production-gloves03/.gitignore": "32dae3052f331ee34d628ef535709b301259a45df7c7522c4d35dcf49873f00b",
     "assets/blender/rider-rebuild/production-gloves03/inputs.json": "c04f3bfe87ee80bf95d2d20ef03c78afa32eaeb705aaf050d93632879b032443"
   },
@@ -63,8 +63,16 @@
     "--python",
     "assets/blender/rider-rebuild/production-gloves03/author.py",
     "--",
-    "docs/evidence/rider-rebuild/production-gloves03/author01"
+    "docs/evidence/rider-rebuild/production-gloves03/author02"
   ],
   "stopRule": "one45minuteconstructionincludinginspection_plus_atmostone15minutelocalcorrection",
-  "retiredMethodsImported": false
+  "retiredMethodsImported": false,
+  "priorAttempt": {
+    "failureCheckpoint": "102f51138",
+    "status": "POSE_CONTROL_GATE_FAILED_NO_NATIVE_SAVED",
+    "maximumControlResidualMeters": 0.07091496767029876
+  },
+  "apiCorrectionReadiness": "docs/evidence/rider-rebuild/production-gloves03/pose-api-correction-readiness.json",
+  "correctedBlenderJobsRun": 0,
+  "correctedHeavyJobsRun": 0
 }

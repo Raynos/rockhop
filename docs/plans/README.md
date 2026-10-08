@@ -1345,3 +1345,5 @@ October 7 jeans02 material inspection/transfer source: exact local-gusset marker
 October 7 hoodie local outside-finishing source: one explicit patch/adjacent-ring domain, OUTSIDE with12mm cloth ease, protected loose exterior/ports and exact topology/UV/PBR/fields/body75. Parent full source/AST/six pins checked. Native boundary diagnosis precedes edits and save precedes views. Unexecuted, no art acceptance.
 
 October 7 jeans actual donor inspection: parent viewed all6matched target/donor images; compact target encloses rest but inherited selected dense still intersects crotch/inner thighs/posterior legs. CPU2exit0 in30.168s; actualmarker/packed4Kmaps and target/source/UV/fields/body75 exact. No bake admission; one conventional dense outside-finishing source next.
+
+October 7 glove03 pose API correction: offline modeling bones ignore inherited scale; documented parent-first convert_local_to_pose inversion replaces lossy sheared child channel assignment. Parent diff/ten-function AST/unchangedcontrols/tenpins verified. Same10micrometre actual gate, partial native/matrix failure retention added. Corrected run unexecuted; no art acceptance.

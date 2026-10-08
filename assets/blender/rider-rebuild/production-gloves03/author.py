@@ -188,6 +188,67 @@ def section_dimensions(vertices, bone, source, candidates=None):
     return extent, int(near.sum())
 
 
+def set_pose_matrices(rig, desired):
+    """Blender documented parent-first conversion; no inherited parent scale.
+
+    https://docs.blender.org/api/current/bpy.types.Bone.html#bpy.types.Bone.convert_local_to_pose
+    Each desired matrix remains the authored target frame and measured scale.
+    Explicit local basis conversion respects each bone's inheritance settings.
+    """
+    def assign(pose, parent_matrix):
+        matrix = desired[pose.name]
+        options = {'invert': True}
+        if pose.parent:
+            options.update(parent_matrix=parent_matrix,
+                           parent_matrix_local=pose.parent.bone.matrix_local)
+        pose.matrix_basis = pose.bone.convert_local_to_pose(
+            matrix, pose.bone.matrix_local, **options)
+        for child in pose.children:
+            assign(child, matrix)
+    for pose in rig.pose.bones:
+        if not pose.parent:
+            assign(pose, None)
+    bpy.context.view_layer.update()
+
+
+def save_failed_pose(out, side, rig, obj, bones, desired, records, residuals):
+    """Preserve editable authoring state and named diagnostics before raising."""
+    obj.hide_render = False
+    obj.hide_set(False)
+    rig.hide_set(False)
+    obj['status'] = 'FAILED_OFFLINE_POSE_CONTROL_CHECK_UNACCEPTED'
+    native_path = out / ('failed-pose-' + side + '.blend')
+    bpy.ops.wm.save_as_mainfile(filepath=str(native_path))
+    rows = []
+    for spec, residual in zip(bones, residuals):
+        pose = rig.pose.bones[spec['name']]
+        rows.append({'name': spec['name'], 'parent': spec['parent'],
+                     'inheritScale': pose.bone.inherit_scale,
+                     'desiredMatrix': [list(row) for row in desired[spec['name']]],
+                     'actualMatrix': [list(row) for row in pose.matrix],
+                     'actualMatrixBasis': [list(row) for row in pose.matrix_basis],
+                     'sourceRestMatrix': [list(row) for row in pose.bone.matrix_local],
+                     'desiredHead': spec['targetHead'].tolist(),
+                     'desiredTail': spec['targetTail'].tolist(),
+                     'actualHead': list(pose.head), 'actualTail': list(pose.tail),
+                     'maxHeadTailResidualMeters': residual})
+    receipt = {'status': 'FAILED_OFFLINE_POSE_CONTROL_CHECK_NATIVE_PRESERVED',
+               'acceptedArt': False, 'side': side,
+               'native': {'path': str(native_path.relative_to(ROOT)), 'sha256': sha(native_path)},
+               'sourceRecipeSHA256': sha(__file__),
+               'controlsSHA256': sha(HERE / 'controls.json'),
+               'sourcePins': json.loads((HERE / 'inputs.json').read_text()),
+               'controlToleranceMeters': 1e-5,
+               'bodyAndMasterRestSignature': protected_signature(
+                   bpy.data.objects['RiderBody'], bpy.data.objects['RiderSkeleton']),
+               'maxActualResidualMeters': max(residuals),
+               'sourceRestObject': obj.name, 'offlineRig': rig.name,
+               'sectionAndPoseScaleRecords': records, 'bones': rows}
+    (out / ('failed-pose-' + side + '.json')).write_text(json.dumps(receipt, indent=2) + '\n')
+    print(json.dumps({'failedSide': side, 'savedDiagnosticNative': receipt['native'],
+                      'maxActualResidualMeters': max(residuals)}), flush=True)
+
+
 def author_hand(side, dense, native, hand, control, mat, out):
     vertices, faces, uv = dense['vertices'].copy(), dense['faces'].copy(), dense['originalCornerUV'].copy()
     if side == 'L':
@@ -211,6 +272,9 @@ def author_hand(side, dense, native, hand, control, mat, out):
             bone.parent = rig.data.edit_bones[spec['parent']]
     bpy.ops.object.mode_set(mode='OBJECT')
     for j, spec in enumerate(bones):
+        # Independent offline length/width adaptation must not inherit parent
+        # nonuniform scale and force a sheared local TRS decomposition.
+        rig.data.bones[spec['name']].inherit_scale = 'NONE'
         group = obj.vertex_groups.new(name=spec['name'])
         # Keep every computed nonzero weight; full normalization survives.
         for i in np.flatnonzero(weights[:, j] > 0):
@@ -219,6 +283,7 @@ def author_hand(side, dense, native, hand, control, mat, out):
     modifier.object = rig
     modifier.use_deform_preserve_volume = True
     records = []
+    desired = {}
     target_names = hand['jointNames'].tolist()
     for spec in bones:
         candidates = hand['nativeCoefficients'][:, target_names.index('DEF-hand.' + side)] > .25
@@ -231,9 +296,7 @@ def author_hand(side, dense, native, hand, control, mat, out):
         width = (target_extent + np.array([ease[label + 'Radial'], ease[label + 'Dorsal']])) / source_extent
         length_scale = np.linalg.norm(spec['targetTail'] - spec['targetHead']) / np.linalg.norm(spec['sourceTail'] - spec['sourceHead'])
         scale = np.diag([width[0], length_scale, width[1], 1.])
-        pose = rig.pose.bones[spec['name']]
-        pose.matrix = Matrix((spec['targetFrame'] @ scale).tolist())
-        bpy.context.view_layer.update()
+        desired[spec['name']] = Matrix((spec['targetFrame'] @ scale).tolist())
         records.append({'name': spec['name'], 'sourceHead': spec['sourceHead'].tolist(),
                         'sourceTail': spec['sourceTail'].tolist(),
                         'targetHead': spec['targetHead'].tolist(), 'targetTail': spec['targetTail'].tolist(),
@@ -241,13 +304,15 @@ def author_hand(side, dense, native, hand, control, mat, out):
                         'targetMeasuredSectionHalfExtent': target_extent.tolist(),
                         'sectionSamples': [source_count, target_count],
                         'authoredPoseScaleXYZ': [float(width[0]), float(length_scale), float(width[1])]})
-    bpy.context.view_layer.update()
+    set_pose_matrices(rig, desired)
     control_residuals = []
     for spec in bones:
         pose = rig.pose.bones[spec['name']]
         residual = max(np.linalg.norm(np.asarray(pose.head) - spec['targetHead']),
                        np.linalg.norm(np.asarray(pose.tail) - spec['targetTail']))
         control_residuals.append(float(residual))
+    if not max(control_residuals) < 1e-5:
+        save_failed_pose(out, side, rig, obj, bones, desired, records, control_residuals)
     assert max(control_residuals) < 1e-5, ('Actual posed controls missed target', control_residuals)
     evaluated = obj.evaluated_get(bpy.context.evaluated_depsgraph_get())
     frozen_mesh = bpy.data.meshes.new_from_object(evaluated, preserve_all_data_layers=True,

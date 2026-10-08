@@ -1,0 +1,242 @@
+{
+  "status": "OFFLINE_RIG_API_REPAIR_SOURCE_ONLY_NOT_RUN",
+  "acceptedArt": false,
+  "failedSourceCommit": "74d907e71",
+  "failedResultCommit": "102f51138",
+  "failedSourceSHA256": "c3ef9877ee75a87454d4fb03bf40714d04b4a05565fb73a7f89a68a3c9379ea2",
+  "correctedSourceSHA256": "1e8265e0cd5c596d5dd69a20bdc4f0dc6b88f89acc5def8ae6728b4feec24c44",
+  "frozenFunctionASTParity": {
+    "unit": true,
+    "projection": true,
+    "frame": true,
+    "protected_signature": true,
+    "material": true,
+    "make_mesh": true,
+    "authored_bones": true,
+    "source_weights": true,
+    "section_dimensions": true,
+    "main": true
+  },
+  "controlsByteIdentical": true,
+  "inputsByteIdentical": true,
+  "all10PinsMatch": true,
+  "actualControlToleranceUnchangedMeters": 1e-05,
+  "blenderJobsRunForCorrection": 0,
+  "heavyJobsRunForCorrection": 0,
+  "diagnosis": "FULL inherited nonuniform parent scales require sheared local child matrices; TRS channel decomposition cannot retain shear. NONE plus documented explicit parent-first local-to-pose inversion removes inherited scale for the offline authoring rig only.",
+  "measurements": [
+    {
+      "name": "source-hand.R",
+      "parent": null,
+      "unchangedDesiredScaleXYZ": [
+        0.035061107001868985,
+        0.1337259620179827,
+        0.1454107032721735
+      ],
+      "normalizedColumnNonorthogonalityUnderFullInherit": 3.3306690738754696e-16
+    },
+    {
+      "name": "source-metacarpal-pinky.R",
+      "parent": "source-hand.R",
+      "unchangedDesiredScaleXYZ": [
+        0.059463110060295046,
+        0.13314061155898546,
+        0.12308375189091836
+      ],
+      "normalizedColumnNonorthogonalityUnderFullInherit": 0.8441672937197755
+    },
+    {
+      "name": "DEF-f_pinky.01.R",
+      "parent": "source-metacarpal-pinky.R",
+      "unchangedDesiredScaleXYZ": [
+        0.15315357028593435,
+        0.12998874597419993,
+        0.14924745979364634
+      ],
+      "normalizedColumnNonorthogonalityUnderFullInherit": 0.23666449344022927
+    },
+    {
+      "name": "DEF-f_pinky.02.R",
+      "parent": "DEF-f_pinky.01.R",
+      "unchangedDesiredScaleXYZ": [
+        0.1306935248568966,
+        0.17489856395559208,
+        0.10628612895436922
+      ],
+      "normalizedColumnNonorthogonalityUnderFullInherit": 0.07972346839107534
+    },
+    {
+      "name": "DEF-f_pinky.03.R",
+      "parent": "DEF-f_pinky.02.R",
+      "unchangedDesiredScaleXYZ": [
+        0.12348327577188954,
+        0.1548647736964574,
+        0.10973721237981028
+      ],
+      "normalizedColumnNonorthogonalityUnderFullInherit": 0.250379617444448
+    },
+    {
+      "name": "source-metacarpal-ring.R",
+      "parent": "source-hand.R",
+      "unchangedDesiredScaleXYZ": [
+        0.03290856749292275,
+        0.13102162820606844,
+        0.16004958594150234
+      ],
+      "normalizedColumnNonorthogonalityUnderFullInherit": 0.7367102818124969
+    },
+    {
+      "name": "DEF-f_ring.01.R",
+      "parent": "source-metacarpal-ring.R",
+      "unchangedDesiredScaleXYZ": [
+        0.1682329877072346,
+        0.15600837848989846,
+        0.1845133202212141
+      ],
+      "normalizedColumnNonorthogonalityUnderFullInherit": 0.5770358723406838
+    },
+    {
+      "name": "DEF-f_ring.02.R",
+      "parent": "DEF-f_ring.01.R",
+      "unchangedDesiredScaleXYZ": [
+        0.15997135642033722,
+        0.13837243857048567,
+        0.15886832546365723
+      ],
+      "normalizedColumnNonorthogonalityUnderFullInherit": 0.027146916876276708
+    },
+    {
+      "name": "DEF-f_ring.03.R",
+      "parent": "DEF-f_ring.02.R",
+      "unchangedDesiredScaleXYZ": [
+        0.11912056834005234,
+        0.11861381722232152,
+        0.1013207424298574
+      ],
+      "normalizedColumnNonorthogonalityUnderFullInherit": 0.06795502349447041
+    },
+    {
+      "name": "source-metacarpal-middle.R",
+      "parent": "source-hand.R",
+      "unchangedDesiredScaleXYZ": [
+        0.035061107001868985,
+        0.1337259620179827,
+        0.1454107032721735
+      ],
+      "normalizedColumnNonorthogonalityUnderFullInherit": 2.2898349882893854e-16
+    },
+    {
+      "name": "DEF-f_middle.01.R",
+      "parent": "source-metacarpal-middle.R",
+      "unchangedDesiredScaleXYZ": [
+        0.18348713540082284,
+        0.16166212052810608,
+        0.182378077678171
+      ],
+      "normalizedColumnNonorthogonalityUnderFullInherit": 0.5831390405780046
+    },
+    {
+      "name": "DEF-f_middle.02.R",
+      "parent": "DEF-f_middle.01.R",
+      "unchangedDesiredScaleXYZ": [
+        0.11769741148301943,
+        0.1371497682495722,
+        0.1299138055465591
+      ],
+      "normalizedColumnNonorthogonalityUnderFullInherit": 0.046547458453632375
+    },
+    {
+      "name": "DEF-f_middle.03.R",
+      "parent": "DEF-f_middle.02.R",
+      "unchangedDesiredScaleXYZ": [
+        0.10706704489930817,
+        0.08786739022678952,
+        0.09703620782099996
+      ],
+      "normalizedColumnNonorthogonalityUnderFullInherit": 0.12053067585512633
+    },
+    {
+      "name": "source-metacarpal-index.R",
+      "parent": "source-hand.R",
+      "unchangedDesiredScaleXYZ": [
+        0.053390267788466034,
+        0.13051770816784095,
+        0.1170581940447948
+      ],
+      "normalizedColumnNonorthogonalityUnderFullInherit": 0.6706009875253331
+    },
+    {
+      "name": "DEF-f_index.01.R",
+      "parent": "source-metacarpal-index.R",
+      "unchangedDesiredScaleXYZ": [
+        0.19902111276141188,
+        0.16317982070772413,
+        0.17246768067288812
+      ],
+      "normalizedColumnNonorthogonalityUnderFullInherit": 0.5315130456967195
+    },
+    {
+      "name": "DEF-f_index.02.R",
+      "parent": "DEF-f_index.01.R",
+      "unchangedDesiredScaleXYZ": [
+        0.09303298559280067,
+        0.11529956112784452,
+        0.1468971575625485
+      ],
+      "normalizedColumnNonorthogonalityUnderFullInherit": 0.02204933097552362
+    },
+    {
+      "name": "DEF-f_index.03.R",
+      "parent": "DEF-f_index.02.R",
+      "unchangedDesiredScaleXYZ": [
+        0.0957044291957738,
+        0.05619101302663475,
+        0.082882077439151
+      ],
+      "normalizedColumnNonorthogonalityUnderFullInherit": 0.11953470985043947
+    },
+    {
+      "name": "DEF-thumb.01.R",
+      "parent": "source-hand.R",
+      "unchangedDesiredScaleXYZ": [
+        0.17985186162510416,
+        0.145178115890066,
+        0.1240782166025753
+      ],
+      "normalizedColumnNonorthogonalityUnderFullInherit": 0.805714284429706
+    },
+    {
+      "name": "DEF-thumb.02.R",
+      "parent": "DEF-thumb.01.R",
+      "unchangedDesiredScaleXYZ": [
+        0.13752198246899353,
+        0.09980417135418874,
+        0.11707846718199999
+      ],
+      "normalizedColumnNonorthogonalityUnderFullInherit": 0.06786463424911456
+    },
+    {
+      "name": "DEF-thumb.03.R",
+      "parent": "DEF-thumb.02.R",
+      "unchangedDesiredScaleXYZ": [
+        0.12840991021195883,
+        0.05725023381981557,
+        0.1259266770861493
+      ],
+      "normalizedColumnNonorthogonalityUnderFullInherit": 0.2188586073110843
+    }
+  ],
+  "officialDocumentation": [
+    {
+      "url": "https://docs.blender.org/api/current/bpy.types.Bone.html#bpy.types.Bone.inherit_scale",
+      "access": "official page fetched with curl; Context7 resolved official current API",
+      "semantics": "FULL inherits all parent scaling; NONE completely ignores parent scaling."
+    },
+    {
+      "url": "https://docs.blender.org/api/current/bpy.types.Bone.html#bpy.types.Bone.convert_local_to_pose",
+      "access": "official current API retrieved through Context7",
+      "semantics": "Documented parent-first conversion assigns matrix_basis with invert=True and new parent pose plus parent rest matrices."
+    }
+  ],
+  "failurePreservation": "Before unchanged gate raises, save failed-pose-SIDE.blend and JSON with named desired/actual/rest/basis matrices, actual heads/tails/residuals, source pins and protected body/master signature."
+}

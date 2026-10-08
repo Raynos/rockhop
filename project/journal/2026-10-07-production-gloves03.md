@@ -9,3 +9,9 @@ Finding: Actual source-rest author fails target-control assertion before a fitte
 Validation: CPU2exit1 in6.218s, children/metacarpals miss up to70.915mm while root isclose. Parent actual worker read; originalsource/controls unchanged.
 
 Limits: Bone pose/scale API diagnosis next with fixedanatomicalcontrols; assertion stays. No saved fit/material/motion accepted.
+
+Finding: Inherited nonuniform parent scale forces sheared child-local bases that Blender pose channels cannot retain. Offline source-rest bones now ignore parent scale and use documented parent-first local-to-pose inversion.
+
+Validation: Parent exact diff read, AST parity for ten protected functions, byte-identical controls/intake and all ten source pins. Existing actual 10 micrometre gate remains; failure saves editable modeling native and named desired/actual matrices before raising.
+
+Limits: API correction only; actual corrected rig and original PBR enclosure unexecuted, no fitting/art acceptance.
