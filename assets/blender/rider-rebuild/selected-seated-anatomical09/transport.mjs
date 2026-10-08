@@ -26,6 +26,16 @@ const PINS = {
   weights: ['harness/out/rider-rebuild/selected-seated-anatomical09/authored01/authored-weight-rows.json', '3af8d3ddd719f47a7f2e5073a5ab0dda00aa9ce2a25fa471c00b9718093bf4bf'],
   author: ['harness/out/rider-rebuild/selected-seated-author04/authored01/rookie.json', '9d59ba63e99c8d017e7f8c8c4dfbfde0859aafd3ea6d2383c734dec259ec5f8a'],
 };
+const nativeInput = process.argv.find(v => v.startsWith('--native-input='))?.slice(15);
+if (nativeInput) {
+  const updated = JSON.parse(fs.readFileSync(path.resolve(nativeInput), 'utf8'));
+  assert.deepEqual(Object.keys(updated).sort(), ['native', 'nativeReceipt', 'weights']);
+  for (const [key, pin] of Object.entries(updated)) {
+    assert(Array.isArray(pin) && pin.length === 2 && /^[a-f0-9]{64}$/.test(pin[1]));
+    assert(pin[0].startsWith('harness/out/rider-rebuild/selected-seated-anatomical09/authored02/') && !pin[0].includes('..'));
+    PINS[key] = pin;
+  }
+}
 async function sha(filename, range = {}) {
   const hash = crypto.createHash('sha256');
   for await (const chunk of fs.createReadStream(filename, range)) hash.update(chunk);
@@ -199,6 +209,14 @@ async function main() {
   const [contract, native, authored, author] = await Promise.all(['engineContract', 'nativeReceipt', 'weights', 'author'].map(read));
   assert.equal(native.accepted, false); assert.equal(native.native.sha256, PINS.native[1]);
   assert.equal(native.native75RestExact, true); assert.equal(native.outsideWeightsExact, true);
+  if (nativeInput) {
+    assert.equal(native.supportCorrection?.rankPruning, false);
+    const pin = native.supportCorrection.nativePruningProof;
+    assert.equal(await sha(path.join(ROOT, pin.path)), pin.sha256);
+    const proof = JSON.parse(await fsp.readFile(path.join(ROOT, pin.path), 'utf8'));
+    assert.equal(proof.rankRemovedMass, 0); assert(proof.maximumPreCutoffSupportCount <= 4);
+    assert(proof.samples.length === 6 && proof.samples.every(s => s.maximumDisplacementM <= POSITION_TOLERANCE));
+  }
   assert.equal(native.editedJeansVertices, authored.length); assert.equal(authored.length, 2356);
   const edits = new Map(authored.map(row => [row.nativeID, row])); assert.equal(edits.size, authored.length);
   const source = await openGLB(path.join(ROOT, PINS.engineRider[0])); const doc = source.document, original = structuredClone(doc);
@@ -280,6 +298,7 @@ async function main() {
     sourceNativeFieldsPreserved: false, decodedChangedFieldsExactlyNewSavedNative: true,
     untouchedGLBFieldsExactlyOriginal: true, baselineNativeExportRounding: baselineRounding,
     maximumFourRemovedMass: native.maximumFourRemovedMass, originalBinarySHA256,
+    supportCorrection: native.supportCorrection ?? null,
     protectedRestGeometryUVMapsAnd75InverseBindsExact: true, nativeLoadedParity: probe.receipt,
     fourPruningDiagnostic: probe.pruning };
   contract.accepted = false; contract.qualificationState = STATUS; contract.glbSHA256 = targetSHA;
@@ -289,7 +308,7 @@ async function main() {
     timesSeconds: [0, 1, 2, 4, 5, 6], schedule: ['rest', 'rest', 'rejected-author04-key', 'rejected-author04-key', 'rest', 'rest'],
     jointChannels: 225, weightChannels: 0, correctiveMorphs: 0,
     nativeActionScope: 'Saved native key endpoints measured; this glTF LINEAR diagnostic does not claim Blender F-curve midpoint identity.',
-    limits: ['Weight result remains unaccepted; maximum FOUR discarded mass15.2225% remains visible.',
+    limits: [`Weight result remains unaccepted; maximum saved FOUR discarded mass${100*native.maximumFourRemovedMass}% remains visible.`,
       'Four native positional witnesses per bike key/rest/return are bounded by0.1mm. Actual GPU vertex readback, continuous native/action parity, full-surface geometry/contact and moving art remain open.'] };
   assert(!contract.corrective && doc.meshes.every(m => !m.weights && m.primitives.every(p => !p.targets)));
   const outputContract = path.join(out, 'rider-contract.json');
@@ -297,6 +316,7 @@ async function main() {
   await fsp.writeFile(path.join(out, 'loaded-weight-changes.json'), JSON.stringify(probe.changes)+'\n');
   await fsp.writeFile(path.join(out, 'four-pruning-diagnostic.json'), JSON.stringify(probe.pruning, null, 2)+'\n');
   const report = { accepted: false, status: STATUS, sourcePins, recipeSHA256: await sha(fileURLToPath(import.meta.url)),
+    nativePinInput: nativeInput ? { path: path.relative(ROOT, path.resolve(nativeInput)), sha256: await sha(path.resolve(nativeInput)) } : null,
     glb: { path: path.relative(ROOT, target), sha256: targetSHA },
     contract: { path: path.relative(ROOT, outputContract), sha256: await sha(outputContract) },
     originalBinaryBytesPreserved: source.binLength, appendedWeightBytes: joints.length+weights.length,

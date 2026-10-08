@@ -1791,3 +1791,5 @@ Motion11correctedsource02 establishespositiveEditBone length BEFORE matrix assig
 Cuffconstruction10source frozen after actualidentityproof: originalfloat32 cutter/coordinates and physical/denseengine unchanged; sixsourcefloorpredicatesshareexistingidentity. Measured1688+71rimcircuits retaininheritedhandle, bothsewnonlyafteractualoperation; topology notdesignconstraint. Oneboundedconstruction queued, no savedcuff/artpass.
 
 Actual anatomicalsupport02PASS126.146s/native4a330ae8: max4support/rankloss0; bothbike+unilateral fullvsFOUR max0.031893mm/neighbour0.033828, CPU/native0.0001871mm, outside/rest/maps exact. Measured21mm reductiondefect cleared, notseatedart. Dressedfilm thencontinuousposedsculpt; motion02/gate33 next.
+
+Transport02source frozen againstactualnative4a330ae8/receiptb7eefbb2/rows60a5fb7e; exactnative-only overrides, originalselectedBIN/engine05/author04fixed and sixactualnative supportchecks required. Sameweight-only diagnosticintake; actualexport/film pending.

@@ -1,0 +1,34 @@
+{
+  "accepted": false,
+  "status": "SOURCE_FROZEN_TRANSPORT02_NOT_RUN",
+  "sourcePins": {
+    "assets/blender/rider-rebuild/selected-seated-anatomical09/transport.mjs": "6b3c5a833ab9b2b42364de3936217fd40e1b29c670981b4401cc03801ca2e882",
+    "assets/blender/rider-rebuild/selected-seated-anatomical09/transport02.input.json": "99ac6795ba18f661b0176ed11835a083876c46b6cd5eceae7fd08ed25a996249",
+    "assets/blender/rider-rebuild/selected-seated-anatomical09/run-transport02.sh": "1f0a141bc1ef40d59fe461dee0b5214302f220821b4777c7809fc7093cfda5de"
+  },
+  "nativeInput": {
+    "native": [
+      "harness/out/rider-rebuild/selected-seated-anatomical09/authored02/selected-anatomical09-weight-only.blend",
+      "4a330ae8a5e93c00a1492dbfd28923ff29796650bbae1dacfadc5fcf00a627a0"
+    ],
+    "nativeReceipt": [
+      "harness/out/rider-rebuild/selected-seated-anatomical09/authored02/receipt.json",
+      "b7eefbb2f18df361948a64af54a4eff52426a41b88a1aa6ae3808fc484d709e5"
+    ],
+    "weights": [
+      "harness/out/rider-rebuild/selected-seated-anatomical09/authored02/authored-weight-rows.json",
+      "60a5fb7eec17602f303972869501e6693d5deeab3f24cc7cf82b9747fc3338fe"
+    ]
+  },
+  "actualNativeProof": {
+    "path": "harness/out/rider-rebuild/selected-seated-anatomical09/authored02/four-pruning-native.json",
+    "sha256": "372cfe2605d03140da68785662011125e01577df76daed5e51f72465835ed5a4",
+    "sampleCount": 6,
+    "rankRemovedMass": 0,
+    "maximumDisplacementM": 3.189307138309133e-05,
+    "maximumNeighborJumpM": 3.382808115437434e-05
+  },
+  "validation": "JS source import and native input guards pass without main/export; JS and Bash syntax pass",
+  "parentCommand": "bash assets/blender/rider-rebuild/selected-seated-anatomical09/run-transport02.sh",
+  "qualification": "UNACCEPTED_WEIGHT_INTERVENTION; same narrow native-weight-only helper contract and actual author04 diagnostic clip; no corrective geometry"
+}
