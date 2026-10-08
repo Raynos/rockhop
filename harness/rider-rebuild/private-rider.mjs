@@ -247,6 +247,8 @@ export function createPrivateRiderClass(metadata) {
     poseRiding(frame) {
       const p = this.physicsTarget(frame), started = performance.now();
       const bound = this.driver.maxSpineFlexRadians ?? 0, candidates = [];
+      const refinement = { iterations: 0, bracketWidthRadians: null,
+        rule: 'Conditional arm/leg contact-gap crossover; not a global minimum or anatomical range proof' };
       fail(Number.isFinite(bound) && bound >= 0 && bound <= Math.PI / 9, 'Spine flex exceeds declared anatomical bound');
       const evaluate = (hips, flex) => {
         resetHumanoidPose(this.binding); this.debug.fullResetCount++;
@@ -257,7 +259,8 @@ export function createPrivateRiderClass(metadata) {
         const inverse = invertAnthropometricCOM(hips => evaluate(hips, flex), p.requestedCOM, [p.hips.x, p.hips.y], 8);
         evaluate(inverse.hips, flex);
         const arm = Math.max(...this.debug.armStretch), leg = Math.max(...this.debug.legStretch);
-        const candidate = { flex, inverse, arm, leg, reach: Math.max(arm, leg), gapM: Math.max(...this.debug.gripErr, ...this.debug.soleErr) };
+        const armGapM = Math.max(...this.debug.gripErr), legGapM = Math.max(...this.debug.soleErr);
+        const candidate = { flex, inverse, arm, leg, armGapM, legGapM, reach: Math.max(arm, leg), gapM: Math.max(armGapM, legGapM) };
         candidates.push(candidate); return candidate;
       };
       const initial = solve(0);
@@ -266,17 +269,31 @@ export function createPrivateRiderClass(metadata) {
         const edge = solve((role === 'arm' ? -1 : 1) * bound);
         const slope = initial[role] - edge[role];
         solve(edge.flex * (slope > 0 ? Math.min(1, Math.max(0, (initial[role] - 1) / slope)) : 1));
+        const difference = row => row.armGapM - row.legGapM;
+        if (initial.gapM > 0.001 && difference(initial) * difference(edge) < 0) {
+          let left = initial, right = edge;
+          for (let iteration = 0; iteration < 8; iteration++) {
+            const middle = solve((left.flex + right.flex) / 2);
+            refinement.iterations++;
+            if (difference(middle) === 0) { left = right = middle; break; }
+            if (difference(left) * difference(middle) < 0) right = middle;
+            else left = middle;
+          }
+          refinement.bracketWidthRadians = Math.abs(right.flex - left.flex);
+        }
       }
       const feasible = candidates.filter(row => row.gapM <= 0.001 && row.inverse.converged);
       const best = feasible.length ? feasible.sort((a, b) => Math.abs(a.flex) - Math.abs(b.flex))[0]
         : candidates.sort((a, b) => a.gapM - b.gapM)[0];
       const inverse = best.inverse;
-      evaluate(inverse.hips, best.flex);
+      const measuredCOM = evaluate(inverse.hips, best.flex);
       this.debug.comResidual = inverse.residualM;
       this.debug.anthropometry = { ...inverse, requestedCOM: p.requestedCOM.toArray(),
+        physicsDimensions: 'XY', measuredCOM: measuredCOM.toArray(), lateralResidualM: measuredCOM.z - p.requestedCOM.z,
         carrierAngle: p.torsoAngle, spineFlexRadians: best.flex, elapsedMs: performance.now() - started,
-        articulationRule: 'Three actual-contact candidates; minimum flex at <=1 mm socket-center error',
-        candidates: candidates.map(({ flex, gapM, reach, inverse }) => ({ flex, gapM, reach, comResidualM: inverse.residualM })),
+        articulationRule: `${candidates.length} actual-contact candidates; least evaluated flex at <=1 mm socket-center error, otherwise least evaluated maximum gap`,
+        candidateCount: candidates.length, refinement,
+        candidates: candidates.map(({ flex, gapM, armGapM, legGapM, reach, inverse }) => ({ flex, gapM, armGapM, legGapM, reach, comResidualM: inverse.residualM })),
         palmForwardBike: this.driver.palmForwardBike ?? [1, -0.25, 0],
         contactLimit: 'Socket center residual only; no glove surface/bar radius or phalange penetration qualification' };
       this.debug.physicalPose = !this.stage && !!frame.riderBody.present;

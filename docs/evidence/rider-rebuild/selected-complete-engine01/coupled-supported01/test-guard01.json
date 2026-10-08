@@ -1,0 +1,54 @@
+{
+  "accepted": false,
+  "lock": "/Users/raynos/projects/localai/.model.lock",
+  "method": "lockf -k",
+  "command": [
+    "node",
+    "--import",
+    "tsx",
+    "--test",
+    "--test-name-pattern=private plugin|private metadata|actual exported assembly|actual forward/back|actual COM|anatomical upper-spine|actual repeated|actual crash",
+    "harness/rider-rebuild/private-rider.test.mjs"
+  ],
+  "controllerPID": 44235,
+  "pollSeconds": 1,
+  "startAnonymousBelowGiB": 55,
+  "stopAnonymousGiB": 65,
+  "stopAnonymousPlusWiredGiB": 96,
+  "limitSeconds": 180.0,
+  "guardSHA256": "cf8acd15d8b7484480bee74d23892be815d955ffd87115d3da8ed228ffb3d916",
+  "status": "worker returned; review pending",
+  "samples": [
+    {
+      "seconds": 0,
+      "anonymousGiB": 26.0,
+      "wiredGiB": 6.8,
+      "freeGiB": 49.2
+    },
+    {
+      "seconds": 0.064,
+      "anonymousGiB": 26.2,
+      "wiredGiB": 6.8,
+      "freeGiB": 49.1
+    },
+    {
+      "seconds": 1.125,
+      "anonymousGiB": 26.6,
+      "wiredGiB": 7.7,
+      "freeGiB": 47.7
+    },
+    {
+      "seconds": 2.188,
+      "anonymousGiB": 27.5,
+      "wiredGiB": 7.4,
+      "freeGiB": 47.1
+    }
+  ],
+  "physicalMemoryBytes": 137438953472,
+  "requiredPhysicalMemoryBytes": 137438953472,
+  "scope": "Future explicitly invoked owned Rockhop job only",
+  "pressureOrSwapLimits": "No separate pressure/swap gate exists in the pinned original guard; none altered",
+  "ownedChildPID": 44243,
+  "exitCode": 1,
+  "elapsedSeconds": 3.202
+}

@@ -103,10 +103,17 @@ test('actual forward/back/neutral targets retain finite full-hierarchy control a
     assert.ok(rider.debug.gripAngleErr.every(angle => angle < 1e-5));
     if (process.env.RIDER_REBUILD_POSE_CALIBRATION) assert.ok(Math.max(...rider.debug.gripErr, ...rider.debug.soleErr) < 0.005);
     assert.ok(rider.debug.comResidual < 1e-5);
-    assert.ok(rider.debug.anthropometry.candidates.length <= 3);
+    assert.ok(rider.debug.anthropometry.candidates.length <= 11);
+    assert.equal(rider.debug.anthropometry.candidateCount, rider.debug.anthropometry.candidates.length);
     assert.ok(Math.abs(rider.debug.anthropometry.spineFlexRadians) <= (metadata.driver.maxSpineFlexRadians ?? 0));
     const measured = rider.toBike(measureAnthropometricCOM(rider, rider.anthropometry));
-    assert.ok(measured.distanceTo(new THREE.Vector3().fromArray(rider.debug.anthropometry.requestedCOM)) < 1e-5);
+    const requested = new THREE.Vector3().fromArray(rider.debug.anthropometry.requestedCOM);
+    // The physical inverse constrains XY; retain authored lateral asymmetry as measured evidence.
+    assert.ok(Math.hypot(measured.x - requested.x, measured.y - requested.y) < 1e-5);
+    assert.ok(Number.isFinite(measured.z));
+    assert.equal(rider.debug.anthropometry.physicsDimensions, 'XY');
+    assert.deepEqual(rider.debug.anthropometry.measuredCOM, measured.toArray());
+    assert.equal(rider.debug.anthropometry.lateralResidualM, measured.z - requested.z);
     for (const limb of rider.limbs.values()) {
       assert.ok(Math.abs(rider.position(limb.upper).distanceTo(rider.position(limb.lower)) - limb.lengths[0]) < 1e-5);
       assert.ok(Math.abs(rider.position(limb.lower).distanceTo(rider.position(limb.end)) - limb.lengths[1]) < 1e-5);
