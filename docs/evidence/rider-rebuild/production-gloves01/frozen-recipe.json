@@ -1,0 +1,80 @@
+{
+  "status": "SOURCE_CHECKPOINT_BEFORE_HEAVY_TRIAL",
+  "acceptedArt": false,
+  "executedHeavyJobs": 0,
+  "trialBudget": {
+    "cpuThreads": 2,
+    "authoredPasses": 1,
+    "targetedRepairsMaximum": 1
+  },
+  "sourceFiles": [
+    {
+      "path": "assets/blender/rider-rebuild/production-gloves01/author.py",
+      "sha256": "83078faf903a7a012aea3b8f56cc7746bc44e03d08f45fa8d17589584156200e"
+    },
+    {
+      "path": "assets/blender/rider-rebuild/production-gloves01/inputs.json",
+      "sha256": "bb8b6a8cfedee058b4f7e88247f675fd73cc5c63edf91fcaaba579b26ac99e10"
+    },
+    {
+      "path": "docs/evidence/rider-rebuild/production-gloves01/CONSTRUCTION.md",
+      "sha256": "4438e566b58cb4a9da585e0eef1f9669990efd93fa8e077aa70ea219b62e7fa3"
+    }
+  ],
+  "sourcePins": {
+    "nativeMaster": {
+      "path": "harness/out/rider-rebuild/native-hand-repair01/native02/anatomical-hand-rig.blend",
+      "sha256": "42fca617ea8d246a6c3e3ca68a90cd3cb5f3ce8b9bb78130e0e2bbd65f605fac"
+    },
+    "nativeArrays": {
+      "path": "docs/evidence/rider-rebuild/native-hand-repair01/native02/native-body.npz",
+      "sha256": "e62e9969503b7761e99463eccc3ca7be39e0c230a2948f2f87a224db52d0f9a2"
+    },
+    "handL": {
+      "path": "docs/evidence/rider-rebuild/glove-native02-fit/target01/native-hand-L.npz",
+      "sha256": "d175eb289e270d83f5dfef0617a8a8396e1841a27b6de450bfa1cb4bc10a1e1d"
+    },
+    "handR": {
+      "path": "docs/evidence/rider-rebuild/glove-native02-fit/target01/native-hand-R.npz",
+      "sha256": "2e3cd9f16768fa063de77a73eb102abfc841b16abcc11c8339b793558707c210"
+    },
+    "denseSelected": {
+      "path": "assets/blender/hero-remaster/rider/finish-2026-10-05/wardrobe/data/prep02/gloves/cleaned-donor.npz",
+      "sha256": "f07a705f334d3d2b802fa7d23baec3e9cd54b211d160b7bbd6ab2c9f4a96541c"
+    },
+    "baseColor": {
+      "path": "assets/blender/hero-remaster/rider/finish-2026-10-05/wardrobe/data/prep02/gloves/baseColorTexture.png",
+      "sha256": "9633beec8bf2bb3bd73918589b931d2fc4f33f8e3e702415094ed173a129f95c"
+    },
+    "metallicRoughness": {
+      "path": "assets/blender/hero-remaster/rider/finish-2026-10-05/wardrobe/data/prep02/gloves/metallicRoughnessTexture.png",
+      "sha256": "a7a712769a73844a9560d4bef1d163ce3fb8721e388d1a7ecfa07a3515280e67"
+    },
+    "selectedOriginal": {
+      "path": ".tmp/generation-comparison-2026-10-03/user-agent2/items01/gloves/paint01/painted.glb",
+      "sha256": "890f8693256347156c20f82a62dd79e2145cf511e7a85eb5239089644a20bfea"
+    },
+    "sourceDetailCage": {
+      "path": "docs/evidence/rider-rebuild/glove-charts01/atlas01/source-atlas.npz",
+      "sha256": "3ef1d2672f07c9a766bcda579dec342cd06e0e987a6f06494045ffb015a28635"
+    },
+    "actualDigitControls": {
+      "path": "docs/evidence/rider-rebuild/native-hand-repair01/verify-native02/digit-controls.json",
+      "sha256": "2995c37fa2db51a37257bf62e6efc79437c115818e6d412326a68dbdded03e4d"
+    },
+    "reference": {
+      "path": "assets/blender/hero-remaster/generation-comparison-2026-10-03/user-agent2/items01/references/gloves-reference01.png",
+      "sha256": "070c5fc70f1cc17e1697cc88ffb91b71bbdba35003ee3113a94e4a1b9b36adb2"
+    }
+  },
+  "stageOrder": [
+    "author both complete shaped gloves + shared75 weights + review action; save geometry and pin report",
+    "ordinary selected dense bake; save each completed side",
+    "save first-look1024 pair for parent played judgment"
+  ],
+  "bakeResolution": {
+    "selectedSource": 4096,
+    "firstLookDerivative": 1024,
+    "final4KMasterBake": "NOT_EXECUTED"
+  }
+}
