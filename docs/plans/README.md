@@ -1897,3 +1897,5 @@ Required original-player gate37 passes10/11 but boot.readyP50 fails326.49ms agai
 Actual-gameplay lean capture source now rejects authored stage clips and follows simulated rider COM/torso on the selected source. Continuous real-time120Hz held inputs cover neutral/forward/back/return with FPS overlay and full native endpoint witnesses; eight CPU checks pass. Actual capture/fit and device gates remain pending, not substituted by native clips.
 
 Actual gameplay capture now records exact24Hz native75/bike/simulated-state witnesses for native reconstruction, without changing physics or pose. Eight source checks pass; actual held-lean capture and visual acceptance remain pending.
+
+Glove memory02 actual run finishes both sides and skips unused hoodie scratch, then hits65GiB memory guard during native save at80.405s. Both ancestry arrays retained; incomplete .blend@ is not a usable master. New uncompressed-save wrapper requested; geometry and guard limits remain unchanged.
