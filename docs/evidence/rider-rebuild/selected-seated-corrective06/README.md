@@ -9,7 +9,7 @@ the full upper-jeans circumference, from anatomical mid-thigh to waistband.
 Parent guarded execution from repository root:
 
 ```sh
-node --import tsx assets/blender/rider-rebuild/selected-seated-corrective06/construct.mjs --out=harness/out/rider-rebuild/selected-seated-corrective06/constructed01
+node --import tsx assets/blender/rider-rebuild/selected-seated-corrective06/construct.mjs --out=harness/out/rider-rebuild/selected-seated-corrective06/constructed02
 ```
 
 The construction is bounded to 120 seconds of internal work, eight obstacle
@@ -27,7 +27,15 @@ boundary strips blend the complete neighborhood into the original posed jeans.
 The actual closed saddle and source left/right material sides constrain the
 surrounding neighborhood.
 
-The body follows a cage formed by the actual source jeans triangles, retaining
+Constructed01 stopped on body native 4620: its actual FOUR is right thumb
+0.694126785, right palm 0.302505493 and right forearm 0.003367704. Its 183.346 mm
+distance from jeans was an anatomical-selection bug: waist height alone had
+included a hand. The corrected selection requires actual positive influence
+from declared pelvis/pelvis-wing/thigh joints and excludes every shoulder/arm/
+hand descendant. All arm/hand corrective deltas are asserted exactly zero;
+the 60 mm cage bound and every collision gate remain unchanged.
+
+Eligible body anatomy follows a cage formed by the actual source jeans triangles, retaining
 its signed source offset while the cage deforms. Missing correspondence beyond
 60 mm or a source body point more than 10 microns outside that cavity stops
 construction with the exact native witness. These values are construction
@@ -66,8 +74,8 @@ for author04.
 This is one Rookie construction. Pro, real generic sitting/deep-crouch clips,
 lean transitions, breathing, contact sockets and full selected moving appearance
 remain parent verification. No model construction, build, browser, Blender or
-runtime edit was performed by the recipe author. Syntax and three small
-reconstruction/rotation/activation tests passed before handoff.
+runtime edit was performed by the recipe author. Syntax and four small
+reconstruction/rotation/activation/anatomical-mask tests passed before handoff.
 
 The authoring model follows [Lewis, Cordner and Fong's pose-space deformation
 workflow](https://www.cs.toronto.edu/~jacobson/seminar/lewis-et-al-2000.pdf): define

@@ -79,11 +79,11 @@
     },
     "construct": {
       "path": "assets/blender/rider-rebuild/selected-seated-corrective06/construct.mjs",
-      "sha256": "88271e6ea3fd446d72d3d965afdc52382f0ac11f5e42caf697192dfc6bb21047"
+      "sha256": "b4a583edf9ae9e66ed64b8a98ef3e2a723862016adbef4c0469e87002c46b587"
     },
     "deform": {
       "path": "assets/blender/rider-rebuild/selected-seated-corrective06/deform.mjs",
-      "sha256": "38b2f071a684d9f39338012fdd3005aa1472ef0d51c91fddeda3c907aaf5ec2a"
+      "sha256": "649978633ce3031e76864aca262da9b6ef9f79734bfd6b44cd5a3c2b378c1114"
     },
     "exportMorph": {
       "path": "assets/blender/rider-rebuild/selected-seated-corrective06/export-morph.mjs",
@@ -95,7 +95,11 @@
     },
     "tests": {
       "path": "assets/blender/rider-rebuild/selected-seated-corrective06/deform.test.mjs",
-      "sha256": "45cabf89e64b61482ac15291a63683e0dd538077c3468020df7cb04447178581"
+      "sha256": "bc5e118a9f42ed387ecbc81b228e884ac72d20186ef0fa466943564c1a8f2839"
+    },
+    "bodyMaskFailure": {
+      "path": "harness/out/rider-rebuild/selected-seated-corrective06/constructed01/failure.json",
+      "sha256": "6c0d0cd46cce23902bc6eb0264dfd791a939aa654f8291a5035d1d010b1ef3ea"
     }
   },
   "maximumMilliseconds": 120000,
@@ -109,10 +113,11 @@
     "Frozen source cores remain intrinsically rigid: only their orientation and position are authored against the finite saddle; no core vertex flattening or easier core selection.",
     "Source differential edge detail is transported by the polar part of exact skin maps across the whole neighborhood. This is a linear detail-preserving construction, not a force simulation.",
     "Actual closed saddle and anatomical left/right center plane supply hard obstacle handles. Eight bounded passes, no penalty weight or threshold campaign.",
-    "Underlying body follows the actual source garment surface cage with its original signed offset. Source cavity violations beyond 10 microns or correspondence beyond60mm hard-fail with exactnative witness."
+    "Underlying body follows the actual source garment surface cage with its original signed offset. Source cavity violations beyond 10 microns or correspondence beyond60mm hard-fail with exactnative witness.",
+    "Body cage eligibility uses actual pelvis/thigh role influences plus explicit native pelvic wings, with every shoulder/arm/hand descendant protected. Height bounds only trim already eligible pelvic anatomy."
   ],
   "limits": [
-    "Source prepared only. No actual construction has run. Three small algebra/activation tests pass; syntax and source pins are checked.",
+    "Source prepared only. No actual construction has run. Four small algebra/activation/anatomical-mask tests pass; syntax and source pins are checked.",
     "Output is an unaccepted prototype. Default morph weight0 preserves exact source rest geometry, FOUR, UVs, materials, source binary and ancestry.",
     "Zero final localself/layer and saddle crossings remain gates; baseline pairs are retained only for attribution. Native seam copies must share the same exact skin map.",
     "Five full-rig rest-to-key samples test deformation continuity proxies. Actual generic/ride clips, both bikes, foot/palm contact, breathing and moving appearance still require parent verification.",
@@ -120,5 +125,9 @@
     "This restores material shape through an authored posed surface. It is not a biomechanical pressure solution or continuous collision proof.",
     "One canonical Rookie construction only. Pro, actual generic sitting/deep-crouch clips and bike lean transitions are not qualified by this source or its five interpolation samples.",
     "Finite, invertible failed-gate geometry is exported only as an explicitly FAILED_CORRECTIVE_GATES ignored diagnostic with exit2 for parent moving judgment. No normal asset or review-slot promotion."
+  ],
+  "additionalPelvisJointIDs": [
+    "DEF-pelvis.L",
+    "DEF-pelvis.R"
   ]
 }

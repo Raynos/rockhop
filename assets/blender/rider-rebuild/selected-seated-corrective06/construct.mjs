@@ -7,7 +7,7 @@ import * as THREE from 'three';
 import { loadRigAt } from '../../../../src/render/hero/gltfTestUtils.ts';
 import { load, mesh, M, pinned, sha } from '../selected-ankle-contact02/surface.mjs';
 import { EPS, surface, support, crossings } from '../selected-seated-author04/geometry.mjs';
-import { V, rotation, triangleFrame, index, closest, inside, reconstruct, relativeFlex, activation } from './deform.mjs';
+import { V, rotation, triangleFrame, index, closest, inside, reconstruct, relativeFlex, activation, anatomicalCageMember } from './deform.mjs';
 import { exportMorph } from './export-morph.mjs';
 
 const HERE = path.dirname(new URL(import.meta.url).pathname), input = JSON.parse(fs.readFileSync(path.join(HERE, 'input.json')));
@@ -48,6 +48,19 @@ function gather(name) {
   return { name, vertices, faces, byNative, rawRows };
 }
 const jeans = gather('RiderJeans'), body = gather('RiderBody');
+const roleIds = name => { const ids = metadata.specification.roles[name]; return Array.isArray(ids) ? ids : [ids]; };
+const bodyCageBones = new Set([...['pelvis', 'thighLeft', 'thighRight'].flatMap(roleIds), ...input.additionalPelvisJointIDs].map(id => {
+  const joint = bone(id); assert(joint?.isBone, `Missing declared pelvic/thigh joint ${id}`); return joint.name;
+}));
+const protectedArmBones = new Set();
+for (const side of ['Left', 'Right']) role('shoulder' + side).traverse(joint => { if (joint.isBone) protectedArmBones.add(joint.name); });
+for (const v of body.vertices) {
+  v.namedFour = [0, 1, 2, 3].map(slot => ({
+    joint: v.mesh.skeleton.bones[v.mesh.geometry.attributes.skinIndex.getComponent(v.row, slot)].name,
+    weight: v.mesh.geometry.attributes.skinWeight.getComponent(v.row, slot) })).filter(row => row.weight > 0);
+  v.bodyCageMember = anatomicalCageMember(v.namedFour, bodyCageBones, protectedArmBones);
+  v.protectedArm = v.namedFour.some(row => protectedArmBones.has(row.joint));
+}
 function applyPose(t) {
   for (const row of receipt.boneLocalTRS) {
     const b = bone(row.id), rest = restTRS.get(row.id);
@@ -151,10 +164,11 @@ const restJeans = surfaces(jeans, jeans.vertices.map(v => v.rest)), restIndex = 
 let movedBody = 0, minimumSourceCavityM = Infinity;
 phase = 'actual source body/garment cage';
 const correctedBody = body.vertices.map(v => {
+  if (!v.bodyCageMember) return v.posed.clone();
   if (v.rest.y <= lowerY || v.rest.y >= upperY) return v.posed.clone();
   const hit = closest(v.rest, restIndex), ids = hit.triangle.ids;
   if (ids.every(id => corrected[id].distanceTo(original[id]) < 1e-9)) return v.posed.clone();
-  failureWitness = { bodyNativeID: v.nativeID, bodyRestPoint: v.rest.toArray(), cageNativeIDs: hit.triangle.nativeIDs,
+  failureWitness = { bodyNativeID: v.nativeID, namedFour: v.namedFour, bodyRestPoint: v.rest.toArray(), cageNativeIDs: hit.triangle.nativeIDs,
     cageRestPoints: hit.triangle.points.map(p => p.toArray()), cageDistanceM: Math.sqrt(hit.distanceSq) };
   assert(hit.distanceSq <= input.maximumCageDistanceM ** 2, `Body outside source garment cage: native=${v.nativeID}, distanceM=${Math.sqrt(hit.distanceSq)}, jeansNative=${hit.triangle.nativeIDs}`);
   const offset = v.rest.clone().sub(hit.point), cavity = -offset.dot(hit.triangle.normal);
@@ -174,6 +188,7 @@ for (const [part, targets] of [[jeans, corrected], [body, correctedBody]]) for (
   v.delta = targets[i].clone().sub(v.posed).applyMatrix3(linear.invert());
   assert(v.local.clone().add(v.delta).applyMatrix4(v.skin).distanceTo(targets[i]) < 1e-9, 'Exact morph inverse failed');
 }
+assert(body.vertices.filter(v => v.protectedArm).every(v => v.delta.lengthSq() === 0), 'Arms/hands must have exactly zero corrective displacement');
 const coreMetrics = positions => Object.fromEntries(['left', 'right'].map(side => [side, support(patches.patches[side].core.triangles.map((t, row) =>
   surface(t.nativeVertexIDs.map(id => positions[jeans.byNative.get(id)]), { row, nativeIDs: t.nativeVertexIDs })), top, definitions.offlineSupportProxies.gapBandM)]));
 const checks = [];
@@ -206,7 +221,9 @@ const result = { accepted: false, status: checks.every(c => c.pass) ? 'UNACCEPTE
   inputSHA256: sha(fs.readFileSync(path.join(HERE, 'input.json'))), pins: input.pins, sourceRestUnchanged: true,
   activation: { method: 'Compact C2 Wendland radial basis in actual bilateral thigh-relative-to-pelvis quaternion distance',
     keyXYZW: key.map(q => q.toArray()), restRelativeXYZW: restRelative.map(q => q.toArray()), radiusRadians: activationRadius },
-  neighborhood: { lowerY, upperY, fixedBoundaryWidthM: input.boundaryWidthM, activeJeansVertices: active.filter(Boolean).length, movedBodyVertices: movedBody, minimumSourceCavityM },
+  neighborhood: { lowerY, upperY, fixedBoundaryWidthM: input.boundaryWidthM, activeJeansVertices: active.filter(Boolean).length,
+    anatomicalBodyMembers: body.vertices.filter(v => v.bodyCageMember).length, protectedArmHandVertices: body.vertices.filter(v => v.protectedArm).length,
+    armHandDeltasExactlyZero: true, bodyCageJointNames: [...bodyCageBones], movedBodyVertices: movedBody, minimumSourceCavityM },
   construction: 'Source differential edge detail transported by polar skin rotations; rigid source core cages oriented and settled on actual finite saddle; body follows the actual source garment cage; exact inverse skin creates relative morphs.',
   history, checks, limits: input.limits };
 fs.mkdirSync(out, { recursive: true }); fs.writeFileSync(path.join(out, 'corrective.json'), JSON.stringify(result, null, 2) + '\n');

@@ -1705,3 +1705,5 @@ Sixth comparison plan status reconciled after remote actual runtime pass67d5ce60
 Selected seated corrective06 source checkpoint: full upper-jeans differential reconstruction, rigid selected anatomical support cores, actual saddle/bodycage, exact inverse-skin morph and hip-flex activation. Parent24pins/3fixtures/syntax pass. One guarded actual construction next; no newmodel/Blender/art/Pro/genericmotion pass yet.
 
 Corrective06 actualconstruct01 fails in1.065s at bodycage native4620,183.346mm lateral distance after jeansreconstruction. Y-only body selection is not anatomical membership; inspect native skin roles and retain60mm correspondence bound before correction. No model or moving verdict.
+
+Corrective06 body-region source fixed from actual thumb4620 FOUR: positive pelvis/thigh/pelvisbranch membership, arm/hand descendants excluded, exactzero protected deltas. Parent25pins/4fixtures/syntax pass; unchanged60mmcage/allfinalgates. Actualconstruct02 next; no modelpass.

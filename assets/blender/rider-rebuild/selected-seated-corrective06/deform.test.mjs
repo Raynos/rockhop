@@ -1,7 +1,7 @@
 import assert from 'node:assert/strict';
 import test from 'node:test';
 import { Matrix3, Quaternion, Vector3 } from 'three';
-import { reconstruct, activation, rotation } from './deform.mjs';
+import { reconstruct, activation, rotation, anatomicalCageMember } from './deform.mjs';
 
 test('boundary-constrained reconstruction removes a stretched interior', () => {
   const source = [[-1, 0, 0], [1, 0, 0], [0, -1, 0], [0, 1, 0], [0, 0, 0]].map(p => new Vector3(...p));
@@ -22,4 +22,13 @@ test('polar transport removes scale and rejects a reflected frame', () => {
   const r = rotation(new Matrix3().set(2, 0, 0, 0, 3, 0, 0, 0, 4));
   assert(r.elements.every((v, i) => Math.abs(v - new Matrix3().elements[i]) < 1e-9));
   assert.throws(() => rotation(new Matrix3().set(-1, 0, 0, 0, 1, 0, 0, 0, 1)));
+});
+test('actual failed right-thumb FOUR is excluded from the pelvic body cage', () => {
+  const eligible = new Set(['DEF-spine', 'DEF-pelvisR', 'DEF-thighR']);
+  const excluded = new Set(['DEF-thumb01R', 'DEF-palm01R', 'DEF-forearmR001']);
+  const thumb = [{ joint: 'DEF-thumb01R', weight: .6941267848014832 },
+    { joint: 'DEF-palm01R', weight: .3025054931640625 }, { joint: 'DEF-forearmR001', weight: .003367704339325428 }];
+  assert.equal(anatomicalCageMember(thumb, eligible, excluded), false);
+  assert.equal(anatomicalCageMember([{ joint: 'DEF-spine', weight: .2 }, { joint: 'DEF-thighR', weight: .8 }], eligible, excluded), true);
+  assert.equal(anatomicalCageMember([...thumb, { joint: 'DEF-spine', weight: 1e-8 }], eligible, excluded), false);
 });

@@ -1,6 +1,10 @@
 import assert from 'node:assert/strict';
 import { Box3, Matrix3, Vector3 } from 'three';
 export const V = p => new Vector3(...p);
+export function anatomicalCageMember(influences, eligible, excluded) {
+  return influences.some(({ joint, weight }) => weight > 0 && eligible.has(joint))
+    && !influences.some(({ joint, weight }) => weight > 0 && excluded.has(joint));
+}
 export function rotation(matrix) {
   let r = matrix.clone();
   assert(r.determinant() > 1e-8, 'No invertible orientation-preserving skin/cage frame');
