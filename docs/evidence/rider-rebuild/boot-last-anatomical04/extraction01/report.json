@@ -1,0 +1,741 @@
+{
+  "accepted": false,
+  "stage": "READ_ONLY_ACTUAL_REGION_EXTRACTION",
+  "recipeSHA256": "cf6511b8e2a37bf3549de3a87d25dc1310de77e63b231ac07e4a09f53eaa9fbd",
+  "inputs": {
+    "original-painted.glb": {
+      "path": ".tmp/generation-comparison-2026-10-03/user-agent2/items01/boots/paint01/painted.glb",
+      "sha256": "b8dbd980f4d5a6a46b86db6f315ac630be07c538382a24fa5a2d2002a7d97d8c"
+    },
+    "cleaned-donor.npz": {
+      "path": "assets/blender/hero-remaster/rider/finish-2026-10-05/wardrobe/data/prep02/boots/cleaned-donor.npz",
+      "sha256": "9849de6444632c2dcd1e1d76fda42ac27a7cbe8c7d2c0263ab2082e24b94777f"
+    },
+    "baseColorTexture.png": {
+      "path": "assets/blender/hero-remaster/rider/finish-2026-10-05/wardrobe/data/prep02/boots/baseColorTexture.png",
+      "sha256": "5bda21b0d584f91aad83d310b868be6a575d28eddb1170e01e65c0b2071f4044"
+    },
+    "metallicRoughnessTexture.png": {
+      "path": "assets/blender/hero-remaster/rider/finish-2026-10-05/wardrobe/data/prep02/boots/metallicRoughnessTexture.png",
+      "sha256": "4017261b5f233cba5780578691a1508382295db4b157c4d175ad905bc98e5c30"
+    },
+    "anatomical-hand-rig.blend": {
+      "path": "harness/out/rider-rebuild/native-hand-repair01/native02/anatomical-hand-rig.blend",
+      "sha256": "42fca617ea8d246a6c3e3ca68a90cd3cb5f3ce8b9bb78130e0e2bbd65f605fac"
+    },
+    "native-body.npz": {
+      "path": "harness/out/rider-rebuild/native-hand-repair01/native02/native-body.npz",
+      "sha256": "e62e9969503b7761e99463eccc3ca7be39e0c230a2948f2f87a224db52d0f9a2"
+    },
+    "rejected-local-upper-repair.blend": {
+      "path": "harness/out/rider-rebuild/production-boots03/local-repair01/local-upper-repair-selected-source.blend",
+      "sha256": "abf70643fce7b054f0c302906b7b26c0ed953bb32cde011e9fec8dcbf64ceba9"
+    },
+    "target-foot-outline.json": {
+      "path": "docs/evidence/rider-rebuild/production-boots03/target-foot-outline.json",
+      "sha256": "cfb4d1eb6d5e10cc88d73f406c936712c6d607b97145ef819b6e78789b07e978"
+    },
+    "current-sculpt02-sections.json": {
+      "path": "docs/evidence/rider-rebuild/production-boots03/current-sculpt02-sections.json",
+      "sha256": "40730502871548b294b20b8d690dfd8d704ab817fb1b4244c3e71bd19460514c"
+    },
+    "required-motion-envelope.json": {
+      "path": "assets/blender/rider-rebuild/production-boots03/artist-handoff01/required-motion-envelope.json",
+      "sha256": "e333d35e1ffac907ace9c878906261994e318afa1456b28baac5c6476e90d83b"
+    }
+  },
+  "workingOutfit": {
+    "path": "harness/out/rider-rebuild/production-authoring01/working01/editable-real-source-outfit.blend",
+    "sha256": "9cedbcdbe0a953d116bafc80b41f8adb0538f21c1ecfca20598f3f079952aaf4"
+  },
+  "sides": {
+    "R": {
+      "path": "docs/evidence/rider-rebuild/boot-last-anatomical04/extraction01/R-sections.json",
+      "sha256": "13d560988cc06288a1470fe95b8288508a9abf81223466ef6912959291f5a855",
+      "sourceState": {
+        "vertices": 305453,
+        "faces": 610934,
+        "positionSHA256": "b56b8f569bfe60b21e70c5266d31aa7af8e67ad62c9fadec7ee2bcd3757455da",
+        "triangleSHA256": "5478a30f8abfd8194c331b04e57bad97e25935756885211b0a88ee98c8ea3fe4",
+        "cornerUVSHA256": "b78023c460ce1b790668bfadbda63be773f3a8d5b09088eb38de4577e1a1e82f",
+        "packedImages": {
+          "baseColorTexture.png.002": "5bda21b0d584f91aad83d310b868be6a575d28eddb1170e01e65c0b2071f4044",
+          "metallicRoughnessTexture.png.002": "4017261b5f233cba5780578691a1508382295db4b157c4d175ad905bc98e5c30"
+        },
+        "visibility": [
+          false,
+          false,
+          false
+        ],
+        "vertexGroups": [
+          "DEF-foot.R",
+          "DEF-toe.R",
+          "DEF-shin.R.001"
+        ],
+        "modifiers": [
+          [
+            "Actual unchanged native75 shared wearer",
+            "ARMATURE",
+            "RiderSkeleton"
+          ]
+        ]
+      },
+      "localBoundsM": [
+        [
+          -0.2216463904029067,
+          -0.02324392832815647,
+          -0.06512799235944221
+        ],
+        [
+          0.055592828984976576,
+          0.14437222480773926,
+          0.06480261768458531
+        ]
+      ],
+      "topologySummary": {
+        "connectedComponents": 1,
+        "largestComponents": [
+          {
+            "vertices": 305453,
+            "minimumSourceVertexRow": 0,
+            "localBoundsM": [
+              [
+                -0.2216463904029067,
+                -0.02324392832815647,
+                -0.06512799235944221
+              ],
+              [
+                0.055592828984976576,
+                0.14437222480773926,
+                0.06480261768458531
+              ]
+            ]
+          }
+        ],
+        "boundaryEdges": 0,
+        "nonManifoldEdgesAboveTwoFaces": 0
+      },
+      "sectionLoopSummary": {
+        "longitudinal": [
+          {
+            "stationM": 0.025,
+            "bootCurveSizesClosed": [
+              [
+                1787,
+                true
+              ]
+            ],
+            "footCurveSizesClosed": [
+              [
+                85,
+                false
+              ]
+            ]
+          },
+          {
+            "stationM": 0.01,
+            "bootCurveSizesClosed": [
+              [
+                1718,
+                true
+              ]
+            ],
+            "footCurveSizesClosed": [
+              [
+                92,
+                false
+              ]
+            ]
+          },
+          {
+            "stationM": -0.025,
+            "bootCurveSizesClosed": [
+              [
+                1672,
+                true
+              ]
+            ],
+            "footCurveSizesClosed": [
+              [
+                93,
+                false
+              ]
+            ]
+          },
+          {
+            "stationM": -0.05,
+            "bootCurveSizesClosed": [
+              [
+                1999,
+                true
+              ]
+            ],
+            "footCurveSizesClosed": [
+              [
+                67,
+                true
+              ]
+            ]
+          },
+          {
+            "stationM": -0.075,
+            "bootCurveSizesClosed": [
+              [
+                1316,
+                true
+              ],
+              [
+                47,
+                true
+              ],
+              [
+                35,
+                true
+              ],
+              [
+                11,
+                true
+              ]
+            ],
+            "footCurveSizesClosed": [
+              [
+                66,
+                true
+              ]
+            ]
+          },
+          {
+            "stationM": -0.105,
+            "bootCurveSizesClosed": [
+              [
+                1098,
+                true
+              ]
+            ],
+            "footCurveSizesClosed": [
+              [
+                77,
+                true
+              ]
+            ]
+          },
+          {
+            "stationM": -0.145,
+            "bootCurveSizesClosed": [
+              [
+                904,
+                true
+              ]
+            ],
+            "footCurveSizesClosed": [
+              [
+                76,
+                true
+              ]
+            ]
+          },
+          {
+            "stationM": -0.185,
+            "bootCurveSizesClosed": [
+              [
+                712,
+                true
+              ]
+            ],
+            "footCurveSizesClosed": [
+              [
+                31,
+                true
+              ],
+              [
+                23,
+                true
+              ],
+              [
+                22,
+                true
+              ],
+              [
+                18,
+                true
+              ]
+            ]
+          },
+          {
+            "stationM": -0.205,
+            "bootCurveSizesClosed": [
+              [
+                509,
+                true
+              ]
+            ],
+            "footCurveSizesClosed": [
+              [
+                26,
+                true
+              ]
+            ]
+          }
+        ],
+        "height": [
+          {
+            "stationM": 0.06,
+            "bootCurveSizesClosed": [
+              [
+                1539,
+                true
+              ],
+              [
+                1003,
+                true
+              ]
+            ],
+            "footCurveSizesClosed": [
+              [
+                76,
+                true
+              ]
+            ]
+          },
+          {
+            "stationM": 0.08,
+            "bootCurveSizesClosed": [
+              [
+                1269,
+                true
+              ],
+              [
+                908,
+                true
+              ],
+              [
+                231,
+                true
+              ],
+              [
+                63,
+                true
+              ],
+              [
+                63,
+                true
+              ]
+            ],
+            "footCurveSizesClosed": [
+              [
+                50,
+                true
+              ]
+            ]
+          },
+          {
+            "stationM": 0.1,
+            "bootCurveSizesClosed": [
+              [
+                1038,
+                true
+              ],
+              [
+                637,
+                true
+              ],
+              [
+                137,
+                true
+              ],
+              [
+                46,
+                true
+              ]
+            ],
+            "footCurveSizesClosed": [
+              [
+                46,
+                true
+              ]
+            ]
+          },
+          {
+            "stationM": 0.12,
+            "bootCurveSizesClosed": [
+              [
+                413,
+                true
+              ]
+            ],
+            "footCurveSizesClosed": [
+              [
+                43,
+                true
+              ]
+            ]
+          },
+          {
+            "stationM": 0.14,
+            "bootCurveSizesClosed": [
+              [
+                14,
+                true
+              ]
+            ],
+            "footCurveSizesClosed": [
+              [
+                37,
+                true
+              ]
+            ]
+          }
+        ]
+      }
+    },
+    "L": {
+      "path": "docs/evidence/rider-rebuild/boot-last-anatomical04/extraction01/L-sections.json",
+      "sha256": "dcdb49845f87f0b48fc1e29b8c1ea7a4f342b7f86c48210410726be4a2d4ca87",
+      "sourceState": {
+        "vertices": 305453,
+        "faces": 610934,
+        "positionSHA256": "f34767bc8a260d71a78a0383f8b86c5990396a4e7845c90634ac6474ae37708b",
+        "triangleSHA256": "2af4b2c415885795e3e1978b86cf1eb51078ba1f24e50a5b39b0b5b635f76bbd",
+        "cornerUVSHA256": "1e3708b93a3a51abbfb9a48e2cd6d6dddd4568eaf8aaf14a61085270d0a4d059",
+        "packedImages": {
+          "baseColorTexture.png.002": "5bda21b0d584f91aad83d310b868be6a575d28eddb1170e01e65c0b2071f4044",
+          "metallicRoughnessTexture.png.002": "4017261b5f233cba5780578691a1508382295db4b157c4d175ad905bc98e5c30"
+        },
+        "visibility": [
+          false,
+          false,
+          false
+        ],
+        "vertexGroups": [
+          "DEF-foot.L",
+          "DEF-toe.L",
+          "DEF-shin.L.001"
+        ],
+        "modifiers": [
+          [
+            "Actual unchanged native75 shared wearer",
+            "ARMATURE",
+            "RiderSkeleton"
+          ]
+        ]
+      },
+      "localBoundsM": [
+        [
+          -0.2216463709720974,
+          -0.02324681542813778,
+          -0.06183920524964446
+        ],
+        [
+          0.0556305122710262,
+          0.14439210295677185,
+          0.06803151088912127
+        ]
+      ],
+      "topologySummary": {
+        "connectedComponents": 1,
+        "largestComponents": [
+          {
+            "vertices": 305453,
+            "minimumSourceVertexRow": 0,
+            "localBoundsM": [
+              [
+                -0.2216463709720974,
+                -0.02324681542813778,
+                -0.06183920524964446
+              ],
+              [
+                0.0556305122710262,
+                0.14439210295677185,
+                0.06803151088912127
+              ]
+            ]
+          }
+        ],
+        "boundaryEdges": 0,
+        "nonManifoldEdgesAboveTwoFaces": 0
+      },
+      "sectionLoopSummary": {
+        "longitudinal": [
+          {
+            "stationM": 0.025,
+            "bootCurveSizesClosed": [
+              [
+                1782,
+                true
+              ]
+            ],
+            "footCurveSizesClosed": [
+              [
+                81,
+                false
+              ]
+            ]
+          },
+          {
+            "stationM": 0.01,
+            "bootCurveSizesClosed": [
+              [
+                1720,
+                true
+              ]
+            ],
+            "footCurveSizesClosed": [
+              [
+                93,
+                false
+              ]
+            ]
+          },
+          {
+            "stationM": -0.025,
+            "bootCurveSizesClosed": [
+              [
+                1670,
+                true
+              ]
+            ],
+            "footCurveSizesClosed": [
+              [
+                92,
+                false
+              ]
+            ]
+          },
+          {
+            "stationM": -0.05,
+            "bootCurveSizesClosed": [
+              [
+                1995,
+                true
+              ]
+            ],
+            "footCurveSizesClosed": [
+              [
+                68,
+                true
+              ]
+            ]
+          },
+          {
+            "stationM": -0.075,
+            "bootCurveSizesClosed": [
+              [
+                1294,
+                true
+              ],
+              [
+                44,
+                true
+              ],
+              [
+                44,
+                true
+              ],
+              [
+                19,
+                true
+              ]
+            ],
+            "footCurveSizesClosed": [
+              [
+                69,
+                true
+              ]
+            ]
+          },
+          {
+            "stationM": -0.105,
+            "bootCurveSizesClosed": [
+              [
+                1099,
+                true
+              ]
+            ],
+            "footCurveSizesClosed": [
+              [
+                78,
+                true
+              ]
+            ]
+          },
+          {
+            "stationM": -0.145,
+            "bootCurveSizesClosed": [
+              [
+                904,
+                true
+              ]
+            ],
+            "footCurveSizesClosed": [
+              [
+                77,
+                true
+              ]
+            ]
+          },
+          {
+            "stationM": -0.185,
+            "bootCurveSizesClosed": [
+              [
+                712,
+                true
+              ]
+            ],
+            "footCurveSizesClosed": [
+              [
+                31,
+                true
+              ],
+              [
+                22,
+                true
+              ],
+              [
+                21,
+                true
+              ],
+              [
+                19,
+                true
+              ]
+            ]
+          },
+          {
+            "stationM": -0.205,
+            "bootCurveSizesClosed": [
+              [
+                510,
+                true
+              ]
+            ],
+            "footCurveSizesClosed": [
+              [
+                28,
+                true
+              ]
+            ]
+          }
+        ],
+        "height": [
+          {
+            "stationM": 0.06,
+            "bootCurveSizesClosed": [
+              [
+                1533,
+                true
+              ],
+              [
+                1004,
+                true
+              ]
+            ],
+            "footCurveSizesClosed": [
+              [
+                76,
+                true
+              ]
+            ]
+          },
+          {
+            "stationM": 0.08,
+            "bootCurveSizesClosed": [
+              [
+                1267,
+                true
+              ],
+              [
+                909,
+                true
+              ],
+              [
+                230,
+                true
+              ],
+              [
+                63,
+                true
+              ],
+              [
+                59,
+                true
+              ]
+            ],
+            "footCurveSizesClosed": [
+              [
+                51,
+                true
+              ]
+            ]
+          },
+          {
+            "stationM": 0.1,
+            "bootCurveSizesClosed": [
+              [
+                1038,
+                true
+              ],
+              [
+                637,
+                true
+              ],
+              [
+                137,
+                true
+              ],
+              [
+                46,
+                true
+              ]
+            ],
+            "footCurveSizesClosed": [
+              [
+                45,
+                true
+              ]
+            ]
+          },
+          {
+            "stationM": 0.12,
+            "bootCurveSizesClosed": [
+              [
+                413,
+                true
+              ]
+            ],
+            "footCurveSizesClosed": [
+              [
+                40,
+                true
+              ]
+            ]
+          },
+          {
+            "stationM": 0.14,
+            "bootCurveSizesClosed": [
+              [
+                14,
+                true
+              ]
+            ],
+            "footCurveSizesClosed": [
+              [
+                39,
+                true
+              ]
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "sectionRationale": {
+    "longitudinal": "Heelward/ankle-midpoint candidates +.025,+.010,-.025; anterior ankle/quarter -.050,-.075; observed proximal forefoot -.105 and ball -.145; actual distal asymmetric big toe -.185,-.205. These test one necessary replacement boundary, not fit parameters.",
+    "height": "Low-quarter and ankle levels .06,.08,.10,.12,.14 spanning observed exposed medial quarter and canonical ankle head .132236m."
+  },
+  "limits": [
+    "No geometric edit, save, bake, render, pose or source substitution.",
+    "Section graphs describe actual geometry and can distinguish cavity/ornament loops; they do not accept fit.",
+    "Parent chooses exactly one necessary topology region after actual extracted data; no global-fitting or displacement recipe."
+  ],
+  "sourceNativeBodyWeightsRestAndBootDataUnchanged": true
+}

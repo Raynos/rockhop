@@ -1,0 +1,86 @@
+{
+  "accepted": false,
+  "stage": "READ_ONLY_REGIONAL_TOPOLOGY_EXTRACTION_PRECEDES_AUTHOR",
+  "inputs": {
+    "original-painted.glb": {
+      "path": ".tmp/generation-comparison-2026-10-03/user-agent2/items01/boots/paint01/painted.glb",
+      "sha256": "b8dbd980f4d5a6a46b86db6f315ac630be07c538382a24fa5a2d2002a7d97d8c"
+    },
+    "cleaned-donor.npz": {
+      "path": "assets/blender/hero-remaster/rider/finish-2026-10-05/wardrobe/data/prep02/boots/cleaned-donor.npz",
+      "sha256": "9849de6444632c2dcd1e1d76fda42ac27a7cbe8c7d2c0263ab2082e24b94777f"
+    },
+    "baseColorTexture.png": {
+      "path": "assets/blender/hero-remaster/rider/finish-2026-10-05/wardrobe/data/prep02/boots/baseColorTexture.png",
+      "sha256": "5bda21b0d584f91aad83d310b868be6a575d28eddb1170e01e65c0b2071f4044"
+    },
+    "metallicRoughnessTexture.png": {
+      "path": "assets/blender/hero-remaster/rider/finish-2026-10-05/wardrobe/data/prep02/boots/metallicRoughnessTexture.png",
+      "sha256": "4017261b5f233cba5780578691a1508382295db4b157c4d175ad905bc98e5c30"
+    },
+    "anatomical-hand-rig.blend": {
+      "path": "harness/out/rider-rebuild/native-hand-repair01/native02/anatomical-hand-rig.blend",
+      "sha256": "42fca617ea8d246a6c3e3ca68a90cd3cb5f3ce8b9bb78130e0e2bbd65f605fac"
+    },
+    "native-body.npz": {
+      "path": "harness/out/rider-rebuild/native-hand-repair01/native02/native-body.npz",
+      "sha256": "e62e9969503b7761e99463eccc3ca7be39e0c230a2948f2f87a224db52d0f9a2"
+    },
+    "rejected-local-upper-repair.blend": {
+      "path": "harness/out/rider-rebuild/production-boots03/local-repair01/local-upper-repair-selected-source.blend",
+      "sha256": "abf70643fce7b054f0c302906b7b26c0ed953bb32cde011e9fec8dcbf64ceba9"
+    },
+    "target-foot-outline.json": {
+      "path": "docs/evidence/rider-rebuild/production-boots03/target-foot-outline.json",
+      "sha256": "cfb4d1eb6d5e10cc88d73f406c936712c6d607b97145ef819b6e78789b07e978"
+    },
+    "current-sculpt02-sections.json": {
+      "path": "docs/evidence/rider-rebuild/production-boots03/current-sculpt02-sections.json",
+      "sha256": "40730502871548b294b20b8d690dfd8d704ab817fb1b4244c3e71bd19460514c"
+    },
+    "required-motion-envelope.json": {
+      "path": "assets/blender/rider-rebuild/production-boots03/artist-handoff01/required-motion-envelope.json",
+      "sha256": "e333d35e1ffac907ace9c878906261994e318afa1456b28baac5c6476e90d83b"
+    }
+  },
+  "workingOutfit": {
+    "path": "harness/out/rider-rebuild/production-authoring01/working01/editable-real-source-outfit.blend",
+    "sha256": "9cedbcdbe0a953d116bafc80b41f8adb0538f21c1ecfca20598f3f079952aaf4"
+  },
+  "objects": {
+    "body": "RiderBody",
+    "rig": "RiderSkeleton",
+    "boots": {
+      "R": "Boots__LocallyRepairedSelectedDenseBoot.R",
+      "L": "Boots__LocallyRepairedSelectedDenseBoot.L"
+    }
+  },
+  "longitudinalSectionsM": [
+    0.025,
+    0.01,
+    -0.025,
+    -0.05,
+    -0.075,
+    -0.105,
+    -0.145,
+    -0.185,
+    -0.205
+  ],
+  "heightSectionsM": [
+    0.06,
+    0.08,
+    0.1,
+    0.12,
+    0.14
+  ],
+  "sectionRationale": {
+    "longitudinal": "Heelward/ankle-midpoint candidates +.025,+.010,-.025; anterior ankle/quarter -.050,-.075; observed proximal forefoot -.105 and ball -.145; actual distal asymmetric big toe -.185,-.205. These test one necessary replacement boundary, not fit parameters.",
+    "height": "Low-quarter and ankle levels .06,.08,.10,.12,.14 spanning observed exposed medial quarter and canonical ankle head .132236m."
+  },
+  "outputRoot": "docs/evidence/rider-rebuild/boot-last-anatomical04",
+  "limits": [
+    "No geometric edit, save, bake, render, pose or source substitution.",
+    "Section graphs describe actual geometry and can distinguish cavity/ornament loops; they do not accept fit.",
+    "Parent chooses exactly one necessary topology region after actual extracted data; no global-fitting or displacement recipe."
+  ]
+}

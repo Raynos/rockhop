@@ -1,0 +1,31 @@
+{
+  "accepted": false,
+  "stage": "READ_ONLY_REGION_EXTRACTION_SOURCE_READY",
+  "pythonASTPassed": true,
+  "explicitInputPinsPassed": 11,
+  "noBlenderModelBakeRenderOrDenseArrayJobExecuted": true,
+  "recipeSHA256": "cf6511b8e2a37bf3549de3a87d25dc1310de77e63b231ac07e4a09f53eaa9fbd",
+  "manifestSHA256": "75c0a8502370de935e44ce70f4a458a00d33efa44146001996bdc6628eb9b01a",
+  "command": [
+    "/Applications/Blender.app/Contents/MacOS/Blender",
+    "-b",
+    "-t",
+    "2",
+    "--python-exit-code",
+    "1",
+    "--python",
+    "assets/blender/rider-rebuild/boot-last-anatomical04/extract_region.py",
+    "--",
+    "docs/evidence/rider-rebuild/boot-last-anatomical04/extraction01"
+  ],
+  "runtimeIntakePending": [
+    "Actual source mesh triangle/UV/packed-map/rest state.",
+    "Exact displayed-foot source ID match with canonical42f.",
+    "Actual closed/branched cut loops, disconnected source features and cavity topology."
+  ],
+  "limits": [
+    "No geometric edit, save, bake, render, pose or source substitution.",
+    "Section graphs describe actual geometry and can distinguish cavity/ornament loops; they do not accept fit.",
+    "Parent chooses exactly one necessary topology region after actual extracted data; no global-fitting or displacement recipe."
+  ]
+}
