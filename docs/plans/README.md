@@ -1649,3 +1649,5 @@ October8 final-byte correction checkpoint: early build05 hook passed but emitted
 October8 comparison build06 final-file check correctly rejects717865B (41Bover). Existing normalizer alternatives and selected offline filename family are simplified;8/8tests include executed offline exclusion. Build07 pending, original five and selected maps intact, no phone/art acceptance.
 
 October8 selected loader ownership checkpoint: build07 final normal JS was31Bover, so selected metadata fetch/validation moves into the same lazy review chunk as native75. Exactly four owned modules, no static entry dependency;9/9tests pass under tsx (plain Node cannot resolve existing TS imports). Build08 final assertion and phone capture pending; original sources/maps intact.
+
+October8 actual comparison build08 passes final emitted normal JS717742/717824B in4.499s; optional review driver10809B/PWA4915Bcosts separately reported. Parent verifies exact original ten rider hashes and selected source72b90e87…/onefullLODasset. Phone-layout old→new→old→new capture next; no art/device acceptance.

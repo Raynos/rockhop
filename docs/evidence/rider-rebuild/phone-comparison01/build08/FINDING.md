@@ -1,0 +1,3 @@
+Actual guarded comparison build08 succeeds in4.499s. Final emitted normal JS717742B fits unchanged717824B cap; selected optional driver10809B, PWA worker4915B separately reported, total JS952523B including existing dev/error chunks. One exact selected357281284BGLB serves its own full/LOD aliases; no LOD optimization is claimed. Parent verifies all ten original rider full/LOD input hashes against unchanged public files, selected sourceSHA72b90e87…, and final-file assertion.
+
+This is a private six-choice compilation, not executed phone switching or art acceptance. Actual phone-layout WebKit capture follows.

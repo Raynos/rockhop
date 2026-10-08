@@ -33,3 +33,9 @@ Finding: Build07 final-file assertion rejects717855B normal JS (31Bover), exit1/
 Validation: Nine focused tests pass, including HTTP503/missing-metadata rejection and exact optional module ownership/static dependency isolation. Actual build08 pending. Original all-slot and normal game sources unchanged.
 
 Limits: Selected metadata fetch follows the small optional JS fetch; actual network/parse/render timings require the phone-layout capture. No generic fallback or art promotion.
+
+Finding: Actual build08 passes the final emitted717824B normal-JS cap at717742B in4.499s. Optional driver10809B and worker4915B remain reported separately; total JS952523B.
+
+Validation: Parent exact original ten rider input hashes, selected source/fullLOD alias and final-byte assertion pass.
+
+Limits: Actual phone switching/capture and human device/art judgment pending.
