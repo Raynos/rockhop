@@ -1343,3 +1343,5 @@ October 7 glove03 actualauthor01 failed: CPU2exit1 in6.218s before fittednative/
 October 7 jeans02 material inspection/transfer source: exact local-gusset marker/native and originalpacked4Kmaps required, six matched target/donor views before isolated regional1024/2048 bake. Parent full source/AST/7pins verified; no geometry rebuild/cage-bound claim or blind4Kretry. Actual inspection unexecuted; allartgatesopen.
 
 October 7 hoodie local outside-finishing source: one explicit patch/adjacent-ring domain, OUTSIDE with12mm cloth ease, protected loose exterior/ports and exact topology/UV/PBR/fields/body75. Parent full source/AST/six pins checked. Native boundary diagnosis precedes edits and save precedes views. Unexecuted, no art acceptance.
+
+October 7 jeans actual donor inspection: parent viewed all6matched target/donor images; compact target encloses rest but inherited selected dense still intersects crotch/inner thighs/posterior legs. CPU2exit0 in30.168s; actualmarker/packed4Kmaps and target/source/UV/fields/body75 exact. No bake admission; one conventional dense outside-finishing source next.

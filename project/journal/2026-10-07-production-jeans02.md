@@ -21,3 +21,9 @@ Finding: Consume exact admitted local-gusset native for genuine selected denim m
 Validation: Parent full new baker read, AST and7input pins match; exact saved marker and packed4Kmap checks execute on reopen. Original canonical source/UV/FULL/FOUR and body75 preservation explicit; copied isolated regions and persistent failures provided.
 
 Limits: Source only; no donor view, transfer or material/motion acceptance. Final4K admission remains separate from1024/2048 firstreview.
+
+Finding: Matched actual selected dense donor still intersects inner thighs and posterior legs despite corrected compact target coverage. No bake admission.
+
+Validation: Parent viewed six actual target/donor cameras; exit0 in30.168s, saved marker and packed4Kmaps verified, exact target/source/UV/fields/body75 retained.
+
+Limits: One conventional dense outside finishing source follows; no new lattice or blind bake. No material or motion accepted.
