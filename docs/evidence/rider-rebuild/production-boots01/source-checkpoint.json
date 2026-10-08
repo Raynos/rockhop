@@ -1,21 +1,38 @@
 {
   "accepted": false,
-  "status": "UNEXECUTED_FROZEN_STAGED_AUTHORED_BOOT_RECIPE",
-  "recipeSHA256": "bc18fa3c22fa0602fdc87adf0d02ce2e0282162c5fa03a90160981d1f83c775a",
-  "controlsSHA256": "c1da92db5bfb8d32c48e097bc3fa4ab5dfbb7363c0c3dd2306670314656314cd",
+  "status": "UNEXECUTED_SINGLE_TARGETED_SETUP_REPAIR_SOURCE_READY",
+  "recipeSHA256": "5b56ff0ec3c9ff40e7f7b450838563da1eb8f291aa1d0e35e5c168b8c252f1ad",
+  "controlsSHA256": "a694d643102ebd396fc80178b447ce4fa139a4f7595d7ee62ed46b39b6d06d40",
   "pythonASTPassed": true,
   "ownedMatmulOperators": 0,
   "allPinnedInputsMatch": true,
-  "rawGLTFUVToBlenderVFlipMaximumRoundtripError": 2.9802322387695312e-08,
-  "originalCornerUVFileUntouched": true,
+  "pinnedInputs": 6,
+  "sourceDiagnosis": "docs/evidence/rider-rebuild/production-boots01/setup-diagnosis01.json",
+  "priorCandidate": "harness/out/rider-rebuild/production-boots01/authored01/author-checked-appearance-pending.blend",
+  "repairOrdinal": 1,
+  "sourceSelection": "All selected dense faces for this pass; no nearest compact mask or fabricated cavity",
+  "plantarDatum": {
+    "sourceContactY": -0.41,
+    "targetContactZ": -0.002,
+    "expectedOuterSoleMinimumZ": {
+      "L": -0.02324681210434487,
+      "R": -0.023243925485065174
+    }
+  },
+  "expectedShortCollarZ": {
+    "L": 0.09419746957809261,
+    "R": 0.0941844000658769
+  },
+  "expectedTongueZ": {
+    "L": 0.1443874537057931,
+    "R": 0.14436756531763878
+  },
   "executionRequiresParentCPU2Lease": true,
+  "noRepairGeometryExecuted": true,
   "appearanceStatus": "PENDING_ACTUAL_BAKE_AND_PARENT_PLAYED_JUDGMENT",
-  "authorStageSavesBothWeightedBootsBeforeMaps": true,
-  "authorStageRendersQuickActualSelectedSourceComparison": true,
-  "renderIsolation": "Requested boots plus complete RiderBody; original coarse garment render visibility disabled; body remains visible",
   "limits": [
-    "No Blender authoring, fit, bake or native geometry has executed.",
-    "Transient pre-bake simplified geometry uses actual dense-source corner UV/PBR; coherent production atlas and maps remain pending.",
-    "One ordinary authored pass, at most one targeted repair; parent alone judges complete played candidate."
+    "One read-only diagnosis exited0; repair geometry and maps have not run.",
+    "Outsole physical source rows are held and checked; upper datum compensation is an explicit rest-shape authoring edit.",
+    "No moving, coherent atlas/bake, export or selected-appearance acceptance."
   ]
 }

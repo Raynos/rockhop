@@ -11,3 +11,9 @@ Finding: author saves both8259v/16482tri boots but parent rejects actual dense-s
 Validation: actual guard exit0 in13.55s, read-only inspection exit0 in3.12s, native/view hashes rechecked, actual U±2/V±4/W±1 extents agree. Render overwrite and finite cut-witness limits remain explicit.
 
 Limits: static negative fit finding only; no production-source comparison, bake, moving or engine acceptance.
+
+Finding: Actual lattice extents now set the cage scale and physical lift. Place the selected outer sole below unchanged barefoot skin, retain all dense source faces for this pass and preserve separate source-comparison images.
+
+Validation: parent reviews the concrete source correction; AST, 6 input pins and refreshed source hashes match.
+
+Limits: repaired author source is unexecuted and unaccepted; no map or moving-art acceptance.

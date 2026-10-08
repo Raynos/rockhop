@@ -23,14 +23,6 @@
       "path": "assets/blender/hero-remaster/rider/finish-2026-10-05/wardrobe/data/prep02/boots/metallicRoughnessTexture.png",
       "sha256": "4017261b5f233cba5780578691a1508382295db4b157c4d175ad905bc98e5c30"
     },
-    "retopology-prototype.npz": {
-      "path": "assets/blender/hero-remaster/rider/finish-2026-10-05/wardrobe/data/prep02/boots/retopology-prototype.npz",
-      "sha256": "d420da6bc7db4fa02ea095266dc174ff07cd3fb657cb0b01b91a319aa6b17853"
-    },
-    "source-semantic-witness.npz": {
-      "path": "docs/evidence/rider-rebuild/boot-cavity-rebuild01/classification01/source-semantic-witness.npz",
-      "sha256": "f6ff1252fb6a92d47d600e2c3b3c678c7f4a7cce86184be8d9936d416fce3526"
-    },
     "bake_fitted_detail.py": {
       "path": "assets/blender/rider-rebuild/donor-detail-transfer01/bake_fitted_detail.py",
       "sha256": "fe6b428145a8770f1be81fec8560a0b7e3b31492b0aade02f83947e68869648c"
@@ -43,7 +35,8 @@
       "plantarBottomY": -0.561128,
       "visibleCollarY": 0.18,
       "frontTongueY": 0.537,
-      "innerShaftDeleteBelowY": 0.18
+      "sourcePlantarContactY": -0.41,
+      "targetPlantarContactZ": -0.002
     },
     "sourceLattice": {
       "bounds": [
@@ -80,53 +73,53 @@
           0
         ],
         [
-          0.25,
-          0.25,
-          0.16,
-          0.025,
-          0
+          0.34425,
+          0.34425,
+          0.25425,
+          0.11925,
+          0.09425
         ],
         [
-          0.2,
-          0.2,
-          0.12,
-          0.015,
-          0
+          0.29425,
+          0.29425,
+          0.21425,
+          0.10925,
+          0.09425
         ],
         [
-          0.12,
-          0.12,
-          0.065,
-          0,
-          0
+          0.21425,
+          0.21425,
+          0.15925,
+          0.09425,
+          0.09425
         ],
         [
-          0,
-          0,
-          0,
-          0,
-          0
+          0.09425,
+          0.09425,
+          0.09425,
+          0.09425,
+          0.09425
         ],
         [
-          0,
-          0,
-          0,
-          0,
-          0
+          0.09425,
+          0.09425,
+          0.09425,
+          0.09425,
+          0.09425
         ],
         [
-          0,
-          0,
-          0,
-          0,
-          0
+          0.09425,
+          0.09425,
+          0.09425,
+          0.09425,
+          0.09425
         ],
         [
-          0,
-          0,
-          0,
-          0,
-          0
+          0.09425,
+          0.09425,
+          0.09425,
+          0.09425,
+          0.09425
         ]
       ],
       "transverseScaleByU": [
@@ -135,7 +128,20 @@
         1.03,
         1.0,
         1.0
-      ]
+      ],
+      "expectedUndeformedCoBounds": [
+        [
+          -2,
+          -4,
+          -1
+        ],
+        [
+          2,
+          4,
+          1
+        ]
+      ],
+      "upperDatumCompensationSourceUnits": 0.09425
     },
     "targetSides": {
       "L": {
@@ -146,7 +152,7 @@
         ],
         "offset": [
           -0.08126428515648462,
-          0.06888797319829257,
+          0.055641158241896915,
           0.004003620287578529
         ],
         "mirrorWidth": -1
@@ -159,7 +165,7 @@
         ],
         "offset": [
           -0.08128336905415504,
-          0.06887725537656703,
+          0.05563332703983855,
           -0.0011018276093284706
         ],
         "mirrorWidth": 1
@@ -181,20 +187,24 @@
     "bakeCageOffsetM": 0.0035,
     "maximumBakeRayDistanceM": 0.012,
     "marginPixels": 16,
-    "retainedVisibleCollarDepth": "Original selected inner collar above authored .18 source station; no fabricated shoe interior.",
-    "sourceUVConvention": "Raw glTF TEXCOORD_0; assign a copy to Blender with V=1-V, never edit originals"
+    "retainedVisibleCollarDepth": "Original selected collar remains; no fabricated interior. Original hidden source faces are retained conservatively in this repair.",
+    "sourceUVConvention": "Raw glTF TEXCOORD_0; assign a copy to Blender with V=1-V, never edit originals",
+    "sourceSelectionPolicy": "All original selected dense faces retained for this single setup repair; production Decimate remains free"
   },
   "execution": {
     "threads": 2,
     "heavyTrialLimit": 1,
     "targetedRepairLimit": 1,
     "parentLeaseRequired": true,
-    "out": "harness/out/rider-rebuild/production-boots01/authored01",
+    "out": "harness/out/rider-rebuild/production-boots01/authored02",
     "stages": [
       "author: save both fitted weighted boots and quick actual-source comparison",
       "bake: read pinned author native, write actual 4K selected maps to fresh bake01"
     ],
-    "authorCommand": "blender -b -t 2 --python-exit-code 1 --python assets/blender/rider-rebuild/production-boots01/author_selected_boots.py -- author harness/out/rider-rebuild/production-boots01/authored01",
-    "bakeCommand": "blender -b -t 2 --python-exit-code 1 --python assets/blender/rider-rebuild/production-boots01/author_selected_boots.py -- bake harness/out/rider-rebuild/production-boots01/authored01"
+    "authorCommand": "blender -b -t 2 --python-exit-code 1 --python assets/blender/rider-rebuild/production-boots01/author_selected_boots.py -- author harness/out/rider-rebuild/production-boots01/authored02",
+    "bakeCommand": "blender -b -t 2 --python-exit-code 1 --python assets/blender/rider-rebuild/production-boots01/author_selected_boots.py -- bake harness/out/rider-rebuild/production-boots01/authored02",
+    "repairOrdinal": 1,
+    "repairOf": "authored01 physical lattice domain and outsole plantar datum; conservative no-cut source choice; render prefix bug",
+    "noGeometryRetryBeforeParentCheckpoint": true
   }
 }

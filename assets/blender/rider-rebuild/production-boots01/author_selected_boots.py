@@ -3,8 +3,8 @@
 blender -b -t 2 --python-exit-code 1 --python THIS -- author FRESH_PRIVATE_OUT
 blender -b -t 2 --python-exit-code 1 --python THIS -- bake AUTHOR_PRIVATE_OUT
 Explicit controls are controls.json. No foot/cavity/chart solver is imported.
-The selected dense mesh is the shape/detail source; its failed hidden shaft floor
-is removed using the already recorded semantic source witness. The production
+The selected dense mesh is the shape/detail source. This setup repair retains
+its source faces without nearest-mask cutting. The production
 boot is a conventional simplified rigid derivative, with fresh UV and real bake.
 """
 import hashlib
@@ -17,7 +17,6 @@ import sys
 import bpy
 import numpy as np
 from mathutils import Matrix, Vector
-from mathutils.bvhtree import BVHTree
 
 HERE = Path(__file__).resolve().parent
 ROOT = HERE.parents[3]
@@ -69,21 +68,11 @@ def affine(body_arrays, side):
     return result, frame, ankle
 
 
-def source_selection(dense, compact, witness):
-    # Source selection only: the recorded actual shaft-floor witness is projected
-    # to the original dense source. No body fitting or anatomical detection here.
-    tree = BVHTree.FromPolygons([Vector(p) for p in compact['vertices']],
-                               compact['faces'].tolist(), all_triangles=True)
-    centers = dense['vertices'][dense['faces']].mean(1)
-    remove = np.zeros(len(centers), dtype=bool)
-    below = centers[:, 1] < CONTROL['sourceLandmarks']['innerShaftDeleteBelowY']
-    # The original witness lies only in this explicitly authored shaft box.
-    box = below & (centers[:, 0] > .02) & (centers[:, 0] < .91)
-    box &= (centers[:, 2] > -.31) & (centers[:, 2] < .23)
-    for row in np.flatnonzero(box):
-        _, _, owner, _ = tree.find_nearest(Vector(centers[row]))
-        remove[row] = witness['sourceInnerVisibleMask'][owner]
-    return np.flatnonzero(~remove), np.flatnonzero(remove)
+def source_selection(dense):
+    # Conservative ordinary source choice for this single setup repair: do not
+    # project a compact semantic mask into the visible selected dense upper.
+    # Production topology remains freely simplified; originals stay immutable.
+    return np.arange(len(dense['faces'])), np.empty(0, dtype=np.int64)
 
 
 def selected_material():
@@ -116,13 +105,19 @@ def lattice_author(source):
     data.interpolation_type_u = data.interpolation_type_v = data.interpolation_type_w = 'KEY_LINEAR'
     obj = bpy.data.objects.new(data.name, data)
     bpy.context.collection.objects.link(obj)
-    obj.location = (low + high) / 2
-    obj.scale = high - low
+    original_co = np.array([tuple(p.co) for p in data.points])
+    co_low, co_high = original_co.min(0), original_co.max(0)
+    assert np.array_equal([co_low, co_high], spec['expectedUndeformedCoBounds'])
+    # Blender5.2 creates this lattice in [-2,2]×[-4,4]×[-1,1]. Match its
+    # actual rest point domain to the authored physical source bounds.
+    cage_scale = (high-low)/(co_high-co_low)
+    obj.location = low-cage_scale*co_low
+    obj.scale = cage_scale
     for w in range(data.points_w):
         for v in range(data.points_v):
             for u in range(data.points_u):
                 row = (w * data.points_v + v) * data.points_u + u
-                data.points[row].co_deform.y += spec['liftYByVThenU'][v][u] / (high[1] - low[1])
+                data.points[row].co_deform.y += spec['liftYByVThenU'][v][u] / cage_scale[1]
                 data.points[row].co_deform.z *= spec['transverseScaleByU'][u]
     modifier = source.modifiers.new('Author upper volume around unchanged foot', 'LATTICE')
     modifier.object = obj
@@ -247,10 +242,10 @@ def render_views(scene, out, objects, name):
     world.node_tree.nodes['Background'].inputs[1].default_value = .6
     scene.world = world
     for i, loc in enumerate([(-.6, -.8, 1.), (.4, .4, .6)]):
-        name = 'Boot matching light ' + str(i)
-        if bpy.data.objects.get(name):
+        light_name = 'Boot matching light ' + str(i)
+        if bpy.data.objects.get(light_name):
             continue
-        data = bpy.data.lights.new(name, 'AREA')
+        data = bpy.data.lights.new(light_name, 'AREA')
         data.energy, data.size = 45, 1.3
         lamp = bpy.data.objects.new(data.name, data)
         bpy.context.collection.objects.link(lamp)
@@ -283,10 +278,8 @@ def author(out):
         (out/'report.json').write_text(json.dumps(report, indent=2)+'\n')
     save_report()
     dense = dict(np.load(input_path('cleaned-donor.npz')))
-    compact = dict(np.load(input_path('retopology-prototype.npz')))
-    witness = dict(np.load(input_path('source-semantic-witness.npz')))
     body_arrays = dict(np.load(input_path('native-body.npz')))
-    kept, removed = source_selection(dense, compact, witness)
+    kept, removed = source_selection(dense)
     original_vertex_rows, dense_faces = np.unique(dense['faces'][kept], return_inverse=True)
     dense_faces = dense_faces.reshape(-1, 3)
     np.savez_compressed(out/'source-selection.npz', originalDenseFaceRows=kept,
@@ -316,6 +309,12 @@ def author(out):
     bpy.context.collection.objects.link(high)
     lattice = lattice_author(high)
     authored_source_vertices = np.array([tuple(v.co) for v in high.data.vertices])
+    original_source_vertices = dense['vertices'][original_vertex_rows]
+    held_sole = original_source_vertices[:,1] <= -.41
+    held_sole_y_error = float(abs(authored_source_vertices[held_sole,1]-original_source_vertices[held_sole,1]).max())
+    assert held_sole_y_error < 1e-6, 'Physical outsole rows moved despite zero authored lift'
+    report['actualHeldOutsoleMaximumVerticalDeltaSourceUnits'] = held_sole_y_error
+    report['sourceSelectionPolicy'] = 'Retain all selected dense faces for this setup repair; no nearest-mask cut'
     right_affine, _, _ = affine(body_arrays, 'R')
     high.data.transform(Matrix(right_affine))
     high.data.update()
