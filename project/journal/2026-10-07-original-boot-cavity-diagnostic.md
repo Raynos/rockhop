@@ -11,3 +11,9 @@ Finding: Exact dense source renders confirm a genuine wearer shaft opening. The 
 Validation: Guard exited 0 in 16.244 seconds using two threads; parent inspected profile, shaft and cutaway pixels and rehashed source/render pins. Original source bytes remain unchanged.
 
 Limits: Diagnostic stills locate source structure; no fitted native, moving contact or art acceptance.
+
+Finding: Certified empty shaft seeds and actual-face visibility can identify the source inner material separately from exterior decorations. No source face is removed by this classification recipe; a partial visibility mask is not a cutting authority.
+
+Validation: Source pin and AST verified by parent. Builder analytical solid-angle interior/exterior and boundary-cycle controls pass. Source classification remains unexecuted.
+
+Limits: Actual cavity mask, sole/instep room, chart fit and motion remain pending. No boot or art acceptance.

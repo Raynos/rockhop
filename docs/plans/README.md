@@ -1181,3 +1181,5 @@ October 7 parent actual-original GLB readback confirms exporter cutoff1e-4 and a
 October 7 actual jeans chart registration01 rejected before candidate generation: both leg charts measured, but two pelvis sections form one connected material contour rather than the assumed nested cavity loops. Source slit/fly topology needs explicit dense/compact classification; no source gap is skipped or fabricated enclosure accepted.
 
 October 7 native hand build01 stops before heat binding: an untouched middle distal rest record differs after edit mode. No fields/master/GLB were produced; original master remains exact. A source-pinned no-op-versus-corrected edit diagnostic will measure all endpoint/frame deltas before any rig invariant changes.
+
+October 7 actual-boot semantic classifier source is checkpointed: empty shaft seeds, upward ingress and source-face ray visibility distinguish real inner material from exterior/detail. All original faces stay intact; visibility alone never authorizes removal. AST and analytical winding/boundary controls pass; actual classifier remains unexecuted.
