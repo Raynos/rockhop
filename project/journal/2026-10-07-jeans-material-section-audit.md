@@ -1,0 +1,3 @@
+Finding: Real compact and dense jeans sections will be compared before deciding whether a closed C-shaped fabric contour has a genuine opening. The source diagnostic preserves every original material crossing and angular gap; a full segment-cone event arrangement also detects gaps narrower than the 720-ray sample spacing.
+Validation: Parent source/helper/mesh pins and ASTs pass; five warning-as-error analytic controls pass, including a rotated slit missed by all sampled rays.
+Limits: Actual source run, fit, boot cuff overlap, native fields, original-detail bake and moving review remain unexecuted. No reconstructed cavity or player promotion is claimed.

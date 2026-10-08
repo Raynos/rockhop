@@ -1,0 +1,55 @@
+{
+  "accepted": false,
+  "status": "SOURCE_DIAGNOSTIC_CHECKPOINT_NOT_EXECUTED",
+  "files": [
+    {
+      "path": "assets/blender/rider-rebuild/jeans-fit01/audit-source-slits.py",
+      "sha256": "b0a4436eeb349a0a59a822e787f25107db294df469ddc3ef7f00d3a2f0a8536d"
+    },
+    {
+      "path": "assets/blender/rider-rebuild/jeans-fit01/test_source_slits.py",
+      "sha256": "c9baec058a4567e84ee05a23b2d9d8355cdb803e8356f751628a39a9bf448dc0"
+    },
+    {
+      "path": "assets/blender/rider-rebuild/jeans-fit01/register-sections.py",
+      "sha256": "d636f2fb250d8ef60ce5ecd78ab398e64eaf12359f46b304ce49cce1018870a4"
+    },
+    {
+      "path": "assets/blender/rider-rebuild/glove-charts01/audit-hand-anatomy.py",
+      "sha256": "1bf0cd59073c83381980801a40a31b5b7f0837750034e2c8db8a616d6711f303"
+    },
+    {
+      "path": "assets/blender/hero-remaster/rider/finish-2026-10-05/wardrobe/data/prep02/jeans/retopology-prototype.npz",
+      "sha256": "6907492293a23765f49b41a64a65cbdf18a6e10b15cfd183416113352f759a49"
+    },
+    {
+      "path": "assets/blender/hero-remaster/rider/finish-2026-10-05/wardrobe/data/prep02/jeans/cleaned-donor.npz",
+      "sha256": "c38413a36d564d97f106ebde13bb240d4c7075078ce463f30234a97c0f3d2237"
+    }
+  ],
+  "validation": {
+    "pythonSourcesParse": true,
+    "analyticMaterialTopologyControlsPassed": 5,
+    "warnings": "error",
+    "maximumThreads": 2,
+    "testElapsedSeconds": 0.01
+  },
+  "pendingRun": {
+    "privateOutput": "harness/out/rider-rebuild/jeans-source-slits01",
+    "guardLimitSeconds": 90,
+    "sourceStations": [
+      0.605,
+      0.6416666666666666,
+      0.6783333333333333,
+      0.715
+    ],
+    "directionalRaysPerStation": 720,
+    "denseComparisonExecuted": false,
+    "completeAngularVisibility": "actual-segment angular-cone Float64 event arrangement; preserve sub-ray-grid gaps"
+  },
+  "limits": [
+    "Actual source comparison, garment fit, native bind, appearance bake and played review remain unexecuted.",
+    "Preliminary lower hem targets .16/.21 are unqualified and must be revised against the actual short boot collar/tongue and body foot obstacle.",
+    "Only parent grants serialized model-resource admission and judges played garment quality."
+  ]
+}
