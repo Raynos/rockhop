@@ -1,7 +1,7 @@
 # Rebuild one dressed rider from first principles
 
 Created: 2026-10-07 · writer: Codex / gpt-6.1-sol · asks312/317–322.
-**Status: active; replacement authorized by the user; accepted milestones 0/6.**
+**Status: blocked on a capable character sculpting/tailoring resource; accepted milestones 0/6.**
 Current construction authority: [Astra workflow correction below](#astra-workflow-correction-and-advisory-cadence).
 Pending donor-registration experiments are historical controls, not the next production route.
 Execution owner: rider remodel agent #2, session01a117db-406b-7b70-a14f-d614b1d8f6e5.
@@ -513,7 +513,7 @@ guard, fresh generation campaign or blind bake follows these failures.
 | Gloves | Corrected standard offline rig places both joint controls within10um, but all8 actual original-PBR views show broad palm/dorsum/web/tip exposure and flared cuffs. | [Actual bilateral rejection](../evidence/rider-rebuild/production-gloves03/surface-review01/FINDING.md); exact selected-source package, expert shape/weights/clearance tailoring. No local15minute correction is justified for this broad failure. |
 | Hoodie | Actual local OUTSIDE operation violates the existing preservation predicate at scoped patch vertex12473 and stops before saving a corrected target. Original patched source still fails the matched views. | [Exact failure](../evidence/rider-rebuild/production-hoodie02/local-outside01/actual01/FINDING.md); package original source/PBR, unchanged native, patch/scope lineage and rejected views for expert underarm tailoring. |
 | Jeans | Compact local gusset encloses the body, but the actual selected dense donor penetrates it. Its single OUTSIDE finish introduces51collapsed triangles and3716face-normal rotations over90degrees, stopping before views/bake. | [Exact failed native/lineage](../evidence/rider-rebuild/production-jeans02/dense-fit01/actual01/FINDING.md); package compact target and genuine dense donor for expert detail-source fitting. |
-| Head/neck | Actual selected face/native75 profiles show a hard anterior throat shelf and posterior neck projection/notch; closed topology does not create anatomical continuity. Independent saved corner normals also fail preservation. | [Four actual rejected views](../evidence/rider-rebuild/production-face01/profile-review01/FINDING.md); preserve exact donor/native and require expert anatomical sculpting. Stop this joining mechanism and park the unexecuted normal diagnostic; normal tuning cannot fix the silhouette. |
+| Head/neck | Actual selected face/native75 profiles show a hard anterior throat shelf and posterior neck projection/notch; closed topology does not create anatomical continuity. Independent saved corner normals also fail preservation. | [Four actual rejected views](../evidence/rider-rebuild/production-face01/profile-review01/FINDING.md) and [verified exact sculpt package](../evidence/rider-rebuild/production-face01/artist-handoff01/FINDING.md); require expert anatomical sculpting. Stop this joining mechanism and park the unexecuted normal diagnostic; normal tuning cannot fix the silhouette. |
 
 A successful joint matrix, topology assertion, modifier invocation or source
 package is not an artistic result. Retain useful original selected geometry,
@@ -528,3 +528,18 @@ AllR0–R5 remain open and0/6accepted. The existing player gate07 passes11/11
 under controlled load; gate06timing failure remains retained. Neither result
 qualifies the selected remastered rider. Do not export this failed wardrobe
 into normal player assets or archive this plan as completed.
+
+
+### Construction resource blocker
+
+All five current family mechanisms now have actual negative findings and exact
+verified original-source/editable-native packages. The head profile review also
+fails, so further independent face integration cannot unblock the outfit.
+No capable artist/teammate or demonstrated alternate construction route has
+been supplied. [HR-27](../../project/human-in-the-loop/QUEUE.md) names this resource
+need; the existing user question remains unanswered. No artist was contacted.
+The parent has not produced acceptable autonomous sculpting/tailoring and must
+not disguise more rejected fitting experiments or packaging as a finished rider.
+Resume with a capable construction resource and actual repaired selected geometry,
+then the original dressed native/engine, generic/bike and device gates. All R0–R5
+remain open; this plan is not complete and must not be archived as completed.
