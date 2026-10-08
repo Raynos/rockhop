@@ -1,0 +1,5 @@
+# Selected deep217 — limited clothed moving integration
+
+The actual original selected complete outfit now plays the separately authored9-second deep crouch/rise in an explicitly selected diagnostic Garage clip. Default Garage riding mode remains on the bike. Append preserves the entire original357,243,920-byte BIN plus original meshes/images/materials/skins/node prefix, exact75 rest/inverse binds and immutable motion provenance. All217 decoded action frames match native worlds within0.000008255143 matrix elements.
+
+Actual silent Garage capture covers9.047continuous rider seconds and five recorded75-joint snapshots, no browser errors. Original18.4second film and640pxproxy retained; proxy naturally played to end at rate1 in18.472wall seconds. Parent viewed full-frame played chronology: selected clothes remain attached through crouch, rise and orbit. The bike obscures the deepest posterior/knee view, so this is a limited integration result, not a full deep-anatomy/art review. Cuff/hem, neck, GPU vertex parity, finite contacts and physical devices remain open. No normal player assets changed.

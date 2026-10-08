@@ -1,0 +1,90 @@
+{
+  "accepted": false,
+  "status": "SELECTED_DEEP217_ACTION_TRANSPORT_REVIEW_PENDING",
+  "source": {
+    "path": "harness/out/rider-rebuild/selected-complete-engine01/engine05/rider.glb",
+    "sha256": "72b90e8790f8490743a75f8b70791aa21edfee6234cec609093e9b62e08d4bfd"
+  },
+  "glb": {
+    "path": "harness/out/rider-rebuild/selected-deep-crouch03/append01/rider.glb",
+    "sha256": "9a2632bf3490bd2b4f0ddb6afa0a0485286a97870d01e1df29a32624f846f8b6"
+  },
+  "contract": {
+    "path": "harness/out/rider-rebuild/selected-deep-crouch03/append01/rider-contract.json",
+    "sha256": "66c03642c9666f6da9bd27bab4bb5e0c7c24dda53554bfb566b255ffab6fb85c"
+  },
+  "calibration": {
+    "path": "harness/out/rider-rebuild/selected-deep-crouch03/append01/pose-calibration.json",
+    "sha256": "925cf54e1a4df6635b89e4f3cdc92cf628e4c2e9dabb5b36b11621f0000d27cd"
+  },
+  "editableNative": {
+    "path": "harness/out/rider-rebuild/selected-deep-crouch03/rig-export01/native75-deep217-rig.blend",
+    "sha256": "0d38f8eff8831a276923d53bf4964c09ed2be7e685c0c5b24e60d920f41c6838"
+  },
+  "recipeSHA256": "601e44ef611a8d1a2f8f0b8397ca675ad603eb0530bddf3760e040e6c14c8d68",
+  "inputSHA256": "9b718983d56bf82dd8a0baa7b975fa0596a4cffb43dff4457fe4dc0e7cf94043",
+  "sourceRigExport": {
+    "path": "harness/out/rider-rebuild/selected-deep-crouch03/rig-export01/rig-export.json",
+    "sha256": "d825b1d97485c67d87d764017c860f01565f88c57def090c58c89180a600ca98",
+    "recipeSHA256": "c3bde3070457f9d98a20245743d21ad175e0459ab1bbc87407a77af5dd70dd80",
+    "inputSHA256": "abbd43be24fadc24c228a1a6edb38010dfcf56d3f3a67c0706bbb75c85e9fa2a"
+  },
+  "motionProvenance": {
+    "sourceAuthor": {
+      "path": "assets/blender/rider-rebuild/selected-deep-crouch03/author.py",
+      "sha256": "96f0bfc45415ecd94cdb8430359a0f1d94f607a0369b33b36ea6de702d696e38"
+    },
+    "sourceConfig": {
+      "path": "assets/blender/rider-rebuild/selected-deep-crouch03/engine05-input01.json",
+      "sha256": "80acead6a9bcb4c25d5ad650b59e52fbc97e3bda90ea727e8cceddc6628e324d"
+    },
+    "motionReceipt": {
+      "path": "harness/out/rider-rebuild/selected-deep-crouch03/authored01/motion.json",
+      "sha256": "a3dcc67325e324477d507e49d9618306bdab0ac7f344c1175fd46e68ea51d68d"
+    },
+    "candidate": {
+      "path": "harness/out/rider-rebuild/selected-deep-crouch03/authored01/selected-deep-fixed-sole217.blend",
+      "sha256": "7e89485d46bb9a03ce2ea05f0a80fbc1cf17fd75f7c67ab295e26af49d681a7c"
+    },
+    "nativeMatrices": {
+      "path": "harness/out/rider-rebuild/selected-deep-crouch03/authored01/native-world-matrices.npz",
+      "sha256": "16333401825785c168d170ec56dac42abf6a758bd9fe8b6ce0c4cbc85b0b22b9"
+    }
+  },
+  "historicalAppendAlgorithm": {
+    "path": "assets/blender/rider-rebuild/selected-garage-actions01/append_actions.py",
+    "sha256": "a5cee1272e81ada241f38c66ab370949a7deb6ef5eea5088ba4d610a8e1959e8"
+  },
+  "rigOnlySkin75AndNamedInverseBindsExact": true,
+  "maximumNamedInverseBindResidual": 0.0,
+  "originalBINByteLength": 357243920,
+  "originalBINPayloadSHA256": "6b942497c729a5aad117cc89c9d2bb4762632f01bb4f39d13e06f24378a5740e",
+  "originalAllGeometryImageAndSkinBytesExact": true,
+  "originalNodesMeshesImagesMaterialsTexturesSkinsExact": true,
+  "originalAccessorAndBufferViewPrefixExact": true,
+  "rigHierarchyNamesExact": true,
+  "maximumSerializedLocalRestMatrixResidual": 0.0,
+  "actions": [
+    {
+      "name": "UnacceptedSelectedDeepFixedSoleCrouchRise217",
+      "fps": 24,
+      "frameRange": [
+        1,
+        217
+      ],
+      "sampleCountPerChannel": 217,
+      "channels": 225,
+      "startSeconds": 0,
+      "durationSeconds": 9.0,
+      "maximumDecodedNativeWorldMatrixResidual": 8.255142811164351e-06,
+      "sourceSlot": "OBRiderSkeleton"
+    }
+  ],
+  "newAnimationBINByteLength": 656668,
+  "normalPlayerAssetsChanged": false,
+  "limits": [
+    "Complete actual Garage/action playback, moving source-GPU parity, contacts and device gates remain open.",
+    "One authored deep217 action appended; no geometry, textures, weights, mask or solver change.",
+    "Calibration semantics copied exactly; source SHA rebound because original complete geometry/rest bytes are unchanged."
+  ]
+}
