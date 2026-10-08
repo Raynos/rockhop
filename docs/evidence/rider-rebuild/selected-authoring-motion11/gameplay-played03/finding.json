@@ -1,0 +1,82 @@
+{
+  "accepted": false,
+  "finding": "First completed selected fully dressed real-input gameplay lean capture; parent moving-art review pending.",
+  "source": {
+    "path": "/Users/raynos/projects/games/rockhop/harness/out/rider-rebuild/selected-seated-anatomical09/transport02/rider.glb",
+    "bytes": 357879172,
+    "sha256": "ff9d78e2c5c40a4be1218b57611c5e71db10a2de7b636ec1589358176f907a0f",
+    "url": "models/private-selected/ff9d78e2c5c40a4be1218b57611c5e71db10a2de7b636ec1589358176f907a0f/rider-ff9d78e2c5c40a4be1218b57611c5e71db10a2de7b636ec1589358176f907a0f.glb"
+  },
+  "contract": {
+    "path": "/Users/raynos/projects/games/rockhop/harness/out/rider-rebuild/selected-authoring-motion11/gameplay-source-calibrated09/rider-contract.json",
+    "sha256": "b7554ed11b8a84f6fc38b5e56a75bc2d690780ce6580c95dc95b91cab10effa8"
+  },
+  "browser": {
+    "backend": "metal",
+    "version": "151.0.7922.34",
+    "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M5 Max, Unspecified Version)",
+    "flagSet": "angle-metal",
+    "helper": {
+      "path": "harness/lib/browser.ts",
+      "sha256": "145a81eec1c13f7c87a2910827f3cb5132b0ba2c80c494d7c42bd17fd017ca7d"
+    },
+    "probe": {
+      "ok": true,
+      "kind": "webgl2",
+      "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M5 Max, Unspecified Version)",
+      "vendor": "Google Inc. (Apple)",
+      "version": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+      "maxTextureSize": 16384
+    }
+  },
+  "recipeSHA256": "6f9cb91a11631772374810597ff558b03e6aca4fec7c25066fa2f781f39e9ee2",
+  "actualReportSHA256": "ff5b387f89316ff8ad11a68de0b69fd899dddeff1fcf999a00cd7f59e5e3fcf3",
+  "actualTicks": 1200,
+  "motionSamples": 241,
+  "jointCount": 75,
+  "allFinite": true,
+  "allPhysicalPose": true,
+  "allStageClipNull": true,
+  "faults": [],
+  "errors": [],
+  "finalHash": "a0fa0c4b1b76ba5e",
+  "wallSeconds": 10.035519999980927,
+  "maximumCatchupTicks": 26,
+  "phases": [
+    {
+      "phase": "neutral",
+      "samples": 49,
+      "lastTick": 240,
+      "lastEffectiveLean": 0.03692882288909533,
+      "maximumGripSocketErrorMm": 0.00027052306711395756,
+      "maximumSoleWitnessErrorMm": 0.003475509703203391
+    },
+    {
+      "phase": "forward",
+      "samples": 72,
+      "lastTick": 600,
+      "lastEffectiveLean": 1,
+      "maximumGripSocketErrorMm": 0.9199447955176385,
+      "maximumSoleWitnessErrorMm": 0.0029830443344207205
+    },
+    {
+      "phase": "backward",
+      "samples": 72,
+      "lastTick": 960,
+      "lastEffectiveLean": -1,
+      "maximumGripSocketErrorMm": 0.0003383097372126944,
+      "maximumSoleWitnessErrorMm": 0.004024735311893587
+    },
+    {
+      "phase": "neutral-return",
+      "samples": 48,
+      "lastTick": 1200,
+      "lastEffectiveLean": 0.03678213284124085,
+      "maximumGripSocketErrorMm": 0.00027508557917391293,
+      "maximumSoleWitnessErrorMm": 0.0036272131211991347
+    }
+  ],
+  "method": "Continuous real-time fixed120Hz game inputs; simulated COM/torso drives selected rider. No pose, joint, animation-clock or physics-state injection.",
+  "performanceLimit": "Additional24Hz exact-state witness draws are included; this capture is not a normal-player FPS benchmark.",
+  "limits": "Socket/witness distances do not qualify finite glove, bar, boot or peg surfaces. No native replay, garment art, Safari/phone, player promotion or release acceptance. Capture under Metal completed; global memory comparisons with earlier WebKit failures are uncontrolled. Trim and continuous silent visual playback are pending."
+}
