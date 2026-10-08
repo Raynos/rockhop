@@ -1,0 +1,30 @@
+{
+  "accepted": false,
+  "classification": "Authored source lower-gluteal candidates; actual seated support and moving appearance remain unaccepted.",
+  "lineage": {"path": "harness/out/rider-rebuild/selected-seated-garage01/pelvis-rear-lineage01.json", "sha256": "7b55fdadb0bb92491d6e7aca9a82d9c8982ad143c440d4eeab16f06a47de08e0"},
+  "body": {"path": "docs/evidence/rider-rebuild/native-hand-repair01/native02/native-body.npz", "sha256": "e62e9969503b7761e99463eccc3ca7be39e0c230a2948f2f87a224db52d0f9a2"},
+  "fields": {"path": "harness/out/rider-rebuild/production-jeans02/whole-correspondence02/authored02/production-jeans-fields.npz", "sha256": "28d337f56a7e963f8ae533a72bf060d40b5d18e956c154b61e2dc995c20bd679"},
+  "selection": "Explicit native quad rows on the inward-curving lower buttock, between source Z rows approximately 0.851320 and 0.887732; exclude the old minimum's crease row near 0.833333 and the rear-lobe apex row near 0.904500. Three adjacent rear panel columns form each context patch; its medial column is the contact core. This is an authored ID selection from actual source sections/photos, not a run-time coordinate or bone-weight classifier.",
+  "left": {
+    "contextPolygonIds": [9728,9729,9730,9731,9733,9734,9739,9740,9744,9745,9746,9747,9749,9750,9755,9756,9760,9761,9762,9763,9765,9766,9771,9772],
+    "corePolygonIds": [9728,9729,9730,9731,9733,9734,9739,9740],
+    "bodyReferenceFaceIds": [8472,8504,8697,19197,19267]
+  },
+  "right": {
+    "contextPolygonIds": [19712,19714,19713,19715,19727,19726,19721,19720,19728,19730,19729,19731,19743,19742,19737,19736,19744,19746,19745,19747,19759,19758,19753,19752],
+    "corePolygonIds": [19712,19714,19713,19715,19727,19726,19721,19720],
+    "bodyReferenceFaceIds": [3255,3410,3480,3495,14060]
+  },
+  "offlineSupportProxies": {
+    "gapBandM": 0.001,
+    "gapBandReason": "Reuses the existing palm/sole 1 mm numerical fit tolerance; not a physical cloth thickness or art acceptance claim.",
+    "minimumCoreFootprintOverlapFraction": 0.5,
+    "minimumOverlapAreaInGapBandFraction": 0.5,
+    "fractionReason": "A majority of each authored medial core must participate, preventing one isolated minimum, edge, or tiny triangle from satisfying the proxy. These are explicit proposed authoring proxies, not measured acceptance limits.",
+    "centering": "Each area-weighted support centroid must lie strictly inside both its core footprint and the actual finite saddle footprint, with opposite nonzero bike-Z signs. Their midpoint must lie on the bike centre plane within the existing 1 mm numerical fit tolerance. Track their fore/aft centroids; do not minimize only the deepest point.",
+    "coverage": "Measure all triangles in each core separately; report projected overlap area, area in the signed gap band, area-weighted gap, range, centroid, connected overlap components, and exact triangle witnesses. Edge/point overlap has zero area and cannot count.",
+    "collision": "Separately check the complete selected jeans/body/saddle neighborhoods for real triangle crossings; a projected signed gap alone is not a closed-volume collision test.",
+    "pose": "Offline per bike: author pelvis X/Y, pelvis tilt and upper-body flex while solving the existing actual palm/sole frames with fixed segment lengths. Keep bilateral cores semantically fixed during solving; never replace them with a cheaper-contact triangle. Pose and appearance remain parent-judged.",
+    "runtime": "Consume a frozen per-bike seated pose and cheap contact IK; pelvis stays seated during upper-body breathing. No dense triangle solve per frame."
+  }
+}

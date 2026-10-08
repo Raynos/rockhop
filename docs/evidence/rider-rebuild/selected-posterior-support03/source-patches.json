@@ -1,0 +1,4683 @@
+{
+  "accepted": false,
+  "classification": "Authored source lower-gluteal candidates; actual seated support and moving appearance remain unaccepted.",
+  "recipeSHA256": "76164dab50edcff533caabb60773c95d558be3d42dcedc424bcde1f021253c7d",
+  "definitionSHA256": "d76f4baadd7f447ecb72ffb01d660bbbc780142268f9e6b9c5d0ead81eba3e2f",
+  "sources": {
+    "lineage": {
+      "path": "harness/out/rider-rebuild/selected-seated-garage01/pelvis-rear-lineage01.json",
+      "sha256": "7b55fdadb0bb92491d6e7aca9a82d9c8982ad143c440d4eeab16f06a47de08e0"
+    },
+    "body": {
+      "path": "docs/evidence/rider-rebuild/native-hand-repair01/native02/native-body.npz",
+      "sha256": "e62e9969503b7761e99463eccc3ca7be39e0c230a2948f2f87a224db52d0f9a2"
+    },
+    "fields": {
+      "path": "harness/out/rider-rebuild/production-jeans02/whole-correspondence02/authored02/production-jeans-fields.npz",
+      "sha256": "28d337f56a7e963f8ae533a72bf060d40b5d18e956c154b61e2dc995c20bd679"
+    }
+  },
+  "selection": "Explicit native quad rows on the inward-curving lower buttock, between source Z rows approximately 0.851320 and 0.887732; exclude the old minimum's crease row near 0.833333 and the rear-lobe apex row near 0.904500. Three adjacent rear panel columns form each context patch; its medial column is the contact core. This is an authored ID selection from actual source sections/photos, not a run-time coordinate or bone-weight classifier.",
+  "offlineSupportProxies": {
+    "gapBandM": 0.001,
+    "gapBandReason": "Reuses the existing palm/sole 1 mm numerical fit tolerance; not a physical cloth thickness or art acceptance claim.",
+    "minimumCoreFootprintOverlapFraction": 0.5,
+    "minimumOverlapAreaInGapBandFraction": 0.5,
+    "fractionReason": "A majority of each authored medial core must participate, preventing one isolated minimum, edge, or tiny triangle from satisfying the proxy. These are explicit proposed authoring proxies, not measured acceptance limits.",
+    "centering": "Each area-weighted support centroid must lie strictly inside both its core footprint and the actual finite saddle footprint, with opposite nonzero bike-Z signs. Their midpoint must lie on the bike centre plane within the existing 1 mm numerical fit tolerance. Track their fore/aft centroids; do not minimize only the deepest point.",
+    "coverage": "Measure all triangles in each core separately; report projected overlap area, area in the signed gap band, area-weighted gap, range, centroid, connected overlap components, and exact triangle witnesses. Edge/point overlap has zero area and cannot count.",
+    "collision": "Separately check the complete selected jeans/body/saddle neighborhoods for real triangle crossings; a projected signed gap alone is not a closed-volume collision test.",
+    "pose": "Offline per bike: author pelvis X/Y, pelvis tilt and upper-body flex while solving the existing actual palm/sole frames with fixed segment lengths. Keep bilateral cores semantically fixed during solving; never replace them with a cheaper-contact triangle. Pose and appearance remain parent-judged.",
+    "runtime": "Consume a frozen per-bike seated pose and cheap contact IK; pelvis stays seated during upper-body breathing. No dense triangle solve per frame."
+  },
+  "patches": {
+    "left": {
+      "context": {
+        "originalPolygonIds": [
+          9728,
+          9729,
+          9730,
+          9731,
+          9733,
+          9734,
+          9739,
+          9740,
+          9744,
+          9745,
+          9746,
+          9747,
+          9749,
+          9750,
+          9755,
+          9756,
+          9760,
+          9761,
+          9762,
+          9763,
+          9765,
+          9766,
+          9771,
+          9772
+        ],
+        "triangles": [
+          {
+            "originalPolygonID": 9728,
+            "nativeVertexIDs": [
+              17063,
+              17064,
+              17067
+            ]
+          },
+          {
+            "originalPolygonID": 9728,
+            "nativeVertexIDs": [
+              17063,
+              17067,
+              17066
+            ]
+          },
+          {
+            "originalPolygonID": 9729,
+            "nativeVertexIDs": [
+              17064,
+              17065,
+              17068
+            ]
+          },
+          {
+            "originalPolygonID": 9729,
+            "nativeVertexIDs": [
+              17064,
+              17068,
+              17067
+            ]
+          },
+          {
+            "originalPolygonID": 9730,
+            "nativeVertexIDs": [
+              17066,
+              17067,
+              17070
+            ]
+          },
+          {
+            "originalPolygonID": 9730,
+            "nativeVertexIDs": [
+              17066,
+              17070,
+              17069
+            ]
+          },
+          {
+            "originalPolygonID": 9731,
+            "nativeVertexIDs": [
+              17067,
+              17068,
+              17071
+            ]
+          },
+          {
+            "originalPolygonID": 9731,
+            "nativeVertexIDs": [
+              17067,
+              17071,
+              17070
+            ]
+          },
+          {
+            "originalPolygonID": 9733,
+            "nativeVertexIDs": [
+              3626,
+              3627,
+              17064
+            ]
+          },
+          {
+            "originalPolygonID": 9733,
+            "nativeVertexIDs": [
+              3626,
+              17064,
+              17063
+            ]
+          },
+          {
+            "originalPolygonID": 9734,
+            "nativeVertexIDs": [
+              3627,
+              3628,
+              17065
+            ]
+          },
+          {
+            "originalPolygonID": 9734,
+            "nativeVertexIDs": [
+              3627,
+              17065,
+              17064
+            ]
+          },
+          {
+            "originalPolygonID": 9739,
+            "nativeVertexIDs": [
+              17070,
+              17071,
+              8575
+            ]
+          },
+          {
+            "originalPolygonID": 9739,
+            "nativeVertexIDs": [
+              17070,
+              8575,
+              8574
+            ]
+          },
+          {
+            "originalPolygonID": 9740,
+            "nativeVertexIDs": [
+              17069,
+              17070,
+              8574
+            ]
+          },
+          {
+            "originalPolygonID": 9740,
+            "nativeVertexIDs": [
+              17069,
+              8574,
+              8573
+            ]
+          },
+          {
+            "originalPolygonID": 9744,
+            "nativeVertexIDs": [
+              17072,
+              17073,
+              17076
+            ]
+          },
+          {
+            "originalPolygonID": 9744,
+            "nativeVertexIDs": [
+              17072,
+              17076,
+              17075
+            ]
+          },
+          {
+            "originalPolygonID": 9745,
+            "nativeVertexIDs": [
+              17073,
+              17074,
+              17077
+            ]
+          },
+          {
+            "originalPolygonID": 9745,
+            "nativeVertexIDs": [
+              17073,
+              17077,
+              17076
+            ]
+          },
+          {
+            "originalPolygonID": 9746,
+            "nativeVertexIDs": [
+              17075,
+              17076,
+              17079
+            ]
+          },
+          {
+            "originalPolygonID": 9746,
+            "nativeVertexIDs": [
+              17075,
+              17079,
+              17078
+            ]
+          },
+          {
+            "originalPolygonID": 9747,
+            "nativeVertexIDs": [
+              17076,
+              17077,
+              17080
+            ]
+          },
+          {
+            "originalPolygonID": 9747,
+            "nativeVertexIDs": [
+              17076,
+              17080,
+              17079
+            ]
+          },
+          {
+            "originalPolygonID": 9749,
+            "nativeVertexIDs": [
+              8573,
+              8574,
+              17073
+            ]
+          },
+          {
+            "originalPolygonID": 9749,
+            "nativeVertexIDs": [
+              8573,
+              17073,
+              17072
+            ]
+          },
+          {
+            "originalPolygonID": 9750,
+            "nativeVertexIDs": [
+              8574,
+              8575,
+              17074
+            ]
+          },
+          {
+            "originalPolygonID": 9750,
+            "nativeVertexIDs": [
+              8574,
+              17074,
+              17073
+            ]
+          },
+          {
+            "originalPolygonID": 9755,
+            "nativeVertexIDs": [
+              17079,
+              17080,
+              3634
+            ]
+          },
+          {
+            "originalPolygonID": 9755,
+            "nativeVertexIDs": [
+              17079,
+              3634,
+              3633
+            ]
+          },
+          {
+            "originalPolygonID": 9756,
+            "nativeVertexIDs": [
+              17078,
+              17079,
+              3633
+            ]
+          },
+          {
+            "originalPolygonID": 9756,
+            "nativeVertexIDs": [
+              17078,
+              3633,
+              3632
+            ]
+          },
+          {
+            "originalPolygonID": 9760,
+            "nativeVertexIDs": [
+              17081,
+              17082,
+              17085
+            ]
+          },
+          {
+            "originalPolygonID": 9760,
+            "nativeVertexIDs": [
+              17081,
+              17085,
+              17084
+            ]
+          },
+          {
+            "originalPolygonID": 9761,
+            "nativeVertexIDs": [
+              17082,
+              17083,
+              17086
+            ]
+          },
+          {
+            "originalPolygonID": 9761,
+            "nativeVertexIDs": [
+              17082,
+              17086,
+              17085
+            ]
+          },
+          {
+            "originalPolygonID": 9762,
+            "nativeVertexIDs": [
+              17084,
+              17085,
+              17088
+            ]
+          },
+          {
+            "originalPolygonID": 9762,
+            "nativeVertexIDs": [
+              17084,
+              17088,
+              17087
+            ]
+          },
+          {
+            "originalPolygonID": 9763,
+            "nativeVertexIDs": [
+              17085,
+              17086,
+              17089
+            ]
+          },
+          {
+            "originalPolygonID": 9763,
+            "nativeVertexIDs": [
+              17085,
+              17089,
+              17088
+            ]
+          },
+          {
+            "originalPolygonID": 9765,
+            "nativeVertexIDs": [
+              3632,
+              3633,
+              17082
+            ]
+          },
+          {
+            "originalPolygonID": 9765,
+            "nativeVertexIDs": [
+              3632,
+              17082,
+              17081
+            ]
+          },
+          {
+            "originalPolygonID": 9766,
+            "nativeVertexIDs": [
+              3633,
+              3634,
+              17083
+            ]
+          },
+          {
+            "originalPolygonID": 9766,
+            "nativeVertexIDs": [
+              3633,
+              17083,
+              17082
+            ]
+          },
+          {
+            "originalPolygonID": 9771,
+            "nativeVertexIDs": [
+              17088,
+              17089,
+              8581
+            ]
+          },
+          {
+            "originalPolygonID": 9771,
+            "nativeVertexIDs": [
+              17088,
+              8581,
+              8580
+            ]
+          },
+          {
+            "originalPolygonID": 9772,
+            "nativeVertexIDs": [
+              17087,
+              17088,
+              8580
+            ]
+          },
+          {
+            "originalPolygonID": 9772,
+            "nativeVertexIDs": [
+              17087,
+              8580,
+              8579
+            ]
+          }
+        ],
+        "nativeVertices": [
+          {
+            "id": 3626,
+            "sourceXYZ": [
+              0.03829842060804367,
+              0.11254759877920151,
+              0.8513204455375671
+            ],
+            "namedFour": [
+              [
+                "DEF-spine",
+                0.05240421057245297
+              ],
+              [
+                "DEF-pelvis.L",
+                0.11546025121143014
+              ],
+              [
+                "DEF-pelvis.R",
+                0.045362143935344115
+              ],
+              [
+                "DEF-thigh.L",
+                0.7867733942807728
+              ]
+            ]
+          },
+          {
+            "id": 3627,
+            "sourceXYZ": [
+              0.03679953143000603,
+              0.11849898099899292,
+              0.869729220867157
+            ],
+            "namedFour": [
+              [
+                "DEF-spine",
+                0.07541469861353121
+              ],
+              [
+                "DEF-pelvis.L",
+                0.13084291998809364
+              ],
+              [
+                "DEF-pelvis.R",
+                0.05556762864725274
+              ],
+              [
+                "DEF-thigh.L",
+                0.7381747527511224
+              ]
+            ]
+          },
+          {
+            "id": 3628,
+            "sourceXYZ": [
+              0.0358586423099041,
+              0.12341044098138809,
+              0.8877317905426025
+            ],
+            "namedFour": [
+              [
+                "DEF-spine",
+                0.28983345769078755
+              ],
+              [
+                "DEF-pelvis.L",
+                0.1145266472744546
+              ],
+              [
+                "DEF-pelvis.R",
+                0.07779507198064996
+              ],
+              [
+                "DEF-thigh.L",
+                0.517844823054108
+              ]
+            ]
+          },
+          {
+            "id": 3632,
+            "sourceXYZ": [
+              0.06759778410196304,
+              0.12708553671836853,
+              0.8513204455375671
+            ],
+            "namedFour": [
+              [
+                "DEF-spine",
+                0.054157759795720864
+              ],
+              [
+                "DEF-pelvis.L",
+                0.08981221486444477
+              ],
+              [
+                "DEF-pelvis.R",
+                0.011847276102536185
+              ],
+              [
+                "DEF-thigh.L",
+                0.8441827492372982
+              ]
+            ]
+          },
+          {
+            "id": 3633,
+            "sourceXYZ": [
+              0.06663493812084198,
+              0.1331738531589508,
+              0.869729220867157
+            ],
+            "namedFour": [
+              [
+                "DEF-spine",
+                0.07278859435257674
+              ],
+              [
+                "DEF-pelvis.L",
+                0.1012064883640841
+              ],
+              [
+                "DEF-pelvis.R",
+                0.012796505744829358
+              ],
+              [
+                "DEF-thigh.L",
+                0.8132084115385098
+              ]
+            ]
+          },
+          {
+            "id": 3634,
+            "sourceXYZ": [
+              0.06607109308242798,
+              0.13744749128818512,
+              0.8877317905426025
+            ],
+            "namedFour": [
+              [
+                "DEF-spine",
+                0.28732061326608327
+              ],
+              [
+                "DEF-pelvis.L",
+                0.09292808330055059
+              ],
+              [
+                "DEF-pelvis.R",
+                0.04432388826182225
+              ],
+              [
+                "DEF-thigh.L",
+                0.5754274151715439
+              ]
+            ]
+          },
+          {
+            "id": 8573,
+            "sourceXYZ": [
+              0.052552301436662674,
+              0.12096904963254929,
+              0.8513204455375671
+            ],
+            "namedFour": [
+              [
+                "DEF-spine",
+                0.07116315167037358
+              ],
+              [
+                "DEF-pelvis.L",
+                0.10271909232083859
+              ],
+              [
+                "DEF-pelvis.R",
+                0.01072876611776805
+              ],
+              [
+                "DEF-thigh.L",
+                0.8153889898910198
+              ]
+            ]
+          },
+          {
+            "id": 8574,
+            "sourceXYZ": [
+              0.05132760852575302,
+              0.12701556086540222,
+              0.869729220867157
+            ],
+            "namedFour": [
+              [
+                "DEF-spine",
+                0.09040332234809417
+              ],
+              [
+                "DEF-pelvis.L",
+                0.11683351381418391
+              ],
+              [
+                "DEF-pelvis.R",
+                0.021012155232160056
+              ],
+              [
+                "DEF-thigh.L",
+                0.7717510086055619
+              ]
+            ]
+          },
+          {
+            "id": 8575,
+            "sourceXYZ": [
+              0.05060663819313049,
+              0.13160060346126556,
+              0.8877317905426025
+            ],
+            "namedFour": [
+              [
+                "DEF-spine",
+                0.2999269409152822
+              ],
+              [
+                "DEF-pelvis.L",
+                0.10481000942004869
+              ],
+              [
+                "DEF-pelvis.R",
+                0.05367652897148548
+              ],
+              [
+                "DEF-thigh.L",
+                0.5415865206931837
+              ]
+            ]
+          },
+          {
+            "id": 8579,
+            "sourceXYZ": [
+              0.08317847549915314,
+              0.1307923048734665,
+              0.8513204455375671
+            ],
+            "namedFour": [
+              [
+                "DEF-spine",
+                0.03396127414880502
+              ],
+              [
+                "DEF-pelvis.L",
+                0.07023197946221348
+              ],
+              [
+                "DEF-thigh.L",
+                0.885654527250382
+              ],
+              [
+                "DEF-thigh.L.001",
+                0.01015221913859958
+              ]
+            ]
+          },
+          {
+            "id": 8580,
+            "sourceXYZ": [
+              0.08246781677007675,
+              0.136867493391037,
+              0.869729220867157
+            ],
+            "namedFour": [
+              [
+                "DEF-spine",
+                0.05530303999803266
+              ],
+              [
+                "DEF-pelvis.L",
+                0.08521029827763643
+              ],
+              [
+                "DEF-pelvis.R",
+                0.0022665505863061364
+              ],
+              [
+                "DEF-thigh.L",
+                0.8572201111380248
+              ]
+            ]
+          },
+          {
+            "id": 8581,
+            "sourceXYZ": [
+              0.08201511204242706,
+              0.14084766805171967,
+              0.8877317905426025
+            ],
+            "namedFour": [
+              [
+                "DEF-spine",
+                0.27206078063182965
+              ],
+              [
+                "DEF-pelvis.L",
+                0.08132534448944323
+              ],
+              [
+                "DEF-pelvis.R",
+                0.024955156534370557
+              ],
+              [
+                "DEF-thigh.L",
+                0.6216587183443566
+              ]
+            ]
+          },
+          {
+            "id": 17063,
+            "sourceXYZ": [
+              0.04177414998412132,
+              0.11486176401376724,
+              0.8513203263282776
+            ],
+            "namedFour": [
+              [
+                "DEF-spine",
+                0.06322951859943715
+              ],
+              [
+                "DEF-pelvis.L",
+                0.10926309428284585
+              ],
+              [
+                "DEF-pelvis.R",
+                0.02705353382647395
+              ],
+              [
+                "DEF-thigh.L",
+                0.8004538532912431
+              ]
+            ]
+          },
+          {
+            "id": 17064,
+            "sourceXYZ": [
+              0.04034518823027611,
+              0.12084183096885681,
+              0.8697291016578674
+            ],
+            "namedFour": [
+              [
+                "DEF-spine",
+                0.08613235390518154
+              ],
+              [
+                "DEF-pelvis.L",
+                0.12423662578528913
+              ],
+              [
+                "DEF-pelvis.R",
+                0.035781568290202875
+              ],
+              [
+                "DEF-thigh.L",
+                0.7538494520193265
+              ]
+            ]
+          },
+          {
+            "id": 17065,
+            "sourceXYZ": [
+              0.0394662469625473,
+              0.12567053735256195,
+              0.8877318501472473
+            ],
+            "namedFour": [
+              [
+                "DEF-spine",
+                0.29773793315089025
+              ],
+              [
+                "DEF-pelvis.L",
+                0.1094610571800573
+              ],
+              [
+                "DEF-pelvis.R",
+                0.06265974115642374
+              ],
+              [
+                "DEF-thigh.L",
+                0.5301412685126288
+              ]
+            ]
+          },
+          {
+            "id": 17066,
+            "sourceXYZ": [
+              0.04531091824173927,
+              0.11703822761774063,
+              0.8513204455375671
+            ],
+            "namedFour": [
+              [
+                "DEF-spine",
+                0.07231467570781176
+              ],
+              [
+                "DEF-pelvis.L",
+                0.10416614591721397
+              ],
+              [
+                "DEF-pelvis.R",
+                0.01179007796059281
+              ],
+              [
+                "DEF-thigh.L",
+                0.8117291004143815
+              ]
+            ]
+          },
+          {
+            "id": 17067,
+            "sourceXYZ": [
+              0.04395090416073799,
+              0.1230437308549881,
+              0.869729220867157
+            ],
+            "namedFour": [
+              [
+                "DEF-spine",
+                0.0936863763237176
+              ],
+              [
+                "DEF-pelvis.L",
+                0.11963086603849112
+              ],
+              [
+                "DEF-pelvis.R",
+                0.02197778261888301
+              ],
+              [
+                "DEF-thigh.L",
+                0.7647049750189082
+              ]
+            ]
+          },
+          {
+            "id": 17068,
+            "sourceXYZ": [
+              0.043129049241542816,
+              0.1277903914451599,
+              0.8877318501472473
+            ],
+            "namedFour": [
+              [
+                "DEF-spine",
+                0.3021308308952569
+              ],
+              [
+                "DEF-pelvis.L",
+                0.10670608559298674
+              ],
+              [
+                "DEF-pelvis.R",
+                0.054417297101338434
+              ],
+              [
+                "DEF-thigh.L",
+                0.5367457864104179
+              ]
+            ]
+          },
+          {
+            "id": 17069,
+            "sourceXYZ": [
+              0.0489048957824707,
+              0.1190747395157814,
+              0.8513203859329224
+            ],
+            "namedFour": [
+              [
+                "DEF-spine",
+                0.07354251177823601
+              ],
+              [
+                "DEF-pelvis.L",
+                0.10470750158784707
+              ],
+              [
+                "DEF-pelvis.R",
+                0.010934383320862206
+              ],
+              [
+                "DEF-thigh.L",
+                0.8108156033130547
+              ]
+            ]
+          },
+          {
+            "id": 17070,
+            "sourceXYZ": [
+              0.047612953931093216,
+              0.12510240077972412,
+              0.8697292804718018
+            ],
+            "namedFour": [
+              [
+                "DEF-spine",
+                0.09377455664060928
+              ],
+              [
+                "DEF-pelvis.L",
+                0.11978935794143185
+              ],
+              [
+                "DEF-pelvis.R",
+                0.022412878639085955
+              ],
+              [
+                "DEF-thigh.L",
+                0.7640232067788729
+              ]
+            ]
+          },
+          {
+            "id": 17071,
+            "sourceXYZ": [
+              0.046843647956848145,
+              0.12976780533790588,
+              0.8877317905426025
+            ],
+            "namedFour": [
+              [
+                "DEF-spine",
+                0.30218851043561595
+              ],
+              [
+                "DEF-pelvis.L",
+                0.10681105940500371
+              ],
+              [
+                "DEF-pelvis.R",
+                0.05470524561714302
+              ],
+              [
+                "DEF-thigh.L",
+                0.5362951845422372
+              ]
+            ]
+          },
+          {
+            "id": 17072,
+            "sourceXYZ": [
+              0.05624929070472717,
+              0.12271898239850998,
+              0.8513203263282776
+            ],
+            "namedFour": [
+              [
+                "DEF-spine",
+                0.06713026007053415
+              ],
+              [
+                "DEF-pelvis.L",
+                0.09959240925086117
+              ],
+              [
+                "DEF-pelvis.R",
+                0.010863527285161672
+              ],
+              [
+                "DEF-thigh.L",
+                0.822413803393443
+              ]
+            ]
+          },
+          {
+            "id": 17073,
+            "sourceXYZ": [
+              0.05509107932448387,
+              0.1287810057401657,
+              0.8697291016578674
+            ],
+            "namedFour": [
+              [
+                "DEF-spine",
+                0.08603673618378344
+              ],
+              [
+                "DEF-pelvis.L",
+                0.11297451557013369
+              ],
+              [
+                "DEF-pelvis.R",
+                0.01904842776404089
+              ],
+              [
+                "DEF-thigh.L",
+                0.781940320482042
+              ]
+            ]
+          },
+          {
+            "id": 17074,
+            "sourceXYZ": [
+              0.054414570331573486,
+              0.13328664004802704,
+              0.8877318501472473
+            ],
+            "namedFour": [
+              [
+                "DEF-spine",
+                0.2966033443958685
+              ],
+              [
+                "DEF-pelvis.L",
+                0.10184041664198817
+              ],
+              [
+                "DEF-pelvis.R",
+                0.05202614082116175
+              ],
+              [
+                "DEF-thigh.L",
+                0.5495300981409815
+              ]
+            ]
+          },
+          {
+            "id": 17075,
+            "sourceXYZ": [
+              0.059991877526044846,
+              0.1243228018283844,
+              0.8513204455375671
+            ],
+            "namedFour": [
+              [
+                "DEF-spine",
+                0.06294640077956555
+              ],
+              [
+                "DEF-pelvis.L",
+                0.09639545477193603
+              ],
+              [
+                "DEF-pelvis.R",
+                0.011096139110341002
+              ],
+              [
+                "DEF-thigh.L",
+                0.8295620053381574
+              ]
+            ]
+          },
+          {
+            "id": 17076,
+            "sourceXYZ": [
+              0.058899447321891785,
+              0.13039696216583252,
+              0.869729220867157
+            ],
+            "namedFour": [
+              [
+                "DEF-spine",
+                0.08164227586262866
+              ],
+              [
+                "DEF-pelvis.L",
+                0.10908088368781552
+              ],
+              [
+                "DEF-pelvis.R",
+                0.017023081247079543
+              ],
+              [
+                "DEF-thigh.L",
+                0.7922537592024763
+              ]
+            ]
+          },
+          {
+            "id": 17077,
+            "sourceXYZ": [
+              0.05826377123594284,
+              0.1348242163658142,
+              0.8877318501472473
+            ],
+            "namedFour": [
+              [
+                "DEF-spine",
+                0.29326101905632773
+              ],
+              [
+                "DEF-pelvis.L",
+                0.09884780872798828
+              ],
+              [
+                "DEF-pelvis.R",
+                0.05033255751706915
+              ],
+              [
+                "DEF-thigh.L",
+                0.5575586146986149
+              ]
+            ]
+          },
+          {
+            "id": 17078,
+            "sourceXYZ": [
+              0.06377604603767395,
+              0.12577888369560242,
+              0.8513203859329224
+            ],
+            "namedFour": [
+              [
+                "DEF-spine",
+                0.05861947919796818
+              ],
+              [
+                "DEF-pelvis.L",
+                0.09313358803112497
+              ],
+              [
+                "DEF-pelvis.R",
+                0.011424809866201717
+              ],
+              [
+                "DEF-thigh.L",
+                0.8368221229047051
+              ]
+            ]
+          },
+          {
+            "id": 17079,
+            "sourceXYZ": [
+              0.06274872273206711,
+              0.13186180591583252,
+              0.8697292804718018
+            ],
+            "namedFour": [
+              [
+                "DEF-spine",
+                0.07722467328803631
+              ],
+              [
+                "DEF-pelvis.L",
+                0.10515679597971361
+              ],
+              [
+                "DEF-pelvis.R",
+                0.014938223881449084
+              ],
+              [
+                "DEF-thigh.L",
+                0.802680306850801
+              ]
+            ]
+          },
+          {
+            "id": 17080,
+            "sourceXYZ": [
+              0.062150515615940094,
+              0.13621169328689575,
+              0.8877317905426025
+            ],
+            "namedFour": [
+              [
+                "DEF-spine",
+                0.28990332926221546
+              ],
+              [
+                "DEF-pelvis.L",
+                0.0958352828030774
+              ],
+              [
+                "DEF-pelvis.R",
+                0.048597899969373956
+              ],
+              [
+                "DEF-thigh.L",
+                0.5656634879653332
+              ]
+            ]
+          },
+          {
+            "id": 17081,
+            "sourceXYZ": [
+              0.0714530423283577,
+              0.12824128568172455,
+              0.8513203263282776
+            ],
+            "namedFour": [
+              [
+                "DEF-spine",
+                0.049568548280958996
+              ],
+              [
+                "DEF-pelvis.L",
+                0.08643628808455317
+              ],
+              [
+                "DEF-pelvis.R",
+                0.012361882412523109
+              ],
+              [
+                "DEF-thigh.L",
+                0.8516332812219647
+              ]
+            ]
+          },
+          {
+            "id": 17082,
+            "sourceXYZ": [
+              0.07055407762527466,
+              0.13433153927326202,
+              0.8697291016578674
+            ],
+            "namedFour": [
+              [
+                "DEF-spine",
+                0.06833863109274865
+              ],
+              [
+                "DEF-pelvis.L",
+                0.09723413548822492
+              ],
+              [
+                "DEF-pelvis.R",
+                0.010600563333732039
+              ],
+              [
+                "DEF-thigh.L",
+                0.8238266700852944
+              ]
+            ]
+          },
+          {
+            "id": 17083,
+            "sourceXYZ": [
+              0.07002176344394684,
+              0.13853004574775696,
+              0.8877318501472473
+            ],
+            "namedFour": [
+              [
+                "DEF-spine",
+                0.2835687777969472
+              ],
+              [
+                "DEF-pelvis.L",
+                0.09008139949345671
+              ],
+              [
+                "DEF-pelvis.R",
+                0.03957065349794178
+              ],
+              [
+                "DEF-thigh.L",
+                0.5867791692116543
+              ]
+            ]
+          },
+          {
+            "id": 17084,
+            "sourceXYZ": [
+              0.07533768564462662,
+              0.12924498319625854,
+              0.8513204455375671
+            ],
+            "namedFour": [
+              [
+                "DEF-spine",
+                0.036814439240877454
+              ],
+              [
+                "DEF-pelvis.L",
+                0.07610258047715765
+              ],
+              [
+                "DEF-pelvis.R",
+                0.009289763828778788
+              ],
+              [
+                "DEF-thigh.L",
+                0.8777932164531861
+              ]
+            ]
+          },
+          {
+            "id": 17085,
+            "sourceXYZ": [
+              0.07450203597545624,
+              0.13533367216587067,
+              0.869729220867157
+            ],
+            "namedFour": [
+              [
+                "DEF-spine",
+                0.06387965326932428
+              ],
+              [
+                "DEF-pelvis.L",
+                0.09324444245949817
+              ],
+              [
+                "DEF-pelvis.R",
+                0.008354557064738963
+              ],
+              [
+                "DEF-thigh.L",
+                0.8345213472064387
+              ]
+            ]
+          },
+          {
+            "id": 17086,
+            "sourceXYZ": [
+              0.0739986002445221,
+              0.1394582837820053,
+              0.8877318501472473
+            ],
+            "namedFour": [
+              [
+                "DEF-spine",
+                0.2797723111288788
+              ],
+              [
+                "DEF-pelvis.L",
+                0.08719695376841027
+              ],
+              [
+                "DEF-pelvis.R",
+                0.03475514939823184
+              ],
+              [
+                "DEF-thigh.L",
+                0.5982755857044791
+              ]
+            ]
+          },
+          {
+            "id": 17087,
+            "sourceXYZ": [
+              0.07924754917621613,
+              0.13009564578533173,
+              0.8513203859329224
+            ],
+            "namedFour": [
+              [
+                "DEF-spine",
+                0.035042669772347754
+              ],
+              [
+                "DEF-pelvis.L",
+                0.07222019924713816
+              ],
+              [
+                "DEF-thigh.L",
+                0.8842865137397319
+              ],
+              [
+                "DEF-thigh.L.001",
+                0.008450617240782228
+              ]
+            ]
+          },
+          {
+            "id": 17088,
+            "sourceXYZ": [
+              0.07847465574741364,
+              0.1361793726682663,
+              0.8697292804718018
+            ],
+            "namedFour": [
+              [
+                "DEF-spine",
+                0.059415898086850154
+              ],
+              [
+                "DEF-pelvis.L",
+                0.0892410889670365
+              ],
+              [
+                "DEF-pelvis.R",
+                0.006060073587233083
+              ],
+              [
+                "DEF-thigh.L",
+                0.8452829393588802
+              ]
+            ]
+          },
+          {
+            "id": 17089,
+            "sourceXYZ": [
+              0.07799769937992096,
+              0.1402311474084854,
+              0.8877317905426025
+            ],
+            "namedFour": [
+              [
+                "DEF-spine",
+                0.2759347085352776
+              ],
+              [
+                "DEF-pelvis.L",
+                0.08427749090482756
+              ],
+              [
+                "DEF-pelvis.R",
+                0.029881940717197217
+              ],
+              [
+                "DEF-thigh.L",
+                0.6099058598426977
+              ]
+            ]
+          }
+        ],
+        "boundaryNativeEdges": [
+          [
+            17063,
+            17066
+          ],
+          [
+            17065,
+            17068
+          ],
+          [
+            17066,
+            17069
+          ],
+          [
+            17068,
+            17071
+          ],
+          [
+            3626,
+            3627
+          ],
+          [
+            3626,
+            17063
+          ],
+          [
+            3627,
+            3628
+          ],
+          [
+            3628,
+            17065
+          ],
+          [
+            8575,
+            17071
+          ],
+          [
+            8573,
+            17069
+          ],
+          [
+            17072,
+            17075
+          ],
+          [
+            17074,
+            17077
+          ],
+          [
+            17075,
+            17078
+          ],
+          [
+            17077,
+            17080
+          ],
+          [
+            8573,
+            17072
+          ],
+          [
+            8575,
+            17074
+          ],
+          [
+            3634,
+            17080
+          ],
+          [
+            3632,
+            17078
+          ],
+          [
+            17081,
+            17084
+          ],
+          [
+            17083,
+            17086
+          ],
+          [
+            17084,
+            17087
+          ],
+          [
+            17086,
+            17089
+          ],
+          [
+            3632,
+            17081
+          ],
+          [
+            3634,
+            17083
+          ],
+          [
+            8581,
+            17089
+          ],
+          [
+            8580,
+            8581
+          ],
+          [
+            8579,
+            8580
+          ],
+          [
+            8579,
+            17087
+          ]
+        ],
+        "connectedDisk": true,
+        "sourceAreaM2": 0.0018739151122768181,
+        "sourceAreaCentroidXYZ": [
+          0.05906945246080175,
+          0.12894856365307586,
+          0.8694813140637673
+        ],
+        "sourceBoundsXYZ": [
+          [
+            0.0358586423099041,
+            0.11254759877920151,
+            0.8513203263282776
+          ],
+          [
+            0.08317847549915314,
+            0.14084766805171967,
+            0.8877318501472473
+          ]
+        ],
+        "sourceNormalBoundsXYZ": [
+          [
+            -0.5347454450647098,
+            0.7942782114733141,
+            -0.3159021869770804
+          ],
+          [
+            -0.14793959861886105,
+            0.9640138141354333,
+            -0.21686168591592847
+          ]
+        ]
+      },
+      "core": {
+        "originalPolygonIds": [
+          9728,
+          9729,
+          9730,
+          9731,
+          9733,
+          9734,
+          9739,
+          9740
+        ],
+        "triangles": [
+          {
+            "originalPolygonID": 9728,
+            "nativeVertexIDs": [
+              17063,
+              17064,
+              17067
+            ]
+          },
+          {
+            "originalPolygonID": 9728,
+            "nativeVertexIDs": [
+              17063,
+              17067,
+              17066
+            ]
+          },
+          {
+            "originalPolygonID": 9729,
+            "nativeVertexIDs": [
+              17064,
+              17065,
+              17068
+            ]
+          },
+          {
+            "originalPolygonID": 9729,
+            "nativeVertexIDs": [
+              17064,
+              17068,
+              17067
+            ]
+          },
+          {
+            "originalPolygonID": 9730,
+            "nativeVertexIDs": [
+              17066,
+              17067,
+              17070
+            ]
+          },
+          {
+            "originalPolygonID": 9730,
+            "nativeVertexIDs": [
+              17066,
+              17070,
+              17069
+            ]
+          },
+          {
+            "originalPolygonID": 9731,
+            "nativeVertexIDs": [
+              17067,
+              17068,
+              17071
+            ]
+          },
+          {
+            "originalPolygonID": 9731,
+            "nativeVertexIDs": [
+              17067,
+              17071,
+              17070
+            ]
+          },
+          {
+            "originalPolygonID": 9733,
+            "nativeVertexIDs": [
+              3626,
+              3627,
+              17064
+            ]
+          },
+          {
+            "originalPolygonID": 9733,
+            "nativeVertexIDs": [
+              3626,
+              17064,
+              17063
+            ]
+          },
+          {
+            "originalPolygonID": 9734,
+            "nativeVertexIDs": [
+              3627,
+              3628,
+              17065
+            ]
+          },
+          {
+            "originalPolygonID": 9734,
+            "nativeVertexIDs": [
+              3627,
+              17065,
+              17064
+            ]
+          },
+          {
+            "originalPolygonID": 9739,
+            "nativeVertexIDs": [
+              17070,
+              17071,
+              8575
+            ]
+          },
+          {
+            "originalPolygonID": 9739,
+            "nativeVertexIDs": [
+              17070,
+              8575,
+              8574
+            ]
+          },
+          {
+            "originalPolygonID": 9740,
+            "nativeVertexIDs": [
+              17069,
+              17070,
+              8574
+            ]
+          },
+          {
+            "originalPolygonID": 9740,
+            "nativeVertexIDs": [
+              17069,
+              8574,
+              8573
+            ]
+          }
+        ],
+        "nativeVertices": [
+          {
+            "id": 3626,
+            "sourceXYZ": [
+              0.03829842060804367,
+              0.11254759877920151,
+              0.8513204455375671
+            ],
+            "namedFour": [
+              [
+                "DEF-spine",
+                0.05240421057245297
+              ],
+              [
+                "DEF-pelvis.L",
+                0.11546025121143014
+              ],
+              [
+                "DEF-pelvis.R",
+                0.045362143935344115
+              ],
+              [
+                "DEF-thigh.L",
+                0.7867733942807728
+              ]
+            ]
+          },
+          {
+            "id": 3627,
+            "sourceXYZ": [
+              0.03679953143000603,
+              0.11849898099899292,
+              0.869729220867157
+            ],
+            "namedFour": [
+              [
+                "DEF-spine",
+                0.07541469861353121
+              ],
+              [
+                "DEF-pelvis.L",
+                0.13084291998809364
+              ],
+              [
+                "DEF-pelvis.R",
+                0.05556762864725274
+              ],
+              [
+                "DEF-thigh.L",
+                0.7381747527511224
+              ]
+            ]
+          },
+          {
+            "id": 3628,
+            "sourceXYZ": [
+              0.0358586423099041,
+              0.12341044098138809,
+              0.8877317905426025
+            ],
+            "namedFour": [
+              [
+                "DEF-spine",
+                0.28983345769078755
+              ],
+              [
+                "DEF-pelvis.L",
+                0.1145266472744546
+              ],
+              [
+                "DEF-pelvis.R",
+                0.07779507198064996
+              ],
+              [
+                "DEF-thigh.L",
+                0.517844823054108
+              ]
+            ]
+          },
+          {
+            "id": 8573,
+            "sourceXYZ": [
+              0.052552301436662674,
+              0.12096904963254929,
+              0.8513204455375671
+            ],
+            "namedFour": [
+              [
+                "DEF-spine",
+                0.07116315167037358
+              ],
+              [
+                "DEF-pelvis.L",
+                0.10271909232083859
+              ],
+              [
+                "DEF-pelvis.R",
+                0.01072876611776805
+              ],
+              [
+                "DEF-thigh.L",
+                0.8153889898910198
+              ]
+            ]
+          },
+          {
+            "id": 8574,
+            "sourceXYZ": [
+              0.05132760852575302,
+              0.12701556086540222,
+              0.869729220867157
+            ],
+            "namedFour": [
+              [
+                "DEF-spine",
+                0.09040332234809417
+              ],
+              [
+                "DEF-pelvis.L",
+                0.11683351381418391
+              ],
+              [
+                "DEF-pelvis.R",
+                0.021012155232160056
+              ],
+              [
+                "DEF-thigh.L",
+                0.7717510086055619
+              ]
+            ]
+          },
+          {
+            "id": 8575,
+            "sourceXYZ": [
+              0.05060663819313049,
+              0.13160060346126556,
+              0.8877317905426025
+            ],
+            "namedFour": [
+              [
+                "DEF-spine",
+                0.2999269409152822
+              ],
+              [
+                "DEF-pelvis.L",
+                0.10481000942004869
+              ],
+              [
+                "DEF-pelvis.R",
+                0.05367652897148548
+              ],
+              [
+                "DEF-thigh.L",
+                0.5415865206931837
+              ]
+            ]
+          },
+          {
+            "id": 17063,
+            "sourceXYZ": [
+              0.04177414998412132,
+              0.11486176401376724,
+              0.8513203263282776
+            ],
+            "namedFour": [
+              [
+                "DEF-spine",
+                0.06322951859943715
+              ],
+              [
+                "DEF-pelvis.L",
+                0.10926309428284585
+              ],
+              [
+                "DEF-pelvis.R",
+                0.02705353382647395
+              ],
+              [
+                "DEF-thigh.L",
+                0.8004538532912431
+              ]
+            ]
+          },
+          {
+            "id": 17064,
+            "sourceXYZ": [
+              0.04034518823027611,
+              0.12084183096885681,
+              0.8697291016578674
+            ],
+            "namedFour": [
+              [
+                "DEF-spine",
+                0.08613235390518154
+              ],
+              [
+                "DEF-pelvis.L",
+                0.12423662578528913
+              ],
+              [
+                "DEF-pelvis.R",
+                0.035781568290202875
+              ],
+              [
+                "DEF-thigh.L",
+                0.7538494520193265
+              ]
+            ]
+          },
+          {
+            "id": 17065,
+            "sourceXYZ": [
+              0.0394662469625473,
+              0.12567053735256195,
+              0.8877318501472473
+            ],
+            "namedFour": [
+              [
+                "DEF-spine",
+                0.29773793315089025
+              ],
+              [
+                "DEF-pelvis.L",
+                0.1094610571800573
+              ],
+              [
+                "DEF-pelvis.R",
+                0.06265974115642374
+              ],
+              [
+                "DEF-thigh.L",
+                0.5301412685126288
+              ]
+            ]
+          },
+          {
+            "id": 17066,
+            "sourceXYZ": [
+              0.04531091824173927,
+              0.11703822761774063,
+              0.8513204455375671
+            ],
+            "namedFour": [
+              [
+                "DEF-spine",
+                0.07231467570781176
+              ],
+              [
+                "DEF-pelvis.L",
+                0.10416614591721397
+              ],
+              [
+                "DEF-pelvis.R",
+                0.01179007796059281
+              ],
+              [
+                "DEF-thigh.L",
+                0.8117291004143815
+              ]
+            ]
+          },
+          {
+            "id": 17067,
+            "sourceXYZ": [
+              0.04395090416073799,
+              0.1230437308549881,
+              0.869729220867157
+            ],
+            "namedFour": [
+              [
+                "DEF-spine",
+                0.0936863763237176
+              ],
+              [
+                "DEF-pelvis.L",
+                0.11963086603849112
+              ],
+              [
+                "DEF-pelvis.R",
+                0.02197778261888301
+              ],
+              [
+                "DEF-thigh.L",
+                0.7647049750189082
+              ]
+            ]
+          },
+          {
+            "id": 17068,
+            "sourceXYZ": [
+              0.043129049241542816,
+              0.1277903914451599,
+              0.8877318501472473
+            ],
+            "namedFour": [
+              [
+                "DEF-spine",
+                0.3021308308952569
+              ],
+              [
+                "DEF-pelvis.L",
+                0.10670608559298674
+              ],
+              [
+                "DEF-pelvis.R",
+                0.054417297101338434
+              ],
+              [
+                "DEF-thigh.L",
+                0.5367457864104179
+              ]
+            ]
+          },
+          {
+            "id": 17069,
+            "sourceXYZ": [
+              0.0489048957824707,
+              0.1190747395157814,
+              0.8513203859329224
+            ],
+            "namedFour": [
+              [
+                "DEF-spine",
+                0.07354251177823601
+              ],
+              [
+                "DEF-pelvis.L",
+                0.10470750158784707
+              ],
+              [
+                "DEF-pelvis.R",
+                0.010934383320862206
+              ],
+              [
+                "DEF-thigh.L",
+                0.8108156033130547
+              ]
+            ]
+          },
+          {
+            "id": 17070,
+            "sourceXYZ": [
+              0.047612953931093216,
+              0.12510240077972412,
+              0.8697292804718018
+            ],
+            "namedFour": [
+              [
+                "DEF-spine",
+                0.09377455664060928
+              ],
+              [
+                "DEF-pelvis.L",
+                0.11978935794143185
+              ],
+              [
+                "DEF-pelvis.R",
+                0.022412878639085955
+              ],
+              [
+                "DEF-thigh.L",
+                0.7640232067788729
+              ]
+            ]
+          },
+          {
+            "id": 17071,
+            "sourceXYZ": [
+              0.046843647956848145,
+              0.12976780533790588,
+              0.8877317905426025
+            ],
+            "namedFour": [
+              [
+                "DEF-spine",
+                0.30218851043561595
+              ],
+              [
+                "DEF-pelvis.L",
+                0.10681105940500371
+              ],
+              [
+                "DEF-pelvis.R",
+                0.05470524561714302
+              ],
+              [
+                "DEF-thigh.L",
+                0.5362951845422372
+              ]
+            ]
+          }
+        ],
+        "boundaryNativeEdges": [
+          [
+            17063,
+            17066
+          ],
+          [
+            17065,
+            17068
+          ],
+          [
+            17066,
+            17069
+          ],
+          [
+            17068,
+            17071
+          ],
+          [
+            3626,
+            3627
+          ],
+          [
+            3626,
+            17063
+          ],
+          [
+            3627,
+            3628
+          ],
+          [
+            3628,
+            17065
+          ],
+          [
+            8575,
+            17071
+          ],
+          [
+            8574,
+            8575
+          ],
+          [
+            8573,
+            8574
+          ],
+          [
+            8573,
+            17069
+          ]
+        ],
+        "connectedDisk": true,
+        "sourceAreaM2": 0.0006360084978787959,
+        "sourceAreaCentroidXYZ": [
+          0.04411175852316348,
+          0.12256799726833112,
+          0.8695046002470985
+        ],
+        "sourceBoundsXYZ": [
+          [
+            0.0358586423099041,
+            0.11254759877920151,
+            0.8513203263282776
+          ],
+          [
+            0.052552301436662674,
+            0.13160060346126556,
+            0.8877318501472473
+          ]
+        ],
+        "sourceNormalBoundsXYZ": [
+          [
+            -0.5347454450647098,
+            0.7942782114733141,
+            -0.3075591235733327
+          ],
+          [
+            -0.42463748558311476,
+            0.8718399980024226,
+            -0.23774153618001242
+          ]
+        ]
+      },
+      "bodyReferenceTriangles": [
+        {
+          "faceId": 8472,
+          "nativeVertexIds": [
+            8591,
+            9114,
+            8654
+          ],
+          "sourceXYZ": [
+            [
+              0.0822986513376236,
+              0.10972649604082108,
+              0.8715789318084717
+            ],
+            [
+              0.05108727887272835,
+              0.09266934543848038,
+              0.8251444101333618
+            ],
+            [
+              0.04850441962480545,
+              0.10899154841899872,
+              0.8635425567626953
+            ]
+          ],
+          "originalSourcePolygonId": 8472
+        },
+        {
+          "faceId": 8504,
+          "nativeVertexIds": [
+            8523,
+            9117,
+            8591
+          ],
+          "sourceXYZ": [
+            [
+              0.11413202434778214,
+              0.09522686153650284,
+              0.8804458975791931
+            ],
+            [
+              0.08667892962694168,
+              0.09985135495662689,
+              0.8352422714233398
+            ],
+            [
+              0.0822986513376236,
+              0.10972649604082108,
+              0.8715789318084717
+            ]
+          ],
+          "originalSourcePolygonId": 8504
+        },
+        {
+          "faceId": 8697,
+          "nativeVertexIds": [
+            8591,
+            8652,
+            8590
+          ],
+          "sourceXYZ": [
+            [
+              0.0822986513376236,
+              0.10972649604082108,
+              0.8715789318084717
+            ],
+            [
+              0.047532133758068085,
+              0.11396688222885132,
+              0.9049880504608154
+            ],
+            [
+              0.07878421992063522,
+              0.11189965158700943,
+              0.9097031950950623
+            ]
+          ],
+          "originalSourcePolygonId": 8697
+        },
+        {
+          "faceId": 19197,
+          "nativeVertexIds": [
+            8652,
+            8654,
+            8653
+          ],
+          "sourceXYZ": [
+            [
+              0.047532133758068085,
+              0.11396688222885132,
+              0.9049880504608154
+            ],
+            [
+              0.04850441962480545,
+              0.10899154841899872,
+              0.8635425567626953
+            ],
+            [
+              0.019955089315772057,
+              0.09618071466684341,
+              0.8599057793617249
+            ]
+          ],
+          "originalSourcePolygonId": 8627
+        },
+        {
+          "faceId": 19267,
+          "nativeVertexIds": [
+            8591,
+            8654,
+            8652
+          ],
+          "sourceXYZ": [
+            [
+              0.0822986513376236,
+              0.10972649604082108,
+              0.8715789318084717
+            ],
+            [
+              0.04850441962480545,
+              0.10899154841899872,
+              0.8635425567626953
+            ],
+            [
+              0.047532133758068085,
+              0.11396688222885132,
+              0.9049880504608154
+            ]
+          ],
+          "originalSourcePolygonId": 8697
+        }
+      ]
+    },
+    "right": {
+      "context": {
+        "originalPolygonIds": [
+          19712,
+          19713,
+          19714,
+          19715,
+          19720,
+          19721,
+          19726,
+          19727,
+          19728,
+          19729,
+          19730,
+          19731,
+          19736,
+          19737,
+          19742,
+          19743,
+          19744,
+          19745,
+          19746,
+          19747,
+          19752,
+          19753,
+          19758,
+          19759
+        ],
+        "triangles": [
+          {
+            "originalPolygonID": 19712,
+            "nativeVertexIDs": [
+              22679,
+              22680,
+              22683
+            ]
+          },
+          {
+            "originalPolygonID": 19712,
+            "nativeVertexIDs": [
+              22679,
+              22683,
+              22682
+            ]
+          },
+          {
+            "originalPolygonID": 19713,
+            "nativeVertexIDs": [
+              22680,
+              22681,
+              22684
+            ]
+          },
+          {
+            "originalPolygonID": 19713,
+            "nativeVertexIDs": [
+              22680,
+              22684,
+              22683
+            ]
+          },
+          {
+            "originalPolygonID": 19714,
+            "nativeVertexIDs": [
+              22682,
+              22683,
+              22686
+            ]
+          },
+          {
+            "originalPolygonID": 19714,
+            "nativeVertexIDs": [
+              22682,
+              22686,
+              22685
+            ]
+          },
+          {
+            "originalPolygonID": 19715,
+            "nativeVertexIDs": [
+              22683,
+              22684,
+              22687
+            ]
+          },
+          {
+            "originalPolygonID": 19715,
+            "nativeVertexIDs": [
+              22683,
+              22687,
+              22686
+            ]
+          },
+          {
+            "originalPolygonID": 19720,
+            "nativeVertexIDs": [
+              22681,
+              10451,
+              10452
+            ]
+          },
+          {
+            "originalPolygonID": 19720,
+            "nativeVertexIDs": [
+              22681,
+              10452,
+              22684
+            ]
+          },
+          {
+            "originalPolygonID": 19721,
+            "nativeVertexIDs": [
+              22684,
+              10452,
+              10453
+            ]
+          },
+          {
+            "originalPolygonID": 19721,
+            "nativeVertexIDs": [
+              22684,
+              10453,
+              22687
+            ]
+          },
+          {
+            "originalPolygonID": 19726,
+            "nativeVertexIDs": [
+              5598,
+              22682,
+              22685
+            ]
+          },
+          {
+            "originalPolygonID": 19726,
+            "nativeVertexIDs": [
+              5598,
+              22685,
+              5599
+            ]
+          },
+          {
+            "originalPolygonID": 19727,
+            "nativeVertexIDs": [
+              5597,
+              22679,
+              22682
+            ]
+          },
+          {
+            "originalPolygonID": 19727,
+            "nativeVertexIDs": [
+              5597,
+              22682,
+              5598
+            ]
+          },
+          {
+            "originalPolygonID": 19728,
+            "nativeVertexIDs": [
+              22688,
+              22689,
+              22692
+            ]
+          },
+          {
+            "originalPolygonID": 19728,
+            "nativeVertexIDs": [
+              22688,
+              22692,
+              22691
+            ]
+          },
+          {
+            "originalPolygonID": 19729,
+            "nativeVertexIDs": [
+              22689,
+              22690,
+              22693
+            ]
+          },
+          {
+            "originalPolygonID": 19729,
+            "nativeVertexIDs": [
+              22689,
+              22693,
+              22692
+            ]
+          },
+          {
+            "originalPolygonID": 19730,
+            "nativeVertexIDs": [
+              22691,
+              22692,
+              22695
+            ]
+          },
+          {
+            "originalPolygonID": 19730,
+            "nativeVertexIDs": [
+              22691,
+              22695,
+              22694
+            ]
+          },
+          {
+            "originalPolygonID": 19731,
+            "nativeVertexIDs": [
+              22692,
+              22693,
+              22696
+            ]
+          },
+          {
+            "originalPolygonID": 19731,
+            "nativeVertexIDs": [
+              22692,
+              22696,
+              22695
+            ]
+          },
+          {
+            "originalPolygonID": 19736,
+            "nativeVertexIDs": [
+              22690,
+              5603,
+              5604
+            ]
+          },
+          {
+            "originalPolygonID": 19736,
+            "nativeVertexIDs": [
+              22690,
+              5604,
+              22693
+            ]
+          },
+          {
+            "originalPolygonID": 19737,
+            "nativeVertexIDs": [
+              22693,
+              5604,
+              5605
+            ]
+          },
+          {
+            "originalPolygonID": 19737,
+            "nativeVertexIDs": [
+              22693,
+              5605,
+              22696
+            ]
+          },
+          {
+            "originalPolygonID": 19742,
+            "nativeVertexIDs": [
+              10452,
+              22691,
+              22694
+            ]
+          },
+          {
+            "originalPolygonID": 19742,
+            "nativeVertexIDs": [
+              10452,
+              22694,
+              10453
+            ]
+          },
+          {
+            "originalPolygonID": 19743,
+            "nativeVertexIDs": [
+              10451,
+              22688,
+              22691
+            ]
+          },
+          {
+            "originalPolygonID": 19743,
+            "nativeVertexIDs": [
+              10451,
+              22691,
+              10452
+            ]
+          },
+          {
+            "originalPolygonID": 19744,
+            "nativeVertexIDs": [
+              22697,
+              22698,
+              22701
+            ]
+          },
+          {
+            "originalPolygonID": 19744,
+            "nativeVertexIDs": [
+              22697,
+              22701,
+              22700
+            ]
+          },
+          {
+            "originalPolygonID": 19745,
+            "nativeVertexIDs": [
+              22698,
+              22699,
+              22702
+            ]
+          },
+          {
+            "originalPolygonID": 19745,
+            "nativeVertexIDs": [
+              22698,
+              22702,
+              22701
+            ]
+          },
+          {
+            "originalPolygonID": 19746,
+            "nativeVertexIDs": [
+              22700,
+              22701,
+              22704
+            ]
+          },
+          {
+            "originalPolygonID": 19746,
+            "nativeVertexIDs": [
+              22700,
+              22704,
+              22703
+            ]
+          },
+          {
+            "originalPolygonID": 19747,
+            "nativeVertexIDs": [
+              22701,
+              22702,
+              22705
+            ]
+          },
+          {
+            "originalPolygonID": 19747,
+            "nativeVertexIDs": [
+              22701,
+              22705,
+              22704
+            ]
+          },
+          {
+            "originalPolygonID": 19752,
+            "nativeVertexIDs": [
+              22699,
+              10457,
+              10458
+            ]
+          },
+          {
+            "originalPolygonID": 19752,
+            "nativeVertexIDs": [
+              22699,
+              10458,
+              22702
+            ]
+          },
+          {
+            "originalPolygonID": 19753,
+            "nativeVertexIDs": [
+              22702,
+              10458,
+              10459
+            ]
+          },
+          {
+            "originalPolygonID": 19753,
+            "nativeVertexIDs": [
+              22702,
+              10459,
+              22705
+            ]
+          },
+          {
+            "originalPolygonID": 19758,
+            "nativeVertexIDs": [
+              5604,
+              22700,
+              22703
+            ]
+          },
+          {
+            "originalPolygonID": 19758,
+            "nativeVertexIDs": [
+              5604,
+              22703,
+              5605
+            ]
+          },
+          {
+            "originalPolygonID": 19759,
+            "nativeVertexIDs": [
+              5603,
+              22697,
+              22700
+            ]
+          },
+          {
+            "originalPolygonID": 19759,
+            "nativeVertexIDs": [
+              5603,
+              22700,
+              5604
+            ]
+          }
+        ],
+        "nativeVertices": [
+          {
+            "id": 5597,
+            "sourceXYZ": [
+              -0.03829842060804367,
+              0.1125476062297821,
+              0.8513205051422119
+            ],
+            "namedFour": [
+              [
+                "DEF-spine",
+                0.052082695300559353
+              ],
+              [
+                "DEF-pelvis.L",
+                0.04552968330542834
+              ],
+              [
+                "DEF-pelvis.R",
+                0.11514390534338237
+              ],
+              [
+                "DEF-thigh.R",
+                0.78724371605063
+              ]
+            ]
+          },
+          {
+            "id": 5598,
+            "sourceXYZ": [
+              -0.03679953143000603,
+              0.11849898099899292,
+              0.869729220867157
+            ],
+            "namedFour": [
+              [
+                "DEF-spine",
+                0.10228425724949972
+              ],
+              [
+                "DEF-pelvis.L",
+                0.04329681797531095
+              ],
+              [
+                "DEF-pelvis.R",
+                0.13063509658005795
+              ],
+              [
+                "DEF-thigh.R",
+                0.7237838281951314
+              ]
+            ]
+          },
+          {
+            "id": 5599,
+            "sourceXYZ": [
+              -0.0358586423099041,
+              0.12341044098138809,
+              0.8877317905426025
+            ],
+            "namedFour": [
+              [
+                "DEF-spine",
+                0.31277960797439314
+              ],
+              [
+                "DEF-pelvis.L",
+                0.06756719068858565
+              ],
+              [
+                "DEF-pelvis.R",
+                0.11484962748089027
+              ],
+              [
+                "DEF-thigh.R",
+                0.504803573856131
+              ]
+            ]
+          },
+          {
+            "id": 5603,
+            "sourceXYZ": [
+              -0.06759778410196304,
+              0.12708553671836853,
+              0.8513205051422119
+            ],
+            "namedFour": [
+              [
+                "DEF-spine",
+                0.05375712416936458
+              ],
+              [
+                "DEF-pelvis.L",
+                0.011918305136699201
+              ],
+              [
+                "DEF-pelvis.R",
+                0.08925935587336022
+              ],
+              [
+                "DEF-thigh.R",
+                0.845065214820576
+              ]
+            ]
+          },
+          {
+            "id": 5604,
+            "sourceXYZ": [
+              -0.06663493812084198,
+              0.1331738531589508,
+              0.869729220867157
+            ],
+            "namedFour": [
+              [
+                "DEF-spine",
+                0.07268416676757557
+              ],
+              [
+                "DEF-pelvis.L",
+                0.012863186602614778
+              ],
+              [
+                "DEF-pelvis.R",
+                0.10089127659592059
+              ],
+              [
+                "DEF-thigh.R",
+                0.8135613700338891
+              ]
+            ]
+          },
+          {
+            "id": 5605,
+            "sourceXYZ": [
+              -0.06607110053300858,
+              0.13744749128818512,
+              0.8877317905426025
+            ],
+            "namedFour": [
+              [
+                "DEF-spine",
+                0.28735372244053037
+              ],
+              [
+                "DEF-pelvis.L",
+                0.04405646886311599
+              ],
+              [
+                "DEF-pelvis.R",
+                0.09281979588907452
+              ],
+              [
+                "DEF-thigh.R",
+                0.5757700128072791
+              ]
+            ]
+          },
+          {
+            "id": 10451,
+            "sourceXYZ": [
+              -0.052552297711372375,
+              0.12096904218196869,
+              0.8513205051422119
+            ],
+            "namedFour": [
+              [
+                "DEF-spine",
+                0.07079316149306637
+              ],
+              [
+                "DEF-pelvis.L",
+                0.010739782315766862
+              ],
+              [
+                "DEF-pelvis.R",
+                0.10207876131393831
+              ],
+              [
+                "DEF-thigh.R",
+                0.8163882948772284
+              ]
+            ]
+          },
+          {
+            "id": 10452,
+            "sourceXYZ": [
+              -0.05132760852575302,
+              0.12701554596424103,
+              0.869729220867157
+            ],
+            "namedFour": [
+              [
+                "DEF-spine",
+                0.09020761217208119
+              ],
+              [
+                "DEF-pelvis.L",
+                0.02099473348891414
+              ],
+              [
+                "DEF-pelvis.R",
+                0.11637909583088629
+              ],
+              [
+                "DEF-thigh.R",
+                0.7724185585081185
+              ]
+            ]
+          },
+          {
+            "id": 10453,
+            "sourceXYZ": [
+              -0.050606634467840195,
+              0.13160058856010437,
+              0.8877317905426025
+            ],
+            "namedFour": [
+              [
+                "DEF-spine",
+                0.299815839682465
+              ],
+              [
+                "DEF-pelvis.L",
+                0.05361424164279769
+              ],
+              [
+                "DEF-pelvis.R",
+                0.104621882324221
+              ],
+              [
+                "DEF-thigh.R",
+                0.5419480363505162
+              ]
+            ]
+          },
+          {
+            "id": 10457,
+            "sourceXYZ": [
+              -0.08317846804857254,
+              0.1307923048734665,
+              0.8513205051422119
+            ],
+            "namedFour": [
+              [
+                "DEF-spine",
+                0.03412626406981364
+              ],
+              [
+                "DEF-pelvis.R",
+                0.07003019390020565
+              ],
+              [
+                "DEF-thigh.R",
+                0.8855131563929409
+              ],
+              [
+                "DEF-thigh.R.001",
+                0.010330385637039847
+              ]
+            ]
+          },
+          {
+            "id": 10458,
+            "sourceXYZ": [
+              -0.08246780931949615,
+              0.136867493391037,
+              0.869729220867157
+            ],
+            "namedFour": [
+              [
+                "DEF-spine",
+                0.05538076771682795
+              ],
+              [
+                "DEF-pelvis.L",
+                0.0020196546549159236
+              ],
+              [
+                "DEF-pelvis.R",
+                0.08501077041322572
+              ],
+              [
+                "DEF-thigh.R",
+                0.8575888072150304
+              ]
+            ]
+          },
+          {
+            "id": 10459,
+            "sourceXYZ": [
+              -0.08201511949300766,
+              0.14084766805171967,
+              0.8877317905426025
+            ],
+            "namedFour": [
+              [
+                "DEF-spine",
+                0.27223625493811143
+              ],
+              [
+                "DEF-pelvis.L",
+                0.02477345536893005
+              ],
+              [
+                "DEF-pelvis.R",
+                0.08119546875523273
+              ],
+              [
+                "DEF-thigh.R",
+                0.6217948209377258
+              ]
+            ]
+          },
+          {
+            "id": 22679,
+            "sourceXYZ": [
+              -0.04177414998412132,
+              0.11486177146434784,
+              0.8513203263282776
+            ],
+            "namedFour": [
+              [
+                "DEF-spine",
+                0.06292413002394831
+              ],
+              [
+                "DEF-pelvis.L",
+                0.027303501785896276
+              ],
+              [
+                "DEF-pelvis.R",
+                0.10895772841836603
+              ],
+              [
+                "DEF-thigh.R",
+                0.8008146397717893
+              ]
+            ]
+          },
+          {
+            "id": 22680,
+            "sourceXYZ": [
+              -0.04531092196702957,
+              0.11703822761774063,
+              0.8513203859329224
+            ],
+            "namedFour": [
+              [
+                "DEF-spine",
+                0.07224617703451833
+              ],
+              [
+                "DEF-pelvis.L",
+                0.01168687484714179
+              ],
+              [
+                "DEF-pelvis.R",
+                0.10369494603075038
+              ],
+              [
+                "DEF-thigh.R",
+                0.8123720020875895
+              ]
+            ]
+          },
+          {
+            "id": 22681,
+            "sourceXYZ": [
+              -0.048904899507761,
+              0.1190747395157814,
+              0.8513203859329224
+            ],
+            "namedFour": [
+              [
+                "DEF-spine",
+                0.07341195451443104
+              ],
+              [
+                "DEF-pelvis.L",
+                0.010883652533035365
+              ],
+              [
+                "DEF-pelvis.R",
+                0.1042115781233976
+              ],
+              [
+                "DEF-thigh.R",
+                0.8114928148291359
+              ]
+            ]
+          },
+          {
+            "id": 22682,
+            "sourceXYZ": [
+              -0.04034518450498581,
+              0.12084183841943741,
+              0.8697291612625122
+            ],
+            "namedFour": [
+              [
+                "DEF-spine",
+                0.10084550249152152
+              ],
+              [
+                "DEF-pelvis.L",
+                0.030920998499554878
+              ],
+              [
+                "DEF-pelvis.R",
+                0.12487671276439101
+              ],
+              [
+                "DEF-thigh.R",
+                0.7433567862445326
+              ]
+            ]
+          },
+          {
+            "id": 22683,
+            "sourceXYZ": [
+              -0.04395090416073799,
+              0.1230437383055687,
+              0.869729220867157
+            ],
+            "namedFour": [
+              [
+                "DEF-spine",
+                0.09371247814561445
+              ],
+              [
+                "DEF-pelvis.L",
+                0.02204270788544712
+              ],
+              [
+                "DEF-pelvis.R",
+                0.11935612713995544
+              ],
+              [
+                "DEF-thigh.R",
+                0.7648886868289829
+              ]
+            ]
+          },
+          {
+            "id": 22684,
+            "sourceXYZ": [
+              -0.04761295020580292,
+              0.12510240077972412,
+              0.869729220867157
+            ],
+            "namedFour": [
+              [
+                "DEF-spine",
+                0.09380570794479051
+              ],
+              [
+                "DEF-pelvis.L",
+                0.02249895194014343
+              ],
+              [
+                "DEF-pelvis.R",
+                0.11952469702961294
+              ],
+              [
+                "DEF-thigh.R",
+                0.7641706430854531
+              ]
+            ]
+          },
+          {
+            "id": 22685,
+            "sourceXYZ": [
+              -0.0394662469625473,
+              0.12567053735256195,
+              0.8877317309379578
+            ],
+            "namedFour": [
+              [
+                "DEF-spine",
+                0.3068832367083551
+              ],
+              [
+                "DEF-pelvis.L",
+                0.06022797399183526
+              ],
+              [
+                "DEF-pelvis.R",
+                0.11028647072340178
+              ],
+              [
+                "DEF-thigh.R",
+                0.5226023185764078
+              ]
+            ]
+          },
+          {
+            "id": 22686,
+            "sourceXYZ": [
+              -0.04312904551625252,
+              0.1277904063463211,
+              0.8877317309379578
+            ],
+            "namedFour": [
+              [
+                "DEF-spine",
+                0.3022057179563833
+              ],
+              [
+                "DEF-pelvis.L",
+                0.05443598054080781
+              ],
+              [
+                "DEF-pelvis.R",
+                0.10667481738202793
+              ],
+              [
+                "DEF-thigh.R",
+                0.5366834841207809
+              ]
+            ]
+          },
+          {
+            "id": 22687,
+            "sourceXYZ": [
+              -0.046843647956848145,
+              0.12976782023906708,
+              0.8877317905426025
+            ],
+            "namedFour": [
+              [
+                "DEF-spine",
+                0.30226823200246716
+              ],
+              [
+                "DEF-pelvis.L",
+                0.05473859998229479
+              ],
+              [
+                "DEF-pelvis.R",
+                0.10678654324755575
+              ],
+              [
+                "DEF-thigh.R",
+                0.5362066247676822
+              ]
+            ]
+          },
+          {
+            "id": 22688,
+            "sourceXYZ": [
+              -0.05624929070472717,
+              0.12271898239850998,
+              0.8513203263282776
+            ],
+            "namedFour": [
+              [
+                "DEF-spine",
+                0.06674905284600684
+              ],
+              [
+                "DEF-pelvis.L",
+                0.010892070935938514
+              ],
+              [
+                "DEF-pelvis.R",
+                0.09897200343845766
+              ],
+              [
+                "DEF-thigh.R",
+                0.823386872779597
+              ]
+            ]
+          },
+          {
+            "id": 22689,
+            "sourceXYZ": [
+              -0.059991877526044846,
+              0.1243227943778038,
+              0.8513203859329224
+            ],
+            "namedFour": [
+              [
+                "DEF-spine",
+                0.06255648286605205
+              ],
+              [
+                "DEF-pelvis.L",
+                0.01114046816517491
+              ],
+              [
+                "DEF-pelvis.R",
+                0.0957963677951946
+              ],
+              [
+                "DEF-thigh.R",
+                0.8305066811735784
+              ]
+            ]
+          },
+          {
+            "id": 22690,
+            "sourceXYZ": [
+              -0.06377604603767395,
+              0.12577886879444122,
+              0.8513203859329224
+            ],
+            "namedFour": [
+              [
+                "DEF-spine",
+                0.058223062584233216
+              ],
+              [
+                "DEF-pelvis.L",
+                0.01148331589776829
+              ],
+              [
+                "DEF-pelvis.R",
+                0.09255701687201973
+              ],
+              [
+                "DEF-thigh.R",
+                0.8377366046459788
+              ]
+            ]
+          },
+          {
+            "id": 22691,
+            "sourceXYZ": [
+              -0.05509108304977417,
+              0.1287810057401657,
+              0.8697291612625122
+            ],
+            "namedFour": [
+              [
+                "DEF-spine",
+                0.08586274167716598
+              ],
+              [
+                "DEF-pelvis.L",
+                0.019053805526217153
+              ],
+              [
+                "DEF-pelvis.R",
+                0.11255465375494231
+              ],
+              [
+                "DEF-thigh.R",
+                0.7825287990416745
+              ]
+            ]
+          },
+          {
+            "id": 22692,
+            "sourceXYZ": [
+              -0.058899447321891785,
+              0.13039696216583252,
+              0.869729220867157
+            ],
+            "namedFour": [
+              [
+                "DEF-spine",
+                0.08149076494126951
+              ],
+              [
+                "DEF-pelvis.L",
+                0.01705002625229548
+              ],
+              [
+                "DEF-pelvis.R",
+                0.1086957646124483
+              ],
+              [
+                "DEF-thigh.R",
+                0.7927634441939867
+              ]
+            ]
+          },
+          {
+            "id": 22693,
+            "sourceXYZ": [
+              -0.06274872273206711,
+              0.1318618208169937,
+              0.869729220867157
+            ],
+            "namedFour": [
+              [
+                "DEF-spine",
+                0.07709632243768559
+              ],
+              [
+                "DEF-pelvis.L",
+                0.014985345953284693
+              ],
+              [
+                "DEF-pelvis.R",
+                0.10480648744070685
+              ],
+              [
+                "DEF-thigh.R",
+                0.8031118441683229
+              ]
+            ]
+          },
+          {
+            "id": 22694,
+            "sourceXYZ": [
+              -0.054414570331573486,
+              0.13328664004802704,
+              0.8877317309379578
+            ],
+            "namedFour": [
+              [
+                "DEF-spine",
+                0.2965066697216614
+              ],
+              [
+                "DEF-pelvis.L",
+                0.051980896215180095
+              ],
+              [
+                "DEF-pelvis.R",
+                0.10167734296642197
+              ],
+              [
+                "DEF-thigh.R",
+                0.5498350910967366
+              ]
+            ]
+          },
+          {
+            "id": 22695,
+            "sourceXYZ": [
+              -0.05826377496123314,
+              0.1348242312669754,
+              0.8877317309379578
+            ],
+            "namedFour": [
+              [
+                "DEF-spine",
+                0.29318072296171865
+              ],
+              [
+                "DEF-pelvis.L",
+                0.050303650373013445
+              ],
+              [
+                "DEF-pelvis.R",
+                0.09870982318102257
+              ],
+              [
+                "DEF-thigh.R",
+                0.5578058034842454
+              ]
+            ]
+          },
+          {
+            "id": 22696,
+            "sourceXYZ": [
+              -0.06215051934123039,
+              0.13621169328689575,
+              0.8877317905426025
+            ],
+            "namedFour": [
+              [
+                "DEF-spine",
+                0.2898413368031898
+              ],
+              [
+                "DEF-pelvis.L",
+                0.04858460785465777
+              ],
+              [
+                "DEF-pelvis.R",
+                0.09572238849132461
+              ],
+              [
+                "DEF-thigh.R",
+                0.5658516668508278
+              ]
+            ]
+          },
+          {
+            "id": 22697,
+            "sourceXYZ": [
+              -0.0714530497789383,
+              0.12824127078056335,
+              0.8513203263282776
+            ],
+            "namedFour": [
+              [
+                "DEF-spine",
+                0.04916544805113445
+              ],
+              [
+                "DEF-pelvis.L",
+                0.01244410349227811
+              ],
+              [
+                "DEF-pelvis.R",
+                0.08590805614309512
+              ],
+              [
+                "DEF-thigh.R",
+                0.8524823923134923
+              ]
+            ]
+          },
+          {
+            "id": 22698,
+            "sourceXYZ": [
+              -0.07533768564462662,
+              0.12924498319625854,
+              0.8513203859329224
+            ],
+            "namedFour": [
+              [
+                "DEF-spine",
+                0.036901654037291086
+              ],
+              [
+                "DEF-pelvis.L",
+                0.00903386051283449
+              ],
+              [
+                "DEF-pelvis.R",
+                0.07579933540384065
+              ],
+              [
+                "DEF-thigh.R",
+                0.8782651500460338
+              ]
+            ]
+          },
+          {
+            "id": 22699,
+            "sourceXYZ": [
+              -0.07924754917621613,
+              0.13009564578533173,
+              0.8513203859329224
+            ],
+            "namedFour": [
+              [
+                "DEF-spine",
+                0.035162829334951524
+              ],
+              [
+                "DEF-pelvis.R",
+                0.07191483716266184
+              ],
+              [
+                "DEF-thigh.R",
+                0.8842335591237074
+              ],
+              [
+                "DEF-thigh.R.001",
+                0.008688774378679187
+              ]
+            ]
+          },
+          {
+            "id": 22700,
+            "sourceXYZ": [
+              -0.07055407017469406,
+              0.13433153927326202,
+              0.8697291612625122
+            ],
+            "namedFour": [
+              [
+                "DEF-spine",
+                0.06825870723180567
+              ],
+              [
+                "DEF-pelvis.L",
+                0.010685536233949827
+              ],
+              [
+                "DEF-pelvis.R",
+                0.09695401705634712
+              ],
+              [
+                "DEF-thigh.R",
+                0.8241017394778973
+              ]
+            ]
+          },
+          {
+            "id": 22701,
+            "sourceXYZ": [
+              -0.07450202852487564,
+              0.13533367216587067,
+              0.869729220867157
+            ],
+            "namedFour": [
+              [
+                "DEF-spine",
+                0.06382461921009783
+              ],
+              [
+                "DEF-pelvis.L",
+                0.008456047308094003
+              ],
+              [
+                "DEF-pelvis.R",
+                0.09299915049613033
+              ],
+              [
+                "DEF-thigh.R",
+                0.8347201829856778
+              ]
+            ]
+          },
+          {
+            "id": 22702,
+            "sourceXYZ": [
+              -0.07847465574741364,
+              0.1361793726682663,
+              0.869729220867157
+            ],
+            "namedFour": [
+              [
+                "DEF-spine",
+                0.05938623577647123
+              ],
+              [
+                "DEF-pelvis.L",
+                0.006176914872320998
+              ],
+              [
+                "DEF-pelvis.R",
+                0.08903054509633548
+              ],
+              [
+                "DEF-thigh.R",
+                0.8454063042548723
+              ]
+            ]
+          },
+          {
+            "id": 22703,
+            "sourceXYZ": [
+              -0.07002175599336624,
+              0.13853004574775696,
+              0.8877317309379578
+            ],
+            "namedFour": [
+              [
+                "DEF-spine",
+                0.28366981078166326
+              ],
+              [
+                "DEF-pelvis.L",
+                0.03932469471278212
+              ],
+              [
+                "DEF-pelvis.R",
+                0.08996484935671534
+              ],
+              [
+                "DEF-thigh.R",
+                0.5870406451488394
+              ]
+            ]
+          },
+          {
+            "id": 22704,
+            "sourceXYZ": [
+              -0.0739986002445221,
+              0.1394582837820053,
+              0.8877317309379578
+            ],
+            "namedFour": [
+              [
+                "DEF-spine",
+                0.2798978429921064
+              ],
+              [
+                "DEF-pelvis.L",
+                0.034530053091842206
+              ],
+              [
+                "DEF-pelvis.R",
+                0.08707577903225991
+              ],
+              [
+                "DEF-thigh.R",
+                0.5984963248837915
+              ]
+            ]
+          },
+          {
+            "id": 22705,
+            "sourceXYZ": [
+              -0.07799769937992096,
+              0.14023113250732422,
+              0.8877317905426025
+            ],
+            "namedFour": [
+              [
+                "DEF-spine",
+                0.2760859530705476
+              ],
+              [
+                "DEF-pelvis.L",
+                0.0296781436540637
+              ],
+              [
+                "DEF-pelvis.R",
+                0.0841517086696711
+              ],
+              [
+                "DEF-thigh.R",
+                0.6100841946057176
+              ]
+            ]
+          }
+        ],
+        "boundaryNativeEdges": [
+          [
+            22679,
+            22680
+          ],
+          [
+            22680,
+            22681
+          ],
+          [
+            22685,
+            22686
+          ],
+          [
+            22686,
+            22687
+          ],
+          [
+            10451,
+            22681
+          ],
+          [
+            10453,
+            22687
+          ],
+          [
+            5599,
+            22685
+          ],
+          [
+            5598,
+            5599
+          ],
+          [
+            5597,
+            22679
+          ],
+          [
+            5597,
+            5598
+          ],
+          [
+            22688,
+            22689
+          ],
+          [
+            22689,
+            22690
+          ],
+          [
+            22694,
+            22695
+          ],
+          [
+            22695,
+            22696
+          ],
+          [
+            5603,
+            22690
+          ],
+          [
+            5605,
+            22696
+          ],
+          [
+            10453,
+            22694
+          ],
+          [
+            10451,
+            22688
+          ],
+          [
+            22697,
+            22698
+          ],
+          [
+            22698,
+            22699
+          ],
+          [
+            22703,
+            22704
+          ],
+          [
+            22704,
+            22705
+          ],
+          [
+            10457,
+            22699
+          ],
+          [
+            10457,
+            10458
+          ],
+          [
+            10458,
+            10459
+          ],
+          [
+            10459,
+            22705
+          ],
+          [
+            5605,
+            22703
+          ],
+          [
+            5603,
+            22697
+          ]
+        ],
+        "connectedDisk": true,
+        "sourceAreaM2": 0.0018739122244391898,
+        "sourceAreaCentroidXYZ": [
+          -0.05906945289518349,
+          0.12894856014460498,
+          0.8694812860248085
+        ],
+        "sourceBoundsXYZ": [
+          [
+            -0.08317846804857254,
+            0.1125476062297821,
+            0.8513203263282776
+          ],
+          [
+            -0.0358586423099041,
+            0.14084766805171967,
+            0.8877317905426025
+          ]
+        ],
+        "sourceNormalBoundsXYZ": [
+          [
+            0.14794287477531246,
+            0.7942761671903177,
+            -0.3159012440631854
+          ],
+          [
+            0.534743897070604,
+            0.9640136503289602,
+            -0.2168615902451898
+          ]
+        ]
+      },
+      "core": {
+        "originalPolygonIds": [
+          19712,
+          19713,
+          19714,
+          19715,
+          19720,
+          19721,
+          19726,
+          19727
+        ],
+        "triangles": [
+          {
+            "originalPolygonID": 19712,
+            "nativeVertexIDs": [
+              22679,
+              22680,
+              22683
+            ]
+          },
+          {
+            "originalPolygonID": 19712,
+            "nativeVertexIDs": [
+              22679,
+              22683,
+              22682
+            ]
+          },
+          {
+            "originalPolygonID": 19713,
+            "nativeVertexIDs": [
+              22680,
+              22681,
+              22684
+            ]
+          },
+          {
+            "originalPolygonID": 19713,
+            "nativeVertexIDs": [
+              22680,
+              22684,
+              22683
+            ]
+          },
+          {
+            "originalPolygonID": 19714,
+            "nativeVertexIDs": [
+              22682,
+              22683,
+              22686
+            ]
+          },
+          {
+            "originalPolygonID": 19714,
+            "nativeVertexIDs": [
+              22682,
+              22686,
+              22685
+            ]
+          },
+          {
+            "originalPolygonID": 19715,
+            "nativeVertexIDs": [
+              22683,
+              22684,
+              22687
+            ]
+          },
+          {
+            "originalPolygonID": 19715,
+            "nativeVertexIDs": [
+              22683,
+              22687,
+              22686
+            ]
+          },
+          {
+            "originalPolygonID": 19720,
+            "nativeVertexIDs": [
+              22681,
+              10451,
+              10452
+            ]
+          },
+          {
+            "originalPolygonID": 19720,
+            "nativeVertexIDs": [
+              22681,
+              10452,
+              22684
+            ]
+          },
+          {
+            "originalPolygonID": 19721,
+            "nativeVertexIDs": [
+              22684,
+              10452,
+              10453
+            ]
+          },
+          {
+            "originalPolygonID": 19721,
+            "nativeVertexIDs": [
+              22684,
+              10453,
+              22687
+            ]
+          },
+          {
+            "originalPolygonID": 19726,
+            "nativeVertexIDs": [
+              5598,
+              22682,
+              22685
+            ]
+          },
+          {
+            "originalPolygonID": 19726,
+            "nativeVertexIDs": [
+              5598,
+              22685,
+              5599
+            ]
+          },
+          {
+            "originalPolygonID": 19727,
+            "nativeVertexIDs": [
+              5597,
+              22679,
+              22682
+            ]
+          },
+          {
+            "originalPolygonID": 19727,
+            "nativeVertexIDs": [
+              5597,
+              22682,
+              5598
+            ]
+          }
+        ],
+        "nativeVertices": [
+          {
+            "id": 5597,
+            "sourceXYZ": [
+              -0.03829842060804367,
+              0.1125476062297821,
+              0.8513205051422119
+            ],
+            "namedFour": [
+              [
+                "DEF-spine",
+                0.052082695300559353
+              ],
+              [
+                "DEF-pelvis.L",
+                0.04552968330542834
+              ],
+              [
+                "DEF-pelvis.R",
+                0.11514390534338237
+              ],
+              [
+                "DEF-thigh.R",
+                0.78724371605063
+              ]
+            ]
+          },
+          {
+            "id": 5598,
+            "sourceXYZ": [
+              -0.03679953143000603,
+              0.11849898099899292,
+              0.869729220867157
+            ],
+            "namedFour": [
+              [
+                "DEF-spine",
+                0.10228425724949972
+              ],
+              [
+                "DEF-pelvis.L",
+                0.04329681797531095
+              ],
+              [
+                "DEF-pelvis.R",
+                0.13063509658005795
+              ],
+              [
+                "DEF-thigh.R",
+                0.7237838281951314
+              ]
+            ]
+          },
+          {
+            "id": 5599,
+            "sourceXYZ": [
+              -0.0358586423099041,
+              0.12341044098138809,
+              0.8877317905426025
+            ],
+            "namedFour": [
+              [
+                "DEF-spine",
+                0.31277960797439314
+              ],
+              [
+                "DEF-pelvis.L",
+                0.06756719068858565
+              ],
+              [
+                "DEF-pelvis.R",
+                0.11484962748089027
+              ],
+              [
+                "DEF-thigh.R",
+                0.504803573856131
+              ]
+            ]
+          },
+          {
+            "id": 10451,
+            "sourceXYZ": [
+              -0.052552297711372375,
+              0.12096904218196869,
+              0.8513205051422119
+            ],
+            "namedFour": [
+              [
+                "DEF-spine",
+                0.07079316149306637
+              ],
+              [
+                "DEF-pelvis.L",
+                0.010739782315766862
+              ],
+              [
+                "DEF-pelvis.R",
+                0.10207876131393831
+              ],
+              [
+                "DEF-thigh.R",
+                0.8163882948772284
+              ]
+            ]
+          },
+          {
+            "id": 10452,
+            "sourceXYZ": [
+              -0.05132760852575302,
+              0.12701554596424103,
+              0.869729220867157
+            ],
+            "namedFour": [
+              [
+                "DEF-spine",
+                0.09020761217208119
+              ],
+              [
+                "DEF-pelvis.L",
+                0.02099473348891414
+              ],
+              [
+                "DEF-pelvis.R",
+                0.11637909583088629
+              ],
+              [
+                "DEF-thigh.R",
+                0.7724185585081185
+              ]
+            ]
+          },
+          {
+            "id": 10453,
+            "sourceXYZ": [
+              -0.050606634467840195,
+              0.13160058856010437,
+              0.8877317905426025
+            ],
+            "namedFour": [
+              [
+                "DEF-spine",
+                0.299815839682465
+              ],
+              [
+                "DEF-pelvis.L",
+                0.05361424164279769
+              ],
+              [
+                "DEF-pelvis.R",
+                0.104621882324221
+              ],
+              [
+                "DEF-thigh.R",
+                0.5419480363505162
+              ]
+            ]
+          },
+          {
+            "id": 22679,
+            "sourceXYZ": [
+              -0.04177414998412132,
+              0.11486177146434784,
+              0.8513203263282776
+            ],
+            "namedFour": [
+              [
+                "DEF-spine",
+                0.06292413002394831
+              ],
+              [
+                "DEF-pelvis.L",
+                0.027303501785896276
+              ],
+              [
+                "DEF-pelvis.R",
+                0.10895772841836603
+              ],
+              [
+                "DEF-thigh.R",
+                0.8008146397717893
+              ]
+            ]
+          },
+          {
+            "id": 22680,
+            "sourceXYZ": [
+              -0.04531092196702957,
+              0.11703822761774063,
+              0.8513203859329224
+            ],
+            "namedFour": [
+              [
+                "DEF-spine",
+                0.07224617703451833
+              ],
+              [
+                "DEF-pelvis.L",
+                0.01168687484714179
+              ],
+              [
+                "DEF-pelvis.R",
+                0.10369494603075038
+              ],
+              [
+                "DEF-thigh.R",
+                0.8123720020875895
+              ]
+            ]
+          },
+          {
+            "id": 22681,
+            "sourceXYZ": [
+              -0.048904899507761,
+              0.1190747395157814,
+              0.8513203859329224
+            ],
+            "namedFour": [
+              [
+                "DEF-spine",
+                0.07341195451443104
+              ],
+              [
+                "DEF-pelvis.L",
+                0.010883652533035365
+              ],
+              [
+                "DEF-pelvis.R",
+                0.1042115781233976
+              ],
+              [
+                "DEF-thigh.R",
+                0.8114928148291359
+              ]
+            ]
+          },
+          {
+            "id": 22682,
+            "sourceXYZ": [
+              -0.04034518450498581,
+              0.12084183841943741,
+              0.8697291612625122
+            ],
+            "namedFour": [
+              [
+                "DEF-spine",
+                0.10084550249152152
+              ],
+              [
+                "DEF-pelvis.L",
+                0.030920998499554878
+              ],
+              [
+                "DEF-pelvis.R",
+                0.12487671276439101
+              ],
+              [
+                "DEF-thigh.R",
+                0.7433567862445326
+              ]
+            ]
+          },
+          {
+            "id": 22683,
+            "sourceXYZ": [
+              -0.04395090416073799,
+              0.1230437383055687,
+              0.869729220867157
+            ],
+            "namedFour": [
+              [
+                "DEF-spine",
+                0.09371247814561445
+              ],
+              [
+                "DEF-pelvis.L",
+                0.02204270788544712
+              ],
+              [
+                "DEF-pelvis.R",
+                0.11935612713995544
+              ],
+              [
+                "DEF-thigh.R",
+                0.7648886868289829
+              ]
+            ]
+          },
+          {
+            "id": 22684,
+            "sourceXYZ": [
+              -0.04761295020580292,
+              0.12510240077972412,
+              0.869729220867157
+            ],
+            "namedFour": [
+              [
+                "DEF-spine",
+                0.09380570794479051
+              ],
+              [
+                "DEF-pelvis.L",
+                0.02249895194014343
+              ],
+              [
+                "DEF-pelvis.R",
+                0.11952469702961294
+              ],
+              [
+                "DEF-thigh.R",
+                0.7641706430854531
+              ]
+            ]
+          },
+          {
+            "id": 22685,
+            "sourceXYZ": [
+              -0.0394662469625473,
+              0.12567053735256195,
+              0.8877317309379578
+            ],
+            "namedFour": [
+              [
+                "DEF-spine",
+                0.3068832367083551
+              ],
+              [
+                "DEF-pelvis.L",
+                0.06022797399183526
+              ],
+              [
+                "DEF-pelvis.R",
+                0.11028647072340178
+              ],
+              [
+                "DEF-thigh.R",
+                0.5226023185764078
+              ]
+            ]
+          },
+          {
+            "id": 22686,
+            "sourceXYZ": [
+              -0.04312904551625252,
+              0.1277904063463211,
+              0.8877317309379578
+            ],
+            "namedFour": [
+              [
+                "DEF-spine",
+                0.3022057179563833
+              ],
+              [
+                "DEF-pelvis.L",
+                0.05443598054080781
+              ],
+              [
+                "DEF-pelvis.R",
+                0.10667481738202793
+              ],
+              [
+                "DEF-thigh.R",
+                0.5366834841207809
+              ]
+            ]
+          },
+          {
+            "id": 22687,
+            "sourceXYZ": [
+              -0.046843647956848145,
+              0.12976782023906708,
+              0.8877317905426025
+            ],
+            "namedFour": [
+              [
+                "DEF-spine",
+                0.30226823200246716
+              ],
+              [
+                "DEF-pelvis.L",
+                0.05473859998229479
+              ],
+              [
+                "DEF-pelvis.R",
+                0.10678654324755575
+              ],
+              [
+                "DEF-thigh.R",
+                0.5362066247676822
+              ]
+            ]
+          }
+        ],
+        "boundaryNativeEdges": [
+          [
+            22679,
+            22680
+          ],
+          [
+            22680,
+            22681
+          ],
+          [
+            22685,
+            22686
+          ],
+          [
+            22686,
+            22687
+          ],
+          [
+            10451,
+            22681
+          ],
+          [
+            10451,
+            10452
+          ],
+          [
+            10452,
+            10453
+          ],
+          [
+            10453,
+            22687
+          ],
+          [
+            5599,
+            22685
+          ],
+          [
+            5598,
+            5599
+          ],
+          [
+            5597,
+            22679
+          ],
+          [
+            5597,
+            5598
+          ]
+        ],
+        "connectedDisk": true,
+        "sourceAreaM2": 0.0006360072807812494,
+        "sourceAreaCentroidXYZ": [
+          -0.04411175598410819,
+          0.12256799460180688,
+          0.8695045717773385
+        ],
+        "sourceBoundsXYZ": [
+          [
+            -0.052552297711372375,
+            0.1125476062297821,
+            0.8513203263282776
+          ],
+          [
+            -0.0358586423099041,
+            0.13160058856010437,
+            0.8877317905426025
+          ]
+        ],
+        "sourceNormalBoundsXYZ": [
+          [
+            0.4246322171482422,
+            0.7942761671903177,
+            -0.3075608024163357
+          ],
+          [
+            0.534743897070604,
+            0.8718424947224791,
+            -0.23774214790398818
+          ]
+        ]
+      },
+      "bodyReferenceTriangles": [
+        {
+          "faceId": 3255,
+          "nativeVertexIds": [
+            3855,
+            3334,
+            3396
+          ],
+          "sourceXYZ": [
+            [
+              -0.051299553364515305,
+              0.09271589666604996,
+              0.8253049850463867
+            ],
+            [
+              -0.0822313129901886,
+              0.10990533232688904,
+              0.8715654611587524
+            ],
+            [
+              -0.04840831458568573,
+              0.10890593379735947,
+              0.8635709285736084
+            ]
+          ],
+          "originalSourcePolygonId": 3255
+        },
+        {
+          "faceId": 3410,
+          "nativeVertexIds": [
+            3393,
+            3396,
+            3394
+          ],
+          "sourceXYZ": [
+            [
+              -0.02083735540509224,
+              0.10419625788927078,
+              0.9021703600883484
+            ],
+            [
+              -0.04840831458568573,
+              0.10890593379735947,
+              0.8635709285736084
+            ],
+            [
+              -0.04742942750453949,
+              0.11405597627162933,
+              0.9049683213233948
+            ]
+          ],
+          "originalSourcePolygonId": 3410
+        },
+        {
+          "faceId": 3480,
+          "nativeVertexIds": [
+            3394,
+            3334,
+            3333
+          ],
+          "sourceXYZ": [
+            [
+              -0.04742942750453949,
+              0.11405597627162933,
+              0.9049683213233948
+            ],
+            [
+              -0.0822313129901886,
+              0.10990533232688904,
+              0.8715654611587524
+            ],
+            [
+              -0.07876113802194595,
+              0.11182872205972672,
+              0.909725546836853
+            ]
+          ],
+          "originalSourcePolygonId": 3480
+        },
+        {
+          "faceId": 3495,
+          "nativeVertexIds": [
+            3395,
+            3855,
+            3396
+          ],
+          "sourceXYZ": [
+            [
+              -0.019798442721366882,
+              0.09648580849170685,
+              0.8598507642745972
+            ],
+            [
+              -0.051299553364515305,
+              0.09271589666604996,
+              0.8253049850463867
+            ],
+            [
+              -0.04840831458568573,
+              0.10890593379735947,
+              0.8635709285736084
+            ]
+          ],
+          "originalSourcePolygonId": 3495
+        },
+        {
+          "faceId": 14060,
+          "nativeVertexIds": [
+            3394,
+            3396,
+            3334
+          ],
+          "sourceXYZ": [
+            [
+              -0.04742942750453949,
+              0.11405597627162933,
+              0.9049683213233948
+            ],
+            [
+              -0.04840831458568573,
+              0.10890593379735947,
+              0.8635709285736084
+            ],
+            [
+              -0.0822313129901886,
+              0.10990533232688904,
+              0.8715654611587524
+            ]
+          ],
+          "originalSourcePolygonId": 3480
+        }
+      ]
+    }
+  }
+}

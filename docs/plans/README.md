@@ -1657,3 +1657,5 @@ October8 phone preview staging source checkpoint: parent-reviewed static helper 
 October8 actual phone-layout comparison capture01 passes four old/new visits, exact sources/pooled instances, one selected357281284Bdownload and zero repeat requests; selected59.608/60.013renderFPS, repeat148.274ms. Parent rejects oversized counter obscuring head; compact one-line overlay source next, all measurement fields retained. No played art/physical-phone or seating acceptance.
 
 October8 actual sleeve ownership proof passes4.256s: exactly exterior/interior oriented annuli per side, all eligible faces accounted; all six saved native06 crossing faces are inner. Parent verifies pins/topology. Replace proven hidden inner band while retaining selected exterior; no new model or art pass, native06 remains rejected.
+
+October8 bilateral posterior source candidates frozen: explicit8-quad cores/24-quad contexts, exact original IDs/fields/body references; old thigh-edge minimum excluded. Parent reviews source/diagrams and pin/disk receipts. Offline pelvisXY/tilt/flex authoring next; no seated pose or art acceptance, R0–R5 remain0/6.
