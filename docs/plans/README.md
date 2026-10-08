@@ -1443,3 +1443,5 @@ October 8 actualPBR clothed headturn/nod rendered72frames in42.123s and played s
 October 8 actual bilateral hoodie topology saved in complete dressed native1ad5c5aa, CPU2 exit0/14.759s: four concave panels/two support loops each, original selected4KPBR and wearer75 retained. Actual compact hoodie now visible; original dense remains reference. Matched views next; no fit/art/motion acceptance.
 
 October 8 actual compact hoodie matched review: chest/deltoid coverage improved, but new axillary panels pinched/jagged with skin exposure, rejected. Eight PBR views inspected; full/close CPU2 exit0/19.149s/17.591s. Correct explicit anatomical seam corners/interior after saved-data check, not a gain sweep. All art gates open.
+
+October 8 glove actual-surface extraction exit0/7.689s, original native unchanged. Builder authors explicit anatomical surface handles for one ordinary selected-mesh sculpt and semantic shared75 skin transfer; failed source-rest scale/envelope method stays retired. No fit/grip acceptance.
