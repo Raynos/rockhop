@@ -1,0 +1,44 @@
+00:08.908  blend            | Read blend: "/Users/raynos/projects/games/rockhop/harness/out/rider-rebuild/selected-complete-engine01/merge02/complete-selected-native75.blend"
+Info: Saved as "rider-private-masked.blend"
+INFO Draco is available, use library at /Applications/Blender.app/Contents/Resources/5.2/scripts/addons_core/io_scene_gltf2/libbf_intern_draco_bridge.dylib
+INFO MeshOptimizer is available, use library at /Applications/Blender.app/Contents/Resources/5.2/scripts/addons_core/io_scene_gltf2/libbf_intern_meshopt_bridge.dylib
+05:30:07 | INFO: Starting glTF 2.0 export
+05:30:07 | WARNING: Armature must be the parent of skinned meshArmature is selected by its name, but may be false in case of instances
+05:30:07 | WARNING: Armature must be the parent of skinned meshArmature is selected by its name, but may be false in case of instances
+05:30:07 | WARNING: Armature must be the parent of skinned meshArmature is selected by its name, but may be false in case of instances
+05:30:07 | INFO: Extracting primitive: LocallyRepairedSelectedDenseBoot.L.004
+05:30:08 | WARNING: More than one shader node tex image used for a texture. The resulting glTF sampler will behave like the first shader node tex image.
+05:30:09 | INFO: Primitives created: 1
+05:30:09 | INFO: Extracting primitive: LocallyRepairedSelectedDenseBoot.R.005
+05:30:10 | INFO: Primitives created: 1
+05:30:10 | INFO: Extracting primitive: Gloves__LocallySculptedSelected04.L
+05:30:11 | WARNING: More than one shader node tex image used for a texture. The resulting glTF sampler will behave like the first shader node tex image.
+05:30:11 | INFO: Primitives created: 1
+05:30:12 | INFO: Extracting primitive: Gloves__LocallySculptedSelected04.R
+05:30:13 | INFO: Primitives created: 1
+05:30:13 | INFO: Extracting primitive: female_v006lowresUV__ExactFaceSubset
+05:30:13 | INFO: Primitives created: 4
+05:30:14 | INFO: Extracting primitive: painted.obj.002
+05:30:16 | WARNING: More than one shader node tex image used for a texture. The resulting glTF sampler will behave like the first shader node tex image.
+05:30:17 | INFO: Primitives created: 1
+05:30:18 | INFO: Extracting primitive: RiderJeansMesh.003
+05:30:19 | WARNING: More than one shader node tex image used for a texture. The resulting glTF sampler will behave like the first shader node tex image.
+05:30:19 | INFO: Primitives created: 1
+05:30:19 | INFO: Finished glTF 2.0 export in 11.690613031387329 s
+Traceback (most recent call last):
+  File "/Users/raynos/projects/games/rockhop/assets/blender/rider-rebuild/selected-complete-engine01/export-private.py", line 173, in <module>
+    if __name__ == '__main__': main()
+                               ~~~~^^
+  File "/Users/raynos/projects/games/rockhop/assets/blender/rider-rebuild/selected-complete-engine01/export-private.py", line 152, in main
+    decoded_four = four_readback(document, raw, meshes, helper)
+  File "/Users/raynos/projects/games/rockhop/assets/blender/rider-rebuild/selected-complete-engine01/export-private.py", line 59, in four_readback
+    assert maximum < 2e-5, ('Decoded source FOUR mismatch', obj.name, maximum)
+           ^^^^^^^^^^^^^^
+AssertionError: ('Decoded source FOUR mismatch', 'ActualSelectedBoot.L', 0.00010001659393310547)
+
+
+Error: script failed, file: 'assets/blender/rider-rebuild/selected-complete-engine01/export-private.py', exiting.
+Blender 5.2.1 LTS (hash 9e2066aef7ef built 2026-08-25 01:35:57)
+scripts disabled for "/Users/raynos/projects/games/rockhop/harness/out/rider-rebuild/selected-complete-engine01/merge02/complete-selected-native75.blend", skipping 'RIG-RiderMetarig_ui.py'
+
+Blender quit

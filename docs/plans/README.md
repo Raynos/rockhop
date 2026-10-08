@@ -1555,3 +1555,5 @@ October8 actual complete merge01 catches fullfieldgloves at FOUR intake; origina
 Actual complete selected dc846 master saved; exact masked private export then whole-rider review/actual Garage/game next. All R0-R5 open.
 
 October8 exact native-rest intake schema corrected to includeuseConnect/useDeform after actualexport01stop; no rig/tolerancechange. Complete maskedexport/playedGarage pending;0/6.
+
+October8 actualexport02 decoder catches Blender fixed1e-4 coefficientcutoff; deliverycopies now mirror cutoff before nativesave, strictdecodedFOUR preserved. Actualengine03 pending;0/6.

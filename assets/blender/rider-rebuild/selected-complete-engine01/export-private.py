@@ -14,6 +14,26 @@ import bpy
 ROOT = Path(__file__).resolve().parents[4]
 
 
+def export_cutoff(obj, rig, helper):
+    """Match Blender 5.2.1's fixed glTF cutoff on delivery copies only."""
+    rows = helper['mesh_four'](obj, rig)
+    groups = {g.name: g for g in obj.vertex_groups}
+    changed, maximum_loss = 0, 0.
+    for index, row in enumerate(rows):
+        kept = [(name, weight) for name, weight in row if weight > .0001]
+        if len(kept) == len(row): continue
+        assert kept
+        changed += 1
+        maximum_loss = max(maximum_loss, sum(w for _, w in row if w <= .0001))
+        total = sum(w for _, w in kept)
+        for name, _ in row: groups[name].remove([index])
+        for name, weight in kept: groups[name].add([index], weight/total, 'REPLACE')
+    assert all(weight > .0001 for row in helper['mesh_four'](obj, rig) for _, weight in row)
+    return {'object': obj.name, 'cutoff': .0001, 'changedRows': changed,
+            'maximumRemovedMass': maximum_loss,
+            'method': 'Mirror installed glTF fixed cutoff then normalize before native save/export'}
+
+
 def four_readback(document, raw, meshes, helper):
     """Compare actual decoded material-primitive fields with saved native FOUR."""
     np = helper['np']
@@ -109,6 +129,8 @@ def main():
     assert helper['mesh_four'](body, rig, require_four=False) == full_body_fields
     meshes = [render_body]+[o for o in visible if o != body]
     assert {o.name for o in meshes} == helper['EXPECTED']
+    cutoff_conditioning = [export_cutoff(obj, rig, helper) for obj in meshes]
+    assert helper['mesh_four'](body, rig, require_four=False) == full_body_fields
     for obj in meshes:
         attribute = obj.data.attributes.get('_NATIVE_ID')
         if attribute is None:
@@ -159,6 +181,7 @@ def main():
         'glb': {'path': str(glb.relative_to(ROOT)), 'sha256': sha(glb)},
         'recipeSHA256': sha(__file__), 'manifestSHA256': sha(manifest_path),
         'bodyMaskReceipt': 'body-mask-receipt.json', 'renderBodyFourConditioning': body_four,
+        'renderDeliveryExportCutoffConditioning': cutoff_conditioning,
         'decodedFourQualification': decoded_four,
         'objects': sorted(helper['EXPECTED']),
         'rigAndContractExactNative75': True, 'normalPlayerAssetsWritten': False,

@@ -21,3 +21,7 @@ Limits: FOUR pruning removed maximum26.16% hoodie/21.04% left glove/21.75% right
 Finding: Export01 compared mismatched restrow schemas. Include actual useConnect/useDeform in exporter and motion author exactly as native02 serializer.
 Validation: Actualguardexit1/8.903s; parentcanonicalsource/contract read, revisedASTpass. No native/rig changed or export saved.
 Limits: Maskedexport/completeplayed/Garage stillpending; allR0-R5open.
+
+Finding: Actual export02 catches installed glTF fixed1e-4 weight cutoff. Mirror cutoff and renormalize only seven deliverycopies before native save; retain original/fullreference.
+Validation: Actualguardexit1/38.987s, exactinstalledprimarysource read; revisedASTpass. Strict decoded2e-5 check retained.
+Limits: Partialexport02 unqualified; successfulexport/playedGarage pending.
