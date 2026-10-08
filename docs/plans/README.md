@@ -1393,3 +1393,5 @@ October 8 fresh Astra04 advisory verified: real garment/head failures retained, 
 October 8 broad anatomical neck source checkpoint: actual canonical shoulders plus genuine selected submental/mastoid rim,19authoredsections/144samples with SCM/throat/nape profile; new derivativeUV/weights, originals/handrows/shared75 protected. Parentfullsource/2AST/3pins checked; oneCPU2 build unexecuted, then actualmatchedprofiles/readback/workingclothedcontext. No artacceptance.
 
 October 8 anatomical neck02 first build stopped in2.85s before saving: genuine donor scan has connected internal shell at upper cut. No shape was created or judged. One scoped interior cleanup diagnosis assigned; real-source outfit and pelvis-only transfer remain next concrete outputs.
+
+October 8 real-source working master recipe ready: one joined body, original selected garment PBR and editable dependencies; no final-bake prerequisite. Parent reviewed full source, AST and 22 pins. Actual assembly remains unexecuted; fit and motion remain unaccepted.
