@@ -1685,3 +1685,5 @@ October8 actual Blender confirms cuff precision diagnosis in1.169s: world cuff m
 October8 exact sixth-rider preview deployed READY with scoped seven-day share access; actual version/catalog verified without login. Remote full recorded comparison stops at65.2GiB memory bound before selected-ready; smaller no-recorder uploaded integration check pending. Ask348 remains active, no production promotion/phone/art pass.
 
 October8 uploaded source-transition gate frozen without recorder: actual six phone targets, old/new/old/new native identity and submitted visibility retained; incremental sanitized reports preserve load phase. Remote execution pending, no substitute art/FPS/device pass.
+
+October8 native08 checkpoint freezes verified wrist-local ray correction plus finite retained-triangle miss fallback; original dense bearings/settings and actual geometry gates unchanged. One guarded construction next; no model or art acceptance.

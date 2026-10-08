@@ -1,0 +1,38 @@
+{
+  "acceptedArt": false,
+  "status": "FROZEN_SOURCE_ONLY_NATIVE08_REQUIRES_PARENT_RUN",
+  "files": {
+    "construct08.py": {
+      "path": "assets/blender/rider-rebuild/astra-cuff-bearing18/construct08.py",
+      "sha256": "ad37d1bb5589a5f351bcef3939df9866779c50028ccdfd85f569c36ac3d8fc65"
+    },
+    "input08.json": {
+      "path": "assets/blender/rider-rebuild/astra-cuff-bearing18/input08.json",
+      "sha256": "e7bc14037441e04eefdb29e2878392bc4f0dfdd9e7cb347bec0163da5259c728"
+    },
+    "finite_bearings.py": {
+      "path": "assets/blender/rider-rebuild/astra-cuff-bearing18/finite_bearings.py",
+      "sha256": "918d87eb44d5a8a8b1939c4c5719f6e5fac1bbdbea992435cf88ac99ee13dd6e"
+    }
+  },
+  "parentInvocation": [
+    "/Applications/Blender.app/Contents/MacOS/Blender",
+    "-b",
+    "-t",
+    "2",
+    "--python-exit-code",
+    "1",
+    "--python",
+    "assets/blender/rider-rebuild/astra-cuff-bearing18/construct08.py",
+    "--",
+    "harness/out/rider-rebuild/astra-cuff-bearing18/authored08"
+  ],
+  "preserved": "All original settings, four barycentric probes per retained cuff triangle, existing grazing rule, maximum cuff scale, actual sleeve contacts, and six geometry checks are unchanged. Existing identity and unaccepted output requirements remain.",
+  "correction": "Subtract actual wrist in float64 before creating BVH points or ray-origin Vector. A missing conditioned hit triggers a 0.3 m finite actual float64 triangle query using conservative axial bins. The wrapper returns world hit position and Euclidean distance. The B.hit_radius signature is unchanged; its implementation avoids the original premature Vector conversion.",
+  "validation": "Syntax compiled; source diff reviewed; sparse finite fallback nearest hit matches exhaustive original-source scan exactly; 0.01 m ray and ray outside actual axial extent both miss. No constructor, Blender, or heavy job launched by this agent.",
+  "limitations": [
+    "Native08 is an unexecuted construction recipe, not a candidate or accepted art.",
+    "Conditioned BVH remains finite-precision sampled evidence; saved actual triangle geometry checks remain mandatory.",
+    "Parent separately confirmed the same witness through actual Blender BVH."
+  ]
+}
