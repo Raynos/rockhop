@@ -1,0 +1,126 @@
+{
+  "accepted": false,
+  "status": "FINITE_SUPPORT_EQUIVALENCE_PASS",
+  "coalesce": {
+    "DEF-pelvis.L": "DEF-spine",
+    "DEF-pelvis.R": "DEF-spine",
+    "DEF-thigh.L.001": "DEF-thigh.L",
+    "DEF-thigh.R.001": "DEF-thigh.R"
+  },
+  "toleranceM": 0.0001,
+  "maximumM": 0.0000026673310912643375,
+  "pairs": {
+    "DEF-pelvis.L": {
+      "maximumM": 2.444386836752729e-7,
+      "label": "runtime-UnacceptedSelectedCrouchRiseArmsUp193-keys-and-midpoints",
+      "sample": 1.0833333730697632
+    },
+    "DEF-pelvis.R": {
+      "maximumM": 2.0741275553554507e-7,
+      "label": "runtime-UnacceptedSelectedCrouchRiseArmsUp193-keys-and-midpoints",
+      "sample": 1.4166666269302368
+    },
+    "DEF-thigh.L.001": {
+      "maximumM": 0.0000025550027677625855,
+      "label": "native-217",
+      "sample": 55
+    },
+    "DEF-thigh.R.001": {
+      "maximumM": 0.0000026673310912643375,
+      "label": "runtime-UnacceptedSelectedDeepFixedSoleCrouchRise217-keys-and-midpoints",
+      "sample": 2.25
+    }
+  },
+  "samples": [
+    {
+      "label": "native-145",
+      "sampleCount": 145,
+      "maximumM": 1.0268216237130475e-7
+    },
+    {
+      "label": "native-193",
+      "sampleCount": 193,
+      "maximumM": 6.740464762573759e-7
+    },
+    {
+      "label": "runtime-UnacceptedSelectedCrouchRiseArmsUp193-keys-and-midpoints",
+      "sampleCount": 385,
+      "maximumM": 7.327238842718812e-7
+    },
+    {
+      "label": "runtime-UnacceptedSelectedDressedReachGripRelease145-keys-and-midpoints",
+      "sampleCount": 289,
+      "maximumM": 1.6237841664526666e-7
+    },
+    {
+      "label": "native-217",
+      "sampleCount": 217,
+      "maximumM": 0.000002635243933088214
+    },
+    {
+      "label": "runtime-UnacceptedSelectedDeepFixedSoleCrouchRise217-keys-and-midpoints",
+      "sampleCount": 433,
+      "maximumM": 0.0000026673310912643375
+    },
+    {
+      "label": "rookie-rejected-key",
+      "sampleCount": 1,
+      "maximumM": 9.708655120761183e-8
+    },
+    {
+      "label": "rookie-diagnostic-L-thigh-subtree-rest-not-art-pose",
+      "sampleCount": 1,
+      "maximumM": 9.708655120761183e-8
+    },
+    {
+      "label": "rookie-diagnostic-R-thigh-subtree-rest-not-art-pose",
+      "sampleCount": 1,
+      "maximumM": 9.708655120761183e-8
+    },
+    {
+      "label": "pro-rejected-key",
+      "sampleCount": 1,
+      "maximumM": 9.708655098327237e-8
+    },
+    {
+      "label": "pro-diagnostic-L-thigh-subtree-rest-not-art-pose",
+      "sampleCount": 1,
+      "maximumM": 9.708655098327237e-8
+    },
+    {
+      "label": "pro-diagnostic-R-thigh-subtree-rest-not-art-pose",
+      "sampleCount": 1,
+      "maximumM": 9.708655098327237e-8
+    }
+  ],
+  "sourcePins": {
+    "assets/blender/rider-rebuild/selected-seated-anatomical09/selection.json": "13a58ef7033085beee5af31eee64e3a0af809281a0cea36efb3886652bc4b739",
+    "harness/out/rider-rebuild/selected-garage-actions01/export01/native-action-matrices.npz": "95ab728bf363c83a9a33dda9627aceb2ab755bd362c1a0a55f76af72cc0282e6",
+    "harness/out/rider-rebuild/selected-garage-actions01/export01/rig-actions.glb": "ec6a7e45fb0647bedf138705410bfb7a11e043a339cd3ce419b8599c067e5472",
+    "harness/out/rider-rebuild/selected-deep-crouch03/rig-export01/native-action-matrices.npz": "eaf493ad3f68d24c68b581ad24b9efe7eb8ada4e50146d15aeb76a187fec33d7",
+    "harness/out/rider-rebuild/selected-deep-crouch03/rig-export01/rig-actions.glb": "a295358ce9008c4e106fc5cb507076d2f95ea741babc3d85dcb6168bf161814f",
+    "harness/out/rider-rebuild/selected-seated-author04/authored01/rookie.json": "9d59ba63e99c8d017e7f8c8c4dfbfde0859aafd3ea6d2383c734dec259ec5f8a",
+    "harness/out/rider-rebuild/selected-seated-author04/authored01/pro.json": "a42137fa3779b10a79d6a6e1b8e17ef036c2a7f03c146620ef19dd76322f4309"
+  },
+  "originalEnginePin": {
+    "path": "harness/out/rider-rebuild/selected-complete-engine01/engine05/rider.glb",
+    "sha256": "72b90e8790f8490743a75f8b70791aa21edfee6234cec609093e9b62e08d4bfd"
+  },
+  "editedVertexCount": 2356,
+  "selectedAABBGltf": [
+    [
+      -0.19381441175937653,
+      0.19381441175937653
+    ],
+    [
+      0.6829063892364502,
+      1.0082292556762695
+    ],
+    [
+      -0.14207814633846283,
+      0.11466291546821594
+    ]
+  ],
+  "proof": "Eight AABB corners bound the norm of the affine operator difference at every enclosed mesh point. Native saved samples and runtime keys/midpoints only; not unsampled motion or art acceptance.",
+  "requiredFutureEnvelope": "Motion11 must independently assert every baked key and runtime midpoint, including asymmetric legs/deep crouch. No independent pelvis-wing or thigh split twist is covered."
+}

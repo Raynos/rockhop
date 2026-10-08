@@ -1783,3 +1783,5 @@ Actual motion11native01 FAIL7.094s: neutralnativecontrol restheads residual588.6
 Motion11neutralprobe source frozen to locateactual588.666mmsetup failure usingeverydeform/control/mechanism rest/pose matrix; no actions/angle campaign/save. Nativeexecution pending.
 
 Actual motionneutralprobe exits0/7.053s: addedrestorientations alreadywrong (thighmatrixcomponenterror1.994), headsmatch; sourceassignsEditBone.matrix beforepositive length. Supportedcreation-order correction assigned24 withpreconstraintrestassertion; no poleangle search/artpass.
+
+Anatomicalsupport02 source frozen: measured-equivalentpelvis/thigh carriers coalesced before unchangedbrush; actual2356rowfixture fitsFOUR withzero rankloss, maxcutoffmass0.016916%. Finiteoperatorbound0.002667mm; parentreview/twosourcetests pass. Boundednativeauthor02 next, no artpass.
