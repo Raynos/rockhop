@@ -1745,3 +1745,5 @@ Permanent source-mode Garage review source checkpoint: actualViteconfig/catalog/
 Actual diagnostic08 dressed Garage film played26.88s silent1x; all63presented samples reviewed. Seated posterior shelf/squared fold, cuffspikes and ankle strip remain rejected. Real source capture has six access-control errors despite selectedSHA/finite75/morph witnesses;59.736devFPS is not deviceacceptance. Regional nativeweights then posedsculpt remain next; no ridergateclosed.
 
 Actual cuff09 construction exits1/25.769s: actualouter floorboundary isnotone ring, before lining/fitting/export/densegates; no candidate saved. Stoprecipe09; sparsepreflight was insufficient. Nextcuff work must resolve measured actualtopology, not repeat radialparameter changes. Native regionaljeansweights remain next construction.
+
+Anatomical09 source checkpoint: nativepolygon-neighbor weightbrush in explicitconnected2,778vertexdomain/2,356transition, fixedpelvis/thighanchors andboundaryfalloff; newnormalizedFOUR declared. Parent fullsource/pins/oneactualquadfixture pass; actualBlender run next. Wholebodyincidentfacegroups prepared withoutbodyweightedit; nosculpt/geometry/artacceptance.
