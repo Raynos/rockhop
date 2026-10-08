@@ -1777,3 +1777,5 @@ Actual anatomical09 dressedGarage exits0/35.494s, zero errors/one navigation aft
 Actual cuffidentity02 nativeprobe exits0/23.669s: originalfloat32 source/cutter unchanged, existing1e-7membership exactlycutancestry, bothhands outer1029/inner781 and no unownedfinaledges. One minimalidentity reconstruction assigned23; rim1688+71interpretation retained, physical/dense/artgates unchanged.
 
 Motion11source frozen: nativeFK/palmsoleIK/poles/digitcontrols and sixgeneric authoredscores, full75 visualbake/operator assertions, source-only five trajectorytests. Parentreview complete; boundednativeexecution next; no garment/art/devicepass.
+
+Actual motion11native01 FAIL7.094s: neutralnativecontrol restheads residual588.666mm exceedsunchanged0.1mmgate, no actions/native/exportsaved. Animationlead24 diagnosing perbone/mechanismrest setup, one supported correction; no poleanglesweep. Countsfirstconstruction sincegate32.
