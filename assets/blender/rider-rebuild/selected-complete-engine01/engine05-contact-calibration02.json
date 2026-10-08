@@ -1,0 +1,96 @@
+{
+  "accepted": false,
+  "sourceSHA256": "72b90e8790f8490743a75f8b70791aa21edfee6234cec609093e9b62e08d4bfd",
+  "driver": {
+    "selectedSoleInFoot": {
+      "left": [
+        0.8975303643469126,
+        0.36272044659805347,
+        -0.250744924549961,
+        0,
+        -1.1922172697831096e-05,
+        -0.5686238719816684,
+        -0.8225976315321484,
+        0,
+        -0.44095240506314376,
+        0.7383092149795747,
+        -0.5103527860688362,
+        0,
+        -0.04843432260321329,
+        0.1850933107240746,
+        0.05921910792392583,
+        1
+      ],
+      "right": [
+        0.8975305573301833,
+        -0.36272031841205016,
+        0.2507451057104126,
+        0,
+        1.2216941659826562e-05,
+        -0.5686238257826277,
+        -0.822597829058586,
+        0,
+        0.4409525866068953,
+        0.738309751455613,
+        -0.510352828207052,
+        0,
+        0.04843428673711425,
+        0.1851633110974218,
+        0.05932033954982355,
+        1
+      ]
+    },
+    "selectedPegSurfaceBike": {
+      "left": [
+        -0.1,
+        0.025981444865465164,
+        -0.165
+      ],
+      "right": [
+        -0.1,
+        0.025981444865465164,
+        0.165
+      ]
+    },
+    "maxSpineFlexRadians": 0.3490658503988659
+  },
+  "bikes": [
+    {
+      "path": "public/models/bike-rookie.glb",
+      "sha256": "e55919d60267849358ef5e97f4731f42fac6eb2835b9998e1d146d056c0f10f7"
+    },
+    {
+      "path": "public/models/bike-pro.glb",
+      "sha256": "0acc9ac86eeca76cc1812f8870eab36e2e25ca76d6a5cbe86d4a46a36cc12a86"
+    }
+  ],
+  "evidence": [
+    {
+      "bike": "rookie",
+      "path": "docs/evidence/rider-rebuild/selected-contact01/parent-source03.json",
+      "sha256": "672356eb018ad03f20aa97db46975c5755e18e9c59e8a4058b5d7291d45040cd"
+    },
+    {
+      "bike": "pro",
+      "path": "docs/evidence/rider-rebuild/selected-contact01/parent-pro-source04.json",
+      "sha256": "7ca96a7faf473d1bc0bcefa837887c17383ba089d7566e6182e7db9ade78e053"
+    }
+  ],
+  "limits": "The rigid selected sole witness/finite peg measurements are retained unchanged. pi/9 is the existing controller envelope, not a current-source anatomical qualification. Actual moving range, full glove/bar contact, skin deformation, collision-proxy agreement and complete selected art remain unaccepted; no player promotion.",
+  "calibration": {
+    "qualification": "SOURCE_BOUND_SUPPORTED_SOLVER_ENVELOPE_MOVING_RANGE_CONTACT_AND_ART_UNACCEPTED",
+    "soleCalibration": {
+      "path": "assets/blender/rider-rebuild/selected-complete-engine01/engine05-sole-calibration.json",
+      "sha256": "7c2b1043a3e6cf19149d3b8188a49d19831483723e262b65d2e9be7729e753ef"
+    },
+    "rationale": "The current canonical75 contract omits maxSpineFlexRadians, making the existing controller solve only flex=0. Actual Rookie ride01 has 56/192 grip gaps above 1 cm and a 57.335 mm maximum despite converged COM. Enable the existing controller upper limit pi/9 for this exact selected source; this declares an evaluation envelope, not a measured anatomical range or transferred combined04 pose calibration.",
+    "selection": "Existing poseRiding evaluates zero, the signed bound and one interpolated candidate, re-solving the same physical COM at every candidate. It selects the least absolute flex among the evaluated candidates with <=1 mm contact residual; otherwise the smallest observed gap.",
+    "invariants": "Keep the exact75 rest, authored segment lengths, physical pelvis carrier, physical COM target, collision proxy, physics state, source garment fields and all selected textures unchanged. Existing upper-spine rotations and COM inverse only.",
+    "driverBindings": [
+      "selectedSoleInFoot",
+      "selectedPegSurfaceBike",
+      "maxSpineFlexRadians"
+    ],
+    "nextJudgment": "Fresh actual Rookie and Pro recorded input clips, side yaw=0, including chosen flex, grip/sole/COM residuals, limb lengths and complete selected moving appearance."
+  }
+}
