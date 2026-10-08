@@ -1,0 +1,3 @@
+Finding: Current-game coldboot/clear/crash/restart reproof retains exact golden physics and one-tick restart, but three loaded SwiftShader render timing checks fail. This is the existing player baseline and cannot certify the unfinished selected outfit.
+Validation: Actual canonical guard exits3 in75.664s;8/11partial checks pass. Golden8.5916666667s and hash622bb2554e0f9a26 agree; boot315.23ms/firstframe7050.11ms/restartframe620.70ms fail their software limits.
+Limits: Older golden source fingerprint, no full ship verdict, new outfit run or physical device qualification. No unaccepted player assets are promoted.
