@@ -1,25 +1,11 @@
 {
   "accepted": false,
-  "status": "UNACCEPTED_NATIVE_CORRECTIVE_REOPEN_PROBE_PENDING",
-  "sourcePins": {
-    "native": {
-      "path": "harness/out/rider-rebuild/selected-complete-engine01/engine05/rider-private-masked.blend",
-      "sha256": "95a4f14e06fb52cc055df6d1446a035d8cd3d35180d565ad52f3a70b3b05664b"
-    },
-    "contract": {
-      "path": "harness/out/rider-rebuild/selected-complete-engine01/engine05/rider-contract.json",
-      "sha256": "2aa39bc8c15738b4ecbd2aac08fd61375e0aa8fd45a0ee2ac3046f577b019728"
-    },
-    "sourceGLB": {
-      "path": "harness/out/rider-rebuild/selected-complete-engine01/engine05/rider.glb",
-      "sha256": "72b90e8790f8490743a75f8b70791aa21edfee6234cec609093e9b62e08d4bfd"
-    }
+  "status": "UNACCEPTED_NATIVE_REOPEN_PROBE",
+  "useScripts": false,
+  "nativeImportReceipt": {
+    "path": "/Users/raynos/projects/games/rockhop/harness/out/rider-rebuild/selected-seated-native07/import02/native-import.json",
+    "sha256": "a92a79ffef5dae67985bb5760e6be25bc6c91d5272c84e5b7fd3c5d6680564d0"
   },
-  "shapeKey": {
-    "path": "/Users/raynos/projects/games/rockhop/harness/out/rider-rebuild/selected-seated-corrective06/constructed02/shape-key.json",
-    "sha256": "972bfc0d475fb5641ecfc706fc973d36d5354e64cc5dea3e832d1aac01627917"
-  },
-  "recipeSHA256": "93115ef3bf2d5e3f78c68994cdf83d07181a4ee60cb655e0747426e0c195b275",
   "correctiveReceipt": {
     "path": "/Users/raynos/projects/games/rockhop/harness/out/rider-rebuild/selected-seated-corrective06/constructed02/corrective.json",
     "sha256": "a9b78bd1e5b038db5d196149da71e027a84e77134928e961148a098d8abfdf52",
@@ -34471,133 +34457,11 @@
     ],
     "failedDiagnosticAuthorized": true
   },
-  "driverMathSHA256": "b4fbc5e9ab63793965063cce82a5b0a30fbac08fb1804a4051cfbb600057bd53",
-  "fingerprintRecipeSHA256": "b0720a3f492e2b05b1256f4034411d775d6920f3e1cd7c69ccebb5b9b8944cb5",
-  "native": {
-    "path": "harness/out/rider-rebuild/selected-seated-native07/import02/selected-seated-native07.blend",
-    "sha256": "ed1fa079d9d7938e788da983511418d0d240cbda003e2854082ad01c76917265"
-  },
-  "exact75RestUnchanged": true,
-  "protectedNativeBefore": {
-    "ActualSelectedGlove.L": {
-      "sha256": "8bac74e49da9e7e297318909f42f1de410a2653fe1597c5232966ef9198b6aad",
-      "vertices": 284571,
-      "polygons": 569142,
-      "positionChangesAllowed": false
-    },
-    "ActualSelectedGlove.R": {
-      "sha256": "943e991156716057952fdaa87b0f58bf40deeb64d6b714c0d5b9aa00eda2382a",
-      "vertices": 284571,
-      "polygons": 569142,
-      "positionChangesAllowed": false
-    },
-    "ActualSelectedBoot.L": {
-      "sha256": "fbc5f87d5292071a7f662079b9db8d049de2787373c0f28028c99debfd4eb09f",
-      "vertices": 305453,
-      "polygons": 610934,
-      "positionChangesAllowed": false
-    },
-    "ActualSelectedBoot.R": {
-      "sha256": "dc462edbf59f0c654f9fde9516284571d21734bcf2006fe28aab595cb379af96",
-      "vertices": 305453,
-      "polygons": 610934,
-      "positionChangesAllowed": false
-    },
-    "RiderJeans": {
-      "sha256": "d9df9ec901926c479800f128d225ce4c4dcdf2bd77e5c5ef113ca146c63aa0b1",
-      "vertices": 26063,
-      "polygons": 25728,
-      "positionChangesAllowed": false
-    },
-    "RiderBody": {
-      "sha256": "65308f596308ab8be8b691dcfbd45069ef9576ce044c32027effffb4e081f88a",
-      "vertices": 38959,
-      "polygons": 63732,
-      "positionChangesAllowed": false
-    },
-    "RiderHoodie": {
-      "sha256": "5256432ee493a000aa41012a1df59e243407b77960db20247599c7a4c4c1334d",
-      "vertices": 716971,
-      "polygons": 921722,
-      "positionChangesAllowed": false
-    },
-    "RiderBody__FullAnatomyReference": {
-      "sha256": "3cd8a156977f04c79da3894daf93902e2440cda4660802793b8ef544d202e360",
-      "vertices": 38959,
-      "polygons": 70845,
-      "positionChangesAllowed": false
-    }
-  },
-  "protectedNativeAfter": {
-    "ActualSelectedGlove.L": {
-      "sha256": "8bac74e49da9e7e297318909f42f1de410a2653fe1597c5232966ef9198b6aad",
-      "vertices": 284571,
-      "polygons": 569142,
-      "positionChangesAllowed": false
-    },
-    "ActualSelectedGlove.R": {
-      "sha256": "943e991156716057952fdaa87b0f58bf40deeb64d6b714c0d5b9aa00eda2382a",
-      "vertices": 284571,
-      "polygons": 569142,
-      "positionChangesAllowed": false
-    },
-    "ActualSelectedBoot.L": {
-      "sha256": "fbc5f87d5292071a7f662079b9db8d049de2787373c0f28028c99debfd4eb09f",
-      "vertices": 305453,
-      "polygons": 610934,
-      "positionChangesAllowed": false
-    },
-    "ActualSelectedBoot.R": {
-      "sha256": "dc462edbf59f0c654f9fde9516284571d21734bcf2006fe28aab595cb379af96",
-      "vertices": 305453,
-      "polygons": 610934,
-      "positionChangesAllowed": false
-    },
-    "RiderJeans": {
-      "sha256": "d9df9ec901926c479800f128d225ce4c4dcdf2bd77e5c5ef113ca146c63aa0b1",
-      "vertices": 26063,
-      "polygons": 25728,
-      "positionChangesAllowed": false
-    },
-    "RiderBody": {
-      "sha256": "65308f596308ab8be8b691dcfbd45069ef9576ce044c32027effffb4e081f88a",
-      "vertices": 38959,
-      "polygons": 63732,
-      "positionChangesAllowed": false
-    },
-    "RiderHoodie": {
-      "sha256": "5256432ee493a000aa41012a1df59e243407b77960db20247599c7a4c4c1334d",
-      "vertices": 716971,
-      "polygons": 921722,
-      "positionChangesAllowed": false
-    },
-    "RiderBody__FullAnatomyReference": {
-      "sha256": "3cd8a156977f04c79da3894daf93902e2440cda4660802793b8ef544d202e360",
-      "vertices": 38959,
-      "polygons": 70845,
-      "positionChangesAllowed": false
-    }
-  },
-  "meshes": {
-    "RiderJeans": {
-      "nativeVertices": 26063,
-      "explicitDeltaIDs": 7005,
-      "basisExactlySource": true,
-      "targetFloat32ExactlyExpected": true,
-      "maximumAssignmentQuantizationM": 5.986518171282645e-08
-    },
-    "RiderBody": {
-      "nativeVertices": 38959,
-      "explicitDeltaIDs": 55,
-      "basisExactlySource": true,
-      "targetFloat32ExactlyExpected": true,
-      "maximumAssignmentQuantizationM": 5.910660878035717e-08
-    }
-  },
-  "relativeRestBasisResidualRadians": [
-    2.148456014718941e-06,
-    2.157531714169877e-06
+  "defaultStoredWeights": [
+    0.0,
+    0.0
   ],
+  "builtInDriverCount": 13,
   "driverProbes": [
     {
       "t": 0.0,
@@ -34660,11 +34524,10 @@
       "maximumResidual": 2.1839141606250223e-10
     }
   ],
-  "driverMethod": "Built-in WORLD quaternion variables -> inverse pelvis times thigh -> distance to key times rest -> bilateral Wendland",
-  "scriptAutoExecutionRequired": false,
-  "defaultRestKeyValue": 0,
+  "exact75RestAndProtectedNativeFields": true,
+  "exportProbe": null,
   "limits": [
-    "Saved/reopened driver parity and default-zero evaluation remain parent probes.",
-    "No GLB export or driver runtime transport claim. No moving-art or contact acceptance."
+    "No moving-art, finite contact, or native/GPU acceptance.",
+    "Static morph export probe does not establish unchanged baseline GLB topology/UV/PBR/BIN parity or live driver transport."
   ]
 }
