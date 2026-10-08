@@ -1433,3 +1433,5 @@ October 8 required construction-round gate11: explicit Metal11/11, exit0/7.182s,
 October 8 complete actual-source working outfit rebuilt with conditioned broad neck/selected head, CPU2 exit0/26.777s, seven actual visible meshes and all original PBR retained. Garment fit remains rejected; head-only clothed motion next, no Garage/player admission.
 
 October 8 jeans directed diagnostic exit0/19.363s:4656black covered pixels all predictedmiss, zero regional UVoverlap; many wrong-side hits. Stop ray-reach escalation. One semantic front/rear cage/correspondence correction and pelvis-only actualPBR probe next; no fullbake or material acceptance.
+
+October 8 actual dressed working scene72frame headturn/nod action saved d33c2c2a, CPU2 exit0/33.675s. All75 rest/mesh/PBR unchanged; nonneck joints static and exact neutral return. One continuous actualPBR review next; no motion/art admission.

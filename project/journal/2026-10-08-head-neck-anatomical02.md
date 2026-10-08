@@ -37,3 +37,9 @@ Finding: The actual selected outfit working native now contains the conditioned 
 Validation: CPU2 assembly exit0/26.777s; exact native75 rest, unchanged incoming body fields, seven actual visible body/clothing meshes and exact saved native pin.
 
 Limits: Garment fit remains rejected; this private editable context supports head-only clothed stress, not normal player promotion.
+
+Finding: Actual fully selected-source clothed context now has one72frame head-turn/nod stress action. Only the native neck chain moves; all75TRS tracks explicitly authored.
+
+Validation: CPU2 exit0/33.675s; incoming mesh geometry/fields/PBR/rest unchanged, nonneck world matrices unchanged within5e-7, neutralreturn within2e-6. Exact native d33c2c2a saved.
+
+Limits: This is an unaccepted head/neck test action, not shoulder, garment, grip or bike motion. One actual PBR Eevee continuous movie and parent played judgment follow.
