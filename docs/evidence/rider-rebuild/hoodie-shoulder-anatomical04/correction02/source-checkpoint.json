@@ -1,0 +1,181 @@
+{
+  "accepted": false,
+  "stage": "REJECTED_PREDICTED_FOLDS",
+  "sources": [
+    {
+      "path": "assets/blender/rider-rebuild/hoodie-shoulder-anatomical04/correction02/author_correction.py",
+      "sha256": "289b1a313610d6da6e1ae6c9f4fa5d050119b72cc66e6c49a8bb9cabad0b8ec2",
+      "AST": "PASS"
+    },
+    {
+      "path": "assets/blender/rider-rebuild/hoodie-shoulder-anatomical04/correction02/diagnose_saved_arrays.py",
+      "sha256": "cacc774a8f68b1e7ab2e15c3abbe104926c289ee9d098484e929fc36f1bfd431",
+      "AST": "PASS"
+    },
+    {
+      "path": "assets/blender/rider-rebuild/hoodie-shoulder-anatomical04/correction02/extract_saved_panels.py",
+      "sha256": "d0daf56cd6a01cf92a410bccc07787658d9cd66001a5468d06d19d5eee0b63a4",
+      "AST": "PASS"
+    },
+    {
+      "path": "assets/blender/rider-rebuild/hoodie-shoulder-anatomical04/correction02/identify_expanded_cut.py",
+      "sha256": "5240d1f0305810784f0edb87b440b5131ff2cadbfa0901fb4bc5016d99dbe2bc",
+      "AST": "PASS"
+    },
+    {
+      "path": "assets/blender/rider-rebuild/hoodie-shoulder-anatomical04/correction02/predict_once.py",
+      "sha256": "8258c6d4fa746f84cc354e2bb6a69dcad27521b827ba466f7c9d67923eba8495",
+      "AST": "PASS"
+    }
+  ],
+  "controls": {
+    "path": "assets/blender/rider-rebuild/hoodie-shoulder-anatomical04/correction02/controls.json",
+    "sha256": "ed96d83c3b18cb009dadeef78284dc1753385faafa7e481a3ad8dd44994c64aa"
+  },
+  "pins": [
+    {
+      "key": "incomingNative",
+      "path": "harness/out/rider-rebuild/hoodie-shoulder-anatomical04/authored01/selected-panel-outfit.blend",
+      "sha256": "1ad5c5aa21553bbb3eb84898572200b2d4418e81e1e1995d774a763707f0124f"
+    },
+    {
+      "key": "incomingAuthorReceipt",
+      "path": "harness/out/rider-rebuild/hoodie-shoulder-anatomical04/authored01/author.json",
+      "sha256": "16fa88f30446f3506047a0242dd086db127b94bd87a453a2bfe6cd3a66c01f9c"
+    },
+    {
+      "key": "savedPanelsIntake",
+      "path": "harness/out/rider-rebuild/hoodie-shoulder-anatomical04/correction02-intake01/saved-panels.npz",
+      "sha256": "e09263ca089e3a111b23f40620564fdf012ec7fcdc58eb8e81ed920e40439c15"
+    },
+    {
+      "key": "savedPanelsReceipt",
+      "path": "harness/out/rider-rebuild/hoodie-shoulder-anatomical04/correction02-intake01/intake.json",
+      "sha256": "2a8e67cdf3cd75a06e638abc638e9206aaa029c18b8abf5d2f0098924b5baa59"
+    },
+    {
+      "key": "selectedIntake",
+      "path": "harness/out/rider-rebuild/hoodie-shoulder-anatomical04/intake01/selected25-source.npz",
+      "sha256": "5ccc4a69b2c2912d761babf8bde8f2ca5916d4896e816fc4ee33ae3ca34366c0"
+    },
+    {
+      "key": "originalPanelControls",
+      "path": "assets/blender/rider-rebuild/hoodie-shoulder-anatomical04/panel-controls.json",
+      "sha256": "782f55d11a975723a71eceec10adee3cd57404d7416f0d041db236f2eaf32b25"
+    },
+    {
+      "key": "previousAuthor",
+      "path": "assets/blender/rider-rebuild/hoodie-shoulder-anatomical04/author_panels.py",
+      "sha256": "e0fe83af63a552133fec56b80a315a6c11de62614d6ff895794d67440b3aa294"
+    },
+    {
+      "key": "baseAuthorHelpers",
+      "path": "assets/blender/rider-rebuild/production-hoodie01/author.py",
+      "sha256": "078da52b40e1f5049759314c1794ba6559ac1dae90d79294672c674f2095d14a"
+    },
+    {
+      "key": "selectedNative",
+      "path": "assets/blender/hero-remaster/rider/anatomical-foundation-2026-10-03/user-agent1/selected-hoodie25/crease-normal-candidate.blend",
+      "sha256": "c732d98076f6b9b1a209a45e8a0cddf793484807ea8b3ae9011fa4f82c151df0"
+    },
+    {
+      "key": "originalDensePBR",
+      "path": ".tmp/generation-comparison-2026-10-03/user-agent2/qualified-hunyuan-paint06/paint/painted.glb",
+      "sha256": "800d7a9717757b90b296a78c605cddb698c68d399a96e403aa381103e77d2eba"
+    },
+    {
+      "key": "geometryDiagnosis",
+      "path": "docs/evidence/rider-rebuild/hoodie-shoulder-anatomical04/correction02/geometry-diagnosis.json",
+      "sha256": "8a68fbcb990167d014f282712bf3e72b2dfb128ad6ce802b48a3ada13060db68"
+    }
+  ],
+  "actualSavedDiagnosis": {
+    "newVertices": 1423,
+    "newQuads": 1547,
+    "opposedFanTriangleNormalQuads": 10,
+    "degenerateFanTriangles": 0,
+    "generatedVerticesInsideCompleteCanonicalBody": 156,
+    "newQuadCentersInsideCompleteCanonicalBody": 164,
+    "quadsUVSpanAboveQuarterAtlas": 884,
+    "quadsUVSpanAboveHalfAtlas": 561,
+    "missingSeamIdentityRepairsActuallyExecuted": 0
+  },
+  "command": [
+    "/Applications/Blender.app/Contents/MacOS/Blender",
+    "-b",
+    "-t",
+    "2",
+    "--python-exit-code",
+    "1",
+    "--python",
+    "assets/blender/rider-rebuild/hoodie-shoulder-anatomical04/correction02/author_correction.py",
+    "--",
+    "assets/blender/rider-rebuild/hoodie-shoulder-anatomical04/correction02/controls.json",
+    "harness/out/rider-rebuild/hoodie-shoulder-anatomical04/corrected02"
+  ],
+  "guardSeconds": 600,
+  "geometrySavedBeforeTextureTransfer": true,
+  "derivativeAtlasSize": 1024,
+  "parentOnlyHeavyJobsAndJudgment": true,
+  "limits": [
+    "One fixed harmonic coordinate solve per actual panel, convex anatomical boundary parameters.",
+    "Ruled concave torso-to-inner-sleeve cloth surface; existing front/rear bridges participate near boundaries with fourth-power transfinite blending. No mean-centered support loops.",
+    "All retained garment vertices including 687 prior moved points remain exactly at incoming1ad positions. Only1423 generated interior cloth points may move; quad connectivity and full weights unchanged.",
+    "No body projection, field trimming, body shrink, repeat fold/ease gain campaign, motion acceptance or player export.",
+    "Transfer atlas uses continuous actual selected donor identity per texel, source triangle/barycentric UV and original4096 PBR. Original outside-panel UVs/materials/maps exact.",
+    "All R0\u2013R5 remain open; geometric controls are unproven until parent reviews actual results."
+  ],
+  "priorStage": "ONE_ACTUAL_ANATOMICAL_PANEL_AND_CONTINUOUS_SOURCE_PBR_AUTHOR_READY_NO_JOB_EXECUTED",
+  "priorCheckpointSHA256": "ca0e0012c90800fb15431368c2f67d9192d6976a1c91380dca8d84b769fc746b",
+  "doNotExecuteAuthor": true,
+  "authorJobExecuted": false,
+  "rejectedPrediction": {
+    "path": "docs/evidence/rider-rebuild/hoodie-shoulder-anatomical04/correction02/prediction-once.json",
+    "sha256": "47dfd9446e81237086e44fa2c63e7f2be0d0c3471042c37ab003d04abe0152ce",
+    "baseline": {
+      "opposedFanNormalQuads": 10,
+      "newVerticesInsideBody": 156,
+      "newQuadCentersInsideBody": 164
+    },
+    "sameFixedFunctionPrediction": {
+      "opposedFanNormalQuads": 179,
+      "newVerticesInsideBody": 69,
+      "newQuadCentersInsideBody": 74
+    },
+    "reason": "Body parity improves but severe local folding worsens. Whole-U surface and retained convoluted seam are incompatible constraints. No native author/atlas job executed.",
+    "initialDiagnosticSerializationFailure": "First unchanged prediction computed but JSON failed on numpy.int64. Serialization-only fix reran the identical unchanged computation; no control search."
+  },
+  "expandedScopeRead": {
+    "source": {
+      "path": "assets/blender/rider-rebuild/hoodie-shoulder-anatomical04/correction02/identify_expanded_cut.py",
+      "sha256": "5240d1f0305810784f0edb87b440b5131ff2cadbfa0901fb4bc5016d99dbe2bc"
+    },
+    "result": {
+      "path": "docs/evidence/rider-rebuild/hoodie-shoulder-anatomical04/correction02/expanded-cut.json",
+      "sha256": "803691f4fce999d585588eacbccbe29cdc6ae4c73d84127e97811d13769e8ca9"
+    },
+    "L": {
+      "faces": 1545,
+      "orientedBoundaryCycleSizes": [
+        93,
+        89
+      ]
+    },
+    "R": {
+      "faces": 1198,
+      "orientedBoundaryCycleSizes": [
+        92,
+        90
+      ]
+    },
+    "limits": "Topology read only; consumed connected penetrating perimeter vertex stars. Outside perimeter vertices do not prove enclosure. Future construction belongs correction03."
+  },
+  "actualShellOrientationFinding": {
+    "method": "Median original adjacent source face normal Y on front y<-.065 and rear y>.065",
+    "L10628": "exterior, front-.629/rear+.581",
+    "L12275": "interior, front+.611/rear-.591",
+    "R3146": "interior, front+.624/rear-.650",
+    "R3568": "exterior, front-.676/rear+.614",
+    "previousMeanAbsXRoleGuessInvalidOnRight": true
+  }
+}

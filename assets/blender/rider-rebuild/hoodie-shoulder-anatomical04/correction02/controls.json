@@ -1,0 +1,137 @@
+{
+  "schemaVersion": 1,
+  "accepted": false,
+  "stage": "ONE_ANATOMICAL_SEAM_PANEL_CORRECTION_AND_CONTINUOUS_DONOR_PBR_TRANSFER",
+  "incomingNative": {
+    "path": "harness/out/rider-rebuild/hoodie-shoulder-anatomical04/authored01/selected-panel-outfit.blend",
+    "sha256": "1ad5c5aa21553bbb3eb84898572200b2d4418e81e1e1995d774a763707f0124f"
+  },
+  "incomingAuthorReceipt": {
+    "path": "harness/out/rider-rebuild/hoodie-shoulder-anatomical04/authored01/author.json",
+    "sha256": "16fa88f30446f3506047a0242dd086db127b94bd87a453a2bfe6cd3a66c01f9c"
+  },
+  "savedPanelsIntake": {
+    "path": "harness/out/rider-rebuild/hoodie-shoulder-anatomical04/correction02-intake01/saved-panels.npz",
+    "sha256": "e09263ca089e3a111b23f40620564fdf012ec7fcdc58eb8e81ed920e40439c15"
+  },
+  "savedPanelsReceipt": {
+    "path": "harness/out/rider-rebuild/hoodie-shoulder-anatomical04/correction02-intake01/intake.json",
+    "sha256": "2a8e67cdf3cd75a06e638abc638e9206aaa029c18b8abf5d2f0098924b5baa59"
+  },
+  "selectedIntake": {
+    "path": "harness/out/rider-rebuild/hoodie-shoulder-anatomical04/intake01/selected25-source.npz",
+    "sha256": "5ccc4a69b2c2912d761babf8bde8f2ca5916d4896e816fc4ee33ae3ca34366c0"
+  },
+  "originalPanelControls": {
+    "path": "assets/blender/rider-rebuild/hoodie-shoulder-anatomical04/panel-controls.json",
+    "sha256": "782f55d11a975723a71eceec10adee3cd57404d7416f0d041db236f2eaf32b25"
+  },
+  "previousAuthor": {
+    "path": "assets/blender/rider-rebuild/hoodie-shoulder-anatomical04/author_panels.py",
+    "sha256": "e0fe83af63a552133fec56b80a315a6c11de62614d6ff895794d67440b3aa294"
+  },
+  "baseAuthorHelpers": {
+    "path": "assets/blender/rider-rebuild/production-hoodie01/author.py",
+    "sha256": "078da52b40e1f5049759314c1794ba6559ac1dae90d79294672c674f2095d14a"
+  },
+  "selectedNative": {
+    "path": "assets/blender/hero-remaster/rider/anatomical-foundation-2026-10-03/user-agent1/selected-hoodie25/crease-normal-candidate.blend",
+    "sha256": "c732d98076f6b9b1a209a45e8a0cddf793484807ea8b3ae9011fa4f82c151df0"
+  },
+  "originalDensePBR": {
+    "path": ".tmp/generation-comparison-2026-10-03/user-agent2/qualified-hunyuan-paint06/paint/painted.glb",
+    "sha256": "800d7a9717757b90b296a78c605cddb698c68d399a96e403aa381103e77d2eba"
+  },
+  "geometryDiagnosis": {
+    "path": "docs/evidence/rider-rebuild/hoodie-shoulder-anatomical04/correction02/geometry-diagnosis.json",
+    "sha256": "8a68fbcb990167d014f282712bf3e72b2dfb128ad6ce802b48a3ada13060db68"
+  },
+  "atlasSize": 1024,
+  "selectedToWearerRows": [
+    [
+      0,
+      1,
+      0
+    ],
+    [
+      -1,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      1
+    ]
+  ],
+  "panels": [
+    {
+      "component": "L-10628",
+      "anatomicalCornerOriginalVertexIds": [
+        821,
+        3922,
+        3116,
+        5126
+      ],
+      "cornerRoles": [
+        "frontTorso",
+        "rearTorso",
+        "rearInnerSleeve",
+        "frontInnerSleeve"
+      ]
+    },
+    {
+      "component": "L-12275",
+      "anatomicalCornerOriginalVertexIds": [
+        317,
+        2163,
+        2034,
+        1290
+      ],
+      "cornerRoles": [
+        "rearTorso",
+        "frontTorso",
+        "frontInnerSleeve",
+        "rearInnerSleeve"
+      ]
+    },
+    {
+      "component": "R-3146",
+      "anatomicalCornerOriginalVertexIds": [
+        6306,
+        6134,
+        6470,
+        6636
+      ],
+      "cornerRoles": [
+        "frontTorso",
+        "rearTorso",
+        "rearInnerSleeve",
+        "frontInnerSleeve"
+      ]
+    },
+    {
+      "component": "R-3568",
+      "anatomicalCornerOriginalVertexIds": [
+        1078,
+        2602,
+        2947,
+        81
+      ],
+      "cornerRoles": [
+        "rearTorso",
+        "frontTorso",
+        "frontInnerSleeve",
+        "rearInnerSleeve"
+      ]
+    }
+  ],
+  "limits": [
+    "One fixed harmonic coordinate solve per actual panel, convex anatomical boundary parameters.",
+    "Ruled concave torso-to-inner-sleeve cloth surface; existing front/rear bridges participate near boundaries with fourth-power transfinite blending. No mean-centered support loops.",
+    "All retained garment vertices including 687 prior moved points remain exactly at incoming1ad positions. Only1423 generated interior cloth points may move; quad connectivity and full weights unchanged.",
+    "No body projection, field trimming, body shrink, repeat fold/ease gain campaign, motion acceptance or player export.",
+    "Transfer atlas uses continuous actual selected donor identity per texel, source triangle/barycentric UV and original4096 PBR. Original outside-panel UVs/materials/maps exact.",
+    "All R0\u2013R5 remain open; geometric controls are unproven until parent reviews actual results."
+  ]
+}

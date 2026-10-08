@@ -1461,3 +1461,5 @@ October8 actual glove dorsal/palm and independent signed-MCP check correct assig
 October8 actual jeans proxy/cage saved nativebecb, then exit1/17.994s before maps: edited polygons independently tessellate differently. Freeze correspondence-only triangles once before cloning; wearing/source/cage/ray/map controls unchanged. Fresh paired-triangle check next; no capture/appearance acceptance.
 
 October8 Astra04 followthrough reconciled into sole rider plan: saved selected outfit, improved anatomical neck and played clothed turn/nod retained; hoodie axilla/boot exterior rejected, failed predicted hoodie surface stopped. Glove mirror audit corrected using actual dorsal/palm and signed curl: originalL/reflectedR. Actual jeans correspondence and properly assigned glove sculpt next; all0/6 milestones open.
+
+October8 hoodie ruled correction02 stopped before author/atlas job: identical-function prediction worsens fan-normal reversals10→179. Negative source/controls retained as do-not-execute. Expanded anatomical seam tailoring must replace incompatible local shell joins while retaining useful selected hood/chest/outer sleeves;0/6 accepted.
