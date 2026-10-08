@@ -31,8 +31,11 @@ def geometry(obj):
     h = hashlib.sha256()
     for v in obj.data.vertices: h.update(struct.pack('<3f', *v.co))
     for p in obj.data.polygons:
-        h.update(struct.pack('<I', len(p.vertices)))
+        h.update(struct.pack('<II', len(p.vertices),p.material_index))
         h.update(struct.pack('<'+'I'*len(p.vertices), *p.vertices))
+    for layer in obj.data.uv_layers:
+        h.update(layer.name.encode())
+        for corner in layer.data:h.update(struct.pack('<2f',*corner.uv))
     for a in obj.data.attributes:
         if a.name in ('_NATIVE_ID', '_SOURCE_VERTEX_ID', '_REGION_ID'):
             h.update(a.name.encode())
@@ -124,8 +127,8 @@ def main():
         if name not in affected:
             assert row == source_rest[name], ('Untouched rest changed',name)
         frame = np.array(row['matrix'])[:3,:3]
-        assert abs(np.linalg.det(frame)-1) < 1e-6
         if name in affected:
+            assert abs(np.linalg.det(frame)-1) < 1e-6
             expected = math.proper_frame(np.array(row['head']),np.array(row['tail']),correction['palmNormals'][name[-1]])
             assert np.max(abs(frame-expected)) < 1e-6, name
     for side in ('L','R'):
@@ -176,12 +179,27 @@ def main():
     bpy.context.view_layer.objects.active=body
     evaluated.data.calc_loop_triangles()
     faces=np.array([list(t.vertices) for t in evaluated.data.loop_triangles],dtype=np.int32)
+    source_membership=[set() for _ in body.data.vertices]
+    for polygon in body.data.polygons:
+        for vertex in polygon.vertices:source_membership[vertex].add(polygon.index)
+    source_polygons=[];source_loops=[]
+    for triangle in faces:
+        matches=set.intersection(*(source_membership[vertex] for vertex in triangle))
+        assert len(matches)==1,('Ambiguous triangulation ancestry',triangle.tolist(),matches)
+        index=matches.pop();polygon=body.data.polygons[index]
+        loop_lookup={int(vertex):int(loop) for vertex,loop in zip(polygon.vertices,polygon.loop_indices)}
+        source_polygons.append(index);source_loops.append([loop_lookup[int(vertex)] for vertex in triangle])
+    active_uv=next((layer for layer in body.data.uv_layers if layer.active_render),body.data.uv_layers.active)
+    assert active_uv is not None
+    triangle_uv=np.array([[list(active_uv.data[loop].uv) for loop in loops] for loops in source_loops],dtype=np.float32)
     rows=rest(rig); by_name={r['name']:r for r in rows}
     np.savez_compressed(out/'native-body.npz',vertices=vertices,faces=faces,nativeCoefficients=new_native,
         originalNativeCoefficients=old_native,jointNames=np.array(names),
         jointHeads=np.array([by_name[n]['head'] for n in names]),jointTails=np.array([by_name[n]['tail'] for n in names]),
         jointMatrices=np.array([by_name[n]['matrix'] for n in names]),newFieldBlendAlpha=alpha,
-        nativeSourceVertexIds=domain['nativeSourceVertexIds'],removedFullMass=loss)
+        nativeSourceVertexIds=domain['nativeSourceVertexIds'],removedFullMass=loss,
+        sourcePolygonRows=np.array(source_polygons,dtype=np.int32),sourceLoopRows=np.array(source_loops,dtype=np.int32),
+        triangleCornerUV=triangle_uv)
     contract=json.loads((ROOT/'harness/out/rider-rebuild/construction01/combined04/rider-contract.json').read_text())
     contract['nativeRest']['bones']=rows
     contract['driver']['socketOrientationCalibrationRequired']=True
@@ -208,12 +226,23 @@ def main():
     bpy.ops.export_scene.gltf(filepath=str(out/'native-body.glb'),export_format='GLB',use_selection=True,
         export_animations=False,export_def_bones=True,export_skins=True,export_influence_nb=4,
         export_all_influences=False,export_apply=True,export_yup=True,export_attributes=True)
+    modifiers=[]
+    for index,m in enumerate(body.modifiers):
+        properties=['show_viewport','show_render']
+        properties+=['quad_method','ngon_method','min_vertices','keep_custom_normals'] if m.type=='TRIANGULATE' else [
+            'use_deform_preserve_volume','use_vertex_groups','use_bone_envelopes','use_multi_modifier','vertex_group','invert_vertex_group']
+        modifiers.append({'index':index,'name':m.name,'type':m.type,
+            'options':{key:getattr(m,key) for key in properties if hasattr(m,key)}})
     report={'acceptedArt':False,'status':'NATIVE_LOCAL_HAND_DERIVATIVE_REOPEN_PENDING',
         'native':{'path':str(out/'anatomical-hand-rig.blend'),'sha256':native_sha},
         'glb':{'path':str(out/'native-body.glb'),'sha256':sha(out/'native-body.glb')},
         'recipeSHA256':sha(__file__),'correctionSHA256':sha(correction_path),
         'sourcePins':receipt['inputs']+[receipt['arrays']]+extra_pins, 'geometryAndSourceIDSHA256':before_geometry,
         'bodyVertices':10582,'skeletonJoints':75,'affectedRestFrames':sorted(affected),
+        'bodyModifierOperators':modifiers,
+        'nativeTriangulationLineage':{'triangles':len(faces),'sourcePolygons':len(body.data.polygons),
+            'sourceUVLayer':active_uv.name,'everyTriangleAndUVCornerHasOriginalPolygonLoopAncestry':True,
+            'arrays':{'path':str(out/'native-body.npz'),'sha256':sha(out/'native-body.npz')}},
         'bindOperatorOutcome':sorted(operator),'candidateUnweightedVertices':0,'excludedBindHelpers':helpers,
         'domainRows':1446,'verbatimOutsideRows':9136,'nativeOutsideFloat32CoefficientsExact':True,
         'zeroPoseMaximumDisplacementM':bind_delta,'maximumRemovedFullMass':float(loss.max()),

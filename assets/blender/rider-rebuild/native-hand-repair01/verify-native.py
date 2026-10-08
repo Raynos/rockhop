@@ -34,6 +34,12 @@ def main():
     assert {o.name for o in bpy.data.objects}=={'RiderBody','RiderSkeleton'}
     assert len(rig.data.bones)==75 and len(body.data.vertices)==10582
     assert all(not pb.constraints for pb in rig.pose.bones) and rig.animation_data is None
+    assert len(body.modifiers)==len(report['bodyModifierOperators'])
+    for record in report['bodyModifierOperators']:
+        modifier=body.modifiers[record['index']]
+        assert modifier.name==record['name'] and modifier.type==record['type']
+        assert all(getattr(modifier,key)==value for key,value in record['options'].items())
+    assert sha(out/'native-body.npz')==report['nativeTriangulationLineage']['arrays']['sha256']
     arrays=dict(np.load(out/'native-body.npz'));names=arrays['jointNames'].tolist();lookup={n:i for i,n in enumerate(names)}
     builder=load_module('native_builder',Path(__file__).with_name('build-native.py'))
     assert builder.geometry(body)==report['geometryAndSourceIDSHA256']
@@ -79,6 +85,27 @@ def main():
     position=accessor(primitive['attributes']['POSITION']).astype(float)[:,[0,2,1]]*np.array([1,-1,1])
     export_pos_error=float(np.max(abs(position-arrays['vertices'][ids])))
     assert export_pos_error<2e-7,export_pos_error
+    export_indices=accessor(primitive['indices']).ravel().astype(int).reshape(-1,3)
+    export_triangles=ids[export_indices]
+    assert len(export_triangles)==len(arrays['faces'])
+    def canonical(triangle):
+        offset=int(np.argmin(triangle));return tuple(np.roll(triangle,-offset)),offset
+    native_triangle_lookup={canonical(triangle)[0]:(row,canonical(triangle)[1]) for row,triangle in enumerate(arrays['faces'])}
+    assert len(native_triangle_lookup)==len(arrays['faces'])
+    source_uv=accessor(primitive['attributes']['TEXCOORD_0']).astype(float)
+    source_uv[:,1]=1-source_uv[:,1]
+    seen=set();uv_error=0.
+    for triangle,indices in zip(export_triangles,export_indices):
+        key,offset=canonical(triangle);assert key in native_triangle_lookup and key not in seen
+        seen.add(key);row,native_offset=native_triangle_lookup[key]
+        polygon=body.data.polygons[int(arrays['sourcePolygonRows'][row])]
+        loops=arrays['sourceLoopRows'][row]
+        assert all(int(loop) in polygon.loop_indices for loop in loops)
+        assert np.array_equal([body.data.loops[int(loop)].vertex_index for loop in loops],arrays['faces'][row])
+        expected_uv=np.roll(arrays['triangleCornerUV'][row],-native_offset,axis=0)
+        actual_uv=np.roll(source_uv[indices],-offset,axis=0)
+        uv_error=max(uv_error,float(np.max(abs(expected_uv-actual_uv))))
+    assert len(seen)==len(native_triangle_lookup) and uv_error<2e-7,uv_error
     joints=accessor(primitive['attributes']['JOINTS_0']).astype(int)
     weights=accessor(primitive['attributes']['WEIGHTS_0']).astype(float)
     export_field=np.zeros((len(ids),75))
@@ -100,7 +127,10 @@ def main():
     convert=np.array([[1,0,0,0],[0,0,1,0],[0,-1,0,0],[0,0,0,1]],dtype=float)
     inverse_error=0.
     for i,name in enumerate(exported_names):
-        expected_inverse=convert@np.linalg.inv(np.array(rest[name]['matrix']))@convert.T
+        # Blender's bone-local axes remain in the authored native basis; only
+        # the world/input point basis is converted to glTF Y-up. Conjugating
+        # both sides would introduce a spurious bone-local 90-degree rotation.
+        expected_inverse=np.linalg.inv(np.array(rest[name]['matrix']))@convert.T
         inverse_error=max(inverse_error,float(np.max(abs(inverse_bind[i]-expected_inverse))))
     assert inverse_error<2e-6,inverse_error
     controls=json.loads((out/'digit-controls.json').read_text())
@@ -226,6 +256,9 @@ def main():
         'exactSourceGeometryIDsAndOutsideFields':True,'jointCount':75,
         'continuousSegments':certificates,'minimumContinuousSegmentClearanceM':min(r['continuousClearanceLowerBoundM'] for r in certificates),
         'exportPositionMaximumM':export_pos_error,'exportNormalizedCoefficientMaximum':export_field_error,
+        'exportTriangleWindingAndOriginalPolygonLoopCornerLineageExact':True,
+        'exportOriginalUVCornerMaximum':uv_error,'nativeTriangulationLineage':report['nativeTriangulationLineage'],
+        'bodyModifierOperators':report['bodyModifierOperators'],
         'exportCutoff':cutoff,'exportCutoffComparison':'DROP coefficient <= cutoff, normalize retained native float32 named coefficients',
         'maximumRemovedExportCutoffMass':float(removed_cutoff_mass.max()),
         'maximumNativeVsDecodedNamedCoefficientDelta':maximum_named_delta,

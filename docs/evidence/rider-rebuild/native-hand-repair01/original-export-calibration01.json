@@ -1,0 +1,34 @@
+{
+  "acceptedArt": false,
+  "status": "ORIGINAL_ONLY_READONLY_EXPORT_CALIBRATION_PASS",
+  "recipe": {
+    "path": "assets/blender/rider-rebuild/native-hand-repair01/check-export-baseline.py",
+    "sha256": "84880ddf24b53d78624517b79e84c44c213b17c86a10e5160aca2fcf79069528"
+  },
+  "inputPins": {
+    "glb": {
+      "path": "harness/out/rider-rebuild/construction01/combined04/rider.glb",
+      "sha256": "58677cc37aff6b22bb98144762eb5a93dfe689ac207ea0b74a214ba60538f6fc"
+    },
+    "four": {
+      "path": "harness/out/rider-rebuild/construction01/rig04/weights-four.json",
+      "sha256": "9ce2e702f65c6ea1492750b0e1066e923a96fcb4bcbd301525a38e2d3503c3af"
+    },
+    "contract": {
+      "path": "harness/out/rider-rebuild/construction01/combined04/rider-contract.json",
+      "sha256": "32d67e9031bd6865a561ba29dc6d2765ace49ad13bfb08bd61df07df85440ee4"
+    }
+  },
+  "exportCutoff": 0.0001,
+  "exportCutoffComparison": "DROP coefficient <= cutoff then normalize retained native float32 fields",
+  "maximumRemovedCutoffMass": 9.411774954060093e-05,
+  "coefficientMaximumAfterExplicitCutoff": 1.017226624044909e-07,
+  "maximumNativeVsDecodedNamedCoefficientDelta": 9.411774954060093e-05,
+  "boneLocalBasis": "Authored Blender bone-local axes retained; glTF Y-up changes world/input point basis only",
+  "expectedInverseBind": "inverse(nativeRest) @ nativeToYUp.transpose()",
+  "inverseBindMaximum": 2.1838831099074696e-07,
+  "incorrectBasisConjugationMaximum": 1.618754815447288,
+  "limits": [
+    "Original transport calibration only; no Blender mutation, native derivative or moving anatomy qualification."
+  ]
+}

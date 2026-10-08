@@ -33,6 +33,21 @@ installed exporter's `<=0.0001` coefficient removal before normalization,
 reporting cutoff mass and named coefficient change separately. The native
 outside-domain rows remain exact; final assembly canonicalization is separate.
 
+The read-only original GLB calibration in `original-export-calibration01.json`
+passes under `-Werror`: cutoff-adjusted coefficient error1.017226624e-7,
+maximum removed cutoff mass9.411774954e-5 and inverse-bind error2.183883110e-7.
+Authored bone-local axes remain native; the correct inverse bind is
+`inverse(nativeRest) @ nativeToYUp.transpose()`. Conjugating both matrix sides
+fails by1.618754815. This baseline check grants no new-rig acceptance.
+
+The derivative preserves the original static TRIANGULATE operator and its
+ordered options alongside one linear ARMATURE. Native triangle corners retain
+explicit original polygon/loop ancestry; independent export checks require
+matching oriented triangles and original corner UVs. Reopened operator rows
+must equal the builder receipt. Proper-frame determinant checks apply strictly
+to the eight newly computed frames; all other source rest matrices remain exact.
+No anatomical joint-range certification is asserted by the provisional maxima.
+
 Parent checkpoint and explicit heavy-run lease are required before either
 Blender process. Each must use the canonical OS lock, two threads, fresh guard
 output and the128GiB bounded launcher. This unit has not executed heat binding,

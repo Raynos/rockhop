@@ -1175,3 +1175,5 @@ October 7 exact original boot source diagnostic completed in16.244s CPU2. Parent
 October 7 native hand derivative source is checkpointed after parent review: exact body+75 master, four corrected heads/four parent tails, local FULL/FOUR rebinding and independent saved-native/GLB plus individual-digit response tests. Source math passes; exporter cutoff is modeled explicitly. Heat bind/native/moving execution remains pending and cannot grant art acceptance.
 
 October 7 actual-jeans fit source replaces sliding per-vertex medians with measured nested source cavities, actual body section envelopes and one continuous pelvis/two-leg chart field. Source IDs/faces remain intact; 128 analytic first-exit rays and exact input pins pass. Actual chart registration, full-surface fit and moving acceptance are unexecuted.
+
+October 7 parent actual-original GLB readback confirms exporter cutoff1e-4 and authored bone-local axes: normalized named coefficient error1.017e-7, inverse-bind error2.184e-7. Updated hand verifier retains static triangulation/corner lineage and measures each phalanx response; exact source update checkpoint precedes native execution.
