@@ -19,3 +19,7 @@ Limits: No timing waiver or new rider verdict. Quieter-condition retry pending.
 Finding: Controlled current-player gate07 passes when unrelated host contention subsides.
 Validation: Silent Metal11/11 exit0 in6.047s; ready108.89ms, first436.42ms, restart8.12ms/one tick; exact finish/hash match.
 Limits: Prior load failure and golden-source warning retained; existing player only, no rider or ship acceptance.
+
+Finding: Required current-player gate08 passes unchanged boot/clear/crash/restart thresholds.
+Validation: Silent Metal11/11 in12.719s; ready279.77ms, first795.37ms, restart10.52ms/one tick; exactfinish/hash and actualload39.96/18retained.
+Limits: Prior gate06failure and golden-source warning retained; no remastered rider or ship acceptance.
