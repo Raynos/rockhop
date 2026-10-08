@@ -15,3 +15,7 @@ Finding: Preserve required Metal timing failure under concurrent host load rathe
 Validation: 10/11exit1 in12.104s; readyP50315.87ms exceeds300, actualload52.71/18cores. Exactfinish/hash/restart pass; sourcefingerprintfd8fe7c2 unchanged.
 
 Limits: No timing waiver or new rider verdict. Quieter-condition retry pending.
+
+Finding: Controlled current-player gate07 passes when unrelated host contention subsides.
+Validation: Silent Metal11/11 exit0 in6.047s; ready108.89ms, first436.42ms, restart8.12ms/one tick; exact finish/hash match.
+Limits: Prior load failure and golden-source warning retained; existing player only, no rider or ship acceptance.
