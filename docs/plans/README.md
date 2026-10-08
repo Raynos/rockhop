@@ -1415,3 +1415,5 @@ October 8 actual complete selected-outfit four-view review: original appearance 
 October 8 actual head-shell diagnostic: zero exact paired triangleUV signatures across99914 source triangles; paired-UV deletion hypothesis rejected. Exit0 in1.071s, geometry unchanged. One justified topology-based interior cleanup/closure required before broad neck; no saved candidate or art acceptance.
 
 October 8 actual jeans pelvis transfer: CPU2 exit0 in52.414s, three1024 maps/sixmatched views saved; parent rejects broad black waist/seat transfer despite recognizable selected detail elsewhere. Original target/source/body75 exact checks pass. One directed-ray/correspondence diagnostic assigned; no full bake or blind ray escalation.
+
+October 8 broad anatomical neck native saved9023618821: CPU2 exit0 in5.064s;19authored sections, exact enclosed inner-rim cap, no ear/exterior-layer deletion. Worker reports zero boundary/nonmanifold/loose and exact retained hands/rest75. Actual matched profiles and independent readback pending; no art/motion acceptance.

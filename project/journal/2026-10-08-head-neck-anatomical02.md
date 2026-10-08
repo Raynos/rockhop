@@ -13,3 +13,7 @@ Limits: No topology result or deletion yet; corrected diagnostic pending.
 Finding: Actual source contains zero exact paired triangleUV signatures, so the suggested UV-pair interior-removal hypothesis is unsupported.
 Validation: Corrected raw diagnostic exit0 in1.071s,99914 source triangles; geometry unchanged. Parent read actual report.
 Limits: No deletion or neck candidate; use actual rim topology for one justified cleanup/closure.
+
+Finding: Broad anatomical neck derivative now saves after exact enclosed inner-rim closure, without inferred source-face deletion.
+Validation: CPU2 build exit0 in5.064s; native9023618821,38959vertices,5879newneck/339captriangles, zero boundary/nonmanifold/loose, worker retained6753canonical/1446hands/rest75.
+Limits: Shape and independent saved readback pending; connected inner-head source surface retained honestly. No art or moving acceptance.

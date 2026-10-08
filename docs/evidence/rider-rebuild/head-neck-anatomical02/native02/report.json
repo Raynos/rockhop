@@ -1,0 +1,108 @@
+{
+  "accepted": false,
+  "status": "UNACCEPTED_AUTHORED_SHAPE_NATIVE_SAVED",
+  "candidate": {
+    "path": "harness/out/rider-rebuild/head-neck-anatomical02/native02/selected-head-anatomical-neck.blend",
+    "sha256": "9023618821cfb4e0c2725f0dfb970ac898d7e38d94a4c30be9863515c938307c"
+  },
+  "sourcePins": {
+    "/Users/raynos/projects/games/rockhop/harness/out/rider-rebuild/native-hand-repair01/native02/anatomical-hand-rig.blend": "42fca617ea8d246a6c3e3ca68a90cd3cb5f3ce8b9bb78130e0e2bbd65f605fac",
+    "/Users/raynos/projects/games/rockhop/harness/out/rider-rebuild/native-hand-repair01/native02/native-body.npz": "e62e9969503b7761e99463eccc3ca7be39e0c230a2948f2f87a224db52d0f9a2",
+    "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/rig-adapter01/body-bind11/rider.glb": "b7f4f22790124c664f9907104e5b17b77775b4c5c995f715d62be640bbcc8754",
+    "/Users/raynos/projects/games/rockhop/harness/out/rider-rebuild/head-neck-anatomical02/shell-diagnostic01/report.json": "ba860951b21c9447c5c2f08b98bae18e2812ff5f02460fabeaf23d5799b56dea"
+  },
+  "recipeSHA256": "d838667392251a607581936dc7d095efd1028ede3e00cc552308a8e055d9c761",
+  "all75RestRecordsUnchanged": true,
+  "canonicalRetainedPositionFieldRows": 6753,
+  "handRowsUnchanged": 1446,
+  "vertices": 38959,
+  "polygons": 70845,
+  "lowerBoundaryVertices": 60,
+  "upperBoundaryVertices": 347,
+  "removedSecondaryInternalScanVertices": 0,
+  "explicitInteriorCapTriangles": 339,
+  "internalCapRecords": [
+    {
+      "rimVertices": 341,
+      "enclosedByActualOuterRim": 341,
+      "triangles": 339,
+      "bounds": [
+        [
+          -0.06664741784334183,
+          -0.10451022535562515,
+          1.5425764322280884
+        ],
+        [
+          0.05843869596719742,
+          0.06878010928630829,
+          1.6049635410308838
+        ]
+      ]
+    }
+  ],
+  "actualTopology": {
+    "boundaryEdges": 0,
+    "nonmanifoldEdges": 0,
+    "looseVertices": 0,
+    "authoredNeckTriangles": 5879,
+    "internalCapTriangles": 339
+  },
+  "interiorPolicy": "Zero exact source UVpairs observed; no inferred inner-head/ear layer deleted. Only enclosed secondary oblique cut opening capped, ancestry2. Existing connected inner-head surface retained.",
+  "authoredNeckNewVertices": 3484,
+  "circumferentialSections": 19,
+  "sectionSamples": 144,
+  "selectedRawCornerNormalsRetained": 148238,
+  "selectedCornerNormalsInDerivativeBlendStrip": 25644,
+  "upperCut": "z=1.555+.36*(y+.07)+.5*x*x",
+  "lowerCut": "z=1.438+2*x*x+.20*(y+.04)",
+  "authoredSections": [
+    [
+      0.0,
+      null
+    ],
+    [
+      0.2,
+      [
+        0.082,
+        -0.069,
+        0.081
+      ]
+    ],
+    [
+      0.4,
+      [
+        0.058,
+        -0.063,
+        0.064
+      ]
+    ],
+    [
+      0.6,
+      [
+        0.052,
+        -0.065,
+        0.055
+      ]
+    ],
+    [
+      0.8,
+      [
+        0.055,
+        -0.074,
+        0.055
+      ]
+    ],
+    [
+      1.0,
+      null
+    ]
+  ],
+  "texture": "New cylindrical UV chart, source-triangle barycentric sampling of genuine donor neck; newly exposed low chest uses extrapolated source neck with lower boundary blend to canonical material; 256x256 packed derivative albedo. No donor bust geometry.",
+  "limits": [
+    "Parent alone judges shape; no moving-art acceptance from stills.",
+    "No finished outfit, bike motion, exported/GPU transport or player promotion.",
+    "New throat UV/PBR is derivative; original source maps and native files unchanged.",
+    "This construction has not passed an independent saved-native readback.",
+    "Existing connected inner-head shell retained; no whole-head interior cleanup claim."
+  ]
+}

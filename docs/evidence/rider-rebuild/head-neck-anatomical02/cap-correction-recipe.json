@@ -1,0 +1,20 @@
+{
+  "accepted": false,
+  "status": "SCOPED_CAP_CORRECTION_PREPARED_PARENT_LEASE_REQUIRED",
+  "recipe": {
+    "path": "assets/blender/rider-rebuild/head-neck-anatomical02/build-capped-interior.py",
+    "sha256": "d838667392251a607581936dc7d095efd1028ede3e00cc552308a8e055d9c761"
+  },
+  "AST": "PASS",
+  "command": "blender -b -t 2 --python-exit-code 1 --python assets/blender/rider-rebuild/head-neck-anatomical02/build-capped-interior.py -- harness/out/rider-rebuild/head-neck-anatomical02/native02",
+  "diagnostic": {
+    "path": "harness/out/rider-rebuild/head-neck-anatomical02/shell-diagnostic01/report.json",
+    "sha256": "ba860951b21c9447c5c2f08b98bae18e2812ff5f02460fabeaf23d5799b56dea",
+    "exactUVPairedTriangles": 0
+  },
+  "change": "Cap only strictly enclosed actual secondary cut rim with tagged internal triangles; no inferred inner-head or ear layer deletion. Same broad authored 19-section neck geometry.",
+  "limits": [
+    "Connected inner-head scan shell retained honestly.",
+    "No exterior shape acceptance until actual four-view review; no moving art pass."
+  ]
+}
