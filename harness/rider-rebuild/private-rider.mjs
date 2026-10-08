@@ -52,6 +52,7 @@ export function createPrivateRiderClass(metadata) {
       wristErr: [0, 0], gripErr: [0, 0], gripAngleErr: [0, 0], ankleErr: [0, 0], armLen: [0, 0],
       additiveWeight: 0, physicalPose: false, comResidual: 0, ragdollResidual: -1, ragdollBlend: 0,
       ragdollDetail: [], bones: 0, clips: [], stageClip: null, stageBlend: 0, soleErr: [0, 0],
+      inheritedSoleErr: [0, 0], soleContactDefinition: [],
       stance: { on: false, pose: 'seated', blend: 0, lean: 0, land: 0, extend: 0, dy: 0, lag: 0, limit: 1 },
       candidate: {}, allBoneFinite: false, fullResetCount: 0,
     };
@@ -170,10 +171,22 @@ export function createPrivateRiderClass(metadata) {
       const soleName = this.driver.soleSocketNames?.[side]; fail(soleName, `Missing ${side} sole socket`);
       const sole = this.binding.exact(sanitize(soleName)), footBone = this.bone(foot);
       footBone.updateWorldMatrix(true, true);
-      const local = footBone.matrixWorld.clone().invert().multiply(sole.matrixWorld);
+      const selected = this.driver.selectedSoleInFoot?.[side];
+      const selectedPeg = this.driver.selectedPegSurfaceBike?.[side];
+      fail(!!selected === !!selectedPeg, `Incomplete ${side} selected sole calibration`);
+      if (selected) {
+        fail(selected.length === 16 && selected.every(Number.isFinite), `Invalid ${side} selected sole frame`);
+        fail(selectedPeg.length === 3 && selectedPeg.every(Number.isFinite), `Invalid ${side} finite peg target`);
+      }
+      const local = selected ? new THREE.Matrix4().fromArray(selected)
+        : footBone.matrixWorld.clone().invert().multiply(sole.matrixWorld);
+      fail(Math.abs(local.determinant()) > 1e-6, `Singular ${side} sole frame`);
       const targetQ = this.driver.soleQuaternionBike?.[side] ? Q().fromArray(this.driver.soleQuaternionBike[side]).normalize()
         : this.restQ.get(foot).clone().multiply(Q().setFromRotationMatrix(local).normalize()).normalize();
-      this.soleFrames.set(side, { node: sole, local, targetQ });
+      this.soleFrames.set(side, { node: sole, local, targetQ, selectedPeg });
+      this.debug.soleContactDefinition.push(selected
+        ? 'Source-bound rigid selected outer-sole witness to finite peg point; whole contact remains unqualified'
+        : 'Inherited anatomy socket center; selected boot surface contact unqualified');
       fail(this.driver.sideZ?.[side] === -1 || this.driver.sideZ?.[side] === 1, `Declare ${side} lateral sign`);
       for (const id of Object.values(hand.digits).flat()) {
         const flex = this.driver.digitFlex?.[side]?.[id];
@@ -290,7 +303,9 @@ export function createPrivateRiderClass(metadata) {
         const grip = V(RIDER_PROFILE.grip.x, RIDER_PROFILE.grip.y, sign * RIDER_PROFILE.grip.z);
         const gripWorld = this.bike.frame.matrixWorld.clone().multiply(new THREE.Matrix4().compose(grip, this.handTargets.get(side), V(1, 1, 1)));
         this.solveLimb(this.limbs.get('arm' + s), solvePalmSocketTarget(this.binding, side, gripWorld), V(p.elbow.x, p.elbow.y, sign * p.elbow.z), 'arm', index);
-        const sole = this.soleFrames.get(side), peg = V(RIDER_PROFILE.peg.x, RIDER_PROFILE.peg.y + 0.011, sign * RIDER_PROFILE.peg.z);
+        const sole = this.soleFrames.get(side);
+        const inheritedPeg = V(RIDER_PROFILE.peg.x, RIDER_PROFILE.peg.y + 0.011, sign * RIDER_PROFILE.peg.z);
+        const peg = sole.selectedPeg ? V().fromArray(sole.selectedPeg) : inheritedPeg;
         const soleWorld = this.bike.frame.matrixWorld.clone().multiply(new THREE.Matrix4().compose(peg, sole.targetQ, V(1, 1, 1)));
         this.solveLimb(this.limbs.get('leg' + s), soleWorld.multiply(sole.local.clone().invert()), V(p.knee.x, p.knee.y, sign * p.knee.z), 'leg', index);
         const hand = this.binding.contract.hands[side];
@@ -303,7 +318,9 @@ export function createPrivateRiderClass(metadata) {
         this.debug.gripErr[index] = this.toBike(palm.getWorldPosition(V())).distanceTo(grip);
         this.debug.gripAngleErr[index] = palm.getWorldQuaternion(Q()).normalize().angleTo(this.frameQ().multiply(this.handTargets.get(side)));
         this.debug.wristErr[index] = this.debug.gripErr[index]; this.debug.handOnGrip[index] = !frame.crashed && this.debug.gripErr[index] < 0.01;
-        this.debug.soleErr[index] = this.toBike(sole.node.getWorldPosition(V())).distanceTo(peg);
+        const supportWorld = this.bone(this.role('foot' + s)).matrixWorld.clone().multiply(sole.local);
+        this.debug.soleErr[index] = this.toBike(V().setFromMatrixPosition(supportWorld)).distanceTo(peg);
+        this.debug.inheritedSoleErr[index] = this.toBike(sole.node.getWorldPosition(V())).distanceTo(inheritedPeg);
         this.debug.ankleErr[index] = this.debug.soleErr[index]; this.debug.footOnPeg[index] = this.debug.soleErr[index] < 0.01;
       });
     }

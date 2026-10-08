@@ -1,0 +1,79 @@
+{
+  "accepted": false,
+  "sourceSHA256": "72b90e8790f8490743a75f8b70791aa21edfee6234cec609093e9b62e08d4bfd",
+  "driver": {
+    "selectedSoleInFoot": {
+      "left": [
+        0.8975303643469126,
+        0.36272044659805347,
+        -0.250744924549961,
+        0,
+        -0.000011922172697831096,
+        -0.5686238719816684,
+        -0.8225976315321484,
+        0,
+        -0.44095240506314376,
+        0.7383092149795747,
+        -0.5103527860688362,
+        0,
+        -0.04843432260321329,
+        0.1850933107240746,
+        0.05921910792392583,
+        1
+      ],
+      "right": [
+        0.8975305573301833,
+        -0.36272031841205016,
+        0.2507451057104126,
+        0,
+        0.000012216941659826562,
+        -0.5686238257826277,
+        -0.822597829058586,
+        0,
+        0.4409525866068953,
+        0.738309751455613,
+        -0.510352828207052,
+        0,
+        0.04843428673711425,
+        0.1851633110974218,
+        0.05932033954982355,
+        1
+      ]
+    },
+    "selectedPegSurfaceBike": {
+      "left": [
+        -0.1,
+        0.025981444865465164,
+        -0.165
+      ],
+      "right": [
+        -0.1,
+        0.025981444865465164,
+        0.165
+      ]
+    }
+  },
+  "bikes": [
+    {
+      "path": "public/models/bike-rookie.glb",
+      "sha256": "e55919d60267849358ef5e97f4731f42fac6eb2835b9998e1d146d056c0f10f7"
+    },
+    {
+      "path": "public/models/bike-pro.glb",
+      "sha256": "0acc9ac86eeca76cc1812f8870eab36e2e25ca76d6a5cbe86d4a46a36cc12a86"
+    }
+  ],
+  "evidence": [
+    {
+      "bike": "rookie",
+      "path": "docs/evidence/rider-rebuild/selected-contact01/parent-source03.json",
+      "sha256": "672356eb018ad03f20aa97db46975c5755e18e9c59e8a4058b5d7291d45040cd"
+    },
+    {
+      "bike": "pro",
+      "path": "docs/evidence/rider-rebuild/selected-contact01/parent-pro-source04.json",
+      "sha256": "7ca96a7faf473d1bc0bcefa837887c17383ba089d7566e6182e7db9ade78e053"
+    }
+  ],
+  "limits": "Measured rigid outer-sole witness and finite peg points only; whole moving contacts and art remain unaccepted."
+}

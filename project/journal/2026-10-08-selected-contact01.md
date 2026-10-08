@@ -1,0 +1,5 @@
+Finding: Near-zero inherited sole helpers conceal selected rigid outer-sole penetration of actual rookie peg geometry. Exact7d826/e559 source triangles and barycentric witnesses support explicit selectedSoleInFoot driver frames with no native75 rest/socket edits.
+Validation: Deterministic GLB/meshopt audit succeeded; maximum nine-sample penetration13.546mmL/13.669mmR, normal opposition .99638/.99858; Node syntax passed.
+Limits: Source translation proposal only; actual played Garage/game and full finite contacts remain unaccepted. Thumb-web ray is articulated, not a palm-pad calibration; no hand shift. All R0-R5 open; no normal player promotion.
+
+Parent validation: Independent guarded current72b90 source audits reproduce both originalsolematrices and13.546/13.669mm penetration; actualPro has identical supportframes/points. Source-bound calibration generator requires exact identical geometry-derived values and rigidownfoot witnesses forbothbikes. Privateadapter consumes these explicitframes, retains inheritedhelperdiagnostic separately; actualGarage/ride next.

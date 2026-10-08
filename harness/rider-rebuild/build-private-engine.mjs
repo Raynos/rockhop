@@ -17,6 +17,9 @@ const calibrationPath = arg('pose-calibration') ? path.resolve(arg('pose-calibra
 const calibration = calibrationPath ? JSON.parse(fs.readFileSync(calibrationPath, 'utf8')) : null;
 if (calibration) {
   if (calibration.sourceSHA256 !== sha(sourceBytes)) throw new Error('Pose calibration source changed');
+  for (const bike of calibration.bikes ?? []) {
+    if (sha(fs.readFileSync(path.resolve(root, bike.path))) !== bike.sha256) throw new Error('Selected sole bike source changed');
+  }
   Object.assign(metadata.driver, calibration.driver);
 }
 const mapping = Object.fromEntries(fs.readdirSync(path.join(root, 'public/models')).filter(name => /^rider.*\.glb$/.test(name)).map(name => [`models/${name}`, source]));

@@ -1,0 +1,240 @@
+{
+  "accepted": false,
+  "status": "SOURCE_MEASURED_SELECTED_SOLE_TRANSLATION_PROPOSAL_PLAYED_REVIEW_PENDING",
+  "source": {
+    "path": "harness/out/rider-rebuild/selected-complete-engine01/engine03/rider.glb",
+    "sha256": "7d826b835ca07c7c584d6b3a9606e9e89780f1c7b92e4030e1f1b58aff4127ed"
+  },
+  "contract": {
+    "path": "harness/out/rider-rebuild/selected-complete-engine01/engine03/rider-contract.json",
+    "sha256": "719209bfee6f9010ef5e1a7ed54bba68905d3b2a2f78b792cd9c1f4af252c3f0"
+  },
+  "bike": {
+    "path": "public/models/bike-rookie.glb",
+    "sha256": "e55919d60267849358ef5e97f4731f42fac6eb2835b9998e1d146d056c0f10f7"
+  },
+  "driver": {
+    "selectedSoleInFoot": {
+      "left": [
+        0.8975303643469126,
+        0.36272044659805347,
+        -0.250744924549961,
+        0,
+        -0.000011922172697831096,
+        -0.5686238719816684,
+        -0.8225976315321484,
+        0,
+        -0.44095240506314376,
+        0.7383092149795747,
+        -0.5103527860688362,
+        0,
+        -0.04843432260321329,
+        0.1850933107240746,
+        0.05921910792392583,
+        1
+      ],
+      "right": [
+        0.8975305573301833,
+        -0.36272031841205016,
+        0.2507451057104126,
+        0,
+        0.000012216941659826562,
+        -0.5686238257826277,
+        -0.822597829058586,
+        0,
+        0.4409525866068953,
+        0.738309751455613,
+        -0.510352828207052,
+        0,
+        0.04843428673711425,
+        0.1851633110974218,
+        0.05932033954982355,
+        1
+      ]
+    },
+    "selectedPegSurfaceBike": {
+      "left": [
+        -0.1,
+        0.025981444865465164,
+        -0.165
+      ],
+      "right": [
+        -0.1,
+        0.025981444865465164,
+        0.165
+      ]
+    }
+  },
+  "witnesses": {
+    "left": {
+      "sourceBoot": "ActualSelectedBoot.L",
+      "nativeVertexIDs": [
+        61131,
+        61661,
+        61126
+      ],
+      "barycentric": [
+        0.05575235796731759,
+        0.906245781674233,
+        0.03800186035844939
+      ],
+      "pointGLTF": [
+        0.18724110680833653,
+        -0.021724431971453684,
+        0.06633197365681853
+      ],
+      "normalBike": [
+        0.08105815511958689,
+        -0.9963837796781493,
+        0.02547428277487849
+      ],
+      "fields": [
+        [
+          [
+            "DEF-foot.L",
+            1
+          ]
+        ],
+        [
+          [
+            "DEF-foot.L",
+            1
+          ]
+        ],
+        [
+          [
+            "DEF-foot.L",
+            1
+          ]
+        ]
+      ],
+      "finitePegTriangle": {
+        "triangleRow": 311,
+        "decodedVertexRows": [
+          452,
+          409,
+          436
+        ],
+        "nativeVertexIDs": [
+          452,
+          409,
+          436
+        ],
+        "point": [
+          -0.1,
+          0.025981444865465164,
+          -0.165
+        ],
+        "normal": [
+          0,
+          1,
+          0
+        ],
+        "barycentric": [
+          0.2547065868263472,
+          0.06541129600464207,
+          0.6798821171690107
+        ],
+        "fields": [
+          [],
+          [],
+          []
+        ],
+        "distance": 0.12401855513453483
+      },
+      "oldSampledPenetrationM": 0.013546200580070417,
+      "soleNormalOpposesPegNormalDot": 0.9963837796781493
+    },
+    "right": {
+      "sourceBoot": "ActualSelectedBoot.R",
+      "nativeVertexIDs": [
+        61112,
+        61645,
+        61646
+      ],
+      "barycentric": [
+        0.07484718658426853,
+        0.2842267922698402,
+        0.6409260211458913
+      ],
+      "pointGLTF": [
+        -0.18724115446024991,
+        -0.02184769325601396,
+        0.06633203640783213
+      ],
+      "normalBike": [
+        0.0508026100844857,
+        -0.9985802947734398,
+        0.016015295776036564
+      ],
+      "fields": [
+        [
+          [
+            "DEF-foot.R",
+            1
+          ]
+        ],
+        [
+          [
+            "DEF-foot.R",
+            1
+          ]
+        ],
+        [
+          [
+            "DEF-foot.R",
+            1
+          ]
+        ]
+      ],
+      "finitePegTriangle": {
+        "triangleRow": 39,
+        "decodedVertexRows": [
+          52,
+          9,
+          36
+        ],
+        "nativeVertexIDs": [
+          52,
+          9,
+          36
+        ],
+        "point": [
+          -0.1,
+          0.025981444865465164,
+          0.165
+        ],
+        "normal": [
+          0,
+          1,
+          0
+        ],
+        "barycentric": [
+          0.7452934131736526,
+          0.06541129600464199,
+          0.18929529082170538
+        ],
+        "fields": [
+          [],
+          [],
+          []
+        ],
+        "distance": 0.12401855513453483
+      },
+      "oldSampledPenetrationM": 0.013669282994812265,
+      "soleNormalOpposesPegNormalDot": 0.9985802947734398
+    }
+  },
+  "orientationPolicy": "Retain existing rest orientation as isolated translation baseline: local sole normals oppose actual peg surface by dot .99638/.99858. Orientation art and finite whole contact remain unaccepted.",
+  "adapterRecommendation": [
+    "calibrateSide: select new Matrix4().fromArray(driver.selectedSoleInFoot[side]) when explicit source-bound selected calibration exists; preserve actual75/socket/rest unchanged.",
+    "poseFromHips: use driver.selectedPegSurfaceBike[side] as finite source target, preserving existing targetQ. Solve foot target = selectedSupportWorld * inverse(selectedSoleInFoot).",
+    "debug: measure footBone.matrixWorld * selectedSoleInFoot against finite target and report inheritedSoleSocket residual separately. Do not report inherited socket zero as selected sole contact.",
+    "Actual output/input GLB must bind these selected surface witness IDs, barycentrics, positions and rigid DEF-foot fields; update source pin only after unchanged boot witness verification."
+  ],
+  "limits": [
+    "Source surface audit only; parent must judge played real Garage/game.",
+    "Sole patch rays are finite support samples, not a global collision proof.",
+    "Palm pad witnesses do not qualify articulated finger wrap or finite bar penetration."
+  ]
+}

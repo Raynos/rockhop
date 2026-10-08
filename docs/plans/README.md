@@ -1593,3 +1593,5 @@ October8 correctedmaskedexport04 stoppedbeforeexport: fingerprintomittedencodedc
 October8 correctedcuff maskedexport05 succeeds86.479s: native95a4f14e/GLB72b90e87, independentprotectedsourceexact, maskbytesexact/no reconditioning, decodedFOURmax1.1921e-7. Actualgeneric/Garage/ride next;all0/6open.
 
 October8 requiredcurrent-player gate19passes11/11 in6.331s: boot/byteidenticalclear/crash/onetickrestart, restartframeP95 7.38ms. Existingplayeronly, doesnotacceptselectedrider; all0/6open.
+
+October8 parentcurrent72b90/rookie/Prosourceauditreproducesrigidselectedsolepenetration13.546/13.669mm; bothbikefiniteframesidentical. Source-boundsolematrices/pegpoints nowconsumedprivately, inheritedsocketdiagnosticseparate;75restunchanged. Actualplayedcomparisonnext,all0/6open.
