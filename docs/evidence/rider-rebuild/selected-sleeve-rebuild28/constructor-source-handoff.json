@@ -1,0 +1,87 @@
+{
+  "status": "FROZEN_CONSTRUCTOR_SOURCE_WAITING_ACTUAL_INPUT_CHECKPOINTS",
+  "acceptedArt": false,
+  "nativeRunExecuted": false,
+  "sourcePins": [
+    {
+      "path": "assets/blender/rider-rebuild/selected-sleeve-rebuild28/author.py",
+      "sha256": "e6a13cd8bc1d0ec18776da9fb4c8ec83598f7365807478ec9de6a87b394fa6e1"
+    },
+    {
+      "path": "assets/blender/rider-rebuild/selected-sleeve-rebuild28/check_field.py",
+      "sha256": "09dd7f76318ac7371c41b76b5058710fd0491bf2ccf1fa404bc7a950c9ff8147"
+    },
+    {
+      "path": "assets/blender/rider-rebuild/selected-sleeve-rebuild28/field.py",
+      "sha256": "09e24d646bbf013a1adb9a7bedc53dc29510507678dd40abbf11d1fe175e131a"
+    },
+    {
+      "path": "assets/blender/rider-rebuild/selected-sleeve-rebuild28/freeze_inputs.py",
+      "sha256": "1011883f199d77b820495920aff4210da5256a4d60dfcea54714f6c774bd0058"
+    },
+    {
+      "path": "assets/blender/rider-rebuild/selected-sleeve-rebuild28/qualify.py",
+      "sha256": "d4e261170c8d754ca97eec329d2958ad88e059a5f87903fc862207d87087710c"
+    }
+  ],
+  "nextInputFreeze": "OPENBLAS_NUM_THREADS=2 OMP_NUM_THREADS=2 /Users/raynos/projects/localai/runtime/unimate/.venv/bin/python assets/blender/rider-rebuild/selected-sleeve-rebuild28/freeze_inputs.py ACTUAL_GLOVES_CHECKPOINT_JSON ACTUAL_ORIGINAL_FULL_REFERENCE_NPZ assets/blender/rider-rebuild/selected-sleeve-rebuild28/input01.json",
+  "nextNativeInvocation": "/Applications/Blender.app/Contents/MacOS/Blender -b -t 2 --python-exit-code 1 --python assets/blender/rider-rebuild/selected-sleeve-rebuild28/author.py -- assets/blender/rider-rebuild/selected-sleeve-rebuild28/input01.json harness/out/rider-rebuild/selected-sleeve-rebuild28/authored01",
+  "parentAdmissionRequest": {
+    "cpu": 2,
+    "wallSeconds": 600,
+    "internalConstructionSeconds": 540,
+    "actualRuntimeMeasured": false,
+    "estimate": "Approximately 2\u20138 minutes before native save, unmeasured. Full dense qualification is separate per relation; each 600-second guard may reject on budget. No autonomous Blender execution."
+  },
+  "method": "One continuous trilinear displacement field carries all selected source cloth sheets together across the connected sleeves/shoulder contact component. Actual original full-reference Basis and triangles must match exactly. Complete affected corners and triangle centers constrain wearer distance. A per-cell analytic derivative upper bound below0.85 proves the continuous field has positive Jacobian everywhere. Exact selected outward UV/PBR and original named fields remain; distal inward return is replaced by copied exterior lining and actual3D boundary sewing. Contact constraints exclude only source terminal/inner-band faces already scheduled for replacement by the exact cuff10 cuts; defective discarded donor material cannot drive the field. All points still use one shared field.",
+  "validation": {
+    "ast": "All five Python sources passed",
+    "mathFixtures": [
+      "identity partition and affine reproduction",
+      "finite contact projection with fixed support",
+      "one function for coincident source seams",
+      "analytic folded-field rejection",
+      "complete two-wall contact fit and healthy retained boundary"
+    ],
+    "projectionFixture": {
+      "constraints": 27,
+      "iterations": 72,
+      "maximumDeficitM": 0.0
+    },
+    "completeTwoWallFit": {
+      "minimumM": 0.0026,
+      "fixedBoundaryMinimumM": 0.008999364400983324,
+      "contactPasses": 4,
+      "globalDerivativeBound": 0.18955590433656844
+    },
+    "actualFixtureReceipt": {
+      "path": "docs/evidence/rider-rebuild/selected-sleeve-rebuild28/math-fixtures.json",
+      "sha256": "86ac3fc15283d1981efa77e1e1160258e7d5820eaeeb41a751ca7721ced8e604"
+    },
+    "correctedFixtureFailure": "Full curved contact initially oscillated because selecting a new worst contact dropped prior rows. The corrected solver retains active rows and schedules same-cell rows sequentially; geometry targets, cell size and budgets are unchanged.",
+    "actualUpperArmMembership": {
+      "path": "docs/evidence/rider-rebuild/selected-sleeve-rebuild28/actual-upper-arm-membership.json",
+      "sha256": "38b54a475e23ee12618bbe5878251f3a1502352c5d517c2f6c015dd22b75e27a"
+    }
+  },
+  "denseRelations": [
+    "hoodie-full-wearer",
+    "hoodie-self",
+    "hoodie-glove-L",
+    "hoodie-glove-R",
+    "glove-L-full-wearer",
+    "glove-R-full-wearer"
+  ],
+  "qualifierInvocation": "/Applications/Blender.app/Contents/MacOS/Blender -b -t 2 --python-exit-code 1 --python assets/blender/rider-rebuild/selected-sleeve-rebuild28/qualify.py -- harness/out/rider-rebuild/selected-sleeve-rebuild28/authored01/construction.json RELATION",
+  "limits": [
+    "Source-only constructor checkpoint; no actual contact/geometry/art pass claimed.",
+    "Actual reference05 early full-reference arrays are now pinned; actual glove native checkpoint remains pending. Input01 is intentionally not fabricated.",
+    "Original body/rest/otherparts protected. Original hoodie source fields remain exact but may still fail independent arm/finger and actual bike envelopes.",
+    "The new lining follows existing cuff10 source cuts after global continuous fit; original distal turned lip is not retained.",
+    "Dense fullhoodie checks include torso, preserved folded source and all original degenerates; no crop or mask waiver."
+  ],
+  "actualReferenceReady": {
+    "path": "harness/out/rider-rebuild/selected-seated-anatomical09/reference05/original-full-reference.npz",
+    "sha256": "01f752d72e94dbab81cc7a193adbd2dd7bba26df919b48454d8937fa9665dcc5"
+  }
+}
