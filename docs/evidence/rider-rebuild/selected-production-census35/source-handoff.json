@@ -1,0 +1,89 @@
+{
+  "status": "FROZEN_SOURCE_ONLY_REJECTED_BOOT_SURFACE_CENSUS",
+  "acceptedArt": false,
+  "nativeExecuted": false,
+  "sourcePins": {
+    "census.py": {
+      "path": "assets/blender/rider-rebuild/selected-production-census35/census.py",
+      "sha256": "b570c6bb9a79e734cf0aa9381523d53c2436eef279bfe1c746fd3b3aa85bbb76"
+    },
+    "check_regions.py": {
+      "path": "assets/blender/rider-rebuild/selected-production-census35/check_regions.py",
+      "sha256": "b0049b2ca27010458792ea099faf2c6704a578ef8493bfbe6433ee4e5c7b12a1"
+    },
+    "input.json": {
+      "path": "assets/blender/rider-rebuild/selected-production-census35/input.json",
+      "sha256": "8b1e26da8faa9781de787c741a74083bfe778d8552076a094863b5ad5a28f8c8"
+    },
+    "regions.py": {
+      "path": "assets/blender/rider-rebuild/selected-production-census35/regions.py",
+      "sha256": "b8d4af46151859b857a9bab848aa0df5d6af7ec455878452c6df2d7ea2c22e61"
+    }
+  },
+  "actualNative": {
+    "path": "harness/out/rider-rebuild/selected-production-diagnostic34/bootL01/REJECTED-bootL-before-transfer.blend",
+    "sha256": "a155d13f9b4df422bf851f847c7d392fbd3451c5d20c675093e8913bd05138ad"
+  },
+  "actualGeometricFinding": {
+    "targetVertex": 14,
+    "originalVertex": 1451,
+    "sameOriginalCoordinate": true,
+    "nearestDistanceM": 0.0,
+    "skinL1": 0.0,
+    "storedVersusIndependentAngleNormalDifference": 3.237644495920103e-05,
+    "normalChangedOnUpdate": false,
+    "targetFace13VersusEverySourceAncestryFanDotRange": [
+      -0.9971580092960758,
+      -0.7518244596222312
+    ],
+    "targetNeighbor7OriginalAncestryDisplacementM": 0.0009173348268461932,
+    "conclusion": "Actual collapsed geometry turned the face against its source fan. Changing normals or picking a convenient nearby face would hide the fold. Zero boundary locks did not constrain curvature/UV features."
+  },
+  "census": "Open pinned151098256-byte rejected native only, no reduction or native save. Export exact selected original vertex positions/triangles/corner ownership/UVs/normals/materialIDs/three named fields. Scan every target vertex, target triangle centroid and target edge midpoint against dense source; then every source vertex and source triangle centroid against target. Record raw distances, nearest face IDs and original normal-limit comparisons, plus connected failed-face regions and ancestry displacement. No alternate nearest-face assignment.",
+  "checkpointOrder": [
+    "Write initial receipt and exact source binary arrays/layout first.",
+    "Write each target-vertex and face-centroid scan as uncompressed compact arrays and report.",
+    "Write connected orientation-region report and target fold/provenance arrays before reverse work.",
+    "Write edge-midpoint scan before source reverse scans.",
+    "Checkpoint each reverse scan every65536 queries and at completion; arrays declare completedCount, remaining rows are NaN/-1.",
+    "Mark only COMPLETED_REJECTED_BOOT_CENSUS_UNACCEPTED when every stage completes."
+  ],
+  "validation": {
+    "pythonAST": "PASS three Python sources",
+    "fixtures": {
+      "path": "docs/evidence/rider-rebuild/selected-production-census35/region-fixtures.json",
+      "sha256": "86cdb737458ad6e59e9a09aa106c7b044965f9c5c0696c0968d4c052a670950c"
+    },
+    "actualCensus": "NOT RUN"
+  },
+  "nextParentGuardCommand": "/Users/raynos/projects/localai/runtime/unimate/.venv/bin/python assets/blender/hero-remaster/generation-comparison-2026-10-03/user-agent2/run_bounded96.py --out docs/evidence/rider-rebuild/selected-production-census35/bootL-guard01 --limit-seconds 90 -- /Applications/Blender.app/Contents/MacOS/Blender -b -t 2 --python-exit-code 1 --python assets/blender/rider-rebuild/selected-production-census35/census.py -- assets/blender/rider-rebuild/selected-production-census35/input.json harness/out/rider-rebuild/selected-production-census35/bootL01",
+  "guardRecipe": {
+    "path": "assets/blender/hero-remaster/generation-comparison-2026-10-03/user-agent2/run_bounded96.py",
+    "sha256": "cf8acd15d8b7484480bee74d23892be815d955ffd87115d3da8ed228ffb3d916"
+  },
+  "guardLock": {
+    "method": "lockf -k",
+    "path": "/Users/raynos/projects/localai/.model.lock"
+  },
+  "wallLimitSeconds": 90,
+  "threads": 2,
+  "nextConstructorProposal": {
+    "condition": "Review global census before constructing one candidate; no vertex14-only repair.",
+    "library": "Installed meshoptimizer1.1.1 index-only simplifyWithAttributes, preserved original vertex IDs.",
+    "input": "Original positions in meters plus actual named skin fields and source normals; preserve UV/material chart ownership through explicit per-corner vertex splitting when retained. Dense donor geometry/maps remain immutable for the existing cage bake.",
+    "configuration": "One target_index_count24000 (8000triangles), target_error0.001 with ErrorAbsolute. No simplifyWithUpdate, Sloppy, Permissive, Prune, ratio sweep or changed source bounds. Explicit vertex locks preserve required borders/contact features; attribute choices must be frozen before one candidate.",
+    "qualification": "Save returned candidate even if above8k as UNACCEPTED; require unchanged8k allocation, original0.25 normal/bidirectional1mm/detail/FOUR limits and complete moving/source-shading gates. meshoptimizer error is approximate and local flip rejection is not final source-surface proof.",
+    "stopLoss": "If one attribute-aware candidate cannot meet unchanged allocation and all source bounds, use the measured feature/contact regions to construct a proper retopology cage; do not force reduction or weaken guards."
+  },
+  "limits": [
+    "No source/master/native modifications or actual meshoptimizer execution. Root scheduling only after required gate; gameplay film priority retained.",
+    "This is a complete census of the listed finite samples, not continuous Hausdorff or all self-intersections. Failures are data, never an art/device pass.",
+    "Runtime/memory of the proposed alternative is unmeasured; installed wrapper makes source-sized WASM copies.",
+    "Census runtime unmeasured;90second original guard is a bound, not a promise."
+  ],
+  "primaryReferences": [
+    "https://github.com/blender/blender/blob/main/source/blender/bmesh/tools/bmesh_decimate_collapse.cc",
+    "https://github.com/zeux/meshoptimizer/blob/b22872835dbabc56a6e4a366ea9917f62b7daf1a/src/simplifier.cpp#L1182-L1198",
+    "https://github.com/zeux/meshoptimizer/blob/b22872835dbabc56a6e4a366ea9917f62b7daf1a/js/README.md"
+  ]
+}
