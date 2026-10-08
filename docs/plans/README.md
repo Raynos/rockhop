@@ -1867,3 +1867,5 @@ Motion11 actual selected dressed transport passes7.737s: all six native actions 
 Gate36 actual Metal partial boot/clear/crash/restart passes11/11 in7.411s, unchangedfd8fe7c2: ready268.416ms, first421.055ms, restart5.90ms, exactfinish/hash. Prior gate35 failure retained; original thresholds unchanged. Partial existing-player check only, no new rider/full release/device acceptance.
 
 Motion11 actual dressed Range Garage film captures the full12s action and plays27.24s to natural end/errors0. Selected clothes/face/hair move together; cuff flaps remain defective and bike occludes deep-crouch hips/knees, so no lower-body/contact/art gate passes. Development59.729FPS/25captureFPS. New measured seated/lean native source is next.
+
+Reference05 source preserves04 unchanged, writes original full-reference Basis/triangles/real IDs early, records exact staged cage/transform differences and saves complete surfaces plus unaccepted recovery native before late gates. Exact cage bounds remain unchanged; actual diagnosis and full wearer/contact qualification are pending.
