@@ -1,0 +1,73 @@
+{
+  "status": "PASS_BEHAVIOR_FIXTURES_ONLY",
+  "acceptedArt": false,
+  "actualNativeRun": false,
+  "results": {
+    "check_checkpoint03.py": {
+      "passed": true,
+      "actualNativeRun": false,
+      "fixtures": [
+        "Successful save explicitly disables compression and hashes final native plus both ancestry files",
+        "Existing native/receipt rejected before save",
+        "cancelled save preserves failure output and emits no success receipt",
+        "missing-final save preserves failure output and emits no success receipt",
+        "compressed save preserves failure output and emits no success receipt",
+        "exception save preserves failure output and emits no success receipt",
+        "Actual03 wrapper retains memory02 and protected callbacks, changes only save, records its own recipe"
+      ],
+      "fixtureFileBytesAreNotNativeBlenderData": true
+    },
+    "check_memory_lifetime.py": {
+      "passed": true,
+      "actualNativeRun": false,
+      "fixtures": [
+        "Existing left instance releases scratch only after successful finish",
+        "Returned actual arrays/report survive scratch release before right construction",
+        "Failed finish preserves diagnostic scratch and propagates failure",
+        "Hoodie sentinel bypasses the original constructor and preserves native object"
+      ],
+      "events": [
+        {
+          "operation": "RELEASE_COMPLETED_GLOVE_PYTHON_SCRATCH",
+          "object": "ActualSelectedGlove.L",
+          "sourceVertices": 284571,
+          "sourceFaces": 569142,
+          "releasedMemberNames": [
+            "fail",
+            "finished",
+            "old_count",
+            "old_face_count",
+            "returned",
+            "scratch",
+            "source"
+          ],
+          "returnedArraysAndReportPreserved": true,
+          "nativeDatablocksRemoved": false
+        },
+        {
+          "operation": "RELEASE_COMPLETED_GLOVE_PYTHON_SCRATCH",
+          "object": "ActualSelectedGlove.R",
+          "sourceVertices": 284571,
+          "sourceFaces": 569142,
+          "releasedMemberNames": [
+            "fail",
+            "finished",
+            "old_count",
+            "old_face_count",
+            "returned",
+            "scratch",
+            "source"
+          ],
+          "returnedArraysAndReportPreserved": true,
+          "nativeDatablocksRemoved": false
+        },
+        {
+          "operation": "SKIP_UNUSED_HOODIE_SURGERY",
+          "object": "RiderHoodie",
+          "nativeObjectUnchanged": true,
+          "scratchArraysAllocated": false
+        }
+      ]
+    }
+  }
+}

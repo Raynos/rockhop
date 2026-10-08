@@ -1,0 +1,109 @@
+{
+  "status": "FROZEN_UNCOMPRESSED_NATIVE_CHECKPOINT_SOURCE_ONLY",
+  "acceptedArt": false,
+  "nativeRunExecuted": false,
+  "sourcePins": [
+    {
+      "path": "assets/blender/rider-rebuild/selected-sleeve-tailoring27/gloves_only03.py",
+      "sha256": "af9fa60673f944b4b1ff1879c870a6f917e1744d28714561cf6cc7dabafb5b6e"
+    },
+    {
+      "path": "assets/blender/rider-rebuild/selected-sleeve-tailoring27/checkpoint03.py",
+      "sha256": "9e3b44563e27da4e99be35ee43539ffc3bd9b0f5b357c06748b4fc224fc080c7"
+    },
+    {
+      "path": "assets/blender/rider-rebuild/selected-sleeve-tailoring27/check_checkpoint03.py",
+      "sha256": "8b5d5db19199c40288bda64cc92d870054f1f758a669bb40eb50ea531855f48e"
+    },
+    {
+      "path": "assets/blender/rider-rebuild/selected-sleeve-tailoring27/gloves_only02.py",
+      "sha256": "61ade7d9c46b60fbbc28a8a1869e86eb67eecb6524b5808c9390c37cdbef2e4b"
+    },
+    {
+      "path": "assets/blender/rider-rebuild/selected-sleeve-tailoring27/memory_lifetime.py",
+      "sha256": "e91325cce045c41373e557f3b92332b8779e0374c7c917133365036f6f8dcb90"
+    },
+    {
+      "path": "assets/blender/rider-rebuild/selected-sleeve-tailoring27/check_memory_lifetime.py",
+      "sha256": "4aa7cbfe306bf695eac70da2a28648c4018bcc6bfa58b5dd259f7719e32360d6"
+    },
+    {
+      "path": "assets/blender/rider-rebuild/selected-sleeve-tailoring27/gloves_only.py",
+      "sha256": "279e936f3ab107434557e8efbb7d0a3b1525b9b7aeb6c6a7c63084b3bbb4455a"
+    },
+    {
+      "path": "assets/blender/rider-rebuild/selected-sleeve-tailoring27/checkpoint.py",
+      "sha256": "d45d46b46cc621fb6a116f6677bafaa642989e6664f6da6a919d46b70b4b2419"
+    }
+  ],
+  "fixtureReceipt": {
+    "path": "docs/evidence/rider-rebuild/selected-sleeve-rebuild28/gloves-memory03-fixtures.json",
+    "sha256": "185b43c948e1e9ed7078141f32a2d93f67dc6f456cccae2dee5e0447c08e315d"
+  },
+  "actualPredecessorFailure": {
+    "guard": {
+      "path": "docs/evidence/rider-rebuild/selected-sleeve-rebuild28/gloves-guard02/guard.json",
+      "sha256": "216632173b41e98725622b2b29b3d0d411cd8dd05f9440d7a31fd5b57afdee71"
+    },
+    "workerLog": {
+      "path": "docs/evidence/rider-rebuild/selected-sleeve-rebuild28/gloves-guard02/worker.log",
+      "sha256": "de5b22a1036048b23b2f2172e6c4638f33ffb113f55c2b9a186891ba2e049ab7"
+    },
+    "output": "harness/out/rider-rebuild/astra-cuff-bearing18/authored28-gloves-only",
+    "elapsedSeconds": 80.405,
+    "exitCode": -15,
+    "status": "stopped owned child at memory bound",
+    "bothGlovesCompleted": true,
+    "leftAndRightScratchReleased": true,
+    "unusedHoodieConstructorSkipped": true,
+    "nativeCheckpointExists": false,
+    "incompleteTemporarySavePreserved": true
+  },
+  "method": [
+    "Exact pinned memory02 glove constructors, selected geometry, UVs, weights, maps, rest and protected geometry callbacks remain unchanged.",
+    "Only checkpoint storage encoding changes to save_as_mainfile(compress=False). Raw output bypasses Zstd buffers; native serialization itself still allocates memory.",
+    "Require FINISHED, final .blend existence and raw BLENDER header before hashing in 1MiB chunks and writing receipt. Existing native or receipt is never overwritten.",
+    "Original callback appends exact protected geometry/native75 confirmation to receipt immediately; dense and moving review remain separate and unpassed."
+  ],
+  "primarySourceInspection": [
+    {
+      "url": "https://raw.githubusercontent.com/blender/blender/main/source/blender/windowmanager/intern/wm_files.cc",
+      "finding": "Save As exposes compress boolean; wm_save_as_mainfile_exec maps it to G_FILE_COMPRESS.",
+      "scope": "Upstream main source inspected; installed build runtime save remains unexecuted."
+    },
+    {
+      "url": "https://raw.githubusercontent.com/blender/blender/main/source/blender/blenloader/intern/writefile.cc",
+      "finding": "BLO_write_file selects RawWriteWrap when G_FILE_COMPRESS is false. ZstdWriteWrap otherwise retains queued input blocks and allocates compressed output buffers."
+    }
+  ],
+  "validation": [
+    "Eight Python source ASTs pass.",
+    "Seven actual03 helper/wrapper behavior fixtures pass with explicitly fake Blender I/O.",
+    "Four exact memory02 lifetime fixtures pass again.",
+    "Original01/02 helpers and all frozen sleeve28 source pins remain unchanged."
+  ],
+  "nextParentGuardedInvocation": "/Applications/Blender.app/Contents/MacOS/Blender -b -t 2 --python-exit-code 1 --python assets/blender/rider-rebuild/selected-sleeve-tailoring27/gloves_only03.py -- harness/out/rider-rebuild/astra-cuff-bearing18/authored29-gloves-only",
+  "parentAdmission": {
+    "threads": 2,
+    "limitSeconds": 300,
+    "startAnonymousBelowGiB": 55,
+    "stopAnonymousGiB": 65,
+    "stopAnonymousPlusWiredGiB": 96,
+    "guardSHA256": "cf8acd15d8b7484480bee74d23892be815d955ffd87115d3da8ed228ffb3d916",
+    "freshOutputRequired": true
+  },
+  "expectedCost": {
+    "previousStoppedRuntimeSeconds": 80.405,
+    "roughPlanningSeconds": [
+      60,
+      150
+    ],
+    "actualRuntimeAndPeakUnmeasured": true,
+    "uncompressedNativeLargerOnDisk": true
+  },
+  "limits": [
+    "No actual native run/reopen or measured memory improvement for03. A raw header alone is not native integrity qualification.",
+    "Compression contributes allocations but is not proven the sole cause of the guard02 host memory bound.",
+    "Both selected gloves remain unaccepted pending saved native, sleeve construction, full dense checks and played generic/bike/device review."
+  ]
+}

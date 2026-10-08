@@ -1907,3 +1907,5 @@ Actual gameplay capture01 admitted at51GiB but crossed65GiB during startup after
 Native gameplay02 source reconstructs live controls from exact captured physical75 frames with source-normalized rest targets and analytic IK warm-start. Parent reviewed source and3coordinate/authority regressions pass. Actual conversion/live controls/readback and complete dressed finite contacts remain unmeasured; not new game clips.
 
 Native gameplay08 full-dressed intake is frozen after parent review: append actual measured75 actions to all7selected meshes, deactivate rejected volume, uncompressed-save/reopen before qualifiers. Known master/recipe pins and AST/Bash syntax pass. Actual capture pins and native replay pending; no geometry/appearance acceptance.
+
+Glove memory03 source preserves exact constructors/protected checks and saves native uncompressed to avoid Zstd buffers. Parent reviewed and reran7save-wrapper+4lifetime fixtures; actual memory improvement/reopen unmeasured. Frozen sources preserved, no geometry or memory-guard relaxation.
