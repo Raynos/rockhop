@@ -1,0 +1,73 @@
+{
+  "accepted": false,
+  "stage": "SAVED_NATIVE_EXACT_HASH_MATCHED_CAMERA_SPECS_READY_NO_RENDER",
+  "native": {
+    "path": "harness/out/rider-rebuild/hoodie-shoulder-anatomical04/authored01/selected-panel-outfit.blend",
+    "sha256": "1ad5c5aa21553bbb3eb84898572200b2d4418e81e1e1995d774a763707f0124f"
+  },
+  "authorReceiptSHA256": "16fa88f30446f3506047a0242dd086db127b94bd87a453a2bfe6cd3a66c01f9c",
+  "writerSHA256": "e33d497d251481f79b7a8e68efd8be9da2340f7dbe82accc44d2303946896eab",
+  "renderer": {
+    "path": "assets/blender/rider-rebuild/production-assembly01/render.py",
+    "sha256": "e50dd77cfa8ebf4f8a1efbfa81beeaea4e224cdef3b4fd82fe99bb81fd771e4b"
+  },
+  "allSevenVisibleMeshes": [
+    "Boots__LocallyRepairedSelectedDenseBoot.L",
+    "Boots__LocallyRepairedSelectedDenseBoot.R",
+    "Gloves__SelectedFittedSource.L",
+    "Gloves__SelectedFittedSource.R",
+    "Hoodie__RiderHoodie",
+    "Jeans__AlignedSelectedDenseJeans",
+    "RiderBody"
+  ],
+  "specs": [
+    {
+      "spec": {
+        "path": "docs/evidence/rider-rebuild/hoodie-shoulder-anatomical04/render-specs01/full-outfit.json",
+        "sha256": "4731bb0d52dd5e71d425881dd78743257a4b78e6189c971fa39c783494dcc3bf"
+      },
+      "output": "harness/out/rider-rebuild/production-assembly01/hoodie-panel04-full-outfit",
+      "views": 4,
+      "command": [
+        "/Applications/Blender.app/Contents/MacOS/Blender",
+        "-b",
+        "-t",
+        "2",
+        "--python-exit-code",
+        "1",
+        "--python",
+        "assets/blender/rider-rebuild/production-assembly01/render.py",
+        "--",
+        "docs/evidence/rider-rebuild/hoodie-shoulder-anatomical04/render-specs01/full-outfit.json",
+        "harness/out/rider-rebuild/production-assembly01/hoodie-panel04-full-outfit"
+      ]
+    },
+    {
+      "spec": {
+        "path": "docs/evidence/rider-rebuild/hoodie-shoulder-anatomical04/render-specs01/head-hoodie.json",
+        "sha256": "a66d0703fd1bf4a91455ceff13bb99a057dfe1d78e6c39dcf1404bb92cba3016"
+      },
+      "output": "harness/out/rider-rebuild/production-assembly01/hoodie-panel04-head-hoodie",
+      "views": 4,
+      "command": [
+        "/Applications/Blender.app/Contents/MacOS/Blender",
+        "-b",
+        "-t",
+        "2",
+        "--python-exit-code",
+        "1",
+        "--python",
+        "assets/blender/rider-rebuild/production-assembly01/render.py",
+        "--",
+        "docs/evidence/rider-rebuild/hoodie-shoulder-anatomical04/render-specs01/head-hoodie.json",
+        "harness/out/rider-rebuild/production-assembly01/hoodie-panel04-head-hoodie"
+      ]
+    }
+  ],
+  "studio": "Existing matched neutral PBR: Cycles CPU2,12samples,640square,AgX; unchanged key/fill/rim.",
+  "limits": [
+    "Parent controls serial CPU2 execution and judges. No render executed by spec writer.",
+    "Existing renderer confines fresh outputs to production-assembly01; source master remains in hoodie-shoulder-anatomical04.",
+    "All R0\u2013R5 open. Private working context; no final outfit or motion claim."
+  ]
+}

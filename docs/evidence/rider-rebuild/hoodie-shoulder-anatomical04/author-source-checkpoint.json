@@ -1,0 +1,93 @@
+{
+  "accepted": false,
+  "stage": "FROZEN_AUTHOR_SOURCE_READY_NO_GEOMETRY_JOB_EXECUTED",
+  "sources": [
+    {
+      "path": "assets/blender/rider-rebuild/hoodie-shoulder-anatomical04/author_panels.py",
+      "sha256": "e0fe83af63a552133fec56b80a315a6c11de62614d6ff895794d67440b3aa294",
+      "AST": "PASS"
+    },
+    {
+      "path": "assets/blender/rider-rebuild/hoodie-shoulder-anatomical04/write_render_specs.py",
+      "sha256": "e33d497d251481f79b7a8e68efd8be9da2340f7dbe82accc44d2303946896eab",
+      "AST": "PASS"
+    }
+  ],
+  "controls": {
+    "path": "assets/blender/rider-rebuild/hoodie-shoulder-anatomical04/panel-controls.json",
+    "sha256": "782f55d11a975723a71eceec10adee3cd57404d7416f0d041db236f2eaf32b25"
+  },
+  "pins": [
+    {
+      "key": "workingContext",
+      "path": "harness/out/rider-rebuild/production-authoring01/conditioned-neck02/editable-real-source-outfit.blend",
+      "sha256": "860d310b639e36e8093d63c6aaf3075a123d03dcbed0557aa99b5a65db80c5b6"
+    },
+    {
+      "key": "workingReceipt",
+      "path": "harness/out/rider-rebuild/production-authoring01/conditioned-neck02/assembly.json",
+      "sha256": "ddecfefbd14e3210fb60eaaaf6fd20af25581d921495c8a4962b00ba67f31770"
+    },
+    {
+      "key": "compactIntake",
+      "path": "harness/out/rider-rebuild/hoodie-shoulder-anatomical04/intake01/compact-target.npz",
+      "sha256": "05cc42d26b59f05674fafe5cbfa105a06b523b2a9ec7ca2a79ece692fbd0a838"
+    },
+    {
+      "key": "selectedIntake",
+      "path": "harness/out/rider-rebuild/hoodie-shoulder-anatomical04/intake01/selected25-source.npz",
+      "sha256": "5ccc4a69b2c2912d761babf8bde8f2ca5916d4896e816fc4ee33ae3ca34366c0"
+    },
+    {
+      "key": "intakeReceipt",
+      "path": "harness/out/rider-rebuild/hoodie-shoulder-anatomical04/intake01/intake.json",
+      "sha256": "5b34f8c08e24fa678239af62ce016ca7565ca266a9bf6b81d61a1760b7840d1c"
+    },
+    {
+      "key": "baseAuthorHelpers",
+      "path": "assets/blender/rider-rebuild/production-hoodie01/author.py",
+      "sha256": "078da52b40e1f5049759314c1794ba6559ac1dae90d79294672c674f2095d14a"
+    },
+    {
+      "key": "originalAuthorReceipt",
+      "path": "harness/out/rider-rebuild/production-hoodie01/regional-repair01/author.json",
+      "sha256": "95663c7336d3c98f59a527d20a2ac3b2e656ccb5a5b9159922a2bf51496412c1"
+    },
+    {
+      "key": "originalDensePBR",
+      "path": ".tmp/generation-comparison-2026-10-03/user-agent2/qualified-hunyuan-paint06/paint/painted.glb",
+      "sha256": "800d7a9717757b90b296a78c605cddb698c68d399a96e403aa381103e77d2eba"
+    },
+    {
+      "key": "selectedNative",
+      "path": "assets/blender/hero-remaster/rider/anatomical-foundation-2026-10-03/user-agent1/selected-hoodie25/crease-normal-candidate.blend",
+      "sha256": "c732d98076f6b9b1a209a45e8a0cddf793484807ea8b3ae9011fa4f82c151df0"
+    }
+  ],
+  "staticChecks": [
+    "Both Python ASTs PASS",
+    "All nine input pins exact",
+    "Four seam cycles unique and match explicit panel dimensions",
+    "Exactly 1035 old patch faces scoped"
+  ],
+  "command": [
+    "/Applications/Blender.app/Contents/MacOS/Blender",
+    "-b",
+    "-t",
+    "2",
+    "--python-exit-code",
+    "1",
+    "--python",
+    "assets/blender/rider-rebuild/hoodie-shoulder-anatomical04/author_panels.py",
+    "--",
+    "assets/blender/rider-rebuild/hoodie-shoulder-anatomical04/panel-controls.json",
+    "harness/out/rider-rebuild/hoodie-shoulder-anatomical04/authored01"
+  ],
+  "suggestedGuardSeconds": 180,
+  "noBlenderOrRenderExecuted": true,
+  "limits": [
+    "Parent serial CPU2 lease/checkpoint required; parent judges actual saved clothed views.",
+    "Construction controls are not measured ease or clearance.",
+    "All R0\u2013R5 open; no moving acceptance, bake or player promotion."
+  ]
+}
