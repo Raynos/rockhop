@@ -1,0 +1,372 @@
+{
+  "status": "SOURCE_ONLY_CONTROL_READY_NOT_FIT",
+  "acceptedArt": false,
+  "sourcePins": {
+    "nativeMaster": {
+      "path": "harness/out/rider-rebuild/native-hand-repair01/native02/anatomical-hand-rig.blend",
+      "sha256": "42fca617ea8d246a6c3e3ca68a90cd3cb5f3ce8b9bb78130e0e2bbd65f605fac"
+    },
+    "nativeArrays": {
+      "path": "docs/evidence/rider-rebuild/native-hand-repair01/native02/native-body.npz",
+      "sha256": "e62e9969503b7761e99463eccc3ca7be39e0c230a2948f2f87a224db52d0f9a2"
+    },
+    "handL": {
+      "path": "docs/evidence/rider-rebuild/glove-native02-fit/target01/native-hand-L.npz",
+      "sha256": "d175eb289e270d83f5dfef0617a8a8396e1841a27b6de450bfa1cb4bc10a1e1d"
+    },
+    "handR": {
+      "path": "docs/evidence/rider-rebuild/glove-native02-fit/target01/native-hand-R.npz",
+      "sha256": "2e3cd9f16768fa063de77a73eb102abfc841b16abcc11c8339b793558707c210"
+    },
+    "denseSelected": {
+      "path": "assets/blender/hero-remaster/rider/finish-2026-10-05/wardrobe/data/prep02/gloves/cleaned-donor.npz",
+      "sha256": "f07a705f334d3d2b802fa7d23baec3e9cd54b211d160b7bbd6ab2c9f4a96541c"
+    },
+    "baseColor": {
+      "path": "assets/blender/hero-remaster/rider/finish-2026-10-05/wardrobe/data/prep02/gloves/baseColorTexture.png",
+      "sha256": "9633beec8bf2bb3bd73918589b931d2fc4f33f8e3e702415094ed173a129f95c"
+    },
+    "metallicRoughness": {
+      "path": "assets/blender/hero-remaster/rider/finish-2026-10-05/wardrobe/data/prep02/gloves/metallicRoughnessTexture.png",
+      "sha256": "a7a712769a73844a9560d4bef1d163ce3fb8721e388d1a7ecfa07a3515280e67"
+    },
+    "selectedOriginal": {
+      "path": ".tmp/generation-comparison-2026-10-03/user-agent2/items01/gloves/paint01/painted.glb",
+      "sha256": "890f8693256347156c20f82a62dd79e2145cf511e7a85eb5239089644a20bfea"
+    },
+    "actualDigitControls": {
+      "path": "docs/evidence/rider-rebuild/native-hand-repair01/verify-native02/digit-controls.json",
+      "sha256": "2995c37fa2db51a37257bf62e6efc79437c115818e6d412326a68dbdded03e4d"
+    },
+    "reference": {
+      "path": "assets/blender/hero-remaster/generation-comparison-2026-10-03/user-agent2/items01/references/gloves-reference01.png",
+      "sha256": "070c5fc70f1cc17e1697cc88ffb91b71bbdba35003ee3113a94e4a1b9b36adb2"
+    }
+  },
+  "controlsSHA256": "d75387be9292303338eba6cea238bb65ef8642c051f2742b2f48796f9415c536",
+  "sourceVertices": 284571,
+  "sections": [
+    {
+      "digit": "pinky",
+      "station": "MCP",
+      "authoredPoint": [
+        -0.52,
+        0.04,
+        -0.21684
+      ],
+      "sampleCount": 279,
+      "localXYHalfWidth": 0.028,
+      "zSurfaceQuantiles02and98": [
+        -0.33185159087181093,
+        -0.1018263965845108
+      ],
+      "zMidpointResidual": -1.0062718391323777e-06
+    },
+    {
+      "digit": "pinky",
+      "station": "PIP",
+      "authoredPoint": [
+        -0.59,
+        0.31,
+        -0.26034
+      ],
+      "sampleCount": 345,
+      "localXYHalfWidth": 0.028,
+      "zSurfaceQuantiles02and98": [
+        -0.3686704480648041,
+        -0.15200636208057403
+      ],
+      "zMidpointResidual": -1.5949273109439055e-06
+    },
+    {
+      "digit": "pinky",
+      "station": "DIP",
+      "authoredPoint": [
+        -0.62,
+        0.49,
+        -0.32515
+      ],
+      "sampleCount": 359,
+      "localXYHalfWidth": 0.028,
+      "zSurfaceQuantiles02and98": [
+        -0.4275606870651245,
+        -0.22274087488651276
+      ],
+      "zMidpointResidual": 7.809758186261284e-07
+    },
+    {
+      "digit": "pinky",
+      "station": "fingertip_inside_cap",
+      "authoredPoint": [
+        -0.63,
+        0.61,
+        -0.34825
+      ],
+      "sampleCount": 545,
+      "localXYHalfWidth": 0.028,
+      "zSurfaceQuantiles02and98": [
+        -0.42200407028198245,
+        -0.27448959708213805
+      ],
+      "zMidpointResidual": -3.166317939784502e-06
+    },
+    {
+      "digit": "ring",
+      "station": "MCP",
+      "authoredPoint": [
+        -0.33,
+        0.08,
+        -0.20373
+      ],
+      "sampleCount": 342,
+      "localXYHalfWidth": 0.028,
+      "zSurfaceQuantiles02and98": [
+        -0.3366255259513855,
+        -0.07083100080490112
+      ],
+      "zMidpointResidual": -1.7366218566794434e-06
+    },
+    {
+      "digit": "ring",
+      "station": "PIP",
+      "authoredPoint": [
+        -0.36,
+        0.42,
+        -0.25341
+      ],
+      "sampleCount": 323,
+      "localXYHalfWidth": 0.028,
+      "zSurfaceQuantiles02and98": [
+        -0.3533986282348633,
+        -0.1534222048521042
+      ],
+      "zMidpointResidual": 4.1654348370556704e-07
+    },
+    {
+      "digit": "ring",
+      "station": "DIP",
+      "authoredPoint": [
+        -0.37,
+        0.66,
+        -0.36376
+      ],
+      "sampleCount": 408,
+      "localXYHalfWidth": 0.028,
+      "zSurfaceQuantiles02and98": [
+        -0.48532500863075256,
+        -0.24220467537641524
+      ],
+      "zMidpointResidual": 4.842003583915844e-06
+    },
+    {
+      "digit": "ring",
+      "station": "fingertip_inside_cap",
+      "authoredPoint": [
+        -0.36,
+        0.83,
+        -0.41571
+      ],
+      "sampleCount": 609,
+      "localXYHalfWidth": 0.028,
+      "zSurfaceQuantiles02and98": [
+        -0.498124794960022,
+        -0.33329429268836974
+      ],
+      "zMidpointResidual": -4.5617580413104264e-07
+    },
+    {
+      "digit": "middle",
+      "station": "MCP",
+      "authoredPoint": [
+        -0.11,
+        0.1,
+        -0.18366
+      ],
+      "sampleCount": 281,
+      "localXYHalfWidth": 0.028,
+      "zSurfaceQuantiles02and98": [
+        -0.3384712040424347,
+        -0.028857000172138214
+      ],
+      "zMidpointResidual": 4.102107286463319e-06
+    },
+    {
+      "digit": "middle",
+      "station": "PIP",
+      "authoredPoint": [
+        -0.1,
+        0.46,
+        -0.22524
+      ],
+      "sampleCount": 319,
+      "localXYHalfWidth": 0.028,
+      "zSurfaceQuantiles02and98": [
+        -0.3432264387607574,
+        -0.10726332128047944
+      ],
+      "zMidpointResidual": 4.880020618436287e-06
+    },
+    {
+      "digit": "middle",
+      "station": "DIP",
+      "authoredPoint": [
+        -0.075,
+        0.74,
+        -0.32963
+      ],
+      "sampleCount": 371,
+      "localXYHalfWidth": 0.028,
+      "zSurfaceQuantiles02and98": [
+        -0.440953803062439,
+        -0.21830319762229924
+      ],
+      "zMidpointResidual": -1.4996576308545784e-06
+    },
+    {
+      "digit": "middle",
+      "station": "fingertip_inside_cap",
+      "authoredPoint": [
+        -0.05,
+        0.94,
+        -0.4071
+      ],
+      "sampleCount": 500,
+      "localXYHalfWidth": 0.028,
+      "zSurfaceQuantiles02and98": [
+        -0.486285040974617,
+        -0.3279180270433426
+      ],
+      "zMidpointResidual": 1.5340089797866163e-06
+    },
+    {
+      "digit": "index",
+      "station": "MCP",
+      "authoredPoint": [
+        0.12,
+        0.09,
+        -0.16453
+      ],
+      "sampleCount": 279,
+      "localXYHalfWidth": 0.028,
+      "zSurfaceQuantiles02and98": [
+        -0.29709151744842527,
+        -0.031978479474782946
+      ],
+      "zMidpointResidual": 4.99846160409434e-06
+    },
+    {
+      "digit": "index",
+      "station": "PIP",
+      "authoredPoint": [
+        0.19,
+        0.43,
+        -0.18848
+      ],
+      "sampleCount": 321,
+      "localXYHalfWidth": 0.028,
+      "zSurfaceQuantiles02and98": [
+        -0.30699740052223207,
+        -0.0699547991156578
+      ],
+      "zMidpointResidual": -3.900181055088714e-06
+    },
+    {
+      "digit": "index",
+      "station": "DIP",
+      "authoredPoint": [
+        0.23,
+        0.68,
+        -0.26858
+      ],
+      "sampleCount": 358,
+      "localXYHalfWidth": 0.028,
+      "zSurfaceQuantiles02and98": [
+        -0.38052621960639954,
+        -0.15663824528455733
+      ],
+      "zMidpointResidual": 2.2324454784228287e-06
+    },
+    {
+      "digit": "index",
+      "station": "fingertip_inside_cap",
+      "authoredPoint": [
+        0.25,
+        0.86,
+        -0.323
+      ],
+      "sampleCount": 529,
+      "localXYHalfWidth": 0.028,
+      "zSurfaceQuantiles02and98": [
+        -0.4066230058670044,
+        -0.23938324213027956
+      ],
+      "zMidpointResidual": 3.123998641940684e-06
+    },
+    {
+      "digit": "thumb",
+      "station": "CMC",
+      "authoredPoint": [
+        0.02,
+        -0.46,
+        -0.19128
+      ],
+      "sampleCount": 361,
+      "localXYHalfWidth": 0.028,
+      "zSurfaceQuantiles02and98": [
+        -0.44335100054740906,
+        0.060795601457357414
+      ],
+      "zMidpointResidual": -2.3004549741800773e-06
+    },
+    {
+      "digit": "thumb",
+      "station": "MCP",
+      "authoredPoint": [
+        0.32,
+        -0.29,
+        -0.29644
+      ],
+      "sampleCount": 376,
+      "localXYHalfWidth": 0.028,
+      "zSurfaceQuantiles02and98": [
+        -0.4381040036678314,
+        -0.15477900207042694
+      ],
+      "zMidpointResidual": 1.5028691291996132e-06
+    },
+    {
+      "digit": "thumb",
+      "station": "IP",
+      "authoredPoint": [
+        0.53,
+        -0.04,
+        -0.34466
+      ],
+      "sampleCount": 284,
+      "localXYHalfWidth": 0.028,
+      "zSurfaceQuantiles02and98": [
+        -0.4565310037136078,
+        -0.23278896003961563
+      ],
+      "zMidpointResidual": -1.8123388290103293e-08
+    },
+    {
+      "digit": "thumb",
+      "station": "fingertip_inside_cap",
+      "authoredPoint": [
+        0.63,
+        0.12,
+        -0.36135
+      ],
+      "sampleCount": 523,
+      "localXYHalfWidth": 0.028,
+      "zSurfaceQuantiles02and98": [
+        -0.4381040036678314,
+        -0.28460134863853453
+      ],
+      "zMidpointResidual": 2.676153183001073e-06
+    }
+  ],
+  "allPinsMatch": true,
+  "heavyJobsRun": 0
+}

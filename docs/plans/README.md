@@ -1333,3 +1333,5 @@ October 7 boot targeted repair rejected: parent viewed all8separate bilateral ac
 October 7 hoodie02 original-PBR inspection source: frozen actual dense helper verifies GLB→Blender axes and preserves original two4Kmaps/UV, target geometry/UV/fields/materials and body75. Parent full source/readiness/intake checks pass. Source unexecuted; patched-target then actualdonor views precede bake.
 
 October 7 saved hoodie patched-target review rejected: parent inspected actualfront/back/profile; substantial bilateral underarm skin remains despite createdquadgrids. ReadonlyCPU2exit0 in8.222s, source unchanged. One local axilla exterior/ease correction before actualdonor/bake; no whole garment solver or appearance/motion acceptance.
+
+October 7 selected glove03 source-rest rig checkpoint: parent actualcontrol/projectionplots and full author/controls inspected; AST and10input/fourrecipe pins match. Continuous normalized overlapweights and actualposecontrol/UV/shared75 assertions replace retired categoricalwarp. Source unexecuted; actualbilateral originalPBRfit45+15minute block next, no artacceptance.
