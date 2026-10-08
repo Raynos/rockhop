@@ -1285,3 +1285,5 @@ October 7 advisory implementation correction: official Blender API distinguishes
 October 7 first actual glove selected-map attempt: exit1 in5.771s before textures; Blender BakeSettings.cage_object expects Object rather than name string. Native unchanged; no appearance or moving acceptance. Exact failure retained before compatibility correction.
 
 October 7 glove bake API source correction: actual cage Object replaces string assignment, source/failure lineage refreshed. Parent exact diff/AST/hash checked. Geometry/donor controls unchanged; corrected bake requires fresh explicit intake and remains unexecuted.
+
+October 7 glove fresh bake intake: immutable original geometry/report retained, amended consumption manifest records only cage Object API compatibility correction. Current frozen source matches; no new geometry. Corrected actual selected-map run unexecuted.

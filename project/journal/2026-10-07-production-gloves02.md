@@ -30,3 +30,9 @@ Finding: Blender5.2 bake cage requires an Object pointer; assign actual cage ins
 Validation: Parent inspected exact one-line code diff, parsed AST and matched helper hash. Frozen source and failure lineage refreshed; no geometry or donor control changes.
 
 Limits: Correction unexecuted; fresh bake intake must retain original native/report provenance. No texture or art acceptance.
+
+Finding: Preserve original geometry/report and create explicitly amended fresh bake intake for one helper API correction.
+
+Validation: Parent checks only appearance.py differs between construction source and bake helper; actual geometry/native authority unchanged. Fresh intake source hash matches current frozen recipe.
+
+Limits: Unexecuted selected-map trial; no claim original geometry was made by corrected helper and no appearance acceptance.
