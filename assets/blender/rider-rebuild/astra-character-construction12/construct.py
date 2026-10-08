@@ -94,6 +94,8 @@ class Surgery:
         self.old_count = len(source)
         self.old_face_count = len(self.faces)
         self.edge_cache = {}
+        self.group_names = [group.name for group in obj.vertex_groups]
+        assert [group.index for group in obj.vertex_groups] == list(range(len(self.group_names)))
         self.old_weights = []
         for vertex in mesh.vertices:
             self.old_weights.append({g.group: g.weight for g in vertex.groups})
@@ -197,7 +199,7 @@ class Surgery:
             if parent >= 0 and factor:
                 for group, weight in self.old_weights[parent].items():
                     accum[group] += factor*weight
-        keep = sorted(accum.items(), key=lambda p: (-p[1], p[0]))[:4]
+        keep = sorted(accum.items(), key=lambda p: (-p[1], self.group_names[p[0]]))[:4]
         total = sum(w for _, w in keep)
         assert total > 0
         return {g: w/total for g, w in keep}
@@ -266,11 +268,22 @@ class Surgery:
         uv.data.foreach_set('uv', np.asarray(self.uv, dtype=np.float32).ravel())
         uv.active_render, uv.active_clone = self.uv_flags
         self.obj.data = mesh
-        groups = list(self.obj.vertex_groups)
+        # Blender stores the deform-group schema with the mesh data. Replacing
+        # that data may empty obj.vertex_groups; restore the exact named order
+        # before assigning any captured source or interpolated deform weights.
+        self.obj.vertex_groups.clear()
+        groups = [self.obj.vertex_groups.new(name=name) for name in self.group_names]
+        assert [(group.index, group.name) for group in groups] == list(enumerate(self.group_names))
         for i in range(len(world)):
             weights = self.old_weights[i] if i < self.old_count else self.weights(i)
             for group, weight in weights.items():
+                assert 0 <= group < len(groups)
                 groups[group].add([i], weight, 'REPLACE')
+        for vertex in mesh.vertices:
+            actual_fields = {self.group_names[g.group]: g.weight for g in vertex.groups}
+            expected_weights = self.old_weights[vertex.index] if vertex.index < self.old_count else self.weights(vertex.index)
+            expected_fields = {self.group_names[g]: float(np.float32(w)) for g, w in expected_weights.items()}
+            assert actual_fields == expected_fields, ('Named field restoration failed', self.obj.name, vertex.index)
         mesh.update()
         actual = A['points'](self.obj)[1]
         affected_faces = sorted(self.affected_faces-{-1})
@@ -301,6 +314,9 @@ class Surgery:
                   'sourceVertexCount': self.old_count, 'vertices': len(world),
                   'sourceTriangleCount': self.old_face_count, 'triangles': len(self.faces),
                   'newVertices': len(world)-self.old_count,
+                  'vertexGroupNamesUnchanged': self.group_names,
+                  'allSourcePrefixNamedFieldsExact': True,
+                  'allNewSourceParentNamedFieldsExactAfterFloat32Storage': True,
                   'retainedSourceTriangles': int(np.sum(np.asarray(self.face_roles) == 0)),
                   'clippedSourceTriangles': int(np.sum(np.asarray(self.face_roles) == 1)),
                   'newLiningTriangles': int(np.sum(np.asarray(self.face_roles) == 2)),
