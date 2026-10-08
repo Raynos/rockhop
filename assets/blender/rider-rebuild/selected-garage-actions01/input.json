@@ -1,0 +1,88 @@
+{
+  "accepted": false,
+  "ready": true,
+  "status": "SOURCE_READY_FOR_GUARDED_RIG_ONLY_EXPORT_AND_STRICT_ANIMATION_APPEND",
+  "native": {
+    "path": "harness/out/rider-rebuild/selected-complete-engine01/engine05/rider-private-masked.blend",
+    "sha256": "95a4f14e06fb52cc055df6d1446a035d8cd3d35180d565ad52f3a70b3b05664b"
+  },
+  "sourceGLB": {
+    "path": "harness/out/rider-rebuild/selected-complete-engine01/engine05/rider.glb",
+    "sha256": "72b90e8790f8490743a75f8b70791aa21edfee6234cec609093e9b62e08d4bfd"
+  },
+  "contract": {
+    "path": "harness/out/rider-rebuild/selected-complete-engine01/engine05/rider-contract.json",
+    "sha256": "2aa39bc8c15738b4ecbd2aac08fd61375e0aa8fd45a0ee2ac3046f577b019728"
+  },
+  "calibration": {
+    "path": "assets/blender/rider-rebuild/selected-complete-engine01/engine05-contact-calibration02.json",
+    "sha256": "1dd8883351254041c2a5352833e453707737b0fe0a53fc050784bd0e63a3d5f7"
+  },
+  "appendHelperSHA256": "f615f7a55988cf02e61daa6243aae40c792aca489242be1a31b39cc7ed62a62e",
+  "exporterSources": [
+    {
+      "path": "/Applications/Blender.app/Contents/Resources/5.2/scripts/addons_core/io_scene_gltf2/__init__.py",
+      "sha256": "73d98cf870d69f2aedb0a13798e389688a225efb4c155c5980bbb7ca0436421b"
+    },
+    {
+      "path": "/Applications/Blender.app/Contents/Resources/5.2/scripts/addons_core/io_scene_gltf2/blender/exp/nodes.py",
+      "sha256": "4ee23688b86f3250057b305fe9397755e6be1dcb4dd99c7ecc39e879a3f9cbcb"
+    },
+    {
+      "path": "/Applications/Blender.app/Contents/Resources/5.2/scripts/addons_core/io_scene_gltf2/blender/exp/tree.py",
+      "sha256": "0abdc591b3542fe91eb33f8b0efa872b2b70a1a7b07f7ebd7fede1683f100fc6"
+    },
+    {
+      "path": "/Applications/Blender.app/Contents/Resources/5.2/scripts/addons_core/io_scene_gltf2/blender/exp/animation/action.py",
+      "sha256": "884724eac08d27fbfb9355c8fe1e8c7a504e847e678fb1ab45628e6ad204e0fe"
+    },
+    {
+      "path": "/Applications/Blender.app/Contents/Resources/5.2/scripts/addons_core/io_scene_gltf2/blender/exp/animation/sampled/armature/keyframes.py",
+      "sha256": "83f01a8c4c08c30926720d7347a2bdf1c694b0e397596c4af8766f741b767458"
+    },
+    {
+      "path": "/Applications/Blender.app/Contents/Resources/5.2/scripts/addons_core/io_scene_gltf2/blender/exp/animation/sampled/armature/sampler.py",
+      "sha256": "888059c3ef8ad75c8d31860ddc8aaf6fe024d7bf4afb2327620f3b0eeeeadf78"
+    }
+  ],
+  "actions": [
+    {
+      "name": "UnacceptedSelectedDressedReachGripRelease145",
+      "slot": "OBRiderSkeleton",
+      "native": {
+        "path": "harness/out/rider-rebuild/selected-dressed-motion01/authored01/selected-dressed-generic145.blend",
+        "sha256": "c44002c92379c90f5ef2fa2249a3f37f6fa697eeebcbd9a1efeb1a5a7f84fe19"
+      },
+      "motionReceipt": {
+        "path": "harness/out/rider-rebuild/selected-dressed-motion01/authored01/motion.json",
+        "sha256": "eef174a75e0aebcd0d66c7305034766dff754dcaed1aa45294de5edede6b5142"
+      },
+      "frameRange": [
+        1,
+        145
+      ]
+    },
+    {
+      "name": "UnacceptedSelectedCrouchRiseArmsUp193",
+      "slot": "OBRiderSkeleton",
+      "native": {
+        "path": "harness/out/rider-rebuild/selected-generic-envelope02/authored01/selected-generic-envelope193.blend",
+        "sha256": "e17f90931f9ef64a7cd2877c7411aff77759fa54cd1c01d0c71eafbb03c98776"
+      },
+      "motionReceipt": {
+        "path": "harness/out/rider-rebuild/selected-generic-envelope02/authored01/motion.json",
+        "sha256": "c22ba747d07f041aa4d88a36dce454a51d63978a327f35ae859af87c8ef3fab1"
+      },
+      "frameRange": [
+        1,
+        193
+      ]
+    }
+  ],
+  "limits": [
+    "Rig-only export of exactly the existing native145 and193 actions; no new animation or dense mesh re-export.",
+    "Original selected source BIN bytes and JSON nodes/meshes/images/materials/textures/skins remain exact. Only animation data append and buffer byteLength changes.",
+    "Derived calibration source hash rebinds unchanged semantics to unchanged geometry/rest with two added generic actions.",
+    "All R0-R5 open. Parent must load/play complete dressed actions in actual Garage and judge actual GPU/native motion parity, contacts, and devices."
+  ]
+}
