@@ -457,8 +457,10 @@ of selected appearance requires correcting the sculpt/bake. If the agents cannot
 author the required art, report that and prepare the exact wearer/donor package
 for a character artist rather than continuing solver preparation as progress.
 
-Asks333–334 add **a fresh Astra-6 high advisory every six hours**, reviewing the
-previous twelve hours while this rider goal is active. The thread heartbeat is
+Asks333–334 add **a fresh Astra-6 high advisory every six hours, four times per
+day**, reviewing the previous twelve hours while this rider goal is active.
+Review model generation, fitting, rigging and animation as well as the plan.
+The thread heartbeat is
 `rider-astra-6-production-advisory`. Spawn the adviser with no inherited builder
 history; supply the original objective, current plan and current evidence paths.
 It inspects actual results and work, challenges assumptions and wasted effort,
@@ -466,6 +468,8 @@ and recommends concrete keep/stop/change decisions and the shortest proper next
 deliverable. The parent verifies that advice against evidence, autonomously
 updates this plan, stops ineffective work and implements supported corrections
 before resuming substantial build work. A report alone is not follow-through.
+Challenge unsupported assumptions before extending them into another long run;
+prefer the next visible, fully dressed result over another preparation campaign.
 Do not resume a paused goal; stop the recurring advisory when this plan is truly
 complete and archived. All R0–R5 and the original complete rider objective remain
 open until their actual requirements are proved.
