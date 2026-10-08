@@ -1543,3 +1543,5 @@ October8 complete selected outfit merge/private engine source reviewed and froze
 October8 parent actual4viewPBR keeps corrected original hoodie shape: proper hanging sleeves and rounded shoulders after verified source-rest fix, nooldplates/inversion. Skin islands need equipped-mask surface review; finalnative75/fulloutfit motion/Garage unaccepted.
 
 October8 actual whole selected4Kdenim transfer succeeds CPU2exit0/195.636s:4capture regions clean,621legitunderbodyhits retained,12bakes/3maps4096 with0coveredblack, originalwearer/source/shared75 exact. Parent6viewsKEEPselectedbaseline, upperthigh region seam/detail/motion open. Complete equipped outfit/Garage next.
+
+October8 actual masked complete-outfit native reach/grip/release source frozen from measured canonical75 IK anddigitaxes; fullreference retained, allsevenactual selectedmeshes. Parent source/AST reviewed; actual native/movie/played judgment pending. Bikecontact/crouch remains actualGarage/ride.
