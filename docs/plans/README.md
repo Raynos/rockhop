@@ -1853,3 +1853,5 @@ Volume04 actual transport passes4.48s with exact original BIN/maps/rest/75binds 
 Motion11 transport source freezes the exact six saved native actions and selected weight02 dressed rider. Parent source review, syntax and11actual input pins pass. Original meshes/maps/BIN/rest/binds must stay exact; actual transport and dressed action playback remain pending.
 
 Volume04 actual dressed Garage film is played30.4s to natural end: selected appearance retained, modest posterior improvement, but inflated upperthigh/glute, wrist spikes and ankle strips remain REJECTED as finished art. Capture errors0; development59.459renderFPS/25captureFPS. Fresh wardrobe28 succeeds retired23; new measured seated controls and coupled sculpt are next, no normal-Garage/contact/device pass.
+
+Reference04 source carries the saved cage onto the hidden full wearer using its own full named operators and fresh inverse; visible keys/Basis/maps/rest/weights are protected. Original full-reference Basis/triangles/available IDs are retained as readonly witnesses. Actual native execution and complete contacts remain pending.

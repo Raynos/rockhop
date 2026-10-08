@@ -1,0 +1,70 @@
+{
+  "accepted": false,
+  "status": "SOURCE_FROZEN_FULL_REFERENCE04_NOT_RUN",
+  "sourcePins": {
+    "assets/blender/rider-rebuild/selected-seated-anatomical09/sculpt-reference04.py": "51f3c51bc87111999faa162ca7abd150735dffdf023c7189ed86288c409b22e2",
+    "assets/blender/rider-rebuild/selected-seated-anatomical09/sculpt-reference04.input.json": "252f08336d36ad6bf24d5283687502c0e0356b8d0beba464e19709879b1aeee9",
+    "assets/blender/rider-rebuild/selected-seated-anatomical09/run-reference04.sh": "7ef5f0afe6d4e1016cec4a225a9d8276a9431e4466387ef8df3cb46ca089f9c8"
+  },
+  "actualInputPins": {
+    "native": {
+      "path": "harness/out/rider-rebuild/selected-seated-anatomical09/sculpted03/selected-anatomical09-posed-volume.blend",
+      "sha256": "5145ceb00bac290afbaf8b925b71e77af7d425b6f95237a12d566b1bdae52505"
+    },
+    "nativeReceipt": {
+      "path": "harness/out/rider-rebuild/selected-seated-anatomical09/sculpted03/receipt.json",
+      "sha256": "73e3b43d6264043c6e4dcfcf49f859ec4860ecfb8e60b5c011b9958b01727bff"
+    },
+    "contract": {
+      "path": "harness/out/rider-rebuild/selected-seated-anatomical09/transport02/rider-contract.json",
+      "sha256": "98fc88c05d2ae45112f94aed28704a02867513bd10483fd86fdc5d60b03558ba"
+    },
+    "sculptRecipe": {
+      "path": "assets/blender/rider-rebuild/selected-seated-anatomical09/sculpt03.py",
+      "sha256": "42d7b7cdfb7dea91025b5fe7911409413e352b9623a91df85580f2d2af5d9a5d"
+    },
+    "sculptInput": {
+      "path": "assets/blender/rider-rebuild/selected-seated-anatomical09/sculpt03.input.json",
+      "sha256": "7d63ce2b9914bf8b07e62e92809861e3590f267191926034e552b94c9cd1321c"
+    },
+    "baseRecipe": {
+      "path": "assets/blender/rider-rebuild/selected-seated-anatomical09/author.py",
+      "sha256": "a862eab5ecc2cd0065fa2d9ca98b7a6d80e2cd94a11800b17364ae3749cca585"
+    },
+    "bikeContext": {
+      "path": "docs/evidence/rider-rebuild/selected-authoring-motion11/bike-context01.json",
+      "sha256": "3762e8e00ba0d4ce0a78e3a8fdb56a5f9798129d6faa02866d60209492a4f9e5"
+    }
+  },
+  "validation": {
+    "syntax": "Python AST/Bash/whitespace PASS",
+    "sourceFalloffFixture": "Center1, boundary/outside0, half-ramp0.5 PASS using exact extracted source",
+    "smallInputPins": [
+      "nativeReceipt",
+      "contract",
+      "sculptRecipe",
+      "sculptInput",
+      "baseRecipe",
+      "bikeContext"
+    ],
+    "nativePin": "Parent actual5145ceb00; independently rehashed before native open by guarded execution"
+  },
+  "construction": "Exact saved A09_PelvicVolumeCage matrix/control field and original spatial falloff; full-reference posed working copy and fresh inverse from its own unpruned saved named weights/actual native matrices. No render FOUR deltas copied.",
+  "protected": "All original visible shape-key coordinates/actions, Basis/topology/UV/maps/weights/native75 rest and original mask; hidden nonexport companion only",
+  "requiredActualProof": [
+    "Own FULL affine operator agrees with actual native reference pose before inverse",
+    "Fresh saved key reproduces same-cage target within3microns",
+    "Byte-identical rest/return for full wearer, masked render body and Jeans",
+    "Reopened native rest/key/return arrays byte exact",
+    "Full native triangle/position arrays including unused render vertices; no geometric acceptance implied"
+  ],
+  "parentCommand": "bash assets/blender/rider-rebuild/selected-seated-anatomical09/run-reference04.sh",
+  "freshOutput": "harness/out/rider-rebuild/selected-seated-anatomical09/reference04",
+  "completeContactsAndMovingArt": "UNMEASURED",
+  "noHeavyJobByBuilder": true,
+  "readonlyMembershipWitnesses": {
+    "basis": "RiderBody__FullAnatomyReference_basis; exact saved vertex coordinates",
+    "identities": "Original _NATIVE_ID/_SOURCE_VERTEX_ID/_REGION_ID POINT arrays when actually present; absence explicitly reported, no invented or modified attributes",
+    "triangles": "Complete fullreference native triangle sourcevertexordinals, including covered anatomy"
+  }
+}
