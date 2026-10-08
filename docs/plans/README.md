@@ -1639,3 +1639,5 @@ Historical rider audit, October 8 (ask346): dedicated remaster began September30
 October8 ask351 hourly audit: independent retained-commit/played-evidence review covers23:49–11:49Panama. No continuous labor inferred from timestamps; visible outfit/motion/contact integration advanced but sleeves and anatomical seating remain unaccepted, R0–R5 still0/6. [Hourly breakdown](../evidence/rider-rebuild/hourly-audit-2026-10-08/FINDING.md).
 
 October8 sixth-slot loader cleanup checkpoint: parent-reviewed original-five eager inventory and one cached metadata/optional-driver request pass7/7focused tests. The preceding build was135bytes above the unchanged normal-JS cap; actual rebuild and old/new phone-layout switching follow. Selected source, art/seating and allR0–R5 remain unaccepted.
+
+October8 comparison build03 retained failure:717835B normal-JS versus unchanged717824B cap (11Bover),3.671s. Runtime diagnostic wording shortened with all failure paths retained;7/7tests pass. Next actual build and phone comparison pending; no art promotion.

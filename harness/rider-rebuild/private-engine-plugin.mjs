@@ -194,7 +194,7 @@ export function privateEnginePlugin(metadata) {
 export class GltfRider extends OriginalGltfRider {
   constructor(gltf, lib) {
     if (gltf.scene.userData.privateSelectedRider) {
-      if (!privateSelectedRiderClass) throw new Error('Selected rider driver unavailable');
+      if (!privateSelectedRiderClass) throw new Error('Rider driver missing');
       return new privateSelectedRiderClass(gltf, lib);
     }
     super(gltf, lib);
@@ -256,17 +256,17 @@ function rememberPrivateAuthoredImages(root: THREE.Object3D) {
           function loadPrivateSelectedRider() {
             return privateRiderRequest ??= Promise.all([
               fetch(new URL('model-catalog.json', document.baseURI)).then(response => {
-                if (!response.ok) throw new Error('Private rider metadata HTTP ' + response.status); return response.json();
+                if (!response.ok) throw new Error('Rider metadata HTTP ' + response.status); return response.json();
               }), import(${JSON.stringify(runtime)})
             ]).then(([value, module]) => {
-              if (!value.privateRiderMetadata) throw new Error('Private rider metadata missing');
+              if (!value.privateRiderMetadata) throw new Error('Missing rider metadata');
               return privateSelectedRiderClass = module.createPrivateRiderClass(value.privateRiderMetadata);
             }).catch(error => { privateRiderRequest = null; throw error; });
           }\n` : `export const privateRiderMetadata = {}; let privateRiderRequest;
           function loadPrivateRiderMetadata() {
             return privateRiderRequest ??= fetch(new URL('model-catalog.json', document.baseURI))
-              .then(response => { if (!response.ok) throw new Error('Private rider metadata HTTP ' + response.status); return response.json(); })
-              .then(value => { if (!value.privateRiderMetadata) throw new Error('Private rider metadata missing'); return Object.assign(privateRiderMetadata, value.privateRiderMetadata); })
+              .then(response => { if (!response.ok) throw new Error('Rider metadata HTTP ' + response.status); return response.json(); })
+              .then(value => { if (!value.privateRiderMetadata) throw new Error('Missing rider metadata'); return Object.assign(privateRiderMetadata, value.privateRiderMetadata); })
               .catch(error => { privateRiderRequest = null; throw error; });
           }\n`;
         return { code: loader +
