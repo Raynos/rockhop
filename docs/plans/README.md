@@ -1851,3 +1851,5 @@ Native action review source now requires the exact six successful native records
 Volume04 actual transport passes4.48s with exact original BIN/maps/rest/75binds and all66,663 exported Body/Jeans rows. Both-bike native endpoints and byte-identical return pass unchanged bounds. Fresh dressed Garage playback is next; full anatomical companion/contact/shading/device and art remain open.
 
 Motion11 transport source freezes the exact six saved native actions and selected weight02 dressed rider. Parent source review, syntax and11actual input pins pass. Original meshes/maps/BIN/rest/binds must stay exact; actual transport and dressed action playback remain pending.
+
+Volume04 actual dressed Garage film is played30.4s to natural end: selected appearance retained, modest posterior improvement, but inflated upperthigh/glute, wrist spikes and ankle strips remain REJECTED as finished art. Capture errors0; development59.459renderFPS/25captureFPS. Fresh wardrobe28 succeeds retired23; new measured seated controls and coupled sculpt are next, no normal-Garage/contact/device pass.
