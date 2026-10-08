@@ -19,7 +19,13 @@ function installWitness({ aliases }) {
   const state = { expected: null, frames: 0, invalidFrames: 0, lastLogical: null, examples: [] };
   const inspect = (full = true) => {
     const rider = owner.debug.rider;
-    if (rider && !cache.has(rider)) {
+    if (!rider?.source?.scene || !rider.scene) {
+      const empty = { logical: null, actualLogical: null, sourceUUID: null, instanceUUID: null,
+        selectedMarker: false, visibleSkins: 0 };
+      return full ? { ...empty, skeletonBones: 0, boundNativeJoints: null, jointIds: null,
+        sourceSHA256: null, authorMeshRoles: null, stageClip: null } : empty;
+    }
+    if (!cache.has(rider)) {
       const skins = [], bones = new Set();
       rider.scene.traverse(node => {
         if (node.isSkinnedMesh) { skins.push(node); node.skeleton.bones.forEach(bone => bones.add(bone.uuid)); }
@@ -86,6 +92,7 @@ async function main() {
   entry.searchParams.delete('audible'); entry.searchParams.set('audio', '0'); entry.searchParams.set('sw', '0');
   const inputs = JSON.parse(fs.readFileSync(path.join(build, 'rider-rebuild-inputs.json')));
   const catalog = JSON.parse(fs.readFileSync(path.join(build, 'model-catalog.json')));
+  const measurements = JSON.parse(fs.readFileSync(path.join(build, 'rider-comparison-js.json')));
   const contractBytes = fs.readFileSync(inputs.contract), contract = JSON.parse(contractBytes);
   const assets = new Map(catalog.models.map(row => [row.logical, row]));
   const oldAsset = assets.get(`models/rider-${oldId}.glb`), selected = assets.get(`models/rider-${selectedId}.glb`);
@@ -101,7 +108,11 @@ async function main() {
     device: { engine: 'webkit', viewport: { width: 932, height: 430 }, dpr: 2, isMobile: true, hasTouch: true, physicalPhone: false },
     recorder: false, screenshots: false, audio: 'audio=0; silent webdriver', selected, originalMustard: oldAsset,
     contractSHA256: sha(contractBytes), recipeSHA256: sha(fs.readFileSync(new URL(import.meta.url))),
-    controls: [], choices: [], errors: [],
+    toolbar: { requestHeader: 'x-vercel-skip-toolbar: 1',
+      source: 'https://vercel.com/docs/vercel-toolbar/managing-toolbar',
+      limit: 'Skips injected toolbar for automation; other CORS/loading failures remain diagnostic targets.' },
+    controls: [], choices: [], errors: [], errorCount: 0, omittedErrorCount: 0,
+    network: [], omittedNetworkEvents: 0,
     limits: ['Source identity and actual submitted-frame transition gate only.',
       'No movie, moving-art, performance, physical-phone, or device-memory acceptance.',
       'Remote model response bodies are not copied or independently hashed; runtime source identity is checked against the local emitted catalog.'] };
@@ -112,18 +123,66 @@ async function main() {
     fs.writeFileSync(path.join(out, 'report.next.json'), text);
     fs.renameSync(path.join(out, 'report.next.json'), path.join(out, 'report.json'));
   };
+  const recordError = message => {
+    const safe = sanitize(message).slice(0, 2000), prior = report.errors.find(row => row.message === safe);
+    report.errorCount++;
+    if (prior) { prior.count++; prior.lastPhase = report.phase; }
+    else if (report.errors.length < 12) report.errors.push({ message: safe, count: 1, firstPhase: report.phase, lastPhase: report.phase });
+    else report.omittedErrorCount++;
+    if (!prior || (prior.count & (prior.count - 1)) === 0) save(report.phase);
+  };
+  const targets = new Map([['/' + selected.url, 'selected-glb'],
+    ['/' + measurements.reviewChunk, 'selected-review-js'], ['/model-catalog.json', 'model-catalog']]);
+  const tracked = new WeakMap();
+  const identify = request => {
+    if (tracked.has(request)) return tracked.get(request);
+    const url = new URL(request.url()), from = request.redirectedFrom();
+    const asset = targets.get(url.pathname) ?? (from ? identify(from)?.asset : null)
+      ?? (request.resourceType() === 'script' ? 'other-script' : null);
+    const row = asset ? { asset } : null; tracked.set(request, row); return row;
+  };
+  const location = (value, base = entry.origin) => {
+    try { const url = new URL(value, base); return { origin: url.origin, path: sanitize(url.pathname).slice(0, 600) }; }
+    catch { return { origin: null, path: '[invalid URL]' }; }
+  };
+  const networkKeys = new Map();
+  const recordNetwork = (kind, request, details = {}) => {
+    const meta = identify(request);
+    if (!meta && kind !== 'requestfailed') return;
+    const row = { kind, asset: meta?.asset ?? 'other-failure', phase: report.phase,
+      ...location(request.url()), resourceType: request.resourceType(), ...details };
+    const key = JSON.stringify(row), prior = networkKeys.get(key);
+    if (prior) prior.count++;
+    else if (report.network.length < 64) { const item = { ...row, count: 1 }; report.network.push(item); networkKeys.set(key, item); }
+    else report.omittedNetworkEvents++;
+    save(report.phase);
+  };
   let browser, context, page;
   save('before-browser-launch');
   try {
     browser = await webkit.launch({ headless: true });
     context = await browser.newContext({ viewport: report.device.viewport, screen: report.device.viewport,
-      deviceScaleFactor: 2, userAgent: devices['iPhone 14 Pro Max landscape'].userAgent, isMobile: true, hasTouch: true });
+      deviceScaleFactor: 2, userAgent: devices['iPhone 14 Pro Max landscape'].userAgent, isMobile: true, hasTouch: true,
+      extraHTTPHeaders: { 'x-vercel-skip-toolbar': '1' } });
     await context.addInitScript(() => {
       localStorage.setItem('rockhop.onboarded', '1'); localStorage.setItem('rockhop.riderOutfit', 'street-mustard');
       localStorage.setItem('rockhop.economy.v1', JSON.stringify({ version: 1, wallet: 0, medals: {}, proOwned: true, equipped: 'rookie' }));
     });
     page = await context.newPage(); page.setDefaultTimeout(180000);
-    page.on('pageerror', error => { report.errors.push(sanitize(error.message)); save(report.phase); });
+    page.on('pageerror', error => recordError(error.message));
+    page.on('request', request => recordNetwork('request', request));
+    page.on('requestfinished', request => recordNetwork('requestfinished', request));
+    page.on('requestfailed', request => recordNetwork('requestfailed', request,
+      { failure: sanitize(request.failure()?.errorText ?? 'unknown failure').slice(0, 600) }));
+    page.on('response', response => {
+      if (!identify(response.request())) return;
+      const headers = response.headers();
+      recordNetwork('response', response.request(), { status: response.status(),
+        contentType: headers['content-type'] ?? null, contentLength: headers['content-length'] ?? null,
+        allowOrigin: sanitize(headers['access-control-allow-origin'] ?? '').slice(0, 600),
+        resourcePolicy: headers['cross-origin-resource-policy'] ?? null,
+        redirectTarget: headers.location ? location(headers.location, response.url()) : null });
+    });
     save('before-boot-load'); await page.goto(entry.href, { timeout: 180000 });
     assert.equal(await page.evaluate(() => navigator.webdriver), true, 'Silent automation mode required');
     save('before-garage-load'); await page.locator('.menu-screen.live .menu-item[data-id=garage]').tap();
@@ -177,15 +236,15 @@ async function main() {
       assert(choice.submitted.frames > 0, 'Actual render submissions required'); assert.equal(choice.submitted.invalidFrames, 0);
       save(phase + '-submitted');
     }
-    assert.deepEqual(report.errors, []); report.sourceTransitionGatePassed = true; save('source-transition-gate-passed');
+    assert.equal(report.errorCount, 0); report.sourceTransitionGatePassed = true; save('source-transition-gate-passed');
   } catch (error) {
-    report.failure = sanitize(error.stack ?? error.message); process.exitCode = 1; save(report.phase + '-failed');
+    report.failure = sanitize(error.stack ?? error.message).slice(0, 4000); process.exitCode = 1; save(report.phase + '-failed');
   } finally {
     try { if (page) await page.evaluate(() => window.__phonePreviewWitness?.stop()); } catch {}
-    try { await context?.close(); await browser?.close(); } catch (error) { report.cleanupError = sanitize(error.message); process.exitCode = 1; }
+    try { await context?.close(); await browser?.close(); } catch (error) { report.cleanupError = sanitize(error.message).slice(0, 2000); process.exitCode = 1; }
     save(report.phase);
     console.log(JSON.stringify({ out, phase: report.phase, choices: report.choices.length,
-      sourceTransitionGatePassed: report.sourceTransitionGatePassed, errors: report.errors.length }));
+      sourceTransitionGatePassed: report.sourceTransitionGatePassed, errors: report.errorCount }));
   }
 }
 

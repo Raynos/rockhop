@@ -1,0 +1,139 @@
+{
+  "accepted": false,
+  "sourceTransitionGatePassed": false,
+  "phase": "choice-2-street-remastered-before-load-failed",
+  "deployment": {
+    "origin": "https://playrockhop-44rxvbdkk-raynos-projects.vercel.app/",
+    "access": "Scoped share access; private URL and cookies omitted"
+  },
+  "device": {
+    "engine": "webkit",
+    "viewport": {
+      "width": 932,
+      "height": 430
+    },
+    "dpr": 2,
+    "isMobile": true,
+    "hasTouch": true,
+    "physicalPhone": false
+  },
+  "recorder": false,
+  "screenshots": false,
+  "audio": "audio=0; silent webdriver",
+  "selected": {
+    "logical": "models/rider-street-remastered.glb",
+    "url": "models/31770ce494360e50/rider-street-remastered-72b90e8790f84907.glb",
+    "bytes": 357281284,
+    "sha256": "72b90e8790f8490743a75f8b70791aa21edfee6234cec609093e9b62e08d4bfd"
+  },
+  "originalMustard": {
+    "logical": "models/rider-street-mustard.glb",
+    "url": "models/3abafaa9ba2be816/rider-street-mustard-bbf2d63694fd22cf.glb",
+    "bytes": 1442236,
+    "sha256": "bbf2d63694fd22cfd32d719e3126710b2bb2bb0e5a3042e33286b57ef45b3e61"
+  },
+  "contractSHA256": "2aa39bc8c15738b4ecbd2aac08fd61375e0aa8fd45a0ee2ac3046f577b019728",
+  "recipeSHA256": "034e35538c8d47c493c95cf4cf48e1318a03b4bb7e59bf1d1f20d012de860c5e",
+  "controls": [
+    {
+      "id": "street-mustard",
+      "text": "Mustardbarehead",
+      "width": 108,
+      "height": 44,
+      "withinViewport": true,
+      "reachable": true,
+      "disabled": false
+    },
+    {
+      "id": "street-openface",
+      "text": "Charcoalopen-face",
+      "width": 108,
+      "height": 44,
+      "withinViewport": true,
+      "reachable": true,
+      "disabled": false
+    },
+    {
+      "id": "race-bluewhite",
+      "text": "Blue & whiteRace",
+      "width": 108,
+      "height": 44,
+      "withinViewport": true,
+      "reachable": true,
+      "disabled": false
+    },
+    {
+      "id": "street-charcoal",
+      "text": "Charcoalbarehead",
+      "width": 108,
+      "height": 44,
+      "withinViewport": true,
+      "reachable": true,
+      "disabled": false
+    },
+    {
+      "id": "race-charcoalyellow",
+      "text": "Charcoal & yellowRace",
+      "width": 108,
+      "height": 44.515625,
+      "withinViewport": true,
+      "reachable": true,
+      "disabled": false
+    },
+    {
+      "id": "street-remastered",
+      "text": "MustardRemastered",
+      "width": 108,
+      "height": 44.515625,
+      "withinViewport": true,
+      "reachable": true,
+      "disabled": false
+    }
+  ],
+  "choices": [
+    {
+      "id": "street-mustard",
+      "visit": 1,
+      "identity": {
+        "logical": "models/rider-street-mustard.glb",
+        "actualLogical": "models/rider-street-mustard.glb",
+        "sourceUUID": "20b226b6-a414-49a1-ad6d-701e77ed1f0d",
+        "instanceUUID": "808530ea-7968-4893-92fd-adeff4f8661e",
+        "selectedMarker": false,
+        "visibleSkins": 4,
+        "skeletonBones": 19,
+        "boundNativeJoints": null,
+        "jointIds": null,
+        "sourceSHA256": null,
+        "authorMeshRoles": null,
+        "stageClip": "idle_breathe"
+      },
+      "submitted": {
+        "expected": "models/rider-street-mustard.glb",
+        "frames": 120,
+        "invalidFrames": 0,
+        "lastLogical": "models/rider-street-mustard.glb",
+        "examples": [],
+        "sourceUUID": "20b226b6-a414-49a1-ad6d-701e77ed1f0d",
+        "instanceUUID": "808530ea-7968-4893-92fd-adeff4f8661e"
+      }
+    }
+  ],
+  "errors": [
+    "Cross-origin script load denied by Cross-Origin Resource Sharing policy.",
+    "undefined is not an object (evaluating 'rider.scene.traverse')"
+  ],
+  "limits": [
+    "Source identity and actual submitted-frame transition gate only.",
+    "No movie, moving-art, performance, physical-phone, or device-memory acceptance.",
+    "Remote model response bodies are not copied or independently hashed; runtime source identity is checked against the local emitted catalog."
+  ],
+  "surface": {
+    "deviceClass": "phone",
+    "width": 932,
+    "height": 430,
+    "horizontalOverflow": false
+  },
+  "failure": "locator.waitFor: Target page, context or browser has been closed\nCall log:\n\u001b[2m  - waiting for locator('button[data-outfit=street-remastered][aria-pressed=true]') to be visible\u001b[22m\n\n    at main (/Users/raynos/projects/games/rockhop/harness/rider-rebuild/verify-phone-preview.mjs:151:74)",
+  "cleanupError": "browserContext.close: Target page, context or browser has been closed\nBrowser logs:\n\n<launching> /Users/raynos/Library/Caches/ms-playwright/webkit-2336/pw_run.sh --inspector-pipe --headless --no-startup-window\n<launched> pid=51022\n[pid=51022] <gracefully close start>"
+}
