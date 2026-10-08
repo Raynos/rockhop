@@ -28,3 +28,8 @@ Limits: No bind, new master, GLB or anatomical/moving acceptance. Controls and i
 Finding: The native repair now requires every actual rest record to match the independently measured edit diagnostic exactly. Four head and four tail changes author eight frames; six descendant recompositions are explicit lineage, with the remaining 61 records exact. Binding is forbidden from changing this authority.
 Validation: Parent independently reran warning-as-error source math checks (11 input pins, 1446 changing and 9136 verbatim rows), confirmed the measured 4/4/14 scope and parsed all six recipes.
 Limits: Native binding, saved-native proof, glove fitting and played anatomy remain unexecuted; no player assets are promoted.
+
+
+Finding: Native02 successfully builds a source-preserving 75-joint hand derivative with the exact measured rest authority. Only 1446 hand-domain rows change; 9136 outside FULL/FOUR and native float32 coefficient rows remain exact. The saved master and diagnostic GLB exist in ignored harness output.
+Validation: Actual guard exits zero in 3.764 seconds; parent rehashes all source/master/GLB inputs, independently compares all 75 rest records and all outside-domain rows. Zero-pose residual is 0.255 micrometres.
+Limits: Independent saved-native/export/moving proof remains pending. Maximum removed FULL mass is 0.25072, a real deformation concern requiring moving comparison; no glove, art or player acceptance.
