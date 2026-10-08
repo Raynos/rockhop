@@ -11,3 +11,9 @@ Finding: Required third construction-round current-player regression remains cle
 Validation: Silent gate11 exit0/7.182s,11/11 checks, byte-identical finish8.591666666666667 and replayhash622bb2554e0f9a26; restart7.19ms and one tick.
 
 Limits: Existing player only; no remastered rider art, full ship, stranger or device acceptance.
+
+Finding: Required current-player gate remained deterministic after three saved construction changes.
+
+Validation: Gate12 launched no child because anonymous memory58GiB exceeded55GiB start bound. After memory returned34.2GiB, fresh silent Metal gate13 exit0/8.18s and11/11 checks passed. Replay finish/hash exact.
+
+Limits: Current player only, no selected-rider or device acceptance; refused guard retained.

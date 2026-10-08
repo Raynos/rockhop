@@ -1447,3 +1447,5 @@ October 8 actual compact hoodie matched review: chest/deltoid coverage improved,
 October 8 glove actual-surface extraction exit0/7.689s, original native unchanged. Builder authors explicit anatomical surface handles for one ordinary selected-mesh sculpt and semantic shared75 skin transfer; failed source-rest scale/envelope method stays retired. No fit/grip acceptance.
 
 October8 saved hoodie panel readback exit0/10.396s preserves native1ad5 and actual shape/UV lineage. Correct cross-island panel interpolation and supported concave underarm geometry while retaining improved chest coverage. Construction remains unaccepted.
+
+October8 current-player Metal gate13 exit0/8.18s,11/11 checks; recorded finish/hash remain byte-identical after saved neck/outfit/hoodie construction. Gate12 correctly refused memory headroom without launching. Neither accepts the selected rider.
