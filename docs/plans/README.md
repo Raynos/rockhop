@@ -1651,3 +1651,5 @@ October8 comparison build06 final-file check correctly rejects717865B (41Bover).
 October8 selected loader ownership checkpoint: build07 final normal JS was31Bover, so selected metadata fetch/validation moves into the same lazy review chunk as native75. Exactly four owned modules, no static entry dependency;9/9tests pass under tsx (plain Node cannot resolve existing TS imports). Build08 final assertion and phone capture pending; original sources/maps intact.
 
 October8 actual comparison build08 passes final emitted normal JS717742/717824B in4.499s; optional review driver10809B/PWA4915Bcosts separately reported. Parent verifies exact original ten rider hashes and selected source72b90e87…/onefullLODasset. Phone-layout old→new→old→new capture next; no art/device acceptance.
+
+October8 phone preview staging source checkpoint: parent-reviewed static helper retains exact selected/original assets, final budget and existing headers while excluding private build receipts.9/9fixture tests pass. Actual phone-layout capture is running; staging/upload/public access and device/art acceptance remain pending.
