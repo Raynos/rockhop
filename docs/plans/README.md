@@ -1653,3 +1653,5 @@ October8 selected loader ownership checkpoint: build07 final normal JS was31Bove
 October8 actual comparison build08 passes final emitted normal JS717742/717824B in4.499s; optional review driver10809B/PWA4915Bcosts separately reported. Parent verifies exact original ten rider hashes and selected source72b90e87…/onefullLODasset. Phone-layout old→new→old→new capture next; no art/device acceptance.
 
 October8 phone preview staging source checkpoint: parent-reviewed static helper retains exact selected/original assets, final budget and existing headers while excluding private build receipts.9/9fixture tests pass. Actual phone-layout capture is running; staging/upload/public access and device/art acceptance remain pending.
+
+October8 actual phone-layout comparison capture01 passes four old/new visits, exact sources/pooled instances, one selected357281284Bdownload and zero repeat requests; selected59.608/60.013renderFPS, repeat148.274ms. Parent rejects oversized counter obscuring head; compact one-line overlay source next, all measurement fields retained. No played art/physical-phone or seating acceptance.

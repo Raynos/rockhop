@@ -15,10 +15,10 @@ export function installGarageCaptureMeter() {
   if (overlay) {
     overlay.id = 'garage-capture-fps';
     overlay.setAttribute('aria-label', 'Measured Garage render performance');
-    overlay.style.cssText = 'position:fixed;left:50%;top:12px;transform:translateX(-50%);'
-      + 'z-index:2147483647;pointer-events:none;margin:0;padding:9px 13px;border-radius:5px;'
-      + 'background:rgba(0,0,0,.86);color:#fff;font:14px/1.4 monospace;font-variant-numeric:tabular-nums;';
-    overlay.textContent = 'GAME RENDER FPS: measuring actual frames…\nRAF: measuring actual callbacks…';
+    overlay.style.cssText = 'position:fixed;left:50%;top:6px;transform:translateX(-50%);'
+      + 'z-index:2147483647;pointer-events:none;margin:0;padding:4px 8px;border-radius:5px;'
+      + 'background:rgba(0,0,0,.86);color:#fff;font:12px/1.3 monospace;font-variant-numeric:tabular-nums;';
+    overlay.textContent = 'Render FPS: measuring…';
     document.body.append(overlay);
   }
   const original = owner.render;
@@ -63,8 +63,7 @@ export function installGarageCaptureMeter() {
       samples.push(sample);
       if (overlay) {
         const fmt = value => value === null ? '—' : value.toFixed(1);
-        overlay.textContent = `GAME RENDER ${sample.renderFPS.toFixed(1)} FPS · frame ${fmt(sample.frameMsP50)} / ${fmt(sample.frameMsP95)} ms p50/p95\n`
-          + `RAF ${sample.rafFPS.toFixed(1)} callbacks/s · actual wall clock\nVideo stream rate measured separately after capture`;
+        overlay.textContent = `Render ${sample.renderFPS.toFixed(1)} FPS · p95 ${fmt(sample.frameMsP95)} ms`;
       }
       lastPaint = now;
     }
