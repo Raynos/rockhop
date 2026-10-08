@@ -1781,3 +1781,5 @@ Motion11source frozen: nativeFK/palmsoleIK/poles/digitcontrols and sixgeneric au
 Actual motion11native01 FAIL7.094s: neutralnativecontrol restheads residual588.666mm exceedsunchanged0.1mmgate, no actions/native/exportsaved. Animationlead24 diagnosing perbone/mechanismrest setup, one supported correction; no poleanglesweep. Countsfirstconstruction sincegate32.
 
 Motion11neutralprobe source frozen to locateactual588.666mmsetup failure usingeverydeform/control/mechanism rest/pose matrix; no actions/angle campaign/save. Nativeexecution pending.
+
+Actual motionneutralprobe exits0/7.053s: addedrestorientations alreadywrong (thighmatrixcomponenterror1.994), headsmatch; sourceassignsEditBone.matrix beforepositive length. Supportedcreation-order correction assigned24 withpreconstraintrestassertion; no poleangle search/artpass.
