@@ -1,0 +1,109 @@
+{
+  "acceptedArt": false,
+  "sourceMaster": {
+    "path": "harness/out/rider-rebuild/selected-complete-engine01/engine05/rider-private-masked.blend",
+    "sha256": "95a4f14e06fb52cc055df6d1446a035d8cd3d35180d565ad52f3a70b3b05664b"
+  },
+  "sourceIntent": "Immutable selected appearance and initial production derivative. Re-pin the parent-judged merged cuff/anatomical source before final qualification; failed anatomical09 weights and corrective06 deltas are forbidden.",
+  "forbiddenSourceShapes": [
+    "SelectedSeatedCorrective06"
+  ],
+  "authorizedCorrectiveShapeNames": [],
+  "rig": "RiderSkeleton",
+  "levels": {
+    "full": {
+      "triangleBudget": 100000,
+      "surfaceErrorMultiplier": 1.0
+    },
+    "lod": {
+      "triangleBudget": 45000,
+      "surfaceErrorMultiplier": 2.0
+    }
+  },
+  "objects": {
+    "RiderBody": {
+      "family": "skin",
+      "full": 28000,
+      "lod": 14000,
+      "maximumSurfaceErrorM": 0.00075,
+      "cageM": 0.0015
+    },
+    "RiderHoodie": {
+      "family": "hoodie",
+      "full": 24000,
+      "lod": 10000,
+      "maximumSurfaceErrorM": 0.0015,
+      "cageM": 0.003
+    },
+    "RiderJeans": {
+      "family": "jeans",
+      "full": 16000,
+      "lod": 7000,
+      "maximumSurfaceErrorM": 0.001,
+      "cageM": 0.002
+    },
+    "ActualSelectedGlove.L": {
+      "family": "gloves",
+      "full": 8000,
+      "lod": 3500,
+      "maximumSurfaceErrorM": 0.0005,
+      "cageM": 0.001
+    },
+    "ActualSelectedGlove.R": {
+      "family": "gloves",
+      "full": 8000,
+      "lod": 3500,
+      "maximumSurfaceErrorM": 0.0005,
+      "cageM": 0.001
+    },
+    "ActualSelectedBoot.L": {
+      "family": "boots",
+      "full": 8000,
+      "lod": 3500,
+      "maximumSurfaceErrorM": 0.001,
+      "cageM": 0.002
+    },
+    "ActualSelectedBoot.R": {
+      "family": "boots",
+      "full": 8000,
+      "lod": 3500,
+      "maximumSurfaceErrorM": 0.001,
+      "cageM": 0.002
+    }
+  },
+  "textures": {
+    "albedo": 1024,
+    "normal": 1024,
+    "orm": 512,
+    "maximumResidentMiB": 60,
+    "bakeSamples": 8,
+    "marginPixels": 8
+  },
+  "protection": {
+    "jointBandFractionOfBoneLength": 0.2,
+    "jointCollapseWeight": 0.2,
+    "curvatureCollapseWeight": 0.15,
+    "curvatureDegrees": 45,
+    "vertexGroupFactor": 1.0
+  },
+  "transfer": {
+    "minimumNormalDot": 0.25,
+    "maximumSkinWeightL1": 0.3,
+    "maximumInfluences": 4,
+    "maximumRemovedMass": 0.001,
+    "maximumAdditionalAdjacentWeightL1": 0.002,
+    "supportEpsilon": 1e-05
+  },
+  "limits": [
+    "One deliberate weighted native simplification per object and level; no ratio search or unbounded retries.",
+    "Real open mesh boundaries and material boundaries retain zero collapse weight. Anatomical joint neighborhoods and high curvature receive reduced collapse weight. Blender's collapse implementation excludes edges incident to zero weight vertices.",
+    "Source and target surface-distance checks include every source vertex and target triangle corners plus centroids. These are geometric approximation bounds, not self/contact or moving-art acceptance.",
+    "Native source objects, topology, materials and rig remain immutable. Only new Production.full.* and Production.lod.* objects change.",
+    "Barycentric correspondence is constrained by source orientation and inherited skin similarity. Explicit source face IDs/coefficients feed all new four-joint fields and parent-authorized shape-key deltas.",
+    "Selected-to-active Blender cages bake original albedo, tangent normal, roughness and metallic into five family atlases. Both sides retain separate atlas regions; original selected bilateral geometry is preserved.",
+    "Texture allowance is 60 MiB RGBA8 including mip chains for the active rider. Full and LOD atlas sets are alternatives, not permission to retain both sets in GPU memory.",
+    "Actual complete Garage and both-bike surface/motion review, whole-track scene budget, synchronized16msP95 and physical devices remain required. A saved derivative or bake never implies acceptance.",
+    "Four-field projection is rejected above0.1percent removed mass per target vertex or0.002 additional adjacent weight-L1 change. Full per-target loss and per-edge support diagnostics are saved before this gate; rest nearest-face compatibility is not a skin-deformation pass.",
+    "Optional comma-separated family argument scopes author and bake to only changed families; source-face IDs, source-reference triangle coordinates, full interpolated fields and final FOUR persist for later updates. Topology-changing edits must invalidate affected family correspondence; unchanged family UVs/maps remain reusable."
+  ]
+}

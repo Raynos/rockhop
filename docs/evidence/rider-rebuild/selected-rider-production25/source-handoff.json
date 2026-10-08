@@ -1,0 +1,122 @@
+{
+  "acceptedArt": false,
+  "status": "FROZEN_GEOMETRY_FIRST_PRODUCTION_SOURCE_WITH_FOUR_AND_BOUNDARY_GATES",
+  "files": [
+    {
+      "path": "assets/blender/rider-rebuild/selected-rider-production25/input.json",
+      "sha256": "49702808cf80ec8ad7104f2681c02b758e97d19f11a386e9b27ca53f8c0f6449"
+    },
+    {
+      "path": "assets/blender/rider-rebuild/selected-rider-production25/author.py",
+      "sha256": "bc9e03aa6d99eba0d4b5037ceff49424c34ddcde99f0f2aae0f84a5090cbc483"
+    },
+    {
+      "path": "assets/blender/rider-rebuild/selected-rider-production25/bake.py",
+      "sha256": "4e640a5ed4f2c050c9a7e4a7efa6e60afca5467c74e0d407d29f27b39f4ea47d"
+    }
+  ],
+  "budget": {
+    "sourceRiderTriangles": 3397798,
+    "fullRiderTriangles": 100000,
+    "realLODRiderTriangles": 45000,
+    "wholeSceneTriangleLimit": 500000,
+    "wholeSceneTextureLimitMiB": 96,
+    "activeRiderTextureLimitMiB": 60,
+    "fullGarageConservativeEstimateTriangles": 409406,
+    "actualRendererEvidence": [
+      {
+        "path": "harness/out/rider-rebuild/selected-seated-garage01/played01/rookie/report.json",
+        "sha256": "d10868792db1acaed7073faa9f99ce0e7bda60f626f28fafd8aac9d5dd5dc700",
+        "sceneTriangles": 6871798,
+        "heroTriangles": 3431002,
+        "heroPasses": 2,
+        "remainingSceneTriangles": 9794,
+        "bikeTriangles": 33204,
+        "reflection": false
+      },
+      {
+        "path": "harness/out/rider-rebuild/selected-seated-garage01/played01/pro/report.json",
+        "sha256": "509a8ea3c2c4fbe51d9eef4ee829e761441b26aab55d7bc262e824a116ff142d",
+        "sceneTriangles": 6871798,
+        "heroTriangles": 3431002,
+        "heroPasses": 2,
+        "remainingSceneTriangles": 9794,
+        "bikeTriangles": 33204,
+        "reflection": false
+      }
+    ],
+    "limits": "Garage allocation estimate only. Actual capture must verify active and resident texture sets, all passes, whole-track triangles,16msP95 synchronized frame time, and5MiB/60s heap growth. Runtime/device gates remain open."
+  },
+  "sourceState": "Engine05 immutable selected appearance is the initial donor. Parent-authorized local cuff/anatomical edits require explicit new native pin and authorized corrective names before final qualification. Anatomical09 and corrective06 are not approved transfer sources.",
+  "geometryInvocation": [
+    "/Applications/Blender.app/Contents/MacOS/Blender",
+    "-b",
+    "-t",
+    "2",
+    "--python-exit-code",
+    "1",
+    "--python",
+    "assets/blender/rider-rebuild/selected-rider-production25/author.py",
+    "--",
+    "assets/blender/rider-rebuild/selected-rider-production25/input.json",
+    "harness/out/rider-rebuild/selected-rider-production25/full01",
+    "full"
+  ],
+  "bakeInvocation": [
+    "/Applications/Blender.app/Contents/MacOS/Blender",
+    "-b",
+    "-t",
+    "2",
+    "--python-exit-code",
+    "1",
+    "--python",
+    "assets/blender/rider-rebuild/selected-rider-production25/bake.py",
+    "--",
+    "assets/blender/rider-rebuild/selected-rider-production25/input.json",
+    "harness/out/rider-rebuild/selected-rider-production25/full01/production.json",
+    "harness/out/rider-rebuild/selected-rider-production25/full-bake-hoodie01",
+    "hoodie"
+  ],
+  "validation": {
+    "syntaxCompiled": true,
+    "actualConstructionExecuted": false,
+    "actualBakeExecuted": false,
+    "movingArtPassed": false,
+    "protectedBoundaryIdentityRuntimeCheckImplemented": true,
+    "fourRemovedMassAndEdgeSupportRuntimeCheckImplemented": true
+  },
+  "primarySourceForZeroWeightProtection": "https://github.com/blender/blender/blob/main/source/blender/bmesh/tools/bmesh_decimate_collapse.cc",
+  "limits": "Prepared construction source, not a compact native/model, map bake, export or art pass. Every protected-budget, correspondence and surface bound stops unsupported reduction. No generic substitution, source mutation, or parameter sweep.",
+  "bakeDeferred": true,
+  "skinGates": {
+    "maximumRemovedMass": 0.001,
+    "maximumAdditionalAdjacentWeightL1": 0.002,
+    "meaning": "Declared conservative source-preservation bounds, not demonstrated posed error limits. Actual full and FOUR rows plus per-edge support/L1 diagnostics save before the gate. A failing field requires deliberate source support authoring; no threshold sweep."
+  },
+  "updateMechanism": {
+    "persistedPerTargetVertex": [
+      "sourceFaceIds",
+      "sourceVertexIds",
+      "sourceCoefficients",
+      "sourceReferenceTrianglesLocal",
+      "sourceTopologySHA256",
+      "targetRestLocal",
+      "fullInterpolatedFields",
+      "finalFourFields"
+    ],
+    "sameTopologyEdit": "Use current source vertices at stored triangle IDs and stored barycentric coefficients to transfer delta from sourceReferenceTrianglesLocal onto targetRestLocal; update fields/authorized keys against the current pinned parent source. Existing target topology/UV and unaffected material maps remain reusable. The replay utility has not been implemented/executed yet.",
+    "topologyEdit": "Invalidate target correspondence that references changed/deleted source triangles. Reconstruct/rebind the affected garment family against the new selected source using optional family CLI scope; preserve other production family objects, UVs and maps. Never reuse stale old ancestry across a cuff topology edit.",
+    "familyCLI": "Optional fourth comma-separated family argument on author.py and bake.py: skin,hoodie,jeans,gloves,boots. Geometry-report authoredFamilies prevents baking absent targets. Parent assembly owns merging family deliverables."
+  },
+  "bakeWorkBound": {
+    "actualWallTimeMeasured": false,
+    "CPUThreads": 2,
+    "samples": 8,
+    "completeObjectPassCalls": 28,
+    "completeAllocatedBakeTexelsUpperBound": 18350080,
+    "singleObjectFamilyPassCalls": 4,
+    "bilateralFamilyPassCalls": 8,
+    "recommendation": "Do not run the complete bake now. After geometry judgment, schedule a single family under the parent wall guard, preserve its PNG/native outputs, measure actual duration, then schedule remaining families individually. No elapsed-time success prediction is claimed.",
+    "residentTextureLimit": "60MiB active set. Separate full/LOD atlas alternatives are not permission for120MiB residency; actual integration must keep aggregate scene96MiB. Shared-atlas/alternate-residency policy remains an integration requirement."
+  }
+}
