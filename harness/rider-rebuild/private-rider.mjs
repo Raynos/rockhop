@@ -40,6 +40,16 @@ export function applyPrivateClipTrack(track, values) {
   } else track.node[track.property].fromArray(values);
 }
 
+/** Preserve root travel by clamping authored one-shot actions at their end. */
+export function privateStageClipTime(clip, stageTime, epoch, metadata) {
+  if (!metadata.nativeAuthoringMotion) return ((stageTime % clip.duration) + clip.duration) % clip.duration;
+  const spec = metadata.genericActions?.[clip.name];
+  fail(spec && spec.durationSeconds === clip.duration && spec.leadInSeconds === 2
+    && ['LOOP', 'ONCE'].includes(spec.playback), 'Declared native action playback required');
+  const elapsed = Math.max(0, stageTime - epoch - spec.leadInSeconds);
+  return spec.playback === 'ONCE' ? Math.min(elapsed, clip.duration) : elapsed % clip.duration;
+}
+
 function loadedSpecification(metadata, scene) {
   const spec = structuredClone(metadata.specification ?? metadata.spec);
   fail(spec, 'Author specification required');
@@ -153,6 +163,7 @@ export function createPrivateRiderClass(metadata) {
     setStageTime(seconds) { this.stageTime = seconds; }
     setStage(on) {
       this.stage = on;
+      if (!on) this.nativeClipEpoch = undefined;
       this.placement.position.fromArray(on && this.clip ? (this.driver.garagePositionBike ?? [-0.6, -0.34, 0.65]) : [0, 0, 0]);
     }
     setLivery() {}
@@ -399,7 +410,13 @@ export function createPrivateRiderClass(metadata) {
       }
       if (frame.ragdoll?.length) this.poseReleased(frame);
       else if (this.stage && this.clip) {
-        const time = ((this.stageTime % this.clip.duration) + this.clip.duration) % this.clip.duration;
+        if (metadata.nativeAuthoringMotion && this.nativeClipEpoch === undefined) this.nativeClipEpoch = this.stageTime;
+        const time = privateStageClipTime(this.clip, this.stageTime, this.nativeClipEpoch, metadata);
+        this.debug.stageClipTime = time;
+        if (metadata.nativeAuthoringMotion) {
+          this.debug.nativeClipEpoch = this.nativeClipEpoch;
+          this.debug.nativeClipElapsed = this.stageTime - this.nativeClipEpoch;
+        }
         for (const track of this.clipTracks) applyPrivateClipTrack(track, track.interpolant.evaluate(time));
         this.debug.stageClip = this.clip.name; this.debug.physicalPose = false;
         this.debug.handOnGrip.fill(false); this.debug.footOnPeg.fill(false);

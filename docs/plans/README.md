@@ -1845,3 +1845,5 @@ Motion11 native05 saves all six editable control actions and native75 bake/expor
 Volume04 source now distinguishes543 pre-existing unused Body vertices from rendered geometry: original export exactly covers all32,412 Body and26,063 Jeans face IDs, and every primitive row must stay exact. Five fixtures pass. No new mask is added; full anatomical companion sculpt/contact and actual dressed review remain open.
 
 Gate35 actual Metal passes replay/crash/restart but fails ready P50319.03ms against unchanged300ms;10/11, not accepted. Existing player fingerprint remains fd8fe7c2. Failure and no-child headroom refusal are preserved before retry; no threshold/backend changes.
+
+Native action review source now requires the exact six successful native records and seven source pins, uses declared beside-bike presentation, holds the initial frame2s and clamps the five one-shot actions to retain root travel. Six CPU checks pass. Actual native-action transport and dressed played review remain pending.

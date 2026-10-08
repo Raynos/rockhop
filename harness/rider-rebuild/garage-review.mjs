@@ -110,7 +110,7 @@ try {
         placementBike: rider.placement.position.toArray(),
         stageTime: renderer.stageTime, riderStageTime: rider.stageTime,
         clipDuration: rider.clip?.duration ?? null,
-        clipTime: rider.clip ? ((rider.stageTime % rider.clip.duration) + rider.clip.duration) % rider.clip.duration : null,
+        clipTime: rider.clip ? rider.debug.stageClipTime ?? ((rider.stageTime % rider.clip.duration) + rider.clip.duration) % rider.clip.duration : null,
         correctiveTargets: rider.binding.meshes.filter(({ mesh }) => mesh.morphTargetDictionary?.SelectedSeatedCorrective06 !== undefined)
           .map(({ role, mesh }) => ({ role, name: mesh.name, weight: mesh.morphTargetInfluences[mesh.morphTargetDictionary.SelectedSeatedCorrective06] })),
         volumeTargets: rider.binding.meshes.filter(({ mesh }) => mesh.morphTargetDictionary?.A09_SeatedVolume !== undefined)
@@ -137,8 +137,22 @@ try {
       if (authored) assert(Math.abs(diagnostic.clipDuration - authored.durationSeconds) < 1e-6, 'Actual clip duration matches source-bound action');
       if (development) {
         assert(diagnostic.attachedToBikeFrame, 'Diagnostic remains attached to actual bike frame');
-        assert.deepEqual(diagnostic.placementBike, [0, 0, 0], 'Saved author clip uses declared bike-local origin');
-        if (development.receipt.diagnosticKind === 'native-weight-only') {
+        if (development.receipt.diagnosticKind === 'native-authoring-motion11') {
+          assert.deepEqual(diagnostic.placementBike, development.receipt.placement.positionBike, 'Declared generic native action presentation');
+          assert.equal(diagnostic.runtimeCorrectiveInstalled, false, 'Native action has no failed corrective helper');
+          assert.equal(diagnostic.correctiveTargets.length, 0);
+          assert.equal(diagnostic.volumeTargets.length, contract.shapeDerivative ? 5 : 0);
+          for (const target of diagnostic.volumeTargets) assert.equal(target.weight, 0, 'Generic native actions do not inherit a seated diagnostic morph');
+          for (const target of diagnostic.actualMorphTargetCounts) {
+            const volume = diagnostic.volumeTargets.some(value => value.role === target.role);
+            assert.equal(target.positions, volume ? 1 : 0);
+            assert.equal(target.normals, volume ? 1 : 0);
+          }
+        } else assert.deepEqual(diagnostic.placementBike, [0, 0, 0], 'Saved author clip uses declared bike-local origin');
+        if (development.receipt.diagnosticKind === 'native-authoring-motion11') {
+          assert.equal(diagnostic.clipTime, diagnostic.debug.stageClipTime, 'Capture actual clamped action clock');
+          assert(Number.isFinite(diagnostic.debug.nativeClipElapsed));
+        } else if (development.receipt.diagnosticKind === 'native-weight-only') {
           assert.equal(diagnostic.runtimeCorrectiveInstalled, false, 'Weight-only source has no corrective helper');
           assert.equal(diagnostic.debug.correctiveWeight, undefined);
           assert.equal(diagnostic.correctiveTargets.length, 0);
@@ -234,10 +248,12 @@ try {
   report.orbit.actualWallSeconds = (performance.now() - orbitAt) / 1000;
   Object.assign(report.orbit, { pointerMoves, maximumPointerStepPx, inspectionPauseMs, pointerDegrees: 360 });
   if (requestedClip) {
-      const first = report.snapshots[0], target = first.riderStageTime + first.clipDuration;
+      const first = report.snapshots[0], nativeAction = development?.receipt.diagnosticKind === 'native-authoring-motion11';
+      const target = nativeAction ? first.debug.nativeClipEpoch + 2 + first.clipDuration : first.riderStageTime + first.clipDuration;
       const before = await page.evaluate(() => window.__render.debug.rider.stageTime);
       report.clipCoverage = { name: requestedClip, durationSeconds: first.clipDuration,
         firstRiderStageTime: first.riderStageTime, beforeFinalWaitStageTime: before,
+        nativeAction, actionEpochStageTime: nativeAction ? first.debug.nativeClipEpoch : null, leadInSeconds: nativeAction ? 2 : 0,
         additionalWaitRequired: before < target };
       if (before < target) {
         // Clock-only polling extends the uninterrupted film if dense rendering
@@ -262,7 +278,10 @@ try {
     const first = report.snapshots[0], last = report.snapshots.at(-1);
     report.clipCoverage.lastRiderStageTime = last.riderStageTime;
     report.clipCoverage.continuousRiderSeconds = last.riderStageTime - first.riderStageTime;
-    assert(report.clipCoverage.continuousRiderSeconds >= first.clipDuration, 'Continuous Garage film covers at least one whole native action cycle');
+    if (report.clipCoverage.nativeAction) {
+      assert(last.debug.nativeClipElapsed >= 2 + first.clipDuration, 'Film includes lead-in and the complete native action');
+      if (contract.genericActions[requestedClip].playback === 'ONCE') assert.equal(last.clipTime, last.clipDuration, 'One-shot action retains its final root pose');
+    } else assert(report.clipCoverage.continuousRiderSeconds >= first.clipDuration, 'Continuous Garage film covers at least one whole native action cycle');
     assert(report.snapshots.every(row => row.clipDuration === first.clipDuration), 'Actual clip duration stays unchanged through orbit');
   }
   if (development?.receipt.diagnosticKind === 'failed-corrective') report.correctiveCoverage = { minimumObserved: Math.min(...report.snapshots.map(row => row.debug.correctiveWeight)),

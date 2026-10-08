@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import * as THREE from 'three';
-import { preparePrivateClipTrack, createPrivateRiderClass } from './private-rider.mjs';
+import { preparePrivateClipTrack, createPrivateRiderClass, privateStageClipTime } from './private-rider.mjs';
 import { sourceDiagnosticKind } from './private-dev-review.mjs';
 
 const metadata = { shapeDerivative: { accepted: false, kind: 'native-relative-shape-key', name: 'A09_SeatedVolume' },
@@ -40,4 +40,27 @@ test('actual runtime updates native mesh arrays through rest, key, return and cy
   assert.throws(() => preparePrivateClipTrack(tracks[0], binding, {}), /declaration/);
   assert.throws(() => preparePrivateClipTrack(new THREE.NumberKeyframeTrack('Jeans.morphTargetInfluences[0]', [0,1], [0,1]), binding, metadata), /Invalid native volume/);
   meshes.forEach(mesh => { mesh.geometry.dispose(); mesh.material.dispose(); });
+});
+
+// A travelling action must retain its final root position across long Garage clocks.
+test('native one-shot actions hold the initial frame and clamp without root teleport', () => {
+  const clip = { name: 'RiderJog', duration: .75 };
+  const native = { nativeAuthoringMotion: {}, genericActions: { RiderJog: { durationSeconds: .75, leadInSeconds: 2, playback: 'ONCE' } } };
+  for (const [clock, expected] of [[10,0],[11.9,0],[12.375,.375],[12.75,.75],[50,.75]]) {
+    assert.equal(privateStageClipTime(clip, clock, 10, native), expected);
+  }
+  const idle = { ...native, genericActions: { RiderJog: { durationSeconds: .75, leadInSeconds: 2, playback: 'LOOP' } } };
+  assert.equal(privateStageClipTime(clip, 13, 10, idle), .25);
+  assert.throws(() => privateStageClipTime(clip, 13, 10, { nativeAuthoringMotion: {}, genericActions: {} }), /playback/);
+});
+
+test('native library intake permits only the six declared actions and exact presentation', () => {
+  const names = ['RiderIdle','RiderWalk','RiderJog','RiderTurn90','RiderJumpLand','RiderRangeOfMotion'];
+  const declared = { ...metadata, qualificationState: 'UNACCEPTED_NATIVE_ACTION_LIBRARY',
+    nativeAuthoringMotion: { accepted: false, kind: 'native-control-action-library', actions: names.map(name => ({ name })), presentation: { positionBike: [-.6,-.34,.65] } },
+    genericActions: { RiderJog: { playback: 'ONCE', leadInSeconds: 2 } } };
+  assert.equal(sourceDiagnosticKind(declared, 'RiderJog', true), 'native-authoring-motion11');
+  assert.throws(() => sourceDiagnosticKind(declared, 'Unknown', true), /declared/);
+  assert.throws(() => sourceDiagnosticKind({ ...declared, corrective: {} }, 'RiderJog', true), /failed corrective/);
+  assert.throws(() => sourceDiagnosticKind({ ...declared, genericActions: { RiderJog: { playback: 'LOOP', leadInSeconds: 2 } } }, 'RiderJog', true));
 });

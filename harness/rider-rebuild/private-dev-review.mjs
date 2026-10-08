@@ -39,6 +39,19 @@ export function observePrivateReloads(hot, events) {
 export function sourceDiagnosticKind(metadata, clip, allowFailedDiagnostic) {
   assert(allowFailedDiagnostic, 'Unaccepted source requires --allow-failed-diagnostic');
   assert.equal(metadata.accepted, false);
+  if (metadata.qualificationState === 'UNACCEPTED_NATIVE_ACTION_LIBRARY') {
+    const library = metadata.nativeAuthoringMotion;
+    assert.equal(library?.accepted, false);
+    assert.equal(library.kind, 'native-control-action-library');
+    assert.deepEqual(library.actions.map(action => action.name), ['RiderIdle', 'RiderWalk', 'RiderJog', 'RiderTurn90', 'RiderJumpLand', 'RiderRangeOfMotion']);
+    assert(library.actions.some(action => action.name === clip), 'Requested native action is declared');
+    const action = metadata.genericActions?.[clip];
+    assert(action && action.leadInSeconds === 2);
+    assert.equal(action.playback, clip === 'RiderIdle' ? 'LOOP' : 'ONCE');
+    assert.deepEqual(library.presentation.positionBike, [-0.6, -0.34, 0.65]);
+    assert.equal(metadata.corrective, undefined, 'Native action library cannot reuse the failed corrective');
+    return 'native-authoring-motion11';
+  }
   assert.equal(metadata.previewClip, clip); assert.equal(metadata.diagnosticMotion?.previewClip, clip);
   assert.equal(metadata.diagnosticMotion?.accepted, false);
   if (clip === 'Anatomical09VolumeRestKey') {
@@ -73,34 +86,51 @@ export async function createPrivateDevReview({ source, contractPath, allowFailed
   const contractBytes = fs.readFileSync(contractPath), metadata = JSON.parse(contractBytes);
   const failed = typeof metadata.qualificationState === 'string' && metadata.qualificationState.startsWith('FAILED');
   const diagnosticKind = sourceDiagnosticKind(metadata, clip, allowFailedDiagnostic);
-  if (['native-weight-only', 'native-posed-volume'].includes(diagnosticKind)) {
+  if (metadata.weightDerivative) {
     for (const name of ['nativeReceipt', 'authoredRows']) {
       const pin = metadata.weightDerivative.sourcePins?.[name];
       assert(pin && typeof pin.path === 'string' && /^[a-f0-9]{64}$/.test(pin.sha256), `Declare weight source ${name}`);
       assert.equal(await hashFile(path.resolve(root, pin.path)), pin.sha256, `Weight source changed: ${name}`);
     }
   }
-  if (diagnosticKind === 'native-posed-volume') {
+  if (metadata.shapeDerivative) {
     for (const name of ['native', 'nativeReceipt', 'shapeKey', 'posedSurfaces', 'weightRider', 'weightContract', 'weightReceipt']) {
       const pin = metadata.shapeDerivative.sourcePins?.[name];
       assert(pin && typeof pin.path === 'string' && /^[a-f0-9]{64}$/.test(pin.sha256), `Declare volume source ${name}`);
       assert.equal(await hashFile(path.resolve(root, pin.path)), pin.sha256, `Volume source changed: ${name}`);
     }
   }
+  if (diagnosticKind === 'native-authoring-motion11') {
+    const library = metadata.nativeAuthoringMotion;
+    for (const name of ['nativeReceipt', 'controlNative', 'bakedNative', 'rigGLB', 'nativeMatrices', 'selectedRider', 'selectedContract']) {
+      const pin = library.sourcePins?.[name];
+      assert(pin && typeof pin.path === 'string' && /^[a-f0-9]{64}$/.test(pin.sha256), `Declare native action source ${name}`);
+      assert.equal(await hashFile(path.resolve(root, pin.path)), pin.sha256, `Native action source changed: ${name}`);
+    }
+    const receipt = JSON.parse(fs.readFileSync(path.resolve(root, library.sourcePins.nativeReceipt.path)));
+    assert.equal(receipt.status, 'NATIVE_CONTROL_ACTION_PACKAGE_UNACCEPTED');
+    assert.deepEqual(library.actions, receipt.actions, 'All six actual native action records remain exact');
+    for (const name of ['controlNative', 'bakedNative', 'rigGLB']) assert.deepEqual(library.sourcePins[name], receipt[name]);
+  }
   const sourceStat = fs.statSync(source), sourceSHA256 = await hashFile(source);
   assert.deepEqual(identity(fs.statSync(source)), identity(sourceStat), 'Selected source changed while hashing');
-  assert.equal(metadata.glbSHA256, sourceSHA256); assert.equal(metadata.diagnosticMotion.outputSHA256, sourceSHA256);
-  const authorPin = metadata.diagnosticMotion.sourcePins.author;
-  const authorPath = path.resolve(root, authorPin.path);
-  assert.equal(await hashFile(authorPath), authorPin.sha256, 'Saved author receipt changed');
-  const author = JSON.parse(fs.readFileSync(authorPath));
-  assert.deepEqual(author, metadata.diagnosticMotion.authorReceipt, 'Diagnostic carries the exact saved author pose');
-  assert.equal(author.bike.path, 'public/models/bike-rookie.glb');
-  const authorRecipe = path.join(root, 'assets/blender/rider-rebuild/selected-seated-author04/author.mjs');
-  const authorCode = fs.readFileSync(authorRecipe, 'utf8');
-  assert(authorCode.includes("const bikeFrame = new THREE.Group(); bikeFrame.name = 'actual-bike-local-frame';"));
-  assert(authorCode.includes('rider.attach({ frame: bikeFrame }); rider.setStage(true); rider.setStageTime(0);'));
-  assert(!authorCode.includes('garagePositionBike'), 'Re-audit author-origin placement if author source adds an offset');
+  assert.equal(metadata.glbSHA256, sourceSHA256);
+  const nativeLibrary = diagnosticKind === 'native-authoring-motion11';
+  let author, authorPin, authorPath, authorRecipe, authorCode;
+  if (!nativeLibrary) {
+    assert.equal(metadata.diagnosticMotion.outputSHA256, sourceSHA256);
+    authorPin = metadata.diagnosticMotion.sourcePins.author;
+    authorPath = path.resolve(root, authorPin.path);
+    assert.equal(await hashFile(authorPath), authorPin.sha256, 'Saved author receipt changed');
+    author = JSON.parse(fs.readFileSync(authorPath));
+    assert.deepEqual(author, metadata.diagnosticMotion.authorReceipt, 'Diagnostic carries the exact saved author pose');
+    assert.equal(author.bike.path, 'public/models/bike-rookie.glb');
+    authorRecipe = path.join(root, 'assets/blender/rider-rebuild/selected-seated-author04/author.mjs');
+    authorCode = fs.readFileSync(authorRecipe, 'utf8');
+    assert(authorCode.includes("const bikeFrame = new THREE.Group(); bikeFrame.name = 'actual-bike-local-frame';"));
+    assert(authorCode.includes('rider.attach({ frame: bikeFrame }); rider.setStage(true); rider.setStageTime(0);'));
+    assert(!authorCode.includes('garagePositionBike'), 'Re-audit author-origin placement if author source adds an offset');
+  }
   const native = relative => import(pathToFileURL(path.join(root, relative)).href);
   const unregister = register(); let modules;
   try { modules = await Promise.all([
@@ -115,12 +145,16 @@ export async function createPrivateDevReview({ source, contractPath, allowFailed
   const models = originals.map(({ logical, url, bytes, sha256 }) => slots.includes(logical)
     ? { logical, url: selectedURL, bytes: sourceStat.size, sha256: sourceSHA256 }
     : { logical, url, bytes: bytes.length, sha256 });
-  assert.equal(models.find(asset => asset.logical === author.bike.path.slice(7))?.sha256, author.bike.sha256);
+  if (author) assert.equal(models.find(asset => asset.logical === author.bike.path.slice(7))?.sha256, author.bike.sha256);
   metadata.sourceSHA256 = sourceSHA256; metadata.metadataSHA256 = sha(contractBytes);
   metadata.selectedRiderSource = { modelSlots: slots, canonicalLogical, sourceSHA256, texturePolicy: 'preserve-authored-images' };
-  metadata.driver = { ...metadata.driver, garagePositionBike: [0, 0, 0] };
+  const positionBike = nativeLibrary ? metadata.nativeAuthoringMotion.presentation.positionBike : [0, 0, 0];
+  metadata.driver = { ...metadata.driver, garagePositionBike: positionBike };
+  if (nativeLibrary) metadata.previewClip = clip;
   metadata.releaseBuild = false;
-  const placement = { clip, positionBike: [0, 0, 0], authorRecipe, authorRecipeSHA256: sha(authorCode),
+  const placement = nativeLibrary ? { clip, positionBike, presentation: metadata.nativeAuthoringMotion.presentation,
+    why: 'Generic native action inspection beside the actual bike; not normal Garage seated riding.' } :
+    { clip, positionBike: [0, 0, 0], authorRecipe, authorRecipeSHA256: sha(authorCode),
     authorReceipt: { path: authorPath, sha256: authorPin.sha256 }, frameOriginFile: author.frameOriginFile,
     why: 'Author04 saved local75 TRS under identity actual-bike-local-frame. Bike-file attach_frame_origin is already subtracted from saddle geometry; the standing-clip presentation offset would translate this saved seated pose away from its bike.' };
   const pins = await Promise.all(['vite.config.ts', 'harness/rider-rebuild/private-engine-plugin.mjs', 'harness/rider-rebuild/private-rider.mjs',
@@ -194,7 +228,7 @@ export async function createPrivateDevReview({ source, contractPath, allowFailed
     source: { path: source, bytes: sourceStat.size, sha256: sourceSHA256, url: selectedURL },
     contract: { path: contractPath, sha256: sha(contractBytes) }, runtimeMetadataSHA256: sha(JSON.stringify(metadata)),
     runtime: { qualificationState: metadata.qualificationState, previewClip: metadata.previewClip,
-      driver: metadata.driver, corrective: metadata.corrective, weightDerivative: metadata.weightDerivative, shapeDerivative: metadata.shapeDerivative, selectedRiderSource: metadata.selectedRiderSource },
+      driver: metadata.driver, corrective: metadata.corrective, weightDerivative: metadata.weightDerivative, shapeDerivative: metadata.shapeDerivative, nativeAuthoringMotion: metadata.nativeAuthoringMotion, genericActions: metadata.genericActions, selectedRiderSource: metadata.selectedRiderSource },
     catalogSHA256: sha(catalogBytes), placement, pins, optimizeDepsInclude: server.config.optimizeDeps.include, serverEvents,
     performanceMeaning: 'Actual rendered-frame measurements from a Vite development server; not a production build or production performance qualification. Production bundle gates remain open.' } };
 }
