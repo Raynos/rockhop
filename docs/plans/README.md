@@ -1313,3 +1313,5 @@ October 7 actual complete selected hoodie checkpoint: direct regional repair exi
 October 7 actual direct selected boot sculpt review: parent viewed all four genuine-PBR original/sculpt views and rehashed native. Rounded toe/detail now retained, but outer flank/distal skin still exposed; rest enclosure rejected. CPU2 exit0 in13.684s, source topology/UV/body75 preserved. Next one local flank repair from current sections, no whole crown/lattice change.
 
 October 7 boot target inventory: exact bilateral unchanged-body forefoot outline now versioned beside direct selected sculpt; parent copy hash matches. Inventory only, no geometry/fit/art change.
+
+October 7 actual local jeans gusset checkpoint: exit0 in2.338s,2031 vertices receive connected local delta; outside positions/UV/FULL/FOUR/topology/materials and body/shared75 pass exact assertions. Parent native hash matches; rest/moving fit remains uninspected, no maps.
