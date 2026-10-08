@@ -548,62 +548,59 @@ anatomy requires them. Keep useful repaired hands and shared75 as the starting
 transport contract; update adapters and qualification if they must change.
 A source conservation check must not prohibit the reconstruction being attempted.
 
-The active construction block now uses actual saved results, not source-ready
-claims. The complete selected-source working scene exists; the latest saved
-hoodie/conditioned-neck scene is native1ad5c5aa. All seven actual meshes are
-visible with genuine original PBR. Static dense jeans/gloves are rejected
-construction references, not qualified dressed animation assets.
+The working scene contains all seven actual selected-source meshes and genuine
+PBR. The latest construction save is hoodie nativebaedfa57; its shoulder join
+is rejected. A saved complete scene is useful authoring context, not a completed
+rider. Static dense jeans/gloves remain rejected references until replaced by
+judged wearing derivatives.
 
-- Head/neck: broad anatomical derivative90236188 improved the matched side
-  silhouettes. Conditionede68b5c41 removes the upper skin-field discontinuity
-  while preserving body/shared75. A72frame clothed turn/nod was rendered and
-  played to natural end silently. Keep that limited improvement. RearC7,
-  mottled shading, hair seam and historical corner-normal residual remain
-  open; no whole-head or complete dressed-motion acceptance.
-- Hoodie: actual new quad panels in1ad5c5aa improve chest/outer-sleeve coverage
-  but fail axillary shape and texture. Actual receipt has884/1547 quads spanning
-  over a quarter of the original atlas. Readback also proves156 generated
-  vertices/164 quad centers inside the canonical body. One proposed ruled
-  correction was stopped before a Blender job: its identical-function numeric
-  prediction worsened opposed fan normals10→179 despite fewer inside points.
-  Do not tune that surface. Expand defective seam scope as anatomy requires;
-  preserve useful chest/hood/outer sleeves, not convoluted failed patch borders.
-  Use coherent donor-identity texture transfer after a credible shape exists.
-- Boots: actual right union/cavity nativef169bab5 saves before failure. Two
-  actual views reject its blunt box-like quarter/forefoot; the outer operand
-  also fails the original rear-tread preservation assertion. Left/material
-  completion did not run; visible detail loss versus face splitting is unproven.
-  Keep the precise cavity evidence; stop unchanged loft/CSG exterior retries.
-  The next construction must tailor the selected upper's actual shoe shape.
-- Jeans: original wearing target95654876 remains useful and unchanged. The
-  first selected-material pelvis probe fails visibly. Actual diagnostic finds
-  all4656 covered black samples are directed-ray misses; physical long rays
-  reach the opposite cloth side. Do not increase ray reach globally. One
-  editable correspondence receiver/cage correction uses actual original-source
-  envelope controls, saves geometry before capture, and permits only six
-  isolated1024 bakes after physical capture passes. Whole garment remains open.
-- Gloves: previous mirror audit did not prove correct anatomical assignment.
-  Actual original padded dorsal/palm views and canonical signed MCP curl show
-  the original donor belongs onL; R requires reflection, with face/UV winding
-  reversed together. Correct that source assignment before the sole ordinary
-  selected-mesh Laplacian sculpt and semantic shared75 binding. Do not retune
-  the failed root-fit/envelope recipe. Real palm/web/cuff enclosure and played
-  bilateral grip/release remain mandatory.
+- Head/neck: retain broad neck sculpt90236188 and endpoint-field correction
+  e68b5c41. The72frame clothed turn/nod was rendered and played silently to
+  natural end. RearC7, mottled shading, hair seam and historical corner-normal
+  residual remain open. This limited neck test does not qualify the outfit.
+- Hoodie: retain useful selected hood/chest/outer sleeves. Stop correction03's
+  rectangular ruled-depth surface and one-strip zipper: actual four-view PBR
+  judgment rejects shoulder shelves and ragged rear joins despite zero predicted
+  point/center/fan defects. Fresh targeted Astra review must specify a source-
+  informed sleeve-cap/armhole with actual boundary and tangent continuity. Do
+  not tune depth/bridge gains or animate this visibly failed join.
+- Jeans: retain actual working wearer95654876. Authored paired-triangle pelvis
+  correspondence succeeds CPU2 exit0/79.503s: original fly/pockets/waist transfer
+  without previous black blocks; all direct regional samples hit the intended
+  source. Root judged all six views. This1024 pelvis baseline permits one whole
+  selected4K source-aware transfer, not final shape, normal or moving acceptance.
+  Lower correspondence follows measured original cuffs/crotch and existing
+  native lineage; no global ray increase or source-encloses-body prerequisite.
+- Gloves: original source belongs onL, reflectedR reverses faces and UV corners
+  together. Dense Laplacian failure is measured: Blender's cotangent epsilon
+  leaves542 unanchored zero columns per placed hand. A selected-derived coarse
+  guide in original units solves both hands; actual right dense transfer keeps
+  coherent original ribs/padding without previous spikes. Root rejects actual
+  palm/thenar/tip skin exposure. Diagnose achieved saved coordinates and author
+  local anatomy corrections; do not confuse target positions with achieved fit.
+  Left SurfaceDeform warning has an unproven generic angular predicate; preserve
+  successful binding and source ancestry, never waive modifier warnings.
+- Boots: stop rejected rectangular exterior UNION. Selected-upper guide sculpt
+  retains original curved dense appearance, sole and UV before own-side cavity.
+  A JSON NumPy-scalar error was corrected without numerical/anatomical changes;
+  fresh actual sculpt02 is in progress. Save geometry before postgates. Actual
+  original-PBR shape and played ankle/toe/bike judgment remain mandatory; an
+  empty cavity alone does not establish enclosure or attractive footwear.
 
-The shortest proper next visible deliverable is a saved complete dressed scene
-with supported garment corrections and genuine selected materials, followed by
-continuous clothed reach/crouch/both supported bike extremes and actual Garage
-review. Save actual geometry before texture work and reject gross defects early.
-Do not spend another block packaging sources, tuning failed parameterizations,
-or perfecting normals on a silhouette that fails. Modeling modifiers and
-incomplete delivery fields are allowed in this editable authoring context;
-final coherent maps/four-weight/export conditions remain delivery gates.
+The next visible deliverable remains the complete selected dressed master with
+supported garment repairs, then continuous clothed reach/crouch/both supported
+bike extremes and actual Garage review. Judge complete moving appearance; stop
+failed silhouettes early and preserve useful geometry. Editing topology, body
+or rig is allowed where anatomy supports it. Original selected stock is immutable;
+defective derivative boundaries are not. Final coherent maps/four-weight/export
+conditions remain delivery gates, not prerequisites for editable construction.
 
-Current-player silent Metal gate13 passes11/11 in8.18s with byte-identical
-recorded finish/hash. Gate12 refused memory headroom and launched no child.
-These protect the existing player only. No remastered rider promotion, full
-ship, stranger or device acceptance follows from them. AllR0–R5 remain open,
-accepted0/6. Count visibly improved saved geometry and dressed movement, not
-preparation or commit volume. An artist remains optional; specific autonomous
-construction failures must be reported honestly rather than generalized into
-an external-only prerequisite.
+Current-player silent Metal gate13 passed11/11 with byte-identical recorded
+finish/hash. Gate14 retains10/11: boot-ready348.241ms exceeds300ms amid actual
+host load60.21, while deterministic finish and one-tick restart pass. Its built-in
+resampling already ran; no blind retry. A meaningful host-load change or the
+next required construction cadence permits a fresh silent gate. Existing-player
+checks do not qualify the remastered rider. AllR0–R5 remain open, accepted0/6;
+no player promotion, full ship, stranger or device acceptance. Artists remain
+optional; report specific autonomous failures without inventing an external-only
+prerequisite.

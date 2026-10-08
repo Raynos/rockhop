@@ -5,3 +5,10 @@ Limits: No art/motion accepted; adviser playback failedSIGKILL9. Scoped reconstr
 Finding: Apply Astra04 by allowing deliberate derivative reconstruction, early actual-source working context and source/receiver correspondence review instead of external-only prerequisites.
 Validation: Parent verified exact failure scope and primaryCycles semantics; three concrete model/material/assembly owners assigned, source-only before parentlease.
 Limits: Historical failures/archives remain intact; new capability and actual dressed motion are unproven, allR0–R5open.
+
+
+Finding: Resharpen active construction using actual saved/PBR results: retain coherent glove guide and jeans pelvis capture, reject rigid shoulder surface despite clean numerical checks, require source-informed armhole.
+
+Validation: Parent actual four-view hoodie/three-view glove/six-view jeans judgments and actual run receipts linked in plan. Existing-player gate14 timing failure retained.
+
+Limits: AllR0–R5 open; next milestone complete selected dressed movement and Garage, no completed rider claim.

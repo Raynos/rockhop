@@ -1491,3 +1491,5 @@ October8 actual hoodie baedfa57 fails parent4-view PBR judgment: stiff front/rea
 October8 actual selected-upper boot run exit1/15.94s on JSON NumPyfloat32 witness, saved failed-in-memory789d4a29. One completed-expression Pythonfloat conversion preserves numerical/anatomical controls; fresh sculpt02 source frozen, no boot wearing acceptance.
 
 October8 actual read-only glove solved03 extraction exit0/5.695s supplies both saved8000-point guides and284571-point right dense coordinates. Local palm/thenar/tip authoring uses achieved surface, no inferred target success or new acceptance.
+
+October8 active rider plan refreshed to actual selected-material outcomes: jeans pelvis correspondence works, original-unit glove guide fixes singular solve but local skin exposure remains, rigid hoodie seam rejected with fresh targeted Astra05 review. Whole4K jeans/selected boot sculpt underway; gate14 timing failure retained; rider0/6 and no promotion.
