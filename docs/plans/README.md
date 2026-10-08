@@ -1293,3 +1293,5 @@ October 7 actual jeans targeted repair review: parent viewed front/back/profile.
 October 7 hoodie author03: exact live left boundary selection now creates324+289 real quads; right cut branches before right selection. Parent worker/diagnostic review verifies left API fix, not a completed garment. Preserved unpatched fit remains; direct regional perimeter repair next, no bake.
 
 October 7 direct selected boot sculpt source checkpoint: retain all original dense forefoot vertices/faces/corner UV/4K PBR and useful selected rear; local medial toe Grab, ball width and dorsal lift with coherent L/R transform. Parent source/AST/eight pins checked; no third lattice, run unexecuted and all art gates open.
+
+October 7 actual bilateral selected-glove map checkpoint: corrected bake exit0 in19.736s, both hands save original selected dense/PBR transfer and new native. Parent native/six map hashes match. 1024 review derivative only; appearance, seams, grip and final4K master remain unaccepted.

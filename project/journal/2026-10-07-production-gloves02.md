@@ -36,3 +36,9 @@ Finding: Preserve original geometry/report and create explicitly amended fresh b
 Validation: Parent checks only appearance.py differs between construction source and bake helper; actual geometry/native authority unchanged. Fresh intake source hash matches current frozen recipe.
 
 Limits: Unexecuted selected-map trial; no claim original geometry was made by corrected helper and no appearance acceptance.
+
+Finding: Both hands now receive genuine selected-source PBR and tangent-normal review maps.
+
+Validation: Corrected bake exit0 in19.736s, native and six map hashes parent verified. Compatibility lineage preserves original geometry authority.
+
+Limits: Material transfer remains uninspected;1024 is a review derivative, not4096 master or moving art acceptance.

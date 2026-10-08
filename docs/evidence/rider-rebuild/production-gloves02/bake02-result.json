@@ -1,0 +1,99 @@
+{
+  "acceptedArt": false,
+  "status": "SELECTED_TEXTURED_REGION_GLOVES_FOR_PARENT_PLAYED_REVIEW",
+  "native": {
+    "path": "harness/out/rider-rebuild/production-gloves02/bake-intake02/first-review-1024/selected-articulated-gloves.blend",
+    "sha256": "73686497e479d0675e8c2dea0a6b548cba5f9300e42b14e60ffe90f3aa55df0b"
+  },
+  "geometryNative": {
+    "path": "harness/out/rider-rebuild/production-gloves02/authored01/authored-geometry.blend",
+    "sha256": "43de777b789e9111ec927a1f6c6aaef09af4768043b1d862eb285763291ad10d"
+  },
+  "sourceReport": {
+    "path": "harness/out/rider-rebuild/production-gloves02/bake-intake02/first-review-1024/report.json",
+    "sha256": "b6c3a384bea6379a9e2b4e6b21fb306a38206a840d9cda6a312fe07bdfb247b5"
+  },
+  "sourceCompatibility": {
+    "originalGeometryReport": {
+      "path": "harness/out/rider-rebuild/production-gloves02/authored01/geometry-report.json",
+      "sha256": "9176c4eca38281962e64aa30df0429787c8ee34d7979f9d1539ce400c303ccb2"
+    },
+    "originalGeometrySourceFiles": {
+      "author.py": "0867ac412dee6005fb032c0cdef727fc0c1be1e49bf0b6a6eb8055db9e99a9cf",
+      "check_source.py": "efaf739e22ed27e5875612173eb5df294f6025f2f033949464911b0cd2b2b9d7",
+      "freeze_regions.py": "67404060619ec8adfc5ae59813705cf18cf0e3a3aadb07ee7b1456b2228eb311",
+      "region_geometry.py": "b94782453716307301ea0b14b5aa1cc744bbd7b07dc8aae305928216c1570ba3",
+      "appearance.py": "2c6694f90d9e1f2c10607beaac9e02c986af8ba24b5e489a90bfbab5c93e6be0",
+      "inputs.json": "bb8b6a8cfedee058b4f7e88247f675fd73cc5c63edf91fcaaba579b26ac99e10",
+      "face-regions.json": "317e4a7338305d8ba1ef3be7b1d26365714d9cc2935fc20e741018af63deca8f"
+    },
+    "changedSource": [
+      "appearance.py"
+    ],
+    "change": "BakeSettings.cage_object = actual cage Object; no geometry or donor control change",
+    "geometryConstructionSourceUnchanged": true,
+    "acceptedArt": false
+  },
+  "textureResolution": {
+    "selectedPaintSource": 4096,
+    "firstLookDerivative": 1024,
+    "final4KMasterBake": "NOT_EXECUTED",
+    "executedBake": 1024
+  },
+  "textures": {
+    "R": {
+      "baseColor": {
+        "resolution": 1024,
+        "derivativeRole": "FIRST_REVIEW",
+        "path": "harness/out/rider-rebuild/production-gloves02/bake-intake02/first-review-1024/GloveProduction.R-baseColor.png",
+        "sha256": "2bef36fba81cbd94fa4a594844675e62b543bc65c795a6fc1c750af44f437628"
+      },
+      "metallicRoughness": {
+        "resolution": 1024,
+        "derivativeRole": "FIRST_REVIEW",
+        "path": "harness/out/rider-rebuild/production-gloves02/bake-intake02/first-review-1024/GloveProduction.R-metallicRoughness.png",
+        "sha256": "0aa3eb9fe25c60ae73daa88d4aabc9b9ff2b33538e5cc81ba3b27c124ad7655c"
+      },
+      "normal": {
+        "resolution": 1024,
+        "derivativeRole": "FIRST_REVIEW",
+        "path": "harness/out/rider-rebuild/production-gloves02/bake-intake02/first-review-1024/GloveProduction.R-normal.png",
+        "sha256": "bbff8f43538be3e72c0b507991be4a0196564102e900e3f4ede571069acb3c77"
+      }
+    },
+    "L": {
+      "baseColor": {
+        "resolution": 1024,
+        "derivativeRole": "FIRST_REVIEW",
+        "path": "harness/out/rider-rebuild/production-gloves02/bake-intake02/first-review-1024/GloveProduction.L-baseColor.png",
+        "sha256": "4521629ed36c63a2d5ed2e36e625a57a3baefe920a0ec5e43111e6e92f15eadd"
+      },
+      "metallicRoughness": {
+        "resolution": 1024,
+        "derivativeRole": "FIRST_REVIEW",
+        "path": "harness/out/rider-rebuild/production-gloves02/bake-intake02/first-review-1024/GloveProduction.L-metallicRoughness.png",
+        "sha256": "3af16977746cbc2afa6b1a8afbc1e8358cba7d95df2ebac46dea3d4c2011f7c7"
+      },
+      "normal": {
+        "resolution": 1024,
+        "derivativeRole": "FIRST_REVIEW",
+        "path": "harness/out/rider-rebuild/production-gloves02/bake-intake02/first-review-1024/GloveProduction.L-normal.png",
+        "sha256": "359c25906617fda682c5d371adc6f6dab6d4785bb09c0a920198cd5918c18e01"
+      }
+    }
+  },
+  "guard": {
+    "path": "docs/evidence/rider-rebuild/production-gloves02/bake-guard02/guard.json",
+    "sha256": "cde07197dce67e2bf53fcf1a23d92894b9469eea15e414901c59c6ac582e8408"
+  },
+  "worker": {
+    "path": "docs/evidence/rider-rebuild/production-gloves02/bake-guard02/worker.txt",
+    "sha256": "632ebdd82e7fd9519c0fb4620a0d7b4a74a0147e0e1a4d040dd65f73faf208f3"
+  },
+  "limits": [
+    "Unaccepted until parent judges complete selected textured outfit in motion.",
+    "Bake coverage, wrong-face contamination and seam continuity require actual inspection.",
+    "1024 first-review textures do not satisfy a final4K master.",
+    "No finite handlebar grip, mobile, release or art gate is granted."
+  ]
+}
