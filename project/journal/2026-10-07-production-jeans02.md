@@ -27,3 +27,7 @@ Finding: Matched actual selected dense donor still intersects inner thighs and p
 Validation: Parent viewed six actual target/donor cameras; exit0 in30.168s, saved marker and packed4Kmaps verified, exact target/source/UV/fields/body75 retained.
 
 Limits: One conventional dense outside finishing source follows; no new lattice or blind bake. No material or motion accepted.
+
+Finding: The actual selected dense denim source needs its own bounded enclosure correction before transfer.
+Validation: Parent read complete source/intake, AST parses and all ten original native/map/helper pins match; only derivative receives one12mm OUTSIDE operation.
+Limits: Source only, no actual operation or donor fit accepted; unsafe displacement/triangle changes stop without retries.

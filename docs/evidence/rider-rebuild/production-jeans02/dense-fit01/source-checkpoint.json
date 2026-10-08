@@ -1,0 +1,69 @@
+{
+  "accepted": false,
+  "status": "DENSE OUTSIDE SOURCE FROZEN; NO BLENDER JOB",
+  "authorSHA256": "e1c7bd86d7e3aa70a11ade53793a903b82e559fb7e4d626d40604a4db3af2814",
+  "intakeSHA256": "f78768369cfd907a8aa580a64b94823f6173495b025a032f5bf768e5dc046c22",
+  "syntaxParsed": true,
+  "verifiedPinRows": 10,
+  "native": {
+    "path": "harness/out/rider-rebuild/production-jeans02/authored01/production-jeans.blend",
+    "sha256": "956548765454fe683952801f5ba401ed82f481489a256cf48039c459850e5c95"
+  },
+  "rawDenseCounts": {
+    "vertices": 420800,
+    "triangles": 841644
+  },
+  "rawDenseTopologySourceUnits": {
+    "boundaryEdges": 0,
+    "nonmanifoldEdges": 0,
+    "sameWindingSharedEdges": 0,
+    "minimumTriangleAreaM2": 4.836131495267182e-13,
+    "tinyTriangleCountBelow1e12M2": 17,
+    "signedVolumeM3": 0.051300060003995895
+  },
+  "rawBodyTopologyMetres": {
+    "boundaryEdges": 0,
+    "nonmanifoldEdges": 0,
+    "sameWindingSharedEdges": 0,
+    "minimumTriangleAreaM2": 5.771222078010396e-08,
+    "tinyTriangleCountBelow1e12M2": 0,
+    "signedVolumeM3": 0.07856808602809906
+  },
+  "originalCornerNormalFaceDisagreementRows": [
+    4798,
+    4801,
+    830027
+  ],
+  "allDisagreementRowsInProtectedCuffBand": true,
+  "sourceZScopeEligibleCount": 372320,
+  "scopeZMetres": [
+    0.19,
+    1.015
+  ],
+  "scopeBasis": "Existing affine z=.485*sourceY+.591; existing lattice has no z displacement. Actual evaluated positions define runtime membership.",
+  "offsetMetres": 0.012,
+  "maximumLocalChangeMetres": 0.09,
+  "runtimeGuards": [
+    "Recheck evaluated donor and complete body closed/manifold/consistent outward winding",
+    "Protect actual evaluated end-band positions exactly",
+    "No new source triangles collapsed below1percent of meaningful baseline area",
+    "No face-normal rotations over90degrees after the point correction",
+    "No already-loose outside point moved",
+    "No moved point with negative nearest-body normal sign",
+    "Actual moved-point nearest-body gap at least11mm for configured12mm within1mm tolerance",
+    "Original source/target/body75 and donor UV/topology/maps remain exact"
+  ],
+  "normalPolicy": "Retain original evaluated corner normals in lineage NPZ; reset derivative custom vectors to automatic normals after the actual geometry edit. No winding flip or stale-normal preservation on derivative.",
+  "stagesExecuted": [],
+  "limits": [
+    "Raw topology does not certify concave nearest-surface attachment. One actual operation may fail guards; no retry.",
+    "Native actual derivative saved before original-PBR three-view review.",
+    "Existing tiny triangles remain recorded; original dense source/map authority untouched.",
+    "No source fit, bake, rest art, motion or player acceptance."
+  ],
+  "references": [
+    "https://docs.blender.org/manual/en/4.4/modeling/modifiers/deform/shrinkwrap.html",
+    "https://docs.blender.org/api/4.0/bpy.types.Mesh.html",
+    "https://developer.blender.org/docs/release_notes/4.1/python_api/"
+  ]
+}

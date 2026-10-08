@@ -1,0 +1,69 @@
+{
+  "schema": "rockhop-selected-dense-one-outside-finish-v1",
+  "accepted": false,
+  "native": {
+    "path": "harness/out/rider-rebuild/production-jeans02/authored01/production-jeans.blend",
+    "sha256": "956548765454fe683952801f5ba401ed82f481489a256cf48039c459850e5c95"
+  },
+  "nativeFields": {
+    "path": "harness/out/rider-rebuild/production-jeans02/authored01/production-jeans-fields.npz",
+    "sha256": "28d337f56a7e963f8ae533a72bf060d40b5d18e956c154b61e2dc995c20bd679"
+  },
+  "dense": {
+    "path": "assets/blender/hero-remaster/rider/finish-2026-10-05/wardrobe/data/prep02/jeans/cleaned-donor.npz",
+    "sha256": "c38413a36d564d97f106ebde13bb240d4c7075078ce463f30234a97c0f3d2237"
+  },
+  "maps": {
+    "albedo": {
+      "path": "assets/blender/hero-remaster/rider/finish-2026-10-05/wardrobe/data/prep02/jeans/baseColorTexture.png",
+      "sha256": "29a166cd304c492a025ea15f5949da0b8540e1ce11de196c2ed0b5afec50e810",
+      "size": [
+        4096,
+        4096
+      ]
+    },
+    "metallicRoughness": {
+      "path": "assets/blender/hero-remaster/rider/finish-2026-10-05/wardrobe/data/prep02/jeans/metallicRoughnessTexture.png",
+      "sha256": "ebd8ead6d0a1b1bfdada88e16c550781848932832859733e8b00c9ccb7ede516",
+      "size": [
+        4096,
+        4096
+      ]
+    }
+  },
+  "bodyArrays": {
+    "path": "docs/evidence/rider-rebuild/native-hand-repair01/native02/native-body.npz",
+    "sha256": "e62e9969503b7761e99463eccc3ca7be39e0c230a2948f2f87a224db52d0f9a2"
+  },
+  "negativeInspection": {
+    "path": "harness/out/rider-rebuild/production-jeans02/donor-review01/report.json",
+    "sha256": "86612a9b915d00d7d963443c2907a2a9f2245a8760bcc5cffc82027f80365600"
+  },
+  "helpers": {
+    "pbr": {
+      "path": "assets/blender/rider-rebuild/production-jeans02/bake.py",
+      "sha256": "04932927ae9e4477cf72b132cc6bd936a44f65a4db800fee2b2d4ef860a9fdc9"
+    },
+    "localAuthor": {
+      "path": "assets/blender/rider-rebuild/production-jeans02/author.py",
+      "sha256": "62a850e4ea78b98022352aede1b6e3de52496ebcb7ff83b169db9789e7610bd0"
+    },
+    "originalAuthor": {
+      "path": "assets/blender/rider-rebuild/production-jeans01/author-jeans.py",
+      "sha256": "659dad0c4cfb5140b4be180c05534459ceb4b4eda0049478500ab92032fe6f15"
+    }
+  },
+  "derivativeObject": "FittedSelectedDenseJeansOutside01",
+  "offsetMetres": 0.012,
+  "scopeZMetres": [
+    0.19,
+    1.015
+  ],
+  "maximumLocalChangeMetres": 0.09,
+  "gapToleranceMetres": 0.001,
+  "scopeReason": "Continuous pelvis/thigh/knee/calf exterior finishing only. Protect cuff/hem and waist/aperture end bands. The source is closed and consistently wound; actual evaluated topology must recheck before finish. No new lattice controls or nearest target-shell wrapping.",
+  "normalPolicy": "Retain original evaluated corner normals in lineage NPZ; reset derivative custom vectors to automatic normals after the actual geometry edit. No winding flip or stale-normal preservation on derivative.",
+  "stopPolicy": "One ordinary operation only. Save actual before-fit and fitted native; record exact max-change, new collapse, over90degree face-normal rotation, moved-loose-point, negative-normal and12mm-gap failures. No automatic repair/retry/bake.",
+  "sourceAuthority": "Actual original selected dense mesh, UV and4K base/MR remain canonical. Derivative uses the already-authored lattice evaluation plus one unchanged-body outside finish.",
+  "nextTransfer": "Separate explicit new bake intake/adapter must name this fitted derivative after parent actual view review. Existing baker/intake are not silently changed."
+}
