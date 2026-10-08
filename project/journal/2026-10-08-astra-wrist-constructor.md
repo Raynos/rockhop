@@ -17,3 +17,7 @@ Limits: No native save or repaired garment acceptance; authored03 still required
 Finding: Two real source contours require explicit inner/exterior ownership; one bounded original-source section and distal-connectivity diagnosis will identify the local surgery.
 Validation: Parent reviewed pure-array script and AST; original-source pins retained, no model edits or parameter sweep.
 Limits: Actual source diagnosis remains pending; preparation is not a constructed or accepted wrist.
+
+Finding: Actual original sleeve has fully nested opposite-winding loops at8/9stations, joining into one distal component; the final station has only exterior.
+Validation: One CPU2 source diagnosis exit0/2.383s; both sides closed at all9planes; exact source-face ownership retained.
+Limits: Actual inner floor/lining surgery still required; no repaired mesh or art acceptance.
