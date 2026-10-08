@@ -1405,3 +1405,5 @@ October 8 working-master append API corrected: requested names remain immutable;
 October 8 raw donor-shell diagnostic prepared for exact paired-UV layer identification. First metadata-only run stopped on removed NumPy2D cross API; explicit determinant correction reviewed and AST passes. No geometry changed, no deletion authorized by normal sign alone.
 
 October 8 real-source editable outfit saved: guarded CPU2 job exit0 in25.184s; native9cedbcdbe includes original selected hoodie/denim/two gloves/two boots PBR and one joined head/body, exact75 rest and unchanged body. Static context only; actual full-outfit views next, all fit/motion gates open.
+
+October 8 required current-player gate09 retained: parent omitted hardware backend; actual SwiftShader run9/11, exact replay finish/hash, first-frame and restart-frame timing fail. One explicit Metal rerun will restore prior test setup. Private selected outfit remains unaccepted.
