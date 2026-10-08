@@ -1,0 +1,193 @@
+/** Remote source/transition gate only; no video, screenshots, art or FPS judgment.
+ * node harness/rider-rebuild/verify-phone-preview.mjs --build=DIR --url-file=PRIVATE --out=FRESH
+ * Run only under the parent's serialized browser/memory guard.
+ */
+import fs from 'node:fs';
+import path from 'node:path';
+import crypto from 'node:crypto';
+import assert from 'node:assert/strict';
+import { webkit, devices } from 'playwright';
+
+const sha = bytes => crypto.createHash('sha256').update(bytes).digest('hex');
+const originals = ['street-mustard', 'street-openface', 'race-bluewhite', 'street-charcoal', 'race-charcoalyellow'];
+const oldId = 'street-mustard', selectedId = 'street-remastered';
+
+// Count actual renderer submissions, caching only mesh references/bone counts.
+// Native joint lists and author metadata are read once after each choice is ready.
+function installWitness({ aliases }) {
+  const owner = window.__render, original = owner.render, cache = new WeakMap();
+  const state = { expected: null, frames: 0, invalidFrames: 0, lastLogical: null, examples: [] };
+  const inspect = (full = true) => {
+    const rider = owner.debug.rider;
+    if (rider && !cache.has(rider)) {
+      const skins = [], bones = new Set();
+      rider.scene.traverse(node => {
+        if (node.isSkinnedMesh) { skins.push(node); node.skeleton.bones.forEach(bone => bones.add(bone.uuid)); }
+      });
+      cache.set(rider, { skins, bones: bones.size });
+    }
+    const parts = cache.get(rider), actual = rider?.source ? owner.heroDocUrl.get(rider.source) : null;
+    const visible = mesh => {
+      for (let node = mesh; node; node = node.parent) {
+        if (!node.visible) return false;
+        if (node === owner.scene) return mesh.geometry.attributes.position.count > 0;
+      }
+      return false;
+    };
+    const row = { logical: aliases[actual] ?? actual, actualLogical: actual,
+      sourceUUID: rider?.source?.scene?.uuid ?? null, instanceUUID: rider?.root?.uuid ?? null,
+      selectedMarker: rider?.source?.scene?.userData?.privateSelectedRider === true,
+      visibleSkins: parts?.skins.filter(visible).length ?? 0 };
+    return full ? { ...row, skeletonBones: parts?.bones ?? 0, boundNativeJoints: rider?.binding?.byId?.size ?? null,
+      jointIds: rider?.binding ? [...rider.binding.byId.keys()].sort() : null,
+      sourceSHA256: rider?.debug?.candidate?.sourceSHA256 ?? null,
+      authorMeshRoles: rider?.debug?.candidate?.authorMeshRoles ?? null, stageClip: rider?.debug?.stageClip ?? null } : row;
+  };
+  function wrapped(...args) {
+    const before = owner.renderer.info.render.frame, result = original.apply(this, args);
+    if (owner.renderer.info.render.frame > before) {
+      const row = inspect(false); state.lastLogical = row.logical;
+      if (state.expected) {
+        state.frames++;
+        if (row.logical !== state.expected || row.sourceUUID !== state.sourceUUID
+          || row.instanceUUID !== state.instanceUUID || !row.sourceUUID || !row.instanceUUID || !row.visibleSkins) {
+          state.invalidFrames++;
+          if (state.examples.length < 3) state.examples.push(row);
+        }
+      }
+    }
+    return result;
+  }
+  owner.render = wrapped;
+  window.__phonePreviewWitness = { inspect, state,
+    begin(expected) { const row = inspect(false); Object.assign(state, { expected, sourceUUID: row.sourceUUID,
+      instanceUUID: row.instanceUUID, frames: 0, invalidFrames: 0, examples: [] }); },
+    stop() { if (owner.render === wrapped) owner.render = original; return state; } };
+}
+
+async function main() {
+  const arg = name => process.argv.find(value => value.startsWith(`--${name}=`))?.slice(name.length + 3);
+  for (const key of ['build', 'url-file', 'out']) assert(arg(key), `Missing --${key}`);
+  const build = path.resolve(arg('build')), out = path.resolve(arg('out'));
+  assert(!fs.existsSync(out), 'Use a fresh verification output');
+  const entry = new URL(fs.readFileSync(arg('url-file'), 'utf8').trim());
+  assert(entry.protocol === 'https:' && entry.hostname.endsWith('.vercel.app') && !entry.username && !entry.password,
+    'An isolated HTTPS Vercel preview is required');
+  const safeKeys = new Set(['x-vercel-set-bypass-cookie', 'audio', 'sw', 'audible']);
+  const secrets = [...entry.searchParams].filter(([key, value]) => value && !safeKeys.has(key)).map(([, value]) => value)
+    .flatMap(value => [value, encodeURIComponent(value)]);
+  const sanitize = value => {
+    let safe = String(value);
+    for (const secret of secrets) safe = safe.replaceAll(secret, '[redacted]');
+    return safe.replace(/https?:\/\/[^\s"'<>]+/g, url => {
+      try { const parsed = new URL(url); return parsed.origin + parsed.pathname; } catch { return '[redacted URL]'; }
+    });
+  };
+  entry.searchParams.delete('audible'); entry.searchParams.set('audio', '0'); entry.searchParams.set('sw', '0');
+  const inputs = JSON.parse(fs.readFileSync(path.join(build, 'rider-rebuild-inputs.json')));
+  const catalog = JSON.parse(fs.readFileSync(path.join(build, 'model-catalog.json')));
+  const contractBytes = fs.readFileSync(inputs.contract), contract = JSON.parse(contractBytes);
+  const assets = new Map(catalog.models.map(row => [row.logical, row]));
+  const oldAsset = assets.get(`models/rider-${oldId}.glb`), selected = assets.get(`models/rider-${selectedId}.glb`);
+  const lod = assets.get(`models/rider-${selectedId}-lod.glb`);
+  assert.equal(inputs.releaseBuild, false); assert.equal(inputs.comparison?.id, selectedId);
+  assert.equal(inputs.metadataSHA256, sha(contractBytes));
+  assert(oldAsset && selected && lod); assert.notEqual(oldAsset.sha256, selected.sha256);
+  assert.equal(selected.sha256, inputs.sourceSHA256); assert.equal(selected.sha256, contract.glbSHA256);
+  assert.equal(selected.sha256, lod.sha256); assert.equal(selected.url, lod.url); assert.equal(selected.bytes, lod.bytes);
+  assert.equal(Object.keys(contract.specification.jointNames).length, 75);
+  const report = { accepted: false, sourceTransitionGatePassed: false, phase: 'initialized',
+    deployment: { origin: entry.origin, access: 'Scoped share access; private URL and cookies omitted' },
+    device: { engine: 'webkit', viewport: { width: 932, height: 430 }, dpr: 2, isMobile: true, hasTouch: true, physicalPhone: false },
+    recorder: false, screenshots: false, audio: 'audio=0; silent webdriver', selected, originalMustard: oldAsset,
+    contractSHA256: sha(contractBytes), recipeSHA256: sha(fs.readFileSync(new URL(import.meta.url))),
+    controls: [], choices: [], errors: [],
+    limits: ['Source identity and actual submitted-frame transition gate only.',
+      'No movie, moving-art, performance, physical-phone, or device-memory acceptance.',
+      'Remote model response bodies are not copied or independently hashed; runtime source identity is checked against the local emitted catalog.'] };
+  fs.mkdirSync(out, { recursive: true });
+  const save = phase => {
+    report.phase = phase;
+    const text = JSON.stringify(report, (_key, value) => typeof value === 'string' ? sanitize(value) : value, 2) + '\n';
+    fs.writeFileSync(path.join(out, 'report.next.json'), text);
+    fs.renameSync(path.join(out, 'report.next.json'), path.join(out, 'report.json'));
+  };
+  let browser, context, page;
+  save('before-browser-launch');
+  try {
+    browser = await webkit.launch({ headless: true });
+    context = await browser.newContext({ viewport: report.device.viewport, screen: report.device.viewport,
+      deviceScaleFactor: 2, userAgent: devices['iPhone 14 Pro Max landscape'].userAgent, isMobile: true, hasTouch: true });
+    await context.addInitScript(() => {
+      localStorage.setItem('rockhop.onboarded', '1'); localStorage.setItem('rockhop.riderOutfit', 'street-mustard');
+      localStorage.setItem('rockhop.economy.v1', JSON.stringify({ version: 1, wallet: 0, medals: {}, proOwned: true, equipped: 'rookie' }));
+    });
+    page = await context.newPage(); page.setDefaultTimeout(180000);
+    page.on('pageerror', error => { report.errors.push(sanitize(error.message)); save(report.phase); });
+    save('before-boot-load'); await page.goto(entry.href, { timeout: 180000 });
+    assert.equal(await page.evaluate(() => navigator.webdriver), true, 'Silent automation mode required');
+    save('before-garage-load'); await page.locator('.menu-screen.live .menu-item[data-id=garage]').tap();
+    await page.waitForSelector('.garage-screen.live'); await page.locator('button[data-bike=rookie]').tap();
+    await page.evaluate(() => window.__render.whenReady());
+    await page.evaluate(installWitness, { aliases: { [lod.logical]: selected.logical } });
+    report.surface = await page.evaluate(() => ({ deviceClass: window.__render.debugInfo().deviceClass,
+      width: innerWidth, height: innerHeight, horizontalOverflow: document.documentElement.scrollWidth > innerWidth }));
+    assert.equal(report.surface.deviceClass, 'phone'); assert.equal(report.surface.horizontalOverflow, false);
+    report.controls = await page.locator('button[data-outfit]').evaluateAll(buttons => buttons.map(button => {
+      const r = button.getBoundingClientRect(), hit = document.elementFromPoint(r.x + r.width / 2, r.y + r.height / 2);
+      return { id: button.dataset.outfit, text: button.textContent.replace(/\s+/g, ' ').trim(), width: r.width, height: r.height,
+        withinViewport: r.x >= 0 && r.y >= 0 && r.right <= innerWidth && r.bottom <= innerHeight,
+        reachable: hit === button || button.contains(hit), disabled: button.disabled };
+    }));
+    assert.deepEqual(report.controls.map(row => row.id).sort(), [...originals, selectedId].sort());
+    assert.match(report.controls.find(row => row.id === selectedId).text, /Mustard.*Remastered/);
+    for (const button of report.controls) assert(button.withinViewport && button.reachable && !button.disabled
+      && button.width >= 44 && button.height >= 44, `Reachable 44px phone target: ${button.id}`);
+    for (const [index, id] of [oldId, selectedId, oldId, selectedId].entries()) {
+      const expected = id === selectedId ? selected : oldAsset, phase = `choice-${index + 1}-${id}`;
+      await page.evaluate(() => window.__phonePreviewWitness.begin(null));
+      save(phase + '-before-load');
+      await page.locator(`button[data-outfit=${id}]`).tap();
+      await page.locator(`button[data-outfit=${id}][aria-pressed=true]`).waitFor();
+      await page.evaluate(() => window.__render.whenReady());
+      await page.waitForFunction(logical => window.__phonePreviewWitness.state.lastLogical === logical,
+        expected.logical, { polling: 100, timeout: 180000 });
+      const identity = await page.evaluate(() => window.__phonePreviewWitness.inspect());
+      assert.equal(identity.logical, expected.logical); assert(identity.sourceUUID && identity.instanceUUID && identity.visibleSkins > 0);
+      if (id === selectedId) {
+        assert.equal(identity.selectedMarker, true); assert.equal(identity.boundNativeJoints, 75); assert.equal(identity.skeletonBones, 75);
+        assert.equal(identity.sourceSHA256, selected.sha256); assert.equal(identity.stageClip, 'Riding IK/breathing');
+        assert.deepEqual(identity.jointIds, Object.keys(contract.specification.jointNames).sort());
+        assert.deepEqual(identity.authorMeshRoles, contract.specification.meshNames);
+      } else {
+        assert.equal(identity.selectedMarker, false); assert.equal(identity.boundNativeJoints, null); assert(identity.skeletonBones > 0);
+      }
+      const prior = report.choices.find(row => row.id === id);
+      if (prior) {
+        assert.equal(identity.sourceUUID, prior.identity.sourceUUID, 'Parsed source stays resident');
+        assert.equal(identity.instanceUUID, prior.identity.instanceUUID, 'Pooled instance stays resident');
+      } else if (report.choices.length) {
+        assert.notEqual(identity.sourceUUID, report.choices[0].identity.sourceUUID, 'Sixth rider uses its separate source');
+      }
+      const choice = { id, visit: prior ? 2 : 1, identity, submitted: null }; report.choices.push(choice);
+      save(phase + '-ready');
+      await page.evaluate(logical => window.__phonePreviewWitness.begin(logical), expected.logical);
+      await page.waitForTimeout(2000);
+      choice.submitted = await page.evaluate(() => ({ ...window.__phonePreviewWitness.state }));
+      assert(choice.submitted.frames > 0, 'Actual render submissions required'); assert.equal(choice.submitted.invalidFrames, 0);
+      save(phase + '-submitted');
+    }
+    assert.deepEqual(report.errors, []); report.sourceTransitionGatePassed = true; save('source-transition-gate-passed');
+  } catch (error) {
+    report.failure = sanitize(error.stack ?? error.message); process.exitCode = 1; save(report.phase + '-failed');
+  } finally {
+    try { if (page) await page.evaluate(() => window.__phonePreviewWitness?.stop()); } catch {}
+    try { await context?.close(); await browser?.close(); } catch (error) { report.cleanupError = sanitize(error.message); process.exitCode = 1; }
+    save(report.phase);
+    console.log(JSON.stringify({ out, phase: report.phase, choices: report.choices.length,
+      sourceTransitionGatePassed: report.sourceTransitionGatePassed, errors: report.errors.length }));
+  }
+}
+
+// Setup failures must not let an invalid private URL escape through Node's stack.
+main().catch(() => { console.error('Preview verifier setup failed before the gate; private URL omitted.'); process.exitCode = 1; });
