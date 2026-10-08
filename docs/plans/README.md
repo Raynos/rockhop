@@ -1675,3 +1675,5 @@ October8 offline seated author04 source frozen after fresh Astra xhigh review: t
 October8 isolated preview uploaded READY; deployment-scoped share access retrieves actual version/catalog without login. Comparison harness now accepts a private URL file for the same actual headless old/new switching test; no token enters committed evidence, remote played verification remains pending.
 
 October8 actual offline author04 fails both bikes in1.677s:~97% footprint overlap but~2% within1mm band,23mm mean hover and4.3mm minima penetration; many new jeans/saddle/self crossings. Fixed limbs pass but no pose promotion. Astra inspects actual residual/geometry before another solve;0/6.
+
+October8 exact cuff ray replay isolates float32 world-coordinate grazing miss: float64 and wrist-relative source intersections exist; wearer hits remain. Freeze diagnostic before actual Blender BVH confirmation; no sample skipped and native07 remains failed.

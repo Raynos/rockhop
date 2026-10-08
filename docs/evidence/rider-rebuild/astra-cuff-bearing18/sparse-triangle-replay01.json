@@ -1,0 +1,189 @@
+{
+  "acceptedArt": false,
+  "geometryGatesPassed": false,
+  "method": "One saved bearing; finite actual triangle rays; no model solve.",
+  "recipeSHA256": "5f313ec6c7f7fc7fde85d8c517778e3e65d1804d7b56bcbab78ce9513ce06f2c",
+  "inputSHA256": "ecc6531bb5453892da1676dcf658a4a1eeab5332ce4e493fa61bfa1534287c39",
+  "failedConstructor": {
+    "path": "assets/blender/rider-rebuild/astra-character-construction12/construct07.py",
+    "sha256": "41172632606ac9a2e54629565f5d46be76a702385dc42bfc28632d93f04a5d0f"
+  },
+  "sourceMaster": {
+    "path": "harness/out/rider-rebuild/selected-complete-engine01/engine05/rider-private-masked.blend",
+    "sha256": "95a4f14e06fb52cc055df6d1446a035d8cd3d35180d565ad52f3a70b3b05664b"
+  },
+  "originalGloveDense": {
+    "path": "assets/blender/hero-remaster/rider/finish-2026-10-05/wardrobe/data/prep02/gloves/cleaned-donor.npz",
+    "sha256": "f07a705f334d3d2b802fa7d23baec3e9cd54b211d160b7bbd6ab2c9f4a96541c"
+  },
+  "wearerSnapshot": {
+    "path": "harness/out/rider-rebuild/glove-cuff-construction07/inspection01/wearer-L.npz",
+    "sha256": "1de2acd9b9893cc55790943758f0a55deee537aa6eaf2c8c344f40623dffab8e",
+    "object": "RiderBody__FullAnatomyReference"
+  },
+  "witness": {
+    "sourceVertexIds": [
+      46711,
+      48112,
+      46712
+    ],
+    "barycentric": [
+      0.05,
+      0.9,
+      0.05
+    ],
+    "sourceXYZ": [
+      [
+        -0.44335100054740906,
+        -0.7328600287437439,
+        0.17051899433135986
+      ],
+      [
+        -0.44048601388931274,
+        -0.7319219708442688,
+        0.1757660061120987
+      ],
+      [
+        -0.44335100054740906,
+        -0.7322620153427124,
+        0.1757660061120987
+      ]
+    ],
+    "worldXYZ": [
+      [
+        0.4111633224255147,
+        -0.028187384551834144,
+        0.9610833598030858
+      ],
+      [
+        0.4118559557716039,
+        -0.02852794781596893,
+        0.961326509338823
+      ],
+      [
+        0.411847231104719,
+        -0.028148894331363923,
+        0.9612551445212285
+      ]
+    ],
+    "sourceY": -0.7319858759641649,
+    "stationM": 0.0296852289699018,
+    "origin": [
+      0.38334112518520613,
+      -0.05805684481077327,
+      0.9591914994390488
+    ],
+    "direction": [
+      0.6928438836978924,
+      0.7192421160374932,
+      0.05155706877170565
+    ],
+    "knownPointRadiusM": 0.04110559875876367,
+    "normalDotRay": 0.0014347274801646756
+  },
+  "floorCutCannotAffectStation": true,
+  "actualSourceFacesAtStation": 1787,
+  "cuffFaces": 109882,
+  "bodyFaces": 433,
+  "triangleRays": {
+    "worldFloat64": [
+      {
+        "triangleId": 94590,
+        "vertexIds": [
+          48164,
+          48112,
+          46711
+        ],
+        "distanceM": 0.04108778311661536,
+        "barycentric": [
+          0.00034393176208419307,
+          0.9315310125548258,
+          0.06812505568308996
+        ]
+      },
+      {
+        "triangleId": 94589,
+        "vertexIds": [
+          46711,
+          48112,
+          46712
+        ],
+        "distanceM": 0.04110559875871564,
+        "barycentric": [
+          0.05000000005331904,
+          0.9000000000879205,
+          0.04999999985876049
+        ]
+      }
+    ],
+    "worldFloat32": [],
+    "quantizedWorldGeometryFloat64Math": [],
+    "wristRelativeFloat32": [
+      {
+        "triangleId": 94590,
+        "vertexIds": [
+          48164,
+          48112,
+          46711
+        ],
+        "distanceM": 0.041087787598371506,
+        "barycentric": [
+          0.0003466978669166565,
+          0.9315282702445984,
+          0.06812503188848495
+        ]
+      },
+      {
+        "triangleId": 94589,
+        "vertexIds": [
+          46711,
+          48112,
+          46712
+        ],
+        "distanceM": 0.041105784475803375,
+        "barycentric": [
+          0.049830108880996704,
+          0.8987229466438293,
+          0.05144694447517395
+        ]
+      }
+    ]
+  },
+  "limitations": [
+    "Finite bearing evidence is not containment or moving-art acceptance.",
+    "The body snapshot is a pinned crop from the identical engine05 master.",
+    "Only --bvh exercises Blender; NumPy-only output cannot claim its API result."
+  ],
+  "wearerRaysFloat64": [
+    {
+      "triangleId": 290,
+      "vertexIds": [
+        61,
+        180,
+        179
+      ],
+      "distanceM": 0.03348426151871227,
+      "barycentric": [
+        0.649837465039531,
+        0.2316831955330813,
+        0.1184793394273876
+      ]
+    }
+  ],
+  "wearerRaysFloat32": [
+    {
+      "triangleId": 290,
+      "vertexIds": [
+        61,
+        180,
+        179
+      ],
+      "distanceM": 0.03348425403237343,
+      "barycentric": [
+        0.6498364806175232,
+        0.23168401420116425,
+        0.11847946792840958
+      ]
+    }
+  ]
+}
