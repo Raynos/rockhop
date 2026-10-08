@@ -1557,3 +1557,5 @@ Actual complete selected dc846 master saved; exact masked private export then wh
 October8 exact native-rest intake schema corrected to includeuseConnect/useDeform after actualexport01stop; no rig/tolerancechange. Complete maskedexport/playedGarage pending;0/6.
 
 October8 actualexport02 decoder catches Blender fixed1e-4 coefficientcutoff; deliverycopies now mirror cutoff before nativesave, strictdecodedFOUR preserved. Actualengine03 pending;0/6.
+
+October8 required silentMetal currentplayergate18 passes11/11, exactfinish/hash/one-tickrestart. Selectedcompleteexport native/decodedFOURpasses, art/game/device remainunaccepted0/6.
