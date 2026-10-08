@@ -1,0 +1,38 @@
+{
+  "acceptedArt": false,
+  "priorInputs": {
+    "path": "assets/blender/rider-rebuild/glove-over-sleeve08/input.json",
+    "sha256": "912e724a6d296709c92a4c48704f5be490e7f228cdfe55b84814e76c85224eed"
+  },
+  "settings": {
+    "sleeveCapRemovalM": 0.02,
+    "sleeveEndpointM": 0.031,
+    "sleeveTransitionM": 0.18,
+    "sleeveFullM": 0.13,
+    "sleeveOuterEaseM": 0.0045,
+    "sleeveWallM": 0.0015,
+    "sleeveReturnM": 0.006,
+    "gloveFloorCutY": -0.65,
+    "gloveJoinY": -0.35,
+    "gloveFullY": -0.65,
+    "gloveCavityEaseM": 0.0065,
+    "gloveLiningLengthM": 0.027,
+    "maximumCuffScale": 1.5
+  },
+  "limits": [
+    "Unaccepted actual geometry construction, not player promotion or a passing-art claim.",
+    "Selected original stock immutable. Only the selected hoodie and bilateral gloves change.",
+    "New lining uses original selected boundary UVs and normalized strongest-four source-parent fields; existing skeleton/materials/maps remain.",
+    "Source-positive radial sleeve deformation is one volume map, not min/max radial-layer compression.",
+    "Floor selection must find exactly two actual dense source section loops, then a bounded inner connected component. No guessed face deletion.",
+    "Exact visible-wearer checks are required; full hidden anatomy is only a construction reference."
+  ],
+  "volumeHelper": {
+    "path": "assets/blender/rider-rebuild/glove-over-sleeve08/volume.py",
+    "sha256": "17e852072061fd2e0ce9791a596c156a63cf9a11c640e96d37933922557873d7"
+  },
+  "intersectionHelper": {
+    "path": "assets/blender/rider-rebuild/glove-over-sleeve08/author.py",
+    "sha256": "42d428f600bdbd82c37d0024f147d57a29a1301560bc9a1fa3cd86389685d3d2"
+  }
+}
