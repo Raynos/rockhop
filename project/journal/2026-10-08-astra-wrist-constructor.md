@@ -13,3 +13,7 @@ Limits: A closed contour and interior origin do not accept the radius map or fin
 Finding: Actual contour extraction stopped at its first exact source-vertex plane; strict sign-change tests omitted that real endpoint. Include exact zero endpoints and retain any further boundary-degree witnesses.
 Validation: Actual authored02 CPU2exit1/19.974s retained; parent reviewed15line correction and AST passes.
 Limits: No native save or repaired garment acceptance; authored03 still required.
+
+Finding: Two real source contours require explicit inner/exterior ownership; one bounded original-source section and distal-connectivity diagnosis will identify the local surgery.
+Validation: Parent reviewed pure-array script and AST; original-source pins retained, no model edits or parameter sweep.
+Limits: Actual source diagnosis remains pending; preparation is not a constructed or accepted wrist.
