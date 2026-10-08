@@ -1735,3 +1735,5 @@ Actual Blender native-driver probe passes13built-in curves/sixposes withautoexec
 Diagnostic08 productionbundle02 stillfails140Bover(717964/717824),exit1/5.153s. Stopbundle-tuningloop. Permanent actualsource devGarage harness next, no budgetwaiver; source-author bike-origin placement mustoverridegenericoffbikeclipoffset. Production/artgatesremainopen.
 
 Native cuff09 source frozen/reviewed: cavity-rooted inward return replaced by0.8mmlining, bothrealboundarycircuits1688/71 sewn, connectedselectedexterior retained. Parent4pins/AST/source review pass; actualCPU2constructor/sixdensegates pending; unchanged1.5identityguard.
+
+Actual native07 import02 saves selectedmaster ed1fa079d9d7938e788da983511418d0d240cbda003e2854082ad01c76917265;13built-in drivers/sixposes pass(max3.647e-7), exactbase/UV/PBR/Four/75rest/sourceIDs,exit0/53.813s. ShapeFAILED persists; savedreopen next, no artpass.
