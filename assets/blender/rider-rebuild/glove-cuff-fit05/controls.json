@@ -1,0 +1,228 @@
+{
+  "acceptedArt": false,
+  "operation": "BILATERAL_LOCAL_PROXIMAL_CUFF_RADIAL_TAPER",
+  "master": {
+    "path": "harness/out/rider-rebuild/selected-complete-engine01/engine03/rider-private-masked.blend",
+    "sha256": "fdff3433c26c345d6f0555f196033f5ba76791d5d566b448991bd1fab2eff384"
+  },
+  "fullGloves": {
+    "path": "harness/out/rider-rebuild/glove-anatomical04/local04/editable-selected-bilateral-gloves.blend",
+    "sha256": "fa21e40445bfb2dcd75789674adcea28ef7af7877d4ef74b22ac55bafc683d59"
+  },
+  "sourceGLB": {
+    "path": "harness/out/rider-rebuild/selected-complete-engine01/engine03/rider.glb",
+    "sha256": "7d826b835ca07c7c584d6b3a9606e9e89780f1c7b92e4030e1f1b58aff4127ed"
+  },
+  "placement": {
+    "path": "assets/blender/rider-rebuild/glove-anatomical04/controls-orientation02.json",
+    "sha256": "1fa7e6f75da3fe2e41815de6436f737af1b565216bed27e07b41942b6cbed0dd"
+  },
+  "guideHelpers": {
+    "path": "assets/blender/rider-rebuild/glove-anatomical04/author_guide02.py",
+    "sha256": "4a1bd17b7dd3c766749419bf8d5d4e0d0f4b478bcd2b6ffa00eb6fed9bc13851"
+  },
+  "fingerprintHelper": {
+    "path": "assets/blender/rider-rebuild/head-neck-anatomical02/author-clothed-neck-motion.py",
+    "sha256": "86cd010c88ad10cf3d5c925a133cdaafab760ac72a30a1e487d782a562fc71b2"
+  },
+  "restHelper": {
+    "path": "assets/blender/rider-rebuild/production-authoring01/assemble.py",
+    "sha256": "81572a2f88c431ebe52bd3f11bd358eff9a772d73f8db1bcb61751d3287f86b0"
+  },
+  "sourceGuide": {
+    "path": "assets/blender/hero-remaster/rider/finish-2026-10-05/wardrobe/data/prep02/gloves/retopology-prototype.npz",
+    "sha256": "746c99bb9fc109492b27e6e9bd3d7281bf3d4799488cb0d6beebf2804d8a6c5e"
+  },
+  "localControls": {
+    "path": "assets/blender/rider-rebuild/glove-anatomical04/local-controls04.json",
+    "sha256": "554c62be5670fabac22f8d98b48a6cd8db79d1dd39ec525b390d86a26073c9b9"
+  },
+  "diagnosis": {
+    "path": "docs/evidence/rider-rebuild/astra-glove-cuff07/receipt.json",
+    "sha256": "f93ef7943c5c93136ca88fa5e63bb70c000d26b0d3a9b2bb951a7603662efa81"
+  },
+  "seed": 5713,
+  "ringControls": [
+    5187,
+    4968
+  ],
+  "falloffMeters": 0.025,
+  "sleeveEaseMeters": 0.0015,
+  "axialTaperStartM": 0.018,
+  "axialTaperFullM": 0.03,
+  "hands": {
+    "L": {
+      "offsets": {
+        "path": "assets/blender/rider-rebuild/glove-cuff-fit05/cuff-offsets-L.npz",
+        "sha256": "14a80824a4257292010a7291807a39572c783f9581f35863462b549471ab7271"
+      },
+      "previousLocalOffsets": {
+        "path": "assets/blender/rider-rebuild/glove-anatomical04/local-offsets04-L.npz",
+        "sha256": "273c74a0182c9973ebc9d5f2b76192570cb964f1c060f062b71eec466d1b9d73"
+      },
+      "axialTaperStations": [
+        [
+          0.03013073575199084,
+          0.2251148623160126
+        ],
+        [
+          0.03449692565252262,
+          0.18163927757933002
+        ],
+        [
+          0.04748343060231515,
+          0.047137112323318235
+        ]
+      ],
+      "changedGuideVertices": 334,
+      "maximumWorldOffsetM": 0.0091723062525747,
+      "existingLocal04EditedVerticesExactlyUntouched": true,
+      "minimumTriangleCrossSourceUnits": 4.614672834581686e-06,
+      "hoodieWitnessMeasurements": [
+        {
+          "face": 26383,
+          "point": [
+            0.400029315110342,
+            -0.08738494020957646,
+            0.9802773778040653
+          ],
+          "distance": 0.005801868258436835,
+          "signedNormalDistance": 0.0058018682584368335,
+          "guideVertex": 5713,
+          "world": [
+            0.4046258846876851,
+            -0.08963809360122815,
+            0.9830080413136522
+          ],
+          "brushWeight": 1.0,
+          "radialNormalProjectionM": 0.04019983098230382
+        },
+        {
+          "face": 28534,
+          "point": [
+            0.4038543424065632,
+            -0.08091156292825288,
+            0.9764089444108033
+          ],
+          "distance": 0.006518235655781265,
+          "signedNormalDistance": 0.006518235655781267,
+          "guideVertex": 5187,
+          "world": [
+            0.40997272606983554,
+            -0.0824917980063248,
+            0.9780075796135095
+          ],
+          "brushWeight": 1.0,
+          "radialNormalProjectionM": 0.035618419740431874
+        },
+        {
+          "face": 24389,
+          "point": [
+            0.3968503904977638,
+            -0.07854245566249339,
+            0.990977861194492
+          ],
+          "distance": 5.722384321693402e-05,
+          "signedNormalDistance": 5.7223843216934025e-05,
+          "guideVertex": 4968,
+          "world": [
+            0.3968932788836259,
+            -0.07856338374627214,
+            0.9910094391915788
+          ],
+          "brushWeight": 1.0,
+          "radialNormalProjectionM": 0.03303604668304197
+        }
+      ]
+    },
+    "R": {
+      "offsets": {
+        "path": "assets/blender/rider-rebuild/glove-cuff-fit05/cuff-offsets-R.npz",
+        "sha256": "e9fe0168b1d11321bc22e6ba8d1455061fa247d8534d39f58a1262b34d41983c"
+      },
+      "previousLocalOffsets": {
+        "path": "assets/blender/rider-rebuild/glove-anatomical04/local-offsets04-R.npz",
+        "sha256": "0a5ec5afeabaa1b4e1af0404dc46cbffd575efc17b9a63c206c1593bba9ecff3"
+      },
+      "axialTaperStations": [
+        [
+          0.030104318291596342,
+          0.1730532780737147
+        ],
+        [
+          0.034321131991464,
+          0.18817770085057192
+        ],
+        [
+          0.04744979316154316,
+          0.06872045599510937
+        ]
+      ],
+      "changedGuideVertices": 334,
+      "maximumWorldOffsetM": 0.008393257554183502,
+      "existingLocal04EditedVerticesExactlyUntouched": true,
+      "minimumTriangleCrossSourceUnits": 6.565212062258853e-06,
+      "hoodieWitnessMeasurements": [
+        {
+          "face": 10151,
+          "point": [
+            -0.4003966212022687,
+            -0.08766426432987759,
+            0.9792290089660617
+          ],
+          "distance": 0.005913833108935544,
+          "signedNormalDistance": 0.005913712463165502,
+          "guideVertex": 5713,
+          "world": [
+            -0.40464946572670707,
+            -0.08965298210711961,
+            0.9828250814199728
+          ],
+          "brushWeight": 1.0,
+          "radialNormalProjectionM": 0.03939740165628115
+        },
+        {
+          "face": 8222,
+          "point": [
+            -0.40598442562238146,
+            -0.08139736960206691,
+            0.9752326595817485
+          ],
+          "distance": 0.004811714157463276,
+          "signedNormalDistance": 0.004811145901054958,
+          "guideVertex": 5187,
+          "world": [
+            -0.40986033352051365,
+            -0.0823964134684761,
+            0.9779032105457481
+          ],
+          "brushWeight": 1.0,
+          "radialNormalProjectionM": 0.03646938082482684
+        },
+        {
+          "face": 13146,
+          "point": [
+            -0.3964641605715909,
+            -0.07831551126621042,
+            0.9907804577712097
+          ],
+          "distance": 0.0007610210618846774,
+          "signedNormalDistance": 0.0007610210618846773,
+          "guideVertex": 4968,
+          "world": [
+            -0.39710228990994306,
+            -0.0786117434934117,
+            0.991070613715029
+          ],
+          "brushWeight": 1.0,
+          "radialNormalProjectionM": 0.03290171796947313
+        }
+      ]
+    }
+  },
+  "freezeRecipeSHA256": "6b8fd1ec432c4a67f84e8e982d956e7d57072d517325c7ac36e62fe25002bb49",
+  "limits": [
+    "Source brush only, no moving-art acceptance.",
+    "Local hoodie planes constrain amount; not watertight containment or body clearance fitting."
+  ]
+}

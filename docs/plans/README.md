@@ -1573,3 +1573,5 @@ October8 freshAstra07 parentreproduced selectedcuff5.80/5.90mmhoodieoverlap atre
 October8 selectedPBRbyteexact/UV centers valid; preparedruntime material/texture probe added to existingGarage harness before anyshaderguess. Actualprobe next; allR0-R5open0/6.
 
 October8 Garage03 prepared maps retain blue/high roughness but selected4K intake reduced images to1024/256. Private selected-source policy now preserves authored dimensions; actual before/after next, chrome cause unproven. AllR0-R5open0/6.
+
+October8 Astra07 supported proximal selected-glove cuff taper source reviewed/pinned:334/8000 guideverts perhand, preserve all prior anatomical edits/UV/PBR/fields and otherfiveparts. ActualCPU2dense transfer/completeGarage judgment next;0/6open.
