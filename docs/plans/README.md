@@ -1525,3 +1525,5 @@ October8 actual original dense hoodie source-pose transport saves complete dress
 October8 selected boot pair source frozen: retain actual successful curved right pre-cavity surface, author own-side selected left and native75 binding. Stop hidden-body cavity/ease campaign; exact topology outfit masks and actual surface/motion review next. Root read source, AST/17pins pass; not executed or accepted.
 
 October8 required current-player silentMetal gate16 after third construction mutation passes11/11 CPU2guardexit0/6.336s, exactfinish/hash andonetickrestart. Existing player only; new selected rider remains unaccepted0/6.
+
+October8 actual original hoodie7bone transport PBR rejected: sleeves swing upward besidehead and expose front/rear armholes despite exactUV/PBR/matrix checks. Stop integration; diagnose actual source-coordinate/bindframes with fresh Astra06. Source/native/evidence preserved; no rider acceptance.
