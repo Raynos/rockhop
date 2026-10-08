@@ -1923,3 +1923,5 @@ Selected skin production29 source preserves original face/cheek/neck UV charts, 
 Glove04 now saves actual constructed native BEFORE the full protected after-scan, with explicit pending status and expected original fingerprints/rest. Separate reopened qualifier alone permits sleeve intake. Parent reviewed source and reran10behavior+4lifetime fixtures; actual04native/memory/reopen/art remain unmeasured. No guard or geometry relaxation.
 
 Required original-player gate38 actual10/11:readyP50317.13ms>unchanged300ms under25.77load/18cores; exactclear/hash/crash/restart pass. Failure retained, no release verdict. Native/actual-game lean work continues independently; repeated unchanged boot checks are not progress.
+
+Production31 isolates the two selected dense boot donors and exact rig/dependencies before unchanged25 geometry/FOUR gates, preserving UV/PBR/rest witnesses and saving an uncompressed derivative. Parent reviewed sources and reran5dependency/deletion fixtures; no native execution, memory gain, bake, full rider or art acceptance yet. Original96GiB guard/65GiB anonymous stop unchanged.
