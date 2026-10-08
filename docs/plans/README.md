@@ -1533,3 +1533,5 @@ October8 read-only actual saved hoodie source-frame probe frozen: rawGLTF sleeve
 October8 exact-input equipped body mask implementation frozen and parent reviewed: original body/shared75 preserved, render face subset with topology/skin/UV/material/source-triangle ancestry guards and measured normal residual. First actual selected-glove mask unexecuted; no wardrobe acceptance.
 
 October8 actual selected curved boot pair saves CPU2exit0/147.646s, own-side native75 foot/toe/shin binding and originalUV/PBR retained. No further cavity/inflation. Masked actual complete surface/ankle/toe/bike review remains pending; rider0/6.
+
+October8 fresh Astra06 diagnosis independently confirmed in actual savednative CPU2exit0/6.133s: zero-length editbone matrix-before-length makes six sleeve rest axes +Z (Lupperarm387mm/forearm378mm error). SourceGLTF centers correct. Minimal head/tail initialization and actualrestframe assertions frozen; no gain tuning/regeneration. Corrected actual outfit still pending.

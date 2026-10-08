@@ -1,0 +1,124 @@
+{
+  "acceptedRider": false,
+  "freshIndependentAdviser": "gpt-6-astra high fork none",
+  "actualProbe": {
+    "path": "docs/evidence/rider-rebuild/shoulder-cage05/frame-probe01.json",
+    "sha256": "99d0dc28f5988a69b4d2cb1d24493f038aa2d3607310caba8467f229307e954d"
+  },
+  "actualCPU2Exit": 0,
+  "actualElapsedSeconds": 6.133,
+  "actualRows": [
+    {
+      "name": "AUTHOR_Chest",
+      "actualRestTail": [
+        0.0,
+        0.0,
+        1.4800000190734863
+      ],
+      "wantedTail": [
+        0,
+        0,
+        1.48
+      ],
+      "tailErrorM": 1.907348634588857e-08,
+      "frameError": 2.028159258316009e-07
+    },
+    {
+      "name": "AUTHOR_ShoulderBridge.L",
+      "actualRestTail": [
+        0.14000000059604645,
+        0.0,
+        1.616736650466919
+      ],
+      "wantedTail": [
+        0.2306,
+        0.005040749907493591,
+        1.4015218171560102
+      ],
+      "tailErrorM": 0.23356196935432044,
+      "frameError": 1.6981267929077148
+    },
+    {
+      "name": "AUTHOR_UpperArm.L",
+      "actualRestTail": [
+        0.2305999994277954,
+        0.005040749907493591,
+        1.6077289581298828
+      ],
+      "wantedTail": [
+        0.36060000000000003,
+        -0.023447250947356224,
+        1.2440104419324132
+      ],
+      "tailErrorM": 0.38730185303761216,
+      "frameError": 1.8425710201263428
+    },
+    {
+      "name": "AUTHOR_Forearm.L",
+      "actualRestTail": [
+        0.36059999465942383,
+        -0.023447250947356224,
+        1.4531288146972656
+      ],
+      "wantedTail": [
+        0.4958,
+        -0.11098450049757957,
+        1.1106362370732756
+      ],
+      "tailErrorM": 0.37847453973871836,
+      "frameError": 1.7602505087852478
+    },
+    {
+      "name": "AUTHOR_ShoulderBridge.R",
+      "actualRestTail": [
+        -0.14000000059604645,
+        0.0,
+        1.5984212160110474
+      ],
+      "wantedTail": [
+        -0.2166,
+        0.00837549939751625,
+        1.413727814224031
+      ],
+      "tailErrorM": 0.20012336585842175,
+      "frameError": 1.7034806609153748
+    },
+    {
+      "name": "AUTHOR_UpperArm.R",
+      "actualRestTail": [
+        -0.21660000085830688,
+        0.00837549939751625,
+        1.6178838014602661
+      ],
+      "wantedTail": [
+        -0.3466,
+        -0.014339752495288849,
+        1.2579596552749475
+      ],
+      "tailErrorM": 0.38335541401240764,
+      "frameError": 1.8307685852050781
+    },
+    {
+      "name": "AUTHOR_Forearm.R",
+      "actualRestTail": [
+        -0.3465999960899353,
+        -0.014339752495288849,
+        1.4744733572006226
+      ],
+      "wantedTail": [
+        -0.4818,
+        -0.10773850418627262,
+        1.116977945483393
+      ],
+      "tailErrorM": 0.3934530941212523,
+      "frameError": 1.764931082725525
+    }
+  ],
+  "verifiedPrimarySourceVersion": "Blender v5.2.1",
+  "primarySources": [
+    "https://raw.githubusercontent.com/blender/blender/v5.2.1/source/blender/editors/armature/armature_utils.cc",
+    "https://raw.githubusercontent.com/blender/blender/v5.2.1/source/blender/makesrna/intern/rna_armature.cc"
+  ],
+  "cause": "Matrix assignment preserves existing zero editbone length; length setter substitutes +Z. Allsix intended source sleeve directions therefore wrong despite passing posed target matrices.",
+  "correction": "Initialize source head/tail before source matrix; assert actual rest head/tail/matrix before pose; original source and target frames/UV/PBR unchanged."
+}
