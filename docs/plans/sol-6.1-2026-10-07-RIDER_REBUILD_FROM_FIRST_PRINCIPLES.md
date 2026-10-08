@@ -609,29 +609,39 @@ face mask, as specified below.
   correspondence. No third offset campaign or generic glove substitution.
 - Actual ride: source-bound torso articulation played in Rookie/Pro side films.
   Rookie has zero supported samples above1cm out of192, maximum hand2.289mm
-  and sole1.029mm. Pro retains two supported sole failures out of108; exclude
-  its84 released/crash samples. A coupled hand/foot refinement uses at most11
-  candidates within the same20degree envelope; actual Pro failure-neighbourhood
-  continuity, surfaces and solve cost remain to be judged before adoption.
-  Preserve fixed limb lengths and physical X/Y COM at the existing tolerance.
-  Report actual lateral COM separately; the approximate physical inverse only
-  solves X/Y, and the old XYZ assertion already fails the baseline by12.764um.
-  Do not enlarge an XYZ epsilon, symmetrize anatomy or add an unneeded lateral
-  solve. Marker results do not qualify full contact or anatomical comfort.
+  and sole1.029mm. Baseline Pro retains two supported sole failures out of108;
+  exclude its84 released/crash samples. The extra conditional torso search is
+  [rejected after actual Pro playback](../evidence/rider-rebuild/selected-complete-engine01/coupled-played04/FINDING.md):
+  one supported failure remains, hand gap worsens and reported solveP95 rises
+  4→16ms. The three-candidate baseline is restored; eight source checks pass.
+  Preserve fixed limbs and physical X/Y COM at the existing tolerance, reporting
+  finite lateral COM separately. Do not enlarge XYZ epsilon, symmetrize anatomy,
+  add lateral physics or increase the20degree spine envelope. Next assess a
+  real contact-preserving ankle/boot pitch from actual sole/peg geometry; its
+  inherited fixed sole orientation is unqualified, and no successful new DOF
+  or anatomical range is inferred. Sampled arm jumps need baseline witnesses
+  before attribution. Markers do not qualify full contact or comfort.
 - Native movement: original selected145 reach/curl/release full and close-hands
   films played to natural end. Parent keeps the construction baseline; the
   black textured fingers remain attached and articulate, but cuff detail and
   finite-bar wrap remain open. Original selected193 moderate12cm fixed-foot
   crouch/rise/arms-up film also played. These limited movements do not qualify
-  deep seated motion, full humanoid range or engine/native clip parity.
-- Next visible result: one integrated private movement review using existing
-  films, corrected supported Rookie/Pro side sequences and missing deep seated
-  transitions/profiles. Export the same named native actions into actual Garage.
-  Choose one observed dressed correction from that complete review. Proper
-  production topology/LOD with selected-detail transfer follows the stable
-  construction envelope; do not spend another advisory interval polishing a
-  dense-only preview. Physical device, finite contacts and release gates remain
-  independent. All R0–R5 stay open; no normal-player promotion.
+  deep seated motion or full humanoid range. Both original named actions now
+  [play on the same selected rider in actual Garage](../evidence/rider-rebuild/selected-garage-actions01/played01/FINDING.md),
+  covering complete8/6-second cycles with original4K clothing maps. All75 local
+  TRS match source exactly at five actual times per clip; integer-frame native
+  world-matrix transport also passes. This is a limited moving integration
+  baseline, not GPU vertex parity, finite grip or an art/device pass.
+- Next visible result: use the complete selected Garage/game movement baseline
+  to construct one observed cuff correction, then missing deep seated
+  transitions/profiles and proper finite boot/peg support. The actual cuff dump
+  identifies outer wall versus inner return; explicit connected boundaries
+  must precede a welded local replacement, not another sector deformation.
+  Preserve the selected strap/palm/fingers and original PBR. Proper production
+  topology/LOD/detail transfer follows the stable construction envelope; do not
+  spend another advisory interval polishing a dense-only preview. Physical
+  device, finite contacts and release gates remain independent. All R0–R5 stay
+  open; no normal-player promotion.
 
 ### Equipped-outfit body masks adopted after independent Astra05 review
 

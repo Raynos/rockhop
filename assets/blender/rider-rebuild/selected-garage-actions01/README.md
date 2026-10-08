@@ -1,6 +1,6 @@
 # Original native actions on the same selected Garage rider
 
-Status: original two-action transport executed successfully; actual Garage playback pending. All rider qualification remains open.
+Status: both original actions transported and played on the same selected rider in actual Garage; sampled75-joint source parity exact. Complete rider qualification remains open.
 
 The input pins engine05's actual selected native/GLB/contract, current contact calibration, and the two already authored native action receipts and candidates. Reach/grip/release uses frames1–145 at24fps (**6 seconds**); crouch/rise/arms-up uses frames1–193 (**8 seconds**). Both original Blender action slots are `OBRiderSkeleton`.
 
@@ -26,7 +26,7 @@ Then use the existing private actual-game builder with that output's source, con
 - `UnacceptedSelectedDressedReachGripRelease145`
 - `UnacceptedSelectedCrouchRiseArmsUp193`
 
-Source preparation received Python AST/syntax checks only. Operator behavior, action-slot export, strict transport readbacks and actual Garage playback have not run. A mismatch fails explicitly; this source contains no fallback animation, clothing substitution, mask, reweighting or geometry repair.
+At the original source checkpoint, only Python AST/syntax checks had run. Subsequent actual export, transport and Garage results are recorded below. A mismatch fails explicitly; this source contains no fallback animation, clothing substitution, mask, reweighting or geometry repair.
 
 The first actual guarded run saved the small editable native and exported both rig actions successfully (**0.648 seconds** in the exporter), then failed the append intake because Blender also emitted one legitimate75-joint armature skin. The append source now accepts that rig metadata only after exact named-joint and float32 inverse-bind equality against the original selected skin. It still preserves the original selected skin JSON and its original BIN bytes. MAT4 readback uses a read-only mmap of the source file, avoiding a357MB payload allocation. Hierarchy/rest thresholds and all225 channels per action remain unchanged; duplicate sampler accessors are valid.
 
@@ -40,6 +40,6 @@ Reuse the pinned existing export01 rig/NPZ/receipt with the corrected helper, un
   harness/out/rider-rebuild/selected-garage-actions01/append02
 ```
 
-The corrected input pins the actual small GLB, native matrices, editable native and original rig-export receipt. Resume reconstructs and verifies the original input hash, allowing only the helper SHA and explicit resume provenance to differ. Original large native/action inputs were already pinned during the successful rig export and are not reloaded or rehashed on resume. The selected source GLB remains freshly SHA-checked before copying. The new export receipt retains the original rig-export receipt, author-recipe SHA and input SHA alongside the corrected helper/config hashes. The existing export01 artifacts remain unchanged. This repair received AST/source-pin checks only; successful append and actual Garage playback are pending.
+The corrected input pins the actual small GLB, native matrices, editable native and original rig-export receipt. Resume reconstructs and verifies the original input hash, allowing only the helper SHA and explicit resume provenance to differ. Original large native/action inputs were already pinned during the successful rig export and are not reloaded or rehashed on resume. The selected source GLB remains freshly SHA-checked before copying. The new export receipt retains the original rig-export receipt, author-recipe SHA and input SHA alongside the corrected helper/config hashes. The existing export01 artifacts remain unchanged. The repair initially received AST/source-pin checks; actual results are recorded below.
 
-Actual append02 succeeded in0.756 seconds. See `docs/evidence/rider-rebuild/selected-garage-actions01/transport02/`: both225-channel actions preserve every original selected geometry/image/skin byte, with maximum decoded native world-matrix residual4.487e-6. This confirms transport only; actual Garage playback and art qualification remain pending.
+Actual append02 succeeded in0.756 seconds. See `docs/evidence/rider-rebuild/selected-garage-actions01/transport02/`: both225-channel actions preserve every original selected geometry/image/skin byte, with maximum decoded native world-matrix residual4.487e-6. Both original clips subsequently played continuously in actual Garage; see `docs/evidence/rider-rebuild/selected-garage-actions01/played01/`. All75 localTRS match the original clip exactly at five actual times each. Cuff details, deep seated/full range, finite contacts, GPU vertex parity, production topology/LOD and physical-device acceptance remain open.

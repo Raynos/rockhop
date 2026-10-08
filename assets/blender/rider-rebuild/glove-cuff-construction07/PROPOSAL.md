@@ -53,5 +53,7 @@ and equipped body mask. Parent moving review remains the art authority.
 
 Validation: both Python files parse; the section helper was exercised against
 the pinned existing left and right guide arrays, reproducing the counts above
-without writing meshes. The Blender inspection has not been run. No corrected
-cuff, correspondence, native or accepted art is claimed.
+without writing meshes. The actual Blender dump subsequently exited0 in24.653s; see
+`docs/evidence/rider-rebuild/glove-cuff-construction07/layers01/`. Outer wall and
+inner return are identified locally; connected replacement boundaries remain
+unresolved. No corrected cuff, correspondence, native or accepted art is claimed.
