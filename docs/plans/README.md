@@ -1437,3 +1437,5 @@ October 8 jeans directed diagnostic exit0/19.363s:4656black covered pixels all p
 October 8 actual dressed working scene72frame headturn/nod action saved d33c2c2a, CPU2 exit0/33.675s. All75 rest/mesh/PBR unchanged; nonneck joints static and exact neutral return. One continuous actualPBR review next; no motion/art admission.
 
 October 8 jeans interpretation correction:452/1764 bounded opposite-source labels describe source normals, not physical panels. Actual long misses cross physical sides; selected front-waist height differs from receiver. One explicit projectionreceiver/cage derivative may repair correspondence without changing wearingtarget or raising global ray reach.
+
+October 8 actualPBR clothed headturn/nod rendered72frames in42.123s and played silently to3s,65actualpresentedcallbacks/7omissions. Parent retains limited neck improvement; actual dense hoodie gross penetration rejects outfit. One compact panel reconstruction next. No art/Garage/game admission.

@@ -1,0 +1,70 @@
+{
+  "accepted": false,
+  "lock": "/Users/raynos/projects/localai/.model.lock",
+  "method": "lockf -k",
+  "command": [
+    "node",
+    "harness/rider-finish/play-film.mjs",
+    "harness/out/rider-rebuild/head-neck-anatomical02/clothed-playback01",
+    "harness/out/rider-rebuild/head-neck-anatomical02/clothed-render01/clothed-neck-threequarter72.mp4"
+  ],
+  "controllerPID": 48208,
+  "pollSeconds": 1,
+  "startAnonymousBelowGiB": 55,
+  "stopAnonymousGiB": 65,
+  "stopAnonymousPlusWiredGiB": 96,
+  "limitSeconds": 45.0,
+  "guardSHA256": "cf8acd15d8b7484480bee74d23892be815d955ffd87115d3da8ed228ffb3d916",
+  "status": "worker returned; review pending",
+  "samples": [
+    {
+      "seconds": 0,
+      "anonymousGiB": 32.0,
+      "wiredGiB": 7.9,
+      "freeGiB": 34.7
+    },
+    {
+      "seconds": 0.061,
+      "anonymousGiB": 32.1,
+      "wiredGiB": 7.9,
+      "freeGiB": 34.7
+    },
+    {
+      "seconds": 1.125,
+      "anonymousGiB": 32.7,
+      "wiredGiB": 7.6,
+      "freeGiB": 34.1
+    },
+    {
+      "seconds": 2.2,
+      "anonymousGiB": 32.9,
+      "wiredGiB": 8.3,
+      "freeGiB": 33.3
+    },
+    {
+      "seconds": 3.265,
+      "anonymousGiB": 33.7,
+      "wiredGiB": 8.2,
+      "freeGiB": 32.4
+    },
+    {
+      "seconds": 4.354,
+      "anonymousGiB": 34.2,
+      "wiredGiB": 8.7,
+      "freeGiB": 31.5
+    },
+    {
+      "seconds": 5.433,
+      "anonymousGiB": 34.5,
+      "wiredGiB": 8.4,
+      "freeGiB": 31.3
+    }
+  ],
+  "physicalMemoryBytes": 137438953472,
+  "requiredPhysicalMemoryBytes": 137438953472,
+  "scope": "Future explicitly invoked owned Rockhop job only",
+  "pressureOrSwapLimits": "No separate pressure/swap gate exists in the pinned original guard; none altered",
+  "ownedChildPID": 48214,
+  "exitCode": 0,
+  "elapsedSeconds": 5.638
+}

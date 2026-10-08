@@ -43,3 +43,9 @@ Finding: Actual fully selected-source clothed context now has one72frame head-tu
 Validation: CPU2 exit0/33.675s; incoming mesh geometry/fields/PBR/rest unchanged, nonneck world matrices unchanged within5e-7, neutralreturn within2e-6. Exact native d33c2c2a saved.
 
 Limits: This is an unaccepted head/neck test action, not shoulder, garment, grip or bike motion. One actual PBR Eevee continuous movie and parent played judgment follow.
+
+Finding: Limited actual clothed threequarter head turn/nod no longer shows the old underjaw detachment in reviewed presentedframes. Gross original dense hoodie chest/deltoid penetration still rejects the outfit.
+
+Validation: ActualPBR Eevee render exit0/42.123s,72consecutive640²frames; silent headless playback exit0/5.638s, ended3s with65presentedcallbacks and no seeks. Parent inspected12 temporal samples.
+
+Limits: 7 callback omissions retained, one mild camera/sample only; C7/PBR/historicalnormal failure open. No wholeoutfit, generic/grip/bike, Garage/game/device acceptance.
