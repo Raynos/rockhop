@@ -147,3 +147,21 @@ test('only comparison isolates exact native modules; vendor closures and normal 
   assert.match(read('vite.config.ts'), /const BUNDLE_BUDGET_GZ_BYTES = 701 \* 1024/);
   assert.throws(() => privateEnginePlugin({ ...metadata, releaseBuild: true }), /releaseBuild false/);
 });
+
+// Low-tier calls run again after loading and when all resident heroes rebudget.
+test('selected document preserves authored maps across repeated texture budgets', () => {
+  const code = transformed(plugin(), 'src/render/hero/gltf.ts');
+  const start = code.indexOf('export function shrinkTextures(');
+  const end = code.indexOf('/** Hero surfaces', start);
+  const fn = transpile(code.slice(start, end), ts.ModuleKind.CommonJS);
+  const exports = {}, module = { exports };
+  Function('module', 'exports', fn)(module, exports);
+  let selectedTraversals = 0, originalTraversals = 0;
+  const selected = { userData: { privateSelectedRider: true }, traverse() { selectedTraversals++; } };
+  const original = { userData: {}, traverse() { originalTraversals++; } };
+  module.exports.shrinkTextures(selected);
+  module.exports.shrinkTextures(selected, 512, 256);
+  module.exports.shrinkTextures(original, 512, 256);
+  assert.equal(selectedTraversals, 0, 'Selected authored maps are never resampled');
+  assert.equal(originalTraversals, 1, 'Original hero retains ordinary texture budget');
+});

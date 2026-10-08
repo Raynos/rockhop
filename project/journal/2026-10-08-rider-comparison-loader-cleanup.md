@@ -15,3 +15,9 @@ Finding: Actual build04 remains9Bover (717833/717824B), exit1 in6.062s. Remove t
 Validation: Focused original/selected constructor and full comparison tests pass7/7. Both failure-to-load and original legacy routing remain intact.
 
 Limits: Actual build05 pending; no size-cap increase or runtime fallback.
+
+Finding: Build05 compiled in4.059s, but final emitted entry grew161gzip bytes after the early budget hook. The comparison report also incorrectly included4915B PWA worker in normal chunk JS. Final emitted normal JS is717969B, still145Bover, so it is not accepted. Final-file measurement now separately reports worker cost and rejects normal-JS overage after writing truthful receipts. Selected scene roots now bypass repeated texture budgets directly; all actual hero budget calls receive document roots, so the duplicate material traversal/texture WeakSet is unnecessary in comparison mode. Original all-slot review behavior is preserved.
+
+Validation: Eight focused tests pass, including selected-root repeated map protection and unchanged original-root traversal. Parent traced all shrinkTextures call sites: hero calls receive parsed scene roots; other calls receive separate world/course roots. Script syntax passes. Build06 pending.
+
+Limits: No phone/performance/art acceptance from the earlier successful compilation. Final emitted cap must pass before phone capture.

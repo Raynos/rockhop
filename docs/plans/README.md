@@ -1643,3 +1643,5 @@ October8 sixth-slot loader cleanup checkpoint: parent-reviewed original-five eag
 October8 comparison build03 retained failure:717835B normal-JS versus unchanged717824B cap (11Bover),3.671s. Runtime diagnostic wording shortened with all failure paths retained;7/7tests pass. Next actual build and phone comparison pending; no art promotion.
 
 October8 comparison build04 remains9Babove unchanged JS cap. The selected constructor now relies on the existing tagged-document load promise, which initializes its native driver before resolve and returns null on failure; no generic fallback.7/7focused tests pass; build05 and phone-layout run pending.
+
+October8 final-byte correction checkpoint: early build05 hook passed but emitted normal JS717969B exceeded unchanged cap by145B; PWA4915Bworker is now separately reported. Final-file receipts/assertions and selected-root texture-budget bypass replace duplicate comparison traversal;8/8tests pass. Build06/actual phone switching pending; no art acceptance.

@@ -5,6 +5,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import crypto from 'node:crypto';
+import { gzipSync } from 'node:zlib';
 import { spawnSync } from 'node:child_process';
 import { comparisonRider, comparisonModelMapping, comparisonSnapshotSource } from './private-engine-plugin.mjs';
 
@@ -86,5 +87,39 @@ fs.writeFileSync(path.join(out, 'rider-rebuild-inputs.json'), JSON.stringify({
 const result = spawnSync(process.execPath, ['--import', 'tsx', driverPath, `--out=${out}`, `--models=${mappingPath}`], { cwd: root, stdio: 'inherit' });
 if (result.error) throw result.error;
 if (result.status !== 0) throw new Error(`Private actual-game build failed: ${result.status}`);
+// Vite may finalize entry dependency tables after generateBundle hooks. Measure
+// final files, not an earlier hook snapshot; report the separately emitted PWA
+// worker as its own cost rather than accidentally calling it player-chunk JS.
+if (comparison) {
+  const loadPath = path.join(out, 'load-manifest.json');
+  const loads = JSON.parse(fs.readFileSync(loadPath));
+  const reportPath = path.join(out, 'rider-comparison-js.json');
+  const report = JSON.parse(fs.readFileSync(reportPath));
+  const phases = new Map(loads.items.filter(row => row.path.endsWith('.js')).map(row => [row.path.replace(/^\.\//, ''), row.phase]));
+  const files = [...phases.keys()];
+  if (fs.existsSync(path.join(out, 'sw.js'))) files.push('sw.js');
+  const measured = new Map();
+  let normal = 0, review = 0, other = 0, worker = 0;
+  for (const file of new Set(files)) {
+    const bytes = fs.readFileSync(path.join(out, file));
+    const gz = gzipSync(bytes).length; measured.set(file, { bytes: bytes.length, gz });
+    if (file === 'sw.js') worker += gz;
+    else if (file === report.reviewChunk) { review += gz; if (sha(bytes) !== report.reviewChunkSHA256) throw new Error('Final review driver hash changed'); }
+    else if (['dev', 'telemetry'].includes(phases.get(file))) other += gz;
+    else normal += gz;
+  }
+  Object.assign(report, { normalPlayerGzipBytes: normal, selectedReviewGzipBytes: review,
+    otherExcludedGzipBytes: other, serviceWorkerGzipBytes: worker,
+    allJavaScriptGzipBytes: normal + review + other + worker,
+    comparisonBudgetGzipBytes: normal + review, measurement: 'Final emitted files; PWA worker cost reported separately.' });
+  fs.writeFileSync(reportPath, JSON.stringify(report));
+  for (const row of loads.items) {
+    const file = row.path.replace(/^\.\//, '');
+    if (measured.has(file)) Object.assign(row, measured.get(file));
+    if (file === 'rider-comparison-js.json') { const bytes = fs.readFileSync(reportPath); row.bytes = bytes.length; row.gz = gzipSync(bytes).length; }
+  }
+  fs.writeFileSync(loadPath, JSON.stringify(loads));
+  if (normal > report.normalPlayerLimitGzipBytes) throw new Error(`Final comparison normal JS exceeds unchanged cap: ${normal}/${report.normalPlayerLimitGzipBytes}`);
+}
 if (sha(fs.readFileSync(source)) !== sha(sourceBytes) || sha(fs.readFileSync(contract)) !== sha(metadataBytes)) throw new Error('Source/metadata changed during build');
 console.log(JSON.stringify({ out, sourceSHA256: sha(sourceBytes), metadataSHA256: sha(metadataBytes), actualGame: true, normalAssetsChanged: false }));

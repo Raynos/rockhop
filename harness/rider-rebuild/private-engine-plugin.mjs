@@ -226,10 +226,16 @@ export class GltfRider extends OriginalGltfRider {
           // retain the ordinary game budget; no maps are synthesized or upscaled.
           code = code.replace(shrinkMarker,
             `          if (url === modelAssetUrl(${JSON.stringify(metadata.selectedRiderSource.canonicalLogical)})) {
-            ${comparison ? 'g.scene.userData.privateSelectedRider = true;' : ''}
-            rememberPrivateAuthoredImages(g.scene);
+            ${comparison ? 'g.scene.userData.privateSelectedRider = true;' : 'rememberPrivateAuthoredImages(g.scene);'}
           }
           shrinkTextures(g.scene);`);
+          if (comparison) {
+            // Every hero budget call receives the parsed document scene. The
+            // source marker survives cloning; selected textures are not shared
+            // with separate original hero or world documents.
+            const signature = 'export function shrinkTextures(root: THREE.Object3D, albedoMax = 1024, otherMax = 512): void {';
+            code = replaceOnce(code, signature, signature + '\n  if (root.userData.privateSelectedRider) return;');
+          } else {
           const textureMarker = '        if (!t || done.has(t)) continue;';
           if (code.split(textureMarker).length !== 2) throw new Error('Private rider build: resident texture budget changed');
           code = `const privateAuthoredImages = new WeakSet<object>();
@@ -246,6 +252,7 @@ function rememberPrivateAuthoredImages(root: THREE.Object3D) {
   });
 }\n` + code.replace(textureMarker,
             '        if (!t || done.has(t) || privateAuthoredImages.has(t)) continue;');
+          }
           touched.add('authored-images');
         }
         touched.add('metadata');
