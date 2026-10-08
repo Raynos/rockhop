@@ -23,3 +23,10 @@ Finding: Required third-construction-round current-player gate14 preserves exact
 Validation: Silent Metal exit1/15.317s,10/11 checks; boot ready348.24ms exceeds300ms with loadavg60.21/18cores after built-in resample. Exact recorded finish/hash and one-tick restart pass; restart frame8.51ms.
 
 Limits: Failed timing retained; no blind retry or release/new-rider acceptance. Current player source fingerprint unchanged.
+
+
+Finding: Meaningfully reduced host load permits scheduled construction-cadence silent current-player gate15, all11 checks pass.
+
+Validation: Metal headless CPU2 exit0/5.533s,11/11 coldboot/clear/crash/restart, restartframe5.94ms, deterministic recorded finish/hash unchanged. Gate14 failure retained.
+
+Limits: Existing player only, no new rider art or release acceptance.
