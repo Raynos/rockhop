@@ -1,0 +1,103 @@
+{
+  "schema": 1,
+  "kind": "gate-partial",
+  "runId": "20261008-111057-32da65",
+  "startedAt": "2026-10-08T16:10:57.246Z",
+  "wallMs": 5316,
+  "git": "17d8a169f",
+  "srcFingerprint": "fd8fe7c2",
+  "node": "v24.18.1",
+  "chromium": "151.0.7922.34",
+  "only": [
+    "boot",
+    "clear",
+    "crash",
+    "restart"
+  ],
+  "checks": [
+    {
+      "id": "boot.readyP50Ms",
+      "value": 224.42133400000012,
+      "limit": 300,
+      "pass": true,
+      "unit": "ms",
+      "note": "runs 232/224/119 min 119 loadavg 5.82/18"
+    },
+    {
+      "id": "boot.firstFrameMs",
+      "value": 417.6050000190735,
+      "limit": 900,
+      "pass": true,
+      "unit": "ms",
+      "note": "ready -> first synced frame"
+    },
+    {
+      "id": "clear.golden",
+      "value": true,
+      "limit": true,
+      "pass": true,
+      "note": "bot-3.json finish=8.591666666666667 run=8.592 faults=0"
+    },
+    {
+      "id": "clear.finishTimeBitEqual",
+      "value": true,
+      "limit": true,
+      "pass": true,
+      "note": "expected 8.591666666666667"
+    },
+    {
+      "id": "clear.hashOk",
+      "value": true,
+      "limit": true,
+      "pass": true,
+      "note": "622bb2554e0f9a26 vs pinned 622bb2554e0f9a26"
+    },
+    {
+      "id": "crash.faultWithinS",
+      "value": 0.8583333333333333,
+      "limit": 8,
+      "pass": true,
+      "unit": "s",
+      "note": "reason=crash"
+    },
+    {
+      "id": "fault.toControlMs",
+      "value": 25,
+      "limit": 500,
+      "pass": true,
+      "unit": "ms",
+      "note": "crash tick -> restart mash on the next tick -> bike moving; auto-respawn path 1017 ms (CONTRACT §2.8: 1.0 s)"
+    },
+    {
+      "id": "restart.ticks",
+      "value": 1,
+      "limit": 1,
+      "pass": true,
+      "note": "tick==0 && faulted==null after exactly one tick, 20 reps"
+    },
+    {
+      "id": "restart.wallMsP95",
+      "value": 0.11499977111816406,
+      "limit": 5,
+      "pass": true,
+      "unit": "ms"
+    },
+    {
+      "id": "restart.frameMsP95",
+      "value": 4.724999904632568,
+      "limit": 33,
+      "pass": true,
+      "unit": "ms",
+      "note": "restart -> synced frame"
+    },
+    {
+      "id": "restart.noCountdown",
+      "value": 1,
+      "limit": 12,
+      "pass": true,
+      "unit": " ticks",
+      "note": "worst of 20 reps: held throttle after the restart tick until the bike rolls (a countdown would be 360+); first-tick roll yes; game faults=20"
+    }
+  ],
+  "failed": 0
+}

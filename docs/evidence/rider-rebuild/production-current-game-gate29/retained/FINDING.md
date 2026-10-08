@@ -1,0 +1,1 @@
+Current-player silent Metal quick gate29 passed11/11, zero failures. Actual guard exit0/6.115s; harness5.316s. Exact golden finish8.591666666666667/hash622bb2554e0f9a26, one-tick restart, synced-frameP95 4.725ms. Current player regression only; selected Garage fit/art/device and full release remain unaccepted.
