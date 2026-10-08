@@ -1,0 +1,42 @@
+{
+  "accepted": false,
+  "status": "REQUIRED_ARTIST_DELIVERY_NOT_PERFORMED",
+  "source": "selected-face/original-selected-carrier.glb",
+  "canonicalWearer": "wearer/anatomical-hand-rig.blend",
+  "canonicalBodyVertices": 10582,
+  "sharedRestBones": 75,
+  "handsLowerBodyAndAll75RestChangesAllowed": false,
+  "transitionScope": "Explicit documented local head/neck/upper-shoulder reconstruction; no generic bust copy, global wearer resizing, rest retargeting or garment correction",
+  "shapeRequired": [
+    "selected face likeness and recognizable hair",
+    "continuous jaw/submental throat and sternocleidomastoid",
+    "continuous trapezius/clavicle/actual shoulder transitions",
+    "no anterior throat shelf or horizontal collar cut",
+    "no posterior projecting stump or notch into upper back",
+    "coherent skin UV/PBR, corner normals and tangents"
+  ],
+  "restViews": ["front", "rear", "left profile", "right profile", "three-quarter and all-around head/neck/upper shoulder"],
+  "continuousHeadNeckReview": ["neutral", "turn both directions", "pitch up/down", "side tilt within declared rig limits", "shoulder/arm reach", "return"],
+  "continuousFullyDressedGenericReview": ["neutral", "forward reach", "crouch", "forward standing ride", "back seated ride", "return"],
+  "finalGenericReview": ["neutral", "A pose", "T pose", "reach", "crouch", "walk", "jog", "turn", "jump", "landing", "return"],
+  "actualFixedBikeReview": {
+    "bikes": ["fixed Rookie", "fixed Pro"],
+    "states": ["standing", "seated", "lean both directions", "compress", "hop", "landing", "crash release", "instant restart/reacquire support"],
+    "evidence": "Continuous full dressed wearer plus close head/neck views; fixed bike geometry and actual contact context, no camera/garment concealment",
+    "bikeAssetsAreContextOnly": true
+  },
+  "editableDelivery": ["editable native master", "documented source ancestry and local transition domain/delta", "packed coherent PBR/UV", "explicit named native fields", "all75 unchanged rest proof", "actual generic and fixed-bike motion clips"],
+  "facialAnimation": "DEFERRED",
+  "existingRejectedCandidateProtectedSourceComparison": {
+    "actualMaximumNormalVectorError": 0.014612238520047997,
+    "existingRequirement": 0.000002,
+    "status": "FAILED_NO_HISTORICAL_PRECISION_WAIVER",
+    "scope": "Protected source corners on the existing rejected candidate, not intentionally sculpted transition data"
+  },
+  "artistTransitionShadingRequirement": "Document changed transition ancestry and demonstrate coherent actual shading and native/export transport; intentionally sculpted transition normals need not remain source-exact",
+  "preparedNormalDiagnostic": "PARKED_UNEXECUTED_HYPOTHESIS_ONLY",
+  "parentAloneJudges": true,
+  "acceptedGates": 0,
+  "suppliedMotionEvidence": "NONE; supplied four actual rest views reject gross anatomy only",
+  "wardrobe": "Separate pending selected-garment work; no successful dressed master supplied"
+}

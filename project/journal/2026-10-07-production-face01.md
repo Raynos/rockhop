@@ -9,3 +9,7 @@ Limits: Saved derivative unaccepted; no tolerance waiver or geometry retry, actu
 Finding: Actual bilateral profiles reject the selected head bridge for a throat shelf and posterior neck notch; stop the joining mechanism.
 Validation: Parent viewed all4actual native6c80 images; CPU2exit0/7.682s, original native and all4image hashes independently match receipts.
 Limits: Negative stills only, no anatomy/motion/outfit acceptance; normal diagnostic parked unexecuted, expert sculpt resource still missing.
+
+Finding: Exact selected face/head-neck sculpt package preserves donor, current body/hands/shared75 and rejected native/views for expert reconstruction.
+Validation: Parent read brief/envelope/packer/manifest and independently verified all46original/payload SHA values,47ZIPmembers/CRC, embedded source albedos and exact manifest copies; archive291822e1/46,561,263bytes.
+Limits: Joining method stopped, diagnostic parked/unexecuted; no artist assignment/contact, sculpt, dressed motion or player result; allR0–R5open.

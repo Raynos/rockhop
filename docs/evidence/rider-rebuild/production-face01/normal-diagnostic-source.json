@@ -1,0 +1,25 @@
+{
+  "accepted": false,
+  "status": "READ_ONLY_DIAGNOSTIC_SOURCE_AST_AND_HASH_CHECKED_UNEXECUTED",
+  "recipe": {
+    "path": "assets/blender/rider-rebuild/production-face01/diagnose_saved_normals.py",
+    "sha256": "55e66490143722e241ce05e2a1324eb042faab1cb43c357f642be39863177a36",
+    "bytes": 12230
+  },
+  "candidate": {
+    "path": "harness/out/rider-rebuild/production-face01/native01/selected-face-native75.blend",
+    "sha256": "6c80f6e8acc9b50c1d3cc30c92ca70e65148d84be6315e2100584b6f573953e4",
+    "bytes": 16012049
+  },
+  "donor": {
+    "path": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/rig-adapter01/body-bind11/rider.glb",
+    "sha256": "b7f4f22790124c664f9907104e5b17b77775b4c5c995f715d62be640bbcc8754",
+    "bytes": 14007264
+  },
+  "command": "blender -b -t 2 --python-exit-code 1 --python assets/blender/rider-rebuild/production-face01/diagnose_saved_normals.py -- harness/out/rider-rebuild/production-face01/normal-diagnostic01",
+  "threads": 2,
+  "parentLeaseRequired": true,
+  "nativeSaveOrRenderCalls": 0,
+  "maximumWorstCorners": 12,
+  "tinyReferencesAtOneWorstVertex": 3
+}
