@@ -1,0 +1,656 @@
+{
+  "accepted": false,
+  "status": "READ_ONLY_CORRESPONDENCE_MEASURED_PARENT_REVIEW_PENDING",
+  "diagnosticSHA256": "b4e8ec5b6e56eb69cbab54c56bc78fbc6c583fda80bdc4773e6042dec3a0d7be",
+  "intakeSHA256": "9398244b460d85378c476a591dff1383637acb9aecf583a95415954d7751a8fd",
+  "inputs": {
+    "actualProbeNative": {
+      "path": "harness/out/rider-rebuild/production-jeans02/correspondence-probe01/authored01/pelvis-correspondence-probe.blend",
+      "sha256": "4b6ffd7e4fd9ff333cca0535a895ed209307724b76dae6617cb83a7153ff6859"
+    },
+    "actualProbeReport": {
+      "path": "harness/out/rider-rebuild/production-jeans02/correspondence-probe01/authored01/report.json",
+      "sha256": "d5b026f77db2ba9c5d4d0f2146c02bfd125a30e0e95b272ad30efc3ef97c8b48"
+    },
+    "parentVerdict": {
+      "path": "docs/evidence/rider-rebuild/production-jeans02/correspondence-probe01/actual01/parent-verdict.json",
+      "sha256": "6a5dfc58f9fcafe9700eae36c7f1dd26b98374d6731b2c8391d313032c3a38fe"
+    },
+    "constructionNative": {
+      "path": "harness/out/rider-rebuild/production-jeans02/authored01/production-jeans.blend",
+      "sha256": "956548765454fe683952801f5ba401ed82f481489a256cf48039c459850e5c95"
+    },
+    "constructionFields": {
+      "path": "harness/out/rider-rebuild/production-jeans02/authored01/production-jeans-fields.npz",
+      "sha256": "28d337f56a7e963f8ae533a72bf060d40b5d18e956c154b61e2dc995c20bd679"
+    },
+    "originalDense": {
+      "path": "assets/blender/hero-remaster/rider/finish-2026-10-05/wardrobe/data/prep02/jeans/cleaned-donor.npz",
+      "sha256": "c38413a36d564d97f106ebde13bb240d4c7075078ce463f30234a97c0f3d2237"
+    },
+    "probeSource": {
+      "path": "assets/blender/rider-rebuild/production-jeans02/correspondence-probe01/probe.py",
+      "sha256": "2b69b1ec2c1e8ac6c4a01fc98217a5e6391f203e983d88542a12448c15d81aa2"
+    },
+    "probeIntake": {
+      "path": "assets/blender/rider-rebuild/production-jeans02/correspondence-probe01/intake.json",
+      "sha256": "17a96e5ee6dac08d5dbead34a3023aca2b75982fce0a75d8801e0a7c15d45b1a"
+    },
+    "actualAlbedo": {
+      "path": "harness/out/rider-rebuild/production-jeans02/correspondence-probe01/authored01/albedo.png",
+      "sha256": "9d2a7a47765f043cc224b7d2b2ce7b4946b7bb7ee447ce79d4f722ab24ef2310"
+    },
+    "actualMetallicRoughness": {
+      "path": "harness/out/rider-rebuild/production-jeans02/correspondence-probe01/authored01/metallicRoughness.png",
+      "sha256": "53eeade19fa78f3cad5b62e24f821a9cb7746a9290abedd49176a086c2c1f0a2"
+    },
+    "actualNormal": {
+      "path": "harness/out/rider-rebuild/production-jeans02/correspondence-probe01/authored01/normal.png",
+      "sha256": "382f11c813ab40c3a7e915ce61b6460c9ed4a6db0024f1b58dabcb6ffd54f799"
+    },
+    "guard": {
+      "path": "assets/blender/hero-remaster/generation-comparison-2026-10-03/user-agent2/run_bounded96.py",
+      "sha256": "cf8acd15d8b7484480bee74d23892be815d955ffd87115d3da8ed228ffb3d916"
+    }
+  },
+  "limitations": [
+    "Original dense need not enclose body. Failed OUTSIDE native is never read. No moving/player/material acceptance.",
+    "Measurements use the saved original evaluated regional source and receiver from the actual failed probe. No source/target geometry or bake setting changes.",
+    "The ray setup and strict acceptance mirror official Blender v5.2.1. Python mathutils BVH and barycentric interior rasterization are separate implementations, not byte-identical Blender zspan/BVH. UV samples use its (-.501,-.502) pixel offset and last-triangle ownership; marked near-edge samples may differ. Actual packed baked PNG black/alpha masks remain exact.",
+    "UV multiplicities measure interior pixel-centre overlap at1024, not a continuous UV area proof. Intentionally unbaked legs/background are excluded from regional ray counts.",
+    "Nearest-source point direction/offset on a miss is evidence about that nearest point only, not proof that every source surface lies behind the ray. No first-intersection is kept separate from beyond45mm.",
+    "Original albedo bilinear-repeat samples are a diagnostic; Cycles texture derivatives/filtering may differ. Hit source UV, original face ID and actual baked values are retained.",
+    "No authored cage is justified until actual measurements show which misses are distance, direction, opening/cut, UV ownership or unmatched new gusset. Parent alone judges the next single correction."
+  ],
+  "blenderVersion": "5.2.1 LTS",
+  "actualRaySettings": {
+    "extrusionMetres": 0.017999999225139618,
+    "maximumMetres": 0.04500000178813934,
+    "useCage": false
+  },
+  "samples": {
+    "path": "harness/out/rider-rebuild/production-jeans02/correspondence-probe01/diagnostic01/directed-correspondence.npz",
+    "sha256": "f6d8a8cf62d4cb6898be494f1baa269d627f5dceb101217787ce54548d7051f8"
+  },
+  "statusMaskLegend": {
+    "0": "outside regional receiver UV sample coverage",
+    "1": "first directed hit within unchanged maximum",
+    "2": "first directed hit beyond/equal unchanged maximum",
+    "3": "no intersection along directed ray"
+  },
+  "panels": [
+    "front-waist",
+    "front-fly-centre",
+    "front-left-panel",
+    "front-right-panel",
+    "rear-waist",
+    "rear-seat-centre",
+    "rear-left-panel",
+    "rear-right-panel",
+    "left-side-panel",
+    "right-side-panel"
+  ],
+  "panelDefinition": {
+    "front": "normalY < -abs(normalX)",
+    "rear": "normalY > abs(normalX)",
+    "side": "remaining directions",
+    "waistZAtLeast": 1.02,
+    "centreAbsXAtMost": 0.045,
+    "left": "X>=0",
+    "right": "X<0",
+    "newGusset": "barycentric weight on original changed target vertex IDs, via retained regional vertex lineage; support label, not new anatomy inference"
+  },
+  "summaries": [
+    {
+      "panel": "front-waist",
+      "samples": 3201,
+      "boundedHits": 335,
+      "directedHitsBeyondMaximum": 2806,
+      "noDirectedIntersection": 60,
+      "actualBlack": 1895,
+      "actualTransparent": 1740,
+      "blackAndPredictedMiss": 1895,
+      "blackDespitePredictedHit": 0,
+      "nonblackDespitePredictedMiss": 971,
+      "boundedHitOriginalAlbedoBlack": 0,
+      "opposedSourceNormalOnBoundedHit": 48,
+      "frontReceiverHitRearSource": 9,
+      "rearReceiverHitFrontSource": 0,
+      "regionalUVOverlap": 0,
+      "firstDirectedHitMetres": {
+        "min": 1.3541773114411626e-05,
+        "median": 0.31694096326828003,
+        "p95": 0.32868626713752747,
+        "max": 0.33713728189468384
+      },
+      "nearestSourceMetresOnMiss": {
+        "min": 0.00014412711607292295,
+        "median": 0.02476637251675129,
+        "p95": 0.0451705027371645,
+        "max": 0.0534391775727272
+      },
+      "nearestSourceOutwardOffsetOnMiss": {
+        "min": -0.0034738543909043074,
+        "median": 0.013970924075692892,
+        "p95": 0.018158258870244026,
+        "max": 0.020249033346772194
+      },
+      "nearestSourceRayCosineOnMiss": {
+        "min": -0.04645785689353943,
+        "median": 0.19112421572208405,
+        "p95": 0.9363702237606049,
+        "max": 0.9999679327011108
+      }
+    },
+    {
+      "panel": "front-fly-centre",
+      "samples": 3795,
+      "boundedHits": 3740,
+      "directedHitsBeyondMaximum": 55,
+      "noDirectedIntersection": 0,
+      "actualBlack": 0,
+      "actualTransparent": 0,
+      "blackAndPredictedMiss": 0,
+      "blackDespitePredictedHit": 0,
+      "nonblackDespitePredictedMiss": 55,
+      "boundedHitOriginalAlbedoBlack": 0,
+      "opposedSourceNormalOnBoundedHit": 209,
+      "frontReceiverHitRearSource": 207,
+      "rearReceiverHitFrontSource": 0,
+      "regionalUVOverlap": 0,
+      "firstDirectedHitMetres": {
+        "min": 9.619629963708576e-06,
+        "median": 0.01383440662175417,
+        "p95": 0.025805162638425812,
+        "max": 0.3287765383720398
+      },
+      "nearestSourceMetresOnMiss": {
+        "min": 0.013312133960425854,
+        "median": 0.016854409128427505,
+        "p95": 0.02048864476382732,
+        "max": 0.022477108985185623
+      },
+      "nearestSourceOutwardOffsetOnMiss": {
+        "min": 0.010410976596176624,
+        "median": 0.013177304528653622,
+        "p95": 0.015292182750999927,
+        "max": 0.015909343957901
+      },
+      "nearestSourceRayCosineOnMiss": {
+        "min": 0.13054250180721283,
+        "median": 0.42373159527778625,
+        "p95": 0.6365820527076721,
+        "max": 0.6749655604362488
+      }
+    },
+    {
+      "panel": "front-left-panel",
+      "samples": 2474,
+      "boundedHits": 2242,
+      "directedHitsBeyondMaximum": 232,
+      "noDirectedIntersection": 0,
+      "actualBlack": 0,
+      "actualTransparent": 0,
+      "blackAndPredictedMiss": 0,
+      "blackDespitePredictedHit": 0,
+      "nonblackDespitePredictedMiss": 232,
+      "boundedHitOriginalAlbedoBlack": 0,
+      "opposedSourceNormalOnBoundedHit": 143,
+      "frontReceiverHitRearSource": 137,
+      "rearReceiverHitFrontSource": 0,
+      "regionalUVOverlap": 0,
+      "firstDirectedHitMetres": {
+        "min": 0.0002697074960451573,
+        "median": 0.030950384214520454,
+        "p95": 0.046846066042780875,
+        "max": 0.3284434974193573
+      },
+      "nearestSourceMetresOnMiss": {
+        "min": 0.012975672259926796,
+        "median": 0.0271257096901536,
+        "p95": 0.02973222453147173,
+        "max": 0.030950691550970078
+      },
+      "nearestSourceOutwardOffsetOnMiss": {
+        "min": -0.03038128651678562,
+        "median": -0.02521159779280424,
+        "p95": -0.01293548336252571,
+        "max": 0.014764285646378994
+      },
+      "nearestSourceRayCosineOnMiss": {
+        "min": 0.2723584473133087,
+        "median": 0.9749955832958221,
+        "p95": 0.9988651305437088,
+        "max": 0.999826192855835
+      }
+    },
+    {
+      "panel": "front-right-panel",
+      "samples": 2258,
+      "boundedHits": 2208,
+      "directedHitsBeyondMaximum": 50,
+      "noDirectedIntersection": 0,
+      "actualBlack": 0,
+      "actualTransparent": 0,
+      "blackAndPredictedMiss": 0,
+      "blackDespitePredictedHit": 0,
+      "nonblackDespitePredictedMiss": 50,
+      "boundedHitOriginalAlbedoBlack": 0,
+      "opposedSourceNormalOnBoundedHit": 99,
+      "frontReceiverHitRearSource": 99,
+      "rearReceiverHitFrontSource": 0,
+      "regionalUVOverlap": 0,
+      "firstDirectedHitMetres": {
+        "min": 4.631359115592204e-05,
+        "median": 0.034540435299277306,
+        "p95": 0.04418661706149578,
+        "max": 0.3292776644229889
+      },
+      "nearestSourceMetresOnMiss": {
+        "min": 0.013182842172682285,
+        "median": 0.027193477377295494,
+        "p95": 0.028067631367594003,
+        "max": 0.028351247310638428
+      },
+      "nearestSourceOutwardOffsetOnMiss": {
+        "min": -0.028277207165956497,
+        "median": -0.02703997865319252,
+        "p95": 0.011215564934536813,
+        "max": 0.012968619354069233
+      },
+      "nearestSourceRayCosineOnMiss": {
+        "min": 0.43383461236953735,
+        "median": 0.9983055591583252,
+        "p95": 0.9993434071540832,
+        "max": 0.9994829893112183
+      }
+    },
+    {
+      "panel": "rear-waist",
+      "samples": 3336,
+      "boundedHits": 3255,
+      "directedHitsBeyondMaximum": 4,
+      "noDirectedIntersection": 77,
+      "actualBlack": 0,
+      "actualTransparent": 0,
+      "blackAndPredictedMiss": 0,
+      "blackDespitePredictedHit": 0,
+      "nonblackDespitePredictedMiss": 81,
+      "boundedHitOriginalAlbedoBlack": 0,
+      "opposedSourceNormalOnBoundedHit": 397,
+      "frontReceiverHitRearSource": 0,
+      "rearReceiverHitFrontSource": 392,
+      "regionalUVOverlap": 0,
+      "firstDirectedHitMetres": {
+        "min": 8.915798389352858e-06,
+        "median": 0.012593739666044712,
+        "p95": 0.034756687656044956,
+        "max": 0.04737086594104767
+      },
+      "nearestSourceMetresOnMiss": {
+        "min": 0.009449495933949947,
+        "median": 0.018281158059835434,
+        "p95": 0.023900728672742844,
+        "max": 0.02579934149980545
+      },
+      "nearestSourceOutwardOffsetOnMiss": {
+        "min": -0.019676290452480316,
+        "median": -0.013422777876257896,
+        "p95": -0.008576163090765476,
+        "max": -0.006977292243391275
+      },
+      "nearestSourceRayCosineOnMiss": {
+        "min": 0.9018310308456421,
+        "median": 0.9389069676399231,
+        "p95": 0.9597060084342957,
+        "max": 0.9689604640007019
+      }
+    },
+    {
+      "panel": "rear-seat-centre",
+      "samples": 3594,
+      "boundedHits": 632,
+      "directedHitsBeyondMaximum": 2683,
+      "noDirectedIntersection": 279,
+      "actualBlack": 2157,
+      "actualTransparent": 2194,
+      "blackAndPredictedMiss": 2157,
+      "blackDespitePredictedHit": 0,
+      "nonblackDespitePredictedMiss": 805,
+      "boundedHitOriginalAlbedoBlack": 0,
+      "opposedSourceNormalOnBoundedHit": 380,
+      "frontReceiverHitRearSource": 0,
+      "rearReceiverHitFrontSource": 380,
+      "regionalUVOverlap": 0,
+      "firstDirectedHitMetres": {
+        "min": 5.143257112649735e-06,
+        "median": 0.29683011770248413,
+        "p95": 0.3212140887975693,
+        "max": 0.3488985300064087
+      },
+      "nearestSourceMetresOnMiss": {
+        "min": 0.012213468551635742,
+        "median": 0.02692266833037138,
+        "p95": 0.03366509936749935,
+        "max": 0.03555041924118996
+      },
+      "nearestSourceOutwardOffsetOnMiss": {
+        "min": 0.0031678786035627127,
+        "median": 0.025516320019960403,
+        "p95": 0.03279730174690485,
+        "max": 0.0355142205953598
+      },
+      "nearestSourceRayCosineOnMiss": {
+        "min": -0.999925971031189,
+        "median": -0.6262262165546417,
+        "p95": 0.4437379479408264,
+        "max": 0.7826715707778931
+      }
+    },
+    {
+      "panel": "rear-left-panel",
+      "samples": 2198,
+      "boundedHits": 1600,
+      "directedHitsBeyondMaximum": 558,
+      "noDirectedIntersection": 40,
+      "actualBlack": 93,
+      "actualTransparent": 108,
+      "blackAndPredictedMiss": 93,
+      "blackDespitePredictedHit": 0,
+      "nonblackDespitePredictedMiss": 505,
+      "boundedHitOriginalAlbedoBlack": 0,
+      "opposedSourceNormalOnBoundedHit": 490,
+      "frontReceiverHitRearSource": 0,
+      "rearReceiverHitFrontSource": 443,
+      "regionalUVOverlap": 0,
+      "firstDirectedHitMetres": {
+        "min": 3.55141787622415e-06,
+        "median": 0.011570031754672527,
+        "p95": 0.2968753635883331,
+        "max": 0.30358171463012695
+      },
+      "nearestSourceMetresOnMiss": {
+        "min": 0.011567133478820324,
+        "median": 0.022675279527902603,
+        "p95": 0.028374214470386506,
+        "max": 0.030231382697820663
+      },
+      "nearestSourceOutwardOffsetOnMiss": {
+        "min": 0.003890962339937687,
+        "median": 0.021390460431575775,
+        "p95": 0.027757509797811507,
+        "max": 0.029984325170516968
+      },
+      "nearestSourceRayCosineOnMiss": {
+        "min": -0.9645318984985352,
+        "median": -0.4114445298910141,
+        "p95": 0.35172619074583045,
+        "max": 0.785321831703186
+      }
+    },
+    {
+      "panel": "rear-right-panel",
+      "samples": 2310,
+      "boundedHits": 1813,
+      "directedHitsBeyondMaximum": 466,
+      "noDirectedIntersection": 31,
+      "actualBlack": 27,
+      "actualTransparent": 35,
+      "blackAndPredictedMiss": 27,
+      "blackDespitePredictedHit": 0,
+      "nonblackDespitePredictedMiss": 470,
+      "boundedHitOriginalAlbedoBlack": 0,
+      "opposedSourceNormalOnBoundedHit": 551,
+      "frontReceiverHitRearSource": 0,
+      "rearReceiverHitFrontSource": 549,
+      "regionalUVOverlap": 0,
+      "firstDirectedHitMetres": {
+        "min": 8.199249634799344e-08,
+        "median": 0.01016044057905674,
+        "p95": 0.2950606346130371,
+        "max": 0.30830684304237366
+      },
+      "nearestSourceMetresOnMiss": {
+        "min": 0.015105043537914753,
+        "median": 0.021134795621037483,
+        "p95": 0.0254916962236166,
+        "max": 0.02755659818649292
+      },
+      "nearestSourceOutwardOffsetOnMiss": {
+        "min": 0.011390864849090576,
+        "median": 0.020098473876714706,
+        "p95": 0.024969039484858513,
+        "max": 0.026857441291213036
+      },
+      "nearestSourceRayCosineOnMiss": {
+        "min": -0.9298079013824463,
+        "median": -0.3095562160015106,
+        "p95": 0.29027056097984305,
+        "max": 0.5544494986534119
+      }
+    },
+    {
+      "panel": "left-side-panel",
+      "samples": 5075,
+      "boundedHits": 3323,
+      "directedHitsBeyondMaximum": 1575,
+      "noDirectedIntersection": 177,
+      "actualBlack": 214,
+      "actualTransparent": 226,
+      "blackAndPredictedMiss": 214,
+      "blackDespitePredictedHit": 0,
+      "nonblackDespitePredictedMiss": 1538,
+      "boundedHitOriginalAlbedoBlack": 0,
+      "opposedSourceNormalOnBoundedHit": 33,
+      "frontReceiverHitRearSource": 0,
+      "rearReceiverHitFrontSource": 0,
+      "regionalUVOverlap": 0,
+      "firstDirectedHitMetres": {
+        "min": 1.252947095053969e-05,
+        "median": 0.041291531175374985,
+        "p95": 0.3053833335638045,
+        "max": 0.3477274477481842
+      },
+      "nearestSourceMetresOnMiss": {
+        "min": 0.002008451148867607,
+        "median": 0.02622340712696314,
+        "p95": 0.03130292370915413,
+        "max": 0.03193093463778496
+      },
+      "nearestSourceOutwardOffsetOnMiss": {
+        "min": -0.031892016530036926,
+        "median": -0.021623515523970127,
+        "p95": 0.014947095373645424,
+        "max": 0.026245277374982834
+      },
+      "nearestSourceRayCosineOnMiss": {
+        "min": -0.43073439598083496,
+        "median": 0.960642546415329,
+        "p95": 0.9990864604711532,
+        "max": 0.9999989867210388
+      }
+    },
+    {
+      "panel": "right-side-panel",
+      "samples": 4878,
+      "boundedHits": 2953,
+      "directedHitsBeyondMaximum": 1751,
+      "noDirectedIntersection": 174,
+      "actualBlack": 270,
+      "actualTransparent": 230,
+      "blackAndPredictedMiss": 270,
+      "blackDespitePredictedHit": 0,
+      "nonblackDespitePredictedMiss": 1655,
+      "boundedHitOriginalAlbedoBlack": 0,
+      "opposedSourceNormalOnBoundedHit": 35,
+      "frontReceiverHitRearSource": 0,
+      "rearReceiverHitFrontSource": 0,
+      "regionalUVOverlap": 0,
+      "firstDirectedHitMetres": {
+        "min": 9.310088353231549e-05,
+        "median": 0.04230249859392643,
+        "p95": 0.3021614983677863,
+        "max": 0.34886065125465393
+      },
+      "nearestSourceMetresOnMiss": {
+        "min": 0.0031621146481484175,
+        "median": 0.026558661833405495,
+        "p95": 0.03159191831946373,
+        "max": 0.03498772904276848
+      },
+      "nearestSourceOutwardOffsetOnMiss": {
+        "min": -0.03237549960613251,
+        "median": -0.022965243086218834,
+        "p95": 0.014669775031507015,
+        "max": 0.028897643089294434
+      },
+      "nearestSourceRayCosineOnMiss": {
+        "min": -0.6098034381866455,
+        "median": 0.9581601023674011,
+        "p95": 0.9986665368080139,
+        "max": 0.9999940991401672
+      }
+    },
+    {
+      "panel": "all-pelvis",
+      "samples": 33119,
+      "boundedHits": 22101,
+      "directedHitsBeyondMaximum": 10180,
+      "noDirectedIntersection": 838,
+      "actualBlack": 4656,
+      "actualTransparent": 4533,
+      "blackAndPredictedMiss": 4656,
+      "blackDespitePredictedHit": 0,
+      "nonblackDespitePredictedMiss": 6362,
+      "boundedHitOriginalAlbedoBlack": 0,
+      "opposedSourceNormalOnBoundedHit": 2385,
+      "frontReceiverHitRearSource": 452,
+      "rearReceiverHitFrontSource": 1764,
+      "regionalUVOverlap": 0,
+      "firstDirectedHitMetres": {
+        "min": 8.199249634799344e-08,
+        "median": 0.036137163639068604,
+        "p95": 0.3219463527202606,
+        "max": 0.3488985300064087
+      },
+      "nearestSourceMetresOnMiss": {
+        "min": 0.00014412711607292295,
+        "median": 0.025839490815997124,
+        "p95": 0.03608740177005529,
+        "max": 0.0534391775727272
+      },
+      "nearestSourceOutwardOffsetOnMiss": {
+        "min": -0.03237549960613251,
+        "median": 0.013898471370339394,
+        "p95": 0.02929023718461394,
+        "max": 0.0355142205953598
+      },
+      "nearestSourceRayCosineOnMiss": {
+        "min": -0.999925971031189,
+        "median": 0.23676080256700516,
+        "p95": 0.9968081772327423,
+        "max": 0.9999989867210388
+      }
+    },
+    {
+      "panel": "new-gusset-support",
+      "samples": 6818,
+      "boundedHits": 3606,
+      "directedHitsBeyondMaximum": 2920,
+      "noDirectedIntersection": 292,
+      "actualBlack": 2199,
+      "actualTransparent": 2244,
+      "blackAndPredictedMiss": 2199,
+      "blackDespitePredictedHit": 0,
+      "nonblackDespitePredictedMiss": 1013,
+      "boundedHitOriginalAlbedoBlack": 0,
+      "opposedSourceNormalOnBoundedHit": 375,
+      "frontReceiverHitRearSource": 31,
+      "rearReceiverHitFrontSource": 275,
+      "regionalUVOverlap": 0,
+      "firstDirectedHitMetres": {
+        "min": 1.252947095053969e-05,
+        "median": 0.022623330354690552,
+        "p95": 0.31541943550109863,
+        "max": 0.3488985300064087
+      },
+      "nearestSourceMetresOnMiss": {
+        "min": 0.005424042697995901,
+        "median": 0.026284576393663883,
+        "p95": 0.03354985844343901,
+        "max": 0.03555041924118996
+      },
+      "nearestSourceOutwardOffsetOnMiss": {
+        "min": 0.0010543565731495619,
+        "median": 0.023385572247207165,
+        "p95": 0.03264888823032379,
+        "max": 0.0355142205953598
+      },
+      "nearestSourceRayCosineOnMiss": {
+        "min": -0.999925971031189,
+        "median": -0.387325644493103,
+        "p95": 0.7440256267786026,
+        "max": 0.9540770053863525
+      }
+    },
+    {
+      "panel": "outside-new-gusset",
+      "samples": 26301,
+      "boundedHits": 18495,
+      "directedHitsBeyondMaximum": 7260,
+      "noDirectedIntersection": 546,
+      "actualBlack": 2457,
+      "actualTransparent": 2289,
+      "blackAndPredictedMiss": 2457,
+      "blackDespitePredictedHit": 0,
+      "nonblackDespitePredictedMiss": 5349,
+      "boundedHitOriginalAlbedoBlack": 0,
+      "opposedSourceNormalOnBoundedHit": 2010,
+      "frontReceiverHitRearSource": 421,
+      "rearReceiverHitFrontSource": 1489,
+      "regionalUVOverlap": 0,
+      "firstDirectedHitMetres": {
+        "min": 8.199249634799344e-08,
+        "median": 0.03672881796956062,
+        "p95": 0.32322225272655486,
+        "max": 0.34886065125465393
+      },
+      "nearestSourceMetresOnMiss": {
+        "min": 0.00014412711607292295,
+        "median": 0.02558174356818199,
+        "p95": 0.039028748869895935,
+        "max": 0.0534391775727272
+      },
+      "nearestSourceOutwardOffsetOnMiss": {
+        "min": -0.03237549960613251,
+        "median": 0.00952737033367157,
+        "p95": 0.02501624170690775,
+        "max": 0.030468551442027092
+      },
+      "nearestSourceRayCosineOnMiss": {
+        "min": -0.9905422329902649,
+        "median": 0.5321875810623169,
+        "p95": 0.9979291409254074,
+        "max": 0.9999989867210388
+      }
+    }
+  ],
+  "receiverUV": {
+    "coveredPixels": 33119,
+    "overlapPixels": 0,
+    "maximumMultiplicity": 1,
+    "boundarySamples": 3,
+    "degenerateTriangles": 0,
+    "fullTargetCoveredPixels": 348054,
+    "fullTargetOverlapPixels": 60,
+    "fullTargetDegenerateTriangles": 0
+  },
+  "canonicalTargetSourceRegionalCopiesExact": true,
+  "body75Exact": true,
+  "allInputFilesSHA256Exact": true,
+  "bakeCalls": 0,
+  "renderCalls": 0,
+  "savedNativeCalls": 0,
+  "changedRaySettings": 0,
+  "correction": "No cage/correspondence change authored or admitted. Parent reviews actual measurements first."
+}

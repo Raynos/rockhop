@@ -1431,3 +1431,5 @@ October 8 actual neck endpoint correction saved e68b5c41; independent readback p
 October 8 required construction-round gate11: explicit Metal11/11, exit0/7.182s, exact finish/hash, restart7.19ms. Existing player only; remastered rider art remains unaccepted.
 
 October 8 complete actual-source working outfit rebuilt with conditioned broad neck/selected head, CPU2 exit0/26.777s, seven actual visible meshes and all original PBR retained. Garment fit remains rejected; head-only clothed motion next, no Garage/player admission.
+
+October 8 jeans directed diagnostic exit0/19.363s:4656black covered pixels all predictedmiss, zero regional UVoverlap; many wrong-side hits. Stop ray-reach escalation. One semantic front/rear cage/correspondence correction and pelvis-only actualPBR probe next; no fullbake or material acceptance.

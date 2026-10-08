@@ -1,0 +1,68 @@
+{
+  "accepted": false,
+  "status": "READ_ONLY_DIAGNOSTIC_SOURCE_READY_NO_BLENDER_CALL",
+  "diagnostic": {
+    "path": "assets/blender/rider-rebuild/production-jeans02/correspondence-probe01/diagnose.py",
+    "sha256": "b4e8ec5b6e56eb69cbab54c56bc78fbc6c583fda80bdc4773e6042dec3a0d7be"
+  },
+  "intake": {
+    "path": "assets/blender/rider-rebuild/production-jeans02/correspondence-probe01/diagnostic-intake.json",
+    "sha256": "9398244b460d85378c476a591dff1383637acb9aecf583a95415954d7751a8fd"
+  },
+  "syntaxParsed": true,
+  "verifiedInputPinRows": 23,
+  "forbiddenBakeRenderSaveCallsAbsent": true,
+  "actualProbeNative": {
+    "path": "harness/out/rider-rebuild/production-jeans02/correspondence-probe01/authored01/pelvis-correspondence-probe.blend",
+    "sha256": "4b6ffd7e4fd9ff333cca0535a895ed209307724b76dae6617cb83a7153ff6859"
+  },
+  "actualParentVerdict": {
+    "path": "docs/evidence/rider-rebuild/production-jeans02/correspondence-probe01/actual01/parent-verdict.json",
+    "sha256": "6a5dfc58f9fcafe9700eae36c7f1dd26b98374d6731b2c8391d313032c3a38fe"
+  },
+  "implementationSources": [
+    {
+      "url": "https://github.com/blender/blender/blob/v5.2.1/source/blender/render/intern/bake.cc",
+      "downloadedFileSHA256": "302013df8a07eda85e8c8a28d798264094468a426e1d61a24529801618601b26"
+    },
+    {
+      "url": "https://github.com/blender/blender/blob/v5.2.1/source/blender/editors/object/object_bake_api.cc",
+      "downloadedFileSHA256": "1ead1bd83d6731fe6f1cb4bc627f64afe6ffd4e3dd3d3bbede98fecd662783ae"
+    }
+  ],
+  "stagesExecuted": [],
+  "guard": {
+    "path": "assets/blender/hero-remaster/generation-comparison-2026-10-03/user-agent2/run_bounded96.py",
+    "sha256": "cf8acd15d8b7484480bee74d23892be815d955ffd87115d3da8ed228ffb3d916"
+  },
+  "sourceNote": {
+    "path": "docs/evidence/rider-rebuild/production-jeans02/correspondence-probe01/DIAGNOSTIC-SOURCE.md",
+    "sha256": "6ab3a49ea437904196939c1b443371cfd155bb84d4a150d9b99884cb2bc838b8"
+  },
+  "proposedCommand": [
+    "env",
+    "OMP_NUM_THREADS=2",
+    "OPENBLAS_NUM_THREADS=2",
+    "MKL_NUM_THREADS=2",
+    "VECLIB_MAXIMUM_THREADS=2",
+    "NUMEXPR_NUM_THREADS=2",
+    "python3",
+    "assets/blender/hero-remaster/generation-comparison-2026-10-03/user-agent2/run_bounded96.py",
+    "--out",
+    "docs/evidence/rider-rebuild/production-jeans02/correspondence-probe01/diagnostic-guard01",
+    "--limit-seconds",
+    "180",
+    "--",
+    "/Applications/Blender.app/Contents/MacOS/Blender",
+    "-b",
+    "-t",
+    "2",
+    "--python-exit-code",
+    "1",
+    "--python",
+    "assets/blender/rider-rebuild/production-jeans02/correspondence-probe01/diagnose.py",
+    "--",
+    "assets/blender/rider-rebuild/production-jeans02/correspondence-probe01/diagnostic-intake.json",
+    "harness/out/rider-rebuild/production-jeans02/correspondence-probe01/diagnostic01"
+  ]
+}

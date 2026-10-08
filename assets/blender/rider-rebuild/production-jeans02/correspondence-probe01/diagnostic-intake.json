@@ -1,0 +1,108 @@
+{
+  "schema": "rockhop-jeans-read-only-correspondence-diagnostic-v1",
+  "accepted": false,
+  "inputs": {
+    "actualProbeNative": {
+      "path": "harness/out/rider-rebuild/production-jeans02/correspondence-probe01/authored01/pelvis-correspondence-probe.blend",
+      "sha256": "4b6ffd7e4fd9ff333cca0535a895ed209307724b76dae6617cb83a7153ff6859"
+    },
+    "actualProbeReport": {
+      "path": "harness/out/rider-rebuild/production-jeans02/correspondence-probe01/authored01/report.json",
+      "sha256": "d5b026f77db2ba9c5d4d0f2146c02bfd125a30e0e95b272ad30efc3ef97c8b48"
+    },
+    "parentVerdict": {
+      "path": "docs/evidence/rider-rebuild/production-jeans02/correspondence-probe01/actual01/parent-verdict.json",
+      "sha256": "6a5dfc58f9fcafe9700eae36c7f1dd26b98374d6731b2c8391d313032c3a38fe"
+    },
+    "constructionNative": {
+      "path": "harness/out/rider-rebuild/production-jeans02/authored01/production-jeans.blend",
+      "sha256": "956548765454fe683952801f5ba401ed82f481489a256cf48039c459850e5c95"
+    },
+    "constructionFields": {
+      "path": "harness/out/rider-rebuild/production-jeans02/authored01/production-jeans-fields.npz",
+      "sha256": "28d337f56a7e963f8ae533a72bf060d40b5d18e956c154b61e2dc995c20bd679"
+    },
+    "originalDense": {
+      "path": "assets/blender/hero-remaster/rider/finish-2026-10-05/wardrobe/data/prep02/jeans/cleaned-donor.npz",
+      "sha256": "c38413a36d564d97f106ebde13bb240d4c7075078ce463f30234a97c0f3d2237"
+    },
+    "probeSource": {
+      "path": "assets/blender/rider-rebuild/production-jeans02/correspondence-probe01/probe.py",
+      "sha256": "2b69b1ec2c1e8ac6c4a01fc98217a5e6391f203e983d88542a12448c15d81aa2"
+    },
+    "probeIntake": {
+      "path": "assets/blender/rider-rebuild/production-jeans02/correspondence-probe01/intake.json",
+      "sha256": "17a96e5ee6dac08d5dbead34a3023aca2b75982fce0a75d8801e0a7c15d45b1a"
+    },
+    "actualAlbedo": {
+      "path": "harness/out/rider-rebuild/production-jeans02/correspondence-probe01/authored01/albedo.png",
+      "sha256": "9d2a7a47765f043cc224b7d2b2ce7b4946b7bb7ee447ce79d4f722ab24ef2310"
+    },
+    "actualMetallicRoughness": {
+      "path": "harness/out/rider-rebuild/production-jeans02/correspondence-probe01/authored01/metallicRoughness.png",
+      "sha256": "53eeade19fa78f3cad5b62e24f821a9cb7746a9290abedd49176a086c2c1f0a2"
+    },
+    "actualNormal": {
+      "path": "harness/out/rider-rebuild/production-jeans02/correspondence-probe01/authored01/normal.png",
+      "sha256": "382f11c813ab40c3a7e915ce61b6460c9ed4a6db0024f1b58dabcb6ffd54f799"
+    },
+    "guard": {
+      "path": "assets/blender/hero-remaster/generation-comparison-2026-10-03/user-agent2/run_bounded96.py",
+      "sha256": "cf8acd15d8b7484480bee74d23892be815d955ffd87115d3da8ed228ffb3d916"
+    }
+  },
+  "blenderVersion": [
+    5,
+    2,
+    1
+  ],
+  "resolution": 1024,
+  "rayRule": {
+    "useCage": false,
+    "origin": "receiver point + actual .018m * interpolated geometric vertex normal in receiver local space, then world transform",
+    "direction": "negative geometric interpolated normal, inverse-transpose transformed to world and normalized; flat faces use face normal",
+    "accept": "first directed source intersection in world space has distance strictly less than actual .045m",
+    "oneRayPerCoveredPixel": true,
+    "furtherRayQueries": "Nearest-source point on each miss only; no reverse ray, direction/distance sweep, changed bake or cage"
+  },
+  "panelDefinition": {
+    "front": "normalY < -abs(normalX)",
+    "rear": "normalY > abs(normalX)",
+    "side": "remaining directions",
+    "waistZAtLeast": 1.02,
+    "centreAbsXAtMost": 0.045,
+    "left": "X>=0",
+    "right": "X<0",
+    "newGusset": "barycentric weight on original changed target vertex IDs, via retained regional vertex lineage; support label, not new anatomy inference"
+  },
+  "outputs": [
+    "One compressed NPZ: per-covered-pixel rays, exact measured first hits/status, source UV/original face lineage, actual baked values, exact raw black/alpha atlas masks, regional/full-target UV sample multiplicity, new-gusset support",
+    "One report: regional counts/distances, black-vs-ray confusion counts, cross-panel and normal orientation evidence, canonical/file preservation"
+  ],
+  "implementationSources": [
+    {
+      "url": "https://github.com/blender/blender/blob/v5.2.1/source/blender/render/intern/bake.cc",
+      "downloadedFileSHA256": "302013df8a07eda85e8c8a28d798264094468a426e1d61a24529801618601b26"
+    },
+    {
+      "url": "https://github.com/blender/blender/blob/v5.2.1/source/blender/editors/object/object_bake_api.cc",
+      "downloadedFileSHA256": "1ead1bd83d6731fe6f1cb4bc627f64afe6ffd4e3dd3d3bbede98fecd662783ae"
+    }
+  ],
+  "limitations": [
+    "Original dense need not enclose body. Failed OUTSIDE native is never read. No moving/player/material acceptance.",
+    "Measurements use the saved original evaluated regional source and receiver from the actual failed probe. No source/target geometry or bake setting changes.",
+    "The ray setup and strict acceptance mirror official Blender v5.2.1. Python mathutils BVH and barycentric interior rasterization are separate implementations, not byte-identical Blender zspan/BVH. UV samples use its (-.501,-.502) pixel offset and last-triangle ownership; marked near-edge samples may differ. Actual packed baked PNG black/alpha masks remain exact.",
+    "UV multiplicities measure interior pixel-centre overlap at1024, not a continuous UV area proof. Intentionally unbaked legs/background are excluded from regional ray counts.",
+    "Nearest-source point direction/offset on a miss is evidence about that nearest point only, not proof that every source surface lies behind the ray. No first-intersection is kept separate from beyond45mm.",
+    "Original albedo bilinear-repeat samples are a diagnostic; Cycles texture derivatives/filtering may differ. Hit source UV, original face ID and actual baked values are retained.",
+    "No authored cage is justified until actual measurements show which misses are distance, direction, opening/cut, UV ownership or unmatched new gusset. Parent alone judges the next single correction."
+  ],
+  "runtime": {
+    "parentOnly": true,
+    "cpuThreads": 2,
+    "proposedLimitSeconds": 180,
+    "noRetry": true,
+    "output": "harness/out/rider-rebuild/production-jeans02/correspondence-probe01/diagnostic01"
+  }
+}
