@@ -1,0 +1,18 @@
+00:00.968  blend            | Read blend: "/Users/raynos/projects/games/rockhop/harness/out/rider-rebuild/native-hand-repair01/native02/anatomical-hand-rig.blend"
+02:26:38 | INFO: Data are loaded, start creating Blender stuff
+02:26:38 | INFO: Blender create Mesh node Protected body NEW hood joined garment
+02:26:38 | INFO: Blender create Mesh node textured
+02:26:38 | INFO: glTF import finished in 0.26s
+Traceback (most recent call last):
+  File "/Users/raynos/projects/games/rockhop/assets/blender/rider-rebuild/head-neck-anatomical02/build.py", line 361, in <module>
+    if __name__=='__main__':main()
+                            ~~~~^^
+  File "/Users/raynos/projects/games/rockhop/assets/blender/rider-rebuild/head-neck-anatomical02/build.py", line 212, in main
+    raise RuntimeError('Selected scan has a connected internal shell; source needs deliberate interior cleanup before new exterior construction')
+RuntimeError: Selected scan has a connected internal shell; source needs deliberate interior cleanup before new exterior construction
+
+Error: script failed, file: 'assets/blender/rider-rebuild/head-neck-anatomical02/build.py', exiting.
+Blender 5.2.1 LTS (hash 9e2066aef7ef built 2026-08-25 01:35:57)
+scripts disabled for "/Users/raynos/projects/games/rockhop/harness/out/rider-rebuild/native-hand-repair01/native02/anatomical-hand-rig.blend", skipping 'RIG-RiderMetarig_ui.py'
+
+Blender quit
