@@ -1803,3 +1803,5 @@ Gate33 software02 completed44.501s:8/11 pass; default SwiftShader fails boot/fir
 Motion11 source03 measures reconstructed added-rest matrices and all75 neutral skin operators against unchanged0.1mm physical bound within2m; actual matrices retained. Original source feet have measured~3.4e-5 Gram residual. Source reviewed/parsed; native03 unexecuted, no control/action acceptance.
 
 Gate33 metal03: explicit verified AppleM5Max Metal WebGL2, original11/11 boot/clear/crash/restart checks pass7.266s; bootP50295.394ms/first471.745ms/restartP956.140ms. Exactfinish/hash, unchangedfd8fe7c2. Required third-round check resolved; partial only, no new-rider/device/release qualification.
+
+Anatomical09 transport02 actual8.829s:2,356 newnative rows exact; selected357,243,920Bprefix/rest/maps/75binds exact. Three witnesses≤0.000678mm, decodedtriangle FOURloss≤0.03183mm/edgejump≤0.04694mm; unchanged0.1mm bound. Mechanicaldropout fixed, dressedseated shape stillunaccepted; Garageplaynext.
