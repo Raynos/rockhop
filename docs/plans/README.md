@@ -1921,3 +1921,5 @@ Actual glove03 again completes both sides, then memory-stops71.804s/65GiB BEFORE
 Selected skin production29 source preserves original face/cheek/neck UV charts, materials and packed maps; family bake rejects repacking preserved skin. Parent reviewed sources/pins and reran3UV/mip fixtures. Planned59MiB/10primitives is arithmetic, not measured runtime. No native derivative, art or device pass; boots25author/input unchanged.
 
 Glove04 now saves actual constructed native BEFORE the full protected after-scan, with explicit pending status and expected original fingerprints/rest. Separate reopened qualifier alone permits sleeve intake. Parent reviewed source and reran10behavior+4lifetime fixtures; actual04native/memory/reopen/art remain unmeasured. No guard or geometry relaxation.
+
+Required original-player gate38 actual10/11:readyP50317.13ms>unchanged300ms under25.77load/18cores; exactclear/hash/crash/restart pass. Failure retained, no release verdict. Native/actual-game lean work continues independently; repeated unchanged boot checks are not progress.
