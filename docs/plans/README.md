@@ -1257,3 +1257,5 @@ October 7 actual jeans shape rejected: parent viewed saved-native front/back/pro
 October 7 ask337 handedness answered: actual saved boot geometry is oppositely reflected, triangle winding reversed and skin side-specific; gloves author uses different actual L/R hand targets. This does not qualify an asymmetric shoe last or fit both feet, and complete glove meshes remain unsaved.
 
 October 7 fresh Astra construction advisory02 adopted: parent replay/pins confirm thumb support failure; actual boot and jeans views are rejected. Replace glove ray-stamping and boot forefoot/sole locally, repair jeans authored saddle and inward donor projection, correct hoodie new-face bookkeeping. Builders are redirected; complete outfit and all moving gates remain open.
+
+October 7 required current-player Metal check02: silent boot/clear/crash/restart passes11/11, byte-identical goldenfinish/hash and1tickrestart. Guardexit0 in5.552s. Existing-player baseline only; new clothes and full rider acceptance remain open.
