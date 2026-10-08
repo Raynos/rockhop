@@ -1,0 +1,1 @@
+Current-player silent Metal quick gate28 passed11/11: cold boot, golden track clear, crash and one-tick restart. Actual guard exit0/7.859s; harness6.899s. Exact golden finish8.591666666666667 and hash622bb2554e0f9a26. Restart synced-frameP95 6.545ms. This checks existing player behavior, not selected rider art, private Garage GPU parity or physical devices.
