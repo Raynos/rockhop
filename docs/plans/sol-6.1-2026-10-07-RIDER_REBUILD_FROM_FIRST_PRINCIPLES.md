@@ -1,7 +1,7 @@
 # Rebuild one dressed rider from first principles
 
 Created: 2026-10-07 · writer: Codex / gpt-6.1-sol · asks312/317–322.
-**Status: uncompleted; selected rider and original actions played in actual private Garage/game; both-bike contact proxy improved from real sole geometry; coherent cuff/sleeve and full motion/art review active; accepted milestones0/6.**
+**Status: uncompleted; selected dressed rider and original actions played in private Garage/game; sixth-choice comparison built and uploaded; anatomical seated corrective and local cuff reconstruction active; accepted milestones0/6.**
 Current construction authority: [Astra workflow correction below](#astra-workflow-correction-and-advisory-cadence).
 Pending donor-registration experiments are historical controls, not the next production route.
 Execution owner: rider remodel agent #2, session01a117db-406b-7b70-a14f-d614b1d8f6e5.
@@ -650,6 +650,13 @@ face mask, as specified below.
   identifies all six retained crossing witnesses in the original inner wall.
   Native07 therefore retains the selected exterior and reconstructs only the
   proven inner band, with explicit1mm lining and sewn proximal/distal joins.
+  Native07 stopped at a missing dense surface bearing; actual Blender
+  [wrist-local queries](../evidence/rider-rebuild/astra-cuff-bearing18/bvh01/FINDING.md)
+  prove a float32 precision issue. Native08 corrects the queries, then
+  [fails uniform scale1.542>1.5](../evidence/rider-rebuild/astra-cuff-bearing18/native08-failed/FINDING.md).
+  Do not raise the bound. Reconstruct the actual local cuff aperture and
+  sleeve overlap from selected material; inspect the inherited ease against
+  real skin/lining/cloth layers. Inner sleeve construction has not yet run.
   Original exterior/UV/PBR ancestry remains required. Saved source adjacency
   disproves the coincident-proximal-ring hypothesis; do not alter that join
   without an actual failed construction witness. The right contour is not star-shaped,
@@ -666,12 +673,17 @@ face mask, as specified below.
   measurements](../evidence/rider-rebuild/selected-seated-garage01/seat-contact01/FINDING.md)
   identify a distal medial-thigh witness, not posterior support. The [frozen
   bilateral posterior cores](../evidence/rider-rebuild/selected-posterior-support03/README.md)
-  now replace that minimum as the offline authoring target. Fit pelvisX/Y,
-  tilt and spinal flex against finite saddle area while fixing limbs; preserve
-  the same anatomical core IDs throughout. Stop iterative runtime minimum-gap
-  fitting. Author04 is source preparation until guarded solve and dressed
-  both-bike playback demonstrate actual sitting. Full surface contact remains
-  open. Production LOD, full
+  now replace that minimum as the offline authoring target. The actual
+  [author04 fit failed](../evidence/rider-rebuild/selected-seated-author04/failed01/FINDING.md):
+  about23mm mean hover, roughly2% within the1mm band and new crossings. Stop
+  pelvis-only and runtime minimum-gap fitting. Actual saved-pose
+  [skin decomposition](../evidence/rider-rebuild/selected-seated-author05/diagnostic01/FINDING.md)
+  shows an18.6mm source edge stretched to62.2mm, primarily from changing
+  thigh/pelvis weights. Construct a localized pose-space corrective over
+  posterior/crotch/upper thighs; preserve selected rest shape, UVs/materials
+  and anatomical core IDs. Activate from actual joint flex for generic seated
+  and both-bike motions. Judge the complete dressed moving result and finite
+  body/saddle/self surfaces before export promotion. Production LOD, full
   surfaces, anatomy, deep motion and physical-device gates remain open0/6.
   An outside artist is optional; no external-resource wait blocks this work.
 
@@ -686,8 +698,15 @@ phone-layout old→new→old→new capture02 measures selected59.7renderFPS and
 desktop WebKit proxy, not physical-phone qualification. The selected source
 remains357281284B, full/LOD slots honestly alias the same high-resolution GLB,
 and first selection requires that download. Keep the candidate private until
-played review and an isolated, accessible preview are delivered. No rider
-milestone passes from packaging or comparison performance.
+played review and an isolated, accessible preview are delivered. The
+[Garage-only movie and selected photo](../evidence/rider-rebuild/phone-comparison01/played02/FINDING.md)
+are retained. The isolated preview is READY with scoped share access, but
+remote selected loading stopped at the unchanged global memory limit with
+and without recording. The verifier loading-state bug is corrected; bounded
+network/redirect receipts will identify the separate CORS failure. Uploaded
+files and range responses do not prove actual remote old/new switching.
+Physical-phone performance remains open. No rider milestone passes from
+packaging or comparison performance.
 
 ### Equipped-outfit body masks adopted after independent Astra05 review
 

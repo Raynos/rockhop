@@ -1693,3 +1693,5 @@ October8 actual saved-TRS readback passes0.528s and confirms2.23/2.27x jeans cor
 Native08 actual construction: wrist-local/finite bearings pass the previous numerical miss, then complete left cuff fails scale1.54211448675>1.5; no model/export and inner sleeve reconstruction not reached. Retain docs/evidence/rider-rebuild/astra-cuff-bearing18/native08-failed/ and inspect local aperture/ease before another attempt; all rider gates open.
 
 Remote phone preview verification01 failed at unchanged memory guard46.696s with only original rider ready; no recorder was active. Temporary loading-actor traversal bug corrected; bounded script/model response diagnostics and official toolbar-skip header added. Remote selected transition remains pending; source/art/device gates unchanged.
+
+Active rider plan corrected to actual failures: stop pelvis-only seated fitting after quantified thigh/pelvis skin distortion; build generic pose-space posterior corrective. Corrected cuff query now exposes local aperture/ease failure, not permission for uniform enlargement. Local comparison/movie pass; isolated upload remains remotely unverified. R0–R5open0/6.
