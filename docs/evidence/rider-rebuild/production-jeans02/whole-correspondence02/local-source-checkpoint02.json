@@ -1,0 +1,37 @@
+{
+  "accepted": false,
+  "status": "LOCAL_CONTINUATION_SOURCE_ONLY_READY_FOR_PARENT_CHECKPOINT",
+  "source": {
+    "path": "assets/blender/rider-rebuild/production-jeans02/whole-correspondence02/continue-local02.py",
+    "sha256": "7f76608226fd9119d611f6e6cbda530764823312e9c2556693fe0026ab2f42b2"
+  },
+  "intake": {
+    "path": "assets/blender/rider-rebuild/production-jeans02/whole-correspondence02/local-continuation-intake02.json",
+    "sha256": "588bcfeb20a7acf5c79c125cff38cef159679fe44d710f152eebb6bb27b83322"
+  },
+  "controls": {
+    "path": "assets/blender/rider-rebuild/production-jeans02/whole-correspondence02/local-continuation-controls02.json",
+    "sha256": "6cfb3140d8f1a0496214d121c395f5e9408c255fc8793d557f285c80033aaedf"
+  },
+  "finding": {
+    "path": "docs/evidence/rider-rebuild/production-jeans02/whole-correspondence02/local-correspondence-finding02.json",
+    "sha256": "4a3598233806a244ca12bcdb64cbaa8e99549dc64bd771a30a1ec7a3bf77e195"
+  },
+  "checks": {
+    "author.py": "AST pass; no Blender import/execution",
+    "continue-local02.py": "AST pass; no Blender import/execution",
+    "directPinsVerified": 27,
+    "legitimateRearUnderbodySamples": 621,
+    "localReceiverFaces": 11,
+    "frontOwnSideCorrectionFaces": [
+      19514,
+      19515,
+      19516
+    ],
+    "maximumLocalGateMetres": 0.1,
+    "globalSemanticGateMetres": 0.08,
+    "blenderMaximumRayDistanceMetres": 0
+  },
+  "command": "env OMP_NUM_THREADS=2 OPENBLAS_NUM_THREADS=2 MKL_NUM_THREADS=2 VECLIB_MAXIMUM_THREADS=2 NUMEXPR_NUM_THREADS=2 python3 /Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/generation-comparison-2026-10-03/user-agent2/run_bounded96.py --out /Users/raynos/projects/games/rockhop/docs/evidence/rider-rebuild/production-jeans02/whole-correspondence02/build-guard02 --limit-seconds 1790 -- /Applications/Blender.app/Contents/MacOS/Blender -b -t 2 --python-exit-code 1 --python /Users/raynos/projects/games/rockhop/assets/blender/rider-rebuild/production-jeans02/whole-correspondence02/continue-local02.py -- /Users/raynos/projects/games/rockhop/assets/blender/rider-rebuild/production-jeans02/whole-correspondence02/local-continuation-intake02.json /Users/raynos/projects/games/rockhop/harness/out/rider-rebuild/production-jeans02/whole-correspondence02/authored02",
+  "heavyExecution": false
+}

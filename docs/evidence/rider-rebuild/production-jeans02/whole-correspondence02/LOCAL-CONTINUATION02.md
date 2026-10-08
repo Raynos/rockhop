@@ -1,0 +1,15 @@
+# Saved whole correspondence local continuation
+
+Source only; parent checkpoint and serialCPU2 lease precede execution. The failed authored01 native/report/arrays and original source remain immutable.
+
+Actual measurement finds621 legitimate own-side rear-underbody first hits beyond80mm. Source hits remain atY+.059..+.086,Z.812..+.826, with rear/downward geometric normals and negative normal.dot(ray). These are correct rear cloth reached from rear cageY+.143..+.166. The arbitrary80mm semantic threshold rejects real underbody geometry. Preserve those geometry/rays. A local<=100mm first-hit gate applies only to the frozen11 original receiverfaces and exact sourceface lists, bounded proxy/cage/hit positions and outward source normals. The global80mm gate and Blender explicit-cage max_ray_distance0 remain unchanged.
+
+The right48 misses/12 opposed-side samples occur only on originalfaces19514/19515/19516: both actual proxy and cage cross topositiveX~4mm while their receiving region is right. The continuation reflects only positive-X paired vertices incident to these three faces onto negativeX, bounded to the anterior underbody patch. It excludes every working pelvis boundary vertex, keeps other positions/UV/fields/topology exact, derives correspondence normals honestly, and records every changed nativevertex/incidentface. No whole controls regenerate.
+
+Open actual8fbc saved native, perform that local change, save the new editable native before all-region gate/maps. Then reuse the frozen whole4K material transfer:12isolated bakes, actual packed albedo/MR/derivednormal, whole wearing native/fields/modifier75/material pins, and six matched whole selected-source/wearer views. Context manifest includes actual local proxy/cage aids. Parent merges core through existing assembler into1ad5 and judges moving/engine evidence. Art/fit/motion/player/device acceptance remain open.
+
+Lightweight validation: both ASTs and all27direct pins passed. All621 recorded long first hits satisfy the frozen source-face/receiver-face membership and100mm bound; all60 right-side problem samples belong to exactly the three named anterior faces. No Blender or bake ran in this preparation. Actual patched geometry and full capture still require the one parent job.
+
+```bash
+env OMP_NUM_THREADS=2 OPENBLAS_NUM_THREADS=2 MKL_NUM_THREADS=2 VECLIB_MAXIMUM_THREADS=2 NUMEXPR_NUM_THREADS=2 python3 /Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/generation-comparison-2026-10-03/user-agent2/run_bounded96.py --out /Users/raynos/projects/games/rockhop/docs/evidence/rider-rebuild/production-jeans02/whole-correspondence02/build-guard02 --limit-seconds 1790 -- /Applications/Blender.app/Contents/MacOS/Blender -b -t 2 --python-exit-code 1 --python /Users/raynos/projects/games/rockhop/assets/blender/rider-rebuild/production-jeans02/whole-correspondence02/continue-local02.py -- /Users/raynos/projects/games/rockhop/assets/blender/rider-rebuild/production-jeans02/whole-correspondence02/local-continuation-intake02.json /Users/raynos/projects/games/rockhop/harness/out/rider-rebuild/production-jeans02/whole-correspondence02/authored02
+```

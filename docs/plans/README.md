@@ -1517,3 +1517,5 @@ October8 actual local04 bilateral selected glove native saved CPU2exit0/62.47s, 
 October8 independent Astra05 production correction adopted after parent primary-source verification: exact-topology outfit body-face masks, full reference retained; stop hidden-body enclosure-only campaigns. Continuous selected silhouette/openings/dressed motion remain mandatory. Bilateral glove local04 saved; actual equipped complete Garage result next. Rider0/6.
 
 October8 original selected dense hoodie source-pose transport frozen: conventional7bone editable authoring aid preserves full topology/UV/original4KPBR; final wearer75 untouched. Root source and six pins verified; actual fit/rig/motion remain unaccepted.
+
+October8 selected-denim whole transfer local continuation frozen from saved8fbc: preserve621 correct rear-underbody first hits under explicit local source-face/position/normal gate, repair three right crotch correspondence faces, retain80mm elsewhere and unchanged original source/wearer/shared75. Parent full source review; ASTs/27pins pass. No job yet; whole4K appearance and complete Garage/dressed motion/engine review remain open.
