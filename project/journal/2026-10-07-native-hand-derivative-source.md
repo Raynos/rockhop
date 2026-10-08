@@ -33,3 +33,8 @@ Limits: Native binding, saved-native proof, glove fitting and played anatomy rem
 Finding: Native02 successfully builds a source-preserving 75-joint hand derivative with the exact measured rest authority. Only 1446 hand-domain rows change; 9136 outside FULL/FOUR and native float32 coefficient rows remain exact. The saved master and diagnostic GLB exist in ignored harness output.
 Validation: Actual guard exits zero in 3.764 seconds; parent rehashes all source/master/GLB inputs, independently compares all 75 rest records and all outside-domain rows. Zero-pose residual is 0.255 micrometres.
 Limits: Independent saved-native/export/moving proof remains pending. Maximum removed FULL mass is 0.25072, a real deformation concern requiring moving comparison; no glove, art or player acceptance.
+
+
+Finding: Independent saved-native and decoded-export verification measures the new hand master successfully. All 75 actual rest records and outside fields stay exact; thirty continuous phalanx certificates and twenty small curl/spread/opposition skin signs are positive. Thirty moving poses and individual-phalanx field receipts expose actual deformation rather than bone presence alone.
+Validation: Separate guard exit zero in 6.472 seconds; parent verifies proof/control/native/GLB pins and counts. Export position error zero, UV error 2.98e-8, inverse-bind error 2.18e-7; native FOUR/evaluator motion differs by at most 0.255 micrometres.
+Limits: FULL/FOUR moving difference reaches 1.312 mm. Each pinky proximal joint owns only one isolated-branch vertex above .05; moving anatomy/field review remains required. Declared ranges, genuine glove fit, new contacts, dressed engine art and phone acceptance remain unqualified.

@@ -1,0 +1,76 @@
+{
+  "accepted": false,
+  "lock": "/Users/raynos/projects/localai/.model.lock",
+  "method": "lockf -k",
+  "command": [
+    "/Applications/Blender.app/Contents/MacOS/Blender",
+    "--background",
+    "--threads",
+    "2",
+    "--python-exit-code",
+    "1",
+    "--python",
+    "assets/blender/rider-rebuild/native-hand-repair01/verify-native.py",
+    "--",
+    "harness/out/rider-rebuild/native-hand-repair01/native02"
+  ],
+  "controllerPID": 20996,
+  "pollSeconds": 1,
+  "startAnonymousBelowGiB": 55,
+  "stopAnonymousGiB": 65,
+  "stopAnonymousPlusWiredGiB": 96,
+  "limitSeconds": 180.0,
+  "guardSHA256": "cf8acd15d8b7484480bee74d23892be815d955ffd87115d3da8ed228ffb3d916",
+  "status": "worker returned; review pending",
+  "samples": [
+    {
+      "seconds": 0,
+      "anonymousGiB": 43.9,
+      "wiredGiB": 8.9,
+      "freeGiB": 16.8
+    },
+    {
+      "seconds": 0.072,
+      "anonymousGiB": 44.0,
+      "wiredGiB": 8.9,
+      "freeGiB": 16.7
+    },
+    {
+      "seconds": 1.142,
+      "anonymousGiB": 44.3,
+      "wiredGiB": 8.8,
+      "freeGiB": 16.5
+    },
+    {
+      "seconds": 2.219,
+      "anonymousGiB": 44.2,
+      "wiredGiB": 8.8,
+      "freeGiB": 16.6
+    },
+    {
+      "seconds": 3.309,
+      "anonymousGiB": 44.8,
+      "wiredGiB": 8.7,
+      "freeGiB": 16.0
+    },
+    {
+      "seconds": 4.401,
+      "anonymousGiB": 45.2,
+      "wiredGiB": 9.0,
+      "freeGiB": 15.3
+    },
+    {
+      "seconds": 5.468,
+      "anonymousGiB": 45.8,
+      "wiredGiB": 8.8,
+      "freeGiB": 15.0
+    }
+  ],
+  "physicalMemoryBytes": 137438953472,
+  "requiredPhysicalMemoryBytes": 137438953472,
+  "scope": "Future explicitly invoked owned Rockhop job only",
+  "pressureOrSwapLimits": "No separate pressure/swap gate exists in the pinned original guard; none altered",
+  "ownedChildPID": 21003,
+  "exitCode": 0,
+  "elapsedSeconds": 6.472
+}
