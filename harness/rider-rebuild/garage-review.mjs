@@ -113,6 +113,8 @@ try {
         clipTime: rider.clip ? ((rider.stageTime % rider.clip.duration) + rider.clip.duration) % rider.clip.duration : null,
         correctiveTargets: rider.binding.meshes.filter(({ mesh }) => mesh.morphTargetDictionary?.SelectedSeatedCorrective06 !== undefined)
           .map(({ role, mesh }) => ({ role, name: mesh.name, weight: mesh.morphTargetInfluences[mesh.morphTargetDictionary.SelectedSeatedCorrective06] })),
+        volumeTargets: rider.binding.meshes.filter(({ mesh }) => mesh.morphTargetDictionary?.A09_SeatedVolume !== undefined)
+          .map(({ role, mesh }) => ({ role, name: mesh.name, weight: mesh.morphTargetInfluences[mesh.morphTargetDictionary.A09_SeatedVolume] })),
         runtimeCorrectiveInstalled: typeof rider.applyPoseCorrective === 'function',
         actualMorphTargetCounts: rider.binding.meshes.map(({ role, mesh }) => ({ role,
           positions: mesh.geometry.morphAttributes.position?.length ?? 0,
@@ -141,6 +143,24 @@ try {
           assert.equal(diagnostic.debug.correctiveWeight, undefined);
           assert.equal(diagnostic.correctiveTargets.length, 0);
           for (const target of diagnostic.actualMorphTargetCounts) assert.equal(target.positions + target.normals, 0, 'Weight-only source has no morph targets');
+        } else if (development.receipt.diagnosticKind === 'native-posed-volume') {
+          assert.equal(diagnostic.runtimeCorrectiveInstalled, false, 'Native volume has no pose corrective helper');
+          assert.equal(diagnostic.debug.correctiveWeight, undefined);
+          assert.equal(diagnostic.correctiveTargets.length, 0, 'Failed corrective is absent');
+          assert.equal(diagnostic.volumeTargets.length, 5, 'Jeans plus four Body primitives carry the native shape');
+          const t = diagnostic.clipTime;
+          const expectedWeight = t < 1 || t >= 5 ? 0 : t < 2 ? t - 1 : t <= 4 ? 1 : 5 - t;
+          for (const target of diagnostic.volumeTargets) {
+            assert(Number.isFinite(target.weight));
+            assert(Math.abs(target.weight - expectedWeight) < 1e-6, 'Actual native shape follows the declared LINEAR clip');
+          }
+          const names = new Set(diagnostic.volumeTargets.map(target => target.name));
+          for (const target of diagnostic.actualMorphTargetCounts) {
+            const volume = diagnostic.volumeTargets.some(value => value.role === target.role);
+            assert.equal(target.positions, volume ? 1 : 0, 'Only declared native volume primitives have POSITION morphs');
+            assert.equal(target.normals, volume ? 1 : 0, 'Only declared native volume primitives have NORMAL morphs');
+          }
+          assert.equal(names.size, 5);
         } else {
           assert.equal(diagnostic.correctiveTargets.length, 5, 'Actual Jeans plus four Body corrective primitives');
           assert(Number.isFinite(diagnostic.debug.correctiveWeight), 'Actual runtime corrective weight is finite');

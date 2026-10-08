@@ -35,12 +35,23 @@ export function observePrivateReloads(hot, events) {
   };
 }
 
-/** Exactly two declared unaccepted source diagnostics; neither enters comparison. */
+/** Explicit unaccepted source diagnostics; none enters comparison. */
 export function sourceDiagnosticKind(metadata, clip, allowFailedDiagnostic) {
   assert(allowFailedDiagnostic, 'Unaccepted source requires --allow-failed-diagnostic');
   assert.equal(metadata.accepted, false);
   assert.equal(metadata.previewClip, clip); assert.equal(metadata.diagnosticMotion?.previewClip, clip);
   assert.equal(metadata.diagnosticMotion?.accepted, false);
+  if (clip === 'Anatomical09VolumeRestKey') {
+    assert.equal(metadata.qualificationState, 'UNACCEPTED_POSED_VOLUME');
+    assert.equal(metadata.diagnosticMotion.status, 'UNACCEPTED_POSED_VOLUME');
+    assert.equal(metadata.diagnosticMotion.kind, 'native-posed-volume');
+    assert.equal(metadata.weightDerivative?.kind, 'native-regional-weight-only');
+    assert.equal(metadata.shapeDerivative?.kind, 'native-relative-shape-key');
+    assert.equal(metadata.shapeDerivative.accepted, false);
+    assert.equal(metadata.shapeDerivative.name, 'A09_SeatedVolume');
+    assert.equal(metadata.corrective, undefined, 'Native volume cannot reuse the failed corrective');
+    return 'native-posed-volume';
+  }
   if (clip === 'Anatomical09WeightRestKey') {
     assert.equal(metadata.qualificationState, 'UNACCEPTED_WEIGHT_INTERVENTION');
     assert.equal(metadata.diagnosticMotion.status, 'UNACCEPTED_WEIGHT_INTERVENTION');
@@ -62,11 +73,18 @@ export async function createPrivateDevReview({ source, contractPath, allowFailed
   const contractBytes = fs.readFileSync(contractPath), metadata = JSON.parse(contractBytes);
   const failed = typeof metadata.qualificationState === 'string' && metadata.qualificationState.startsWith('FAILED');
   const diagnosticKind = sourceDiagnosticKind(metadata, clip, allowFailedDiagnostic);
-  if (diagnosticKind === 'native-weight-only') {
+  if (['native-weight-only', 'native-posed-volume'].includes(diagnosticKind)) {
     for (const name of ['nativeReceipt', 'authoredRows']) {
       const pin = metadata.weightDerivative.sourcePins?.[name];
       assert(pin && typeof pin.path === 'string' && /^[a-f0-9]{64}$/.test(pin.sha256), `Declare weight source ${name}`);
       assert.equal(await hashFile(path.resolve(root, pin.path)), pin.sha256, `Weight source changed: ${name}`);
+    }
+  }
+  if (diagnosticKind === 'native-posed-volume') {
+    for (const name of ['native', 'nativeReceipt', 'shapeKey', 'posedSurfaces', 'weightRider', 'weightContract', 'weightReceipt']) {
+      const pin = metadata.shapeDerivative.sourcePins?.[name];
+      assert(pin && typeof pin.path === 'string' && /^[a-f0-9]{64}$/.test(pin.sha256), `Declare volume source ${name}`);
+      assert.equal(await hashFile(path.resolve(root, pin.path)), pin.sha256, `Volume source changed: ${name}`);
     }
   }
   const sourceStat = fs.statSync(source), sourceSHA256 = await hashFile(source);
@@ -176,7 +194,7 @@ export async function createPrivateDevReview({ source, contractPath, allowFailed
     source: { path: source, bytes: sourceStat.size, sha256: sourceSHA256, url: selectedURL },
     contract: { path: contractPath, sha256: sha(contractBytes) }, runtimeMetadataSHA256: sha(JSON.stringify(metadata)),
     runtime: { qualificationState: metadata.qualificationState, previewClip: metadata.previewClip,
-      driver: metadata.driver, corrective: metadata.corrective, weightDerivative: metadata.weightDerivative, selectedRiderSource: metadata.selectedRiderSource },
+      driver: metadata.driver, corrective: metadata.corrective, weightDerivative: metadata.weightDerivative, shapeDerivative: metadata.shapeDerivative, selectedRiderSource: metadata.selectedRiderSource },
     catalogSHA256: sha(catalogBytes), placement, pins, optimizeDepsInclude: server.config.optimizeDeps.include, serverEvents,
     performanceMeaning: 'Actual rendered-frame measurements from a Vite development server; not a production build or production performance qualification. Production bundle gates remain open.' } };
 }

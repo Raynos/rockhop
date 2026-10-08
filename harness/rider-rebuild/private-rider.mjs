@@ -15,6 +15,31 @@ const SIDES = ['left', 'right'];
 const suffix = side => side === 'left' ? 'Left' : 'Right';
 const sanitize = name => THREE.PropertyBinding.sanitizeNodeName(name);
 
+/** Native shape tracks share the actual loaded mesh's influence array. */
+export function preparePrivateClipTrack(track, binding, metadata) {
+  const parsed = THREE.PropertyBinding.parseTrackName(track.name), node = binding.exact(parsed.nodeName);
+  const property = parsed.propertyName;
+  if (property === 'morphTargetInfluences') {
+    fail(metadata.shapeDerivative?.kind === 'native-relative-shape-key'
+      && metadata.shapeDerivative.name === 'A09_SeatedVolume'
+      && metadata.shapeDerivative.accepted === false, 'Native volume declaration required');
+    fail(parsed.propertyIndex === undefined && node.isSkinnedMesh
+      && node.morphTargetDictionary?.A09_SeatedVolume === 0
+      && node.morphTargetInfluences?.length === 1
+      && track.getValueSize() === 1, `Invalid native volume track ${track.name}`);
+    return { node, property, interpolant: track.createInterpolant(), original: [...node[property]], array: true };
+  }
+  fail(['position', 'quaternion', 'scale'].includes(property), `Invalid clip property ${track.name}`);
+  return { node, property, interpolant: track.createInterpolant(), original: node[property].clone(), array: false };
+}
+
+export function applyPrivateClipTrack(track, values) {
+  if (track.array) {
+    fail(values.length === track.node[track.property].length && [...values].every(Number.isFinite), 'Finite native shape sample required');
+    for (let i = 0; i < values.length; i++) track.node[track.property][i] = values[i];
+  } else track.node[track.property].fromArray(values);
+}
+
 function loadedSpecification(metadata, scene) {
   const spec = structuredClone(metadata.specification ?? metadata.spec);
   fail(spec, 'Author specification required');
@@ -120,11 +145,7 @@ export function createPrivateRiderClass(metadata) {
         const clip = gltf.animations.find(item => item.name === selectedClip);
         fail(clip, `Clip ${selectedClip} required`);
         this.clip = clip;
-        this.clipTracks = clip.tracks.map(track => {
-          const parsed = THREE.PropertyBinding.parseTrackName(track.name), node = this.binding.exact(parsed.nodeName);
-          fail(['position', 'quaternion', 'scale'].includes(parsed.propertyName), `Invalid clip property ${track.name}`);
-          return { node, property: parsed.propertyName, interpolant: track.createInterpolant(), original: node[parsed.propertyName].clone() };
-        });
+        this.clipTracks = clip.tracks.map(track => preparePrivateClipTrack(track, this.binding, metadata));
       }
     }
 
@@ -372,11 +393,14 @@ export function createPrivateRiderClass(metadata) {
         resetHumanoidPose(this.binding); this.poseRiding(frame); this.beginRelease(frame);
       }
       resetHumanoidPose(this.binding); this.debug.fullResetCount++;
-      for (const track of this.clipTracks ?? []) if (!track.node.isBone) track.node[track.property].copy(track.original);
+      for (const track of this.clipTracks ?? []) if (!track.node.isBone) {
+        if (track.array) applyPrivateClipTrack(track, track.original);
+        else track.node[track.property].copy(track.original);
+      }
       if (frame.ragdoll?.length) this.poseReleased(frame);
       else if (this.stage && this.clip) {
         const time = ((this.stageTime % this.clip.duration) + this.clip.duration) % this.clip.duration;
-        for (const track of this.clipTracks) track.node[track.property].fromArray(track.interpolant.evaluate(time));
+        for (const track of this.clipTracks) applyPrivateClipTrack(track, track.interpolant.evaluate(time));
         this.debug.stageClip = this.clip.name; this.debug.physicalPose = false;
         this.debug.handOnGrip.fill(false); this.debug.footOnPeg.fill(false);
       }

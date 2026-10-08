@@ -78,7 +78,7 @@ test('actual native75 saved author key reaches runtime morph through appended TR
   });
   // Evaluate the transformed actual class; dependencies outside update are not
   // exercised. Constructor/calibration ordering is checked separately above.
-  const body = transformed(metadata).replace(/^import .*;\n/gm, '').replace('export function createPrivateRiderClass', 'function createPrivateRiderClass');
+  const body = transformed(metadata).replace(/^import .*;\n/gm, '').replace(/^export function /gm, 'function ');
   const create = Function('THREE', 'resetHumanoidPose', 'prepareSeatedCorrective', body + '\nreturn createPrivateRiderClass;')(THREE, resetHumanoidPose, prepareSeatedCorrective);
   const rider = Object.create(create(metadata).prototype);
   Object.assign(rider, { bike: {}, release: null, stage: true, scene, roles: metadata.specification.roles,

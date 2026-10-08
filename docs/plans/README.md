@@ -1825,3 +1825,5 @@ Motion11 actualnative04 fixespoleinversion: all75neutraloperators within0.059482
 Sculpt03 source checkpoint: one editable shared Body/Jeans posed cage, fresh inverse from authored02 FOUR, exact original Basis/maps/fields/75rest, explicit LINEAR shape keys. Actual sculpt, complete contacts/crossings and dressed moving review remain pending; rejected author04 key stays a construction witness.
 
 Gate34 actualMetal partialboot/clear/crash/restart PASS11/11, unchangedhardwarelimits and exact8.591666666666667finish/hash622bb2554e0f9a26. Firstinvocation refusedheadroom/nochild; retry0/10.773s. Existingplayeronly, not newrider/device/fullrelease. Nextsculptconstructionmayproceed.
+
+PrivateGarage source now accepts only the explicitlypinned UNACCEPTED_POSED_VOLUME derivative: originalweightpins plus sevenfreshshapepins, actualLINEAR mesh-array tracks and fiveBody/Jeans targetchecks; failedcorrectivehelper staysabsent. FourCPUchecksPASS; no actualsculpt/film/artpassyet.
