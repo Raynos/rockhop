@@ -1,0 +1,1 @@
+Silent current-player gate24 passes11/11: exact8.591666666666667s clear/hash622bb2554e0f9a26, crash and one-tick restart; restart frameP95 6.010ms. Actual guard exit0/5.956s. Existing-player checks only, not selected-rider art or physical-device qualification.
