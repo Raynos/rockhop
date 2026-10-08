@@ -3,6 +3,64 @@ import { fileURLToPath } from 'node:url';
 import { gzipSync } from 'node:zlib';
 
 const runtime = fileURLToPath(new URL('./private-rider.mjs', import.meta.url));
+export const comparisonRider = {
+  id: 'street-remastered', label: 'Mustard · Remastered',
+  full: 'models/rider-street-remastered.glb', lod: 'models/rider-street-remastered-lod.glb',
+};
+export const comparisonModelMapping = source => Object.fromEntries([comparisonRider.full, comparisonRider.lod].map(slot => [slot, source]));
+const replaceOnce = (code, before, after) => {
+  if (code.split(before).length !== 2) throw new Error(`Private comparison source changed: ${before}`);
+  return code.replace(before, after);
+};
+export function comparisonSnapshotSource(code) {
+  code = replaceOnce(code,
+    '  if (!fs.existsSync(path.join(sourceRoot, logical))) throw new Error(`unknown logical model ${logical}`);',
+    `  if (logical === ${JSON.stringify(comparisonRider.lod)}) fs.linkSync(path.join(sourceRoot, ${JSON.stringify(comparisonRider.full)}), path.join(sourceRoot, logical));
+  else fs.copyFileSync(path.resolve(mapping[logical]), path.join(sourceRoot, logical));`);
+  return replaceOnce(code, 'const assets = readModelCatalog(sourceRoot);',
+    `const assets = readModelCatalog(sourceRoot);
+const selectedFull = assets.find(a => a.logical === ${JSON.stringify(comparisonRider.full)})!;
+const selectedLod = assets.find(a => a.logical === ${JSON.stringify(comparisonRider.lod)})!;
+if (selectedFull.sha256 !== selectedLod.sha256) throw new Error('Selected review full/LOD alias differs');
+selectedLod.url = selectedFull.url;`);
+}
+
+function comparisonSource(code, id) {
+  const { id: outfit, full, label } = comparisonRider;
+  if (id.endsWith('/src/core/riderPresets.ts')) {
+    code = replaceOnce(code, "export type RiderOutfit = ", `export type RiderOutfit = '${outfit}' | `);
+    code = replaceOnce(code, '];\nexport const AVAILABLE_RIDER_PRESETS',
+      `  { id: '${outfit}', available: true, family: 'street', label: '${label}', detail: 'Selected high-resolution rider · private review', reference: '06' },\n];\nexport const AVAILABLE_RIDER_PRESETS`);
+    code = replaceOnce(code, "  if (value === 'street-openface')", `  if (value === '${outfit}') return 'street';\n  if (value === 'street-openface')`);
+    return replaceOnce(code, "  if (value === 'street')", `  if (value === '${outfit}') return '${outfit}';\n  if (value === 'street')`);
+  }
+  if (id.endsWith('/src/render/hero/urls.ts')) {
+    code = replaceOnce(code, '  rider: {', `  rider: {\n    '${outfit}': '${full}',`);
+    code = replaceOnce(code, 'export const HERO_FILES_BY_OUTFIT_CLASS = {',
+      `export const HERO_FILES_BY_OUTFIT_CLASS = {\n  '${outfit}': { rookie: heroFiles('${outfit}', 'rookie'), pro: heroFiles('${outfit}', 'pro') },`);
+    return replaceOnce(code, 'export const HERO_FILES_BY_OUTFIT = {',
+      `export const HERO_FILES_BY_OUTFIT = {\n  '${outfit}': [...HERO_FILES_BY_OUTFIT_CLASS['${outfit}'].rookie, ...HERO_FILES_BY_OUTFIT_CLASS['${outfit}'].pro],`);
+  }
+  if (id.endsWith('/src/ui/garage.ts')) return replaceOnce(code, 'export const OUTFIT_SWATCH: Record<RiderOutfit, string> = {',
+    `export const OUTFIT_SWATCH: Record<RiderOutfit, string> = {\n  '${outfit}': '#d6a021',`);
+  if (id.endsWith('/src/render/index.ts') || id.endsWith('/src/boot/asset-totals.ts')) {
+    const marker = 'Object.values(HERO_FILES_BY_OUTFIT_CLASS).flatMap';
+    code = replaceOnce(code, marker, `Object.entries(HERO_FILES_BY_OUTFIT_CLASS).filter(([outfit]) => outfit !== '${outfit}').map(([, value]) => value).flatMap`);
+    if (id.endsWith('/src/render/index.ts')) {
+      code = replaceOnce(code, '    const files = HERO_FILE_SET.filter',
+        `    const inventory = this.riderOutfit === '${outfit}' ? [...HERO_FILE_SET, ...heroPair(this.riderOutfit, this.bikeClass, 'full'), ...heroPair(this.riderOutfit, this.bikeClass, 'lod')] : HERO_FILE_SET;\n    const files = inventory.filter`);
+      // The review source is fetched on choice, outside the unchanged original
+      // boot-byte bucket, including when the private preference was persisted.
+      code = replaceOnce(code, 'loadGltf(f, false, bytes)', `loadGltf(f, false, f.includes('rider-${outfit}') ? undefined : bytes)`);
+      code = replaceOnce(code, "    return (this.heroDocUrl.get(doc!) ?? '').endsWith('-lod.glb');",
+        "    return !doc?.scene.userData.privateSelectedRider && (this.heroDocUrl.get(doc!) ?? '').endsWith('-lod.glb');");
+    }
+    return code;
+  }
+  if (id.endsWith('/src/boot/offline-pack.ts')) return replaceOnce(code, '    if (heroes.has(logical)',
+    `    if (logical === '${full}' || logical === '${comparisonRider.lod}') continue;\n    if (heroes.has(logical)`);
+  return null;
+}
 
 /** Only explicitly declared slots containing this same source may share a document. */
 export function selectedRiderAliases(metadata) {
@@ -24,7 +82,12 @@ export function selectedRiderAliases(metadata) {
 export function privateEnginePlugin(metadata) {
   const touched = new Set();
   const aliases = selectedRiderAliases(metadata);
+  const comparison = metadata.comparison === true;
+  if (comparison && (Object.keys(aliases).length !== 2 || ![comparisonRider.full, comparisonRider.lod].every(slot => aliases[slot] === comparisonRider.full))) {
+    throw new Error('Private comparison requires only the new full/LOD selected slots');
+  }
   const preserveImages = metadata.selectedRiderSource?.texturePolicy === 'preserve-authored-images';
+  if (comparison && !preserveImages) throw new Error('Private comparison requires selected authored images');
   if (metadata.selectedRiderSource?.texturePolicy && !preserveImages) throw new Error('Private rider: unknown texture policy');
   if (preserveImages && !Object.keys(aliases).length) throw new Error('Private rider: authored images require exact selected source aliases');
   return {
@@ -36,12 +99,47 @@ export function privateEnginePlugin(metadata) {
       const loads = JSON.parse(String(manifest.source)), row = loads.items.find(item => item.path === './model-catalog.json');
       if (!row) throw new Error('Private rider: missing catalog load receipt');
       row.bytes = Buffer.byteLength(catalog.source); row.gz = gzipSync(catalog.source).length;
+      if (comparison) {
+        // The reused hero recipe emits candidate assets after the normal load
+        // manifest hook. Retain exact selected bytes in this private manifest.
+        const models = JSON.parse(String(catalog.source)).models;
+        const full = models.find(model => model.logical === comparisonRider.full);
+        const lod = models.find(model => model.logical === comparisonRider.lod);
+        if (!full || !lod || full.url !== lod.url || full.sha256 !== metadata.sourceSHA256 || lod.sha256 !== full.sha256 || lod.bytes !== full.bytes) {
+          throw new Error('Private comparison model manifest differs from selected alias');
+        }
+        const asset = bundle[full.url];
+        if (asset?.type !== 'asset' || Buffer.byteLength(asset.source) !== full.bytes) throw new Error('Private comparison emitted model missing');
+        if (!loads.items.some(item => item.path === './' + full.url)) loads.items.push({
+          path: './' + full.url, bytes: full.bytes, gz: full.bytes, phase: 'models', label: comparisonRider.label, sha256: full.sha256,
+        });
+      }
       manifest.source = JSON.stringify(loads);
     } },
     transform(code, id) {
       const normalized = id.split('?')[0].replaceAll(path.sep, '/');
+      if (comparison) {
+        const changed = comparisonSource(code, normalized);
+        if (changed !== null) { touched.add(normalized.slice(normalized.lastIndexOf('/src/') + 5)); return { code: changed, map: null }; }
+      }
       if (normalized.endsWith('/src/render/hero/gltfRider.ts')) {
         touched.add('rider');
+        if (comparison) {
+          code = replaceOnce(code, 'export class GltfRider {', 'class OriginalGltfRider {');
+          return { code: `import { privateSelectedRiderClass } from './gltf';\n` + code + `
+export class GltfRider extends OriginalGltfRider {
+  constructor(gltf, lib) {
+    if (gltf.scene.userData.privateSelectedRider) {
+      if (!privateSelectedRiderClass) throw new Error('Selected rider driver unavailable');
+      return new privateSelectedRiderClass(gltf, lib);
+    }
+    super(gltf, lib);
+  }
+  static [Symbol.hasInstance](instance) {
+    return instance instanceof OriginalGltfRider || !!privateSelectedRiderClass && instance instanceof privateSelectedRiderClass;
+  }
+}\n`, map: null };
+        }
         return { code: `import * as THREE from 'three';\nimport { createPrivateRiderClass } from ${JSON.stringify(runtime)};\nimport { privateRiderMetadata } from './gltf';\nexport const GltfRider = createPrivateRiderClass(privateRiderMetadata);\nexport const boneName = name => THREE.PropertyBinding.sanitizeNodeName(name);\n`, map: null };
       }
       if (normalized.endsWith('/src/render/hero/gltf.ts')) {
@@ -63,7 +161,10 @@ export function privateEnginePlugin(metadata) {
           // Review the selected source at its authored resolution. Other models
           // retain the ordinary game budget; no maps are synthesized or upscaled.
           code = code.replace(shrinkMarker,
-            `          if (url === modelAssetUrl(${JSON.stringify(metadata.selectedRiderSource.canonicalLogical)})) rememberPrivateAuthoredImages(g.scene);
+            `          if (url === modelAssetUrl(${JSON.stringify(metadata.selectedRiderSource.canonicalLogical)})) {
+            ${comparison ? 'g.scene.userData.privateSelectedRider = true;' : ''}
+            rememberPrivateAuthoredImages(g.scene);
+          }
           shrinkTextures(g.scene);`);
           const textureMarker = '        if (!t || done.has(t)) continue;';
           if (code.split(textureMarker).length !== 2) throw new Error('Private rider build: resident texture budget changed');
@@ -84,20 +185,30 @@ function rememberPrivateAuthoredImages(root: THREE.Object3D) {
           touched.add('authored-images');
         }
         touched.add('metadata');
-        return { code: `export const privateRiderMetadata = {}; let privateRiderRequest;
+        const ready = comparison
+          ? `export let privateSelectedRiderClass;
+          function loadPrivateSelectedRider() {
+            return loadPrivateRiderMetadata().then(() => import(${JSON.stringify(runtime)})).then(module => {
+              return privateSelectedRiderClass ??= module.createPrivateRiderClass(privateRiderMetadata);
+            });
+          }\n` : '';
+        return { code: ready + `export const privateRiderMetadata = {}; let privateRiderRequest;
           function loadPrivateRiderMetadata() {
             return privateRiderRequest ??= fetch(new URL('model-catalog.json', document.baseURI))
               .then(response => { if (!response.ok) throw new Error('Private rider metadata HTTP ' + response.status); return response.json(); })
               .then(value => { if (!value.privateRiderMetadata) throw new Error('Private rider metadata missing'); return Object.assign(privateRiderMetadata, value.privateRiderMetadata); })
               .catch(error => { privateRiderRequest = null; throw error; });
           }\n` +
-          code.replace(marker, '              void loadPrivateRiderMetadata().then(() => resolve(g), () => resolve(null));'), map: null };
+          code.replace(marker, comparison
+            ? '              if (g.scene.userData.privateSelectedRider) void loadPrivateSelectedRider().then(() => resolve(g), () => resolve(null)); else resolve(g);'
+            : '              void loadPrivateRiderMetadata().then(() => resolve(g), () => resolve(null));'), map: null };
       }
       if (normalized.endsWith('/src/render/hero/lod.ts')) {
         const marker = '  mergeSkinnedByMaterial(root);';
         if (code.split(marker).length !== 2) throw new Error('Private rider build: prepareHero material-merge call changed');
         touched.add('parts');
-        return { code: code.replace(marker, '  // Private rider review preserves explicitly declared object/primitive roles.'), map: null };
+        return { code: code.replace(marker, comparison ? '  if (!root.userData.privateSelectedRider) mergeSkinnedByMaterial(root);'
+          : '  // Private rider review preserves explicitly declared object/primitive roles.'), map: null };
       }
       return null;
     },
@@ -105,6 +216,9 @@ function rememberPrivateAuthoredImages(root: THREE.Object3D) {
       if (!error && (!touched.has('rider') || !touched.has('parts') || !touched.has('metadata'))) throw new Error('Private rider build did not consume all scoped substitutions');
       if (!error && Object.keys(aliases).length && !touched.has('source-aliases')) throw new Error('Private rider build did not consume selected source aliases');
       if (!error && preserveImages && !touched.has('authored-images')) throw new Error('Private rider build did not preserve authored images');
+      if (!error && comparison) for (const source of ['core/riderPresets.ts', 'render/hero/urls.ts', 'ui/garage.ts', 'render/index.ts', 'boot/asset-totals.ts', 'boot/offline-pack.ts']) {
+        if (!touched.has(source)) throw new Error(`Private comparison did not consume ${source}`);
+      }
     },
   };
 }
