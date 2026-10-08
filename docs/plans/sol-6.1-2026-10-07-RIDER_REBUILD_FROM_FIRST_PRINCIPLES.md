@@ -499,3 +499,31 @@ Parent independently replayed the [fresh Astra03 diagnosis](../evidence/rider-re
 - Timebox source-rest glove authoring and first original-PBR inspection to45minutes plus at most one15minute correction of an observed local defect. If an enclosing recognizable selected sculpt cannot be authored, prepare the exact selected source/maps/native75/failed-view/animation-envelope package for a character artist; no renamed registration campaign or another generation detour.
 
 Keep complete saved hoodie fd7761d7, locally reconstructed jeans95654876 and direct selected boot sculpt1ba3ac9e on their existing path. Correct only observed local defects, then actual selected-material transfer, complete editable outfit, and played generic/grip/bike/native/private-engine review. No new art or motion accepted; allR0–R5open.
+
+### Bounded construction outcomes: mechanisms stopped
+
+Actual review of the saved selected sources ends the current automated fitting
+block. The next production step for these failed regions is expert tailoring
+of the exact selected sources and saved native work. No renamed solver, weaker
+guard, fresh generation campaign or blind bake follows these failures.
+
+| Family | Actual finding | Next admissible work |
+| --- | --- | --- |
+| Boots | Original selected bilateral local sculpt still exposes inner-foot/ankle skin; camera labels confused R lateral with L medial. Opposite handedness/winding is correct, enclosure is not. | [Verified exact artist package](../evidence/rider-rebuild/production-boots03/artist-handoff01/FINDING.md); expert cavity/upper tailoring and both medial/lateral played review. |
+| Gloves | Corrected standard offline rig places both joint controls within10um, but all8 actual original-PBR views show broad palm/dorsum/web/tip exposure and flared cuffs. | [Actual bilateral rejection](../evidence/rider-rebuild/production-gloves03/surface-review01/FINDING.md); exact selected-source package, expert shape/weights/clearance tailoring. No local15minute correction is justified for this broad failure. |
+| Hoodie | Actual local OUTSIDE operation violates the existing preservation predicate at scoped patch vertex12473 and stops before saving a corrected target. Original patched source still fails the matched views. | [Exact failure](../evidence/rider-rebuild/production-hoodie02/local-outside01/actual01/FINDING.md); package original source/PBR, unchanged native, patch/scope lineage and rejected views for expert underarm tailoring. |
+| Jeans | Compact local gusset encloses the body, but the actual selected dense donor penetrates it. Its single OUTSIDE finish introduces51collapsed triangles and3716face-normal rotations over90degrees, stopping before views/bake. | [Exact failed native/lineage](../evidence/rider-rebuild/production-jeans02/dense-fit01/actual01/FINDING.md); package compact target and genuine dense donor for expert detail-source fitting. |
+
+A successful joint matrix, topology assertion, modifier invocation or source
+package is not an artistic result. Retain useful original selected geometry,
+UV/PBR, unchanged body/shared75, editable failed natives and negative views.
+Character-artist packages must name actual deliverables: recognizable selected
+forms, anatomically enclosing bilateral surfaces, shared75 articulation, finite
+handlebar/thumb grip and release, continuous generic and both bike extremes,
+complete editable dressed native, genuine selected-material ancestry and real
+Garage/game review. A package alone closes none of those requirements.
+
+AllR0–R5 remain open and0/6accepted. The existing player gate07 passes11/11
+under controlled load; gate06timing failure remains retained. Neither result
+qualifies the selected remastered rider. Do not export this failed wardrobe
+into normal player assets or archive this plan as completed.
