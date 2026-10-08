@@ -9,3 +9,9 @@ Finding: Saved axilla topology still leaves large actual body intersections; rej
 Validation: Parent viewed front/back/profile, readonlyCPU2exit0 in8.222s; exactfd7761native unchanged.
 
 Limits: One bounded regional outside finishing source next, no topology operator/generalfit campaign or art acceptance.
+
+Finding: Prepare one conventional local OUTSIDE finishing pass around the actual axilla patch and four adjacent rings; protect loose exterior and genuine garment ports.
+
+Validation: Parent full helper and controls read; AST and six intake pins match. Native intake records local boundaries before any edit, then retains exact topology, UV, materials, fields and body/shared75. Actual native saves before views.
+
+Limits: Unexecuted 12 mm clearance hypothesis, no general fit campaign. An unexpected local opening stops before editing; parent must inspect actual enclosure and moving art remains open.

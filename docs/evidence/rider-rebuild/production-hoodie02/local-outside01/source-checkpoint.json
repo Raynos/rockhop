@@ -1,0 +1,84 @@
+{
+  "accepted": false,
+  "stage": "SOURCE_ONLY_ONE_LOCAL_OUTSIDE_FINISH_READY",
+  "pythonASTPassed": true,
+  "allSixIntakePinsPassed": true,
+  "noHeavyJobExecuted": true,
+  "inputs": {
+    "schemaVersion": 1,
+    "accepted": false,
+    "pins": {
+      "frozenInputs": {
+        "path": "assets/blender/rider-rebuild/production-hoodie01/inputs.json",
+        "sha256": "ae90f988b1a3b5f020d540cddd677a8a6286e6e2e3e7afb08733b5b7470aff28"
+      },
+      "baseAuthor": {
+        "path": "assets/blender/rider-rebuild/production-hoodie01/author.py",
+        "sha256": "078da52b40e1f5049759314c1794ba6559ac1dae90d79294672c674f2095d14a"
+      },
+      "repairAuthor": {
+        "path": "assets/blender/rider-rebuild/production-hoodie01/repair_axilla.py",
+        "sha256": "48fe9bd0b6e72e5ad8484f5b9a7ba50f75538cf402b6d3a314065fc03d92c2a5"
+      },
+      "authorReceipt": {
+        "path": "harness/out/rider-rebuild/production-hoodie01/regional-repair01/author.json",
+        "sha256": "95663c7336d3c98f59a527d20a2ac3b2e656ccb5a5b9159922a2bf51496412c1"
+      },
+      "authoredNative": {
+        "path": "harness/out/rider-rebuild/production-hoodie01/regional-repair01/authored-hoodie.blend",
+        "sha256": "fd7761d7b7c9794cb5871945515d992052424b52ddc83f289522dae942d05f3c"
+      },
+      "historicalFrameRecipe": {
+        "path": "assets/blender/hero-remaster/rider/anatomical-foundation-2026-10-03/user-agent1/construct_selected_hoodie.py",
+        "sha256": "95c555e656e889f00d59a7295e89021cc822c34c34e87bd2cfa24e131cf2d1f9"
+      }
+    },
+    "stage": "SOURCE_ONLY_LOCAL_OUTSIDE_FINISH",
+    "patchAttribute": "_HOODIE_PATCH",
+    "adjacentFaceRings": 4,
+    "underarmBoxes": {
+      "L": {
+        "center": [
+          0.205,
+          0.015,
+          1.345
+        ],
+        "halfSize": [
+          0.14,
+          0.19,
+          0.19
+        ]
+      },
+      "R": {
+        "center": [
+          -0.205,
+          0.015,
+          1.345
+        ],
+        "halfSize": [
+          0.14,
+          0.19,
+          0.19
+        ]
+      }
+    },
+    "clothClearanceM": 0.012,
+    "wrapMethod": "NEAREST_SURFACEPOINT",
+    "snapMode": "OUTSIDE",
+    "maxDisplacementM": 0.12,
+    "outputRoot": "harness/out/rider-rebuild/production-hoodie02/local-outside01",
+    "basis": "Frozen current native rest coordinates; no frame transformation or registration",
+    "limits": [
+      "One local OUTSIDE aid only; parent judges same-camera views.",
+      "OUTSIDE preserves already loose points; OUTSIDE_SURFACE is forbidden here.",
+      "No source retopology, UV/material/field edit, dense import, bake, generation or export.",
+      "All R0\u2013R5 open. No player promotion."
+    ]
+  },
+  "sourceSHA256": "ad7ae108b4e73162ada91d40210ea4c713d75617090df787cf4d529d907f6157",
+  "controlsSHA256": "4a480bdb3f02a0fefdecab2ee1b30c7d867ad68595527a676d7197167dd87c67",
+  "officialSemanticsSource": "https://docs.blender.org/api/3.2/bpy.types.ShrinkwrapModifier.html",
+  "semantics": "OUTSIDE constrains points outside the target; OUTSIDE_SURFACE snaps points to the surface with outside offset. This helper uses OUTSIDE only.",
+  "preEditDiagnosis": "Actual local boundary and nearest-body vertex sign intake is inside the one bounded native run. The original author receipt alone cannot exclude other local holes.",
+  "next": "Parent checkpoint and one CPU2 lease. Save corrected actual native first, then parent same-camera three views. No dense prep or bake lease."
+}
