@@ -71,8 +71,12 @@ def install(rig, contract):
             add(m_upper, rest[upper], (middle-start).length, parent)
             add(m_lower, rest[lower], (tip-middle).length, m_upper); edit[m_lower].use_connect = True
             normal = (tip-start).cross(pole_location-start)
-            pole_axis = normal.cross(middle-start).normalized(); x = edit[m_upper].x_axis.normalized(); y = edit[m_upper].y_axis.normalized()
-            pole_angle = math.atan2(x.cross(pole_axis).dot(y), x.dot(pole_axis))
+            pole_axis = normal.cross(middle-start).normalized()
+            x = edit[m_upper].x_axis.normalized(); z = edit[m_upper].z_axis.normalized()
+            # Blender IK_QJacobianSolver::ConstrainPoleVector constructs
+            # up = rootX*cos(angle) + rootZ*sin(angle). A signed angle around
+            # rootY reverses this convention because X cross Z = -Y.
+            pole_angle = math.atan2(pole_axis.dot(z), pole_axis.dot(x))
             limbs.append({'kind': kind, 'side': suffix, 'uppers': uppers, 'lowers': lowers, 'end': end,
                           'socket': socket, 'targetControl': target_name, 'poleControl': pole_name,
                           'target': target, 'mechanismUpper': m_upper, 'mechanismLower': m_lower,

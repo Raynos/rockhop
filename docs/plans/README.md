@@ -1815,3 +1815,5 @@ Support02 dressedGarage capture0errors/onebootnav; parentplays28s silent1x natur
 Motion11 native03 fails9.152s: added-rest physicalchecks pass; all75 neutral skinoperator checks expose wrongIKroll/bend(71.599mmheadresidual/7.136mbound). Noactions/native/export. Lead24 correctsactualpoleconvention fromrecordedmatrices; no boundchange/sweep. Firstconstructionaftergate33.
 
 Cuff10 actualfails79.961s afterbothglovesurfaceconstruction: leftsleeve fixedproximal exteriorboundary violatesactualcontact. Numericflooridentity repaired; no savednative/report/artpass. Lead23 replacesarbitraryimmutableboundary with deliberateadjacentsleevetailoring; no radius/ease/densegate relaxation. Secondconstructionaftergate33.
+
+Motion11 source04 derivespoleangle directlyfromBlender rootX/rootZ coefficients; analyticoldoperator predictsactualfailurewithin4.3e-7arms/2.02e-5legs, correctedidentitywithin4.29e-6. Fullnative04 queuedwithstrictneutralcheckpointbeforeactions; no native/actionpassyet or boundchange.

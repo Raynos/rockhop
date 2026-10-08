@@ -1,0 +1,16 @@
+{
+  "accepted": false,
+  "status": "POLE_CONVENTION_CORRECTED_SOURCE_UNEXECUTED",
+  "sources": {
+    "build.py": "da537fce4c172f8ba23bd5d7c0b8b01610846a8bd8ee0291ad8a8d68895d550b",
+    "controls.py": "b5b77c1af0442b87d4730834baf1e76bfae737a4531daad5e1aeada79293fd21",
+    "test_motion.py": "9007b7b53e126726d83364b1c457b11fdb00fa89c7f1393361e33f3aab3e3074",
+    "bike_pose.py": "5f0b727147b9372b0ace2aa10c3a4435a73f3589b1646815974fe4d90995ca4f",
+    "motion.py": "f5fd14147362a9cfe10814bdb971b23436ab98b65009c31dfc8f885f231f5ff4",
+    "pose.py": "89e9c3a0726218a1ee3cab2387961bbfa794ffbc88aaaace97e82872aa943258",
+    "probe_controls.py": "f4eb982901ff4e5bf7916187497a7846e88eadb4b4cf7a28c1e8115e27f17649"
+  },
+  "evidence": "docs/evidence/rider-rebuild/selected-authoring-motion11/pole-convention-proof04.json",
+  "correction": "atan2(projectedPole dot rootZ, projectedPole dot rootX), directly matching Blender IK solver up-vector coefficients; no search, no tolerances changed.",
+  "next": "Run build.py with original source.json, fresh native04 and --neutral-only. Saves only after complete added-rest and original75 physical/roll gates pass. Successful action transport still requires later full action receipt."
+}

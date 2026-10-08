@@ -1,6 +1,6 @@
 """Parent-guarded native construction: controls plus six real actions.
 
-blender -b -t 2 --python-exit-code 1 --python build.py -- source.json FRESH_OUT
+blender -b -t 2 --python-exit-code 1 --python build.py -- source.json FRESH_OUT [--neutral-only]
 Reads only RiderSkeleton from the appearance master. Never writes that master.
 """
 import hashlib
@@ -59,13 +59,32 @@ def operator_bound(a,b):
 
 
 def main():
-    args=sys.argv[sys.argv.index('--')+1:]; assert len(args)==2
-    config_path,out=map(lambda p:Path(p).resolve(),args); config=json.loads(config_path.read_text())
+    args=sys.argv[sys.argv.index('--')+1:]; assert len(args) in (2,3)
+    neutral_only=len(args)==3
+    if neutral_only:assert args[2]=='--neutral-only'
+    config_path,out=map(lambda p:Path(p).resolve(),args[:2]); config=json.loads(config_path.read_text())
     assert config['accepted'] is False and not out.exists() and out.is_relative_to(ROOT/'harness/out/rider-rebuild/selected-authoring-motion11')
     for row in (config['native'],config['contract']): assert sha(ROOT/row['path'])==row['sha256'],row
     native=ROOT/config['native']['path']; contract=json.loads((ROOT/config['contract']['path']).read_text())
     bpy.ops.wm.read_factory_settings(use_empty=True); rig=load_rig(native); assert not bpy.data.meshes
     context=install(rig,contract); names=context['names']; scene=bpy.context.scene; scene.render.fps=FPS
+    # Retain the strict neutral result before authoring any action. This is a
+    # separately named construction receipt, never a successful action package.
+    out.mkdir(parents=True); neutral_native=out/'native75-neutral-controls.blend'
+    bpy.ops.wm.save_as_mainfile(filepath=str(neutral_native),compress=True)
+    neutral_report={'accepted':False,'status':'NATIVE_NEUTRAL_CONTROLS_ONLY_UNACCEPTED','source':config,
+        'sources':{p.name:sha(p) for p in HERE.glob('*.py')},
+        'native':{'path':str(neutral_native.relative_to(ROOT)),'sha256':sha(neutral_native)},
+        'original75RestExactlyPreserved':rest_rows(rig,set(names))==contract['nativeRest']['bones'],
+        'controls':context['controls'],'limbs':context['limbs'],'sourceRestResidualM':context['sourceRestResidualM'],
+        'addedRestBeforeConstraints':context['addedRestBeforeConstraints'],
+        'neutral75BeforeActions':context['neutral75BeforeActions'],
+        'neutralMaximumAffineBoundWithin2mM':context['neutralMaximumAffineBoundWithin2mM'],
+        'actionsAuthored':False,'clothedArtAccepted':False}
+    (out/'neutral-receipt.json').write_text(json.dumps(neutral_report,indent=2)+'\n')
+    if neutral_only:
+        print(json.dumps({'neutralNative':neutral_report['native'],'neutralBoundM':context['neutralMaximumAffineBoundWithin2mM'],'actionsAuthored':False}),flush=True)
+        return
     scene.render.fps_base=1; rig.animation_data_create(); records=[]; arrays={'boneNames':np.asarray(names)}; controls=[]; baked=[]
     for clip_index,(name,spec) in enumerate(SCORES.items()):
         frames=round(spec['seconds']*FPS)+1; action=bpy.data.actions.new('Author.'+name); action.use_fake_user=True
@@ -108,7 +127,7 @@ def main():
                         'soleTargetMaximumM':maximum_sole_error,'regionalOperatorBoundWithin2mM':palette_error,'support':support})
         print(json.dumps({'action':name,'frames':frames,'soleMaxM':maximum_sole_error,'paletteBoundM':palette_error}),flush=True)
     assert rest_rows(rig,set(names))==contract['nativeRest']['bones'] and not bpy.data.meshes
-    out.mkdir(parents=True); control_native=out/'native75-authoring-controls.blend'
+    control_native=out/'native75-authoring-controls.blend'
     rig.animation_data.action=controls[0]; rig.animation_data.action_slot=controls[0].slots[0]
     scene.frame_set(1); scene.frame_start=1; scene.frame_end=records[0]['frameRange'][1]
     bpy.ops.wm.save_as_mainfile(filepath=str(control_native),compress=True)
