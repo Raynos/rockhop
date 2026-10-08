@@ -1303,3 +1303,5 @@ October 7 direct boot sculpt attempt: NumPy bool receipt serialization fails bef
 October 7 boot receipt compatibility source: determinant comparison explicitly coerced to Python bool. Parent one-line diff/AST/hash checked; sculpture controls unchanged and corrected run unexecuted. No shape verdict.
 
 October 7 actual selected glove material review rejected: parent viewed three severe patchy/chrome/white artifact renders. Source MR differs from allzero target misses across≈40% eroded occupiedUV; higher resolution cannot fix missing transfer. Next inspect actual aligned selected donor/target; no blind larger-ray or4K retry. No appearance/motion acceptance.
+
+October 7 direct jeans gusset source: actual anterior saddle was inside pubis despite a low enough bottom; own-side support strips also overlapped. New regional author uses seven anatomical front seam controls and descending own-sided supports, applying only local subdivision delta to pinned author04. Parent full source/AST/pins checked; run unexecuted.
