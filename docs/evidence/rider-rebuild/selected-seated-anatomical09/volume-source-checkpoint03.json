@@ -1,0 +1,77 @@
+{
+  "accepted": false,
+  "status": "SOURCE_FROZEN_VOLUME03_NOT_RUN",
+  "sourcePins": {
+    "assets/blender/rider-rebuild/selected-seated-anatomical09/transport-volume03.mjs": "ad05ebef61bc194dd5e156047dde63c108c9e1a3c22013bd2e559e506a3380f3",
+    "assets/blender/rider-rebuild/selected-seated-anatomical09/volume03.input.json": "8d8ef1e445c8b03b0baa0ae9fd169a04d0f91b802c6ce2fec88b938b80396f54",
+    "assets/blender/rider-rebuild/selected-seated-anatomical09/run-volume03.sh": "31a0814b3b96630fb57a4a07332a27134e068bdf300c5a80d42114c11ea40bf2",
+    "assets/blender/rider-rebuild/selected-seated-anatomical09/test_volume03.mjs": "de933f030cd24618fd740a89f74c71e6c2853082b8e7f521cc7934d0fe06d9ff"
+  },
+  "actualInputs": {
+    "native": {
+      "path": "harness/out/rider-rebuild/selected-seated-anatomical09/sculpted03/selected-anatomical09-posed-volume.blend",
+      "sha256": "5145ceb00bac290afbaf8b925b71e77af7d425b6f95237a12d566b1bdae52505"
+    },
+    "nativeReceipt": {
+      "path": "harness/out/rider-rebuild/selected-seated-anatomical09/sculpted03/receipt.json",
+      "sha256": "73e3b43d6264043c6e4dcfcf49f859ec4860ecfb8e60b5c011b9958b01727bff"
+    },
+    "shapeKey": {
+      "path": "harness/out/rider-rebuild/selected-seated-anatomical09/sculpted03/shape-key.json",
+      "sha256": "7190a72b0d4cb78bd9c234d8aa37e6f6aedba1864b7af56f3c380963ece7bc43"
+    },
+    "posedSurfaces": {
+      "path": "harness/out/rider-rebuild/selected-seated-anatomical09/sculpted03/posed-surface-samples.npz",
+      "sha256": "2cbabdbfaf2cfb69705f7dfa987e00b2263ec09248f65d1b9465de032bdfbfaa"
+    },
+    "weightRider": {
+      "path": "harness/out/rider-rebuild/selected-seated-anatomical09/transport02/rider.glb",
+      "sha256": "ff9d78e2c5c40a4be1218b57611c5e71db10a2de7b636ec1589358176f907a0f"
+    },
+    "weightContract": {
+      "path": "harness/out/rider-rebuild/selected-seated-anatomical09/transport02/rider-contract.json",
+      "sha256": "98fc88c05d2ae45112f94aed28704a02867513bd10483fd86fdc5d60b03558ba"
+    },
+    "weightReceipt": {
+      "path": "harness/out/rider-rebuild/selected-seated-anatomical09/transport02/transport.json",
+      "sha256": "0497acb5edf34ca37e6d97b90bac51aaebe47920441568096778d895462166c5"
+    }
+  },
+  "qualification": "UNACCEPTED_POSED_VOLUME",
+  "previewClip": "Anatomical09VolumeRestKey",
+  "validation": {
+    "smallFixtures": "4/4 PASS; split native IDs, rigid shading preservation, malformed deltas, closed manifest schema",
+    "syntax": "JS/Bash and whitespace PASS",
+    "smallInputHashes": "Native receipt, shape JSON, weight contract and weight receipt PASS",
+    "lineage": "Actual sculpt03 native/receipt/deltas tie to exact authored02 weightDerivative and same author04 pose; no old06 fields",
+    "nativeShapeAnimation": "LINEAR scalar0/1/0 at frames1/31/61",
+    "movedVertices": {
+      "RiderJeans": 14807,
+      "RiderBody": 621
+    },
+    "inverseChecks": {
+      "RiderJeans": {
+        "sourceAffineM": 1.8403040081132586e-07,
+        "posedTargetM": 9.900094255499425e-07,
+        "maximumInverseCondition": 1.497961156054734
+      },
+      "RiderBody": {
+        "sourceAffineM": 2.59525256726029e-07,
+        "posedTargetM": 8.06351124538196e-07,
+        "maximumInverseCondition": 1.4166124888263318
+      }
+    },
+    "reopenedResidualM": {
+      "RiderJeans": 0.0,
+      "RiderBody": 0.0
+    },
+    "largeInputHashes": "Parent actual pins supplied; guarded execution independently hashes all7 inputs before processing"
+  },
+  "parentCommand": "bash assets/blender/rider-rebuild/selected-seated-anatomical09/run-volume03.sh assets/blender/rider-rebuild/selected-seated-anatomical09/volume03.input.json",
+  "freshOutput": "harness/out/rider-rebuild/selected-seated-anatomical09/volume03",
+  "protected": "Entire original transport02 BIN prefix and original attributes/maps/UV/weights/native75 rest/inverse binds; original weightDerivative unchanged",
+  "appendScope": "New Body/Jeans POSITION/NORMAL relative targets and225 LINEAR TRS+2 node-weight diagnostic channels; no source TANGENT attributes exist and loader has no morph tangent support",
+  "actualTransportOperatorAndRestKeyReturn": "UNMEASURED; guarded execution checks complete exported Body/Jeans rows against actual native endpoint arrays and loaded independent skin operator; rest/return byte identity required",
+  "completeGeometryContactsAndMovingArt": "UNMEASURED",
+  "noHeavyJobByBuilder": true
+}

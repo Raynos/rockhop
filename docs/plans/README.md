@@ -1833,3 +1833,5 @@ Hem26 freezes one actualselected lower-hem tailoring source:1724L/1717Rvertices,
 Sculpt03 actual native construction saved and reopened successfully (65.679s): shared volume moves14,807 Jeans/621 Body vertices, fresh inverse target residual below0.991µm and reopened residual0. Original Basis, weights, rest and maps remain exact. Contact, crossings, runtime and dressed-art acceptance remain open.
 
 Motion11 source05 corrects an impossible asymmetric planted-leg target with20mm pelvis yield, retaining6° roll and20° chest turn. Exact289 range keys retain≥0.630mm reach margin; five tests pass across all six scores. Completed-action checkpoints and detailed failure witnesses are added. Native05 remains pending.
+
+Volume03 source pins the actual saved sculpt03 and original weight02 GLB. It appends fresh native-ID Body/Jeans position/normal morphs and a LINEAR rest/key/return diagnostic while preserving the entire source binary prefix. Four fixtures pass; actual loaded/native parity and dressed Garage judgment remain pending.
