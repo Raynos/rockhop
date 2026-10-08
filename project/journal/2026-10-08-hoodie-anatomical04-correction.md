@@ -30,3 +30,10 @@ Finding: Actual expanded anatomical hoodie join and original-PBR local transfer 
 Validation: CPU2 exit0/26.275s; nativebaedfa57 and prior geometry709c3cce saved, complete body/rest75/outside garment preserved,7 visible actual meshes.
 
 Limits: Save is not art acceptance; matched actual PBR views and dressed motion next.
+
+
+Finding: Actual tailored join fails artist silhouette despite0 point/center/fan numerical defects: rigid shelf-like shoulders and ragged rear seams.
+
+Validation: CPU2 actual PBR render exit0/17.552s; root viewed all4 matched views, rejects gross shape before motion.
+
+Limits: No whole outfit/art acceptance; stop this analytic ruled-depth pattern, targeted independent method review next.
