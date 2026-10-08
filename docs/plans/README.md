@@ -1877,3 +1877,5 @@ Sleeve28 source freezes one continuous complete two-wall cloth field against the
 Native bike source freezes two native75 seated/forward/back/return actions using actual bike saddle/palm/sole frames, exact limb geometry and strict source rest. First editable seated checkpoint precedes later failures. All12 input pins pass; actual construction/finite contacts and dressed Garage playback remain pending. Old rejected author04 pose is inactive.
 
 Finish sequence16:20Panama records actual six-action selected transport and played RangeOfMotion; cuff failures and crouch occlusion remain explicit. Whole-sleeve field source is frozen and glove-only native run active. New measured bike seating/leans precede more anatomy sculpt. Full-reference cache failure is diagnosed exactly. AllR0–R5open;24h stretch target unchanged.
+
+Glove-only actual run01 reached both cuff stages, then stopped at the unchanged65GiB anonymous guard after68.447s; no native checkpoint/receipt saved. Failure retained. Smaller rig-only bike construction proceeds next; glove retry needs additional headroom, no bounds relaxed.
