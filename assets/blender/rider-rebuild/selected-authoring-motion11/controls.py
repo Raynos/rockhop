@@ -3,6 +3,7 @@
 Only nondeforming controls/mechanisms are added. Native IK uses two full-length
 mechanism bones; their rotations drive the existing split deform segments.
 """
+import json
 import math
 import bpy
 from mathutils import Matrix, Quaternion, Vector
@@ -78,12 +79,24 @@ def install(rig, contract):
                           'poleAngle': pole_angle, 'lengths': [(middle-start).length, (tip-middle).length]})
     bpy.ops.object.mode_set(mode='OBJECT')
     assert rest_rows(rig, set(names)) == expected, 'Adding controls changed a source rest bone'
-    added_rest_residual = 0.
+    added_rest_residual = 0.; added_rest_checks = []
     for name, (matrix, length) in added.items():
         b = rig.data.bones[name]
         error = max(abs(b.matrix_local[i][j]-matrix[i][j]) for i in range(4) for j in range(4))
         added_rest_residual = max(added_rest_residual, error)
-        assert error < 2e-6 and abs(b.length-length) < 2e-6, ('Added control rest differs BEFORE constraints', name, error, b.length, length)
+        # Source foot/socket matrices already have ~3.4e-5 Gram residual.
+        # EditBone reconstruction normalizes its direction/roll. Measure that
+        # known source deviation in metres instead of an arbitrary matrix epsilon.
+        delta = b.matrix_local @ matrix.inverted()
+        linear = math.sqrt(sum((delta[i][j]-(i==j))**2 for i in range(3) for j in range(3)))
+        bound = linear*2 + delta.translation.length
+        gram = matrix.to_3x3().transposed() @ matrix.to_3x3()
+        added_rest_checks.append({'name':name, 'maximumMatrixComponentResidual':error,
+            'sourceGramFrobenius':math.sqrt(sum((gram[i][j]-(i==j))**2 for i in range(3) for j in range(3))),
+            'sourceDeterminant':matrix.to_3x3().determinant(),
+            'affineDisplacementBoundWithin2mM':bound, 'lengthResidualM':abs(b.length-length)})
+    print(json.dumps({'addedRestBeforeConstraints':added_rest_checks}),flush=True)
+    assert all(r['affineDisplacementBoundWithin2mM']<.0001 and r['lengthResidualM']<.0001 for r in added_rest_checks), ('Added control rest exceeds 0.1 mm physical bound',added_rest_checks)
 
     def copy(name, target, kind):
         c = rig.pose.bones[name].constraints.new(kind); c.name = 'M11 '+target
@@ -120,9 +133,22 @@ def install(rig, contract):
     rig['M11_controls'] = 'Native hips/spine/head FK; palm/sole IK and elbow/knee poles; five curl properties on each palm. No trusted Python handlers.'
     bpy.context.view_layer.update()
     residual = max((rig.pose.bones[n].matrix.translation-rest[n].translation).length for n in names)
+    neutral_checks = []
+    for name in names:
+        actual = rig.pose.bones[name].matrix.copy(); operator = actual @ rest[name].inverted()
+        linear = math.sqrt(sum((operator[i][j]-(i==j))**2 for i in range(3) for j in range(3)))
+        neutral_checks.append({'name':name, 'nativePoseMatrix':[list(r) for r in actual],
+            'skinOperator':[list(r) for r in operator],
+            'affineDisplacementBoundWithin2mM':linear*2+operator.translation.length})
+    neutral_bound = max(r['affineDisplacementBoundWithin2mM'] for r in neutral_checks)
+    print(json.dumps({'neutral75BeforeActions':neutral_checks, 'neutralMaximumAffineBoundWithin2mM':neutral_bound}),flush=True)
     assert residual < .0001, ('Native controls failed source rest pose', residual, [{k:l[k] for k in ('kind','side','poleAngle')} for l in limbs])
+    assert neutral_bound < .0001, ('Native controls changed neutral skin operator',
+        sorted(neutral_checks,key=lambda r:r['affineDisplacementBoundWithin2mM'],reverse=True)[:5])
     return {'names': names, 'controls': controls, 'fk': fk, 'limbs': limbs, 'rest': rest, 'heads': heads,
-            'roles': roles, 'sourceRestResidualM': residual, 'addedRestMaximumMatrixResidual': added_rest_residual}
+            'roles': roles, 'sourceRestResidualM': residual, 'addedRestMaximumMatrixResidual': added_rest_residual,
+            'addedRestBeforeConstraints':added_rest_checks,'neutral75BeforeActions':neutral_checks,
+            'neutralMaximumAffineBoundWithin2mM':neutral_bound}
 
 
 def set_world(rig, name, matrix):

@@ -1799,3 +1799,5 @@ Motionnative02FAIL6.643s beforeconstraints/save atnew2e−6addedrest componentas
 Shipgate33 interrupted41.436s atunchangedhostanonymous65.2GiBguardbound. Clear/replayhash andcrash/restarttocontrol passed, boot/fullrestart incomplete. ConcurrentotherVercelcheckoutbuild observed(contributionunmeasured); nounownedkill/boundchange. Retryoncewhenoriginalstartbound permits; no playerpass/constructiongateclear.
 
 Gate33 software02 completed44.501s:8/11 pass; default SwiftShader fails boot/first-frame/restart timing. Actual failure retained. Product fd8fe7c2 unchanged; next invocation explicitly requests verified Metal like passed gate32, without limit changes. Construction gate remains pending.
+
+Motion11 source03 measures reconstructed added-rest matrices and all75 neutral skin operators against unchanged0.1mm physical bound within2m; actual matrices retained. Original source feet have measured~3.4e-5 Gram residual. Source reviewed/parsed; native03 unexecuted, no control/action acceptance.

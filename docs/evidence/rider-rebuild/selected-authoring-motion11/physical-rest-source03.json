@@ -1,0 +1,33 @@
+{
+  "accepted": false,
+  "status": "PHYSICAL_REST_GATE_SOURCE_UNEXECUTED",
+  "sourceRestEvidence": [
+    {
+      "name": "DEF-foot.L",
+      "sourceGramFrobenius": 3.32798154853182e-05
+    },
+    {
+      "name": "SoleSocket.L",
+      "sourceGramFrobenius": 3.334464691916476e-05
+    },
+    {
+      "name": "DEF-foot.R",
+      "sourceGramFrobenius": 3.409530174496069e-05
+    },
+    {
+      "name": "SoleSocket.R",
+      "sourceGramFrobenius": 3.406652593742022e-05
+    }
+  ],
+  "cause": "Native source foot/socket bases are already slightly nonorthonormal; EditBone recreation normalizes direction and roll. Positive length creation corrected the original unit-scale basis error. The failed 2e-6 component check was not the existing physical acceptance limit.",
+  "gate": "All added matrices recorded before constraints; Frobenius upper bound on actualRest @ inverse(intendedRest) displacement within 2 m must be below 0.1 mm. Length error must also be below 0.1 mm. Original75 rest byte-exact and all neutral/limb/support/bake 0.1mm gates remain. Full original75 neutral skin operators pose @ inverseRest are also bounded by Frobenius norm within 2m <0.1mm before any action, retaining actual matrices and operators in stdout/receipt. This catches roll with unchanged joint heads.",
+  "sources": {
+    "build.py": "e2f551e53affe916a4882010d8da6316da4b2f3268be93003ace7a55a633b03f",
+    "controls.py": "6fae89ce394d676df76f1ee37b5a1fc3f68dd178d0775d545fa28378df1c9a16",
+    "test_motion.py": "9007b7b53e126726d83364b1c457b11fdb00fa89c7f1393361e33f3aab3e3074",
+    "bike_pose.py": "5f0b727147b9372b0ace2aa10c3a4435a73f3589b1646815974fe4d90995ca4f",
+    "motion.py": "f5fd14147362a9cfe10814bdb971b23436ab98b65009c31dfc8f885f231f5ff4",
+    "pose.py": "89e9c3a0726218a1ee3cab2387961bbfa794ffbc88aaaace97e82872aa943258",
+    "probe_controls.py": "f4eb982901ff4e5bf7916187497a7846e88eadb4b4cf7a28c1e8115e27f17649"
+  }
+}
