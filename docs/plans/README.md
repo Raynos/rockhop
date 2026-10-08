@@ -1811,3 +1811,5 @@ Production25 selected-source full/realLOD derivative source checkpointed: actual
 24h finish plan now distinguishes rejectedauthor01 from mechanicallypassedauthor02/actualloader result, pendingdressedplayback/posedvolume, cuffidentity-provedconstruction, lowerhemrepair, boots-firstproduction and native03controls. AllR0–R5 open; targetOct9 14:05Panama remains stretch, no gatewaiver.
 
 Support02 dressedGarage capture0errors/onebootnav; parentplays28s silent1x naturalend/all63samples+fullprofiles. Selectedoutfit retained, seatedlowerglute/thighshelf/cuffspikes/anklestrip stillREJECTED.59.636developmentrenderFPS/25captureFPS; noGPU/devicepass. Sharedcageposedvolume+cuff/hemconstructionnext.
+
+Motion11 native03 fails9.152s: added-rest physicalchecks pass; all75 neutral skinoperator checks expose wrongIKroll/bend(71.599mmheadresidual/7.136mbound). Noactions/native/export. Lead24 correctsactualpoleconvention fromrecordedmatrices; no boundchange/sweep. Firstconstructionaftergate33.
