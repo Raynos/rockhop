@@ -33,18 +33,30 @@ H0 is October 8, 14:05 Panama / 19:05 UTC; target finish is October 9 at the sam
 
 | Target | Complete visible deliverable | Owner |
 | --- | --- | --- |
-| H+4 | Selected dressed rider in convincing standing/deep seated/return on both bikes, clean cuff/ankle overlap, visible hands/hips/profiles | Native lead27 and wardrobe lead28; parent judges |
-| H+10 | Compact selected-appearance production candidate and genuine full/LOD, compared moving in actual Garage | Wardrobe/production lead28 and native lead27 |
-| H+16 | Same master with editable Blender controls, complete generic and bike actions, consumed engine deformation/contact | Animation/runtime lead24 and native lead27 |
+| H+4 | Selected dressed rider in convincing standing/deep seated/return on both bikes, clean cuff/ankle overlap, visible hands/hips/profiles | Native lead29 and wardrobe lead28; parent judges |
+| H+10 | Compact selected-appearance production candidate and genuine full/LOD, compared moving in actual Garage | Wardrobe/production lead28 and native lead29 |
+| H+16 | Same master with editable Blender controls, complete generic and bike actions, consumed engine deformation/contact | Animation/runtime lead24 and native lead29 |
 | H+24 | Exact candidate reviewed on desktop/physical iPhone, bot/stranger/replay/restart and checked release/live SHA | Parent; human/device decisions through HR-23 |
 
-Native lead27 succeeds retired lead22 at the 150-response handoff. It owns the
+Native lead29 succeeds retired lead27 at the 150-response handoff. It owns the
 integrated anatomical derivative and exact native volume transport. Wardrobe
 lead28 succeeds retired lead23 and supplies separate cuff/ankle patches and compact selected production
 meshes, detail transfer and real LOD. Animation lead24 supplies native controls,
 actions and runtime delivery. The parent schedules actual heavy jobs serially,
 integrates handoffs and judges played complete outfits. Source work proceeds
 concurrently. These are final-intent selected assets; no generic substitutions.
+
+**Immediate gameplay priority, October 8, 16:30 Panama (ask356):** The user
+correctly identifies that the displayed stand-up/rest diagnostic does not show
+lean forward/back used by the game. The seat-held native01 score is also only a
+seated baseline; its first sole affine check fails at 0.114114 mm against 0.1 mm.
+Do not present it as gameplay lean or relax that bound. Lead24 derives new native
+controls from actual `riderPoseAtLean` and the simulated COM/torso path. The
+next visible film must show selected dressed neutral → forward-standing →
+back-seated → neutral, with hands/feet visible. Normal game rendering must
+consume simulated rider state; an isolated time clip cannot substitute for it.
+Lead29 replays those actual source poses on the complete selected native master
+before any additional anatomy sculpt. Generic actions remain required afterward.
 
 **Measured construction status, October 8, 16:20 Panama:**
 
