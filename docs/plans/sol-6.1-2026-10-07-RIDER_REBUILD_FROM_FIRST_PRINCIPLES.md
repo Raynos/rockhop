@@ -33,20 +33,20 @@ H0 is October 8, 14:05 Panama / 19:05 UTC; target finish is October 9 at the sam
 
 | Target | Complete visible deliverable | Owner |
 | --- | --- | --- |
-| H+4 | Selected dressed rider in convincing standing/deep seated/return on both bikes, clean cuff/ankle overlap, visible hands/hips/profiles | Native lead27 and wardrobe lead23; parent judges |
-| H+10 | Compact selected-appearance production candidate and genuine full/LOD, compared moving in actual Garage | Wardrobe/production lead23 and native lead27 |
+| H+4 | Selected dressed rider in convincing standing/deep seated/return on both bikes, clean cuff/ankle overlap, visible hands/hips/profiles | Native lead27 and wardrobe lead28; parent judges |
+| H+10 | Compact selected-appearance production candidate and genuine full/LOD, compared moving in actual Garage | Wardrobe/production lead28 and native lead27 |
 | H+16 | Same master with editable Blender controls, complete generic and bike actions, consumed engine deformation/contact | Animation/runtime lead24 and native lead27 |
 | H+24 | Exact candidate reviewed on desktop/physical iPhone, bot/stranger/replay/restart and checked release/live SHA | Parent; human/device decisions through HR-23 |
 
 Native lead27 succeeds retired lead22 at the 150-response handoff. It owns the
 integrated anatomical derivative and exact native volume transport. Wardrobe
-lead23 supplies separate cuff/ankle patches and compact selected production
+lead28 succeeds retired lead23 and supplies separate cuff/ankle patches and compact selected production
 meshes, detail transfer and real LOD. Animation lead24 supplies native controls,
 actions and runtime delivery. The parent schedules actual heavy jobs serially,
 integrates handoffs and judges played complete outfits. Source work proceeds
 concurrently. These are final-intent selected assets; no generic substitutions.
 
-**Measured construction status, October 8, 15:25 Panama:**
+**Measured construction status, October 8, 15:55 Panama:**
 
 - Author01's rank reduction was rejected at 21.252 mm. Author02 repairs the
   weight defect without rank pruning: actual both-bike/asymmetric native loss
@@ -58,22 +58,38 @@ concurrently. These are final-intent selected assets; no generic substitutions.
   shared body/jeans cage carries fresh inverse-skin deltas on 14,807 Jeans and
   621 Body vertices. Maximum target residual is 0.991 micrometres; reopened
   residual is zero. Original Basis and fields stay exact. Full finite contacts,
-  crossings and dressed moving appearance remain unaccepted. Volume03 is the
-  next exact transport and Garage film; no old corrective06 deltas are reused.
+  crossings remain unaccepted. Volume04 passes the actual production loader
+  with every original exported ID, rest/bind and binary prefix preserved. The
+  parent played its 30.4-second dressed Garage film: improvement is modest;
+  inflated posterior thigh/glute, wrist spikes and ankle strips remain rejected.
+  This rest/seated diagnostic is not normal Garage riding. No old corrective06
+  deltas are reused. Full-reference companion04 fails a late exact cage-state
+  check; native27 must diagnose the state and retain recovery surfaces.
 - Cuff10 fixed source topology identity, then failed a physically impossible
   preserved sleeve boundary. The original inner sleeve penetrates the wearer
-  proximally. Lead23 now reconstructs a connected outer/inner tailoring patch
-  and a real annular lining join, with a recoverable glove-only native save.
+  proximally. Fresh lead28 succeeds retired lead23. A measured actual outward
+  upper-arm contour also lies inside the canonical wearer, so the repair must
+  fit continuous sleeves/shoulder into a genuinely healthy exterior region and
+  replace defective inward surfaces. The old independent-sheet preparation is
+  rejected. Glove-only recovery source preserves both finished native gloves
+  before any sleeve edit; actual save and dense moving gates remain pending.
   No repeated fixed-plane, radius, ease or dense-bound sweep is authorized.
 - Hem26 is frozen source for one actual collar-based lower-Jeans position patch.
   Its IDs are disjoint from upper anatomical weights and sculpt deltas. Actual
   native execution and dense pose/contact qualification are pending. Production25
   starts with stable bilateral boots geometry, then selected-source detail bake.
-- Motion11 native04 fixes the IK pole convention and passes all 75 neutral
-  operators plus native Idle/Walk/Jog/Turn90/JumpLand contact checks. The range
-  action fails a physically unreachable planted-leg target. Source05 adds knee
-  yield without changing solver/rest/bounds and saves each completed action.
-  Native05, full export, dressed motion and bike authoring remain pending.
+- Motion11 native05 now saves all six editable native control actions and
+  their native75 bake/export. Contact residual is at most 0.090460 mm and bake
+  discrepancy 0.025975 mm under unchanged 0.1 mm bounds. Exact selected dressed
+  transport and played action review are next. Lead24 authors measured seated,
+  forward and backward controls on both bikes; native27 refits coupled anatomy
+  to that new posture rather than extending the rejected author04 sculpt.
+- Parent Garage intake consumes real mesh-array morph tracks and the native
+  action library, preserves one-shot root travel and includes a 2-second lead-in.
+  Six CPU checks pass. The actual volume film reports 59.459 development render
+  FPS and 25 capture FPS with no errors; this is not a GPU/physical-phone pass.
+  Gate35 retains the unchanged original-player ready-time failure (319.03 ms
+  against 300 ms). Release remains open while isolated construction proceeds.
 
 Keep production geometry and missing actions moving alongside fit work. Preserve
 selected appearance through compact deliberate derivatives and measured detail

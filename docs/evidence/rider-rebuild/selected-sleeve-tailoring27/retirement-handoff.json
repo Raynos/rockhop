@@ -1,0 +1,132 @@
+{
+  "status": "RETIRED_FAILED_SLEEVE_PREPARATION_NO_VIABLE_SLEEVE_CANDIDATE",
+  "acceptedArt": false,
+  "nativeSleeveRunReady": false,
+  "ownedSource": [
+    {
+      "path": "assets/blender/rider-rebuild/selected-sleeve-tailoring27/prepare.py",
+      "sha256": "bc54420220de68f0d6ded7ec3c7c1de283b004e97cf8fd9bbb34788fe2ca3555"
+    },
+    {
+      "path": "assets/blender/rider-rebuild/selected-sleeve-tailoring27/bridge3d.py",
+      "sha256": "13f05ed010994687d3333b166a8ee4265c78671d6570a55995e74ff573b7eaf2"
+    },
+    {
+      "path": "assets/blender/rider-rebuild/selected-sleeve-tailoring27/checkpoint.py",
+      "sha256": "d45d46b46cc621fb6a116f6677bafaa642989e6664f6da6a919d46b70b4b2419"
+    },
+    {
+      "path": "assets/blender/rider-rebuild/selected-sleeve-tailoring27/gloves_only.py",
+      "sha256": "c0f454fd7459ed2819482984d5246f99ac4daa21ac75896ecb5b47c3232841a4"
+    }
+  ],
+  "gloveCheckpoint": {
+    "wrapperStatus": "NEW_SOURCE_ONLY_NEVER_RUN",
+    "lastActuallyExecutedRecipe": {
+      "path": "assets/blender/rider-rebuild/selected-cuff-topology10/construct10.py",
+      "sha256": "906c4df1c117d183b9b117fe03a27d2f96c82f65f1abc45ae9fd6e9e7e29aa0e"
+    },
+    "lastActualResult": "Both gloves finished in memory and ancestry was saved; left sleeve then failed at its immutable proximal contact boundary. No actual glove native checkpoint existed; ancestry NPZ does not contain positions/faces/UV/weights.",
+    "nextParentGuardedInvocation": "/Applications/Blender.app/Contents/MacOS/Blender -b -t 2 --python-exit-code 1 --python assets/blender/rider-rebuild/selected-sleeve-tailoring27/gloves_only.py -- harness/out/rider-rebuild/astra-cuff-bearing18/authored27-gloves-only",
+    "behavior": "Imports exact cuff10 wrapper and its pinned unchanged glove helper. At the FIRST sleeve callback, saves the actual full scene with both completed gloves and unchanged hoodie to UNACCEPTED-gloves-only-checkpoint.blend, records native/ancestry pins, exits0. No sleeve authoring or dense/art qualification is claimed.",
+    "sourceRuntimeEvidence": "Prior cuff10 total79.961s included both glove builds and failed sleeve. New wrapper save cost unmeasured; parent must retain original300s CPU2 guard and current shared-host admission guard."
+  },
+  "failedSleevePreparation": {
+    "neverRunMarkers": "prepare.py IS NOT a native constructor. It has only run lightweight source-array preparation and failed before writing patch-selection.npz/selection.json. No sleeve27 native candidate exists. Do not queue it as an authoring job.",
+    "failure": "Contact-deficit adjacency crosses the artificial anatomical elbow boundary and also the wider\u221290mm source extent. Neither boundary is viable. Independent original-sheet warping is rejected.",
+    "sourceConnectivity": "At the widened source domain, a197-face adjacency path joins the source-owned outer and inner sleeve bands; its source scalar range is\u22120.023364665743812945 to0.08416918257052433m. Exact source-position-weld adjacency; not UV seam duplication. This is why blindly flooding two wall components fails.",
+    "latestBoundaryWitness": {
+      "side": "L",
+      "startingWall": "outer",
+      "contactConnectedActiveDOFs": 11783,
+      "componentDOFs": 33974,
+      "deficientExtentBoundaryDOFs": 170,
+      "originalSourceCoordinate": [
+        0.490570992231369,
+        -0.081325002014637,
+        0.14435400068759918
+      ],
+      "engine05DecodedNativeWorld": [
+        0.22355934977531433,
+        -0.028615955263376236,
+        1.2544084787368774
+      ],
+      "sourceAxialM": -0.08889305923110344,
+      "canonicalBodySignedNearestTriangleDistanceM": -0.01485730042640496
+    },
+    "measurementLimit": "Engine05 hoodie positions were decoded using exact _NATIVE_ID and checked for duplicate-ID consistency. Body query triangles came from the pinned native02 canonical body array. Prior actual wrist crop points match that array exactly, but this upper-arm witness has NOT yet been rechecked for triangle membership in the actual engine05 FullAnatomyReference. It is source-bound evidence, not a native sleeve gate.",
+    "recommendation": "Inspect the entire selected outward sleeve/upper-arm fit against the complete actual wearer first. The defect is not demonstrated to be lining-only: outer-seeded contact adjacency reaches substantial upper-arm overlap, though original inward return reconnection mixes whole-component labels. Rebuild defective inward surfaces and author a continuous exterior sleeve enclosure into a measured healthy outward boundary. Do not continue station/radius/ease sweeps or preserve donor handles/caps for their own sake."
+  },
+  "readyHelpers": {
+    "bridge3d": "Two directed actual rings; nonplanar arclength zipper; no vertex moves/caps/deletes. Checks all boundary edges oppose source half edges, manifold interior incidence, Euler0 and positive area. Three unequal nonplanar ring construction fixtures passed. No actual source/native/dense result.",
+    "checkpoint": "Saves real native glove geometry/UV/materials/named weights/rig/maps immediately after both Surgery.finish calls. Explicitly unaccepted."
+  },
+  "immutableInputs": [
+    {
+      "path": "harness/out/rider-rebuild/selected-complete-engine01/engine05/rider-private-masked.blend",
+      "sha256": "95a4f14e06fb52cc055df6d1446a035d8cd3d35180d565ad52f3a70b3b05664b"
+    },
+    {
+      "path": "harness/out/rider-rebuild/selected-complete-engine01/engine05/rider.glb",
+      "sha256": "72b90e8790f8490743a75f8b70791aa21edfee6234cec609093e9b62e08d4bfd"
+    },
+    {
+      "path": "docs/evidence/rider-rebuild/native-hand-repair01/native02/native-body.npz",
+      "sha256": "e62e9969503b7761e99463eccc3ca7be39e0c230a2948f2f87a224db52d0f9a2"
+    },
+    {
+      "path": "assets/blender/rider-rebuild/selected-cuff-topology10/input09.json",
+      "sha256": "076ce70b228895af9cd75ea9148abca85c57996938c19691fb6d3bdc9049d0f4"
+    },
+    {
+      "path": "assets/blender/rider-rebuild/selected-cuff-topology10/reconstruct.py",
+      "sha256": "fdab30613f06a6aabe7734f5577ef0bda428f79c77788a6fe3a7769c5e77656e"
+    }
+  ],
+  "readyHem26": {
+    "files": [
+      {
+        "path": "assets/blender/rider-rebuild/selected-ankle-overlap26/author.py",
+        "sha256": "f2702c5eee222066187abc4ffd1ac0a9c87764b474e0a283203b77c6fbe1b70b"
+      },
+      {
+        "path": "assets/blender/rider-rebuild/selected-ankle-overlap26/input.json",
+        "sha256": "9b65da37c33e6fd1d1f10d20bf10219acb5079fbdbc734de7e05af9ef747ec14"
+      },
+      {
+        "path": "assets/blender/rider-rebuild/selected-ankle-overlap26/hem-selection.npz",
+        "sha256": "0c5948cd601a011ee580455336565f64f4a5503bd56d5a88e0103f1c46c54af7"
+      }
+    ],
+    "handoff": "docs/evidence/rider-rebuild/selected-ankle-overlap26/source-handoff.json",
+    "invocation": "/Applications/Blender.app/Contents/MacOS/Blender -b -t 2 --python-exit-code 1 --python assets/blender/rider-rebuild/selected-ankle-overlap26/author.py -- assets/blender/rider-rebuild/selected-ankle-overlap26/input.json harness/out/rider-rebuild/selected-ankle-overlap26/authored01",
+    "state": "Frozen source; no native execution by this agent. LowerJeans position-only patch, nativeIDs1724L/1717R below20cm, disjoint native22 upper weights. No boot/sole/mask movement. Parent owns integration/judgment."
+  },
+  "readyProduction25": {
+    "parentCheckpoint": "66e8ed9c1",
+    "files": [
+      {
+        "path": "assets/blender/rider-rebuild/selected-rider-production25/author.py",
+        "sha256": "bc9e03aa6d99eba0d4b5037ceff49424c34ddcde99f0f2aae0f84a5090cbc483"
+      },
+      {
+        "path": "assets/blender/rider-rebuild/selected-rider-production25/input.json",
+        "sha256": "49702808cf80ec8ad7104f2681c02b758e97d19f11a386e9b27ca53f8c0f6449"
+      },
+      {
+        "path": "assets/blender/rider-rebuild/selected-rider-production25/bake.py",
+        "sha256": "4e640a5ed4f2c050c9a7e4a7efa6e60afca5467c74e0d407d29f27b39f4ea47d"
+      },
+      {
+        "path": "assets/blender/rider-rebuild/selected-rider-production25/refresh.py",
+        "sha256": "bbcb6a16c0559c3b82c6a416dab95b9e9449b757e7da068bf3f0b16ac2a3957c"
+      },
+      {
+        "path": "assets/blender/rider-rebuild/selected-rider-production25/refresh_math.py",
+        "sha256": "7f5992bdbe540a2241eb6e5ac03ec4312687c3024d3a725db6f0e822b24e4339"
+      }
+    ],
+    "firstInvocation": "/Applications/Blender.app/Contents/MacOS/Blender -b -t 2 --python-exit-code 1 --python assets/blender/rider-rebuild/selected-rider-production25/author.py -- assets/blender/rider-rebuild/selected-rider-production25/input.json harness/out/rider-rebuild/selected-rider-production25/full-boots01 full boots",
+    "state": "First single-family boots geometry only;8k triangles each,16k total,1mm two-way source error, actual boundary identity and FOUR-loss gates. No all-model bakes. Refresh preserves source-face/barycentric ancestry and fails topology changes. Later skin-family must preserve selected face UV density; unresolved before skin run."
+  }
+}

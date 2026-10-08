@@ -1859,3 +1859,5 @@ Reference04 source carries the saved cage onto the hidden full wearer using its 
 Glove recovery source now saves both actual completed selected gloves before any sleeve edit, checking protected geometry including hoodie and native75 rest against pre-glove signatures. Source hashes/AST and parent control-flow review pass; guarded native checkpoint and geometry/art review remain pending.
 
 Reference04 actual fails49.591s at exact saved-cage state equality after native full-field inverse/target checks. No native candidate or full surface/reopen pass is claimed. Native27 diagnoses the actual cage-state change and adds recovery evidence before retry; complete wearer/contact remains open.
+
+24h finish status now records six saved native actions, actual dressed volume04 played rejection and fresh wardrobe28 replacing retired23. Whole-sleeve exterior fit and new measured seated controls supersede doomed local-boundary/author04 iterations. All six acceptance gates and the original-player boot timing failure remain open; targetOctober9 14:05Panama is still a stretch.
