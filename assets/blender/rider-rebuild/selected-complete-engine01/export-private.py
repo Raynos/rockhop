@@ -176,7 +176,7 @@ def part_fingerprint(obj, helper, allow_positions=False):
             'polygons': len(mesh.polygons), 'positionChangesAllowed': allow_positions}
 
 
-def masked_state(helper, contract):
+def masked_state(helper, contract, allowed_position_objects):
     rig = bpy.data.objects['RiderSkeleton']
     assert len(rig.data.bones) == 75 and rig.animation_data is None and rig.matrix_world.is_identity
     assert all(b.matrix_basis.is_identity for b in rig.pose.bones)
@@ -193,11 +193,11 @@ def masked_state(helper, contract):
         assert all(mod.type in {'ARMATURE', 'TRIANGULATE'} for mod in obj.modifiers)
         rows = helper['mesh_four'](obj, rig)
         assert all(weight > .0001 for row in rows for _, weight in row), ('Saved export cutoff unstable', obj.name)
-    states = {obj.name: part_fingerprint(obj, helper, obj.name.startswith('ActualSelectedGlove.'))
+    states = {obj.name: part_fingerprint(obj, helper, obj.name in allowed_position_objects)
               for obj in visible+[reference]}
     positions = {}
     for obj in visible:
-        if not obj.name.startswith('ActualSelectedGlove.'): continue
+        if obj.name not in allowed_position_objects: continue
         values = helper['np'].empty(len(obj.data.vertices)*3, dtype=helper['np'].float32)
         obj.data.vertices.foreach_get('co', values)
         assert helper['np'].isfinite(values).all()
@@ -207,6 +207,12 @@ def masked_state(helper, contract):
 
 def intake_masked(manifest, manifest_path, out, helper):
     """Validate a shape-only derivative, without mask, prune or weight writes."""
+    gloves = {'ActualSelectedGlove.L', 'ActualSelectedGlove.R'}
+    allowed = manifest.get('allowedPositionObjects', sorted(gloves))
+    assert isinstance(allowed, list) and all(isinstance(name, str) for name in allowed)
+    assert len(allowed) == len(set(allowed)), 'Duplicate allowed position object'
+    allowed = set(allowed)
+    assert allowed in (gloves, gloves | {'RiderHoodie'}), 'Only bilateral gloves or gloves plus hoodie may change positions'
     pin = helper['pin']
     parent_path = pin(manifest['parentExportReceipt'])
     parent = json.loads(parent_path.read_text())
@@ -223,22 +229,26 @@ def intake_masked(manifest, manifest_path, out, helper):
     contract = json.loads(pin(manifest['baseContract']).read_text())
     assert contract['glbSHA256'] == parent['glb']['sha256']
     bpy.ops.wm.open_mainfile(filepath=str(pin(manifest['parentNative'])))
-    _, _, before, before_positions = masked_state(helper, contract)
+    _, _, before, before_positions = masked_state(helper, contract, allowed)
     bpy.ops.wm.open_mainfile(filepath=str(pin(manifest['native'])))
-    rig, meshes, after, after_positions = masked_state(helper, contract)
+    rig, meshes, after, after_positions = masked_state(helper, contract, allowed)
     assert before == after, ('Shape-only masked export changed protected native data',
                              [name for name in before if before[name] != after[name]])
-    assert all(before_positions[name] != after_positions[name] for name in before_positions), 'Expected bilateral shape correction is absent'
-    qualification = {'glovePositionHashesBefore': before_positions, 'glovePositionHashesAfter': after_positions,
+    assert all(before_positions[name] != after_positions[name] for name in before_positions), 'Expected allowed-object shape correction is absent'
+    qualification = {'positionHashesBefore': before_positions, 'positionHashesAfter': after_positions,
                      'parentExportReceipt': manifest['parentExportReceipt'],
                      'parentNative': manifest['parentNative'], 'correctedNativeReceipt': manifest['correctedNativeReceipt'],
                      'protectedNativeFingerprints': after, 'bodyMaskAppliedAgain': False,
                      'weightPruningOrNormalizationPerformed': False,
-                     'allowedPositionObjects': ['ActualSelectedGlove.L', 'ActualSelectedGlove.R'],
-                     'fullAnatomyReferenceAndOtherFiveMeshesExact': True,
+                     'allowedPositionObjects': sorted(allowed),
+                     'fullAnatomyReferenceAndOtherMeshesExact': True,
+                     'otherVisibleMeshesExactCount': len(meshes)-len(allowed),
                      'allSevenTopologyUVPBRAndDeliveryFieldsExact': True,
                      'savedPointNativeIDsValidatedByFinalizer': True,
                      'exportCutoffStableWithoutMutation': True}
+    if allowed == gloves:
+        qualification.update({'glovePositionHashesBefore': before_positions, 'glovePositionHashesAfter': after_positions,
+                              'fullAnatomyReferenceAndOtherFiveMeshesExact': True})
     conditioning = [{'object': obj.name, 'cutoff': .0001, 'changedRows': 0,
                      'maximumRemovedMass': 0., 'method': 'Assert existing saved delivery coefficients; no mutation'}
                     for obj in meshes]
