@@ -1305,3 +1305,5 @@ October 7 boot receipt compatibility source: determinant comparison explicitly c
 October 7 actual selected glove material review rejected: parent viewed three severe patchy/chrome/white artifact renders. Source MR differs from allzero target misses across≈40% eroded occupiedUV; higher resolution cannot fix missing transfer. Next inspect actual aligned selected donor/target; no blind larger-ray or4K retry. No appearance/motion acceptance.
 
 October 7 direct jeans gusset source: actual anterior saddle was inside pubis despite a low enough bottom; own-side support strips also overlapped. New regional author uses seven anatomical front seam controls and descending own-sided supports, applying only local subdivision delta to pinned author04. Parent full source/AST/pins checked; run unexecuted.
+
+October 7 current-player baseline: initial portable SwiftShader9/11 timing failure retained; explicit headless Metal11/11 passes in5.601s, firstframe435.38ms/restartframeP955.68ms and exact finish/hash. New garments remain outside normal player; partial baseline grants no rider/device/art release.

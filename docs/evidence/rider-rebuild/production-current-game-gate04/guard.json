@@ -1,0 +1,72 @@
+{
+  "accepted": false,
+  "lock": "/Users/raynos/projects/localai/.model.lock",
+  "method": "lockf -k",
+  "command": [
+    "/opt/homebrew/bin/pnpm",
+    "harness:gate",
+    "--only=boot,clear,crash,restart",
+    "--quick",
+    "--jobs=1",
+    "--quiet-timing"
+  ],
+  "controllerPID": 65507,
+  "pollSeconds": 1,
+  "startAnonymousBelowGiB": 55,
+  "stopAnonymousGiB": 65,
+  "stopAnonymousPlusWiredGiB": 96,
+  "limitSeconds": 240.0,
+  "guardSHA256": "cf8acd15d8b7484480bee74d23892be815d955ffd87115d3da8ed228ffb3d916",
+  "status": "worker returned; review pending",
+  "samples": [
+    {
+      "seconds": 0,
+      "anonymousGiB": 26.8,
+      "wiredGiB": 6.6,
+      "freeGiB": 41.1
+    },
+    {
+      "seconds": 0.036,
+      "anonymousGiB": 26.8,
+      "wiredGiB": 6.6,
+      "freeGiB": 41.1
+    },
+    {
+      "seconds": 1.068,
+      "anonymousGiB": 27.9,
+      "wiredGiB": 7.1,
+      "freeGiB": 39.4
+    },
+    {
+      "seconds": 2.112,
+      "anonymousGiB": 28.0,
+      "wiredGiB": 7.1,
+      "freeGiB": 39.3
+    },
+    {
+      "seconds": 3.158,
+      "anonymousGiB": 28.7,
+      "wiredGiB": 7.3,
+      "freeGiB": 38.5
+    },
+    {
+      "seconds": 4.202,
+      "anonymousGiB": 29.4,
+      "wiredGiB": 7.0,
+      "freeGiB": 38.1
+    },
+    {
+      "seconds": 5.245,
+      "anonymousGiB": 29.6,
+      "wiredGiB": 7.4,
+      "freeGiB": 37.5
+    }
+  ],
+  "physicalMemoryBytes": 137438953472,
+  "requiredPhysicalMemoryBytes": 137438953472,
+  "scope": "Future explicitly invoked owned Rockhop job only",
+  "pressureOrSwapLimits": "No separate pressure/swap gate exists in the pinned original guard; none altered",
+  "ownedChildPID": 65575,
+  "exitCode": 0,
+  "elapsedSeconds": 5.601
+}
