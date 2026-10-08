@@ -1,0 +1,552 @@
+{
+  "accepted": false,
+  "lock": "/Users/raynos/projects/localai/.model.lock",
+  "method": "lockf -k",
+  "command": [
+    "pnpm",
+    "harness:gate",
+    "--only=boot,clear,crash,restart",
+    "--quick",
+    "--jobs=1",
+    "--quiet-timing"
+  ],
+  "controllerPID": 13189,
+  "pollSeconds": 1,
+  "startAnonymousBelowGiB": 55,
+  "stopAnonymousGiB": 65,
+  "stopAnonymousPlusWiredGiB": 96,
+  "limitSeconds": 90.0,
+  "guardSHA256": "cf8acd15d8b7484480bee74d23892be815d955ffd87115d3da8ed228ffb3d916",
+  "status": "stopped owned child at time bound",
+  "samples": [
+    {
+      "seconds": 0,
+      "anonymousGiB": 48.7,
+      "wiredGiB": 8.7,
+      "freeGiB": 8.9
+    },
+    {
+      "seconds": 0.053,
+      "anonymousGiB": 48.6,
+      "wiredGiB": 8.7,
+      "freeGiB": 8.9
+    },
+    {
+      "seconds": 1.097,
+      "anonymousGiB": 49.4,
+      "wiredGiB": 8.7,
+      "freeGiB": 7.9
+    },
+    {
+      "seconds": 2.153,
+      "anonymousGiB": 50.3,
+      "wiredGiB": 8.9,
+      "freeGiB": 6.7
+    },
+    {
+      "seconds": 3.217,
+      "anonymousGiB": 51.8,
+      "wiredGiB": 8.5,
+      "freeGiB": 5.7
+    },
+    {
+      "seconds": 4.282,
+      "anonymousGiB": 51.6,
+      "wiredGiB": 8.0,
+      "freeGiB": 6.5
+    },
+    {
+      "seconds": 5.338,
+      "anonymousGiB": 50.9,
+      "wiredGiB": 8.2,
+      "freeGiB": 7.0
+    },
+    {
+      "seconds": 6.392,
+      "anonymousGiB": 51.0,
+      "wiredGiB": 8.7,
+      "freeGiB": 6.3
+    },
+    {
+      "seconds": 7.46,
+      "anonymousGiB": 51.7,
+      "wiredGiB": 9.4,
+      "freeGiB": 5.0
+    },
+    {
+      "seconds": 8.508,
+      "anonymousGiB": 52.1,
+      "wiredGiB": 9.7,
+      "freeGiB": 4.3
+    },
+    {
+      "seconds": 9.563,
+      "anonymousGiB": 52.1,
+      "wiredGiB": 9.6,
+      "freeGiB": 4.4
+    },
+    {
+      "seconds": 10.621,
+      "anonymousGiB": 52.7,
+      "wiredGiB": 9.7,
+      "freeGiB": 3.7
+    },
+    {
+      "seconds": 11.695,
+      "anonymousGiB": 52.7,
+      "wiredGiB": 9.6,
+      "freeGiB": 3.8
+    },
+    {
+      "seconds": 12.746,
+      "anonymousGiB": 52.5,
+      "wiredGiB": 9.7,
+      "freeGiB": 4.0
+    },
+    {
+      "seconds": 13.803,
+      "anonymousGiB": 52.7,
+      "wiredGiB": 9.7,
+      "freeGiB": 3.6
+    },
+    {
+      "seconds": 14.861,
+      "anonymousGiB": 52.6,
+      "wiredGiB": 9.7,
+      "freeGiB": 3.8
+    },
+    {
+      "seconds": 15.911,
+      "anonymousGiB": 51.7,
+      "wiredGiB": 9.6,
+      "freeGiB": 4.8
+    },
+    {
+      "seconds": 16.97,
+      "anonymousGiB": 52.1,
+      "wiredGiB": 9.7,
+      "freeGiB": 4.3
+    },
+    {
+      "seconds": 18.035,
+      "anonymousGiB": 51.9,
+      "wiredGiB": 9.6,
+      "freeGiB": 4.5
+    },
+    {
+      "seconds": 19.097,
+      "anonymousGiB": 53.2,
+      "wiredGiB": 9.7,
+      "freeGiB": 3.2
+    },
+    {
+      "seconds": 20.176,
+      "anonymousGiB": 52.3,
+      "wiredGiB": 9.6,
+      "freeGiB": 4.2
+    },
+    {
+      "seconds": 21.238,
+      "anonymousGiB": 53.2,
+      "wiredGiB": 10.1,
+      "freeGiB": 2.7
+    },
+    {
+      "seconds": 22.293,
+      "anonymousGiB": 53.2,
+      "wiredGiB": 10.1,
+      "freeGiB": 2.7
+    },
+    {
+      "seconds": 23.359,
+      "anonymousGiB": 52.8,
+      "wiredGiB": 10.0,
+      "freeGiB": 3.2
+    },
+    {
+      "seconds": 24.415,
+      "anonymousGiB": 52.6,
+      "wiredGiB": 10.0,
+      "freeGiB": 3.3
+    },
+    {
+      "seconds": 25.478,
+      "anonymousGiB": 54.9,
+      "wiredGiB": 10.5,
+      "freeGiB": 0.6
+    },
+    {
+      "seconds": 26.534,
+      "anonymousGiB": 55.9,
+      "wiredGiB": 10.6,
+      "freeGiB": 0.1
+    },
+    {
+      "seconds": 27.611,
+      "anonymousGiB": 56.2,
+      "wiredGiB": 10.7,
+      "freeGiB": 0.4
+    },
+    {
+      "seconds": 28.713,
+      "anonymousGiB": 53.3,
+      "wiredGiB": 10.6,
+      "freeGiB": 3.4
+    },
+    {
+      "seconds": 29.77,
+      "anonymousGiB": 51.3,
+      "wiredGiB": 10.6,
+      "freeGiB": 5.4
+    },
+    {
+      "seconds": 30.825,
+      "anonymousGiB": 50.8,
+      "wiredGiB": 10.5,
+      "freeGiB": 5.9
+    },
+    {
+      "seconds": 31.899,
+      "anonymousGiB": 51.6,
+      "wiredGiB": 10.7,
+      "freeGiB": 5.0
+    },
+    {
+      "seconds": 32.97,
+      "anonymousGiB": 53.1,
+      "wiredGiB": 10.2,
+      "freeGiB": 3.9
+    },
+    {
+      "seconds": 34.025,
+      "anonymousGiB": 50.4,
+      "wiredGiB": 10.2,
+      "freeGiB": 6.5
+    },
+    {
+      "seconds": 35.112,
+      "anonymousGiB": 51.0,
+      "wiredGiB": 10.2,
+      "freeGiB": 5.7
+    },
+    {
+      "seconds": 36.177,
+      "anonymousGiB": 51.5,
+      "wiredGiB": 10.0,
+      "freeGiB": 5.0
+    },
+    {
+      "seconds": 37.24,
+      "anonymousGiB": 52.5,
+      "wiredGiB": 10.1,
+      "freeGiB": 3.8
+    },
+    {
+      "seconds": 38.322,
+      "anonymousGiB": 50.5,
+      "wiredGiB": 10.3,
+      "freeGiB": 5.6
+    },
+    {
+      "seconds": 39.401,
+      "anonymousGiB": 51.7,
+      "wiredGiB": 10.6,
+      "freeGiB": 4.1
+    },
+    {
+      "seconds": 40.464,
+      "anonymousGiB": 48.8,
+      "wiredGiB": 10.5,
+      "freeGiB": 7.0
+    },
+    {
+      "seconds": 41.564,
+      "anonymousGiB": 49.4,
+      "wiredGiB": 10.3,
+      "freeGiB": 6.7
+    },
+    {
+      "seconds": 42.641,
+      "anonymousGiB": 50.4,
+      "wiredGiB": 10.4,
+      "freeGiB": 5.5
+    },
+    {
+      "seconds": 43.731,
+      "anonymousGiB": 52.4,
+      "wiredGiB": 10.5,
+      "freeGiB": 3.5
+    },
+    {
+      "seconds": 44.796,
+      "anonymousGiB": 50.9,
+      "wiredGiB": 10.3,
+      "freeGiB": 5.1
+    },
+    {
+      "seconds": 45.881,
+      "anonymousGiB": 50.1,
+      "wiredGiB": 10.7,
+      "freeGiB": 5.6
+    },
+    {
+      "seconds": 46.95,
+      "anonymousGiB": 51.7,
+      "wiredGiB": 10.0,
+      "freeGiB": 4.7
+    },
+    {
+      "seconds": 48.017,
+      "anonymousGiB": 50.9,
+      "wiredGiB": 10.1,
+      "freeGiB": 5.4
+    },
+    {
+      "seconds": 49.087,
+      "anonymousGiB": 50.1,
+      "wiredGiB": 10.2,
+      "freeGiB": 6.1
+    },
+    {
+      "seconds": 50.172,
+      "anonymousGiB": 51.4,
+      "wiredGiB": 10.5,
+      "freeGiB": 4.5
+    },
+    {
+      "seconds": 51.243,
+      "anonymousGiB": 51.8,
+      "wiredGiB": 10.6,
+      "freeGiB": 4.1
+    },
+    {
+      "seconds": 52.332,
+      "anonymousGiB": 53.3,
+      "wiredGiB": 10.2,
+      "freeGiB": 3.0
+    },
+    {
+      "seconds": 53.423,
+      "anonymousGiB": 51.6,
+      "wiredGiB": 11.0,
+      "freeGiB": 4.5
+    },
+    {
+      "seconds": 54.521,
+      "anonymousGiB": 44.5,
+      "wiredGiB": 10.6,
+      "freeGiB": 12.4
+    },
+    {
+      "seconds": 55.678,
+      "anonymousGiB": 43.9,
+      "wiredGiB": 10.4,
+      "freeGiB": 13.1
+    },
+    {
+      "seconds": 56.76,
+      "anonymousGiB": 43.6,
+      "wiredGiB": 10.1,
+      "freeGiB": 13.7
+    },
+    {
+      "seconds": 57.837,
+      "anonymousGiB": 42.4,
+      "wiredGiB": 10.0,
+      "freeGiB": 15.0
+    },
+    {
+      "seconds": 58.917,
+      "anonymousGiB": 41.4,
+      "wiredGiB": 8.6,
+      "freeGiB": 17.4
+    },
+    {
+      "seconds": 59.977,
+      "anonymousGiB": 39.9,
+      "wiredGiB": 8.7,
+      "freeGiB": 18.7
+    },
+    {
+      "seconds": 61.041,
+      "anonymousGiB": 40.6,
+      "wiredGiB": 8.3,
+      "freeGiB": 18.4
+    },
+    {
+      "seconds": 62.115,
+      "anonymousGiB": 41.4,
+      "wiredGiB": 7.9,
+      "freeGiB": 17.9
+    },
+    {
+      "seconds": 63.178,
+      "anonymousGiB": 39.7,
+      "wiredGiB": 8.1,
+      "freeGiB": 19.5
+    },
+    {
+      "seconds": 64.231,
+      "anonymousGiB": 40.7,
+      "wiredGiB": 7.9,
+      "freeGiB": 18.7
+    },
+    {
+      "seconds": 65.284,
+      "anonymousGiB": 40.3,
+      "wiredGiB": 7.9,
+      "freeGiB": 19.1
+    },
+    {
+      "seconds": 66.34,
+      "anonymousGiB": 40.2,
+      "wiredGiB": 8.3,
+      "freeGiB": 18.8
+    },
+    {
+      "seconds": 67.412,
+      "anonymousGiB": 40.5,
+      "wiredGiB": 8.5,
+      "freeGiB": 18.2
+    },
+    {
+      "seconds": 68.48,
+      "anonymousGiB": 38.4,
+      "wiredGiB": 8.1,
+      "freeGiB": 20.7
+    },
+    {
+      "seconds": 69.545,
+      "anonymousGiB": 37.7,
+      "wiredGiB": 8.0,
+      "freeGiB": 21.5
+    },
+    {
+      "seconds": 70.604,
+      "anonymousGiB": 38.7,
+      "wiredGiB": 7.9,
+      "freeGiB": 20.6
+    },
+    {
+      "seconds": 71.657,
+      "anonymousGiB": 38.7,
+      "wiredGiB": 8.2,
+      "freeGiB": 20.3
+    },
+    {
+      "seconds": 72.713,
+      "anonymousGiB": 38.4,
+      "wiredGiB": 7.9,
+      "freeGiB": 20.9
+    },
+    {
+      "seconds": 73.781,
+      "anonymousGiB": 39.0,
+      "wiredGiB": 7.3,
+      "freeGiB": 20.8
+    },
+    {
+      "seconds": 74.843,
+      "anonymousGiB": 38.8,
+      "wiredGiB": 8.1,
+      "freeGiB": 20.3
+    },
+    {
+      "seconds": 75.9,
+      "anonymousGiB": 38.9,
+      "wiredGiB": 8.7,
+      "freeGiB": 19.5
+    },
+    {
+      "seconds": 76.961,
+      "anonymousGiB": 39.6,
+      "wiredGiB": 9.0,
+      "freeGiB": 18.6
+    },
+    {
+      "seconds": 78.031,
+      "anonymousGiB": 39.9,
+      "wiredGiB": 9.0,
+      "freeGiB": 18.2
+    },
+    {
+      "seconds": 79.097,
+      "anonymousGiB": 40.7,
+      "wiredGiB": 9.0,
+      "freeGiB": 17.4
+    },
+    {
+      "seconds": 80.167,
+      "anonymousGiB": 40.6,
+      "wiredGiB": 8.7,
+      "freeGiB": 17.9
+    },
+    {
+      "seconds": 81.239,
+      "anonymousGiB": 40.5,
+      "wiredGiB": 8.6,
+      "freeGiB": 18.0
+    },
+    {
+      "seconds": 82.302,
+      "anonymousGiB": 40.3,
+      "wiredGiB": 8.6,
+      "freeGiB": 18.2
+    },
+    {
+      "seconds": 83.361,
+      "anonymousGiB": 40.0,
+      "wiredGiB": 8.6,
+      "freeGiB": 18.6
+    },
+    {
+      "seconds": 84.414,
+      "anonymousGiB": 40.6,
+      "wiredGiB": 8.9,
+      "freeGiB": 17.6
+    },
+    {
+      "seconds": 85.473,
+      "anonymousGiB": 39.6,
+      "wiredGiB": 8.6,
+      "freeGiB": 18.9
+    },
+    {
+      "seconds": 86.525,
+      "anonymousGiB": 39.7,
+      "wiredGiB": 9.5,
+      "freeGiB": 17.9
+    },
+    {
+      "seconds": 87.572,
+      "anonymousGiB": 40.6,
+      "wiredGiB": 10.1,
+      "freeGiB": 16.4
+    },
+    {
+      "seconds": 88.623,
+      "anonymousGiB": 41.0,
+      "wiredGiB": 9.8,
+      "freeGiB": 16.3
+    },
+    {
+      "seconds": 89.674,
+      "anonymousGiB": 40.9,
+      "wiredGiB": 9.6,
+      "freeGiB": 16.6
+    },
+    {
+      "seconds": 90.724,
+      "anonymousGiB": 41.2,
+      "wiredGiB": 9.2,
+      "freeGiB": 16.7
+    }
+  ],
+  "physicalMemoryBytes": 137438953472,
+  "requiredPhysicalMemoryBytes": 137438953472,
+  "scope": "Future explicitly invoked owned Rockhop job only",
+  "pressureOrSwapLimits": "No separate pressure/swap gate exists in the pinned original guard; none altered",
+  "ownedChildPID": 13226,
+  "exitCode": 143,
+  "elapsedSeconds": 90.842
+}

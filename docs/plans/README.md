@@ -1695,3 +1695,5 @@ Native08 actual construction: wrist-local/finite bearings pass the previous nume
 Remote phone preview verification01 failed at unchanged memory guard46.696s with only original rider ready; no recorder was active. Temporary loading-actor traversal bug corrected; bounded script/model response diagnostics and official toolbar-skip header added. Remote selected transition remains pending; source/art/device gates unchanged.
 
 Active rider plan corrected to actual failures: stop pelvis-only seated fitting after quantified thigh/pelvis skin distortion; build generic pose-space posterior corrective. Corrected cuff query now exposes local aperture/ease failure, not permission for uniform enlargement. Local comparison/movie pass; isolated upload remains remotely unverified. R0–R5open0/6.
+
+Current-source player gate30: explicit silent Metal --dev boot/clear/crash/restart passes11/11, exact8.591666666666667finish/hash622bb2554e0f9a26, one-tick restart and5.97ms synced-frame P95. Retain default-SwiftShader timeout and stale-dist baseline separately. No selected rider/ship/device pass.
