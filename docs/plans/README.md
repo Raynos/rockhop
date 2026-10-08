@@ -1589,3 +1589,5 @@ October8 actualGarage05 provesselected4096²intake/residentpolicy: broadwhite/ch
 October8 actualcuff05 saved6a3fcb82 in52.310s: knownlobes now1.31/1.44mm insideactualsleeve, unchangednoncuffdensepositions/otherfive/fullreference/75rest/deliveryfields;0newbindsweightsbakes. Readyexactmaskedreexport thenGarage/gripreview;all0/6open.
 
 October8 correctedmaskedexport04 stoppedbeforeexport: fingerprintomittedencodedcustom_normal INT16_2D. Addexact2componentint16format; source/tolerance unchanged. Actualrerun next;all0/6open.
+
+October8 correctedcuff maskedexport05 succeeds86.479s: native95a4f14e/GLB72b90e87, independentprotectedsourceexact, maskbytesexact/no reconditioning, decodedFOURmax1.1921e-7. Actualgeneric/Garage/ride next;all0/6open.

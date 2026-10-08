@@ -1,0 +1,224 @@
+{
+  "accepted": false,
+  "status": "PRIVATE_SELECTED_MASKED_ENGINE_EXPORT_REVIEW_PENDING",
+  "native": {
+    "path": "harness/out/rider-rebuild/selected-complete-engine01/engine05/rider-private-masked.blend",
+    "sha256": "95a4f14e06fb52cc055df6d1446a035d8cd3d35180d565ad52f3a70b3b05664b"
+  },
+  "glb": {
+    "path": "harness/out/rider-rebuild/selected-complete-engine01/engine05/rider.glb",
+    "sha256": "72b90e8790f8490743a75f8b70791aa21edfee6234cec609093e9b62e08d4bfd"
+  },
+  "recipeSHA256": "7ab99507a4a1e3cc62aef599eb73c7d5dc4311d3d1fd6762d47d0ec29186ff52",
+  "manifestSHA256": "56510847887275e68005e47689c74b76e48a22b8b759ead8231082a24beabb86",
+  "bodyMaskReceipt": "body-mask-receipt.json",
+  "renderBodyFourConditioning": {
+    "method": "Existing masked body FOUR preserved exactly; no conditioning",
+    "fullAnatomyReferenceChanged": false
+  },
+  "renderDeliveryExportCutoffConditioning": [
+    {
+      "object": "ActualSelectedGlove.L",
+      "cutoff": 0.0001,
+      "changedRows": 0,
+      "maximumRemovedMass": 0.0,
+      "method": "Assert existing saved delivery coefficients; no mutation"
+    },
+    {
+      "object": "ActualSelectedGlove.R",
+      "cutoff": 0.0001,
+      "changedRows": 0,
+      "maximumRemovedMass": 0.0,
+      "method": "Assert existing saved delivery coefficients; no mutation"
+    },
+    {
+      "object": "ActualSelectedBoot.L",
+      "cutoff": 0.0001,
+      "changedRows": 0,
+      "maximumRemovedMass": 0.0,
+      "method": "Assert existing saved delivery coefficients; no mutation"
+    },
+    {
+      "object": "ActualSelectedBoot.R",
+      "cutoff": 0.0001,
+      "changedRows": 0,
+      "maximumRemovedMass": 0.0,
+      "method": "Assert existing saved delivery coefficients; no mutation"
+    },
+    {
+      "object": "RiderJeans",
+      "cutoff": 0.0001,
+      "changedRows": 0,
+      "maximumRemovedMass": 0.0,
+      "method": "Assert existing saved delivery coefficients; no mutation"
+    },
+    {
+      "object": "RiderBody",
+      "cutoff": 0.0001,
+      "changedRows": 0,
+      "maximumRemovedMass": 0.0,
+      "method": "Assert existing saved delivery coefficients; no mutation"
+    },
+    {
+      "object": "RiderHoodie",
+      "cutoff": 0.0001,
+      "changedRows": 0,
+      "maximumRemovedMass": 0.0,
+      "method": "Assert existing saved delivery coefficients; no mutation"
+    }
+  ],
+  "decodedFourQualification": {
+    "decodedSourceFOURMatchesSavedNative": true,
+    "objects": [
+      {
+        "object": "ActualSelectedBoot.L",
+        "decodedPrimitiveRows": 466146,
+        "nativeSurfaceVertexIDs": 305453,
+        "maximumNamedWeightResidual": 0.0,
+        "maximumNativePositiveInfluences": 2
+      },
+      {
+        "object": "ActualSelectedBoot.R",
+        "decodedPrimitiveRows": 466146,
+        "nativeSurfaceVertexIDs": 305453,
+        "maximumNamedWeightResidual": 0.0,
+        "maximumNativePositiveInfluences": 2
+      },
+      {
+        "object": "ActualSelectedGlove.L",
+        "decodedPrimitiveRows": 439646,
+        "nativeSurfaceVertexIDs": 284571,
+        "maximumNamedWeightResidual": 1.1920928955078125e-07,
+        "maximumNativePositiveInfluences": 4
+      },
+      {
+        "object": "ActualSelectedGlove.R",
+        "decodedPrimitiveRows": 439646,
+        "nativeSurfaceVertexIDs": 284571,
+        "maximumNamedWeightResidual": 1.1920928955078125e-07,
+        "maximumNativePositiveInfluences": 4
+      },
+      {
+        "object": "RiderBody",
+        "decodedPrimitiveRows": 40189,
+        "nativeSurfaceVertexIDs": 32412,
+        "maximumNamedWeightResidual": 1.1920928955078125e-07,
+        "maximumNativePositiveInfluences": 4
+      },
+      {
+        "object": "RiderHoodie",
+        "decodedPrimitiveRows": 2761252,
+        "nativeSurfaceVertexIDs": 716971,
+        "maximumNamedWeightResidual": 1.1920928955078125e-07,
+        "maximumNativePositiveInfluences": 4
+      },
+      {
+        "object": "RiderJeans",
+        "decodedPrimitiveRows": 26474,
+        "nativeSurfaceVertexIDs": 26063,
+        "maximumNamedWeightResidual": 1.1920928955078125e-07,
+        "maximumNativePositiveInfluences": 4
+      }
+    ],
+    "limits": "Source transport fields only; native-vs-actual-GPU moving parity remains open."
+  },
+  "alreadyMaskedReexport": {
+    "glovePositionHashesBefore": {
+      "ActualSelectedGlove.L": "341a65cf6e0b29cda61aee52fe6d3f6dca7c7ffebc239c42da98ce55fab5f0cb",
+      "ActualSelectedGlove.R": "c77cc139c4acd0add07d870e786c2e2bf70a6c68d3639f5289a99a030da54ffd"
+    },
+    "glovePositionHashesAfter": {
+      "ActualSelectedGlove.L": "c6fc7a01d51d728b8c249fe6bcc90d1dc1e992ca597c83c682b47cb9ce84b156",
+      "ActualSelectedGlove.R": "6ea1fbd4661439db9b68c07e87afdea4bab20bedad35c5f7220e42e4ab642ab7"
+    },
+    "parentExportReceipt": {
+      "path": "harness/out/rider-rebuild/selected-complete-engine01/engine03/export.json",
+      "sha256": "66984c6495bbfb33db8f7dc6f704b8cf2086129076326983194b4bfaeba1bc4b"
+    },
+    "parentNative": {
+      "path": "harness/out/rider-rebuild/selected-complete-engine01/engine03/rider-private-masked.blend",
+      "sha256": "fdff3433c26c345d6f0555f196033f5ba76791d5d566b448991bd1fab2eff384"
+    },
+    "correctedNativeReceipt": {
+      "path": "harness/out/rider-rebuild/glove-cuff-fit05/authored02/report.json",
+      "sha256": "f2f6075e782a43f9626a72b021bffaaf6d2cde6ddd55ed4424b2f81e248cf257"
+    },
+    "protectedNativeFingerprints": {
+      "ActualSelectedGlove.L": {
+        "sha256": "40ce0f823e69bb693d32f3bdd8a0fbe51661791917ccfcbbf76ad0a209850c39",
+        "vertices": 284571,
+        "polygons": 569142,
+        "positionChangesAllowed": true
+      },
+      "ActualSelectedGlove.R": {
+        "sha256": "2614208b7450b90dbaa2df79d73659bad15d33dae600dddb1bc9462df957a996",
+        "vertices": 284571,
+        "polygons": 569142,
+        "positionChangesAllowed": true
+      },
+      "ActualSelectedBoot.L": {
+        "sha256": "fbc5f87d5292071a7f662079b9db8d049de2787373c0f28028c99debfd4eb09f",
+        "vertices": 305453,
+        "polygons": 610934,
+        "positionChangesAllowed": false
+      },
+      "ActualSelectedBoot.R": {
+        "sha256": "dc462edbf59f0c654f9fde9516284571d21734bcf2006fe28aab595cb379af96",
+        "vertices": 305453,
+        "polygons": 610934,
+        "positionChangesAllowed": false
+      },
+      "RiderJeans": {
+        "sha256": "d9df9ec901926c479800f128d225ce4c4dcdf2bd77e5c5ef113ca146c63aa0b1",
+        "vertices": 26063,
+        "polygons": 25728,
+        "positionChangesAllowed": false
+      },
+      "RiderBody": {
+        "sha256": "65308f596308ab8be8b691dcfbd45069ef9576ce044c32027effffb4e081f88a",
+        "vertices": 38959,
+        "polygons": 63732,
+        "positionChangesAllowed": false
+      },
+      "RiderHoodie": {
+        "sha256": "5256432ee493a000aa41012a1df59e243407b77960db20247599c7a4c4c1334d",
+        "vertices": 716971,
+        "polygons": 921722,
+        "positionChangesAllowed": false
+      },
+      "RiderBody__FullAnatomyReference": {
+        "sha256": "3cd8a156977f04c79da3894daf93902e2440cda4660802793b8ef544d202e360",
+        "vertices": 38959,
+        "polygons": 70845,
+        "positionChangesAllowed": false
+      }
+    },
+    "bodyMaskAppliedAgain": false,
+    "weightPruningOrNormalizationPerformed": false,
+    "allowedPositionObjects": [
+      "ActualSelectedGlove.L",
+      "ActualSelectedGlove.R"
+    ],
+    "fullAnatomyReferenceAndOtherFiveMeshesExact": true,
+    "allSevenTopologyUVPBRAndDeliveryFieldsExact": true,
+    "savedPointNativeIDsValidatedByFinalizer": true,
+    "exportCutoffStableWithoutMutation": true
+  },
+  "objects": [
+    "ActualSelectedBoot.L",
+    "ActualSelectedBoot.R",
+    "ActualSelectedGlove.L",
+    "ActualSelectedGlove.R",
+    "RiderBody",
+    "RiderHoodie",
+    "RiderJeans"
+  ],
+  "rigAndContractExactNative75": true,
+  "normalPlayerAssetsWritten": false,
+  "limits": [
+    "Structural export intake only. All R0-R5 remain open.",
+    "Actual Garage/game continuous motion, GPU parity and device performance require parent judgment.",
+    "Original4K maps embedded; this dense private preview does not meet a shipping performance gate.",
+    "No old combined04 calibration transferred across corrected finger rest frames."
+  ]
+}
