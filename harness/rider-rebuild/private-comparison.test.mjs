@@ -9,7 +9,7 @@ import { privateEnginePlugin, comparisonRider, comparisonModelMapping, compariso
 
 const read = file => fs.readFileSync(file, 'utf8');
 const original = ['street-mustard', 'street-openface', 'race-bluewhite', 'street-charcoal', 'race-charcoalyellow'];
-const metadata = { comparison: true, sourceSHA256: 'a'.repeat(64), selectedRiderSource: {
+const metadata = { comparison: true, releaseBuild: false, sourceSHA256: 'a'.repeat(64), selectedRiderSource: {
   modelSlots: [comparisonRider.full, comparisonRider.lod], canonicalLogical: comparisonRider.full,
   sourceSHA256: 'a'.repeat(64), texturePolicy: 'preserve-authored-images' } };
 const plugin = () => privateEnginePlugin(metadata);
@@ -93,8 +93,10 @@ test('comparison rejects old-slot aliases and detects source anchor drift', () =
   assert.throws(() => plugin().transform('changed presets', '/src/core/riderPresets.ts'), /source changed/);
 });
 
-test('all scoped actual sources parse and selected alias has one exact load receipt', () => {
+test('all scoped actual sources parse and selected alias has one exact load receipt', async () => {
   const p = plugin();
+  const nativeFiles = ['private-rider.mjs', 'new-humanoid-contract.mjs', 'anthropometric-inverse.mjs'].map(name => path.resolve('harness/rider-rebuild', name));
+  await p.buildStart.call({ resolve: async id => ({ id }) });
   for (const file of ['src/core/riderPresets.ts', 'src/render/hero/urls.ts', 'src/ui/garage.ts', 'src/render/index.ts', 'src/boot/asset-totals.ts', 'src/boot/offline-pack.ts',
     'src/render/hero/gltfRider.ts', 'src/render/hero/gltf.ts', 'src/render/hero/lod.ts']) {
     const code = transformed(p, file);
@@ -107,11 +109,40 @@ test('all scoped actual sources parse and selected alias has one exact load rece
     'model-catalog.json': { type: 'asset', source: JSON.stringify({ models }) },
     'load-manifest.json': { type: 'asset', source: JSON.stringify({ items: [{ path: './model-catalog.json', bytes: 0, gz: 0 }] }) },
     'models/exact-selected.glb': { type: 'asset', source: Buffer.from([1, 2, 3]) },
+    'assets/rider-review-test.js': { type: 'chunk', name: 'rider-review', fileName: 'assets/rider-review-test.js', code: 'export const native75 = true;', isEntry: false,
+      modules: Object.fromEntries(nativeFiles.map(file => [file, {}])), imports: [] },
+    'assets/index-test.js': { type: 'chunk', name: 'index', fileName: 'assets/index-test.js', code: 'export const original = true;', isEntry: true, modules: {}, imports: [] },
   };
-  p.generateBundle.handler(null, bundle);
+  p.generateBundle.handler.call({ emitFile: asset => { bundle[asset.fileName] = asset; } }, null, bundle);
   const loads = JSON.parse(bundle['load-manifest.json'].source).items;
   assert.equal(loads.filter(row => row.path === './models/exact-selected.glb').length, 1);
   assert.equal(loads.find(row => row.path === './models/exact-selected.glb').bytes, 3);
   assert.equal(loads[0].bytes, Buffer.byteLength(bundle['model-catalog.json'].source));
   assert.equal(JSON.parse(bundle['model-catalog.json'].source).models.length, 2);
+  const measurement = JSON.parse(bundle['rider-comparison-js.json'].source);
+  assert.equal(measurement.releaseBuild, false);
+  assert.equal(measurement.normalPlayerLimitGzipBytes, 701 * 1024);
+  assert.equal(measurement.comparisonBudgetGzipBytes, measurement.normalPlayerGzipBytes + measurement.selectedReviewGzipBytes);
+  assert.equal(measurement.allJavaScriptGzipBytes, measurement.comparisonBudgetGzipBytes + measurement.otherExcludedGzipBytes);
+  bundle['assets/index-test.js'].imports.push('assets/rider-review-test.js');
+  assert.throws(() => p.generateBundle.handler.call({ emitFile() {} }, null, bundle), /static player dependency/);
+});
+
+test('only comparison isolates exact native modules; vendor closures and normal budget policy remain intact', async () => {
+  const normal = privateEnginePlugin({ ...metadata, comparison: false }), options = { manualChunks: { three: ['three'], 'sentry-errors': ['@sentry/browser'] } };
+  await normal.buildStart.call({ resolve() { throw Error('normal build must not resolve private chunks'); } });
+  assert.equal(normal.outputOptions(options), null);
+  const p = plugin(); await p.buildStart.call({ resolve: async id => ({ id }) });
+  const files = ['private-rider.mjs', 'new-humanoid-contract.mjs', 'anthropometric-inverse.mjs'].map(name => path.resolve('harness/rider-rebuild', name));
+  const graph = { three: ['three-core'], 'three-core': [], '@sentry/browser': ['sentry-core'], 'sentry-core': [], 'shared-game': [] };
+  files.forEach(file => { graph[file] = ['shared-game', 'three']; });
+  const output = p.outputOptions.call({ getModuleInfo: id => graph[id] ? { importedIds: graph[id] } : null }, options);
+  assert.equal(output.onlyExplicitManualChunks, true);
+  files.forEach(file => assert.equal(output.manualChunks(file), 'rider-review'));
+  assert.equal(output.manualChunks('shared-game'), undefined);
+  assert.equal(output.manualChunks('three-core'), 'three');
+  assert.equal(output.manualChunks('sentry-core'), 'sentry-errors');
+  assert.deepEqual(options.manualChunks, { three: ['three'], 'sentry-errors': ['@sentry/browser'] });
+  assert.match(read('vite.config.ts'), /const BUNDLE_BUDGET_GZ_BYTES = 701 \* 1024/);
+  assert.throws(() => privateEnginePlugin({ ...metadata, releaseBuild: true }), /releaseBuild false/);
 });

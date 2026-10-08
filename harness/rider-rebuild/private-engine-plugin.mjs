@@ -1,8 +1,11 @@
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { gzipSync } from 'node:zlib';
+import { createHash } from 'node:crypto';
 
 const runtime = fileURLToPath(new URL('./private-rider.mjs', import.meta.url));
+const reviewModules = ['private-rider.mjs', 'new-humanoid-contract.mjs', 'anthropometric-inverse.mjs']
+  .map(name => fileURLToPath(new URL(name, import.meta.url)));
 export const comparisonRider = {
   id: 'street-remastered', label: 'Mustard · Remastered',
   full: 'models/rider-street-remastered.glb', lod: 'models/rider-street-remastered-lod.glb',
@@ -30,7 +33,7 @@ function comparisonSource(code, id) {
   if (id.endsWith('/src/core/riderPresets.ts')) {
     code = replaceOnce(code, "export type RiderOutfit = ", `export type RiderOutfit = '${outfit}' | `);
     code = replaceOnce(code, '];\nexport const AVAILABLE_RIDER_PRESETS',
-      `  { id: '${outfit}', available: true, family: 'street', label: '${label}', detail: 'Selected high-resolution rider · private review', reference: '06' },\n];\nexport const AVAILABLE_RIDER_PRESETS`);
+      `  { id: '${outfit}', available: true, family: 'street', label: '${label}', detail: 'New face, hoodie, jeans, gloves & boots', reference: '06' },\n];\nexport const AVAILABLE_RIDER_PRESETS`);
     code = replaceOnce(code, "  if (value === 'street-openface')", `  if (value === '${outfit}') return 'street';\n  if (value === 'street-openface')`);
     return replaceOnce(code, "  if (value === 'street')", `  if (value === '${outfit}') return '${outfit}';\n  if (value === 'street')`);
   }
@@ -81,8 +84,10 @@ export function selectedRiderAliases(metadata) {
 /** Compile-time substitution in a private build, never writes player sources. */
 export function privateEnginePlugin(metadata) {
   const touched = new Set();
+  const resolvedChunks = new Map();
   const aliases = selectedRiderAliases(metadata);
   const comparison = metadata.comparison === true;
+  if (comparison && metadata.releaseBuild !== false) throw new Error('Private comparison must declare releaseBuild false');
   if (comparison && (Object.keys(aliases).length !== 2 || ![comparisonRider.full, comparisonRider.lod].every(slot => aliases[slot] === comparisonRider.full))) {
     throw new Error('Private comparison requires only the new full/LOD selected slots');
   }
@@ -92,6 +97,41 @@ export function privateEnginePlugin(metadata) {
   if (preserveImages && !Object.keys(aliases).length) throw new Error('Private rider: authored images require exact selected source aliases');
   return {
     name: 'rockhop:private-first-principles-rider', enforce: 'pre',
+    async buildStart() {
+      if (!comparison) return;
+      for (const source of ['three', '@sentry/browser', ...reviewModules]) {
+        const resolved = await this.resolve(source);
+        if (!resolved || resolved.external) throw new Error(`Private comparison module unresolved: ${source}`);
+        resolvedChunks.set(source, resolved.id);
+      }
+    },
+    outputOptions(options) {
+      if (!comparison) return null;
+      if (!options.manualChunks || typeof options.manualChunks !== 'object') throw new Error('Private comparison expects explicit vendor chunks');
+      const roots = new Map(), assigned = new Map();
+      for (const [name, sources] of Object.entries(options.manualChunks)) for (const source of sources) {
+        const id = resolvedChunks.get(source);
+        if (!id) throw new Error(`Private comparison vendor chunk changed: ${source}`);
+        roots.set(id, name);
+      }
+      for (const source of reviewModules) {
+        const id = resolvedChunks.get(source);
+        if (!id) throw new Error('Private comparison native module unresolved');
+        roots.set(id, 'rider-review');
+      }
+      // Preserve the existing vendor dependency closures. Explicit-only chunks
+      // then keep shared game geometry out of the optional native75 module.
+      const visit = (id, name) => {
+        if (assigned.has(id) || roots.has(id) && roots.get(id) !== name) return;
+        const info = this.getModuleInfo(id); if (!info || info.isExternal) return;
+        assigned.set(id, name);
+        for (const child of info.importedIds) visit(child, name);
+      };
+      for (const [id, name] of roots) {
+        if (name === 'rider-review') assigned.set(id, name); else visit(id, name);
+      }
+      return { ...options, onlyExplicitManualChunks: true, manualChunks: id => assigned.get(id) };
+    },
     generateBundle: { order: 'post', handler(_options, bundle) {
       const catalog = bundle['model-catalog.json'], manifest = bundle['load-manifest.json'];
       if (!catalog || !manifest) throw new Error('Private rider: missing actual model/load manifests');
@@ -100,6 +140,34 @@ export function privateEnginePlugin(metadata) {
       if (!row) throw new Error('Private rider: missing catalog load receipt');
       row.bytes = Buffer.byteLength(catalog.source); row.gz = gzipSync(catalog.source).length;
       if (comparison) {
+        const chunks = Object.values(bundle).filter(item => item.type === 'chunk');
+        const reviews = chunks.filter(chunk => chunk.name === 'rider-review');
+        if (reviews.length !== 1 || reviews[0].isEntry || Object.keys(reviews[0].modules).length !== reviewModules.length
+          || Object.keys(reviews[0].modules).some(id => !reviewModules.some(source => resolvedChunks.get(source) === id))) {
+          throw new Error('Private comparison needs one exact native75 review chunk');
+        }
+        const review = reviews[0], pending = chunks.filter(chunk => chunk.isEntry).map(chunk => chunk.fileName), seen = new Set();
+        for (const file of pending) {
+          if (seen.has(file)) continue; seen.add(file);
+          if (file === review.fileName) throw new Error('Private review chunk became a static player dependency');
+          const chunk = bundle[file]; if (chunk?.type === 'chunk') pending.push(...chunk.imports);
+        }
+        const measurements = { releaseBuild: false, normalPlayerLimitGzipBytes: 701 * 1024,
+          normalPlayerGzipBytes: 0, selectedReviewGzipBytes: 0, otherExcludedGzipBytes: 0, allJavaScriptGzipBytes: 0 };
+        for (const [name, item] of Object.entries(bundle)) {
+          if (item.type !== 'chunk' && !name.endsWith('.js')) continue;
+          const bytes = gzipSync(item.type === 'chunk' ? item.code : item.source).length;
+          measurements.allJavaScriptGzipBytes += bytes;
+          if (name === review.fileName) measurements.selectedReviewGzipBytes += bytes;
+          else if (/^assets\/(retired|audio-offline|legacy-physics|sentry-errors)-[\w-]+\.js$/.test(name)) measurements.otherExcludedGzipBytes += bytes;
+          else measurements.normalPlayerGzipBytes += bytes;
+        }
+        const report = JSON.stringify({ ...measurements,
+          comparisonBudgetGzipBytes: measurements.normalPlayerGzipBytes + measurements.selectedReviewGzipBytes,
+          reviewChunk: review.fileName, reviewChunkSHA256: createHash('sha256').update(review.code).digest('hex'),
+          limits: 'Selected review JS is additional to the unchanged normal-player gate; full comparison cost remains reported.' });
+        this.emitFile({ type: 'asset', fileName: 'rider-comparison-js.json', source: report });
+        loads.items.push({ path: './rider-comparison-js.json', bytes: Buffer.byteLength(report), gz: gzipSync(report).length, phase: 'other', label: 'Private comparison JS measurements' });
         // The reused hero recipe emits candidate assets after the normal load
         // manifest hook. Retain exact selected bytes in this private manifest.
         const models = JSON.parse(String(catalog.source)).models;
