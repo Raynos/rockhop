@@ -24,7 +24,7 @@ Validation: Retained timestamps plus played findings in selected-complete-engine
 
 Limits: Commit times do not establish exact time spent, idle time or labor across concurrent agents. Passing current-player checks does not qualify selected rider art or phone performance.
 
-Update through October 8 13:25 Panama (UTC−5)
+Update through October 8 13:22 Panama (UTC−5)
 
 The original table above is the retained 11:49 snapshot. Subsequent committed results extend it as follows; these are landing windows, not measured labor.
 
@@ -32,7 +32,7 @@ The original table above is the retained 11:49 snapshot. Subsequent committed re
 |---|---|---|
 | 11:49–12:00 | Local old/new comparison worked with resident instances; comparison build size and smooth Garage capture fixes continued. | Final bundle budget and remote delivery still pending. |
 | 12:00–13:00 | Final comparison build passed its byte limit; staged and uploaded isolated preview; retained Garage-only movie. Wrist-local coordinates fixed a real ray precision failure. | Initial remote checks hit memory limits. Cuff enlargement exceeded its bound. Offline seating still hovered/crossed; no shape accepted. |
-| 13:00–13:25 | Uploaded original/new/original/new switching verified: 483 submitted frames, zero invalid frames/errors. Current-source player gate passed. A new seated shape was constructed and tested. | Seated shape failed: 50 new jeans self-crossings, 82 body/jeans crossings, 550 jeans/saddle crossings. Native driver and next cuff/diagnostic recipes are preparation only; no accepted new model. |
+| 13:00–13:22 | Uploaded original/new/original/new switching verified: 483 submitted frames, zero invalid frames/errors. Current-source player gate passed. A new seated shape was constructed and tested. | Seated shape failed: 50 new jeans self-crossings, 82 body/jeans crossings, 550 jeans/saddle crossings. Native driver and next cuff/diagnostic recipes are preparation only; no accepted new model. |
 
 Validation: parent reviewed commits through0563361cd, actual remote-verified02 and failed02 findings. The remote gate is desktop WebKit in phone layout, not a physical-phone result. The current-source player gate is independent of rider art acceptance.
 
