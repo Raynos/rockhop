@@ -1,0 +1,100 @@
+{
+  "accepted": false,
+  "pins": {
+    "rider": {
+      "path": "harness/out/rider-rebuild/selected-complete-engine01/engine05/rider.glb",
+      "sha256": "72b90e8790f8490743a75f8b70791aa21edfee6234cec609093e9b62e08d4bfd"
+    },
+    "contract": {
+      "path": "harness/out/rider-rebuild/selected-complete-engine01/engine05/rider-contract.json",
+      "sha256": "2aa39bc8c15738b4ecbd2aac08fd61375e0aa8fd45a0ee2ac3046f577b019728"
+    },
+    "calibration": {
+      "path": "assets/blender/rider-rebuild/selected-ankle-contact02/engine05-contact-calibration03.json",
+      "sha256": "b5fb15d7f68b46915d0fc3919620c3aaabc8b819636a930df45766cc3bc6aedd"
+    },
+    "definitions": {
+      "path": "assets/blender/rider-rebuild/selected-posterior-support03/patches.json",
+      "sha256": "d76f4baadd7f447ecb72ffb01d660bbbc780142268f9e6b9c5d0ead81eba3e2f"
+    },
+    "patches": {
+      "path": "docs/evidence/rider-rebuild/selected-posterior-support03/source-patches.json",
+      "sha256": "d5945cbf5eb83d348ef8bf1db6024a29390d6dca174988136f1b8c8fb9bbeb24"
+    },
+    "measurement": {
+      "path": "harness/out/rider-rebuild/selected-seated-garage01/seat-contact02.json",
+      "sha256": "ec9bd14babb14f14f4d274eb79a1f2728b618dfe4a54d36be16d4a6fe1446bc3"
+    },
+    "driver": {
+      "path": "harness/rider-rebuild/private-rider.mjs",
+      "sha256": "76658c3d9c58e18e573bd56442016f60019a5e35b6090bf91800d125c9d3b124"
+    },
+    "contractLoader": {
+      "path": "harness/rider-rebuild/new-humanoid-contract.mjs",
+      "sha256": "db73c6489f4cac9041f5d8e8ba6f110a8dbec437762f936e5cbadbfdd8ef43a8"
+    },
+    "anthropometry": {
+      "path": "harness/rider-rebuild/anthropometric-inverse.mjs",
+      "sha256": "363ca2a174d8e906a90fcfb52d2c85f19d5ef0bb70793379934faa178dd172df"
+    },
+    "loader": {
+      "path": "src/render/hero/gltfTestUtils.ts",
+      "sha256": "f37c61cb88648f4a6fdb0b130e59b1abdbbd0213b38639c8af77f4dec25cf01a"
+    },
+    "frame": {
+      "path": "src/render/frame.ts",
+      "sha256": "c3460d6c2a0e0d4ccb5cd6bab24054e18ebbd9bc6e2ef0d0315b813285cd6d6a"
+    },
+    "riderGeometry": {
+      "path": "src/core/riderGeometry.ts",
+      "sha256": "c613269c62a3f7f5e8e0c004bd7775e9f593ee92dfc24b111ede825ea9516011"
+    },
+    "materials": {
+      "path": "src/render/hero/gltf.ts",
+      "sha256": "6de5285f505d5e09d5bd8eaf4506f62db44f42c931ed507e3c17367256e79fdf"
+    },
+    "bikeFrame": {
+      "path": "src/render/hero/gltfBike.ts",
+      "sha256": "8f0af24d89ae958f9c98c5f5e98debbd07f65a1c79c9ede479e0ed88ac2cb899"
+    },
+    "surface": {
+      "path": "assets/blender/rider-rebuild/selected-ankle-contact02/surface.mjs",
+      "sha256": "54aa653151e73dcbb067a729dfc5756574f139e1053d97bf3a4e308fd803959d"
+    },
+    "packageLock": {
+      "path": "pnpm-lock.yaml",
+      "sha256": "771e61a364aa8d31eeb1756a9287d02905ae8770d816c9548aef5b1d420cbf64"
+    },
+    "author": {
+      "path": "assets/blender/rider-rebuild/selected-seated-author04/author.mjs",
+      "sha256": "6fced5bde9e708ccaea72a6bf39deb4ff1749823614383024dcefb5348281899"
+    },
+    "geometry": {
+      "path": "assets/blender/rider-rebuild/selected-seated-author04/geometry.mjs",
+      "sha256": "2b5aa433b32005d15905a791be84898b5d5cb892b077e42fabcfa26d50285303"
+    },
+    "cachedPose": {
+      "path": "assets/blender/rider-rebuild/selected-seated-author04/apply-authored-pose.mjs",
+      "sha256": "5d83c665f74ce76fbbb915ad6b5d6ab17c66a1896bbf0d4a07213be8242b610e"
+    }
+  },
+  "breathingRadians": 0.008,
+  "solver": {
+    "maxIterations": 48,
+    "maxEvaluations": 480,
+    "maxNormalizedStep": 0.15,
+    "method": "One damped Gauss-Newton trajectory; four finite-difference columns, bounded step, maximum six backtracks. No grid/restarts. Source-area weighted degree-two quadrature to closest finite saddle top; actual context penetration and socket residual penalties. Exact bilateral finite-area gates are independent of objective."
+  },
+  "limits": [
+    "Source preparation only until parent CPU2 run. No existing runtime or player file changes.",
+    "Unaccepted numerical candidate is not seated appearance acceptance. Parent must play original fully dressed selected rider on both bikes.",
+    "Geometry diagnostics are local and sampled; no cloth force, continuous collision, whole-character intersection, or global material proof.",
+    "Fixed palms use the pinned current driver target frames; soles use measured calibration03 frames, common to both pinned bikes. Their actual glove/bar and sole/peg area contact remains separately unqualified.",
+    "Carrier search quadrant is an authored forward-to-upright Garage restriction, not a measured anatomical range. Flex uses existing 20-degree driver envelope. No skeleton scale or length changes.",
+    "Breathing center and both extrema are checked for support/socket area only; full neighboring intersections are checked at authored center. Moving validation remains required.",
+    "Positive majority-area gates, 1 mm fit band, strict centroid interiors and bilateral center are proposed authoring proxies, not physical contact or art acceptance.",
+    "Images are omitted in memory by existing CPU loader; disk geometry, materials, textures and source identity are not replaced.",
+    "Each posed core must retain downward projected area at least half its actual 3D surface area; this additional authoring proxy rejects nearly vertical sliver contact. It is an orientation proxy, not a measured force threshold."
+  ],
+  "minimumDownwardProjectionFraction": 0.5
+}
