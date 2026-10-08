@@ -38,3 +38,10 @@ Finding: Right original-PBR guide transfer is coherent, but actual palm/thenar a
 Validation: Root viewed all3 actual saved-native PBR views from CPU2 exit0/21.033s; prior spikes gone, straight palm view occluded by jeans.
 
 Limits: Retain solved form only; no wearing fit or motion acceptance. Local anatomical repair follows actual defects.
+
+
+Finding: One read-only saved guide/right transfer coordinate extraction enables actual local palm/thenar ownership repair; no retuned sculpt.
+
+Validation: Root read bounded extractor and pinned saved native; AST passes. No extraction job yet.
+
+Limits: Arrays only; all wearing and motion acceptance open.

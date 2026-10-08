@@ -1483,3 +1483,5 @@ October8 root actual right glove guide02 PBR review exit0/21.033s: selected ribs
 October8 actual tailored hoodie job exit1/7.219s before save: full75 array names include absent zero-weight garment groups. Minimal repair creates only missing names with exactly-zero incoming columns; shape/source/rest75 unchanged. Fresh corrected04 native/PBR run next; no result acceptance.
 
 October8 actual tailored hoodie and genuine local selected-PBR transfer saved CPU2 exit0/26.275s, nativebaedfa57 in complete seven-mesh outfit. Outside garment/body75 unchanged. Root matched PBR judgment and complete clothed movement next; save is not art acceptance.
+
+October8 bounded actual solved-glove coordinate extraction source reviewed for local palm/thenar repair; preserves successful guides/right selected appearance and avoids guessing from target controls. No new fit or acceptance.
