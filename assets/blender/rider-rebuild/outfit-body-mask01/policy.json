@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "acceptedArt": false,
+  "units": "canonical Blender metres; fixed rest-space coverage",
+  "minimumRegionMass": 0.35,
+  "hoodie": {
+    "hemInnerZ": 1.025,
+    "neckKeepAboveZ": 1.47,
+    "neckKeepRadiusM": 0.095,
+    "wristKeepProximalM": 0.018
+  },
+  "jeans": {
+    "waistInnerZ": 1.015,
+    "cuffInnerZ": 0.12
+  },
+  "gloves": {
+    "wristKeepDistalM": 0.012
+  },
+  "boots": {
+    "collarInnerZ": 0.09
+  },
+  "limits": [
+    "Conservative opening margins are provisional author controls, not measured garment clearance or an art pass.",
+    "Every vertex of a hidden polygon must satisfy its garment coverage predicate; crossing polygons stay visible.",
+    "Collar, wrist, waist and ankle skin overlap stays visible; no camera/frame/normal-ray visibility test is used.",
+    "A mask removes covered body polygons only. It supplies no garment surface and cannot repair a garment hole or silhouette.",
+    "Changing body positions, topology, skin fields or skeleton invalidates the frozen manifest. Author a fresh manifest on the exact new body.",
+    "Do not apply garment coverage unless that actual selected garment is equipped. Parent judges complete actual-PBR moving appearance."
+  ]
+}

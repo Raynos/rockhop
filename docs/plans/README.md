@@ -1529,3 +1529,5 @@ October8 required current-player silentMetal gate16 after third construction mut
 October8 actual original hoodie7bone transport PBR rejected: sleeves swing upward besidehead and expose front/rear armholes despite exactUV/PBR/matrix checks. Stop integration; diagnose actual source-coordinate/bindframes with fresh Astra06. Source/native/evidence preserved; no rider acceptance.
 
 October8 read-only actual saved hoodie source-frame probe frozen: rawGLTF sleeve centers independently match controls; fresh Astra predicts zero-length editbone matrix-before-length loses source direction. Verify actual saved rest frames before one minimal correction, not more garment gain tuning.
+
+October8 exact-input equipped body mask implementation frozen and parent reviewed: original body/shared75 preserved, render face subset with topology/skin/UV/material/source-triangle ancestry guards and measured normal residual. First actual selected-glove mask unexecuted; no wardrobe acceptance.

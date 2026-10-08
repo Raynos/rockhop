@@ -1,0 +1,109 @@
+{
+  "acceptedArt": false,
+  "status": "NUMPY_SOURCE_AUDIT_ONLY_NO_BLENDER_RUN",
+  "canonicalVertices": 10582,
+  "canonicalPolygons": 10590,
+  "canonicalTriangles": 21160,
+  "canonicalCorners": 42340,
+  "canonicalTopologySHA256": "435d708bce9f2dea52046b4a55a58ae43760a1b5b022dde0ce344498d94393da",
+  "source": {
+    "path": "harness/out/rider-rebuild/native-hand-repair01/native02/native-body.npz",
+    "sha256": "e62e9969503b7761e99463eccc3ca7be39e0c230a2948f2f87a224db52d0f9a2"
+  },
+  "garments": {
+    "hoodie": {
+      "polygons": 1816,
+      "triangles": 3632,
+      "uniqueSourceVertices": 1885,
+      "bodyRegionBoundsM": [
+        [
+          -0.4098043739795685,
+          -0.15212929248809814,
+          0.9373353123664856
+        ],
+        [
+          0.41023358702659607,
+          0.11690763384103775,
+          1.5080622434616089
+        ]
+      ],
+      "bothSidesPresent": true
+    },
+    "jeans": {
+      "polygons": 1132,
+      "triangles": 2264,
+      "uniqueSourceVertices": 1172,
+      "bodyRegionBoundsM": [
+        [
+          -0.2226247936487198,
+          -0.1405956894159317,
+          0.12017842382192612
+        ],
+        [
+          0.22261759638786316,
+          0.11598767340183258,
+          1.0137094259262085
+        ]
+      ],
+      "bothSidesPresent": true
+    },
+    "gloves": {
+      "polygons": 1303,
+      "triangles": 2606,
+      "uniqueSourceVertices": 1331,
+      "bodyRegionBoundsM": [
+        [
+          -0.4638965427875519,
+          -0.18901626765727997,
+          0.7555481791496277
+        ],
+        [
+          0.46372708678245544,
+          -0.040780242532491684,
+          0.9237270951271057
+        ]
+      ],
+      "bothSidesPresent": true
+    },
+    "boots": {
+      "polygons": 2182,
+      "triangles": 4364,
+      "uniqueSourceVertices": 2210,
+      "bodyRegionBoundsM": [
+        [
+          -0.28946036100387573,
+          -0.14105752110481262,
+          0.0
+        ],
+        [
+          0.289460688829422,
+          0.10991878062486649,
+          0.0894564539194107
+        ]
+      ],
+      "bothSidesPresent": true
+    }
+  },
+  "sourceChecks": [
+    "Every head polygon above1.56m retained; every garment polygon has all corners in its fixed covered region.",
+    "Rejected changed bodyTopologySHA256",
+    "Rejected changed bodyPositionSHA256",
+    "Rejected changed bodyFieldSHA256",
+    "Rejected changed restEndpointsSHA256",
+    "Rejected changed policySHA256",
+    "Rejected altered glove face ownership",
+    "Every canonical triangle inherits its original native polygon's garment ownership."
+  ],
+  "limitations": [
+    "Conservative opening margins are provisional author controls, not measured garment clearance or an art pass.",
+    "Every vertex of a hidden polygon must satisfy its garment coverage predicate; crossing polygons stay visible.",
+    "Collar, wrist, waist and ankle skin overlap stays visible; no camera/frame/normal-ray visibility test is used.",
+    "A mask removes covered body polygons only. It supplies no garment surface and cannot repair a garment hole or silhouette.",
+    "Changing body positions, topology, skin fields or skeleton invalidates the frozen manifest. Author a fresh manifest on the exact new body.",
+    "Do not apply garment coverage unless that actual selected garment is equipped. Parent judges complete actual-PBR moving appearance."
+  ],
+  "canonicalOwnershipSHA256": "fec1fee0bba4d17c2e14521fb9042053249d5ba3818d769b3aa5b976976bd17a",
+  "canonicalManifestSHA256": "6e1452824742badf467140e5c27284f88f9f3dff1764b631db11e85c5974b979",
+  "allOutfitKeptPolygons": 4157,
+  "allOutfitRemovedPolygons": 6433
+}
