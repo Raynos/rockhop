@@ -1,0 +1,8 @@
+{
+  "accepted": false,
+  "exitCode": 1,
+  "elapsedSeconds": 4.246,
+  "savedNative": false,
+  "finding": "Blender mutates the requested append-object list into Object references. Reusing it for name mapping mixed Object and str keys.",
+  "correction": "Pass a separate list to libraries.load selected.objects; preserve frozen requested names."
+}

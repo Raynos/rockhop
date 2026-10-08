@@ -1397,3 +1397,5 @@ October 8 anatomical neck02 first build stopped in2.85s before saving: genuine d
 October 8 real-source working master recipe ready: one joined body, original selected garment PBR and editable dependencies; no final-bake prerequisite. Parent reviewed full source, AST and 22 pins. Actual assembly remains unexecuted; fit and motion remain unaccepted.
 
 October 8 human resource queue corrected after Astra04: artist assistance is optional rather than a prerequisite for already-authorized scoped construction. HR-27 remains an unanswered resource-identity request; no artist contacted and no rider gate accepted.
+
+October 8 first real-source assembly stopped before save: Blender append mutates its requested object list, corrupting the reused name mapping. CPU2 job exited1 in4.246s; explicit copied-name-list correction assigned. No native or outfit result yet.
