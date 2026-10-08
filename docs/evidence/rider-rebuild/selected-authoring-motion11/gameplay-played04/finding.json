@@ -1,0 +1,118 @@
+{
+  "accepted": false,
+  "status": "ACTUAL_SELECTED_DRESSED_PRO_SIDE_LEANS_PLAYED_ART_PENDING",
+  "source": {
+    "path": "/Users/raynos/projects/games/rockhop/harness/out/rider-rebuild/selected-seated-anatomical09/transport02/rider.glb",
+    "bytes": 357879172,
+    "sha256": "ff9d78e2c5c40a4be1218b57611c5e71db10a2de7b636ec1589358176f907a0f",
+    "url": "models/private-selected/ff9d78e2c5c40a4be1218b57611c5e71db10a2de7b636ec1589358176f907a0f/rider-ff9d78e2c5c40a4be1218b57611c5e71db10a2de7b636ec1589358176f907a0f.glb"
+  },
+  "contract": {
+    "path": "/Users/raynos/projects/games/rockhop/harness/out/rider-rebuild/selected-authoring-motion11/gameplay-source-calibrated09/rider-contract.json",
+    "sha256": "b7554ed11b8a84f6fc38b5e56a75bc2d690780ce6580c95dc95b91cab10effa8"
+  },
+  "actualReportSHA256": "4a556312f69d82286969f713ee06210256250fdbd628f9992a713641914d7751",
+  "recipeSHA256": "3b459d6ba99bb90e0bb4d500e4be6b301834bc3f54c96310daf7339c7dbc1475",
+  "browser": {
+    "backend": "metal",
+    "version": "151.0.7922.34",
+    "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M5 Max, Unspecified Version)",
+    "flagSet": "angle-metal",
+    "helper": {
+      "path": "harness/lib/browser.ts",
+      "sha256": "145a81eec1c13f7c87a2910827f3cb5132b0ba2c80c494d7c42bd17fd017ca7d"
+    },
+    "probe": {
+      "ok": true,
+      "kind": "webgl2",
+      "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M5 Max, Unspecified Version)",
+      "vendor": "Google Inc. (Apple)",
+      "version": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+      "maxTextureSize": 16384
+    }
+  },
+  "camera": {
+    "mode": "orbit",
+    "x": 0.33962096166525263,
+    "y": 1.135753000021225,
+    "yaw": 0.28,
+    "pitch": 0.08,
+    "dist": 4.6,
+    "screenX": 0.5,
+    "screenY": 0.5
+  },
+  "ticks": 1200,
+  "samples": 241,
+  "joints": 75,
+  "finalHash": "c419c93f72c2f26c",
+  "faults": [],
+  "errors": [],
+  "phases": [
+    {
+      "phase": "neutral",
+      "samples": 49,
+      "lastEffectiveLean": 0.03708567756099997,
+      "maximumGripSocketErrorMm": 0.00027069957334280943,
+      "maximumSoleWitnessErrorMm": 0.0034737016035153523
+    },
+    {
+      "phase": "forward",
+      "samples": 72,
+      "lastEffectiveLean": 1,
+      "maximumGripSocketErrorMm": 0.9969200685797887,
+      "maximumSoleWitnessErrorMm": 0.002942915587631961
+    },
+    {
+      "phase": "backward",
+      "samples": 72,
+      "lastEffectiveLean": -1,
+      "maximumGripSocketErrorMm": 0.00033830685385669766,
+      "maximumSoleWitnessErrorMm": 0.004023163357093891
+    },
+    {
+      "phase": "neutral-return",
+      "samples": 48,
+      "lastEffectiveLean": 0.03483449992395056,
+      "maximumGripSocketErrorMm": 0.00027548691969458153,
+      "maximumSoleWitnessErrorMm": 0.0036072259636387768
+    }
+  ],
+  "trimFromOriginalSeconds": 6.269337625,
+  "movie": {
+    "path": "docs/evidence/rider-rebuild/selected-authoring-motion11/gameplay-played04/rider-actual-leans-pro.mp4",
+    "sha256": "cc50cd0210c5aff84e5d7b1e50283dd6ec9c76217f1b0e8cf83054322e591e83",
+    "durationSeconds": 12.08,
+    "fps": 25
+  },
+  "playback": {
+    "ended": true,
+    "rate": 1,
+    "wallSeconds": 12.179,
+    "presentedCallbacks": 229,
+    "capturedPNGFrames": 63,
+    "silent": true,
+    "seekOrStall": false
+  },
+  "parentTemporalReview": {
+    "actualPresentedSamples": [
+      "0000",
+      "0031",
+      "0060",
+      "0088",
+      "0117",
+      "0146",
+      "0175",
+      "0203"
+    ],
+    "finding": "Selected complete outfit now visibly shifts forward/up, crouches backward and returns near neutral in actual game side view. No loading screen.",
+    "unaccepted": [
+      "Jagged sleeve/wrist holes remain visible during every phase.",
+      "Jeans/boot ankle overlap and lower-leg bunching remain imperfect; no finite overlap gate pass.",
+      "Rearward posterior approaches the saddle/tail; finite posterior/saddle support not qualified.",
+      "Far-side glove/boot remain occluded from this single side.",
+      "Source head/profile appearance retained; no new facial or body surface acceptance.",
+      "Original25FPS, omitted presented callbacks and extra24Hz witness draws preclude smooth/playerFPS claims."
+    ]
+  },
+  "limits": "Actual played private development candidate only. Both-bike reports unblock native conversion; no native live-controls replay, mobile art, player promotion or release pass. AllR0\u2013R5 open."
+}
