@@ -1,0 +1,68 @@
+{
+  "status": "SOURCE_READY_ONE_PROTECTED_CONSTRUCTION_UNACCEPTED",
+  "acceptedArt": false,
+  "files": [
+    {
+      "path": "assets/blender/rider-rebuild/selected-boot-fan59/census.py",
+      "sha256": "94df44f0a38a9ff72c1fe74415cc101ff798f1f08c9c3895dccac632af0a497d"
+    },
+    {
+      "path": "assets/blender/rider-rebuild/selected-boot-fan59/construct.mjs",
+      "sha256": "ff1328930687d5eb8e7b1c0e7f5961e2fac11f911e88d0e4224fa5e37f1c571f"
+    },
+    {
+      "path": "assets/blender/rider-rebuild/selected-boot-fan59/check-construction.mjs",
+      "sha256": "36c0cc474fa5243be002e520e88063e43295f92908f5a6cb8db6fed835f58d8b"
+    },
+    {
+      "path": "docs/evidence/rider-rebuild/selected-boot-fan59/fan-census.json",
+      "sha256": "46b48498db71d774e9eb1e98793e0eec0f8d58b2b8e8b8a070edddafb12ec6ce"
+    },
+    {
+      "path": "docs/evidence/rider-rebuild/selected-boot-fan59/fan-protection.bin",
+      "sha256": "4d1235558a67ac3a4d7c3f6e51d66bf99fa65291ec57fb4bde8c542716c61129"
+    },
+    {
+      "path": "docs/evidence/rider-rebuild/selected-boot-fan59/construction-fixtures.json",
+      "sha256": "39b7c4bb7d4720dde47a5cd8474333e86067c351179edba7daf80259abaa2b14"
+    }
+  ],
+  "cpuCensus": {
+    "sourceVerticesExamined": 305453,
+    "sourceTrianglesExamined": 610934,
+    "candidateVerticesExamined": 11815,
+    "candidateTrianglesExamined": 23658,
+    "minimumSourceNormalReproductionDot": 0.9704560040255963,
+    "sourceNormalReproductionBelowPoint25": 0,
+    "minimumCandidateVertexNormalDot": -0.9220260449023607,
+    "minimumCandidateDotDistanceFromPoint25": 0.00691850074506517,
+    "candidateFailingVertices": 13,
+    "mixedDonorFanCenters": 447,
+    "additionalFailedCandidateFanCenters": 3,
+    "protectedCenters": 450,
+    "protectedOriginalVertices": 2049,
+    "requiredSourceFaces": 2227,
+    "requiredEdges": 4143
+  },
+  "parentCommand": [
+    "node",
+    "assets/blender/rider-rebuild/selected-boot-fan59/construct.mjs",
+    "harness/out/rider-rebuild/selected-production-census35/bootL01/census.json",
+    "docs/evidence/rider-rebuild/selected-boot-fan59/fan-census.json",
+    "harness/out/rider-rebuild/selected-boot-fan59/candidate01"
+  ],
+  "executionPolicy": "Parent original guarded serial stage only after source review. One construction call, no sweep, no fallback retries. New output directory must not exist.",
+  "frozenPolicy": {
+    "maximumSurfaceErrorM": 0.001,
+    "minimumNormalDot": 0.25,
+    "simplificationTargetTriangles": 8000,
+    "simplificationTargetIsSoft": true,
+    "sceneBudgetPassed": false,
+    "flags": [
+      "ErrorAbsolute"
+    ]
+  },
+  "resultGates": "All original component/material/boundary/coincidence and exact original position/field gates persist, plus exact protected center-fan and edge retention. Source UV/corner-normal/PBR data is untouched.",
+  "validation": "Complete census ran on 305453 source and 11815 candidate vertices; 13 candidate failures. Four constructor fixture groups passed; no simplifier call in testing.",
+  "limits": "No candidate59 has been constructed, no native qualification run and no art or scene-allocation pass. Existing author57 intentionally pins old candidate46; candidate59 native intake requires a separately reviewed receipt adapter. Original bounded59 finding/certificate and frozen56/current57 remain unchanged."
+}

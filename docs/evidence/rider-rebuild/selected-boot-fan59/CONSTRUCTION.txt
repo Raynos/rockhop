@@ -1,0 +1,24 @@
+Complete CPU fan census: 305453 source and 11815 candidate vertices.
+All source recomputed normals agree with stored donor normals above 0.97045.
+Candidate46 has 13 vertex-normal failures against exact donor ancestry;
+the nearest candidate result to 0.25 is 0.0069185 away.
+
+One protection policy, using the existing 0.25 criterion: protect every
+complete donor fan whose incident geometric face normals conflict with
+its donor vertex normal, plus every source fan with a failing retained
+candidate vertex. The union has 450 centers: 447 source crease/fold fans
+and three additional reduction-damaged fans. It protects 2049 original
+vertices, 4143 edges and 2227 exact oriented source triangles.
+
+The constructor uses the locally pinned meshoptimizer1.1.1 binary
+vertex-lock interface. It keeps original ErrorAbsolute, 1mm, attribute
+weights and soft 8000 target; no welding, pruning or source edits.
+It merges all old locks, constructs once, and rejects any missing, extra,
+reversed or duplicate protected center face. Positions and named fields
+remain exact original vertex values; selected donor UV/PBR stay untouched.
+
+Validation: four CPU constructor fixture groups pass. Full source fans
+pass, old candidate fails, and topology/lock-closure mutations fail.
+No simplifier or native job was run by this builder. Parent source review
+and original serial guard own the next candidate. Native59 intake needs
+a new explicit adapter because author57 correctly pins old candidate46.

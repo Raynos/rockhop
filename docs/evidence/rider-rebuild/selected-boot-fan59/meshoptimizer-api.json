@@ -1,0 +1,39 @@
+{
+  "package": "meshoptimizer",
+  "version": "1.1.1",
+  "evidence": [
+    {
+      "path": "node_modules/meshoptimizer/README.md",
+      "sha256": "38d96f2d977c1a47413865fdcb913adfda1a1fbcb777eef0d1b549a16493e4f5",
+      "lines": [
+        147,
+        151,
+        153,
+        155,
+        168,
+        173
+      ],
+      "finding": "The API returns indices into original vertex buffers. Binary per-vertex locks use one for locked vertices. LockBorder applies only to topological borders; Prune can remove locked components. Neither new flag is used."
+    },
+    {
+      "path": "node_modules/meshoptimizer/meshopt_simplifier.d.ts",
+      "sha256": "82a112d9f414607e9683dc87a6dafe84cdfe4b817325e08f1387026d0cf1878b",
+      "lines": [
+        21,
+        28
+      ],
+      "finding": "simplifyWithAttributes exposes Uint8Array or null vertex_lock."
+    },
+    {
+      "path": "node_modules/meshoptimizer/meshopt_simplifier.js",
+      "sha256": "d2e80c60a84c700947f97ab4678cc222a5b9ab409a0745eef2dcaa79bb1ef922",
+      "lines": [
+        418,
+        419,
+        447
+      ],
+      "finding": "Pinned wrapper requires Uint8Array of the original vertex count and passes it to the native API unchanged."
+    }
+  ],
+  "decision": "Merge exact fan vertex locks with existing locks and preserve existing ErrorAbsolute only. Independently require full oriented fan/edge retention; the lock API is not acceptance evidence."
+}

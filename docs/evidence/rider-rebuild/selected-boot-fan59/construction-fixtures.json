@@ -1,0 +1,55 @@
+{
+  "status": "CPU_CONSTRUCTOR_FIXTURES_PASSED_UNACCEPTED",
+  "recipeSHA256": "ff1328930687d5eb8e7b1c0e7f5961e2fac11f911e88d0e4224fa5e37f1c571f",
+  "checks": [
+    "Complete actual census pins and full source fan closure verified: 450 centers, 2049 vertices, 2227 faces, 4143 edges",
+    "Original locks retained; full source fans pass; current candidate fails complete protected-fan retention",
+    "Reversed/deleted/duplicate faces and omitted center-fan faces/vertices/edges reject",
+    "One index-only call; original 1mm/0.25/8000-soft target and ErrorAbsolute flag unchanged; no allocation pass"
+  ],
+  "currentCandidateRetention": {
+    "requiredSourceFaces": 2227,
+    "actualProtectedIncidentFaces": 803,
+    "missingCount": 2187,
+    "unexpectedCount": 763,
+    "duplicateFaces": 0,
+    "firstMissingOrientedTriangles": [
+      "3707,4033,4030",
+      "3705,3707,4030",
+      "3705,4030,4027",
+      "4022,4379,4377",
+      "4022,4024,4379",
+      "4030,4033,4161",
+      "4030,4161,4385",
+      "4030,4385,4383",
+      "4027,4030,4383",
+      "4025,4027,4381",
+      "4027,4383,4381",
+      "4024,4025,4379",
+      "4025,4381,4379",
+      "4377,4379,4510",
+      "4381,4383,4571",
+      "4381,4571,4751"
+    ],
+    "firstUnexpectedOrientedTriangles": [
+      "3371,3867,4030",
+      "3371,4030,4025",
+      "4025,4379,4373",
+      "3867,4571,4030",
+      "4025,4030,4571",
+      "4025,4571,4379",
+      "4373,4379,4747",
+      "4379,4571,4747",
+      "6936,6939,7325",
+      "6939,7328,7325",
+      "6936,7325,8188",
+      "7325,7693,8188",
+      "23943,27929,28565",
+      "23943,28565,26722",
+      "26722,28565,27616",
+      "27616,28565,29518"
+    ],
+    "passed": false
+  },
+  "limits": "No simplifier invocation or new candidate; parent original guard owns the actual single construction."
+}

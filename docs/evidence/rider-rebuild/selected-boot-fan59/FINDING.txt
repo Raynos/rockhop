@@ -1,0 +1,25 @@
+Native03 correctly rejects target vertex 3667 at dot -0.9220517171.
+Its exact donor ancestor is vertex 80837, with seven incident triangles
+and eight fan vertices. Candidate46 keeps only vertices 80837 and 81373;
+all seven donor triangles and 13 of the 14 fan edges are absent.
+
+The donor fan already folds sharply: minimum face-pair dot -0.998725.
+Its angle-weighted normal agrees with the donor normal at 0.999999943.
+The candidate rewrites the fan and reproduces the native failure at
+dot -0.922026. Center positions and skin fields [1, 0, 0] remain exact.
+This is real source-fan loss after collapse, not the prior nearest-face tie.
+
+Supported construction correction: union the eight listed original
+vertex locks and 14 required edges into existing protections before the
+next separately authorized index-only construction. After compaction,
+require exactly the seven original oriented center triangles; reject
+missing, extra or reversed fan faces. Preserve the donor fold and PBR.
+Do not replace shading normals, waive 0.25, splice overlapping source
+triangles into candidate01, or vary simplification parameters.
+
+Validation: current candidate fails the certificate. The exact source
+patch passes. Deleted/reversed/extra faces, moved vertices and altered
+fields fail; cyclic corner order passes. CPU tests only.
+Limits: this is one measured fan constraint, not a global fold census
+or a new production candidate. Other geometry/contact/budget/motion
+gates remain open. Native56 and current57 sources remain untouched.

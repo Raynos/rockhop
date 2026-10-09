@@ -1,0 +1,232 @@
+{
+  "status": "PROPOSED_EXACT_SOURCE_FAN_CONSTRUCTION_CONSTRAINT_UNACCEPTED",
+  "sourceArrays": {
+    "path": "harness/out/rider-rebuild/selected-production-census35/bootL01/exact-source-arrays.bin",
+    "sha256": "bb81be503529efa6c93d592555bda8c093cfc9b8e8a8a6704a6a13820103f63a"
+  },
+  "centerOriginalVertexId": 80837,
+  "sourceFaceIds": [
+    162082,
+    162083,
+    162085,
+    162112,
+    162114,
+    162115,
+    162116
+  ],
+  "lockedOriginalVertexIds": [
+    80674,
+    80715,
+    80736,
+    80777,
+    80804,
+    80837,
+    81370,
+    81373
+  ],
+  "lockedVertices": [
+    {
+      "originalVertexId": 80674,
+      "position": [
+        0.22943541407585144,
+        -0.02230273000895977,
+        0.07747408747673035
+      ],
+      "namedWeights": [
+        1.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "originalVertexId": 80715,
+      "position": [
+        0.22873587906360626,
+        -0.02237456664443016,
+        0.07739415764808655
+      ],
+      "namedWeights": [
+        1.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "originalVertexId": 80736,
+      "position": [
+        0.22936128079891205,
+        -0.02219056896865368,
+        0.07772115617990494
+      ],
+      "namedWeights": [
+        1.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "originalVertexId": 80777,
+      "position": [
+        0.22839009761810303,
+        -0.022268852218985558,
+        0.07740778475999832
+      ],
+      "namedWeights": [
+        1.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "originalVertexId": 80804,
+      "position": [
+        0.2277662307024002,
+        -0.022389410063624382,
+        0.07733170688152313
+      ],
+      "namedWeights": [
+        1.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "originalVertexId": 80837,
+      "position": [
+        0.2283410131931305,
+        -0.02218088135123253,
+        0.07766835391521454
+      ],
+      "namedWeights": [
+        1.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "originalVertexId": 81370,
+      "position": [
+        0.22823356091976166,
+        -0.022198382765054703,
+        0.0776737704873085
+      ],
+      "namedWeights": [
+        1.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "originalVertexId": 81373,
+      "position": [
+        0.22760242223739624,
+        -0.022382261231541634,
+        0.0774478167295456
+      ],
+      "namedWeights": [
+        1.0,
+        0.0,
+        0.0
+      ]
+    }
+  ],
+  "requiredEdgesOriginal": [
+    [
+      80674,
+      80736
+    ],
+    [
+      80674,
+      80777
+    ],
+    [
+      80674,
+      80837
+    ],
+    [
+      80715,
+      80736
+    ],
+    [
+      80715,
+      80804
+    ],
+    [
+      80715,
+      80837
+    ],
+    [
+      80736,
+      80837
+    ],
+    [
+      80777,
+      80837
+    ],
+    [
+      80777,
+      81370
+    ],
+    [
+      80804,
+      80837
+    ],
+    [
+      80804,
+      81373
+    ],
+    [
+      80837,
+      81370
+    ],
+    [
+      80837,
+      81373
+    ],
+    [
+      81370,
+      81373
+    ]
+  ],
+  "requiredOrientedTrianglesOriginal": [
+    [
+      80777,
+      80674,
+      80837
+    ],
+    [
+      80837,
+      80674,
+      80736
+    ],
+    [
+      80837,
+      81370,
+      80777
+    ],
+    [
+      80837,
+      80736,
+      80715
+    ],
+    [
+      81373,
+      81370,
+      80837
+    ],
+    [
+      81373,
+      80837,
+      80804
+    ],
+    [
+      80804,
+      80837,
+      80715
+    ]
+  ],
+  "requireExactCenterIncidentFan": true,
+  "minimumVertexNormalDot": 0.25,
+  "constructionUse": "Union these original vertex locks and edge constraints with every existing constructor37 protection before one separately authorized index-only construction. Require this exact oriented incident fan after compaction; locks alone are not proof. Do not splice an overlapping patch into candidate01.",
+  "limits": "One measured donor fold only. Source topology/positions/fields/PBR remain unchanged. Full source/target normal, surface, skin, contact, budget and motion gates remain required; this is not a global fold census or a construction run."
+}

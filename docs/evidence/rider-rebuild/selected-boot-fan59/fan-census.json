@@ -1,0 +1,189 @@
+{
+  "status": "COMPLETE_CPU_FAN_PROTECTION_CENSUS_UNACCEPTED",
+  "acceptedArt": false,
+  "recipeSHA256": "94df44f0a38a9ff72c1fe74415cc101ff798f1f08c9c3895dccac632af0a497d",
+  "boundedFindingRecipeSHA256": "2803ffe4bd2f24d25c609793b1817e447c6a5f71ac14d0315ec3a03b5ebfdc32",
+  "constructor46": {
+    "path": "harness/out/rider-rebuild/selected-production-allocation46/candidate01/constructor.json",
+    "sha256": "624affb3b59053d6bdee32fb3283c6b2ce23ff3d849c3fe0dd9669ec9319f3c8"
+  },
+  "census35": {
+    "path": "harness/out/rider-rebuild/selected-production-census35/bootL01/census.json",
+    "sha256": "0e1d5780eeea975fae6c534fc7b348894490c33cc3911d0e090cdb4c723507af"
+  },
+  "sourceArrayPackage": {
+    "path": "harness/out/rider-rebuild/selected-production-census35/bootL01/exact-source-arrays.bin",
+    "sha256": "bb81be503529efa6c93d592555bda8c093cfc9b8e8a8a6704a6a13820103f63a"
+  },
+  "minimumNormalDot": 0.25,
+  "criterion": "Protect the complete original incident fan of every source vertex with any incident geometric face dot native donor vertex normal below 0.25, union every original ancestor whose candidate geometric vertex normal dot native donor vertex normal is below 0.25. This is conservative topology protection, not rejection/filtering of donor faces.",
+  "summary": {
+    "sourceVerticesExamined": 305453,
+    "sourceTrianglesExamined": 610934,
+    "candidateVerticesExamined": 11815,
+    "candidateTrianglesExamined": 23658,
+    "minimumSourceNormalReproductionDot": 0.9704560040255963,
+    "sourceNormalReproductionBelowPoint25": 0,
+    "minimumCandidateVertexNormalDot": -0.9220260449023607,
+    "minimumCandidateDotDistanceFromPoint25": 0.00691850074506517,
+    "candidateFailingVertices": 13,
+    "mixedDonorFanCenters": 447,
+    "additionalFailedCandidateFanCenters": 3,
+    "protectedCenters": 450,
+    "protectedOriginalVertices": 2049,
+    "requiredSourceFaces": 2227,
+    "requiredEdges": 4143,
+    "failures": [
+      {
+        "targetVertexId": 3667,
+        "originalVertexId": 80837,
+        "normalDot": -0.9220260449023607,
+        "minimumDonorIncidentFaceDot": -0.21693519494927643,
+        "sourceFanMixedUnderExistingCriterion": true,
+        "sourceFanCoherence": 0.09770077366645183,
+        "targetFanCoherence": 0.13439997410716234
+      },
+      {
+        "targetVertexId": 3893,
+        "originalVertexId": 84334,
+        "normalDot": -0.08399841881980456,
+        "minimumDonorIncidentFaceDot": -0.27466063176364963,
+        "sourceFanMixedUnderExistingCriterion": true,
+        "sourceFanCoherence": 0.08955336549537833,
+        "targetFanCoherence": 0.0798350775438618
+      },
+      {
+        "targetVertexId": 3936,
+        "originalVertexId": 85064,
+        "normalDot": -0.378300747344692,
+        "minimumDonorIncidentFaceDot": 0.8326544196273558,
+        "sourceFanMixedUnderExistingCriterion": false,
+        "sourceFanCoherence": 0.9049874627850881,
+        "targetFanCoherence": 0.2850069128936717
+      },
+      {
+        "targetVertexId": 3980,
+        "originalVertexId": 85780,
+        "normalDot": -0.03340346293398577,
+        "minimumDonorIncidentFaceDot": -0.6323198411293175,
+        "sourceFanMixedUnderExistingCriterion": true,
+        "sourceFanCoherence": 0.5594283906143215,
+        "targetFanCoherence": 0.2609045600084589
+      },
+      {
+        "targetVertexId": 4102,
+        "originalVertexId": 87322,
+        "normalDot": -0.8158607195088681,
+        "minimumDonorIncidentFaceDot": -0.5151166055361769,
+        "sourceFanMixedUnderExistingCriterion": true,
+        "sourceFanCoherence": 0.1439585920439076,
+        "targetFanCoherence": 0.20166516383822322
+      },
+      {
+        "targetVertexId": 4305,
+        "originalVertexId": 90398,
+        "normalDot": -0.5418611344894821,
+        "minimumDonorIncidentFaceDot": 0.8835080689938153,
+        "sourceFanMixedUnderExistingCriterion": false,
+        "sourceFanCoherence": 0.9632099080954984,
+        "targetFanCoherence": 0.025340241908737026
+      },
+      {
+        "targetVertexId": 4435,
+        "originalVertexId": 92587,
+        "normalDot": -0.027197244757154578,
+        "minimumDonorIncidentFaceDot": 0.14428521793145876,
+        "sourceFanMixedUnderExistingCriterion": true,
+        "sourceFanCoherence": 0.32185252400788555,
+        "targetFanCoherence": 0.960422266423134
+      },
+      {
+        "targetVertexId": 4733,
+        "originalVertexId": 97305,
+        "normalDot": 0.22924334645636743,
+        "minimumDonorIncidentFaceDot": 0.6462139743164759,
+        "sourceFanMixedUnderExistingCriterion": false,
+        "sourceFanCoherence": 0.7478793598512697,
+        "targetFanCoherence": 0.14684958636745626
+      },
+      {
+        "targetVertexId": 4772,
+        "originalVertexId": 97985,
+        "normalDot": 0.17759984226169512,
+        "minimumDonorIncidentFaceDot": -0.07268816507789949,
+        "sourceFanMixedUnderExistingCriterion": true,
+        "sourceFanCoherence": 0.12388389096853433,
+        "targetFanCoherence": 0.9993984376097185
+      },
+      {
+        "targetVertexId": 6360,
+        "originalVertexId": 128653,
+        "normalDot": 0.20931741266931927,
+        "minimumDonorIncidentFaceDot": -0.07565591982880468,
+        "sourceFanMixedUnderExistingCriterion": true,
+        "sourceFanCoherence": 0.06255971529090096,
+        "targetFanCoherence": 0.9510515931263274
+      },
+      {
+        "targetVertexId": 9999,
+        "originalVertexId": 246190,
+        "normalDot": 0.09697793933321311,
+        "minimumDonorIncidentFaceDot": 0.018656021392751077,
+        "sourceFanMixedUnderExistingCriterion": true,
+        "sourceFanCoherence": 0.07340683596812825,
+        "targetFanCoherence": 0.9999161676837292
+      },
+      {
+        "targetVertexId": 10632,
+        "originalVertexId": 267598,
+        "normalDot": 0.15056301315331608,
+        "minimumDonorIncidentFaceDot": 0.07492760356035807,
+        "sourceFanMixedUnderExistingCriterion": true,
+        "sourceFanCoherence": 0.13312142005731295,
+        "targetFanCoherence": 0.9983659575396121
+      },
+      {
+        "targetVertexId": 10644,
+        "originalVertexId": 267993,
+        "normalDot": 0.06360914855981381,
+        "minimumDonorIncidentFaceDot": 0.007317141180566866,
+        "sourceFanMixedUnderExistingCriterion": true,
+        "sourceFanCoherence": 0.02741883567097634,
+        "targetFanCoherence": 0.9989062489369425
+      }
+    ]
+  },
+  "protection": {
+    "path": "docs/evidence/rider-rebuild/selected-boot-fan59/fan-protection.bin",
+    "sha256": "4d1235558a67ac3a4d7c3f6e51d66bf99fa65291ec57fb4bde8c542716c61129",
+    "layout": {
+      "centerOriginalVertexIds": {
+        "byteOffset": 0,
+        "byteLength": 1800,
+        "dtype": "<u4",
+        "count": 450
+      },
+      "lockedOriginalVertexIds": {
+        "byteOffset": 1800,
+        "byteLength": 8196,
+        "dtype": "<u4",
+        "count": 2049
+      },
+      "requiredSourceFaceIds": {
+        "byteOffset": 9996,
+        "byteLength": 8908,
+        "dtype": "<u4",
+        "count": 2227
+      },
+      "requiredEdgesOriginal": {
+        "byteOffset": 18904,
+        "byteLength": 33144,
+        "dtype": "<u4",
+        "count": 8286
+      }
+    }
+  },
+  "sourceInputBytesUnchanged": true,
+  "candidateAttempts": 0,
+  "limits": "CPU angle-weighted normals approximate Blender arithmetic. Full coverage and all failures are recorded; native 0.25 gate remains authoritative. All exact protected source fans must survive one separately guarded construction. No new candidate or scene allocation claim."
+}

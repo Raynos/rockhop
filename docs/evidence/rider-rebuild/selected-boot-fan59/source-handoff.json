@@ -1,0 +1,40 @@
+{
+  "status": "SOURCE_READY_ACTUAL_FAN_FINDING_UNACCEPTED",
+  "acceptedArt": false,
+  "files": [
+    {
+      "path": "assets/blender/rider-rebuild/selected-boot-fan59/diagnose.py",
+      "sha256": "2803ffe4bd2f24d25c609793b1817e447c6a5f71ac14d0315ec3a03b5ebfdc32"
+    },
+    {
+      "path": "assets/blender/rider-rebuild/selected-boot-fan59/check.py",
+      "sha256": "36871271e62ad8079d81f3be88982baa3bdf3a46aa7db0b9d15563c685657294"
+    },
+    {
+      "path": "docs/evidence/rider-rebuild/selected-boot-fan59/finding.json",
+      "sha256": "2a86d86d4db2d6cf29053612e841c3b856ca09ece4c9915e96d2ab2f760df52c"
+    },
+    {
+      "path": "docs/evidence/rider-rebuild/selected-boot-fan59/source-fan-constraint.json",
+      "sha256": "1ef10e6882bbb1b2d0a916e0931e376c596443537920c37afa546d751341e734"
+    },
+    {
+      "path": "docs/evidence/rider-rebuild/selected-boot-fan59/fixtures.json",
+      "sha256": "7b1d1f93def4f92f81f1c009cf8edf0826c3139ed3b85fa090f93f1248cc2952"
+    }
+  ],
+  "finding": {
+    "targetVertexId": 3667,
+    "sourceOriginalVertexId": 80837,
+    "nativeVertexNormalDot": -0.9220517171222511,
+    "sourceFanVertices": 8,
+    "sourceFanTriangles": 7,
+    "candidateRetainedFanVertices": 2,
+    "candidateRetainedFanTriangles": 0,
+    "sourceFanEdges": 14,
+    "candidateRetainedFanEdges": 1
+  },
+  "constructionCorrection": "Merge exact eight-vertex donor-fan protection into existing constructor locks and require all fourteen fan edges and exact seven oriented center triangles after compaction. No constructor was launched; parent owns any next experiment.",
+  "verification": "Three CPU fixture groups passed, including current-candidate rejection and topology/position/field mutation rejection.",
+  "limits": "One observed fan only; no global enumeration, gate waiver, normal override, new candidate, native run or production acceptance. Frozen56/current57 unchanged."
+}
