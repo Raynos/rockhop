@@ -2067,3 +2067,5 @@ Parent independently verifies deep hoodie sample inside both anatomy solids. Sup
 Parent replays exact source/native-ID paired-sheet proof with identicalSHA: neighboring original Hoodie sheets both~69mm inside wearer. Inward-only deletion cannot fix fit. Astra50 owns real broad paired registration; teammate51 owns distal cuff then one complete native10 merge/replay. No new cloth result or art pass yet.
 
 Current-game gate47 completes11/11 under original guard6.099s exit0. Exact clear/hash/crash/coldboot/instantrestart pass. Prior timing misses retained; rebuilt-rider art, garment contact, production/device and release gates remain open.
+
+Actual native45 ankle transfer stops before save at required Jeans field-group inventory assertion (36.49s, exit1). No target native exists. New52 will explicitly append missing canonical groups and qualify inventory/unchanged fields;50/51 hoodie work continues. R0–R5 remain open.

@@ -1,0 +1,21 @@
+00:33.637  blend            | Read blend: "/Users/raynos/projects/games/rockhop/harness/out/rider-rebuild/selected-seated-anatomical09/gameplay10/UNACCEPTED-selected-gameplay-checkpoint10.blend"
+Traceback (most recent call last):
+  File "/Users/raynos/projects/games/rockhop/assets/blender/rider-rebuild/selected-ankle-native45/apply.py", line 228, in <module>
+    save(path) if mode == 'save' else compare(path) if mode == 'compare' else witness(path, mode)
+    ~~~~^^^^^^
+  File "/Users/raynos/projects/games/rockhop/assets/blender/rider-rebuild/selected-ankle-native45/apply.py", line 112, in save
+    assert set(row['after']) <= bones and all(n in jeans.vertex_groups for n in row['after'])
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+
+Error: script failed, file: 'assets/blender/rider-rebuild/selected-ankle-native45/apply.py', exiting.
+Blender 5.2.1 LTS (hash 9e2066aef7ef built 2026-08-25 01:35:57)
+scripts disabled for "/Users/raynos/projects/games/rockhop/harness/out/rider-rebuild/selected-seated-anatomical09/gameplay10/UNACCEPTED-selected-gameplay-checkpoint10.blend", skipping 'RIG-RiderMetarig_ui.py'
+
+Blender quit
+Traceback (most recent call last):
+  File "/tmp/rockhop-ankle45-native01.py", line 7, in <module>
+    subprocess.run([*blender,'save',str(out)],check=True)
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 528, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['/Applications/Blender.app/Contents/MacOS/Blender', '-b', '-t', '2', '--python-exit-code', '1', '--python', 'assets/blender/rider-rebuild/selected-ankle-native45/apply.py', '--', 'save', 'harness/out/rider-rebuild/selected-ankle-native45/native01']' returned non-zero exit status 1.
