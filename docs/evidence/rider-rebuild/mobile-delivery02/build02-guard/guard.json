@@ -1,0 +1,54 @@
+{
+  "accepted": false,
+  "lock": "/Users/raynos/projects/localai/.model.lock",
+  "method": "lockf -k",
+  "command": [
+    "pnpm",
+    "exec",
+    "vite",
+    "build",
+    "--outDir",
+    "harness/out/rider-rebuild/mobile-delivery02/build01"
+  ],
+  "controllerPID": 41001,
+  "pollSeconds": 1,
+  "startAnonymousBelowGiB": 55,
+  "stopAnonymousGiB": 65,
+  "stopAnonymousPlusWiredGiB": 96,
+  "limitSeconds": 420.0,
+  "guardSHA256": "cf8acd15d8b7484480bee74d23892be815d955ffd87115d3da8ed228ffb3d916",
+  "status": "worker returned; review pending",
+  "samples": [
+    {
+      "seconds": 0,
+      "anonymousGiB": 44.6,
+      "wiredGiB": 7.2,
+      "freeGiB": 30.6
+    },
+    {
+      "seconds": 0.034,
+      "anonymousGiB": 44.6,
+      "wiredGiB": 7.2,
+      "freeGiB": 30.6
+    },
+    {
+      "seconds": 1.066,
+      "anonymousGiB": 45.2,
+      "wiredGiB": 7.5,
+      "freeGiB": 29.8
+    },
+    {
+      "seconds": 2.098,
+      "anonymousGiB": 45.3,
+      "wiredGiB": 7.5,
+      "freeGiB": 29.6
+    }
+  ],
+  "physicalMemoryBytes": 137438953472,
+  "requiredPhysicalMemoryBytes": 137438953472,
+  "scope": "Future explicitly invoked owned Rockhop job only",
+  "pressureOrSwapLimits": "No separate pressure/swap gate exists in the pinned original guard; none altered",
+  "ownedChildPID": 41005,
+  "exitCode": 0,
+  "elapsedSeconds": 2.747
+}
