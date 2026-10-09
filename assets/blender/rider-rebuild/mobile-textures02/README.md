@@ -72,6 +72,34 @@ Current UV streams occupy7,716,869 wire bytes and are mostly raw normalized
 Uint16. A further exact meshopt codec test may be useful after this checkpoint;
 no additional UV quantization is authorized by this recipe.
 
+## Conservative follow-up
+
+After checkpoint6bc282f25, `--images 1,3,11 --out
+harness/out/rider-rebuild/mobile-textures02/orm2k02` restores the hoodie ORM4K
+and keeps only boot/glove/jeans ORM2K. The resulting GLB is87,278,904 bytes,
+SHA256 `305139b02b9a520c8cdc28c71ec641a9b6f113f5b79755c9360b07e2f9dc9bcd`.
+Texture payloads are40,360,859 bytes. Pinned WASM passes474transcodes across
+158mips, every ASTC block remains exact to its retained source mip, and all13
+base-level native ASTC software RGBA pixel comparisons pass. Hoodie albedo,
+ORM and normal KTX files now all remain byte-identical to the selected source.
+
+`uv-codec.mjs` measures exact UV encodes sequentially against the pinned
+source, with no output GLB or UV mutation. Codec0/EXT at encoder level3 saves
+zero bytes over current raw/compressed choices. Codec1/KHR saves31,234 bytes
+in total despite exact pinned Three decoder roundtrips. This negligible saving
+does not justify a new extension/toolchain variant; UV storage remains intact.
+Version1 is explicitly incompatible with EXT labeling. The installed Three
+loader supports KHR, but that does not establish future authoring-tool parity.
+KHR additionally prohibits sharing an EXT-labeled fallback buffer. No KHR
+candidate or new runtime requirement was introduced.
+
+The future component bake composition is expected to replace four shared4K
+boot/glove maps with twelve component2K albedo/ORM/normal maps. Including jeans
+ORM2K and unchanged hoodie/identity maps, expected texture GPU streams are
+187,433,520 bytes. Wire bytes depend on actual encoded bake entropy and remain
+unmeasured until composition. Density builder compacts old garment geometry;
+texture composition will remove only proven unreferenced old delivery records.
+
 ```sh
 python3 assets/blender/rider-rebuild/mobile-textures02/budget.py
 node assets/blender/rider-rebuild/download-textures01/runtime-transcode.mjs harness/out/rider-rebuild/mobile-textures02/orm2k01 orm2k
