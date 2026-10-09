@@ -59,3 +59,9 @@ Finding: Replace the mismatched shoulder cap with a conforming shared selected s
 Validation: Parent fully reviewed five sources; AST/hash and four frozen input pins pass. Reconstruction/native binding is connected.
 
 Limits: Source checkpoint only; one construction/all482 inspection next. Full finite contact, selected bake and played art remain unaccepted.
+
+Finding: Actual shared-seam construction saves coherent topology but rejects a negative floating-point torso remainder at two anatomical boundary vertices.
+
+Validation: Originalguard54.791s exit1;16184v/32084tri,zero degenerate fans or inconsistent shared windings. Parent identifies four negative scalars all fixed body-boundary values, minimum−2.22e−16.
+
+Limits: All482/views did not run; no native or moving acceptance. Preserve14 and clamp only roundoff-negative constructed remainder in immutable15.
