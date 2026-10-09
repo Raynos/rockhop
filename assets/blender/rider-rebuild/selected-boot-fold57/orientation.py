@@ -47,7 +47,12 @@ def verify_proof_data(proof):
     vertex = proof['nativeVertexEvidence']
     assert vertex['positionExact'] is True and vertex['originalVertexIdExact'] is True
     assert vertex['consistentVertexNormalDot'] >= .25
-    assert np.isclose(np.array(vertex['sourceNormal'])@vertex['targetNormal'], vertex['consistentVertexNormalDot'], atol=1e-12, rtol=0)
+    # mathutils vectors and the recorded NumPy dot are float32 in native57.
+    # Recompute at that storage precision; float64 arithmetic changes the
+    # recorded result even though the serialized vector components are exact.
+    normals = np.asarray([vertex['sourceNormal'], vertex['targetNormal']], dtype=np.float32)
+    assert np.array_equal(normals.astype(np.float64), np.asarray([vertex['sourceNormal'], vertex['targetNormal']], dtype=np.float64))
+    assert float(normals[0]@normals[1]) == vertex['consistentVertexNormalDot']
 
 
 def ancestry(source, target, sp, tp):

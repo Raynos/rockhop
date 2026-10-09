@@ -71,6 +71,24 @@ for path, value in [(('status',), 'PARTIAL_NATIVE57_BEARING_BEFORE_FANS'),
     rejected(lambda: orientation.verify_proof_data(mutation))
 checks.append('Incomplete/wrong-face/nonzero-distance/wrong-native/nonexact ancestry proof mutations rejected')
 
+# The actual native proof records float32 vector arithmetic. Recomputing the
+# same components in float64 differs by4.27e-8, so reproduce the recorded dtype
+# rather than widening the proof tolerance or changing the angular gate.
+stored_proof = copy.deepcopy(proof)
+stored_proof['nativeVertexEvidence'].update(
+    sourceNormal=[-0.9771018624305725, 0.21056947112083435, 0.03053584322333336],
+    targetNormal=[-0.9885111451148987, 0.14583207666873932, -0.03973494470119476],
+    consistentVertexNormalDot=0.9953705668449402)
+orientation.verify_proof_data(stored_proof)
+wrong_precision = copy.deepcopy(stored_proof)
+vertex = wrong_precision['nativeVertexEvidence']
+vertex['consistentVertexNormalDot'] = float(np.asarray(vertex['sourceNormal'])@vertex['targetNormal'])
+rejected(lambda: orientation.verify_proof_data(wrong_precision))
+wrong_storage = copy.deepcopy(stored_proof)
+wrong_storage['nativeVertexEvidence']['sourceNormal'][0] += 1e-12
+rejected(lambda: orientation.verify_proof_data(wrong_storage))
+checks.append('Actual native float32 normal-dot witness reproduced exactly; wrong arithmetic/storage mutations rejected')
+
 
 class Foreach:
     def __init__(self, array): self.array = np.asarray(array)

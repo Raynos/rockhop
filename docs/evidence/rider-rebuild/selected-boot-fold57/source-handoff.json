@@ -8,7 +8,7 @@
     },
     {
       "path": "assets/blender/rider-rebuild/selected-boot-fold57/check.py",
-      "sha256": "ea7988312e481274e12d8276d372aae9d049f11e8b983012d3128c0a3b65cccc"
+      "sha256": "1953c5ba46b8e8f2962c678008fadba6340089b1f3872ce9ce80ed741ec00a51"
     },
     {
       "path": "assets/blender/rider-rebuild/selected-boot-fold57/fan.py",
@@ -20,7 +20,7 @@
     },
     {
       "path": "assets/blender/rider-rebuild/selected-boot-fold57/orientation.py",
-      "sha256": "edf86406d5db07be1ee40db9620ec63e6ea5c6d4983d50103f35e4110ce5f136"
+      "sha256": "88ccf86250e709b4f4b7b76827d103764c9e36bb96934618917ed0bb2fa95abe"
     },
     {
       "path": "docs/evidence/rider-rebuild/selected-boot-fold57/cpu-fan.json",
@@ -28,7 +28,7 @@
     },
     {
       "path": "docs/evidence/rider-rebuild/selected-boot-fold57/fixtures.json",
-      "sha256": "47e196fd3d5cea80c862661a78148710f8527d4518d4065a737a00795595d8d1"
+      "sha256": "642bb18cbca7d0fd05ec1486350d4122eb63ed123e26e044f31bddb35cc8898a"
     }
   ],
   "nativeDiagnosticCommand": [
@@ -61,5 +61,6 @@
     "consistentVertexNormalDotCPU": 0.9953700313892974
   },
   "nextCorrection": "Use donor vertex normal at exact retained original vertex ancestry for target vertex orientation, with the unchanged0.25 threshold. Retain the donor micro-face and all source fields/PBR. Original target geometric face-centroid normals, edge/reverse distance, skin/contact/bake/motion qualifications remain.",
-  "limits": "Actual native BVH nearest face remains unproven until native57. Correction is conditional; no native job or geometry/art acceptance from this CPU builder."
+  "limits": "Actual native BVH nearest face remains unproven until native57. Correction is conditional; no native job or geometry/art acceptance from this CPU builder.",
+  "proofArithmeticRevision": "Native57 vectors/dot use float32; verifier reproduces stored float32 vectors and dot exactly rather than widening tolerance. Parent6CPU groups pass, including actual-vector wrong precision/storage mutations."
 }
