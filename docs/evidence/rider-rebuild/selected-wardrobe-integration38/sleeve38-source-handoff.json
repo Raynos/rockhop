@@ -1,0 +1,69 @@
+{
+  "status": "FROZEN_SOURCE_ONLY_SLEEVE_CHECKPOINT_BEFORE_PROTECTED_AFTER_SCAN",
+  "acceptedArt": false,
+  "nativeRunExecuted": false,
+  "sourcePins": [
+    {
+      "path": "assets/blender/rider-rebuild/selected-wardrobe-integration38/freeze-sleeve38.py",
+      "sha256": "21813443169fa5f93ba696c1205c34d55aad4d729fc0c6e81139b84b56ba4b22"
+    },
+    {
+      "path": "assets/blender/rider-rebuild/selected-wardrobe-integration38/sleeve38.py",
+      "sha256": "d41ab8201abd8ca40bae501375af0ce4d40123cd910a82a9f2c7fa0f97e2a23f"
+    },
+    {
+      "path": "assets/blender/rider-rebuild/selected-wardrobe-integration38/sleeve_checkpoint.py",
+      "sha256": "a7519a567fcabe067f13342a955938553fd97d91ffe8a1c7e3c21b63235c265e"
+    },
+    {
+      "path": "assets/blender/rider-rebuild/selected-wardrobe-integration38/qualify-sleeve38.py",
+      "sha256": "00415b63a4bd500b1bc14eff6329cf9b2dfc19163773c244de081484fd76eb5d"
+    },
+    {
+      "path": "assets/blender/rider-rebuild/selected-wardrobe-integration38/test_sleeve38.py",
+      "sha256": "8932c8ee257677173795a36e91bf8027430244af795dedcdb9d5a2e33a2be887"
+    }
+  ],
+  "fixtureReceipt": {
+    "path": "docs/evidence/rider-rebuild/selected-wardrobe-integration38/sleeve38-fixtures.json",
+    "sha256": "735989ef4117a9d95192d444ee9de6d28c1e7ba88a62debe6c64b03c296bf1d5"
+  },
+  "validation": {
+    "pythonASTFiles": 5,
+    "behaviorFixtures": 7,
+    "passed": true
+  },
+  "finding": "Frozen sleeve28 repeated the expensive protected after-scan before its compressed save. New38 retains its exact geometry prefix through Surgery.finish, releases completed Python construction scratch, then saves an uncompressed explicitly pending native before that after-scan.",
+  "receiptGates": [
+    "Only actual glove04 gloves-only-qualified.json with separate reopened protected success is admitted by freeze-sleeve38.py.",
+    "The original full-reference Basis/triangles witness remains exact to sleeve28; source recipe28, field, cuff, ownership, guide, UV/PBR and skin pins remain unchanged.",
+    "Pending report recipeSHA256 must equal config.pins.constructor38.sha256; source38 constructor, checkpoint helper and original28 recipe bytes are checked at save and at reopened qualification.",
+    "A separate Blender process reopens the saved native with use_scripts=False and compares every original protected fingerprint and exact75 rest. Only this writes construction.json.",
+    "The original six relation workers consume construction.json unchanged. No pending native, fixture, marker or preparation report passes any dense/pose/art gate."
+  ],
+  "expectedOutputNames": {
+    "native": "UNACCEPTED-selected-sleeve-rebuild38.blend",
+    "pending": "construction-pending.json",
+    "witness": "protected-before-sleeve.json",
+    "qualified": "construction.json"
+  },
+  "nextSteps": [
+    "Parent runs frozen glove04 then its separate qualifier under unchanged serial resource admission.",
+    "Freeze actual qualified glove receipt and actual reference05/original-full-reference.npz into a new38 input.",
+    "Parent runs sleeve38.py with that actual input and a fresh harness/out/rider-rebuild/selected-sleeve-rebuild28 child output under original CPU2/600-second host guard.",
+    "Parent runs qualify-sleeve38.py on construction-pending.json in a separate guarded process.",
+    "Only then run original28 qualify.py for all six static relations."
+  ],
+  "actualReferenceReady": {
+    "path": "harness/out/rider-rebuild/selected-seated-anatomical09/reference05/original-full-reference.npz",
+    "sha256": "01f752d72e94dbab81cc7a193adbd2dd7bba26df919b48454d8937fa9665dcc5"
+  },
+  "limits": [
+    "No actual glove04/sleeve38/native save/reopen/dense/moving run executed by this builder.",
+    "Original construction and native raw saving still allocate memory; no new runtime/peak estimate or raised guard.",
+    "Original turned-lip replacement remains an explicit unaccepted detail change.",
+    "The current played cuff/wrist holes remain visually rejected until new actual complete-outfit clips are reviewed by the parent.",
+    "Existing ankle/boot overlap and both-bike/generic moving enclosure remain open."
+  ],
+  "parentReview": "PASS complete original28 and38 source/qualifier/freeze review, exact geometry prefix and explicit result/source pins verified, all7fixtures rerun. No actual native result."
+}
