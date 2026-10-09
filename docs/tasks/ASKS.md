@@ -573,3 +573,7 @@ Status: **open** (nobody on it) · **in flight** (owner named) · **needs pick**
 | 360 | Pause the rider goal, let existing subagents finish, checkpoint progress and deploy the selected remaster as the sixth Garage outfit. | **active — finite wrap-up; broader goal paused** | No new art experiments or advisers. Preserve existing builder handoffs and unaccepted masters; pause recurring advisory, integrate selected played model, run checked release and verify live SHA. |
 
 | 361 | Cancel the recurring six-hour Astra rider advisory. | **done — automation deleted** | Supported automation API returned deleteStatus deleted for rider-astra-6-production-advisory. No future recurring review; finite checkpoint/deployment wrap-up continues. |
+
+| 362 | Explain why the remastered asset is roughly10times larger than the October4 game. | **done — actual geometry/texture and live-game bytes measured** | Compare selected runtime02 geometry/texture payload with live October4 model/load catalog; distinguish authoring export from mobile production optimization. |
+
+| 363 | Explain the best technique to reduce the remastered rider download size while preserving selected appearance. | **done — lossless geometry packing first; production topology/bake/KTX2 advised** | Prioritize actual300MB geometry payload, full-attribute dedup/compression, then production topology/baked detail and compressed textures. Advice only; broader construction remains paused. |
