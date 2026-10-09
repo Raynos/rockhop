@@ -17,3 +17,9 @@ Finding: The first selected glove derivative is rejected pending semantic-field 
 Validation: Original guard unit exit0 in26.305s;569142 to40000triangles,30280seam vertices; receiver surface max0.189574mm. Native482played-pose comparison maximum36.614412mm,540vertices above1mm and349above2mm. Top4 discarded native weight mass maximum0.161502. All30000cage rays hit; albedo mean0.0000971,ORM0.0013813,normal mean2.002degrees,p99 45.500,max178.999,109samples above90degrees. Raw witnesses and full distributions retained compressed.
 
 Limits: Nearest rest-surface correspondence can address the wrong close finger or inner glove sheet. The propagated collapse field can also blend across native articulation. Their actual joint memberships and first failed vertex must be compared before interpreting the cause or trying another method. Right-glove construction is stopped at this failure. This derivative remains unaccepted and no player clothing/master changes.
+
+Finding: The largest glove pose error addresses the wrong source sheet; the actual collapsed receiver skin retains the correct pinky field at this witness.
+
+Validation: Guarded forensic exit0 in0.825s. Vertex11107 is100percent pinkyMCP. Unconstrained nearest sourceface413109 at0.009784mm carries palm/index/middle skin with source-normal dot-0.9258. Nearby sourceface356848 at0.053143mm carries the identical pinky field, weightL1difference3.54e-8 and normaldot+0.99295. Complete raw neighbor list retained.
+
+Limits: One witness does not qualify all540vertices flagged above1mm. Geometric correspondence must distinguish facing sheets independently of joint weights, retaining the original failed distribution. No candidate weights/geometry or player assets were modified by this diagnosis.
