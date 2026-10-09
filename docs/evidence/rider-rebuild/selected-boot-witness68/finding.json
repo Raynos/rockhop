@@ -1,0 +1,65 @@
+{
+  "status": "CPU_SERIALIZATION_CAUSE_PROVEN_ACTUAL_READBACK_PENDING",
+  "acceptedArt": false,
+  "production": {
+    "path": "harness/out/rider-rebuild/selected-boot-native63/native01/production.json",
+    "sha256": "ba31a23f3489296c97ca02d3e34808cc10e8f869cc1f035d347b148efdba7644"
+  },
+  "witnessRecipe": {
+    "path": "assets/blender/rider-rebuild/selected-production-family31/witness.py",
+    "sha256": "95c7813b503c7d5539b2d7082e14229d484060bacefae294d28160e2c30755d5"
+  },
+  "frozenNativeProof": {
+    "path": "assets/blender/rider-rebuild/selected-boot-surface67/native-proof.py",
+    "sha256": "8bbfcc04fa62836224477785a55f272cd3e78d8f93ff662cb7230bb28758460a"
+  },
+  "knownSufficientFailure": "Live source.groups rows are Python tuples; production63 JSON rows are lists. Direct live-dict equality to JSON-dict is false even when all values match.",
+  "cpuReproduction": {
+    "equal": true,
+    "comparison": "Whole canonical JSON value; no field exclusions, numeric tolerance or order changes inside arrays",
+    "livePythonEquality": false,
+    "valueDifferenceCount": 0,
+    "valueDifferences": [],
+    "representationDifferences": [
+      {
+        "path": "$.sources.ActualSelectedBoot.L.groups[0]",
+        "kind": "sequence-representation",
+        "actualType": "tuple",
+        "expectedType": "list"
+      },
+      {
+        "path": "$.sources.ActualSelectedBoot.L.groups[1]",
+        "kind": "sequence-representation",
+        "actualType": "tuple",
+        "expectedType": "list"
+      },
+      {
+        "path": "$.sources.ActualSelectedBoot.L.groups[2]",
+        "kind": "sequence-representation",
+        "actualType": "tuple",
+        "expectedType": "list"
+      },
+      {
+        "path": "$.sources.ActualSelectedBoot.R.groups[0]",
+        "kind": "sequence-representation",
+        "actualType": "tuple",
+        "expectedType": "list"
+      },
+      {
+        "path": "$.sources.ActualSelectedBoot.R.groups[1]",
+        "kind": "sequence-representation",
+        "actualType": "tuple",
+        "expectedType": "list"
+      },
+      {
+        "path": "$.sources.ActualSelectedBoot.R.groups[2]",
+        "kind": "sequence-representation",
+        "actualType": "tuple",
+        "expectedType": "list"
+      }
+    ]
+  },
+  "savedStage": "Capture before construction; exact witness check immediately before raw63 save; raw63 save precedes transfer. The original expected sourceWitness is correct.",
+  "correction": "Compare full canonical JSON values, persist actual/expected/diff before asserting, preserve live-before==live-after and every frozen67 geometric/raw guard.",
+  "limits": "Native67 did not persist its actual live witness. Other reopen differences are unknown until68 runs; no actual source unchanged claim, native proof or qualification is made."
+}

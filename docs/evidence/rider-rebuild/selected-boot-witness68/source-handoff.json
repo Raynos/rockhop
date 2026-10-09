@@ -1,0 +1,37 @@
+{
+  "status": "SOURCE_READY_CANONICAL_SAVED_STAGE_WITNESS_NATIVE_PENDING_UNACCEPTED",
+  "acceptedArt": false,
+  "files": [
+    {
+      "path": "assets/blender/rider-rebuild/selected-boot-witness68/check.py",
+      "sha256": "6ddbe91d362a16953f48b2117040a5b73c037b6af84f7e7635634fd63d137849"
+    },
+    {
+      "path": "assets/blender/rider-rebuild/selected-boot-witness68/native-proof.py",
+      "sha256": "8a5c38abb91403f7d504d0eac082694b9f660090498d07b8c049ca7e9948cc56"
+    },
+    {
+      "path": "assets/blender/rider-rebuild/selected-boot-witness68/witness68.py",
+      "sha256": "b52d42550d1c16367095424f207a0303e1f80d4452747eaf6f3941e8298b912e"
+    },
+    {
+      "path": "docs/evidence/rider-rebuild/selected-boot-witness68/finding.json",
+      "sha256": "ebc578b04cee0d793714104f09be500494bb91faaaede88c8009c12203e59e76"
+    },
+    {
+      "path": "docs/evidence/rider-rebuild/selected-boot-witness68/fixtures.json",
+      "sha256": "7d43c64e78556f19a524ad3342f06affdb72229ff87f1e1c829e5758a1defe0d"
+    }
+  ],
+  "finding": "Six guaranteed tuple/list differences in nonempty boot vertex-group rows make native67 direct Python-vs-JSON equality fail. Frozen37 confirms production63.sourceWitness is the correct raw-save stage. The actual failed live witness was not saved, so any further native differences remain unknown.",
+  "change": "Expand frozen67 proof with only whole-witness JSON representation comparison, explicit68 provenance, owned output path and partial witness evidence. Persist complete actual/expected/diff before any witness mismatch assertion. Retain exact live-before/live-after comparison and every frozen67 geometry/material/raw-source check.",
+  "parentBlenderArguments": [
+    "--python",
+    "assets/blender/rider-rebuild/selected-boot-witness68/native-proof.py",
+    "--",
+    "harness/out/rider-rebuild/selected-boot-witness68/proof01"
+  ],
+  "validation": "Four CPU fixture groups pass: schema/lifecycle proof, all protected-value mutation checks, full pre-assert evidence persistence and rejection of a substituted saved-stage witness. Expanded source and all Python ASTs parse.",
+  "execution": "Parent original guarded serial proof only. No Blender/simplifier/constructor job or commit ran. Frozen67 and all previous stages unchanged.",
+  "limits": "Actual native readback/proof still pending. No source-unchanged, qualified geometry, selected material bake or production acceptance claim."
+}
