@@ -2017,3 +2017,5 @@ Ankle42 frozen selected-field initializer parent-reviewed:3318 lowerJeans IDs fr
 Current-game gate43 retained: all11 cold-boot/clear/crash/restart checks pass; golden clear8.591666666666667s byte-identical. This does not accept the selected rider or device/release gates. Next: actual calibrated ankle42 preview and fully dressed gameplay leans.
 
 Partial Astra43 corrections adopted: native10 now actually qualified (max0.020169mm); stop more failed offline IK before clothing film. Ankle42 and exact glove41 are active garment route. Review43 final synthesis capacity interrupted, not a completed deep review. Whole-scene production budget supersedes unsupported exact8k boot target; correction implementation pending. AllR0–R5 open.
+
+Ankle42 actual runtime02 readback passes:3318 same named rows, selected rest geometry/topology/maps retained; raw source binary357791424bytes copied. Corrected unsupported runtime01 review discriminator; actual source intake admits calibrated gameplay with explicit unaccepted intervention. Next fully dressed actual-input Pro/Rookie films; native parity and art pending.
