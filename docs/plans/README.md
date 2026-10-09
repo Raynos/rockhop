@@ -2065,3 +2065,5 @@ Astra49 and parent independently prove actual upper-arm donor witness lies69mm i
 Parent independently verifies deep hoodie sample inside both anatomy solids. Supported correction now delegated to Astra49 as concrete proximal rest-registration50 on actual selected hoodie, preserving UV/PBR/fields and paired cloth; frozen28 small-repair is stopped. Report new art/displacement/strain truthfully, then distal cuff/one native10 merge/actual lean film; all gates open.
 
 Parent replays exact source/native-ID paired-sheet proof with identicalSHA: neighboring original Hoodie sheets both~69mm inside wearer. Inward-only deletion cannot fix fit. Astra50 owns real broad paired registration; teammate51 owns distal cuff then one complete native10 merge/replay. No new cloth result or art pass yet.
+
+Current-game gate47 completes11/11 under original guard6.099s exit0. Exact clear/hash/crash/coldboot/instantrestart pass. Prior timing misses retained; rebuilt-rider art, garment contact, production/device and release gates remain open.
