@@ -23,3 +23,11 @@ Finding: The private derivative585ae314 activates fitted profile659ff94c through
 Validation: Original unchanged guard exits0 after25.438 seconds once admission succeeds. Capture, presence and encoding checks pass with zero page errors, faults or invalid submissions. The private upstream572476 and original fit-authoring030108 contract pins remain separate. Encoded presentation is25fps; measured forced-harness render85.1fps/RAF92.1fps is explicitly not normal-player performance.
 
 Limits: Close optical framing preserves both hands, cuffs and elbows but crops head/legs. Actual derivative whole-glove/bar and cuff surface qualification is the density worker's separate task. Pro motion, whole-rider Garage orbit, parent movie judgment and physical-device/performance acceptance remain pending. The original queue waited outside its55GiB admission gate before launch; no guard threshold or foreign process changed.
+
+## Rookie chronological navigation gallery
+
+Finding: Seven time-ordered played-video frames expose the near glove, cuff and elbow from neutral through both held leans and return. The gallery indexes exact frame numbers and timestamps against the loader-trimmed movie SHA; complete camera images and the source movie remain available for parent motion judgment.
+
+Validation: Frames25,65,115,160,210,270,300 map to1.00,2.60,4.60,6.40,8.40,10.80,12.00 seconds at the encoded25fps cadence. Extraction uses original played frames with two-thread decoding/encoding and no interpolation. The fixed420x430 crop at355,365 preserves chronological order.
+
+Limits: This is navigation evidence, not static art acceptance. Complete camera images retain the close framing's head/leg crop. Parent identified near-wrist cuff protrusions for separate density classification; the candidate remains unaccepted pending Pro opposite-hand motion and whole-rider Garage orbit.
