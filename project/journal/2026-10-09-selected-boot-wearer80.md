@@ -17,3 +17,9 @@ Finding: Checked right exterior sections fit; left local toe escapes1.78mm while
 Validation: Original guard0.28s exit0; parent full-source/pins/closed-contour and named exact section-probe review. Full actual classified receipt retained.
 
 Limits: Selected sections only, no exhaustive3D, moving, bake, native or art acceptance. No geometry changed or hidden.
+
+Finding: One editable own-side selected shoe construction targets the observed hidden heel floor, collar return and local left toe lip. Exterior elsewhere stays exact; genuine left/right geometry and own-side fields remain distinct.
+
+Validation: Parent fully reviewed407lines, AST and all11 declared pins pass. Source compares exact47/native02 foot IDs, positions and named fields before use, preserves all3318 ankle rows, and rejects cavity selection reaching exterior sole/toe. One local left inset; right toe untouched. Source-only.
+
+Limits: No constructor run, independent saved-native reopen, exhaustive3D/posed foot or jeans corridor, compact output, source-detail bake, engine or moving-art pass. New geometry cannot inherit native70 qualification.
