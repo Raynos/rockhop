@@ -2171,3 +2171,5 @@ Actual headless desktop Metal guard01 passes14/14 unchanged ordinary-game checks
 **Final corrected-source build preparation (asks381/382):** Exact staged source/contract/player pins are hash-checked for a fresh guarded compiled build and restored on exit. Corrected cuff construction, actual moving judgment, replay and checked deployment remain pending; no private preparation or Mac proxy is rider/device completion.
 
 **Final mobile runtime qualification prepared (asks374–376/381/382):** Reuses normal production RAF with explicit final source/metadata/grip identity, real loader-stage dwell, Garage entry/equip timing and snapshot texture payloads. Frozen corrected build is still pending; no new runtime/phone acceptance claimed.
+
+**Final corrected-source moving review prepared (asks381/382):** Fresh packet/build identities and compiled player bytes are fixed before both-bike forward/back leans plus a full seated-rider Garage orbit using trusted controls. Unchanged glove/native/driver proofs inherit existing exhaustive finite-bar results; corrected sleeve art still requires new played judgment. No capture or promotion has passed yet.

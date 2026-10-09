@@ -45,3 +45,31 @@ python3 assets/blender/rider-rebuild/focused-delivery07/test_compile.py
 
 Test fixtures certify parser behavior only. They are not source parity,
 upload, staging, moving-art or device acceptance evidence.
+
+Once the parent supplies the fresh compiled packet/build and admits the run,
+the capture launcher verifies their exact identities before starting:
+
+```sh
+python3 assets/blender/rider-rebuild/focused-delivery07/capture.py \
+  --packet harness/out/rider-rebuild/focused-delivery07/stage01 \
+  --source harness/out/rider-rebuild/selected-cuff-finish06/candidate01/rider.glb \
+  --build PARENT_SUPPLIED_PRIVATE_BUILD \
+  --out harness/out/rider-rebuild/focused-delivery07/played01 \
+  --evidence docs/evidence/rider-rebuild/focused-delivery07/played01
+```
+
+The launcher uses the original shared admission helper and bounded guard for
+serial Rookie and Pro forward/back leans followed by one full18second Garage
+orbit. Each job has its original420second bound. Lean framing uses6m with
+review zoom1.6; Garage uses two trusted outward120 wheel gestures within the
+normal player limits. The parent verifies full head/boots in the played movie.
+`--garage-bike=pro` selects Pro for the single Garage orbit; Rookie is default.
+
+Compiled JS/WASM/HTML and packet/catalog/version bytes are pinned before and
+after every capture. Version metadata alone does not prove the compiled source
+revision; the parent owns build freeze/provenance. Fresh output directories
+are required. Failed jobs retain guard/report/movie evidence and stop without
+automatic retries. No exhaustive contact job is repeated: exact glove/native/
+driver proof supports inherited finite-bar measurements only. All captures
+remain unaccepted until parent judgment. Mac CPU render-submission FPS and
+encoded movie cadence do not establish GPU completion or physical iPhone FPS.

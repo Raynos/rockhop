@@ -28,6 +28,7 @@ const mode = arg('mode', 'lean'), bike = arg('bike', 'rookie'), backend = arg('b
 const cameraYaw = Number(arg('camera-yaw', '.8')), cameraPitch = Number(arg('camera-pitch', '.22'));
 const reviewZoom = Number(arg('review-zoom', '2.2'));
 const cameraDistance = Number(arg('camera-distance', '3')), orbitSeconds = Number(arg('orbit-seconds', '18'));
+const garageWheelDelta = Number(arg('garage-wheel-delta', '-240'));
 assert(['garage', 'lean'].includes(mode)); assert(['rookie', 'pro'].includes(bike));
 assert(['webkit', 'metal'].includes(backend));
 assert(Number.isFinite(cameraYaw) && Math.abs(cameraYaw) <= Math.PI);
@@ -35,6 +36,8 @@ assert(Number.isFinite(cameraPitch) && cameraPitch >= -.06 && cameraPitch <= .55
 assert(Number.isFinite(cameraDistance) && cameraDistance >= 3 && cameraDistance <= 8, 'Existing runtime orbit limits');
 assert(Number.isFinite(reviewZoom) && reviewZoom >= 1 && reviewZoom <= 4);
 assert(Number.isFinite(orbitSeconds) && orbitSeconds >= 16 && orbitSeconds <= 60);
+assert(Number.isInteger(garageWheelDelta) && garageWheelDelta >= -240 && garageWheelDelta <= 240,
+  'Bounded normal Garage wheel gesture');
 const sha = data => crypto.createHash('sha256').update(data).digest('hex');
 async function streamedPin(filename) {
   const hash = crypto.createHash('sha256'); let bytes = 0;
@@ -315,7 +318,7 @@ try {
     const point = { x: box.x + box.width * .72, y: box.y + box.height * .55 };
     assert(point.x - fullTurnPixels >= 0);
     assert(await page.evaluate(p => !!globalThis.document.elementFromPoint(p.x, p.y)?.closest('.garage-stage'), point));
-    await page.mouse.move(point.x, point.y); await page.mouse.wheel(0, -240); await page.mouse.wheel(0, -240);
+    await page.mouse.move(point.x, point.y); await page.mouse.wheel(0, garageWheelDelta); await page.mouse.wheel(0, garageWheelDelta);
     await page.waitForTimeout(500); await page.mouse.down();
     await page.evaluate(() => globalThis.window.__garageCaptureMeter.reset());
     const started = performance.now(); let progress = 0, moves = 0;
@@ -326,7 +329,8 @@ try {
     }
     await page.waitForTimeout(100); await page.mouse.up();
     report.orbit = { wallSeconds: (performance.now() - started) / 1000, fullTurnPixels, moves,
-      pointerSensitivitySourceSHA256: sha(garageSource), zoom: 'Trusted wheel to player3m minimum' };
+      pointerSensitivitySourceSHA256: sha(garageSource), wheelDelta: garageWheelDelta,
+      zoom: garageWheelDelta === -240 ? 'Trusted wheel to player3m minimum' : 'Trusted bounded wheel for full-body review; normal player orbit limits' };
     report.garageEnd = await page.evaluate(() => ({ debug: structuredClone(globalThis.window.__render.debug.rider.debug), camera: globalThis.window.__render.camera() }));
     assert.equal(report.garageEnd.debug.stageClip, 'Riding IK/breathing');
   } else {
