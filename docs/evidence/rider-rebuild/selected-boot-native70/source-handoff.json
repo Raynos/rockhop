@@ -1,0 +1,66 @@
+{
+  "status": "UNACCEPTED_SOURCE_CHECKPOINT_CPU_FIXTURES_PASS_NATIVE_PENDING",
+  "acceptedArt": false,
+  "ownedSource": {
+    "assets/blender/rider-rebuild/selected-boot-native70/author.py": "e58c32bf6c4a68d41f64295c7e7c1e23e957ae6b2d057496e10db2d6441ce355",
+    "assets/blender/rider-rebuild/selected-boot-native70/intake.py": "bc1262b93289e95da61d6961b9a3132d65d2ee93ce9b0ff65a992f06608eccd5",
+    "assets/blender/rider-rebuild/selected-boot-native70/surface.py": "192b3676f97714a89d978db64cabab81363c464d406b9d0ad7d9008c87859d1e",
+    "assets/blender/rider-rebuild/selected-boot-native70/check.py": "b45a01cde3caebfe0d1cfbf0686a861e1f7d97568551a5dd27ae3be6871d5aa7"
+  },
+  "cpuEvidence": {
+    "docs/evidence/rider-rebuild/selected-boot-native70/cpu-admission.json": "1f7bfea9dda8cc8c12a36bb81510f8da168740c7d8de742ac640f9477fb2ea16",
+    "docs/evidence/rider-rebuild/selected-boot-native70/fixtures.json": "4f7f461c4f8d780c639fd1d992aa5adf936a321b78a8391994753f2ec2499e7e"
+  },
+  "constructor": {
+    "path": "harness/out/rider-rebuild/selected-boot-surface67/candidate01/constructor.json",
+    "sha256": "14b4f68aee996befc290a5cfc135029b5a7e5b6933d42398e3eae1a2347eb487",
+    "candidateSHA256": "d86bf09de091e17ee7ccdbdd2bea00636861bf50a620c38510c36ba5a2a07bde",
+    "completedJointIterations": 5,
+    "triangles": 30456,
+    "vertices": 15214,
+    "protectedOriginalFanCenters": 1120,
+    "protectedExactOrientedFaces": 5029
+  },
+  "nativeProof68": {
+    "path": "harness/out/rider-rebuild/selected-boot-witness68/proof01/diagnostic.json",
+    "sha256": "9373ab042e0899ec5366a92386fd775dc82837c511345f8110917c26632b15ae",
+    "proofSourceFaceId": 278671,
+    "proofSourceFaceCurrentTargetId": 18678,
+    "claim": "Exact inherited oriented face, material, positions and centroid identity; own geometric normal. The measured single-face BVH nearest error remains greater than the adjacent full-tree bearing error and is not erased."
+  },
+  "surfacePolicy": {
+    "exactInheritedForwardAndReverseFaces": 5522,
+    "newTargetFacesUsingUnchangedGlobalBVH": 24934,
+    "allEdgeMidpointsUseUnchangedGlobalBVH": true,
+    "unmatchedReverseSourceCentroidsUseUnchangedGlobalBVH": true,
+    "minimumNormalDot": 0.25,
+    "maximumSurfaceErrorM": 0.001,
+    "geometryAndMaterialIdentityRequired": true,
+    "normalSelectedBearings": false,
+    "microFaceExemption": false
+  },
+  "preserved": [
+    "Raw unaccepted native save before original transfer and native qualification",
+    "Frozen56 scale-independent barycentrics with unchanged nearest source skin bearing",
+    "Actual-proof-supported frozen57 exact ancestor native vertex normal comparison",
+    "All frozen37 shape, skin, FOUR, source identity and surface gates",
+    "New face global-nearest orientation and distance checks, all edge and reverse checks",
+    "Measured shape and skin results produced by this execution, not copied from prior native outputs",
+    "LEFT_BOOT_ONLY_NOT_A_BILATERAL_FAMILY32_INPUT"
+  ],
+  "validation": {
+    "command": "/Users/raynos/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3 assets/blender/rider-rebuild/selected-boot-native70/check.py",
+    "passedGroups": 5,
+    "nativeExecuted": false,
+    "atlasExecuted": false
+  },
+  "parentGuardBlenderArguments": [
+    "--python",
+    "assets/blender/rider-rebuild/selected-boot-native70/author.py",
+    "--",
+    "harness/out/rider-rebuild/selected-boot-surface67/candidate01/constructor.json",
+    "14b4f68aee996befc290a5cfc135029b5a7e5b6933d42398e3eae1a2347eb487",
+    "harness/out/rider-rebuild/selected-boot-native70/native01"
+  ],
+  "limits": "Parent review and original guard are required before the fresh native70 run. No scene budget, bilateral32 bake, atlas, contact, motion, device or art acceptance is implied. Earlier frozen source families are untouched."
+}
