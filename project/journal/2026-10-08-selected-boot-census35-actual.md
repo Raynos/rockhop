@@ -1,0 +1,5 @@
+Finding: Actual read-only census35 completes all5 source/target scans of selected left boot in6.710s exit0 under unchanged original guard. Exact source array package64758500bytes enables constructor46. Rejected8k target remains rejected:322 targetcentroids have negative source normal relation and72 exceed1mm; reverse sourcecentroid scan finds5389 over1mm.396 connected failure regions measured. No native/field/map edit or production quality pass; right boot/fullscene remain separate.
+
+Validation: Completed status and all5 scan completion flags actual; original source arrays/pins frozen and rejected target failures retained.
+
+Limits: Read-only left-boot intake for one new candidate; no complete-scene census, new native, bake, art or mobile acceptance.
