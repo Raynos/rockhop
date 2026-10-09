@@ -30,6 +30,56 @@ export function selectedGripPositionBike(driver, side) {
   return V().fromArray(fitted[side]);
 }
 
+/** Opt-in only: the fitted palm owns orientation; native forearms own axial roll. */
+export function calibrateSelectedForearmPronation(driver, binding, chain, wrist) {
+  const declaration = driver.forearmPronation;
+  if (!declaration) return null;
+  fail(declaration.schema === 'native-segment-twist-v1'
+    && declaration.gripProfileHash === driver.gripProfileHash
+    && /^[a-f0-9]{64}$/.test(driver.gripProfileHash ?? '')
+    && driver.gripSocketPositionBike && driver.gripSocketQuaternionBike, 'Pronation needs its exact fitted grip profile');
+  SIDES.forEach(side => selectedGripPositionBike(driver, side));
+  fail(chain.length > 0 && new Set([...chain, wrist]).size === chain.length + 1, 'Invalid native forearm chain');
+  const next = [...chain.slice(1), wrist];
+  const segments = chain.map((id, index) => {
+    const bone = binding.byId.get(id), child = binding.byId.get(next[index]);
+    fail(bone && child?.parent === bone, 'Pronation requires the actual connected native forearm chain');
+    bone.updateWorldMatrix(true, true);
+    const shaft = child.getWorldPosition(V()).sub(bone.getWorldPosition(V()));
+    fail(shaft.length() > 1e-7, 'Degenerate native forearm segment');
+    return { id, next: next[index], length: shaft.length(), axis: shaft.normalize() };
+  });
+  fail(segments.every(segment => segment.axis.dot(segments[0].axis) > 1 - 1e-8), 'Native forearm shafts must be collinear');
+  const total = segments.reduce((sum, segment) => sum + segment.length, 0);
+  let distance = 0;
+  // Constant torsion per native rest length minimizes sum(deltaRoll² / length).
+  // The distal frame carries the entire pronation; wrist flex/deviation remain.
+  return { wrist, restWrist: Q().fromArray(binding.rests.get(wrist).rotationXYZW).normalize(),
+    segments: segments.map(({ id, next, length }) => ({ id, next, fraction: (distance += length) / total })) };
+}
+
+/** Twist-before-swing removes axial wrist DOF without changing its world target. */
+export function applySelectedForearmPronation(binding, calibration, targetWristQ, tolerance = 1e-5) {
+  const frames = calibration.segments.map(segment => {
+    const bone = binding.byId.get(segment.id), child = binding.byId.get(segment.next);
+    return { ...segment, quaternion: bone.getWorldQuaternion(Q()).normalize(),
+      axis: child.getWorldPosition(V()).sub(bone.getWorldPosition(V())).normalize() };
+  });
+  const distal = frames.at(-1), axis = distal.axis.clone().applyQuaternion(distal.quaternion.clone().invert());
+  const delta = distal.quaternion.clone().invert().multiply(targetWristQ).multiply(calibration.restWrist.clone().invert()).normalize();
+  const axial = V(delta.x, delta.y, delta.z).dot(axis);
+  // At a 180-degree transverse swing twist is undefined. Keep the aimed frame.
+  const singular = Math.hypot(axial, delta.w) < 1e-8;
+  const raw = singular ? 0 : 2 * Math.atan2(axial, delta.w);
+  const radians = Math.atan2(Math.sin(raw), Math.cos(raw));
+  for (const frame of frames) {
+    const roll = Q().setFromAxisAngle(frame.axis, radians * frame.fraction);
+    setJointWorldQuaternion(binding, frame.id, roll.multiply(frame.quaternion).normalize(), tolerance);
+  }
+  setJointWorldQuaternion(binding, calibration.wrist, targetWristQ, tolerance);
+  return { radians, singular };
+}
+
 /** Native shape tracks share the actual loaded mesh's influence array. */
 export function preparePrivateClipTrack(track, binding, metadata) {
   const parsed = THREE.PropertyBinding.parseTrackName(track.name), node = binding.exact(parsed.nodeName);
@@ -160,6 +210,7 @@ export function createSelectedRiderClass(metadata) {
         contractSchema: this.binding.contract.schema, geometry: metadata.selectedRiderSource?.geometryPolicy ?? 'Unchanged author FOUR',
         massApproximation: this.anthropometry.approximation,
         gripProfileHash: this.driver.gripProfileHash ?? null,
+        forearmPronation: this.driver.forearmPronation ?? null,
       };
       this.scene.traverse(node => {
         if (node.isMesh) this.debug.candidate.visibleMeshes.push({ name: node.name, skinned: !!node.isSkinnedMesh, triangles: (node.geometry.index?.count ?? node.geometry.attributes.position.count) / 3 });
@@ -208,6 +259,8 @@ export function createSelectedRiderClass(metadata) {
       };
       limb('arm', 'upperArm', 'forearm', wrist);
       limb('leg', 'thigh', 'shin', foot);
+      const arm = this.limbs.get('arm' + s);
+      arm.pronation = calibrateSelectedForearmPronation(this.driver, this.binding, arm.lowerIds, wrist);
       const hand = this.binding.contract.hands[side]; fail(hand, `Hand ${side} required`);
       this.handGripPositions.set(side, selectedGripPositionBike(this.driver, side));
       const axes = hand.axesInWrist, wristQ = this.restQ.get(wrist);
@@ -271,7 +324,12 @@ export function createSelectedRiderClass(metadata) {
       const middle = start.clone().addScaledVector(ray, along).addScaledVector(pole, Math.sqrt(Math.max(0, a * a - along * along)));
       this.aim(upperIds, lower, middle.clone().sub(start));
       this.aim(lowerIds, limb.end, target.clone().sub(middle));
-      const targetQ = Q().setFromRotationMatrix(targetWorld).normalize(); this.setWorld(limb.end, targetQ);
+      const targetQ = Q().setFromRotationMatrix(targetWorld).normalize();
+      if (limb.pronation) {
+        const result = applySelectedForearmPronation(this.binding, limb.pronation, targetQ, this.driver.nearSimilarityTolerance ?? 1e-5);
+        this.debug.forearmPronation ??= [null, null];
+        this.debug.forearmPronation[index] = result;
+      } else this.setWorld(limb.end, targetQ);
       this.debug[kind + 'Stretch'][index] = distance / (a + b);
       if (kind === 'arm') this.debug.armLen[index] = a + b;
     }
