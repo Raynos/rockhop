@@ -1,0 +1,28 @@
+{
+  "status": "READ_ONLY_DIAGNOSTIC_SOURCE_READY_ACTUAL_RUN_PENDING",
+  "acceptedArt": false,
+  "nativeRunExecuted": false,
+  "sourcePins": [
+    {
+      "path": "assets/blender/rider-rebuild/selected-sleeve-support49/diagnose.py",
+      "sha256": "e80b2b27415bc556c56840547e3585a26b57d0094f2092dd534c0be0843c5ae3"
+    },
+    {
+      "path": "assets/blender/rider-rebuild/selected-sleeve-support49/check_diagnostic.py",
+      "sha256": "61ae6274fcc67b30718da1ea68271f989d878231bb7fb21ed412e3b93b8c66d6"
+    }
+  ],
+  "input": {
+    "path": "assets/blender/rider-rebuild/selected-sleeve-component47/input01.json",
+    "sha256": "7426ed1631f88fd4f6dc6c951ce10fb09d257c739add94f553243a8a3e2e6599"
+  },
+  "finding": "Original28 selects full affected triangle corners and centroids after selecting support from arm-seeded connected unsafe original vertices. Some constrained samples can therefore have no effective active interpolation weight. The actual log proves this first-solve condition but does not identify which samples fail; its -68.9492 mm global minimum is not proven to be an unsupported sample.",
+  "validation": "Five CPU fixture/source checks pass, including exact original field28 reproduction of an unsupported vertex and centroid before any projection. No actual native run or geometry change.",
+  "invocation": "/Applications/Blender.app/Contents/MacOS/Blender -b -t 2 --python-exit-code 1 --python assets/blender/rider-rebuild/selected-sleeve-support49/diagnose.py -- assets/blender/rider-rebuild/selected-sleeve-component47/input01.json harness/out/rider-rebuild/selected-sleeve-support49/diagnostic01",
+  "limits": [
+    "Parent guarded serial execution only; same frozen47 input and original28 field/targets.",
+    "No geometry changes, native saves, support expansion or art pass.",
+    "All failing sample classes are counted; JSON witnesses are bounded to64; compact NPZ retains every offending sample ID/gap/coordinate.",
+    "Raw named bone fields and original inward-face membership label evidence; they do not prove semantic garment ownership."
+  ]
+}

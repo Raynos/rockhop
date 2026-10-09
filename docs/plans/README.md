@@ -2053,3 +2053,5 @@ Actual sleeve47 geometry fails at contact pass0: deficient zero-effective-suppor
 One component47-to-native10 merge source ready and parent-reviewed: exact38 transplant, scoped donor and complete target/merged preservation, actual qualified11 target fact, separate original08 merged replay. CPU source/scope/17mutation fixtures pass. Actual donor construction failed; no merge, replay or moving-art result invented.
 
 Required current-game gate46 completes10/11: cold-ready401.76ms misses300ms; firstframe624.83ms and exact clear/hash/crash/1tick restart pass. No ship/rider/device acceptance or timing waiver.
+
+Fresh clean Astra6 X-High49 identifies frozen28 support/triangle-constraint closure fault as the necessary first-solve failure. Parent verified exact field source and five read-only diagnostic fixtures. One actual49 native-ID/body-region witness is next; no ease/support/geometry change or constructed sleeve claimed.
