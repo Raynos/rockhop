@@ -1,0 +1,24 @@
+{
+  "status": "AUTHORED77_CPU_SOURCE_AND_OUTPUT_CHECKS",
+  "acceptedArt": false,
+  "receiverReceipt": {
+    "path": "harness/out/rider-rebuild/selected-hoodie-joints77/receiver08/receiver.json",
+    "sha256": "9775c8c459b2780d8a6b8f1cf6765bacf15efc239f87d7a58ec15371f6e17ce4"
+  },
+  "nativeRecipe": {
+    "path": "assets/blender/rider-rebuild/selected-hoodie-joints77/native.py",
+    "sha256": "cef7a022878fca0a34bd87bf09382c1a0febbc6b6c9839044c426ca55e12199d"
+  },
+  "inspection": {
+    "path": "harness/out/rider-rebuild/selected-hoodie-joints77/inspect08/inspection.json",
+    "sha256": "318a4849cafa8a579020d4ebd70184928451524236ec25f822c9c901417789cf"
+  },
+  "checks": {
+    "receiptSourcePins": true,
+    "geometryAndPreviewUVExactVs07": true,
+    "retainedNativeFieldsExact": true,
+    "allNamedFieldsFinite": true,
+    "receiverCannotMasqueradeAsNativeReopen": true
+  },
+  "limits": "Native save/reopen, source PBR bake, actual finite/posed relations and moving art not run or passed by builder."
+}
