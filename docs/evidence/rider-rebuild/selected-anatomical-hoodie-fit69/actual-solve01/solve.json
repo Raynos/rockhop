@@ -1,0 +1,1247 @@
+{
+  "status": "UNACCEPTED_ANATOMICAL69_EXACT65_MAPS_SOLVED_TRANSPORT_PENDING",
+  "acceptedArt": false,
+  "workerRecipe": {
+    "path": "assets/blender/rider-rebuild/selected-anatomical-hoodie-fit69/worker.py",
+    "sha256": "33a3f0cf7764b1226bc380cf4686b595a33b48b9f9a4580dfb7233ae390445bf"
+  },
+  "frozen65": {
+    "component65": {
+      "path": "assets/blender/rider-rebuild/selected-anatomical-hoodie-fit65/component.py",
+      "sha256": "0338d2b19a99da861a92974e9829db41f9de1dfd2277ce5f0ce1bfaff2159b1b"
+    },
+    "input65": {
+      "path": "assets/blender/rider-rebuild/selected-anatomical-hoodie-fit65/input01.json",
+      "sha256": "24b887a1617e6c4282f249a3613eea010e92203faac75d6b7d1e656767d8f462"
+    },
+    "cage65": {
+      "path": "assets/blender/rider-rebuild/selected-anatomical-hoodie-fit65/multiscale.py",
+      "sha256": "f6c4783d74fd508dd8ff7386eae1ebe9aa3d5a023e9dcbdbd5096113c5c3ab14"
+    },
+    "fixedMaterialTargets": {
+      "path": "harness/out/rider-rebuild/selected-anatomical-hoodie-fit65/component01/fixed-material-targets.npz",
+      "sha256": "821f1095759ff60dde341b3235859e88aabd8c4ccb0ab400a23d8abad186608b"
+    },
+    "materialTargets": {
+      "path": "harness/out/rider-rebuild/selected-anatomical-hoodie-fit65/component01/material-targets.json",
+      "sha256": "f1565f44ceb4d79e1f462db8f38a185a0fb05c93607cee508a71acd617b8e357"
+    }
+  },
+  "original47Arrays": {
+    "path": "harness/out/rider-rebuild/selected-proximal-fit-review54/original01/actual-hoodie-geometry.npz",
+    "sha256": "370a8bc8569113e422b66d05a8677f6d206628eb362cf731fb6903ac641e06fd"
+  },
+  "registrationMaps": {
+    "path": "harness/out/rider-rebuild/selected-anatomical-hoodie-fit69/solve01/anatomical-cage.npz",
+    "sha256": "008e11811d9d3735afbc04276391d3960aa675bbc97dc54a89dcb2775a876df5"
+  },
+  "anatomicalRegistration": {
+    "maximumEndpointResidualM": 2.220446049250313e-16,
+    "nativeCoordinatePrecisionM": 1.1920928955078125e-07,
+    "method": "Fixed material endpoints through shared sparse coarse and paired-wall-scale C2 fields",
+    "endpointCorrespondencePassed": true,
+    "continuousMapInjectivityProven": true,
+    "fixedEndpointControls": 656,
+    "steps": [
+      {
+        "step": 0,
+        "endpointResidualBeforeM": 0.09629551211454727,
+        "continuationFraction": 0.03464360634434878,
+        "certificate": {
+          "basis": "C2 tensor cubic B-spline",
+          "derivativeColumnUpperBounds": [
+            0.5178665788880082,
+            0.49218863407813934,
+            0.46050467419465496
+          ],
+          "globalDisplacementLipschitzUpperBound": 0.8499999999999998,
+          "globalMinimumSingularValueLowerBound": 0.15000000000000024,
+          "positiveJacobianProvenForContinuousField": true,
+          "compactC2ZeroExtensionProven": true,
+          "levelDerivativeColumnUpperBounds": [
+            [
+              0.111695665067091,
+              0.11081542921600078,
+              0.08739870899957769
+            ],
+            [
+              0.40617091382091725,
+              0.38137320486213855,
+              0.37310596519507727
+            ]
+          ],
+          "proof": "Each sparse level has implicit zero coefficients and exact adjacent differences. Sum of per-level column bounds bounds the sum field; Frobenius bounds spectral norm."
+        },
+        "linearSystem": {
+          "constraintRank": 656,
+          "constraintRows": 656,
+          "smallestSingularValue": 0.09007017489261412,
+          "largestSingularValue": 2.0503046038904533,
+          "activeCoefficientCount": 38676,
+          "spacingsM": [
+            0.04,
+            0.0028839254367271482
+          ]
+        },
+        "interpolationResidualM": 5.228313816947573e-16
+      },
+      {
+        "step": 1,
+        "endpointResidualBeforeM": 0.09295948830012338,
+        "continuationFraction": 0.034741097968632804,
+        "certificate": {
+          "basis": "C2 tensor cubic B-spline",
+          "derivativeColumnUpperBounds": [
+            0.4951388425142832,
+            0.4911168509324952,
+            0.48594419984578996
+          ],
+          "globalDisplacementLipschitzUpperBound": 0.85,
+          "globalMinimumSingularValueLowerBound": 0.15000000000000002,
+          "positiveJacobianProvenForContinuousField": true,
+          "compactC2ZeroExtensionProven": true,
+          "levelDerivativeColumnUpperBounds": [
+            [
+              0.10610940595164224,
+              0.10386794116587082,
+              0.08953441868658663
+            ],
+            [
+              0.38902943656264094,
+              0.38724890976662435,
+              0.39640978115920333
+            ]
+          ],
+          "proof": "Each sparse level has implicit zero coefficients and exact adjacent differences. Sum of per-level column bounds bounds the sum field; Frobenius bounds spectral norm."
+        },
+        "linearSystem": {
+          "constraintRank": 656,
+          "constraintRows": 656,
+          "smallestSingularValue": 0.09018027153595999,
+          "largestSingularValue": 2.062881394924766,
+          "activeCoefficientCount": 38343,
+          "spacingsM": [
+            0.04,
+            0.0028839254367271482
+          ]
+        },
+        "interpolationResidualM": 8.752009559388962e-16
+      },
+      {
+        "step": 2,
+        "endpointResidualBeforeM": 0.08972997360997476,
+        "continuationFraction": 0.03877556293459835,
+        "certificate": {
+          "basis": "C2 tensor cubic B-spline",
+          "derivativeColumnUpperBounds": [
+            0.46025001480163047,
+            0.498385945011535,
+            0.5121341364233183
+          ],
+          "globalDisplacementLipschitzUpperBound": 0.8499999999999999,
+          "globalMinimumSingularValueLowerBound": 0.15000000000000013,
+          "positiveJacobianProvenForContinuousField": true,
+          "compactC2ZeroExtensionProven": true,
+          "levelDerivativeColumnUpperBounds": [
+            [
+              0.11082236234847592,
+              0.1073648184450369,
+              0.09858194739744763
+            ],
+            [
+              0.34942765245315455,
+              0.3910211265664981,
+              0.41355218902587065
+            ]
+          ],
+          "proof": "Each sparse level has implicit zero coefficients and exact adjacent differences. Sum of per-level column bounds bounds the sum field; Frobenius bounds spectral norm."
+        },
+        "linearSystem": {
+          "constraintRank": 656,
+          "constraintRows": 656,
+          "smallestSingularValue": 0.0902727338668638,
+          "largestSingularValue": 2.075240345085028,
+          "activeCoefficientCount": 38610,
+          "spacingsM": [
+            0.04,
+            0.0028839254367271482
+          ]
+        },
+        "interpolationResidualM": 9.487951412917584e-16
+      },
+      {
+        "step": 3,
+        "endpointResidualBeforeM": 0.08625064337114141,
+        "continuationFraction": 0.040811127419482035,
+        "certificate": {
+          "basis": "C2 tensor cubic B-spline",
+          "derivativeColumnUpperBounds": [
+            0.4759604008811147,
+            0.48930027348560956,
+            0.5065046289620618
+          ],
+          "globalDisplacementLipschitzUpperBound": 0.8499999999999999,
+          "globalMinimumSingularValueLowerBound": 0.15000000000000013,
+          "positiveJacobianProvenForContinuousField": true,
+          "compactC2ZeroExtensionProven": true,
+          "levelDerivativeColumnUpperBounds": [
+            [
+              0.10725872411963397,
+              0.10349008528936589,
+              0.0991966426086605
+            ],
+            [
+              0.36870167676148075,
+              0.3858101881962437,
+              0.4073079863534014
+            ]
+          ],
+          "proof": "Each sparse level has implicit zero coefficients and exact adjacent differences. Sum of per-level column bounds bounds the sum field; Frobenius bounds spectral norm."
+        },
+        "linearSystem": {
+          "constraintRank": 656,
+          "constraintRows": 656,
+          "smallestSingularValue": 0.09035605314800957,
+          "largestSingularValue": 2.088371346261269,
+          "activeCoefficientCount": 38595,
+          "spacingsM": [
+            0.04,
+            0.0028839254367271482
+          ]
+        },
+        "interpolationResidualM": 1.0003745849880759e-15
+      },
+      {
+        "step": 4,
+        "endpointResidualBeforeM": 0.08273065737450942,
+        "continuationFraction": 0.04115549577936171,
+        "certificate": {
+          "basis": "C2 tensor cubic B-spline",
+          "derivativeColumnUpperBounds": [
+            0.49726930408805475,
+            0.4748952496509115,
+            0.4996976496550491
+          ],
+          "globalDisplacementLipschitzUpperBound": 0.85,
+          "globalMinimumSingularValueLowerBound": 0.15000000000000002,
+          "positiveJacobianProvenForContinuousField": true,
+          "compactC2ZeroExtensionProven": true,
+          "levelDerivativeColumnUpperBounds": [
+            [
+              0.09782567836434714,
+              0.093637598976189,
+              0.09317897538793994
+            ],
+            [
+              0.3994436257237076,
+              0.3812576506747225,
+              0.40651867426710914
+            ]
+          ],
+          "proof": "Each sparse level has implicit zero coefficients and exact adjacent differences. Sum of per-level column bounds bounds the sum field; Frobenius bounds spectral norm."
+        },
+        "linearSystem": {
+          "constraintRank": 656,
+          "constraintRows": 656,
+          "smallestSingularValue": 0.09042240431966221,
+          "largestSingularValue": 2.1020270823334886,
+          "activeCoefficientCount": 38379,
+          "spacingsM": [
+            0.04,
+            0.0028839254367271482
+          ]
+        },
+        "interpolationResidualM": 9.837595266731214e-16
+      },
+      {
+        "step": 5,
+        "endpointResidualBeforeM": 0.079325836154109,
+        "continuationFraction": 0.04343215150264797,
+        "certificate": {
+          "basis": "C2 tensor cubic B-spline",
+          "derivativeColumnUpperBounds": [
+            0.5094980160866854,
+            0.4754025188221549,
+            0.48672807264558093
+          ],
+          "globalDisplacementLipschitzUpperBound": 0.8499999999999999,
+          "globalMinimumSingularValueLowerBound": 0.15000000000000013,
+          "positiveJacobianProvenForContinuousField": true,
+          "compactC2ZeroExtensionProven": true,
+          "levelDerivativeColumnUpperBounds": [
+            [
+              0.09655867746037704,
+              0.08760794233052445,
+              0.09016631460461788
+            ],
+            [
+              0.41293933862630844,
+              0.38779457649163046,
+              0.39656175804096305
+            ]
+          ],
+          "proof": "Each sparse level has implicit zero coefficients and exact adjacent differences. Sum of per-level column bounds bounds the sum field; Frobenius bounds spectral norm."
+        },
+        "linearSystem": {
+          "constraintRank": 656,
+          "constraintRows": 656,
+          "smallestSingularValue": 0.09046876837190482,
+          "largestSingularValue": 2.115460896380892,
+          "activeCoefficientCount": 38498,
+          "spacingsM": [
+            0.04,
+            0.0028839254367271482
+          ]
+        },
+        "interpolationResidualM": 7.362596230043063e-16
+      },
+      {
+        "step": 6,
+        "endpointResidualBeforeM": 0.07588054442018963,
+        "continuationFraction": 0.04289007743534979,
+        "certificate": {
+          "basis": "C2 tensor cubic B-spline",
+          "derivativeColumnUpperBounds": [
+            0.5027389258317185,
+            0.49502386682245625,
+            0.47403053037722426
+          ],
+          "globalDisplacementLipschitzUpperBound": 0.8499999999999998,
+          "globalMinimumSingularValueLowerBound": 0.15000000000000024,
+          "positiveJacobianProvenForContinuousField": true,
+          "compactC2ZeroExtensionProven": true,
+          "levelDerivativeColumnUpperBounds": [
+            [
+              0.09373233899328835,
+              0.07666407737691783,
+              0.07999828802398525
+            ],
+            [
+              0.40900658683843016,
+              0.4183597894455384,
+              0.394032242353239
+            ]
+          ],
+          "proof": "Each sparse level has implicit zero coefficients and exact adjacent differences. Sum of per-level column bounds bounds the sum field; Frobenius bounds spectral norm."
+        },
+        "linearSystem": {
+          "constraintRank": 656,
+          "constraintRows": 656,
+          "smallestSingularValue": 0.09049729403245535,
+          "largestSingularValue": 2.1292694708674653,
+          "activeCoefficientCount": 38251,
+          "spacingsM": [
+            0.04,
+            0.0028839254367271482
+          ]
+        },
+        "interpolationResidualM": 6.748183367995178e-16
+      },
+      {
+        "step": 7,
+        "endpointResidualBeforeM": 0.07262602199417133,
+        "continuationFraction": 0.0445243306786357,
+        "certificate": {
+          "basis": "C2 tensor cubic B-spline",
+          "derivativeColumnUpperBounds": [
+            0.4789088381862153,
+            0.4989319651815828,
+            0.49417933872954745
+          ],
+          "globalDisplacementLipschitzUpperBound": 0.8499999999999996,
+          "globalMinimumSingularValueLowerBound": 0.15000000000000036,
+          "positiveJacobianProvenForContinuousField": true,
+          "compactC2ZeroExtensionProven": true,
+          "levelDerivativeColumnUpperBounds": [
+            [
+              0.09486881016322166,
+              0.07743646983109599,
+              0.07355393771417432
+            ],
+            [
+              0.3840400280229937,
+              0.4214954953504868,
+              0.42062540101537316
+            ]
+          ],
+          "proof": "Each sparse level has implicit zero coefficients and exact adjacent differences. Sum of per-level column bounds bounds the sum field; Frobenius bounds spectral norm."
+        },
+        "linearSystem": {
+          "constraintRank": 656,
+          "constraintRows": 656,
+          "smallestSingularValue": 0.09050683946027241,
+          "largestSingularValue": 2.1424002252717083,
+          "activeCoefficientCount": 38411,
+          "spacingsM": [
+            0.04,
+            0.0028839254367271482
+          ]
+        },
+        "interpolationResidualM": 5.060104303809388e-16
+      },
+      {
+        "step": 8,
+        "endpointResidualBeforeM": 0.06939239697502908,
+        "continuationFraction": 0.04811543928339434,
+        "certificate": {
+          "basis": "C2 tensor cubic B-spline",
+          "derivativeColumnUpperBounds": [
+            0.49603052452119883,
+            0.4862949414247962,
+            0.48986829728803444
+          ],
+          "globalDisplacementLipschitzUpperBound": 0.8499999999999999,
+          "globalMinimumSingularValueLowerBound": 0.15000000000000013,
+          "positiveJacobianProvenForContinuousField": true,
+          "compactC2ZeroExtensionProven": true,
+          "levelDerivativeColumnUpperBounds": [
+            [
+              0.09916941799669708,
+              0.08095721154084244,
+              0.06909263496582961
+            ],
+            [
+              0.39686110652450174,
+              0.4053377298839537,
+              0.4207756623222048
+            ]
+          ],
+          "proof": "Each sparse level has implicit zero coefficients and exact adjacent differences. Sum of per-level column bounds bounds the sum field; Frobenius bounds spectral norm."
+        },
+        "linearSystem": {
+          "constraintRank": 656,
+          "constraintRows": 656,
+          "smallestSingularValue": 0.0904992861175036,
+          "largestSingularValue": 2.1552199613029375,
+          "activeCoefficientCount": 38627,
+          "spacingsM": [
+            0.04,
+            0.0028839254367271482
+          ]
+        },
+        "interpolationResidualM": 4.573507644406768e-16
+      },
+      {
+        "step": 9,
+        "endpointResidualBeforeM": 0.0660535513116478,
+        "continuationFraction": 0.056686744712635954,
+        "certificate": {
+          "basis": "C2 tensor cubic B-spline",
+          "derivativeColumnUpperBounds": [
+            0.48456514495205066,
+            0.4709330683703384,
+            0.5156730218005362
+          ],
+          "globalDisplacementLipschitzUpperBound": 0.85,
+          "globalMinimumSingularValueLowerBound": 0.15000000000000002,
+          "positiveJacobianProvenForContinuousField": true,
+          "compactC2ZeroExtensionProven": true,
+          "levelDerivativeColumnUpperBounds": [
+            [
+              0.11244917023205288,
+              0.09138270498517474,
+              0.0838856009644814
+            ],
+            [
+              0.3721159747199978,
+              0.3795503633851636,
+              0.4317874208360548
+            ]
+          ],
+          "proof": "Each sparse level has implicit zero coefficients and exact adjacent differences. Sum of per-level column bounds bounds the sum field; Frobenius bounds spectral norm."
+        },
+        "linearSystem": {
+          "constraintRank": 656,
+          "constraintRows": 656,
+          "smallestSingularValue": 0.09047347843017185,
+          "largestSingularValue": 2.1692822683664654,
+          "activeCoefficientCount": 38511,
+          "spacingsM": [
+            0.04,
+            0.0028839254367271482
+          ]
+        },
+        "interpolationResidualM": 4.1642036137509624e-16
+      },
+      {
+        "step": 10,
+        "endpointResidualBeforeM": 0.06230919051108146,
+        "continuationFraction": 0.053802339154794515,
+        "certificate": {
+          "basis": "C2 tensor cubic B-spline",
+          "derivativeColumnUpperBounds": [
+            0.5182920412652995,
+            0.48343660757320484,
+            0.4692146698678122
+          ],
+          "globalDisplacementLipschitzUpperBound": 0.8499999999999999,
+          "globalMinimumSingularValueLowerBound": 0.15000000000000013,
+          "positiveJacobianProvenForContinuousField": true,
+          "compactC2ZeroExtensionProven": true,
+          "levelDerivativeColumnUpperBounds": [
+            [
+              0.10334328086478829,
+              0.08393120041259043,
+              0.0813091680714194
+            ],
+            [
+              0.41494876040051115,
+              0.3995054071606144,
+              0.38790550179639277
+            ]
+          ],
+          "proof": "Each sparse level has implicit zero coefficients and exact adjacent differences. Sum of per-level column bounds bounds the sum field; Frobenius bounds spectral norm."
+        },
+        "linearSystem": {
+          "constraintRank": 656,
+          "constraintRows": 656,
+          "smallestSingularValue": 0.0904230902842555,
+          "largestSingularValue": 2.1848508279865295,
+          "activeCoefficientCount": 38360,
+          "spacingsM": [
+            0.04,
+            0.0028839254367271482
+          ]
+        },
+        "interpolationResidualM": 4.658257443019315e-16
+      },
+      {
+        "step": 11,
+        "endpointResidualBeforeM": 0.05895681031074352,
+        "continuationFraction": 0.053586191755442894,
+        "certificate": {
+          "basis": "C2 tensor cubic B-spline",
+          "derivativeColumnUpperBounds": [
+            0.5014138753448333,
+            0.5036385640088505,
+            0.4662963890647007
+          ],
+          "globalDisplacementLipschitzUpperBound": 0.8499999999999999,
+          "globalMinimumSingularValueLowerBound": 0.15000000000000013,
+          "positiveJacobianProvenForContinuousField": true,
+          "compactC2ZeroExtensionProven": true,
+          "levelDerivativeColumnUpperBounds": [
+            [
+              0.09858338060002407,
+              0.08021204815237994,
+              0.08030704029951052
+            ],
+            [
+              0.40283049474480925,
+              0.42342651585647056,
+              0.3859893487651902
+            ]
+          ],
+          "proof": "Each sparse level has implicit zero coefficients and exact adjacent differences. Sum of per-level column bounds bounds the sum field; Frobenius bounds spectral norm."
+        },
+        "linearSystem": {
+          "constraintRank": 656,
+          "constraintRows": 656,
+          "smallestSingularValue": 0.09035943970819521,
+          "largestSingularValue": 2.1989932433714676,
+          "activeCoefficientCount": 38495,
+          "spacingsM": [
+            0.04,
+            0.0028839254367271482
+          ]
+        },
+        "interpolationResidualM": 7.016680758146442e-16
+      },
+      {
+        "step": 12,
+        "endpointResidualBeforeM": 0.055797539368142704,
+        "continuationFraction": 0.0587929586134425,
+        "certificate": {
+          "basis": "C2 tensor cubic B-spline",
+          "derivativeColumnUpperBounds": [
+            0.4888333054096307,
+            0.5205152203436846,
+            0.4610920785622543
+          ],
+          "globalDisplacementLipschitzUpperBound": 0.85,
+          "globalMinimumSingularValueLowerBound": 0.15000000000000002,
+          "positiveJacobianProvenForContinuousField": true,
+          "compactC2ZeroExtensionProven": true,
+          "levelDerivativeColumnUpperBounds": [
+            [
+              0.10269939720121297,
+              0.08384670712602861,
+              0.08564174930522418
+            ],
+            [
+              0.38613390820841775,
+              0.43666851321765593,
+              0.37545032925703015
+            ]
+          ],
+          "proof": "Each sparse level has implicit zero coefficients and exact adjacent differences. Sum of per-level column bounds bounds the sum field; Frobenius bounds spectral norm."
+        },
+        "linearSystem": {
+          "constraintRank": 656,
+          "constraintRows": 656,
+          "smallestSingularValue": 0.09028391952487713,
+          "largestSingularValue": 2.2123098421532306,
+          "activeCoefficientCount": 38354,
+          "spacingsM": [
+            0.04,
+            0.0028839254367271482
+          ]
+        },
+        "interpolationResidualM": 3.88488988946383e-16
+      },
+      {
+        "step": 13,
+        "endpointResidualBeforeM": 0.052517036945339476,
+        "continuationFraction": 0.0637252826002707,
+        "certificate": {
+          "basis": "C2 tensor cubic B-spline",
+          "derivativeColumnUpperBounds": [
+            0.512451446040568,
+            0.4934057546621512,
+            0.46523572166935306
+          ],
+          "globalDisplacementLipschitzUpperBound": 0.85,
+          "globalMinimumSingularValueLowerBound": 0.15000000000000002,
+          "positiveJacobianProvenForContinuousField": true,
+          "compactC2ZeroExtensionProven": true,
+          "levelDerivativeColumnUpperBounds": [
+            [
+              0.10451914313140476,
+              0.08565442983704662,
+              0.08845114221372503
+            ],
+            [
+              0.4079323029091633,
+              0.40775132482510457,
+              0.37678457945562804
+            ]
+          ],
+          "proof": "Each sparse level has implicit zero coefficients and exact adjacent differences. Sum of per-level column bounds bounds the sum field; Frobenius bounds spectral norm."
+        },
+        "linearSystem": {
+          "constraintRank": 656,
+          "constraintRows": 656,
+          "smallestSingularValue": 0.09018989525260895,
+          "largestSingularValue": 2.2265230460411334,
+          "activeCoefficientCount": 38386,
+          "spacingsM": [
+            0.04,
+            0.0028839254367271482
+          ]
+        },
+        "interpolationResidualM": 3.7889935832387353e-16
+      },
+      {
+        "step": 14,
+        "endpointResidualBeforeM": 0.04917037392466884,
+        "continuationFraction": 0.07627558705022405,
+        "certificate": {
+          "basis": "C2 tensor cubic B-spline",
+          "derivativeColumnUpperBounds": [
+            0.5017843827139861,
+            0.47651670078282865,
+            0.4936033500082754
+          ],
+          "globalDisplacementLipschitzUpperBound": 0.85,
+          "globalMinimumSingularValueLowerBound": 0.15000000000000002,
+          "positiveJacobianProvenForContinuousField": true,
+          "compactC2ZeroExtensionProven": true,
+          "levelDerivativeColumnUpperBounds": [
+            [
+              0.11650015385790884,
+              0.09576470853770425,
+              0.10042380962629836
+            ],
+            [
+              0.3852842288560772,
+              0.3807519922451244,
+              0.393179540381977
+            ]
+          ],
+          "proof": "Each sparse level has implicit zero coefficients and exact adjacent differences. Sum of per-level column bounds bounds the sum field; Frobenius bounds spectral norm."
+        },
+        "linearSystem": {
+          "constraintRank": 656,
+          "constraintRows": 656,
+          "smallestSingularValue": 0.09007781114495088,
+          "largestSingularValue": 2.2408108723471725,
+          "activeCoefficientCount": 38487,
+          "spacingsM": [
+            0.04,
+            0.0028839254367271482
+          ]
+        },
+        "interpolationResidualM": 3.923431510167905e-16
+      },
+      {
+        "step": 15,
+        "endpointResidualBeforeM": 0.045419874788085686,
+        "continuationFraction": 0.09163052484566402,
+        "certificate": {
+          "basis": "C2 tensor cubic B-spline",
+          "derivativeColumnUpperBounds": [
+            0.4933007566750799,
+            0.4787718149462982,
+            0.499931908040306
+          ],
+          "globalDisplacementLipschitzUpperBound": 0.8499999999999999,
+          "globalMinimumSingularValueLowerBound": 0.15000000000000013,
+          "positiveJacobianProvenForContinuousField": true,
+          "compactC2ZeroExtensionProven": true,
+          "levelDerivativeColumnUpperBounds": [
+            [
+              0.12739670940148953,
+              0.10511325102035202,
+              0.11582753176335996
+            ],
+            [
+              0.3659040472735903,
+              0.3736585639259462,
+              0.38410437627694605
+            ]
+          ],
+          "proof": "Each sparse level has implicit zero coefficients and exact adjacent differences. Sum of per-level column bounds bounds the sum field; Frobenius bounds spectral norm."
+        },
+        "linearSystem": {
+          "constraintRank": 656,
+          "constraintRows": 656,
+          "smallestSingularValue": 0.089932901688715,
+          "largestSingularValue": 2.257121417627554,
+          "activeCoefficientCount": 38391,
+          "spacingsM": [
+            0.04,
+            0.0028839254367271482
+          ]
+        },
+        "interpolationResidualM": 3.687827907171373e-16
+      },
+      {
+        "step": 16,
+        "endpointResidualBeforeM": 0.04125802782282892,
+        "continuationFraction": 0.08618767876459181,
+        "certificate": {
+          "basis": "C2 tensor cubic B-spline",
+          "derivativeColumnUpperBounds": [
+            0.4823377847364205,
+            0.5123299964609104,
+            0.476831454648208
+          ],
+          "globalDisplacementLipschitzUpperBound": 0.85,
+          "globalMinimumSingularValueLowerBound": 0.15000000000000002,
+          "positiveJacobianProvenForContinuousField": true,
+          "compactC2ZeroExtensionProven": true,
+          "levelDerivativeColumnUpperBounds": [
+            [
+              0.10353933236256671,
+              0.08645922169806602,
+              0.09854858689710186
+            ],
+            [
+              0.3787984523738538,
+              0.42587077476284435,
+              0.3782828677511061
+            ]
+          ],
+          "proof": "Each sparse level has implicit zero coefficients and exact adjacent differences. Sum of per-level column bounds bounds the sum field; Frobenius bounds spectral norm."
+        },
+        "linearSystem": {
+          "constraintRank": 656,
+          "constraintRows": 656,
+          "smallestSingularValue": 0.08974870907736783,
+          "largestSingularValue": 2.275511811358703,
+          "activeCoefficientCount": 38222,
+          "spacingsM": [
+            0.04,
+            0.0028839254367271482
+          ]
+        },
+        "interpolationResidualM": 2.196977801399824e-16
+      },
+      {
+        "step": 17,
+        "endpointResidualBeforeM": 0.037702094174374375,
+        "continuationFraction": 0.09245595083178908,
+        "certificate": {
+          "basis": "C2 tensor cubic B-spline",
+          "derivativeColumnUpperBounds": [
+            0.4919497507720907,
+            0.4925863274647385,
+            0.4876926826497186
+          ],
+          "globalDisplacementLipschitzUpperBound": 0.85,
+          "globalMinimumSingularValueLowerBound": 0.15000000000000002,
+          "positiveJacobianProvenForContinuousField": true,
+          "compactC2ZeroExtensionProven": true,
+          "levelDerivativeColumnUpperBounds": [
+            [
+              0.09666398614135827,
+              0.08134457229271176,
+              0.0945535573914457
+            ],
+            [
+              0.39528576463073245,
+              0.41124175517202677,
+              0.3931391252582729
+            ]
+          ],
+          "proof": "Each sparse level has implicit zero coefficients and exact adjacent differences. Sum of per-level column bounds bounds the sum field; Frobenius bounds spectral norm."
+        },
+        "linearSystem": {
+          "constraintRank": 656,
+          "constraintRows": 656,
+          "smallestSingularValue": 0.08957282787438745,
+          "largestSingularValue": 2.2915413825711752,
+          "activeCoefficientCount": 38093,
+          "spacingsM": [
+            0.04,
+            0.0028839254367271482
+          ]
+        },
+        "interpolationResidualM": 3.4427815263550035e-16
+      },
+      {
+        "step": 18,
+        "endpointResidualBeforeM": 0.03421631120913293,
+        "continuationFraction": 0.10836693480498132,
+        "certificate": {
+          "basis": "C2 tensor cubic B-spline",
+          "derivativeColumnUpperBounds": [
+            0.4876624426635506,
+            0.46843761069771533,
+            0.5150257730436747
+          ],
+          "globalDisplacementLipschitzUpperBound": 0.8499999999999999,
+          "globalMinimumSingularValueLowerBound": 0.15000000000000013,
+          "positiveJacobianProvenForContinuousField": true,
+          "compactC2ZeroExtensionProven": true,
+          "levelDerivativeColumnUpperBounds": [
+            [
+              0.10631830262942048,
+              0.08485129905168183,
+              0.09751436090435356
+            ],
+            [
+              0.3813441400341301,
+              0.3835863116460335,
+              0.41751141213932114
+            ]
+          ],
+          "proof": "Each sparse level has implicit zero coefficients and exact adjacent differences. Sum of per-level column bounds bounds the sum field; Frobenius bounds spectral norm."
+        },
+        "linearSystem": {
+          "constraintRank": 656,
+          "constraintRows": 656,
+          "smallestSingularValue": 0.08938485095864952,
+          "largestSingularValue": 2.306970578963647,
+          "activeCoefficientCount": 38122,
+          "spacingsM": [
+            0.04,
+            0.0028839254367271482
+          ]
+        },
+        "interpolationResidualM": 2.3333804100689365e-16
+      },
+      {
+        "step": 19,
+        "endpointResidualBeforeM": 0.03050839444306581,
+        "continuationFraction": 0.12916086720834036,
+        "certificate": {
+          "basis": "C2 tensor cubic B-spline",
+          "derivativeColumnUpperBounds": [
+            0.5106646507780523,
+            0.47258560155541984,
+            0.4882463145260102
+          ],
+          "globalDisplacementLipschitzUpperBound": 0.85,
+          "globalMinimumSingularValueLowerBound": 0.15000000000000002,
+          "positiveJacobianProvenForContinuousField": true,
+          "compactC2ZeroExtensionProven": true,
+          "levelDerivativeColumnUpperBounds": [
+            [
+              0.11837131842820066,
+              0.09467983910091415,
+              0.09779322779912064
+            ],
+            [
+              0.3922933323498517,
+              0.3779057624545057,
+              0.39045308672688955
+            ]
+          ],
+          "proof": "Each sparse level has implicit zero coefficients and exact adjacent differences. Sum of per-level column bounds bounds the sum field; Frobenius bounds spectral norm."
+        },
+        "linearSystem": {
+          "constraintRank": 656,
+          "constraintRows": 656,
+          "smallestSingularValue": 0.08916908638189291,
+          "largestSingularValue": 2.323650072360518,
+          "activeCoefficientCount": 38205,
+          "spacingsM": [
+            0.04,
+            0.0028839254367271482
+          ]
+        },
+        "interpolationResidualM": 2.584248360046203e-16
+      },
+      {
+        "step": 20,
+        "endpointResidualBeforeM": 0.02656790375966527,
+        "continuationFraction": 0.1268722655247657,
+        "certificate": {
+          "basis": "C2 tensor cubic B-spline",
+          "derivativeColumnUpperBounds": [
+            0.5093790590250491,
+            0.5114559707432582,
+            0.4488270983550646
+          ],
+          "globalDisplacementLipschitzUpperBound": 0.85,
+          "globalMinimumSingularValueLowerBound": 0.15000000000000002,
+          "positiveJacobianProvenForContinuousField": true,
+          "compactC2ZeroExtensionProven": true,
+          "levelDerivativeColumnUpperBounds": [
+            [
+              0.10560187313427988,
+              0.08505603880693463,
+              0.07461253182462904
+            ],
+            [
+              0.40377718589076916,
+              0.4263999319363236,
+              0.37421456653043556
+            ]
+          ],
+          "proof": "Each sparse level has implicit zero coefficients and exact adjacent differences. Sum of per-level column bounds bounds the sum field; Frobenius bounds spectral norm."
+        },
+        "linearSystem": {
+          "constraintRank": 656,
+          "constraintRows": 656,
+          "smallestSingularValue": 0.08892329187042279,
+          "largestSingularValue": 2.3417368389403137,
+          "activeCoefficientCount": 38289,
+          "spacingsM": [
+            0.04,
+            0.0028839254367271482
+          ]
+        },
+        "interpolationResidualM": 1.4975638417341086e-16
+      },
+      {
+        "step": 21,
+        "endpointResidualBeforeM": 0.023197173619432507,
+        "continuationFraction": 0.1443712286920652,
+        "certificate": {
+          "basis": "C2 tensor cubic B-spline",
+          "derivativeColumnUpperBounds": [
+            0.4912631964466386,
+            0.5134465163886986,
+            0.46640448821311853
+          ],
+          "globalDisplacementLipschitzUpperBound": 0.8499999999999999,
+          "globalMinimumSingularValueLowerBound": 0.15000000000000013,
+          "positiveJacobianProvenForContinuousField": true,
+          "compactC2ZeroExtensionProven": true,
+          "levelDerivativeColumnUpperBounds": [
+            [
+              0.1080837843514127,
+              0.08753832782834463,
+              0.07209494997996378
+            ],
+            [
+              0.3831794120952259,
+              0.42590818856035406,
+              0.39430953823315473
+            ]
+          ],
+          "proof": "Each sparse level has implicit zero coefficients and exact adjacent differences. Sum of per-level column bounds bounds the sum field; Frobenius bounds spectral norm."
+        },
+        "linearSystem": {
+          "constraintRank": 656,
+          "constraintRows": 656,
+          "smallestSingularValue": 0.0887006957344459,
+          "largestSingularValue": 2.3573378892000107,
+          "activeCoefficientCount": 38108,
+          "spacingsM": [
+            0.04,
+            0.0028839254367271482
+          ]
+        },
+        "interpolationResidualM": 1.9371219059623805e-16
+      },
+      {
+        "step": 22,
+        "endpointResidualBeforeM": 0.019848169161812056,
+        "continuationFraction": 0.17514503897468575,
+        "certificate": {
+          "basis": "C2 tensor cubic B-spline",
+          "derivativeColumnUpperBounds": [
+            0.5146673741913521,
+            0.48888920776125605,
+            0.467551961259441
+          ],
+          "globalDisplacementLipschitzUpperBound": 0.8499999999999998,
+          "globalMinimumSingularValueLowerBound": 0.15000000000000024,
+          "positiveJacobianProvenForContinuousField": true,
+          "compactC2ZeroExtensionProven": true,
+          "levelDerivativeColumnUpperBounds": [
+            [
+              0.11465615549692396,
+              0.09332298262169447,
+              0.07180996818050164
+            ],
+            [
+              0.40001121869442813,
+              0.3955662251395616,
+              0.39574199307893937
+            ]
+          ],
+          "proof": "Each sparse level has implicit zero coefficients and exact adjacent differences. Sum of per-level column bounds bounds the sum field; Frobenius bounds spectral norm."
+        },
+        "linearSystem": {
+          "constraintRank": 656,
+          "constraintRows": 656,
+          "smallestSingularValue": 0.08846930325711796,
+          "largestSingularValue": 2.3732810565573206,
+          "activeCoefficientCount": 38101,
+          "spacingsM": [
+            0.04,
+            0.0028839254367271482
+          ]
+        },
+        "interpolationResidualM": 1.6513961602500112e-16
+      },
+      {
+        "step": 23,
+        "endpointResidualBeforeM": 0.01637186080039033,
+        "continuationFraction": 0.24589143023829188,
+        "certificate": {
+          "basis": "C2 tensor cubic B-spline",
+          "derivativeColumnUpperBounds": [
+            0.4965733771724843,
+            0.4739996223513065,
+            0.5012377071752805
+          ],
+          "globalDisplacementLipschitzUpperBound": 0.8499999999999999,
+          "globalMinimumSingularValueLowerBound": 0.15000000000000013,
+          "positiveJacobianProvenForContinuousField": true,
+          "compactC2ZeroExtensionProven": true,
+          "levelDerivativeColumnUpperBounds": [
+            [
+              0.13512715076112214,
+              0.11063709807326005,
+              0.09654814425392248
+            ],
+            [
+              0.36144622641136215,
+              0.36336252427804644,
+              0.404689562921358
+            ]
+          ],
+          "proof": "Each sparse level has implicit zero coefficients and exact adjacent differences. Sum of per-level column bounds bounds the sum field; Frobenius bounds spectral norm."
+        },
+        "linearSystem": {
+          "constraintRank": 656,
+          "constraintRows": 656,
+          "smallestSingularValue": 0.08821938893270242,
+          "largestSingularValue": 2.389879439707113,
+          "activeCoefficientCount": 38042,
+          "spacingsM": [
+            0.04,
+            0.0028839254367271482
+          ]
+        },
+        "interpolationResidualM": 1.0000764528155994e-16
+      },
+      {
+        "step": 24,
+        "endpointResidualBeforeM": 0.01234616053252027,
+        "continuationFraction": 0.2933528215321816,
+        "certificate": {
+          "basis": "C2 tensor cubic B-spline",
+          "derivativeColumnUpperBounds": [
+            0.5111504350881372,
+            0.4887999956082511,
+            0.47148679409139516
+          ],
+          "globalDisplacementLipschitzUpperBound": 0.85,
+          "globalMinimumSingularValueLowerBound": 0.15000000000000002,
+          "positiveJacobianProvenForContinuousField": true,
+          "compactC2ZeroExtensionProven": true,
+          "levelDerivativeColumnUpperBounds": [
+            [
+              0.12221115515127397,
+              0.1011676369785051,
+              0.09921431872800693
+            ],
+            [
+              0.38893927993686317,
+              0.387632358629746,
+              0.3722724753633882
+            ]
+          ],
+          "proof": "Each sparse level has implicit zero coefficients and exact adjacent differences. Sum of per-level column bounds bounds the sum field; Frobenius bounds spectral norm."
+        },
+        "linearSystem": {
+          "constraintRank": 656,
+          "constraintRows": 656,
+          "smallestSingularValue": 0.08791903886880618,
+          "largestSingularValue": 2.4095642083969273,
+          "activeCoefficientCount": 37983,
+          "spacingsM": [
+            0.04,
+            0.0028839254367271482
+          ]
+        },
+        "interpolationResidualM": 8.632625765774001e-17
+      },
+      {
+        "step": 25,
+        "endpointResidualBeforeM": 0.008724379505216212,
+        "continuationFraction": 0.41821647814416685,
+        "certificate": {
+          "basis": "C2 tensor cubic B-spline",
+          "derivativeColumnUpperBounds": [
+            0.4838981327669601,
+            0.5072438785963572,
+            0.48067270021416153
+          ],
+          "globalDisplacementLipschitzUpperBound": 0.8499999999999999,
+          "globalMinimumSingularValueLowerBound": 0.15000000000000013,
+          "positiveJacobianProvenForContinuousField": true,
+          "compactC2ZeroExtensionProven": true,
+          "levelDerivativeColumnUpperBounds": [
+            [
+              0.12185857600377682,
+              0.10199305926588745,
+              0.10747282016579955
+            ],
+            [
+              0.3620395567631833,
+              0.4052508193304698,
+              0.37319988004836196
+            ]
+          ],
+          "proof": "Each sparse level has implicit zero coefficients and exact adjacent differences. Sum of per-level column bounds bounds the sum field; Frobenius bounds spectral norm."
+        },
+        "linearSystem": {
+          "constraintRank": 656,
+          "constraintRows": 656,
+          "smallestSingularValue": 0.08764013574725252,
+          "largestSingularValue": 2.427770430245771,
+          "activeCoefficientCount": 37899,
+          "spacingsM": [
+            0.04,
+            0.0028839254367271482
+          ]
+        },
+        "interpolationResidualM": 5.154788462083232e-17
+      },
+      {
+        "step": 26,
+        "endpointResidualBeforeM": 0.005075700234551495,
+        "continuationFraction": 0.723669694348105,
+        "certificate": {
+          "basis": "C2 tensor cubic B-spline",
+          "derivativeColumnUpperBounds": [
+            0.4749710580400928,
+            0.47464692680560816,
+            0.5211648385091477
+          ],
+          "globalDisplacementLipschitzUpperBound": 0.8499999999999999,
+          "globalMinimumSingularValueLowerBound": 0.15000000000000013,
+          "positiveJacobianProvenForContinuousField": true,
+          "compactC2ZeroExtensionProven": true,
+          "levelDerivativeColumnUpperBounds": [
+            [
+              0.12091720231159574,
+              0.10227301706008089,
+              0.11293844317841908
+            ],
+            [
+              0.35405385572849707,
+              0.37237390974552725,
+              0.40822639533072863
+            ]
+          ],
+          "proof": "Each sparse level has implicit zero coefficients and exact adjacent differences. Sum of per-level column bounds bounds the sum field; Frobenius bounds spectral norm."
+        },
+        "linearSystem": {
+          "constraintRank": 656,
+          "constraintRows": 656,
+          "smallestSingularValue": 0.08735212425169596,
+          "largestSingularValue": 2.4461343900885426,
+          "activeCoefficientCount": 37912,
+          "spacingsM": [
+            0.04,
+            0.0028839254367271482
+          ]
+        },
+        "interpolationResidualM": 3.531258728134949e-17
+      },
+      {
+        "step": 27,
+        "endpointResidualBeforeM": 0.001402569797210892,
+        "continuationFraction": 1.0,
+        "certificate": {
+          "basis": "C2 tensor cubic B-spline",
+          "derivativeColumnUpperBounds": [
+            0.19110334419073863,
+            0.18612884571866384,
+            0.2022504231620759
+          ],
+          "globalDisplacementLipschitzUpperBound": 0.33476808246707873,
+          "globalMinimumSingularValueLowerBound": 0.6652319175329213,
+          "positiveJacobianProvenForContinuousField": true,
+          "compactC2ZeroExtensionProven": true,
+          "levelDerivativeColumnUpperBounds": [
+            [
+              0.045193996192904734,
+              0.038703145287077564,
+              0.04412405585876256
+            ],
+            [
+              0.1459093479978339,
+              0.1474257004315863,
+              0.15812636730331334
+            ]
+          ],
+          "proof": "Each sparse level has implicit zero coefficients and exact adjacent differences. Sum of per-level column bounds bounds the sum field; Frobenius bounds spectral norm."
+        },
+        "linearSystem": {
+          "constraintRank": 656,
+          "constraintRows": 656,
+          "smallestSingularValue": 0.08705627642546347,
+          "largestSingularValue": 2.465035570192341,
+          "activeCoefficientCount": 37817,
+          "spacingsM": [
+            0.04,
+            0.0028839254367271482
+          ]
+        },
+        "interpolationResidualM": 1.023250802900336e-17
+      }
+    ],
+    "globalComposedMinimumSingularValueLowerBound": 3.7795236984433406e-23,
+    "geometryGatesPassed": false,
+    "movingReviewPassed": false,
+    "fineSpacingM": 0.0028839254367271482,
+    "fineSpacingDerivation": "Minimum actual original paired source wall span over all fixed material controls"
+  },
+  "originalBounds": [
+    [
+      -0.4222300052642822,
+      -0.1663619875907898,
+      0.8212136626243591
+    ],
+    [
+      0.4125487506389618,
+      0.18400844931602478,
+      1.6251864433288574
+    ]
+  ],
+  "sourceVertexCount": 716971,
+  "sourceTriangleCount": 921722,
+  "serializedEndpointReplayExact": true,
+  "fullClothTransportExecuted": false,
+  "nativeExecuted": false,
+  "elapsedSeconds": 29.745999875012785
+}
