@@ -1,0 +1,3 @@
+Finding: Analytical original-triangle z90 clipping reaches131148left/131070right faces. Both fail only minlocalZ−2.414mm with858faces below−1mm; maxforward83.66/83.62mm stays below110mm. One boundary circuit each. The combined earlier guard did not prove exterior/toe deletion.
+Validation: Originalguard1.063s exit0; parent pins and selected-ID hashes match, all three input pins exact. Firstlauncher0.180s import failure retained; fixed by preload/runpy, executed diagnostic source unchanged.
+Limits: Source clipping only, not actual BMesh deletion replay or a wearable model. Inspect actual wall orientation/ray order before any changed cut; no guard relaxation or shoe-fit acceptance.

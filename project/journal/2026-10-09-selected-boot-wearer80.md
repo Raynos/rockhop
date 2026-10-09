@@ -29,3 +29,9 @@ Finding: Diagnose the rejected boot cavity selection from original source topolo
 Validation: Parent full181line source review, AST and three input/failure pins pass. Original execution recipe restored8ddea96d; no source changes or guard relaxation.
 
 Limits: Read-only diagnostic source checkpoint; not a BMesh replay, cavity cut, native shoe fit or moving result. Original construction01 saved no master.
+
+Finding: The original shoe cut refusal isolates to localZ−2.414mm, not the forward toe bound. A131k-face seed component has one z90 boundary on each side; actual lining/outsole identity still needs classification.
+
+Validation: Frozen diagnostic originalguard1.063s exit0; parent source/input and selected-ID pins match. First0.180s launcher import conflict retained and corrected with NumPy preload/runpy; recipe unchanged.
+
+Limits: Analytical source clipping only, not BMesh replay, deletion or wearable fit. Do not infer collateral exterior loss solely from the old combined assertion or change guard by hunch.
