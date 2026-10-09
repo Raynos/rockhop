@@ -77,3 +77,9 @@ Finding: The narrow constructed remainder correction passes, but the parent mixe
 Validation: Originalguard137.916s exit1 after successful15 construction; parent saved-array comparison proves all14 geometry/ancestry exact, only boundary/named fields differ; minfield0 and rowerror1.19e−7.
 
 Limits: All482/views remain unrun. Continue the saved candidate using original3.13 NumPy; no additional candidate or arithmetic identity waiver.
+
+Finding: Continue the saved corrected hoodie in its original numerical runtime.
+
+Validation: Parent full driver/metadata reviewed; original NumPy2.3.4 loaded before matching cp313 Pillow; saved receipt/arrays/source pins checked before and after.
+
+Limits: Launcher checkpoint only; all482/views pending, no new solve/candidate or native/contact/art acceptance.
