@@ -1,0 +1,51 @@
+{
+  "status": "SOURCE_READY_EXACT_ACTUAL62_NATIVE_ADAPTER_UNACCEPTED",
+  "acceptedArt": false,
+  "files": [
+    {
+      "path": "assets/blender/rider-rebuild/selected-boot-native63/admission.py",
+      "sha256": "46a5f5479aaf55c459944a9e4e60fda4347a7b77005e7b3b8b40d393d4b5eccd"
+    },
+    {
+      "path": "assets/blender/rider-rebuild/selected-boot-native63/author.py",
+      "sha256": "0f756829d1cb83d8f3be28b38dc82a0b9150e4754ef113d498095cd10798d934"
+    },
+    {
+      "path": "assets/blender/rider-rebuild/selected-boot-native63/check.py",
+      "sha256": "df4c4b5fda4435c93bf2355e367b8d8fc249f227a92cd37abcea5d8e0e4b18c5"
+    },
+    {
+      "path": "docs/evidence/rider-rebuild/selected-boot-native63/cpu-admission.json",
+      "sha256": "6805e8700debcb1a759772c233a2350309c01c51f727de654eae520af05a452d"
+    },
+    {
+      "path": "docs/evidence/rider-rebuild/selected-boot-native63/fixtures.json",
+      "sha256": "7fc332af69d405458234dc2015bcacd2b9fc2a80d23ce8ae0b3933e603f284b8"
+    }
+  ],
+  "constructor": {
+    "path": "harness/out/rider-rebuild/selected-boot-closure62/candidate01/constructor.json",
+    "sha256": "e264a3df52483c996b0f298b6174a5730766ea2ef07465bf36293fddf199fc52"
+  },
+  "finalCandidateSHA256": "871388caea9ef810f3896e436f7a1035d186ab3882da83312fcaa1df5281ea73",
+  "actualCandidate": {
+    "vertices": 13250,
+    "triangles": 26528,
+    "protectedCenters": 451,
+    "protectedOriginalVertices": 2053,
+    "exactOrientedSourceFaces": 2232,
+    "protectedEdges": 4152
+  },
+  "parentBlenderArguments": [
+    "--python",
+    "assets/blender/rider-rebuild/selected-boot-native63/author.py",
+    "--",
+    "harness/out/rider-rebuild/selected-boot-closure62/candidate01/constructor.json",
+    "e264a3df52483c996b0f298b6174a5730766ea2ef07465bf36293fddf199fc52",
+    "harness/out/rider-rebuild/selected-boot-native63/native01"
+  ],
+  "executionPolicy": "Parent original guarded serial native stage only after source review. No native job launched by this builder; held61 and all frozen ancestry remain unchanged.",
+  "qualificationOrder": "Exact62 receipt, recipe, originalTopology, source/binary fields and both monotone fan rounds admitted before Blender scene read; native indices/positions/fields/locks/source witness verified, raw unaccepted native saved, then frozen56 barycentric and proof-supported57 vertex orientation/skin/reverse/chord gates, frozen37 geometric face-centroid/edge/reverse surface checks and unwrap.",
+  "validation": "Six CPU fixture groups passed. Wrong receipt bytes/pins/output scope, mutated62 schema/gates/closure, positions/fields/winding/materials/indices and omitted/extra fan constraints reject. Frozen37 surface function is byte-identical and raw save ordering retained.",
+  "limits": "CPU admission only. Actual Blender qualification, contact, selected atlas/PBR bake, moving review, device and whole-scene allocation remain open; no production promotion."
+}

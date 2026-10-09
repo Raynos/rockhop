@@ -1,0 +1,47 @@
+{
+  "status": "EXACT_ACTUAL62_ADMITTED_NATIVE_QUALIFICATION_PENDING",
+  "acceptedArt": false,
+  "admissionRecipeSHA256": "46a5f5479aaf55c459944a9e4e60fda4347a7b77005e7b3b8b40d393d4b5eccd",
+  "constructor": {
+    "path": "harness/out/rider-rebuild/selected-boot-closure62/candidate01/constructor.json",
+    "sha256": "e264a3df52483c996b0f298b6174a5730766ea2ef07465bf36293fddf199fc52"
+  },
+  "constructorRecipe": {
+    "path": "assets/blender/rider-rebuild/selected-boot-closure62/construct.mjs",
+    "sha256": "56ac49d3d2001f65ea39bb6d151768e8b9626c8c192bf1ed90fa03ffaefa42cc"
+  },
+  "closureRecipe": {
+    "path": "assets/blender/rider-rebuild/selected-boot-closure62/closure.mjs",
+    "sha256": "89cb51a5d9587a0c6726ab65d7678b9e0072756d16973dab3263e96e849ce294"
+  },
+  "iterationVerification": [
+    {
+      "exactOriginalPositionsAndNamedFields": true,
+      "exactReturnedOriginalIndices": true,
+      "protectedCenters": 450,
+      "protectedVertices": 2049,
+      "exactOrientedSourceFaces": 2227,
+      "protectedEdges": 4143,
+      "protectedFaceMaterialsExact": true,
+      "passed": true,
+      "iteration": 1,
+      "candidateSHA256": "52e7caba17ce3edeece40020f8c35abb3631d97e06c9bad8bff2d269cac6b023"
+    },
+    {
+      "exactOriginalPositionsAndNamedFields": true,
+      "exactReturnedOriginalIndices": true,
+      "protectedCenters": 451,
+      "protectedVertices": 2053,
+      "exactOrientedSourceFaces": 2232,
+      "protectedEdges": 4152,
+      "protectedFaceMaterialsExact": true,
+      "passed": true,
+      "iteration": 2,
+      "candidateSHA256": "871388caea9ef810f3896e436f7a1035d186ab3882da83312fcaa1df5281ea73"
+    }
+  ],
+  "finalCandidateSHA256": "871388caea9ef810f3896e436f7a1035d186ab3882da83312fcaa1df5281ea73",
+  "finalFanProtectionSHA256": "77e83c0a4595a787a4c7c0f230a6754b43049d9f94b8830be52ac8e39423cb30",
+  "sceneBudgetPassed": false,
+  "limits": "Admission only. Frozen native geometry/orientation/skin gates, contact, selected atlas bake and motion remain required."
+}
