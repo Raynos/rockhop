@@ -41,7 +41,10 @@ H0 is October 8, 14:05 Panama / 19:05 UTC; target finish is October 9 at the sam
 **Current execution, October 8, 20:55 Panama:** Both actual-input Rookie03
 and Pro04 films show the selected complete outfit leaning forward/backward and
 returning to neutral. Garage stage forces neutral; the stand-up diagnostic
-cannot demonstrate gameplay leans. Native10 is saved and independently reopened:
+cannot demonstrate gameplay leans. Actual held-input footage is retained for
+both bikes. The existing game forward profile lifts the hips over the pegs;
+that physical motion must be distinguished from the stand-up diagnostic.
+Native10 is saved and independently reopened:
 qualifier11 verifies all482 gameplay keys within0.020169mm of their original
 75-joint source, exact selected geometry/PBR/fields/rest and original actions.
 This technical foundation does not accept the visible wrists, ankles or saddle.
@@ -65,8 +68,11 @@ Wide views do not establish decisive ankle improvement; native45 application
 and deformation parity remain pending. Glove41 actual construction completes
 in62.885s and saves the selected pair (`5af37790…`). Independent reopen passes
 in11.003s: exact constructed geometry/fields, original75rest/full anatomy and
-selected PBR/metadata. Full-master attachment is queued; sleeve38 repair and
-complete-outfit moving acceptance remain next. This is verified garment work,
+selected PBR/metadata. Whole-master attachment stopped before its witness at
+the unchanged memory bound; no attached output exists. Component-sleeve47 now
+intakes only original Hoodie plus qualified glove41, exact75 and full reference,
+retaining frozen28/38 geometry math. Merge the wardrobe once into native10 after
+component save/reopen, then judge fresh complete-outfit movement. This is garment work,
 not accepted garment art. Lead36 is retired; Astra builders37/38 are capacity
 interrupted. Parent owns integration and played judgment.
 
