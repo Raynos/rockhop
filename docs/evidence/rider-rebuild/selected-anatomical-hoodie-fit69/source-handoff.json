@@ -1,0 +1,116 @@
+{
+  "acceptedArt": false,
+  "productionSolveExecuted": false,
+  "productionTransportExecuted": false,
+  "nativeExecuted": false,
+  "finding": "Frozen65 solved all actual656 endpoints in28 maps; original guard stopped75.997s during full paired-cloth carry. Separate solver, complete cloth transport and native lifetime without changing targets or math.",
+  "sourcePins": {
+    "check.py": {
+      "path": "assets/blender/rider-rebuild/selected-anatomical-hoodie-fit69/check.py",
+      "sha256": "497efb2aa6a88911df6d3508f9fddc5e5ec5aca8862ea3375a702b1a47053ae8"
+    },
+    "component.py": {
+      "path": "assets/blender/rider-rebuild/selected-anatomical-hoodie-fit69/component.py",
+      "sha256": "c139bb69e9e92f5d1fb44280d6d0af19bb878c197aa499a001872dbd7acb511a"
+    },
+    "worker.py": {
+      "path": "assets/blender/rider-rebuild/selected-anatomical-hoodie-fit69/worker.py",
+      "sha256": "33a3f0cf7764b1226bc380cf4686b595a33b48b9f9a4580dfb7233ae390445bf"
+    }
+  },
+  "equivalenceFixtures": {
+    "path": "docs/evidence/rider-rebuild/selected-anatomical-hoodie-fit69/equivalence-fixtures.json",
+    "sha256": "c2b24ac46505cfefe5401c939b79572c1c09fc8df2517ee345bbea6a110da935"
+  },
+  "frozenInputs": {
+    "component65": {
+      "path": "assets/blender/rider-rebuild/selected-anatomical-hoodie-fit65/component.py",
+      "sha256": "0338d2b19a99da861a92974e9829db41f9de1dfd2277ce5f0ce1bfaff2159b1b"
+    },
+    "input65": {
+      "path": "assets/blender/rider-rebuild/selected-anatomical-hoodie-fit65/input01.json",
+      "sha256": "24b887a1617e6c4282f249a3613eea010e92203faac75d6b7d1e656767d8f462"
+    },
+    "cage65": {
+      "path": "assets/blender/rider-rebuild/selected-anatomical-hoodie-fit65/multiscale.py",
+      "sha256": "f6c4783d74fd508dd8ff7386eae1ebe9aa3d5a023e9dcbdbd5096113c5c3ab14"
+    },
+    "fixedMaterialTargets": {
+      "path": "harness/out/rider-rebuild/selected-anatomical-hoodie-fit65/component01/fixed-material-targets.npz",
+      "sha256": "821f1095759ff60dde341b3235859e88aabd8c4ccb0ab400a23d8abad186608b"
+    },
+    "materialTargets": {
+      "path": "harness/out/rider-rebuild/selected-anatomical-hoodie-fit65/component01/material-targets.json",
+      "sha256": "f1565f44ceb4d79e1f462db8f38a185a0fb05c93607cee508a71acd617b8e357"
+    }
+  },
+  "guardPolicy": "Every real solve, full-cloth transport, Blender apply and reopen remains a separate parent invocation under the unchanged original serial CPU2 guard. No automatic continuation, external kills or new memory threshold.",
+  "commands": {
+    "smallFixtures": "OPENBLAS_NUM_THREADS=2 OMP_NUM_THREADS=2 /Applications/Blender.app/Contents/Resources/5.2/python/bin/python3.13 assets/blender/rider-rebuild/selected-anatomical-hoodie-fit69/check.py",
+    "solve": "OPENBLAS_NUM_THREADS=2 OMP_NUM_THREADS=2 /Applications/Blender.app/Contents/Resources/5.2/python/bin/python3.13 assets/blender/rider-rebuild/selected-anatomical-hoodie-fit69/worker.py solve harness/out/rider-rebuild/selected-anatomical-hoodie-fit69/solve01",
+    "transport": "OPENBLAS_NUM_THREADS=2 OMP_NUM_THREADS=2 /Applications/Blender.app/Contents/Resources/5.2/python/bin/python3.13 assets/blender/rider-rebuild/selected-anatomical-hoodie-fit69/worker.py transport harness/out/rider-rebuild/selected-anatomical-hoodie-fit69/solve01/solve.json harness/out/rider-rebuild/selected-anatomical-hoodie-fit69/transport01",
+    "freezeNativeInput": "python3 assets/blender/rider-rebuild/selected-anatomical-hoodie-fit69/component.py freeze harness/out/rider-rebuild/selected-anatomical-hoodie-fit69/transport01/transport.json assets/blender/rider-rebuild/selected-anatomical-hoodie-fit69/input01.json",
+    "nativeApply": "/Applications/Blender.app/Contents/MacOS/Blender -b -t 2 --python-exit-code 1 --python assets/blender/rider-rebuild/selected-anatomical-hoodie-fit69/component.py -- assets/blender/rider-rebuild/selected-anatomical-hoodie-fit69/input01.json harness/out/rider-rebuild/selected-anatomical-hoodie-fit69/component01",
+    "independentNativeReopen": "/Applications/Blender.app/Contents/MacOS/Blender -b -t 2 --python-exit-code 1 --python assets/blender/rider-rebuild/selected-anatomical-hoodie-fit69/component.py -- qualify harness/out/rider-rebuild/selected-anatomical-hoodie-fit69/component01/component-pending.json"
+  },
+  "expectedOutputs": {
+    "solve01": [
+      "anatomical-cage.npz",
+      "solve.json"
+    ],
+    "transport01": [
+      "positions.npy",
+      "jacobians.npy",
+      "transport.json"
+    ],
+    "component01": [
+      "UNACCEPTED-selected-anatomical-hoodie-fit69.blend",
+      "component-raw.json",
+      "component-pending.json",
+      "expected-witness.json",
+      "anatomical-cage.npz",
+      "material-targets.json",
+      "fixed-material-targets.npz",
+      "qualification-inputs.npz",
+      "actual-tangent-and-pair.json",
+      "component-qualified.json"
+    ]
+  },
+  "numericalPolicy": {
+    "fieldCellM": 0.04,
+    "nativeActualFineSpacingM": 0.0028839254367271482,
+    "nominalContactTargetM": 0.0026,
+    "existingNumericalContactToleranceM": 2e-05,
+    "perMapDerivativeBound": 0.85,
+    "maximumMaps": 64,
+    "nativeCoordinateEndpointPrecisionUnchanged": true
+  },
+  "execution": {
+    "solve": "Unmodified65.fixed_targets receives exact original47 min/max, all actual saved656 controls/targets and exact native-report wall-span fine spacing. Only the two bounds points are carried in this process; all maps/certificates are saved and endpoint replay checked.",
+    "transport": "A new CPU process restores unchanged65 maps and carries all716971 original float32 coordinates promoted to float64 through evaluate and composed matmul,4096 vertices per batch. Complete float64 positions and Jacobians are flushed to memory-mapped NPY files. No triangles/skin/materials/normals are changed in this worker.",
+    "native": "Only after the CPU worker exits, exact component47 opens. Original world coordinates/faces are checked against cache. Complete carried positions and Jacobians are memory-mapped; original native corner normals receive unchanged65 inverse-transpose transport. Original47 topology/fields/UV/PBR,75/rest and protected gloves/fullref remain under exact65 invariants. Raw save precedes fingerprints.",
+    "qualification": "Exact65 separate native contact/tangent/pair/protected/source qualification and exact CPU admission remain. A saved/reopened preservation receipt alone does not qualify the fit; actual contact pass is mandatory."
+  },
+  "memoryScope": {
+    "fullPositionsBytes": 17207304,
+    "fullJacobiansBytes": 51621912,
+    "originalCachePointsBytes": 8603652,
+    "productionPeakMeasured": false,
+    "note": "Independent process exit releases LAPACK and Blender allocations; transport coefficient gathers/evaluate matrices are limited to4096 vertices, while output arrays are memory-mapped. This does not guarantee global anonymous memory will stay below the original guard when unrelated capacity changes."
+  },
+  "qualificationAdmission": {
+    "helper": "assets/blender/rider-rebuild/selected-anatomical-hoodie-fit69/component.py",
+    "call": "qualify_receipt(actual_component_qualified_path)",
+    "status": "UNACCEPTED_ANATOMICAL69_REOPENED_DISTAL_AND_MOTION_PENDING",
+    "registrationRecipe": "Exact frozen65/multiscale.py via unchanged config cage65",
+    "additionalExecutionProvenance": "input.execution69 and report.execution69: componentRecipe,workerRecipe,transportReceipt. Authoritative helper checks transport/solve/source/target/map/position/Jacobian pins.",
+    "fixedMaterialTargetsRequired": true
+  },
+  "downstream": "Do not adapt51 until actual69 qualifies. Then narrow canonical helper/status to69 and registration identity to frozen65 multiscale/config cage65; require fixedMaterialTargets and call69 authoritative qualifier. Retain exact distal28 surgery, six relation gates, actual52 merge and changed-native482-key replay. Private runtime export needs a changed-topology/action-aware adapter, not the old shape-only masked template.",
+  "limits": [
+    "Full production carry and native69 are not executed by this builder.",
+    "No fit/contact/art/motion pass is claimed.",
+    "65 and51 sources remain unchanged.",
+    "No generic geometry, source-sheet deletion, body masking or tolerance relaxation."
+  ]
+}
