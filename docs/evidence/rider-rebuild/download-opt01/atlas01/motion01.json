@@ -1,0 +1,112 @@
+{
+  "accepted": false,
+  "sourceSHA256": "127e316a8ff7910a4918b63f83e086e4e658062f102c73f17d0ee2f956750649",
+  "method": "Every final seam vertex; exact original source face barycentric weighted skinned positions versus receiver skinned positions under every recorded actual gameplay pose. Native inverse binds and original75jointorder. Identity native mesh/root bind; attached-mode world cancellation; rigid skeletonWorld verified.",
+  "vertices": 63389,
+  "bikes": [
+    {
+      "bike": "rookie",
+      "reportSHA256": "9ca4af67bf9dcacfda99fbc364939c47b38aa0074d5399ad28b207f63cbf4788",
+      "recordedPoses": 241,
+      "worst": {
+        "baryTop4": {
+          "meters": 0.009713258964182592,
+          "vertex": 21771,
+          "sourceFace": 473190,
+          "tick": 685,
+          "phase": "backward",
+          "localPosition": [
+            0.014541230164468288,
+            1.020548939704895,
+            -0.10986264050006866
+          ]
+        },
+        "nearestSourceCorner": {
+          "meters": 0.038293302190287426,
+          "vertex": 43616,
+          "sourceFace": 317674,
+          "tick": 610,
+          "phase": "backward",
+          "localPosition": [
+            -0.11181580275297165,
+            1.566034197807312,
+            -0.11331921815872192
+          ]
+        }
+      },
+      "poseMaximumMeters": {
+        "baryTop4": {
+          "mean": 0.007603913281402325,
+          "max": 0.009713258964182592
+        },
+        "nearestSourceCorner": {
+          "mean": 0.024572245790836444,
+          "max": 0.038293302190287426
+        }
+      },
+      "maxPalmHandSkinMatrixComponentDifference": 2.5785187385274355e-07
+    },
+    {
+      "bike": "pro",
+      "reportSHA256": "205c95f230136077665780d5c08cf5ac94c8d0d77968ca3e03e16d5199dbbaf0",
+      "recordedPoses": 241,
+      "worst": {
+        "baryTop4": {
+          "meters": 0.009710320641731999,
+          "vertex": 21771,
+          "sourceFace": 473190,
+          "tick": 680,
+          "phase": "backward",
+          "localPosition": [
+            0.014541230164468288,
+            1.020548939704895,
+            -0.10986264050006866
+          ]
+        },
+        "nearestSourceCorner": {
+          "meters": 0.03830388593832354,
+          "vertex": 43616,
+          "sourceFace": 317674,
+          "tick": 610,
+          "phase": "backward",
+          "localPosition": [
+            -0.11181580275297165,
+            1.566034197807312,
+            -0.11331921815872192
+          ]
+        }
+      },
+      "poseMaximumMeters": {
+        "baryTop4": {
+          "mean": 0.007633926902743015,
+          "max": 0.009710320641731999
+        },
+        "nearestSourceCorner": {
+          "mean": 0.02483982045302224,
+          "max": 0.03830388593832354
+        }
+      },
+      "maxPalmHandSkinMatrixComponentDifference": 2.5785187385274355e-07
+    }
+  ],
+  "allPoseVertexErrorMeters": {
+    "baryTop4": {
+      "mean": 6.401558005295481e-05,
+      "p95": 0.00010481884070072414,
+      "p99": 0.0008407532554507419,
+      "max": 0.009713258964182592,
+      "verticesAbove1mm": 561,
+      "verticesAbove2mm": 249
+    },
+    "nearestSourceCorner": {
+      "mean": 0.0002899304619324526,
+      "p95": 0.0010532285096733528,
+      "p99": 0.00398118822113772,
+      "max": 0.03830388593832354,
+      "verticesAbove1mm": 3376,
+      "verticesAbove2mm": 1454
+    }
+  },
+  "elapsedSeconds": 5.058312540873885,
+  "limitations": "Recorded neutral/forward/back gameplay only. Source face correspondence follows exact nearest rest surface; no future or unsampled crash/ragdoll guarantee."
+}

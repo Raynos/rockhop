@@ -1,0 +1,76 @@
+{
+  "accepted": false,
+  "lock": "/Users/raynos/projects/localai/.model.lock",
+  "method": "lockf -k",
+  "command": [
+    "/opt/homebrew/bin/blender",
+    "--background",
+    "--threads",
+    "2",
+    "--python",
+    "assets/blender/rider-rebuild/download-atlas01/rebuild.py",
+    "--",
+    "audit",
+    "harness/out/rider-rebuild/download-opt01/atlas01/prepare01",
+    "harness/out/rider-rebuild/download-opt01/atlas01/bake01"
+  ],
+  "controllerPID": 57068,
+  "pollSeconds": 1,
+  "startAnonymousBelowGiB": 55,
+  "stopAnonymousGiB": 65,
+  "stopAnonymousPlusWiredGiB": 96,
+  "limitSeconds": 1790.0,
+  "guardSHA256": "cf8acd15d8b7484480bee74d23892be815d955ffd87115d3da8ed228ffb3d916",
+  "status": "worker returned; review pending",
+  "samples": [
+    {
+      "seconds": 0,
+      "anonymousGiB": 45.8,
+      "wiredGiB": 7.3,
+      "freeGiB": 25.1
+    },
+    {
+      "seconds": 0.034,
+      "anonymousGiB": 45.9,
+      "wiredGiB": 7.3,
+      "freeGiB": 25.0
+    },
+    {
+      "seconds": 1.074,
+      "anonymousGiB": 45.9,
+      "wiredGiB": 7.3,
+      "freeGiB": 25.0
+    },
+    {
+      "seconds": 2.116,
+      "anonymousGiB": 47.7,
+      "wiredGiB": 7.4,
+      "freeGiB": 23.1
+    },
+    {
+      "seconds": 3.153,
+      "anonymousGiB": 47.9,
+      "wiredGiB": 7.3,
+      "freeGiB": 23.0
+    },
+    {
+      "seconds": 4.188,
+      "anonymousGiB": 47.7,
+      "wiredGiB": 7.1,
+      "freeGiB": 23.3
+    },
+    {
+      "seconds": 5.245,
+      "anonymousGiB": 45.3,
+      "wiredGiB": 7.4,
+      "freeGiB": 25.5
+    }
+  ],
+  "physicalMemoryBytes": 137438953472,
+  "requiredPhysicalMemoryBytes": 137438953472,
+  "scope": "Future explicitly invoked owned Rockhop job only",
+  "pressureOrSwapLimits": "No separate pressure/swap gate exists in the pinned original guard; none altered",
+  "ownedChildPID": 57072,
+  "exitCode": 0,
+  "elapsedSeconds": 5.275
+}

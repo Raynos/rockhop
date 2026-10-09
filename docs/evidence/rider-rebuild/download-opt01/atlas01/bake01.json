@@ -1,0 +1,143 @@
+{
+  "sourceSHA256": "127e316a8ff7910a4918b63f83e086e4e658062f102c73f17d0ee2f956750649",
+  "attributes": {
+    "POSITION": {
+      "count": 63389,
+      "width": 3,
+      "dtype": "float32",
+      "min": [
+        -0.42225703597068787,
+        0.8213694095611572,
+        -0.18408335745334625
+      ],
+      "max": [
+        0.41253817081451416,
+        1.625180721282959,
+        0.16637000441551208
+      ]
+    },
+    "NORMAL": {
+      "count": 63389,
+      "width": 3,
+      "dtype": "float32",
+      "min": [
+        -0.999980628490448,
+        -0.9999821782112122,
+        -0.9999973177909851
+      ],
+      "max": [
+        0.9999991655349731,
+        0.9998767971992493,
+        0.9999997615814209
+      ]
+    },
+    "TEXCOORD_0": {
+      "count": 63389,
+      "width": 2,
+      "dtype": "float32",
+      "min": [
+        0.0,
+        5.960464477539063e-08
+      ],
+      "max": [
+        0.9999999403953552,
+        1.0
+      ]
+    },
+    "TANGENT": {
+      "count": 63389,
+      "width": 4,
+      "dtype": "float32",
+      "min": [
+        -0.999857485294342,
+        -0.999992847442627,
+        -0.9998887777328491,
+        -1.0
+      ],
+      "max": [
+        1.0,
+        0.9999909996986389,
+        0.9999954104423523,
+        1.0
+      ]
+    },
+    "JOINTS_0": {
+      "count": 63389,
+      "width": 4,
+      "dtype": "uint8",
+      "min": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "max": [
+        60,
+        60,
+        68,
+        68
+      ]
+    },
+    "WEIGHTS_0": {
+      "count": 63389,
+      "width": 4,
+      "dtype": "float32",
+      "min": [
+        0.2549577057361603,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "max": [
+        1.0,
+        0.4998232126235962,
+        0.324659138917923,
+        0.24630507826805115
+      ]
+    },
+    "_NATIVE_ID": {
+      "count": 63389,
+      "width": 1,
+      "dtype": "float32",
+      "min": [
+        9.0
+      ],
+      "max": [
+        716969.0
+      ]
+    }
+  },
+  "indicesCount": 300000,
+  "triangles": 100000,
+  "uvContract": "Blender atlas V flipped for glTF. Tangent.w is unmodified Blender bitangent_sign, matching Blender 5.2 glTF exporter.",
+  "bake": {
+    "size": 4096,
+    "type": {
+      "albedo": "selected source image through emission",
+      "orm": "selected source image through emission (Non-Color)",
+      "normal": "selected exact corner normal field, tangent-space"
+    },
+    "cageExtrusionMeters": 0.003,
+    "maxRayDistanceMeters": 0.01,
+    "marginPixels": 12,
+    "device": "CPU",
+    "threads": 2
+  },
+  "accepted": false,
+  "albedo": {
+    "bytes": 10088108,
+    "sha256": "397153ae1bb9212f84bff57ecef4081c7b0719a04d9fe4b2d309bcadfe7f4723"
+  },
+  "orm": {
+    "bytes": 8098866,
+    "sha256": "519cfa9124051314416be68727cfc374641010ad4e74e8a0dbe5e85fd2147eba"
+  },
+  "normal": {
+    "bytes": 9963744,
+    "sha256": "4b9767be46ec0b1ae37b88ead234f05bef04e0ebd7400ed1d70aa237a68d437f"
+  },
+  "zeroWeightJointSlotCanonicalization": {
+    "zeroWeightOutOfRangeSlotsCanonicalizedToJoint0": 47499,
+    "nativeNonzeroJointWeightsChanged": false
+  }
+}
