@@ -38,39 +38,51 @@ H0 is October 8, 14:05 Panama / 19:05 UTC; target finish is October 9 at the sam
 | H+16 | Same master with editable Blender controls, complete generic and bike actions, consumed engine deformation/contact | Parent and next concrete controls builder |
 | H+24 | Exact candidate reviewed on desktop/physical iPhone, bot/stranger/replay/restart and checked release/live SHA | Parent; human/device decisions through HR-23 |
 
-**Current execution, October 9, 01:20 Panama:** Independent clean-context Astra6
+**Current execution, October 9, 02:52 Panama:** Independent clean-context Astra6
 X-High review53 keeps qualified native10 motion, original rest/actions and the
 complete selected outfit. Existing Rookie/Pro ankle42 films show real
 forward/back/neutral inputs. Garage neutral and stand-up diagnostics do not
 establish those game leans. Their clothing/contact defects remain open;
 all R0–R5 remain open, 0/6 accepted. No repaired-outfit upgrade film exists yet.
 
-Actual65 retained all656 native targets and solved28 maps, but its second
-full-native attempt stopped75.997s during garment carry. Frozen69 separates
-unchanged65 solve, complete CPU garment transport and native lifetimes. Parent
-nine fixture groups prove bit-exact maps, positions, Jacobians and normals.
-Actual69 solve now passes30.067s and saves all28 maps; parent serialized replay,
-certificates and exact source/targets pass. Endpoint residual2.22e-16m meets
-original native precision; actual paired-wall spacing2.883925mm is unchanged.
+Actual69 solves all656 fixed material points in28 maps. Durable72 now completes
+all176 spans/716971 original vertices and composed Jacobians under the unchanged
+guard. Parent verifies complete arrays against every sealed span, original
+source/order/payload and the unchanged prior prefix. Actual72 applies the result
+in Blender47.53s and independently reopens40.826s; original selected topology,
+PBR, fields,75 rig/rest and protected reference survive.
 
-The first full transport invocation refuses original admission before launch.
-The second runs27.727s, logs69632 of716971 vertices and stops at shared anonymous
-memory65.7GiB; observed child peak RSS293568KiB is not physical footprint or
-attribution of global growth. Partial NPY arrays are inadmissible. Stop unchanged
-full-run retries. Builder72 adds independently durable verified chunks, explicit
-parent-guarded resume and complete-only native admission. No automatic restart,
-new memory threshold, target reconstruction, tolerance change or source forgery.
-Frozen69/65 remain unchanged; actual72 execution and native qualification are pending.
+The [actual reopened fit fails](../evidence/rider-rebuild/selected-anatomical-hoodie-fit72/actual-reopen01/FINDING.txt):
+225130 retained vertex/face samples miss required clearance, worst41.473mm inside
+the full body. There are no new zero-area triangles, but actual deformation has
+extreme local compression/stretch. The authoritative CPU intake rejects despite
+the preservation-only report's reopened status name. This is a failed garment.
+Stop unchanged65/69/72 fitting and keep distal51/engine71 closed.
 
-Next visible deliverable: complete verified72 transport → native apply and
-independent saved contact/tangent/source qualification → minimally adapted51
-distal cuffs and all six dense relations → one merge into qualified52 → changed
-native482-key replay → private topology-aware export71 → dressed actual
-forward/back/neutral films on both bikes. Adapt canonical51/71 only after actual72
-qualifies. Source71 already passes parent eight Python/three Node fixture groups;
-its current69 prerequisite remains held and uncommitted. Exact calibrated physical
-driver, original75/rest/actions, selected PBR and all3318 ankle fields must survive.
-Do not substitute isolated action playback or repeat unchanged rig reconstruction.
+Parent verifies `multiscale.fixed_targets` interpolates sparse targets without
+querying the body or enforcing dense contact. A fresh clean-context Astra6
+X-High constructor73 diagnoses this actual failure. Its bounded original-source
+check supports testing a source-relative elastic material graph, measured
+opposed-wall correspondence and actual full-body constraints over every retained
+vertex and face centroid in the solve. This is one changed construction method,
+not a contact or art pass. Exact cached body/world/rest identity must be proved
+against the native; expensive stages preserve useful work under original guard.
+Retain chosen source appearance/PBR/UV/detail and useful rig/fields. Necessary
+topology changes are authorized, but must repair a demonstrated defect and carry
+source appearance. Do not preserve accidental defects or invent an injectivity
+claim for a graph solve. Independent native contact, triangle/surface strain,
+source/rig fidelity, all dense garment relations and moving art remain judges.
+
+Next visible deliverable: actual qualified selected hoodie from the supported
+73 construction → minimally adapted51 distal cuffs and all six dense relations
+→ one complete merge into qualified52 → changed native482-key replay → private
+topology-aware export71 → dressed actual forward/back/neutral films on both
+bikes, side-framed with hands, feet and hips visible. Adapt canonical51/71 only
+after the new actual garment passes authoritative qualification. Source71 passes
+parent eight Python/four Node fixture groups; its69 prerequisite stays held and
+uncommitted. Preserve exact calibrated physical driver, original75/rest/actions,
+selected PBR and all3318 ankle fields. Isolated clips, stand-up motion or another
+unchanged rig reconstruction cannot replace actual gameplay.
 
 Boot67 joint vertex/face closure passes12.049s over five reductions,30456triangles
 and15214vertices. Parent complete arrays/censuses pass. Native68 proves identical
@@ -86,7 +98,7 @@ rotation remain unproven; hold the upgraded film for the repaired complete outfi
 No loading footage, fabricated frames or unsupported FPS labels. The358MB/3.9M
 triangle source remains an appearance reference rather than a phone candidate.
 
-Required ordinary game gate62 passes11/11, boot278.875ms; deterministic finish/hash,
+Required ordinary game gate67 passes11/11; deterministic finish/hash,
 crash and instant restart pass. Earlier passes/failures remain retained. Continue
 coherent checkpoints and third-round gates without unchanged latency retries.
 H+4/H+10 are missed; October9 14:05Panama is an unproven stretch target. Generic
