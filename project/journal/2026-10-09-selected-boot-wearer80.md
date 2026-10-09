@@ -47,3 +47,9 @@ Finding: Actual source hit order supports all low faces as inner arch floor, cor
 Validation: Originalguard3.243s exit0; parent verifies all858 rows per side,0unsupported/0outside plantar projection; untouched outerbottom13.24–17.66mm below.
 
 Limits: Ownership only. Astra83 may replace the source-selection predicate with literal component/cut identity; no clearance, moving or compact production acceptance.
+
+Finding: Construct the shoe cavity from actual selected inner parents and source-edge circuits, leaving the exterior unsplit.
+
+Validation: Parent full605line source review, AST/hash and four new dependent pins pass; cut UV/raw-field interpolation and protected exterior checks are explicit.
+
+Limits: Source checkpoint only. Guarded construction/reopen/posed corridor, selected compact bake and moving art remain unrun.
