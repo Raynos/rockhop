@@ -10,6 +10,7 @@ parser.add_argument('--profile', type=Path, required=True)
 parser.add_argument('--base-contract', type=Path, default=Path('harness/out/rider-rebuild/download-opt01/delivery01/rider-contract.json'))
 parser.add_argument('--out', type=Path, required=True)
 parser.add_argument('--apply-private', action='store_true')
+parser.add_argument('--forearm-pronation', action='store_true')
 args = parser.parse_args()
 sha = lambda data: hashlib.sha256(data).hexdigest()
 encoded = lambda value: (json.dumps(value, indent=2) + '\n').encode()
@@ -44,6 +45,9 @@ for side in ['left', 'right']:
     for key in ['gripSocketPositionBike', 'gripSocketQuaternionBike']:
         base['driver'].setdefault(key, {})[side] = hand[key]
 base['driver']['gripProfileHash'] = sha(profile_bytes)
+if args.forearm_pronation:
+    base['driver']['forearmPronation'] = {
+        'schema': 'native-segment-twist-v1', 'gripProfileHash': sha(profile_bytes)}
 base['driver']['selectedGripProfile'] = {
     'accepted': False, 'profileSHA256': sha(profile_bytes),
     'authoringSourceSHA256': profile['source']['sha256'],
@@ -72,7 +76,8 @@ args.out.mkdir(parents=True, exist_ok=False)
 report = {'accepted': False, 'sourceSHA256': receipt['sha256'], 'bytes': receipt['bytes'],
     'contractSHA256': contract_sha, 'profileSHA256': sha(profile_bytes),
     'normalizedRuntimeNativeRestUnchanged': True, 'originalMasterSHA256': manifest['originalMasterSHA256'],
-    'status': 'PRIVATE_STAGING_ONLY', 'workingTreeApplied': args.apply_private}
+    'status': 'PRIVATE_STAGING_ONLY', 'workingTreeApplied': args.apply_private,
+    'nativeForearmPronationOptIn': args.forearm_pronation}
 (args.out/'stage.json').write_bytes(encoded(report))
 if args.apply_private:
     Path('public/rider-remaster-source.json').write_bytes(encoded(manifest))
