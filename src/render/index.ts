@@ -6,7 +6,7 @@
  * captures of one recording are pixel-identical. See docs/design/rendering.md.
  */
 import * as THREE from 'three';
-import type { BikeClass, CameraDebug, CameraOverride, CompiledTrack, GameEvent, GamePhase, PhysicsState, QualityTier, RenderStats, RiderOutfit } from '../core/types';
+import type { BikeClass, CameraDebug, CameraOverride, CompiledTrack, GameEvent, GamePhase, PhysicsState, QualityTier, RenderStats, RiderOutfit, SelectedTextureReceipt } from '../core/types';
 import { ArtLibrary, idsFor } from './art/library';
 import { biomeFor, type Biome } from './biomes';
 import { BikeModel, type HeroBike } from './bike/bikeModel';
@@ -20,6 +20,7 @@ import { HERO_BOOT_FILE_SET, SELECTED_HERO_FILES } from '../boot/asset-totals';
 import { setHeroTextureRenderer } from './hero/selectedTextures';
 import { GltfBike } from './hero/gltfBike';
 import { GltfRider } from './hero/gltfRider';
+import { selectedTextureReceipt } from './hero/selectedTextureReceipt';
 import type { GLTF } from 'three/examples/jsm/loaders/GLTFLoader.js';
 import { CameraRig } from './camera/rig';
 import { releaseSceneAllocations } from './contextResources';
@@ -60,6 +61,8 @@ export interface GameRenderer {
   resize(width: number, height: number, pixelRatio?: number): void;
   stats(): RenderStats;
   readonly framesRendered: number;
+  /** Read-only texture scan, called only when taking an explicit receipt. */
+  selectedTextureReceipt?(): SelectedTextureReceipt;
   dispose(): void;
   /** Release this context while the 3D map owns the phone GPU; false when safe release is unsupported. */
   suspendGpu?(): Promise<boolean>;
@@ -2235,8 +2238,14 @@ export class ThreeRenderer implements GameRenderer {
     return { total, byBatch, structure };
   }
 
-  /** Extra diagnostics for the harness / perf report. */
-  debugInfo(): {
+  /** Active rider only; excludes pooled documents, ghosts and Garage reflections. */
+  selectedTextureReceipt(): SelectedTextureReceipt {
+    return selectedTextureReceipt(this.rider.root);
+  }
+
+  /** Extra diagnostics; texture traversal is explicitly opt-in, never a frame cost. */
+  debugInfo(options?: { selectedTextures?: boolean }): {
+    selectedTextures?: SelectedTextureReceipt;
     biome: string;
     zoom: string;
     phase: GamePhase;
@@ -2307,6 +2316,7 @@ export class ThreeRenderer implements GameRenderer {
       bytes += w.width * w.height * w.bytesPerPixel;
     }
     return {
+      ...(options?.selectedTextures ? { selectedTextures: this.selectedTextureReceipt() } : {}),
       prepare: this.prepareTimeline,
       biome: this.biome.id,
       zoom: this.rig.zoomState,

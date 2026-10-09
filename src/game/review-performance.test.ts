@@ -59,7 +59,9 @@ describe('opt-in review riding frame receipt', () => {
 
   it('exposes notes only for the current active ride, never stale Garage or paused samples', () => {
     const win = new ReviewPerformanceWindow();
-    const game = { phase: () => 'riding', paused: () => false, currentTrack: { id: context.trackId }, currentBike: context.bike, qualityTier: context.quality };
+    const selectedTextures = { method: 'selected-rider-material-typed-array-payloads' as const, textureCount: 0, mapReferences: 0, payloadBytes: 0, compressedTextures: 0, unavailableTextures: 0, incompleteTextures: 0, textures: [] };
+    const textureSnapshot = vi.fn(() => selectedTextures);
+    const game = { phase: () => 'riding', paused: () => false, currentTrack: { id: context.trackId }, currentBike: context.bike, qualityTier: context.quality, rendererRef: { selectedTextureReceipt: textureSnapshot } };
     const app = Object.create(App.prototype) as App;
     Object.assign(app, { reviewPerformance: win, screen: 'run', game, riderOutfit: context.outfit, frameCapHz: () => 60 });
     const hidden = vi.spyOn(document, 'hidden', 'get').mockReturnValue(false);
@@ -68,11 +70,17 @@ describe('opt-in review riding frame receipt', () => {
       const notes = app.testApi().reviewPerformance!;
       expect(notes()).toBeNull();
       for (let i = 0; i <= 1500; i++) win.frame(1000 + i * 20, context, true, true, split);
-      expect(notes()).toMatchObject({ ready: true, trackId: context.trackId, fps: 50 });
+      expect(textureSnapshot).not.toHaveBeenCalled();
+      expect(notes()).toMatchObject({ ready: true, trackId: context.trackId, fps: 50, selectedTextures });
+      expect(textureSnapshot).toHaveBeenCalledTimes(1);
       game.currentTrack = { id: 'c2' }; expect(notes()).toBeNull();
       game.currentTrack = { id: context.trackId }; game.paused = () => true; expect(notes()).toBeNull();
       game.paused = () => false; hidden.mockReturnValue(true); expect(notes()).toBeNull();
       hidden.mockReturnValue(false); Object.assign(app, { screen: 'garage' }); expect(notes()).toBeNull();
+      expect(textureSnapshot).toHaveBeenCalledTimes(1); // No traversal on invalid/paused samples.
+      Object.assign(app, { screen: 'run' });
+      Object.assign(game, { rendererRef: {} });
+      expect(notes()?.selectedTextures).toBeUndefined(); // Scaffold renderers keep the optional shape.
     } finally { hidden.mockRestore(); clock.mockRestore(); }
   });
 

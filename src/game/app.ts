@@ -845,9 +845,11 @@ export class App {
       ...(this.reviewPerformance ? { reviewPerformance: () => {
         if (this.screen !== 'run' || this.game.phase() !== 'riding' || this.game.paused() || document.hidden) return null;
         const receipt = this.reviewPerformance!.snapshot(performance.now());
-        return receipt && receipt.trackId === this.game.currentTrack?.id && receipt.outfit === this.riderOutfit
-          && receipt.bike === this.game.currentBike && receipt.quality === this.game.qualityTier
-          && receipt.cap === this.frameCapHz() ? receipt : null;
+        if (!receipt || receipt.trackId !== this.game.currentTrack?.id || receipt.outfit !== this.riderOutfit
+          || receipt.bike !== this.game.currentBike || receipt.quality !== this.game.qualityTier
+          || receipt.cap !== this.frameCapHz()) return null;
+        const selectedTextures = this.game.rendererRef.selectedTextureReceipt?.();
+        return selectedTextures ? { ...receipt, selectedTextures } : receipt;
       } } : {}),
     };
   }

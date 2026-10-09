@@ -586,6 +586,32 @@ export interface RenderStats {
   contextKind: string;
 }
 
+/** Selected material payloads retained by Three; never a GPU allocation estimate. */
+export interface SelectedTextureReceipt {
+  method: 'selected-rider-material-typed-array-payloads';
+  textureCount: number;
+  mapReferences: number;
+  payloadBytes: number;
+  compressedTextures: number;
+  unavailableTextures: number;
+  incompleteTextures: number;
+  textures: {
+    slots: string[];
+    references: number;
+    format: number;
+    type: number;
+    colorSpace: string;
+    compressed: boolean;
+    width: number | null;
+    height: number | null;
+    generateMipmaps: boolean;
+    expectedMipLevels: number | null;
+    payloadBytes: number;
+    payloadStatus: 'complete' | 'incomplete' | 'unavailable';
+    mipLevels: { level: number; width: number | null; height: number | null; payloadBytes: number | null }[];
+  }[];
+}
+
 /** A bounded real-clock riding window attached only to explicit review notes. */
 export interface ReviewPerformance {
   method: 'normal-raf-submitted-riding-frames';
@@ -607,6 +633,8 @@ export interface ReviewPerformance {
   physicsMs: { p50: number; p95: number; max: number };
   submitMs: { p50: number; p95: number; max: number };
   dropped: number;
+  /** Snapshot only: actual selected map format and retained mip payload bytes. */
+  selectedTextures?: SelectedTextureReceipt;
 }
 
 export interface HookInfo {
