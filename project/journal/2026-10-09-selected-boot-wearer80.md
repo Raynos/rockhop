@@ -59,3 +59,9 @@ Finding: Reproduce the cut arithmetic only on actual original crossing triangles
 Validation: Parent full179line source review, AST/hash and three dependency pins pass; both float64/float32 plane and ULP comparisons preserve raw BMesh output.
 
 Limits: Source-only local fixture, not identical whole-mesh edge ordering. No candidate, tolerance change, source replacement or native save.
+
+Finding: Correct the shoe cut arithmetic without changing the selected exterior or final analytic cut.
+
+Validation: Parent reviewed the small author03-to04 diff and verified all17 pinned inputs plus AST and recipe hash. The1759-edge actual fixture explains float32 BMesh prewrite differences; author04 checks actual full-mesh endpoint order bitexactly before double-plane authoring.
+
+Limits: Source checkpoint only. No author04 execution, repaired native, reopen, posed corridor or art acceptance.
