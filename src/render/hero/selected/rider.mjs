@@ -141,7 +141,7 @@ export function createSelectedRiderClass(metadata) {
         roles: structuredClone(this.roles), meshRoles: this.binding.meshes.map(({ role, mesh }) => ({ role, name: mesh.name })),
         authorMeshRoles: structuredClone((metadata.specification ?? metadata.spec).meshNames), visibleMeshes: [],
         jointNames: Object.fromEntries([...this.binding.byId].map(([id, bone]) => [id, bone.name])),
-        contractSchema: this.binding.contract.schema, geometry: 'Unchanged author FOUR',
+        contractSchema: this.binding.contract.schema, geometry: metadata.selectedRiderSource?.geometryPolicy ?? 'Unchanged author FOUR',
         massApproximation: this.anthropometry.approximation,
 
       };

@@ -1,4 +1,4 @@
-import { SELECTED_RIDER_CHUNK, SELECTED_RIDER_JS_GZIP_CAP } from '../../src/boot/player-budget';
+import { SELECTED_RIDER_CHUNK, SELECTED_RIDER_JS_GZIP_CAP, TEXTURE_CODEC_CHUNK, TEXTURE_CODEC_JS_GZIP_CAP } from '../../src/boot/player-budget';
 /**
  * Ship gate (CONTRACT §3, harness-metrics.md §5). One command, one JSON,
  * exit code = number of failed checks.
@@ -177,9 +177,9 @@ function dirBytes(dir: string): number {
  * fatal-error-only telemetry phases. The lazy chunks a player does fetch (audio worklet, review sheet) count.
  * Without a manifest every file counts.
  */
-function jsGzipBytes(dir: string): { total: number; selected: number; dev: number; devFiles: string[] } {
+function jsGzipBytes(dir: string): { total: number; selected: number; textureCodec: number; dev: number; devFiles: string[] } {
   const assets = path.join(dir, 'assets');
-  const out = { total: 0, selected: 0, dev: 0, devFiles: [] as string[] };
+  const out = { total: 0, selected: 0, textureCodec: 0, dev: 0, devFiles: [] as string[] };
   if (!fs.existsSync(assets)) return out;
   const devPaths = new Set<string>();
   try {
@@ -194,7 +194,8 @@ function jsGzipBytes(dir: string): { total: number; selected: number; dev: numbe
     if (devPaths.has(`assets/${f}`)) {
       out.dev += gz;
       out.devFiles.push(f);
-    } else if (SELECTED_RIDER_CHUNK.test(`assets/${f}`)) out.selected += gz;
+    } else if (TEXTURE_CODEC_CHUNK.test(`assets/${f}`)) out.textureCodec += gz;
+    else if (SELECTED_RIDER_CHUNK.test(`assets/${f}`)) out.selected += gz;
     else out.total += gz;
   }
   return out;
@@ -599,7 +600,8 @@ async function main(): Promise<void> {
     const runBundle = (check: (c: GateCheck) => void): Promise<void> => (async () => {
     const gzKB = gz / 1024;
     check({ id: 'bundle.jsGzipKB', value: gzKB, limit: num('bundle.jsGzipKB'), pass: gz > 0 && gzKB <= num('bundle.jsGzipKB'), unit: 'KB', note: `player JS (excluding dev and fatal-error telemetry phases); outside player budget: ${js.devFiles.join(', ') || 'none'} ${(js.dev / 1024).toFixed(1)} KB gz; dist ${(distBytes / 1024).toFixed(0)} KB raw` });
-    check({ id: 'bundle.selectedRiderGzipKB', value: js.selected / 1024, limit: SELECTED_RIDER_JS_GZIP_CAP / 1024, pass: js.selected <= SELECTED_RIDER_JS_GZIP_CAP, unit: 'KB', note: `Optional selected native75 driver; combined player ${(gz + js.selected) / 1024} KB gz` });
+    check({ id: 'bundle.selectedRiderGzipKB', value: js.selected / 1024, limit: SELECTED_RIDER_JS_GZIP_CAP / 1024, pass: js.selected <= SELECTED_RIDER_JS_GZIP_CAP, unit: 'KB', note: `Selected native75 driver; combined player ${(gz + js.selected + js.textureCodec) / 1024} KB gz` });
+    check({ id: 'bundle.textureCodecGzipKB', value: js.textureCodec / 1024, limit: TEXTURE_CODEC_JS_GZIP_CAP / 1024, pass: js.textureCodec <= TEXTURE_CODEC_JS_GZIP_CAP, unit: 'KB', note: 'Pinned KTX2/Basis decoder, measured separately from game and native rig' });
     })();
 
     // G9 determinism on the golden recording

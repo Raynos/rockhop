@@ -43,8 +43,13 @@ export function emptyPackBytes(): OfflinePackBytes {
   return { '1x': 0, '2x': 0 };
 }
 
-/** Every hero file, once (the same set `src/render/index.ts setModels` fetches). */
+/** The original local hero files; the selected source is declared separately once. */
 export const HERO_FILE_SET: readonly BootAssetKey[] = [...new Set(Object.values(HERO_FILES_BY_OUTFIT_CLASS).flatMap((c) => [...c.rookie, ...c.pro]))];
+
+/** Both selected detail names resolve to one parsed document and one resident instance. */
+export const SELECTED_HERO_FILES = ['models/rider-street-remastered.glb', 'models/rider-street-remastered-lod.glb'] as const;
+/** Every Garage choice is fetched and prepared during the initial loading screen. */
+export const HERO_BOOT_FILE_SET: readonly string[] = [...HERO_FILE_SET, ...SELECTED_HERO_FILES];
 
 /**
  * The offline pack's declared bytes from the build's byte table: every art asset the boot set does not
@@ -63,7 +68,7 @@ export function offlinePackBytes(rows: Iterable<readonly [string, number]>, face
     } else if (where) out[where] += bytes;
   };
   for (const [key, bytes] of rows) {
-    if (key.startsWith('models/') && !HERO_FILE_SET.includes(key as BootAssetKey) && /\.(glb|webp|png|jpe?g|avif|ktx2)$/.test(key)) {
+    if (key.startsWith('models/') && !HERO_BOOT_FILE_SET.includes(key) && /\.(glb|webp|png|jpe?g|avif|ktx2)$/.test(key)) {
       add('both', bytes);
     } else if (key.startsWith('art:')) {
       const id = key.slice(4);

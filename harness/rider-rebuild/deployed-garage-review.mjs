@@ -35,7 +35,7 @@ catalog.models.push(...['models/rider-street-remastered.glb','models/rider-stree
 const inputs = { source, metadataSHA256:selectedManifest.contractSHA256, sourceSHA256:selectedManifest.sha256 };
 const originalIds = ['street-mustard', 'street-openface', 'race-bluewhite', 'street-charcoal', 'race-charcoalyellow'];
 const oldId = 'street-mustard', newId = 'street-remastered';
-assert.equal(selectedManifest.optional, true); assert.equal(selectedManifest.lodAliasesFull, true);
+assert.equal(selectedManifest.optional, false); assert.equal(selectedManifest.lodAliasesFull, true);
 assert.equal(path.resolve(inputs.source), source); assert.equal(inputs.metadataSHA256, sha(contractBytes));
 const assets = Object.fromEntries(catalog.models.map(row => [row.logical, row]));
 const oldAsset = assets[`models/rider-${oldId}.glb`], newAsset = assets[`models/rider-${newId}.glb`];
@@ -240,7 +240,7 @@ try {
   assert.deepEqual(report.errors, []);
   const selectedRequests = report.requests.filter(row => row.catalogSHA256 === newAsset.sha256);
   assert.equal(selectedRequests.length, 1, 'New full/LOD alias fetches actual selected source once');
-  assert.equal(selectedRequests[0].phase, `choice-2-${newId}`);
+  assert.equal(selectedRequests[0].phase, 'boot', 'Selected rider is downloaded in the loading screen');
   assert.equal(selectedRequests[0].status, 200);
   if (selectedRequests[0].contentLength !== null) assert.equal(selectedRequests[0].contentLength, newAsset.bytes);
   report.browserByteWitness = selectedRequests[0].contentLength === null
@@ -249,12 +249,16 @@ try {
   for (const choice of report.choices) {
     const rows = report.requests.filter(row => row.phase === `choice-${report.choices.indexOf(choice) + 1}-${choice.id}`);
     choice.network = { modelRequests: rows.length, responsesWithoutSize: rows.filter(row => row.contentLength === null).length, modelResponseBytes: rows.reduce((sum, row) => sum + (row.contentLength ?? 0), 0) };
-    if (choice.visit === 2) assert.equal(rows.length, 0, 'Resident comparison repeats request no model files');
+    assert.equal(rows.length, 0, 'First and repeated Garage selections use preloaded models');
+    assert(choice.readyMs < 500, `Resident Garage selection exceeds 500ms: ${choice.readyMs}`);
   }
   report.resourceTiming = await page.evaluate(() => performance.getEntriesByType('resource')
     .filter(row => row.name.includes('.glb')).map(row => ({ url: row.name, durationMs: row.duration,
       transferSize: row.transferSize, encodedBodySize: row.encodedBodySize, decodedBodySize: row.decodedBodySize })));
-} catch (error) { report.failure = String(error.stack).replaceAll(entryURL.href, publicBase); process.exitCode = 1; }
+} catch (error) {
+  report.failure = String(error.stack).replaceAll(entryURL.href, publicBase); process.exitCode = 1;
+  try { report.failureUI = await page.locator('body').innerText(); } catch { /* Closed page. */ }
+}
 finally {
   try {
     report.presence = await page.evaluate(() => globalThis.window.__garageComparison?.stop() ?? null);

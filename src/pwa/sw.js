@@ -28,7 +28,8 @@
  *             hold the first paint — the plan's B-SLOW), offline.html as the last resort;
  *             load-manifest.json / sw.js / manifest.webmanifest: network-first, cache fallback;
  *             version.json: network-only, never cached (the "new build" pill must hear the server);
- *             /api/**, cross-origin and `?harness=1`: untouched.
+ *             the exact pinned cross-origin selected rider: cache-first immutable;
+ *             /api/**, other cross-origin and `?harness=1`: untouched.
  *   message   { type: 'SKIP_WAITING' } → activate now (the boot's start-of-load update, src/boot/sw.ts)
  *             { type: 'VERSION' }      → what this worker holds, back on the message port.
  *
@@ -38,6 +39,16 @@
  */
 const BUILD = '__BUILD_ID__';
 const ASSETS = '__ASSET_ID__';
+const SELECTED_RIDER_URL = '__SELECTED_RIDER_URL__';
+const SELECTED_RIDER_PATH = /^\/rider-remaster\/[a-f0-9]{64}\/rider\.glb$/;
+/** Only this build's immutable public source may cross the origin cache boundary. */
+const SELECTED_RIDER = (() => {
+  try {
+    const url = new URL(SELECTED_RIDER_URL);
+    return url.protocol === 'https:' && url.hostname.endsWith('.public.blob.vercel-storage.com')
+      && SELECTED_RIDER_PATH.test(url.pathname) && !url.search && !url.hash && !url.username && !url.password ? url : null;
+  } catch { return null; }
+})();
 const SHELL = `rockhop-shell-${BUILD}`;
 const STATIC = `rockhop-static-${ASSETS}`;
 const IMMUTABLE_CACHE = 'rockhop-immutable';
@@ -115,14 +126,16 @@ async function adoptLegacyImmutable() {
   await caches.delete(LEGACY_IMMUTABLE);
 }
 
-/** Drop only the content-addressed entries this build no longer names. No manifest → no prune (never a wipe). */
+/** Drop unnamed content-addressed entries and old selected pins. No manifest → retain ordinary entries. */
 async function pruneImmutable() {
   const names = await manifestPaths();
-  if (!names) return;
   const cache = await caches.open(IMMUTABLE_CACHE);
   for (const req of await cache.keys()) {
-    const p = new URL(req.url).pathname;
-    if (IMMUTABLE_RE.test(p) && !names.has(p)) await cache.delete(req);
+    const url = new URL(req.url);
+    // Keep one selected source, without pruning another service's assets.
+    if (SELECTED_RIDER && url.origin === SELECTED_RIDER.origin && SELECTED_RIDER_PATH.test(url.pathname)) {
+      if (url.href !== SELECTED_RIDER.href) await cache.delete(req);
+    } else if (names && IMMUTABLE_RE.test(url.pathname) && !names.has(url.pathname)) await cache.delete(req);
   }
 }
 
@@ -183,7 +196,10 @@ self.addEventListener('fetch', (event) => {
   const req = event.request;
   if (req.method !== 'GET') return;
   const url = new URL(req.url);
-  if (url.origin !== self.location.origin) return;
+  if (url.origin !== self.location.origin) {
+    if (SELECTED_RIDER && url.href === SELECTED_RIDER.href) event.respondWith(selectedRiderFirst(event, req));
+    return;
+  }
   if (url.pathname.includes('/api/')) return; // the review inbox: network-only, queued in localStorage when it fails
   if (url.searchParams.get('harness') === '1') return; // the evidence harness measures the network, not the cache
   // Network-only, never cached: the "new build" pill (src/ui/updatePill.ts) asks the SERVER which build is live.
@@ -246,6 +262,23 @@ async function cacheFirst(req, name) {
   if (hit) return hit;
   const res = await fetch(req);
   if (res.ok) cache.put(req, res.clone()).catch(() => undefined);
+  return res;
+}
+
+/** Stream the first source while keeping its complete cache write alive for offline reuse. */
+async function selectedRiderFirst(event, req) {
+  let cache;
+  try {
+    cache = await caches.open(IMMUTABLE_CACHE);
+    const hit = await cache.match(req, MATCH_OPTS);
+    if (hit) return hit;
+  } catch {
+    // Restricted or exhausted storage must not block a reachable rider.
+    return fetch(req);
+  }
+  const res = await fetch(req);
+  // Opaque/error responses cannot qualify the required decoded model.
+  if (res.ok) event.waitUntil(cache.put(req, res.clone()).catch(() => undefined));
   return res;
 }
 

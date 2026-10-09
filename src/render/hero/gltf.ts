@@ -4,7 +4,7 @@
  * / per-livery files behind the same names in `urls.ts` (Meshopt on the bikes and street riders, clearcoat /
  * specular flattened and skinned parts merged by `prepareHero`).
  * One loader, one parsed document per file, cloned per instance (live + ghost).
- * `?rider=gltf&bike=gltf` (or the settings menu) selects them through `setModels`.
+ * Riders always use their authored GLB; `?bike=gltf` selects the authored bike.
  */
 import type * as THREE from 'three';
 import { GLTFLoader, type GLTF } from 'three/examples/jsm/loaders/GLTFLoader.js';
@@ -15,6 +15,7 @@ import { lodUrl, modelAssetUrl } from './urls';
 import type { ByteProgress } from '../../boot/plan';
 import { SELECTED_RIDER_ASSET } from './selectedAsset';
 import { loadSelectedRiderClass } from './selectedDriver';
+import { configureSelectedTextures } from './selectedTextures';
 
 export { lodUrl };
 
@@ -31,8 +32,8 @@ export interface HeroLoadTiming { url: string; bytes: number; fetchMs: number; p
 export const heroLoads: HeroLoadTiming[] = [];
 
 /**
- * Load + parse once; a failed load resolves null (the caller keeps the procedural model, or — for a
- * `-lod.glb` — the authored file on every tier). Round 13: `prepareHero` (spoke split for files
+ * Load + parse once; a failed load resolves null so mandatory boot readiness can show a retry.
+ * Round 13: `prepareHero` (spoke split for files
  * without `<wheel>_spokes`, `KHR_materials_variants` table) runs before anyone clones the document.
  */
 export function loadGltf(url: string, quiet = false, bytes?: ByteProgress): Promise<GLTF | null> {
@@ -47,37 +48,45 @@ export function loadGltf(url: string, quiet = false, bytes?: ByteProgress): Prom
     const t0 = performance.now();
     let tFetched = t0;
     let total = 0;
-    p = new Promise<GLTF | null>((resolve) => {
-      loader.load(
-        url,
-        (g) => {
-          const tParsed = performance.now();
-          if (url === SELECTED_RIDER_ASSET.url) g.scene.userData.selectedRemaster = true;
-          shrinkTextures(g.scene);
-          void prepareHero(g)
-            .catch((err: unknown) => console.warn(`[render] hero prepare for ${url} failed:`, err))
-            .then(() => {
-              heroLoads.push({ url, bytes: total, fetchMs: tFetched - t0, parseMs: tParsed - tFetched, prepareMs: performance.now() - tParsed, at: t0 });
-              if (heroLoads.length > 40) heroLoads.shift();
-              if (g.scene.userData?.selectedRemaster) {
-                void loadSelectedRiderClass().then(() => resolve(g), () => resolve(null));
-              } else resolve(g);
-            });
-        },
-        (e) => {
-          // The last progress event is the end of the bytes; what follows until `onLoad` is the parse (+ Meshopt).
-          if (e.loaded >= e.total && e.total > 0) tFetched = performance.now();
-          total = Math.max(total, e.loaded);
-          if (bytes && e.loaded > reported) {
-            bytes.add(e.loaded - reported);
-            reported = e.loaded;
-          }
-        },
-        (err) => {
-          if (!quiet) console.warn(`[render] glTF ${url} failed:`, err);
-          resolve(null);
-        },
-      );
+    p = (async (): Promise<GLTF | null> => {
+      if (url === SELECTED_RIDER_ASSET.url) await configureSelectedTextures(loader);
+      return new Promise<GLTF | null>((resolve) => {
+        loader.load(
+          url,
+          (g) => {
+            const tParsed = performance.now();
+            if (url === SELECTED_RIDER_ASSET.url) g.scene.userData.selectedRemaster = true;
+            shrinkTextures(g.scene);
+            void prepareHero(g).then(async () => {
+                if (g.scene.userData?.selectedRemaster) await loadSelectedRiderClass();
+                heroLoads.push({ url, bytes: total, fetchMs: tFetched - t0, parseMs: tParsed - tFetched, prepareMs: performance.now() - tParsed, at: t0 });
+                if (heroLoads.length > 40) heroLoads.shift();
+                resolve(g);
+              }).catch((err: unknown) => {
+                if (!quiet) console.warn(`[render] hero prepare for ${url} failed:`, err);
+                // Native rig/texture preparation is mandatory: a partial selected
+                // document must never reach the pool or become a generic rider.
+                resolve(null);
+              });
+          },
+          (e) => {
+            // The last progress event is the end of the bytes; what follows until `onLoad` is the parse (+ Meshopt).
+            if (e.loaded >= e.total && e.total > 0) tFetched = performance.now();
+            total = Math.max(total, e.loaded);
+            if (bytes && e.loaded > reported) {
+              bytes.add(e.loaded - reported);
+              reported = e.loaded;
+            }
+          },
+          (err) => {
+            if (!quiet) console.warn(`[render] glTF ${url} failed:`, err);
+            resolve(null);
+          },
+        );
+      });
+    })().catch((err: unknown) => {
+      if (!quiet) console.warn(`[render] glTF ${url} setup failed:`, err);
+      return null;
     });
     cache.set(url, p);
     // Share in-flight work and successful documents, but let an explicit retry fetch a

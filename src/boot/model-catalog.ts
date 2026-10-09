@@ -103,7 +103,7 @@ export function modelAssetsPlugin(required: readonly string[], onCatalog?: (asse
       if (fs.existsSync(selectedPath)) {
         const selected = JSON.parse(fs.readFileSync(selectedPath, 'utf8')) as { url: string; bytes: number; sha256: string };
         if (!/^https:\/\/[^/]+\.public\.blob\.vercel-storage\.com\//.test(selected.url) || !/^[a-f0-9]{64}$/.test(selected.sha256) || selected.bytes <= 0) throw new Error('Invalid optional rider asset');
-        for (const suffix of ['', '-lod']) models.push({ logical: `models/rider-street-remastered${suffix}.glb`, ...selected, optional: true });
+        for (const suffix of ['', '-lod']) models.push({ logical: `models/rider-street-remastered${suffix}.glb`, ...selected, optional: false });
       }
       this.emitFile({
         type: 'asset', fileName: 'model-catalog.json',

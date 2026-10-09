@@ -1,5 +1,5 @@
 import { createHash } from 'node:crypto';
-import { playerBudget, PLAYER_JS_GZIP_CAP, SELECTED_RIDER_JS_GZIP_CAP, SELECTED_RIDER_CHUNK } from './src/boot/player-budget';
+import { playerBudget, PLAYER_JS_GZIP_CAP, SELECTED_RIDER_JS_GZIP_CAP, SELECTED_RIDER_CHUNK, TEXTURE_CODEC_CHUNK, TEXTURE_CODEC_JS_GZIP_CAP } from './src/boot/player-budget';
 import { gzipSync } from 'node:zlib';
 import { execSync } from 'node:child_process';
 import { createRequire } from 'node:module';
@@ -133,7 +133,7 @@ function bundleBudget(): Plugin {
     name: 'rockhop:bundle-budget',
     apply: 'build',
     generateBundle(_options, bundle) {
-      let total = 0, selected = 0;
+      let total = 0, selected = 0, textureCodec = 0;
       const rows: string[] = [];
       for (const [name, item] of Object.entries(bundle)) {
         // Chunks and the emitted JS assets (the audio worklet is an asset): the same set the ship gate's
@@ -142,14 +142,15 @@ function bundleBudget(): Plugin {
         const gz = gzipSync(item.type === 'chunk' ? Buffer.from(item.code) : Buffer.from(item.source)).length;
         // Explicit review-only chunks are absent from normal player boot: listed, not budgeted.
         const excluded = DEV_CHUNK.test(name) || CRASH_REPORT_CHUNK.test(name);
-        if (SELECTED_RIDER_CHUNK.test(name)) selected += gz;
+        if (TEXTURE_CODEC_CHUNK.test(name)) textureCodec += gz;
+        else if (SELECTED_RIDER_CHUNK.test(name)) selected += gz;
         else if (!excluded) total += gz;
         rows.push(`  ${name.padEnd(40)} ${(gz / 1024).toFixed(1).padStart(8)} KB gz${excluded ? '  (outside player budget)' : ''}`);
       }
-      const measured = playerBudget(total, selected);
+      const measured = playerBudget(total, selected, textureCodec);
       const ok = measured.pass;
       const line = `bundle budget: ${(total / 1024).toFixed(1)} KB gz (${total} B) of ${(BUNDLE_BUDGET_GZ_BYTES / 1024).toFixed(0)} KB — ${ok ? 'OK' : 'OVER BUDGET'}`;
-      this.info(`\n${rows.join('\n')}\n${line}\noptional rider: ${selected} B gz of ${SELECTED_RIDER_JS_GZIP_CAP} B; combined player: ${measured.combinedBytes} B gz`);
+      this.info(`\n${rows.join('\n')}\n${line}\nselected rider: ${selected} B gz of ${SELECTED_RIDER_JS_GZIP_CAP} B; texture decoder: ${textureCodec} B gz of ${TEXTURE_CODEC_JS_GZIP_CAP} B; combined player: ${measured.combinedBytes} B gz`);
       if (!ok) this.error(line);
     },
   };
@@ -224,7 +225,12 @@ function publicItems(root: string): LoadItem[] {
   // (`models/<pair>/<name>-<digest>.glb`), which reach this manifest through the bundle walk above — listing
   // the flat copies too both named files nothing requests and double-counted 26.9 MB of models.
   for (const rel of ['rider-remaster-source.json', 'rider-remaster-contract.json']) {
-    if (stat(rel)) items.push({ path: `./${rel}`, bytes: stat(rel), gz: gzipSync(fs.readFileSync(path.join(pub, rel))).length, phase: 'optional-rider', label: rel });
+    if (stat(rel)) items.push({ path: `./${rel}`, bytes: stat(rel), gz: gzipSync(fs.readFileSync(path.join(pub, rel))).length, phase: 'core', label: rel });
+  }
+  const selectedPath = path.join(pub, 'rider-remaster-source.json');
+  if (fs.existsSync(selectedPath)) {
+    const selected = JSON.parse(fs.readFileSync(selectedPath, 'utf8')) as { url: string; bytes: number };
+    items.push({ path: selected.url, bytes: selected.bytes, gz: selected.bytes, phase: 'models', label: 'Mustard remastered' });
   }
   return items;
 }
@@ -339,7 +345,7 @@ function loadManifest(id: string): Plugin[] {
         // warms every `other` item (src/main.ts). The retired tracks' dev chunk is `dev`: only a `?` dev URL fetches it.
         if (name.startsWith('assets/worldMap3dScene-') || /^assets\/sky-alpine-a-[\w-]+\.webp$/.test(name)) phase = 'worldmap';
         else if (name === 'model-catalog.json' || name.startsWith('assets/inbox-')) phase = 'other';
-        else if (SELECTED_RIDER_CHUNK.test(name)) phase = 'optional-rider';
+        else if (SELECTED_RIDER_CHUNK.test(name) || TEXTURE_CODEC_CHUNK.test(name)) phase = 'core';
         else if (DEV_CHUNK.test(name)) phase = 'dev';
         else if (CRASH_REPORT_CHUNK.test(name)) phase = 'telemetry';
         else if (/worklet/.test(name)) phase = 'audio-worklet';
@@ -353,9 +359,10 @@ function loadManifest(id: string): Plugin[] {
       const sum = (ph: LoadItem['phase']): number => items.filter((i) => i.phase === ph).reduce((n, i) => n + i.bytes, 0);
       this.info(`load manifest: core ${(sum('core') / 1024).toFixed(0)} KB, title ${(sum('title') / 1024).toFixed(0)} KB, menu ${(sum('menu') / 1024).toFixed(0)} KB, world ${(sum('world') / 1024).toFixed(0)} KB, models ${(sum('models') / 1024).toFixed(0)} KB`);
       const counted = items.filter(i => i.path.endsWith('.js') && i.phase !== 'dev' && i.phase !== 'telemetry');
-      const selectedGz = counted.filter(i => i.phase === 'optional-rider').reduce((n, i) => n + i.gz, 0);
-      const coreGz = counted.filter(i => i.phase !== 'optional-rider').reduce((n, i) => n + i.gz, 0);
-      this.emitFile({ type: 'asset', fileName: 'load-manifest.json', source: JSON.stringify({ generatedAt: new Date().toISOString(), items, playerJS: { ...playerBudget(coreGz, selectedGz), coreCapBytes: PLAYER_JS_GZIP_CAP, selectedCapBytes: SELECTED_RIDER_JS_GZIP_CAP } }) });
+      const selectedGz = counted.filter(i => SELECTED_RIDER_CHUNK.test(i.path.slice(2))).reduce((n, i) => n + i.gz, 0);
+      const textureCodecGz = counted.filter(i => TEXTURE_CODEC_CHUNK.test(i.path.slice(2))).reduce((n, i) => n + i.gz, 0);
+      const coreGz = counted.filter(i => !SELECTED_RIDER_CHUNK.test(i.path.slice(2)) && !TEXTURE_CODEC_CHUNK.test(i.path.slice(2))).reduce((n, i) => n + i.gz, 0);
+      this.emitFile({ type: 'asset', fileName: 'load-manifest.json', source: JSON.stringify({ generatedAt: new Date().toISOString(), items, playerJS: { ...playerBudget(coreGz, selectedGz, textureCodecGz), coreCapBytes: PLAYER_JS_GZIP_CAP, selectedCapBytes: SELECTED_RIDER_JS_GZIP_CAP, textureCodecBytes: textureCodecGz, textureCodecCapBytes: TEXTURE_CODEC_JS_GZIP_CAP } }) });
     },
     // Preview mirrors the production host: hashed assets are immutable, so the loader's streamed
     // fetch and the module script it inserts afterwards share one cached body.
@@ -548,7 +555,9 @@ function pwa(id: string): Plugin {
         .filter(([name]) => !name.endsWith('.map') && name !== 'sw.js')
         .map(([name, item]) => `${name}:${item.type === 'chunk' ? Buffer.byteLength(item.code) : Buffer.byteLength(item.source as string | Uint8Array)}`);
       const stamp = `${id}-${contentStamp([...emitted, ...assetRows])}`;
-      this.emitFile({ type: 'asset', fileName: 'sw.js', source: src.replaceAll('__BUILD_ID__', stamp).replaceAll('__ASSET_ID__', assets) });
+      const selected = JSON.parse(fs.readFileSync(path.join(root, 'public/rider-remaster-source.json'), 'utf8')) as { url: string };
+      if (!/^https:\/\/[^/]+\.public\.blob\.vercel-storage\.com\/rider-remaster\/[a-f0-9]{64}\/rider\.glb$/.test(selected.url)) throw new Error('Invalid selected rider cache pin');
+      this.emitFile({ type: 'asset', fileName: 'sw.js', source: src.replaceAll('__BUILD_ID__', stamp).replaceAll('__ASSET_ID__', assets).replaceAll('__SELECTED_RIDER_URL__', selected.url) });
       this.info(`sw.js emitted (rockhop-shell-${stamp}, rockhop-static-${assets}, rockhop-immutable)`);
     },
   };
@@ -673,6 +682,7 @@ export default defineConfig({
         },
         // The audio renderer and v1 physics are explicit review-only paths, never normal player boots.
         chunkFileNames: (c) => (c.facadeModuleId?.endsWith('/src/render/hero/selected/loader.mjs') ? 'assets/rider-selected-[hash].js'
+          : c.facadeModuleId?.endsWith('/src/render/hero/selected/textures.ts') ? 'assets/rider-textures-[hash].js'
           : c.facadeModuleId?.endsWith('/src/audio/offline.ts') ? 'assets/audio-offline-[hash].js'
           : c.facadeModuleId?.endsWith('/src/physics/webLegacy.ts') ? 'assets/legacy-physics-[hash].js' : 'assets/[name]-[hash].js'),
       },

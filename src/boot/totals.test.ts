@@ -3,8 +3,9 @@ import { describe, expect, it, vi } from 'vitest';
 import { PUBLIC_BYTES } from './plan.generated';
 import { BOOT_BYTE_TOTALS, HERO_FILES, bootByteTotals } from './totals';
 import { BOOT_IDS } from '../render/art/boot-set';
-import { declaredBootTotals, emptyBootTotals, emptyPackBytes, HERO_FILE_SET, offlinePackBytes, packMembership } from './asset-totals';
+import { declaredBootTotals, emptyBootTotals, emptyPackBytes, HERO_FILE_SET, HERO_BOOT_FILE_SET, SELECTED_HERO_FILES, offlinePackBytes, packMembership } from './asset-totals';
 import { HERO_FILES_BY_OUTFIT_CLASS } from '../render/hero/urls';
+import { SELECTED_RIDER_BYTES } from '../render/hero/selectedAsset';
 
 // Distinct fixture sizes make a missed or double-counted file observable.
 vi.mock('./plan.generated', async () => {
@@ -24,7 +25,7 @@ vi.mock('./plan.generated', async () => {
 describe('declared byte totals', () => {
   it('sum the generated table over every hero file and the boot art set, and are positive', () => {
     const table = PUBLIC_BYTES as Readonly<Record<string, number>>;
-    expect(BOOT_BYTE_TOTALS.heroModels).toBe(HERO_FILES.reduce((n, f) => n + table[f]!, 0));
+    expect(BOOT_BYTE_TOTALS.heroModels).toBe(HERO_FILES.reduce((n, f) => n + table[f]!, 0) + SELECTED_RIDER_BYTES);
     expect(BOOT_BYTE_TOTALS.bootArt).toBe(BOOT_IDS.reduce((n, id) => n + table[`art:${id}`]!, 0));
     expect(BOOT_BYTE_TOTALS.heroModels).toBeGreaterThan(0);
     expect(BOOT_BYTE_TOTALS.bootArt).toBeGreaterThan(0);
@@ -37,8 +38,9 @@ describe('declared byte totals', () => {
     expect(new Set(HERO_FILE_SET).size).toBe(14);
     const every = new Set(Object.values(HERO_FILES_BY_OUTFIT_CLASS).flatMap((c) => [...c.rookie, ...c.pro]));
     expect(new Set(HERO_FILE_SET)).toEqual(every);
-    expect(bootByteTotals().heroModels).toBe(821); // the fixture's fourteen sizes
+    expect(bootByteTotals().heroModels).toBe(821 + SELECTED_RIDER_BYTES); // fourteen local files + one shared selected source
     expect(BOOT_BYTE_TOTALS).toEqual(bootByteTotals());
+    expect(HERO_BOOT_FILE_SET).toEqual([...HERO_FILE_SET, ...SELECTED_HERO_FILES]);
   });
 
   // Ask 59: the pack is bucketed by ONE rule, shared with the runtime list in `offline-pack.ts`. A device
@@ -76,6 +78,8 @@ describe('declared byte totals', () => {
   it('counts course models and maps up front without counting heroes or source records twice', () => {
     expect(offlinePackBytes([
       ['models/bike-rookie.glb', 900],
+      ['models/rider-street-remastered.glb', SELECTED_RIDER_BYTES],
+      ['models/rider-street-remastered-lod.glb', SELECTED_RIDER_BYTES],
       ['models/c1-harbor-tug.glb', 100],
       ['models/c1-harbor-tug-lod.glb', 40],
       ['models/course-kits/forest/bark.phone.webp', 20],

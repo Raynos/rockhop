@@ -9,13 +9,12 @@
  */
 import type { DeclaredBootTotals } from './asset-totals';
 import { wantsHiRes } from './tier';
-import { normalizeRiderOutfit } from '../core/riderPresets';
 import { SELECTED_RIDER_BYTES } from '../render/hero/selectedAsset';
 
 export function selectedBootTotals(totals: DeclaredBootTotals): { heroModels: number; bootArt: number; offlinePack: number } {
   // A spread, not three named fields: `DeclaredBootTotals` IS the byte sources, and the inline loader pays
   // for every character of the longhand.
-  let outfit: string | null = null;
-  try { outfit = normalizeRiderOutfit(new URLSearchParams(location.search).get('outfit')) ?? localStorage.getItem('rockhop.riderOutfit'); } catch { /* blocked storage uses the default */ }
-  return { ...totals, heroModels: totals.heroModels + (outfit === 'street-remastered' ? SELECTED_RIDER_BYTES : 0), offlinePack: totals.offlinePack[wantsHiRes() ? '2x' : '1x'] };
+  // The remaster's full/LOD logical names share one document and one download.
+  // Every outfit is ready before the menu, including the first Garage selection.
+  return { ...totals, heroModels: totals.heroModels + SELECTED_RIDER_BYTES, offlinePack: totals.offlinePack[wantsHiRes() ? '2x' : '1x'] };
 }

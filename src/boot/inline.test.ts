@@ -4,8 +4,9 @@ import { JSDOM } from 'jsdom';
 import { expect, it } from 'vitest';
 import { buildInline } from '../../vite.config';
 import type { BootWindow } from './handoff';
+import { SELECTED_RIDER_BYTES } from '../render/hero/selectedAsset';
 
-it('starts a cold saved-sixth boot from inert metadata with its declared model bytes', async () => {
+it('starts a cold default boot from inert metadata with every Garage model declared', async () => {
   const totals = { heroModels: 100, bootArt: 20, offlinePack: { '1x': 30, '2x': 40 } };
   const code = await buildInline(process.cwd(), [], totals, true, 'coldboot');
   expect(Buffer.byteLength(code)).toBeLessThanOrEqual(8192);
@@ -13,7 +14,6 @@ it('starts a cold saved-sixth boot from inert metadata with its declared model b
   const data = JSON.stringify({ c: [], t: totals, b: 'coldboot' });
   const html = raw.replace('<script id="boot"></script>', `<script id="boot-data" type="application/json">${data}</script>`);
   const dom = new JSDOM(html, { url: 'https://example.test/?sw=0', runScripts: 'outside-only' });
-  dom.window.localStorage.setItem('rockhop.riderOutfit', 'street-remastered');
   Object.defineProperty(dom.window, 'devicePixelRatio', { value: 1 });
   Object.defineProperty(dom.window, 'innerWidth', { value: 1024 });
   new vm.Script(code).runInContext(dom.getInternalVMContext());
@@ -22,7 +22,7 @@ it('starts a cold saved-sixth boot from inert metadata with its declared model b
   const handoff = bootWindow.__boot;
   expect(handoff).toBeDefined();
   const plan = await handoff!.take();
-  expect(plan.view.bytesTotal).toBe(100 + 20 + 30 + 358409072);
+  expect(plan.view.bytesTotal).toBe(100 + 20 + 30 + SELECTED_RIDER_BYTES);
   expect(plan.view.rows.find(row => row.key === 'core')?.state).toBe('ok');
   expect(dom.window.document.querySelector('.build')?.textContent).toBe('build coldboot');
   expect(dom.window.document.querySelector('script[type="module"]')?.getAttribute('src')).toBe('/src/main.ts');

@@ -6,7 +6,7 @@ const load = vi.hoisted(() => vi.fn());
 vi.mock('./selected/loader.mjs', () => ({ loadSelectedRiderClass: load }));
 beforeEach(() => { vi.resetModules(); load.mockReset(); });
 
-it('shares optional native loading and permits retry after a transient failure', async () => {
+it('shares native loading and permits retry after a transient failure', async () => {
   class NativeRider { readonly native = true; }
   load.mockRejectedValueOnce(new Error('transient')).mockResolvedValue(NativeRider);
   const module = await import('./selectedDriver');
@@ -21,10 +21,13 @@ it('shares optional native loading and permits retry after a transient failure',
 it('ships the selected 75-joint contract with separate left/right clothes and fingers', () => {
   const contract = JSON.parse(fs.readFileSync('public/rider-remaster-contract.json', 'utf8')) as {
     sourceSHA256: string; metadataSHA256: string;
+    selectedRiderSource: { originalMasterSHA256: string; rigContractSHA256: string };
     specification: { jointNames: Record<string, string>; meshNames: Record<string, string>; hands: Record<string, { digits: Record<string, number[]> }> };
   };
   expect(contract.sourceSHA256).toBe(SELECTED_RIDER_ASSET.sha256);
-  expect(contract.metadataSHA256).toBe('6fb6e726ee5f6b6c3dc3e378354a11c086a4fd5e8345169e26a80234f5cbc996');
+  expect(contract.metadataSHA256).toBe(SELECTED_RIDER_ASSET.contractSHA256);
+  expect(contract.selectedRiderSource.originalMasterSHA256).toBe('127e316a8ff7910a4918b63f83e086e4e658062f102c73f17d0ee2f956750649');
+  expect(contract.selectedRiderSource.rigContractSHA256).toBe('6fb6e726ee5f6b6c3dc3e378354a11c086a4fd5e8345169e26a80234f5cbc996');
   expect(Object.keys(contract.specification.jointNames)).toHaveLength(75);
   const roles = contract.specification.meshNames;
   for (const part of ['Glove', 'Boot']) {

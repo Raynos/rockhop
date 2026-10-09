@@ -8,7 +8,7 @@
  *   ?physics=v1|v2  explicit solver review; v1 is fetched only for that URL, default is v2
  *   ?audio=0        NullAudio (the hook then has no renderOffline)
  *   ?ghost=1        run the PB ghost world in harness mode too (off by default there: one world per µs/tick)
- *   ?rider=gltf|proc, ?bike=gltf|proc   rider / bike model (default gltf; a stored settings choice otherwise)
+ *   ?bike=gltf|proc bike model (default gltf; stored choice otherwise)
  *   ?outfit=street|race   cosmetic rider outfit (default street; stored garage choice otherwise)
  *   ?touchdebug=1   overlay showing active touch pointers and the live InputFrame
  *   ?track=<id>     start straight into a track (skips the menu)
@@ -88,7 +88,7 @@ export interface ModelChoices {
 function modelChoices(params: URLSearchParams): ModelChoices {
   const pick = (v: string | null, stored: ModelChoice): ModelChoice => (v === 'gltf' || v === 'proc' ? v : stored);
   return {
-    riderModel: pick(params.get('rider'), loadModelChoice('rider')),
+    riderModel: 'gltf',
     bikeModel: pick(params.get('bike'), loadModelChoice('bike')),
   };
 }
@@ -105,7 +105,7 @@ interface HeroStart { riderOutfit: RiderOutfit; bikeClass: BikeClass; quality: Q
 
 function makeRenderer(parent: HTMLElement, harness: boolean, models: ModelChoices, start: HeroStart, boot?: RendererBootHooks, powerPreference?: WebGLPowerPreference): { renderer: GameRenderer; kind: string } {
   const m = renderMod as AnyModule;
-  // riderModel / bikeModel: 'proc' | 'gltf' — the render owner reads them; unknown keys are ignored today.
+  // The rider uses its authored GLB; the bike also accepts the saved model choice.
   // riderOutfit / bikeClass / quality / deviceClass: what the first frame draws (src/game/startTier.ts); every hero
   // file is fetched before `ready` whatever they are (ask 50), so a later outfit / class / tier is a resident swap.
   const opts = { ...(harness ? { pixelRatio: 1 } : {}), preserveDrawingBuffer: harness, ...models, ...start, ...(boot ?? {}), ...(powerPreference ? { powerPreference } : {}) };

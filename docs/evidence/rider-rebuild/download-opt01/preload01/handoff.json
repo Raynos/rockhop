@@ -1,0 +1,135 @@
+{
+  "schemaVersion": 1,
+  "recordedAtUTC": "2026-10-09T17:36:09.063184+00:00",
+  "headAtInspection": "36cd023bac44280c744c661828dca15dd6f3eefd",
+  "status": "Source and unit-test handoff; parent integration, moving and physical-phone review pending",
+  "ownedPaths": [
+    "src/boot/outfit.ts",
+    "src/boot/outfit.test.ts",
+    "src/boot/asset-totals.ts",
+    "src/boot/totals.test.ts",
+    "src/boot/inline.test.ts",
+    "src/render/index.ts",
+    "src/render/bikeLivery.test.ts",
+    "src/render/hero/gltf.ts",
+    "src/render/hero/gltfLoading.test.ts",
+    "src/render/hero/urls.test.ts",
+    "src/render/rider/riderModel.ts",
+    "src/render/rider/loadingRider.ts",
+    "src/pwa/sw.js",
+    "src/pwa/selected-cache.test.ts"
+  ],
+  "ownedFileSHA256": {
+    "src/boot/outfit.ts": "6c1db45f71ed9651063b5323ddbd344bdab9882b9a8f4246ded5ee08d8ad8eb3",
+    "src/boot/outfit.test.ts": "e179a772c46cffb68d60ce82211a6c937dd202fffa3c17055f3748d1d5557919",
+    "src/boot/asset-totals.ts": "0333b288f32524785d287e7d3bcab03c2a1e67bcc0a7f05020c9260a4d916a84",
+    "src/boot/totals.test.ts": "82266c2bdb410f16e9567c83ab780b6ef8172d489ee58fc6e109ffc5d9f7b35a",
+    "src/boot/inline.test.ts": "abc37a59d1aeb57cbd14acf95de5f02a6560ea4087ff8cd9ecb9964eb8c4ca4e",
+    "src/render/index.ts": "618833e68a2e4dee774b3b2e947b57c6699880e9265193a8213d1fbf7dd03cf4",
+    "src/render/bikeLivery.test.ts": "0f9a8765c49858b7fc66b4e434b5854911d4833eb8e270d661033ea422c81349",
+    "src/render/hero/gltf.ts": "d0b699359ec9ea99226a7300ecb46d75f0d88af4c2b1b21542a7d328b8a95ce2",
+    "src/render/hero/gltfLoading.test.ts": "5125c223a55471b9f37e488c33a6629cfb35787988fd444aea8560aa30b1b582",
+    "src/render/hero/urls.test.ts": "1de2472b54bf7ceff35ac78a58ea263de9b891607780d5a05ea4e41b9a99e1be",
+    "src/render/rider/riderModel.ts": "91bffced596e6d582b2b024619c82d57a5cbc6684596de2b64e234bdf63d2b0d",
+    "src/render/rider/loadingRider.ts": "b4dc0eb63a17dfbffeb37fced1cfd2a7b3cfda1acf8d315b79f41e64ecf5e982",
+    "src/pwa/sw.js": "a458b63736bb4218f63c23d483ce1900aade492b42fd465122a4ff55a4103289",
+    "src/pwa/selected-cache.test.ts": "083f7a08acbf284bffacb1bb67de8ac30d1fb06d8b3e3bacf07738572028ac1c"
+  },
+  "validation": [
+    {
+      "command": "pnpm exec vitest run src/boot/outfit.test.ts src/boot/totals.test.ts src/render/hero/gltfLoading.test.ts src/render/bikeLivery.test.ts src/render/hero/urls.test.ts src/boot/inline.test.ts",
+      "result": "pass",
+      "files": 6,
+      "tests": 24
+    },
+    {
+      "command": "pnpm typecheck",
+      "result": "pass"
+    },
+    {
+      "command": "pnpm exec oxlint src/boot/outfit.ts src/boot/outfit.test.ts src/boot/asset-totals.ts src/boot/totals.test.ts src/boot/inline.test.ts src/render/index.ts src/render/bikeLivery.test.ts src/render/hero/gltf.ts src/render/hero/gltfLoading.test.ts src/render/hero/urls.test.ts src/render/rider/riderModel.ts src/render/rider/loadingRider.ts",
+      "result": "pass"
+    },
+    {
+      "command": "pnpm exec vitest run src/render/bikeLivery.test.ts src/render/hero/gltfLoading.test.ts",
+      "result": "pass",
+      "files": 2,
+      "tests": 11
+    },
+    {
+      "command": "node --import tsx --input-type=module (read-only JSDOM assertion using all AVAILABLE_RIDER_PRESETS, both saved and URL overrides, and LoadingRider.root.traverse)",
+      "result": "pass",
+      "savedAndUrlOutfitChecks": 12,
+      "selectedCountPerBoot": 1,
+      "loadingHolderMeshes": 0,
+      "loadingHolderTriangles": 0,
+      "limits": "The first custom assertion omitted devicePixelRatio/innerWidth globals and failed due to its Node fixture. The rerun installed all browser globals and passed. This is a declaration/lifecycle assertion, not network/browser evidence."
+    },
+    {
+      "command": "pnpm exec vitest run src/pwa/selected-cache.test.ts harness/audio-remaster/cache.test.ts",
+      "result": "pass",
+      "files": 2,
+      "tests": 8
+    },
+    {
+      "command": "pnpm exec oxlint src/pwa/selected-cache.test.ts src/pwa/sw.js",
+      "result": "pass"
+    },
+    {
+      "command": "node --check src/pwa/sw.js",
+      "result": "pass"
+    },
+    {
+      "command": "pnpm typecheck",
+      "result": "pass",
+      "phase": "after selected Cache Storage repair"
+    },
+    {
+      "command": "git diff --check -- src/pwa/sw.js src/pwa/selected-cache.test.ts",
+      "result": "pass"
+    },
+    {
+      "command": "pnpm typecheck",
+      "result": "initial fixture failed; corrected activation event fixture, rerun passed",
+      "phase": "selected-cache test typing"
+    },
+    {
+      "command": "pnpm exec vitest run src/pwa/selected-cache.test.ts harness/audio-remaster/cache.test.ts",
+      "result": "pass after fixture correction",
+      "files": 2,
+      "tests": 8
+    }
+  ],
+  "findings": [
+    "Every outfit declares one selected-source download in heroModels; original fourteen local hero assets remain unchanged.",
+    "Both remaster logical detail names resolve to one cached GLTF document. Selected texture setup, scene preparation and native driver readiness resolve before the document can enter the resident pool.",
+    "Normal loading-screen dismissal requires all boot steps, including heroPending, required-doc guards, resident instances, shaders, uploads and warm frames. Failed original or selected documents keep loader/error retry visible.",
+    "Procedural RiderModel geometry and blue helmet were deleted. riderModel.ts retains shared IK math; LoadingRider is empty. Main and renderer force glTF rider even with a stale proc preference/query.",
+    "Native SkeletonUtils scene cloning shares BufferGeometry and texture objects; each instance clones bones/skeletons/material objects. Full/LOD aliases share the same pooled instance.",
+    "Follow-up repair: actual service-worker VM tests now prove exact pinned selected source caches in rockhop-immutable, an event.waitUntil holds the complete write alive, the cached source answers with fetch throwing offline, stale/unrelated/invalid-pin cross-origin requests remain untouched, unsuccessful source responses permit explicit retry, and only prior selected source versions on the pinned host prune."
+  ],
+  "limits": [
+    "No browser, build or commit ran in this worker. No physical iPhone, offline reboot, actual draw or memory high-water pass is claimed.",
+    "At inspection the selected source still pointed to the original external 358409072-byte Blob. The parent owns candidate promotion and source contract updates.",
+    "Harness deliberately removes loader immediately and may render empty scene before calling whenReady; no procedural helmet artwork remains. Normal player path stays covered by loader.",
+    "Native cloning avoids geometry/texture duplication per instance, but decoded attributes and texture payloads remain large. Cached GLTF objects retain their parser/BIN buffers and decoded arrays; mirror/ghost add bones, skeletons and material objects. Global document cache remains resident for the page.",
+    "The old photo cannot identify which network request failed. Prior code allowed either stored/query proc preference or failed original GLB to expose procedural helmet under an outfit label.",
+    "Parent Vite must replace __SELECTED_RIDER_URL__ with the current immutable selected public URL. Raw unbuilt source deliberately ignores an unresolved/invalid pin. Real browser offline boot, storage quota behavior and physical-device memory remain unqualified."
+  ],
+  "memoryReferenceReceipts": [
+    {
+      "path": "docs/evidence/rider-rebuild/download-opt01/textures01/baseline-summary.json",
+      "status": "unaccepted historical candidate",
+      "gpuTextureMipBytesASTCOrBC7": 204210496,
+      "gpuTextureMipBytesRGBA": 816840688,
+      "note": "Do not treat these historical transcode numbers as the promoted/current asset memory measurement."
+    },
+    {
+      "path": "docs/evidence/rider-rebuild/download-opt01/geometry02/breakdown.json",
+      "status": "unaccepted historical candidate",
+      "originalDecodedAccessorBytes": 301293272,
+      "runtimeDecodedAccessorBytes": 245280140,
+      "note": "Compression reduces wire bytes; it does not remove decoded vertex memory. Accepted-candidate decoded footprint must be measured separately."
+    }
+  ]
+}

@@ -7,14 +7,14 @@ import { MODEL_ASSETS } from './models.generated';
 import { bikeUrl, HERO, HERO_FILES_BY_OUTFIT, HERO_FILES_BY_OUTFIT_CLASS, heroFiles, heroPair, lodUrl, riderUrl, modelAssetUrl, modelAssetBytes } from './urls';
 
 describe('hero file table', () => {
-  it('offers selected remaster sixth without adding its optional download to boot', () => {
+  it('offers selected remaster sixth with one shared source for both details', () => {
     expect(AVAILABLE_RIDER_PRESETS).toHaveLength(6);
     expect(AVAILABLE_RIDER_PRESETS[5]?.id).toBe('street-remastered');
     expect(DEFAULT_RIDER_OUTFIT).toBe('street-mustard');
     const files = heroFiles('street-remastered', 'rookie');
     expect(modelAssetUrl(files[2])).toBe(SELECTED_RIDER_ASSET.url);
     expect(modelAssetUrl(files[3])).toBe(SELECTED_RIDER_ASSET.url);
-    expect(modelAssetBytes(files[2])).toBe(358409072);
+    expect(modelAssetBytes(files[2])).toBe(SELECTED_RIDER_ASSET.bytes);
     expect(Object.keys(HERO_FILES_BY_OUTFIT)).toHaveLength(5);
     expect(modelAssetUrl(files[2])).toBe(modelAssetUrl(files[3]));
   });

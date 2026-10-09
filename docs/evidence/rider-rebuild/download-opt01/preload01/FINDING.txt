@@ -1,0 +1,13 @@
+Finding: Every Garage rider now loads during the initial loader. The selected full/LOD names share one request, parsed document and pooled native instance. Mandatory document failure keeps startup behind a visible retry. The stale procedural rider and blue helmet mesh source were removed; shared glTF IK math remains.
+
+Validation: Six focused test files / 24 tests passed, typecheck passed, focused lint passed, final renderer/GLTF rerun 11 tests passed. Read-only JSDOM declarations passed for all six saved outfits and six URL overrides; LoadingRider contains zero meshes and zero triangles. See handoff.json for commands and owned paths.
+
+Integration review: Opaque #loader covers normal menu/direct-track startup until plan.done() after hero readiness, instance construction and GPU warm-up. Both main and renderer force GLTF rider, so stale proc state cannot draw the removed helmet. Harness intentionally removes loader before compose; it still must await whenReady before captures.
+
+Cache limit: At this inspection the selected GLB remains external and the service worker ignores cross-origin fetches. Mandatory external source therefore has no Cache Storage guarantee; report sent to parent to add pinned cache-first handling before claiming offline readiness. Contract and native JS are now core-streamed by parent Vite changes.
+
+Memory limit: Native scene clones share geometry and textures; full/LOD shares a resident instance. Bones, skeletons, cloned materials, decoded vertex arrays, image/transcode data and cached GLTF parser/BIN body remain resident. Historical candidate receipts show hundreds of MB of decoded vertex/texture data; they are not an accepted-candidate phone memory measurement.
+
+Limits: No browser/build/commit or physical device qualification by this worker. Source promotion, moving parity, PWA repair, real memory high-water and device judgments belong to parent.
+
+Follow-up Cache Storage repair: Parent-authorized src/pwa/sw.js and src/pwa/selected-cache.test.ts now cache only the validated exact HTTPS selected Blob pin. Successful CORS responses stream immediately while fetch-event.waitUntil keeps the cache write alive; cache hits require no fetch, including with offline fetch failure. Activation prunes prior source versions only on the pinned Blob host, preserving other sources with or without a manifest. Five selected cases and three existing audio cases pass; focused lint, worker syntax, typecheck and diff whitespace checks pass. Parent owns Vite template replacement, candidate promotion and actual browser/offline device evidence.

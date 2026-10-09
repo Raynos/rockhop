@@ -15,7 +15,9 @@ import type { ByteProgress, StepProgress, StepRunner } from '../boot/plan';
 import type { PrepareStep } from '../boot/steps';
 import { isRiderLodEnabled, lodChoice, setRiderLodEnabled } from './hero/lod';
 import { DEFAULT_RIDER_OUTFIT, normalizeRiderOutfit } from '../core/riderPresets';
-import { HERO_FILES_BY_OUTFIT_CLASS, heroPair, type HeroDetail } from './hero/urls';
+import { heroPair, type HeroDetail } from './hero/urls';
+import { HERO_BOOT_FILE_SET, SELECTED_HERO_FILES } from '../boot/asset-totals';
+import { setHeroTextureRenderer } from './hero/selectedTextures';
 import { GltfBike } from './hero/gltfBike';
 import { GltfRider } from './hero/gltfRider';
 import type { GLTF } from 'three/examples/jsm/loaders/GLTFLoader.js';
@@ -29,7 +31,7 @@ import { MaterialLibrary } from './materials/library';
 import { Emitters } from './particles/emitters';
 import { PostChain, tierPixelRatio, type PassWrite } from './post/chain';
 import { garagePixelRatio } from './garageQuality';
-import { RiderModel } from './rider/riderModel';
+import { LoadingRider } from './rider/loadingRider';
 import { SKY_ID, buildBiomeKit } from './world/biomeKit';
 import type { CourseAssetOwner } from './world/courseAssets';
 import { ZONE_TIME } from './world/zones/zoneKit';
@@ -108,9 +110,8 @@ export interface ThreeRendererOptions {
   powerPreference?: WebGLPowerPreference;
   quality?: QualityTier;
   /**
-   * Hero model choice (`?rider=proc&bike=proc` to force the procedural kit). Round 10: the
-   * default is the glTF hero; the procedural kit stays as the load-failure fallback (a glTF
-   * that fails to load resolves null and `applyModels` keeps the procedural meshes).
+   * Authored riders are required. The bike accepts its saved model choice.
+   * A failed required hero keeps the loading screen and explicit retry visible.
    */
   riderModel?: ModelChoice;
   bikeModel?: ModelChoice;
@@ -140,7 +141,7 @@ export class WebGL2ContextUnavailableError extends Error {
   }
 }
 
-type HeroRider = RiderModel | GltfRider;
+type HeroRider = LoadingRider | GltfRider;
 
 /**
  * Ask 52: the garage stage's self-light on the hero (`applyHeroStageLift`), per channel — cool, because the set's
@@ -152,7 +153,6 @@ type HeroRider = RiderModel | GltfRider;
  */
 const HERO_STAGE_LIFT = [0.3, 0.4, 0.7] as const;
 /** Every hero file (ask 50: all resident), in a stable order. */
-const HERO_FILE_SET: readonly string[] = [...new Set(Object.values(HERO_FILES_BY_OUTFIT_CLASS).flatMap((c) => [...c.rookie, ...c.pro]))];
 
 /** World meshes whose shadow roles the tier rules manage (round 13): props, deck, obstacles, ribbons. */
 const WORLD_MESH = /^(props:|deck:|obstacles:|ribbon:)/;
@@ -351,7 +351,7 @@ export class ThreeRenderer implements GameRenderer {
   private readonly rig = new CameraRig();
   private bikeRef: HeroBike | null = null;
   private riderRef: HeroRider | null = null;
-  private models: ModelChoices = { riderModel: 'proc', bikeModel: 'proc' };
+  private models: ModelChoices = { riderModel: 'gltf', bikeModel: 'proc' };
   private readonly nearestScratch: number[] = [];
   private bikeClass: BikeClass = 'rookie';
   private riderOutfit: RiderOutfit = DEFAULT_RIDER_OUTFIT;
@@ -362,9 +362,8 @@ export class ThreeRenderer implements GameRenderer {
   readonly heroSwaps: { at: number; what: string; buildMs: number; firstFrameMs: number; programsAdded: number; texturesAdded: number }[] = [];
   private swapPendingFrame: { at: number; what: string; buildMs: number } | null = null;
   /**
-   * Ask 50: every hero document — five outfits and two classes, authored and LOD — parsed before `ready` (the boot bar
-   * declares all fourteen files), by logical URL. A missing file leaves its slot empty (the other detail, else the
-   * procedural kit, draws) and the next `setModels` retries it.
+   * Every hero document — six outfits and two classes, authored and LOD — parsed before `ready`, by logical URL.
+   * The remaster's two names share one document. A missing file fails startup visibly; the next `setModels` retries it.
    */
   private readonly heroDocs = new Map<string, GLTF>();
   private readonly heroDocUrl = new Map<GLTF, string>();
@@ -551,6 +550,7 @@ export class ThreeRenderer implements GameRenderer {
     this.canvas.addEventListener('webglcontextrestored', this.onContextRestored);
     this.contextKind = gl instanceof WebGL2RenderingContext ? 'webgl2' : 'webgl';
     this.rendererString = describeRenderer(gl);
+    setHeroTextureRenderer(this.renderer);
 
     this.lib = new MaterialLibrary(0x7a1a15);
     this.scene.add(this.emitters.group);
@@ -565,7 +565,7 @@ export class ThreeRenderer implements GameRenderer {
       if (options.deviceClass) this.deviceClass = options.deviceClass;
       const riderModel: ModelChoice = options.riderModel ?? 'gltf';
       const bikeModel: ModelChoice = options.bikeModel ?? 'gltf';
-      if (riderModel !== 'proc' || bikeModel === 'gltf') this.setModels({ riderModel, bikeModel }, options.heroBytes);
+      this.setModels({ riderModel, bikeModel }, options.heroBytes);
     }
     // The boot art set (showcase plate, container skins, banners, crowd) starts now, under every boot step,
     // its bytes counted by the library's own read loop; `prepare()`'s `bootArt` step awaits it.
@@ -636,7 +636,7 @@ export class ThreeRenderer implements GameRenderer {
     this.riderRef = r;
   }
 
-  /** Build the procedural hero once (≈ 30 k + 20 k tris of lathe/tube geometry). */
+  /** Build the bike lifecycle and an empty rider holder behind the loading screen. */
   private ensureHero(): void {
     if (this.bikeRef && this.riderRef) return;
     if (!this.bikeRef) {
@@ -646,7 +646,7 @@ export class ThreeRenderer implements GameRenderer {
       if (this.track) this.bindGround(this.track);
     }
     if (!this.riderRef) {
-      this.riderRef = new RiderModel(this.lib);
+      this.riderRef = new LoadingRider();
       this.riderRef.attach(this.bikeRef);
       this.scene.add(this.riderRef.root);
     }
@@ -687,11 +687,9 @@ export class ThreeRenderer implements GameRenderer {
   setModels(m: ModelChoices, bytes?: ByteProgress): void {
     if (this.disposed) return;
     this.heroLoadError = undefined;
-    this.models = { riderModel: m.riderModel === 'gltf' ? 'gltf' : 'proc', bikeModel: m.bikeModel === 'gltf' ? 'gltf' : 'proc' };
+    this.models = { riderModel: 'gltf', bikeModel: m.bikeModel === 'gltf' ? 'gltf' : 'proc' };
     const want = this.models;
-    const inventory = this.riderOutfit === 'street-remastered'
-      ? [...HERO_FILE_SET, 'models/rider-street-remastered.glb', 'models/rider-street-remastered-lod.glb'] : HERO_FILE_SET;
-    const files = inventory.filter((f) => !this.heroDocs.has(f) && (/\/bike-/.test(f) ? want.bikeModel === 'gltf' : want.riderModel === 'gltf'));
+    const files = HERO_BOOT_FILE_SET.filter((f) => !this.heroDocs.has(f));
     this.heroLoading++;
     const run = async (): Promise<void> => {
       await Promise.all(files.map((f) => loadGltf(f, false, bytes).then((g) => {
@@ -702,14 +700,19 @@ export class ThreeRenderer implements GameRenderer {
       })));
       // A superseded request (a later model choice) leaves the swap to that request.
       if (want !== this.models) return;
-      if (this.riderOutfit === 'street-remastered' && want.riderModel === 'gltf' && !this.riderDoc()) {
-        if (!this.riderDocumentOutfit) this.heroLoadError = new Error('Remaster load failed. Retry.');
+      if (want.riderModel === 'gltf' && !SELECTED_HERO_FILES.some((f) => this.heroDocs.has(f))) {
+        this.heroLoadError = new Error('Remaster load failed. Retry.');
+        return;
+      }
+      const missing = HERO_BOOT_FILE_SET.find((f) => !this.heroDocs.has(f));
+      if (missing) {
+        this.heroLoadError = new Error(`Hero model load failed: ${missing}. Retry.`);
         return;
       }
       this.applyModels();
     };
     this.heroPending = run()
-      .catch((e: Error) => { if (!this.riderDocumentOutfit) this.heroLoadError = e; })
+      .catch((e: Error) => { if (want === this.models) this.heroLoadError = e; })
       .then(() => {
         this.heroLoading--;
       });
@@ -722,7 +725,7 @@ export class ThreeRenderer implements GameRenderer {
     outfit = canonical;
     const previous = this.riderDocumentOutfit ?? this.riderOutfit;
     this.riderOutfit = outfit;
-    // Choosing clothing returns to the glTF rider that supplies the outfits (the procedural kit has none).
+    // The outfit selects its resident authored rider document.
     this.setModels({ ...this.models, riderModel: 'gltf' });
     let pending: Promise<void>;
     do {
@@ -805,7 +808,7 @@ export class ThreeRenderer implements GameRenderer {
 
   private freshRider(choice: ModelChoice): HeroRider {
     const doc = this.riderDoc();
-    if (choice !== 'gltf' || !doc) return new RiderModel(this.lib);
+    if (choice !== 'gltf' || !doc) return new LoadingRider();
     const rider = new GltfRider(doc, this.lib);
     rider.setStage(this.stageOn); // ask 51: a rider built under the garage stage (outfit / tier swap) plays the stage clip
     return rider;
@@ -849,7 +852,7 @@ export class ThreeRenderer implements GameRenderer {
     if (this.kindOfRider(this.rider) !== wantRider || riderStale) {
       this.sceneEpoch++;
       const old = this.rider;
-      const next: HeroRider = wantRider === 'gltf' ? this.pooled(riderDoc!, 'rider') : new RiderModel(this.lib);
+      const next: HeroRider = wantRider === 'gltf' ? this.pooled(riderDoc!, 'rider') : new LoadingRider();
       old.detach();
       this.scene.remove(old.root);
       next.attach(this.bike);
@@ -918,7 +921,7 @@ export class ThreeRenderer implements GameRenderer {
   /** One scene-only frame per resident hero pair that is not the drawn one (the shadow-depth variants and the driver's first draw). */
   private async warmHeroFrames(report: (done: number, total: number) => void): Promise<void> {
     const bikeNow = this.bike, riderNow = this.rider;
-    if (!(bikeNow instanceof GltfBike) || !(riderNow instanceof GltfRider)) return;
+    if (!(riderNow instanceof GltfRider)) return;
     const bikes = [...this.heroPool.values()].filter((i): i is GltfBike => i instanceof GltfBike);
     const riders = [...this.heroPool.values()].filter((i): i is GltfRider => i instanceof GltfRider);
     const pairs: [GltfBike, GltfRider][] = [];
@@ -958,7 +961,7 @@ export class ThreeRenderer implements GameRenderer {
    * least one lit frame has been drawn — the frame after that is the final look.
    */
   get ready(): boolean {
-    return this.lib.hasTextures && this.art.settled && this.art.requested(this.artIds) && this.heroLoading === 0 && this.frameCount > 0;
+    return !this.heroLoadError && this.lib.hasTextures && this.art.settled && this.art.requested(this.artIds) && this.heroLoading === 0 && this.frameCount > 0;
   }
 
   /**
@@ -971,18 +974,19 @@ export class ThreeRenderer implements GameRenderer {
     if (this.contextUnavailable) return this.restored.then(() => this.whenReady());
     const req = this.artRequest;
     const entry = this.entryPending;
-    return Promise.all([this.art.whenSettled, req, this.heroPending, entry, this.retirement.whenIdle()]).then(() => {
+    const heroes = this.heroPending;
+    return Promise.all([this.art.whenSettled, req, heroes, entry, this.retirement.whenIdle()]).then(() => {
       if (this.heroLoadError) throw this.heroLoadError;
       if (this.disposal) return this.disposal;
       if (this.contextUnavailable) return this.whenReady();
-      if (this.artRequest !== req || this.entryPending !== entry) return this.whenReady();
+      if (this.artRequest !== req || this.entryPending !== entry || this.heroPending !== heroes) return this.whenReady();
       // Round 10: the settle callback only rebuilds an undrawn world; do the same here so a
       // caller that awaits `whenReady()` right after `setTrack` gets the art-complete world
       // even when the settle fired before `setTrack` finished wiring it.
       this.rebuildIfArtLanded();
       return this.retirement.whenIdle().then(() => {
         if (this.disposal) return this.disposal;
-        if (this.artRequest !== req || this.entryPending !== entry) return this.whenReady();
+        if (this.artRequest !== req || this.entryPending !== entry || this.heroPending !== heroes) return this.whenReady();
         return undefined;
       });
     });
@@ -2316,7 +2320,7 @@ export class ThreeRenderer implements GameRenderer {
       rtPasses: writes.map((w) => `${w.name} ${w.width}×${w.height}`).join(' | '),
       shadowMap,
       heroTris: (this.bikeRef?.triangles ?? 0) + (this.riderRef?.triangles ?? 0),
-      heroDoc: `${this.bikeRef instanceof GltfBike ? (this.isLodDoc(this.bikeRef.source) ? 'bike-lod' : 'bike') : 'bike-proc'} ${this.riderRef instanceof GltfRider ? (this.isLodDoc(this.riderRef.source) ? 'rider-lod' : 'rider') : 'rider-proc'}`,
+      heroDoc: `${this.bikeRef instanceof GltfBike ? (this.isLodDoc(this.bikeRef.source) ? 'bike-lod' : 'bike') : 'bike-proc'} ${this.riderRef instanceof GltfRider ? (this.isLodDoc(this.riderRef.source) ? 'rider-lod' : 'rider') : 'rider-loading'}`,
       riderOutfit: this.riderRef && this.kindOfRider(this.riderRef) === 'gltf' ? this.riderDocumentOutfit : null,
       riderMaterialVariant: null, // retired with the palette family (round 5); the outfit is the file — kept for the outfit e2e's shape
       heroShadow: this.lightingRig?.isHeroShadow ? 'hero-only' : 'world',
