@@ -1,0 +1,332 @@
+{
+  "accepted": false,
+  "status": "UNACCEPTED_SELECTED_GRIP_PLAYED_REVIEW",
+  "mode": "garage",
+  "bike": "rookie",
+  "source": {
+    "path": "/Users/raynos/projects/games/rockhop/harness/out/rider-rebuild/mobile-textures02/combined01/rider.glb",
+    "sha256": "585ae314e2b354768a1385e5a85828c142d542b47f8d9fe948f46c7478c112ef",
+    "bytes": 74833728
+  },
+  "contract": {
+    "path": "/Users/raynos/projects/games/rockhop/harness/out/rider-rebuild/mobile-delivery02/stage04/rider-contract.json",
+    "sha256": "36bc9a83454f6e885bb0a5d6d90b76d2bbe6658d93144d2da55ce068f627d4ff"
+  },
+  "runtimeMetadata": {
+    "path": "/Users/raynos/projects/games/rockhop/harness/out/rider-rebuild/mobile-delivery02/build02/rider-remaster-contract.json",
+    "sha256": "50b9bad4b983e24e9aa946bdfaa1009f2a98b3578bd4c1788e672bc7fdfcf94c",
+    "upstreamContractSHA256": "36bc9a83454f6e885bb0a5d6d90b76d2bbe6658d93144d2da55ce068f627d4ff"
+  },
+  "requestedGripProfileSHA256": "659ff94c1611e0ce95310ab090e94637832ac2bbfbac7f9554f903595bd05972",
+  "profileDriverIdentity": {
+    "sourceSHA256": "585ae314e2b354768a1385e5a85828c142d542b47f8d9fe948f46c7478c112ef",
+    "runtimeMetadataSHA256": "50b9bad4b983e24e9aa946bdfaa1009f2a98b3578bd4c1788e672bc7fdfcf94c",
+    "runtimeDriverSHA256": "6324fa443223d0ed61c04ec6b00fd5030de4511a8dfac3da318eb87f2aa632d0",
+    "activatedGripProfileSHA256": "659ff94c1611e0ce95310ab090e94637832ac2bbfbac7f9554f903595bd05972",
+    "selectedGripProfile": {
+      "accepted": false,
+      "profileSHA256": "659ff94c1611e0ce95310ab090e94637832ac2bbfbac7f9554f903595bd05972",
+      "authoringSourceSHA256": "f814b8d7cde87b1e41b45eec75cd55fdea89b915bf9acae0e5a18b40d3a156af",
+      "appliesToSourceSHA256": "585ae314e2b354768a1385e5a85828c142d542b47f8d9fe948f46c7478c112ef",
+      "limits": "Parent full-arm/cuff, both-bike motion and new reduced-surface contact qualification required."
+    },
+    "exactProfileControlsVerified": {
+      "sides": 2,
+      "nativeDigitControls": 30,
+      "socketPositionAndOrientation": true
+    },
+    "definition": "Entire actual runtime driver, including palm/contact and per-digit/opposed-thumb settings; exact equality to built metadata checked."
+  },
+  "sourcePinsAtCapture": [
+    {
+      "path": "src/render/hero/selected/rider.mjs",
+      "sha256": "ce7db4276548146cce14cae7f9909bcc018d3e66ba118d2acc5ff6ec07af5afd",
+      "bytes": 32562
+    },
+    {
+      "path": "src/render/hero/selected/contract.mjs",
+      "sha256": "db73c6489f4cac9041f5d8e8ba6f110a8dbec437762f936e5cbadbfdd8ef43a8",
+      "bytes": 11979
+    },
+    {
+      "path": "src/render/hero/selected/mass.mjs",
+      "sha256": "363ca2a174d8e906a90fcfb52d2c85f19d5ef0bb70793379934faa178dd172df",
+      "bytes": 5763
+    },
+    {
+      "path": "src/render/camera/rig.ts",
+      "sha256": "60658414a4052cadf5b4710b7a7324b0e5c6fe42188659b74457290292ebdcbf",
+      "bytes": 33325
+    },
+    {
+      "path": "src/game/game.ts",
+      "sha256": "8d1c9dd089731507fbb6811c3b2d5600075237124741c2e1631d67fe6188576d",
+      "bytes": 51607
+    },
+    {
+      "path": "src/render/frame.ts",
+      "sha256": "c3460d6c2a0e0d4ccb5cd6bab24054e18ebbd9bc6e2ef0d0315b813285cd6d6a",
+      "bytes": 10684
+    },
+    {
+      "path": "src/core/riderGeometry.ts",
+      "sha256": "c613269c62a3f7f5e8e0c004bd7775e9f593ee92dfc24b111ede825ea9516011",
+      "bytes": 13860
+    },
+    {
+      "path": "src/ui/garage.ts",
+      "sha256": "015dee097b2cc51ea97740fc5bf17d40f2d7013f7a7b17e6cc91a73bc9f08aae",
+      "bytes": 27605
+    }
+  ],
+  "sourcePinScope": "Working-tree source hashes at capture; parent private-build receipt establishes compiled-source provenance.",
+  "browser": {
+    "backend": "metal",
+    "version": "151.0.7922.34",
+    "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M5 Max, Unspecified Version)",
+    "helper": {
+      "path": "harness/lib/browser.ts",
+      "sha256": "145a81eec1c13f7c87a2910827f3cb5132b0ba2c80c494d7c42bd17fd017ca7d"
+    },
+    "flagSet": "angle-metal",
+    "probe": {
+      "ok": true,
+      "kind": "webgl2",
+      "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M5 Max, Unspecified Version)",
+      "vendor": "Google Inc. (Apple)",
+      "version": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+      "maxTextureSize": 16384
+    }
+  },
+  "audio": "Silent webdriver; audio=0; no audible override.",
+  "method": "Normal Garage UI, trusted wheel zoom and continuous trusted pointer orbit; actual riding solver/breathing clock.",
+  "limits": [
+    "Parent judges the played movie. Presence/TRS/contact diagnostics do not accept palm, finger or elbow art.",
+    "Capture render FPS counts actual CPU submissions, not GPU completion or encoded-video cadence.",
+    "No geometry, source transforms, bone pose, animation clock, physics state or renderer cap writes."
+  ],
+  "presence": {
+    "submittedFrames": 1120,
+    "invalidFrames": 0,
+    "examples": [],
+    "first": {
+      "sourceSHA256": "585ae314e2b354768a1385e5a85828c142d542b47f8d9fe948f46c7478c112ef",
+      "metadataSHA256": "36bc9a83454f6e885bb0a5d6d90b76d2bbe6658d93144d2da55ce068f627d4ff",
+      "selectedMarker": true,
+      "bikeSourceLogical": "models/bike-rookie.glb",
+      "bikeSourceUUID": "3c412c84-8b7f-47cf-8493-c9ecaa6c37c3",
+      "riderAttachedToSubmittedBike": true,
+      "visibleBikeMeshes": 33,
+      "sourceUUID": "54c61934-6e42-47bc-86d6-3256258179b2",
+      "instanceUUID": "0990688e-6aea-460b-b212-8e601d9d891f",
+      "nativeJoints": 75,
+      "skeletonBones": 75,
+      "visibleSkins": [
+        "ActualSelectedBootL",
+        "ActualSelectedBootR",
+        "ActualSelectedGloveL",
+        "ActualSelectedGloveR",
+        "female_v006lowresUV__ExactFaceSubset",
+        "female_v006lowresUV__ExactFaceSubset_1",
+        "female_v006lowresUV__ExactFaceSubset_2",
+        "female_v006lowresUV__ExactFaceSubset_3",
+        "RiderHoodie",
+        "RiderJeans"
+      ],
+      "authorRolesPresent": true,
+      "stageClip": "Riding IK/breathing",
+      "physicalPose": false,
+      "allBoneFinite": true,
+      "gripProfileHash": "659ff94c1611e0ce95310ab090e94637832ac2bbfbac7f9554f903595bd05972",
+      "opticalZoom": 1,
+      "actualFOVDegrees": 29.999999999999996,
+      "effectiveFOVDegrees": 29.999999999999996
+    },
+    "last": {
+      "sourceSHA256": "585ae314e2b354768a1385e5a85828c142d542b47f8d9fe948f46c7478c112ef",
+      "metadataSHA256": "36bc9a83454f6e885bb0a5d6d90b76d2bbe6658d93144d2da55ce068f627d4ff",
+      "selectedMarker": true,
+      "bikeSourceLogical": "models/bike-rookie.glb",
+      "bikeSourceUUID": "3c412c84-8b7f-47cf-8493-c9ecaa6c37c3",
+      "riderAttachedToSubmittedBike": true,
+      "visibleBikeMeshes": 33,
+      "sourceUUID": "54c61934-6e42-47bc-86d6-3256258179b2",
+      "instanceUUID": "0990688e-6aea-460b-b212-8e601d9d891f",
+      "nativeJoints": 75,
+      "skeletonBones": 75,
+      "visibleSkins": [
+        "ActualSelectedBootL",
+        "ActualSelectedBootR",
+        "ActualSelectedGloveL",
+        "ActualSelectedGloveR",
+        "female_v006lowresUV__ExactFaceSubset",
+        "female_v006lowresUV__ExactFaceSubset_1",
+        "female_v006lowresUV__ExactFaceSubset_2",
+        "female_v006lowresUV__ExactFaceSubset_3",
+        "RiderHoodie",
+        "RiderJeans"
+      ],
+      "authorRolesPresent": true,
+      "stageClip": "Riding IK/breathing",
+      "physicalPose": false,
+      "allBoneFinite": true,
+      "gripProfileHash": "659ff94c1611e0ce95310ab090e94637832ac2bbfbac7f9554f903595bd05972",
+      "opticalZoom": 1,
+      "actualFOVDegrees": 29.999999999999996,
+      "effectiveFOVDegrees": 29.999999999999996
+    }
+  },
+  "videoRates": {
+    "raw": {
+      "exitCode": 0,
+      "stderr": "",
+      "metadata": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "vp8",
+            "r_frame_rate": "25/1",
+            "avg_frame_rate": "25/1"
+          }
+        ],
+        "format": {
+          "duration": "28.520000"
+        }
+      }
+    },
+    "presentation": {
+      "exitCode": 0,
+      "stderr": "",
+      "metadata": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "r_frame_rate": "25/1",
+            "avg_frame_rate": "25/1",
+            "duration": "19.520000",
+            "nb_frames": "488"
+          }
+        ],
+        "format": {
+          "duration": "19.520000"
+        }
+      }
+    },
+    "meaning": "Presentation normalized to25fps without interpolation. Encoded-video cadence is separate from measured actual render submissions and RAF FPS."
+  },
+  "encoding": {
+    "exitCode": 0,
+    "signal": null,
+    "stderr": "",
+    "args": [
+      "-v",
+      "error",
+      "-y",
+      "-threads",
+      "2",
+      "-i",
+      "/Users/raynos/projects/games/rockhop/harness/out/rider-rebuild/fixed-grip-engine04/garage-rookie01/garage-played.webm",
+      "-ss",
+      "8.983",
+      "-an",
+      "-vf",
+      "fps=25",
+      "-c:v",
+      "libx264",
+      "-threads",
+      "2",
+      "-crf",
+      "18",
+      "-pix_fmt",
+      "yuv420p",
+      "-movflags",
+      "+faststart",
+      "/Users/raynos/projects/games/rockhop/harness/out/rider-rebuild/fixed-grip-engine04/garage-rookie01/garage-played.mp4"
+    ],
+    "decoderThreads": 2,
+    "encoderThreads": 2,
+    "presentationFPS": 25,
+    "rawRetained": true,
+    "encodedPath": "/Users/raynos/projects/games/rockhop/harness/out/rider-rebuild/fixed-grip-engine04/garage-rookie01/garage-played.mp4",
+    "trimmedStartSeconds": 8.982600917
+  },
+  "reviewLimits": "Unaccepted checkpoint. Parent judges played movie. Socket/joint invariants do not establish finger, thumb, cuff or hoodie surface acceptance. Mac submissions and encoded cadence do not establish iPhone FPS.",
+  "exactReport": {
+    "path": "harness/out/rider-rebuild/fixed-grip-engine04/garage-rookie01/report.json",
+    "sha256": "edeaf61550f91084f03b8a9498b7997aada6ac1eb2c7835484a200ad5b63bfef",
+    "bytes": 66565,
+    "compressedArchive": "docs/evidence/rider-rebuild/fixed-grip-engine04/garage-rookie01-report05.json.gz",
+    "compressedSHA256": "4584fb54d0cf93c541a56d7c928a9083426a5d367dea12390be149819627744b"
+  },
+  "movies": [
+    {
+      "path": "harness/out/rider-rebuild/fixed-grip-engine04/garage-rookie01/garage-played.webm",
+      "sha256": "80981e9b25619370a158ebb4423e60ed3c446539078c673dfae4f9873c094f2f",
+      "bytes": 4180923
+    },
+    {
+      "path": "harness/out/rider-rebuild/fixed-grip-engine04/garage-rookie01/garage-played.mp4",
+      "sha256": "0d86633621051685ca5cdc09c84114b8b7b378fde35a62b1cfc72bc323e94f5c",
+      "bytes": 14927935
+    }
+  ],
+  "orbit": {
+    "wallSeconds": 18.133564417000002,
+    "fullTurnPixels": 640,
+    "moves": 560,
+    "pointerSensitivitySourceSHA256": "015dee097b2cc51ea97740fc5bf17d40f2d7013f7a7b17e6cc91a73bc9f08aae",
+    "zoom": "Trusted wheel to player3m minimum"
+  },
+  "garageEnd": {
+    "forearmPronation": [
+      {
+        "radians": 1.1947924859041834,
+        "singular": false
+      },
+      {
+        "radians": -1.196967054852371,
+        "singular": false
+      }
+    ]
+  },
+  "chronologicalMovieFrames": [
+    {
+      "presentationSeconds": 0.976,
+      "full": "harness/out/rider-rebuild/fixed-grip-engine04/review05/garage-rookie01/frame-000.976.png",
+      "sha256": "fa9c623dceb68e176665025a1e66f9668c243df7e388d69faa2eb399c0b047f2"
+    },
+    {
+      "presentationSeconds": 3.904,
+      "full": "harness/out/rider-rebuild/fixed-grip-engine04/review05/garage-rookie01/frame-003.904.png",
+      "sha256": "6e6d0b9c651ff050f6fa8cf77d1e7da369fc336f58c7d6725987aa115bf75955"
+    },
+    {
+      "presentationSeconds": 6.832,
+      "full": "harness/out/rider-rebuild/fixed-grip-engine04/review05/garage-rookie01/frame-006.832.png",
+      "sha256": "393cefba0b80ec9ac1f00a3951bea406f88e9a63ed93abf4a4bcdace92b7a91d"
+    },
+    {
+      "presentationSeconds": 9.76,
+      "full": "harness/out/rider-rebuild/fixed-grip-engine04/review05/garage-rookie01/frame-009.760.png",
+      "sha256": "40edb189ecf79bf1d513ea40f360960af0b37a5150c74dc58fdd964988d7f7d2"
+    },
+    {
+      "presentationSeconds": 12.688,
+      "full": "harness/out/rider-rebuild/fixed-grip-engine04/review05/garage-rookie01/frame-012.688.png",
+      "sha256": "3b622a7c1128c1dbfd0781832330cee79078c3cb881e2cc2de595b0bd01b91b3"
+    },
+    {
+      "presentationSeconds": 15.616,
+      "full": "harness/out/rider-rebuild/fixed-grip-engine04/review05/garage-rookie01/frame-015.616.png",
+      "sha256": "b23af90a306ca7830d8c9540f7d89cc6ead819eb74c692e9eed074cab02b7bdb"
+    },
+    {
+      "presentationSeconds": 18.544,
+      "full": "harness/out/rider-rebuild/fixed-grip-engine04/review05/garage-rookie01/frame-018.544.png",
+      "sha256": "4ebb2feff5c7c62d4c54820ee7a5373b04243f2bfc0bb89ea48a9802f30b63d9"
+    }
+  ]
+}

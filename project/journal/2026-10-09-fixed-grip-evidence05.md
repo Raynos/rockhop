@@ -32,3 +32,19 @@ Exact compressed report round-trips. See
 Limits: Unaccepted surface/moving-art checkpoint. Socket consistency is
 not a finite glove or cuff surface pass; parent source-ray investigation,
 reduced-surface qualification and physical iPhone FPS remain separate.
+
+## Both-bike Garage archive
+
+Finding: Actual trusted wheel/drag Garage orbits on both bikes retain the
+selected derivative, profile and native75 rig. Archive chronological full
+movie frames and exact reports while parent diagnosis rejects cuff breaks.
+
+Validation: Rookie orbit 18.1336 seconds/560 drag moves; pro orbit 18.1273
+seconds/565 moves. Both passed capture, encoding, selected-asset presence
+(zero invalid frames) and original external guards. Reports gzip round-trip.
+See [rookie](../../docs/evidence/rider-rebuild/fixed-grip-engine04/garage-rookie01-summary05.json)
+and [pro](../../docs/evidence/rider-rebuild/fixed-grip-engine04/garage-pro01-summary05.json).
+
+Limits: Unaccepted moving appearance, not physical iPhone performance.
+Parent owns the third-round ship gate on the final corrected candidate
+before checked deploy; the current pre-cuff candidate has no full closure.

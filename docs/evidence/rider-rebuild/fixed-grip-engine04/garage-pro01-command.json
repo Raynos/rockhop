@@ -1,0 +1,32 @@
+{
+  "accepted": false,
+  "name": "garage-pro01",
+  "command": [
+    "python3",
+    "/tmp/rockhop-gameplay-telemetry-queuefast.py",
+    "/Users/raynos/projects/games/rockhop/docs/evidence/rider-rebuild/fixed-grip-engine04/garage-pro01-telemetry.jsonl",
+    "/Users/raynos/projects/games/rockhop/docs/evidence/rider-rebuild/fixed-grip-engine04/garage-pro01-guard/guard.json",
+    "python3",
+    "assets/blender/hero-remaster/generation-comparison-2026-10-03/user-agent2/run_bounded96.py",
+    "--out",
+    "/Users/raynos/projects/games/rockhop/docs/evidence/rider-rebuild/fixed-grip-engine04/garage-pro01-guard",
+    "--limit-seconds",
+    "420",
+    "--",
+    "node",
+    "harness/rider-rebuild/selected-grip-review.mjs",
+    "--build=/Users/raynos/projects/games/rockhop/harness/out/rider-rebuild/mobile-delivery02/build02",
+    "--source=/Users/raynos/projects/games/rockhop/harness/out/rider-rebuild/mobile-textures02/combined01/rider.glb",
+    "--contract=/Users/raynos/projects/games/rockhop/harness/out/rider-rebuild/mobile-delivery02/stage04/rider-contract.json",
+    "--profile=/Users/raynos/projects/games/rockhop/docs/evidence/rider-rebuild/selected-grip-kinematic02/thumbplane05/runtime-profile.json",
+    "--profile-sha256=659ff94c1611e0ce95310ab090e94637832ac2bbfbac7f9554f903595bd05972",
+    "--transfer=/Users/raynos/projects/games/rockhop/docs/evidence/rider-rebuild/mobile-textures02/combined01/decoded-parity.json",
+    "--out=/Users/raynos/projects/games/rockhop/harness/out/rider-rebuild/fixed-grip-engine04/garage-pro01",
+    "--mode=garage",
+    "--bike=pro",
+    "--backend=metal",
+    "--camera-yaw=2.35",
+    "--review-zoom=2.2"
+  ],
+  "limits": "Actual Mac diagnostic/played evidence only; no phone FPS or art acceptance."
+}
