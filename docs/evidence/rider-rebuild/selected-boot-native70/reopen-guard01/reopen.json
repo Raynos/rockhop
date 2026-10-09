@@ -1,0 +1,404 @@
+{
+  "status": "SAVED_NATIVE70_REST_READBACK_PASSED_UNACCEPTED",
+  "acceptedArt": false,
+  "recipeSHA256": "65d4e0fc435df1ed332b847522de085caaceae9fd94f1fe14ed0f064fb766212",
+  "limits": "Saved left boot rest qualification only; no bilateral, allocation, atlas, posed/contact, moving art or device acceptance.",
+  "production": {
+    "path": "harness/out/rider-rebuild/selected-boot-native70/native01/production.json",
+    "sha256": "518fe4ce2f7da86adc176c45d3d3393f70d1b1a4daaae0701ff245baa2681465"
+  },
+  "native": {
+    "path": "harness/out/rider-rebuild/selected-boot-native70/native01/UNACCEPTED-selected-production-full.blend",
+    "sha256": "ffac10be163895d2ecb76d6552c9e357b86122d522543b7117974884be0ea52c"
+  },
+  "admission": {
+    "status": "EXACT_ACTUAL67_AND_NATIVE68_ADMITTED_NATIVE_QUALIFICATION_PENDING",
+    "acceptedArt": false,
+    "recipeSHA256": "bc1262b93289e95da61d6961b9a3132d65d2ee93ce9b0ff65a992f06608eccd5",
+    "constructor": {
+      "path": "harness/out/rider-rebuild/selected-boot-surface67/candidate01/constructor.json",
+      "sha256": "14b4f68aee996befc290a5cfc135029b5a7e5b6933d42398e3eae1a2347eb487"
+    },
+    "actualProof68": {
+      "path": "harness/out/rider-rebuild/selected-boot-witness68/proof01/diagnostic.json",
+      "sha256": "9373ab042e0899ec5366a92386fd775dc82837c511345f8110917c26632b15ae"
+    },
+    "candidateSHA256": "d86bf09de091e17ee7ccdbdd2bea00636861bf50a620c38510c36ba5a2a07bde",
+    "iterationVerification": [
+      {
+        "exactOriginalPositionsAndNamedFields": true,
+        "exactReturnedOriginalIndices": true,
+        "protectedCenters": 931,
+        "protectedVertices": 3805,
+        "exactOrientedSourceFaces": 4319,
+        "protectedEdges": 7915,
+        "protectedFaceMaterialsExact": true,
+        "passed": true,
+        "iteration": 1,
+        "completeVertexCensus": true,
+        "completeFaceCensus": false
+      },
+      {
+        "exactOriginalPositionsAndNamedFields": true,
+        "exactReturnedOriginalIndices": true,
+        "protectedCenters": 1049,
+        "protectedVertices": 4142,
+        "exactOrientedSourceFaces": 4761,
+        "protectedEdges": 8685,
+        "protectedFaceMaterialsExact": true,
+        "passed": true,
+        "iteration": 2,
+        "completeVertexCensus": true,
+        "completeFaceCensus": false
+      },
+      {
+        "exactOriginalPositionsAndNamedFields": true,
+        "exactReturnedOriginalIndices": true,
+        "protectedCenters": 1099,
+        "protectedVertices": 4300,
+        "exactOrientedSourceFaces": 4960,
+        "protectedEdges": 9037,
+        "protectedFaceMaterialsExact": true,
+        "passed": true,
+        "iteration": 3,
+        "completeVertexCensus": true,
+        "completeFaceCensus": false
+      },
+      {
+        "exactOriginalPositionsAndNamedFields": true,
+        "exactReturnedOriginalIndices": true,
+        "protectedCenters": 1114,
+        "protectedVertices": 4333,
+        "exactOrientedSourceFaces": 5008,
+        "protectedEdges": 9117,
+        "protectedFaceMaterialsExact": true,
+        "passed": true,
+        "iteration": 4,
+        "completeVertexCensus": true,
+        "completeFaceCensus": false
+      },
+      {
+        "exactOriginalPositionsAndNamedFields": true,
+        "exactReturnedOriginalIndices": true,
+        "protectedCenters": 1120,
+        "protectedVertices": 4348,
+        "exactOrientedSourceFaces": 5029,
+        "protectedEdges": 9153,
+        "protectedFaceMaterialsExact": true,
+        "passed": true,
+        "iteration": 5,
+        "completeVertexCensus": true,
+        "completeFaceCensus": true
+      }
+    ],
+    "sceneBudgetPassed": false,
+    "limits": "Admission only. Native70 keeps frozen shape/skin and new-face nearest/surface gates. Left boot only; no bilateral32 bake, atlas, contact, motion, device or scene-allocation acceptance."
+  },
+  "sourceMaster": {
+    "path": "harness/out/rider-rebuild/selected-production-diagnostic34/bootL01/REJECTED-bootL-before-transfer.blend",
+    "sha256": "a155d13f9b4df422bf851f847c7d392fbd3451c5d20c675093e8913bd05138ad"
+  },
+  "source-before": {
+    "equal": true,
+    "valueDifferenceCount": 0,
+    "evidence": {
+      "path": "harness/out/rider-rebuild/selected-boot-native70/reopen01/source-before.json",
+      "sha256": "56267469ba34d3242472252bcc750ec1057480aa7726a9613df06e98007700cf"
+    }
+  },
+  "target-pbr": {
+    "equal": true,
+    "valueDifferenceCount": 0,
+    "evidence": {
+      "path": "harness/out/rider-rebuild/selected-boot-native70/reopen01/target-pbr.json",
+      "sha256": "b27b4cee32691f9ddccc65f62430803494d7406e19403cc67a4ec8d548d329d8"
+    }
+  },
+  "savedOriginalArraysFieldsAncestryAndBindExact": true,
+  "reference-arrays": {
+    "equal": true,
+    "differences": [],
+    "actual": {
+      "path": "harness/out/rider-rebuild/selected-boot-native70/reopen01/Production.full.ActualSelectedBoot.L-source-transfer.npz",
+      "sha256": "0a73124a094b8b3d2c8d3e623ecc419727516016a626cc3f26f6176d89688982"
+    },
+    "expected": {
+      "path": "harness/out/rider-rebuild/selected-boot-native70/native01/Production.full.ActualSelectedBoot.L-source-transfer.npz",
+      "sha256": "0a73124a094b8b3d2c8d3e623ecc419727516016a626cc3f26f6176d89688982"
+    }
+  },
+  "four-arrays": {
+    "equal": true,
+    "differences": [],
+    "actual": {
+      "path": "harness/out/rider-rebuild/selected-boot-native70/reopen01/Production.full.ActualSelectedBoot.L-four-field-diagnostics.npz",
+      "sha256": "ad62dcdf715b549c7dd7dd6482f1b3479f0b86d86f916f84277a5b989d4b533b"
+    },
+    "expected": {
+      "path": "harness/out/rider-rebuild/selected-boot-native70/native01/Production.full.ActualSelectedBoot.L-four-field-diagnostics.npz",
+      "sha256": "ad62dcdf715b549c7dd7dd6482f1b3479f0b86d86f916f84277a5b989d4b533b"
+    }
+  },
+  "transfer-measurements": {
+    "equal": true,
+    "valueDifferenceCount": 0,
+    "evidence": {
+      "path": "harness/out/rider-rebuild/selected-boot-native70/reopen01/transfer-measurements.json",
+      "sha256": "73e64b2ad9748f57d2052b007e46505970d88476e7d6e6c4914a5961c1274927"
+    }
+  },
+  "correspondence56": {
+    "status": "NUMERICAL_CORRESPONDENCE_ONLY_UNACCEPTED",
+    "bearingPolicy": "Original BVH nearest source triangle and point unchanged",
+    "kernelCalls": 15214,
+    "formerlyRejectedBearings": [
+      {
+        "sourceFaceId": 43281,
+        "targetVertexId": 1279,
+        "frozenGramDeterminantM4": 2.757672835377996e-27,
+        "coefficients": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "reconstructionResidualM": 0.0
+      },
+      {
+        "sourceFaceId": 98650,
+        "targetVertexId": 2627,
+        "frozenGramDeterminantM4": 1.4561590710230547e-25,
+        "coefficients": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "reconstructionResidualM": 0.0
+      },
+      {
+        "sourceFaceId": 160060,
+        "targetVertexId": 4440,
+        "frozenGramDeterminantM4": 8.106818728322698e-25,
+        "coefficients": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "reconstructionResidualM": 0.0
+      },
+      {
+        "sourceFaceId": 160066,
+        "targetVertexId": 4441,
+        "frozenGramDeterminantM4": 4.778121216127563e-25,
+        "coefficients": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "reconstructionResidualM": 0.0
+      },
+      {
+        "sourceFaceId": 187608,
+        "targetVertexId": 6336,
+        "frozenGramDeterminantM4": 1.0540687000597251e-26,
+        "coefficients": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "reconstructionResidualM": 0.0
+      },
+      {
+        "sourceFaceId": 332803,
+        "targetVertexId": 10700,
+        "frozenGramDeterminantM4": 7.749060501782194e-28,
+        "coefficients": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "reconstructionResidualM": 0.0
+      },
+      {
+        "sourceFaceId": 374317,
+        "targetVertexId": 11417,
+        "frozenGramDeterminantM4": 1.2002465528104585e-25,
+        "coefficients": [
+          1.0,
+          0.0,
+          0.0
+        ],
+        "reconstructionResidualM": 0.0
+      },
+      {
+        "sourceFaceId": 373978,
+        "targetVertexId": 11434,
+        "frozenGramDeterminantM4": 9.021120570755944e-27,
+        "coefficients": [
+          1.0,
+          0.0,
+          0.0
+        ],
+        "reconstructionResidualM": 0.0
+      },
+      {
+        "sourceFaceId": 424432,
+        "targetVertexId": 12052,
+        "frozenGramDeterminantM4": 4.174412355559392e-25,
+        "coefficients": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "reconstructionResidualM": 0.0
+      },
+      {
+        "sourceFaceId": 513095,
+        "targetVertexId": 13427,
+        "frozenGramDeterminantM4": 2.614577164956398e-25,
+        "coefficients": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "reconstructionResidualM": 0.0
+      }
+    ],
+    "kernelFailure": null,
+    "acceptedArt": false,
+    "limits": "These IDs identify actual queried bearings, not all 78 source cutoff faces. Downstream geometry, normal, skin, contact, bake and motion gates remain required."
+  },
+  "sourceSurfaceSamples": {
+    "target-face-centroids": {
+      "samples": 30456,
+      "exactInheritedAncestryBearings": 5522,
+      "unchangedNearestBVHBearings": 24934,
+      "actualProof68": {
+        "path": "harness/out/rider-rebuild/selected-boot-witness68/proof01/diagnostic.json",
+        "sha256": "9373ab042e0899ec5366a92386fd775dc82837c511345f8110917c26632b15ae"
+      },
+      "missingBearings": 0,
+      "over1mmCount": 0,
+      "normalBelowPoint25Count": 0,
+      "maximumDistanceM": 0.0007186773582361639,
+      "minimumNormalDot": 0.25053727626800537,
+      "arrays": {
+        "path": "harness/out/rider-rebuild/selected-boot-native70/reopen01/target-face-centroids.npz",
+        "sha256": "626ad43ffb00439eff05bc75bed7456f796c349d4b14e236d9d602b429a7bd29"
+      }
+    },
+    "target-edge-midpoints": {
+      "samples": 45684,
+      "exactInheritedAncestryBearings": 0,
+      "unchangedNearestBVHBearings": 45684,
+      "actualProof68": {
+        "path": "harness/out/rider-rebuild/selected-boot-witness68/proof01/diagnostic.json",
+        "sha256": "9373ab042e0899ec5366a92386fd775dc82837c511345f8110917c26632b15ae"
+      },
+      "missingBearings": 0,
+      "over1mmCount": 0,
+      "normalBelowPoint25Count": 0,
+      "maximumDistanceM": 0.0008917678496800363,
+      "minimumNormalDot": null,
+      "arrays": {
+        "path": "harness/out/rider-rebuild/selected-boot-native70/reopen01/target-edge-midpoints.npz",
+        "sha256": "a68fa7a9bc4c88284c7efb5842a3ee9aa57cd76bd786f1adbda6e06a449dada8"
+      }
+    },
+    "source-face-centroids": {
+      "samples": 610934,
+      "exactInheritedAncestryBearings": 5522,
+      "unchangedNearestBVHBearings": 605412,
+      "actualProof68": {
+        "path": "harness/out/rider-rebuild/selected-boot-witness68/proof01/diagnostic.json",
+        "sha256": "9373ab042e0899ec5366a92386fd775dc82837c511345f8110917c26632b15ae"
+      },
+      "missingBearings": 0,
+      "over1mmCount": 0,
+      "normalBelowPoint25Count": 0,
+      "maximumDistanceM": 0.0008827699348330498,
+      "minimumNormalDot": null,
+      "arrays": {
+        "path": "harness/out/rider-rebuild/selected-boot-native70/reopen01/source-face-centroids.npz",
+        "sha256": "c9af5b34fe820413191082eba5ed5878fe0b477e1456d55525d516db79ff80e2"
+      }
+    }
+  },
+  "target-face-centroids-arrays": {
+    "equal": true,
+    "differences": [],
+    "actual": {
+      "path": "harness/out/rider-rebuild/selected-boot-native70/reopen01/target-face-centroids.npz",
+      "sha256": "626ad43ffb00439eff05bc75bed7456f796c349d4b14e236d9d602b429a7bd29"
+    },
+    "expected": {
+      "path": "harness/out/rider-rebuild/selected-boot-native70/native01/target-face-centroids.npz",
+      "sha256": "626ad43ffb00439eff05bc75bed7456f796c349d4b14e236d9d602b429a7bd29"
+    }
+  },
+  "target-face-centroids-measurements": {
+    "equal": true,
+    "valueDifferenceCount": 0,
+    "evidence": {
+      "path": "harness/out/rider-rebuild/selected-boot-native70/reopen01/target-face-centroids-measurements.json",
+      "sha256": "83e139be8f99e1cd1b25b9cd358c782e56364182f45773a348a0104293abeeab"
+    }
+  },
+  "target-edge-midpoints-arrays": {
+    "equal": true,
+    "differences": [],
+    "actual": {
+      "path": "harness/out/rider-rebuild/selected-boot-native70/reopen01/target-edge-midpoints.npz",
+      "sha256": "a68fa7a9bc4c88284c7efb5842a3ee9aa57cd76bd786f1adbda6e06a449dada8"
+    },
+    "expected": {
+      "path": "harness/out/rider-rebuild/selected-boot-native70/native01/target-edge-midpoints.npz",
+      "sha256": "a68fa7a9bc4c88284c7efb5842a3ee9aa57cd76bd786f1adbda6e06a449dada8"
+    }
+  },
+  "target-edge-midpoints-measurements": {
+    "equal": true,
+    "valueDifferenceCount": 0,
+    "evidence": {
+      "path": "harness/out/rider-rebuild/selected-boot-native70/reopen01/target-edge-midpoints-measurements.json",
+      "sha256": "867dd5d54aba13ae13cd81da2a4c79537457b3efdd3faae7c3963150de241c1f"
+    }
+  },
+  "source-face-centroids-arrays": {
+    "equal": true,
+    "differences": [],
+    "actual": {
+      "path": "harness/out/rider-rebuild/selected-boot-native70/reopen01/source-face-centroids.npz",
+      "sha256": "c9af5b34fe820413191082eba5ed5878fe0b477e1456d55525d516db79ff80e2"
+    },
+    "expected": {
+      "path": "harness/out/rider-rebuild/selected-boot-native70/native01/source-face-centroids.npz",
+      "sha256": "c9af5b34fe820413191082eba5ed5878fe0b477e1456d55525d516db79ff80e2"
+    }
+  },
+  "source-face-centroids-measurements": {
+    "equal": true,
+    "valueDifferenceCount": 0,
+    "evidence": {
+      "path": "harness/out/rider-rebuild/selected-boot-native70/reopen01/source-face-centroids-measurements.json",
+      "sha256": "f2d81be8eda1f731453720e2ca0550c3c3f021c0ad35203eb5e523a73c9ecc39"
+    }
+  },
+  "source-after": {
+    "equal": true,
+    "valueDifferenceCount": 0,
+    "evidence": {
+      "path": "harness/out/rider-rebuild/selected-boot-native70/reopen01/source-after.json",
+      "sha256": "56267469ba34d3242472252bcc750ec1057480aa7726a9613df06e98007700cf"
+    }
+  },
+  "target-after": {
+    "equal": true,
+    "valueDifferenceCount": 0,
+    "evidence": {
+      "path": "harness/out/rider-rebuild/selected-boot-native70/reopen01/target-after.json",
+      "sha256": "9bb24379c0185e5822f592fb10ef52133be5fc3894086e29d50744df8923f4b3"
+    }
+  },
+  "savedNativeBytesUnchanged": true,
+  "sourceMasterBytesUnchanged": true
+}
