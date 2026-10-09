@@ -108,6 +108,7 @@ export interface GarageView {
 
 /** Outfit swatches for the tags (CSS backgrounds keyed by preset id). */
 export const OUTFIT_SWATCH: Record<RiderOutfit, string> = {
+  'street-remastered': '#d6a021',
   'street-mustard': '#d6a021',
   'street-openface': 'linear-gradient(135deg, #3a3d44 60%, #d9dde3 60%)',
   'race-bluewhite': 'linear-gradient(135deg, #2e6fd8 50%, #f2f2f2 50%)',

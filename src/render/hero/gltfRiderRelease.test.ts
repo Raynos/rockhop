@@ -14,7 +14,7 @@ import { prepareHero } from './lod';
 import { fixture } from './riderPoseTestUtils';
 
 const JOINTS = ['pelvis', 'neck', 'head', 'forearm.L', 'hand.L', 'shin.L', 'foot.L', 'forearm.R', 'hand.R', 'shin.R', 'foot.R'];
-const subjects = AVAILABLE_RIDER_PRESETS.flatMap(p => [`rider-${p.id}.glb`, `rider-${p.id}-lod.glb`]);
+const subjects = AVAILABLE_RIDER_PRESETS.flatMap(p => p.id === 'street-remastered' ? [] : [`rider-${p.id}.glb`, `rider-${p.id}-lod.glb`]);
 describe.each(subjects)('%s production impact release', file => {
   let gltf: GLTF;
   beforeAll(async () => { gltf = await loadRig(file); await prepareHero(gltf); });

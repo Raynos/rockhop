@@ -1,3 +1,4 @@
+import { selectedRiderClass } from './selectedDriver';
 /**
  * glTF rider (round 8): `public/models/rider.glb` — one skinned mesh, 19 joints, 8 clips — and (ask 43) Astra's
  * per-outfit files: the same 19-joint rig and sockets, several skinned meshes merged by `prepareHero`, six reference
@@ -93,7 +94,7 @@ function sampler(clip: THREE.AnimationClip, w: ClipWindow): ClipSampler {
   return s;
 }
 
-export class GltfRider {
+class OriginalGltfRider {
   private stageTime: number | null = null;
   get hasStageMotion(): boolean { return this.clips.has('idle_breathe'); }
   /** Explicit presentation time, supplied only while the Garage is visible. */
@@ -991,5 +992,18 @@ export class GltfRider {
   dispose(): void {
     for (const m of this.materials) m.dispose();
     for (const release of this.releaseSleeveGeometry) release();
+  }
+}
+
+/** Preserve the original five drivers; the selected native rig is loaded only on choice. */
+export class GltfRider extends OriginalGltfRider {
+  constructor(gltf: GLTF, lib: MaterialLibrary) {
+    if (gltf.scene.userData.selectedRemaster) {
+      return new selectedRiderClass!(gltf, lib);
+    }
+    super(gltf, lib);
+  }
+  static override [Symbol.hasInstance](instance: unknown): boolean {
+    return instance instanceof OriginalGltfRider || !!selectedRiderClass && instance instanceof selectedRiderClass;
   }
 }

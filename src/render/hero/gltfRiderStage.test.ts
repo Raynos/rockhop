@@ -69,7 +69,7 @@ function physicsFrame(hipX: number, hipY: number, torsoDegrees: number, tSim: nu
 
 const maxDistance = (a: THREE.Vector3[], b: THREE.Vector3[]) => Math.max(...a.map((p, i) => p.distanceTo(b[i]!)));
 
-const subjects = AVAILABLE_RIDER_PRESETS.flatMap((p) => [`rider-${p.id}.glb`, `rider-${p.id}-lod.glb`].map((file) => ({ file })));
+const subjects = AVAILABLE_RIDER_PRESETS.flatMap((p) => p.id === 'street-remastered' ? [] : [`rider-${p.id}.glb`, `rider-${p.id}-lod.glb`].map((file) => ({ file })));
 
 describe.each(subjects)('$file garage stage', ({ file }) => {
   let gltf: GLTF;

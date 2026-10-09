@@ -13,6 +13,8 @@ import { prepareHero } from './lod';
 import { fogify } from '../lighting/environment';
 import { lodUrl, modelAssetUrl } from './urls';
 import type { ByteProgress } from '../../boot/plan';
+import { SELECTED_RIDER_ASSET } from './selectedAsset';
+import { loadSelectedRiderClass } from './selectedDriver';
 
 export { lodUrl };
 
@@ -50,13 +52,16 @@ export function loadGltf(url: string, quiet = false, bytes?: ByteProgress): Prom
         url,
         (g) => {
           const tParsed = performance.now();
+          if (url === SELECTED_RIDER_ASSET.url) g.scene.userData.selectedRemaster = true;
           shrinkTextures(g.scene);
           void prepareHero(g)
             .catch((err: unknown) => console.warn(`[render] hero prepare for ${url} failed:`, err))
             .then(() => {
               heroLoads.push({ url, bytes: total, fetchMs: tFetched - t0, parseMs: tParsed - tFetched, prepareMs: performance.now() - tParsed, at: t0 });
               if (heroLoads.length > 40) heroLoads.shift();
-              resolve(g);
+              if (g.scene.userData?.selectedRemaster) {
+                void loadSelectedRiderClass().then(() => resolve(g), () => resolve(null));
+              } else resolve(g);
             });
         },
         (e) => {
@@ -92,6 +97,7 @@ export function loadGltf(url: string, quiet = false, bytes?: ByteProgress): Prom
  * (deterministic; the same bitmap in every session). ≈ 48 MB → ≈ 16 MB.
  */
 export function shrinkTextures(root: THREE.Object3D, albedoMax = 1024, otherMax = 512): void {
+  if (root.userData?.selectedRemaster) return;
   const done = new Set<THREE.Texture>();
   root.traverse((o) => {
     const mesh = o as THREE.Mesh;

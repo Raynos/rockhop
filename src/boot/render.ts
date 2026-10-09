@@ -23,8 +23,7 @@ export function createLoaderRenderer(root: HTMLElement, build: string, now: () =
   const q = <T extends Element = HTMLElement>(sel: string): T => root.querySelector<T>(sel)!;
   const t0 = now();
   const elapsed = () => `${((now() - t0) / 1000).toFixed(1)} s`;
-  const buildEl = q('.build');
-  if (buildEl) buildEl.textContent = `build ${build}`;
+  q('.build').textContent = `build ${build}`;
 
   interface Track {
     ring: SVGPathElement;

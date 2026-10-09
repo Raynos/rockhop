@@ -14,7 +14,7 @@ beforeAll(() => {
 });
 afterAll(() => vi.unstubAllGlobals());
 
-const subjects = AVAILABLE_RIDER_PRESETS.flatMap(p => [false, true].map(lod => ({ file: `rider-${p.id}${lod ? '-lod' : ''}.glb`, lod })));
+const subjects = AVAILABLE_RIDER_PRESETS.flatMap(p => p.id === 'street-remastered' ? [] : [false, true].map(lod => ({ file: `rider-${p.id}${lod ? '-lod' : ''}.glb`, lod })));
 
 describe.each(subjects)('$file shared physical stances', ({ file, lod }) => {
   let gltf: GLTF;

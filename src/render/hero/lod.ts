@@ -77,7 +77,7 @@ export function wheelParts(wheel: THREE.Object3D): { spokes: THREE.Mesh | null; 
 export async function prepareHero(gltf: GLTF): Promise<void> {
   const root = gltf.scene;
   dropEmptyMeshes(root);
-  mergeSkinnedByMaterial(root);
+  if (!root.userData.selectedRemaster) mergeSkinnedByMaterial(root);
   const meshes: THREE.Mesh[] = [];
   root.traverse((o) => {
     if ((o as THREE.Mesh).isMesh) meshes.push(o as THREE.Mesh);

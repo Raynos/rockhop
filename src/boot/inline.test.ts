@@ -1,0 +1,31 @@
+import fs from 'node:fs';
+import vm from 'node:vm';
+import { JSDOM } from 'jsdom';
+import { expect, it } from 'vitest';
+import { buildInline } from '../../vite.config';
+import type { BootWindow } from './handoff';
+
+it('starts a cold saved-sixth boot from inert metadata with its declared model bytes', async () => {
+  const totals = { heroModels: 100, bootArt: 20, offlinePack: { '1x': 30, '2x': 40 } };
+  const code = await buildInline(process.cwd(), [], totals, true, 'coldboot');
+  expect(Buffer.byteLength(code)).toBeLessThanOrEqual(8192);
+  const raw = fs.readFileSync('index.html', 'utf8').replace(/<script type="module"[^>]*><\/script>/g, '');
+  const data = JSON.stringify({ c: [], t: totals, b: 'coldboot' });
+  const html = raw.replace('<script id="boot"></script>', `<script id="boot-data" type="application/json">${data}</script>`);
+  const dom = new JSDOM(html, { url: 'https://example.test/?sw=0', runScripts: 'outside-only' });
+  dom.window.localStorage.setItem('rockhop.riderOutfit', 'street-remastered');
+  Object.defineProperty(dom.window, 'devicePixelRatio', { value: 1 });
+  Object.defineProperty(dom.window, 'innerWidth', { value: 1024 });
+  new vm.Script(code).runInContext(dom.getInternalVMContext());
+  const bootWindow = dom.window as unknown as BootWindow;
+  for (let i = 0; i < 12 && !bootWindow.__boot; i++) await Promise.resolve();
+  const handoff = bootWindow.__boot;
+  expect(handoff).toBeDefined();
+  const plan = await handoff!.take();
+  expect(plan.view.bytesTotal).toBe(100 + 20 + 30 + 358409072);
+  expect(plan.view.rows.find(row => row.key === 'core')?.state).toBe('ok');
+  expect(dom.window.document.querySelector('.build')?.textContent).toBe('build coldboot');
+  expect(dom.window.document.querySelector('script[type="module"]')?.getAttribute('src')).toBe('/src/main.ts');
+  expect(dom.window.document.querySelectorAll('script[type="module"]')).toHaveLength(1);
+  dom.window.close();
+});

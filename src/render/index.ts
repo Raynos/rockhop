@@ -379,6 +379,7 @@ export class ThreeRenderer implements GameRenderer {
   private readonly heroPool = new Map<GLTF, GltfBike | GltfRider>();
   /** In-flight setModels (glTF load + swap); `whenReady` waits for it. */
   private heroPending: Promise<void> = Promise.resolve();
+  private heroLoadError: Error | undefined;
   private heroLoading = 0;
   private readonly emitters = new Emitters();
   private postRef: PostChain | null = null;
@@ -685,9 +686,12 @@ export class ThreeRenderer implements GameRenderer {
    */
   setModels(m: ModelChoices, bytes?: ByteProgress): void {
     if (this.disposed) return;
+    this.heroLoadError = undefined;
     this.models = { riderModel: m.riderModel === 'gltf' ? 'gltf' : 'proc', bikeModel: m.bikeModel === 'gltf' ? 'gltf' : 'proc' };
     const want = this.models;
-    const files = HERO_FILE_SET.filter((f) => !this.heroDocs.has(f) && (/\/bike-/.test(f) ? want.bikeModel === 'gltf' : want.riderModel === 'gltf'));
+    const inventory = this.riderOutfit === 'street-remastered'
+      ? [...HERO_FILE_SET, 'models/rider-street-remastered.glb', 'models/rider-street-remastered-lod.glb'] : HERO_FILE_SET;
+    const files = inventory.filter((f) => !this.heroDocs.has(f) && (/\/bike-/.test(f) ? want.bikeModel === 'gltf' : want.riderModel === 'gltf'));
     this.heroLoading++;
     const run = async (): Promise<void> => {
       await Promise.all(files.map((f) => loadGltf(f, false, bytes).then((g) => {
@@ -698,10 +702,14 @@ export class ThreeRenderer implements GameRenderer {
       })));
       // A superseded request (a later model choice) leaves the swap to that request.
       if (want !== this.models) return;
+      if (this.riderOutfit === 'street-remastered' && want.riderModel === 'gltf' && !this.riderDoc()) {
+        if (!this.riderDocumentOutfit) this.heroLoadError = new Error('Remaster load failed. Retry.');
+        return;
+      }
       this.applyModels();
     };
     this.heroPending = run()
-      .catch((e) => console.warn('[render] setModels failed', e))
+      .catch((e: Error) => { if (!this.riderDocumentOutfit) this.heroLoadError = e; })
       .then(() => {
         this.heroLoading--;
       });
@@ -749,7 +757,7 @@ export class ThreeRenderer implements GameRenderer {
 
   /** Whether a document is the LOD twin (for `heroDoc` diagnostics). */
   private isLodDoc(doc: GLTF | undefined): boolean {
-    return (this.heroDocUrl.get(doc!) ?? '').endsWith('-lod.glb');
+    return !doc?.scene.userData.selectedRemaster && (this.heroDocUrl.get(doc!) ?? '').endsWith('-lod.glb');
   }
 
   setRiderLod(on: boolean): void {
@@ -964,6 +972,7 @@ export class ThreeRenderer implements GameRenderer {
     const req = this.artRequest;
     const entry = this.entryPending;
     return Promise.all([this.art.whenSettled, req, this.heroPending, entry, this.retirement.whenIdle()]).then(() => {
+      if (this.heroLoadError) throw this.heroLoadError;
       if (this.disposal) return this.disposal;
       if (this.contextUnavailable) return this.whenReady();
       if (this.artRequest !== req || this.entryPending !== entry) return this.whenReady();
@@ -1073,6 +1082,7 @@ export class ThreeRenderer implements GameRenderer {
         if (this.models.bikeModel === 'gltf' || this.models.riderModel === 'gltf') {
           p.detail(this.models.riderModel === 'gltf' && this.models.bikeModel === 'gltf' ? 'bikes + riders' : this.models.riderModel === 'gltf' ? 'riders' : 'bikes');
           await this.heroPending;
+          if (this.heroLoadError) throw this.heroLoadError;
           // Ask 50: one resident instance per document (clone + materials, a few ms each), so every later swap is detach / attach.
           const docs = [...this.heroDocs.entries()];
           for (let i = 0; i < docs.length; i++) {

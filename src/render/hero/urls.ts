@@ -9,9 +9,11 @@
  */
 import type { BikeClass, RiderOutfit } from '../../core/types';
 import { MODEL_ASSETS, MODEL_RESOURCES } from './models.generated';
+import { SELECTED_RIDER_ASSET, isSelectedRiderLogical } from './selectedAsset';
 
 export const HERO = {
   rider: {
+    'street-remastered': 'models/rider-street-remastered.glb',
     'street-mustard': 'models/rider-street-mustard.glb',
     'street-charcoal': 'models/rider-street-charcoal.glb',
     'street-openface': 'models/rider-street-openface.glb',
@@ -32,6 +34,7 @@ export function bikeUrl<C extends BikeClass>(cls: C): Hero['bike'][C] {
 
 /** Resolve a logical model name to the exact full/LOD byte snapshot compiled with this application. */
 export function modelAssetUrl(logicalPath: string): string {
+  if (isSelectedRiderLogical(logicalPath)) return SELECTED_RIDER_ASSET.url;
   const asset = MODEL_ASSETS[logicalPath as keyof typeof MODEL_ASSETS];
   if (!asset) throw new Error(`No generated model asset for ${logicalPath}`);
   return asset.url;
@@ -47,6 +50,7 @@ export function modelResourceUrl(logicalPath: string): string {
 
 /** The compiled byte size of a logical model (the twin's `after` total in src/render/index.ts). */
 export function modelAssetBytes(logicalPath: string): number {
+  if (isSelectedRiderLogical(logicalPath)) return SELECTED_RIDER_ASSET.bytes;
   return MODEL_ASSETS[logicalPath as keyof typeof MODEL_ASSETS]?.bytes ?? 0;
 }
 

@@ -16,9 +16,7 @@ import type { BootWindow } from './handoff';
 import type { DeclaredBootTotals } from './asset-totals';
 import { selectedBootTotals } from './outfit';
 
-declare const __BOOT_CORE__: [path: string, bytes: number][];
-declare const __BOOT_TOTALS__: DeclaredBootTotals;
-declare const __BOOT_BUILD__: string;
+const bootData = JSON.parse(document.getElementById('boot-data')!.textContent!) as { c: [path: string, bytes: number][]; t: DeclaredBootTotals; b: string };
 /** Production web builds only: dev has no `sw.js` and a stale worker there would serve yesterday's bundle; a store build (`VITE_STORE=1`) ships none. */
 declare const __BOOT_SW__: boolean;
 /** The `?harness=1` route (src/core/release.ts `AUTOMATION_HOOK`): every build but a store release. */
@@ -32,19 +30,18 @@ declare const __BOOT_HOOK__: boolean;
     const s = document.createElement('script');
     s.type = 'module';
     s.src = entry;
-    s.onerror = () => onError(`Could not load ${entry}`);
+    s.onerror = () => onError(`Load failed: ${entry}`);
     document.head.appendChild(s);
   };
   // The harness owns the clock and expects the hook at once: no loader in its way, no plan.
   if (__BOOT_HOOK__ && /[?&]harness=1/.test(location.search)) {
     root.remove();
-    insertEntry(() => undefined);
+    insertEntry(() => {});
     return;
   }
 
-  const core = __BOOT_CORE__;
-  const coreTotal = core.reduce((sum, item) => sum + item[1], 0);
-  const plan = createBootPlan(createLoaderRenderer(root, __BOOT_BUILD__).paint, { totals: { core: coreTotal, ...selectedBootTotals(__BOOT_TOTALS__) } });
+  const core = bootData.c;
+  const plan = createBootPlan(createLoaderRenderer(root, bootData.b).paint, { totals: { core: core.reduce((sum, item) => sum + item[1], 0), ...selectedBootTotals(bootData.t) } });
   const fail = (m: string): void => {
     // Keep the offline cause visible alongside the underlying load error.
     if (!plan.view.done && !plan.view.error) plan.fail(navigator.onLine ? m : `Offline: ${m}`);

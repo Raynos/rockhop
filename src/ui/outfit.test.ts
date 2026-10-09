@@ -8,9 +8,9 @@ beforeEach(() => localStorage.clear());
 afterEach(() => { vi.restoreAllMocks(); vi.unstubAllGlobals(); });
 
 describe('committed rider outfit', () => {
-  it('migrates legacy names and persists all five designs', () => {
-    expect(RIDER_PRESETS).toHaveLength(5);
-    expect(AVAILABLE_RIDER_PRESETS).toHaveLength(5);
+  it('migrates legacy names and persists all six designs', () => {
+    expect(RIDER_PRESETS).toHaveLength(6);
+    expect(AVAILABLE_RIDER_PRESETS).toHaveLength(6);
     localStorage.setItem(RIDER_OUTFIT_KEY, 'race');
     expect(loadRiderOutfit()).toBe('race-bluewhite');
     expect(loadRiderOutfit('street')).toBe('street-mustard');

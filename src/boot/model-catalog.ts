@@ -59,11 +59,12 @@ export function readModelResources(publicDir: string): ModelAsset[] {
 }
 
 export function writeModelCatalog(root: string, assets: readonly ModelAsset[], resources: readonly ModelAsset[] = []): void {
-  const values = Object.fromEntries(assets.map(asset => [asset.logical, { url: asset.url, bytes: asset.bytes.length, sha256: asset.sha256 }]));
+  const values = Object.fromEntries(assets.map(asset => [asset.logical, { url: asset.url, bytes: asset.bytes.length }]));
   const source = '// Generated from public/models by trials:model-assets. Do not edit.\n'
     + '// URLs identify the snapshotted full/LOD pair and each file\'s actual bytes.\n'
     + `export const MODEL_ASSETS = ${JSON.stringify(values, null, 2)} as const;\n`
-    + `export const MODEL_RESOURCES = ${JSON.stringify(Object.fromEntries(resources.map(a => [a.logical, { url: a.url, bytes: a.bytes.length, sha256: a.sha256 }])), null, 2)} as const;\n`;
+    + '// Full SHA256 receipts stay in model-catalog.json; runtime resolves URLs and download sizes only.\n'
+    + `export const MODEL_RESOURCES = ${JSON.stringify(Object.fromEntries(resources.map(a => [a.logical, { url: a.url, bytes: a.bytes.length }])), null, 2)} as const;\n`;
   const output = path.join(root, 'src', 'render', 'hero', 'models.generated.ts');
   if (!fs.existsSync(output) || fs.readFileSync(output, 'utf8') !== source) fs.writeFileSync(output, source);
 }
@@ -97,9 +98,16 @@ export function modelAssetsPlugin(required: readonly string[], onCatalog?: (asse
     },
     generateBundle() {
       for (const asset of [...assets, ...resources]) this.emitFile({ type: 'asset', fileName: asset.url, source: asset.bytes });
+      const models: { logical: string; url: string; bytes: number; sha256: string; optional?: boolean }[] = assets.map(asset => ({ logical: asset.logical, url: asset.url, bytes: asset.bytes.length, sha256: asset.sha256 }));
+      const selectedPath = path.join(root, 'public/rider-remaster-source.json');
+      if (fs.existsSync(selectedPath)) {
+        const selected = JSON.parse(fs.readFileSync(selectedPath, 'utf8')) as { url: string; bytes: number; sha256: string };
+        if (!/^https:\/\/[^/]+\.public\.blob\.vercel-storage\.com\//.test(selected.url) || !/^[a-f0-9]{64}$/.test(selected.sha256) || selected.bytes <= 0) throw new Error('Invalid optional rider asset');
+        for (const suffix of ['', '-lod']) models.push({ logical: `models/rider-street-remastered${suffix}.glb`, ...selected, optional: true });
+      }
       this.emitFile({
         type: 'asset', fileName: 'model-catalog.json',
-        source: JSON.stringify({ models: assets.map(asset => ({ logical: asset.logical, url: asset.url, bytes: asset.bytes.length, sha256: asset.sha256 })), resources: resources.map(asset => ({ logical: asset.logical, url: asset.url, bytes: asset.bytes.length, sha256: asset.sha256 })) }, null, 2) + '\n',
+        source: JSON.stringify({ models, resources: resources.map(asset => ({ logical: asset.logical, url: asset.url, bytes: asset.bytes.length, sha256: asset.sha256 })) }, null, 2) + '\n',
       });
     },
     configureServer(server) {

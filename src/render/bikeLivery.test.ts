@@ -61,6 +61,35 @@ const settle = async (renderer: ThreeRenderer): Promise<void> => {
 const drawn = (state: unknown) => { const s = state as { bike: { source?: { name: string } }; rider: { source?: { name: string } } }; return [s.bike.source?.name, s.rider.source?.name]; };
 
 describe('resident hero set', () => {
+  it('keeps the valid rider when the optional remaster fails to load', async () => {
+    const { renderer, state, scene } = fixture();
+    renderer.setModels({ bikeModel: 'gltf', riderModel: 'gltf' });
+    await settle(renderer);
+    const original = state.rider;
+    scene.remove.mockClear();
+    expect(await renderer.setRiderOutfit('street-remastered')).toBe(false);
+    expect(state.rider).toBe(original);
+    expect(state.riderOutfit).toBe('street-mustard');
+    expect(scene.remove).not.toHaveBeenCalled();
+  });
+
+  it('fails a saved-sixth cold boot visibly and clears the failure on retry', async () => {
+    const { renderer, state, docs } = fixture();
+    state.riderOutfit = 'street-remastered';
+    Object.assign(renderer, { art: { whenSettled: Promise.resolve() }, retirement: { whenIdle: () => Promise.resolve() }, rebuildIfArtLanded: vi.fn() });
+    const initial = state.rider;
+    renderer.setModels({ bikeModel: 'gltf', riderModel: 'gltf' });
+    await settle(renderer);
+    await expect(renderer.whenReady()).rejects.toThrow('Remaster load failed. Retry.');
+    expect(state.rider).toBe(initial);
+    expect(state.riderDocumentOutfit).toBeNull();
+    for (const suffix of ['', '-lod']) docs.set(`models/rider-street-remastered${suffix}.glb`, { name: `models/rider-street-remastered${suffix}.glb` } as unknown as GLTF);
+    renderer.setModels({ bikeModel: 'gltf', riderModel: 'gltf' });
+    await expect(renderer.whenReady()).resolves.toBeUndefined();
+    expect(state.riderDocumentOutfit).toBe('street-remastered');
+    expect(state.rider.root.name).toBe('rider:gltf');
+  });
+
   it('boot fetches all fourteen files once and draws the first pair from the pool; later swaps fetch nothing and build nothing new', async () => {
     const { renderer, state, built } = fixture();
     renderer.setModels({ bikeModel: 'gltf', riderModel: 'gltf' });

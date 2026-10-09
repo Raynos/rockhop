@@ -41,7 +41,10 @@ describe('content-addressed model byte snapshots', () => {
     expect(first[0]!.logical).toBe('models/course-kits/forest/bark.phone.webp');
     expect(first[0]!.url).toContain(`bark.phone-${hash(bytes).slice(0, 16)}.webp`);
     writeModelCatalog(root, readModelCatalog(publicDir), first);
-    expect(await readFile(path.join(root, 'src/render/hero/models.generated.ts'), 'utf8')).toContain('MODEL_RESOURCES');
+    const runtime = await readFile(path.join(root, 'src/render/hero/models.generated.ts'), 'utf8');
+    expect(runtime).toContain('MODEL_RESOURCES');
+    expect(runtime).toContain(first[0]!.url);
+    expect(runtime).not.toContain('"sha256"'); // Full fingerprints belong to the retained catalog receipt, not unused runtime fields.
     await writeFile(file, Buffer.from([1, 7, 10]));
     expect(readModelResources(publicDir)[0]!.url).not.toBe(first[0]!.url);
     expect(first[0]!.bytes).toEqual(bytes);
@@ -92,8 +95,9 @@ describe('content-addressed model byte snapshots', () => {
     const emit = plugin.generateBundle as (this: { emitFile(asset: { fileName: string; source: Uint8Array | string }): void }) => void;
     emit.call({ emitFile: asset => { emitted.push(asset); } });
     const catalog = emitted.find(item => item.fileName === 'model-catalog.json')!;
-    const metadata = JSON.parse(typeof catalog.source === 'string' ? catalog.source : Buffer.from(catalog.source).toString()) as { models: { logical: string; url: string; bytes: number; sha256: string }[] };
+    const metadata = JSON.parse(typeof catalog.source === 'string' ? catalog.source : Buffer.from(catalog.source).toString()) as { models: { logical: string; url: string; bytes: number; sha256: string }[]; resources: { logical: string; url: string; bytes: number; sha256: string }[] };
     expect(metadata.models).toEqual(assets.filter(asset => asset.logical.endsWith('.glb')).map(asset => ({ logical: asset.logical, url: asset.url, bytes: asset.bytes.length, sha256: asset.sha256 })));
+    expect(metadata.resources).toEqual(assets.filter(asset => !asset.logical.endsWith('.glb')).map(asset => ({ logical: asset.logical, url: asset.url, bytes: asset.bytes.length, sha256: asset.sha256 })));
     for (const asset of assets) {
       const response = await fetch(`http://127.0.0.1:${address.port}/${asset.url}?ignored-by-old-sw=1`);
       expect(response.status).toBe(200);

@@ -11,6 +11,14 @@ beforeEach(() => { localStorage.clear(); history.replaceState(null, '', '/'); })
 afterEach(() => { delete (window as BootWindow).__boot; history.replaceState(null, '', '/'); });
 
 describe('boot totals (ask 50: every hero file in the one bar)', () => {
+  it('declares optional selected source exactly once on saved or URL selected cold boots', () => {
+    saveRiderOutfit('street-remastered');
+    expect(selectedBootTotals(totals).heroModels).toBe(821 + 358409072);
+    history.replaceState(null, '', '/?outfit=street-mustard');
+    expect(selectedBootTotals(totals).heroModels).toBe(821);
+    history.replaceState(null, '', '/?outfit=street-remastered');
+    expect(selectedBootTotals(totals).heroModels).toBe(821 + 358409072);
+  });
   it('are the same number whatever the saved outfit, class or tier, or the URL', async () => {
     for (const [outfit, cls, quality, search] of [
       [null, null, null, ''], ['race-bluewhite', 'pro', 'high', '?outfit=street'], ['street-charcoal', 'rookie', 'low', '?outfit=race-charcoalyellow'], ['invalid', 'invalid', 'garbage', '?outfit=invalid'],

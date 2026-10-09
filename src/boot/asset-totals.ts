@@ -4,7 +4,7 @@ import { BOOT_IDS } from '../render/art/boot-set';
 import { HERO_FILES_BY_OUTFIT_CLASS, type HERO_FILES_BY_OUTFIT } from '../render/hero/urls';
 import type { ArtTier } from './tier';
 
-export type BootAssetKey = (typeof HERO_FILES_BY_OUTFIT)[RiderOutfit][number] | `art:${(typeof BOOT_IDS)[number]}`;
+export type BootAssetKey = (typeof HERO_FILES_BY_OUTFIT)[Exclude<RiderOutfit, 'street-remastered'>][number] | `art:${(typeof BOOT_IDS)[number]}`;
 /**
  * Ask 50: the boot bar covers EVERY hero file (five outfits, two classes, authored + LOD) — one number,
  * nothing streams after. Ask 58 adds `offlinePack`: the user asked for the game to behave like a game —

@@ -1,4 +1,5 @@
 import { createHash } from 'node:crypto';
+import { playerBudget, PLAYER_JS_GZIP_CAP, SELECTED_RIDER_JS_GZIP_CAP, SELECTED_RIDER_CHUNK } from './src/boot/player-budget';
 import { gzipSync } from 'node:zlib';
 import { execSync } from 'node:child_process';
 import { createRequire } from 'node:module';
@@ -125,14 +126,14 @@ const INLINE_BUDGET_BYTES = 8 * 1024;
  *
  * Both gates count player JS, excluding dev-only chunks and the fatal-error-only Sentry SDK.
  */
-const BUNDLE_BUDGET_GZ_BYTES = 701 * 1024;
+const BUNDLE_BUDGET_GZ_BYTES = PLAYER_JS_GZIP_CAP;
 
 function bundleBudget(): Plugin {
   return {
     name: 'rockhop:bundle-budget',
     apply: 'build',
     generateBundle(_options, bundle) {
-      let total = 0;
+      let total = 0, selected = 0;
       const rows: string[] = [];
       for (const [name, item] of Object.entries(bundle)) {
         // Chunks and the emitted JS assets (the audio worklet is an asset): the same set the ship gate's
@@ -141,12 +142,14 @@ function bundleBudget(): Plugin {
         const gz = gzipSync(item.type === 'chunk' ? Buffer.from(item.code) : Buffer.from(item.source)).length;
         // Explicit review-only chunks are absent from normal player boot: listed, not budgeted.
         const excluded = DEV_CHUNK.test(name) || CRASH_REPORT_CHUNK.test(name);
-        if (!excluded) total += gz;
+        if (SELECTED_RIDER_CHUNK.test(name)) selected += gz;
+        else if (!excluded) total += gz;
         rows.push(`  ${name.padEnd(40)} ${(gz / 1024).toFixed(1).padStart(8)} KB gz${excluded ? '  (outside player budget)' : ''}`);
       }
-      const ok = total <= BUNDLE_BUDGET_GZ_BYTES;
+      const measured = playerBudget(total, selected);
+      const ok = measured.pass;
       const line = `bundle budget: ${(total / 1024).toFixed(1)} KB gz (${total} B) of ${(BUNDLE_BUDGET_GZ_BYTES / 1024).toFixed(0)} KB — ${ok ? 'OK' : 'OVER BUDGET'}`;
-      this.info(`\n${rows.join('\n')}\n${line}`);
+      this.info(`\n${rows.join('\n')}\n${line}\noptional rider: ${selected} B gz of ${SELECTED_RIDER_JS_GZIP_CAP} B; combined player: ${measured.combinedBytes} B gz`);
       if (!ok) this.error(line);
     },
   };
@@ -172,7 +175,7 @@ interface LoadItem {
   path: string;
   bytes: number;
   gz: number;
-  phase: 'core' | 'title' | 'menu' | 'world' | 'worldmap' | 'models' | 'models-lod' | 'audio-worklet' | 'other' | 'telemetry' | 'dev';
+  phase: 'core' | 'title' | 'menu' | 'world' | 'worldmap' | 'models' | 'models-lod' | 'audio-worklet' | 'other' | 'telemetry' | 'dev' | 'optional-rider';
   label?: string;
 }
 
@@ -220,6 +223,9 @@ function publicItems(root: string): LoadItem[] {
   // snapshots, not a deployed URL. The runtime fetches only the content-addressed copies the catalog emits
   // (`models/<pair>/<name>-<digest>.glb`), which reach this manifest through the bundle walk above — listing
   // the flat copies too both named files nothing requests and double-counted 26.9 MB of models.
+  for (const rel of ['rider-remaster-source.json', 'rider-remaster-contract.json']) {
+    if (stat(rel)) items.push({ path: `./${rel}`, bytes: stat(rel), gz: gzipSync(fs.readFileSync(path.join(pub, rel))).length, phase: 'optional-rider', label: rel });
+  }
   return items;
 }
 
@@ -293,7 +299,7 @@ export function writeBootPlanTable(root: string, modelAssets?: readonly ModelAss
 }
 
 /** Bundle + (in build) minify `src/boot/inline.ts` with the core file list and the build sha compiled in. */
-export async function buildInline(root: string, core: LoadItem[], totals: DeclaredBootTotals, minify: boolean, id: string): Promise<string> {
+export async function buildInline(root: string, _core: LoadItem[], _totals: DeclaredBootTotals, minify: boolean, _id: string): Promise<string> {
   const res = await esbuild.build({
     entryPoints: [path.join(root, 'src', 'boot', 'inline.ts')],
     bundle: true,
@@ -304,7 +310,7 @@ export async function buildInline(root: string, core: LoadItem[], totals: Declar
     minify,
     charset: 'utf8',
     legalComments: 'none',
-    define: { __BOOT_CORE__: JSON.stringify(core.map((i) => [i.path, i.bytes])), __BOOT_TOTALS__: JSON.stringify(totals), __BOOT_BUILD__: JSON.stringify(id), __BOOT_SW__: JSON.stringify(minify && !STORE_BUILD), __BOOT_HOOK__: JSON.stringify(!STORE_BUILD || STORE_DEBUG) },
+    define: { __BOOT_SW__: JSON.stringify(minify && !STORE_BUILD), __BOOT_HOOK__: JSON.stringify(!STORE_BUILD || STORE_DEBUG) },
   });
   const code = res.outputFiles[0]?.text.trim() ?? '';
   if (minify && Buffer.byteLength(code) > INLINE_BUDGET_BYTES) throw new Error(`inline loader is ${Buffer.byteLength(code)} B, budget ${INLINE_BUDGET_BYTES} B`);
@@ -333,6 +339,7 @@ function loadManifest(id: string): Plugin[] {
         // warms every `other` item (src/main.ts). The retired tracks' dev chunk is `dev`: only a `?` dev URL fetches it.
         if (name.startsWith('assets/worldMap3dScene-') || /^assets\/sky-alpine-a-[\w-]+\.webp$/.test(name)) phase = 'worldmap';
         else if (name === 'model-catalog.json' || name.startsWith('assets/inbox-')) phase = 'other';
+        else if (SELECTED_RIDER_CHUNK.test(name)) phase = 'optional-rider';
         else if (DEV_CHUNK.test(name)) phase = 'dev';
         else if (CRASH_REPORT_CHUNK.test(name)) phase = 'telemetry';
         else if (/worklet/.test(name)) phase = 'audio-worklet';
@@ -345,7 +352,10 @@ function loadManifest(id: string): Plugin[] {
       coreItems = items.filter((i) => i.phase === 'core');
       const sum = (ph: LoadItem['phase']): number => items.filter((i) => i.phase === ph).reduce((n, i) => n + i.bytes, 0);
       this.info(`load manifest: core ${(sum('core') / 1024).toFixed(0)} KB, title ${(sum('title') / 1024).toFixed(0)} KB, menu ${(sum('menu') / 1024).toFixed(0)} KB, world ${(sum('world') / 1024).toFixed(0)} KB, models ${(sum('models') / 1024).toFixed(0)} KB`);
-      this.emitFile({ type: 'asset', fileName: 'load-manifest.json', source: JSON.stringify({ generatedAt: new Date().toISOString(), items }) });
+      const counted = items.filter(i => i.path.endsWith('.js') && i.phase !== 'dev' && i.phase !== 'telemetry');
+      const selectedGz = counted.filter(i => i.phase === 'optional-rider').reduce((n, i) => n + i.gz, 0);
+      const coreGz = counted.filter(i => i.phase !== 'optional-rider').reduce((n, i) => n + i.gz, 0);
+      this.emitFile({ type: 'asset', fileName: 'load-manifest.json', source: JSON.stringify({ generatedAt: new Date().toISOString(), items, playerJS: { ...playerBudget(coreGz, selectedGz), coreCapBytes: PLAYER_JS_GZIP_CAP, selectedCapBytes: SELECTED_RIDER_JS_GZIP_CAP } }) });
     },
     // Preview mirrors the production host: hashed assets are immutable, so the loader's streamed
     // fetch and the module script it inserts afterwards share one cached body.
@@ -364,7 +374,15 @@ function loadManifest(id: string): Plugin[] {
         if (!html.includes('<script id="boot"></script>')) throw new Error('index.html: <script id="boot"></script> missing');
         // Function replacer: a string replacement would interpret `$&` / `$'` inside the minified code
         // (the 2026-09-15 audit's P1 — `$&&t++` re-inserted the placeholder markup into the script).
-        html = html.replace('<script id="boot"></script>', () => `<script>${code}</script>`);
+        const data = JSON.stringify({ c: (ctx.bundle ? coreItems : []).map(i => [i.path, i.bytes]), t: totals, b: id }).replaceAll('<', '\\u003c');
+        if (ctx.bundle) {
+          const manifest = ctx.bundle['load-manifest.json'];
+          if (!manifest || manifest.type !== 'asset') throw new Error('Missing inline boot manifest');
+          const inlineBoot = { executableBytes: Buffer.byteLength(code), metadataBytes: Buffer.byteLength(data), combinedBytes: Buffer.byteLength(code) + Buffer.byteLength(data) };
+          manifest.source = JSON.stringify({ ...JSON.parse(String(manifest.source)), inlineBoot });
+          console.info('inline boot bytes:', JSON.stringify(inlineBoot));
+        }
+        html = html.replace('<script id="boot"></script>', () => `<script id="boot-data" type="application/json">${data}</script><script>${code}</script>`);
         if (/<script>[^]*?<script id="boot">/.test(html)) throw new Error('index.html: loader insertion corrupted');
         // Take over the entry: the loader inserts it once the core set is in cache (dev: straight away).
         let entry: string | null = null;
@@ -654,7 +672,8 @@ export default defineConfig({
           'sentry-errors': ['@sentry/browser'],
         },
         // The audio renderer and v1 physics are explicit review-only paths, never normal player boots.
-        chunkFileNames: (c) => (c.facadeModuleId?.endsWith('/src/audio/offline.ts') ? 'assets/audio-offline-[hash].js'
+        chunkFileNames: (c) => (c.facadeModuleId?.endsWith('/src/render/hero/selected/loader.mjs') ? 'assets/rider-selected-[hash].js'
+          : c.facadeModuleId?.endsWith('/src/audio/offline.ts') ? 'assets/audio-offline-[hash].js'
           : c.facadeModuleId?.endsWith('/src/physics/webLegacy.ts') ? 'assets/legacy-physics-[hash].js' : 'assets/[name]-[hash].js'),
       },
     },

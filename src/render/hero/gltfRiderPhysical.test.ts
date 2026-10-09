@@ -12,8 +12,8 @@ import { prepareHero } from './lod';
 
 import { fixture, poseFrame, expectContactsAndMass } from './riderPoseTestUtils';
 
-// Every shipped outfit and detail goes through the production decoder and preparation.
-const subjects: { file: string; load: () => Promise<GLTF> }[] = AVAILABLE_RIDER_PRESETS.flatMap(p =>
+// Original five local rigs use this legacy-driver gate; native75 has separate selected-source and played Garage gates.
+const subjects: { file: string; load: () => Promise<GLTF> }[] = AVAILABLE_RIDER_PRESETS.flatMap(p => p.id === 'street-remastered' ? [] :
   [`rider-${p.id}.glb`, `rider-${p.id}-lod.glb`].map(file => ({ file, load: async () => { const g = await loadRig(file); await prepareHero(g); return g; } })));
 
 describe.each(subjects)('$file physical pose', ({ file, load }) => {
