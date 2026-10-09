@@ -3,6 +3,7 @@ import fs from 'node:fs/promises';
 import path from 'node:path';
 import assert from 'node:assert/strict';
 import crypto from 'node:crypto';
+import { preview } from 'vite';
 import { webkit } from 'playwright';
 import { register } from 'tsx/esm/api';
 import { createPrivateDevReview } from './private-dev-review.mjs';
@@ -18,8 +19,36 @@ assert(['webkit', 'metal'].includes(backend), 'Pass --backend=webkit|metal');
 const cameraYaw = Number(arg('camera-yaw') ?? 1.4);
 assert(Number.isFinite(cameraYaw) && Math.abs(cameraYaw) <= Math.PI, 'Camera yaw must be finite radians within ±pi');
 await fs.mkdir(out, { recursive: false });
-const contract = JSON.parse(await fs.readFile(contractPath));
-const development = await createPrivateDevReview({ source, contractPath, allowFailedDiagnostic: true });
+const contractBytes = await fs.readFile(contractPath), contract = JSON.parse(contractBytes);
+const buildPath = arg('build');
+let selectedManifest;
+async function productionReview() {
+  selectedManifest = JSON.parse(await fs.readFile(path.join(buildPath, 'rider-remaster-source.json')));
+  assert.equal(selectedManifest.sha256, contract.glbSHA256);
+  assert.equal(selectedManifest.contractSHA256, crypto.createHash('sha256').update(contractBytes).digest('hex'));
+  const data = await fs.readFile(source);
+  assert.equal(crypto.createHash('sha256').update(data).digest('hex'), selectedManifest.sha256);
+  assert.equal(data.length, selectedManifest.bytes);
+  const server = await preview({ configFile: false, root: process.cwd(), build: { outDir: path.resolve(buildPath) },
+    preview: { host: '127.0.0.1', port: 0 }, logLevel: 'warn' });
+  return { receipt: { mode: 'actual-vite-production-build', diagnosticKind: 'actual-gameplay-lean',
+    source: selectedManifest, contractSHA256: selectedManifest.contractSHA256 },
+    server: { resolvedUrls: server.resolvedUrls, close: () => new Promise((resolve, reject) => server.httpServer.close(error => error ? reject(error) : resolve())) } };
+}
+const development = buildPath ? await productionReview()
+  : await createPrivateDevReview({ source, contractPath, allowFailedDiagnostic: true });
+async function witness(response) {
+  if (!buildPath || response.url() !== selectedManifest.url) return witnessGlbResponse(response, witnesses);
+  assert.equal(response.status(), 200);
+  const streamed = await fetch(selectedManifest.url), hash = crypto.createHash('sha256');
+  assert.equal(streamed.status, 200); assert.equal(streamed.url, selectedManifest.url);
+  let bytes = 0;
+  for await (const chunk of streamed.body) { hash.update(chunk); bytes += chunk.length; }
+  const sha256 = hash.digest('hex');
+  assert.equal(sha256, selectedManifest.sha256); assert.equal(bytes, selectedManifest.bytes);
+  return { url: response.url(), status: response.status(), sha256, bytes,
+    hashScope: 'Independent public streamed witness against the pinned source; browser response body not read' };
+}
 const phases = [{ name: 'neutral', ticks: 240, lean: 0 }, { name: 'forward', ticks: 360, lean: 1 },
   { name: 'backward', ticks: 360, lean: -1 }, { name: 'neutral-return', ticks: 240, lean: 0 }];
 const report = { accepted: false, status: 'UNACCEPTED_ACTUAL_GAMEPLAY_LEAN', bike,
@@ -59,10 +88,10 @@ try {
   const started = performance.now();
   page.on('pageerror', error => report.errors.push(error.message));
   page.on('response', response => {
-    if (response.url().endsWith('.glb')) responses.push(witnessGlbResponse(response, witnesses)
+    if (response.url().endsWith('.glb')) responses.push(witness(response)
       .then(row => report.loaded.push(row)).catch(error => report.errors.push(error.message)));
   });
-  await page.goto(development.server.resolvedUrls.local[0] + '?harness=1&audio=0&sw=0&outfit=street-mustard&physics=v2&hz=120&track=b1-first-ride');
+  await page.goto(development.server.resolvedUrls.local[0] + `?harness=1&audio=0&sw=0&outfit=${buildPath ? 'street-remastered' : 'street-mustard'}&physics=v2&hz=120&track=b1-first-ride`);
   await page.waitForFunction(() => globalThis.window.__rockhop?.ready && globalThis.window.__rockhop.info().trackId === 'b1-first-ride', null, { timeout: 120000 });
   report.browser.renderer = await page.evaluate(() => {
     const gl = globalThis.window.__render.debug.renderer.getContext(), extension = gl.getExtension('WEBGL_debug_renderer_info');
@@ -70,7 +99,7 @@ try {
   });
   if (backend === 'metal') assert(/Metal/.test(report.browser.renderer)
     && !/swiftshader|llvmpipe|software/i.test(report.browser.renderer), 'Actual game renderer must use Metal');
-  report.camera = await page.evaluate(async ({ bike, cameraYaw }) => {
+  report.camera = await page.evaluate(async ({ bike, cameraYaw, contract }) => {
     const t = globalThis.window.__rockhop, r = globalThis.window.__render;
     // Main already loads this registered track; avoid warming and discarding flat-test.
     if (bike !== 'rookie') { t.setBike(bike); await t.loadTrack('b1-first-ride', 138717428); }
@@ -79,6 +108,7 @@ try {
     if (info.trackId !== 'b1-first-ride' || info.seed !== 138717428 || info.bike !== bike)
       throw new Error('Initial track/seed/physics bike differs from measured preflight'); t.setQuality('high'); await r.whenReady(); t.skipCountdown(); t.render(true);
     const candidate = r.debug.rider.debug.candidate;
+    if (candidate.sourceSHA256 !== contract.glbSHA256) throw new Error('Actual rider source differs from requested contract');
     const id = Array.isArray(candidate.roles.pelvis) ? candidate.roles.pelvis[0] : candidate.roles.pelvis;
     const pelvis = r.debug.rider.binding.byId.get(id);
     const p = pelvis.getWorldPosition(new r.debug.THREE.Vector3());
@@ -87,7 +117,7 @@ try {
     r.setCameraOverride(globalThis.window.__gameplayLeanCamera);
     t.render(true);
     return structuredClone(globalThis.window.__gameplayLeanCamera);
-  }, { bike, cameraYaw });
+  }, { bike, cameraYaw, contract });
   report.readyOffsetSeconds = (performance.now() - started) / 1000;
   await page.evaluate(installGarageCaptureMeter);
   report.played = await page.evaluate(async phases => {
