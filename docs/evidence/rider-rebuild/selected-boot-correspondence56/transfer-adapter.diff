@@ -1,0 +1,11 @@
+--- frozen25-transfer
++++ kernel56-transfer
+@@ -9,7 +9,7 @@
+     for i,p in enumerate(tp):
+         near=bvh.find_nearest(Vector(p),limit)
+         assert near[0] is not None,('Target vertex escapes selected source',source.name,i,limit)
+-        tri=int(near[2]);coeff=barycentric(np.asarray(near[0]),sp[sf[tri]])
++        tri=int(near[2]);coeff=correspondence56.evaluate(np.asarray(near[0]),sp[sf[tri]],tri,i)
+         weights=coeff@sw[sf[tri]];difference=float(np.abs(weights-tw[i]).sum())
+         dot=float(normals[tri]@np.asarray(target.data.vertices[i].normal))
+         assert dot>=config['transfer']['minimumNormalDot'],('Wrong-facing source correspondence',source.name,i,dot)

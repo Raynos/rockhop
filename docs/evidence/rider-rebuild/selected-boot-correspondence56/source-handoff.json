@@ -1,0 +1,47 @@
+{
+  "status": "SOURCE_READY_NATIVE_PENDING_UNACCEPTED",
+  "acceptedArt": false,
+  "files": [
+    {
+      "path": "assets/blender/rider-rebuild/selected-boot-correspondence56/author.py",
+      "sha256": "e73906dcdea2938a0add64594317752366bdfe29468a9ba7133b690e23590ee9"
+    },
+    {
+      "path": "assets/blender/rider-rebuild/selected-boot-correspondence56/kernel.py",
+      "sha256": "71fc5add2e5e7fa876329a03b213eea891141f06539554056f58fb2652a9593f"
+    },
+    {
+      "path": "assets/blender/rider-rebuild/selected-boot-correspondence56/check.py",
+      "sha256": "2852eae8cb37cff634de3979ca1356ed48efcd028258856954348e6099d75d0f"
+    },
+    {
+      "path": "docs/evidence/rider-rebuild/selected-boot-correspondence56/numerical-fixtures.json",
+      "sha256": "b6e169c966982d75ec75143644fe6488453683cefe80c765e04e9695f10f3828"
+    }
+  ],
+  "frozenAuthor46": {
+    "path": "assets/blender/rider-rebuild/selected-production-allocation46/author.py",
+    "sha256": "e802d51a7a1384bd76dab84050c63d8c58498fd851af8949c435a8c5f56f7906"
+  },
+  "frozenEngine25SHA256": "bc9e03aa6d99eba0d4b5037ceff49424c34ddcde99f0f2aae0f84a5090cbc483",
+  "candidateReceipt": {
+    "path": "harness/out/rider-rebuild/selected-production-allocation46/candidate01/constructor.json",
+    "sha256": "624affb3b59053d6bdee32fb3283c6b2ce23ff3d849c3fe0dd9669ec9319f3c8"
+  },
+  "parentCommand": [
+    "/Applications/Blender.app/Contents/MacOS/Blender",
+    "-b",
+    "-t",
+    "2",
+    "--python-exit-code",
+    "1",
+    "--python",
+    "assets/blender/rider-rebuild/selected-boot-correspondence56/author.py",
+    "--",
+    "harness/out/rider-rebuild/selected-production-allocation46/candidate01/constructor.json",
+    "harness/out/rider-rebuild/selected-production-allocation46/native02"
+  ],
+  "executionPolicy": "Parent original guarded serial stage only; command is not permission to bypass the guard. New output must not exist. No simplification rerun.",
+  "runtimeEvidence": "native02/correspondence56.json records actual queried source/target ordinals even if a later frozen gate fails.",
+  "limits": "Numerical fixtures only; no native56 run, no geometry/skin/contact/PBR/bake/motion acceptance, no scene-budget change."
+}

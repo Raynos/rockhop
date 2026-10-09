@@ -1,0 +1,32 @@
+--- frozen-author46-expanded
++++ author56-expanded
+@@ -88,6 +88,7 @@
+ def main():
+     args = sys.argv[sys.argv.index('--')+1:]; assert len(args) == 2
+     receipt_path = Path(args[0]).resolve(); out = Path(args[1]).resolve()
++    assert receipt_path == CANDIDATE56 and sha(receipt_path) == CANDIDATE56_SHA, 'Exact candidate46 required'
+     base = ROOT/'harness/out/rider-rebuild/selected-production-allocation46'
+     assert receipt_path.is_relative_to(base) and out.is_relative_to(base) and not out.exists()
+     receipt = json.loads(receipt_path.read_text())
+@@ -101,6 +102,7 @@
+     assert pins['rejectedNative']['sha256'] == NATIVE_SHA
+     engine_path = ROOT/pins['productionAuthor']['path']; assert sha(engine_path) == ENGINE_SHA
+     engine = load(engine_path, 'constructor37_frozen25')
++    KERNEL56.install(engine, out)
+     for row in pins.values(): engine.pin(row)
+     engine.pin(receipt['census'])
+     witness_path = ROOT/'assets/blender/rider-rebuild/selected-production-family31/witness.py'
+@@ -163,11 +165,11 @@
+         'authoredFamilies': ['boots'], 'authoredSourceObjects': [name],
+         'constructor': {'path': str(receipt_path.relative_to(ROOT)), 'sha256': sha(receipt_path)},
+         'sourceMaster': pins['rejectedNative'], 'sourceWitness': before,
+-        'recipeSHA256': sha(__file__), 'objects': {}, 'totalTriangles': len(f),
++        'recipeSHA256': sha(AUTHOR56), 'correspondenceAdapter': {'author46': {'path': str(AUTHOR46.relative_to(ROOT)), 'sha256': AUTHOR46_SHA}, 'kernel56': {'path': str(Path(KERNEL56.__file__).relative_to(ROOT)), 'sha256': sha(KERNEL56.__file__)}, 'policy': 'Same BVH source bearing; scale-independent cross-product barycentrics; all downstream gates unchanged'}, 'objects': {}, 'totalTriangles': len(f),
+         'sourceIdentityAfterProduction': True, 'sourceInputBytesUnchanged': True,
+         'bakeCompleted': False, 'movingReviewPassed': False, 'denseGeometryPassed': False, 'devicePassed': False,
+         'bakeEligibility': 'LEFT_BOOT_ONLY_NOT_A_BILATERAL_FAMILY32_INPUT',
+-        'limits': 'Left boot only; no new right boot or complete selected rider. Exact source ancestry and original named fields precede unchanged frozen25 correspondence. Selected donor maps persist; target appearance awaits its fresh atlas and cage bake.'}
++        'limits': 'Left boot only; no new right boot or complete selected rider. Exact source ancestry and original named fields precede scale-independent kernel56 correspondence with unchanged source bearings and frozen25 downstream gates. Selected donor maps persist; target appearance awaits its fresh atlas and cage bake.'}
+     def write(): (out/'production.json').write_text(json.dumps(report, indent=2)+'\n')
+     write()
+     native = out/'UNACCEPTED-constructor46-before-transfer.blend'
