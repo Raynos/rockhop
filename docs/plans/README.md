@@ -2059,3 +2059,5 @@ Fresh clean Astra6 X-High49 identifies frozen28 support/triangle-constraint clos
 Actual Astra49 diagnostic succeeds28.441s:9 shallow unsupported neck constraints (+2.287mmgap,0.313mmdeficit) separate from movable upperarm signedgap−68.949mm against exactcanonicaltri18873. Stop support-only/unchanged reruns; verify deep witness solid/orientation before genuine selected-cloth correction. No constructed sleeve or art accepted.
 
 Active rider execution21:30Panama adopts fresh targeted Astra49 correction: stop unchanged/support-only sleeve retries after actual9 shallow frozen neck rows plus separate deep upper-arm witness. Verify solid/orientation and proximal sheet ownership, then correct genuine selected garment fit, one native10 merge/replay and actual lean film. AllR0–R5 remain open.
+
+Astra49 and parent independently prove actual upper-arm donor witness lies69mm inside both actual full anatomy and canonical native02: winding1,3outward rays, exhaustive distance agree. This is real penetration, not orientation artifact. Proximal outward/interior sheet ownership remains to classify before corrective selected-cloth construction; no guard waiver or acceptance.

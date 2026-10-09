@@ -1,0 +1,215 @@
+{
+  "status": "ACTUAL_UPPER_ARM_WITNESS_INSIDE_BOTH_BODY_SOLIDS",
+  "acceptedArt": false,
+  "queryWorldPoint": [
+    0.1750047355890274,
+    0.02354886382818222,
+    1.3649895985921223
+  ],
+  "originalHoodieFace": 734276,
+  "diagnostic": {
+    "path": "harness/out/rider-rebuild/selected-sleeve-support49/diagnostic01/diagnostic.json",
+    "sha256": "aefa7de7ce7bb51b52b515e4ac931ab4e4f3cac211c208ac1405edde6cbd81ab"
+  },
+  "recipe": {
+    "path": "assets/blender/rider-rebuild/selected-sleeve-support49/check_solid.py",
+    "sha256": "908d9a3dd1eef190ba4dbc4a74f372b704658ec8f4eccca92cba6ebca45bd064"
+  },
+  "actualReference": {
+    "path": "harness/out/rider-rebuild/selected-seated-anatomical09/reference05/original-full-reference.npz",
+    "sha256": "01f752d72e94dbab81cc7a193adbd2dd7bba26df919b48454d8937fa9665dcc5"
+  },
+  "canonicalBody": {
+    "path": "docs/evidence/rider-rebuild/native-hand-repair01/native02/native-body.npz",
+    "sha256": "e62e9969503b7761e99463eccc3ca7be39e0c230a2948f2f87a224db52d0f9a2"
+  },
+  "meshes": {
+    "actualFullReference": {
+      "solidAngleWinding": 1.0000000000000002,
+      "rays": [
+        {
+          "direction": [
+            1.0,
+            0.371,
+            0.193
+          ],
+          "positiveHitCount": 1,
+          "firstHits": [
+            {
+              "triangleId": 11486,
+              "distanceM": 0.07862535315342069,
+              "barycentric": [
+                0.7477147605667986,
+                0.0819645371457767,
+                0.1703207022874247
+              ],
+              "normalDotRay": 0.985264246997144
+            }
+          ]
+        },
+        {
+          "direction": [
+            -0.537,
+            1.0,
+            0.271
+          ],
+          "positiveHitCount": 1,
+          "firstHits": [
+            {
+              "triangleId": 10065,
+              "distanceM": 0.09460003641622788,
+              "barycentric": [
+                0.5465157241634935,
+                0.02340692458430995,
+                0.4300773512521966
+              ],
+              "normalDotRay": 0.7765318212120417
+            }
+          ]
+        },
+        {
+          "direction": [
+            0.191,
+            -0.313,
+            1.0
+          ],
+          "positiveHitCount": 1,
+          "firstHits": [
+            {
+              "triangleId": 11778,
+              "distanceM": 0.10150501266307302,
+              "barycentric": [
+                0.06392976193003624,
+                0.45530953264377244,
+                0.48076070542619137
+              ],
+              "normalDotRay": 0.9092386653866253
+            }
+          ]
+        }
+      ],
+      "nearestFaceIdFromActualDiagnostic": 9838,
+      "nearestFaceCoordinates": [
+        [
+          0.20267461240291595,
+          0.08193419128656387,
+          1.335289478302002
+        ],
+        [
+          0.19104339182376862,
+          0.09514457732439041,
+          1.3592069149017334
+        ],
+        [
+          0.20703519880771637,
+          0.08882284164428711,
+          1.3788481950759888
+        ]
+      ],
+      "nearestFaceNormal": [
+        0.5483583464316968,
+        0.8157705557948526,
+        -0.18390629189033356
+      ],
+      "signedNearestFacePlaneDistanceM": -0.06826407791787403,
+      "exhaustiveNearestTriangleId": 9838,
+      "exhaustiveUnsignedDistanceM": 0.06894919698567123
+    },
+    "canonicalNative02": {
+      "solidAngleWinding": 1.0,
+      "rays": [
+        {
+          "direction": [
+            1.0,
+            0.371,
+            0.193
+          ],
+          "positiveHitCount": 1,
+          "firstHits": [
+            {
+              "triangleId": 19697,
+              "distanceM": 0.07862535315342069,
+              "barycentric": [
+                0.7477147605667986,
+                0.0819645371457767,
+                0.1703207022874247
+              ],
+              "normalDotRay": 0.985264246997144
+            }
+          ]
+        },
+        {
+          "direction": [
+            -0.537,
+            1.0,
+            0.271
+          ],
+          "positiveHitCount": 1,
+          "firstHits": [
+            {
+              "triangleId": 8416,
+              "distanceM": 0.09460003641622788,
+              "barycentric": [
+                0.5465157241634935,
+                0.02340692458430995,
+                0.4300773512521966
+              ],
+              "normalDotRay": 0.7765318212120417
+            }
+          ]
+        },
+        {
+          "direction": [
+            0.191,
+            -0.313,
+            1.0
+          ],
+          "positiveHitCount": 1,
+          "firstHits": [
+            {
+              "triangleId": 9504,
+              "distanceM": 0.10150501266307302,
+              "barycentric": [
+                0.06392976193003624,
+                0.45530953264377244,
+                0.48076070542619137
+              ],
+              "normalDotRay": 0.9092386653866253
+            }
+          ]
+        }
+      ],
+      "nearestFaceIdFromActualDiagnostic": 18873,
+      "nearestFaceCoordinates": [
+        [
+          0.20267461240291595,
+          0.08193419128656387,
+          1.335289478302002
+        ],
+        [
+          0.19104339182376862,
+          0.09514457732439041,
+          1.3592069149017334
+        ],
+        [
+          0.20703519880771637,
+          0.08882284164428711,
+          1.3788481950759888
+        ]
+      ],
+      "nearestFaceNormal": [
+        0.5483583464316968,
+        0.8157705557948526,
+        -0.18390629189033356
+      ],
+      "signedNearestFacePlaneDistanceM": -0.06826407791787403,
+      "exhaustiveNearestTriangleId": 8303,
+      "exhaustiveUnsignedDistanceM": 0.06894919698567123
+    }
+  },
+  "limits": [
+    "One actual witness, not a full garment qualification.",
+    "Winding, separated transverse rays and exhaustive distance agree; no support/geometry/target changes.",
+    "Distal inner-band exclusion does not prove this proximal donor face is an exterior garment surface."
+  ]
+}
