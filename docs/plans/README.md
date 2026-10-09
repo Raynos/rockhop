@@ -2029,3 +2029,5 @@ Ankle42 Rookie film also naturally played11.52s:1200real inputs/241finite75 samp
 Required current-game gate44 retains10/11pass; bootready372.04375ms fails300ms. Exact clear/crash/one-tickrestart pass; player sources unchanged since gate43PASS, timing cause unproven. No release/device acceptance. Next actual selected glove41 component construction under original guard.
 
 Native45 exact same ankle42 application source parent-reviewed:3318 rows, rawsave before scans, independent source/saved witnesses and complete field prediction.18 CPU fixtures/sourcepins/Python3.9syntax pass. Actual native application/reopen/engine parity pending; field42 remains unaccepted art. Glove41 actual component job now parent-owned under original serial guard.
+
+Actual glove41 component saved RAW: native5af37790, bothselectedsides323766verts/567467tris, originalprefix/newparent namedfield assertions pass. Guard62.885s exit0/maxglobalanon59.8GiB. Independent reopen queued; no fulloutfitintegration/densecontact/movingart acceptance yet. Exact selected identity retained.
