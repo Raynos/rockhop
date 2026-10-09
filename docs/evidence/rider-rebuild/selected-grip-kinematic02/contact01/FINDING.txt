@@ -1,0 +1,9 @@
+UNACCEPTED: fixed-point chain IK does not meet contact constraints
+
+Damped simultaneous IK of3 finger flexions and5 thumb controls demonstrates that fixing the native MCP axial station plus rear/below contact is too restrictive under the current palm placement and bounds. It is not a feasible grasp. All bone translations, source geometry and weights remain immutable.
+
+Validation: bounded child exit0 in3.110s. Distal finger gaps7.29–18.55mm; thumb normal points away (+0.704/+0.716) despite1.29/1.31mm proximity. Exact vertex checks measure15.94/15.91mm penetration. No claim of contact feasibility or anatomical acceptance.
+
+Limits: fixed target solve is rejected. Next thumb construction uses rotation invariants: reach length and dot(reach,normal), finite face plane/sphere intersection, then explicit CMC frame rotation. Parent played judgment still required.
+
+Thumb starting ranges refer to https://pmc.ncbi.nlm.nih.gov/articles/PMC3653006/ (MCP mean60degrees, IP80degrees conservative endpoint) and source-measured rest angles; they are initial authoring envelopes, not universal anatomy certificates. Opposition coupling reference: https://pubmed.ncbi.nlm.nih.gov/16643926/.

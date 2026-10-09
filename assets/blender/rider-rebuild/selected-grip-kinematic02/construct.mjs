@@ -90,6 +90,7 @@ for(const side of ['left','right']){
  }
  const axisA=V(old.recipeAxis.a).sub(bikes[0].shift),axisU=V(old.recipeAxis.unit),centre=axisA.clone().addScaledVector(axisU,grip.clone().sub(axisA).dot(axisU));
  const describe={side,wrist:newP.toArray(),anatomicalForwardInWrist:anatomicalForwardInWrist.toArray(),anatomicalNormalInWrist:anatomicalNormalInWrist.toArray(),bar:{axisA:axisA.toArray(),axisU:axisU.toArray(),centre:centre.toArray(),length:old.recipeAxis.lengthM},labels};
+ if(process.argv[3])describe.construction=await (await import(new URL(process.argv[3],import.meta.url))).construct({side,hand,meta,source,d,nodes,rest,root,bone,P,V,I,Q,w,place,matrices,skinned,sourceRows,names,idx,pos,handOwned,rigid,labels,nearest,triangles,axisA,axisU,centre,grip,pad,bar,newP,newQ,anatomicalForwardInWrist,anatomicalNormalInWrist,output});
  report.sides.push(describe);
  console.log(JSON.stringify({side,wrist:newP.toArray(),centre:centre.toArray(),digits:Object.fromEntries(Object.entries(labels).map(([digit,v])=>[digit,v.map(x=>({id:x.id,head:x.head,length:x.length,pulp:x.pulp.point,pulpThickness:x.pulp.thicknessM,pulpDot:x.pulp.normalDotBendDirection}))]))}));
 }
