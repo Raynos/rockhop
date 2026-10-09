@@ -1,0 +1,30 @@
+{
+  "status": "SOURCE_READY_PARENT_GUARDED_DIAGNOSTIC_RENDER_PENDING",
+  "acceptedArt": false,
+  "actualNativeRenderExecuted": false,
+  "sourcePins": [
+    {
+      "path": "assets/blender/rider-rebuild/selected-proximal-fit-review54/render.py",
+      "sha256": "2d0bcc3ee1769812fb5e9a4ce9d03714c4ccb538be9c567e12cb27bfeabcbfa9"
+    },
+    {
+      "path": "assets/blender/rider-rebuild/selected-proximal-fit-review54/tangent.py",
+      "sha256": "08b96261f8ae752e48ae06696822247a45f8d5a92bccbe34420c011f54b28a43"
+    }
+  ],
+  "fixture": {
+    "path": "docs/evidence/rider-rebuild/selected-proximal-fit-review54/tangent-fixtures.json",
+    "sha256": "6ac667dd2fd1f4e6a90480e7b843c996c3a595877460e6bf0836168485dedd83"
+  },
+  "originalCommand": "/Applications/Blender.app/Contents/MacOS/Blender -b -t 2 --python-exit-code 1 --python assets/blender/rider-rebuild/selected-proximal-fit-review54/render.py -- original wearer harness/out/rider-rebuild/selected-proximal-fit-review54/original01 -",
+  "registeredCommand": "/Applications/Blender.app/Contents/MacOS/Blender -b -t 2 --python-exit-code 1 --python assets/blender/rider-rebuild/selected-proximal-fit-review54/render.py -- registered wearer harness/out/rider-rebuild/selected-proximal-fit-review54/registered01 harness/out/rider-rebuild/selected-proximal-fit-review54/original01/render.json",
+  "render": "Each run48 continuous orbit frames,512px,12fps,EEVEE16samples,CPU2 thread setting, unchanged selected garment PBR. Actual full anatomy neutral opaque; cloth mode optional but must match both runs. No source save.",
+  "outputs": "Each run: actual-hoodie-geometry.npz,48PNGframes,movie,render.json. Registered run adds actual triangle tangent principal stretch/area distributions, bounded source face witnesses, source-pair span change and local full-body centroid gaps in tangent-and-pair.json. Camera matrices must match exactly.",
+  "validation": "Four CPU tangent fixtures pass: normal-only3D compression gives unchanged tangent strains, known anisotropic tangent scales/area, rigid transform invariance, and stable minor stretch under ill-conditioned direct SVD. Both sources parse with Python3.9. EEVEE sample/raytracing settings checked against installed Blender5.2 UI source. Actual runtime is unmeasured.",
+  "limits": [
+    "Static rest turntable is diagnostic and cannot pass generic/bike deformation or complete-rider art.",
+    "Ambient3D singular values are not cloth tangent principal stretches; no new rejection threshold introduced.",
+    "Source-degenerate triangles remain counted; local contact witnesses do not replace the failed global contact gate.",
+    "Use parent existing guard policy; no budget change or heavy run by this worker."
+  ]
+}
