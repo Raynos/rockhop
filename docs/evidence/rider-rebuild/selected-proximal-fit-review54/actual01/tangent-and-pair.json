@@ -1,0 +1,509 @@
+{
+  "metric": "Principal stretches of each actual triangle tangent plane, original native to saved native",
+  "triangleCount": 921722,
+  "sourceDegenerateTriangles": 50,
+  "sourceDegenerateFaceIdsFirst32": [
+    5892,
+    5912,
+    5913,
+    6879,
+    36247,
+    37648,
+    113113,
+    113129,
+    159921,
+    159942,
+    159943,
+    161456,
+    193457,
+    198769,
+    198771,
+    198813,
+    203012,
+    203015,
+    208545,
+    208576,
+    212273,
+    212290,
+    223730,
+    223745,
+    250430,
+    250431,
+    250456,
+    255904,
+    310599,
+    310622,
+    515611,
+    515625
+  ],
+  "newZeroAreaFromNondegenerateSource": 0,
+  "percentiles": [
+    0,
+    0.1,
+    1,
+    5,
+    50,
+    95,
+    99,
+    99.9,
+    100
+  ],
+  "minorPrincipalStretch": [
+    0.013393115828515883,
+    0.06595767346129683,
+    0.16827389174511828,
+    0.7087010210396527,
+    0.99819968529659,
+    1.0176459432178435,
+    1.097738730778733,
+    1.3127359725836505,
+    2.3785629551731793
+  ],
+  "majorPrincipalStretch": [
+    0.3393415255654862,
+    0.5683445839970316,
+    0.9377410590813327,
+    1.0000178007458005,
+    1.0190086822882352,
+    1.316068082634674,
+    2.0933604861021533,
+    3.228770470423725,
+    66.18735492981682
+  ],
+  "areaRatio": [
+    0.02144190309167654,
+    0.04967113936052431,
+    0.22638461581076258,
+    0.881673981904756,
+    1.0061680651901213,
+    1.1869339541699646,
+    1.715461334132267,
+    2.810540503040441,
+    151.3220092819887
+  ],
+  "mostCompressedFaceIds": [
+    754365,
+    713389,
+    755900,
+    719254,
+    170652,
+    754370,
+    747540,
+    747868
+  ],
+  "mostStretchedFaceIds": [
+    747550,
+    745512,
+    148555,
+    754320,
+    745816,
+    743486,
+    743638,
+    745825
+  ],
+  "acceptanceThresholdInvented": false,
+  "limits": [
+    "Source-degenerate faces cannot define a tangent basis; their count is retained, not passed.",
+    "Triangle tangents describe rest-shape changes, not posed cloth behavior or intersection clearance."
+  ],
+  "sourcePair": {
+    "path": "docs/evidence/rider-rebuild/selected-sleeve-support49/source-pair01.json",
+    "sha256": "c1b7999f62f8f7172bba59bc9aa0027067d102835c3b865fc5bd3f6276e076da"
+  },
+  "pairFaceIds": [
+    734276,
+    729981
+  ],
+  "sourcePairBeforeAfter": [
+    {
+      "innerSourceCentroid": [
+        0.1750047355890274,
+        0.02354886382818222,
+        1.3649895985921223
+      ],
+      "pairedSourceWallPoint": [
+        0.17242750257940026,
+        0.024640145788166295,
+        1.3632313950578687
+      ],
+      "fixedSourceCorrespondenceSeparationM": 0.003305193787050968
+    },
+    {
+      "innerSourceCentroid": [
+        0.19096734126408896,
+        0.05021500959992409,
+        1.2983204921086628
+      ],
+      "pairedSourceWallPoint": [
+        0.18868927456675721,
+        0.05151562315167991,
+        1.2982054871169755
+      ],
+      "fixedSourceCorrespondenceSeparationM": 0.0026257207842068546
+    }
+  ],
+  "sourcePairSeparationRatio": 0.7944226430818849,
+  "boundedActualFaceWitnesses": [
+    {
+      "sourceFaceId": 148555,
+      "nativeVertexIds": [
+        624074,
+        624313,
+        623581
+      ],
+      "centroid": [
+        -0.18555263678232828,
+        0.006303454904506604,
+        1.266213059425354
+      ],
+      "tangentPrincipalStretches": [
+        0.7170371973333673,
+        4.594523698018502
+      ],
+      "areaRatio": 3.2944443955089264,
+      "nearestFullReferenceTriangleId": 3237,
+      "signedNearestFullReferenceCentroidGapM": 0.005707080475986004
+    },
+    {
+      "sourceFaceId": 170652,
+      "nativeVertexIds": [
+        328109,
+        325638,
+        328156
+      ],
+      "centroid": [
+        -0.19327706098556519,
+        0.039126839488744736,
+        1.2914023399353027
+      ],
+      "tangentPrincipalStretches": [
+        0.0195391541264694,
+        1.5230879159752622
+      ],
+      "areaRatio": 0.029759849538403733,
+      "nearestFullReferenceTriangleId": 3084,
+      "signedNearestFullReferenceCentroidGapM": 0.005663976538926363
+    },
+    {
+      "sourceFaceId": 713389,
+      "nativeVertexIds": [
+        152082,
+        150709,
+        150703
+      ],
+      "centroid": [
+        0.1830472598473231,
+        0.040083068112532295,
+        1.288643717765808
+      ],
+      "tangentPrincipalStretches": [
+        0.013842783224962327,
+        1.6500571666959702
+      ],
+      "areaRatio": 0.02284138366736809,
+      "nearestFullReferenceTriangleId": 9831,
+      "signedNearestFullReferenceCentroidGapM": -0.006466312799602747
+    },
+    {
+      "sourceFaceId": 719254,
+      "nativeVertexIds": [
+        333929,
+        333930,
+        333928
+      ],
+      "centroid": [
+        0.17997120320796967,
+        0.04103509336709976,
+        1.2921926180521648
+      ],
+      "tangentPrincipalStretches": [
+        0.019355608237924524,
+        2.7384533441062775
+      ],
+      "areaRatio": 0.0530044301063551,
+      "nearestFullReferenceTriangleId": 9831,
+      "signedNearestFullReferenceCentroidGapM": -0.01085724774748087
+    },
+    {
+      "sourceFaceId": 729981,
+      "nativeVertexIds": [
+        676354,
+        676349,
+        676380
+      ],
+      "centroid": [
+        0.18865270415941873,
+        0.050707111756006874,
+        1.2980841795603435
+      ],
+      "tangentPrincipalStretches": [
+        0.5609303491292292,
+        2.5323782366584595
+      ],
+      "areaRatio": 1.420487808416092,
+      "nearestFullReferenceTriangleId": 11448,
+      "signedNearestFullReferenceCentroidGapM": -0.009453952312469482
+    },
+    {
+      "sourceFaceId": 734276,
+      "nativeVertexIds": [
+        676352,
+        676339,
+        676344
+      ],
+      "centroid": [
+        0.19096734126408896,
+        0.05021500959992409,
+        1.2983204921086628
+      ],
+      "tangentPrincipalStretches": [
+        0.8397630732525512,
+        2.4289507919333344
+      ],
+      "areaRatio": 2.0397431818131553,
+      "nearestFullReferenceTriangleId": 11448,
+      "signedNearestFullReferenceCentroidGapM": -0.009650628082454205
+    },
+    {
+      "sourceFaceId": 743486,
+      "nativeVertexIds": [
+        494443,
+        494442,
+        493760
+      ],
+      "centroid": [
+        0.19053411980470022,
+        0.041141620526711144,
+        1.2966805299123128
+      ],
+      "tangentPrincipalStretches": [
+        2.3785629551731793,
+        4.252725936594345
+      ],
+      "areaRatio": 10.115376371287475,
+      "nearestFullReferenceTriangleId": 11448,
+      "signedNearestFullReferenceCentroidGapM": -0.00957755371928215
+    },
+    {
+      "sourceFaceId": 743638,
+      "nativeVertexIds": [
+        260537,
+        260534,
+        260551
+      ],
+      "centroid": [
+        0.19231076538562775,
+        0.017480414050320785,
+        1.3010948499043782
+      ],
+      "tangentPrincipalStretches": [
+        0.23212191796946363,
+        4.08078219804393
+      ],
+      "areaRatio": 0.9472389906256007,
+      "nearestFullReferenceTriangleId": 11583,
+      "signedNearestFullReferenceCentroidGapM": -0.012284673750400543
+    },
+    {
+      "sourceFaceId": 745512,
+      "nativeVertexIds": [
+        35528,
+        35524,
+        35523
+      ],
+      "centroid": [
+        0.18655939400196075,
+        -0.011946054796377817,
+        1.3037731647491455
+      ],
+      "tangentPrincipalStretches": [
+        1.012443300276265,
+        14.04688872376194
+      ],
+      "areaRatio": 14.221678378098986,
+      "nearestFullReferenceTriangleId": 11443,
+      "signedNearestFullReferenceCentroidGapM": -0.00309802801348269
+    },
+    {
+      "sourceFaceId": 745816,
+      "nativeVertexIds": [
+        261320,
+        261321,
+        261322
+      ],
+      "centroid": [
+        0.19669178624947867,
+        0.05208965142567953,
+        1.2981884479522705
+      ],
+      "tangentPrincipalStretches": [
+        0.6959510000083252,
+        4.4814007844440065
+      ],
+      "areaRatio": 3.1188353573718977,
+      "nearestFullReferenceTriangleId": 11448,
+      "signedNearestFullReferenceCentroidGapM": -0.011121929623186588
+    },
+    {
+      "sourceFaceId": 745825,
+      "nativeVertexIds": [
+        260551,
+        260543,
+        260537
+      ],
+      "centroid": [
+        0.1924571841955185,
+        0.01719424221664667,
+        1.301038424173991
+      ],
+      "tangentPrincipalStretches": [
+        0.0969088910370896,
+        4.0726819126191325
+      ],
+      "areaRatio": 0.39467908769873444,
+      "nearestFullReferenceTriangleId": 11583,
+      "signedNearestFullReferenceCentroidGapM": -0.01225533802062273
+    },
+    {
+      "sourceFaceId": 747540,
+      "nativeVertexIds": [
+        493694,
+        493147,
+        493693
+      ],
+      "centroid": [
+        0.1890511910120646,
+        0.03963171939055125,
+        1.2954468329747517
+      ],
+      "tangentPrincipalStretches": [
+        0.020407712896417893,
+        3.4351639963040825
+      ],
+      "areaRatio": 0.0701038405886852,
+      "nearestFullReferenceTriangleId": 11448,
+      "signedNearestFullReferenceCentroidGapM": -0.008584284223616123
+    },
+    {
+      "sourceFaceId": 747550,
+      "nativeVertexIds": [
+        35522,
+        35628,
+        35629
+      ],
+      "centroid": [
+        0.1870714177687963,
+        -0.004138411954045296,
+        1.3034334977467854
+      ],
+      "tangentPrincipalStretches": [
+        2.286267663097373,
+        66.18735492981682
+      ],
+      "areaRatio": 151.3220092819887,
+      "nearestFullReferenceTriangleId": 11442,
+      "signedNearestFullReferenceCentroidGapM": -0.00478221895173192
+    },
+    {
+      "sourceFaceId": 747868,
+      "nativeVertexIds": [
+        260552,
+        260654,
+        260542
+      ],
+      "centroid": [
+        0.1944043884674708,
+        0.04217675949136416,
+        1.296959400177002
+      ],
+      "tangentPrincipalStretches": [
+        0.023524379875874992,
+        3.4405993560791894
+      ],
+      "areaRatio": 0.08093796625309779,
+      "nearestFullReferenceTriangleId": 11448,
+      "signedNearestFullReferenceCentroidGapM": -0.010717561468482018
+    },
+    {
+      "sourceFaceId": 754320,
+      "nativeVertexIds": [
+        542988,
+        541971,
+        541935
+      ],
+      "centroid": [
+        0.1884379635254542,
+        -0.005138738236079614,
+        1.3014455636342366
+      ],
+      "tangentPrincipalStretches": [
+        1.5953028736519599,
+        4.522880360970492
+      ],
+      "areaRatio": 7.215364037040242,
+      "nearestFullReferenceTriangleId": 11442,
+      "signedNearestFullReferenceCentroidGapM": -0.005130421835929155
+    },
+    {
+      "sourceFaceId": 754365,
+      "nativeVertexIds": [
+        542765,
+        541922,
+        541917
+      ],
+      "centroid": [
+        0.1913619488477707,
+        0.04158174619078636,
+        1.2953133185704548
+      ],
+      "tangentPrincipalStretches": [
+        0.013393115828515883,
+        3.2836260617241417
+      ],
+      "areaRatio": 0.04397798418220374,
+      "nearestFullReferenceTriangleId": 11448,
+      "signedNearestFullReferenceCentroidGapM": -0.00829277653247118
+    },
+    {
+      "sourceFaceId": 754370,
+      "nativeVertexIds": [
+        35944,
+        35945,
+        35946
+      ],
+      "centroid": [
+        0.19037128488222757,
+        0.026030516251921654,
+        1.2970523436864216
+      ],
+      "tangentPrincipalStretches": [
+        0.02033760118988859,
+        3.7233089015227243
+      ],
+      "areaRatio": 0.07572317154587901,
+      "nearestFullReferenceTriangleId": 9879,
+      "signedNearestFullReferenceCentroidGapM": 0.009405585937201977
+    },
+    {
+      "sourceFaceId": 755900,
+      "nativeVertexIds": [
+        541916,
+        541915,
+        541917
+      ],
+      "centroid": [
+        0.19121605654557547,
+        0.04106392835577329,
+        1.2951953013737996
+      ],
+      "tangentPrincipalStretches": [
+        0.017242197257269727,
+        3.268252001023201
+      ],
+      "areaRatio": 0.05635184568810872,
+      "nearestFullReferenceTriangleId": 11448,
+      "signedNearestFullReferenceCentroidGapM": -0.008242242969572544
+    }
+  ],
+  "localContactLimit": "Only listed saved triangle centroids measured; global contact remains failed in qualified50."
+}
