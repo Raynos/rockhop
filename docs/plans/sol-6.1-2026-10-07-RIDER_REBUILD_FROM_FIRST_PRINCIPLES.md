@@ -55,20 +55,34 @@ this checkpoint; do not send it to distal51 or retry unchanged from the original
 Maximum movement is74.675mm; median1.93mm and P9940.17mm. Ambient3D singular
 values0.032529–4.127195 do not measure cloth-tangent strain or award art quality.
 
-Next construction decision: one matched original47/registered50 moving
-component diagnostic54 with actual triangle tangent stretch/area and paired
-wall separation. If silhouette/detail/layers survive and residual contact is
-localized, justify one bounded continuation from the saved work. If cloth is
-stretched/collapsed, stop contact projection and author a coherent selected
-shoulder/axilla control surface carrying the original garment detail. Do not
-invent a new strain cap, loosen clearance or discard useful selected source.
+Diagnostic54 is complete: matched selected-PBR turntables preserve the useful
+broad coverage/silhouette improvement, but show torso bands and residual axilla
+penetration. Parent independently verifies actual well-shaped source face754365
+retains4.40% area and face7133892.28%; the66.19× extreme is separately a source
+sliver. Known paired cloth moves67mm down the crease and stretches~2.5× while
+remaining inside the body. Stop additional nearest-exit projection and
+normal-smoothing-only repairs. These are actual local geometric failures.
+
+New constructor55 starts from original47 material coordinates, with selected
+shoulder/sleeve frames and actual canonical upperarm/torso landmarks defining
+axial/ring correspondence. Use useful50 fit as reference where healthy; fit
+transverse ease/contact and the connected shoulder–chest/back region through
+one C2 shared cage/map carrying both original sheets and their normal detail.
+The smooth basis addresses the credible trilinear derivative-break mechanism
+for bands; anatomical correspondence prevents downward material escape.
+Preserve original topology/UV/PBR/named fields; no generic replacement, blanket
+strain cap or clearance waiver. Save one actual unaccepted candidate, reuse54
+for the known compression/pair/appearance witnesses, then proceed to distal51.
+Astra49 owns55 source; parent owns actual guard, integration and judgment.
 
 Native45 failed before save because the Jeans lacks a required canonical foot
 vertex group; its protected helper also incorrectly bundled fields into geometry.
 New52 explicitly appends only missing canonical foot groups, keeps every old
 index/name, and separately qualifies complete predicted memberships and all
-protected geometry/PBR/actions/rest. Parent reviewed39 mutation fixtures and
-source pins; actual52 save/reopen remains next independent work.
+protected geometry/PBR/actions/rest. Actual52 saves and independently
+reopens; both foot groups append23/24, exact3318 fields and protected source
+witnesses pass. CPU51 intake accepts the actual qualified52 native. Changed
+skin deformation parity and played art remain open.
 
 After qualified garment construction: distal51 retains proximal positions
 outside exact cuff surgery, then one complete merge into actual qualified52.
