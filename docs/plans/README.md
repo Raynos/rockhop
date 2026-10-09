@@ -1971,3 +1971,5 @@ Exact both-bike gameplay conversion input02 frozen from actual successful Rookie
 Actual both-bike native matrix conversion02 completed under original guard0.798s:482 finite poses across all75 original joints, exact native rest/source ticks, independent hierarchy bounds0. Controls02/full-dressed native08 execution now unblocked; unified09 awaits actual passes. Required gate40 follows this third actual round since39. No Blender/art/contact/device acceptance.
 
 Complete selected native08 input now pins actual converted02 output and original weight-only master/fullreference/helpers. Parent reran real read_input successfully without Blender. Ready for guarded full-outfit save/reopen/replay execution after gate40; no native output or unified live-control result yet.
+
+Required current-game gate40 executed after three actual rider rounds:10/11 pass, boot ready P50422.43ms>300ms under observed55.35/18core load. First frame634.19ms, exact clear8.591666666666667/hash622bb2554e0f9a26, crash and1tick restart pass. Retained stale golden warning; no selected-rider/device/release pass. Continue native construction without blind repeat.
