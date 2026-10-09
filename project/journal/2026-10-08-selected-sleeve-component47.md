@@ -1,0 +1,3 @@
+Finding: Component47 preserves exact sleeve28 solve and38 save lifetime, loading only original selected Hoodie, qualified41 gloves, exact75 and full reference.
+Validation: Parent read all four recipes, source pins, original freeze/construction/qualification. Seven CPU fixtures and Python3.9 syntax pass; original fit-through-finish and six relation calculations remain exact. Helper47 fixes local receipt shadowing in the inherited wrapper.
+Limits: No actual intake/construction/merge/export or accepted moving art yet. Full-rider preservation requires separate latest-master witnesses after one wardrobe transplant.
