@@ -61,7 +61,8 @@ def main(intake,rookie,pro,out):
         g=comps['ActualSelectedGlove.'+side]; wrist=names.index('DEF-hand.'+side); distal=names.index('DEF-forearm.'+side+'.001')
         head=rest[wrist,:3,3]; axis=head-rest[distal,:3,3]; length=np.linalg.norm(axis);axis/=length
         allowed={names.index('DEF-forearm.'+side),distal,wrist,*[i for i,n in enumerate(names) if n.startswith('DEF-palm.') and n.endswith('.'+side)]}
-        positive=source_fields>0; keep=np.array([all(int(i) in allowed for i in np.flatnonzero(row)) for row in positive])
+        ownership_allowed={i for i,n in enumerate(names) if ('.'+side) in n and n.startswith(('DEF-forearm.','DEF-hand.','DEF-palm.','DEF-thumb.','DEF-f_'))}
+        positive=source_fields>0; keep=np.array([all(int(i) in ownership_allowed for i in np.flatnonzero(row)) for row in positive])
         # Connected skin carrier is only the actual distal native forearm/wrist.
         keep &= (p-head)@axis >= -length
         ids=np.flatnonzero(np.isin(inverse,inverse[np.flatnonzero(keep)]))
@@ -114,6 +115,7 @@ def main(intake,rookie,pro,out):
             'hoodieCarrierCorrespondenceFaceIDsSHA256':hashlib.sha256(np.array(transfer_faces,dtype='<u4').tobytes()).hexdigest(),
             'discardedDigitFieldMassPercentiles':np.percentile(discarded,[0,50,100]).tolist(),
             'sourceOnlyCarrierNames':[names[i] for i in sorted(allowed)],
+            'sourceCuffOwnershipNames':[names[i] for i in sorted(ownership_allowed)],
             'canonicalCuffFaces':len(cuff_faces),'canonicalCuffVertices':len(cuff_rows),
             'canonicalCuffFaceIDsSHA256':hashlib.sha256(cuff_faces.astype('<u4').tobytes()).hexdigest(),
             'canonicalCuffStationMeters':np.percentile((g['POSITION'][cuff_rows]-head)@axis,[0,50,100]).tolist(),

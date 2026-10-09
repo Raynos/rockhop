@@ -77,3 +77,10 @@ Prepared conditioner and independent validator syntax pass.
 
 Limits: No emitted source yet; exact-float32 orientation, complete finite
 clearance and parent moving judgment remain required.
+
+Finding: All nine rejected faces lie on a false cuff-domain boundary: the
+selected hoodie itself has thumb weights at ordinary cuff vertices. Garment
+ownership now includes the whole ipsilateral native hand branch; its conditioned
+carrier still excludes digit support.
+Validation: Exact source face rows/fields inspected; source syntax passes.
+Limits: Corrected full pose envelope is pending; no inversion gate is waived.
