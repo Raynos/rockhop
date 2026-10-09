@@ -1,0 +1,74 @@
+{
+  "status": "ACTUAL_SOURCE_DOMAIN_TRACE_UNQUALIFIED",
+  "acceptedArt": false,
+  "sourceWallDomainsQualified": false,
+  "attempts": 1,
+  "guard": {
+    "path": "docs/evidence/rider-rebuild/selected-engine-receiver79/source-domains-guard01/guard.json",
+    "sha256": "19ceed5f96809dd579650ae3258b9315096da493a9a71333f1f86c9e44411a7b"
+  },
+  "actualReport": {
+    "path": "harness/out/rider-rebuild/selected-engine-receiver79/source-domains01/source-domain-report.json",
+    "sha256": "768f64f0d8b4e7729133c6570a18f55be6245cd82a5f7a200eeaaa5ae3f61202"
+  },
+  "actualArrays": {
+    "path": "harness/out/rider-rebuild/selected-engine-receiver79/source-domains01/source-domain-cuts.npz",
+    "sha256": "575c8d245638f734271b284def751e26f22a19780a880454d42cb8c3d3cf0b56"
+  },
+  "retained": [
+    {
+      "path": "docs/evidence/rider-rebuild/selected-engine-receiver79/source-domain-trace01/guard.json.gz",
+      "sha256": "e24fb57d8896b5a2771c37b94747b0c776e9450c1ee6a02bb44927e6fd3f2c34"
+    },
+    {
+      "path": "docs/evidence/rider-rebuild/selected-engine-receiver79/source-domain-trace01/source-domain-cuts.npz",
+      "sha256": "575c8d245638f734271b284def751e26f22a19780a880454d42cb8c3d3cf0b56"
+    },
+    {
+      "path": "docs/evidence/rider-rebuild/selected-engine-receiver79/source-domain-trace01/source-domain-report.json.gz",
+      "sha256": "667c6c00f85fe58e9a6c9174b37957fb7c5549aa348de8fef15d95172430c82b"
+    },
+    {
+      "path": "docs/evidence/rider-rebuild/selected-engine-receiver79/source-domain-trace01/telemetry.jsonl.gz",
+      "sha256": "75173bfcd01739f711b361ac71ee95d6ab810bdaba2acaa4f119baa85d309517"
+    },
+    {
+      "path": "docs/evidence/rider-rebuild/selected-engine-receiver79/source-domain-trace01/worker.log.gz",
+      "sha256": "039aa4c793ea0dfc1eb8cd3c41c167710bbdeed4882c3f8031c0b7a6b284d4b6"
+    }
+  ],
+  "actualOutcome": {
+    "exitCode": 0,
+    "elapsedSeconds": 2.403,
+    "faceCounts": {
+      "-1": 154,
+      "0": 499739,
+      "1": 421829
+    },
+    "actualClosureCutEdges": 1561,
+    "closedDegreeTwoLoops": 4,
+    "closureComponents": 4,
+    "opposingWallConflicts": 73712,
+    "unclassified73RayVertices": 31
+  },
+  "telemetry": {
+    "samples": 3,
+    "peakAnonymousGiB": 49.5,
+    "peakWiredGiB": 10.3,
+    "peakSampledOwnedRSSMiB": 530.359375,
+    "pressureRaw": [
+      "1"
+    ],
+    "swapRaw": [
+      "total = 6144.00M  used = 4944.62M  free = 1199.38M  (encrypted)"
+    ]
+  },
+  "interpretation": "Literal seam geodesic assignment produces closed cuts but disagrees with independent opposite-wall observations. This is not same-wall bake authority.",
+  "scope": {
+    "sourceEdited": false,
+    "nativeExecuted": false,
+    "bakeExecuted": false,
+    "retryExecuted": false
+  },
+  "nextRequired": "Parent judgment and third-round gate86 before the next actual; literal source wall ownership and actual receiver labels remain open. Actual83 saved/reopened boot intake remains missing."
+}

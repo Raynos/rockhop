@@ -28,3 +28,9 @@ Finding: Freeze the actual dense selected hoodie inventory and four literal sele
 Validation: Parent verifies six actual inventory pins;716971vertices/921722triangles,byte-exact position bridging,zero true boundary edges,50 ambiguity cuts; disjoint own seam anchors. Trace launcher source reviewed/Node syntax passes.
 
 Limits: Inventory only; closed selected material needs actual domain tracing/closure judgment before cages. No wall-domain, native bake or moving acceptance.
+
+Finding: Closed geodesic source cuts do not establish correct clothing-wall labels; stop this assignment as bake authority.
+
+Validation: One originalguard trace2.403s exit0, parent report/array/hash checks pass.73712 opposite-wall conflicts and154unassigned faces retained despite four unbranched closed loops.
+
+Limits: Independent ray observations also need semantic scrutiny; no bake authority, native, retry or art acceptance. Correct local source/cage workflow next.
