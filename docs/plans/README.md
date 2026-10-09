@@ -2047,3 +2047,5 @@ Current-game gate45 interrupted at original memory bound before restart: exact c
 Component-sleeve47 source parent-reviewed: exact original28 solve and dense math, save-first38 lifetime, original Hoodie intake into reopened41 glove/75/fullref component. Seven CPU fixtures/pins/Python3.9 pass. Actual intake/sleeve/native replay/export and moving art remain pending; no fullmaster preservation claim from component.
 
 Component47 actual intake succeeds: original selected Hoodie + qualified41 bilateral gloves +exact75/fullref raw save/reopen34.073s,325MB native ff2ba521…. Exact geometry/PBR/field metadata/rest preserved. Frozen sleeve input01 ready; fitting/full outfit merge/replay/moving art pending.
+
+Actual sleeve47 geometry fails at contact pass0: deficient zero-effective-support constraint,28.98s exit1; no constructed output. Original Hoodie/glove intake intact. Fresh clean Astra6 X-High49 owns exact offending-sample diagnosis; stop unchanged retries/ease sweeps. Complete garment moving acceptance remains open.
