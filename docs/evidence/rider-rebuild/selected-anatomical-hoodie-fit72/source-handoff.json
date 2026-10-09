@@ -1,0 +1,122 @@
+{
+  "acceptedArt": false,
+  "productionTransportExecuted": false,
+  "nativeExecuted": false,
+  "sourcePins": {
+    "check.py": {
+      "path": "assets/blender/rider-rebuild/selected-anatomical-hoodie-fit72/check.py",
+      "sha256": "78729900f80bd270d46f9d20fb151524eff09f28212c36682e86f00b7734783c"
+    },
+    "component.py": {
+      "path": "assets/blender/rider-rebuild/selected-anatomical-hoodie-fit72/component.py",
+      "sha256": "ee42e039a753e9f61c84364c982920dff08e2495afe75ea519756b57812e66e2"
+    },
+    "durable.py": {
+      "path": "assets/blender/rider-rebuild/selected-anatomical-hoodie-fit72/durable.py",
+      "sha256": "6277f55680b226a8773c0a059aedabaf7e8432c5fb1ef0cf237895dc00472128"
+    },
+    "worker.py": {
+      "path": "assets/blender/rider-rebuild/selected-anatomical-hoodie-fit72/worker.py",
+      "sha256": "3555b6a7f698ec969c7aec4558032a38021c3fa2bf6e10c352ee58a6e0f69e7e"
+    }
+  },
+  "fixtures": {
+    "path": "docs/evidence/rider-rebuild/selected-anatomical-hoodie-fit72/resume-fixtures.json",
+    "sha256": "67d46eafa2958e543881488f017545661026ccb53cfc9e4d0b78020576d307d6"
+  },
+  "actualSolve69": {
+    "path": "harness/out/rider-rebuild/selected-anatomical-hoodie-fit69/solve01/solve.json",
+    "sha256": "c3f8c60ed4ed75cefa712f0edffa1318e8cead54041fe1c7b1026e51bdd339c7"
+  },
+  "unchangedCarry69": {
+    "path": "assets/blender/rider-rebuild/selected-anatomical-hoodie-fit69/worker.py",
+    "sha256": "33a3f0cf7764b1226bc380cf4686b595a33b48b9f9a4580dfb7233ae390445bf"
+  },
+  "frozen65": {
+    "component65": {
+      "path": "assets/blender/rider-rebuild/selected-anatomical-hoodie-fit65/component.py",
+      "sha256": "0338d2b19a99da861a92974e9829db41f9de1dfd2277ce5f0ce1bfaff2159b1b"
+    },
+    "input65": {
+      "path": "assets/blender/rider-rebuild/selected-anatomical-hoodie-fit65/input01.json",
+      "sha256": "24b887a1617e6c4282f249a3613eea010e92203faac75d6b7d1e656767d8f462"
+    },
+    "cage65": {
+      "path": "assets/blender/rider-rebuild/selected-anatomical-hoodie-fit65/multiscale.py",
+      "sha256": "f6c4783d74fd508dd8ff7386eae1ebe9aa3d5a023e9dcbdbd5096113c5c3ab14"
+    },
+    "fixedMaterialTargets": {
+      "path": "harness/out/rider-rebuild/selected-anatomical-hoodie-fit65/component01/fixed-material-targets.npz",
+      "sha256": "821f1095759ff60dde341b3235859e88aabd8c4ccb0ab400a23d8abad186608b"
+    },
+    "materialTargets": {
+      "path": "harness/out/rider-rebuild/selected-anatomical-hoodie-fit65/component01/material-targets.json",
+      "sha256": "f1565f44ceb4d79e1f462db8f38a185a0fb05c93607cee508a71acd617b8e357"
+    }
+  },
+  "finding": "Actual69 solve passed and saved28 exact maps. Transport02 reached69632 vertices before the original global-memory guard stopped; owned RSS peaked293568KiB. This does not establish worker-caused global pressure.72 retains completed work across explicitly requested parent invocations without relaxing that guard.",
+  "commands": {
+    "smallFixtures": "OPENBLAS_NUM_THREADS=2 OMP_NUM_THREADS=2 /Applications/Blender.app/Contents/Resources/5.2/python/bin/python3.13 assets/blender/rider-rebuild/selected-anatomical-hoodie-fit72/check.py",
+    "startOnceUnderOriginalGuard": "OPENBLAS_NUM_THREADS=2 OMP_NUM_THREADS=2 /Applications/Blender.app/Contents/Resources/5.2/python/bin/python3.13 assets/blender/rider-rebuild/selected-anatomical-hoodie-fit72/worker.py start harness/out/rider-rebuild/selected-anatomical-hoodie-fit72/transport01",
+    "explicitParentResumeUnderOriginalGuard": "OPENBLAS_NUM_THREADS=2 OMP_NUM_THREADS=2 /Applications/Blender.app/Contents/Resources/5.2/python/bin/python3.13 assets/blender/rider-rebuild/selected-anatomical-hoodie-fit72/worker.py resume harness/out/rider-rebuild/selected-anatomical-hoodie-fit72/transport01",
+    "freezeOnlyAfterCompleteTransport": "OPENBLAS_NUM_THREADS=2 OMP_NUM_THREADS=2 /Applications/Blender.app/Contents/Resources/5.2/python/bin/python3.13 assets/blender/rider-rebuild/selected-anatomical-hoodie-fit72/component.py freeze harness/out/rider-rebuild/selected-anatomical-hoodie-fit72/transport01/transport.json assets/blender/rider-rebuild/selected-anatomical-hoodie-fit72/input01.json",
+    "nativeApplyUnderOriginalGuard": "/Applications/Blender.app/Contents/MacOS/Blender -b -t 2 --python-exit-code 1 --python assets/blender/rider-rebuild/selected-anatomical-hoodie-fit72/component.py -- assets/blender/rider-rebuild/selected-anatomical-hoodie-fit72/input01.json harness/out/rider-rebuild/selected-anatomical-hoodie-fit72/component01",
+    "independentReopenUnderOriginalGuard": "/Applications/Blender.app/Contents/MacOS/Blender -b -t 2 --python-exit-code 1 --python assets/blender/rider-rebuild/selected-anatomical-hoodie-fit72/component.py -- qualify harness/out/rider-rebuild/selected-anatomical-hoodie-fit72/component01/component-pending.json"
+  },
+  "guardPolicy": "Parent invokes each real transport/native command using the unchanged original serial CPU2 guard. Resume is a separate explicit parent action. This worker contains no subprocess, memory monitor, retry timer or automatic restart. No guard/source changes and no foreign kills.",
+  "durability": {
+    "job": "Immutable job.json pins current72 worker/storage sources, actual69 solve/maps, unchanged69 carry source and original47 cache.",
+    "spanCount": 176,
+    "fullSpanVertices": 4096,
+    "fullSpanCount": 175,
+    "lastSpanVertices": 171,
+    "seal": "Per-span float64 positions/Jacobians are fsynced and reopened byte-exactly. Seal includes immutable job hash, original vertex range/hash and payload pins. A fsynced directory is atomically renamed to its sealed range only after both arrays and seal are complete.",
+    "resume": "Validate all sealed spans and their exact contiguous source prefix; then compute remaining spans using restored exact65 maps. Ignore only unsealed .pending staging. Corrupt, gapped, wrong-source or incomplete sealed spans reject.",
+    "assembly": "Require every original vertex, copy spans in source order into full float64 arrays, fsync and atomically seal complete/. Verify full arrays against all span payloads. transport.json is written last and requires exact complete assembly.",
+    "interruptedAssembly": "No complete receipt exists. The next explicit resume reuses all sealed spans and rebuilds only incomplete assembly. An already complete assembly is verified without replacing it.",
+    "oldPartial69": "transport02 partial NPY arrays are never read, imported or admitted. Source arrays are only original47; numerical fields are only committed69 solve01."
+  },
+  "qualificationAdmission": {
+    "helper": "assets/blender/rider-rebuild/selected-anatomical-hoodie-fit72/component.py",
+    "call": "qualify_receipt(actual_component_qualified_path)",
+    "status": "UNACCEPTED_ANATOMICAL72_REOPENED_DISTAL_AND_MOTION_PENDING",
+    "registrationRecipe": {
+      "path": "assets/blender/rider-rebuild/selected-anatomical-hoodie-fit65/multiscale.py",
+      "sha256": "f6c4783d74fd508dd8ff7386eae1ebe9aa3d5a023e9dcbdbd5096113c5c3ab14"
+    },
+    "configRegistrationKey": "cage65",
+    "executionProvenance": "input.execution72 and report.execution72 name actual72 component, worker and completed transport receipt. The transport receipt also names storage72, actual69 solver/carry ancestry and complete sealed assembly. No72 receipt claims workerRecipe69.",
+    "fieldPolicy": "Nominal2.6mm and existing20micrometre comparison tolerance; coarse40mm; actual-native fine spacing0.0028839254367271482m; per-map derivative bound0.85; saved28 maps unchanged.",
+    "nativePreservation": "Exact original47 positions/faces checked before apply. Unchanged65 inverse-transpose source corner-normal transport; raw native saved before scans. Invariant/corner_normals/qualify/qualify_receipt function ASTs remain exact65. Actual full contact, source/field/UV/PBR/rest/fullreference and tangent/pair gates remain mandatory.",
+    "python": "CPU admission now validates NPY spans; use bundled Python with NumPy for freeze and authoritative qualifier calls."
+  },
+  "expectedOutputs": {
+    "transport01": [
+      "job.json",
+      "spans/START-END/{positions.npy,jacobians.npy,seal.json}",
+      "complete/positions.npy",
+      "complete/jacobians.npy",
+      "complete/assembly.json",
+      "transport.json"
+    ],
+    "component01": [
+      "UNACCEPTED-selected-anatomical-hoodie-fit72.blend",
+      "component-raw.json",
+      "component-pending.json",
+      "expected-witness.json",
+      "anatomical-cage.npz",
+      "material-targets.json",
+      "fixed-material-targets.npz",
+      "qualification-inputs.npz",
+      "actual-tangent-and-pair.json",
+      "component-qualified.json"
+    ]
+  },
+  "downstream": "After actual72 authoritative qualification only, parent narrowly adapts canonical51 and held71 helper/status/execution ancestry to72 while registration stays frozen65. No current51/71 edit; exact distal surgery, six relation gates,52 merge and actual gameplay remain open.",
+  "limits": [
+    "Only small CPU fixtures executed by builder.",
+    "No incomplete transport, raw save or preservation-only receipt is fit/art acceptance.",
+    "No changed targets, topology, selected appearance, named fields, normals policy, thresholds, map solve or original guard.",
+    "Frozen65/69/51 remain unchanged."
+  ]
+}

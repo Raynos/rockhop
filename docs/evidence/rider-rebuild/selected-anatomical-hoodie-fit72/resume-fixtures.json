@@ -1,0 +1,21 @@
+{
+  "acceptedArt": false,
+  "passed": true,
+  "productionTransportExecuted": false,
+  "nativeExecuted": false,
+  "checks": [
+    "Interrupted unsealed bytes do not count; valid contiguous sealed prefix24/31 survives reopening and rejects complete admission",
+    "Explicit resume from durable prefix including short final span matches uninterrupted positions and composed Jacobians bit-exactly",
+    "Completed assembly verifies idempotently without changing immutable output or sealed spans",
+    "Corrupted sealed position bytes reject by checksum before prefix reuse or native admission",
+    "A sealed span missing its Jacobian payload rejects; partial data is never promoted",
+    "Missing earlier span with later seals rejects as a noncontiguous prefix",
+    "Changed executing-source job or original source vertex order rejects on resume",
+    "Corrupt assembled whole-domain Jacobian rejects despite valid sealed source spans",
+    "Wrong sealed tail bound rejects; completion requires exactly all source vertices",
+    "Truthful72 execution and storage provenance retain pinned actual69 solve and unchanged69 carry helper; no forged69 worker identity",
+    "Native72 retains AST-exact65 preservation/reopen/admission and exact normal transport, with truthful72 output/status and no repeated solve",
+    "All72 source parses as Python3.9; fixture performed no production transport or native job"
+  ],
+  "elapsedSeconds": 0.5261797499842942
+}
