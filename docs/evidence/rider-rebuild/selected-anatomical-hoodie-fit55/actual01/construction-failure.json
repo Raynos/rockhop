@@ -1,0 +1,13 @@
+{
+  "acceptedArt": false,
+  "status": "UNACCEPTED_ANATOMICAL55_CONSTRUCTION_FAILED",
+  "stage": "ACTUAL_SOURCE_MERIDIANS_AND_BODY_TARGETS",
+  "sourceRecipe": {
+    "path": "assets/blender/rider-rebuild/selected-anatomical-hoodie-fit55/component.py",
+    "sha256": "6463d53817cc949f6238ab13881897de4af23a2ecfc651c99746e598bb94667d"
+  },
+  "exceptionType": "AssertionError",
+  "message": "",
+  "traceback": "Traceback (most recent call last):\n  File \"/Users/raynos/projects/games/rockhop/assets/blender/rider-rebuild/selected-anatomical-hoodie-fit55/component.py\", line 210, in construct\n    try: namespace['main']()\n         ~~~~~~~~~~~~~~~~~^^\n  File \"/Users/raynos/projects/games/rockhop/assets/blender/rider-rebuild/selected-sleeve-rebuild28/author.py\", line 133, in main\n    surgery = B.Surgery(hoodie, source)\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/raynos/projects/games/rockhop/assets/blender/rider-rebuild/selected-anatomical-hoodie-fit55/component.py\", line 135, in build\n    control_points, targets, target_report = target_helper.make(c, original, broad['points'].astype(float),\n                                             ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n        faces, c['actual_nearest'](c['bp'], c['bf']), target)\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/raynos/projects/games/rockhop/assets/blender/rider-rebuild/selected-anatomical-hoodie-fit55/targets.py\", line 126, in make\n    assert endpoint_interval is not None\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n",
+  "rawNativeExists": false
+}
