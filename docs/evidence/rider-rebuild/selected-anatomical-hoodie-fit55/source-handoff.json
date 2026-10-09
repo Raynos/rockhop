@@ -1,0 +1,70 @@
+{
+  "acceptedArt": false,
+  "actualConstructionExecuted": false,
+  "sourcePins": {
+    "cage.py": {
+      "path": "assets/blender/rider-rebuild/selected-anatomical-hoodie-fit55/cage.py",
+      "sha256": "2c9782ae17ccb23d69ac7a4069cc29f06adcbc180c97be30520b541f0caee417"
+    },
+    "check.py": {
+      "path": "assets/blender/rider-rebuild/selected-anatomical-hoodie-fit55/check.py",
+      "sha256": "164212ca1190dd57111ef2e0da7f00941a769f2b93eec31de2dfbc0c5270af62"
+    },
+    "component.py": {
+      "path": "assets/blender/rider-rebuild/selected-anatomical-hoodie-fit55/component.py",
+      "sha256": "6463d53817cc949f6238ab13881897de4af23a2ecfc651c99746e598bb94667d"
+    },
+    "input01.json": {
+      "path": "assets/blender/rider-rebuild/selected-anatomical-hoodie-fit55/input01.json",
+      "sha256": "7d9249f1dc0d1c2d068efd27562a85642848730b5c2b9fc6dd55009ef229cea8"
+    },
+    "qualify.py": {
+      "path": "assets/blender/rider-rebuild/selected-anatomical-hoodie-fit55/qualify.py",
+      "sha256": "a6c2cf06274bdb52daee5e4e0a4c325cadf4cc614127b5118beee2bd10735e13"
+    },
+    "sections.py": {
+      "path": "assets/blender/rider-rebuild/selected-anatomical-hoodie-fit55/sections.py",
+      "sha256": "01687d2f746616508f561d83c4f227d3686b68d6b2c11d9f09e64b7c8b2511a3"
+    },
+    "targets.py": {
+      "path": "assets/blender/rider-rebuild/selected-anatomical-hoodie-fit55/targets.py",
+      "sha256": "44ae658dc2d605d526b9c23ec8a990860cca2b5262953b5cd549817cfb9aee7d"
+    }
+  },
+  "cpuFixtures": {
+    "path": "docs/evidence/rider-rebuild/selected-anatomical-hoodie-fit55/cpu-fixtures.json",
+    "sha256": "1bbeda1ac865fd73e1d3a06aabe181d5905f76acfb4e300be6ad2cfc1ff9c28c"
+  },
+  "commands": {
+    "construct": "/Applications/Blender.app/Contents/MacOS/Blender -b -t 2 --python-exit-code 1 --python assets/blender/rider-rebuild/selected-anatomical-hoodie-fit55/component.py -- assets/blender/rider-rebuild/selected-anatomical-hoodie-fit55/input01.json harness/out/rider-rebuild/selected-anatomical-hoodie-fit55/component01",
+    "qualify": "/Applications/Blender.app/Contents/MacOS/Blender -b -t 2 --python-exit-code 1 --python assets/blender/rider-rebuild/selected-anatomical-hoodie-fit55/component.py -- qualify harness/out/rider-rebuild/selected-anatomical-hoodie-fit55/component01/component-pending.json",
+    "cpu": "OPENBLAS_NUM_THREADS=2 OMP_NUM_THREADS=2 /Applications/Blender.app/Contents/Resources/5.2/python/bin/python3.13 assets/blender/rider-rebuild/selected-anatomical-hoodie-fit55/check.py"
+  },
+  "expectedOutputs": [
+    "UNACCEPTED-selected-anatomical-hoodie-fit55.blend",
+    "component-raw.json",
+    "component-pending.json",
+    "expected-witness.json",
+    "anatomical-cage.npz",
+    "material-targets.json",
+    "qualification-inputs.npz",
+    "component-qualified.json",
+    "actual-tangent-and-pair.json"
+  ],
+  "failureOutput": "construction-failure.json records exact stage and exception even before raw save",
+  "qualificationAdmission": "component.py qualify_receipt(path) requires actual independent saved contact, ordered endpoints, C2 certificates and exact source/protected preservation. Failed contact never admits distal51.",
+  "actualWitnessFaceIds": [
+    754365,
+    713389,
+    734276,
+    729981
+  ],
+  "method": "Actual selected cavity apex and connected torso/sleeve material arclength to highest true3D feasible paired-wall body-gap section; coherent C2 shared cage anchors healthy50 regions. Body nearest point/normal never chooses target correspondence.",
+  "limits": [
+    "No actual55 native or qualification yet. CPU fixtures are not art or contact acceptance.",
+    "Original parent serial CPU2/guard policy unchanged; actual first constructor/qualifier duration unknown.",
+    "Original45mm repair constructor remains retired; this is explicit anatomical rest-shape tailoring.",
+    "Raw save precedes actual full retained corner/centroid contact and tangent scan, which run after independent reopen.",
+    "Full triangle/self/body/glove relations and generic/actual-game moving review remain open."
+  ]
+}
