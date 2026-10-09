@@ -5,6 +5,14 @@ type Entry = SelectedTextureReceipt['textures'][number];
 type PayloadImage = { width?: number; height?: number; data?: unknown };
 const dimension = (value: unknown): number | null => typeof value === 'number' && Number.isInteger(value) && value > 0 ? value : null;
 
+/** The rider scene remains its visual owner after attachment under the bike. */
+export function activeRiderTextureReceipt(rider: { root: Object3D }): SelectedTextureReceipt {
+  // The legacy driver keeps scene private in TypeScript; the selected driver
+  // exposes it. Both own this scene at runtime, independently of its parent.
+  const scene = Reflect.get(rider, 'scene') as Object3D | undefined;
+  return selectedTextureReceipt(scene?.isObject3D ? scene : rider.root);
+}
+
 function inspect(texture: Texture): Entry {
   const image = texture.image as PayloadImage | undefined;
   const width = dimension(image?.width), height = dimension(image?.height);

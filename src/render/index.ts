@@ -20,7 +20,7 @@ import { HERO_BOOT_FILE_SET, SELECTED_HERO_FILES } from '../boot/asset-totals';
 import { setHeroTextureRenderer } from './hero/selectedTextures';
 import { GltfBike } from './hero/gltfBike';
 import { GltfRider } from './hero/gltfRider';
-import { selectedTextureReceipt } from './hero/selectedTextureReceipt';
+import { activeRiderTextureReceipt } from './hero/selectedTextureReceipt';
 import type { GLTF } from 'three/examples/jsm/loaders/GLTFLoader.js';
 import { CameraRig } from './camera/rig';
 import { releaseSceneAllocations } from './contextResources';
@@ -2240,7 +2240,7 @@ export class ThreeRenderer implements GameRenderer {
 
   /** Active rider only; excludes pooled documents, ghosts and Garage reflections. */
   selectedTextureReceipt(): SelectedTextureReceipt {
-    return selectedTextureReceipt(this.rider.root);
+    return activeRiderTextureReceipt(this.rider);
   }
 
   /** Extra diagnostics; texture traversal is explicitly opt-in, never a frame cost. */

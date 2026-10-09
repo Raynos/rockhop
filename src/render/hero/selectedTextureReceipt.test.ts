@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest';
 import * as THREE from 'three';
-import { selectedTextureReceipt } from './selectedTextureReceipt';
+import { activeRiderTextureReceipt, selectedTextureReceipt } from './selectedTextureReceipt';
 
 function rider(...materials: THREE.Material[]): THREE.Group {
   const root = new THREE.Group();
@@ -16,6 +16,23 @@ function compressed(format: THREE.CompressedPixelFormat, data: Uint8Array[]): TH
 }
 
 describe('selected rider texture payload receipt', () => {
+  it('follows the rider scene after bike attachment without including bike maps', () => {
+    const map = compressed(THREE.RGBA_ASTC_4x4_Format, [new Uint8Array(16), new Uint8Array(16), new Uint8Array(16)]);
+    const scene = rider(new THREE.MeshStandardMaterial({ map }));
+    const placement = new THREE.Group(), root = new THREE.Group();
+    placement.add(scene); root.add(placement);
+    const bike = rider(new THREE.MeshStandardMaterial({ map: new THREE.DataTexture(new Uint8Array(64), 4, 4) }));
+    bike.add(placement); // Actual selected rider attach reparents the placement.
+    expect(root.children).toHaveLength(0);
+    expect(selectedTextureReceipt(root).textureCount).toBe(0);
+    const attachedRider = { root, scene };
+    expect(activeRiderTextureReceipt(attachedRider)).toMatchObject({
+      textureCount: 1, mapReferences: 1, payloadBytes: 48, unavailableTextures: 0, incompleteTextures: 0,
+    });
+    expect(scene.parent).toBe(placement); expect(placement.parent).toBe(bike);
+    expect(activeRiderTextureReceipt({ root: scene }).textureCount).toBe(1);
+  });
+
   it('sums actual ASTC mip views once across shared material maps and meshes', () => {
     const storage = new Uint8Array(128);
     const texture = compressed(THREE.RGBA_ASTC_4x4_Format, [storage.subarray(0, 16), storage.subarray(16, 32), storage.subarray(32, 48)]);

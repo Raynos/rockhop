@@ -93,6 +93,7 @@ try {
  page.on('request', request => report.requests.push({atMs: performance.now(), url: request.url(), type: request.resourceType()}));
  await page.goto(server.resolvedUrls.local[0] + '?audio=0&perf=1');
  await page.waitForSelector('.menu-screen.live .menu-item[data-id=garage]');
+ await page.waitForSelector('#loader', {state: 'detached'});
  report.firstGarageBefore = await page.evaluate(() => ({lifecycle: globalThis.window.__phoneLifecycle, info: globalThis.window.__rockhop.info(), stats: globalThis.window.__rockhop.stats(), webdriver: globalThis.navigator.webdriver}));
  assert(report.firstGarageBefore.webdriver, 'Silent automation requires navigator.webdriver');
  const firstGarageStart = performance.now();
@@ -115,7 +116,8 @@ try {
    if (outfit === 'street-remastered') {
     measured.nativeSkeleton = await page.evaluate(() => {
      const bones = new Set(), roots = new Set();
-     globalThis.window.__render.debug.rider.root.traverse(object => {
+     const rider = globalThis.window.__render.debug.rider;
+     (rider.scene ?? rider.root).traverse(object => {
       if (!object.isSkinnedMesh) return; roots.add(object.skeleton);
       for (const bone of object.skeleton.bones) bones.add(bone.name);
      });
