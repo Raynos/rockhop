@@ -1,0 +1,33 @@
+Source-only handoff. Do not run these payloads outside the parent's unchanged
+serial CPU2/global resource guard. Each Blender command is a NEW process.
+Run from /Users/raynos/projects/games/rockhop. All paths below are fresh outputs.
+Source pin manifest: source-checkpoint.json. No output below currently exists.
+
+1. Construct only the original selected bilateral glove component:
+/Applications/Blender.app/Contents/MacOS/Blender -b -t 2 --python-exit-code 1 --python assets/blender/rider-rebuild/selected-glove-component41/component.py -- build harness/out/rider-rebuild/selected-glove-component41/component01
+
+2. Qualify the saved component in a separate process:
+/Applications/Blender.app/Contents/MacOS/Blender -b -t 2 --python-exit-code 1 --python assets/blender/rider-rebuild/selected-glove-component41/component.py -- qualify harness/out/rider-rebuild/selected-glove-component41/component01/component-pending.json
+
+3. Produce the independent original whole-master protected witness:
+/Applications/Blender.app/Contents/MacOS/Blender -b -t 2 --python-exit-code 1 --python assets/blender/rider-rebuild/selected-glove-component41/assemble.py -- witness harness/out/rider-rebuild/selected-glove-component41/original01/protected.json
+
+4. Freeze concrete component/witness/native pins (ordinary Python; no Blender):
+python3 assets/blender/rider-rebuild/selected-glove-component41/assemble.py -- freeze harness/out/rider-rebuild/selected-glove-component41/component01/component-qualified.json harness/out/rider-rebuild/selected-glove-component41/original01/protected.json assets/blender/rider-rebuild/selected-glove-component41/assembly01.input.json
+
+5. Attach only finished glove mesh data to original95a4 master; save raw first:
+/Applications/Blender.app/Contents/MacOS/Blender -b -t 2 --python-exit-code 1 --python assets/blender/rider-rebuild/selected-glove-component41/assemble.py -- assemble assets/blender/rider-rebuild/selected-glove-component41/assembly01.input.json harness/out/rider-rebuild/selected-glove-component41/attached01
+
+6. Independently reopen/qualify protected full-master and exact component mesh:
+/Applications/Blender.app/Contents/MacOS/Blender -b -t 2 --python-exit-code 1 --python assets/blender/rider-rebuild/selected-glove-component41/assemble.py -- qualify harness/out/rider-rebuild/selected-glove-component41/attached01/gloves-only-pending.json
+
+7. New narrow sleeve intake retains actual41/frozen04 identity:
+python3 assets/blender/rider-rebuild/selected-glove-component41/freeze-sleeve.py harness/out/rider-rebuild/selected-glove-component41/attached01/gloves-only-qualified.json harness/out/rider-rebuild/selected-seated-anatomical09/reference05/original-full-reference.npz assets/blender/rider-rebuild/selected-glove-component41/sleeve01.input.json
+
+8. Run unchanged sleeve38 (original28 geometry) under the original guard:
+/Applications/Blender.app/Contents/MacOS/Blender -b -t 2 --python-exit-code 1 --python assets/blender/rider-rebuild/selected-wardrobe-integration38/sleeve38.py -- assets/blender/rider-rebuild/selected-glove-component41/sleeve01.input.json harness/out/rider-rebuild/selected-sleeve-rebuild28/component41-authored01
+
+Then use original qualify-sleeve38.py, original six full-triangle relation
+workers, and independent generic/bike moving evidence. No final38 lineage pin
+may be silently changed to call recipe41 recipe04. No normal player promotion.
+Runtime, global memory growth, native-save duration and art outcome unmeasured.

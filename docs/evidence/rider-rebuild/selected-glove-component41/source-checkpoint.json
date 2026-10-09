@@ -1,0 +1,58 @@
+{
+  "acceptedArt": false,
+  "status": "SOURCE_ONLY_PARENT_NATIVE_RUN_PENDING",
+  "sources": {
+    "assemble.py": {
+      "path": "assets/blender/rider-rebuild/selected-glove-component41/assemble.py",
+      "sha256": "11d9e3b2c359a23c68d54d42cb6217bdc2df70460760bfe52069ecf8a77ec001"
+    },
+    "component.py": {
+      "path": "assets/blender/rider-rebuild/selected-glove-component41/component.py",
+      "sha256": "ea4d19ff842fb9e5dc65fe27cbd48f76bcc09628f86f86bdfddc996465ebc251"
+    },
+    "freeze-sleeve.py": {
+      "path": "assets/blender/rider-rebuild/selected-glove-component41/freeze-sleeve.py",
+      "sha256": "39d44dc53f55b08cf72c715e6794b45417e05492883ec357a71f67055590989c"
+    },
+    "test_component.py": {
+      "path": "assets/blender/rider-rebuild/selected-glove-component41/test_component.py",
+      "sha256": "e4e9ec164ee23ae0d1827c84492a760d1f5f07f98fd8363a600078f3020c746a"
+    }
+  },
+  "originalMaster": {
+    "path": "harness/out/rider-rebuild/selected-complete-engine01/engine05/rider-private-masked.blend",
+    "sha256": "95a4f14e06fb52cc055df6d1446a035d8cd3d35180d565ad52f3a70b3b05664b"
+  },
+  "originalMethod": {
+    "path": "assets/blender/rider-rebuild/selected-sleeve-tailoring27/gloves_only04.py",
+    "sha256": "c1a98001b74ad0ad445f856a2f423d320bf98ec1b9e315126eba218bb55ce002"
+  },
+  "constructionInput": {
+    "path": "assets/blender/rider-rebuild/selected-cuff-topology10/input09.json",
+    "sha256": "076ce70b228895af9cd75ea9148abca85c57996938c19691fb6d3bdc9049d0f4"
+  },
+  "requiredObjects": [
+    "ActualSelectedGlove.L",
+    "ActualSelectedGlove.R",
+    "RiderSkeleton",
+    "RiderBody__FullAnatomyReference"
+  ],
+  "originalFullReferenceSamples": {
+    "path": "harness/out/rider-rebuild/selected-seated-anatomical09/reference05/original-full-reference.npz",
+    "sha256": "01f752d72e94dbab81cc7a193adbd2dd7bba26df919b48454d8937fa9665dcc5"
+  },
+  "validation": {
+    "command": "python3 assets/blender/rider-rebuild/selected-glove-component41/test_component.py",
+    "tests": 8,
+    "result": "PASS",
+    "syntaxSources": 4,
+    "nativeRunExecuted": false
+  },
+  "limits": [
+    "Actual selective Blender dependency closure, construction memory peak, runtime and native serialization are unmeasured.",
+    "No Blender, browser, build, export, image generation, player promotion, art judgement or commit performed by builder.",
+    "Only a new parent-owned serial CPU2 run under unchanged original global guard may establish a saved component.",
+    "Existing geometry fingerprints cover positions, topology, corner UVs, material/PBR bytes and deform fields; arbitrary mesh attribute/corner-normal serialization is not a new separately measured claim.",
+    "Old strict04 final wardrobe lineage38 remains unchanged and rejects a41 sourceRecipe. New freeze-sleeve intake consumes a qualified41 attached master; final repaired-native intake must remain explicit."
+  ]
+}
