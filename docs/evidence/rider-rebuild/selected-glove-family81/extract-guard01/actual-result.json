@@ -1,0 +1,75 @@
+{
+  "status": "ACTUAL41_CACHE_EXTRACTED_AND_INDEPENDENT_CPU_IDENTITY_PASSED_UNACCEPTED",
+  "acceptedArt": false,
+  "guard": {
+    "path": "docs/evidence/rider-rebuild/selected-glove-family81/extract-guard01/guard.json",
+    "sha256": "2c910f439669f73a858b57faa888dbe4ec1ee2740cd8c72d2740a4e0d7a2682c"
+  },
+  "runner": {
+    "path": "assets/blender/rider-rebuild/selected-glove-family81/run_extract.py",
+    "sha256": "d60d95737200d3caa9d8dc3660d1688b27fdd07bdf5caaf82e0138f411cd3ea3"
+  },
+  "elapsedSeconds": 21.002,
+  "exitCode": 0,
+  "sourceReceipt": {
+    "path": "harness/out/rider-rebuild/selected-glove-component41/component01/component-qualified.json",
+    "sha256": "0136d429c4501386dad7e96a6113164adafb3f091d029f3e8b496803c6b1aa5b"
+  },
+  "sourceNative": {
+    "path": "harness/out/rider-rebuild/selected-glove-component41/component01/UNACCEPTED-selected-gloves-component.blend",
+    "sha256": "5af3779051374238bfe09487337ba606e94159d85d99706f859ec52d50abfd45"
+  },
+  "extraction": {
+    "path": "harness/out/rider-rebuild/selected-glove-family81/extract01/extraction.json",
+    "sha256": "a97a775d06b971e0a9198933903d0a36c2da83f0f97cee46940f98a27e522d8a"
+  },
+  "cpuCheck": {
+    "path": "harness/out/rider-rebuild/selected-glove-family81/extract01/cpu-check.json",
+    "sha256": "4c593323090894014d301b5a6835b9f0f916cc95b6a6168d46203bc03550bf60"
+  },
+  "cpuStatus": "INDEPENDENT_CPU_ACTUAL41_CACHE_IDENTITY_PASSED_UNACCEPTED",
+  "cacheObjects": {
+    "ActualSelectedGlove.L": {
+      "arrays": {
+        "path": "harness/out/rider-rebuild/selected-glove-family81/extract01/ActualSelectedGlove.L.npz",
+        "sha256": "26083e0697d8379fd41c613258d669b7027824a7f8ff69eee1618016026996f4"
+      },
+      "bytes": 93955644,
+      "cpu": {
+        "vertices": 323766,
+        "triangles": 567467,
+        "namedFields": 75,
+        "memberships": 801423,
+        "maximumMemberships": 4,
+        "zeroVertexNormals": 1,
+        "cornerNormals": 1702401,
+        "fullQualifiedGeometryReconstructed": true,
+        "sourceWitnessArrayAndNamedFieldBytesExact": true
+      }
+    },
+    "ActualSelectedGlove.R": {
+      "arrays": {
+        "path": "harness/out/rider-rebuild/selected-glove-family81/extract01/ActualSelectedGlove.R.npz",
+        "sha256": "7c81eebf4e9eca3495f4d8123bbb0d826538e002da1c47937d0deaf34dfbd787"
+      },
+      "bytes": 93941492,
+      "cpu": {
+        "vertices": 323766,
+        "triangles": 567467,
+        "namedFields": 75,
+        "memberships": 799654,
+        "maximumMemberships": 4,
+        "zeroVertexNormals": 0,
+        "cornerNormals": 1702401,
+        "fullQualifiedGeometryReconstructed": true,
+        "sourceWitnessArrayAndNamedFieldBytesExact": true
+      }
+    }
+  },
+  "maximumAnonymousGiB": 49.7,
+  "maximumAnonymousPlusWiredGiB": 59.900000000000006,
+  "maximumOwnedRSSGiB": 1.1129608154296875,
+  "nativeMutation": false,
+  "candidateAttempts": 0,
+  "limits": "Source identity only; no simplifier, fitted-glove geometry, bake, motion, art or device acceptance."
+}
