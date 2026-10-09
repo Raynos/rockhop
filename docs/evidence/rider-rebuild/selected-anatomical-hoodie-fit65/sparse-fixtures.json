@@ -1,0 +1,10 @@
+{
+  "passed": true,
+  "checks": [
+    "Sparse hash lookup matches every dense coefficient including missing/outside indices",
+    "Sparse cubic positions/Jacobians equal dense positions/Jacobians exactly",
+    "Sparse implicit-zero adjacent-difference bounds equal full dense certificate exactly",
+    "Shared sum field and global multilevel derivative certificate cover the actual summed Jacobian",
+    "Compressed sparse multilevel map serialization/reload has byte-exact position/Jacobian replay and certificates"
+  ]
+}
