@@ -17,3 +17,9 @@ Finding: Actual rear/below face requires reach dot pulp normal-0.226/-0.304mm; d
 Validation: Exact skinned material and thumb-subtree assertion; bounded worker exits0 in3.073s after unchanged admission queue.
 
 Limits: Endpoint-bracket failure only, not exhaustive thumb infeasibility. Finite lower-face construction and played parent gate remain open.
+
+Finding: Exact finite-face construction achieves bilateral thumb contact but requires168/169degree CMC rotation; anatomically unaccepted. Sequential finger closure exposes middle-DIP penetration caused upstream by PIP.
+
+Validation: Child exit0 in3.610s; full vertex and triangle checks measure2.822/3.425mm penetration,268/306 crossings. Thumb residual11/37nanometres with0.800/0.783mm clearance.
+
+Limits: No player promotion. Independent thumb controls and descendant-aware contact closure required; parent moving judgment remains open.
