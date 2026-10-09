@@ -1,0 +1,20 @@
+{
+  "acceptedArt": false,
+  "status": "ACTUAL72_REOPENED_SOURCE_PASS_CONTACT_FAIL_ADMISSION_REJECTED",
+  "authoritativeAdmissionRejected": true,
+  "reopenedNative": {
+    "path": "harness/out/rider-rebuild/selected-anatomical-hoodie-fit72/component01/UNACCEPTED-selected-anatomical-hoodie-fit72.blend",
+    "sha256": "836514932582be8a1168b7162cd0b1a27beea881ca3e229af4ef57964a21a800"
+  },
+  "failedReport": {
+    "path": "harness/out/rider-rebuild/selected-anatomical-hoodie-fit72/component01/component-qualified.json",
+    "sha256": "0a432350034d88bc2a24fda5a81bb5a73d45531dbedc9d3ce1f2782eef97499e"
+  },
+  "deficientRetainedConstraintCount": 225130,
+  "fullRetainedConstraintVertices": 676289,
+  "fullRetainedConstraintCentroids": 870162,
+  "minimumSignedBodyGapM": -0.04147346317768097,
+  "originalSourceAndRigPreserved": true,
+  "noNewDegenerateFaces": true,
+  "traceback": "Traceback (most recent call last):\n  File \"/tmp/rockhop-record72-reopen-failure.py\", line 5, in <module>\n    try:c['qualify_receipt'](p)\n        ~~~~~~~~~~~~~~~~~~~~^^^\n  File \"/Users/raynos/projects/games/rockhop/assets/blender/rider-rebuild/selected-anatomical-hoodie-fit72/component.py\", line 93, in qualify_receipt\n    report = _qualify_receipt65(path)\n  File \"/Users/raynos/projects/games/rockhop/assets/blender/rider-rebuild/selected-anatomical-hoodie-fit65/component.py\", line 292, in qualify_receipt\n    for name in ('native', 'registrationMaps', 'materialTargets', 'fixedMaterialTargets', 'qualificationInputs',\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n"
+}
