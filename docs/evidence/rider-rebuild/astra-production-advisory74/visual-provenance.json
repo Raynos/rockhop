@@ -1,0 +1,57 @@
+{
+  "scope": "Visual advisory from ordered samples of existing played game films; no fresh1xplayback or temporal acceptance",
+  "sourceClips": [
+    {
+      "bike": "rookie",
+      "path": "docs/evidence/rider-rebuild/selected-ankle-field42/played-rookie01/rider-actual-leans-rookie.mp4",
+      "sha256": "1f06b1b6d3f851c6c2931f6adb7b0670cdd9727cff7ddcb362a04550f1b3a20e",
+      "probe": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "width": 1440,
+            "height": 900,
+            "r_frame_rate": "25/1",
+            "nb_frames": "287"
+          }
+        ],
+        "format": {
+          "duration": "11.480000"
+        }
+      }
+    },
+    {
+      "bike": "pro",
+      "path": "docs/evidence/rider-rebuild/selected-ankle-field42/played-pro01/rider-actual-leans-pro.mp4",
+      "sha256": "062e8771863d4d65bc257fe7b5ac9f01ce20368c1b06c469d1be82da63b94dbb",
+      "probe": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "width": 1440,
+            "height": 900,
+            "r_frame_rate": "25/1",
+            "nb_frames": "323"
+          }
+        ],
+        "format": {
+          "duration": "12.920000"
+        }
+      }
+    }
+  ],
+  "sequenceSampling": "ffmpeg fps=1 at720px wide, chronological contact sheet; black tail tiles contain no frame",
+  "detailFrames": {
+    "pro-backward.png": "seek5.8s source frame; game HUD7.033",
+    "pro-forward.png": "seek2.7s source frame; game HUD3.950"
+  },
+  "reviewedImages": [
+    "rookie-sequence.jpg",
+    "pro-sequence.jpg",
+    "pro-backward.png",
+    "pro-forward.png"
+  ],
+  "acceptanceGranted": false
+}
