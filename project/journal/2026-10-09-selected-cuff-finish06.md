@@ -38,3 +38,14 @@ syntax pass. See selected-cuff-finish06/fit03-rejected.json.
 
 Limits: No candidate GLB exists. Corrected correspondence is unexecuted; moving
 judgment and checked deploy remain pending. No art or physical-phone pass.
+
+Finding: Anatomical cuff face identity alone does not validate global first-ray
+hoodie wall correspondence. fit04 still demands 60.232 mm and is rejected by
+146 inverted faces. Prepared exact source-maximizer attribution and complete
+selected hoodie geometry emitter; neither can promote the rejected patch.
+
+Validation: fit04 measures all 482 actual poses and fails its unchanged
+orientation gate. Emitter and attribution source syntax pass.
+
+Limits: No corrected GLB exists. Local source wall correspondence remains to
+be fixed, followed by clearance verification and parent moving review.
