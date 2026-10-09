@@ -45,6 +45,7 @@ def load(root):
 def main(intake,rookie,pro,out):
     started=time.monotonic(); root=Path(intake); out=Path(out);assert not out.exists();out.mkdir(parents=True)
     receipt,comps=load(root); h=comps['RiderHoodie']; p=h['POSITION'].astype(float); f=h['indices']; names=h['names']
+    h['JOINTS_0']=h['JOINTS_0'].copy()
     rest=np.linalg.inv(h['ib']); hoodie_tree=tree(p,f)
     classify,canonical=load_canonical(Path.cwd(),names)
     # Geometry seam identity is exact source POSITION identity, not spatial welding.
