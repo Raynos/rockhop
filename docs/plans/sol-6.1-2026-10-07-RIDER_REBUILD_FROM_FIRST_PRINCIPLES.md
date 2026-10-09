@@ -33,41 +33,46 @@ H0 is October 8, 14:05 Panama / 19:05 UTC; target finish is October 9 at the sam
 
 | Target | Complete visible deliverable | Owner |
 | --- | --- | --- |
-| H+4 — missed; remains unaccepted | Selected dressed rider in convincing standing/deep seated/return on both bikes, clean cuff/ankle overlap, visible hands/hips/profiles | Native lead36 and production builders; parent judges |
+| H+4 — missed; remains unaccepted | Selected dressed rider in convincing standing/deep seated/return on both bikes, clean cuff/ankle overlap, visible hands/hips/profiles | Selected garment builders41/42; parent judges |
 | H+10 | Compact selected-appearance production candidate and genuine full/LOD, compared moving in actual Garage | Production constructor37 and parent |
-| H+16 | Same master with editable Blender controls, complete generic and bike actions, consumed engine deformation/contact | Native lead36, wardrobe integration38 and parent |
+| H+16 | Same master with editable Blender controls, complete generic and bike actions, consumed engine deformation/contact | Parent and next concrete controls builder |
 | H+24 | Exact candidate reviewed on desktop/physical iPhone, bot/stranger/replay/restart and checked release/live SHA | Parent; human/device decisions through HR-23 |
 
-Native lead36 owns conditioned live controls and deterministic generic-action
-activation. Wardrobe lead38 owns completed glove/sleeve transfer onto the latest
-complete dressed master. Boot constructor37 owns the measured folded-triangle
-production repair with exact selected-source ancestry. Earlier28/24/29 sources
-remain useful preserved work; preparation is not a completed rider. The parent
-schedules heavy jobs serially, integrates handoffs and judges played outfits;
-source construction proceeds concurrently.
+**Current execution, October 8, 20:21 Panama:** Both actual-input Rookie03
+and Pro04 films show the selected complete outfit leaning forward/backward and
+returning to neutral. Garage stage forces neutral; the stand-up diagnostic
+cannot demonstrate gameplay leans. Native10 is saved and independently reopened:
+qualifier11 verifies all482 gameplay keys within0.020169mm of their original
+75-joint source, exact selected geometry/PBR/fields/rest and original actions.
+This technical foundation does not accept the visible wrists, ankles or saddle.
 
-**Current execution, October 8, 19:35 Panama:** Both real-input Rookie03 and
-Pro04 films are naturally played and shared, showing forward/up, backward
-crouch and neutral return in the selected high-resolution outfit. Wrist holes,
-ankle overlap and finite seated contact remain rejected. The earlier stand-up
-clip does not satisfy gameplay motion. Save-first native10 now retains both
-241-frame sequences on the full selected outfit (native `35815e62…`), with
-independent preservation and reopened replay qualification still pending.
+Fresh clean-context Astra6 X-High advisory43 started October9 at01:05UTC and
+inspected the previous12hours and actual played evidence. Its final synthesis
+was interrupted by model capacity; it is a partial review, not a completed deep
+review. The parent verified and adopted its useful interim corrections:
+stop offline IK rebuilding until the next clothing film; isolate exact selected
+glove construction from the full outfit; judge one complete outfit moving on
+both bikes; allocate production geometry against the whole-scene budget rather
+than an unsupported exact8000-triangle boot requirement. The last completed
+whole review remains review24 at19:05UTC. No new24h forecast is established.
 
-Actual diagnostic03 reproduces the near-straight arm error only when IK is
-active: 1.184200 mm versus 0.028859 mm for the saved keyed FK prepose under the
-unchanged 0.1 mm bound. Use explicit editable per-limb FK/IK conditioning and
-safe action activation; stop solver/pole/iteration campaigns. Preserve original
-75 rest bones, selected appearance and useful jeans weights.
+Ankle builder42 derives3318 lower-jeans fields from actual outward same-leg
+canonical body triangles, preserving selected rest geometry/maps and unrelated
+fields. Two fixtures pass. This is an initializer: edge stretch2.15 and a3.18mm
+left boundary displacement jump require moving review. Its calibrated private
+runtime is next; native application/parity remains pending. Glove builder41
+supplies an exact-method component-only constructor with separate raw save,
+reopen and full-master mesh transplant; parent source review passes8fixtures.
+Neither source is accepted garment art. Lead36 is retired; Astra builders37/38
+are capacity interrupted. Parent owns integration and played judgment.
 
-Next actual results: qualify saved native10; execute glove04 and save-first
-sleeve38, then transfer only qualified wardrobe and play a fresh real export;
-qualify conditioned controls36 on the same master. Census35/constructor37
-provide the independent compact-boot path. All R0–R5 remain open; no additional
-sculpt is justified before these actual gameplay poses and clothing defects
-are reviewed. Required gate41 passes exact clear/crash/restart but misses boot
-ready by 5.071625 ms under observed shared load; no release/device pass.
-
+Conditioned controls04 fail near-extension at1.1842mm. Adapter05 proves mode
+refresh but stops at unreachable left arm tick280. Do not repeat pole/solver
+campaigns or relax0.1mm. Native10 already preserves actual gameplay; editable
+controls and all generic actions remain required before completion. Next visible
+result: actual dressed gameplay with ankle42, then exact selected glove/sleeve
+repair in the same film. Current-game gate43 passes all11 checks; allR0–R5,
+finite contacts, compact production, physical-phone and release gates remain open.
 
 **Immediate gameplay priority, October 8, 16:30 Panama (ask356):** The user
 correctly identifies that the displayed stand-up/rest diagnostic does not show
