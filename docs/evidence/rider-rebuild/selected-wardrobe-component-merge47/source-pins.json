@@ -1,0 +1,64 @@
+{
+  "status": "UNACCEPTED_SOURCE_ONLY_PARENT_NATIVE_EXECUTION_PENDING",
+  "acceptedArt": false,
+  "nativeRunExecuted": false,
+  "sourcePins": {
+    "merge47.py": {
+      "path": "assets/blender/rider-rebuild/selected-sleeve-component47/merge47.py",
+      "sha256": "e3d0c477977d96e1bb2adad5cca997f9b33897f8d7aa7fbde8c6f83953588d73"
+    },
+    "test_merge47.py": {
+      "path": "assets/blender/rider-rebuild/selected-sleeve-component47/test_merge47.py",
+      "sha256": "348fa23189aa488067a9bb2df73960798405e50a50cd5483e0aa4c1dd420a1eb"
+    }
+  },
+  "componentSourceRecipe": {
+    "path": "assets/blender/rider-rebuild/selected-sleeve-component47/component.py",
+    "sha256": "6fcc124b1fe5cf69a3cd0cd4114ff3fc16b6bd3e7741fb4b2b7488648c6bbd87"
+  },
+  "sourceFacts": {
+    "TRANSPLANT38": {
+      "path": "assets/blender/rider-rebuild/selected-wardrobe-integration38/integrate.py",
+      "sha256": "dd7e3373b43325149505ad89ce1a5ff5eb74d61776d5fc96df73c62d10d8ab49"
+    },
+    "LINEAGE38": {
+      "path": "assets/blender/rider-rebuild/selected-wardrobe-integration38/lineage.py",
+      "sha256": "cc1157bf315622e598c2c9051d80d9e707b1082e0275030d2c694f63557c9997"
+    },
+    "GENERATION10": {
+      "path": "assets/blender/rider-rebuild/selected-seated-anatomical09/gameplay_checkpoint10.py",
+      "sha256": "a4da0f6719e9f43cb97e01d3139be2c279d2c0e3cd695d76f001ae444127fa61"
+    },
+    "GAMEPLAY08": {
+      "path": "assets/blender/rider-rebuild/selected-seated-anatomical09/append-measured-gameplay08.py",
+      "sha256": "2399678e7c7fff60f2bc7a3aa609dc439e869a5dc6d6287d8b94f1c98180d1a5"
+    },
+    "TARGET_PENDING10": {
+      "path": "harness/out/rider-rebuild/selected-seated-anatomical09/gameplay10/pending.json",
+      "sha256": "3c9492f9567d76c4be8bfebf53ba05f14e7bde22cc11721116d9b8bad6089c13"
+    },
+    "TARGET_NATIVE10": {
+      "path": "harness/out/rider-rebuild/selected-seated-anatomical09/gameplay10/UNACCEPTED-selected-gameplay-checkpoint10.blend",
+      "sha256": "35815e62180aabc37588668f426d3709bad139b5f50d6b1f82ccfa60af848ce8"
+    },
+    "QUALIFIER11": {
+      "path": "assets/blender/rider-rebuild/selected-wardrobe-integration38/gameplay_qualify11.py",
+      "sha256": "aefc733547c24149221675c2992c9ce7904d0524a84a73311ba88b896f4f194f"
+    },
+    "TARGET_QUALIFIED11": {
+      "path": "docs/evidence/rider-rebuild/selected-seated-anatomical09/gameplay11-qualified01/receipt.json.gz",
+      "sha256": "ec8356a639ebbe78612b718d43bec1e89f235278655d3c09c2f972d604995820"
+    }
+  },
+  "targetActualReplayFrames": 482,
+  "targetActualMaximumAffineErrorM": 2.0168789039197326e-05,
+  "mergedReplayExecuted": false,
+  "fullFingerprintChecksRelaxed": false,
+  "donorScope": [
+    "ActualSelectedGlove.L",
+    "ActualSelectedGlove.R",
+    "RiderBody__FullAnatomyReference",
+    "RiderHoodie",
+    "RiderSkeleton"
+  ]
+}

@@ -2049,3 +2049,5 @@ Component-sleeve47 source parent-reviewed: exact original28 solve and dense math
 Component47 actual intake succeeds: original selected Hoodie + qualified41 bilateral gloves +exact75/fullref raw save/reopen34.073s,325MB native ff2ba521…. Exact geometry/PBR/field metadata/rest preserved. Frozen sleeve input01 ready; fitting/full outfit merge/replay/moving art pending.
 
 Actual sleeve47 geometry fails at contact pass0: deficient zero-effective-support constraint,28.98s exit1; no constructed output. Original Hoodie/glove intake intact. Fresh clean Astra6 X-High49 owns exact offending-sample diagnosis; stop unchanged retries/ease sweeps. Complete garment moving acceptance remains open.
+
+One component47-to-native10 merge source ready and parent-reviewed: exact38 transplant, scoped donor and complete target/merged preservation, actual qualified11 target fact, separate original08 merged replay. CPU source/scope/17mutation fixtures pass. Actual donor construction failed; no merge, replay or moving-art result invented.
