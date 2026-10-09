@@ -1,0 +1,530 @@
+{
+  "acceptedArt": false,
+  "status": "UNACCEPTED_PROXIMAL50_SAVED_REOPEN_PENDING",
+  "sourceRecipe": {
+    "path": "assets/blender/rider-rebuild/selected-proximal-hoodie-fit50/component.py",
+    "sha256": "1cf3ba48083cec2f711ad71009a054043f961d405e7ce4d5a1b88c8bd3674f1d"
+  },
+  "registrationRecipe": {
+    "path": "assets/blender/rider-rebuild/selected-proximal-hoodie-fit50/registration.py",
+    "sha256": "1cc7b09bcfd112ea55dcbc594c09cd8f81ac3e4453b2e775742c149548c1f29b"
+  },
+  "input": {
+    "path": "assets/blender/rider-rebuild/selected-proximal-hoodie-fit50/input01.json",
+    "sha256": "62a4f85046c673b1aece9099e4fc989fbcaab82d10cbc4f6f8eaf505d73c9471"
+  },
+  "sourceInput47": {
+    "path": "assets/blender/rider-rebuild/selected-sleeve-component47/input01.json",
+    "sha256": "7426ed1631f88fd4f6dc6c951ce10fb09d257c739add94f553243a8a3e2e6599"
+  },
+  "sourceIntake47": {
+    "path": "harness/out/rider-rebuild/selected-sleeve-component47/intake01/intake-qualified.json",
+    "sha256": "55adfeb1c0a6ff43d640338af1062d05c2893b56695cc94fa79a46144fd532c5"
+  },
+  "sourceComponentReceipt41": {
+    "path": "harness/out/rider-rebuild/selected-glove-component41/component01/component-qualified.json",
+    "sha256": "0136d429c4501386dad7e96a6113164adafb3f091d029f3e8b496803c6b1aa5b"
+  },
+  "originalSourceGLB": {
+    "path": ".tmp/generation-comparison-2026-10-03/user-agent2/qualified-hunyuan-paint06/paint/painted.glb",
+    "sha256": "800d7a9717757b90b296a78c605cddb698c68d399a96e403aa381103e77d2eba"
+  },
+  "native": {
+    "path": "harness/out/rider-rebuild/selected-proximal-hoodie-fit50/component01/UNACCEPTED-selected-proximal-hoodie-fit50.blend",
+    "sha256": "ef5f8e9be05fee40f5c162c3d5ced791c96a1e1fef39a3c08abfa81b0e025b89"
+  },
+  "sourceVertexCount": 716971,
+  "sourceTriangleCount": 921722,
+  "scope": [
+    "ActualSelectedGlove.L",
+    "ActualSelectedGlove.R",
+    "RiderBody__FullAnatomyReference",
+    "RiderHoodie",
+    "RiderSkeleton"
+  ],
+  "broadRegistration": {
+    "method": "Broad actual-wearer contact registration through composed shared injective spatial maps",
+    "retired45mmRepairGateClaimed": false,
+    "constructionContactSamplesPassed": false,
+    "finalActualFullWearerMinimumM": -0.012673387303948402,
+    "contactTargetM": 0.0026,
+    "healthyRetainedBoundaryPassed": true,
+    "sourceBoundaryMinimumM": 0.02305023744702339,
+    "sourceBoundaryVertices": 970,
+    "changedSourceVertices": 704249,
+    "affectedOriginalTriangles": 854463,
+    "fullConstraintSamples": 1519000,
+    "maximumOriginalSourceDisplacementM": 0.07467452765446342,
+    "sourceDisplacementPercentilesM": [
+      0.0019298696956341892,
+      0.018935903000514103,
+      0.04016923222749603,
+      0.07467452765446342
+    ],
+    "continuousMapInjectivityProven": true,
+    "globalComposedMinimumSingularValueLowerBound": 2.5628906250000144e-07,
+    "globalComposedMaximumSingularValueUpperBound": 137.206228668789,
+    "registrationSteps": [
+      {
+        "step": 0,
+        "beforeMinimumM": -0.06894920021295547,
+        "support": {
+          "initial": {
+            "contactCoreNodes": 968,
+            "elasticSupportNodes": 3729
+          },
+          "closure": [
+            {
+              "frozenConstraints": 9,
+              "addedNodes": 105
+            }
+          ],
+          "activeNodes": 3834,
+          "constraintVertices": 663473,
+          "constraintCentroids": 853108,
+          "frozenDeficientConstraints": 0
+        },
+        "solve": {
+          "constraintRows": 1922,
+          "iterations": 256,
+          "subsetMaximumDeficitM": 0.005846654546575368
+        },
+        "proposedDerivativeBound": 6.558707635398149,
+        "continuationFraction": 0.12959870255726078,
+        "certificate": {
+          "worstCellDisplacementDerivativeEntryBounds": [
+            [
+              0.3065184859716415,
+              0.32562996218734935,
+              0.32029361943260554
+            ],
+            [
+              0.18456358280168417,
+              0.2910982652207533,
+              0.12472158665055334
+            ],
+            [
+              0.3028515448907183,
+              0.2323291390491712,
+              0.3739923334140656
+            ]
+          ],
+          "worstCell": [
+            7,
+            8,
+            14
+          ],
+          "globalDisplacementLipschitzUpperBound": 0.8499999999999999,
+          "globalMinimumSingularValueLowerBound": 0.15000000000000013,
+          "positiveJacobianProvenForContinuousField": true
+        },
+        "maximumStepDisplacementM": 0.018829978007631344
+      },
+      {
+        "step": 1,
+        "beforeMinimumM": -0.059897929430007935,
+        "support": {
+          "initial": {
+            "contactCoreNodes": 967,
+            "elasticSupportNodes": 3839
+          },
+          "closure": [],
+          "activeNodes": 3839,
+          "constraintVertices": 662751,
+          "constraintCentroids": 852036,
+          "frozenDeficientConstraints": 0
+        },
+        "solve": {
+          "constraintRows": 1908,
+          "iterations": 256,
+          "subsetMaximumDeficitM": 0.006664770365066273
+        },
+        "proposedDerivativeBound": 6.01980378624224,
+        "continuationFraction": 0.14120061553212152,
+        "certificate": {
+          "worstCellDisplacementDerivativeEntryBounds": [
+            [
+              0.4006541667531253,
+              0.2136306658223114,
+              0.2070209619263982
+            ],
+            [
+              0.08145748272895449,
+              0.16091011103944844,
+              0.11174992664846035
+            ],
+            [
+              0.2756866366117741,
+              0.32275486066060344,
+              0.49828831562378
+            ]
+          ],
+          "worstCell": [
+            8,
+            7,
+            14
+          ],
+          "globalDisplacementLipschitzUpperBound": 0.85,
+          "globalMinimumSingularValueLowerBound": 0.15000000000000002,
+          "positiveJacobianProvenForContinuousField": true
+        },
+        "maximumStepDisplacementM": 0.018584056845658257
+      },
+      {
+        "step": 2,
+        "beforeMinimumM": -0.050464995205402374,
+        "support": {
+          "initial": {
+            "contactCoreNodes": 954,
+            "elasticSupportNodes": 3832
+          },
+          "closure": [],
+          "activeNodes": 3832,
+          "constraintVertices": 662751,
+          "constraintCentroids": 852036,
+          "frozenDeficientConstraints": 0
+        },
+        "solve": {
+          "constraintRows": 1896,
+          "iterations": 256,
+          "subsetMaximumDeficitM": 0.006127917965792977
+        },
+        "proposedDerivativeBound": 4.668658662967189,
+        "continuationFraction": 0.18206514148108188,
+        "certificate": {
+          "worstCellDisplacementDerivativeEntryBounds": [
+            [
+              0.2676169162340084,
+              0.389866645706609,
+              0.2945352690384276
+            ],
+            [
+              0.33989413393596246,
+              0.246169594365289,
+              0.3110297514936832
+            ],
+            [
+              0.19348935864529668,
+              0.2302961622933235,
+              0.22089071492270945
+            ]
+          ],
+          "worstCell": [
+            17,
+            6,
+            15
+          ],
+          "globalDisplacementLipschitzUpperBound": 0.8499999999999999,
+          "globalMinimumSingularValueLowerBound": 0.15000000000000013,
+          "positiveJacobianProvenForContinuousField": true
+        },
+        "maximumStepDisplacementM": 0.01739145306792996
+      },
+      {
+        "step": 3,
+        "beforeMinimumM": -0.038937874138355255,
+        "support": {
+          "initial": {
+            "contactCoreNodes": 937,
+            "elasticSupportNodes": 3803
+          },
+          "closure": [],
+          "activeNodes": 3803,
+          "constraintVertices": 659367,
+          "constraintCentroids": 847727,
+          "frozenDeficientConstraints": 0
+        },
+        "solve": {
+          "constraintRows": 1879,
+          "iterations": 256,
+          "subsetMaximumDeficitM": 0.0017732796999404034
+        },
+        "proposedDerivativeBound": 4.442164487863889,
+        "continuationFraction": 0.19134815973659292,
+        "certificate": {
+          "worstCellDisplacementDerivativeEntryBounds": [
+            [
+              0.27909454411700085,
+              0.2988580712100275,
+              0.29547555125600583
+            ],
+            [
+              0.3141024510985455,
+              0.383128159922141,
+              0.2817328719454643
+            ],
+            [
+              0.190194246564882,
+              0.23800530271384768,
+              0.22437237783277225
+            ]
+          ],
+          "worstCell": [
+            17,
+            6,
+            14
+          ],
+          "globalDisplacementLipschitzUpperBound": 0.85,
+          "globalMinimumSingularValueLowerBound": 0.15000000000000002,
+          "positiveJacobianProvenForContinuousField": true
+        },
+        "maximumStepDisplacementM": 0.011070165235540632
+      },
+      {
+        "step": 4,
+        "beforeMinimumM": -0.03160848841071129,
+        "support": {
+          "initial": {
+            "contactCoreNodes": 925,
+            "elasticSupportNodes": 3788
+          },
+          "closure": [],
+          "activeNodes": 3788,
+          "constraintVertices": 658326,
+          "constraintCentroids": 846303,
+          "frozenDeficientConstraints": 0
+        },
+        "solve": {
+          "constraintRows": 1871,
+          "iterations": 256,
+          "subsetMaximumDeficitM": 0.0002976300707321772
+        },
+        "proposedDerivativeBound": 3.4665273635092047,
+        "continuationFraction": 0.2452021607986199,
+        "certificate": {
+          "worstCellDisplacementDerivativeEntryBounds": [
+            [
+              0.29574398518962525,
+              0.18979725925197727,
+              0.33057954907278225
+            ],
+            [
+              0.248650609217155,
+              0.3101280090317716,
+              0.15440284807998012
+            ],
+            [
+              0.19893239768314802,
+              0.2365115094283381,
+              0.46083740891350483
+            ]
+          ],
+          "worstCell": [
+            17,
+            7,
+            14
+          ],
+          "globalDisplacementLipschitzUpperBound": 0.8499999999999999,
+          "globalMinimumSingularValueLowerBound": 0.15000000000000013,
+          "positiveJacobianProvenForContinuousField": true
+        },
+        "maximumStepDisplacementM": 0.013910759638869506
+      },
+      {
+        "step": 5,
+        "beforeMinimumM": -0.022556092590093613,
+        "support": {
+          "initial": {
+            "contactCoreNodes": 910,
+            "elasticSupportNodes": 3748
+          },
+          "closure": [],
+          "activeNodes": 3748,
+          "constraintVertices": 657122,
+          "constraintCentroids": 844655,
+          "frozenDeficientConstraints": 0
+        },
+        "solve": {
+          "constraintRows": 1861,
+          "iterations": 256,
+          "subsetMaximumDeficitM": 0.0014448376285575507
+        },
+        "proposedDerivativeBound": 5.6703387296982175,
+        "continuationFraction": 0.14990286127848979,
+        "certificate": {
+          "worstCellDisplacementDerivativeEntryBounds": [
+            [
+              0.3545326295745844,
+              0.1888047675318123,
+              0.28780612261469807
+            ],
+            [
+              0.21287472635391266,
+              0.2215372639957059,
+              0.18877553842611994
+            ],
+            [
+              0.24739839418168336,
+              0.23219337197173634,
+              0.4828837026773356
+            ]
+          ],
+          "worstCell": [
+            17,
+            8,
+            14
+          ],
+          "globalDisplacementLipschitzUpperBound": 0.8499999999999999,
+          "globalMinimumSingularValueLowerBound": 0.15000000000000013,
+          "positiveJacobianProvenForContinuousField": true
+        },
+        "maximumStepDisplacementM": 0.007460233880692085
+      },
+      {
+        "step": 6,
+        "beforeMinimumM": -0.019069023430347443,
+        "support": {
+          "initial": {
+            "contactCoreNodes": 897,
+            "elasticSupportNodes": 3741
+          },
+          "closure": [],
+          "activeNodes": 3741,
+          "constraintVertices": 657122,
+          "constraintCentroids": 844655,
+          "frozenDeficientConstraints": 0
+        },
+        "solve": {
+          "constraintRows": 1852,
+          "iterations": 256,
+          "subsetMaximumDeficitM": 0.004324350953237447
+        },
+        "proposedDerivativeBound": 4.728614884655002,
+        "continuationFraction": 0.17975665617396025,
+        "certificate": {
+          "worstCellDisplacementDerivativeEntryBounds": [
+            [
+              0.4711732608732382,
+              0.267042709373019,
+              0.3379789922929793
+            ],
+            [
+              0.03228774278433366,
+              0.07365739949586987,
+              0.07118463030001744
+            ],
+            [
+              0.15658178853806215,
+              0.28574224439091456,
+              0.44413117569084454
+            ]
+          ],
+          "worstCell": [
+            17,
+            8,
+            14
+          ],
+          "globalDisplacementLipschitzUpperBound": 0.85,
+          "globalMinimumSingularValueLowerBound": 0.15000000000000002,
+          "positiveJacobianProvenForContinuousField": true
+        },
+        "maximumStepDisplacementM": 0.007347500457087324
+      },
+      {
+        "step": 7,
+        "beforeMinimumM": -0.014963841065764427,
+        "support": {
+          "initial": {
+            "contactCoreNodes": 890,
+            "elasticSupportNodes": 3724
+          },
+          "closure": [],
+          "activeNodes": 3724,
+          "constraintVertices": 657122,
+          "constraintCentroids": 844655,
+          "frozenDeficientConstraints": 0
+        },
+        "solve": {
+          "constraintRows": 1858,
+          "iterations": 256,
+          "subsetMaximumDeficitM": 0.0013285975935188065
+        },
+        "proposedDerivativeBound": 5.001060852267065,
+        "continuationFraction": 0.16996393867406764,
+        "certificate": {
+          "worstCellDisplacementDerivativeEntryBounds": [
+            [
+              0.4022161701032997,
+              0.24365327199743037,
+              0.4173942493534104
+            ],
+            [
+              0.09465437536559498,
+              0.10872607150046369,
+              0.07540196611366856
+            ],
+            [
+              0.2662169171744416,
+              0.3358953505827358,
+              0.3420144393626359
+            ]
+          ],
+          "worstCell": [
+            8,
+            8,
+            14
+          ],
+          "globalDisplacementLipschitzUpperBound": 0.8499999999999998,
+          "globalMinimumSingularValueLowerBound": 0.15000000000000024,
+          "positiveJacobianProvenForContinuousField": true
+        },
+        "maximumStepDisplacementM": 0.006049662982572403
+      }
+    ],
+    "restOnly": true,
+    "geometryGatesPassed": false,
+    "poseEnclosurePassed": false,
+    "limits": [
+      "Large source-shape change is explicit and requires played judgment.",
+      "Continuous-map injectivity does not prove piecewise-linear triangles avoid crossings.",
+      "Actual full triangle/self/body/glove checks and independent generic/bike motion remain mandatory."
+    ]
+  },
+  "registrationMaps": {
+    "path": "harness/out/rider-rebuild/selected-proximal-hoodie-fit50/component01/registration-maps.npz",
+    "sha256": "87e4e8a07bfe83325f0605accb657a904801db987d7df8e27b7e6b892475e9b6"
+  },
+  "scheduledDistalRemovalExcludedFromConstraints": {
+    "L": {
+      "terminalCutFaces": 5263,
+      "replacedInwardFaces": 18811
+    },
+    "R": {
+      "terminalCutFaces": 6103,
+      "replacedInwardFaces": 21383
+    }
+  },
+  "protectedValidationPassed": false,
+  "sourceInvariantExact": false,
+  "topologyAndSourceVertexOrderUnchanged": false,
+  "exact75RestUnchanged": false,
+  "fullReferenceUnchanged": false,
+  "geometryGatesPassed": false,
+  "movingReviewPassed": false,
+  "nativeStorage": {
+    "compressed": false,
+    "reopenVerified": false
+  },
+  "limits": [
+    "Original45mm small-repair constructor retired; this is explicit broad rest tailoring.",
+    "No topology changes or inward-only deletion occur in proximal50.",
+    "Full triangle relations and generic/actual-bike moving appearance remain unaccepted."
+  ],
+  "actualSourcePointDifferential": {
+    "minimumDeterminant": 0.004505678321052355,
+    "minimumSingularValue": 0.032529239849449824,
+    "maximumSingularValue": 4.127194795093059,
+    "singularValuePercentiles": [
+      0.032529239849449824,
+      0.26973693924493813,
+      1.0003034131243678,
+      1.5946365409826704,
+      4.127194795093059
+    ]
+  },
+  "expectedWitness": {
+    "path": "harness/out/rider-rebuild/selected-proximal-hoodie-fit50/component01/expected-witness.json",
+    "sha256": "adc5d1874b75401f6327bc9d0b92bbe311720c54290366e6aef664ee13dd5ce8"
+  },
+  "expectedRebuiltHoodieGeometry": "047180a9c9551ed20af4ed85ffe14924ba949534155ca62ba2bd55f435f2ce69"
+}
