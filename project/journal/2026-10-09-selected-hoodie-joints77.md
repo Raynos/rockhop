@@ -23,3 +23,9 @@ Finding: Whole-wearer nearest-face transfer binds exact47 fields without alterin
 Validation: Original guards103.046s and9.187s exit0. Parent reconstructs all full71 mapped fields exactly from triangle/barycentric witnesses; finite arrays, unchanged geometry/UV/ancestry,482keys and33704edges verified. Rookie129 edge1.014mm grows79.515mm (78.381x); its nearest body samples are9.908mm apart on different torso/arm sheets. Parent endpoint vision shows bilateral triangular body exposure.
 
 Limits: Unaccepted CPU geometry diagnosis only, without source PBR. No native11, bake, contact, production-four, GPU or played-art/device pass. Hold assembly; preserve selected appearance and correct continuous anatomical ownership.
+
+Finding: Repaint the complete continuous selected hoodie from actual native spine/clavicle anatomy, then inherit newly painted sleeve seam parents through the existing measured meridians. The lowered hood follows upper torso. No frozen donor boundary, raw nearest-body branch selection, diffusion, bone alias or top-four pruning.
+
+Validation: Parent full181-line paint source review, complete inspection/view/native diffs, four ASTs and declared input pins pass. Full71 inventory and exact geometry/UV/ancestry remain; own-side semantic support only, source-derived height intervals and saved meridian coefficients. Same33704edges/482actual matrices will be inspected. Source-only.
+
+Limits: No actual12candidate, contact, native, genuine bake, GPU or played-art acceptance. Native binding lineage remains explicit; production-four conditioning separate.
