@@ -53,3 +53,9 @@ Finding: A single physically calibrated native-field simplification retains sele
 Validation: Complete guarded left unit exit0 in36.967s;243618triangles versus244454prior,0.34percent fewer. Original corner positions/four weight slots remain exact,482played-pose corner error0. Rest-centroid coverage243616of243618,344sheet-sensitive errorsabove1mm; actual posed-source query exit0 in4.152s across18worstposes,342same-facing witnesses max0.554525mm and noneabove1mm. Two posed missing-facing witnesses and two rest missing-facing witnesses retained. Atlas selected-source normal/albedo/ORM witnesses retained compressed.
 
 Limits: Density plateau persists after physical calibration; no quota sweep or weaker skin bound authorized. Complete paired candidate and actual phone/render judgment must determine whether this conservative reduction is useful. Corrected grip, atlas normals/material and moving acceptance remain open. No player/source promotion.
+
+Finding: The independently constructed selected right glove matches the supported skin03 native-field method without mirroring left geometry or skin.
+
+Validation: Original complete guard exit0 in36.097s;569142 to244038triangles,122019geometric vertices,original four native weights and vertices exact under482historical poses. All30000atlas cage rays hit;normal mean1.281degrees,p99 23.789,max174.639,83above90degrees retained. Rest-centroid coverage244036of244038 with395sheet-sensitive errorsabove1mm; actual posed-source query exit0 in5.267s,393same-facing at24worstposes,max0.680241mm,noneabove1mm. Two rest and two posed-facing misses retained.
+
+Limits: Art/material/normal outliers remain unaccepted. Historical source correspondence does not prove corrected glove grip. Whole paired composition, encoded weights, complete moving comparison and actual phoneFPS remain gates; no player changes.
