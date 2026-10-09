@@ -1,0 +1,79 @@
+{
+  "status": "SOURCE_AND_CPU_FIXTURES_PASSED_NATIVE_CENSUS_AND_CONSTRUCTION_NOT_RUN",
+  "passed": 5,
+  "groups": [
+    {
+      "name": "Right intake admits exact structure and rejects side, field, proof, dtype and path drift",
+      "passed": true,
+      "mutationsRejected": 17,
+      "actualNativeCensusAvailable": false
+    },
+    {
+      "name": "Actual opposite source winding and all four right vertex failures reproduced",
+      "passed": true,
+      "separatelyAuthoredVertices": 305453,
+      "vertexFailures": 4
+    },
+    {
+      "name": "Every actual right failed face and global geometric bearing reproduced",
+      "passed": true,
+      "faceFailures": 28,
+      "minimumNormalDot": -0.9794978072560462,
+      "maximumDistanceM": 0.00013698737872001938
+    },
+    {
+      "name": "Exact monotone union retains every required oriented right fan; deletion and reversal rejected",
+      "passed": true,
+      "priorCenters": 1120,
+      "addedCenters": 133,
+      "totalCenters": 1253,
+      "requiredFaces": 5511,
+      "mutationsRejected": 3
+    },
+    {
+      "name": "Two-axis parity handles interior, exterior and boundary; collar/domain evidence stays explicitly partitioned",
+      "passed": true,
+      "rightOutside": 291,
+      "rightAboveEntireSource": 6,
+      "rightAtOrBelow107mm": 220,
+      "soleBandOutside": 0
+    }
+  ],
+  "recipes": [
+    {
+      "path": "assets/blender/rider-rebuild/selected-boot-family75/prepare.py",
+      "sha256": "b2c845204125fe6d079ea28e2cdeb9f69f46e46c53d779c51cf7542705b2c44d"
+    },
+    {
+      "path": "assets/blender/rider-rebuild/selected-boot-family75/preflight.mjs",
+      "sha256": "9f70a1e2ea6a9d8bfaad9b990039a85d2987e9e5678aa4e5ee0b2de39bbd80a4"
+    },
+    {
+      "path": "assets/blender/rider-rebuild/selected-boot-family75/diagnose.py",
+      "sha256": "e2041f7fa03cdeedea405714e7f2970c05b8f5afff9ed8778ca0b0c5f5d458f8"
+    },
+    {
+      "path": "assets/blender/rider-rebuild/selected-boot-family75/census.py",
+      "sha256": "ddd88fc4717ff1e708ef895e8038258364ceb25e263cf77047d921f2c2e4136f"
+    },
+    {
+      "path": "assets/blender/rider-rebuild/selected-boot-family75/construct.mjs",
+      "sha256": "8330cbfbf99aed676a686aa693d64d1faede0bfb9ad1a11a6767ae73e46ffccc"
+    },
+    {
+      "path": "assets/blender/rider-rebuild/selected-boot-family75/check.mjs",
+      "sha256": "eb54d23d5f5c2fda3ba4b7d3e24f0a4ab1f0bdb2c0ae2f72cba0aab51e988a0f"
+    }
+  ],
+  "actualFinding": {
+    "path": "docs/evidence/rider-rebuild/selected-boot-family75/right-repair.json",
+    "sha256": "56b823544807dac15b6d2aa74ff847ad79c5dcd7e0a1314b2e05bdbcc00700ec"
+  },
+  "actualPreflight": {
+    "path": "docs/evidence/rider-rebuild/selected-boot-family75/preflight.json",
+    "sha256": "fad6e5a0945c000085fde19babeeb1c71ddd4d1e51054328b5da8320080e8a09"
+  },
+  "optimizerCalls": 0,
+  "nativeExecuted": false,
+  "acceptedArt": false
+}
