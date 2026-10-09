@@ -1,0 +1,38 @@
+
+> rockhop@0.3.2 harness:gate /Users/raynos/projects/games/rockhop
+> tsx harness/gate/ship-gate.ts --dev --only=boot,clear,crash,restart --quick --jobs=1 --quiet-timing
+
+gate flat-test: physics=bikePhysicsFactory-v2 thresholds=harness/gate/thresholds.json
+renderer: ANGLE (Apple, ANGLE Metal Renderer: Apple M5 Max, Unspecified Version) -> ship limits
+      golden: WARNING nothing under harness/inputs/flat-test/ is a rookie golden stamped src=fd8fe7c2; using newest bot-3.json (src=a415fcb8) — re-run pnpm harness:bot flat-test
+sections: pool of 1 (clear, clearPro, crash, determinism, camera, bundle) then timing chain (boot, restart, heap), then offline — only boot, clear, crash, restart; loadavg 33.7 25.9 26.8 / 18 cores
+PASS  clear.golden                 true  (limit true)  bot-3.json finish=8.591666666666667 run=8.592 faults=0
+PASS  clear.finishTimeBitEqual     true  (limit true)  expected 8.591666666666667
+PASS  clear.hashOk                 true  (limit true)  622bb2554e0f9a26 vs pinned 622bb2554e0f9a26
+      section clear: 1.0 s, loadavg 33.7 25.9 26.8 / 18 cores
+PASS  crash.faultWithinS           0.86s  (limit 8s)  reason=crash
+PASS  fault.toControlMs            25ms  (limit 500ms)  crash tick -> restart mash on the next tick -> bike moving; auto-respawn path 1017 ms (CONTRACT §2.8: 1.0 s)
+      section crash: 0.8 s, loadavg 33.7 25.9 26.8 / 18 cores
+      boot p50 368 ms over limit with loadavg 33.33 > 18 cores: re-sampling 3 runs
+FAIL  boot.readyP50Ms              368.29ms  (limit 300ms)  runs 352/373/368 min 352 loadavg 32.74/18 re-sampled under load
+PASS  boot.firstFrameMs            613.86ms  (limit 900ms)  ready -> first synced frame
+      section boot: 7.5 s, loadavg 32.7 26.0 26.8 / 18 cores
+PASS  restart.ticks                1  (limit 1)  tick==0 && faulted==null after exactly one tick, 20 reps
+PASS  restart.wallMsP95            0.16ms  (limit 5ms)
+PASS  restart.frameMsP95           6.92ms  (limit 33ms)  restart -> synced frame
+PASS  restart.noCountdown          1 ticks  (limit 12 ticks)  worst of 20 reps: held throttle after the restart tick until the bike rolls (a countdown would be 360+); first-tick roll yes; game faults=20
+      section restart: 1.5 s, loadavg 32.7 26.0 26.8 / 18 cores
+FAIL  boot.readyP50Ms              368.29ms  (limit 300ms)  runs 352/373/368 min 352 loadavg 32.74/18 re-sampled under load
+PASS  boot.firstFrameMs            613.86ms  (limit 900ms)  ready -> first synced frame
+PASS  clear.golden                 true  (limit true)  bot-3.json finish=8.591666666666667 run=8.592 faults=0
+PASS  clear.finishTimeBitEqual     true  (limit true)  expected 8.591666666666667
+PASS  clear.hashOk                 true  (limit true)  622bb2554e0f9a26 vs pinned 622bb2554e0f9a26
+PASS  crash.faultWithinS           0.86s  (limit 8s)  reason=crash
+PASS  fault.toControlMs            25ms  (limit 500ms)  crash tick -> restart mash on the next tick -> bike moving; auto-respawn path 1017 ms (CONTRACT §2.8: 1.0 s)
+PASS  restart.ticks                1  (limit 1)  tick==0 && faulted==null after exactly one tick, 20 reps
+PASS  restart.wallMsP95            0.16ms  (limit 5ms)
+PASS  restart.frameMsP95           6.92ms  (limit 33ms)  restart -> synced frame
+PASS  restart.noCountdown          1 ticks  (limit 12 ticks)  worst of 20 reps: held throttle after the restart tick until the bike rolls (a countdown would be 360+); first-tick roll yes; game faults=20
+
+PARTIAL (boot, clear, crash, restart): 10/11 checks pass — not a ship verdict; report: /Users/raynos/projects/games/rockhop/harness/out/metrics/ship-gate.partial.json
+ ELIFECYCLE  Command failed with exit code 1.
