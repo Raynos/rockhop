@@ -14,8 +14,9 @@ const types={1:'SCALAR',2:'VEC2',3:'VEC3',4:'VEC4'};
 function newView(bytes,count,size,mode){const v=j.bufferViews.length;j.bufferViews.push({buffer:0,byteLength:bytes.length});changed.set(v,{bytes,count,size,mode});return v;}
 function attribute(bytes,count,width,componentType){return {bufferView:newView(bytes,count,width*(componentType===5121?1:componentType===5123?2:4),'ATTRIBUTES'),componentType,count,type:types[width]};}
 for(const [mi,name] of ['boot-L','boot-R','glove-L','glove-R'].entries()){
- const dir=path.join(partsRoot,name,'bake01'),b=JSON.parse(fs.readFileSync(path.join(dir,'bake.json'))),p=j.meshes[mi].primitives[0];assert.equal(b.sourceSHA256,'127e316a8ff7910a4918b63f83e086e4e658062f102c73f17d0ee2f956750649');
+ const dir=path.join(partsRoot,name,...(mi>=2?['skin03','bake01']:['bake01'])),b=JSON.parse(fs.readFileSync(path.join(dir,'bake.json'))),p=j.meshes[mi].primitives[0];assert.equal(b.sourceSHA256,'127e316a8ff7910a4918b63f83e086e4e658062f102c73f17d0ee2f956750649');
  for(const [semantic,meta] of Object.entries(b.attributes)){
+  if(semantic==='_NATIVE_ID')continue; // Authoring provenance remains in bake records, never a runtime shader field.
   let bytes=fs.readFileSync(path.join(dir,semantic+'.bin')),a;
   if(semantic==='WEIGHTS_0'){
    const f=new Float32Array(bytes.buffer,bytes.byteOffset,meta.count*4),q=new Uint16Array(meta.count*4);

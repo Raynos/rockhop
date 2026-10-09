@@ -59,3 +59,9 @@ Finding: The independently constructed selected right glove matches the supporte
 Validation: Original complete guard exit0 in36.097s;569142 to244038triangles,122019geometric vertices,original four native weights and vertices exact under482historical poses. All30000atlas cage rays hit;normal mean1.281degrees,p99 23.789,max174.639,83above90degrees retained. Rest-centroid coverage244036of244038 with395sheet-sensitive errorsabove1mm; actual posed-source query exit0 in5.267s,393same-facing at24worstposes,max0.680241mm,noneabove1mm. Two rest and two posed-facing misses retained.
 
 Limits: Art/material/normal outliers remain unaccepted. Historical source correspondence does not prove corrected glove grip. Whole paired composition, encoded weights, complete moving comparison and actual phoneFPS remain gates; no player changes.
+
+Finding: All four independently reduced selected components form one native-rig candidate with actual encoded weights verified.
+
+Validation: Original guarded composition exit0 in14.133s;whole rider2576076 to783580triangles,69.58percent fewer. GLBccbd61edd23ff8475353881dec586bb6c9c08c23c4649e6fb5eb87fe93f499f2 is108212004bytes before downstream KTX/pruning. Native nodes/skins/animations/scenes JSON exact;264protected accessors exact. Old replaced garment geometry payloads removed andruntime provenance omitted while authoring records remain. All actual packed Uint16 weight fields normalized65535 and measured under482historical poses;no verticesabove1mm.
+
+Limits: Intermediate PNG maps and unused old map records require texture-worker encoding/pruning. Four parts have explicit atlas/source-facing outliers;whole moving appearance,corrected grip,normal sourceC1 rendering and actual phoneFPS remain parent gates.783580triangles exceeds500Kscene target;actualdevice result must decide useful safe promotion. No player asset changes.
