@@ -15,3 +15,14 @@ traces retain bar sockets below0.381micrometers error; all three captures
 havezero presence failures/errors. Independent482-pose clearance fails.
 
 Limits: Private diagnostic only;25FPS movies do not establish iPhoneFPS.
+
+Finding: Fresh played traces can differ in visual interpolation even when
+physics finish hashes match. Finite-bar validation accepts a declared cuff
+derivative only after independently verifying protected source parity.
+
+Validation: Node syntax passes. Legacy source pin remains unchanged unless
+explicit parity verifies actual derivative/native/glove/map bytes. Actual
+a069 played02 full-glove contact measurement follows.
+
+Limits: This admits an honest derivative measurement; no collision threshold
+or equation changes, and no physical iPhone or universal cuff claim.
