@@ -60,8 +60,9 @@ python3 assets/blender/rider-rebuild/focused-delivery07/capture.py \
 
 The launcher uses the original shared admission helper and bounded guard for
 serial Rookie and Pro forward/back leans followed by one full18second Garage
-orbit. Each job has its original420second bound. Lean framing uses6m with
-review zoom1.6; Garage uses two trusted outward120 wheel gestures within the
+orbit. Each job has its original420second bound. Diagnostic lean framing
+retains the original3m/review zoom2.2 and Rookie.8/Pro2.35 yaw for comparable
+cuff/hand pixels. Garage uses two trusted outward120 wheel gestures within the
 normal player limits. The parent verifies full head/boots in the played movie.
 `--garage-bike=pro` selects Pro for the single Garage orbit; Rookie is default.
 

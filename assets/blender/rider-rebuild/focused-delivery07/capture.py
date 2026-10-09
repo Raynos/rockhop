@@ -86,12 +86,14 @@ def main():
             '--profile=' + str(PROFILE), '--profile-sha256=' + PROFILE_HASH,
             '--transfer=' + str(packet / 'profile-transfer.json'), '--out=' + str(target),
             '--mode=' + mode, '--bike=' + bike, '--backend=metal', '--camera-yaw=' + yaw,
-            '--camera-distance=6', '--review-zoom=1.6', '--garage-wheel-delta=120', '--orbit-seconds=18']
+            '--camera-distance=' + ('3' if mode == 'lean' else '6'),
+            '--review-zoom=' + ('2.2' if mode == 'lean' else '1.6'),
+            '--garage-wheel-delta=120', '--orbit-seconds=18']
         guarded = ['python3', str(QUEUE), str(evidence / (name + '-telemetry.jsonl')),
             str(guard / 'guard.json'), 'python3', str(GUARD), '--out', str(guard),
             '--limit-seconds', '420', '--', *command]
         save(evidence / (name + '-command.json'), {'accepted': False, 'command': guarded,
-            'framing': 'Lean existing 6m orbit/zoom1.6; Garage normal trusted outward wheel/full orbit. Parent verifies full head/boots in actual movies.',
+            'framing': 'Diagnostic lean matches prior3m/zoom2.2/yaws; Garage wide trusted outward wheel/full orbit. Parent verifies full head/boots in Garage movie.',
             'limits': 'Silent actual Mac capture only. Render FPS is CPU submission measurement; phone and moving-art acceptance remain open.'})
         code = subprocess.call(guarded, cwd=ROOT, env=dict(os.environ, TRIALS_BROWSER_BACKEND='metal'))
         state = json.loads((guard / 'guard.json').read_text()) if (guard / 'guard.json').exists() else None

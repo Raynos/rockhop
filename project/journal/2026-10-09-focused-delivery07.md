@@ -43,3 +43,9 @@ submissions do not prove physical iPhone performance. Explicitly declared
 hoodie carrier JOINTS/WEIGHTS changes are permitted by the staging schema;
 protected-exact claims cover only unchanged streams, gloves, native rig/maps
 and actual driver controls.
+
+Finding: Parent requires comparable cuff/hand pixels in diagnostic leans.
+Restore the original3m/zoom2.2 and Rookie.8/Pro2.35 yaw; retain wide framing
+only for the separate Garage progress movie. This supersedes the launcher
+framing recorded above. Validation: Python compilation and diff checks pass.
+Limits: No capture ran; parent new-source played judgment remains pending.
