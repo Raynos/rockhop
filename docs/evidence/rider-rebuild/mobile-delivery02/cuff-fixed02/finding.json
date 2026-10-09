@@ -1,0 +1,38 @@
+{
+  "accepted": false,
+  "sourceSHA256": "585ae314e2b354768a1385e5a85828c142d542b47f8d9fe948f46c7478c112ef",
+  "playedReportSHA256": "94b282e7348b17b2c8a3de26b6dbdf5de951bf2a383891d3c30bc341bf5e8bdc",
+  "tick": 1200,
+  "currentRays": [
+    {
+      "pixel": [
+        476,
+        498
+      ],
+      "foregroundGloveTriangle": 74724,
+      "hoodieTriangleBehind": 883,
+      "raySeparationMeters": 0.005049710100942573
+    },
+    {
+      "pixel": [
+        488,
+        520
+      ],
+      "foregroundGloveTriangle": 81481,
+      "hoodieTriangleBehind": 199,
+      "raySeparationMeters": 0.00209908731524866
+    },
+    {
+      "pixel": [
+        1029,
+        389
+      ],
+      "foregroundGloveTriangle": 167304,
+      "hoodieTriangleBehind": 98640,
+      "raySeparationMeters": 0.0007396789077929178
+    }
+  ],
+  "sourceRayReportSHA256": "0a64ead6f3255702415d8e9eca18b2d33a1a0cb694bd4cd2739cf8a8a721204d",
+  "finding": "All three visible black cuff patches are real foreground front-facing glove triangles, with front-facing hoodie behind. Two source fields can be identical yet intersect; wrist orientation alone cannot fix rest geometry.",
+  "limits": "Ray separation is camera-ray distance, not minimum surface clearance. Constructor must prove coherent rest fit and moving clearance."
+}

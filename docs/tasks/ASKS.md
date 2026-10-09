@@ -609,3 +609,9 @@ Status: **open** (nobody on it) · **in flight** (owner named) · **needs pick**
 | 378 | Report current rider remaster completion percentage during focused fixes. | **done — informal estimate85%; broad plan paused** | Loading corrections live; selected mobile candidate reduces triangles69.6% and wire26.55%, normal Mac C1~60FPS. Corrected grip still requires moving review and optimized checked deployment; physical iPhone>30FPS/loading gates remain open. No formal milestone completion claim. |
 
 | 379 | Make60FPS a physical iPhone target, rather than claiming Mac M5 results as phone performance. | **done — phone target clarified; ask376 remains active** | Only actual iPhone gameplay can establish the60FPS target or required>30FPS floor. Mac normal-runtime results measure candidate work reduction only. Focused performance blocker remains open until physical-device evidence. |
+
+| 380 | Report current loading, downloading and handlebar hand-grip progress. | **done - user redirected to construction and deploy** | Loading fixes live; mobile source26.55%smaller; fixed bilateral fingers contact both bars in actual leans. Current source stays private until cuff defects are corrected and checked deploy passes. Continued work under asks381/382; no phone acceptance claim. |
+
+| 381 | Deploy focused rider download, loading and handlebar grip improvements now. | **active - checked deploy priority** | Promote selected optimized source and grip after actual moving qualification, push main, request checked deployment and verify public build/source identities. Physical iPhone FPS remains open. |
+
+| 382 | Build the focused rider improvements to completion rather than stop at a status update. | **active - construction and checked delivery** | Finish selected-source grip/cuff fixes, density/textures, loading and checked deployment; measure sustained physical iPhone60FPS target and>30FPSfloor. Broad remaster sculpting remains paused; no temporary substitutions. |
