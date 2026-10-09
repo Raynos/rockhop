@@ -1,0 +1,18 @@
+--- kernel56-transfer
++++ orientation57-transfer
+@@ -1,5 +1,6 @@
+ def transfer(source,target,rig,spec,level,config,out):
+     sp=points(source);sf=triangles(source);tp=points(target);tf=triangles(target)
++    donor_vertex_normals57,original57=ancestry57(source,target,sp,tp)
+     names=[g.name for g in source.vertex_groups if g.name in rig.data.bones]
+     sw=skin_rows(source,names);tw=skin_rows(target,names);bvh=tree(sp,sf)
+     normals=np.cross(sp[sf[:,1]]-sp[sf[:,0]],sp[sf[:,2]]-sp[sf[:,0]])
+@@ -11,7 +12,7 @@
+         assert near[0] is not None,('Target vertex escapes selected source',source.name,i,limit)
+         tri=int(near[2]);coeff=correspondence56.evaluate(np.asarray(near[0]),sp[sf[tri]],tri,i)
+         weights=coeff@sw[sf[tri]];difference=float(np.abs(weights-tw[i]).sum())
+-        dot=float(normals[tri]@np.asarray(target.data.vertices[i].normal))
++        dot=float(donor_vertex_normals57[original57[i]]@np.asarray(target.data.vertices[i].normal))
+         assert dot>=config['transfer']['minimumNormalDot'],('Wrong-facing source correspondence',source.name,i,dot)
+         assert difference<=config['transfer']['maximumSkinWeightL1'],('Anatomical field correspondence escaped its source',source.name,i,difference)
+         ids.append(tri);coefficients.append(coeff);distances.append(float(near[3]));normal_dots.append(dot);weight_errors.append(difference)

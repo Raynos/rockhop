@@ -1,0 +1,65 @@
+{
+  "status": "SOURCE_READY_NATIVE57_PROOF_REQUIRED_UNACCEPTED",
+  "acceptedArt": false,
+  "files": [
+    {
+      "path": "assets/blender/rider-rebuild/selected-boot-fold57/author.py",
+      "sha256": "1f99906b30d58e1c9849396e23cd6e219e1e177d190be336a48902950677d1aa"
+    },
+    {
+      "path": "assets/blender/rider-rebuild/selected-boot-fold57/check.py",
+      "sha256": "ea7988312e481274e12d8276d372aae9d049f11e8b983012d3128c0a3b65cccc"
+    },
+    {
+      "path": "assets/blender/rider-rebuild/selected-boot-fold57/fan.py",
+      "sha256": "141a51716ffe65defaca86210789ecde72cc526e5faa516f10609b6c89dfeb82"
+    },
+    {
+      "path": "assets/blender/rider-rebuild/selected-boot-fold57/native.py",
+      "sha256": "76abc44b8d6b6c55ce9f36173f444d8b394f09324bd93f54711442f004d7600d"
+    },
+    {
+      "path": "assets/blender/rider-rebuild/selected-boot-fold57/orientation.py",
+      "sha256": "edf86406d5db07be1ee40db9620ec63e6ea5c6d4983d50103f35e4110ce5f136"
+    },
+    {
+      "path": "docs/evidence/rider-rebuild/selected-boot-fold57/cpu-fan.json",
+      "sha256": "71090423a628fc0b3376c934a284cca1b691770e1054f56d58825a16cddb9a4e"
+    },
+    {
+      "path": "docs/evidence/rider-rebuild/selected-boot-fold57/fixtures.json",
+      "sha256": "47e196fd3d5cea80c862661a78148710f8527d4518d4065a737a00795595d8d1"
+    }
+  ],
+  "nativeDiagnosticCommand": [
+    "/Applications/Blender.app/Contents/MacOS/Blender",
+    "-b",
+    "-t",
+    "2",
+    "--python-exit-code",
+    "1",
+    "--python",
+    "assets/blender/rider-rebuild/selected-boot-fold57/native.py",
+    "--",
+    "harness/out/rider-rebuild/selected-boot-fold57/native01"
+  ],
+  "conditionalCorrectionUsage": "Original guarded Blender --python assets/blender/rider-rebuild/selected-boot-fold57/author.py -- NATIVE57_DIAGNOSTIC_JSON REVIEWED_DIAGNOSTIC_SHA256 NEW_ALLOCATION46_OUTPUT",
+  "executionPolicy": "Parent original guarded serial stages only. No new simplification or parameter sweep. Confirm and record native57 proof before correction invocation.",
+  "finding": {
+    "targetVertexId": 2485,
+    "sourceOriginalVertexId": 56390,
+    "sourceOpposingFaceId": 113358,
+    "targetExactInheritedFaceId": 5011,
+    "originalVertexIds": [
+      56390,
+      56936,
+      56633
+    ],
+    "sourceFaceAreaM2": 5.273075986088994e-09,
+    "cpuPredictedRejectedDot": -0.9968503156869384,
+    "nativeRejectedDot": -0.9968504702542031,
+    "consistentVertexNormalDotCPU": 0.9953700313892974
+  },
+  "nextCorrection": "Use donor vertex normal at exact retained original vertex ancestry for target vertex orientation, with the unchanged0.25 threshold. Retain the donor micro-face and all source fields/PBR. Original target geometric face-centroid normals, edge/reverse distance, skin/contact/bake/motion qualifications remain.",
+  "limits": "Actual native BVH nearest face remains unproven until native57. Correction is conditional; no native job or geometry/art acceptance from this CPU builder."
+}

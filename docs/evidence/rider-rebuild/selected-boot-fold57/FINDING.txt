@@ -1,0 +1,19 @@
+Native02 stopped at target vertex2485 normal dot -0.9968504702542031.
+Exact ancestry is donor vertex56390. Source face113358 (56390,56936,56633)
+is opposite to its donor smooth vertex normal and survives exactly as
+candidate face5011, including winding, positions and material index.
+Its area is5.273075986088994e-9 m2. The other four source and seven target
+incident faces align with the donor vertex normal. CPU fan normal predicts
+the native rejection within1.55e-7; consistent vertex normals dot0.99537.
+This is strong zero-distance bearing-tie evidence, not native BVH proof.
+
+Parent native.py pins native02 and writes partial progress before reading,
+before BVH, and before fans. It must prove nearest113358 at distance0.
+Only then may parent invoke author.py with the reviewed proof SHA.
+The correction compares native source/target vertex normals at exact
+original vertex ancestry;0.25 stays. No normal attribute is changed, no
+flap removed, no source geometry/PBR altered, no simplifier rerun.
+Geometric face-centroid normals and surface/skin/contact gates remain.
+Validation: five CPU fixture groups pass, including malformed/incomplete
+proof, wrong ancestry, wrong vertex normal, and reverse geometry failures.
+Limits: native57 proof and actual conditional native qualification pending.
