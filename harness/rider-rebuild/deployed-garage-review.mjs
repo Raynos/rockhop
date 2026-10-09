@@ -104,18 +104,27 @@ page.on('response', response => {
 });
 
 // Cheap post-render presence witness. It reads scene identities/counts once per
-// instance, never skin coordinates, indices, textures or whole geometry buffers.
+// instance, never skin coordinates, indices, texture pixels or whole buffers.
 function installComparisonMonitor({ logicals, aliases }) {
   const owner = globalThis.window.__render, original = owner.render, cache = new WeakMap();
   const state = { frames: 0, invalidFrames: 0, examples: [], lastLogical: null };
   const details = rider => {
     if (!rider?.source?.scene || !rider.scene) return null;
     if (!cache.has(rider)) {
-      const skins = [], bones = new Set();
+      const skins = [], bones = new Set(), textures = new Map();
       rider.scene.traverse(node => {
         if (node.isSkinnedMesh) { skins.push(node); for (const bone of node.skeleton.bones) bones.add(bone.uuid); }
+        if (node.isMesh) for (const material of Array.isArray(node.material) ? node.material : [node.material]) {
+          for (const key of ['map', 'normalMap', 'roughnessMap', 'metalnessMap', 'aoMap', 'alphaMap']) {
+            const texture = material[key];
+            if (texture?.isCompressedTexture && !textures.has(texture.uuid)) textures.set(texture.uuid, {
+              format: texture.format, width: texture.image.width, height: texture.image.height,
+              mipCount: texture.mipmaps.length, mipBytes: texture.mipmaps.reduce((sum, mip) => sum + mip.data.byteLength, 0),
+            });
+          }
+        }
       });
-      cache.set(rider, { skins, bones: bones.size });
+      cache.set(rider, { skins, bones: bones.size, compressedTextures: [...textures.values()] });
     }
     return cache.get(rider);
   };
@@ -131,6 +140,7 @@ function installComparisonMonitor({ logicals, aliases }) {
       visibleSkins: part?.skins.filter(mesh => visible(mesh) && inScene(mesh) && mesh.geometry.attributes.position.count > 0).length ?? 0,
       sourceSHA256: rider?.debug?.candidate?.sourceSHA256 ?? null,
       authorMeshRoles: rider?.debug?.candidate?.authorMeshRoles ?? null,
+      compressedTextures: part?.compressedTextures ?? [],
       jointIds: rider?.binding ? [...rider.binding.byId.keys()].sort((a, b) => a < b ? -1 : a > b ? 1 : 0) : null,
       stageClip: rider?.debug?.stageClip ?? null, rootName: rider?.root?.name ?? null };
   };
