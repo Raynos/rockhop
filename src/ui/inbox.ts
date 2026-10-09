@@ -9,7 +9,7 @@
  * with the password stored once under `rockhop.reviewPassword`. Offline or failed sends queue in
  * localStorage and retry on the next open / `online` event. The pull side is `scripts/inbox-pull.ts`.
  */
-import type { RockhopHook } from '../core/types';
+import type { RockhopHook, ReviewPerformance } from '../core/types';
 import { conceal, reveal } from './live';
 
 export const PASSWORD_KEY = 'rockhop.reviewPassword';
@@ -21,6 +21,7 @@ export const SHOT_QUALITY = 0.7;
 const QUEUE_MAX = 20;
 
 declare const __BUILD_ID__: string | undefined;
+declare const __BUILD_SHA__: string | undefined;
 
 export interface NoteContext {
   trackId: string;
@@ -44,10 +45,17 @@ export interface NoteContext {
   bikeModel: string;
   version: string;
   build: string;
+  buildSHA?: string;
   ua: string;
   viewport: string;
   url: string;
   at: string;
+  performance?: ReviewPerformance | null;
+  renderer?: string;
+  contextKind?: string;
+  riderSourceSHA256?: string;
+  riderNativeMetadataSHA256?: string;
+  riderGripProfileSHA256?: string;
 }
 
 export interface QueuedNote {
@@ -107,10 +115,12 @@ export function savePassword(pw: string | null, storage = safeStorage()): void {
   }
 }
 
-/** Everything the agent needs to reproduce, read from the hook + storage; every field is a string or number (chips + JSON). */
+/** Reproduction context plus the opt-in real-clock riding receipt, captured before pausing. */
 export function captureContext(hook: RockhopHook | undefined, hud: { trackName: string; device: string }, storage = safeStorage(), nav: { userAgent: string } = navigator, win: { innerWidth: number; innerHeight: number; devicePixelRatio: number; location: { href: string } } = window): NoteContext {
   const info = hook?.info();
   const st = hook?.getState();
+  let stats: ReturnType<RockhopHook['stats']> | undefined;
+  try { stats = hook?.stats(); } catch { /* A lost context must not prevent the note. */ }
   const render = (info?.render ?? {}) as Record<string, unknown>;
   const s = (v: unknown, d = ''): string => (v === undefined || v === null ? d : String(v));
   const n = (v: unknown, d = 0): number => (typeof v === 'number' && Number.isFinite(v) ? v : d);
@@ -139,14 +149,20 @@ export function captureContext(hook: RockhopHook | undefined, hud: { trackName: 
     tier: s(render['tier']),
     deviceClass: s(render['deviceClass']),
     riderModel: get('rockhop.riderModel'),
-    riderOutfit: get('rockhop.riderOutfit'),
+    riderOutfit: s(render['riderOutfit'], get('rockhop.riderOutfit')),
     bikeModel: get('rockhop.bikeModel'),
     version: s(info?.version),
     build: typeof __BUILD_ID__ === 'string' ? __BUILD_ID__ : 'dev',
+    buildSHA: typeof __BUILD_SHA__ === 'string' ? __BUILD_SHA__ : '',
     ua: nav.userAgent,
     viewport: `${win.innerWidth}×${win.innerHeight}@${win.devicePixelRatio}`,
     url: win.location.href,
     at: new Date().toISOString(),
+    ...(hook?.app?.reviewPerformance ? { performance: hook.app.reviewPerformance() } : {}),
+    renderer: s(stats?.renderer), contextKind: s(stats?.contextKind),
+    riderSourceSHA256: s(render['riderSourceSHA256']),
+    riderNativeMetadataSHA256: s(render['riderNativeMetadataSHA256']),
+    riderGripProfileSHA256: s(render['riderGripProfileSHA256']),
   };
 }
 
@@ -165,6 +181,8 @@ export function contextChips(c: NoteContext): [string, string][] {
     ['rider', [c.riderModel, c.riderOutfit].filter(Boolean).join(' / ') || 'default'],
     ['build', `${c.version} ${c.build}`],
   ];
+  if (c.performance) chips.splice(chips.length - 1, 0, ['ride fps', c.performance.ready
+    ? `${c.performance.fps} fps · 20 s` : `sampling ${(c.performance.windowMs / 1000).toFixed(1)} / 20 s`]);
   return chips;
 }
 
@@ -351,9 +369,9 @@ export class InboxSheet {
 
   /** Tap on the HUD control: pause, capture (the frame the reviewer is looking at), show. */
   show(): void {
-    this.host.pause();
     const hook = this.hook();
     this.context = captureContext(hook, this.host.hud());
+    this.host.pause();
     this.screenshot = captureScreenshot(document.querySelector('canvas'), hook);
     this.shotEl.hidden = !this.screenshot;
     if (this.screenshot) this.shotEl.src = this.screenshot;

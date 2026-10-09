@@ -2260,6 +2260,9 @@ export class ThreeRenderer implements GameRenderer {
     heroShadow: 'hero-only' | 'world';
     riderOutfit: RiderOutfit | null;
     riderMaterialVariant: string | null;
+    riderSourceSHA256: string | null;
+    riderNativeMetadataSHA256: string | null;
+    riderGripProfileSHA256: string | null;
     trackCalls: number;
     trackTris: number;
     textureGenMs: number;
@@ -2292,6 +2295,8 @@ export class ThreeRenderer implements GameRenderer {
     /** Garage round: the workshop set — up or not, its draws, the world drawables it hides. */
     garage: { on: boolean; draws: number; hidden: number; textureMB: number; reflection: boolean };
   } {
+    const candidate = this.riderRef instanceof GltfRider
+      ? (this.riderRef.debug as typeof this.riderRef.debug & { candidate?: { sourceSHA256?: string; metadataSHA256?: string; gripProfileHash?: string } }).candidate : undefined;
     const writes: PassWrite[] = this.postRef ? this.postRef.passWrites() : [];
     const shadowMap = this.renderer.shadowMap.enabled && this.lightingRig ? this.lightingRig.shadowMapSize : 0;
     if (shadowMap) writes.unshift({ name: 'shadow', width: shadowMap, height: shadowMap, bytesPerPixel: 8 });
@@ -2323,6 +2328,9 @@ export class ThreeRenderer implements GameRenderer {
       heroDoc: `${this.bikeRef instanceof GltfBike ? (this.isLodDoc(this.bikeRef.source) ? 'bike-lod' : 'bike') : 'bike-proc'} ${this.riderRef instanceof GltfRider ? (this.isLodDoc(this.riderRef.source) ? 'rider-lod' : 'rider') : 'rider-loading'}`,
       riderOutfit: this.riderRef && this.kindOfRider(this.riderRef) === 'gltf' ? this.riderDocumentOutfit : null,
       riderMaterialVariant: null, // retired with the palette family (round 5); the outfit is the file — kept for the outfit e2e's shape
+      riderSourceSHA256: candidate?.sourceSHA256 ?? null,
+      riderNativeMetadataSHA256: candidate?.metadataSHA256 ?? null,
+      riderGripProfileSHA256: candidate?.gripProfileHash ?? null,
       heroShadow: this.lightingRig?.isHeroShadow ? 'hero-only' : 'world',
       trackCalls: this.world?.trackCalls ?? 0,
       trackTris: Math.round(this.world?.trackTris ?? 0),

@@ -26,6 +26,7 @@ function fakeHook(over: Partial<ReturnType<RockhopHook['info']>> = {}): RockhopH
     faults: () => 3,
     phase: () => 'riding',
     render: vi.fn(() => 0),
+    stats: () => ({ renderer: 'Actual GPU', contextKind: 'webgl2' }) as ReturnType<RockhopHook['stats']>,
   } as unknown as RockhopHook;
 }
 
@@ -43,6 +44,35 @@ describe('review inbox: context capture', () => {
     expect(c).toMatchObject({ trackId: 'b1', trackName: 'Basics', tick: 4321, runTime: 36.017, faults: 3, phase: 'riding', checkpoint: 2, bike: 'pro', seed: 7, device: 'touch', quality: 'high', dpr: 1.5, canvas: '1398×645', tier: 'high', deviceClass: 'phone', riderModel: 'gltf', riderOutfit: 'street-mustard', version: '0.2.1-core', build: 'dev', ua: 'UA/1', viewport: '932×430@3', url: 'http://x/?review=1' });
     for (const v of Object.values(c)) expect(['string', 'number']).toContain(typeof v);
     expect(Date.parse(c.at)).not.toBeNaN();
+  });
+
+  it('attaches actual riding measurements and active source identity before the note pauses', async () => {
+    const hook = fakeHook({ render: { riderSourceSHA256: 'source-hash', riderNativeMetadataSHA256: 'native-hash', riderGripProfileSHA256: 'profile-hash', riderOutfit: 'street-remastered' } });
+    let paused = false;
+    const receipt = { method: 'normal-raf-submitted-riding-frames', trackId: 'b1', outfit: 'street-remastered', bike: 'pro', quality: 'high', cap: 60, phase: 'riding', windowMs: 20_000, frames: 240, fps: 12, ready: true, sampleAgeMs: 10, frameMs: { p50: 83, p95: 100, max: 130 }, cpuMs: { p50: 3, p95: 5, max: 8 }, physicsMs: { p50: .2, p95: .5, max: 1 }, submitMs: { p50: 2, p95: 4, max: 6 }, dropped: 240 } as const;
+    hook.phase = () => 'riding';
+    hook.app = { reviewPerformance: () => {
+      expect(paused).toBe(false);
+      return receipt;
+    } } as NonNullable<RockhopHook['app']>;
+    const fetchImpl = fetchReturning(200, { id: 'id' });
+    localStorage.setItem(PASSWORD_KEY, 'pw');
+    const sheet = new InboxSheet({ hud: () => ({ trackName: 'Basics', device: 'touch' }), pause: () => { paused = true; } }, () => hook, fetchImpl);
+    sheet.show();
+    expect(paused).toBe(true);
+    expect(sheet.root.querySelector('.inbox-chips')?.textContent).toContain('12 fps');
+    (sheet.root.querySelector('.inbox-text') as HTMLTextAreaElement).value = 'C1 performance';
+    await sheet.send();
+    const body = JSON.parse(String(vi.mocked(fetchImpl).mock.calls[0]![1]!.body)) as { context: { performance: unknown; phase: string } };
+    expect(body.context).toMatchObject({ performance: receipt, phase: 'riding' });
+    const context = captureContext(fakeHook(hook.info()), { trackName: 'Basics', device: 'touch' });
+    expect(context).toMatchObject({ renderer: 'Actual GPU', contextKind: 'webgl2', riderSourceSHA256: 'source-hash', riderNativeMetadataSHA256: 'native-hash', riderGripProfileSHA256: 'profile-hash', riderOutfit: 'street-remastered', buildSHA: '' });
+    expect(context.performance).toBeUndefined();
+  });
+
+  it('does not lose a note when renderer stats cannot be read after context loss', () => {
+    const hook = fakeHook(); hook.stats = () => { throw new Error('lost context'); };
+    expect(captureContext(hook, { trackName: 'Basics', device: 'touch' }).renderer).toBe('');
   });
 
   it('survives a missing hook (menu / before ready) with defaults', () => {

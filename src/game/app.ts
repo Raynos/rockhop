@@ -86,6 +86,7 @@ import { ReplaySession, type ReplaySource } from './replay';
 import { ReviewSession } from './review';
 import { BenchLog, RunCollector, RunLog } from './telemetry';
 import { isPhone, startTier } from './startTier';
+import { ReviewPerformanceWindow, reviewPerformanceEnabled, type ReviewFrameContext } from './review-performance';
 
 /** Result continuation uses the same career gate as a normal launch. */
 export interface ResultNextAction {
@@ -220,6 +221,8 @@ export class App {
   private replayReturn: { from: 'results'; snap: ReturnType<Game['snapshot']>; counters: ReturnType<Game['counters']>; result: RunResult | null } | { from: 'tracks' } | null = null;
   private replayMuted = false;
   private readonly frameMs = new Percentiles(120);
+  private reviewPerformance: ReviewPerformanceWindow | null = null;
+  private readonly reviewFrameContext: ReviewFrameContext = { trackId: '', outfit: '', bike: '', quality: 'low', cap: 60 };
   private readonly runLog = new RunLog();
   private readonly benchLog = new BenchLog();
   private readonly bench: Bench | null;
@@ -307,6 +310,11 @@ export class App {
 
     this.qualityChoice = loadQualityOverride();
     this.fpsChoice = loadFpsChoice();
+    if (DEV_SURFACES) {
+      let password: string | null = null;
+      try { password = localStorage.getItem('rockhop.reviewPassword'); } catch { /* storage restricted */ }
+      if (reviewPerformanceEnabled(location.search, password)) this.reviewPerformance = new ReviewPerformanceWindow();
+    }
     this.fpsEl = document.createElement('button');
     this.fpsEl.type = 'button';
     this.fpsEl.className = 'fpsmeter';
@@ -633,6 +641,7 @@ export class App {
     window.addEventListener('pointerdown', unlock, { passive: true });
     window.addEventListener('keydown', unlock);
     document.addEventListener('visibilitychange', () => {
+      if (document.hidden) this.reviewPerformance?.reset();
       if (document.hidden && this.inRun() && !this.game.paused()) this.togglePause('visibilitychange');
       if (document.hidden && this.screen === 'replay') this.game.setPaused(true);
     });
@@ -833,6 +842,13 @@ export class App {
       togglePause: () => this.togglePause('hook'),
       screen: () => this.screen,
       paused: () => this.game.paused(),
+      ...(this.reviewPerformance ? { reviewPerformance: () => {
+        if (this.screen !== 'run' || this.game.phase() !== 'riding' || this.game.paused() || document.hidden) return null;
+        const receipt = this.reviewPerformance!.snapshot(performance.now());
+        return receipt && receipt.trackId === this.game.currentTrack?.id && receipt.outfit === this.riderOutfit
+          && receipt.bike === this.game.currentBike && receipt.quality === this.game.qualityTier
+          && receipt.cap === this.frameCapHz() ? receipt : null;
+      } } : {}),
     };
   }
 
@@ -911,7 +927,15 @@ export class App {
       this.lastRenderAt = now;
       const elapsed = Math.min(0.25, Math.max(0, (now - this.lastNow) / 1000));
       this.lastNow = now;
+      const submittedBefore = this.reviewPerformance ? this.game.framesRendered : 0;
       this.tickFrame(elapsed);
+      if (this.reviewPerformance) {
+        const c = this.reviewFrameContext;
+        c.trackId = this.game.currentTrack?.id ?? ''; c.outfit = this.riderOutfit;
+        c.bike = this.game.currentBike; c.quality = this.game.qualityTier; c.cap = cap;
+        this.reviewPerformance.frame(now, c, this.screen === 'run' && this.game.phase() === 'riding'
+          && !this.game.paused() && !document.hidden, this.game.framesRendered > submittedBefore, this.frameSplit);
+      }
       this.meterFrame(now, sinceRender);
       this.governFrame(now, sinceRender);
       this.bench?.frame(now, this.frameSplit);

@@ -659,7 +659,7 @@ function buildId(): string {
 }
 
 export default defineConfig({
-  define: { __BUILD_ID__: JSON.stringify(buildId()), __BUILD_TIME__: JSON.stringify(new Date().toISOString().slice(0, 16).replace('T', ' ') + 'Z') },
+  define: { __BUILD_ID__: JSON.stringify(buildId()), __BUILD_SHA__: JSON.stringify(fullSha()), __BUILD_TIME__: JSON.stringify(new Date().toISOString().slice(0, 16).replace('T', ' ') + 'Z') },
   // Relative base so the built bundle also works when served from a subpath
   // (Vercel preview folders, file listings, the harness preview server).
   base: './',

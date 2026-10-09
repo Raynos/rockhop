@@ -586,6 +586,29 @@ export interface RenderStats {
   contextKind: string;
 }
 
+/** A bounded real-clock riding window attached only to explicit review notes. */
+export interface ReviewPerformance {
+  method: 'normal-raf-submitted-riding-frames';
+  trackId: string;
+  outfit: string;
+  bike: string;
+  quality: QualityTier;
+  cap: number;
+  phase: 'riding';
+  windowMs: number;
+  frames: number;
+  fps: number;
+  /** At least 20 continuous seconds under one track/outfit/tier/cap, with a recent sample. */
+  ready: boolean;
+  sampleAgeMs: number;
+  frameMs: { p50: number; p95: number; max: number };
+  /** CPU wall submissions; these are not GPU completion times. */
+  cpuMs: { p50: number; p95: number; max: number };
+  physicsMs: { p50: number; p95: number; max: number };
+  submitMs: { p50: number; p95: number; max: number };
+  dropped: number;
+}
+
 export interface HookInfo {
   version: string;
   physicsHz: number;
@@ -693,6 +716,8 @@ export interface RockhopHook {
     togglePause(): void;
     screen(): string;
     paused(): boolean;
+    /** Ordinary on-device riding receipt; absent outside review opt-in. */
+    reviewPerformance?(): ReviewPerformance | null;
   };
   /** Level reviewer (docs/design/game.md §21; `window.__rockhop.review`): open a track under the review UI, read / drive its view, the Copy review payload. */
   review?: {
