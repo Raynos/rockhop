@@ -1,0 +1,18 @@
+GARAGE SOURCE FINDING — NO RUNTIME EDIT OR PLAYED CLAIM
+
+private-rider.mjs:153 defaults to riding contact IK. At 263 the non-stage
+branch reads actual riderBody COM/angle; gameplay forward/back remains that
+physical driver. At 273 the stage uses riderPoseAtLean(0) plus breathing.
+poseRiding:287–307 solves COM and selects by hand/sole reach, with no saddle
+constraint. The 'seated' stance label at 320 follows lean===0, not an observed
+posterior-jeans/saddle contact. riderGeometry.ts:41's neutral hips/torso are
+only target numbers, not proof that this selected anatomy sits on the saddle.
+
+garage60-capture.mjs:101–108 checks selected source, visible outfit meshes,
+75 joints and optional clip; it does not measure saddle contact. Existing79
+review.mjs rejects clip/calibration overrides. Thus source alone establishes
+neutral riding IK, not the user's explicitly seated Garage requirement.
+A proper separate result must constrain actual selected posterior-jeans to
+the finite saddle while preserving real palms/soles. Actual gameplay's
+physical branch must stay intact. No old rejected Garage patch was adopted,
+no runtime source was modified, and no seated appearance was claimed.

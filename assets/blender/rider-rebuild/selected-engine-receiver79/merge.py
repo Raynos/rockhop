@@ -48,6 +48,9 @@ def wrapper():
             old = 'selected_materials = list(obj.data.materials)'
             assert src.count(old) == 1
             src = src.replace(old,"selected_materials = list(donor.data.materials) if name == 'RiderHoodie' else list(obj.data.materials)")
+            old_count = 'assert len(donor.data.materials) == len(obj.data.materials) > 0'
+            assert src.count(old_count) == 1
+            src = src.replace(old_count,"assert len(donor.data.materials) > 0 and (name == 'RiderHoodie' or len(donor.data.materials) == len(obj.data.materials))")
             anchor = "    originals = {obj.name:"
             assert src.count(anchor) == 1
             src = src.replace(anchor,"    target_witness = capture_target(target,contract,bpy)\n"+anchor)

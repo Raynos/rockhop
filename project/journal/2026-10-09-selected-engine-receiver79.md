@@ -34,3 +34,9 @@ Finding: Closed geodesic source cuts do not establish correct clothing-wall labe
 Validation: One originalguard trace2.403s exit0, parent report/array/hash checks pass.73712 opposite-wall conflicts and154unassigned faces retained despite four unbranched closed loops.
 
 Limits: Independent ray observations also need semantic scrutiny; no bake authority, native, retry or art acceptance. Correct local source/cage workflow next.
+
+Finding: Retain the proposed local selected47 sleeve bake as a paused source checkpoint; admit the actual derivative recipe instead of mistaking its constructor for its latest recipe.
+
+Validation: Parent reviewed six sources; independent10 adapter and6 numerical fixture groups pass under Python3.13/NumPy2.3.4; six AST parses and all historical source pins match.
+
+Limits: No actual native, local source selection, texture bake, candidate or moving art result; resume only with the rider goal.

@@ -46,29 +46,51 @@ def verify(uv,triangles,np):
             'candidatePairsExamined':len(checked),'method':'Exact integer separating axes of saved float32 UV triangles'}
 
 
-def unwrap(obj,bpy,np):
-    """Use actual Blender packing; retain immutable sampling UV as another layer."""
-    old_layer = obj.data.uv_layers.active
-    assert old_layer is not None
-    old = np.empty((len(obj.data.loops),2),np.float32)
-    old_layer.data.foreach_get('uv',old.ravel())
-    old_name = old_layer.name
+def unwrap(obj,walls,bpy,np):
+    """Pack rebuilt roles, preserving retained UV and role-boundary tangents.
+
+    Separate exterior/cavity/cuff islands ensure each local receiver bake has
+    the same tangent discontinuities as the final mesh. Retained materials
+    keep their original coordinates in the existing UV layer.
+    """
+    layer=obj.data.uv_layers.active;assert layer is not None
+    before=np.empty((len(obj.data.loops),2),np.float32)
+    layer.data.foreach_get('uv',before.ravel())
     bpy.ops.object.select_all(action='DESELECT');obj.hide_set(False);obj.select_set(True)
     bpy.context.view_layer.objects.active=obj
-    layer=obj.data.uv_layers.new(name='SelectedProductionAtlas')
-    obj.data.uv_layers.active=layer
-    bpy.ops.object.mode_set(mode='EDIT');bpy.ops.mesh.select_all(action='SELECT')
-    assert bpy.ops.uv.smart_project(angle_limit=math.radians(66),island_margin=.012,
-        correct_aspect=True,scale_to_bounds=True)=={'FINISHED'}
+    bpy.context.tool_settings.mesh_select_mode=(False,False,True)
+    sync=bpy.context.tool_settings.use_uv_select_sync
+    bpy.context.tool_settings.use_uv_select_sync=True
+    def select(faces):
+        bpy.ops.object.mode_set(mode='EDIT');bpy.ops.mesh.select_all(action='DESELECT')
+        bpy.ops.object.mode_set(mode='OBJECT')
+        obj.data.polygons.foreach_set('select',np.asarray(faces,bool))
+        bpy.ops.object.mode_set(mode='EDIT')
+    for index,key in enumerate(sorted(set(walls)-{'retained'})):
+        selected=walls==key;select(selected)
+        assert bpy.ops.uv.smart_project(angle_limit=math.radians(66),island_margin=.012,
+            correct_aspect=True,scale_to_bounds=True)=={'FINISHED'}
+        bpy.ops.object.mode_set(mode='OBJECT')
+        uv=np.empty_like(before);layer.data.foreach_get('uv',uv.ravel())
+        loops=np.concatenate([np.arange(p.loop_start,p.loop_start+p.loop_total)
+                              for p in obj.data.polygons if selected[p.index]])
+        # Keep separately unwrapped roles disjoint while the final pack finds
+        # islands; otherwise coincident UVs could reconnect a role boundary.
+        uv[loops,0]+=2*index;layer.data.foreach_set('uv',uv.ravel())
+    rebuilt=walls!='retained';select(rebuilt)
+    assert bpy.ops.uv.pack_islands(rotate=True,margin=.012)=={'FINISHED'}
     bpy.ops.object.mode_set(mode='OBJECT')
-    for uv_layer in obj.data.uv_layers: uv_layer.active_render=uv_layer==layer
-    copied=np.empty_like(old);obj.data.uv_layers[old_name].data.foreach_get('uv',copied.ravel())
-    assert np.array_equal(old,copied),'Original selected sampling UV changed'
+    bpy.context.tool_settings.use_uv_select_sync=sync
+    uv=np.empty_like(before);layer.data.foreach_get('uv',uv.ravel())
+    retained_loops=np.concatenate([np.arange(p.loop_start,p.loop_start+p.loop_total)
+                                  for p in obj.data.polygons if not rebuilt[p.index]])
+    assert np.array_equal(before[retained_loops],uv[retained_loops]),'Retained selected UV changed'
     obj.data.calc_loop_triangles()
-    loops=np.empty((len(obj.data.loop_triangles),3),np.int32)
-    obj.data.loop_triangles.foreach_get('loops',loops.ravel())
-    atlas=np.empty_like(old);layer.data.foreach_get('uv',atlas.ravel())
-    return atlas,loops,verify(atlas,loops,np)
+    loops=np.asarray([t.loops for t in obj.data.loop_triangles],np.int32)
+    indices=np.flatnonzero([rebuilt[t.polygon_index] for t in obj.data.loop_triangles])
+    report=verify(uv[loops[indices]].reshape(-1,2),np.arange(len(indices)*3).reshape(-1,3),np)
+    report.update(scope='Rebuilt polygons only; retained selected UV/PBR preserved',uvLayer=layer.name)
+    return uv,loops,indices,report
 
 
 def interior_pixels(uv,triangles,size,np):

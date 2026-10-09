@@ -37,7 +37,8 @@ transplant = m['transplant_source']()
 old='selected_materials = list(obj.data.materials)'
 new="selected_materials = list(donor.data.materials) if name == 'RiderHoodie' else list(obj.data.materials)"
 assert transplant.count(new)==1 and old not in transplant
-normalized=transplant.replace(new,old).replace('h.pin(WRAPPER)','h.pin(__file__)').replace(
+normalized=transplant.replace("assert len(donor.data.materials) > 0 and (name == 'RiderHoodie' or len(donor.data.materials) == len(obj.data.materials))",
+    'assert len(donor.data.materials) == len(obj.data.materials) > 0').replace(new,old).replace('h.pin(WRAPPER)','h.pin(__file__)').replace(
     "h.ROOT/'harness/out/rider-rebuild/selected-engine-receiver79/merge'",
     "h.ROOT/'harness/out/rider-rebuild/selected-wardrobe-integration38'").replace(
     'UNACCEPTED-selected-dressed-receiver79.blend','UNACCEPTED-selected-dressed-wardrobe38.blend')
@@ -140,5 +141,19 @@ for key in ('rest','motionInput'):
     else:raise AssertionError('Contact input mutation admitted: '+key)
 gate.__globals__['c']=original_c
 groups.append('texture-only contact reuse rejects changed geometry/topology/skin/evaluation/rest/motion')
+bake_source=(HERE/'bake.py').read_text()
+assert all(x not in bake_source for x in ('wallInput','cages.domains','find_nearest','source_walls'))
+assert "atlas.unwrap(target,walls,bpy,np)" in bake_source
+assert "target.data.materials.clear()" not in bake_source
+assert "if not actual['retainedPolygons'][poly.index]:poly.material_index=original_slots" in bake_source
+assert "retained_witness(target,bpy.data.objects[DONOR]" in bake_source
+assert "cage.data=receiver.data.copy()" in bake_source
+assert "receiver=copied_patch(target,tp,tv[indices]" in bake_source
+assert "scene.render.bake.max_ray_distance=" in bake_source
+for name,source_slots,target_slots,expected in [('RiderHoodie',2,1,True),('ActualSelectedGlove.L',2,1,False),
+                                                ('ActualSelectedGlove.L',1,1,True),('RiderHoodie',0,1,False)]:
+    actual=source_slots>0 and (name=='RiderHoodie' or source_slots==target_slots)
+    assert actual==expected
+groups.append('local source47 bake only; shared cage topology; retained material/UV guard; extra slot only hoodie')
 print(json.dumps({'status':'SOURCE_ADAPTER_CHECKS_ONLY','count':len(groups),'groups':groups,
                   'nativeExecuted':False,'browserExecuted':False,'candidateAdmitted':False}))
