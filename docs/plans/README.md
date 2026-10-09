@@ -2027,3 +2027,5 @@ Ankle42 actual Pro complete-outfit lean film played12.96s naturally:1200inputs/2
 Ankle42 Rookie film also naturally played11.52s:1200real inputs/241finite75 samples/zero errors/faults, exact priorhasha0fa0c4b1b76ba5e. Parent sees actual both leans in complete selected outfit; cuffs remain, front view occludes ankle/posterior, deep crouch head/hood compression unaccepted. ASK356 actual-motion film delivery complete; overall rider plan remains open. Required gate44 next.
 
 Required current-game gate44 retains10/11pass; bootready372.04375ms fails300ms. Exact clear/crash/one-tickrestart pass; player sources unchanged since gate43PASS, timing cause unproven. No release/device acceptance. Next actual selected glove41 component construction under original guard.
+
+Native45 exact same ankle42 application source parent-reviewed:3318 rows, rawsave before scans, independent source/saved witnesses and complete field prediction.18 CPU fixtures/sourcepins/Python3.9syntax pass. Actual native application/reopen/engine parity pending; field42 remains unaccepted art. Glove41 actual component job now parent-owned under original serial guard.
