@@ -64,3 +64,16 @@ separate count; newly inverted or degenerate nondegenerate faces still reject.
 
 Limits: Corrected construction and carrier transfer are unexecuted. Retained
 internal cap topology is not an open-cloth or full-remaster acceptance.
+
+Finding: Exterior cuff construction measures all 482 poses but rejects nine
+newly inverted nondegenerate faces; eight inherited zero-area faces remain
+separate. Maximum measured requirement is16.834mm. Prepared orientation
+conditioning only raises local displacement lower bounds, retaining every
+measured pose constraint and exact carrier. Independent full cuff-vertex
+validation uses source rest coverage and exact geometry/carrier aliases.
+
+Validation: fit05 rejects in70.942seconds, with no new degenerate faces.
+Prepared conditioner and independent validator syntax pass.
+
+Limits: No emitted source yet; exact-float32 orientation, complete finite
+clearance and parent moving judgment remain required.
