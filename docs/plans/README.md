@@ -2063,3 +2063,5 @@ Active rider execution21:30Panama adopts fresh targeted Astra49 correction: stop
 Astra49 and parent independently prove actual upper-arm donor witness lies69mm inside both actual full anatomy and canonical native02: winding1,3outward rays, exhaustive distance agree. This is real penetration, not orientation artifact. Proximal outward/interior sheet ownership remains to classify before corrective selected-cloth construction; no guard waiver or acceptance.
 
 Parent independently verifies deep hoodie sample inside both anatomy solids. Supported correction now delegated to Astra49 as concrete proximal rest-registration50 on actual selected hoodie, preserving UV/PBR/fields and paired cloth; frozen28 small-repair is stopped. Report new art/displacement/strain truthfully, then distal cuff/one native10 merge/actual lean film; all gates open.
+
+Parent replays exact source/native-ID paired-sheet proof with identicalSHA: neighboring original Hoodie sheets both~69mm inside wearer. Inward-only deletion cannot fix fit. Astra50 owns real broad paired registration; teammate51 owns distal cuff then one complete native10 merge/replay. No new cloth result or art pass yet.
