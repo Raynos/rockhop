@@ -54,19 +54,29 @@ clothes with rejected cuff/ankle/hood art; no repaired complete film yet.
  guide local sculpting. Deliberately repair
  local shape/fields if needed; preserve healthy panels and recheck six poses.
  No global optimizer or requirement to preserve demonstrably failed weights.
-2.79/85 genuinely bake every rebuilt sleeve/cap/cuff panel from identified
- original47 outer/inner/rim domains. Healthy panels retain exact original UV/PBR.
- Nearest76 preview UVs are insufficient. Reuse existing atlas/cage/bake sources.
+2.79/85 locally bake actual rebuilt sleeve/cap/cuff roles from selected47 own-side
+ arm patches with matching-topology exterior/cavity/cuff cages. Keep healthy
+ selected_retained loops and original material slots exact; append one baked
+ material for rebuilt faces. Verify actual first hits and interior texel coverage.
+ Stop global geodesic wall classification: four closed cuts still disagree with
+ 73712 cached73 rays, and those rays are unbounded first hits without reciprocal
+ sheet proof. Disagreement is not anatomical ground truth. No nearest76 preview
+ transfer or repeated label tuning. Use Blender selected-to-active cage workflow.
 3.83 repairs own-side boot lining/collar and measured left toe. Floor01 confirms
- all858 disputed faces/side are lining. Actual03 stops30.389s at a source-edge
- cutpoint comparison before deletion/native; witness the cause before one fix.
+ all858 disputed faces/side are lining. Actual04 passes all883 left cut/circuit
+ checks after the verified float32 prewrite correction, then stops23.214s at
+ collar221988 ray predicate. No repaired pair saved. Correct collar construction
+ from actual source topology rather than sweeping radial-ray thresholds.
  Preserve selected exterior/PBR/fields and all3318 ankle rows.
 4.Assemble repaired/baked77 hoodie, selected41 bilateral HIGH-RES gloves,
  repaired83 shoes and52 jeans/body/head/hair once, retaining native10 physical
  actions/calibrated driver. Do not wait for81 compact gloves or final boot LOD.
 5.Replay/export and film actual Rookie/Pro neutral→forward→backward→neutral,
  useful hands/hip/foot/profile views and seated Garage orbit with actualFPS,
- measured video timing and no loading. Parent plays and judges the new outfit.
+ measured video timing and no loading. Garage neutral IK alone has no finite
+ saddle constraint and is not a seating pass. Qualify a distinct source-bound
+ seated display pose against actual posterior/saddle/palm/sole geometry while
+ preserving the gameplay physics branch. Parent plays and judges the new outfit.
 
 **Proof scope:** A genuinely textured, structurally usable private diagnostic
 assembly may be filmed before exhaustive six-relation qualification. All final
