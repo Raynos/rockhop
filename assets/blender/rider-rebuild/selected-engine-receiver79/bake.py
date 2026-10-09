@@ -118,6 +118,8 @@ def scene_witness(bpy,original,np):
         'actions':{a.name:scope['action_state'](a) for a in bpy.data.actions},
         'frame':[bpy.context.scene.frame_current,bpy.context.scene.frame_start,bpy.context.scene.frame_end],
         'targetSurface':surface(bpy.data.objects[TARGET],original,np)}
+    contact=runpy.run_path(str(HERE/'contact.py'))
+    result['contactInputs']=contact['capture'](bpy,np,contact['helper']())
     return json.loads(json.dumps(result))
 
 
@@ -348,7 +350,8 @@ def bake(atlas_path,out):
         'expectedWitness':pin(out/'expected-baked-witness.json'),'originalWitness':pending['originalWitness'],
         'atlasPending':pin(atlas_path),'maps':maps,'passes':passes,'sourceRecipe25':LEGACY25,'lifetime32':LIFETIME32,
         'actionWitnessRecipe':ACTION_STATE,'sourceRayCoverage':{'file':pin(coverage_path),'report':coverage_report},
-        'bakedMaterial':actual_material,
+        'bakedMaterial':actual_material,'contactRecipe':pin(HERE/'contact.py'),
+        'assemblyWitnessRecipe':pin(HERE/'witness.py'),
         'ownedMeshLifetime':{'created':tracker.created,'released':tracker.released,'unreleased':[]},
         'denseBakeSourceObject':DONOR,'targetObject':TARGET,'nativeStorage':{'compressed':False,'reopenVerified':False},
         'detailBakePassed':False,'bakeReopened':False,'independentReopenPassed':False,
@@ -376,9 +379,15 @@ def reopen(path):
     uv=arrays(target.data.uv_layers['SelectedProductionAtlas'].data,'uv',2,np.float32,np)
     loops=arrays(target.data.loop_triangles,'loops',3,np.int32,np)
     assert np.array_equal(uv,ancestry['atlasUV']) and atlas.verify(uv,loops,np)==prepared['atlas']
+    merger=runpy.run_path(str(HERE/'merge.py'));methods=merger['methods']()
+    target=methods['read'](methods['TARGET_QUALIFIED11'])
+    contract=methods['read'](target['sourcePins']['contract'])
+    observer=runpy.run_path(str(checked(row['assemblyWitnessRecipe'])))
+    source_witness=observer['capture']('source',target,contract,bpy,methods)
     row.update(status='BAKED79_NATIVE_INDEPENDENTLY_REOPENED_UNACCEPTED',bakeReopened=True,
         independentReopenPassed=True,detailBakePassed=True,pendingReceipt=pin(path),
-        receiverGeometry=expected['receiverGeometry'],receiverMetadata=expected['receiverMetadata'])
+        receiverGeometry=expected['receiverGeometry'],receiverMetadata=expected['receiverMetadata'],
+        assemblySourceWitness=source_witness)
     row['nativeStorage']['reopenVerified']=True
     write(path.with_name('bake-reopened.json'),row)
 
@@ -391,6 +400,8 @@ def qualify_receipt(path):
     for key in ('native','sourceNative77','sourceReceipt','receiverReceipt','expectedWitness','atlasPending','pendingReceipt','sourceRecipe25','lifetime32','actionWitnessRecipe'):checked(row[key])
     assert row['sourceReceipt']==row['source47Receipt']==SOURCE47
     assert row['sourceRecipe25']==LEGACY25 and row['lifetime32']==LIFETIME32 and row['actionWitnessRecipe']==ACTION_STATE
+    assert row['contactRecipe']==pin(HERE/'contact.py') and row['assemblyWitnessRecipe']==pin(HERE/'witness.py')
+    assert set(row['assemblySourceWitness']['parts'])=={TARGET,'ActualSelectedGlove.L','ActualSelectedGlove.R','RiderBody__FullAnatomyReference'}
     prepared=read(row['atlasPending'])
     assert prepared['recipe']==pin(__file__) and prepared['atlasRecipe']==pin(HERE/'atlas.py') and prepared['cageRecipe']==pin(HERE/'cages.py')
     for key in ('native77Receipt','native77Recipe','native','wallInput','ancestry','sourceRecipe25','lifetime32','actionWitnessRecipe'):checked(prepared[key])

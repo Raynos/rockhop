@@ -19,6 +19,12 @@ def transformed_source():
     for old,new in changes.items():
         assert source.count(old) == 1
         source = source.replace(old,new)
+    anchor = "    row = {'acceptedArt': False"
+    source = source.replace(anchor,"    contact = runpy.run_path(str(CONTACT))\n"
+        "    contact_inputs = contact['capture'](bpy,np,helper)\n"+anchor)
+    source = source.replace("'fullTrianglesNoRadialCrop': True, 'result': result,",
+        "'fullTrianglesNoRadialCrop': True, 'result': result,\n"
+        "           'contactRecipe': {'path':str(CONTACT.relative_to(ROOT)), 'sha256':sha(CONTACT)}, 'contactInputs':contact_inputs,")
     return source
 
 
@@ -27,6 +33,6 @@ if __name__ == '__main__':
     report = json.loads(Path(args[0]).read_text())
     h['native_gate'](report,h['read'](report['input']))
     namespace = {'__name__':'receiver79_exact_dense28','__file__':str(h['checked'](ORIGINAL)),
-                 'WRAPPER':__file__,'ORIGINAL':ORIGINAL}
+                 'WRAPPER':__file__,'ORIGINAL':ORIGINAL,'CONTACT':HERE/'contact.py'}
     exec(compile(transformed_source(),namespace['__file__'],'exec'),namespace)
     namespace['main']()

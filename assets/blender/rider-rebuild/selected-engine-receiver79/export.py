@@ -15,7 +15,9 @@ def transformed_source():
                'UNACCEPTED_DISTAL71_RAW_SAVED_REOPEN_EXPORT_PENDING':
                    'UNACCEPTED_RECEIVER79_RAW_SAVED_REOPEN_EXPORT_PENDING',
                "'nativeIdentityReassigned':False,":
-                   "'nativeIdentityReassigned':False,'nativeIdentitySemantic':'Saved native row; receiver77 derivative identity is separate from selected donor ancestry',"}
+                   "'nativeIdentityReassigned':False,'nativeIdentitySemantic':'Saved native row; receiver77 derivative identity is separate from selected donor ancestry',",
+               "'runtimeAnimationChannels':0,":
+                   "'runtimeAnimationChannels':0,'assemblyEligibility':merge_config['eligibility'],"}
     for old,new in changes.items():
         assert source.count(old) >= 1,old
         source = source.replace(old,new)

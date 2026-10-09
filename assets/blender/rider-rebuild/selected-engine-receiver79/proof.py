@@ -26,9 +26,13 @@ def transformed_source():
         'UNACCEPTED_MERGED51_ORIGINAL08_MATRIX_REPLAY_PASS_ART_PENDING':
             'UNACCEPTED_MERGED79_ORIGINAL08_MATRIX_REPLAY_PASS_ART_PENDING',
         'SINGLE_DISTAL51_MERGE_NATIVE_WITNESS_ONLY':'SINGLE_RECEIVER79_MERGE_NATIVE_WITNESS_ONLY',
+        'THREE_SEPARATE_REOPENED_COMPONENT_TARGET_MERGED_NATIVES':
+            'SOURCE_REOPEN_TARGET_AT_MERGE_ASSEMBLY_REOPEN',
         'UNACCEPTED_DISTAL_TOPOLOGY_TRANSPORT':'UNACCEPTED_RECEIVER_TOPOLOGY_TRANSPORT',
         "'nativeIdentityReassigned':False,":
-            "'nativeIdentityReassigned':False,'nativeIdentitySemantic':'Saved native row; receiver77 derivative identity is separate from selected donor ancestry',"}
+            "'nativeIdentityReassigned':False,'nativeIdentitySemantic':'Saved native row; receiver77 derivative identity is separate from selected donor ancestry',",
+        "'runtimeAnimationChannels':0,":
+            "'runtimeAnimationChannels':0,'assemblyEligibility':merge_config['eligibility'],"}
     for old,new in changes.items():
         assert source.count(old) >= 1,old
         source = source.replace(old,new)

@@ -1,0 +1,84 @@
+{
+  "status": "SOURCE_ONLY_DIAGNOSTIC_ASSEMBLY_ADAPTER_UNACCEPTED",
+  "sourcePins": [
+    {
+      "path": "assets/blender/rider-rebuild/selected-engine-receiver79/bake.py",
+      "sha256": "fc7b9956626d41cb5f2bb8f07f71892434e3de73ea1b9c62653a5bc7438ff2a3"
+    },
+    {
+      "path": "assets/blender/rider-rebuild/selected-engine-receiver79/dense.py",
+      "sha256": "9dff33d54872573baf52c532db4d2237c08af284d7cea62b94c7749eec6a4d89"
+    },
+    {
+      "path": "assets/blender/rider-rebuild/selected-engine-receiver79/export.py",
+      "sha256": "6c88fdfd1a5343e87b1989f71a525d4aee5b2eaae4eb2b3310a423d3980c3fee"
+    },
+    {
+      "path": "assets/blender/rider-rebuild/selected-engine-receiver79/merge.py",
+      "sha256": "2d7bafa6be8ffd5d7151e35f70dad147645fddeae092d4cf3ff3c19518287785"
+    },
+    {
+      "path": "assets/blender/rider-rebuild/selected-engine-receiver79/proof.py",
+      "sha256": "3d654f523e4fe6ab25d3d9133f2ee97c4161654193f1766b54b65521aff66d8b"
+    },
+    {
+      "path": "assets/blender/rider-rebuild/selected-engine-receiver79/test_source.py",
+      "sha256": "9228f71183f3f693115c3c0852116eb404744b2df27f36af38dec8512bc83d89"
+    },
+    {
+      "path": "assets/blender/rider-rebuild/selected-engine-receiver79/contact.py",
+      "sha256": "d8c4b5a2dd5c4de945f0732e282a2940dd3f62d4aabe5bb81a8544187933fe47"
+    },
+    {
+      "path": "assets/blender/rider-rebuild/selected-engine-receiver79/witness.py",
+      "sha256": "4a15acfc5ebca5e07ec12b0c2531d69b83a7bb7e27b3bc12b6bedb8f948f0476"
+    }
+  ],
+  "validation": {
+    "command": "python3 assets/blender/rider-rebuild/selected-engine-receiver79/test_source.py",
+    "passedGroups": 9,
+    "pythonSourcesParsed": 8,
+    "gitDiffCheckPassed": true
+  },
+  "actualExecution": {
+    "native": false,
+    "trace": false,
+    "bake": false,
+    "contact": false,
+    "assembly": false,
+    "replay": false,
+    "browser": false
+  },
+  "candidateAdmitted": false,
+  "parentJudgment": "Pending; builder does not judge",
+  "unchangedTracePins": [
+    {
+      "path": "assets/blender/rider-rebuild/selected-engine-receiver79/source_walls.py",
+      "sha256": "50557ae1959e1bc22e4e42043bb76176f6b9bee48d83062e6bcbf7fa0c0d87e8"
+    },
+    {
+      "path": "assets/blender/rider-rebuild/selected-engine-receiver79/source47-inventory.json",
+      "sha256": "dbbe8e715c4ac035990f414495f790ba841bc6fc4377d014a901c49563c698c4"
+    },
+    {
+      "path": "assets/blender/rider-rebuild/selected-engine-receiver79/trace-source-domains01.mjs",
+      "sha256": "b43bbc84b59e772d63116dec1382e4110992db5705a063e0615026d1424609ee"
+    }
+  ],
+  "traceGuard": {
+    "path": "assets/blender/hero-remaster/generation-comparison-2026-10-03/user-agent2/run_bounded96.py",
+    "sha256": "cf8acd15d8b7484480bee74d23892be815d955ffd87115d3da8ed228ffb3d916"
+  },
+  "traceCommand": [
+    "python3",
+    "assets/blender/hero-remaster/generation-comparison-2026-10-03/user-agent2/run_bounded96.py",
+    "--out",
+    "docs/evidence/rider-rebuild/selected-engine-receiver79/source-domains-guard01",
+    "--limit-seconds",
+    "150",
+    "--",
+    "node",
+    "assets/blender/rider-rebuild/selected-engine-receiver79/trace-source-domains01.mjs"
+  ],
+  "traceReadiness": "Source frozen; trace output/source-domains01 and guard must be fresh. Explicit parent grant required; launcher timeout 120 seconds, inherited CPU2 thread caps."
+}

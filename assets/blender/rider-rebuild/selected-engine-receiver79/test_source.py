@@ -27,7 +27,7 @@ original28 = c['checked'](dense['ORIGINAL']).read_text()
 changed28 = dense['transformed_source']()
 a="    arrays = {key: (helper['points']"
 b="    row = {'acceptedArt': False"
-assert original28[original28.index(a):original28.index(b)]==changed28[changed28.index(a):changed28.index(b)]
+assert original28[original28.index(a):original28.index(b)]==changed28[changed28.index(a):changed28.index('    contact = runpy.run_path')]
 assert 'fullTrianglesNoRadialCrop' in changed28
 assert 'native_gate' in (HERE/'dense.py').read_text()
 groups.append('same six full triangle relations and measurement-only native gate')
@@ -41,6 +41,8 @@ normalized=transplant.replace(new,old).replace('h.pin(WRAPPER)','h.pin(__file__)
     "h.ROOT/'harness/out/rider-rebuild/selected-engine-receiver79/merge'",
     "h.ROOT/'harness/out/rider-rebuild/selected-wardrobe-integration38'").replace(
     'UNACCEPTED-selected-dressed-receiver79.blend','UNACCEPTED-selected-dressed-wardrobe38.blend')
+normalized=normalized.replace('    target_witness = capture_target(target,contract,bpy)\n','').replace(
+    "\n    write_intake_witnesses(out/'pending.json',target_witness)",'')
 assert normalized==original38
 groups.append('exact38 mesh transplant except protected baked hoodie material retention')
 
@@ -90,5 +92,53 @@ for key,value in [('donorOriginalNamedGeometry','wrong-original-name'),('donorMe
     except AssertionError:pass
     else:raise AssertionError(('Changed selected donor witness admitted',key))
 groups.append('distinct renamed donor hash retained; original-name geometry and selected PBR exact')
+
+state=merge['eligibility'](None,{},m)
+assert state=={'mode':'PRIVATE_DIAGNOSTIC_CONTACT_PENDING','staticContactPassed':False,
+              'productionQualified':False,'movingReviewPassed':False}
+assert m['intake'] is merge['intake']
+assert merge['STAGE'] in merge['wrapper']()['transformed_source']()
+assert 'shapeZeroActions' in merge['wrapper']()['target52_gate'].__code__.co_consts
+assert 'assemblyEligibility' in p['transformed_source']() and 'assemblyEligibility' in export['transformed_source']()
+for name in ('freeze','intake'):
+    node=code_function((HERE/'merge.py').read_text(),name)
+    assert "c['donor_gate']" in ast.unparse(node)
+    assert "['target52_gate']" in ast.unparse(node)
+groups.append('diagnostic state admits no contact/art/production claim; native+bake+52 remain mandatory')
+
+observer=runpy.run_path(str(HERE/'witness.py'))
+capture=observer['capture_source']()
+assert 'open_mainfile' not in capture
+for marker in ('geometryPBRBind','namedFieldsSHA256','keys_state','action_state','poseBasis','maskReference'):
+    assert marker in capture
+assert "'source',target,contract,bpy,methods" in (HERE/'bake.py').read_text()
+assert 'capture_target(target,contract,bpy)' in transplant and 'write_intake_witnesses' in transplant
+groups.append('exact47 full observations collected during one component reopen and existing target open')
+
+# This pure gate fixture tests invalidation only; it is not native evidence.
+contact=runpy.run_path(str(HERE/'contact.py'))
+gate=contact['reusable'];original_c=gate.__globals__['c']
+recipe={'path':'observed-contact-recipe','sha256':'test-only'}
+old_native={'path':'observed-unbaked-native','sha256':'test-only'}
+new_native={'path':'observed-baked-native','sha256':'test-only'}
+inputs={'parts':{'hoodie':{'positions':'a','triangles':'b','namedFields':'c','evaluatedPositions':'d'}},'rest':'e','motionInput':'f'}
+gate.__globals__['c']={'pin':lambda _:recipe,'read':lambda _:{'native':old_native}}
+row={'contactRecipe':recipe,'contactInputs':inputs,'sourceNative':old_native}
+baked={'contactRecipe':recipe,'originalWitness':{'contactInputs':inputs},'native':new_native,'sourceNative77':{},
+       'independentReopenPassed':True,'bakeReopened':True,'detailBakePassed':True}
+gate(row,baked)
+import copy
+for key in ('positions','triangles','namedFields','evaluatedPositions'):
+    changed=copy.deepcopy(row);changed['contactInputs']['parts']['hoodie'][key]='changed'
+    try:gate(changed,baked)
+    except AssertionError:pass
+    else:raise AssertionError('Contact input mutation admitted: '+key)
+for key in ('rest','motionInput'):
+    changed=copy.deepcopy(row);changed['contactInputs'][key]='changed'
+    try:gate(changed,baked)
+    except AssertionError:pass
+    else:raise AssertionError('Contact input mutation admitted: '+key)
+gate.__globals__['c']=original_c
+groups.append('texture-only contact reuse rejects changed geometry/topology/skin/evaluation/rest/motion')
 print(json.dumps({'status':'SOURCE_ADAPTER_CHECKS_ONLY','count':len(groups),'groups':groups,
                   'nativeExecuted':False,'browserExecuted':False,'candidateAdmitted':False}))
