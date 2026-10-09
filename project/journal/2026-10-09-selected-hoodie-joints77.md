@@ -101,3 +101,9 @@ Finding: Restore the lateral shoulder attachment erased by inherited torso weigh
 Validation: Parent read the196-line paint recipe and60-line exact six-pose adapter, verified six actual input pins/two recipe hashes and seven literal intended seam witnesses. Geometry, UVs, topology, wall spacing and ancestry stay unchanged; full71 derivative fields are explicitly authored.
 
 Limits: Unaccepted source checkpoint only. No receiver16/contact16 run. Retained hood/head and lower-front torso require separate correction; all482 native/export parity and moving art remain open.
+
+Finding: Shoulder attachment correction is useful but does not make the cap fit; stop weight-taper experiments.
+
+Validation: Actual16 guard77.108s exit0,4188 rows changed. Six actual cap counts decrease at129/193 but barely at121; substantial bilateral inner/outer crossings remain. Hood/head and lower-front counts are exactly unchanged; all posed surface degenerates zero.
+
+Limits: No native, bake or art acceptance. Repair actual remaining cap shape/body attachment, demonstrated retained original head/pelvis fields and real front rest-fit defect.
