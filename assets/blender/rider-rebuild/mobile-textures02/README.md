@@ -225,3 +225,20 @@ Normal compression versus this bakedPNG: mean0.266°,p992.88°,max155.58°;
 but other>90° source vectors include0.2874; no padding/occupancy exclusion.
 Builder's72/30K cage-normal>90° probes, two posed-facing misses and its
 342 actual posed witness maximum0.555mm remain separate unaccepted evidence.
+
+## Final right glove atlas
+
+The independently built right skin03 atlas is stable2cbb76232. Its original
+queued guard returns0 in40.472s; three2K UASTC maps total3,650,863 wire bytes
+and16,777,296 ASTC mip bytes.108 pinned runtime transcodes and every native
+block/pixel comparison pass; alpha remains255 everywhere.
+
+Normal compression: mean0.259°,p992.87°,max160.60°;267 pixels>30°,32>60°,
+6>90° of4,194,304. All source pixels remain included. Maximum angular texel
+1552,1332 has source-vector length0.0548; no neutral-padding assumption is
+used to discard it or other outliers. Whole played/device judgment remains
+open, alongside builder's393 posed-facing witnesses max0.680mm.
+
+All twelve new component maps total18,564,510 wire bytes. Combined with
+30,049,025 retained-map bytes, final texture wire is48,613,535 bytes before
+exact image dedup. Actual complete GLB/storage totals follow composition.

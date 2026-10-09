@@ -88,3 +88,15 @@ Evidence: docs/evidence/rider-rebuild/mobile-textures02/components01/glove-L/.
 
 Limits: Compression is distinct from actual source-field/posed witnesses;
 parent moving judgment pending. No second atlas encoding or production edit.
+
+Finding: Encode the fixed independent skin03 right-glove three-map source
+family once with the conservative UASTC recipe. All four families are ready.
+
+Validation: Original queued guard returns0 in40.472s.3,650,863 wire bytes;
+108 runtime transcodes and all native ASTC block/base-pixel comparisons
+pass; alpha exact, ASTC mips16,777,296 bytes. Normal mean0.259°,p992.87°,
+max160.60°,267 of4,194,304 pixels>30° without exclusions.
+Evidence: docs/evidence/rider-rebuild/mobile-textures02/components01/glove-R/.
+
+Limits: Independent source-field/posed witnesses and parent moving/device
+judgment remain open; no runtime or player asset edits.

@@ -1,0 +1,213 @@
+{
+  "accepted": false,
+  "component": "glove-R",
+  "sourceBakerCheckpoint": "2cbb76232",
+  "sourceOriginalMasterSHA256": "127e316a8ff7910a4918b63f83e086e4e658062f102c73f17d0ee2f956750649",
+  "sourceBakeMetadataSHA256": "1168b7bfdb25a14c2763d68db84275686d53817dffa3709e2b13c3d630786788",
+  "sourcePNGBytes": 5338553,
+  "KTX2Bytes": 3650863,
+  "textureGPUBytesFullMip": {
+    "ASTC4x4": 16777296,
+    "BC7": 16777296,
+    "RGBA32": 67108860
+  },
+  "transcodes": 108,
+  "alphaChangedPixels": 0,
+  "nativeASTCAndPinnedRuntimeBlockPixelProof": true,
+  "normalAngularDegrees": {
+    "authoredPixels": 4194304,
+    "mean": 0.25908756349235773,
+    "p95": 1.27,
+    "p99": 2.87,
+    "max": 160.6
+  },
+  "normalOutliers": {
+    "image": 2,
+    "pixels": 4194304,
+    "mask": "All source pixels; no UV or alpha exclusion",
+    "countsAboveDegrees": {
+      "5": 16151,
+      "10": 4193,
+      "30": 267,
+      "60": 32,
+      "90": 6
+    },
+    "fractionsAboveDegrees": {
+      "5": 0.003850698471069336,
+      "10": 0.0009996891021728516,
+      "30": 6.365776062011719e-05,
+      "60": 7.62939453125e-06,
+      "90": 1.430511474609375e-06
+    },
+    "worstPixels": [
+      {
+        "x": 1552,
+        "y": 1332,
+        "degrees": 160.5981219092275,
+        "sourceRGBA": [
+          121,
+          130,
+          128,
+          255
+        ],
+        "decodedRGBA": [
+          143,
+          126,
+          123,
+          255
+        ],
+        "sourceVectorLength": 0.054761725661839,
+        "decodedVectorLength": 0.12713384374468492
+      },
+      {
+        "x": 1515,
+        "y": 1596,
+        "degrees": 124.82605954654167,
+        "sourceRGBA": [
+          126,
+          126,
+          122,
+          255
+        ],
+        "decodedRGBA": [
+          131,
+          163,
+          140,
+          255
+        ],
+        "sourceVectorLength": 0.046234612245300316,
+        "decodedVectorLength": 0.2964612510200976
+      },
+      {
+        "x": 1472,
+        "y": 1418,
+        "degrees": 101.8031206471062,
+        "sourceRGBA": [
+          120,
+          129,
+          128,
+          255
+        ],
+        "decodedRGBA": [
+          130,
+          131,
+          116,
+          255
+        ],
+        "sourceVectorLength": 0.06011650869316036,
+        "decodedVectorLength": 0.09629826790438174
+      },
+      {
+        "x": 1530,
+        "y": 1892,
+        "degrees": 101.34518269776582,
+        "sourceRGBA": [
+          108,
+          119,
+          130,
+          255
+        ],
+        "decodedRGBA": [
+          136,
+          119,
+          138,
+          255
+        ],
+        "sourceVectorLength": 0.16798784306355996,
+        "decodedVectorLength": 0.12518344862362635
+      },
+      {
+        "x": 1395,
+        "y": 468,
+        "degrees": 97.40782595486912,
+        "sourceRGBA": [
+          143,
+          154,
+          159,
+          255
+        ],
+        "decodedRGBA": [
+          125,
+          140,
+          115,
+          255
+        ],
+        "sourceVectorLength": 0.3449866130272482,
+        "decodedVectorLength": 0.14002800840280105
+      },
+      {
+        "x": 1535,
+        "y": 589,
+        "degrees": 96.25716054435185,
+        "sourceRGBA": [
+          148,
+          128,
+          144,
+          255
+        ],
+        "decodedRGBA": [
+          92,
+          116,
+          163,
+          255
+        ],
+        "sourceVectorLength": 0.20643250491375467,
+        "decodedVectorLength": 0.40395964031504455
+      },
+      {
+        "x": 1341,
+        "y": 1012,
+        "degrees": 89.77067863593294,
+        "sourceRGBA": [
+          127,
+          135,
+          131,
+          255
+        ],
+        "decodedRGBA": [
+          133,
+          130,
+          123,
+          255
+        ],
+        "sourceVectorLength": 0.06503185863441957,
+        "decodedVectorLength": 0.059084388914977914
+      },
+      {
+        "x": 876,
+        "y": 453,
+        "degrees": 85.85301751835776,
+        "sourceRGBA": [
+          118,
+          110,
+          146,
+          255
+        ],
+        "decodedRGBA": [
+          163,
+          116,
+          139,
+          255
+        ],
+        "sourceVectorLength": 0.21317612431257846,
+        "decodedVectorLength": 0.30625919471638313
+      }
+    ],
+    "accepted": false
+  },
+  "guardAdmissionAndStopLimitsUnchanged": true,
+  "guardResults": [
+    {
+      "path": "harness/out/rider-rebuild/mobile-textures02/components01/glove-R/encode-guard01/guard.json",
+      "status": "worker returned; review pending",
+      "exitCode": 0,
+      "samples": 40
+    }
+  ],
+  "limits": [
+    "Compression compares to this new baked PNG; source-field/native posed witnesses are independent builder evidence.",
+    "Normal outliers include every source pixel; no UV occupancy mask or short-vector exclusions.",
+    "Software ASTC linear pixels do not prove sRGB GPU filtering or moving appearance. BC7 pixels not measured.",
+    "Combined appearance and phone memory/FPS remain unqualified. No production pin/deployment."
+  ]
+}
