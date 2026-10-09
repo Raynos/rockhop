@@ -71,3 +71,9 @@ Finding: Correct only the floating-point torso remainder in newly constructed an
 Validation: Parent full four wrappers/native diff reviewed; AST/hash and immutable14 original pins pass. Literal body samples and geometry remain unchanged; max(0,1-ownsum) replaces only the negative remainder.
 
 Limits: New15 candidate/all482/views not yet run; no field-source rewrite, geometry/contact or moving-art acceptance.
+
+Finding: The narrow constructed remainder correction passes, but the parent mixed numerical runtimes in exact reconstruction.
+
+Validation: Originalguard137.916s exit1 after successful15 construction; parent saved-array comparison proves all14 geometry/ancestry exact, only boundary/named fields differ; minfield0 and rowerror1.19e−7.
+
+Limits: All482/views remain unrun. Continue the saved candidate using original3.13 NumPy; no additional candidate or arithmetic identity waiver.
