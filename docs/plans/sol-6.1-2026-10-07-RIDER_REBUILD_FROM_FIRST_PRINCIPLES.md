@@ -78,10 +78,17 @@ verified its support/triangle-constraint closure diagnosis and executed one
 read-only exact first-fit witness in28.441s: nine unsupported shallow neck
 constraints need at most0.313mm, separately from a movable proximal upper-arm
 sample with source signedgap−68.949mm. That minimum requires71.549mm signed
-clearance travel if valid, exceeding the unchanged45mm artist guard. Stop
-unchanged and support-only solver retries. Verify solid/reference orientation
-and original sheet ownership before a supported broader garment correction;
-distal inner-cuff exclusion does not identify proximal exterior cloth. This
+clearance travel, exceeding the unchanged45mm small-repair artist guard.
+Parent independently verifies the point inside both real full anatomy and
+canonical native02 using winding1, three outward ray exits and exhaustive
+triangle distance. Stop unchanged and support-only solver retries. Astra49
+owns one new proximal selected-Hoodie rest-registration50, moving paired cloth
+continuously across shoulder/axilla into a measured healthy retained boundary
+before distal cuff construction. Keep exact source UV/PBR/fields and report
+actual source displacement/strain as new unaccepted garment art; never claim
+the new broad registration passed the frozen45mm small-repair gate. Original
+proximal sheet ownership proof remains separate; inward-only deletion is not
+a supported repair. Distal cuff reconstruction follows genuine anatomical fit. This
 is a targeted advisory, not a new completed whole-goal deep review. Preserve
 selected detail, exact75/native actions and all contact/strain gates. After a
 real saved/reopened garment, merge wardrobe once into native10 using scoped
