@@ -2077,3 +2077,5 @@ Actual proximal50 saves/reopens selected Hoodie+gloves/fullref with topology/UV/
 Required ordinary-game gate48 passes11/11 (guard6.764s exit0), exact recorded clear/hash/crash/coldboot/1tick restart. Actual50 remains an unaccepted contact failure; native52 inventory repair and one shape diagnostic are next.
 
 Native52 source reviewed: explicit missing canonical foot-group append, unchanged original group indices and complete predicted field witnesses;39 meaningful CPU fixtures/source pins/Python3.9 pass. Parent actual save/reopen is pending; source42 remains an unaccepted ankle initializer.
+
+Required ordinary-game gate49 completes10/11: bootready302.177ms>300ms; exact clear/hash/crash/1tick restart pass (guard12.634s exit1). Retain failure without unchanged immediate retry. Native52 saved-field preservation passes; one actual cloth diagnostic is next, art/device/release remain open.
