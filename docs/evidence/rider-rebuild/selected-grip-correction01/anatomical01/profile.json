@@ -1,0 +1,488 @@
+{
+  "accepted": false,
+  "schema": "rockhop-selected-grip-profile-v1",
+  "sourceSHA256": "f814b8d7cde87b1e41b45eec75cd55fdea89b915bf9acae0e5a18b40d3a156af",
+  "sourceContractSHA256": "0301087649f7e2b2c442299bb21f61dc1e325c6b5b84afbc3ac5c4a594b72813",
+  "bikes": [
+    {
+      "asset": "bike-rookie.glb",
+      "sha256": "e55919d60267849358ef5e97f4731f42fac6eb2835b9998e1d146d056c0f10f7"
+    },
+    {
+      "asset": "bike-pro.glb",
+      "sha256": "0acc9ac86eeca76cc1812f8870eab36e2e25ca76d6a5cbe86d4a46a36cc12a86"
+    }
+  ],
+  "hands": {
+    "left": {
+      "anatomicalAxesInWrist": {
+        "forward": [
+          -0.0966757255268062,
+          0.9949573154889523,
+          0.02671599612373075
+        ],
+        "normal": [
+          0.9867838765743744,
+          0.09230553988743606,
+          0.13318133592564083
+        ]
+      },
+      "padMaterialRegion": {
+        "sourceRestPointGlb": [
+          0.4032186003139484,
+          0.865379404490724,
+          0.10743112628673862
+        ],
+        "sourceRestPointWrist": [
+          0.022476941001696726,
+          0.07595158757732562,
+          0.005958528915811556
+        ],
+        "radiusM": 0.012,
+        "semantic": "Outer volar distal palm10mm proximal to middle-MCP along anatomical forward"
+      },
+      "wristQuaternionBike": [
+        0.08076375969322451,
+        0.008798542293233564,
+        -0.8102371527182816,
+        0.5804442756447006
+      ],
+      "wristPositionBike": [
+        0.20602956133819483,
+        0.8430465472336335,
+        -0.3512914056320571
+      ],
+      "selectedPalmPadInWrist": [
+        -0.7078848659210972,
+        0.6860467643488949,
+        0.16804420170384474,
+        0,
+        0.66877805402587,
+        0.7275460648688248,
+        -0.153011888254666,
+        0,
+        -0.22723320851768355,
+        0.004069474204339937,
+        -0.9738318686130885,
+        0,
+        0.023481784555181462,
+        0.07615841383056196,
+        0.008193885748004448,
+        1
+      ],
+      "finitePalmTargetBike": [
+        0.2694306435177727,
+        0.7952792893216142,
+        -0.34046413373376777
+      ],
+      "selectedSurfaceWitness": {
+        "triangle": 297058,
+        "rows": [
+          227623,
+          227626,
+          229992
+        ],
+        "barycentric": [
+          0.017017711550372128,
+          0.5969572574709935,
+          0.38602503097863433
+        ],
+        "anatomicalProbe": "One outer volar ray10mm proximal to actual middle-MCP base, along declared palmar direction; distal palm pressure region rather than inherited thumb-web socket",
+        "sourceFields": [
+          [
+            {
+              "jointId": "DEF-palm.01.L",
+              "weight": 0.452124818799115
+            },
+            {
+              "jointId": "DEF-hand.L",
+              "weight": 0.4254673075455863
+            },
+            {
+              "jointId": "DEF-thumb.01.L",
+              "weight": 0.06243991760128176
+            },
+            {
+              "jointId": "DEF-palm.04.L",
+              "weight": 0.05996795605401694
+            }
+          ],
+          [
+            {
+              "jointId": "DEF-hand.L",
+              "weight": 0.4451667048142214
+            },
+            {
+              "jointId": "DEF-palm.01.L",
+              "weight": 0.44281681544213014
+            },
+            {
+              "jointId": "DEF-thumb.01.L",
+              "weight": 0.05770962081330587
+            },
+            {
+              "jointId": "DEF-palm.04.L",
+              "weight": 0.054306858930342566
+            }
+          ],
+          [
+            {
+              "jointId": "DEF-palm.01.L",
+              "weight": 0.47391470206759745
+            },
+            {
+              "jointId": "DEF-hand.L",
+              "weight": 0.409399557488365
+            },
+            {
+              "jointId": "DEF-thumb.01.L",
+              "weight": 0.0648355840390631
+            },
+            {
+              "jointId": "DEF-palm.04.L",
+              "weight": 0.051850156404974444
+            }
+          ]
+        ],
+        "poseConditioned": true,
+        "skeletalWristFrame": "Anatomical middle-MCP forward and radial-ulnar palmar-plane normal define wrist pose; curved materialfacet normal is measured, never projected into boneforward",
+        "normalPatchSamples": 1910
+      },
+      "digits": {
+        "thumb": {
+          "jointIds": [
+            "DEF-thumb.01.L",
+            "DEF-thumb.02.L",
+            "DEF-thumb.03.L"
+          ],
+          "flexRadians": [
+            0.273030984132259,
+            0.006911025942406331,
+            0.8430889740575936
+          ],
+          "opposition": {
+            "jointId": "DEF-thumb.01.L",
+            "axisLocal": [
+              -0.8254057494663246,
+              0,
+              -0.5645399443333792
+            ],
+            "radians": 0.7391902756050837
+          },
+          "limitsRadians": [
+            0.85,
+            0.85,
+            0.85
+          ]
+        },
+        "index": {
+          "jointIds": [
+            "DEF-f_index.01.L",
+            "DEF-f_index.02.L",
+            "DEF-f_index.03.L"
+          ],
+          "flexRadians": [
+            0.2990282434782713,
+            1.5010014527439137,
+            0.33014232660457415
+          ],
+          "opposition": null,
+          "limitsRadians": [
+            1.4255953820816392,
+            1.5133055633404238,
+            1.1848327355186947
+          ]
+        },
+        "middle": {
+          "jointIds": [
+            "DEF-f_middle.01.L",
+            "DEF-f_middle.02.L",
+            "DEF-f_middle.03.L"
+          ],
+          "flexRadians": [
+            0.15196132733847828,
+            1.4013054115032626,
+            0.65639703114383
+          ],
+          "opposition": null,
+          "limitsRadians": [
+            1.2194778535383524,
+            1.5049735707412508,
+            1.1673308649331735
+          ]
+        },
+        "ring": {
+          "jointIds": [
+            "DEF-f_ring.01.L",
+            "DEF-f_ring.02.L",
+            "DEF-f_ring.03.L"
+          ],
+          "flexRadians": [
+            0.01047154891843384,
+            1.2386869197143728,
+            0.6076392615701779
+          ],
+          "opposition": null,
+          "limitsRadians": [
+            1.2879153767970979,
+            1.551512338472541,
+            1.133666625171158
+          ]
+        },
+        "pinky": {
+          "jointIds": [
+            "DEF-f_pinky.01.L",
+            "DEF-f_pinky.02.L",
+            "DEF-f_pinky.03.L"
+          ],
+          "flexRadians": [
+            0.2636624947261779,
+            0.5875243218997694,
+            1.115664935977917
+          ],
+          "opposition": null,
+          "limitsRadians": [
+            1.8071696235299886,
+            1.3677240869896239,
+            1.1248103400252123
+          ]
+        }
+      }
+    },
+    "right": {
+      "anatomicalAxesInWrist": {
+        "forward": [
+          0.09667498342516209,
+          0.9949573806249735,
+          0.02671625571887916
+        ],
+        "normal": [
+          -0.9864807488087327,
+          0.09221385205072752,
+          0.1354708002476122
+        ]
+      },
+      "padMaterialRegion": {
+        "sourceRestPointGlb": [
+          -0.4032508798308307,
+          0.8654378810137703,
+          0.10748358446101726
+        ],
+        "sourceRestPointWrist": [
+          -0.022419295414245588,
+          0.07594434596950822,
+          0.0060205581425576415
+        ],
+        "radiusM": 0.012,
+        "semantic": "Outer volar distal palm10mm proximal to middle-MCP along anatomical forward"
+      },
+      "wristQuaternionBike": [
+        0.8144464783375281,
+        0.5758919952981274,
+        -0.0651955561887892,
+        0.027836722658646333
+      ],
+      "wristPositionBike": [
+        0.2061906385244453,
+        0.8434505347905875,
+        0.3490742765548252
+      ],
+      "selectedPalmPadInWrist": [
+        0.6895783467301286,
+        0.6982441204872315,
+        0.19218962491756664,
+        0,
+        -0.672517753262107,
+        0.7158596848956047,
+        -0.18778919854042012,
+        0,
+        -0.26870350810555144,
+        0.00024443031342982757,
+        0.9632229051396108,
+        0,
+        -0.02291260083902047,
+        0.07623276387037539,
+        0.008204685157200908,
+        1
+      ],
+      "finitePalmTargetBike": [
+        0.2698506597231784,
+        0.7955028472554138,
+        0.3418521311630677
+      ],
+      "selectedSurfaceWitness": {
+        "triangle": 294147,
+        "rows": [
+          227623,
+          225391,
+          225386
+        ],
+        "barycentric": [
+          0.43688714373311377,
+          0.5245822097426897,
+          0.03853064652419658
+        ],
+        "anatomicalProbe": "One outer volar ray10mm proximal to actual middle-MCP base, along declared palmar direction; distal palm pressure region rather than inherited thumb-web socket",
+        "sourceFields": [
+          [
+            {
+              "jointId": "DEF-palm.01.R",
+              "weight": 0.48963149462119476
+            },
+            {
+              "jointId": "DEF-hand.R",
+              "weight": 0.39504081788357365
+            },
+            {
+              "jointId": "DEF-thumb.01.R",
+              "weight": 0.05938811322194247
+            },
+            {
+              "jointId": "DEF-palm.04.R",
+              "weight": 0.055939574273289085
+            }
+          ],
+          [
+            {
+              "jointId": "DEF-palm.01.R",
+              "weight": 0.4586861982146944
+            },
+            {
+              "jointId": "DEF-hand.R",
+              "weight": 0.436240177004654
+            },
+            {
+              "jointId": "DEF-thumb.01.R",
+              "weight": 0.054108491645685514
+            },
+            {
+              "jointId": "DEF-palm.04.R",
+              "weight": 0.05096513313496605
+            }
+          ],
+          [
+            {
+              "jointId": "DEF-palm.01.R",
+              "weight": 0.45569542992294193
+            },
+            {
+              "jointId": "DEF-hand.R",
+              "weight": 0.4267338063630121
+            },
+            {
+              "jointId": "DEF-palm.04.R",
+              "weight": 0.05918974593728542
+            },
+            {
+              "jointId": "DEF-thumb.01.R",
+              "weight": 0.05838101777676051
+            }
+          ]
+        ],
+        "poseConditioned": true,
+        "skeletalWristFrame": "Anatomical middle-MCP forward and radial-ulnar palmar-plane normal define wrist pose; curved materialfacet normal is measured, never projected into boneforward",
+        "normalPatchSamples": 1924
+      },
+      "digits": {
+        "thumb": {
+          "jointIds": [
+            "DEF-thumb.01.R",
+            "DEF-thumb.02.R",
+            "DEF-thumb.03.R"
+          ],
+          "flexRadians": [
+            0.11710230274532529,
+            0.20065778087480013,
+            0.8430889740575936
+          ],
+          "opposition": {
+            "jointId": "DEF-thumb.01.R",
+            "axisLocal": [
+              0.8241554223989437,
+              0,
+              -0.5663636991637254
+            ],
+            "radians": -0.7519618216812282
+          },
+          "limitsRadians": [
+            0.85,
+            0.85,
+            0.85
+          ]
+        },
+        "index": {
+          "jointIds": [
+            "DEF-f_index.01.R",
+            "DEF-f_index.02.R",
+            "DEF-f_index.03.R"
+          ],
+          "flexRadians": [
+            0.28740560437991614,
+            1.5009898131955879,
+            0.33012172434562614
+          ],
+          "opposition": null,
+          "limitsRadians": [
+            1.4254383263091355,
+            1.5132938283796054,
+            1.1847587970113902
+          ]
+        },
+        "middle": {
+          "jointIds": [
+            "DEF-f_middle.01.R",
+            "DEF-f_middle.02.R",
+            "DEF-f_middle.03.R"
+          ],
+          "flexRadians": [
+            0.14284186834282048,
+            1.4052116872721863,
+            0.6624644994809327
+          ],
+          "opposition": null,
+          "limitsRadians": [
+            1.226308575215169,
+            1.4881430575154666,
+            1.178121198718752
+          ]
+        },
+        "ring": {
+          "jointIds": [
+            "DEF-f_ring.01.R",
+            "DEF-f_ring.02.R",
+            "DEF-f_ring.03.R"
+          ],
+          "flexRadians": [
+            0.01047292734328047,
+            1.2386489890224301,
+            0.6133137489880957
+          ],
+          "opposition": null,
+          "limitsRadians": [
+            1.2880849118457864,
+            1.551464828536318,
+            1.1336256175192696
+          ]
+        },
+        "pinky": {
+          "jointIds": [
+            "DEF-f_pinky.01.R",
+            "DEF-f_pinky.02.R",
+            "DEF-f_pinky.03.R"
+          ],
+          "flexRadians": [
+            0.16341200231395603,
+            0.6842897273983474,
+            1.115647438408454
+          ],
+          "opposition": null,
+          "limitsRadians": [
+            1.8122668765108438,
+            1.3643423259616185,
+            1.12479269902349
+          ]
+        }
+      }
+    }
+  }
+}

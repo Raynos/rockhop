@@ -21,3 +21,9 @@ Finding: Opposed01 is rejected: a curved material facet normal was forced into t
 Validation: Guarded exact source solve exit0 in9.562s, unchanged selected GLB, rest rig and skin weights. Recipe, profile, exhaustive finite-surface report and guard telemetry retained. No candidate integrated.
 
 Limits: Numerical fitting is frozen pending a concrete anatomical-frame diagnosis. Material normals must be measured contact constraints, not substitutes for anatomical wrist axes. No new played rider result or grip acceptance.
+
+Finding: Anatomical wrist framing improves palm opposition but anatomical01 remains rejected: L4.662/R4.713mm penetration and925/981crossing pairs. Thumb pads remain43–48mm away and face away. Vision of exact selected-source projections confirms thumb shafts run axially along the bar rather than wrap in opposition. Stop weighted-coordinate descent; explicit native thumb chain reach and pulp orientation are prerequisites.
+
+Validation: Original guard exit0 in7.771s. Actual native thumb lengths52.336/32.939/10.844mm and four inherited flex-envelope corner radii retained. Parent inspected exact skinned hand/bar geometry projection. Source, skin, rest and selected materials unchanged.
+
+Limits: Static diagnostic only, no successful or played grip candidate. Four corner evaluations are not a minimum reach certificate; selected pulp labeling remains to establish. Need explicit articulated contact construction, not another arbitrary swing/curl sweep.
