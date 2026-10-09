@@ -2033,3 +2033,5 @@ Native45 exact same ankle42 application source parent-reviewed:3318 rows, rawsav
 Actual glove41 component saved RAW: native5af37790, bothselectedsides323766verts/567467tris, originalprefix/newparent namedfield assertions pass. Guard62.885s exit0/maxglobalanon59.8GiB. Independent reopen queued; no fulloutfitintegration/densecontact/movingart acceptance yet. Exact selected identity retained.
 
 Production46 supported correction parent-reviewed:8000 remains soft requestedtarget, actual above-target candidate retained UNACCEPTED_SCENE_BUDGET_PENDING; no invented larger cap. Original37 algorithms/locks/1mm/skin/native gates remain. Four fixtures/pinnedauthoradapter/sourcepins pass. Need actual census35 then one candidate; whole-scene500k acceptance stillrequired. This is source, not a produced boot.
+
+Actual glove41 pair independently reopened: exact constructedgeometry/namedfields, original75rest/fullreference and selected glovePBR/metadata pass; guard11.003s exit0. Next frozen mesh-only attachment and actual sleeve38 construction. Densecontact/fulloutfitplayedart remains open; no completed rider claim.
