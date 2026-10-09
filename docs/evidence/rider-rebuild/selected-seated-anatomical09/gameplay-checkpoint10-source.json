@@ -1,0 +1,37 @@
+{
+  "accepted": false,
+  "status": "SAVE_FIRST_SELECTED_GAMEPLAY_SOURCE_ONLY",
+  "sources": [
+    {
+      "path": "assets/blender/rider-rebuild/selected-seated-anatomical09/gameplay_checkpoint10.py",
+      "sha256": "a4da0f6719e9f43cb97e01d3139be2c279d2c0e3cd695d76f001ae444127fa61"
+    },
+    {
+      "path": "assets/blender/rider-rebuild/selected-seated-anatomical09/test_gameplay_checkpoint10.py",
+      "sha256": "edd99719d94cb0c281b64d32a688876d316c19e4766473efbaa0b8e5511c91e2"
+    },
+    {
+      "path": "assets/blender/rider-rebuild/selected-seated-anatomical09/run-gameplay-checkpoint10.sh",
+      "sha256": "b3da47911156fe7a8d8e6d10920b346a0c4e8b98d8b3d03bf07309032958d6c0"
+    },
+    {
+      "path": "assets/blender/rider-rebuild/selected-seated-anatomical09/gameplay-checkpoint10.input.json",
+      "sha256": "99c17bf6104dc57375ad2b18b913f0ff6f03648be44608790419f4e475748590"
+    }
+  ],
+  "validation": [
+    "Four preservation fixtures PASS",
+    "Actual input all source08/report/native/conversion pins PASS, Python3.9",
+    "Shell syntax PASS"
+  ],
+  "stages": [
+    "save before whole-mesh protected scans",
+    "source snapshot in separate process",
+    "saved snapshot in separate process",
+    "compare unchanged full preservation; reopened241x75 both actions replay and surface extraction"
+  ],
+  "limits": [
+    "No native10 result exists yet. Original0.1mm and source identity/geometry/maps/skin/rest/action gates unchanged.",
+    "Saved-but-unqualified checkpoint never emits successful receipt; no art/device/player promotion."
+  ]
+}
