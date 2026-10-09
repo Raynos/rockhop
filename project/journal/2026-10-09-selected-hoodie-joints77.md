@@ -41,3 +41,9 @@ Finding: Topology provenance does not imply torso ownership. The actual source a
 Validation: Parent fully read source paint and complete inspection/view/native diffs. Four ASTs/frozen recipes/literal input pins pass. Actual12 first-station9.773mm edge becomes104.887mm with identical limb fields but angular torso shares35%→74%. Actual body has53–88% arm at misclassified seams. Lowerbound material-curve diagnostics remain distinguished from actual zipper-edge chains. Exact12 far trunk/hood/distal fields and geometry/UV/ancestry enforced.
 
 Limits: Source-only correction. One actual482/view check next; native/contact/selected bake/production-four/GPU/played art remain unqualified. No operator mutation, diffusion, old donor anchors or generic substitution.
+
+Finding: Actual seam13 repairs source arm ownership and cap rows; worst482-key stretch improves10.732 to5.9489x but remains unaccepted.
+
+Validation: Guard36.764s exit0,482keys/33704edges. Parent selected geometry/ancestry and finite full-field/outside-domain identity pass. Both endpoint sheets reviewed.
+
+Limits: Remaining seam2.121 to12.618mm and torso22.999 to0.458mm compression need actual geometry/contact diagnosis. Painter-sorted CPU images are not native-depth or dressed motion acceptance.
