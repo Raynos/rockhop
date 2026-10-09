@@ -2121,3 +2121,5 @@ Actual headless desktop Metal guard01 passes14/14 unchanged ordinary-game checks
 **Kinematic grip intake checkpoint (asks369/372):** Exact source-ray pulp labels use each native shaft and curl plane (normal agreement0.799–0.999), with semantic rest coordinates for density-derivative re-registration. Source/shared75skin/rest unchanged. Explicit finite-bar construction follows; no grasp pose or played wrist/lean acceptance, and no player promotion.
 
 **Kinematic fixed-target checkpoint (asks369/372):** Simultaneous chain IK with fixed MCP axial stations is unaccepted: finger gaps7.29–18.55mm, thumb normal points away, full vertex penetration15.94/15.91mm. Stable source/evidence preserved before explicit rotation-invariant finite-face construction; no runtime changes.
+
+**Parallel focused finish (ask377):** All four available slots are active: parent loading/deployment; selected boot/glove density for gameplay rendering cost; texture composition for download/GPU size; fresh Astra XHi for bilateral finite-bar grip. No additional adviser round replaces construction. Level01 sustained>30FPS is mandatory,60FPS target; physical iPhone evidence remains required.
