@@ -1,0 +1,40 @@
+{
+  "status": "EXACT_NATIVE63_SAMPLES_FOR_CPU_COMPARISON",
+  "recipe": {
+    "path": "assets/blender/rider-rebuild/selected-boot-surface67/prepare.py",
+    "sha256": "874cac4677d069ddce200d19ec8cb7ac772ca507ea323aa5b1f85af951b06cf9"
+  },
+  "production": {
+    "path": "harness/out/rider-rebuild/selected-boot-native63/native01/production.json",
+    "sha256": "ba31a23f3489296c97ca02d3e34808cc10e8f869cc1f035d347b148efdba7644"
+  },
+  "sourceNPZ": {
+    "path": "harness/out/rider-rebuild/selected-boot-native63/native01/target-face-centroids.npz",
+    "sha256": "a392ee80c46ba2f0caa927b430ef5bb74fe4349eed53c78845dbcd88b7f39eda"
+  },
+  "samples": 26528,
+  "arrays": {
+    "path": "docs/evidence/rider-rebuild/selected-boot-surface67/native-reference.bin",
+    "sha256": "51af3e92d9d3c506284dc77b23ca1560d2d289af778c9e54d329e342d3cdcc06",
+    "layout": {
+      "sourceFaceId": {
+        "dtype": "<i4",
+        "count": 26528,
+        "byteOffset": 0,
+        "byteLength": 106112
+      },
+      "distanceM": {
+        "dtype": "<f4",
+        "count": 26528,
+        "byteOffset": 106112,
+        "byteLength": 106112
+      },
+      "normalDot": {
+        "dtype": "<f4",
+        "count": 26528,
+        "byteOffset": 212224,
+        "byteLength": 106112
+      }
+    }
+  }
+}

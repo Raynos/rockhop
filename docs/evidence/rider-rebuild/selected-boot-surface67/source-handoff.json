@@ -1,0 +1,130 @@
+{
+  "status": "SOURCE_READY_JOINT_CPU_VERTEX_FACE_FIXED_POINT_NATIVE_PROOF_PENDING_UNACCEPTED",
+  "acceptedArt": false,
+  "files": [
+    {
+      "path": "assets/blender/rider-rebuild/selected-boot-surface67/check-proof.py",
+      "sha256": "3b9488c76bb133d17ad285e7397c7f7e30f8b4400cdefa5a65d02f14cff4e147"
+    },
+    {
+      "path": "assets/blender/rider-rebuild/selected-boot-surface67/check.mjs",
+      "sha256": "f139eeb74e65175186efa1500fdad1c698ca5855a18a12f3e7ae0321c214588e"
+    },
+    {
+      "path": "assets/blender/rider-rebuild/selected-boot-surface67/closure.mjs",
+      "sha256": "63994435703329695c7a7553cbd64de678a088ae5edba1682f78306caf676c8b"
+    },
+    {
+      "path": "assets/blender/rider-rebuild/selected-boot-surface67/construct.mjs",
+      "sha256": "e04871f48c80819f6bc2b62b61d9c473708fc2f30cf6bb1a12b63491c1e586d4"
+    },
+    {
+      "path": "assets/blender/rider-rebuild/selected-boot-surface67/io.mjs",
+      "sha256": "0d16140064776a453ae8cc51e7fef53f7498d9f9ef61e9eacdd9167eebff1e50"
+    },
+    {
+      "path": "assets/blender/rider-rebuild/selected-boot-surface67/native-proof.py",
+      "sha256": "8bbfcc04fa62836224477785a55f272cd3e78d8f93ff662cb7230bb28758460a"
+    },
+    {
+      "path": "assets/blender/rider-rebuild/selected-boot-surface67/preflight.mjs",
+      "sha256": "8143badce74bf35491d312f295a9c7ae7b07ada3024d57bc743585b7b838a0ca"
+    },
+    {
+      "path": "assets/blender/rider-rebuild/selected-boot-surface67/prepare.py",
+      "sha256": "874cac4677d069ddce200d19ec8cb7ac772ca507ea323aa5b1f85af951b06cf9"
+    },
+    {
+      "path": "assets/blender/rider-rebuild/selected-boot-surface67/proof.py",
+      "sha256": "46e22c6fe3d16d3f610a04ee2e5ba19b638f542798370149adcaddfd94acc4a2"
+    },
+    {
+      "path": "assets/blender/rider-rebuild/selected-boot-surface67/surface.mjs",
+      "sha256": "4c68f83bfd76f2fedb2cec42de6cfef4ee8d1cca74f3959cffa813521778d07a"
+    },
+    {
+      "path": "docs/evidence/rider-rebuild/selected-boot-surface67/fixtures.json",
+      "sha256": "578e78c5653f87f841cdb44aa9f362f8b481e5ec1835207b316666267e67990b"
+    },
+    {
+      "path": "docs/evidence/rider-rebuild/selected-boot-surface67/native-reference.bin",
+      "sha256": "51af3e92d9d3c506284dc77b23ca1560d2d289af778c9e54d329e342d3cdcc06"
+    },
+    {
+      "path": "docs/evidence/rider-rebuild/selected-boot-surface67/native-reference.json",
+      "sha256": "108803b54e065e2625dcc00ae524e254365bd8c5e27147462bf65b1c854a37ae"
+    },
+    {
+      "path": "docs/evidence/rider-rebuild/selected-boot-surface67/preflight.json",
+      "sha256": "720afe7dd5ebea51a124cb3fd000f473bb9160d50c489f80d26a203bd56f45c4"
+    },
+    {
+      "path": "docs/evidence/rider-rebuild/selected-boot-surface67/proof-fixtures.json",
+      "sha256": "cf8c5f9d4e3af5231c9fe88e09f71c924e3e8a0660a7d63667f13aa5223faa4e"
+    }
+  ],
+  "preflight": {
+    "path": "docs/evidence/rider-rebuild/selected-boot-surface67/preflight.json",
+    "sha256": "720afe7dd5ebea51a124cb3fd000f473bb9160d50c489f80d26a203bd56f45c4"
+  },
+  "comparison": {
+    "sourceTriangles": 610934,
+    "allNativeSamples": 26528,
+    "sameSourceFaceIds": 26223,
+    "differentSourceFaceIds": 305,
+    "maximumDistanceDeltaM": 4.4251481240053795e-07,
+    "nativeRecordedDotsExactlyReproduced": true,
+    "missedNativeNewFaceFailures": [],
+    "additionalCPUFaceFailures": [
+      10230
+    ],
+    "elapsedSeconds": 4.181640208,
+    "initialJointProtection": {
+      "centers": 931,
+      "addedCenters": [
+        11397,
+        67860,
+        71878,
+        74063,
+        79927,
+        85147,
+        87289,
+        91861,
+        93331,
+        93338,
+        94086,
+        94092,
+        94938,
+        137456,
+        145055,
+        166458,
+        168120,
+        194331,
+        257557
+      ],
+      "vertices": 3805,
+      "faces": 4319,
+      "edges": 7915
+    }
+  },
+  "geometricTiePolicy": "All source faces incident on the actual closest edge/vertex and all equal-distance nearest faces must satisfy the same0.25 gate. No radius, nearest-k subset, numeric tie epsilon, chosen favorable normal or source facet deletion. Primary BVH nearest ID remains reported separately. Exact oriented source faces use source ancestry in CPU; native adoption requires the separately guarded proof.",
+  "nativeProofParentArguments": [
+    "--python",
+    "assets/blender/rider-rebuild/selected-boot-surface67/native-proof.py",
+    "--",
+    "harness/out/rider-rebuild/selected-boot-surface67/proof01"
+  ],
+  "constructorParentCommand": [
+    "node",
+    "assets/blender/rider-rebuild/selected-boot-surface67/construct.mjs",
+    "harness/out/rider-rebuild/selected-production-census35/bootL01/census.json",
+    "docs/evidence/rider-rebuild/selected-boot-face66/finding.json",
+    "docs/evidence/rider-rebuild/selected-boot-surface67/preflight.json",
+    "720afe7dd5ebea51a124cb3fd000f473bb9160d50c489f80d26a203bd56f45c4",
+    "harness/out/rider-rebuild/selected-boot-surface67/candidate01"
+  ],
+  "constructorPolicy": "One original external guard for the entire invocation. Re-reduce immutable original source each iteration with original1mm/ErrorAbsolute/soft8000/0.25 policy. Every vertex and every face must pass CPU census; all failures grow source-fan constraints together monotonically; no-progress rejects. Every raw iteration candidate/census is persisted unaccepted.",
+  "validation": "Six CPU fixture groups pass, including240 brute-force query comparisons and all78 formerly cutoff positive source facets. Synthetic proof schema plus13 mutation cases pass; actual native proof has not run. Node/Python syntax and owned whitespace pass.",
+  "execution": "No simplifier or Blender job and no commit. Only67 owned source/evidence/journal changed; prior frozen stages unchanged.",
+  "limits": "CPU feasibility and source checkpoint only. Native67 proof, a successful actual joint fixed point, independent native geometry/skin/reverse/contact gates, selected PBR bake, motion, device and scene allocation remain pending. No atlas or player-asset promotion."
+}
