@@ -23,3 +23,9 @@ Finding: The frozen combined private engine build passes required played/replay 
 Validation: Original guard gate02 returns0 in10.311seconds;15/15 boot/clear/crash/instant-restart/bundle/determinism checks pass. All9 determinism checks preserve bit-identical finish8.591666666666667 and hash622bb2554e0f9a26. Gate01's dirty-dist bundle failure is retained explicitly.
 
 Limits: Partial required gate bundle, not complete ship or art acceptance. Mac timing never establishes the60FPS physical iPhone target. Actual derivative grip/cuff moving review and phone evidence remain open.
+
+Finding: Rookie played motion keeps the new finger wrap stable but exposes black triangular glove cuff protrusions through the sleeve. Actual captured native wrist motion concentrates60-72degrees of axial rotation at the wrist while the distal forearm local rotation stays at rest. This challenges the current swing-only forearm solver before any source-weight patch.
+
+Validation: Exact delivered GLB rest and all241 played native75 poses produce left60.10-71.72degrees/right-71.84 to-60.22degrees relative wrist axial motion. Seven chronological movie frames retain the visible cuff defect. Diagnostic writes no poses or player assets.
+
+Limits: Wrist-roll diagnosis alone does not identify each protruding source triangle or approve a correction. Independent anatomical forearm construction and actual moving/source contact qualification remain necessary; production source unchanged.
