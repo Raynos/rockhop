@@ -1,0 +1,5 @@
+Finding: Actual left source-edge cut checks pass; collar radial-ray assumption still prevents a repaired pair.
+
+Validation: Original guard23.214s exit1, unchanged author04 source. All883 left raw float32 and final double-plane cuts/circuit checks complete before saved provenance. Actual2638 lower-body positions/fields remain exact. Failure at collar vertex221988: hit/nonbackfacing combined predicate failed. No saved native; no retry.
+
+Limits: The log does not distinguish missing ray from wrong-facing hit. No right cut, complete collar, toe repair, native/reopen, moving art or normal-player promotion. Correct the collar construction method rather than guessing another threshold.
