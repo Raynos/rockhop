@@ -35,86 +35,72 @@ H0 is October 8, 14:05 Panama / 19:05 UTC; target finish is October 9 at the sam
 | --- | --- | --- |
 | H+4 — missed; remains unaccepted | Selected dressed rider in convincing standing/deep seated/return on both bikes, clean cuff/ankle overlap, visible hands/hips/profiles | Selected garment builders41/42; parent judges |
 | H+10 — missed; remains unaccepted | Compact selected-appearance production candidate and genuine full/LOD, compared moving in actual Garage | Production constructor37 and parent |
-| H+16 | Same master with editable Blender controls, complete generic and bike actions, consumed engine deformation/contact | Parent and next concrete controls builder |
+| H+16 — missed; remains unaccepted | Same master with editable Blender controls, complete generic and bike actions, consumed engine deformation/contact | Parent and next concrete controls builder |
 | H+24 | Exact candidate reviewed on desktop/physical iPhone, bot/stranger/replay/restart and checked release/live SHA | Parent; human/device decisions through HR-23 |
 
-**Current execution, October 9, 04:02 Panama:** The fresh independent
+**Current execution, October 9, 07:14 Panama:** The independent
 [Astra6 X-High advisory74](../evidence/rider-rebuild/astra-production-advisory74/FINDING.md)
-reviews the preceding twelve hours and actual recorded gameplay frames. It keeps
-the recognizable selected outfit, qualified native10 physical motion, glove41,
-ankle52 and useful boot70. No new moving-art acceptance is awarded; all R0–R5
-remain open, 0/6 accepted. Existing42 films show real forward/back/neutral inputs
-but retain triangular cuff breaks and crowded crouched head/hood profiles. Their
-25FPS encoding is not smooth60FPS evidence. No repaired-outfit upgrade film yet.
+remains the broad production review. Preserve selected appearance, native10
+physical motion, distinct glove41 geometry, ankle52 and useful boot70 work.
+All R0–R5 remain open, 0/6 accepted. Existing42 films demonstrate actual forward/
+back/neutral inputs in selected clothes, with rejected cuff/ankle/hood defects;
+their25FPS encoding is not smooth60FPS evidence. No repaired complete film yet.
 
-Actual72 completes all176 spans/716971 original vertices and composed Jacobians,
-saves47.53s and independently reopens40.826s with original topology/PBR/full named
-fields/75rest/protected reference intact. Its [actual garment fit fails](../evidence/rider-rebuild/selected-anatomical-hoodie-fit72/actual-reopen01/FINDING.txt):
-225130 retained body-contact samples fail, deepest41.473mm; tangent stretch reaches
-24.79×. Sparse656-guide interpolation never constrained dense body contact.
-Preserving source arrays was not garment fitting. Stop unchanged65/69/72; their
-failed results cannot enter distal51 or engine71.
+**Active construction route:** Three concrete builders work on the same selected
+master: Astra82 owns the connected hoodie shoulder/cap; Astra81 owns distinct
+original-index glove receivers;79 owns the real selected-source atlas/detail bake
+and complete engine recipient. The parent reviews actual results and owns the
+bilateral boot cavity/collar correction. Build models and materials; source
+preparation and identity checks do not count as a completed rider.
 
-73 directly corrects that omission with original-selected material graph energy,
-measured wall links and every retained vertex/face centroid against the full body.
-Parent numerical/source checks and independent convergence review pass. Permit
-ONE bounded actual changed-method result. It is an offline source-fitting aid,
-not compact production topology, proven injectivity or cloth/moving-art quality.
-Do not start another optimizer family if73 fails or becomes another long campaign.
+- Hoodie13 is inadmissible. Anatomical scalar ownership reduces worst recorded
+  stretch10.732→5.949× but collapses a22.999mm lower-trunk edge to0.458mm.
+  Geometry zipper connections and sampled field meridians also disagree. Replace
+  that cap connection with one literal selected-seam loop shared by geometry and
+  fields. One bounded linear field extension may use only the actual connected
+  anatomical shoulder patch, meaningful12 trunk/collar and47 arm boundaries.
+  Preserve lower trunk/downhood. No heuristic scalar retry or garment optimizer.
+- Gloves81 use independent actual41 arrays, complete stored fields and source
+  fans. Replace invalid circular thumb-root/flat-cuff assumptions with measured
+  joint-plane surfaces and real1688+71 nonplanar cuff circuits. One original-index
+  candidate per side/level; unchanged0.5mm gates. Left320543 has a known undefined
+  source average: retain its five positive-area faces/raw failure and deliberately
+  author nonzero derivative corner normals. Never export zero shading normals.
+- Boots80 found only local left toe escape≤1.7803mm in checked closed sections;
+  the hidden heel floor is3–10mm above the plantar surface. Construction01 stopped
+  before saving a native when its cavity selection hit a guard. Diagnose both
+  predicates and actual source connectivity before another cut. Preserve the
+  selected exterior and distinct left/right fields; no whole-shoe replacement.
+- Bake79 must create a genuinely nonoverlapping atlas and source-wall-aware cage.
+  PreviewUV and REJECTED_DRAFT_cornerBakeUV are not baked production appearance.
+  Old global-nearest parents do not establish same-wall ancestry. Final geometry,
+  materials and bake/native receipts must describe the same reopened master.
 
-First73 preparation stops16.271s at the unchanged global memory guard before any
-prepared receipt. Owned sampledRSS1.2GB does not establish the global cause.
-The implemented correction reuses existing same-original47-SHA geometry/rest/PBR/
-field/body witnesses and runs wall preparation in an empty process. Original
-normals are bound by exact native bytes, not an invented standalone hash. Actual
-apply must reopen/hash-check that file, compare the proven witness subset, sample
-and transport the real original normals, then independently reopen the complete
-expected final witness. No source or final-normal protection is waived.
+Sparse65/69/72 are retired failures;72 retained225130 failed contact samples and
+41.473mm deepest penetration. Dense73 remains a bounded offline aid, not the
+production dependency:721.941s used,1068.059s lifetime remains, no contact/objective
+pass or garment. Do not let it delay the concrete receiver and complete outfit.
+No new optimizer campaign, generic clothes, flat-color substitute or hidden fit.
 
-**Production representation:** Author compact selected-appearance exteriors with
-deliberate shoulder/armhole/axilla, sleeve-joint and cuff topology. Keep healthy
-selected regions, panels, folds, hood/hem and silhouette. Preserve dense donors as
-appearance/bake authority; transfer their genuine detail/PBR with controlled cages.
-Perfect body clearance of every dense internal source wall is not a prerequisite
-for constructing that receiver. Necessary derivative topology changes are already
-authorized. Generic clothes, flat-color substitutes and hiding failed fit remain
-prohibited.73 must not postpone the compact receiver and whole-outfit budget.
+**Next visible result:** Assemble the repaired selected hoodie, jeans, distinct
+boots/gloves, face and hairstyle on one master. Show seated Garage rotation with
+actual FPS/timing and no loading, then Rookie and Pro neutral → forward → backward
+→ neutral under actual simulated rider state, exposing hands, hips, feet and side
+profiles. Standing is a generic rig diagnostic, not gameplay-lean evidence.
+Preserve original75/rest/actions, calibrated physical driver, selected PBR and all
+3318 ankle fields. Existing79 rest contact alone cannot certify posed hoodie
+contact; use actual evaluated forward/back surfaces. Parent must play and judge
+complete clips before admitting normal-player assets. The358MB/3.9Mtriangle
+reference is not a phone production candidate.
 
-**Next visible result:** Complete the admitted hoodie and both cuffs, all six dense
-relations, one merge into qualified52, then changed482-key native gameplay replay
-and private71 export. Show the complete selected rider in seated real Garage
-rotation and actual Rookie/Pro neutral → forward → backward → return, from side/
-three-quarter views exposing wrists, hips and feet. Preserve calibrated physical
-driver, original75/rest/actions, selected PBR and all3318 ankle fields. Adapt51/71
-truthfully only after actual73 admission; never invent old spatial-map certificates
-for the new graph. If73 fails, change to the compact receiver route rather than
-another dense-source optimizer. Generic actions, bootLOD and final phone polish
-must not delay showing a genuine complete-outfit construction gain, but remain
-mandatory before plan closure.
-
-Actual left boot70 passes its original shape/orientation/skin gates; the final saved
-native independently reopens23.605s. Parent29 nested pins/thirteen exact witness,
-array and measurement comparisons pass. This is LEFT rest qualification, not a
-bilateral, atlas/bake, posed/contact/motion or device pass. Next boot result is the
-genuine selected left/right production family for32/bake; soft8k/scene pending.
-Garage60 recorder source is reviewed; actual canvas/codec timing and smooth
-rotation remain unproven. No loading, invented frames or unsupported FPS labels.
-The358MB/3.9Mtriangle reference is not the phone production mesh.
-
-Keep coherent findings and mandatory third-round ship gates. Durable blocks of
-the SAME experiment are progress, not new modeling findings by themselves. Do
-not manufacture extra rounds or repeat unchanged checks to publish another report.
-All prior ordinary-game passes/failures remain retained; current report is indexed
-in README. No timing waiver or device/selected-rider acceptance follows from them.
-
-H+4/H+10 were missed. Full finish/archive by October9 14:05Panama is not a credible
-forecast with compact whole outfit, editable generic controls/actions, independent
-moving art, engine parity, physical-device/stranger and checked release still open.
-An improved complete dressed film is the immediate useful target, conditional on
-actual construction, not promised. HR-23 human decisions do not block construction.
-Never label preparation or CPU checks a completed rider. Next fresh six-hour
-independent advisory is due around15:00UTC; narrower construction reviews do not
-reset that cadence.
+H+4, H+10 and H+16 were missed. Full finish/archive by October9 14:05Panama remains
+not credible while complete construction, genuine full/LOD bake, editable generic
+controls/actions, independent moving art, engine parity, physical-device/stranger
+and checked release remain open. A complete dressed improvement film is the
+immediate target, conditional on actual construction. HR-23 does not block work.
+Keep coherent finding commits and mandatory third-round ordinary ship gates;
+retain their failures without timing waivers. Next fresh six-hour independent
+advisory is due around15:00UTC; narrower artist reviews do not reset that cadence.
 
 **Immediate gameplay priority, October 8, 16:30 Panama (ask356):** The user
 correctly identifies that the displayed stand-up/rest diagnostic does not show

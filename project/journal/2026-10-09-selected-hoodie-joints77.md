@@ -47,3 +47,9 @@ Finding: Actual seam13 repairs source arm ownership and cap rows; worst482-key s
 Validation: Guard36.764s exit0,482keys/33704edges. Parent selected geometry/ancestry and finite full-field/outside-domain identity pass. Both endpoint sheets reviewed.
 
 Limits: Remaining seam2.121 to12.618mm and torso22.999 to0.458mm compression need actual geometry/contact diagnosis. Painter-sorted CPU images are not native-depth or dressed motion acceptance.
+
+Finding: Resharpen the active execution around concrete selected hoodie, distinct glove and boot construction plus genuine atlas/detail bake. Retire the stale dense-source dependency and keep actual gameplay leans as the next complete visible result.
+
+Validation: Reconciled actual13 deformation, actual41 raw cache/landmark witnesses, stopped80 cut, advisory74 and existing42 films; sources and failed findings remain in evidence/journals. Ordinary gate77 is10/11 with boot305.343ms.
+
+Limits: Planning correction only,0/6 accepted. H+16 missed, no new acceptable complete film. No source/native/asset promotion or acceptance inferred.
