@@ -2081,3 +2081,5 @@ Native52 source reviewed: explicit missing canonical foot-group append, unchange
 Required ordinary-game gate49 completes10/11: bootready302.177ms>300ms; exact clear/hash/crash/1tick restart pass (guard12.634s exit1). Retain failure without unchanged immediate retry. Native52 saved-field preservation passes; one actual cloth diagnostic is next, art/device/release remain open.
 
 Diagnostic54 source reviewed for one matched original47/saved50 component comparison: direct tangent SVD, fixed wall pair and48-frame selected-PBR turntables. Four meaningful CPU fixtures, actual source/native pins and Python3.9 syntax pass. This is a construction decision tool, not rider motion or art acceptance; actual render remains pending.
+
+Normal-game sixth comparison guard03 completes all four played Garage orbits with actual selected native75 source, zero runtime errors/invalid submissions and59.4–60.0 submitted FPS. Executed verifier exits1 on an absent public Content-Length header; release/deployment/device/art remain pending. [Preserved finding](../evidence/rider-rebuild/sixth-outfit-release01/local-play03/FINDING.md). Broader production remains paused.
