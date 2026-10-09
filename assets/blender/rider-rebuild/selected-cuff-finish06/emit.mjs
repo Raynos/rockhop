@@ -11,7 +11,7 @@ assert.equal(fileSha(source),BASELINE); assert(!fs.existsSync(out),'Fresh output
 const patch=path.join(fitDirectory,'patch.npz'),reportFile=path.join(fitDirectory,'report.json');
 const report=JSON.parse(fs.readFileSync(reportFile));
 assert.equal(report.nonpositiveAreaOrientationDots,0,'Uninverted source topology required');
-assert.equal(report.poseCount,482); assert.equal(report.sourceNativeFieldsExact,true);
+assert.equal(report.poseCount,482); assert.equal(report.gloveNativeFieldsExact,true);assert.equal(report.newlyDegenerateTriangles,0);
 const unpack=spawnSync('python3',['-c',"import zipfile,sys;sys.stdout.buffer.write(zipfile.ZipFile(sys.argv[1]).read('positionsAfter.npy'))",patch],{maxBuffer:16*1024*1024});
 assert.equal(unpack.status,0,String(unpack.stderr));
 const npy=unpack.stdout;assert.equal(npy.subarray(0,6).toString('latin1'),'\x93NUMPY');assert.equal(npy[6],1);
@@ -60,7 +60,9 @@ for(let i=0;i<n;i++){if(!affectedVertex[i]||!sumWeight[i])continue;
 }
 const originalBin=readAt(g.fd,fs.statSync(source).size-g.binOffset,g.binOffset),chunks=[originalBin];let offset=originalBin.length;
 const changes=[];
-for(const [semantic,payload,stride] of [['POSITION',positionBytes,12],['NORMAL',normals,8],['TANGENT',tangents,16]]){
+for(const [semantic,payload,stride] of [['POSITION',positionBytes,12],['NORMAL',normals,8],['TANGENT',tangents,16],
+  ['JOINTS_0',fs.readFileSync(path.join(fitDirectory,'jointsAfter.bin')),4],
+  ['WEIGHTS_0',fs.readFileSync(path.join(fitDirectory,'weightsAfter.bin')),8]]){
   const ai=prim.attributes[semantic],previous=await bytes(ai),rows=[];
   for(let i=0;i<n;i++)if(!previous.subarray(i*stride,(i+1)*stride).equals(payload.subarray(i*stride,(i+1)*stride)))rows.push(i);
   if(!rows.length)continue;

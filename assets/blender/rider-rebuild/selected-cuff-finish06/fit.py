@@ -1,8 +1,8 @@
 """Minimal connected selected sleeve shell envelope under the actual native poses.
 
 Every glove byte and every native field stays protected. The source's real
-inner/outer sleeve radial spacing is retained; only the local cuff carrier can
-move outward. A discrete Dirichlet obstacle solve avoids independent bumps.
+exterior sheet defines constraints; retained inner folds and caps follow
+one connected deformation instead of being forced outside the glove. A discrete Dirichlet obstacle solve avoids independent bumps.
 """
 import bpy, json, sys, time, hashlib, runpy
 from pathlib import Path
@@ -25,6 +25,14 @@ def hits(bvh,origin,direction,bound,epsilon):
         traveled=t+epsilon
         if traveled>=bound:return result
     raise AssertionError('Unresolved repeated shell intersections')
+
+def barycentric(q,triangle):
+    a,b,c=triangle;v0=b-a;v1=c-a;v2=q-a
+    den=(v0@v0)*(v1@v1)-(v0@v1)**2
+    if abs(den)<1e-20:return np.array([1.,0.,0.])
+    v=((v1@v1)*(v2@v0)-(v0@v1)*(v2@v1))/den
+    w=((v0@v0)*(v2@v1)-(v0@v1)*(v2@v0))/den
+    weights=np.maximum([1-v-w,v,w],0.);return weights/weights.sum()
 
 def load(root):
     receipt=json.loads((root/'intake.json').read_text()); comps={}
@@ -59,31 +67,51 @@ def main(intake,rookie,pro,out):
         stations=(p[ids]-head)@axis; origins=head+stations[:,None]*axis
         radial=p[ids]-origins; radii=np.linalg.norm(radial,axis=1);directions=radial/radii[:,None]
         glove_min=float(((g['POSITION']-head)@axis).min()); glove_max=float(((g['POSITION']-head)@axis).max())
-        inner=np.empty(len(ids)); layers=np.empty(len(ids)); shell_width=[]; missing=[]
-        bound=float(np.linalg.norm(p.max(0)-p.min(0)))
-        for k,(o,d,r) in enumerate(zip(origins,directions,radii)):
-            intersections=hits(hoodie_tree,o,d,bound,epsilon)
-            before=[row for row in intersections if row[0]<=r+epsilon*4]
-            if not before:missing.append(int(ids[k]))
-            # The exact indexed source vertex is itself an authoritative
-            # surface point even when an edge-tangent float BVH ray misses it.
-            inner[k]=min([r,*[row[0] for row in before]]);layers[k]=max(0.,r-inner[k])
-            for a,b in zip(intersections,intersections[1:]):
-                if a[1]<0 and b[1]>0:shell_width.append(b[0]-a[0]);break
-        assert np.isfinite(inner).all() and np.all(layers>=0)
-        # Source triangles and all their layered spacing remain; the tiny floor
-        # is derived from source float32 ULP, not a tuned fit or fabric offset.
-        domain[inverse[ids]]=True
         ownership,body_face,body_distance,body_signed=classify(g['POSITION'],side)
         cuff_faces=np.flatnonzero(np.any(ownership[g['indices']],axis=1))
-        cuff_rows=np.unique(g['indices'][cuff_faces])
+        cuff_rows=np.unique(g['indices'][cuff_faces]);gt=tree(g['POSITION'],g['indices'][cuff_faces])
         witnesses=[167304] if side=='L' else [74724,81481]
         assert all(i in cuff_faces for i in witnesses),'Actual observed cuff surface omitted'
-        side_data[side]={'g':g,'cuffFaces':cuff_faces,'ids':ids,'origins':origins,'directions':directions,'radii':radii,'inner':inner,'layers':layers}
+        domain[inverse[ids]]=True
+        local_faces=np.flatnonzero(np.all(np.isin(f,ids),axis=1));local=tree(p,f[local_faces])
+        area=np.cross(p[f[:,1]]-p[f[:,0]],p[f[:,2]]-p[f[:,0]])
+        normal=np.zeros_like(p)
+        for corner in range(3):np.add.at(normal,f[:,corner],area)
+        normal/=np.maximum(np.linalg.norm(normal,axis=1)[:,None],1e-30)
+        _,_,_,hoodie_body_signed=classify(p[ids],side)
+        exterior=np.zeros(len(ids),bool);outer_radius=np.zeros(len(ids));missing=[]
+        bound=float(np.linalg.norm(p[ids].max(0)-p[ids].min(0)))
+        for k,(o,d,r) in enumerate(zip(origins,directions,radii)):
+            intersections=hits(local,o,d,bound,epsilon)
+            outward=[row[0] for row in intersections if row[1]>0]
+            if normal[ids[k]]@d>0:outward.append(r)
+            if not outward:missing.append(int(ids[k]));continue
+            outer_radius[k]=max(outward);exterior[k]=abs(r-outer_radius[k])<=epsilon*8 and hoodie_body_signed[k]>=0
+        # A shared nearest rest cuff correspondence conditions only the selected
+        # sleeve carrier. Actual glove fields and every native driver stay exact.
+        transfer_faces=[];discarded=[]
+        for row in ids:
+            q,n,face,d=gt.find_nearest(Vector(p[row]));gf=g['indices'][cuff_faces[face]]
+            bary=barycentric(np.asarray(q),g['POSITION'][gf].astype(float));field=np.zeros(len(names))
+            for corner in range(3):
+                for k in range(4):field[g['JOINTS_0'][gf[corner],k]]+=bary[corner]*g['WEIGHTS_0'][gf[corner],k]
+            discarded.append(float(sum(field[i] for i in range(len(names)) if i not in allowed)))
+            field[[i for i in range(len(names)) if i not in allowed]]=0
+            assert field.sum()>0;field/=field.sum()
+            top=np.argsort(-field,kind='stable')[:4];values=field[top];values/=values.sum()
+            exact=values*65535;quantized=np.floor(exact).astype(np.uint16)
+            for qid in np.argsort(-(exact-quantized),kind='stable')[:65535-int(quantized.sum())]:quantized[qid]+=1
+            h['JOINTS_0'][row]=top;h['WEIGHTS_0'][row]=quantized.astype(float)/65535
+            transfer_faces.append(int(cuff_faces[face]))
+        side_data[side]={'g':g,'cuffFaces':cuff_faces,'ids':ids,'origins':origins,'directions':directions,'radii':radii,'exterior':exterior}
         policies.append({'side':side,'vertices':len(ids),'uniqueVertices':int(len(np.unique(inverse[ids]))),
             'nativeWrist':head.tolist(),'nativeForearmAxis':axis.tolist(),'nativeSegmentLengthMeters':float(length),
             'nativeStationMeters':[float(stations.min()),float(stations.max())],'gloveStationMeters':[glove_min,glove_max],
-            'sourceFabricWallMeters':np.percentile(shell_width,[0,50,100]).tolist(),'exactSourceVertexAsFirstShellHit':missing,'quantizationClearanceMeters':epsilon,
+            'sourceExteriorRows':int(exterior.sum()),'retainedInternalRows':int((~exterior).sum()),
+            'sourceWearerEmbeddedRows':int(np.sum(hoodie_body_signed<0)),
+            'sourceExteriorRowIDs':ids[exterior].tolist(),'noOutwardSourceHitRows':missing,'quantizationClearanceMeters':epsilon,
+            'hoodieCarrierCorrespondenceFaceIDsSHA256':hashlib.sha256(np.array(transfer_faces,dtype='<u4').tobytes()).hexdigest(),
+            'discardedDigitFieldMassPercentiles':np.percentile(discarded,[0,50,100]).tolist(),
             'sourceOnlyCarrierNames':[names[i] for i in sorted(allowed)],
             'canonicalCuffFaces':len(cuff_faces),'canonicalCuffVertices':len(cuff_rows),
             'canonicalCuffFaceIDsSHA256':hashlib.sha256(cuff_faces.astype('<u4').tobytes()).hexdigest(),
@@ -107,13 +135,14 @@ def main(intake,rookie,pro,out):
                 bound=float(np.linalg.norm(gp.max(0)-gp.min(0))+np.max(np.linalg.norm(origins-gp.mean(0),axis=1)))
                 values=np.zeros(len(ids));intersected=0
                 for k,(o,d) in enumerate(zip(origins,direction)):
+                    if not data['exterior'][k]:continue
                     found=hits(bvh,o,d,bound,epsilon)
                     # Source-rest anatomical cuff face identity is transported
                     # unchanged, excluding unrelated posed fingers and palm.
                     outward=[row[0] for row in found]
                     if outward:
                         intersected+=1;glove_radius=max(outward)/scale[k]
-                        values[k]=max(0.,glove_radius-data['inner'][k]+epsilon/scale[k])
+                        values[k]=max(0.,glove_radius-data['radii'][k]+epsilon/scale[k])
                 uid=inverse[ids];better=values>required[uid]
                 worst[uid[better]]=processed
                 np.maximum.at(required,uid,values)
@@ -147,25 +176,33 @@ def main(intake,rookie,pro,out):
     original_area=np.cross(p[f[:,1]]-p[f[:,0]],p[f[:,2]]-p[f[:,0]])
     new_area=np.cross(candidate[f[:,1]]-candidate[f[:,0]],candidate[f[:,2]]-candidate[f[:,0]])
     changed=np.flatnonzero(np.any(candidate!=p,axis=1));affected=np.any(row_delta[f]>0,axis=1)
-    dot=np.sum(original_area[affected]*new_area[affected],axis=1)
-    area_ratio=np.linalg.norm(new_area[affected],axis=1)/np.linalg.norm(original_area[affected],axis=1)
+    original_lengths=np.linalg.norm(original_area,axis=1);new_lengths=np.linalg.norm(new_area,axis=1)
+    nondegenerate=affected & (original_lengths>1e-20)
+    dot=np.sum(original_area[nondegenerate]*new_area[nondegenerate],axis=1)
+    area_ratio=new_lengths[nondegenerate]/original_lengths[nondegenerate]
+    new_degenerate=int(np.sum(new_lengths[nondegenerate]<=1e-20))
+    h['JOINTS_0'].astype('u1').tofile(out/'jointsAfter.bin')
+    np.rint(h['WEIGHTS_0']*65535).astype('<u2').tofile(out/'weightsAfter.bin')
     np.savez(out/'patch.npz',positionsBefore=p,positionsAfter=candidate.astype(np.float32),changedRows=changed,
         requiredByUniqueRow=required,connectedDisplacementByUniqueRow=displacement,sourcePositionUniqueRows=first,
-        sourcePositionToUnique=inverse,radialDirections=directions_all,sourceCarrierRowDisplacement=row_delta,worstPoseByUniqueRow=worst)
+        sourcePositionToUnique=inverse,radialDirections=directions_all,sourceCarrierRowDisplacement=row_delta,worstPoseByUniqueRow=worst,jointsAfter=h['JOINTS_0'],weightsAfter=h['WEIGHTS_0'])
     result={'accepted':False,'schema':'selected-cuff-rest-envelope-v1','source':receipt['source'],'intakeSHA256':sha(root/'intake.json'),
         'recipeSHA256':sha(__file__),'playedReports':{b:{'path':str(path),'sha256':sha(path)} for b,path in [('rookie',rookie),('pro',pro)]},
-        'policies':policies,'canonical':canonical,'sourceNativeFieldsExact':True,'allGloveBytesProtected':True,'native75RestAndAnimationExact':True,
-        'sourceGeometrySeamFieldsUnchanged':True,'sourcePositionSeamCarrierMaxDifference':seam_field_difference,'poseCount':processed,'constraintSamples':len(progress['samples']),
+        'policies':policies,'canonical':canonical,'sourceNativeFieldsExact':False,'gloveNativeFieldsExact':True,'hoodieCarrierConditioned':True,'allGloveBytesProtected':True,'native75RestAndAnimationExact':True,
+        'sourceGeometrySeamFieldsUnchanged':False,'sourcePositionSeamCarrierMaxDifference':seam_field_difference,'poseCount':processed,'constraintSamples':len(progress['samples']),
         'hoodieChangedRows':len(changed),'hoodieMaxRestDisplacementMeters':float(row_delta.max()),
         'hoodieRequiredMaxMeters':float(required.max()),'hoodieRestDisplacementPercentilesMeters':np.percentile(row_delta[changed],[0,50,95,99,100]).tolist(),
         'affectedTriangles':int(affected.sum()),'nonpositiveAreaOrientationDots':int((dot<=0).sum()),
+        'affectedInheritedZeroAreaTriangles':int(np.sum(affected & (original_lengths<=1e-20))),
+        'newlyDegenerateTriangles':new_degenerate,
         'affectedAreaRatioPercentiles':np.percentile(area_ratio,[0,50,100]).tolist(),'obstacleIterations':iterations+1,
         'obstacleMaxStepMeters':float(error),'patch':{'path':str(out/'patch.npz'),'sha256':sha(out/'patch.npz')},
         'elapsedSeconds':time.monotonic()-started,
         'limits':['Finite rays at every selected cuff vertex in all482 recorded poses are construction constraints, not exhaustive triangle or unseen-pose proof.',
-                  'Minimum source layer radius follows actual selected shell intersections; no sleeve/glove topology or material is replaced.',
+                  'Only the source outer radial sheet receives enclosure constraints. Retained internal cap/fold topology follows the connected displacement; no open-cloth topology or full remaster claim.',
                   'New moving clips and independent finite surface validation remain parent gates.']}
     (out/'report.json').write_text(json.dumps(result,indent=2)+'\n');print(json.dumps(result),flush=True)
+    assert new_degenerate==0,'New degenerate source face rejects candidate'
     assert result['nonpositiveAreaOrientationDots']==0,'Source face inversion rejects candidate'
 
 if __name__=='__main__':main(*sys.argv[sys.argv.index('--')+1:])

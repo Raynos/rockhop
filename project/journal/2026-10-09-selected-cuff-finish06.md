@@ -49,3 +49,18 @@ orientation gate. Emitter and attribution source syntax pass.
 
 Limits: No corrected GLB exists. Local source wall correspondence remains to
 be fixed, followed by clearance verification and parent moving review.
+
+Finding: Exact maximizers distinguish retained internal caps from exterior
+sleeve: L20103 is 0.269 mm clear, while its falsely paired cap lies only
+0.268 mm from the wrist axis. R52182 has a real exterior 5.687 mm overlap.
+Prepared fit constrains the local outer radial sheet outside the actual wearer;
+embedded caps/folds follow connected displacement without being enclosed over
+the glove. Hoodie carriers share nearest immutable glove cuff fields with
+digit support removed; glove and native records stay exact.
+
+Validation: Exact maximizer attribution exits0 in7.571seconds. Construction
+and emitter syntax pass. Source inherited zero-area triangles now have a
+separate count; newly inverted or degenerate nondegenerate faces still reject.
+
+Limits: Corrected construction and carrier transfer are unexecuted. Retained
+internal cap topology is not an open-cloth or full-remaster acceptance.
