@@ -53,3 +53,9 @@ Finding: Resharpen the active execution around concrete selected hoodie, distinc
 Validation: Reconciled actual13 deformation, actual41 raw cache/landmark witnesses, stopped80 cut, advisory74 and existing42 films; sources and failed findings remain in evidence/journals. Ordinary gate77 is10/11 with boot305.343ms.
 
 Limits: Planning correction only,0/6 accepted. H+16 missed, no new acceptable complete film. No source/native/asset promotion or acceptance inferred.
+
+Finding: Replace the mismatched shoulder cap with a conforming shared selected seam and actual anatomical boundary fields.
+
+Validation: Parent fully reviewed five sources; AST/hash and four frozen input pins pass. Reconstruction/native binding is connected.
+
+Limits: Source checkpoint only; one construction/all482 inspection next. Full finite contact, selected bake and played art remain unaccepted.

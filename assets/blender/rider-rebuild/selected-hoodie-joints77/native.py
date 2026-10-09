@@ -18,6 +18,8 @@ TARGET = 'RiderHoodie'
 DONOR = 'RiderHoodie__SelectedDenseBakeSource77'
 COMPONENT = {'path': 'assets/blender/rider-rebuild/selected-sleeve-component47/component.py',
              'sha256': '6fcc124b1fe5cf69a3cd0cd4114ff3fc16b6bd3e7741fb4b2b7488648c6bbd87'}
+CONNECTED_CAP_BINDING = {'path': 'assets/blender/rider-rebuild/selected-hoodie-joints77/connected_cap_binding.py',
+                         'sha256': '12168f54407c6473678d832f6545f736f7e80fc528e026d8b4e5dfaea6ec4145'}
 
 
 def sha(path):
@@ -47,7 +49,15 @@ def receiver(path):
     assert row['recipe']==pin(HERE/'author.py')
     for key in ('sourceReceiver','source47Receipt','fullBody','original47Geometry','actualGuides','receiver','editableOBJ','construction'):
         checked(row[key])
-    if 'seamOwnershipBinding' in row:
+    if 'connectedCapBinding' in row:
+        assert all(key not in row for key in ('seamOwnershipBinding','wholeAnatomicalFieldBinding','wearerFieldBinding','anatomicalFieldRepair','fieldRepair'))
+        binding=row['connectedCapBinding'];assert binding['recipe']==pin(HERE/'connected_cap.py')
+        runpy.run_path(str(checked(CONNECTED_CAP_BINDING)))['verify'](path)
+        assert row['correspondenceAndSkin']['healthyFieldsExactBeforeFloat32'] is False
+        assert row['correspondenceAndSkin']['sourceFarFieldAnchorsExact'] is False
+        assert row['correspondenceAndSkin']['farTrunk12FieldsExact'] is True
+        assert row['correspondenceAndSkin']['fullNamedFieldCount']==71
+    elif 'seamOwnershipBinding' in row:
         assert all(key not in row for key in ('wholeAnatomicalFieldBinding','wearerFieldBinding','anatomicalFieldRepair','fieldRepair'))
         binding=row['seamOwnershipBinding'];assert binding['recipe']==pin(HERE/'seam_ownership_fields.py')
         runpy.run_path(str(checked(binding['recipe'])))['verify'](path)
@@ -81,11 +91,12 @@ def receiver(path):
 
 
 def control_field_lineage(report):
-    key=next((k for k in ('seamOwnershipBinding','wholeAnatomicalFieldBinding','wearerFieldBinding','anatomicalFieldRepair','fieldRepair')if k in report),None)
+    key=next((k for k in ('connectedCapBinding','seamOwnershipBinding','wholeAnatomicalFieldBinding','wearerFieldBinding','anatomicalFieldRepair','fieldRepair')if k in report),None)
     return {'kind':key or 'initialAuthoredJointFields',
             'recipe':report[key]['recipe']if key else report['recipe'],
             'input':report[key]['input']if key else report['sourceReceiver'],
             'repair':report[key]if key else None,
+            **({'bindingVerifier':CONNECTED_CAP_BINDING}if key=='connectedCapBinding'else{}),
             'fullCanonicalFieldInventory':report['correspondenceAndSkin']['fullNamedFieldCount'],
             'localSourceFieldsUnchanged':report['correspondenceAndSkin']['healthyFieldsExactBeforeFloat32'],
             'productionFourConditioned':False}
