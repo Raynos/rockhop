@@ -1,0 +1,103 @@
+{
+  "accepted": false,
+  "status": "CONDITIONED04_SOURCE_INPUT_FIXTURES_PASS_NATIVE_UNEXECUTED",
+  "sources": {
+    "gameplay_conditioned04.py": {
+      "path": "assets/blender/rider-rebuild/selected-authoring-motion11/gameplay_conditioned04.py",
+      "sha256": "308f7e988e18847e10fff3d24b60f73500977ddbabd3397d60a8bea2033d013b"
+    },
+    "conditioned_controls04.py": {
+      "path": "assets/blender/rider-rebuild/selected-authoring-motion11/conditioned_controls04.py",
+      "sha256": "6015f25cdc7713d9092effddb35c8fe2444ded5a2d7ef033c652ba2b3a225b84"
+    },
+    "conditioned_policy04.py": {
+      "path": "assets/blender/rider-rebuild/selected-authoring-motion11/conditioned_policy04.py",
+      "sha256": "8d30be5f629f564025283c052d0b0e2797439ecd25ae09b0a8913d76d3d965b0"
+    },
+    "native_playback04.py": {
+      "path": "assets/blender/rider-rebuild/selected-authoring-motion11/native_playback04.py",
+      "sha256": "be67cb49fe7bbee1a3678ab990e2d4e91ae8eb62cff4d8908184f8cdad663f08"
+    },
+    "test_gameplay_conditioned04.py": {
+      "path": "assets/blender/rider-rebuild/selected-authoring-motion11/test_gameplay_conditioned04.py",
+      "sha256": "701bef2e96d3cde1b0f5baeee49eb0527a64993f41c7046ca2a5d93c932e462d"
+    },
+    "run-gameplay-conditioned04.sh": {
+      "path": "assets/blender/rider-rebuild/selected-authoring-motion11/run-gameplay-conditioned04.sh",
+      "sha256": "719f67cfaf3bb6af74b5a0e687fb4e092402489853f1b0afed7248ce4b4263f4"
+    },
+    "gameplay-conditioned04.input.json": {
+      "path": "assets/blender/rider-rebuild/selected-authoring-motion11/gameplay-conditioned04.input.json",
+      "sha256": "7c2e901ac05cd2010dfeda0d41639ace4f677e24ca98418a0a3bffc6030a5dbf"
+    }
+  },
+  "actualDiagnostic": {
+    "path": "harness/out/rider-rebuild/selected-authoring-motion11/gameplay-diagnostic03/receipt.json",
+    "sha256": "a1f1ca6ba8e61cd3cfaecb221eab1ec38697fcbfc436775e3ea83b9cc1c64505"
+  },
+  "diagnosticBounds": [
+    {
+      "stage": "before-ik",
+      "maximumAffineBoundWithin2mM": 2.885850699385628e-05
+    },
+    {
+      "stage": "after-ik",
+      "maximumAffineBoundWithin2mM": 0.0011842002859339118
+    },
+    {
+      "stage": "reopened-ik-on",
+      "maximumAffineBoundWithin2mM": 0.0011842002859339118
+    },
+    {
+      "stage": "reopened-ik-off-keyed-prepose",
+      "maximumAffineBoundWithin2mM": 2.885850699385628e-05
+    }
+  ],
+  "mechanism": {
+    "all75AffineLimitM": 0.0001,
+    "restChanged": false,
+    "skinChanged": false,
+    "solverSettingsChanged": false,
+    "visibleFKControls": 8,
+    "perLimbIKProperties": 4,
+    "fingerDriverHelpers": 30,
+    "modePolicy": "Evaluate actual same-key IK and FK once, retain IK where qualified, expand failing runs to measured agreeing FK/IK boundary keys.",
+    "activation": "Original action curves retained. Native.* complete native TRS plus live=0; Author.* identity native TRS plus live=1; every added constraint and finger helper output is gated.",
+    "genericLibrary": "Exactly six separately pinned native05 baked clips; source75 rest and all546 keys validated before install and after saved conditioned native reopen.",
+    "gameplayQualification": "All482 captured keys measured during analysis, construction, saved controls and fresh75 bake; boundary jumps also remain below0.1mm."
+  },
+  "sourceValidation": {
+    "python": "3.9.6",
+    "fixturesPassed": 7,
+    "python39SyntaxFiles": 5,
+    "shellSyntax": "PASS",
+    "actualPinnedInputValidation": "PASS"
+  },
+  "unexecuted": [
+    "Conditioned mode analysis",
+    "Conditioned native construction",
+    "All-key saved readback and mode-boundary checks",
+    "Generic/live activation readback",
+    "Full selected dressed integration",
+    "Moving art/contact/device acceptance"
+  ],
+  "parentCommands": [
+    "bash assets/blender/rider-rebuild/selected-authoring-motion11/run-gameplay-conditioned04.sh --analyze assets/blender/rider-rebuild/selected-authoring-motion11/gameplay-conditioned04.input.json harness/out/rider-rebuild/selected-authoring-motion11/gameplay-conditioned-analysis04 docs/evidence/rider-rebuild/selected-authoring-motion11/gameplay-conditioned-analysis-guard04",
+    "bash assets/blender/rider-rebuild/selected-authoring-motion11/run-gameplay-conditioned04.sh --build assets/blender/rider-rebuild/selected-authoring-motion11/gameplay-conditioned04.input.json harness/out/rider-rebuild/selected-authoring-motion11/gameplay-conditioned-analysis04/receipt.json harness/out/rider-rebuild/selected-authoring-motion11/gameplay-conditioned-native04 docs/evidence/rider-rebuild/selected-authoring-motion11/gameplay-conditioned-native-guard04"
+  ],
+  "integrationPrerequisites": [
+    "Actual NATIVE_CONDITIONED_GAMEPLAY_ACTIONS_UNACCEPTED receipt after every gate, not partial-receipt.",
+    "Actually qualified selected complete native10 receipt with explicit generation+qualifier recipe pins.",
+    "New integrator must preserve native10 mesh/material/maps/full-reference/weights/rest while adding conditioned04 helpers/drivers and exact generic05+Author actions; old09 status/installer assumptions are not valid."
+  ],
+  "parentReview": {
+    "allSevenSourcesRead": true,
+    "sourcePinsVerified": true,
+    "sevenFixturesReplayed": true,
+    "actualInputAncestryRevalidated": true,
+    "python39SyntaxPass": true,
+    "bashSyntaxPass": true,
+    "nativeExecuted": false,
+    "acceptance": "Source only. Actual conditioned analysis/build/readback and complete selected dressed integration remain required."
+  }
+}
