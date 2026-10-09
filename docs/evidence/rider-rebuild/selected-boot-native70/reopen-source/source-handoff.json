@@ -1,0 +1,44 @@
+{
+  "status": "SAVED_NATIVE70_REOPEN_SOURCE_CHECKPOINT_CPU_PASS_NATIVE_PENDING",
+  "acceptedArt": false,
+  "source": [
+    {
+      "path": "assets/blender/rider-rebuild/selected-boot-native70/reopen/qualify.py",
+      "sha256": "65d4e0fc435df1ed332b847522de085caaceae9fd94f1fe14ed0f064fb766212"
+    },
+    {
+      "path": "assets/blender/rider-rebuild/selected-boot-native70/reopen/check.py",
+      "sha256": "c19164c156425916c365d5bebfc990b7b6cc361a3b0af0771fbfb49071bed0d3"
+    }
+  ],
+  "fixtures": {
+    "path": "docs/evidence/rider-rebuild/selected-boot-native70/reopen-source/fixtures.json",
+    "sha256": "cb1dd7e39aef38ced82890bb9e2372c3c1292653784b7a53b6453201efa58165"
+  },
+  "readonlyFrozenTransferSHA256": "4c66b9f6f97dbda9d9e82fb9f5c6a7f1e36bcf1bf4e3c11b7863a1880079d483",
+  "production": {
+    "path": "harness/out/rider-rebuild/selected-boot-native70/native01/production.json",
+    "sha256": "518fe4ce2f7da86adc176c45d3d3393f70d1b1a4daaae0701ff245baa2681465"
+  },
+  "native": {
+    "path": "harness/out/rider-rebuild/selected-boot-native70/native01/UNACCEPTED-selected-production-full.blend",
+    "sha256": "ffac10be163895d2ecb76d6552c9e357b86122d522543b7117974884be0ea52c"
+  },
+  "policy": "Reopen the exact final saved native read-only. Compare the entire canonical selected source/PBR/75-rest witness with production70; retain every field and numeric value. Verify exact original positions/topology/materials/ancestry/full named weights and original bind. Rerun the frozen56/57 validation prefix through FOUR before its first scene write and the unchanged surface70 checker, compare all saved measurements and NPZ arrays exactly including dtype and intentional NaNs, then require whole source and target witnesses and input bytes unchanged.",
+  "actualNoShapes": true,
+  "shapePolicy": "The pinned actual70 source and target have no shape keys; both must remain absent. This is not generic shape support.",
+  "validation": {
+    "passedGroups": 5,
+    "command": "/Users/raynos/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3 assets/blender/rider-rebuild/selected-boot-native70/reopen/check.py",
+    "BlenderRun": false
+  },
+  "guardedBlenderArguments": [
+    "--python",
+    "assets/blender/rider-rebuild/selected-boot-native70/reopen/qualify.py",
+    "--",
+    "518fe4ce2f7da86adc176c45d3d3393f70d1b1a4daaae0701ff245baa2681465",
+    "harness/out/rider-rebuild/selected-boot-native70/reopen01"
+  ],
+  "expectedOutput": "harness/out/rider-rebuild/selected-boot-native70/reopen01/reopen.json",
+  "limits": "Parent review and the original serial two-thread guard are required for the one eventual reopen. No native save, constructor, unwrap, bake or promotion; saved rest readback does not grant bilateral, allocation, posed/contact, moving-art or device acceptance."
+}
