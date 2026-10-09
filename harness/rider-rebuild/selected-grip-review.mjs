@@ -1,6 +1,7 @@
 /** Silent selected-source grip review: actual Garage gestures or trusted held keys.
  * --build=DIR --source=GLB --contract=JSON --profile=JSON --profile-sha256=HASH --out=FRESH_DIR --mode=garage|lean
  * --bike=rookie|pro --backend=webkit|metal --camera-yaw=RAD --camera-pitch=RAD --review-zoom=2.2
+ * Derivative source requires --transfer=decoded-parity.json and explicit authoring/application pins.
  * Existing reviewer orbit + explicit optical camera zoom; no private source, pose or clock overrides.
  */
 import fs from 'node:fs/promises';
@@ -50,7 +51,23 @@ assert.equal(runtimeMetadata.metadataSHA256, upstreamContractSHA256);
 assert.deepEqual(runtimeMetadata.driver, contract.driver, 'Requested and built runtime grip driver differ');
 assert.equal(sha(profileBytes), profileSHA256, 'Exact source-pinned profile bytes required');
 assert.equal(gripProfile.schema, 'rockhop-selected-grip-kinematic-v2');
-assert.equal(gripProfile.source.sha256, selected.sha256);
+let profileApplicationTransfer = null;
+if (gripProfile.source.sha256 !== selected.sha256) {
+  const declaration = runtimeMetadata.driver.selectedGripProfile;
+  assert.equal(declaration?.authoringSourceSHA256, gripProfile.source.sha256, 'Explicit fitted profile authoring source');
+  assert.equal(declaration.appliesToSourceSHA256, selected.sha256, 'Explicit derivative source application');
+  const transferPath = arg('transfer'); assert(transferPath, 'Derivative profile application requires --transfer=decoded-parity.json');
+  const transferBytes = await fs.readFile(transferPath), transfer = JSON.parse(transferBytes);
+  assert.equal(transfer.pass, true); assert.equal(transfer.candidate.sha256, selected.sha256);
+  assert.equal(transfer.selectedCheckpointReference.sha256, gripProfile.source.sha256);
+  assert.equal(transfer.nativeJoints, 75); assert.equal(transfer.nativeJSONAndAllDecodedAccessorViewsExactToGraft, true);
+  assert(transfer.protectedSelectedAccessorStreamsExact.length > 0 && transfer.protectedSelectedAccessorStreamsExact.every(row => row.exact === true));
+  profileApplicationTransfer = { declaration: structuredClone(declaration), receipt: { path: path.resolve(transferPath), sha256: sha(transferBytes) },
+    authoringSourceSHA256: gripProfile.source.sha256, appliesToSourceSHA256: selected.sha256,
+    protectedExactAccessorStreams: transfer.protectedSelectedAccessorStreamsExact.length, nativeJoints: transfer.nativeJoints,
+    geometry: { vertices: transfer.geometry.vertices, triangles: transfer.geometry.triangles },
+    limits: 'Protected source rig/accessor streams and exact graft delivery only. Changed-density glove/cuff contact and moving appearance require actual derivative qualification; authoring-source finite-surface results do not establish derivative contact.' };
+}
 assert.equal(gripProfile.contractSHA256, upstreamContractSHA256);
 assert.equal(runtimeMetadata.driver.gripProfileHash, profileSHA256, 'Built driver declares exact fitted profile');
 for (const side of ['left', 'right']) {
@@ -75,7 +92,7 @@ await fs.mkdir(out, { recursive: false });
 const phases = [{ name: 'neutral', ticks: 240, lean: 0 }, { name: 'forward', ticks: 360, lean: 1 },
   { name: 'backward', ticks: 360, lean: -1 }, { name: 'neutral-return', ticks: 240, lean: 0 }];
 const report = { accepted: false, status: 'UNACCEPTED_SELECTED_GRIP_PLAYED_REVIEW', mode, bike,
-  source: sourcePin, requestedGripProfileSHA256: profileSHA256, gripProfile: { path: profilePath, sha256: profileSHA256, schema: gripProfile.schema, source: gripProfile.source }, selectedManifest: selected, bikeAsset: { ...bikeAsset, buildFile: bikePin }, contract: { path: contractPath, sha256: sha(contractBytes) },
+  source: sourcePin, requestedGripProfileSHA256: profileSHA256, profileApplicationTransfer, gripProfile: { path: profilePath, sha256: profileSHA256, schema: gripProfile.schema, source: gripProfile.source }, selectedManifest: selected, bikeAsset: { ...bikeAsset, buildFile: bikePin }, contract: { path: contractPath, sha256: sha(contractBytes) },
   runtimeMetadata: { path: path.join(build, 'rider-remaster-contract.json'), sha256: sha(runtimeMetadataBytes), upstreamContractSHA256 },
   sourcePinsAtCapture: await Promise.all(['src/render/hero/selected/rider.mjs', 'src/render/hero/selected/contract.mjs',
     'src/render/hero/selected/mass.mjs', 'src/render/camera/rig.ts', 'src/game/game.ts', 'src/render/frame.ts',
