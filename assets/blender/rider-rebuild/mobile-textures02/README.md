@@ -190,3 +190,24 @@ expansion. The90% goal is the visual/project milestone, not a wire-reduction
 quota. Quality and useful memory/performance gains drive the final choice.
 Primary codec reference:
 [Binomial Basis Universal](https://github.com/BinomialLLC/basis_universal).
+
+## Right boot fixed-family checkpoint
+
+Checkpointed builder9b7766e70 supplies independent selected Boot-R source
+atlases. The first three unchanged admission attempts refused before child
+launch; attempt4 admitted and returned0 in50.138s. UASTC/RDO0.5/settings
+are identical to Boot-L, with no alternate map resolution or codec trial.
+Payloads total5,535,990 bytes versus8,037,649 source PNG bytes. All108 pinned
+transcodes,36 native ASTC mip blocks and3 native base-level pixel comparisons
+pass; every alpha value remains255. ASTC4x4/BC7 full mips16,777,296 bytes.
+
+Worst RGB-channel albedo RMSE0.547/255; ORM roughness1.298/255 and
+metallic1.015/255. Normal mean0.327°,p992.36°,max109.47°:112/4,194,304 pixels
+exceed30°,16 exceed60°,4 exceed90°. Every source pixel remains counted.
+The worst texel1666,1099 has source-vector length0.0340; another>90° source
+vector has length0.3796, so these are not all dismissed as neutral padding.
+Normal/skin/bake field witness qualification remains separate parent work.
+
+Both verified boot families now total11,150,174 wire bytes and33,554,592
+ASTC full-mip bytes. Corrected glove maps wait for the physically scaled
+density choice before encoding, avoiding duplicate atlas generations.

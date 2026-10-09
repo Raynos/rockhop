@@ -52,3 +52,16 @@ transcodes, native block/pixel parity and zero alpha differences reproduced.
 
 Limits: Summary collection performs no new encoding or art judgment. Full
 composition proof remains pending corrected component graft availability.
+
+Finding: Encode the stable selected right-boot three-map family with the
+same2K UASTC/RDO0.5 recipe. Its5,535,990 wire bytes are independently pinned;
+no paired-model or approximate image reuse is assumed.
+
+Validation: Original guard attempt4 returns0 in50.138s after three child-free
+admission refusals.108 pinned transcodes,36 native ASTC mip block comparisons
+and3 base-level pixel comparisons pass. Alpha unchanged; ASTC mips16,777,296
+bytes. Normal mean0.327°,p992.36°,max109.47°,112 pixels>30° of4,194,304.
+Evidence: docs/evidence/rider-rebuild/mobile-textures02/components01/boot-R/.
+
+Limits: All source normal pixels retained; source-field/native posed witness
+and final moving/phone acceptance remain independent. No production changes.
