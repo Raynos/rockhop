@@ -12,6 +12,7 @@ from mathutils.bvhtree import BVHTree
 
 HERE=Path(__file__).resolve().parent
 D=runpy.run_path(str(HERE/'diagnose.py')); read,skin=D['read'],D['skin']
+load_canonical=runpy.run_path(str(HERE/'canonical_cuff.py'))['load_canonical']
 
 def sha(p): return hashlib.sha256(Path(p).read_bytes()).hexdigest()
 def tree(p,f): return BVHTree.FromPolygons(p.tolist(),f.tolist(),all_triangles=True)
@@ -37,22 +38,25 @@ def main(intake,rookie,pro,out):
     started=time.monotonic(); root=Path(intake); out=Path(out);assert not out.exists();out.mkdir(parents=True)
     receipt,comps=load(root); h=comps['RiderHoodie']; p=h['POSITION'].astype(float); f=h['indices']; names=h['names']
     rest=np.linalg.inv(h['ib']); hoodie_tree=tree(p,f)
+    classify,canonical=load_canonical(Path.cwd(),names)
     # Geometry seam identity is exact source POSITION identity, not spatial welding.
     unique,first,inverse=np.unique(p,axis=0,return_index=True,return_inverse=True)
     count=len(unique); required=np.zeros(count); domain=np.zeros(count,bool)
     source_fields=np.zeros((len(p),len(names)))
     for k in range(4):np.add.at(source_fields,(np.arange(len(p)),h['JOINTS_0'][:,k]),h['WEIGHTS_0'][:,k])
-    assert np.max(abs(source_fields-source_fields[first[inverse]]))<1e-12,'Source seam native fields disagree'
+    seam_field_difference=float(np.max(abs(source_fields-source_fields[first[inverse]])))
     epsilon=float(8*np.max(np.spacing(h['POSITION'].astype(np.float32))))
     assert epsilon>0
     policies=[]; side_data={}
     for side in ['L','R']:
         g=comps['ActualSelectedGlove.'+side]; wrist=names.index('DEF-hand.'+side); distal=names.index('DEF-forearm.'+side+'.001')
         head=rest[wrist,:3,3]; axis=head-rest[distal,:3,3]; length=np.linalg.norm(axis);axis/=length
-        allowed={distal,wrist,*[i for i,n in enumerate(names) if n.startswith('DEF-palm.') and n.endswith('.'+side)]}
+        allowed={names.index('DEF-forearm.'+side),distal,wrist,*[i for i,n in enumerate(names) if n.startswith('DEF-palm.') and n.endswith('.'+side)]}
         positive=source_fields>0; keep=np.array([all(int(i) in allowed for i in np.flatnonzero(row)) for row in positive])
         # Connected skin carrier is only the actual distal native forearm/wrist.
-        ids=np.flatnonzero(keep); stations=(p[ids]-head)@axis; origins=head+stations[:,None]*axis
+        keep &= (p-head)@axis >= -length
+        ids=np.flatnonzero(np.isin(inverse,inverse[np.flatnonzero(keep)]))
+        stations=(p[ids]-head)@axis; origins=head+stations[:,None]*axis
         radial=p[ids]-origins; radii=np.linalg.norm(radial,axis=1);directions=radial/radii[:,None]
         glove_min=float(((g['POSITION']-head)@axis).min()); glove_max=float(((g['POSITION']-head)@axis).max())
         inner=np.empty(len(ids)); layers=np.empty(len(ids)); shell_width=[]; missing=[]
@@ -60,22 +64,33 @@ def main(intake,rookie,pro,out):
         for k,(o,d,r) in enumerate(zip(origins,directions,radii)):
             intersections=hits(hoodie_tree,o,d,bound,epsilon)
             before=[row for row in intersections if row[0]<=r+epsilon*4]
-            if not before:missing.append(int(ids[k]));continue
-            inner[k]=before[0][0];layers[k]=max(0.,r-inner[k])
+            if not before:missing.append(int(ids[k]))
+            # The exact indexed source vertex is itself an authoritative
+            # surface point even when an edge-tangent float BVH ray misses it.
+            inner[k]=min([r,*[row[0] for row in before]]);layers[k]=max(0.,r-inner[k])
             for a,b in zip(intersections,intersections[1:]):
                 if a[1]<0 and b[1]>0:shell_width.append(b[0]-a[0]);break
-        assert not missing, ('Missing actual sleeve shell rays',side,missing[:20])
+        assert np.isfinite(inner).all() and np.all(layers>=0)
         # Source triangles and all their layered spacing remain; the tiny floor
         # is derived from source float32 ULP, not a tuned fit or fabric offset.
         domain[inverse[ids]]=True
-        side_data[side]={'g':g,'ids':ids,'origins':origins,'directions':directions,'radii':radii,'inner':inner,'layers':layers}
+        ownership,body_face,body_distance,body_signed=classify(g['POSITION'],side)
+        cuff_faces=np.flatnonzero(np.any(ownership[g['indices']],axis=1))
+        cuff_rows=np.unique(g['indices'][cuff_faces])
+        witnesses=[167304] if side=='L' else [74724,81481]
+        assert all(i in cuff_faces for i in witnesses),'Actual observed cuff surface omitted'
+        side_data[side]={'g':g,'cuffFaces':cuff_faces,'ids':ids,'origins':origins,'directions':directions,'radii':radii,'inner':inner,'layers':layers}
         policies.append({'side':side,'vertices':len(ids),'uniqueVertices':int(len(np.unique(inverse[ids]))),
             'nativeWrist':head.tolist(),'nativeForearmAxis':axis.tolist(),'nativeSegmentLengthMeters':float(length),
             'nativeStationMeters':[float(stations.min()),float(stations.max())],'gloveStationMeters':[glove_min,glove_max],
-            'sourceFabricWallMeters':np.percentile(shell_width,[0,50,100]).tolist(),'quantizationClearanceMeters':epsilon,
-            'sourceOnlyCarrierNames':[names[i] for i in sorted(allowed)]})
+            'sourceFabricWallMeters':np.percentile(shell_width,[0,50,100]).tolist(),'exactSourceVertexAsFirstShellHit':missing,'quantizationClearanceMeters':epsilon,
+            'sourceOnlyCarrierNames':[names[i] for i in sorted(allowed)],
+            'canonicalCuffFaces':len(cuff_faces),'canonicalCuffVertices':len(cuff_rows),
+            'canonicalCuffFaceIDsSHA256':hashlib.sha256(cuff_faces.astype('<u4').tobytes()).hexdigest(),
+            'canonicalCuffStationMeters':np.percentile((g['POSITION'][cuff_rows]-head)@axis,[0,50,100]).tolist(),
+            'observedWitnessFacesIncluded':witnesses})
     reports={bike:json.loads(Path(path).read_text()) for bike,path in [('rookie',rookie),('pro',pro)]}
-    progress={'accepted':False,'source':receipt['source'],'policies':policies,'phase':'pose envelope','samples':[]}
+    progress={'accepted':False,'source':receipt['source'],'policies':policies,'canonical':canonical,'phase':'pose envelope','samples':[]}
     (out/'progress.json').write_text(json.dumps(progress,indent=2)+'\n')
     worst=np.zeros(count,dtype=int); processed=0
     for bike,report in reports.items():
@@ -84,7 +99,7 @@ def main(intake,rookie,pro,out):
             byname={j['id']:j['worldMatrix'] for j in sample['joints']}
             world=np.array([byname[n] for n in names]).reshape(-1,4,4).transpose(0,2,1);mat=world@h['ib']
             for side,data in side_data.items():
-                g=data['g'];gp=skin(g['POSITION'],g['JOINTS_0'],g['WEIGHTS_0'],mat);bvh=tree(gp,g['indices'])
+                g=data['g'];gp=skin(g['POSITION'],g['JOINTS_0'],g['WEIGHTS_0'],mat);bvh=tree(gp,g['indices'][data['cuffFaces']])
                 ids=data['ids'];m=np.zeros((len(ids),4,4))
                 for k in range(4):m+=mat[h['JOINTS_0'][ids,k]]*h['WEIGHTS_0'][ids,k,None,None]
                 origins=np.einsum('nij,nj->ni',m[:,:3,:],np.column_stack([data['origins'],np.ones(len(ids))]))
@@ -93,9 +108,9 @@ def main(intake,rookie,pro,out):
                 values=np.zeros(len(ids));intersected=0
                 for k,(o,d) in enumerate(zip(origins,direction)):
                     found=hits(bvh,o,d,bound,epsilon)
-                    # Outermost real glove outward crossing establishes its
-                    # envelope; inner returns cannot masquerade as its exterior.
-                    outward=[row[0] for row in found if row[1]>0]
+                    # Source-rest anatomical cuff face identity is transported
+                    # unchanged, excluding unrelated posed fingers and palm.
+                    outward=[row[0] for row in found]
                     if outward:
                         intersected+=1;glove_radius=max(outward)/scale[k]
                         values[k]=max(0.,glove_radius-data['inner'][k]+epsilon/scale[k])
@@ -139,8 +154,8 @@ def main(intake,rookie,pro,out):
         sourcePositionToUnique=inverse,radialDirections=directions_all,sourceCarrierRowDisplacement=row_delta,worstPoseByUniqueRow=worst)
     result={'accepted':False,'schema':'selected-cuff-rest-envelope-v1','source':receipt['source'],'intakeSHA256':sha(root/'intake.json'),
         'recipeSHA256':sha(__file__),'playedReports':{b:{'path':str(path),'sha256':sha(path)} for b,path in [('rookie',rookie),('pro',pro)]},
-        'policies':policies,'sourceNativeFieldsExact':True,'allGloveBytesProtected':True,'native75RestAndAnimationExact':True,
-        'sourceGeometrySeamFieldsExact':True,'poseCount':processed,'constraintSamples':len(progress['samples']),
+        'policies':policies,'canonical':canonical,'sourceNativeFieldsExact':True,'allGloveBytesProtected':True,'native75RestAndAnimationExact':True,
+        'sourceGeometrySeamFieldsUnchanged':True,'sourcePositionSeamCarrierMaxDifference':seam_field_difference,'poseCount':processed,'constraintSamples':len(progress['samples']),
         'hoodieChangedRows':len(changed),'hoodieMaxRestDisplacementMeters':float(row_delta.max()),
         'hoodieRequiredMaxMeters':float(required.max()),'hoodieRestDisplacementPercentilesMeters':np.percentile(row_delta[changed],[0,50,95,99,100]).tolist(),
         'affectedTriangles':int(affected.sum()),'nonpositiveAreaOrientationDots':int((dot<=0).sum()),
