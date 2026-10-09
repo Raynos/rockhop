@@ -1,0 +1,33 @@
+{
+  "status": "RECOMMENDATION_ONLY_DO_NOT_IMPLEMENT_BEFORE_PARENT_REVIEW",
+  "algorithm": "Keep constructor62 immutable-source reduction and monotone source-fan closure. Build one immutable source triangle AABB tree per invocation. Each iteration must census every resulting vertex and every face centroid; use exact cyclic oriented source-face ancestry for retained faces, globally nearest geometric source triangle for new faces. All failures from both metrics add their original target corners and bearing source corners together before re-reducing the same original source. Stop only when both complete censuses pass or reject if no new fan constraints are possible. Parent original guard bounds the whole invocation.",
+  "initialConstraints": "The66 union of all94 new failed target/bearing patches plus all prior62 fans is only an initial constraint set, never a promised fixed point.",
+  "localImplementationRoute": {
+    "sourceAABBTree": {
+      "path": "assets/blender/rider-rebuild/selected-seated-author04/geometry.mjs",
+      "sha256": "2b5aa433b32005d15905a791be84898b5d5cb892b077e42fabcfa26d50285303"
+    },
+    "note": "This existing CPU module has deterministic median-split triangle bounds for crossing queries; adapt only its bounds/tree pattern to an exhaustive nearest-distance branch-and-bound. No fixed radius, nearest-k subset or geometry EPS cutoff. Typed arrays can avoid constructing610934 heavyweight Triangle objects.",
+    "primaryPointTriangleImplementation": {
+      "path": "node_modules/three/src/math/Triangle.js",
+      "sha256": "99044bc57c2ddc32c3cf616b333675b03d2ae71ea0e1e71f94fb3e28d103ab06"
+    },
+    "primaryPackage": {
+      "path": "node_modules/three/package.json",
+      "sha256": "f9c474a27c920b9435353a6235968f4453436bee0444fac7e5fd289c8fa463de"
+    },
+    "installedThreeVersion": "0.186.1",
+    "pointTrianglePolicy": "The installed Three Triangle.closestPointToPoint implements triangle Voronoi-region distance. Cross-check it against66 scaled cross-product plane+edge distance on actual microscopic faces before reuse; no assumption of conditioning. No third-party BVH or SciPy/trimesh package was found locally."
+  },
+  "requiredCPUPreflight": "Before any constructor run, query ALL26528 actual63 centroids against the full immutable610934-face source. Compare every face ID, distance, normal dot and pass/fail to pinned native63 NPZ. Query the same float32-rounded points used by mathutils.Vector and explicitly record different-bearing float32 ties/numerical winners; do not silently widen .25 or1mm, pick an aligned normal, or ignore a native failure. Include known actual94 new failures in initial constraints regardless of CPU/native tie differences. Independent native qualification remains authoritative.",
+  "inheritedBearingProof": "One bounded native proof is still needed before changing the geometric-bearing policy: actual target15560 exact source278671, full BVH chosen278672, returned query/closest point, explicit own-face closest point/distance at identical float32 query, unchanged original triangle/positions/materials and own geometric normal. Conditional exact-face ancestry then preserves geometry rather than filtering this authored microface; all new faces retain nearest geometric bearings.",
+  "thresholds": {
+    "minimumNormalDot": 0.25,
+    "maximumSurfaceErrorM": 0.001,
+    "flags": [
+      "ErrorAbsolute"
+    ],
+    "triangleAllocationRemainsSoft": true
+  },
+  "limits": "Feasible implementation path, not executed CPU BVH preflight or a new constructor. No candidate/native/bake job authorized by this recommendation."
+}

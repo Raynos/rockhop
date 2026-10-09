@@ -1,0 +1,52 @@
+{
+  "status": "COMPLETE_CPU_ACTUAL63_DIAGNOSIS_READY_PARENT_REVIEW_UNACCEPTED",
+  "acceptedArt": false,
+  "files": [
+    {
+      "path": "assets/blender/rider-rebuild/selected-boot-face66/diagnose.py",
+      "sha256": "ecdf0e73eda8bd583ebcbb8e2578f8b64e59ca78e01a4d9926b9ade659072fc2"
+    },
+    {
+      "path": "assets/blender/rider-rebuild/selected-boot-face66/check.py",
+      "sha256": "dc4d54adca97322ca354bf6452628af1411c54f9a53254d9afc4d80b36533ba0"
+    },
+    {
+      "path": "docs/evidence/rider-rebuild/selected-boot-face66/finding.json",
+      "sha256": "4fe77385f9b912c26ebe6448ad800f90bc94d82a695f74605fbcbaf4ed77bbae"
+    },
+    {
+      "path": "docs/evidence/rider-rebuild/selected-boot-face66/proposed-fan-constraints.bin",
+      "sha256": "ef82d281ada5b28569b15d537da677731c62418d744cabe6f0059f61d869150b"
+    },
+    {
+      "path": "docs/evidence/rider-rebuild/selected-boot-face66/fixtures.json",
+      "sha256": "bae0d114507fbde0049b0016885fe6132b8e2c7a17e19f601728bbe7cec8eb82"
+    },
+    {
+      "path": "docs/evidence/rider-rebuild/selected-boot-face66/next-construction.json",
+      "sha256": "8e46f621678435a23d1cd8fe82ea0904baae6ad5ba05ac08cf9e99d21b3cf4c5"
+    }
+  ],
+  "summary": {
+    "samplesExamined": 26528,
+    "recordedDotValuesReproducedExactly": true,
+    "failuresClassified": 95,
+    "exactInheritedOrientedSourceFaces": 1,
+    "newFaces": 94,
+    "reversedExistingSourceFaces": 0,
+    "failedDistanceMaximumM": 0.0004242666473146528,
+    "newTargetFaceCornerCenters": 259,
+    "newBearingSourceFaceCornerCenters": 277,
+    "unionRequestedCenters": 474,
+    "additionalCenters": 461,
+    "proposedTotalCenters": 912,
+    "proposedLockedVertices": 3775,
+    "proposedExactSourceFaces": 4264,
+    "proposedRequiredEdges": 7827,
+    "newFaceBearingHasCornerNormalBelowPoint25": 5,
+    "newFaceHasOriginalCornerNormalBelowPoint25": 63
+  },
+  "validation": "Four CPU fixture groups pass: exhaustive arithmetic/classification, evidence mutations, scaled closest-triangle fixtures and whole-fan union.",
+  "execution": "CPU only. No constructor/native jobs or frozen-source edits. Parent must freeze/review this diagnosis before a successor implementation.",
+  "limits": "CPU diagnosis and proposed constraints only. No corrected bearing, new simplifier/native job, gate waiver, bake, art or allocation acceptance. The 1mm surface and .25 orientation limits stay unchanged; edge/reverse face stages have not run."
+}
