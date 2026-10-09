@@ -39,7 +39,7 @@ import { getTrack, loadRetiredTracks } from './tracks';
 import { ArtManifest, BestTimes, DomHud, injectStyles, loadBikeChoice, loadHeldTier, loadModelChoice, loadQualityOverride, menuPlate, type ModelChoice } from './ui';
 import { nextPaint } from './ui/loader';
 import { takeBootPlan } from './boot/handoff';
-import { offlinePackUrls } from './boot/offline-pack';
+import { offlinePackUrls, warmOfflineCode } from './boot/offline-pack';
 import { streamBytes } from './boot/stream';
 import { PREPARE_STEPS } from './boot/steps';
 import { delegate, type ByteProgress, type StepRunner } from './boot/plan';
@@ -412,12 +412,7 @@ function boot(): void {
         // Warm lazy code and assets needed for the first offline PLAY, including the 3D map
         // and its sky, plus the audio worklet and review sheet. These are outside the art
         // reader's byte dial; the hashed sky URL is exactly what TextureLoader will request.
-        await fetch('./load-manifest.json')
-          .then((r) => (r.ok ? (r.json() as Promise<{ items?: { path: string; phase: string }[] }>) : null))
-          .then(async (m) => {
-            for (const item of m?.items ?? []) if (item.phase === 'audio-worklet' || item.phase === 'other' || item.phase === 'worldmap') await fetch(item.path).catch(() => undefined);
-          })
-          .catch(() => undefined);
+        await warmOfflineCode();
         completed++;
         packProgress();
       });

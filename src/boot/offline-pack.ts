@@ -53,3 +53,23 @@ export function offlinePackUrls(entries: readonly ArtEntry[]): [url: string, byt
   }
   return out;
 }
+
+/** Warm the small lazy-code set in bounded parallel requests, through body completion. */
+export async function warmOfflineCode(): Promise<void> {
+  try {
+    const response = await fetch('./load-manifest.json');
+    if (!response.ok) return;
+    const manifest = await response.json() as { items?: { path: string; phase: string }[] };
+    const items = (manifest.items ?? []).filter(item => item.phase === 'audio-worklet' || item.phase === 'other' || item.phase === 'worldmap');
+    let next = 0;
+    const pull = async (): Promise<void> => {
+      while (next < items.length) {
+        const item = items[next++]!;
+        // fetch resolves at headers. Await the body so the loading screen
+        // cannot announce completion while these bytes still arrive.
+        await fetch(item.path).then(r => r.arrayBuffer()).catch(() => undefined);
+      }
+    };
+    await Promise.all(Array.from({ length: Math.min(4, items.length) }, pull));
+  } catch { /* Optional offline warmup keeps its existing tolerant failure policy. */ }
+}
