@@ -2045,3 +2045,5 @@ Rider plan now stops failed whole-master sleeve intake in favor of original-sele
 Current-game gate45 interrupted at original memory bound before restart: exact clear/hash/crash pass, cold-ready401.58ms misses300ms, first-frame644.18ms passes. Stale gate44 partial report excluded. No completed ship gate or rider/device acceptance.
 
 Component-sleeve47 source parent-reviewed: exact original28 solve and dense math, save-first38 lifetime, original Hoodie intake into reopened41 glove/75/fullref component. Seven CPU fixtures/pins/Python3.9 pass. Actual intake/sleeve/native replay/export and moving art remain pending; no fullmaster preservation claim from component.
+
+Component47 actual intake succeeds: original selected Hoodie + qualified41 bilateral gloves +exact75/fullref raw save/reopen34.073s,325MB native ff2ba521…. Exact geometry/PBR/field metadata/rest preserved. Frozen sleeve input01 ready; fitting/full outfit merge/replay/moving art pending.
