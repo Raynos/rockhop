@@ -1,0 +1,34 @@
+{
+  "accepted": false,
+  "status": "LIVE_CONTROLS_NEAR_EXTENSION_REPLAY_FAILED",
+  "action": "RiderGameplayLeanRookie",
+  "frame": 51,
+  "sourceTick": 250,
+  "maximumAffineBoundWithin2mM": 0.0011842002859339118,
+  "unchangedLimitM": 0.0001,
+  "guardElapsedSeconds": 14.632,
+  "guardExitCode": 1,
+  "failure": {
+    "path": "harness/out/rider-rebuild/selected-authoring-motion11/gameplay-native02/failed-action.json",
+    "bytes": 28271,
+    "sha256": "4daf207b4da6e40129a2426dab9c2de34d60b2a317bf85db60c94858b5864f51"
+  },
+  "initialFrameOnlyNative": {
+    "path": "harness/out/rider-rebuild/selected-authoring-motion11/gameplay-native02/rookie-first-physical-controls.blend",
+    "bytes": 130820,
+    "sha256": "1c1df5126a086bb55b4796f1c8135aee8091ffd384b6013ef27b868d7aecd6af"
+  },
+  "sourceReceipt": {
+    "path": "harness/out/rider-rebuild/selected-authoring-motion11/gameplay-converted02/receipt.json",
+    "bytes": 2220222,
+    "sha256": "c12feb416599b1ed6409af4962bc3e70096ec6f28b0adecdd20d1dec5236957d"
+  },
+  "controlsRecipe": {
+    "path": "assets/blender/rider-rebuild/selected-authoring-motion11/gameplay_controls02.py",
+    "bytes": 15053,
+    "sha256": "9e3251cee5e94e2a427512202b2d0d6fcbde5f9e32f0d9597133982ac1ce044c"
+  },
+  "finding": "Exact analytic prepose does not prevent solver drift at near-full arm extension. Local arm rotation error fails unchanged bound; actual gameplay captures remain useful.",
+  "next": "Diagnose evaluated pre/post solver mechanism and target/rest precision. Preserve full dressed baked native independently.",
+  "limits": "First-frame controls checkpoint only; no completed action, saved failed-frame native, live replay, moving art or release pass."
+}
