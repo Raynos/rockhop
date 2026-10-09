@@ -1,0 +1,225 @@
+{
+  "observedUTC": "2026-10-09T21:54:03.493387+00:00",
+  "publicURL": "https://playrockhop.vercel.app",
+  "version": {
+    "build": "3069b78",
+    "sha": "3069b78fb9c586e21fb58ddf356658a2e6dd81f4",
+    "time": "2026-10-09T21:51:40.690Z"
+  },
+  "selectedSource": {
+    "url": "https://b47ghqoufyfsjh9t.public.blob.vercel-storage.com/rider-remaster/f814b8d7cde87b1e41b45eec75cd55fdea89b915bf9acae0e5a18b40d3a156af/rider.glb",
+    "pathname": "rider-remaster/f814b8d7cde87b1e41b45eec75cd55fdea89b915bf9acae0e5a18b40d3a156af/rider.glb",
+    "bytes": 101885432,
+    "sha256": "f814b8d7cde87b1e41b45eec75cd55fdea89b915bf9acae0e5a18b40d3a156af",
+    "contentType": "model/gltf-binary",
+    "contractSHA256": "0301087649f7e2b2c442299bb21f61dc1e325c6b5b84afbc3ac5c4a594b72813",
+    "texturePolicy": "Full-resolution UASTC RDO0.5; selected hoodie detail rebaked to4K albedo/ORM/tangent normal",
+    "lodAliasesFull": true,
+    "optional": false,
+    "acceptance": "Comparison checkpoint; final art, phone memory and release-art acceptance remain open",
+    "rigContractSHA256": "6fb6e726ee5f6b6c3dc3e378354a11c086a4fd5e8345169e26a80234f5cbc996",
+    "originalMasterSHA256": "127e316a8ff7910a4918b63f83e086e4e658062f102c73f17d0ee2f956750649"
+  },
+  "checkedDeploy": {
+    "conclusion": "success",
+    "headSha": "3069b78fb9c586e21fb58ddf356658a2e6dd81f4",
+    "jobs": [
+      {
+        "completedAt": "2026-10-09T21:52:18Z",
+        "conclusion": "success",
+        "databaseId": 114040893850,
+        "name": "build-and-deploy",
+        "startedAt": "2026-10-09T21:48:36Z",
+        "status": "completed",
+        "steps": [
+          {
+            "completedAt": "2026-10-09T21:48:37Z",
+            "conclusion": "success",
+            "name": "Set up job",
+            "number": 1,
+            "startedAt": "2026-10-09T21:48:37Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-09T21:48:45Z",
+            "conclusion": "success",
+            "name": "Run actions/checkout@v4",
+            "number": 2,
+            "startedAt": "2026-10-09T21:48:37Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-09T21:48:46Z",
+            "conclusion": "success",
+            "name": "Skip if this commit is already live",
+            "number": 3,
+            "startedAt": "2026-10-09T21:48:45Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-09T21:48:47Z",
+            "conclusion": "success",
+            "name": "Run pnpm/action-setup@v4",
+            "number": 4,
+            "startedAt": "2026-10-09T21:48:46Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-09T21:48:49Z",
+            "conclusion": "success",
+            "name": "Run actions/setup-node@v4",
+            "number": 5,
+            "startedAt": "2026-10-09T21:48:47Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-09T21:48:50Z",
+            "conclusion": "success",
+            "name": "Install",
+            "number": 6,
+            "startedAt": "2026-10-09T21:48:49Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-09T21:49:08Z",
+            "conclusion": "success",
+            "name": "Typecheck (app + harness)",
+            "number": 7,
+            "startedAt": "2026-10-09T21:48:50Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-09T21:49:12Z",
+            "conclusion": "success",
+            "name": "Lint",
+            "number": 8,
+            "startedAt": "2026-10-09T21:49:08Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-09T21:49:33Z",
+            "conclusion": "success",
+            "name": "Audio decoder test dependency",
+            "number": 9,
+            "startedAt": "2026-10-09T21:49:12Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-09T21:51:06Z",
+            "conclusion": "success",
+            "name": "Unit tests",
+            "number": 10,
+            "startedAt": "2026-10-09T21:49:33Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-09T21:51:06Z",
+            "conclusion": "skipped",
+            "name": "Web build (push or PR)",
+            "number": 11,
+            "startedAt": "2026-10-09T21:51:06Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-09T21:51:14Z",
+            "conclusion": "success",
+            "name": "IP audit (store build, strict)",
+            "number": 12,
+            "startedAt": "2026-10-09T21:51:06Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-09T21:51:14Z",
+            "conclusion": "skipped",
+            "name": "No token, no deploy",
+            "number": 13,
+            "startedAt": "2026-10-09T21:51:14Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-09T21:51:45Z",
+            "conclusion": "success",
+            "name": "Build Vercel output in GitHub Actions",
+            "number": 14,
+            "startedAt": "2026-10-09T21:51:14Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-09T21:52:05Z",
+            "conclusion": "success",
+            "name": "Deploy prebuilt output",
+            "number": 15,
+            "startedAt": "2026-10-09T21:51:45Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-09T21:52:16Z",
+            "conclusion": "success",
+            "name": "Production serves this commit",
+            "number": 16,
+            "startedAt": "2026-10-09T21:52:05Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-09T21:52:16Z",
+            "conclusion": "success",
+            "name": "Post Run actions/setup-node@v4",
+            "number": 30,
+            "startedAt": "2026-10-09T21:52:16Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-09T21:52:16Z",
+            "conclusion": "success",
+            "name": "Post Run pnpm/action-setup@v4",
+            "number": 31,
+            "startedAt": "2026-10-09T21:52:16Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-09T21:52:16Z",
+            "conclusion": "success",
+            "name": "Post Run actions/checkout@v4",
+            "number": 32,
+            "startedAt": "2026-10-09T21:52:16Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-09T21:52:16Z",
+            "conclusion": "success",
+            "name": "Complete job",
+            "number": 33,
+            "startedAt": "2026-10-09T21:52:16Z",
+            "status": "completed"
+          }
+        ],
+        "url": "https://github.com/Raynos/rockhop/actions/runs/37995648473/job/114040893850"
+      },
+      {
+        "completedAt": "2026-10-09T21:48:34Z",
+        "conclusion": "skipped",
+        "databaseId": 114040895483,
+        "name": "store",
+        "startedAt": "2026-10-09T21:48:34Z",
+        "status": "completed",
+        "steps": [],
+        "url": "https://github.com/Raynos/rockhop/actions/runs/37995648473/job/114040895483"
+      }
+    ],
+    "status": "completed",
+    "url": "https://github.com/Raynos/rockhop/actions/runs/37995648473"
+  },
+  "physicalIPhoneResult": null,
+  "phoneTargetFPS": 60,
+  "phoneFloorFPS": 30,
+  "limits": [
+    "Phone performance receipt support is live; physical iPhone gameplay has not been measured.",
+    "The optimized585a source and fixed grip remain private and unpromoted."
+  ],
+  "pushReleaseGates": {
+    "conclusion": "success",
+    "headSha": "3069b78fb9c586e21fb58ddf356658a2e6dd81f4",
+    "status": "completed",
+    "url": "https://github.com/Raynos/rockhop/actions/runs/37995400742"
+  }
+}
