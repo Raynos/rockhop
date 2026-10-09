@@ -1,5 +1,5 @@
 /** Silent WebKit phone-layout comparison of original Mustard and sixth selected outfit.
- * node garage-comparison-review.mjs --build=DIR --source=GLB --contract=JSON --out=FRESH_DIR
+ * node deployed-garage-review.mjs --build=DIR --source=GLB --contract=JSON --out=FRESH_DIR
  * Optional --url-file=FILE verifies the normal deployed HTTPS game.
  * Headless silent harness; this is not physical-device or final art acceptance.
  */
@@ -99,7 +99,7 @@ page.on('response', response => {
     const row = catalog.models.find(asset => new URL(asset.url, publicBase).href === response.url());
     report.requests.push({ phase: started.phase, url: response.url(), status: response.status(),
       logical: row?.logical ?? null, catalogSHA256: row?.sha256 ?? null,
-      contentLength: Number(headers['content-length'] ?? 0), responseHeaderWallMs: performance.now() - started.at });
+      contentLength: headers['content-length'] === undefined ? null : Number(headers['content-length']), responseHeaderWallMs: performance.now() - started.at });
   })());
 });
 
@@ -241,10 +241,14 @@ try {
   const selectedRequests = report.requests.filter(row => row.catalogSHA256 === newAsset.sha256);
   assert.equal(selectedRequests.length, 1, 'New full/LOD alias fetches actual selected source once');
   assert.equal(selectedRequests[0].phase, `choice-2-${newId}`);
-  assert.equal(selectedRequests[0].status, 200); assert.equal(selectedRequests[0].contentLength, newAsset.bytes);
+  assert.equal(selectedRequests[0].status, 200);
+  if (selectedRequests[0].contentLength !== null) assert.equal(selectedRequests[0].contentLength, newAsset.bytes);
+  report.browserByteWitness = selectedRequests[0].contentLength === null
+    ? 'Response has no Content-Length; browser byte count unmeasured. Independently verified public source/catalog SHA retained.'
+    : 'Response Content-Length matches independently verified source size.';
   for (const choice of report.choices) {
     const rows = report.requests.filter(row => row.phase === `choice-${report.choices.indexOf(choice) + 1}-${choice.id}`);
-    choice.network = { modelRequests: rows.length, modelResponseBytes: rows.reduce((sum, row) => sum + row.contentLength, 0) };
+    choice.network = { modelRequests: rows.length, responsesWithoutSize: rows.filter(row => row.contentLength === null).length, modelResponseBytes: rows.reduce((sum, row) => sum + (row.contentLength ?? 0), 0) };
     if (choice.visit === 2) assert.equal(rows.length, 0, 'Resident comparison repeats request no model files');
   }
   report.resourceTiming = await page.evaluate(() => performance.getEntriesByType('resource')
