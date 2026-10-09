@@ -1,0 +1,66 @@
+{
+  "samples": 30000,
+  "method": "Deterministic low-face centroids, nearest exact source face barycentric source field versus bilinear actual baked2K atlas; includes source facets and filtered texels",
+  "errors": {
+    "albedo": {
+      "mean": 0.00016452349119498204,
+      "p95": 0.0010998655483476223,
+      "p99": 0.003921568859368563,
+      "max": 0.12260222863428093
+    },
+    "orm": {
+      "mean": 0.001628209812162252,
+      "p95": 0.0033082975981936474,
+      "p99": 0.00866504658968224,
+      "max": 0.5633039589711246
+    },
+    "normalDegrees": {
+      "mean": 10.468715274936446,
+      "p95": 122.69697326384843,
+      "p99": 165.16097976236088,
+      "max": 178.76543292985576
+    }
+  },
+  "firstBakeRay": {
+    "method": "Every same receiver centroid ray from +3mm along interpolated receiver normal, -normal direction,10mm max; exactly declared bake-cage starting surface, separate from nearest-face evidence. Not a moving-camera acceptance.",
+    "hits": 30000,
+    "misses": 0,
+    "errors": {
+      "albedo": {
+        "mean": 9.709118534588324e-05,
+        "p95": 0.0006733352146859401,
+        "p99": 0.002155121729715805,
+        "max": 0.04036866509258896
+      },
+      "orm": {
+        "mean": 0.0013812844841123858,
+        "p95": 0.0018620030848094287,
+        "p99": 0.004211004361629154,
+        "max": 0.5633045648055539
+      },
+      "normalDegrees": {
+        "mean": 2.00239565500186,
+        "p95": 5.870864161798675,
+        "p99": 45.50012754144689,
+        "max": 178.99855899531516
+      }
+    },
+    "normalThresholdCounts": {
+      "15": 819,
+      "45": 303,
+      "90": 109
+    }
+  },
+  "thresholdCounts": {
+    "normalDegrees": {
+      "15": 2656,
+      "45": 2134,
+      "90": 1747
+    },
+    "albedoMeanAbsoluteError": {
+      "0.05": 1,
+      "0.1": 1
+    }
+  },
+  "accepted": false
+}

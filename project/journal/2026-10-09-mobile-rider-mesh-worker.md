@@ -11,3 +11,9 @@ Finding: The independently reduced selected right boot matches the left componen
 Validation: Original guard component exit0 in23.04s;610934 to40000 triangles,29072 final seam vertices; sampled receiver distance max0.178112mm. All482historical played poses/all vertices maximum0.178117mm; no vertices above1mm and no top4 skin discard. Actual30000 cage rays hit; normal mean1.294degrees,p99 22.392,max164.298,89samples above90degrees retained in compressed full witnesses. Albedo/ORM first-ray mean absolute error0.001058/0.003956. Recipes syntax checked.
 
 Limits: Rare first-ray normal and ORM outliers remain unresolved until complete moving source comparison. This is unaccepted derivative evidence; source master and player assets remain unchanged. Final packed Uint16 weights and corrected grip motion still require separate qualification.
+
+Finding: The first selected glove derivative is rejected pending semantic-field diagnosis; a small rest surface error does not establish native deformation parity.
+
+Validation: Original guard unit exit0 in26.305s;569142 to40000triangles,30280seam vertices; receiver surface max0.189574mm. Native482played-pose comparison maximum36.614412mm,540vertices above1mm and349above2mm. Top4 discarded native weight mass maximum0.161502. All30000cage rays hit; albedo mean0.0000971,ORM0.0013813,normal mean2.002degrees,p99 45.500,max178.999,109samples above90degrees. Raw witnesses and full distributions retained compressed.
+
+Limits: Nearest rest-surface correspondence can address the wrong close finger or inner glove sheet. The propagated collapse field can also blend across native articulation. Their actual joint memberships and first failed vertex must be compared before interpreting the cause or trying another method. Right-glove construction is stopped at this failure. This derivative remains unaccepted and no player clothing/master changes.
