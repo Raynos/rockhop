@@ -95,3 +95,9 @@ Finding: Classify shoulder patches using actual garment/body triangles at both b
 Validation: Parent full186line review, AST/hash/all15pins and frozen triangulation/pose/crossing function scopes pass. No authoring function or new field solve is invoked.
 
 Limits: Source checkpoint; finite crossings do not prove enclosure, native/GPU parity or art. Six-pose execution remains unrun.
+
+Finding: Restore the lateral shoulder attachment erased by inherited torso weighting.
+
+Validation: Parent read the196-line paint recipe and60-line exact six-pose adapter, verified six actual input pins/two recipe hashes and seven literal intended seam witnesses. Geometry, UVs, topology, wall spacing and ancestry stay unchanged; full71 derivative fields are explicitly authored.
+
+Limits: Unaccepted source checkpoint only. No receiver16/contact16 run. Retained hood/head and lower-front torso require separate correction; all482 native/export parity and moving art remain open.
