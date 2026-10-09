@@ -1,0 +1,1480 @@
+{
+  "samples": 30000,
+  "method": "Deterministic low-face centroids, nearest exact source face barycentric source field versus bilinear actual baked4K atlas; includes source facets and filtered texels",
+  "errors": {
+    "albedo": {
+      "mean": 0.0011674984208693234,
+      "p95": 0.0044258932202327775,
+      "p99": 0.013072245503410936,
+      "max": 0.11445324162589694
+    },
+    "orm": {
+      "mean": 0.0046317553570978005,
+      "p95": 0.016547005816804544,
+      "p99": 0.08151251710093005,
+      "max": 0.7006536175807317
+    },
+    "normalDegrees": {
+      "mean": 4.2030841183170775,
+      "p95": 3.7833857167539424,
+      "p99": 147.2569286201822,
+      "max": 177.52878870433685
+    }
+  },
+  "thresholdCounts": {
+    "normalDegrees": {
+      "15": 985,
+      "45": 823,
+      "90": 694
+    },
+    "albedoMeanAbsoluteError": {
+      "0.05": 10,
+      "0.1": 2
+    }
+  },
+  "worstNormalLocations": [
+    {
+      "targetFace": 19563,
+      "nearestSourceFace": 244369,
+      "rayFirstSourceFace": 240700,
+      "rayDistanceMeters": 0.0022101840004324913,
+      "localPosition": [
+        0.20714952051639557,
+        0.09181267023086548,
+        0.013412694446742535
+      ],
+      "nearestDistanceMeters": 4.341337626101449e-05,
+      "sourceUV": [
+        0.3494991660118103,
+        0.7283297777175903
+      ],
+      "atlasUV": [
+        0.4801722466945648,
+        0.40453040599823
+      ],
+      "normalToNearestDegrees": 177.52878870433685,
+      "normalToRayFirstDegrees": 1.1729534451779253,
+      "albedoMeanAbsoluteError": 0.0021964078329423514,
+      "ormMeanAbsoluteError": 0.009342597373823628
+    },
+    {
+      "targetFace": 16041,
+      "nearestSourceFace": 204001,
+      "rayFirstSourceFace": 212041,
+      "rayDistanceMeters": 0.001051655039191246,
+      "localPosition": [
+        0.24568629264831543,
+        0.08758145570755005,
+        0.004640027415007353
+      ],
+      "nearestDistanceMeters": 3.895167901646346e-05,
+      "sourceUV": [
+        0.7266371250152588,
+        0.9184463024139404
+      ],
+      "atlasUV": [
+        0.7847888469696045,
+        0.9647595286369324
+      ],
+      "normalToNearestDegrees": 177.4998050342406,
+      "normalToRayFirstDegrees": 6.38643357858527,
+      "albedoMeanAbsoluteError": 0.011002604442182928,
+      "ormMeanAbsoluteError": 0.005134219209534052
+    },
+    {
+      "targetFace": 26122,
+      "nearestSourceFace": 338975,
+      "rayFirstSourceFace": 341423,
+      "rayDistanceMeters": 0.0017134509980678558,
+      "localPosition": [
+        0.1667853593826294,
+        0.11370173841714859,
+        -0.007033263798803091
+      ],
+      "nearestDistanceMeters": 2.713490539463237e-05,
+      "sourceUV": [
+        0.39159858226776123,
+        0.08133912831544876
+      ],
+      "atlasUV": [
+        0.9569658637046814,
+        0.17251186072826385
+      ],
+      "normalToNearestDegrees": 176.6829668973761,
+      "normalToRayFirstDegrees": 2.0884412461233453,
+      "albedoMeanAbsoluteError": 0.0040014295185988235,
+      "ormMeanAbsoluteError": 0.055548053940300185
+    },
+    {
+      "targetFace": 11971,
+      "nearestSourceFace": 160670,
+      "rayFirstSourceFace": 157899,
+      "rayDistanceMeters": 0.0023607586044818163,
+      "localPosition": [
+        0.23520350456237793,
+        0.07847931236028671,
+        0.021808529272675514
+      ],
+      "nearestDistanceMeters": 4.264665403752588e-05,
+      "sourceUV": [
+        0.9481420516967773,
+        0.5424094200134277
+      ],
+      "atlasUV": [
+        0.8967942595481873,
+        0.22571013867855072
+      ],
+      "normalToNearestDegrees": 175.4631798059405,
+      "normalToRayFirstDegrees": 0.3821773336341696,
+      "albedoMeanAbsoluteError": 0.007315123726660507,
+      "ormMeanAbsoluteError": 0.014759855538895694
+    },
+    {
+      "targetFace": 25279,
+      "nearestSourceFace": 326992,
+      "rayFirstSourceFace": 329364,
+      "rayDistanceMeters": 0.002123323269188404,
+      "localPosition": [
+        0.17096614837646484,
+        0.11390799283981323,
+        -0.004805088974535465
+      ],
+      "nearestDistanceMeters": 3.8815935113234445e-05,
+      "sourceUV": [
+        0.39141398668289185,
+        0.09161603450775146
+      ],
+      "atlasUV": [
+        0.9706664681434631,
+        0.04957357048988342
+      ],
+      "normalToNearestDegrees": 175.34197450250392,
+      "normalToRayFirstDegrees": 3.0610301276443,
+      "albedoMeanAbsoluteError": 0.003921569014588992,
+      "ormMeanAbsoluteError": 0.02745097999771436
+    },
+    {
+      "targetFace": 13253,
+      "nearestSourceFace": 173824,
+      "rayFirstSourceFace": 173772,
+      "rayDistanceMeters": 0.002624465385451913,
+      "localPosition": [
+        0.21660859882831573,
+        0.07773967832326889,
+        0.02191508561372757
+      ],
+      "nearestDistanceMeters": 4.204026481602341e-05,
+      "sourceUV": [
+        0.5904424786567688,
+        0.8075670003890991
+      ],
+      "atlasUV": [
+        0.9451713562011719,
+        0.449715256690979
+      ],
+      "normalToNearestDegrees": 175.27424739905956,
+      "normalToRayFirstDegrees": 1.846544548431463,
+      "albedoMeanAbsoluteError": 0.00392156932502985,
+      "ormMeanAbsoluteError": 0.0040203143509742745
+    },
+    {
+      "targetFace": 25946,
+      "nearestSourceFace": 336590,
+      "rayFirstSourceFace": 339021,
+      "rayDistanceMeters": 0.001902779215015471,
+      "localPosition": [
+        0.16681472957134247,
+        0.11541608721017838,
+        -0.006912454962730408
+      ],
+      "nearestDistanceMeters": 3.625308090704493e-05,
+      "sourceUV": [
+        0.3877216577529907,
+        0.08174192905426025
+      ],
+      "atlasUV": [
+        0.6254855990409851,
+        0.9773437976837158
+      ],
+      "normalToNearestDegrees": 174.73747895953767,
+      "normalToRayFirstDegrees": 3.024639916888196,
+      "albedoMeanAbsoluteError": 0.003921568859368563,
+      "ormMeanAbsoluteError": 0.029196108759032075
+    },
+    {
+      "targetFace": 22223,
+      "nearestSourceFace": 280367,
+      "rayFirstSourceFace": 284570,
+      "rayDistanceMeters": 0.0014403571840375662,
+      "localPosition": [
+        0.20095039904117584,
+        0.09888335317373276,
+        0.006298238877207041
+      ],
+      "nearestDistanceMeters": 7.644945435458794e-05,
+      "sourceUV": [
+        0.3486502468585968,
+        0.4063396751880646
+      ],
+      "atlasUV": [
+        0.04792755842208862,
+        0.5237171649932861
+      ],
+      "normalToNearestDegrees": 174.1737297393196,
+      "normalToRayFirstDegrees": 0.19610672305330476,
+      "albedoMeanAbsoluteError": 0.014446787894512592,
+      "ormMeanAbsoluteError": 0.08779254885769812
+    },
+    {
+      "targetFace": 12944,
+      "nearestSourceFace": 172284,
+      "rayFirstSourceFace": 172339,
+      "rayDistanceMeters": 0.0026859967038035393,
+      "localPosition": [
+        0.21801738440990448,
+        0.0774482786655426,
+        0.021347181871533394
+      ],
+      "nearestDistanceMeters": 3.08028502331581e-05,
+      "sourceUV": [
+        0.8688146471977234,
+        0.5144457221031189
+      ],
+      "atlasUV": [
+        0.28417301177978516,
+        0.8789084553718567
+      ],
+      "normalToNearestDegrees": 173.55782962304264,
+      "normalToRayFirstDegrees": 1.4781858321610228,
+      "albedoMeanAbsoluteError": 0.0,
+      "ormMeanAbsoluteError": 0.0006654009702913299
+    },
+    {
+      "targetFace": 22224,
+      "nearestSourceFace": 280365,
+      "rayFirstSourceFace": 272571,
+      "rayDistanceMeters": 0.0012688401620835066,
+      "localPosition": [
+        0.20326249301433563,
+        0.0993770956993103,
+        0.005847087595611811
+      ],
+      "nearestDistanceMeters": 3.7098475331731606e-06,
+      "sourceUV": [
+        0.37528830766677856,
+        0.7256137728691101
+      ],
+      "atlasUV": [
+        0.4884882867336273,
+        0.4186793565750122
+      ],
+      "normalToNearestDegrees": 173.18744755199052,
+      "normalToRayFirstDegrees": 0.13994667620179227,
+      "albedoMeanAbsoluteError": 0.011764706578105688,
+      "ormMeanAbsoluteError": 0.09130018475927344
+    },
+    {
+      "targetFace": 25776,
+      "nearestSourceFace": 334159,
+      "rayFirstSourceFace": 336543,
+      "rayDistanceMeters": 0.0018115113489329815,
+      "localPosition": [
+        0.1677396446466446,
+        0.1144324466586113,
+        -0.006433571223169565
+      ],
+      "nearestDistanceMeters": 4.964449180988595e-05,
+      "sourceUV": [
+        0.38997435569763184,
+        0.08387254923582077
+      ],
+      "atlasUV": [
+        0.010065671056509018,
+        0.5709061026573181
+      ],
+      "normalToNearestDegrees": 172.7194026225366,
+      "normalToRayFirstDegrees": 0.6344362691597352,
+      "albedoMeanAbsoluteError": 0.018103248041570003,
+      "ormMeanAbsoluteError": 0.09898149930043765
+    },
+    {
+      "targetFace": 11558,
+      "nearestSourceFace": 156440,
+      "rayFirstSourceFace": 160669,
+      "rayDistanceMeters": 0.0024257483892142773,
+      "localPosition": [
+        0.2364484667778015,
+        0.07829102128744125,
+        0.021983293816447258
+      ],
+      "nearestDistanceMeters": 2.780519935186021e-05,
+      "sourceUV": [
+        0.17276883125305176,
+        0.1502901017665863
+      ],
+      "atlasUV": [
+        0.3419208526611328,
+        0.9196935296058655
+      ],
+      "normalToNearestDegrees": 172.66689236291901,
+      "normalToRayFirstDegrees": 0.2048821190023917,
+      "albedoMeanAbsoluteError": 0.004982281062686796,
+      "ormMeanAbsoluteError": 0.01299881203158293
+    },
+    {
+      "targetFace": 23111,
+      "nearestSourceFace": 292815,
+      "rayFirstSourceFace": 288994,
+      "rayDistanceMeters": 0.0015918484423309565,
+      "localPosition": [
+        0.20092140138149261,
+        0.0992177426815033,
+        0.004343749489635229
+      ],
+      "nearestDistanceMeters": 1.783130574040115e-05,
+      "sourceUV": [
+        0.3775751292705536,
+        0.7201826572418213
+      ],
+      "atlasUV": [
+        0.7469675540924072,
+        0.452709436416626
+      ],
+      "normalToNearestDegrees": 172.50548502177205,
+      "normalToRayFirstDegrees": 0.17026242794801988,
+      "albedoMeanAbsoluteError": 0.012279795125778037,
+      "ormMeanAbsoluteError": 0.1155147447448499
+    },
+    {
+      "targetFace": 21948,
+      "nearestSourceFace": 276492,
+      "rayFirstSourceFace": 280364,
+      "rayDistanceMeters": 0.0013177536893635988,
+      "localPosition": [
+        0.2020886391401291,
+        0.0987846776843071,
+        0.007266730070114136
+      ],
+      "nearestDistanceMeters": 3.128888420178555e-05,
+      "sourceUV": [
+        0.350994348526001,
+        0.40828901529312134
+      ],
+      "atlasUV": [
+        0.04829154536128044,
+        0.5213825702667236
+      ],
+      "normalToNearestDegrees": 172.36258564753015,
+      "normalToRayFirstDegrees": 0.12125578222228948,
+      "albedoMeanAbsoluteError": 0.011038667335393862,
+      "ormMeanAbsoluteError": 0.08905778984975228
+    },
+    {
+      "targetFace": 25445,
+      "nearestSourceFace": 329392,
+      "rayFirstSourceFace": 329371,
+      "rayDistanceMeters": 0.002208632417023182,
+      "localPosition": [
+        0.17020972073078156,
+        0.11427575349807739,
+        -0.005915079265832901
+      ],
+      "nearestDistanceMeters": 4.4289077777648345e-05,
+      "sourceUV": [
+        0.2685665190219879,
+        0.9097802639007568
+      ],
+      "atlasUV": [
+        0.9400920867919922,
+        0.7806026339530945
+      ],
+      "normalToNearestDegrees": 172.36162983084628,
+      "normalToRayFirstDegrees": 3.9943431090234673,
+      "albedoMeanAbsoluteError": 0.003921568859368563,
+      "ormMeanAbsoluteError": 0.02745097999771436
+    },
+    {
+      "targetFace": 13252,
+      "nearestSourceFace": 172341,
+      "rayFirstSourceFace": 172285,
+      "rayDistanceMeters": 0.0027737035416066647,
+      "localPosition": [
+        0.21784049272537231,
+        0.07756984978914261,
+        0.02162722684442997
+      ],
+      "nearestDistanceMeters": 7.406724034808576e-05,
+      "sourceUV": [
+        0.9297125339508057,
+        0.7432733774185181
+      ],
+      "atlasUV": [
+        0.9454269409179688,
+        0.45177069306373596
+      ],
+      "normalToNearestDegrees": 172.21587946190883,
+      "normalToRayFirstDegrees": 6.79460680170239,
+      "albedoMeanAbsoluteError": 0.00028502151473031034,
+      "ormMeanAbsoluteError": 0.0026139457241640685
+    },
+    {
+      "targetFace": 11969,
+      "nearestSourceFace": 160653,
+      "rayFirstSourceFace": 160548,
+      "rayDistanceMeters": 0.0029724270571023226,
+      "localPosition": [
+        0.2313513159751892,
+        0.0776483491063118,
+        0.022194817662239075
+      ],
+      "nearestDistanceMeters": 7.080491286615143e-06,
+      "sourceUV": [
+        0.9500811696052551,
+        0.5352057814598083
+      ],
+      "atlasUV": [
+        0.8982803225517273,
+        0.2190447449684143
+      ],
+      "normalToNearestDegrees": 172.1813196296436,
+      "normalToRayFirstDegrees": 4.879103435175448,
+      "albedoMeanAbsoluteError": 0.0018502085694544663,
+      "ormMeanAbsoluteError": 0.01752249517435267
+    },
+    {
+      "targetFace": 14984,
+      "nearestSourceFace": 192130,
+      "rayFirstSourceFace": 195530,
+      "rayDistanceMeters": 0.001871950807981193,
+      "localPosition": [
+        0.22762197256088257,
+        0.08328830450773239,
+        0.021053196862339973
+      ],
+      "nearestDistanceMeters": 3.3244021324208006e-05,
+      "sourceUV": [
+        0.773206353187561,
+        0.4252764880657196
+      ],
+      "atlasUV": [
+        0.46547576785087585,
+        0.9840603470802307
+      ],
+      "normalToNearestDegrees": 172.04575390794216,
+      "normalToRayFirstDegrees": 6.710528627146959,
+      "albedoMeanAbsoluteError": 0.0,
+      "ormMeanAbsoluteError": 0.03547603414664646
+    },
+    {
+      "targetFace": 25280,
+      "nearestSourceFace": 327009,
+      "rayFirstSourceFace": 329388,
+      "rayDistanceMeters": 0.0022619639057666063,
+      "localPosition": [
+        0.17057625949382782,
+        0.1147875189781189,
+        -0.004960827529430389
+      ],
+      "nearestDistanceMeters": 3.595488306018524e-05,
+      "sourceUV": [
+        0.389425128698349,
+        0.09079261869192123
+      ],
+      "atlasUV": [
+        0.97021484375,
+        0.04797184094786644
+      ],
+      "normalToNearestDegrees": 172.01148685268237,
+      "normalToRayFirstDegrees": 1.228271474945112,
+      "albedoMeanAbsoluteError": 0.003921568859368563,
+      "ormMeanAbsoluteError": 0.02745097999771436
+    },
+    {
+      "targetFace": 26129,
+      "nearestSourceFace": 341474,
+      "rayFirstSourceFace": 336547,
+      "rayDistanceMeters": 0.0018170884577557445,
+      "localPosition": [
+        0.16724836826324463,
+        0.11480927467346191,
+        -0.007978255860507488
+      ],
+      "nearestDistanceMeters": 4.453318251762539e-05,
+      "sourceUV": [
+        0.26100850105285645,
+        0.911831259727478
+      ],
+      "atlasUV": [
+        0.9448304772377014,
+        0.77739018201828
+      ],
+      "normalToNearestDegrees": 171.9530162335817,
+      "normalToRayFirstDegrees": 1.177587461884994,
+      "albedoMeanAbsoluteError": 0.003921569014588992,
+      "ormMeanAbsoluteError": 0.02745097999771436
+    },
+    {
+      "targetFace": 25939,
+      "nearestSourceFace": 336546,
+      "rayFirstSourceFace": 338994,
+      "rayDistanceMeters": 0.001728953910060227,
+      "localPosition": [
+        0.16714508831501007,
+        0.1140754222869873,
+        -0.0067982240580022335
+      ],
+      "nearestDistanceMeters": 0.00010306394688086584,
+      "sourceUV": [
+        0.3908294439315796,
+        0.08241426199674606
+      ],
+      "atlasUV": [
+        0.6254288554191589,
+        0.9797181487083435
+      ],
+      "normalToNearestDegrees": 171.86195494999282,
+      "normalToRayFirstDegrees": 2.385002798439063,
+      "albedoMeanAbsoluteError": 0.0057107648547312,
+      "ormMeanAbsoluteError": 0.055871891976076886
+    },
+    {
+      "targetFace": 13982,
+      "nearestSourceFace": 181588,
+      "rayFirstSourceFace": 172579,
+      "rayDistanceMeters": 0.000438662274973467,
+      "localPosition": [
+        0.2386496216058731,
+        0.08443218469619751,
+        0.01685192622244358
+      ],
+      "nearestDistanceMeters": 2.119212513207458e-05,
+      "sourceUV": [
+        0.2029249519109726,
+        0.0034315944649279118
+      ],
+      "atlasUV": [
+        0.4026843011379242,
+        0.9328181147575378
+      ],
+      "normalToNearestDegrees": 171.7098813736153,
+      "normalToRayFirstDegrees": 2.8910165362276046,
+      "albedoMeanAbsoluteError": 0.004924970605951096,
+      "ormMeanAbsoluteError": 0.012603447356127617
+    },
+    {
+      "targetFace": 22531,
+      "nearestSourceFace": 284595,
+      "rayFirstSourceFace": 276547,
+      "rayDistanceMeters": 0.0013778945431113243,
+      "localPosition": [
+        0.20248039066791534,
+        0.09985169023275375,
+        0.0052766334265470505
+      ],
+      "nearestDistanceMeters": 2.95272502626176e-06,
+      "sourceUV": [
+        0.3769765794277191,
+        0.7242854237556458
+      ],
+      "atlasUV": [
+        0.4884355962276459,
+        0.4201623499393463
+      ],
+      "normalToNearestDegrees": 171.31026720115844,
+      "normalToRayFirstDegrees": 0.3322877891014655,
+      "albedoMeanAbsoluteError": 0.01568627547471122,
+      "ormMeanAbsoluteError": 0.10300977577356989
+    },
+    {
+      "targetFace": 16666,
+      "nearestSourceFace": 210062,
+      "rayFirstSourceFace": 198991,
+      "rayDistanceMeters": 0.0002032965567195788,
+      "localPosition": [
+        0.24288730323314667,
+        0.0876476988196373,
+        0.004777118563652039
+      ],
+      "nearestDistanceMeters": 1.034326123772189e-05,
+      "sourceUV": [
+        0.3771068751811981,
+        0.5568596124649048
+      ],
+      "atlasUV": [
+        0.9718219637870789,
+        0.40540239214897156
+      ],
+      "normalToNearestDegrees": 171.28532407239172,
+      "normalToRayFirstDegrees": 117.72670436873,
+      "albedoMeanAbsoluteError": 0.0009251015406164242,
+      "ormMeanAbsoluteError": 0.0038929010837631672
+    },
+    {
+      "targetFace": 26121,
+      "nearestSourceFace": 338948,
+      "rayFirstSourceFace": 338947,
+      "rayDistanceMeters": 0.0017181695438921452,
+      "localPosition": [
+        0.1670389622449875,
+        0.11256576329469681,
+        -0.007042935583740473
+      ],
+      "nearestDistanceMeters": 1.8399254258838482e-05,
+      "sourceUV": [
+        0.39418500661849976,
+        0.08167451620101929
+      ],
+      "atlasUV": [
+        0.956866443157196,
+        0.17444069683551788
+      ],
+      "normalToNearestDegrees": 171.02325707789672,
+      "normalToRayFirstDegrees": 2.1104132637674273,
+      "albedoMeanAbsoluteError": 0.0030720233917425808,
+      "ormMeanAbsoluteError": 0.10381848935204736
+    },
+    {
+      "targetFace": 17999,
+      "nearestSourceFace": 224808,
+      "rayFirstSourceFace": 233850,
+      "rayDistanceMeters": 0.0008295067236758769,
+      "localPosition": [
+        0.24258841574192047,
+        0.09455316513776779,
+        -0.000618816411588341
+      ],
+      "nearestDistanceMeters": 3.5893203857995104e-06,
+      "sourceUV": [
+        0.9358827471733093,
+        0.35662519931793213
+      ],
+      "atlasUV": [
+        0.1016203984618187,
+        0.9418988823890686
+      ],
+      "normalToNearestDegrees": 170.95477802434735,
+      "normalToRayFirstDegrees": 0.49084260050131784,
+      "albedoMeanAbsoluteError": 0.007843137718737125,
+      "ormMeanAbsoluteError": 0.019607841968536377
+    },
+    {
+      "targetFace": 13101,
+      "nearestSourceFace": 172329,
+      "rayFirstSourceFace": 172307,
+      "rayDistanceMeters": 0.001064424286596477,
+      "localPosition": [
+        0.24829880893230438,
+        0.08226168155670166,
+        0.011978772468864918
+      ],
+      "nearestDistanceMeters": 2.8959726478205994e-05,
+      "sourceUV": [
+        0.8220797777175903,
+        0.3959731161594391
+      ],
+      "atlasUV": [
+        0.45277464389801025,
+        0.9500439167022705
+      ],
+      "normalToNearestDegrees": 170.81633600442754,
+      "normalToRayFirstDegrees": 2.332955606490848,
+      "albedoMeanAbsoluteError": 0.0,
+      "ormMeanAbsoluteError": 0.006366165878716856
+    },
+    {
+      "targetFace": 11292,
+      "nearestSourceFace": 154841,
+      "rayFirstSourceFace": 154896,
+      "rayDistanceMeters": 0.0020677607972174883,
+      "localPosition": [
+        0.2489810436964035,
+        0.07656195759773254,
+        0.016907120123505592
+      ],
+      "nearestDistanceMeters": 1.757819154590834e-05,
+      "sourceUV": [
+        0.7091981768608093,
+        0.30018341541290283
+      ],
+      "atlasUV": [
+        0.019046857953071594,
+        0.926141083240509
+      ],
+      "normalToNearestDegrees": 170.47668458258127,
+      "normalToRayFirstDegrees": 5.64027606231403,
+      "albedoMeanAbsoluteError": 0.0039007452541663192,
+      "ormMeanAbsoluteError": 0.04322871856479319
+    },
+    {
+      "targetFace": 17992,
+      "nearestSourceFace": 224762,
+      "rayFirstSourceFace": 233826,
+      "rayDistanceMeters": 0.0007280175341293216,
+      "localPosition": [
+        0.24379567801952362,
+        0.09422188997268677,
+        -0.0014262320473790169
+      ],
+      "nearestDistanceMeters": 2.5159597498713993e-05,
+      "sourceUV": [
+        0.5407344102859497,
+        0.00571495620533824
+      ],
+      "atlasUV": [
+        0.846093475818634,
+        0.8995179533958435
+      ],
+      "normalToNearestDegrees": 170.41344323823688,
+      "normalToRayFirstDegrees": 3.356734431536472,
+      "albedoMeanAbsoluteError": 0.0,
+      "ormMeanAbsoluteError": 0.014521247534482676
+    },
+    {
+      "targetFace": 12268,
+      "nearestSourceFace": 163734,
+      "rayFirstSourceFace": 153660,
+      "rayDistanceMeters": 0.0007833541021682322,
+      "localPosition": [
+        0.24331365525722504,
+        0.0811588391661644,
+        0.01923714391887188
+      ],
+      "nearestDistanceMeters": 1.3196109648561105e-05,
+      "sourceUV": [
+        0.11724488437175751,
+        0.8168967366218567
+      ],
+      "atlasUV": [
+        0.8964655995368958,
+        0.24102745950222015
+      ],
+      "normalToNearestDegrees": 170.39587393613525,
+      "normalToRayFirstDegrees": 36.68317968213523,
+      "albedoMeanAbsoluteError": 0.0027076440660017387,
+      "ormMeanAbsoluteError": 0.01092166212220036
+    }
+  ],
+  "worstAlbedoLocations": [
+    {
+      "targetFace": 18171,
+      "nearestSourceFace": 227061,
+      "rayFirstSourceFace": 227061,
+      "rayDistanceMeters": 0.0029985825531184673,
+      "localPosition": [
+        0.19622254371643066,
+        0.08120010048151016,
+        0.02214224822819233
+      ],
+      "nearestDistanceMeters": 1.3794242477160878e-06,
+      "sourceUV": [
+        0.07358487695455551,
+        0.3391802906990051
+      ],
+      "atlasUV": [
+        0.11658669263124466,
+        0.97259920835495
+      ],
+      "normalToNearestDegrees": 0.22055033097755913,
+      "normalToRayFirstDegrees": 0.20438517017508162,
+      "albedoMeanAbsoluteError": 0.11445324162589694,
+      "ormMeanAbsoluteError": 0.017935422213080126
+    },
+    {
+      "targetFace": 12534,
+      "nearestSourceFace": 166394,
+      "rayFirstSourceFace": 166394,
+      "rayDistanceMeters": 0.0030342633835971355,
+      "localPosition": [
+        0.2578895688056946,
+        0.07771257311105728,
+        0.008858301676809788
+      ],
+      "nearestDistanceMeters": 3.3753840398276225e-05,
+      "sourceUV": [
+        0.7291437387466431,
+        0.697169303894043
+      ],
+      "atlasUV": [
+        0.04499686136841774,
+        0.2139980047941208
+      ],
+      "normalToNearestDegrees": 3.9738614507361714,
+      "normalToRayFirstDegrees": 3.8877282826035606,
+      "albedoMeanAbsoluteError": 0.11060708092165665,
+      "ormMeanAbsoluteError": 0.010657477164347248
+    },
+    {
+      "targetFace": 15103,
+      "nearestSourceFace": 193439,
+      "rayFirstSourceFace": 193439,
+      "rayDistanceMeters": 0.0030081418808549643,
+      "localPosition": [
+        0.19470231235027313,
+        0.07365410774946213,
+        0.02896094135940075
+      ],
+      "nearestDistanceMeters": 6.2952249209047295e-06,
+      "sourceUV": [
+        0.10381489992141724,
+        0.31291690468788147
+      ],
+      "atlasUV": [
+        0.9776008725166321,
+        0.686424732208252
+      ],
+      "normalToNearestDegrees": 3.4637301092600157,
+      "normalToRayFirstDegrees": 3.3699210400865147,
+      "albedoMeanAbsoluteError": 0.09801443535417219,
+      "ormMeanAbsoluteError": 0.012214927319263325
+    },
+    {
+      "targetFace": 25219,
+      "nearestSourceFace": 325788,
+      "rayFirstSourceFace": 325788,
+      "rayDistanceMeters": 0.0029566430021077394,
+      "localPosition": [
+        0.25000622868537903,
+        0.03380291163921356,
+        -0.04322502017021179
+      ],
+      "nearestDistanceMeters": 4.31917178502772e-05,
+      "sourceUV": [
+        0.4401070773601532,
+        0.23417821526527405
+      ],
+      "atlasUV": [
+        0.9554943442344666,
+        0.48167285323143005
+      ],
+      "normalToNearestDegrees": 0.8970723450202415,
+      "normalToRayFirstDegrees": 0.9264411732281308,
+      "albedoMeanAbsoluteError": 0.08454149611222173,
+      "ormMeanAbsoluteError": 0.019268767154572975
+    },
+    {
+      "targetFace": 20108,
+      "nearestSourceFace": 252202,
+      "rayFirstSourceFace": 252202,
+      "rayDistanceMeters": 0.0029666649643331766,
+      "localPosition": [
+        0.25168225169181824,
+        0.09737471491098404,
+        -0.019788412377238274
+      ],
+      "nearestDistanceMeters": 3.335231667733751e-05,
+      "sourceUV": [
+        0.9934270977973938,
+        0.44435155391693115
+      ],
+      "atlasUV": [
+        0.02781783603131771,
+        0.2680998742580414
+      ],
+      "normalToNearestDegrees": 2.899333973176414,
+      "normalToRayFirstDegrees": 2.912971566546148,
+      "albedoMeanAbsoluteError": 0.07975956581417278,
+      "ormMeanAbsoluteError": 0.15924916469436398
+    },
+    {
+      "targetFace": 14790,
+      "nearestSourceFace": 190238,
+      "rayFirstSourceFace": 190238,
+      "rayDistanceMeters": 0.0030045118182897568,
+      "localPosition": [
+        0.19621555507183075,
+        0.07389548420906067,
+        0.02969542145729065
+      ],
+      "nearestDistanceMeters": 4.143417754676193e-06,
+      "sourceUV": [
+        0.10396211594343185,
+        0.30960023403167725
+      ],
+      "atlasUV": [
+        0.9658299088478088,
+        0.515184223651886
+      ],
+      "normalToNearestDegrees": 4.248976780910144,
+      "normalToRayFirstDegrees": 4.144211325327565,
+      "albedoMeanAbsoluteError": 0.06668728866892884,
+      "ormMeanAbsoluteError": 0.041966274041428164
+    },
+    {
+      "targetFace": 17940,
+      "nearestSourceFace": 224264,
+      "rayFirstSourceFace": 224264,
+      "rayDistanceMeters": 0.0030565105844289064,
+      "localPosition": [
+        0.19789659976959229,
+        0.08214569836854935,
+        0.022654058411717415
+      ],
+      "nearestDistanceMeters": 4.855201405007392e-05,
+      "sourceUV": [
+        0.40521106123924255,
+        0.9541844129562378
+      ],
+      "atlasUV": [
+        0.11617768555879593,
+        0.97540682554245
+      ],
+      "normalToNearestDegrees": 2.7004835747208347,
+      "normalToRayFirstDegrees": 1.3020365927247741,
+      "albedoMeanAbsoluteError": 0.06559586743918278,
+      "ormMeanAbsoluteError": 0.03039848015242021
+    },
+    {
+      "targetFace": 19555,
+      "nearestSourceFace": 244335,
+      "rayFirstSourceFace": 244335,
+      "rayDistanceMeters": 0.002984879305586219,
+      "localPosition": [
+        0.24820025265216827,
+        0.09532681852579117,
+        -0.015706662088632584
+      ],
+      "nearestDistanceMeters": 1.469909147999715e-05,
+      "sourceUV": [
+        0.7246555089950562,
+        0.6047305464744568
+      ],
+      "atlasUV": [
+        0.026366526260972023,
+        0.2637312710285187
+      ],
+      "normalToNearestDegrees": 2.81788569400243,
+      "normalToRayFirstDegrees": 2.9585149575596073,
+      "albedoMeanAbsoluteError": 0.061188648808215874,
+      "ormMeanAbsoluteError": 0.024573368205321983
+    },
+    {
+      "targetFace": 14791,
+      "nearestSourceFace": 191732,
+      "rayFirstSourceFace": 191732,
+      "rayDistanceMeters": 0.0031077766325324774,
+      "localPosition": [
+        0.1956600546836853,
+        0.0736953541636467,
+        0.02953568659722805
+      ],
+      "nearestDistanceMeters": 9.809107723413035e-05,
+      "sourceUV": [
+        0.10440724343061447,
+        0.31058359146118164
+      ],
+      "atlasUV": [
+        0.9774587750434875,
+        0.684819221496582
+      ],
+      "normalToNearestDegrees": 1.5112349866458874,
+      "normalToRayFirstDegrees": 0.6221239805751226,
+      "albedoMeanAbsoluteError": 0.05572884433073466,
+      "ormMeanAbsoluteError": 0.10250507073919479
+    },
+    {
+      "targetFace": 17941,
+      "nearestSourceFace": 224265,
+      "rayFirstSourceFace": 224265,
+      "rayDistanceMeters": 0.003022919874638319,
+      "localPosition": [
+        0.1985863447189331,
+        0.08241477608680725,
+        0.022825315594673157
+      ],
+      "nearestDistanceMeters": 2.1301337255863473e-05,
+      "sourceUV": [
+        0.406261682510376,
+        0.9537811279296875
+      ],
+      "atlasUV": [
+        0.11620519310235977,
+        0.9764949679374695
+      ],
+      "normalToNearestDegrees": 1.887965671573681,
+      "normalToRayFirstDegrees": 1.8980035991760666,
+      "albedoMeanAbsoluteError": 0.052569369068124205,
+      "ormMeanAbsoluteError": 0.008399341702880647
+    },
+    {
+      "targetFace": 13834,
+      "nearestSourceFace": 181334,
+      "rayFirstSourceFace": 163322,
+      "rayDistanceMeters": 0.0011801669606938958,
+      "localPosition": [
+        0.20468632876873016,
+        0.07462001591920853,
+        0.03222505748271942
+      ],
+      "nearestDistanceMeters": 2.6012538000941277e-05,
+      "sourceUV": [
+        0.4516053795814514,
+        0.3725048899650574
+      ],
+      "atlasUV": [
+        0.9068719744682312,
+        0.7954152226448059
+      ],
+      "normalToNearestDegrees": 154.22924378036882,
+      "normalToRayFirstDegrees": 2.979750638108393,
+      "albedoMeanAbsoluteError": 0.039022641819571775,
+      "ormMeanAbsoluteError": 0.06447732688047125
+    },
+    {
+      "targetFace": 16232,
+      "nearestSourceFace": 207772,
+      "rayFirstSourceFace": 207772,
+      "rayDistanceMeters": 0.0029709895607084036,
+      "localPosition": [
+        0.25513577461242676,
+        0.08783694356679916,
+        -0.006855815649032593
+      ],
+      "nearestDistanceMeters": 2.834445513144601e-05,
+      "sourceUV": [
+        0.9426791667938232,
+        0.19043183326721191
+      ],
+      "atlasUV": [
+        0.03697195649147034,
+        0.24302668869495392
+      ],
+      "normalToNearestDegrees": 15.917938175875994,
+      "normalToRayFirstDegrees": 15.527484616133995,
+      "albedoMeanAbsoluteError": 0.03788425881759009,
+      "ormMeanAbsoluteError": 0.16547399295552806
+    },
+    {
+      "targetFace": 17014,
+      "nearestSourceFace": 215822,
+      "rayFirstSourceFace": 215822,
+      "rayDistanceMeters": 0.003002159297466278,
+      "localPosition": [
+        0.24993067979812622,
+        0.02161354012787342,
+        -0.012684013694524765
+      ],
+      "nearestDistanceMeters": 1.8905217302744859e-06,
+      "sourceUV": [
+        0.34566810727119446,
+        0.030502017587423325
+      ],
+      "atlasUV": [
+        0.19110774993896484,
+        0.9803937077522278
+      ],
+      "normalToNearestDegrees": 19.8226970400313,
+      "normalToRayFirstDegrees": 19.8510208862363,
+      "albedoMeanAbsoluteError": 0.03006536141037941,
+      "ormMeanAbsoluteError": 0.5014946935149283
+    },
+    {
+      "targetFace": 10713,
+      "nearestSourceFace": 148747,
+      "rayFirstSourceFace": 146996,
+      "rayDistanceMeters": 0.0014776545576751232,
+      "localPosition": [
+        0.2129339575767517,
+        0.07145469635725021,
+        0.03698418289422989
+      ],
+      "nearestDistanceMeters": 2.113443952111993e-05,
+      "sourceUV": [
+        0.11263280361890793,
+        0.9036381244659424
+      ],
+      "atlasUV": [
+        0.41326797008514404,
+        0.907390296459198
+      ],
+      "normalToNearestDegrees": 162.32237293725095,
+      "normalToRayFirstDegrees": 0.22529072300528344,
+      "albedoMeanAbsoluteError": 0.02688734708791607,
+      "ormMeanAbsoluteError": 0.11101968137033265
+    },
+    {
+      "targetFace": 22548,
+      "nearestSourceFace": 280539,
+      "rayFirstSourceFace": 272725,
+      "rayDistanceMeters": 0.00046121259219944477,
+      "localPosition": [
+        0.2014523297548294,
+        0.1045260801911354,
+        0.004659988917410374
+      ],
+      "nearestDistanceMeters": 1.7667789506958798e-05,
+      "sourceUV": [
+        0.38586515188217163,
+        0.7265517711639404
+      ],
+      "atlasUV": [
+        0.9040672183036804,
+        0.6924263834953308
+      ],
+      "normalToNearestDegrees": 104.48195480477362,
+      "normalToRayFirstDegrees": 0.5115092221647181,
+      "albedoMeanAbsoluteError": 0.024784479916249907,
+      "ormMeanAbsoluteError": 0.1091980785300007
+    },
+    {
+      "targetFace": 14650,
+      "nearestSourceFace": 188713,
+      "rayFirstSourceFace": 188713,
+      "rayDistanceMeters": 0.003009671112522483,
+      "localPosition": [
+        0.19901756942272186,
+        0.0748692974448204,
+        0.02998531423509121
+      ],
+      "nearestDistanceMeters": 9.558615602145437e-06,
+      "sourceUV": [
+        0.9528172016143799,
+        0.4708767831325531
+      ],
+      "atlasUV": [
+        0.9030959606170654,
+        0.16215169429779053
+      ],
+      "normalToNearestDegrees": 143.0187110461123,
+      "normalToRayFirstDegrees": 142.94921770447735,
+      "albedoMeanAbsoluteError": 0.024023187248368993,
+      "ormMeanAbsoluteError": 0.14979780717024008
+    },
+    {
+      "targetFace": 25440,
+      "nearestSourceFace": 329366,
+      "rayFirstSourceFace": 331758,
+      "rayDistanceMeters": 0.002247480908408761,
+      "localPosition": [
+        0.17010049521923065,
+        0.11373556405305862,
+        -0.005273392423987389
+      ],
+      "nearestDistanceMeters": 7.348139479290694e-05,
+      "sourceUV": [
+        0.3917379379272461,
+        0.08948718756437302
+      ],
+      "atlasUV": [
+        0.9724478721618652,
+        0.3299154043197632
+      ],
+      "normalToNearestDegrees": 169.30832027860845,
+      "normalToRayFirstDegrees": 1.804332916144135,
+      "albedoMeanAbsoluteError": 0.024011568388329296,
+      "ormMeanAbsoluteError": 0.1250522265651076
+    },
+    {
+      "targetFace": 12215,
+      "nearestSourceFace": 163320,
+      "rayFirstSourceFace": 184423,
+      "rayDistanceMeters": 0.0006818175897933543,
+      "localPosition": [
+        0.20529694855213165,
+        0.07410640269517899,
+        0.033667147159576416
+      ],
+      "nearestDistanceMeters": 4.6528490202035755e-05,
+      "sourceUV": [
+        0.901310920715332,
+        0.130311518907547
+      ],
+      "atlasUV": [
+        0.5848461389541626,
+        0.9409688115119934
+      ],
+      "normalToNearestDegrees": 69.54139260499171,
+      "normalToRayFirstDegrees": 44.966881663317416,
+      "albedoMeanAbsoluteError": 0.023850298383350704,
+      "ormMeanAbsoluteError": 0.03888744643095126
+    },
+    {
+      "targetFace": 22232,
+      "nearestSourceFace": 280488,
+      "rayFirstSourceFace": 280483,
+      "rayDistanceMeters": 0.0016174986958503723,
+      "localPosition": [
+        0.2012505680322647,
+        0.10298323631286621,
+        0.005788282956928015
+      ],
+      "nearestDistanceMeters": 1.6382871763198636e-05,
+      "sourceUV": [
+        0.343993216753006,
+        0.41229647397994995
+      ],
+      "atlasUV": [
+        0.042275313287973404,
+        0.5253278017044067
+      ],
+      "normalToNearestDegrees": 141.92118636555506,
+      "normalToRayFirstDegrees": 0.5069255426771326,
+      "albedoMeanAbsoluteError": 0.023529413621872663,
+      "ormMeanAbsoluteError": 0.10965516296326194
+    },
+    {
+      "targetFace": 25952,
+      "nearestSourceFace": 336647,
+      "rayFirstSourceFace": 336612,
+      "rayDistanceMeters": 0.0022859559394419193,
+      "localPosition": [
+        0.1675664186477661,
+        0.11698947101831436,
+        -0.006910540629178286
+      ],
+      "nearestDistanceMeters": 3.481499516055919e-05,
+      "sourceUV": [
+        0.9969776272773743,
+        0.48135271668434143
+      ],
+      "atlasUV": [
+        0.9988346695899963,
+        0.7977118492126465
+      ],
+      "normalToNearestDegrees": 148.54463619809178,
+      "normalToRayFirstDegrees": 5.81880859806171,
+      "albedoMeanAbsoluteError": 0.023529413156211376,
+      "ormMeanAbsoluteError": 0.12186383805334759
+    },
+    {
+      "targetFace": 13386,
+      "nearestSourceFace": 175249,
+      "rayFirstSourceFace": 175193,
+      "rayDistanceMeters": 0.0018013693625107408,
+      "localPosition": [
+        0.21058668196201324,
+        0.07655905932188034,
+        0.024638041853904724
+      ],
+      "nearestDistanceMeters": 2.4904289603000507e-05,
+      "sourceUV": [
+        0.4714176058769226,
+        0.995207667350769
+      ],
+      "atlasUV": [
+        0.6878803372383118,
+        0.9900339245796204
+      ],
+      "normalToNearestDegrees": 148.54169405787965,
+      "normalToRayFirstDegrees": 0.515498547187902,
+      "albedoMeanAbsoluteError": 0.023529413156211376,
+      "ormMeanAbsoluteError": 0.06310636105869587
+    },
+    {
+      "targetFace": 16416,
+      "nearestSourceFace": 207662,
+      "rayFirstSourceFace": 205626,
+      "rayDistanceMeters": 0.001262590056285262,
+      "localPosition": [
+        0.24709536135196686,
+        0.084672711789608,
+        0.0024639086332172155
+      ],
+      "nearestDistanceMeters": 5.3750442020827904e-05,
+      "sourceUV": [
+        0.41361063718795776,
+        0.30728644132614136
+      ],
+      "atlasUV": [
+        0.08113449066877365,
+        0.9898961186408997
+      ],
+      "normalToNearestDegrees": 141.67603704758517,
+      "normalToRayFirstDegrees": 6.536195949183631,
+      "albedoMeanAbsoluteError": 0.0232989216622691,
+      "ormMeanAbsoluteError": 0.1580975217775703
+    },
+    {
+      "targetFace": 21746,
+      "nearestSourceFace": 273440,
+      "rayFirstSourceFace": 289864,
+      "rayDistanceMeters": 0.002561515662819147,
+      "localPosition": [
+        0.23614859580993652,
+        0.12467020750045776,
+        -0.012467036955058575
+      ],
+      "nearestDistanceMeters": 3.1335035600932315e-05,
+      "sourceUV": [
+        0.3407517969608307,
+        0.5453770160675049
+      ],
+      "atlasUV": [
+        0.5200475454330444,
+        0.8759323954582214
+      ],
+      "normalToNearestDegrees": 43.05963765154039,
+      "normalToRayFirstDegrees": 20.93591729650837,
+      "albedoMeanAbsoluteError": 0.02327776711578039,
+      "ormMeanAbsoluteError": 0.01877446194184107
+    },
+    {
+      "targetFace": 25596,
+      "nearestSourceFace": 331819,
+      "rayFirstSourceFace": 331819,
+      "rayDistanceMeters": 0.0029721406754106283,
+      "localPosition": [
+        0.16924948990345,
+        0.11613687127828598,
+        -0.005979387555271387
+      ],
+      "nearestDistanceMeters": 5.034340119891567e-06,
+      "sourceUV": [
+        0.7665729522705078,
+        0.0033653229475021362
+      ],
+      "atlasUV": [
+        0.964379608631134,
+        0.7491293549537659
+      ],
+      "normalToNearestDegrees": 134.54018711242878,
+      "normalToRayFirstDegrees": 135.55404208558596,
+      "albedoMeanAbsoluteError": 0.021762505582330505,
+      "ormMeanAbsoluteError": 0.11216171486073336
+    },
+    {
+      "targetFace": 17961,
+      "nearestSourceFace": 224410,
+      "rayFirstSourceFace": 224410,
+      "rayDistanceMeters": 0.0030253378208726645,
+      "localPosition": [
+        0.24702100455760956,
+        0.0877537950873375,
+        0.0005594749818556011
+      ],
+      "nearestDistanceMeters": 2.4821334591251798e-05,
+      "sourceUV": [
+        0.28998059034347534,
+        0.8380674123764038
+      ],
+      "atlasUV": [
+        0.9990029335021973,
+        0.7375895380973816
+      ],
+      "normalToNearestDegrees": 94.46668317088222,
+      "normalToRayFirstDegrees": 94.19731040121168,
+      "albedoMeanAbsoluteError": 0.021698739179887627,
+      "ormMeanAbsoluteError": 0.09635250831474289
+    },
+    {
+      "targetFace": 13808,
+      "nearestSourceFace": 179676,
+      "rayFirstSourceFace": 176757,
+      "rayDistanceMeters": 0.0008822010131552815,
+      "localPosition": [
+        0.20993690192699432,
+        0.07800889015197754,
+        0.022177942097187042
+      ],
+      "nearestDistanceMeters": 7.950740109663457e-05,
+      "sourceUV": [
+        0.9138312339782715,
+        0.7507582902908325
+      ],
+      "atlasUV": [
+        0.9987690448760986,
+        0.7905924320220947
+      ],
+      "normalToNearestDegrees": 117.48589312627864,
+      "normalToRayFirstDegrees": 9.564897649111744,
+      "albedoMeanAbsoluteError": 0.02079062659266273,
+      "ormMeanAbsoluteError": 0.01234368703814622
+    },
+    {
+      "targetFace": 14651,
+      "nearestSourceFace": 187228,
+      "rayFirstSourceFace": 181126,
+      "rayDistanceMeters": 0.0007521826773881912,
+      "localPosition": [
+        0.19931097328662872,
+        0.0748746320605278,
+        0.03055957518517971
+      ],
+      "nearestDistanceMeters": 2.76256469078362e-05,
+      "sourceUV": [
+        0.9511990547180176,
+        0.4708535373210907
+      ],
+      "atlasUV": [
+        0.9020048975944519,
+        0.16231243312358856
+      ],
+      "normalToNearestDegrees": 138.1203752784189,
+      "normalToRayFirstDegrees": 2.992463102748977,
+      "albedoMeanAbsoluteError": 0.01987379278630678,
+      "ormMeanAbsoluteError": 0.13189813197336164
+    },
+    {
+      "targetFace": 22534,
+      "nearestSourceFace": 284650,
+      "rayFirstSourceFace": 284647,
+      "rayDistanceMeters": 0.0018359072273597121,
+      "localPosition": [
+        0.20088450610637665,
+        0.10146608203649521,
+        0.005558752920478582
+      ],
+      "nearestDistanceMeters": 2.5399252990609966e-05,
+      "sourceUV": [
+        0.3443976640701294,
+        0.4094931483268738
+      ],
+      "atlasUV": [
+        0.0444263331592083,
+        0.5255618095397949
+      ],
+      "normalToNearestDegrees": 159.16572750489533,
+      "normalToRayFirstDegrees": 0.27605017339554294,
+      "albedoMeanAbsoluteError": 0.019607845228165388,
+      "ormMeanAbsoluteError": 0.10631166031228882
+    },
+    {
+      "targetFace": 11282,
+      "nearestSourceFace": 153374,
+      "rayFirstSourceFace": 153448,
+      "rayDistanceMeters": 0.0020245243795216084,
+      "localPosition": [
+        0.21936412155628204,
+        0.07367587834596634,
+        0.030732376500964165
+      ],
+      "nearestDistanceMeters": 7.877998200456204e-07,
+      "sourceUV": [
+        0.10568991303443909,
+        0.24911566078662872
+      ],
+      "atlasUV": [
+        0.7929555773735046,
+        0.2062000185251236
+      ],
+      "normalToNearestDegrees": 148.40362349988015,
+      "normalToRayFirstDegrees": 1.3159293043713438,
+      "albedoMeanAbsoluteError": 0.01960784466584844,
+      "ormMeanAbsoluteError": 0.011185062940091584
+    },
+    {
+      "targetFace": 10874,
+      "nearestSourceFace": 148702,
+      "rayFirstSourceFace": 148765,
+      "rayDistanceMeters": 0.0016170511953532696,
+      "localPosition": [
+        0.21390502154827118,
+        0.07057889550924301,
+        0.036279741674661636
+      ],
+      "nearestDistanceMeters": 1.2074231563019566e-05,
+      "sourceUV": [
+        0.08935100585222244,
+        0.24174714088439941
+      ],
+      "atlasUV": [
+        0.7816390991210938,
+        0.1978786438703537
+      ],
+      "normalToNearestDegrees": 158.7643976145553,
+      "normalToRayFirstDegrees": 0.03457420718906528,
+      "albedoMeanAbsoluteError": 0.01960784460728367,
+      "ormMeanAbsoluteError": 0.07588559284680763
+    }
+  ],
+  "accepted": false
+}
