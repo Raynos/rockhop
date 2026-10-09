@@ -1,0 +1,118 @@
+{
+  "acceptedArt": false,
+  "actualConstructionExecuted": false,
+  "sourcePins": {
+    "cage.py": {
+      "path": "assets/blender/rider-rebuild/selected-anatomical-hoodie-fit64/cage.py",
+      "sha256": "f6883e87a0b406b8cd4015d1fe38ac901dd59e835ab60101d6c9b8b47d8dacbe"
+    },
+    "check.py": {
+      "path": "assets/blender/rider-rebuild/selected-anatomical-hoodie-fit64/check.py",
+      "sha256": "67e06dfe1a0a28a9e198e8b28093dd6e75c7f8b2afd4320df02b13a40033afd2"
+    },
+    "check_intervals.py": {
+      "path": "assets/blender/rider-rebuild/selected-anatomical-hoodie-fit64/check_intervals.py",
+      "sha256": "5f8b4a41a6b095b495880d012bbcd16d807d359eaa9ae0f90d6dd99fa46eddf7"
+    },
+    "check_precision.py": {
+      "path": "assets/blender/rider-rebuild/selected-anatomical-hoodie-fit64/check_precision.py",
+      "sha256": "76c29af5c0341aa80e4aff25e82ba01625fc74c6b60dbb1aa74ed2eba82fbedf"
+    },
+    "component.py": {
+      "path": "assets/blender/rider-rebuild/selected-anatomical-hoodie-fit64/component.py",
+      "sha256": "6b97258f0e315c5dfd506e3c1b6a5bd331d3e7023a5fc4db46e06e6b09dcfaaa"
+    },
+    "geometry.py": {
+      "path": "assets/blender/rider-rebuild/selected-anatomical-hoodie-fit64/geometry.py",
+      "sha256": "8f301f20da87f3e2f2dec34e2fcfde63b1c56187aed98f165a35d3a9b26dc091"
+    },
+    "input01.json": {
+      "path": "assets/blender/rider-rebuild/selected-anatomical-hoodie-fit64/input01.json",
+      "sha256": "3e8699f55eed2fc25f7cbeb7d0e79c14183d9df68c5740e3e85004afe23f4ce9"
+    },
+    "intervals.py": {
+      "path": "assets/blender/rider-rebuild/selected-anatomical-hoodie-fit64/intervals.py",
+      "sha256": "329ac7c14e4d8dfb8dc46f85971ab55a01ce977d27dc0bd700e1fda80946759c"
+    },
+    "meridian.py": {
+      "path": "assets/blender/rider-rebuild/selected-anatomical-hoodie-fit64/meridian.py",
+      "sha256": "6536cdec550712c339fb18d57fbf1619fdf27c7618830dfadb78241ae0c80058"
+    },
+    "qualify.py": {
+      "path": "assets/blender/rider-rebuild/selected-anatomical-hoodie-fit64/qualify.py",
+      "sha256": "895a120b7b47e31bafd55a627c83004a2ca93a54b39bef521f80fa935300eb9a"
+    },
+    "sections.py": {
+      "path": "assets/blender/rider-rebuild/selected-anatomical-hoodie-fit64/sections.py",
+      "sha256": "01687d2f746616508f561d83c4f227d3686b68d6b2c11d9f09e64b7c8b2511a3"
+    },
+    "targets.py": {
+      "path": "assets/blender/rider-rebuild/selected-anatomical-hoodie-fit64/targets.py",
+      "sha256": "1afb0fca34fb6732783432218302edbbe8c10fa75d6d2cf9864da3b72117b21f"
+    }
+  },
+  "evidencePins": {
+    "cpu-fixtures.json": {
+      "path": "docs/evidence/rider-rebuild/selected-anatomical-hoodie-fit64/cpu-fixtures.json",
+      "sha256": "42f07341afaba0da1a443be7d4a2d61bed901c41371af194a3fa7ddfc5bb31fe"
+    },
+    "interval-fixtures.json": {
+      "path": "docs/evidence/rider-rebuild/selected-anatomical-hoodie-fit64/interval-fixtures.json",
+      "sha256": "9e9d229c673be2c402d49e7a108146504b113ad12bb4dbe2b03dab8b76c33787"
+    },
+    "precision-fixtures.json": {
+      "path": "docs/evidence/rider-rebuild/selected-anatomical-hoodie-fit64/precision-fixtures.json",
+      "sha256": "b8a58c538499a611446436e68b14f7d08d7209e810e80db5c0e03105262e6e11"
+    }
+  },
+  "prior60Handoff": {
+    "path": "docs/evidence/rider-rebuild/selected-anatomical-hoodie-fit60/source-handoff.json",
+    "sha256": "e7ca6c8161900b5fa565c3988b455432377dbcc6ba6e101f183d4ff4ae0d3d47"
+  },
+  "commands": {
+    "construct": "/Applications/Blender.app/Contents/MacOS/Blender -b -t 2 --python-exit-code 1 --python assets/blender/rider-rebuild/selected-anatomical-hoodie-fit64/component.py -- assets/blender/rider-rebuild/selected-anatomical-hoodie-fit64/input01.json harness/out/rider-rebuild/selected-anatomical-hoodie-fit64/component01",
+    "qualify": "/Applications/Blender.app/Contents/MacOS/Blender -b -t 2 --python-exit-code 1 --python assets/blender/rider-rebuild/selected-anatomical-hoodie-fit64/component.py -- qualify harness/out/rider-rebuild/selected-anatomical-hoodie-fit64/component01/component-pending.json",
+    "cpu": "OPENBLAS_NUM_THREADS=2 OMP_NUM_THREADS=2 /Applications/Blender.app/Contents/Resources/5.2/python/bin/python3.13 assets/blender/rider-rebuild/selected-anatomical-hoodie-fit64/check.py",
+    "intervalCPU": "OPENBLAS_NUM_THREADS=2 OMP_NUM_THREADS=2 /Applications/Blender.app/Contents/Resources/5.2/python/bin/python3.13 assets/blender/rider-rebuild/selected-anatomical-hoodie-fit64/check_intervals.py",
+    "precisionCPU": "OPENBLAS_NUM_THREADS=2 OMP_NUM_THREADS=2 /Applications/Blender.app/Contents/Resources/5.2/python/bin/python3.13 assets/blender/rider-rebuild/selected-anatomical-hoodie-fit64/check_precision.py"
+  },
+  "expectedOutputs": [
+    "UNACCEPTED-selected-anatomical-hoodie-fit64.blend",
+    "component-raw.json",
+    "component-pending.json",
+    "expected-witness.json",
+    "anatomical-cage.npz",
+    "material-targets.json",
+    "qualification-inputs.npz",
+    "component-qualified.json",
+    "actual-tangent-and-pair.json"
+  ],
+  "failureOutput": "construction-failure.json includes exact paired offsets plus full analytic forbidden/feasible and both wall exterior intervals, anatomical side/depth/role/station/frame/ease and minimum-clearance diagnosis on infeasibility.",
+  "qualificationAdmission": "component.py qualify_receipt(path), status UNACCEPTED_ANATOMICAL64_REOPENED_DISTAL_AND_MOTION_PENDING. All60 actual source/C2/native reopen/contact admission checks unchanged. Failed or raw receipts never admit downstream51.",
+  "actualWitnessFaceIds": [
+    754365,
+    713389,
+    734276,
+    729981
+  ],
+  "finding": "Actual60 exact comparison rejected2.786889672nm signed measurement shortfall although existing saved qualification allows20\u00b5m numerical contact tolerance.",
+  "change": "Use that same already-pinned tolerance for measured fixed-pair/target-gap checks. Preserve measured eases as evidence; prescribed construction eases are clamped to at least nominal2.6mm. No changed analytical geometry, actual endpoints, source order, C2 or saved qualification.",
+  "nominalContactTargetM": 0.0026,
+  "existingNumericalContactToleranceM": 2e-05,
+  "cpuValidation": {
+    "originalFixtureGroups": 15,
+    "precisionRegressionGroups": 5,
+    "actualNativeApexGapM": 0.0025999972131103277,
+    "independentCPUFixedPairMinimumsM": [
+      0.0026000042108227685,
+      0.00694540718519244
+    ],
+    "fullTargetPreflightRepeated": false,
+    "reason": "Analytic interval solver/source sections/C2/full qualification unchanged; pinned60 all-branch evidence plus exact recorded precision regression cover this comparison policy change."
+  },
+  "limits": [
+    "No64 cage or native executed. Parent original serial CPU2 guard policy unchanged.",
+    "Original selected full rider completion still requires saved contact/tangent qualification and moving full outfit review.",
+    "Exact source60 files and failure preserved. No tolerance expansion or nominal target lowering."
+  ]
+}

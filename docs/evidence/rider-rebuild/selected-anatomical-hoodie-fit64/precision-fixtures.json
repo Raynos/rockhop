@@ -1,0 +1,32 @@
+{
+  "passed": true,
+  "nativeExecuted": false,
+  "sourceRecipe": {
+    "path": "assets/blender/rider-rebuild/selected-anatomical-hoodie-fit64/check_precision.py",
+    "sha256": "76c29af5c0341aa80e4aff25e82ba01625fc74c6b60dbb1aa74ed2eba82fbedf"
+  },
+  "actual60Failure": {
+    "path": "harness/out/rider-rebuild/selected-anatomical-hoodie-fit60/component01/construction-failure.json",
+    "sha256": "a54762e60054f5f366c44bd0abc054ecd5a45bbe4db608816a3879e20277c680"
+  },
+  "fullBody": {
+    "path": "harness/out/rider-rebuild/selected-seated-anatomical09/reference05/original-full-reference.npz",
+    "sha256": "01f752d72e94dbab81cc7a193adbd2dd7bba26df919b48454d8937fa9665dcc5"
+  },
+  "recordedApexGapM": 0.0025999972131103277,
+  "nominalClearanceM": 0.0026,
+  "existingNumericalToleranceM": 2e-05,
+  "shortfallM": 2.786889672160009e-09,
+  "nativeCoordinatePrecisionM": 1.1920928955078125e-07,
+  "actualCPUFixedPairMinimumsM": [
+    0.0026000042108227685,
+    0.00694540718519244
+  ],
+  "checks": [
+    "Exact actual60 measured apex reproduces old rejection and passes existing20\u00b5m measurement policy",
+    "Actual fullbody CPU distances agree within native float32 coordinate precision",
+    "Fixed source apex/healthy endpoint remain exact; measured ease retained; every prescribed ease is at least nominal2.6mm",
+    "Existing tolerance boundary admits equality and rejects the very next smaller representable measurement",
+    "Analytic geometric interval solver, actual reference queries, original material sections, C2 math and reopened qualification remain unchanged"
+  ]
+}
