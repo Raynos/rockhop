@@ -394,12 +394,18 @@ function boot(): void {
         const reader = plan.reader('offlinePack');
         await art.load();
         const urls = offlinePackUrls(art.all());
-        p.detail(`${urls.length} files`);
+        let completed = 0;
+        // The last unit is the lazy-code warmup below. Report completed work
+        // while downloads run, rather than leaving SETUP at30% for the pack.
+        const packProgress = (): void => p.set(completed, urls.length + 1, `${Math.min(completed, urls.length)}/${urls.length} assets`);
+        packProgress();
         let i = 0;
         const pull = async (): Promise<void> => {
           while (i < urls.length) {
             const item = urls[i++]!;
             await streamBytes(item[0], reader.add, item[1]).catch(() => undefined);
+            completed++;
+            packProgress();
           }
         };
         await Promise.all([pull(), pull(), pull(), pull()]);
@@ -412,6 +418,8 @@ function boot(): void {
             for (const item of m?.items ?? []) if (item.phase === 'audio-worklet' || item.phase === 'other' || item.phase === 'worldmap') await fetch(item.path).catch(() => undefined);
           })
           .catch(() => undefined);
+        completed++;
+        packProgress();
       });
       const sTrack = await sPack.step('track', async (p) => {
         p.detail(getTrack(initialTrack ?? BACKDROP_TRACK)?.name ?? 'track');
