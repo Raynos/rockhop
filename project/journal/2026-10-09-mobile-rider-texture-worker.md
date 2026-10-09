@@ -65,3 +65,14 @@ Evidence: docs/evidence/rider-rebuild/mobile-textures02/components01/boot-R/.
 
 Limits: All source normal pixels retained; source-field/native posed witness
 and final moving/phone acceptance remain independent. No production changes.
+
+Finding: Keep fixed encoding families active through intermittent headroom
+with a bounded admission wrapper around the byte-pinned original guard.
+
+Validation: Original shared-lock guard admits an existing cached Boot-R
+family; wrapper and guard return0, and all3 KTX hashes remain exact. No native
+encoder launched. Queue never alters admission, stop limits or foreign
+processes; a raced refusal returns to bounded waiting.
+
+Limits: Admission waiting is bounded separately from original shared-lock
+wait/child limits. No art candidate or device qualification in this probe.
