@@ -1,0 +1,4396 @@
+{
+  "status": "COMPLETE_RUNTIME_DIAGNOSIS_NOT_PHONE_ACCEPTANCE",
+  "accepted": false,
+  "backend": "metal",
+  "buildVersion": {
+    "build": "1430fd83e",
+    "sha": "1430fd83eb7da8bff955b5919c03ff26156b7e1e",
+    "time": "2026-10-09T21:10:52.035Z"
+  },
+  "selectedSource": {
+    "url": "https://b47ghqoufyfsjh9t.public.blob.vercel-storage.com/rider-remaster/585ae314e2b354768a1385e5a85828c142d542b47f8d9fe948f46c7478c112ef/rider.glb",
+    "pathname": "rider-remaster/585ae314e2b354768a1385e5a85828c142d542b47f8d9fe948f46c7478c112ef/rider.glb",
+    "bytes": 74833728,
+    "sha256": "585ae314e2b354768a1385e5a85828c142d542b47f8d9fe948f46c7478c112ef",
+    "contentType": "model/gltf-binary",
+    "contractSHA256": "572476fa24f6f5f5c4bef66d7e557d9b36a983671498aa6d6c7b561c70ba0635",
+    "texturePolicy": "Protected hoodie/face/hair maps retained; jeans ORM2K and component2K UASTC/RDO0.5",
+    "lodAliasesFull": true,
+    "optional": false,
+    "acceptance": "Unaccepted private moving review; phone performance and final art gates remain open",
+    "rigContractSHA256": "6fb6e726ee5f6b6c3dc3e378354a11c086a4fd5e8345169e26a80234f5cbc996",
+    "originalMasterSHA256": "127e316a8ff7910a4918b63f83e086e4e658062f102c73f17d0ee2f956750649"
+  },
+  "recipeSHA256": "bee62f0ab55d72c1c702eb0c8ed49d8db964a8a76f44b64013cb35191fdbef71",
+  "browserProbe": {
+    "ok": true,
+    "kind": "webgl2",
+    "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M5 Max, Unspecified Version)",
+    "vendor": "Google Inc. (Apple)",
+    "version": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+    "maxTextureSize": 16384
+  },
+  "method": "Normal production App RAF and physics clock. Trusted Garage outfit clicks and held ArrowUp/ArrowLeft keys. App public flow API launches C1 and quits, bypassing the world-map GPU transfer only. No manual ticks, replay, quality/cap/camera/pose overrides.",
+  "limits": [
+    "Mac hardware with phone viewport/touch/DPR is not physical iPhone hardware.",
+    "CPU submissions and RAF differ from GPU completion. Timer queries sampled asynchronously only when extension exists.",
+    "Lifecycle and warm performance measured in one fresh normal page. No physical-phone crash claim from absence on Mac."
+  ],
+  "firstGarage": {
+    "timeOriginUnchanged": true,
+    "documentCount": 1,
+    "phase": "menu",
+    "navigations": 1
+  },
+  "lifecycleChecks": {
+    "singleDocument": true,
+    "timeOriginUnchanged": true,
+    "contextLost": 0,
+    "contextRestored": 0,
+    "selectedSourceFetches": 1,
+    "errors": 0,
+    "requestFailures": 0,
+    "audioNull": true
+  },
+  "firstGarageBefore": {
+    "info": {
+      "version": "0.2.2-core",
+      "physicsHz": 120,
+      "trackId": "c1-low-tide",
+      "seed": 341352973,
+      "bike": "rookie",
+      "harness": false,
+      "readyAtMs": 300.5,
+      "loadTrackMs": 162.3,
+      "lastRender": {
+        "prepMs": 0,
+        "hudMs": 0,
+        "audioMs": 0,
+        "submitMs": 0,
+        "syncMs": 0
+      },
+      "render": {
+        "biome": "coast",
+        "zoom": "idle",
+        "phase": "menu",
+        "tier": "medium",
+        "dpr": 1.5,
+        "devicePixelRatio": 1.5,
+        "canvasW": 1266,
+        "canvasH": 585,
+        "calls": 1,
+        "tris": 12,
+        "rtMpx": 4.97,
+        "rtMB": 43.6,
+        "rtPasses": "shadow 1024\u00d71024 | scene:hdr 1266\u00d7585 | bloom:bright 317\u00d7146 | bloom:h0 317\u00d7146 | bloom:v0 317\u00d7146 | bloom:h1 159\u00d773 | bloom:v1 159\u00d773 | bloom:h2 80\u00d737 | bloom:v2 80\u00d737 | bloom:h3 40\u00d719 | bloom:v3 40\u00d719 | bloom:h4 20\u00d710 | bloom:v4 20\u00d710 | bloom:composite 317\u00d7146 | composite:graded 1266\u00d7585 | smaa:edges 1266\u00d7585 | smaa:weights 1266\u00d7585 | smaa\u2192canvas 1266\u00d7585",
+        "shadowMap": 1024,
+        "heroTris": 31444,
+        "heroDoc": "bike-proc rider-loading",
+        "riderOutfit": null,
+        "riderMaterialVariant": null,
+        "heroShadow": "world",
+        "trackCalls": 13,
+        "trackTris": 70328,
+        "textureGenMs": 269.19999980926514,
+        "passes": 17,
+        "stalePrograms": 0,
+        "skippedFrames": 0,
+        "deviceClass": "phone",
+        "profile": "medium",
+        "bloomers": 0,
+        "entryMs": 0,
+        "entering": true,
+        "courseAssetsEnabled": false,
+        "courseAssetsMounted": 0,
+        "courseAssetsTextureMB": 0
+      },
+      "qualityWhy": "governor start medium",
+      "quality": "medium",
+      "entryHold": false,
+      "modules": {
+        "physics": "createBikePhysics",
+        "render": "ThreeRenderer",
+        "audio": "null",
+        "rider": "gltf",
+        "bike": "gltf"
+      }
+    },
+    "stats": {
+      "calls": 1,
+      "triangles": 12,
+      "points": 0,
+      "lines": 0,
+      "geometries": 9,
+      "textures": 7,
+      "programs": 2,
+      "texturesMB": 27.902562973022455,
+      "renderer": "Google Inc. (Apple) / ANGLE (Apple, ANGLE Metal Renderer: Apple M5 Max, Unspecified Version)",
+      "contextKind": "webgl2"
+    },
+    "webdriver": true,
+    "timeOrigin": 1791580282193.6
+  },
+  "boot": {
+    "info": {
+      "version": "0.2.2-core",
+      "physicsHz": 120,
+      "trackId": "c1-low-tide",
+      "seed": 341352973,
+      "bike": "rookie",
+      "harness": false,
+      "readyAtMs": 300.5,
+      "loadTrackMs": 162.3,
+      "lastRender": {
+        "prepMs": 0,
+        "hudMs": 0,
+        "audioMs": 0,
+        "submitMs": 2.799999713897705,
+        "syncMs": 0
+      },
+      "render": {
+        "biome": "coast",
+        "zoom": "idle",
+        "phase": "menu",
+        "tier": "low",
+        "dpr": 2,
+        "devicePixelRatio": 1.5,
+        "canvasW": 1688,
+        "canvasH": 780,
+        "calls": 73,
+        "tris": 1643362,
+        "rtMpx": 6.85,
+        "rtMB": 62.3,
+        "rtPasses": "shadow 512\u00d7512 | scene:hdr 1688\u00d7780 | composite:graded 1688\u00d7780 | smaa:edges 1688\u00d7780 | smaa:weights 1688\u00d7780 | smaa\u2192canvas 1688\u00d7780",
+        "shadowMap": 512,
+        "heroTris": 816784,
+        "heroDoc": "bike rider",
+        "riderOutfit": "street-remastered",
+        "riderMaterialVariant": null,
+        "heroShadow": "hero-only",
+        "trackCalls": 13,
+        "trackTris": 70328,
+        "textureGenMs": 269.19999980926514,
+        "passes": 5,
+        "stalePrograms": 7,
+        "skippedFrames": 0,
+        "deviceClass": "phone",
+        "profile": "low",
+        "bloomers": 0,
+        "entryMs": 6294.9,
+        "entering": false,
+        "courseAssetsEnabled": false,
+        "courseAssetsMounted": 0,
+        "courseAssetsTextureMB": 0
+      },
+      "qualityWhy": "governor \u2193 low (p95 28.7 ms, drops 20 %)",
+      "quality": "low",
+      "entryHold": false,
+      "modules": {
+        "physics": "createBikePhysics",
+        "render": "ThreeRenderer",
+        "audio": "null",
+        "rider": "gltf",
+        "bike": "gltf"
+      }
+    },
+    "renderDetails": {
+      "prepare": [
+        {
+          "step": "art:start",
+          "ms": 3.6,
+          "bytes": 0
+        },
+        {
+          "step": "hero:bike",
+          "ms": 24.1,
+          "bytes": 0
+        },
+        {
+          "step": "hero:rider",
+          "ms": 5.4,
+          "bytes": 0
+        },
+        {
+          "step": "lighting",
+          "ms": 1,
+          "bytes": 0
+        },
+        {
+          "step": "post:create",
+          "ms": 0.6,
+          "bytes": 0
+        },
+        {
+          "step": "materials",
+          "ms": 371.4,
+          "bytes": 27256160.255999994
+        },
+        {
+          "step": "hero:gltf",
+          "ms": 5047.2,
+          "bytes": 0
+        },
+        {
+          "step": "art:settled",
+          "ms": 0.3,
+          "bytes": 842302
+        },
+        {
+          "step": "shaders",
+          "ms": 600.9,
+          "bytes": 0
+        },
+        {
+          "step": "firstframe:post",
+          "ms": 259.8,
+          "bytes": 0
+        },
+        {
+          "step": "firstframe:heroes",
+          "ms": 91.6,
+          "bytes": 0
+        }
+      ],
+      "biome": "coast",
+      "zoom": "idle",
+      "occluder": {
+        "ms": 0,
+        "tested": 0,
+        "hits": 0,
+        "count": 0,
+        "override": "orbit"
+      },
+      "garage": {
+        "on": true,
+        "draws": 14,
+        "hidden": 290,
+        "textureMB": 4.04,
+        "reflection": false
+      },
+      "phase": "menu",
+      "tier": "low",
+      "dpr": 2,
+      "devicePixelRatio": 1.5,
+      "canvasW": 1688,
+      "canvasH": 780,
+      "calls": 73,
+      "tris": 1643362,
+      "rtMpx": 6.85,
+      "rtMB": 62.3,
+      "rtPasses": "shadow 512\u00d7512 | scene:hdr 1688\u00d7780 | composite:graded 1688\u00d7780 | smaa:edges 1688\u00d7780 | smaa:weights 1688\u00d7780 | smaa\u2192canvas 1688\u00d7780",
+      "shadowMap": 512,
+      "heroTris": 816784,
+      "heroDoc": "bike rider",
+      "riderOutfit": "street-remastered",
+      "riderMaterialVariant": null,
+      "heroShadow": "hero-only",
+      "trackCalls": 13,
+      "trackTris": 70328,
+      "textureGenMs": 269.19999980926514,
+      "passes": 5,
+      "stalePrograms": 7,
+      "stabilized": {
+        "singlePass": 0,
+        "split": 0,
+        "depth": 0
+      },
+      "skippedFrames": 0,
+      "deviceClass": "phone",
+      "profile": "low",
+      "bloomers": 0,
+      "entryMs": 6294.9,
+      "entry": {
+        "biome": "coast",
+        "ms": 6294.9,
+        "compileMs": 4.599999904632568,
+        "textureMs": 0.09999990463256836,
+        "warmMs": 15.6,
+        "textures": 40,
+        "texturesMB": 25.1,
+        "materials": 52,
+        "programs": 39,
+        "programsBefore": 2
+      },
+      "heroSwap": {
+        "loads": [
+          {
+            "url": "models/3abafaa9ba2be816/rider-street-mustard-lod-def6821d99fe7d73.glb",
+            "bytes": 530340,
+            "fetchMs": 117.40000009536743,
+            "parseMs": 68.40000009536743,
+            "prepareMs": 0.40000009536743164,
+            "at": 215.90000009536743
+          },
+          {
+            "url": "models/98214c3b3099a465/bike-rookie-lod-4ec26ad0a0c08f7e.glb",
+            "bytes": 870436,
+            "fetchMs": 139.2999997138977,
+            "parseMs": 67,
+            "prepareMs": 0.5,
+            "at": 215.60000038146973
+          },
+          {
+            "url": "models/f7e7252c644c5eee/rider-race-charcoalyellow-lod-31229d98fde8964c.glb",
+            "bytes": 912696,
+            "fetchMs": 138.40000009536743,
+            "parseMs": 70.7999997138977,
+            "prepareMs": 0.7000002861022949,
+            "at": 216.30000019073486
+          },
+          {
+            "url": "models/c49fd28578f306a9/rider-race-bluewhite-lod-2bbe14c984d760e5.glb",
+            "bytes": 946824,
+            "fetchMs": 138.19999980926514,
+            "parseMs": 73.69999980926514,
+            "prepareMs": 0.10000038146972656,
+            "at": 216.10000038146973
+          },
+          {
+            "url": "models/bb3ec209a0dcc809/bike-pro-lod-37455064bf7b6012.glb",
+            "bytes": 864844,
+            "fetchMs": 148.80000019073486,
+            "parseMs": 76.2999997138977,
+            "prepareMs": 0.09999990463256836,
+            "at": 215.80000019073486
+          },
+          {
+            "url": "models/a7d3e3df18ab35a0/rider-street-charcoal-lod-fec85cbceaa7ad68.glb",
+            "bytes": 1472164,
+            "fetchMs": 181.30000019073486,
+            "parseMs": 54.69999980926514,
+            "prepareMs": 0.20000028610229492,
+            "at": 216
+          },
+          {
+            "url": "models/3abafaa9ba2be816/rider-street-mustard-bbf2d63694fd22cf.glb",
+            "bytes": 1442236,
+            "fetchMs": 195.09999990463257,
+            "parseMs": 60.80000019073486,
+            "prepareMs": 0.19999980926513672,
+            "at": 215.90000009536743
+          },
+          {
+            "url": "models/6ffd0a14f8f8e55c/rider-street-openface-lod-369e586fe3268929.glb",
+            "bytes": 1245476,
+            "fetchMs": 203.40000009536743,
+            "parseMs": 67.5,
+            "prepareMs": 0.19999980926513672,
+            "at": 215.7000002861023
+          },
+          {
+            "url": "models/98214c3b3099a465/bike-rookie-e55919d602678493.glb",
+            "bytes": 2283036,
+            "fetchMs": 227.30000019073486,
+            "parseMs": 63.5,
+            "prepareMs": 0.19999980926513672,
+            "at": 214.90000009536743
+          },
+          {
+            "url": "models/6ffd0a14f8f8e55c/rider-street-openface-a875ae974381dff1.glb",
+            "bytes": 2796628,
+            "fetchMs": 228.69999980926514,
+            "parseMs": 74,
+            "prepareMs": 0.19999980926513672,
+            "at": 215.60000038146973
+          },
+          {
+            "url": "models/c49fd28578f306a9/rider-race-bluewhite-28a1e706cf13337a.glb",
+            "bytes": 2448152,
+            "fetchMs": 231.10000038146973,
+            "parseMs": 82.39999961853027,
+            "prepareMs": 0.10000038146972656,
+            "at": 216
+          },
+          {
+            "url": "models/bb3ec209a0dcc809/bike-pro-0acc9ac86eeca76c.glb",
+            "bytes": 2270540,
+            "fetchMs": 245.80000019073486,
+            "parseMs": 79.09999990463257,
+            "prepareMs": 0.40000009536743164,
+            "at": 215.80000019073486
+          },
+          {
+            "url": "models/f7e7252c644c5eee/rider-race-charcoalyellow-4a9801c2a4148f45.glb",
+            "bytes": 2355380,
+            "fetchMs": 250.2999997138977,
+            "parseMs": 83.09999990463257,
+            "prepareMs": 0.10000038146972656,
+            "at": 216.10000038146973
+          },
+          {
+            "url": "models/a7d3e3df18ab35a0/rider-street-charcoal-0c14eb52f0aaed26.glb",
+            "bytes": 3234924,
+            "fetchMs": 341,
+            "parseMs": 22.300000190734863,
+            "prepareMs": 0.19999980926513672,
+            "at": 216
+          },
+          {
+            "url": "https://b47ghqoufyfsjh9t.public.blob.vercel-storage.com/rider-remaster/585ae314e2b354768a1385e5a85828c142d542b47f8d9fe948f46c7478c112ef/rider.glb",
+            "bytes": 74833728,
+            "fetchMs": 0,
+            "parseMs": 5512.400000095367,
+            "prepareMs": 4.5,
+            "at": 216.30000019073486
+          }
+        ],
+        "swaps": [
+          {
+            "at": 7742.700000286102,
+            "what": "bike:gltf/rider:gltf:rebuild \u2192 street-remastered/rookie",
+            "buildMs": 0.40000009536743164,
+            "firstFrameMs": 40.59999990463257,
+            "programsAdded": 5,
+            "texturesAdded": 8
+          }
+        ]
+      },
+      "entering": false,
+      "courseAssetsEnabled": false,
+      "courseAssetsMounted": 0,
+      "courseAssetsTextureMB": 0,
+      "retirement": {
+        "requested": 3,
+        "released": 3,
+        "deferred": 0,
+        "pending": 0,
+        "maxPending": 0,
+        "contextLosses": 0
+      },
+      "terminalPrograms": {
+        "deleted": 0,
+        "contextReleased": 0
+      },
+      "art": {
+        "settled": true,
+        "ok": true,
+        "loadMs": 187,
+        "deliveredMB": 0.8,
+        "inWorld": true,
+        "trackComplete": true,
+        "trackIds": 8,
+        "builtAtFrame": 0,
+        "frames": 15
+      }
+    },
+    "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/151.0.7922.34 Safari/537.36",
+    "viewport": [
+      844,
+      390
+    ],
+    "DPR": 3,
+    "coarse": true,
+    "renderer": {
+      "calls": 73,
+      "triangles": 1643362,
+      "points": 0,
+      "lines": 0,
+      "geometries": 338,
+      "textures": 201,
+      "programs": 46,
+      "texturesMB": 579.3333935089112,
+      "renderer": "Google Inc. (Apple) / ANGLE (Apple, ANGLE Metal Renderer: Apple M5 Max, Unspecified Version)",
+      "contextKind": "webgl2"
+    },
+    "phase": "menu",
+    "loaderFinalEvents": [
+      {
+        "atMs": 7273.800000190735,
+        "kind": "loader",
+        "detail": {
+          "present": true,
+          "text": "build 1430fd83e Rotate your phone to landscape 101234567890123456789% Download 106.81 MB \u00b7 complete 101234567890123456789% Setup ready DetailsCore99 msParse70 msRenderer20 msPhysics1 msAudio0 msGame + HUD1 msFront end81 msOffline pack365 msFirst track195 msHero meshes29 msLighting1 msPost1 msTextures371 msHero models5047 msWorld art1 msShaders600 msFirst frame351 msFonts6 msAfter startKey art463 KB / 463 KBTrack art173 KB / 173 KB\u2713 18 of 18 done \u27f3 Retry 7.2 s"
+        }
+      },
+      {
+        "atMs": 7575.800000190735,
+        "kind": "loader",
+        "detail": {
+          "present": false,
+          "text": "REMOVED"
+        }
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "outfit": "street-mustard",
+      "mode": "garage",
+      "choiceMs": 41.9395829999994,
+      "timeOriginUnchanged": true,
+      "duration": 20.00340000009537,
+      "appRenderCalls": 1199,
+      "submittedFrames": 1199,
+      "submittedFPS": 59.93981023197475,
+      "appRenderFPS": 59.93981023197475,
+      "observedRAFFPS": 111.4810482212708,
+      "cpuMs": {
+        "p50": 0.9000000953674316,
+        "p95": 1.0999999046325684,
+        "max": 1.5
+      },
+      "riderMs": {
+        "p50": 0,
+        "p95": 0.09999990463256836,
+        "max": 0.19999980926513672
+      },
+      "postMs": {
+        "p50": 0.7999997138977051,
+        "p95": 0.9000000953674316,
+        "max": 1.1999998092651367
+      },
+      "resetsPerSubmittedFrame": {
+        "p50": 0,
+        "p95": 0,
+        "max": 0
+      },
+      "calls": {
+        "p50": 88,
+        "p95": 88,
+        "max": 88
+      },
+      "triangles": {
+        "p50": 282981,
+        "p95": 282981,
+        "max": 282981
+      },
+      "gpuMs": {
+        "p50": 2.711375,
+        "p95": 4.897125,
+        "max": 4.950874
+      },
+      "gpuTimerSupported": true,
+      "gpuDisjointQueries": 0,
+      "after": {
+        "version": "0.2.2-core",
+        "physicsHz": 120,
+        "trackId": "c1-low-tide",
+        "seed": 341352973,
+        "bike": "rookie",
+        "harness": false,
+        "readyAtMs": 300.5,
+        "loadTrackMs": 162.3,
+        "lastRender": {
+          "prepMs": 0,
+          "hudMs": 0,
+          "audioMs": 0,
+          "submitMs": 1,
+          "syncMs": 0
+        },
+        "render": {
+          "biome": "coast",
+          "zoom": "idle",
+          "phase": "menu",
+          "tier": "low",
+          "dpr": 2,
+          "devicePixelRatio": 1.5,
+          "canvasW": 1688,
+          "canvasH": 780,
+          "calls": 88,
+          "tris": 282981,
+          "rtMpx": 6.85,
+          "rtMB": 62.3,
+          "rtPasses": "shadow 512\u00d7512 | scene:hdr 1688\u00d7780 | composite:graded 1688\u00d7780 | smaa:edges 1688\u00d7780 | smaa:weights 1688\u00d7780 | smaa\u2192canvas 1688\u00d7780",
+          "shadowMap": 512,
+          "heroTris": 90977,
+          "heroDoc": "bike rider",
+          "riderOutfit": "street-mustard",
+          "riderMaterialVariant": null,
+          "heroShadow": "hero-only",
+          "trackCalls": 13,
+          "trackTris": 70328,
+          "textureGenMs": 269.19999980926514,
+          "passes": 5,
+          "stalePrograms": 9,
+          "skippedFrames": 0,
+          "deviceClass": "phone",
+          "profile": "low",
+          "bloomers": 0,
+          "entryMs": 6294.9,
+          "entering": false,
+          "courseAssetsEnabled": false,
+          "courseAssetsMounted": 0,
+          "courseAssetsTextureMB": 0
+        },
+        "qualityWhy": "governor \u2193 low (p95 28.7 ms, drops 20 %)",
+        "quality": "low",
+        "entryHold": false,
+        "modules": {
+          "physics": "createBikePhysics",
+          "render": "ThreeRenderer",
+          "audio": "null",
+          "rider": "gltf",
+          "bike": "gltf"
+        }
+      },
+      "renderDetailsAfter": {
+        "prepare": [
+          {
+            "step": "art:start",
+            "ms": 3.6,
+            "bytes": 0
+          },
+          {
+            "step": "hero:bike",
+            "ms": 24.1,
+            "bytes": 0
+          },
+          {
+            "step": "hero:rider",
+            "ms": 5.4,
+            "bytes": 0
+          },
+          {
+            "step": "lighting",
+            "ms": 1,
+            "bytes": 0
+          },
+          {
+            "step": "post:create",
+            "ms": 0.6,
+            "bytes": 0
+          },
+          {
+            "step": "materials",
+            "ms": 371.4,
+            "bytes": 27256160.255999994
+          },
+          {
+            "step": "hero:gltf",
+            "ms": 5047.2,
+            "bytes": 0
+          },
+          {
+            "step": "art:settled",
+            "ms": 0.3,
+            "bytes": 842302
+          },
+          {
+            "step": "shaders",
+            "ms": 600.9,
+            "bytes": 0
+          },
+          {
+            "step": "firstframe:post",
+            "ms": 259.8,
+            "bytes": 0
+          },
+          {
+            "step": "firstframe:heroes",
+            "ms": 91.6,
+            "bytes": 0
+          }
+        ],
+        "biome": "coast",
+        "zoom": "idle",
+        "occluder": {
+          "ms": 0,
+          "tested": 0,
+          "hits": 0,
+          "count": 0,
+          "override": "orbit"
+        },
+        "garage": {
+          "on": true,
+          "draws": 14,
+          "hidden": 290,
+          "textureMB": 4.04,
+          "reflection": true
+        },
+        "phase": "menu",
+        "tier": "low",
+        "dpr": 2,
+        "devicePixelRatio": 1.5,
+        "canvasW": 1688,
+        "canvasH": 780,
+        "calls": 88,
+        "tris": 282981,
+        "rtMpx": 6.85,
+        "rtMB": 62.3,
+        "rtPasses": "shadow 512\u00d7512 | scene:hdr 1688\u00d7780 | composite:graded 1688\u00d7780 | smaa:edges 1688\u00d7780 | smaa:weights 1688\u00d7780 | smaa\u2192canvas 1688\u00d7780",
+        "shadowMap": 512,
+        "heroTris": 90977,
+        "heroDoc": "bike rider",
+        "riderOutfit": "street-mustard",
+        "riderMaterialVariant": null,
+        "heroShadow": "hero-only",
+        "trackCalls": 13,
+        "trackTris": 70328,
+        "textureGenMs": 269.19999980926514,
+        "passes": 5,
+        "stalePrograms": 9,
+        "stabilized": {
+          "singlePass": 1,
+          "split": 0,
+          "depth": 14
+        },
+        "skippedFrames": 0,
+        "deviceClass": "phone",
+        "profile": "low",
+        "bloomers": 0,
+        "entryMs": 6294.9,
+        "entry": {
+          "biome": "coast",
+          "ms": 6294.9,
+          "compileMs": 4.599999904632568,
+          "textureMs": 0.09999990463256836,
+          "warmMs": 15.6,
+          "textures": 40,
+          "texturesMB": 25.1,
+          "materials": 52,
+          "programs": 39,
+          "programsBefore": 2
+        },
+        "heroSwap": {
+          "loads": [
+            {
+              "url": "models/3abafaa9ba2be816/rider-street-mustard-lod-def6821d99fe7d73.glb",
+              "bytes": 530340,
+              "fetchMs": 117.40000009536743,
+              "parseMs": 68.40000009536743,
+              "prepareMs": 0.40000009536743164,
+              "at": 215.90000009536743
+            },
+            {
+              "url": "models/98214c3b3099a465/bike-rookie-lod-4ec26ad0a0c08f7e.glb",
+              "bytes": 870436,
+              "fetchMs": 139.2999997138977,
+              "parseMs": 67,
+              "prepareMs": 0.5,
+              "at": 215.60000038146973
+            },
+            {
+              "url": "models/f7e7252c644c5eee/rider-race-charcoalyellow-lod-31229d98fde8964c.glb",
+              "bytes": 912696,
+              "fetchMs": 138.40000009536743,
+              "parseMs": 70.7999997138977,
+              "prepareMs": 0.7000002861022949,
+              "at": 216.30000019073486
+            },
+            {
+              "url": "models/c49fd28578f306a9/rider-race-bluewhite-lod-2bbe14c984d760e5.glb",
+              "bytes": 946824,
+              "fetchMs": 138.19999980926514,
+              "parseMs": 73.69999980926514,
+              "prepareMs": 0.10000038146972656,
+              "at": 216.10000038146973
+            },
+            {
+              "url": "models/bb3ec209a0dcc809/bike-pro-lod-37455064bf7b6012.glb",
+              "bytes": 864844,
+              "fetchMs": 148.80000019073486,
+              "parseMs": 76.2999997138977,
+              "prepareMs": 0.09999990463256836,
+              "at": 215.80000019073486
+            },
+            {
+              "url": "models/a7d3e3df18ab35a0/rider-street-charcoal-lod-fec85cbceaa7ad68.glb",
+              "bytes": 1472164,
+              "fetchMs": 181.30000019073486,
+              "parseMs": 54.69999980926514,
+              "prepareMs": 0.20000028610229492,
+              "at": 216
+            },
+            {
+              "url": "models/3abafaa9ba2be816/rider-street-mustard-bbf2d63694fd22cf.glb",
+              "bytes": 1442236,
+              "fetchMs": 195.09999990463257,
+              "parseMs": 60.80000019073486,
+              "prepareMs": 0.19999980926513672,
+              "at": 215.90000009536743
+            },
+            {
+              "url": "models/6ffd0a14f8f8e55c/rider-street-openface-lod-369e586fe3268929.glb",
+              "bytes": 1245476,
+              "fetchMs": 203.40000009536743,
+              "parseMs": 67.5,
+              "prepareMs": 0.19999980926513672,
+              "at": 215.7000002861023
+            },
+            {
+              "url": "models/98214c3b3099a465/bike-rookie-e55919d602678493.glb",
+              "bytes": 2283036,
+              "fetchMs": 227.30000019073486,
+              "parseMs": 63.5,
+              "prepareMs": 0.19999980926513672,
+              "at": 214.90000009536743
+            },
+            {
+              "url": "models/6ffd0a14f8f8e55c/rider-street-openface-a875ae974381dff1.glb",
+              "bytes": 2796628,
+              "fetchMs": 228.69999980926514,
+              "parseMs": 74,
+              "prepareMs": 0.19999980926513672,
+              "at": 215.60000038146973
+            },
+            {
+              "url": "models/c49fd28578f306a9/rider-race-bluewhite-28a1e706cf13337a.glb",
+              "bytes": 2448152,
+              "fetchMs": 231.10000038146973,
+              "parseMs": 82.39999961853027,
+              "prepareMs": 0.10000038146972656,
+              "at": 216
+            },
+            {
+              "url": "models/bb3ec209a0dcc809/bike-pro-0acc9ac86eeca76c.glb",
+              "bytes": 2270540,
+              "fetchMs": 245.80000019073486,
+              "parseMs": 79.09999990463257,
+              "prepareMs": 0.40000009536743164,
+              "at": 215.80000019073486
+            },
+            {
+              "url": "models/f7e7252c644c5eee/rider-race-charcoalyellow-4a9801c2a4148f45.glb",
+              "bytes": 2355380,
+              "fetchMs": 250.2999997138977,
+              "parseMs": 83.09999990463257,
+              "prepareMs": 0.10000038146972656,
+              "at": 216.10000038146973
+            },
+            {
+              "url": "models/a7d3e3df18ab35a0/rider-street-charcoal-0c14eb52f0aaed26.glb",
+              "bytes": 3234924,
+              "fetchMs": 341,
+              "parseMs": 22.300000190734863,
+              "prepareMs": 0.19999980926513672,
+              "at": 216
+            },
+            {
+              "url": "https://b47ghqoufyfsjh9t.public.blob.vercel-storage.com/rider-remaster/585ae314e2b354768a1385e5a85828c142d542b47f8d9fe948f46c7478c112ef/rider.glb",
+              "bytes": 74833728,
+              "fetchMs": 0,
+              "parseMs": 5512.400000095367,
+              "prepareMs": 4.5,
+              "at": 216.30000019073486
+            }
+          ],
+          "swaps": [
+            {
+              "at": 7742.700000286102,
+              "what": "bike:gltf/rider:gltf:rebuild \u2192 street-remastered/rookie",
+              "buildMs": 0.40000009536743164,
+              "firstFrameMs": 40.59999990463257,
+              "programsAdded": 5,
+              "texturesAdded": 8
+            },
+            {
+              "at": 8347,
+              "what": "bike:gltf/rider:gltf:rebuild \u2192 street-mustard/rookie",
+              "buildMs": 0.5,
+              "firstFrameMs": 25.40000009536743,
+              "programsAdded": 2,
+              "texturesAdded": 0
+            }
+          ]
+        },
+        "entering": false,
+        "courseAssetsEnabled": false,
+        "courseAssetsMounted": 0,
+        "courseAssetsTextureMB": 0,
+        "retirement": {
+          "requested": 3,
+          "released": 3,
+          "deferred": 0,
+          "pending": 0,
+          "maxPending": 0,
+          "contextLosses": 0
+        },
+        "terminalPrograms": {
+          "deleted": 0,
+          "contextReleased": 0
+        },
+        "art": {
+          "settled": true,
+          "ok": true,
+          "loadMs": 187,
+          "deliveredMB": 0.8,
+          "inWorld": true,
+          "trackComplete": true,
+          "trackIds": 8,
+          "builtAtFrame": 0,
+          "frames": 1321
+        }
+      },
+      "statsAfter": {
+        "calls": 88,
+        "triangles": 282981,
+        "points": 0,
+        "lines": 0,
+        "geometries": 339,
+        "textures": 201,
+        "programs": 48,
+        "texturesMB": 53.74739350891112,
+        "renderer": "Google Inc. (Apple) / ANGLE (Apple, ANGLE Metal Renderer: Apple M5 Max, Unspecified Version)",
+        "contextKind": "webgl2"
+      },
+      "startState": {
+        "tick": 0,
+        "time": 0,
+        "bike": {
+          "pos": {
+            "x": 0.5921550723081759,
+            "y": 0.4916785695390017
+          },
+          "vel": {
+            "x": 0,
+            "y": 0
+          },
+          "angle": 0.023977002138789442,
+          "angVel": 0
+        },
+        "wheels": {
+          "rear": {
+            "pos": {
+              "x": 0,
+              "y": 0.34000000000001485
+            },
+            "spin": 0,
+            "spinVel": 0,
+            "compression": 0.28238301592511267,
+            "grounded": false
+          },
+          "front": {
+            "pos": {
+              "x": 1.2927022515345887,
+              "y": 0.34000000000001385
+            },
+            "spin": 0,
+            "spinVel": 0,
+            "compression": 0.1892318255345102,
+            "grounded": false
+          }
+        },
+        "rider": {
+          "lean": -0.009900315489308488,
+          "crouch": 0.058376073018405014,
+          "torsoPitch": 0,
+          "armExtend": 0.2136970680045652
+        },
+        "riderBody": {
+          "pos": {
+            "x": 0.4838272748830158,
+            "y": 1.0815735361460224
+          },
+          "angle": 0.023977002138789442,
+          "vel": {
+            "x": 0,
+            "y": 0
+          },
+          "angVel": 0,
+          "drawn": {
+            "pose": "back",
+            "blend": 0.009900315489308488,
+            "hips": {
+              "x": -0.3421900893970258,
+              "y": 0.7094128962402796
+            },
+            "torso": 1.1344640137963142,
+            "head": 1.4835298641951802
+          }
+        },
+        "checkpoint": -1,
+        "finished": false,
+        "faulted": null,
+        "finishTime": null,
+        "input": {
+          "throttle": 0,
+          "brake": 0,
+          "lean": 0
+        },
+        "engine": {
+          "rpm": 1500,
+          "throttleEff": 0,
+          "limiter": false
+        },
+        "contacts": {
+          "rear": null,
+          "front": null
+        },
+        "rearSlip": 0,
+        "hopPhase": "idle",
+        "ragdoll": null,
+        "seesaws": [],
+        "drums": []
+      },
+      "endState": {
+        "tick": 0,
+        "time": 0,
+        "bike": {
+          "pos": {
+            "x": 0.5921550723081759,
+            "y": 0.4916785695390017
+          },
+          "vel": {
+            "x": 0,
+            "y": 0
+          },
+          "angle": 0.023977002138789442,
+          "angVel": 0
+        },
+        "wheels": {
+          "rear": {
+            "pos": {
+              "x": 0,
+              "y": 0.34000000000001485
+            },
+            "spin": 0,
+            "spinVel": 0,
+            "compression": 0.28238301592511267,
+            "grounded": false
+          },
+          "front": {
+            "pos": {
+              "x": 1.2927022515345887,
+              "y": 0.34000000000001385
+            },
+            "spin": 0,
+            "spinVel": 0,
+            "compression": 0.1892318255345102,
+            "grounded": false
+          }
+        },
+        "rider": {
+          "lean": -0.009900315489308488,
+          "crouch": 0.058376073018405014,
+          "torsoPitch": 0,
+          "armExtend": 0.2136970680045652
+        },
+        "riderBody": {
+          "pos": {
+            "x": 0.4838272748830158,
+            "y": 1.0815735361460224
+          },
+          "angle": 0.023977002138789442,
+          "vel": {
+            "x": 0,
+            "y": 0
+          },
+          "angVel": 0,
+          "drawn": {
+            "pose": "back",
+            "blend": 0.009900315489308488,
+            "hips": {
+              "x": -0.3421900893970258,
+              "y": 0.7094128962402796
+            },
+            "torso": 1.1344640137963142,
+            "head": 1.4835298641951802
+          }
+        },
+        "checkpoint": -1,
+        "finished": false,
+        "faulted": null,
+        "finishTime": null,
+        "input": {
+          "throttle": 0,
+          "brake": 0,
+          "lean": 0
+        },
+        "engine": {
+          "rpm": 1500,
+          "throttleEff": 0,
+          "limiter": false
+        },
+        "contacts": {
+          "rear": null,
+          "front": null
+        },
+        "rearSlip": 0,
+        "hopPhase": "idle",
+        "ragdoll": null,
+        "seesaws": [],
+        "drums": []
+      },
+      "requestsSinceChoice": [],
+      "phaseChanges": [],
+      "phaseCounts": {
+        "menu": 1199
+      },
+      "lifecycleEvents": []
+    },
+    {
+      "outfit": "street-mustard",
+      "mode": "c1-ride",
+      "choiceMs": 41.9395829999994,
+      "timeOriginUnchanged": true,
+      "duration": 20.004400000095366,
+      "appRenderCalls": 1200,
+      "submittedFrames": 1200,
+      "submittedFPS": 59.98680290307529,
+      "appRenderFPS": 59.98680290307529,
+      "observedRAFFPS": 456.6495370996606,
+      "cpuMs": {
+        "p50": 0.9000000953674316,
+        "p95": 1.5999999046325684,
+        "max": 2.1000003814697266
+      },
+      "riderMs": {
+        "p50": 0,
+        "p95": 0.10000038146972656,
+        "max": 0.20000028610229492
+      },
+      "postMs": {
+        "p50": 0.7999997138977051,
+        "p95": 1.3000001907348633,
+        "max": 1.8000001907348633
+      },
+      "resetsPerSubmittedFrame": {
+        "p50": 0,
+        "p95": 0,
+        "max": 0
+      },
+      "calls": {
+        "p50": 92,
+        "p95": 100,
+        "max": 102
+      },
+      "triangles": {
+        "p50": 121984,
+        "p95": 143360,
+        "max": 144146
+      },
+      "gpuMs": {
+        "p50": 1.88375,
+        "p95": 2.816,
+        "max": 2.953208
+      },
+      "gpuTimerSupported": true,
+      "gpuDisjointQueries": 0,
+      "after": {
+        "version": "0.2.2-core",
+        "physicsHz": 120,
+        "trackId": "c1-low-tide",
+        "seed": 341352973,
+        "bike": "rookie",
+        "harness": false,
+        "readyAtMs": 300.5,
+        "loadTrackMs": 87,
+        "lastRender": {
+          "prepMs": 0,
+          "hudMs": 0,
+          "audioMs": 0,
+          "submitMs": 1.0999999046325684,
+          "syncMs": 0
+        },
+        "render": {
+          "biome": "coast",
+          "zoom": "riding",
+          "phase": "riding",
+          "tier": "low",
+          "dpr": 1.5,
+          "devicePixelRatio": 1.5,
+          "canvasW": 1266,
+          "canvasH": 585,
+          "calls": 97,
+          "tris": 121960,
+          "rtMpx": 3.97,
+          "rtMB": 35.9,
+          "rtPasses": "shadow 512\u00d7512 | scene:hdr 1266\u00d7585 | composite:graded 1266\u00d7585 | smaa:edges 1266\u00d7585 | smaa:weights 1266\u00d7585 | smaa\u2192canvas 1266\u00d7585",
+          "shadowMap": 512,
+          "heroTris": 13630,
+          "heroDoc": "bike-lod rider-lod",
+          "riderOutfit": "street-mustard",
+          "riderMaterialVariant": null,
+          "heroShadow": "hero-only",
+          "trackCalls": 13,
+          "trackTris": 70328,
+          "textureGenMs": 269.19999980926514,
+          "passes": 5,
+          "stalePrograms": 1,
+          "skippedFrames": 0,
+          "deviceClass": "phone",
+          "profile": "low",
+          "bloomers": 0,
+          "entryMs": 270.7,
+          "entering": false,
+          "courseAssetsEnabled": true,
+          "courseAssetsMounted": 2,
+          "courseAssetsTextureMB": 5.665
+        },
+        "qualityWhy": "governor \u2193 low (p95 28.7 ms, drops 20 %)",
+        "quality": "low",
+        "entryHold": false,
+        "modules": {
+          "physics": "createBikePhysics",
+          "render": "ThreeRenderer",
+          "audio": "null",
+          "rider": "gltf",
+          "bike": "gltf"
+        }
+      },
+      "renderDetailsAfter": {
+        "prepare": [
+          {
+            "step": "art:start",
+            "ms": 3.6,
+            "bytes": 0
+          },
+          {
+            "step": "hero:bike",
+            "ms": 24.1,
+            "bytes": 0
+          },
+          {
+            "step": "hero:rider",
+            "ms": 5.4,
+            "bytes": 0
+          },
+          {
+            "step": "lighting",
+            "ms": 1,
+            "bytes": 0
+          },
+          {
+            "step": "post:create",
+            "ms": 0.6,
+            "bytes": 0
+          },
+          {
+            "step": "materials",
+            "ms": 371.4,
+            "bytes": 27256160.255999994
+          },
+          {
+            "step": "hero:gltf",
+            "ms": 5047.2,
+            "bytes": 0
+          },
+          {
+            "step": "art:settled",
+            "ms": 0.3,
+            "bytes": 842302
+          },
+          {
+            "step": "shaders",
+            "ms": 600.9,
+            "bytes": 0
+          },
+          {
+            "step": "firstframe:post",
+            "ms": 259.8,
+            "bytes": 0
+          },
+          {
+            "step": "firstframe:heroes",
+            "ms": 91.6,
+            "bytes": 0
+          }
+        ],
+        "biome": "coast",
+        "zoom": "riding",
+        "occluder": {
+          "ms": 0,
+          "tested": 0,
+          "hits": 0,
+          "count": 0,
+          "override": null
+        },
+        "garage": {
+          "on": false,
+          "draws": 14,
+          "hidden": 0,
+          "textureMB": 4.04,
+          "reflection": false
+        },
+        "phase": "riding",
+        "tier": "low",
+        "dpr": 1.5,
+        "devicePixelRatio": 1.5,
+        "canvasW": 1266,
+        "canvasH": 585,
+        "calls": 97,
+        "tris": 121960,
+        "rtMpx": 3.97,
+        "rtMB": 35.9,
+        "rtPasses": "shadow 512\u00d7512 | scene:hdr 1266\u00d7585 | composite:graded 1266\u00d7585 | smaa:edges 1266\u00d7585 | smaa:weights 1266\u00d7585 | smaa\u2192canvas 1266\u00d7585",
+        "shadowMap": 512,
+        "heroTris": 13630,
+        "heroDoc": "bike-lod rider-lod",
+        "riderOutfit": "street-mustard",
+        "riderMaterialVariant": null,
+        "heroShadow": "hero-only",
+        "trackCalls": 13,
+        "trackTris": 70328,
+        "textureGenMs": 269.19999980926514,
+        "passes": 5,
+        "stalePrograms": 1,
+        "stabilized": {
+          "singlePass": 0,
+          "split": 0,
+          "depth": 86
+        },
+        "skippedFrames": 0,
+        "deviceClass": "phone",
+        "profile": "low",
+        "bloomers": 0,
+        "entryMs": 270.7,
+        "entry": {
+          "biome": "coast",
+          "ms": 270.7,
+          "compileMs": 132.2999997138977,
+          "textureMs": 1.1000003814697266,
+          "warmMs": 97.2,
+          "textures": 46,
+          "texturesMB": 28.4,
+          "materials": 63,
+          "programs": 49,
+          "programsBefore": 41
+        },
+        "heroSwap": {
+          "loads": [
+            {
+              "url": "models/3abafaa9ba2be816/rider-street-mustard-lod-def6821d99fe7d73.glb",
+              "bytes": 530340,
+              "fetchMs": 117.40000009536743,
+              "parseMs": 68.40000009536743,
+              "prepareMs": 0.40000009536743164,
+              "at": 215.90000009536743
+            },
+            {
+              "url": "models/98214c3b3099a465/bike-rookie-lod-4ec26ad0a0c08f7e.glb",
+              "bytes": 870436,
+              "fetchMs": 139.2999997138977,
+              "parseMs": 67,
+              "prepareMs": 0.5,
+              "at": 215.60000038146973
+            },
+            {
+              "url": "models/f7e7252c644c5eee/rider-race-charcoalyellow-lod-31229d98fde8964c.glb",
+              "bytes": 912696,
+              "fetchMs": 138.40000009536743,
+              "parseMs": 70.7999997138977,
+              "prepareMs": 0.7000002861022949,
+              "at": 216.30000019073486
+            },
+            {
+              "url": "models/c49fd28578f306a9/rider-race-bluewhite-lod-2bbe14c984d760e5.glb",
+              "bytes": 946824,
+              "fetchMs": 138.19999980926514,
+              "parseMs": 73.69999980926514,
+              "prepareMs": 0.10000038146972656,
+              "at": 216.10000038146973
+            },
+            {
+              "url": "models/bb3ec209a0dcc809/bike-pro-lod-37455064bf7b6012.glb",
+              "bytes": 864844,
+              "fetchMs": 148.80000019073486,
+              "parseMs": 76.2999997138977,
+              "prepareMs": 0.09999990463256836,
+              "at": 215.80000019073486
+            },
+            {
+              "url": "models/a7d3e3df18ab35a0/rider-street-charcoal-lod-fec85cbceaa7ad68.glb",
+              "bytes": 1472164,
+              "fetchMs": 181.30000019073486,
+              "parseMs": 54.69999980926514,
+              "prepareMs": 0.20000028610229492,
+              "at": 216
+            },
+            {
+              "url": "models/3abafaa9ba2be816/rider-street-mustard-bbf2d63694fd22cf.glb",
+              "bytes": 1442236,
+              "fetchMs": 195.09999990463257,
+              "parseMs": 60.80000019073486,
+              "prepareMs": 0.19999980926513672,
+              "at": 215.90000009536743
+            },
+            {
+              "url": "models/6ffd0a14f8f8e55c/rider-street-openface-lod-369e586fe3268929.glb",
+              "bytes": 1245476,
+              "fetchMs": 203.40000009536743,
+              "parseMs": 67.5,
+              "prepareMs": 0.19999980926513672,
+              "at": 215.7000002861023
+            },
+            {
+              "url": "models/98214c3b3099a465/bike-rookie-e55919d602678493.glb",
+              "bytes": 2283036,
+              "fetchMs": 227.30000019073486,
+              "parseMs": 63.5,
+              "prepareMs": 0.19999980926513672,
+              "at": 214.90000009536743
+            },
+            {
+              "url": "models/6ffd0a14f8f8e55c/rider-street-openface-a875ae974381dff1.glb",
+              "bytes": 2796628,
+              "fetchMs": 228.69999980926514,
+              "parseMs": 74,
+              "prepareMs": 0.19999980926513672,
+              "at": 215.60000038146973
+            },
+            {
+              "url": "models/c49fd28578f306a9/rider-race-bluewhite-28a1e706cf13337a.glb",
+              "bytes": 2448152,
+              "fetchMs": 231.10000038146973,
+              "parseMs": 82.39999961853027,
+              "prepareMs": 0.10000038146972656,
+              "at": 216
+            },
+            {
+              "url": "models/bb3ec209a0dcc809/bike-pro-0acc9ac86eeca76c.glb",
+              "bytes": 2270540,
+              "fetchMs": 245.80000019073486,
+              "parseMs": 79.09999990463257,
+              "prepareMs": 0.40000009536743164,
+              "at": 215.80000019073486
+            },
+            {
+              "url": "models/f7e7252c644c5eee/rider-race-charcoalyellow-4a9801c2a4148f45.glb",
+              "bytes": 2355380,
+              "fetchMs": 250.2999997138977,
+              "parseMs": 83.09999990463257,
+              "prepareMs": 0.10000038146972656,
+              "at": 216.10000038146973
+            },
+            {
+              "url": "models/a7d3e3df18ab35a0/rider-street-charcoal-0c14eb52f0aaed26.glb",
+              "bytes": 3234924,
+              "fetchMs": 341,
+              "parseMs": 22.300000190734863,
+              "prepareMs": 0.19999980926513672,
+              "at": 216
+            },
+            {
+              "url": "https://b47ghqoufyfsjh9t.public.blob.vercel-storage.com/rider-remaster/585ae314e2b354768a1385e5a85828c142d542b47f8d9fe948f46c7478c112ef/rider.glb",
+              "bytes": 74833728,
+              "fetchMs": 0,
+              "parseMs": 5512.400000095367,
+              "prepareMs": 4.5,
+              "at": 216.30000019073486
+            }
+          ],
+          "swaps": [
+            {
+              "at": 7742.700000286102,
+              "what": "bike:gltf/rider:gltf:rebuild \u2192 street-remastered/rookie",
+              "buildMs": 0.40000009536743164,
+              "firstFrameMs": 40.59999990463257,
+              "programsAdded": 5,
+              "texturesAdded": 8
+            },
+            {
+              "at": 8347,
+              "what": "bike:gltf/rider:gltf:rebuild \u2192 street-mustard/rookie",
+              "buildMs": 0.5,
+              "firstFrameMs": 25.40000009536743,
+              "programsAdded": 2,
+              "texturesAdded": 0
+            },
+            {
+              "at": 30604.800000190735,
+              "what": "bike:gltf/rider:gltf \u2192 street-mustard/rookie",
+              "buildMs": 0.19999980926513672,
+              "firstFrameMs": 0,
+              "programsAdded": 0,
+              "texturesAdded": 0
+            }
+          ]
+        },
+        "entering": false,
+        "courseAssetsEnabled": true,
+        "courseAssetsMounted": 2,
+        "courseAssetsTextureMB": 5.665,
+        "retirement": {
+          "requested": 4,
+          "released": 4,
+          "deferred": 0,
+          "pending": 0,
+          "maxPending": 0,
+          "contextLosses": 0
+        },
+        "terminalPrograms": {
+          "deleted": 0,
+          "contextReleased": 0
+        },
+        "art": {
+          "settled": true,
+          "ok": true,
+          "loadMs": 187,
+          "deliveredMB": 0.8,
+          "inWorld": true,
+          "trackComplete": true,
+          "trackIds": 8,
+          "builtAtFrame": 1358,
+          "frames": 2823
+        }
+      },
+      "statsAfter": {
+        "calls": 97,
+        "triangles": 121960,
+        "points": 512,
+        "lines": 0,
+        "geometries": 291,
+        "textures": 208,
+        "programs": 49,
+        "texturesMB": 52.058205734252915,
+        "renderer": "Google Inc. (Apple) / ANGLE (Apple, ANGLE Metal Renderer: Apple M5 Max, Unspecified Version)",
+        "contextKind": "webgl2"
+      },
+      "startState": {
+        "tick": 179,
+        "time": 1.4916666666666667,
+        "bike": {
+          "pos": {
+            "x": 5.899581025112405,
+            "y": 0.48327499563347115
+          },
+          "vel": {
+            "x": 7.5707058578365745,
+            "y": 2.1282837224109177e-05
+          },
+          "angle": 0.09226609288689411,
+          "angVel": 0.002684569586625113
+        },
+        "wheels": {
+          "rear": {
+            "pos": {
+              "x": 5.314345011094685,
+              "y": 0.3396395953875036
+            },
+            "spin": 15.655141594349985,
+            "spinVel": 22.288820795669135,
+            "compression": 0.4683834679836597,
+            "grounded": true
+          },
+          "front": {
+            "pos": {
+              "x": 6.6308882437965115,
+              "y": 0.34004496354125396
+            },
+            "spin": 15.568877047353554,
+            "spinVel": 22.267746878365344,
+            "compression": 2.5256996283747704e-14,
+            "grounded": true
+          }
+        },
+        "rider": {
+          "lean": -0.09552080522528342,
+          "crouch": 0.012790892525857597,
+          "torsoPitch": 0.04185465755867501,
+          "armExtend": 0.28121659199813287
+        },
+        "riderBody": {
+          "pos": {
+            "x": 5.736274150991988,
+            "y": 1.0767511184638408
+          },
+          "angle": 0.050411435328219095,
+          "vel": {
+            "x": 7.570194753296167,
+            "y": -0.0010512355640667286
+          },
+          "angVel": -0.0020997433592158596,
+          "drawn": {
+            "pose": "back",
+            "blend": 0.09552080522528342,
+            "hips": {
+              "x": -0.365183437537499,
+              "y": 0.7296342090142994
+            },
+            "torso": 1.0926093562376393,
+            "head": 1.441675206636505
+          }
+        },
+        "checkpoint": -1,
+        "finished": false,
+        "faulted": null,
+        "finishTime": null,
+        "input": {
+          "throttle": 1,
+          "brake": 0,
+          "lean": 0
+        },
+        "engine": {
+          "rpm": 3788.597573681947,
+          "throttleEff": 0.9999373553708009,
+          "limiter": false
+        },
+        "contacts": {
+          "rear": "dirt",
+          "front": "dirt"
+        },
+        "rearSlip": 0.032774657378356054,
+        "hopPhase": "idle",
+        "ragdoll": null,
+        "seesaws": [],
+        "drums": []
+      },
+      "endState": {
+        "tick": 332,
+        "time": 2.7666666666666666,
+        "bike": {
+          "pos": {
+            "x": 199.3837931455925,
+            "y": 0.49189533811587544
+          },
+          "vel": {
+            "x": 12.880850252486223,
+            "y": -0.0014675223638635866
+          },
+          "angle": 0.07880269476372778,
+          "angVel": -0.007699688926548097
+        },
+        "wheels": {
+          "rear": {
+            "pos": {
+              "x": 198.79752390224357,
+              "y": 0.3393857042698224
+            },
+            "spin": 55.03243067277763,
+            "spinVel": 37.891152545781935,
+            "compression": 0.4038116038675963,
+            "grounded": true
+          },
+          "front": {
+            "pos": {
+              "x": 200.11251041131214,
+              "y": 0.3399398992801946
+            },
+            "spin": 54.924475838726714,
+            "spinVel": 37.865915012500565,
+            "compression": 0.0052379924068393785,
+            "grounded": true
+          }
+        },
+        "rider": {
+          "lean": -0.08284744372661175,
+          "crouch": 0.014637460980897837,
+          "torsoPitch": 0.044009922009563704,
+          "armExtend": 0.26984185138069217
+        },
+        "riderBody": {
+          "pos": {
+            "x": 199.2317780022212,
+            "y": 1.0872201374016177
+          },
+          "angle": 0.03479277275416408,
+          "vel": {
+            "x": 12.888040708853898,
+            "y": 0.00031078198030228525
+          },
+          "angVel": -0.001994028259923315,
+          "drawn": {
+            "pose": "back",
+            "blend": 0.08284744372661175,
+            "hips": {
+              "x": -0.3616391748195451,
+              "y": 0.7295469565516061
+            },
+            "torso": 1.0904540917867505,
+            "head": 1.4395199421856164
+          }
+        },
+        "checkpoint": 1,
+        "finished": false,
+        "faulted": null,
+        "finishTime": null,
+        "input": {
+          "throttle": 1,
+          "brake": 0,
+          "lean": 0
+        },
+        "engine": {
+          "rpm": 6440.642594553747,
+          "throttleEff": 0.9999999839942433,
+          "limiter": false
+        },
+        "contacts": {
+          "rear": "dirt",
+          "front": "dirt"
+        },
+        "rearSlip": 0.0402424564459416,
+        "hopPhase": "idle",
+        "ragdoll": null,
+        "seesaws": [],
+        "drums": []
+      },
+      "requestsSinceChoice": [
+        {
+          "atMs": 31507.201084,
+          "url": "http://127.0.0.1:57779/models/624657da70e8c78d/c1-harbor-tug-lod-bf0bddee9b84ea3c.glb",
+          "type": "fetch"
+        },
+        {
+          "atMs": 31507.370459,
+          "url": "http://127.0.0.1:57779/models/course-kits/coast-frontage/918b21884fbf220d/coast-frontage-95fe300274c04e6e.glb",
+          "type": "fetch"
+        },
+        {
+          "atMs": 31517.350125,
+          "url": "blob:http://127.0.0.1:57779/2380824a-6d57-49c4-8d24-cbd1a168d714",
+          "type": "fetch"
+        },
+        {
+          "atMs": 31519.910209,
+          "url": "http://127.0.0.1:57779/models/course-kits/coast-frontage/df56343262497dfe/frontage-albedo.phone-df56343262497dfe.webp",
+          "type": "fetch"
+        },
+        {
+          "atMs": 31519.944792,
+          "url": "http://127.0.0.1:57779/models/course-kits/coast-frontage/196e99318a3bd23b/frontage-arm.phone-196e99318a3bd23b.webp",
+          "type": "fetch"
+        },
+        {
+          "atMs": 31520.407167,
+          "url": "http://127.0.0.1:57779/models/course-kits/coast-frontage/6b18cc8114a4bf6a/frontage-normal.phone-6b18cc8114a4bf6a.webp",
+          "type": "fetch"
+        },
+        {
+          "atMs": 31520.418834,
+          "url": "http://127.0.0.1:57779/models/course-kits/coast-frontage/6bbbef3e12737875/coast-albedo.phone-6bbbef3e12737875.webp",
+          "type": "fetch"
+        },
+        {
+          "atMs": 31520.427042,
+          "url": "http://127.0.0.1:57779/models/course-kits/coast-frontage/7ef8ea04566fef19/coast-arm.phone-7ef8ea04566fef19.webp",
+          "type": "fetch"
+        },
+        {
+          "atMs": 31520.43425,
+          "url": "http://127.0.0.1:57779/models/course-kits/coast-frontage/4f83c0f35100efbf/coast-normal.phone-4f83c0f35100efbf.webp",
+          "type": "fetch"
+        }
+      ],
+      "phaseChanges": [
+        {
+          "atMs": 51512.10000038147,
+          "phase": "crashed",
+          "tick": 2129
+        },
+        {
+          "atMs": 52511.7000002861,
+          "phase": "riding",
+          "tick": 1
+        }
+      ],
+      "phaseCounts": {
+        "crashed": 60,
+        "riding": 1140
+      },
+      "lifecycleEvents": []
+    },
+    {
+      "outfit": "street-remastered",
+      "mode": "garage",
+      "choiceMs": 241.93033399999695,
+      "timeOriginUnchanged": true,
+      "duration": 20.007300000190735,
+      "appRenderCalls": 1201,
+      "submittedFrames": 1201,
+      "submittedFPS": 60.02808974666999,
+      "appRenderFPS": 60.02808974666999,
+      "observedRAFFPS": 106.16125114232062,
+      "cpuMs": {
+        "p50": 2.4000000953674316,
+        "p95": 3.5,
+        "max": 5.599999904632568
+      },
+      "riderMs": {
+        "p50": 1.3000001907348633,
+        "p95": 2.0999999046325684,
+        "max": 3.299999713897705
+      },
+      "postMs": {
+        "p50": 1,
+        "p95": 1.1000003814697266,
+        "max": 2.1000003814697266
+      },
+      "resetsPerSubmittedFrame": {
+        "p50": 11,
+        "p95": 11,
+        "max": 11
+      },
+      "calls": {
+        "p50": 73,
+        "p95": 73,
+        "max": 73
+      },
+      "triangles": {
+        "p50": 1643362,
+        "p95": 1643362,
+        "max": 1643362
+      },
+      "gpuMs": {
+        "p50": 3.106374,
+        "p95": 5.118791,
+        "max": 7.633875
+      },
+      "gpuTimerSupported": true,
+      "gpuDisjointQueries": 0,
+      "after": {
+        "version": "0.2.2-core",
+        "physicsHz": 120,
+        "trackId": "c1-low-tide",
+        "seed": 341352973,
+        "bike": "rookie",
+        "harness": false,
+        "readyAtMs": 300.5,
+        "loadTrackMs": 78.4,
+        "lastRender": {
+          "prepMs": 0,
+          "hudMs": 0.09999990463256836,
+          "audioMs": 0,
+          "submitMs": 2.5,
+          "syncMs": 0
+        },
+        "render": {
+          "biome": "coast",
+          "zoom": "idle",
+          "phase": "menu",
+          "tier": "low",
+          "dpr": 2,
+          "devicePixelRatio": 1.5,
+          "canvasW": 1688,
+          "canvasH": 780,
+          "calls": 73,
+          "tris": 1643362,
+          "rtMpx": 6.85,
+          "rtMB": 62.3,
+          "rtPasses": "shadow 512\u00d7512 | scene:hdr 1688\u00d7780 | composite:graded 1688\u00d7780 | smaa:edges 1688\u00d7780 | smaa:weights 1688\u00d7780 | smaa\u2192canvas 1688\u00d7780",
+          "shadowMap": 512,
+          "heroTris": 816784,
+          "heroDoc": "bike rider",
+          "riderOutfit": "street-remastered",
+          "riderMaterialVariant": null,
+          "heroShadow": "hero-only",
+          "trackCalls": 13,
+          "trackTris": 70328,
+          "textureGenMs": 269.19999980926514,
+          "passes": 5,
+          "stalePrograms": 8,
+          "skippedFrames": 0,
+          "deviceClass": "phone",
+          "profile": "low",
+          "bloomers": 0,
+          "entryMs": 527,
+          "entering": false,
+          "courseAssetsEnabled": false,
+          "courseAssetsMounted": 0,
+          "courseAssetsTextureMB": 0
+        },
+        "qualityWhy": "governor \u2193 low (p95 28.7 ms, drops 20 %)",
+        "quality": "low",
+        "entryHold": false,
+        "modules": {
+          "physics": "createBikePhysics",
+          "render": "ThreeRenderer",
+          "audio": "null",
+          "rider": "gltf",
+          "bike": "gltf"
+        }
+      },
+      "renderDetailsAfter": {
+        "prepare": [
+          {
+            "step": "art:start",
+            "ms": 3.6,
+            "bytes": 0
+          },
+          {
+            "step": "hero:bike",
+            "ms": 24.1,
+            "bytes": 0
+          },
+          {
+            "step": "hero:rider",
+            "ms": 5.4,
+            "bytes": 0
+          },
+          {
+            "step": "lighting",
+            "ms": 1,
+            "bytes": 0
+          },
+          {
+            "step": "post:create",
+            "ms": 0.6,
+            "bytes": 0
+          },
+          {
+            "step": "materials",
+            "ms": 371.4,
+            "bytes": 27256160.255999994
+          },
+          {
+            "step": "hero:gltf",
+            "ms": 5047.2,
+            "bytes": 0
+          },
+          {
+            "step": "art:settled",
+            "ms": 0.3,
+            "bytes": 842302
+          },
+          {
+            "step": "shaders",
+            "ms": 600.9,
+            "bytes": 0
+          },
+          {
+            "step": "firstframe:post",
+            "ms": 259.8,
+            "bytes": 0
+          },
+          {
+            "step": "firstframe:heroes",
+            "ms": 91.6,
+            "bytes": 0
+          }
+        ],
+        "biome": "coast",
+        "zoom": "idle",
+        "occluder": {
+          "ms": 0,
+          "tested": 0,
+          "hits": 0,
+          "count": 0,
+          "override": "orbit"
+        },
+        "garage": {
+          "on": true,
+          "draws": 14,
+          "hidden": 199,
+          "textureMB": 4.04,
+          "reflection": false
+        },
+        "phase": "menu",
+        "tier": "low",
+        "dpr": 2,
+        "devicePixelRatio": 1.5,
+        "canvasW": 1688,
+        "canvasH": 780,
+        "calls": 73,
+        "tris": 1643362,
+        "rtMpx": 6.85,
+        "rtMB": 62.3,
+        "rtPasses": "shadow 512\u00d7512 | scene:hdr 1688\u00d7780 | composite:graded 1688\u00d7780 | smaa:edges 1688\u00d7780 | smaa:weights 1688\u00d7780 | smaa\u2192canvas 1688\u00d7780",
+        "shadowMap": 512,
+        "heroTris": 816784,
+        "heroDoc": "bike rider",
+        "riderOutfit": "street-remastered",
+        "riderMaterialVariant": null,
+        "heroShadow": "hero-only",
+        "trackCalls": 13,
+        "trackTris": 70328,
+        "textureGenMs": 269.19999980926514,
+        "passes": 5,
+        "stalePrograms": 8,
+        "stabilized": {
+          "singlePass": 0,
+          "split": 0,
+          "depth": 27
+        },
+        "skippedFrames": 0,
+        "deviceClass": "phone",
+        "profile": "low",
+        "bloomers": 0,
+        "entryMs": 527,
+        "entry": {
+          "biome": "coast",
+          "ms": 527,
+          "compileMs": 12.400000095367432,
+          "textureMs": 0.19999980926513672,
+          "warmMs": 10.1,
+          "textures": 39,
+          "texturesMB": 24.8,
+          "materials": 51,
+          "programs": 45,
+          "programsBefore": 42
+        },
+        "heroSwap": {
+          "loads": [
+            {
+              "url": "models/3abafaa9ba2be816/rider-street-mustard-lod-def6821d99fe7d73.glb",
+              "bytes": 530340,
+              "fetchMs": 117.40000009536743,
+              "parseMs": 68.40000009536743,
+              "prepareMs": 0.40000009536743164,
+              "at": 215.90000009536743
+            },
+            {
+              "url": "models/98214c3b3099a465/bike-rookie-lod-4ec26ad0a0c08f7e.glb",
+              "bytes": 870436,
+              "fetchMs": 139.2999997138977,
+              "parseMs": 67,
+              "prepareMs": 0.5,
+              "at": 215.60000038146973
+            },
+            {
+              "url": "models/f7e7252c644c5eee/rider-race-charcoalyellow-lod-31229d98fde8964c.glb",
+              "bytes": 912696,
+              "fetchMs": 138.40000009536743,
+              "parseMs": 70.7999997138977,
+              "prepareMs": 0.7000002861022949,
+              "at": 216.30000019073486
+            },
+            {
+              "url": "models/c49fd28578f306a9/rider-race-bluewhite-lod-2bbe14c984d760e5.glb",
+              "bytes": 946824,
+              "fetchMs": 138.19999980926514,
+              "parseMs": 73.69999980926514,
+              "prepareMs": 0.10000038146972656,
+              "at": 216.10000038146973
+            },
+            {
+              "url": "models/bb3ec209a0dcc809/bike-pro-lod-37455064bf7b6012.glb",
+              "bytes": 864844,
+              "fetchMs": 148.80000019073486,
+              "parseMs": 76.2999997138977,
+              "prepareMs": 0.09999990463256836,
+              "at": 215.80000019073486
+            },
+            {
+              "url": "models/a7d3e3df18ab35a0/rider-street-charcoal-lod-fec85cbceaa7ad68.glb",
+              "bytes": 1472164,
+              "fetchMs": 181.30000019073486,
+              "parseMs": 54.69999980926514,
+              "prepareMs": 0.20000028610229492,
+              "at": 216
+            },
+            {
+              "url": "models/3abafaa9ba2be816/rider-street-mustard-bbf2d63694fd22cf.glb",
+              "bytes": 1442236,
+              "fetchMs": 195.09999990463257,
+              "parseMs": 60.80000019073486,
+              "prepareMs": 0.19999980926513672,
+              "at": 215.90000009536743
+            },
+            {
+              "url": "models/6ffd0a14f8f8e55c/rider-street-openface-lod-369e586fe3268929.glb",
+              "bytes": 1245476,
+              "fetchMs": 203.40000009536743,
+              "parseMs": 67.5,
+              "prepareMs": 0.19999980926513672,
+              "at": 215.7000002861023
+            },
+            {
+              "url": "models/98214c3b3099a465/bike-rookie-e55919d602678493.glb",
+              "bytes": 2283036,
+              "fetchMs": 227.30000019073486,
+              "parseMs": 63.5,
+              "prepareMs": 0.19999980926513672,
+              "at": 214.90000009536743
+            },
+            {
+              "url": "models/6ffd0a14f8f8e55c/rider-street-openface-a875ae974381dff1.glb",
+              "bytes": 2796628,
+              "fetchMs": 228.69999980926514,
+              "parseMs": 74,
+              "prepareMs": 0.19999980926513672,
+              "at": 215.60000038146973
+            },
+            {
+              "url": "models/c49fd28578f306a9/rider-race-bluewhite-28a1e706cf13337a.glb",
+              "bytes": 2448152,
+              "fetchMs": 231.10000038146973,
+              "parseMs": 82.39999961853027,
+              "prepareMs": 0.10000038146972656,
+              "at": 216
+            },
+            {
+              "url": "models/bb3ec209a0dcc809/bike-pro-0acc9ac86eeca76c.glb",
+              "bytes": 2270540,
+              "fetchMs": 245.80000019073486,
+              "parseMs": 79.09999990463257,
+              "prepareMs": 0.40000009536743164,
+              "at": 215.80000019073486
+            },
+            {
+              "url": "models/f7e7252c644c5eee/rider-race-charcoalyellow-4a9801c2a4148f45.glb",
+              "bytes": 2355380,
+              "fetchMs": 250.2999997138977,
+              "parseMs": 83.09999990463257,
+              "prepareMs": 0.10000038146972656,
+              "at": 216.10000038146973
+            },
+            {
+              "url": "models/a7d3e3df18ab35a0/rider-street-charcoal-0c14eb52f0aaed26.glb",
+              "bytes": 3234924,
+              "fetchMs": 341,
+              "parseMs": 22.300000190734863,
+              "prepareMs": 0.19999980926513672,
+              "at": 216
+            },
+            {
+              "url": "https://b47ghqoufyfsjh9t.public.blob.vercel-storage.com/rider-remaster/585ae314e2b354768a1385e5a85828c142d542b47f8d9fe948f46c7478c112ef/rider.glb",
+              "bytes": 74833728,
+              "fetchMs": 0,
+              "parseMs": 5512.400000095367,
+              "prepareMs": 4.5,
+              "at": 216.30000019073486
+            }
+          ],
+          "swaps": [
+            {
+              "at": 7742.700000286102,
+              "what": "bike:gltf/rider:gltf:rebuild \u2192 street-remastered/rookie",
+              "buildMs": 0.40000009536743164,
+              "firstFrameMs": 40.59999990463257,
+              "programsAdded": 5,
+              "texturesAdded": 8
+            },
+            {
+              "at": 8347,
+              "what": "bike:gltf/rider:gltf:rebuild \u2192 street-mustard/rookie",
+              "buildMs": 0.5,
+              "firstFrameMs": 25.40000009536743,
+              "programsAdded": 2,
+              "texturesAdded": 0
+            },
+            {
+              "at": 30604.800000190735,
+              "what": "bike:gltf/rider:gltf \u2192 street-mustard/rookie",
+              "buildMs": 0.19999980926513672,
+              "firstFrameMs": 0,
+              "programsAdded": 0,
+              "texturesAdded": 0
+            },
+            {
+              "at": 56434.300000190735,
+              "what": "bike:gltf/rider:gltf \u2192 street-mustard/rookie",
+              "buildMs": 0.19999980926513672,
+              "firstFrameMs": 0,
+              "programsAdded": 0,
+              "texturesAdded": 0
+            },
+            {
+              "at": 56684.800000190735,
+              "what": "bike:gltf/rider:gltf \u2192 street-remastered/rookie",
+              "buildMs": 0.19999980926513672,
+              "firstFrameMs": 2.5999999046325684,
+              "programsAdded": 0,
+              "texturesAdded": 0
+            }
+          ]
+        },
+        "entering": false,
+        "courseAssetsEnabled": false,
+        "courseAssetsMounted": 0,
+        "courseAssetsTextureMB": 0,
+        "retirement": {
+          "requested": 5,
+          "released": 5,
+          "deferred": 0,
+          "pending": 0,
+          "maxPending": 0,
+          "contextLosses": 0
+        },
+        "terminalPrograms": {
+          "deleted": 0,
+          "contextReleased": 0
+        },
+        "art": {
+          "settled": true,
+          "ok": true,
+          "loadMs": 187,
+          "deliveredMB": 0.8,
+          "inWorld": true,
+          "trackComplete": true,
+          "trackIds": 8,
+          "builtAtFrame": 2857,
+          "frames": 4162
+        }
+      },
+      "statsAfter": {
+        "calls": 73,
+        "triangles": 1643362,
+        "points": 0,
+        "lines": 0,
+        "geometries": 163,
+        "textures": 200,
+        "programs": 45,
+        "texturesMB": 579.2867626495362,
+        "renderer": "Google Inc. (Apple) / ANGLE (Apple, ANGLE Metal Renderer: Apple M5 Max, Unspecified Version)",
+        "contextKind": "webgl2"
+      },
+      "startState": {
+        "tick": 0,
+        "time": 0,
+        "bike": {
+          "pos": {
+            "x": 0.5921550723081759,
+            "y": 0.4916785695390017
+          },
+          "vel": {
+            "x": 0,
+            "y": 0
+          },
+          "angle": 0.023977002138789442,
+          "angVel": 0
+        },
+        "wheels": {
+          "rear": {
+            "pos": {
+              "x": 0,
+              "y": 0.34000000000001485
+            },
+            "spin": 0,
+            "spinVel": 0,
+            "compression": 0.28238301592511267,
+            "grounded": false
+          },
+          "front": {
+            "pos": {
+              "x": 1.2927022515345887,
+              "y": 0.34000000000001385
+            },
+            "spin": 0,
+            "spinVel": 0,
+            "compression": 0.1892318255345102,
+            "grounded": false
+          }
+        },
+        "rider": {
+          "lean": -0.009900315489308488,
+          "crouch": 0.058376073018405014,
+          "torsoPitch": 0,
+          "armExtend": 0.2136970680045652
+        },
+        "riderBody": {
+          "pos": {
+            "x": 0.4838272748830158,
+            "y": 1.0815735361460224
+          },
+          "angle": 0.023977002138789442,
+          "vel": {
+            "x": 0,
+            "y": 0
+          },
+          "angVel": 0,
+          "drawn": {
+            "pose": "back",
+            "blend": 0.009900315489308488,
+            "hips": {
+              "x": -0.3421900893970258,
+              "y": 0.7094128962402796
+            },
+            "torso": 1.1344640137963142,
+            "head": 1.4835298641951802
+          }
+        },
+        "checkpoint": -1,
+        "finished": false,
+        "faulted": null,
+        "finishTime": null,
+        "input": {
+          "throttle": 0,
+          "brake": 0,
+          "lean": 0
+        },
+        "engine": {
+          "rpm": 1500,
+          "throttleEff": 0,
+          "limiter": false
+        },
+        "contacts": {
+          "rear": null,
+          "front": null
+        },
+        "rearSlip": 0,
+        "hopPhase": "idle",
+        "ragdoll": null,
+        "seesaws": [],
+        "drums": []
+      },
+      "endState": {
+        "tick": 0,
+        "time": 0,
+        "bike": {
+          "pos": {
+            "x": 0.5921550723081759,
+            "y": 0.4916785695390017
+          },
+          "vel": {
+            "x": 0,
+            "y": 0
+          },
+          "angle": 0.023977002138789442,
+          "angVel": 0
+        },
+        "wheels": {
+          "rear": {
+            "pos": {
+              "x": 0,
+              "y": 0.34000000000001485
+            },
+            "spin": 0,
+            "spinVel": 0,
+            "compression": 0.28238301592511267,
+            "grounded": false
+          },
+          "front": {
+            "pos": {
+              "x": 1.2927022515345887,
+              "y": 0.34000000000001385
+            },
+            "spin": 0,
+            "spinVel": 0,
+            "compression": 0.1892318255345102,
+            "grounded": false
+          }
+        },
+        "rider": {
+          "lean": -0.009900315489308488,
+          "crouch": 0.058376073018405014,
+          "torsoPitch": 0,
+          "armExtend": 0.2136970680045652
+        },
+        "riderBody": {
+          "pos": {
+            "x": 0.4838272748830158,
+            "y": 1.0815735361460224
+          },
+          "angle": 0.023977002138789442,
+          "vel": {
+            "x": 0,
+            "y": 0
+          },
+          "angVel": 0,
+          "drawn": {
+            "pose": "back",
+            "blend": 0.009900315489308488,
+            "hips": {
+              "x": -0.3421900893970258,
+              "y": 0.7094128962402796
+            },
+            "torso": 1.1344640137963142,
+            "head": 1.4835298641951802
+          }
+        },
+        "checkpoint": -1,
+        "finished": false,
+        "faulted": null,
+        "finishTime": null,
+        "input": {
+          "throttle": 0,
+          "brake": 0,
+          "lean": 0
+        },
+        "engine": {
+          "rpm": 1500,
+          "throttleEff": 0,
+          "limiter": false
+        },
+        "contacts": {
+          "rear": null,
+          "front": null
+        },
+        "rearSlip": 0,
+        "hopPhase": "idle",
+        "ragdoll": null,
+        "seesaws": [],
+        "drums": []
+      },
+      "requestsSinceChoice": [],
+      "phaseChanges": [],
+      "phaseCounts": {
+        "menu": 1201
+      },
+      "lifecycleEvents": []
+    },
+    {
+      "outfit": "street-remastered",
+      "mode": "c1-ride",
+      "choiceMs": 241.93033399999695,
+      "timeOriginUnchanged": true,
+      "duration": 20.00589999961853,
+      "appRenderCalls": 1200,
+      "submittedFrames": 1200,
+      "submittedFPS": 59.98230522110384,
+      "appRenderFPS": 59.98230522110384,
+      "observedRAFFPS": 394.83352411791606,
+      "cpuMs": {
+        "p50": 2.5999999046325684,
+        "p95": 2.8000001907348633,
+        "max": 4.300000190734863
+      },
+      "riderMs": {
+        "p50": 1.299999713897705,
+        "p95": 1.4000000953674316,
+        "max": 2
+      },
+      "postMs": {
+        "p50": 1.200000286102295,
+        "p95": 1.4000000953674316,
+        "max": 2.200000286102295
+      },
+      "resetsPerSubmittedFrame": {
+        "p50": 11,
+        "p95": 11,
+        "max": 11
+      },
+      "calls": {
+        "p50": 104,
+        "p95": 112,
+        "max": 114
+      },
+      "triangles": {
+        "p50": 1673470,
+        "p95": 1694846,
+        "max": 1695632
+      },
+      "gpuMs": {
+        "p50": 3.60525,
+        "p95": 4.811458,
+        "max": 4.958791
+      },
+      "gpuTimerSupported": true,
+      "gpuDisjointQueries": 0,
+      "after": {
+        "version": "0.2.2-core",
+        "physicsHz": 120,
+        "trackId": "c1-low-tide",
+        "seed": 341352973,
+        "bike": "rookie",
+        "harness": false,
+        "readyAtMs": 300.5,
+        "loadTrackMs": 69.4,
+        "lastRender": {
+          "prepMs": 0,
+          "hudMs": 0,
+          "audioMs": 0,
+          "submitMs": 2.6999998092651367,
+          "syncMs": 0
+        },
+        "render": {
+          "biome": "coast",
+          "zoom": "riding",
+          "phase": "riding",
+          "tier": "low",
+          "dpr": 1.5,
+          "devicePixelRatio": 1.5,
+          "canvasW": 1266,
+          "canvasH": 585,
+          "calls": 109,
+          "tris": 1673446,
+          "rtMpx": 3.97,
+          "rtMB": 35.9,
+          "rtPasses": "shadow 512\u00d7512 | scene:hdr 1266\u00d7585 | composite:graded 1266\u00d7585 | smaa:edges 1266\u00d7585 | smaa:weights 1266\u00d7585 | smaa\u2192canvas 1266\u00d7585",
+          "shadowMap": 512,
+          "heroTris": 789373,
+          "heroDoc": "bike-lod rider",
+          "riderOutfit": "street-remastered",
+          "riderMaterialVariant": null,
+          "heroShadow": "hero-only",
+          "trackCalls": 13,
+          "trackTris": 70328,
+          "textureGenMs": 269.19999980926514,
+          "passes": 5,
+          "stalePrograms": 1,
+          "skippedFrames": 0,
+          "deviceClass": "phone",
+          "profile": "low",
+          "bloomers": 0,
+          "entryMs": 144.2,
+          "entering": false,
+          "courseAssetsEnabled": true,
+          "courseAssetsMounted": 2,
+          "courseAssetsTextureMB": 5.665
+        },
+        "qualityWhy": "governor \u2193 low (p95 28.7 ms, drops 20 %)",
+        "quality": "low",
+        "entryHold": false,
+        "modules": {
+          "physics": "createBikePhysics",
+          "render": "ThreeRenderer",
+          "audio": "null",
+          "rider": "gltf",
+          "bike": "gltf"
+        }
+      },
+      "renderDetailsAfter": {
+        "prepare": [
+          {
+            "step": "art:start",
+            "ms": 3.6,
+            "bytes": 0
+          },
+          {
+            "step": "hero:bike",
+            "ms": 24.1,
+            "bytes": 0
+          },
+          {
+            "step": "hero:rider",
+            "ms": 5.4,
+            "bytes": 0
+          },
+          {
+            "step": "lighting",
+            "ms": 1,
+            "bytes": 0
+          },
+          {
+            "step": "post:create",
+            "ms": 0.6,
+            "bytes": 0
+          },
+          {
+            "step": "materials",
+            "ms": 371.4,
+            "bytes": 27256160.255999994
+          },
+          {
+            "step": "hero:gltf",
+            "ms": 5047.2,
+            "bytes": 0
+          },
+          {
+            "step": "art:settled",
+            "ms": 0.3,
+            "bytes": 842302
+          },
+          {
+            "step": "shaders",
+            "ms": 600.9,
+            "bytes": 0
+          },
+          {
+            "step": "firstframe:post",
+            "ms": 259.8,
+            "bytes": 0
+          },
+          {
+            "step": "firstframe:heroes",
+            "ms": 91.6,
+            "bytes": 0
+          }
+        ],
+        "biome": "coast",
+        "zoom": "riding",
+        "occluder": {
+          "ms": 0,
+          "tested": 0,
+          "hits": 0,
+          "count": 0,
+          "override": null
+        },
+        "garage": {
+          "on": false,
+          "draws": 14,
+          "hidden": 0,
+          "textureMB": 4.04,
+          "reflection": false
+        },
+        "phase": "riding",
+        "tier": "low",
+        "dpr": 1.5,
+        "devicePixelRatio": 1.5,
+        "canvasW": 1266,
+        "canvasH": 585,
+        "calls": 109,
+        "tris": 1673446,
+        "rtMpx": 3.97,
+        "rtMB": 35.9,
+        "rtPasses": "shadow 512\u00d7512 | scene:hdr 1266\u00d7585 | composite:graded 1266\u00d7585 | smaa:edges 1266\u00d7585 | smaa:weights 1266\u00d7585 | smaa\u2192canvas 1266\u00d7585",
+        "shadowMap": 512,
+        "heroTris": 789373,
+        "heroDoc": "bike-lod rider",
+        "riderOutfit": "street-remastered",
+        "riderMaterialVariant": null,
+        "heroShadow": "hero-only",
+        "trackCalls": 13,
+        "trackTris": 70328,
+        "textureGenMs": 269.19999980926514,
+        "passes": 5,
+        "stalePrograms": 1,
+        "stabilized": {
+          "singlePass": 0,
+          "split": 0,
+          "depth": 86
+        },
+        "skippedFrames": 0,
+        "deviceClass": "phone",
+        "profile": "low",
+        "bloomers": 0,
+        "entryMs": 144.2,
+        "entry": {
+          "biome": "coast",
+          "ms": 144.2,
+          "compileMs": 100.19999980926514,
+          "textureMs": 0.9000000953674316,
+          "warmMs": 13.1,
+          "textures": 46,
+          "texturesMB": 28.4,
+          "materials": 63,
+          "programs": 49,
+          "programsBefore": 42
+        },
+        "heroSwap": {
+          "loads": [
+            {
+              "url": "models/3abafaa9ba2be816/rider-street-mustard-lod-def6821d99fe7d73.glb",
+              "bytes": 530340,
+              "fetchMs": 117.40000009536743,
+              "parseMs": 68.40000009536743,
+              "prepareMs": 0.40000009536743164,
+              "at": 215.90000009536743
+            },
+            {
+              "url": "models/98214c3b3099a465/bike-rookie-lod-4ec26ad0a0c08f7e.glb",
+              "bytes": 870436,
+              "fetchMs": 139.2999997138977,
+              "parseMs": 67,
+              "prepareMs": 0.5,
+              "at": 215.60000038146973
+            },
+            {
+              "url": "models/f7e7252c644c5eee/rider-race-charcoalyellow-lod-31229d98fde8964c.glb",
+              "bytes": 912696,
+              "fetchMs": 138.40000009536743,
+              "parseMs": 70.7999997138977,
+              "prepareMs": 0.7000002861022949,
+              "at": 216.30000019073486
+            },
+            {
+              "url": "models/c49fd28578f306a9/rider-race-bluewhite-lod-2bbe14c984d760e5.glb",
+              "bytes": 946824,
+              "fetchMs": 138.19999980926514,
+              "parseMs": 73.69999980926514,
+              "prepareMs": 0.10000038146972656,
+              "at": 216.10000038146973
+            },
+            {
+              "url": "models/bb3ec209a0dcc809/bike-pro-lod-37455064bf7b6012.glb",
+              "bytes": 864844,
+              "fetchMs": 148.80000019073486,
+              "parseMs": 76.2999997138977,
+              "prepareMs": 0.09999990463256836,
+              "at": 215.80000019073486
+            },
+            {
+              "url": "models/a7d3e3df18ab35a0/rider-street-charcoal-lod-fec85cbceaa7ad68.glb",
+              "bytes": 1472164,
+              "fetchMs": 181.30000019073486,
+              "parseMs": 54.69999980926514,
+              "prepareMs": 0.20000028610229492,
+              "at": 216
+            },
+            {
+              "url": "models/3abafaa9ba2be816/rider-street-mustard-bbf2d63694fd22cf.glb",
+              "bytes": 1442236,
+              "fetchMs": 195.09999990463257,
+              "parseMs": 60.80000019073486,
+              "prepareMs": 0.19999980926513672,
+              "at": 215.90000009536743
+            },
+            {
+              "url": "models/6ffd0a14f8f8e55c/rider-street-openface-lod-369e586fe3268929.glb",
+              "bytes": 1245476,
+              "fetchMs": 203.40000009536743,
+              "parseMs": 67.5,
+              "prepareMs": 0.19999980926513672,
+              "at": 215.7000002861023
+            },
+            {
+              "url": "models/98214c3b3099a465/bike-rookie-e55919d602678493.glb",
+              "bytes": 2283036,
+              "fetchMs": 227.30000019073486,
+              "parseMs": 63.5,
+              "prepareMs": 0.19999980926513672,
+              "at": 214.90000009536743
+            },
+            {
+              "url": "models/6ffd0a14f8f8e55c/rider-street-openface-a875ae974381dff1.glb",
+              "bytes": 2796628,
+              "fetchMs": 228.69999980926514,
+              "parseMs": 74,
+              "prepareMs": 0.19999980926513672,
+              "at": 215.60000038146973
+            },
+            {
+              "url": "models/c49fd28578f306a9/rider-race-bluewhite-28a1e706cf13337a.glb",
+              "bytes": 2448152,
+              "fetchMs": 231.10000038146973,
+              "parseMs": 82.39999961853027,
+              "prepareMs": 0.10000038146972656,
+              "at": 216
+            },
+            {
+              "url": "models/bb3ec209a0dcc809/bike-pro-0acc9ac86eeca76c.glb",
+              "bytes": 2270540,
+              "fetchMs": 245.80000019073486,
+              "parseMs": 79.09999990463257,
+              "prepareMs": 0.40000009536743164,
+              "at": 215.80000019073486
+            },
+            {
+              "url": "models/f7e7252c644c5eee/rider-race-charcoalyellow-4a9801c2a4148f45.glb",
+              "bytes": 2355380,
+              "fetchMs": 250.2999997138977,
+              "parseMs": 83.09999990463257,
+              "prepareMs": 0.10000038146972656,
+              "at": 216.10000038146973
+            },
+            {
+              "url": "models/a7d3e3df18ab35a0/rider-street-charcoal-0c14eb52f0aaed26.glb",
+              "bytes": 3234924,
+              "fetchMs": 341,
+              "parseMs": 22.300000190734863,
+              "prepareMs": 0.19999980926513672,
+              "at": 216
+            },
+            {
+              "url": "https://b47ghqoufyfsjh9t.public.blob.vercel-storage.com/rider-remaster/585ae314e2b354768a1385e5a85828c142d542b47f8d9fe948f46c7478c112ef/rider.glb",
+              "bytes": 74833728,
+              "fetchMs": 0,
+              "parseMs": 5512.400000095367,
+              "prepareMs": 4.5,
+              "at": 216.30000019073486
+            }
+          ],
+          "swaps": [
+            {
+              "at": 7742.700000286102,
+              "what": "bike:gltf/rider:gltf:rebuild \u2192 street-remastered/rookie",
+              "buildMs": 0.40000009536743164,
+              "firstFrameMs": 40.59999990463257,
+              "programsAdded": 5,
+              "texturesAdded": 8
+            },
+            {
+              "at": 8347,
+              "what": "bike:gltf/rider:gltf:rebuild \u2192 street-mustard/rookie",
+              "buildMs": 0.5,
+              "firstFrameMs": 25.40000009536743,
+              "programsAdded": 2,
+              "texturesAdded": 0
+            },
+            {
+              "at": 30604.800000190735,
+              "what": "bike:gltf/rider:gltf \u2192 street-mustard/rookie",
+              "buildMs": 0.19999980926513672,
+              "firstFrameMs": 0,
+              "programsAdded": 0,
+              "texturesAdded": 0
+            },
+            {
+              "at": 56434.300000190735,
+              "what": "bike:gltf/rider:gltf \u2192 street-mustard/rookie",
+              "buildMs": 0.19999980926513672,
+              "firstFrameMs": 0,
+              "programsAdded": 0,
+              "texturesAdded": 0
+            },
+            {
+              "at": 56684.800000190735,
+              "what": "bike:gltf/rider:gltf \u2192 street-remastered/rookie",
+              "buildMs": 0.19999980926513672,
+              "firstFrameMs": 2.5999999046325684,
+              "programsAdded": 0,
+              "texturesAdded": 0
+            },
+            {
+              "at": 78915.30000019073,
+              "what": "bike:gltf/rider:gltf:rebuild \u2192 street-remastered/rookie",
+              "buildMs": 0.3000001907348633,
+              "firstFrameMs": 0,
+              "programsAdded": 0,
+              "texturesAdded": 0
+            }
+          ]
+        },
+        "entering": false,
+        "courseAssetsEnabled": true,
+        "courseAssetsMounted": 2,
+        "courseAssetsTextureMB": 5.665,
+        "retirement": {
+          "requested": 6,
+          "released": 6,
+          "deferred": 0,
+          "pending": 0,
+          "maxPending": 0,
+          "contextLosses": 0
+        },
+        "terminalPrograms": {
+          "deleted": 0,
+          "contextReleased": 0
+        },
+        "art": {
+          "settled": true,
+          "ok": true,
+          "loadMs": 187,
+          "deliveredMB": 0.8,
+          "inWorld": true,
+          "trackComplete": true,
+          "trackIds": 8,
+          "builtAtFrame": 4201,
+          "frames": 5671
+        }
+      },
+      "statsAfter": {
+        "calls": 109,
+        "triangles": 1673446,
+        "points": 512,
+        "lines": 0,
+        "geometries": 291,
+        "textures": 208,
+        "programs": 49,
+        "texturesMB": 577.6442057342529,
+        "renderer": "Google Inc. (Apple) / ANGLE (Apple, ANGLE Metal Renderer: Apple M5 Max, Unspecified Version)",
+        "contextKind": "webgl2"
+      },
+      "startState": {
+        "tick": 180,
+        "time": 1.5,
+        "bike": {
+          "pos": {
+            "x": 5.898751354780698,
+            "y": 0.48327529190123597
+          },
+          "vel": {
+            "x": 7.570250444058764,
+            "y": -1.0074594886771786e-05
+          },
+          "angle": 0.09226582079187867,
+          "angVel": 0.0027339350792274864
+        },
+        "wheels": {
+          "rear": {
+            "pos": {
+              "x": 5.313515320511803,
+              "y": 0.3396395910165189
+            },
+            "spin": 15.652688110757907,
+            "spinVel": 22.28750317835438,
+            "compression": 0.4683816977542705,
+            "grounded": true
+          },
+          "front": {
+            "pos": {
+              "x": 6.630058534711029,
+              "y": 0.3400450609452321
+            },
+            "spin": 15.578272680081735,
+            "spinVel": 22.266443038488216,
+            "compression": 2.7662759719473184e-14,
+            "grounded": true
+          }
+        },
+        "rider": {
+          "lean": -0.09545466936782776,
+          "crouch": 0.012771944563079545,
+          "torsoPitch": 0.041790632002088025,
+          "armExtend": 0.28111162619136704
+        },
+        "riderBody": {
+          "pos": {
+            "x": 5.735461024322459,
+            "y": 1.076758683656207
+          },
+          "angle": 0.05047518878979065,
+          "vel": {
+            "x": 7.569707951892679,
+            "y": -0.00108966424585199
+          },
+          "angVel": -0.002040875093702812,
+          "drawn": {
+            "pose": "back",
+            "blend": 0.09545466936782776,
+            "hips": {
+              "x": -0.36515098384023853,
+              "y": 0.7296365779047238
+            },
+            "torso": 1.0926733817942262,
+            "head": 1.4417392321930922
+          }
+        },
+        "checkpoint": -1,
+        "finished": false,
+        "faulted": null,
+        "finishTime": null,
+        "input": {
+          "throttle": 1,
+          "brake": 0,
+          "lean": 0
+        },
+        "engine": {
+          "rpm": 3788.3736084122056,
+          "throttleEff": 0.9999373553708009,
+          "limiter": false
+        },
+        "contacts": {
+          "rear": "dirt",
+          "front": "dirt"
+        },
+        "rearSlip": 0.032772722356058104,
+        "hopPhase": "idle",
+        "ragdoll": null,
+        "seesaws": [],
+        "drums": []
+      },
+      "endState": {
+        "tick": 332,
+        "time": 2.7666666666666666,
+        "bike": {
+          "pos": {
+            "x": 199.3837931455925,
+            "y": 0.49189533811587544
+          },
+          "vel": {
+            "x": 12.880850252486223,
+            "y": -0.0014675223638635866
+          },
+          "angle": 0.07880269476372778,
+          "angVel": -0.007699688926548097
+        },
+        "wheels": {
+          "rear": {
+            "pos": {
+              "x": 198.79752390224357,
+              "y": 0.3393857042698224
+            },
+            "spin": 55.03243067277763,
+            "spinVel": 37.891152545781935,
+            "compression": 0.4038116038675963,
+            "grounded": true
+          },
+          "front": {
+            "pos": {
+              "x": 200.11251041131214,
+              "y": 0.3399398992801946
+            },
+            "spin": 54.924475838726714,
+            "spinVel": 37.865915012500565,
+            "compression": 0.0052379924068393785,
+            "grounded": true
+          }
+        },
+        "rider": {
+          "lean": -0.08284744372661175,
+          "crouch": 0.014637460980897837,
+          "torsoPitch": 0.044009922009563704,
+          "armExtend": 0.26984185138069217
+        },
+        "riderBody": {
+          "pos": {
+            "x": 199.2317780022212,
+            "y": 1.0872201374016177
+          },
+          "angle": 0.03479277275416408,
+          "vel": {
+            "x": 12.888040708853898,
+            "y": 0.00031078198030228525
+          },
+          "angVel": -0.001994028259923315,
+          "drawn": {
+            "pose": "back",
+            "blend": 0.08284744372661175,
+            "hips": {
+              "x": -0.3616391748195451,
+              "y": 0.7295469565516061
+            },
+            "torso": 1.0904540917867505,
+            "head": 1.4395199421856164
+          }
+        },
+        "checkpoint": 1,
+        "finished": false,
+        "faulted": null,
+        "finishTime": null,
+        "input": {
+          "throttle": 1,
+          "brake": 0,
+          "lean": 0
+        },
+        "engine": {
+          "rpm": 6440.642594553747,
+          "throttleEff": 0.9999999839942433,
+          "limiter": false
+        },
+        "contacts": {
+          "rear": "dirt",
+          "front": "dirt"
+        },
+        "rearSlip": 0.0402424564459416,
+        "hopPhase": "idle",
+        "ragdoll": null,
+        "seesaws": [],
+        "drums": []
+      },
+      "requestsSinceChoice": [
+        {
+          "atMs": 79817.670125,
+          "url": "http://127.0.0.1:57779/models/624657da70e8c78d/c1-harbor-tug-lod-bf0bddee9b84ea3c.glb",
+          "type": "fetch"
+        },
+        {
+          "atMs": 79817.847417,
+          "url": "http://127.0.0.1:57779/models/course-kits/coast-frontage/918b21884fbf220d/coast-frontage-95fe300274c04e6e.glb",
+          "type": "fetch"
+        },
+        {
+          "atMs": 79823.906792,
+          "url": "blob:http://127.0.0.1:57779/0b69fd01-be46-44ea-9605-294422d99461",
+          "type": "fetch"
+        },
+        {
+          "atMs": 79827.029,
+          "url": "http://127.0.0.1:57779/models/course-kits/coast-frontage/df56343262497dfe/frontage-albedo.phone-df56343262497dfe.webp",
+          "type": "fetch"
+        },
+        {
+          "atMs": 79827.042667,
+          "url": "http://127.0.0.1:57779/models/course-kits/coast-frontage/196e99318a3bd23b/frontage-arm.phone-196e99318a3bd23b.webp",
+          "type": "fetch"
+        },
+        {
+          "atMs": 79827.053334,
+          "url": "http://127.0.0.1:57779/models/course-kits/coast-frontage/6b18cc8114a4bf6a/frontage-normal.phone-6b18cc8114a4bf6a.webp",
+          "type": "fetch"
+        },
+        {
+          "atMs": 79827.060209,
+          "url": "http://127.0.0.1:57779/models/course-kits/coast-frontage/6bbbef3e12737875/coast-albedo.phone-6bbbef3e12737875.webp",
+          "type": "fetch"
+        },
+        {
+          "atMs": 79827.066709,
+          "url": "http://127.0.0.1:57779/models/course-kits/coast-frontage/7ef8ea04566fef19/coast-arm.phone-7ef8ea04566fef19.webp",
+          "type": "fetch"
+        },
+        {
+          "atMs": 79827.087709,
+          "url": "http://127.0.0.1:57779/models/course-kits/coast-frontage/4f83c0f35100efbf/coast-normal.phone-4f83c0f35100efbf.webp",
+          "type": "fetch"
+        }
+      ],
+      "phaseChanges": [
+        {
+          "atMs": 99772.5,
+          "phase": "crashed",
+          "tick": 2128
+        },
+        {
+          "atMs": 100777.7000002861,
+          "phase": "riding",
+          "tick": 1
+        }
+      ],
+      "phaseCounts": {
+        "crashed": 61,
+        "riding": 1139
+      },
+      "lifecycleEvents": []
+    }
+  ],
+  "requestsByURL": [
+    {
+      "url": "http://127.0.0.1:57779/?audio=0&perf=1",
+      "count": 1
+    },
+    {
+      "url": "http://127.0.0.1:57779/assets/basis_transcoder-VXdx5NbI.wasm",
+      "count": 2
+    },
+    {
+      "url": "http://127.0.0.1:57779/assets/basis_transcoder-o4Hde_L7.js",
+      "count": 2
+    },
+    {
+      "url": "http://127.0.0.1:57779/assets/three-DXE_f4pi.js",
+      "count": 2
+    },
+    {
+      "url": "http://127.0.0.1:57779/assets/index-Bd8F_rZu.js",
+      "count": 2
+    },
+    {
+      "url": "http://127.0.0.1:57779/assets/rider-textures-C99I58hT.js",
+      "count": 2
+    },
+    {
+      "url": "http://127.0.0.1:57779/assets/rider-selected-CPwZmZbN.js",
+      "count": 2
+    },
+    {
+      "url": "http://127.0.0.1:57779/fonts/Archivo-Rockhop.woff2",
+      "count": 2
+    },
+    {
+      "url": "http://127.0.0.1:57779/fonts/ArchivoBlack-Rockhop.woff2",
+      "count": 2
+    },
+    {
+      "url": "http://127.0.0.1:57779/fonts/BarlowCondensed-BlackItalic.woff2",
+      "count": 1
+    },
+    {
+      "url": "http://127.0.0.1:57779/fonts/BarlowCondensed-Bold.woff2",
+      "count": 2
+    },
+    {
+      "url": "http://127.0.0.1:57779/fonts/BarlowCondensed-Medium.woff2",
+      "count": 2
+    },
+    {
+      "url": "http://127.0.0.1:57779/rider-remaster-source.json",
+      "count": 1
+    },
+    {
+      "url": "http://127.0.0.1:57779/rider-remaster-contract.json",
+      "count": 2
+    },
+    {
+      "url": "http://127.0.0.1:57779/assets/retired-uhpeOnlK.js",
+      "count": 1
+    },
+    {
+      "url": "http://127.0.0.1:57779/models/98214c3b3099a465/bike-rookie-e55919d602678493.glb",
+      "count": 1
+    },
+    {
+      "url": "http://127.0.0.1:57779/models/98214c3b3099a465/bike-rookie-lod-4ec26ad0a0c08f7e.glb",
+      "count": 1
+    },
+    {
+      "url": "http://127.0.0.1:57779/models/6ffd0a14f8f8e55c/rider-street-openface-a875ae974381dff1.glb",
+      "count": 1
+    },
+    {
+      "url": "http://127.0.0.1:57779/models/6ffd0a14f8f8e55c/rider-street-openface-lod-369e586fe3268929.glb",
+      "count": 1
+    },
+    {
+      "url": "http://127.0.0.1:57779/models/bb3ec209a0dcc809/bike-pro-0acc9ac86eeca76c.glb",
+      "count": 1
+    },
+    {
+      "url": "http://127.0.0.1:57779/models/bb3ec209a0dcc809/bike-pro-lod-37455064bf7b6012.glb",
+      "count": 1
+    },
+    {
+      "url": "http://127.0.0.1:57779/models/3abafaa9ba2be816/rider-street-mustard-bbf2d63694fd22cf.glb",
+      "count": 1
+    },
+    {
+      "url": "http://127.0.0.1:57779/models/3abafaa9ba2be816/rider-street-mustard-lod-def6821d99fe7d73.glb",
+      "count": 1
+    },
+    {
+      "url": "http://127.0.0.1:57779/models/a7d3e3df18ab35a0/rider-street-charcoal-0c14eb52f0aaed26.glb",
+      "count": 1
+    },
+    {
+      "url": "http://127.0.0.1:57779/models/a7d3e3df18ab35a0/rider-street-charcoal-lod-fec85cbceaa7ad68.glb",
+      "count": 1
+    },
+    {
+      "url": "http://127.0.0.1:57779/models/c49fd28578f306a9/rider-race-bluewhite-28a1e706cf13337a.glb",
+      "count": 1
+    },
+    {
+      "url": "http://127.0.0.1:57779/models/c49fd28578f306a9/rider-race-bluewhite-lod-2bbe14c984d760e5.glb",
+      "count": 1
+    },
+    {
+      "url": "http://127.0.0.1:57779/models/f7e7252c644c5eee/rider-race-charcoalyellow-4a9801c2a4148f45.glb",
+      "count": 1
+    },
+    {
+      "url": "http://127.0.0.1:57779/models/f7e7252c644c5eee/rider-race-charcoalyellow-lod-31229d98fde8964c.glb",
+      "count": 1
+    },
+    {
+      "url": "http://127.0.0.1:57779/art/manifest.json",
+      "count": 4
+    },
+    {
+      "url": "http://127.0.0.1:57779/art/menu/keyart-harbour-960.webp",
+      "count": 1
+    },
+    {
+      "url": "https://b47ghqoufyfsjh9t.public.blob.vercel-storage.com/rider-remaster/585ae314e2b354768a1385e5a85828c142d542b47f8d9fe948f46c7478c112ef/rider.glb",
+      "count": 1
+    },
+    {
+      "url": "http://127.0.0.1:57779/art/world/banner-vortex-oil.webp",
+      "count": 1
+    },
+    {
+      "url": "http://127.0.0.1:57779/art/world/banner-kestrel-tyres.webp",
+      "count": 1
+    },
+    {
+      "url": "http://127.0.0.1:57779/art/world/banner-nordvik.webp",
+      "count": 1
+    },
+    {
+      "url": "http://127.0.0.1:57779/art/world/banner-apex-suspension.webp",
+      "count": 1
+    },
+    {
+      "url": "http://127.0.0.1:57779/art/world/banner-bolt-energy.webp",
+      "count": 1
+    },
+    {
+      "url": "http://127.0.0.1:57779/art/world/tyremark-arc.webp",
+      "count": 1
+    },
+    {
+      "url": "http://127.0.0.1:57779/art/world/stencil-hkr.webp",
+      "count": 1
+    },
+    {
+      "url": "http://127.0.0.1:57779/art/world/stencil-nordvik.webp",
+      "count": 1
+    },
+    {
+      "url": "http://127.0.0.1:57779/art/world/stencil-weights.webp",
+      "count": 1
+    },
+    {
+      "url": "http://127.0.0.1:57779/art/world/stencil-hazard.webp",
+      "count": 1
+    },
+    {
+      "url": "http://127.0.0.1:57779/art/world/stencil-serial.webp",
+      "count": 1
+    },
+    {
+      "url": "http://127.0.0.1:57779/art/world/stencil-arrows.webp",
+      "count": 1
+    },
+    {
+      "url": "http://127.0.0.1:57779/art/world/mask-edge-grime.webp",
+      "count": 1
+    },
+    {
+      "url": "http://127.0.0.1:57779/art/world/mask-grime-spatter.webp",
+      "count": 1
+    },
+    {
+      "url": "http://127.0.0.1:57779/art/plates/plate-industrial.webp",
+      "count": 1
+    },
+    {
+      "url": "http://127.0.0.1:57779/art/menu/medal-bronze-512.png?v=6079a5f5",
+      "count": 2
+    },
+    {
+      "url": "http://127.0.0.1:57779/art/menu/medal-silver-512.png?v=3a22eb09",
+      "count": 2
+    },
+    {
+      "url": "http://127.0.0.1:57779/art/menu/medal-gold-512.png?v=baeb408f",
+      "count": 2
+    },
+    {
+      "url": "http://127.0.0.1:57779/art/menu/keyart-harbour-1920.webp?v=bb6fa1d4",
+      "count": 5
+    },
+    {
+      "url": "http://127.0.0.1:57779/art/menu/results-coast.webp?v=fa0485c4",
+      "count": 2
+    },
+    {
+      "url": "http://127.0.0.1:57779/art/menu/bike-rookie-1536.webp?v=ddcf8ace",
+      "count": 3
+    },
+    {
+      "url": "http://127.0.0.1:57779/art/menu/bike-pro-1536.webp?v=3e042f66",
+      "count": 3
+    },
+    {
+      "url": "http://127.0.0.1:57779/art/world/stencil-taro.webp?v=40d02bbb",
+      "count": 1
+    },
+    {
+      "url": "http://127.0.0.1:57779/art/world/stencil-apex.webp?v=d5d94290",
+      "count": 1
+    },
+    {
+      "url": "http://127.0.0.1:57779/art/world/mask-rust-streaks.webp?v=f8b91860",
+      "count": 1
+    },
+    {
+      "url": "http://127.0.0.1:57779/art/world/mask-rivet-drips.webp?v=5a4d4a38",
+      "count": 1
+    },
+    {
+      "url": "blob:http://127.0.0.1:57779/a9711a96-f49e-49c9-8c23-c9457e1970cd",
+      "count": 1
+    },
+    {
+      "url": "blob:http://127.0.0.1:57779/5291e08d-3049-4ae0-9274-a92bd9a861d3",
+      "count": 1
+    },
+    {
+      "url": "http://127.0.0.1:57779/art/world/tyremark-straight.webp?v=8940ca99",
+      "count": 1
+    },
+    {
+      "url": "http://127.0.0.1:57779/art/world/sign-hard-hat.webp?v=b710c986",
+      "count": 1
+    },
+    {
+      "url": "http://127.0.0.1:57779/art/world/sign-overhead-crane.webp?v=ebba5c57",
+      "count": 1
+    },
+    {
+      "url": "http://127.0.0.1:57779/art/world/sign-forklift.webp?v=674eadbd",
+      "count": 1
+    },
+    {
+      "url": "blob:http://127.0.0.1:57779/5745d5c1-6d11-4070-ab6e-bdc7632693c3",
+      "count": 1
+    },
+    {
+      "url": "blob:http://127.0.0.1:57779/1182dd7a-e2ee-42bd-9d13-31be65c9c53b",
+      "count": 1
+    },
+    {
+      "url": "blob:http://127.0.0.1:57779/e447df51-f278-4c0f-8437-ce482727e186",
+      "count": 1
+    },
+    {
+      "url": "blob:http://127.0.0.1:57779/cd5f6a88-7e5a-421e-96be-d1aeb81663dc",
+      "count": 1
+    },
+    {
+      "url": "blob:http://127.0.0.1:57779/ec529ff8-d4e4-42dc-b4ae-b0085d22faf9",
+      "count": 1
+    },
+    {
+      "url": "blob:http://127.0.0.1:57779/7ab78cdd-dd1f-47f8-a31b-f7cc3f3334c6",
+      "count": 1
+    },
+    {
+      "url": "blob:http://127.0.0.1:57779/311776b7-254d-44d5-ac88-e4ba398e4a17",
+      "count": 1
+    },
+    {
+      "url": "blob:http://127.0.0.1:57779/b038828e-5708-4cc2-8b2d-e70708bada5e",
+      "count": 1
+    },
+    {
+      "url": "blob:http://127.0.0.1:57779/20475909-f740-423d-a1af-165903c1b32a",
+      "count": 1
+    },
+    {
+      "url": "blob:http://127.0.0.1:57779/ed18274f-9a40-4e85-8cbb-66d85daa0231",
+      "count": 1
+    },
+    {
+      "url": "blob:http://127.0.0.1:57779/4700161c-5440-4e2c-a1e8-1be5bc636d09",
+      "count": 1
+    },
+    {
+      "url": "blob:http://127.0.0.1:57779/0e4a4039-74b6-4e7e-ad5d-c22ca84af1a2",
+      "count": 1
+    },
+    {
+      "url": "blob:http://127.0.0.1:57779/5d286fbd-865e-48cc-8033-4e7ac427e4e5",
+      "count": 1
+    },
+    {
+      "url": "blob:http://127.0.0.1:57779/4eb2fca3-c4b5-4ad0-9c04-abc1da4c7f50",
+      "count": 1
+    },
+    {
+      "url": "http://127.0.0.1:57779/art/world/sign-exit.webp?v=160bed9f",
+      "count": 1
+    },
+    {
+      "url": "http://127.0.0.1:57779/art/world/poster-tyres.webp?v=9fe1b890",
+      "count": 1
+    },
+    {
+      "url": "blob:http://127.0.0.1:57779/438e5b8c-8df0-4200-bc58-28a2c987ba70",
+      "count": 1
+    },
+    {
+      "url": "blob:http://127.0.0.1:57779/1ab43a59-f012-443f-8064-32c86558ac72",
+      "count": 1
+    },
+    {
+      "url": "blob:http://127.0.0.1:57779/a7fbc92d-a8bc-416a-a11f-b7365ff9cd5d",
+      "count": 1
+    },
+    {
+      "url": "blob:http://127.0.0.1:57779/a7ae1699-c0ad-4a83-b074-0d0d57e0ce07",
+      "count": 1
+    },
+    {
+      "url": "blob:http://127.0.0.1:57779/7928a501-936f-4794-b520-362d76bd734b",
+      "count": 1
+    },
+    {
+      "url": "blob:http://127.0.0.1:57779/94cc8282-6841-470b-bd75-58facd0ab697",
+      "count": 1
+    },
+    {
+      "url": "blob:http://127.0.0.1:57779/ba34fac1-629a-45a9-b378-febf0e86cb47",
+      "count": 1
+    },
+    {
+      "url": "blob:http://127.0.0.1:57779/e22bbcf3-d360-4448-b223-95d15a881a2e",
+      "count": 1
+    },
+    {
+      "url": "http://127.0.0.1:57779/art/world/graffiti-grind.webp?v=1f75a1ce",
+      "count": 1
+    },
+    {
+      "url": "http://127.0.0.1:57779/art/world/graffiti-skull.webp?v=b10d2418",
+      "count": 1
+    },
+    {
+      "url": "http://127.0.0.1:57779/art/world/graffiti-tag-wall.webp?v=d9f5531e",
+      "count": 1
+    },
+    {
+      "url": "http://127.0.0.1:57779/art/world/graffiti-wheel.webp?v=1a1b02de",
+      "count": 1
+    },
+    {
+      "url": "blob:http://127.0.0.1:57779/69d1f8f8-2a1b-4f3a-8ff1-cb1386616c17",
+      "count": 1
+    },
+    {
+      "url": "blob:http://127.0.0.1:57779/f0c2bc3f-739e-45ad-9612-d9462e4f0e3b",
+      "count": 1
+    },
+    {
+      "url": "blob:http://127.0.0.1:57779/017252d5-ffa1-4841-9946-ef60e6160a04",
+      "count": 1
+    },
+    {
+      "url": "blob:http://127.0.0.1:57779/4acd37a8-d696-4253-9eca-c2b541aedd74",
+      "count": 1
+    },
+    {
+      "url": "blob:http://127.0.0.1:57779/229eafcc-22a0-4b61-a719-c8158adcf93a",
+      "count": 1
+    },
+    {
+      "url": "blob:http://127.0.0.1:57779/1accf64e-24a3-4681-bf96-af39a0a48fd6",
+      "count": 1
+    },
+    {
+      "url": "blob:http://127.0.0.1:57779/46389b47-a190-42ae-976f-938eb9bf36f7",
+      "count": 1
+    },
+    {
+      "url": "http://127.0.0.1:57779/art/world/crowd-day.webp?v=aec9d620",
+      "count": 1
+    },
+    {
+      "url": "http://127.0.0.1:57779/art/world/crowd-night.webp?v=da616c86",
+      "count": 1
+    },
+    {
+      "url": "blob:http://127.0.0.1:57779/a87271a3-99d6-49f0-9607-d016f729e8c2",
+      "count": 1
+    },
+    {
+      "url": "blob:http://127.0.0.1:57779/a4aad0e2-2efd-4290-9d0b-1db9356725ef",
+      "count": 1
+    },
+    {
+      "url": "http://127.0.0.1:57779/art/plates/plate-canyon.webp?v=e0c48cb6",
+      "count": 1
+    },
+    {
+      "url": "http://127.0.0.1:57779/art/plates/plate-snow.webp?v=5e6479e4",
+      "count": 1
+    },
+    {
+      "url": "blob:http://127.0.0.1:57779/4620e2ec-fa38-43ad-8946-0b5105a6dc5c",
+      "count": 1
+    },
+    {
+      "url": "blob:http://127.0.0.1:57779/b47b61d5-0e50-43b9-b0a3-e5cea9709f63",
+      "count": 1
+    },
+    {
+      "url": "blob:http://127.0.0.1:57779/5125f831-4ca4-4acd-98ea-7ff0d17cc7be",
+      "count": 1
+    },
+    {
+      "url": "blob:http://127.0.0.1:57779/f85b2239-9765-4918-a66f-ea8f5d2194ed",
+      "count": 1
+    },
+    {
+      "url": "blob:http://127.0.0.1:57779/be7c2735-57b8-4939-87ee-12289c30d68b",
+      "count": 1
+    },
+    {
+      "url": "http://127.0.0.1:57779/art/plates/plate-nightcity.webp?v=f30a7074",
+      "count": 1
+    },
+    {
+      "url": "http://127.0.0.1:57779/art/plates/plate-foundry.webp?v=a4209e10",
+      "count": 1
+    },
+    {
+      "url": "http://127.0.0.1:57779/art/plates/sky-canyon.webp?v=ec66e12f",
+      "count": 1
+    },
+    {
+      "url": "http://127.0.0.1:57779/art/plates/sky-snow.webp?v=ef347821",
+      "count": 1
+    },
+    {
+      "url": "blob:http://127.0.0.1:57779/70061560-6ad8-4885-94f0-5a027e2ecec2",
+      "count": 1
+    },
+    {
+      "url": "blob:http://127.0.0.1:57779/4f80d737-91d5-4cd7-998d-86c37dcfc6c6",
+      "count": 1
+    },
+    {
+      "url": "blob:http://127.0.0.1:57779/f6f46b9a-df48-48a1-9fc4-9aaf54d89561",
+      "count": 1
+    },
+    {
+      "url": "blob:http://127.0.0.1:57779/e743d883-5e56-40af-8417-ac758bdd822a",
+      "count": 1
+    },
+    {
+      "url": "blob:http://127.0.0.1:57779/6f96eb24-e39a-41b4-b581-29b68e35a4b7",
+      "count": 1
+    },
+    {
+      "url": "blob:http://127.0.0.1:57779/2d41b074-d3a6-48ea-a29f-e89ba82e165f",
+      "count": 1
+    },
+    {
+      "url": "blob:http://127.0.0.1:57779/a3dd14df-6d52-40f9-bccb-20e29614578f",
+      "count": 1
+    },
+    {
+      "url": "blob:http://127.0.0.1:57779/4d74fa4f-f7f6-4b53-acbd-538ca8ee076b",
+      "count": 1
+    },
+    {
+      "url": "blob:http://127.0.0.1:57779/2c9843c1-b2d7-499b-b767-e83cffaacc97",
+      "count": 1
+    },
+    {
+      "url": "blob:http://127.0.0.1:57779/53f52bcc-bddc-4dc6-b21d-33a4b1334595",
+      "count": 1
+    },
+    {
+      "url": "blob:http://127.0.0.1:57779/55a75130-fb2c-47b5-b748-386b8d4889f0",
+      "count": 1
+    },
+    {
+      "url": "blob:http://127.0.0.1:57779/39313bbb-b15e-4d65-a496-eacc6280630d",
+      "count": 1
+    },
+    {
+      "url": "blob:http://127.0.0.1:57779/f35443da-5424-492e-9af0-fbc85e14f415",
+      "count": 1
+    },
+    {
+      "url": "http://127.0.0.1:57779/art/plates/sky-nightcity.webp?v=ef7aa3d7",
+      "count": 1
+    },
+    {
+      "url": "http://127.0.0.1:57779/art/plates/sky-foundry.webp?v=c610ff31",
+      "count": 1
+    },
+    {
+      "url": "http://127.0.0.1:57779/art/plates/sky-industrial.webp?v=a76dc2bb",
+      "count": 1
+    },
+    {
+      "url": "blob:http://127.0.0.1:57779/3205164a-7d52-4c7a-acfa-6bad0182ae45",
+      "count": 1
+    },
+    {
+      "url": "blob:http://127.0.0.1:57779/fa1018a9-1dc3-4154-9a07-9b5f073b063a",
+      "count": 1
+    },
+    {
+      "url": "blob:http://127.0.0.1:57779/805008e1-354e-4cb3-99a1-c8a22554d373",
+      "count": 1
+    },
+    {
+      "url": "blob:http://127.0.0.1:57779/15e4a55e-530b-493f-930e-fc515504671f",
+      "count": 1
+    },
+    {
+      "url": "blob:http://127.0.0.1:57779/6b78f343-cb89-42ca-82c9-d29791e5e5be",
+      "count": 1
+    },
+    {
+      "url": "blob:http://127.0.0.1:57779/0728a434-5b57-4b06-8d80-c8bb3eb366e1",
+      "count": 1
+    },
+    {
+      "url": "blob:http://127.0.0.1:57779/809fe086-f0ef-471c-af57-6e9bf9e8ec2c",
+      "count": 1
+    },
+    {
+      "url": "blob:http://127.0.0.1:57779/eed13047-0d7e-4ff5-98f2-a787c76198bd",
+      "count": 1
+    },
+    {
+      "url": "blob:http://127.0.0.1:57779/85efc73a-d37f-407c-9fd6-d9dc8f2acb36",
+      "count": 1
+    },
+    {
+      "url": "blob:http://127.0.0.1:57779/16cf0087-4565-4dc3-a71e-1d43c69553b1",
+      "count": 1
+    },
+    {
+      "url": "blob:http://127.0.0.1:57779/75caf47b-e394-4d3b-b24c-8f9b122839f8",
+      "count": 1
+    },
+    {
+      "url": "http://127.0.0.1:57779/art/menu/bike-rookie-alt.webp?v=c1c3df43",
+      "count": 1
+    },
+    {
+      "url": "blob:http://127.0.0.1:57779/aff2f5c3-bb26-4548-b6aa-b2f752dbe502",
+      "count": 1
+    },
+    {
+      "url": "blob:http://127.0.0.1:57779/de256755-ed37-4a08-bea7-704102d6b63c",
+      "count": 1
+    },
+    {
+      "url": "blob:http://127.0.0.1:57779/f0cfc7e8-8a2e-4aa8-aa90-fb19a8155183",
+      "count": 1
+    },
+    {
+      "url": "http://127.0.0.1:57779/art/menu/bike-pro-alt.webp?v=23c607e6",
+      "count": 1
+    },
+    {
+      "url": "http://127.0.0.1:57779/art/menu/garage-plate.webp?v=9ccf0f5b",
+      "count": 1
+    },
+    {
+      "url": "http://127.0.0.1:57779/art/world/kit-rookie.webp?v=a3b38548",
+      "count": 1
+    },
+    {
+      "url": "http://127.0.0.1:57779/art/world/kit-pro.webp?v=da575160",
+      "count": 1
+    },
+    {
+      "url": "http://127.0.0.1:57779/art/icons/icon-1024.png?v=908f76e9",
+      "count": 1
+    },
+    {
+      "url": "http://127.0.0.1:57779/art/icons/icon-512.png?v=4d3c5ccd",
+      "count": 1
+    },
+    {
+      "url": "http://127.0.0.1:57779/art/icons/icon-192.png?v=3d3f3477",
+      "count": 1
+    },
+    {
+      "url": "http://127.0.0.1:57779/art/icons/icon-maskable-512.png?v=bf6e010e",
+      "count": 1
+    },
+    {
+      "url": "blob:http://127.0.0.1:57779/e9b715f8-bb34-44fd-ae40-6eb4622892a8",
+      "count": 1
+    },
+    {
+      "url": "blob:http://127.0.0.1:57779/cf3afb2b-636c-4f7a-9193-1fdf83163222",
+      "count": 1
+    },
+    {
+      "url": "blob:http://127.0.0.1:57779/bb5db1b1-46d2-4529-85a8-ceb5ab64816a",
+      "count": 1
+    },
+    {
+      "url": "blob:http://127.0.0.1:57779/5ff4e44a-710b-4c6f-8aac-36e7d14176f1",
+      "count": 1
+    },
+    {
+      "url": "blob:http://127.0.0.1:57779/f993d026-c2c2-4078-8464-b416bce34555",
+      "count": 1
+    },
+    {
+      "url": "blob:http://127.0.0.1:57779/fb54adaf-a7c3-48b9-8b6c-18c488d702dd",
+      "count": 1
+    },
+    {
+      "url": "blob:http://127.0.0.1:57779/5c6d5867-1f61-4301-b379-08fe741a1e76",
+      "count": 1
+    },
+    {
+      "url": "http://127.0.0.1:57779/art/icons/icon-maskable-192.png?v=9c1c9473",
+      "count": 1
+    },
+    {
+      "url": "http://127.0.0.1:57779/art/icons/apple-touch-icon.png?v=93d86e48",
+      "count": 1
+    },
+    {
+      "url": "http://127.0.0.1:57779/art/icons/favicon-32.png?v=9a338662",
+      "count": 1
+    },
+    {
+      "url": "http://127.0.0.1:57779/art/icons/favicon-16.png?v=c1711f62",
+      "count": 1
+    },
+    {
+      "url": "http://127.0.0.1:57779/art/icons/emblem-512.png?v=23b43148",
+      "count": 1
+    },
+    {
+      "url": "http://127.0.0.1:57779/art/icons/favicon.svg?v=c1350cbc",
+      "count": 1
+    },
+    {
+      "url": "http://127.0.0.1:57779/art/plates/plate-coast.webp?v=36480bdf",
+      "count": 1
+    },
+    {
+      "url": "http://127.0.0.1:57779/art/plates/plate-alpine.webp?v=1ce66b55",
+      "count": 1
+    },
+    {
+      "url": "http://127.0.0.1:57779/art/plates/plate-quarry.webp?v=91ec1b24",
+      "count": 1
+    },
+    {
+      "url": "http://127.0.0.1:57779/art/plates/plate-snowline.webp?v=09d035b7",
+      "count": 1
+    },
+    {
+      "url": "http://127.0.0.1:57779/art/plates/sky-coast.webp?v=42263622",
+      "count": 1
+    },
+    {
+      "url": "http://127.0.0.1:57779/art/plates/sky-alpine.webp?v=46d1e706",
+      "count": 1
+    },
+    {
+      "url": "http://127.0.0.1:57779/art/plates/sky-quarry.webp?v=61753691",
+      "count": 1
+    },
+    {
+      "url": "http://127.0.0.1:57779/art/plates/sky-snowline.webp?v=998e3855",
+      "count": 1
+    },
+    {
+      "url": "http://127.0.0.1:57779/art/menu/keyart-quarry-1920.webp?v=7a685a90",
+      "count": 1
+    },
+    {
+      "url": "http://127.0.0.1:57779/art/menu/results-alpine.webp?v=bd5c64aa",
+      "count": 1
+    },
+    {
+      "url": "http://127.0.0.1:57779/art/menu/results-quarry.webp?v=ff390a0c",
+      "count": 1
+    },
+    {
+      "url": "http://127.0.0.1:57779/art/menu/results-snowline.webp?v=2b296331",
+      "count": 1
+    },
+    {
+      "url": "http://127.0.0.1:57779/art/menu/medal-obsidian-512.png?v=73ba8d62",
+      "count": 1
+    },
+    {
+      "url": "http://127.0.0.1:57779/art/thumbs/c1-low-tide.webp?v=e3a5d9da",
+      "count": 1
+    },
+    {
+      "url": "http://127.0.0.1:57779/art/thumbs/c2-crane-hop.webp?v=c0f48550",
+      "count": 1
+    },
+    {
+      "url": "http://127.0.0.1:57779/art/thumbs/c3-hull-breach.webp?v=a5a9ee8e",
+      "count": 1
+    },
+    {
+      "url": "http://127.0.0.1:57779/art/thumbs/a1-sawdust.webp?v=b4b7501a",
+      "count": 1
+    },
+    {
+      "url": "http://127.0.0.1:57779/art/thumbs/a2-log-jam.webp?v=311cd90e",
+      "count": 1
+    },
+    {
+      "url": "http://127.0.0.1:57779/art/thumbs/a3-timberline.webp?v=90da0536",
+      "count": 1
+    },
+    {
+      "url": "http://127.0.0.1:57779/art/thumbs/d1-dust-devil.webp?v=dfc603af",
+      "count": 1
+    },
+    {
+      "url": "http://127.0.0.1:57779/art/thumbs/d2-conveyor.webp?v=a8f066fa",
+      "count": 1
+    },
+    {
+      "url": "http://127.0.0.1:57779/art/thumbs/d3-rope-walk.webp?v=34f7da88",
+      "count": 1
+    },
+    {
+      "url": "http://127.0.0.1:57779/art/thumbs/s1-lift-line.webp?v=c707ae4c",
+      "count": 1
+    },
+    {
+      "url": "http://127.0.0.1:57779/art/thumbs/s2-cornice.webp?v=ce60e51c",
+      "count": 1
+    },
+    {
+      "url": "http://127.0.0.1:57779/art/thumbs/s3-whiteout.webp?v=4b58caf9",
+      "count": 1
+    },
+    {
+      "url": "http://127.0.0.1:57779/art/plates/plate-coast-low-tide.webp?v=6f0e4813",
+      "count": 1
+    },
+    {
+      "url": "http://127.0.0.1:57779/models/624657da70e8c78d/c1-harbor-tug-lod-bf0bddee9b84ea3c.glb",
+      "count": 3
+    },
+    {
+      "url": "http://127.0.0.1:57779/models/624657da70e8c78d/c1-harbor-tug-b55802fbb49b8732.glb",
+      "count": 1
+    },
+    {
+      "url": "http://127.0.0.1:57779/models/course-kits/alpine-trees/91ca25d71be698ad/trees-lod-8aa2e8f5f041e852.glb",
+      "count": 1
+    },
+    {
+      "url": "http://127.0.0.1:57779/models/course-kits/alpine-trees/91ca25d71be698ad/trees-fab79d15f9a3e120.glb",
+      "count": 1
+    },
+    {
+      "url": "http://127.0.0.1:57779/models/course-kits/coast-frontage/918b21884fbf220d/coast-frontage-lod-b614184510f599a3.glb",
+      "count": 1
+    },
+    {
+      "url": "http://127.0.0.1:57779/models/course-kits/coast-frontage/918b21884fbf220d/coast-frontage-95fe300274c04e6e.glb",
+      "count": 3
+    },
+    {
+      "url": "http://127.0.0.1:57779/models/course-kits/alpine-trees/2586e7f04b0819c8/bark_willow_02-arm.phone-2586e7f04b0819c8.webp",
+      "count": 1
+    },
+    {
+      "url": "http://127.0.0.1:57779/models/course-kits/alpine-trees/789cf59fd6692128/bark_willow_02-diffuse.phone-789cf59fd6692128.webp",
+      "count": 1
+    },
+    {
+      "url": "http://127.0.0.1:57779/models/course-kits/alpine-trees/d44af17987d0dd78/bark_willow_02-nor_gl.phone-d44af17987d0dd78.webp",
+      "count": 1
+    },
+    {
+      "url": "http://127.0.0.1:57779/models/course-kits/alpine-trees/d18d289ca18daf36/cards-albedo.phone-d18d289ca18daf36.webp",
+      "count": 1
+    },
+    {
+      "url": "http://127.0.0.1:57779/models/course-kits/alpine-trees/19b3fd57c67d2783/cards-arm.phone-19b3fd57c67d2783.webp",
+      "count": 1
+    },
+    {
+      "url": "http://127.0.0.1:57779/models/course-kits/alpine-trees/0073dc44c9eebab2/cards-normal.phone-0073dc44c9eebab2.webp",
+      "count": 1
+    },
+    {
+      "url": "http://127.0.0.1:57779/models/course-kits/alpine-trees/8df4d71773c63f35/fir_bark-arm.phone-8df4d71773c63f35.webp",
+      "count": 1
+    },
+    {
+      "url": "http://127.0.0.1:57779/models/course-kits/alpine-trees/d8455200e700ac24/fir_bark-diffuse.phone-d8455200e700ac24.webp",
+      "count": 1
+    },
+    {
+      "url": "http://127.0.0.1:57779/models/course-kits/alpine-trees/1a51b43616599cf2/fir_bark-nor_gl.phone-1a51b43616599cf2.webp",
+      "count": 1
+    },
+    {
+      "url": "http://127.0.0.1:57779/models/course-kits/alpine-trees/9c12ba6b1af4e963/impostor-albedo.phone-9c12ba6b1af4e963.webp",
+      "count": 1
+    },
+    {
+      "url": "http://127.0.0.1:57779/models/course-kits/alpine-trees/408707ab642701ca/impostor-normal.phone-408707ab642701ca.webp",
+      "count": 1
+    },
+    {
+      "url": "http://127.0.0.1:57779/models/course-kits/alpine-trees/6a282e05dc5e3bc9/pine_bark-arm.phone-6a282e05dc5e3bc9.webp",
+      "count": 1
+    },
+    {
+      "url": "http://127.0.0.1:57779/models/course-kits/alpine-trees/06ca84d6b38809e4/pine_bark-diffuse.phone-06ca84d6b38809e4.webp",
+      "count": 1
+    },
+    {
+      "url": "http://127.0.0.1:57779/models/course-kits/alpine-trees/83926e86793d57c4/pine_bark-nor_gl.phone-83926e86793d57c4.webp",
+      "count": 1
+    },
+    {
+      "url": "http://127.0.0.1:57779/models/course-kits/coast-frontage/6bbbef3e12737875/coast-albedo.phone-6bbbef3e12737875.webp",
+      "count": 3
+    },
+    {
+      "url": "http://127.0.0.1:57779/models/course-kits/coast-frontage/7ef8ea04566fef19/coast-arm.phone-7ef8ea04566fef19.webp",
+      "count": 3
+    },
+    {
+      "url": "http://127.0.0.1:57779/models/course-kits/coast-frontage/4f83c0f35100efbf/coast-normal.phone-4f83c0f35100efbf.webp",
+      "count": 3
+    },
+    {
+      "url": "http://127.0.0.1:57779/models/course-kits/coast-frontage/df56343262497dfe/frontage-albedo.phone-df56343262497dfe.webp",
+      "count": 3
+    },
+    {
+      "url": "http://127.0.0.1:57779/models/course-kits/coast-frontage/196e99318a3bd23b/frontage-arm.phone-196e99318a3bd23b.webp",
+      "count": 3
+    },
+    {
+      "url": "http://127.0.0.1:57779/models/course-kits/coast-frontage/6b18cc8114a4bf6a/frontage-normal.phone-6b18cc8114a4bf6a.webp",
+      "count": 3
+    },
+    {
+      "url": "http://127.0.0.1:57779/load-manifest.json",
+      "count": 1
+    },
+    {
+      "url": "http://127.0.0.1:57779/assets/sky-alpine-a-duW0jn55.webp",
+      "count": 1
+    },
+    {
+      "url": "http://127.0.0.1:57779/assets/inbox-kXpUGcsf.js",
+      "count": 1
+    },
+    {
+      "url": "http://127.0.0.1:57779/assets/worklet-DAkd6Thg.js",
+      "count": 1
+    },
+    {
+      "url": "http://127.0.0.1:57779/assets/worldMap3dScene-C3KEJzN0.js",
+      "count": 1
+    },
+    {
+      "url": "http://127.0.0.1:57779/model-catalog.json",
+      "count": 1
+    },
+    {
+      "url": "http://127.0.0.1:57779/assets/worklet-CT-J7623.js",
+      "count": 1
+    },
+    {
+      "url": "http://127.0.0.1:57779/art/plates/plate-coast-low-tide.webp",
+      "count": 1
+    },
+    {
+      "url": "http://127.0.0.1:57779/art/plates/sky-coast.webp",
+      "count": 1
+    },
+    {
+      "url": "blob:http://127.0.0.1:57779/a5f6a651-4705-4d5a-adb4-b531222213d7",
+      "count": 1
+    },
+    {
+      "url": "blob:http://127.0.0.1:57779/c6c41c13-82d6-4be1-8668-24c0821615fa",
+      "count": 1
+    },
+    {
+      "url": "blob:http://127.0.0.1:57779/c3fe2103-9816-475d-95da-23165c80a123",
+      "count": 1
+    },
+    {
+      "url": "blob:http://127.0.0.1:57779/d7d332a0-0597-4649-93f8-a885fb11aa83",
+      "count": 1
+    },
+    {
+      "url": "blob:http://127.0.0.1:57779/6759e7a7-db43-4d1f-a546-44edd98b82f0",
+      "count": 1
+    },
+    {
+      "url": "blob:http://127.0.0.1:57779/0ffcfd14-4f31-4d42-8669-61a620e430d9",
+      "count": 1
+    },
+    {
+      "url": "blob:http://127.0.0.1:57779/c4ccf9fb-2f71-495f-9c1f-70351bc05f90",
+      "count": 1
+    },
+    {
+      "url": "blob:http://127.0.0.1:57779/81acaeb6-c13a-4469-bd6c-beb719848339",
+      "count": 1
+    },
+    {
+      "url": "blob:http://127.0.0.1:57779/1e34ae0a-a261-4c1d-b1c5-1788c96e354f",
+      "count": 1
+    },
+    {
+      "url": "blob:http://127.0.0.1:57779/ca5bfcc3-ef21-47fb-9c24-b2f92a6b785f",
+      "count": 1
+    },
+    {
+      "url": "blob:http://127.0.0.1:57779/5ac892bb-b2fc-4c0d-a65b-cb4b6dcd339d",
+      "count": 1
+    },
+    {
+      "url": "blob:http://127.0.0.1:57779/609c6a9f-1001-4dad-971a-a3315a61c1ed",
+      "count": 1
+    },
+    {
+      "url": "blob:http://127.0.0.1:57779/77e5a344-1c9a-489f-a7f8-72fdf3a22a01",
+      "count": 1
+    },
+    {
+      "url": "blob:http://127.0.0.1:57779/58a1bf72-7234-4245-bc63-78628ffebf22",
+      "count": 1
+    },
+    {
+      "url": "blob:http://127.0.0.1:57779/b2c892c6-4a2f-4d45-a860-e7e016734015",
+      "count": 1
+    },
+    {
+      "url": "blob:http://127.0.0.1:57779/ee10574c-259e-4bf0-9de2-21239f592ae8",
+      "count": 1
+    },
+    {
+      "url": "blob:http://127.0.0.1:57779/89489539-a62f-40d1-a030-1f266a1fcfa5",
+      "count": 1
+    },
+    {
+      "url": "blob:http://127.0.0.1:57779/44934b27-1e29-4c81-b27b-a626ee72f275",
+      "count": 1
+    },
+    {
+      "url": "blob:http://127.0.0.1:57779/3723a50c-56e6-4bfd-8602-c77c626b36ec",
+      "count": 1
+    },
+    {
+      "url": "blob:http://127.0.0.1:57779/c4b12254-0430-4053-87f5-f3a0c85b202a",
+      "count": 1
+    },
+    {
+      "url": "blob:http://127.0.0.1:57779/a7fc7a0e-8928-43f4-8c1a-66af98c5c217",
+      "count": 1
+    },
+    {
+      "url": "blob:http://127.0.0.1:57779/51a0568d-9403-4681-a393-4b59a088a84d",
+      "count": 2
+    },
+    {
+      "url": "http://127.0.0.1:57779/version.json?t=1791580289467",
+      "count": 1
+    },
+    {
+      "url": "blob:http://127.0.0.1:57779/2380824a-6d57-49c4-8d24-cbd1a168d714",
+      "count": 1
+    },
+    {
+      "url": "blob:http://127.0.0.1:57779/0b69fd01-be46-44ea-9605-294422d99461",
+      "count": 1
+    }
+  ],
+  "selectedSourceResponses": [
+    {
+      "url": "https://b47ghqoufyfsjh9t.public.blob.vercel-storage.com/rider-remaster/585ae314e2b354768a1385e5a85828c142d542b47f8d9fe948f46c7478c112ef/rider.glb",
+      "status": 200,
+      "fromServiceWorker": true
+    }
+  ],
+  "errors": [],
+  "requestFailures": [],
+  "navigations": [
+    {
+      "atMs": 914.641875,
+      "url": "http://127.0.0.1:57779/?audio=0&perf=1"
+    }
+  ],
+  "finalLifecycleNonLoader": [
+    {
+      "atMs": 37.90000009536743,
+      "kind": "pageshow",
+      "detail": {
+        "persisted": false
+      }
+    },
+    {
+      "atMs": 84.40000009536743,
+      "kind": "sw-controllerchange",
+      "detail": "http://127.0.0.1:57779/sw.js"
+    }
+  ],
+  "accountingLimits": [
+    "Renderer stats textureMB is the RGBA-size estimate in src/render/index.ts estimateTextureMB, not measured compressed GPU allocation. Actual runtime transcode format/allocation was not captured.",
+    "Metal headless browser RAF is uncapped by launcher. observedRAFFPS is browser callback cadence; submittedFPS is the normal production cap and is the performance comparison.",
+    "C1 normal throttle encounters one crash and automatic respawn in each20second window. This test did not clear C1 or measure explicit instant restart, deterministic replay, stranger attempts or world-map transfer."
+  ],
+  "baselineComparison": {
+    "path": "docs/evidence/rider-rebuild/phone-runtime-profile01/run02/report.json",
+    "backend": "webkit",
+    "candidateBackend": "metal",
+    "comparable": "actual source and submitted triangle counts; FPS are Mac proxies and timers/backend differ",
+    "baselineMedianC1SubmittedTriangles": 5258462,
+    "candidateMedianC1SubmittedTriangles": 1673470,
+    "reductionPercent": 68.17567570137429,
+    "baselineC1HeroTriangles": 2581869,
+    "candidateC1HeroTriangles": 789373,
+    "actualRenderScale": {
+      "viewport": [
+        844,
+        390
+      ],
+      "contextRequestedDPR": 3,
+      "c1": {
+        "dpr": 1.5,
+        "canvas": [
+          1266,
+          585
+        ]
+      },
+      "garage": {
+        "dpr": 2,
+        "canvas": [
+          1688,
+          780
+        ]
+      },
+      "baselineMatchesExecutedCanvasAndDPR": true
+    }
+  },
+  "runtimeCandidate": {
+    "sourceSHA256": "585ae314e2b354768a1385e5a85828c142d542b47f8d9fe948f46c7478c112ef",
+    "metadataSHA256": "572476fa24f6f5f5c4bef66d7e557d9b36a983671498aa6d6c7b561c70ba0635",
+    "roles": {
+      "pelvis": "DEF-spine",
+      "trunk": [
+        "DEF-spine",
+        "DEF-spine.001",
+        "DEF-spine.002",
+        "DEF-spine.003"
+      ],
+      "neck": [
+        "DEF-spine.004",
+        "DEF-spine.005"
+      ],
+      "head": "DEF-spine.006",
+      "upperArmLeft": [
+        "DEF-upper_arm.L",
+        "DEF-upper_arm.L.001"
+      ],
+      "forearmLeft": [
+        "DEF-forearm.L",
+        "DEF-forearm.L.001"
+      ],
+      "thighLeft": [
+        "DEF-thigh.L",
+        "DEF-thigh.L.001"
+      ],
+      "shinLeft": [
+        "DEF-shin.L",
+        "DEF-shin.L.001"
+      ],
+      "shoulderLeft": "DEF-shoulder.L",
+      "wristLeft": "DEF-hand.L",
+      "footLeft": "DEF-foot.L",
+      "toeLeft": "DEF-toe.L",
+      "upperArmRight": [
+        "DEF-upper_arm.R",
+        "DEF-upper_arm.R.001"
+      ],
+      "forearmRight": [
+        "DEF-forearm.R",
+        "DEF-forearm.R.001"
+      ],
+      "thighRight": [
+        "DEF-thigh.R",
+        "DEF-thigh.R.001"
+      ],
+      "shinRight": [
+        "DEF-shin.R",
+        "DEF-shin.R.001"
+      ],
+      "shoulderRight": "DEF-shoulder.R",
+      "wristRight": "DEF-hand.R",
+      "footRight": "DEF-foot.R",
+      "toeRight": "DEF-toe.R"
+    },
+    "meshRoles": [
+      {
+        "role": "ActualSelectedGlove.L",
+        "name": "ActualSelectedGloveL"
+      },
+      {
+        "role": "ActualSelectedGlove.R",
+        "name": "ActualSelectedGloveR"
+      },
+      {
+        "role": "ActualSelectedBoot.L",
+        "name": "ActualSelectedBootL"
+      },
+      {
+        "role": "ActualSelectedBoot.R",
+        "name": "ActualSelectedBootR"
+      },
+      {
+        "role": "RiderJeans",
+        "name": "RiderJeans"
+      },
+      {
+        "role": "RiderBody.primitive0",
+        "name": "female_v006lowresUV__ExactFaceSubset"
+      },
+      {
+        "role": "RiderBody.primitive1",
+        "name": "female_v006lowresUV__ExactFaceSubset_1"
+      },
+      {
+        "role": "RiderBody.primitive2",
+        "name": "female_v006lowresUV__ExactFaceSubset_2"
+      },
+      {
+        "role": "RiderBody.primitive3",
+        "name": "female_v006lowresUV__ExactFaceSubset_3"
+      },
+      {
+        "role": "RiderHoodie",
+        "name": "RiderHoodie"
+      }
+    ],
+    "authorMeshRoles": {
+      "ActualSelectedGlove.L": "ActualSelectedGlove.L",
+      "ActualSelectedGlove.R": "ActualSelectedGlove.R",
+      "ActualSelectedBoot.L": "ActualSelectedBoot.L",
+      "ActualSelectedBoot.R": "ActualSelectedBoot.R",
+      "RiderJeans": "RiderJeans",
+      "RiderBody": "RiderBody",
+      "RiderHoodie": "RiderHoodie"
+    },
+    "visibleMeshes": [
+      {
+        "name": "ActualSelectedBootL",
+        "skinned": true,
+        "triangles": 40000
+      },
+      {
+        "name": "ActualSelectedBootR",
+        "skinned": true,
+        "triangles": 40000
+      },
+      {
+        "name": "ActualSelectedGloveL",
+        "skinned": true,
+        "triangles": 243618
+      },
+      {
+        "name": "ActualSelectedGloveR",
+        "skinned": true,
+        "triangles": 244038
+      },
+      {
+        "name": "female_v006lowresUV__ExactFaceSubset",
+        "skinned": true,
+        "triangles": 778
+      },
+      {
+        "name": "female_v006lowresUV__ExactFaceSubset_1",
+        "skinned": true,
+        "triangles": 58102
+      },
+      {
+        "name": "female_v006lowresUV__ExactFaceSubset_2",
+        "skinned": true,
+        "triangles": 429
+      },
+      {
+        "name": "female_v006lowresUV__ExactFaceSubset_3",
+        "skinned": true,
+        "triangles": 5159
+      },
+      {
+        "name": "RiderHoodie",
+        "skinned": true,
+        "triangles": 100000
+      },
+      {
+        "name": "RiderJeans",
+        "skinned": true,
+        "triangles": 51456
+      }
+    ],
+    "jointNames": {
+      "DEF-spine": "DEF-spine",
+      "DEF-spine.001": "DEF-spine001",
+      "DEF-spine.002": "DEF-spine002",
+      "DEF-spine.003": "DEF-spine003",
+      "DEF-spine.004": "DEF-spine004",
+      "DEF-spine.005": "DEF-spine005",
+      "DEF-spine.006": "DEF-spine006",
+      "DEF-shoulder.L": "DEF-shoulderL",
+      "DEF-upper_arm.L": "DEF-upper_armL",
+      "DEF-upper_arm.L.001": "DEF-upper_armL001",
+      "DEF-forearm.L": "DEF-forearmL",
+      "DEF-forearm.L.001": "DEF-forearmL001",
+      "DEF-hand.L": "DEF-handL",
+      "DEF-thumb.01.L": "DEF-thumb01L",
+      "DEF-thumb.02.L": "DEF-thumb02L",
+      "DEF-thumb.03.L": "DEF-thumb03L",
+      "DEF-palm.01.L": "DEF-palm01L",
+      "DEF-f_index.01.L": "DEF-f_index01L",
+      "DEF-f_index.02.L": "DEF-f_index02L",
+      "DEF-f_index.03.L": "DEF-f_index03L",
+      "DEF-palm.02.L": "DEF-palm02L",
+      "DEF-f_middle.01.L": "DEF-f_middle01L",
+      "DEF-f_middle.02.L": "DEF-f_middle02L",
+      "DEF-f_middle.03.L": "DEF-f_middle03L",
+      "DEF-palm.03.L": "DEF-palm03L",
+      "DEF-f_ring.01.L": "DEF-f_ring01L",
+      "DEF-f_ring.02.L": "DEF-f_ring02L",
+      "DEF-f_ring.03.L": "DEF-f_ring03L",
+      "DEF-palm.04.L": "DEF-palm04L",
+      "DEF-f_pinky.01.L": "DEF-f_pinky01L",
+      "DEF-f_pinky.02.L": "DEF-f_pinky02L",
+      "DEF-f_pinky.03.L": "DEF-f_pinky03L",
+      "PalmSocket.L": "PalmSocketL",
+      "DEF-shoulder.R": "DEF-shoulderR",
+      "DEF-upper_arm.R": "DEF-upper_armR",
+      "DEF-upper_arm.R.001": "DEF-upper_armR001",
+      "DEF-forearm.R": "DEF-forearmR",
+      "DEF-forearm.R.001": "DEF-forearmR001",
+      "DEF-hand.R": "DEF-handR",
+      "DEF-thumb.01.R": "DEF-thumb01R",
+      "DEF-thumb.02.R": "DEF-thumb02R",
+      "DEF-thumb.03.R": "DEF-thumb03R",
+      "DEF-palm.01.R": "DEF-palm01R",
+      "DEF-f_index.01.R": "DEF-f_index01R",
+      "DEF-f_index.02.R": "DEF-f_index02R",
+      "DEF-f_index.03.R": "DEF-f_index03R",
+      "DEF-palm.02.R": "DEF-palm02R",
+      "DEF-f_middle.01.R": "DEF-f_middle01R",
+      "DEF-f_middle.02.R": "DEF-f_middle02R",
+      "DEF-f_middle.03.R": "DEF-f_middle03R",
+      "DEF-palm.03.R": "DEF-palm03R",
+      "DEF-f_ring.01.R": "DEF-f_ring01R",
+      "DEF-f_ring.02.R": "DEF-f_ring02R",
+      "DEF-f_ring.03.R": "DEF-f_ring03R",
+      "DEF-palm.04.R": "DEF-palm04R",
+      "DEF-f_pinky.01.R": "DEF-f_pinky01R",
+      "DEF-f_pinky.02.R": "DEF-f_pinky02R",
+      "DEF-f_pinky.03.R": "DEF-f_pinky03R",
+      "PalmSocket.R": "PalmSocketR",
+      "DEF-pelvis.L": "DEF-pelvisL",
+      "DEF-pelvis.R": "DEF-pelvisR",
+      "DEF-thigh.L": "DEF-thighL",
+      "DEF-thigh.L.001": "DEF-thighL001",
+      "DEF-shin.L": "DEF-shinL",
+      "DEF-shin.L.001": "DEF-shinL001",
+      "DEF-foot.L": "DEF-footL",
+      "DEF-toe.L": "DEF-toeL",
+      "SoleSocket.L": "SoleSocketL",
+      "DEF-thigh.R": "DEF-thighR",
+      "DEF-thigh.R.001": "DEF-thighR001",
+      "DEF-shin.R": "DEF-shinR",
+      "DEF-shin.R.001": "DEF-shinR001",
+      "DEF-foot.R": "DEF-footR",
+      "DEF-toe.R": "DEF-toeR",
+      "SoleSocket.R": "SoleSocketR"
+    },
+    "contractSchema": "rockhop-humanoid-contract-v1",
+    "geometry": "Selected original boot/glove fields retained on simplified meshes with source-detail bake; protected parts unchanged",
+    "massApproximation": "Adult male segment mass fractions on measured joint centres/head and toe extents; not tissue-density integration",
+    "gripProfileHash": "659ff94c1611e0ce95310ab090e94637832ac2bbfbac7f9554f903595bd05972"
+  }
+}
