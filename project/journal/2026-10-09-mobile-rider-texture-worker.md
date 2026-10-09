@@ -100,3 +100,20 @@ Evidence: docs/evidence/rider-rebuild/mobile-textures02/components01/glove-R/.
 
 Limits: Independent source-field/posed witnesses and parent moving/device
 judgment remain open; no runtime or player asset edits.
+
+Finding: Compose all four fixed selected component families with protected
+identity/hoodie maps and measured jeansORM2K; prune only unreferenced old
+boot/glove records. Complete rider74,833,728 wire bytes, SHA585ae314…c112ef.
+
+Validation: All21maps/252mips/756 actual pinned transcodes pass; everyASTC
+block/base pixel matches independently native-verified sources. Actual loader
+loads10 skinned meshes, unchanged u16 normalized weights. Every decoded
+accessor matches graft; protected selected geometry/native75/225 exact.
+Geometry496,791verts/783,580tris/36,410,328 bytes; textureASTC187,433,520,
+combined223,843,848 bytes (31.7% less). No exact duplicate KTX maps found.
+Evidence: docs/evidence/rider-rebuild/mobile-textures02/combined01/.
+
+Limits: Unaccepted played/device appearance, source-field/compression normal
+outliers and jeans alpha proxy retained; native corner/packed field tests
+do not qualify all triangle interiors/future poses/grip. Totals exclude
+staging/driver/otherassets. Raw metadata/GLB pins are not compiled rest hashes.

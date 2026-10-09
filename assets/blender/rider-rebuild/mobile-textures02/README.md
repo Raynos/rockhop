@@ -1,9 +1,14 @@
 # Selective mobile texture budget
 
-Unaccepted checkpoint. Parent owns moving closeups and physical-device
-judgment. Original dense selected master and current selected source remain
-intact. This round tests one budget, with no block re-encoding and no normal,
-albedo, face/cheek/neck, material-factor, UV, topology or rig change.
+Final conservative artifact is74,833,728 bytes with21 UASTC maps,783,580
+triangles and36,410,328 decoded geometry bytes. Parent owns moving closeups
+and physical-device judgment; this remains unaccepted art. Original dense
+selected master and current selected source remain intact.
+
+The initial ORM trials below test one resolution budget without block
+re-encoding or any normal/albedo/identity/material-factor/UV/topology/rig
+change. Final composition later combines the independently checkpointed
+component geometry/atlases; it is a separate delivery artifact.
 
 Pinned source is `download-opt01/textures01/composition01/rider.glb`,
 101,885,432 bytes, SHA256
@@ -242,3 +247,65 @@ open, alongside builder's393 posed-facing witnesses max0.680mm.
 All twelve new component maps total18,564,510 wire bytes. Combined with
 30,049,025 retained-map bytes, final texture wire is48,613,535 bytes before
 exact image dedup. Actual complete GLB/storage totals follow composition.
+
+## Complete conservative composition
+
+Source graftc5c269b83 is108,212,004 bytes, SHA256
+`ccbd61edd23ff8475353881dec586bb6c9c08c23c4649e6fb5eb87fe93f499f2`.
+`compose.py` pins that receipt and the selected f814 source. It verifies every
+new componentPNG/hash and encodedKTX/hash, reuses protected KTX files exactly,
+and promotes only the previously measured jeansORM mip1. It removes four
+proven unused shared boot/glove image records and their unreferenced shader
+records/views. Exact-byte KTX dedup is available, but these21 maps are all
+distinct; there is no assumed L/R image or geometry equivalence.
+
+Final ignored artifact:
+`harness/out/rider-rebuild/mobile-textures02/combined01/rider.glb`, SHA256
+`585ae314e2b354768a1385e5a85828c142d542b47f8d9fe948f46c7478c112ef`.
+Wire74,833,728 bytes (26.55% below101,885,432 selected checkpoint). Texture
+wire48,613,535 bytes; decoded geometry36,410,328 bytes (64.0% less).
+Actual496,791 vertices,783,580 triangles (69.6% less than selected2,576,076).
+ASTC4x4/BC7 full texture mips187,433,520 bytes; combined streams223,843,848
+bytes,31.7% below selected327,712,676. RGBA32 fallback textures749,731,812
+bytes; combined786,142,140. These are stream totals, not measured device RAM.
+
+All21 maps/252 mips/756 actual pinned transcodes pass.
+`verify-runtime-reuse.py` compares every composed ASTC block and base-level
+RGBA pixel against independently native-verified families. JeansORM uses
+native source mip1. All twelve new component maps preserve alpha exactly;
+retained KTX bytes are unchanged apart from explicit jeansORM mip selection.
+The prior independent jeans resolution proxy still records52,666 reconstructed
+alpha differences in an opaque ORM texture, plus per-channel roughness/metal
+errors. No global zero-alpha-error claim hides the resolution change.
+
+`verify-composition.mjs` independently decodes every accessor view against
+the graft and protected geometry/75-joint rig/225 animation channels against
+the selected checkpoint. Every retained payload/metadata passes. Live material
+factors/textureInfo, sampler and image roles pass reference-undo comparisons.
+The actual pinned Three GLTFLoader geometry probe loads all10 skinned meshes;
+Uint16 normalized weights remain byte-identical and each sum is65535. Its
+texture references are omitted in memory only; real artifact remains intact.
+
+Metadata evidence separately records canonical full glTF JSON hashes and
+exact raw JSON-chunk hashes including padding. Storage/reference remaps change
+those hashes; neither is a compiled native-rest SHA. Original master and
+selected source hashes stay distinct from new GLB and bake metadata pins.
+
+The summary retains every component compression outlier, independent nearest
+source/cage normal evidence, packed482-pose vertex errors, prior hoodie
+max98.93° compression outlier and9.713mm atlas hem transfer limit. Native
+corner/weight preservation does not qualify filtered normals, all triangle
+interiors, future crash poses, corrected grip or whole played appearance.
+Actual phone FPS/RAM and sRGB hardware filtering remain parent gates.
+
+```sh
+python3 assets/blender/rider-rebuild/mobile-textures02/compose.py --source harness/out/rider-rebuild/mobile-mesh02/composition01/rider.glb --source-sha ccbd61edd23ff8475353881dec586bb6c9c08c23c4649e6fb5eb87fe93f499f2 --graft-receipt harness/out/rider-rebuild/mobile-mesh02/composition01/graft.json --out harness/out/rider-rebuild/mobile-textures02/combined02
+node assets/blender/rider-rebuild/mobile-textures02/verify-composition.mjs harness/out/rider-rebuild/mobile-textures02/combined02/rider.glb harness/out/rider-rebuild/mobile-textures02/combined02/composition.json harness/out/rider-rebuild/mobile-textures02/combined02/decoded-parity.json
+node assets/blender/rider-rebuild/download-opt01/geometry04/loader-probe.mjs harness/out/rider-rebuild/mobile-textures02/combined02/rider.glb harness/out/rider-rebuild/mobile-textures02/combined02/loader-probe.json
+node assets/blender/rider-rebuild/download-textures01/runtime-transcode.mjs harness/out/rider-rebuild/mobile-textures02/combined02 uastc-rdo05
+python3 assets/blender/rider-rebuild/mobile-textures02/verify-runtime-reuse.py harness/out/rider-rebuild/mobile-textures02/combined02 --graft-receipt harness/out/rider-rebuild/mobile-mesh02/composition01/graft.json
+python3 assets/blender/rider-rebuild/mobile-textures02/combined-summary.py harness/out/rider-rebuild/mobile-textures02/combined02 harness/out/rider-rebuild/mobile-textures02/combined02/summary.json
+```
+
+Use bundled Python/PIL for pixel validation and a fresh numbered output.
+No production source, package, runtime, browser, pin or deployment edits.

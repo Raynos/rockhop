@@ -1,0 +1,1233 @@
+{
+  "accepted": false,
+  "candidate": {
+    "path": "harness/out/rider-rebuild/mobile-textures02/combined01/rider.glb",
+    "sha256": "585ae314e2b354768a1385e5a85828c142d542b47f8d9fe948f46c7478c112ef",
+    "bytes": 74833728
+  },
+  "sourceGraft": {
+    "path": "harness/out/rider-rebuild/mobile-mesh02/composition01/rider.glb",
+    "sha256": "ccbd61edd23ff8475353881dec586bb6c9c08c23c4649e6fb5eb87fe93f499f2",
+    "bytes": 108212004
+  },
+  "selectedSourceSHA256": "f814b8d7cde87b1e41b45eec75cd55fdea89b915bf9acae0e5a18b40d3a156af",
+  "originalMasterSHA256": "127e316a8ff7910a4918b63f83e086e4e658062f102c73f17d0ee2f956750649",
+  "metadataHashScope": "Canonical full glTF metadata includes storage/remapped delivery records; raw chunk hashes cover exact JSON bytes including padding. Neither is compiled native-rest SHA.",
+  "metadataHashes": {
+    "sourceFullMetadataCanonicalJSON_SHA256": "9af0553d754323798f5d9583ea3589d7794fea17cdb69d1aab40bfb50b2ba65a",
+    "candidateFullMetadataCanonicalJSON_SHA256": "b1b6ebc8aeca88717ea4b47151c167dc028586e10a801d60dfcb668463da0075",
+    "sourceRawJSONChunkSHA256": "9560b787cc8c7d568e3d063fa7265491eeeb02d5302d93f9b22960bd50bc9773",
+    "candidateRawJSONChunkSHA256": "ceaf1aab07cbc66740f2292b5ef5f674acb1222af189b6c3a2b810cf722eeb7a"
+  },
+  "uniqueMaps": 21,
+  "mipLevels": 252,
+  "successfulPinnedWASMTranscodes": 756,
+  "everyMipASTCBlocksExactToNativeVerifiedSources": true,
+  "everyMapBasePixelsExactToNativeASTCLinearDecode": true,
+  "textureWireBytes": 48613535,
+  "exactImageDedupWireSavedBytes": 0,
+  "textureGPUBytesFullMip": {
+    "ASTC4x4": 187433520,
+    "BC7": 187433520,
+    "RGBA32": 749731812
+  },
+  "decodedGeometry": {
+    "meshes": [
+      {
+        "mesh": 0,
+        "primitive": 0,
+        "name": "LocallyRepairedSelectedDenseBoot.L.004",
+        "vertices": 29245,
+        "triangles": 40000,
+        "fields": {
+          "POSITION": {
+            "accessor": 0,
+            "count": 29245,
+            "type": "VEC3",
+            "componentType": 5126,
+            "normalized": false,
+            "decodedViewBytes": 350940
+          },
+          "NORMAL": {
+            "accessor": 1,
+            "count": 29245,
+            "type": "VEC3",
+            "componentType": 5126,
+            "normalized": false,
+            "decodedViewBytes": 350940
+          },
+          "TEXCOORD_0": {
+            "accessor": 2,
+            "count": 29245,
+            "type": "VEC2",
+            "componentType": 5126,
+            "normalized": false,
+            "decodedViewBytes": 233960
+          },
+          "JOINTS_0": {
+            "accessor": 3,
+            "count": 29245,
+            "type": "VEC4",
+            "componentType": 5121,
+            "normalized": false,
+            "decodedViewBytes": 116980
+          },
+          "WEIGHTS_0": {
+            "accessor": 4,
+            "count": 29245,
+            "type": "VEC4",
+            "componentType": 5123,
+            "normalized": true,
+            "decodedViewBytes": 233960
+          },
+          "TANGENT": {
+            "accessor": 292,
+            "count": 29245,
+            "type": "VEC4",
+            "componentType": 5126,
+            "normalized": false,
+            "decodedViewBytes": 467920
+          },
+          "indices": {
+            "accessor": 5,
+            "count": 120000,
+            "type": "SCALAR",
+            "componentType": 5125,
+            "normalized": false,
+            "decodedViewBytes": 480000
+          }
+        }
+      },
+      {
+        "mesh": 1,
+        "primitive": 0,
+        "name": "LocallyRepairedSelectedDenseBoot.R.005",
+        "vertices": 29072,
+        "triangles": 40000,
+        "fields": {
+          "POSITION": {
+            "accessor": 7,
+            "count": 29072,
+            "type": "VEC3",
+            "componentType": 5126,
+            "normalized": false,
+            "decodedViewBytes": 348864
+          },
+          "NORMAL": {
+            "accessor": 8,
+            "count": 29072,
+            "type": "VEC3",
+            "componentType": 5126,
+            "normalized": false,
+            "decodedViewBytes": 348864
+          },
+          "TEXCOORD_0": {
+            "accessor": 9,
+            "count": 29072,
+            "type": "VEC2",
+            "componentType": 5126,
+            "normalized": false,
+            "decodedViewBytes": 232576
+          },
+          "JOINTS_0": {
+            "accessor": 10,
+            "count": 29072,
+            "type": "VEC4",
+            "componentType": 5121,
+            "normalized": false,
+            "decodedViewBytes": 116288
+          },
+          "WEIGHTS_0": {
+            "accessor": 11,
+            "count": 29072,
+            "type": "VEC4",
+            "componentType": 5123,
+            "normalized": true,
+            "decodedViewBytes": 232576
+          },
+          "TANGENT": {
+            "accessor": 293,
+            "count": 29072,
+            "type": "VEC4",
+            "componentType": 5126,
+            "normalized": false,
+            "decodedViewBytes": 465152
+          },
+          "indices": {
+            "accessor": 12,
+            "count": 120000,
+            "type": "SCALAR",
+            "componentType": 5125,
+            "normalized": false,
+            "decodedViewBytes": 480000
+          }
+        }
+      },
+      {
+        "mesh": 2,
+        "primitive": 0,
+        "name": "Gloves__LocallySculptedSelected04.L",
+        "vertices": 154561,
+        "triangles": 243618,
+        "fields": {
+          "POSITION": {
+            "accessor": 13,
+            "count": 154561,
+            "type": "VEC3",
+            "componentType": 5126,
+            "normalized": false,
+            "decodedViewBytes": 1854732
+          },
+          "NORMAL": {
+            "accessor": 14,
+            "count": 154561,
+            "type": "VEC3",
+            "componentType": 5126,
+            "normalized": false,
+            "decodedViewBytes": 1854732
+          },
+          "TEXCOORD_0": {
+            "accessor": 15,
+            "count": 154561,
+            "type": "VEC2",
+            "componentType": 5126,
+            "normalized": false,
+            "decodedViewBytes": 1236488
+          },
+          "JOINTS_0": {
+            "accessor": 16,
+            "count": 154561,
+            "type": "VEC4",
+            "componentType": 5121,
+            "normalized": false,
+            "decodedViewBytes": 618244
+          },
+          "WEIGHTS_0": {
+            "accessor": 17,
+            "count": 154561,
+            "type": "VEC4",
+            "componentType": 5123,
+            "normalized": true,
+            "decodedViewBytes": 1236488
+          },
+          "TANGENT": {
+            "accessor": 294,
+            "count": 154561,
+            "type": "VEC4",
+            "componentType": 5126,
+            "normalized": false,
+            "decodedViewBytes": 2472976
+          },
+          "indices": {
+            "accessor": 18,
+            "count": 730854,
+            "type": "SCALAR",
+            "componentType": 5125,
+            "normalized": false,
+            "decodedViewBytes": 2923416
+          }
+        }
+      },
+      {
+        "mesh": 3,
+        "primitive": 0,
+        "name": "Gloves__LocallySculptedSelected04.R",
+        "vertices": 153861,
+        "triangles": 244038,
+        "fields": {
+          "POSITION": {
+            "accessor": 19,
+            "count": 153861,
+            "type": "VEC3",
+            "componentType": 5126,
+            "normalized": false,
+            "decodedViewBytes": 1846332
+          },
+          "NORMAL": {
+            "accessor": 20,
+            "count": 153861,
+            "type": "VEC3",
+            "componentType": 5126,
+            "normalized": false,
+            "decodedViewBytes": 1846332
+          },
+          "TEXCOORD_0": {
+            "accessor": 21,
+            "count": 153861,
+            "type": "VEC2",
+            "componentType": 5126,
+            "normalized": false,
+            "decodedViewBytes": 1230888
+          },
+          "JOINTS_0": {
+            "accessor": 22,
+            "count": 153861,
+            "type": "VEC4",
+            "componentType": 5121,
+            "normalized": false,
+            "decodedViewBytes": 615444
+          },
+          "WEIGHTS_0": {
+            "accessor": 23,
+            "count": 153861,
+            "type": "VEC4",
+            "componentType": 5123,
+            "normalized": true,
+            "decodedViewBytes": 1230888
+          },
+          "TANGENT": {
+            "accessor": 295,
+            "count": 153861,
+            "type": "VEC4",
+            "componentType": 5126,
+            "normalized": false,
+            "decodedViewBytes": 2461776
+          },
+          "indices": {
+            "accessor": 24,
+            "count": 732114,
+            "type": "SCALAR",
+            "componentType": 5125,
+            "normalized": false,
+            "decodedViewBytes": 2928456
+          }
+        }
+      },
+      {
+        "mesh": 4,
+        "primitive": 0,
+        "name": "female_v006lowresUV__ExactFaceSubset",
+        "vertices": 619,
+        "triangles": 778,
+        "fields": {
+          "POSITION": {
+            "accessor": 25,
+            "count": 619,
+            "type": "VEC3",
+            "componentType": 5126,
+            "normalized": false,
+            "decodedViewBytes": 7428
+          },
+          "NORMAL": {
+            "accessor": 26,
+            "count": 619,
+            "type": "VEC3",
+            "componentType": 5122,
+            "normalized": true,
+            "decodedViewBytes": 4952
+          },
+          "TEXCOORD_0": {
+            "accessor": 27,
+            "count": 619,
+            "type": "VEC2",
+            "componentType": 5126,
+            "normalized": false,
+            "decodedViewBytes": 4952
+          },
+          "JOINTS_0": {
+            "accessor": 28,
+            "count": 619,
+            "type": "VEC4",
+            "componentType": 5121,
+            "normalized": false,
+            "decodedViewBytes": 2476
+          },
+          "WEIGHTS_0": {
+            "accessor": 29,
+            "count": 619,
+            "type": "VEC4",
+            "componentType": 5123,
+            "normalized": true,
+            "decodedViewBytes": 4952
+          },
+          "indices": {
+            "accessor": 30,
+            "count": 2334,
+            "type": "SCALAR",
+            "componentType": 5123,
+            "normalized": false,
+            "decodedViewBytes": 4668
+          }
+        }
+      },
+      {
+        "mesh": 4,
+        "primitive": 1,
+        "name": "female_v006lowresUV__ExactFaceSubset",
+        "vertices": 36434,
+        "triangles": 58102,
+        "fields": {
+          "POSITION": {
+            "accessor": 31,
+            "count": 36434,
+            "type": "VEC3",
+            "componentType": 5126,
+            "normalized": false,
+            "decodedViewBytes": 437208
+          },
+          "NORMAL": {
+            "accessor": 32,
+            "count": 36434,
+            "type": "VEC3",
+            "componentType": 5122,
+            "normalized": true,
+            "decodedViewBytes": 291472
+          },
+          "TEXCOORD_0": {
+            "accessor": 33,
+            "count": 36434,
+            "type": "VEC2",
+            "componentType": 5123,
+            "normalized": true,
+            "decodedViewBytes": 145736
+          },
+          "JOINTS_0": {
+            "accessor": 34,
+            "count": 36434,
+            "type": "VEC4",
+            "componentType": 5121,
+            "normalized": false,
+            "decodedViewBytes": 145736
+          },
+          "WEIGHTS_0": {
+            "accessor": 35,
+            "count": 36434,
+            "type": "VEC4",
+            "componentType": 5123,
+            "normalized": true,
+            "decodedViewBytes": 291472
+          },
+          "indices": {
+            "accessor": 36,
+            "count": 174306,
+            "type": "SCALAR",
+            "componentType": 5123,
+            "normalized": false,
+            "decodedViewBytes": 348612
+          }
+        }
+      },
+      {
+        "mesh": 4,
+        "primitive": 2,
+        "name": "female_v006lowresUV__ExactFaceSubset",
+        "vertices": 294,
+        "triangles": 429,
+        "fields": {
+          "POSITION": {
+            "accessor": 37,
+            "count": 294,
+            "type": "VEC3",
+            "componentType": 5126,
+            "normalized": false,
+            "decodedViewBytes": 3528
+          },
+          "NORMAL": {
+            "accessor": 38,
+            "count": 294,
+            "type": "VEC3",
+            "componentType": 5122,
+            "normalized": true,
+            "decodedViewBytes": 2352
+          },
+          "TEXCOORD_0": {
+            "accessor": 39,
+            "count": 294,
+            "type": "VEC2",
+            "componentType": 5123,
+            "normalized": true,
+            "decodedViewBytes": 1176
+          },
+          "JOINTS_0": {
+            "accessor": 40,
+            "count": 294,
+            "type": "VEC4",
+            "componentType": 5121,
+            "normalized": false,
+            "decodedViewBytes": 1176
+          },
+          "WEIGHTS_0": {
+            "accessor": 41,
+            "count": 294,
+            "type": "VEC4",
+            "componentType": 5123,
+            "normalized": true,
+            "decodedViewBytes": 2352
+          },
+          "indices": {
+            "accessor": 42,
+            "count": 1287,
+            "type": "SCALAR",
+            "componentType": 5123,
+            "normalized": false,
+            "decodedViewBytes": 2574
+          }
+        }
+      },
+      {
+        "mesh": 4,
+        "primitive": 3,
+        "name": "female_v006lowresUV__ExactFaceSubset",
+        "vertices": 2842,
+        "triangles": 5159,
+        "fields": {
+          "POSITION": {
+            "accessor": 43,
+            "count": 2842,
+            "type": "VEC3",
+            "componentType": 5126,
+            "normalized": false,
+            "decodedViewBytes": 34104
+          },
+          "NORMAL": {
+            "accessor": 44,
+            "count": 2842,
+            "type": "VEC3",
+            "componentType": 5122,
+            "normalized": true,
+            "decodedViewBytes": 22736
+          },
+          "TEXCOORD_0": {
+            "accessor": 45,
+            "count": 2842,
+            "type": "VEC2",
+            "componentType": 5123,
+            "normalized": true,
+            "decodedViewBytes": 11368
+          },
+          "JOINTS_0": {
+            "accessor": 46,
+            "count": 2842,
+            "type": "VEC4",
+            "componentType": 5121,
+            "normalized": false,
+            "decodedViewBytes": 11368
+          },
+          "WEIGHTS_0": {
+            "accessor": 47,
+            "count": 2842,
+            "type": "VEC4",
+            "componentType": 5123,
+            "normalized": true,
+            "decodedViewBytes": 22736
+          },
+          "indices": {
+            "accessor": 48,
+            "count": 15477,
+            "type": "SCALAR",
+            "componentType": 5123,
+            "normalized": false,
+            "decodedViewBytes": 30954
+          }
+        }
+      },
+      {
+        "mesh": 5,
+        "primitive": 0,
+        "name": "painted.obj.002",
+        "vertices": 63389,
+        "triangles": 100000,
+        "fields": {
+          "POSITION": {
+            "accessor": 49,
+            "count": 63389,
+            "type": "VEC3",
+            "componentType": 5126,
+            "normalized": false,
+            "decodedViewBytes": 760668
+          },
+          "NORMAL": {
+            "accessor": 50,
+            "count": 63389,
+            "type": "VEC3",
+            "componentType": 5122,
+            "normalized": true,
+            "decodedViewBytes": 507112
+          },
+          "TEXCOORD_0": {
+            "accessor": 51,
+            "count": 63389,
+            "type": "VEC2",
+            "componentType": 5123,
+            "normalized": true,
+            "decodedViewBytes": 253556
+          },
+          "JOINTS_0": {
+            "accessor": 52,
+            "count": 63389,
+            "type": "VEC4",
+            "componentType": 5121,
+            "normalized": false,
+            "decodedViewBytes": 253556
+          },
+          "WEIGHTS_0": {
+            "accessor": 53,
+            "count": 63389,
+            "type": "VEC4",
+            "componentType": 5123,
+            "normalized": true,
+            "decodedViewBytes": 507112
+          },
+          "TANGENT": {
+            "accessor": 291,
+            "count": 63389,
+            "type": "VEC4",
+            "componentType": 5126,
+            "normalized": false,
+            "decodedViewBytes": 1014224
+          },
+          "indices": {
+            "accessor": 54,
+            "count": 300000,
+            "type": "SCALAR",
+            "componentType": 5125,
+            "normalized": false,
+            "decodedViewBytes": 1200000
+          }
+        }
+      },
+      {
+        "mesh": 6,
+        "primitive": 0,
+        "name": "RiderJeansMesh.003",
+        "vertices": 26474,
+        "triangles": 51456,
+        "fields": {
+          "POSITION": {
+            "accessor": 55,
+            "count": 26474,
+            "type": "VEC3",
+            "componentType": 5126,
+            "normalized": false,
+            "decodedViewBytes": 317688
+          },
+          "NORMAL": {
+            "accessor": 56,
+            "count": 26474,
+            "type": "VEC3",
+            "componentType": 5122,
+            "normalized": true,
+            "decodedViewBytes": 211792
+          },
+          "TEXCOORD_0": {
+            "accessor": 57,
+            "count": 26474,
+            "type": "VEC2",
+            "componentType": 5123,
+            "normalized": true,
+            "decodedViewBytes": 105896
+          },
+          "JOINTS_0": {
+            "accessor": 289,
+            "count": 26474,
+            "type": "VEC4",
+            "componentType": 5121,
+            "normalized": false,
+            "decodedViewBytes": 105896
+          },
+          "WEIGHTS_0": {
+            "accessor": 290,
+            "count": 26474,
+            "type": "VEC4",
+            "componentType": 5123,
+            "normalized": true,
+            "decodedViewBytes": 211792
+          },
+          "indices": {
+            "accessor": 60,
+            "count": 154368,
+            "type": "SCALAR",
+            "componentType": 5123,
+            "normalized": false,
+            "decodedViewBytes": 308736
+          }
+        }
+      }
+    ],
+    "vertices": 496791,
+    "triangles": 783580,
+    "uniqueViews": 65,
+    "decodedBytes": 36410328
+  },
+  "combinedTextureAndGeometryStreamBytes": {
+    "ASTC4x4": 223843848,
+    "BC7": 223843848,
+    "RGBA32": 786142140
+  },
+  "selectedCheckpointReferenceStreams": {
+    "textureWireBytes": 54967384,
+    "ASTCMipBytes": 226580144,
+    "decodedGeometryBytes": 101132532
+  },
+  "reductionsVsSelectedCheckpoint": {
+    "GLBWireBytes": 27051704,
+    "textureWireBytes": 6353849,
+    "ASTCMipBytes": 39146624,
+    "decodedGeometryBytes": 64722204
+  },
+  "nativeJoints": 75,
+  "nativeAnimationChannels": 225,
+  "nativeJSONAndDecodedStreamsExactToGraft": true,
+  "protectedStreamsExactToSelectedCheckpoint": true,
+  "allDeliveryMaterialTextureImageRecordsReferenced": true,
+  "componentIndependentCompressionProofs": [
+    {
+      "component": "boot-L",
+      "summary": "docs/evidence/rider-rebuild/mobile-textures02/components01/boot-L/summary.json",
+      "sourceBakerCheckpoint": "dcce19850",
+      "sourceBakeMetadataSHA256": "ff80c1af6dbe69cf7714087c68f119cb52c756c1e42ee12c920b558faba8c6f0",
+      "normalAngularDegrees": {
+        "authoredPixels": 4194304,
+        "mean": 0.33001044439151883,
+        "p95": 1.35,
+        "p99": 2.37,
+        "max": 122.16
+      },
+      "normalOutlierCountsAboveDegrees": {
+        "5": 8490,
+        "10": 1798,
+        "30": 124,
+        "60": 18,
+        "90": 4
+      },
+      "alphaChangedPixels": 0
+    },
+    {
+      "component": "boot-R",
+      "summary": "docs/evidence/rider-rebuild/mobile-textures02/components01/boot-R/summary.json",
+      "sourceBakerCheckpoint": "9b7766e70",
+      "sourceBakeMetadataSHA256": "e3151fe82e1669d6801b73d29a48675bc04c5c20513059d503468e09f5b89ef3",
+      "normalAngularDegrees": {
+        "authoredPixels": 4194304,
+        "mean": 0.3273438406176865,
+        "p95": 1.35,
+        "p99": 2.36,
+        "max": 109.47
+      },
+      "normalOutlierCountsAboveDegrees": {
+        "5": 8364,
+        "10": 1857,
+        "30": 112,
+        "60": 16,
+        "90": 4
+      },
+      "alphaChangedPixels": 0
+    },
+    {
+      "component": "glove-L",
+      "summary": "docs/evidence/rider-rebuild/mobile-textures02/components01/glove-L/summary.json",
+      "sourceBakerCheckpoint": "cf961b0da",
+      "sourceBakeMetadataSHA256": "4f81b164119a122bbc0793363ab8ac27ae9d545dbae6a5456e4791ad3cd0131e",
+      "normalAngularDegrees": {
+        "authoredPixels": 4194304,
+        "mean": 0.26626065745949745,
+        "p95": 1.29,
+        "p99": 2.88,
+        "max": 155.58
+      },
+      "normalOutlierCountsAboveDegrees": {
+        "5": 16414,
+        "10": 4008,
+        "30": 315,
+        "60": 38,
+        "90": 13
+      },
+      "alphaChangedPixels": 0
+    },
+    {
+      "component": "glove-R",
+      "summary": "docs/evidence/rider-rebuild/mobile-textures02/components01/glove-R/summary.json",
+      "sourceBakerCheckpoint": "2cbb76232",
+      "sourceBakeMetadataSHA256": "1168b7bfdb25a14c2763d68db84275686d53817dffa3709e2b13c3d630786788",
+      "normalAngularDegrees": {
+        "authoredPixels": 4194304,
+        "mean": 0.25908756349235773,
+        "p95": 1.27,
+        "p99": 2.87,
+        "max": 160.6
+      },
+      "normalOutlierCountsAboveDegrees": {
+        "5": 16151,
+        "10": 4193,
+        "30": 267,
+        "60": 32,
+        "90": 6
+      },
+      "alphaChangedPixels": 0
+    }
+  ],
+  "componentNewLevel0AlphaChangedPixels": 0,
+  "jeansORMResolutionErrorAndAlphaProxy": {
+    "evidence": "docs/evidence/rider-rebuild/mobile-textures02/orm2k02/measurements.json",
+    "measurement": {
+      "image": 11,
+      "source": [
+        4096,
+        4096
+      ],
+      "candidate": [
+        2048,
+        2048
+      ],
+      "reconstruction": "Independent-channel linear bilinear upsample, texel proxy; not a shader/render equivalence claim",
+      "comparisons": {
+        "authoredPNG": [
+          {
+            "channel": "R",
+            "rmse8bit": 2.78755868713114,
+            "meanSigned8bit": 0.0010102391242980957,
+            "p95Absolute8bit": 0,
+            "p99Absolute8bit": 0,
+            "maxAbsolute8bit": 172,
+            "changedPixels": 70663,
+            "sourceAuthoredAlphaPositive": {
+              "pixels": 5853008,
+              "rmse8bit": 4.61799970810461,
+              "p99Absolute8bit": 6,
+              "maxAbsolute8bit": 172
+            }
+          },
+          {
+            "channel": "roughnessG",
+            "rmse8bit": 2.866256250806365,
+            "meanSigned8bit": 0.061237335205078125,
+            "p95Absolute8bit": 1,
+            "p99Absolute8bit": 4,
+            "maxAbsolute8bit": 157,
+            "changedPixels": 2451761,
+            "sourceAuthoredAlphaPositive": {
+              "pixels": 5853008,
+              "rmse8bit": 4.770012774091554,
+              "p99Absolute8bit": 19,
+              "maxAbsolute8bit": 157
+            }
+          },
+          {
+            "channel": "metallicB",
+            "rmse8bit": 0.7707659502906254,
+            "meanSigned8bit": 0.027084410190582275,
+            "p95Absolute8bit": 1,
+            "p99Absolute8bit": 3,
+            "maxAbsolute8bit": 58,
+            "changedPixels": 2440750,
+            "sourceAuthoredAlphaPositive": {
+              "pixels": 5853008,
+              "rmse8bit": 1.2970533007010037,
+              "p99Absolute8bit": 5,
+              "maxAbsolute8bit": 58
+            }
+          },
+          {
+            "channel": "alpha",
+            "rmse8bit": 3.6994913437818484,
+            "meanSigned8bit": 0.0008438229560852051,
+            "p95Absolute8bit": 0,
+            "p99Absolute8bit": 0,
+            "maxAbsolute8bit": 220,
+            "changedPixels": 52666
+          }
+        ],
+        "sourceASTCLevel0": [
+          {
+            "channel": "R",
+            "rmse8bit": 2.78737527371525,
+            "meanSigned8bit": 0.0009082555770874023,
+            "p95Absolute8bit": 0,
+            "p99Absolute8bit": 0,
+            "maxAbsolute8bit": 172,
+            "changedPixels": 70816,
+            "sourceAuthoredAlphaPositive": {
+              "pixels": 5853008,
+              "rmse8bit": 4.617790929087478,
+              "p99Absolute8bit": 6,
+              "maxAbsolute8bit": 172
+            }
+          },
+          {
+            "channel": "roughnessG",
+            "rmse8bit": 2.8759549669578632,
+            "meanSigned8bit": 0.055501341819763184,
+            "p95Absolute8bit": 1,
+            "p99Absolute8bit": 4,
+            "maxAbsolute8bit": 157,
+            "changedPixels": 2511192,
+            "sourceAuthoredAlphaPositive": {
+              "pixels": 5853008,
+              "rmse8bit": 4.78678563425014,
+              "p99Absolute8bit": 19,
+              "maxAbsolute8bit": 157
+            }
+          },
+          {
+            "channel": "metallicB",
+            "rmse8bit": 0.7942835238750949,
+            "meanSigned8bit": 0.04747319221496582,
+            "p95Absolute8bit": 1,
+            "p99Absolute8bit": 3,
+            "maxAbsolute8bit": 49,
+            "changedPixels": 2579248,
+            "sourceAuthoredAlphaPositive": {
+              "pixels": 5853008,
+              "rmse8bit": 1.3371048676773034,
+              "p99Absolute8bit": 5,
+              "maxAbsolute8bit": 49
+            }
+          },
+          {
+            "channel": "alpha",
+            "rmse8bit": 3.6994913437818484,
+            "meanSigned8bit": 0.0008438229560852051,
+            "p95Absolute8bit": 0,
+            "p99Absolute8bit": 0,
+            "maxAbsolute8bit": 220,
+            "changedPixels": 52666
+          }
+        ]
+      }
+    }
+  },
+  "packedNativeFieldQualification": {
+    "path": "docs/evidence/rider-rebuild/mobile-mesh02/composition01-qualification.json",
+    "sha256": "8f807e0c6d662c4bb22342eb600812d7caa6ff4f3d52d01f7359a2d8ac92c9c5",
+    "method": "Four distinct original selected components, skin03 native-knot gloves, direct packed Uint16 field readback under original482played poses. Parent actual moving/phone and corrected grip gates remain open.",
+    "parts": [
+      {
+        "component": "boot-L",
+        "vertices": 29245,
+        "recordedPoses": 482,
+        "packedWeightSHA256": "625dd7feff825b41be514ad709b066d0261e67fe5561315091b6213f3557f91e",
+        "allIntegerSums65535": true,
+        "allPoseVertexErrorMeters": {
+          "packedNativeTop4": {
+            "mean": 2.922456683482369e-05,
+            "p95": 7.429265528764972e-05,
+            "p99": 0.00010155292319149877,
+            "max": 0.0001963318240399812,
+            "verticesAbove1mm": 0,
+            "verticesAbove2mm": 0
+          }
+        },
+        "limitations": "Recorded neutral/forward/back gameplay only. Source face correspondence follows exact nearest rest surface; no future or unsampled crash/ragdoll guarantee."
+      },
+      {
+        "component": "boot-R",
+        "vertices": 29072,
+        "recordedPoses": 482,
+        "packedWeightSHA256": "7ea86b5ad243423f69bd60afecdc559dd0e84a18bba7a55720d0f79fd43a6af0",
+        "allIntegerSums65535": true,
+        "allPoseVertexErrorMeters": {
+          "packedNativeTop4": {
+            "mean": 2.914302795395998e-05,
+            "p95": 7.44582002871002e-05,
+            "p99": 0.00010125209034190842,
+            "max": 0.00017811658965100614,
+            "verticesAbove1mm": 0,
+            "verticesAbove2mm": 0
+          }
+        },
+        "limitations": "Recorded neutral/forward/back gameplay only. Source face correspondence follows exact nearest rest surface; no future or unsampled crash/ragdoll guarantee."
+      },
+      {
+        "component": "glove-L",
+        "vertices": 154561,
+        "recordedPoses": 482,
+        "packedWeightSHA256": "b1eb4f9e1e78cff13280e20d9be622aa77fe0b25592dda6325733488c11c63b2",
+        "allIntegerSums65535": true,
+        "allPoseVertexErrorMeters": {
+          "packedNativeTop4": {
+            "mean": 9.226606556932634e-08,
+            "p95": 3.1221123135621503e-07,
+            "p99": 4.3286619281553453e-07,
+            "max": 8.689359774719989e-07,
+            "verticesAbove1mm": 0,
+            "verticesAbove2mm": 0
+          }
+        },
+        "limitations": "Recorded neutral/forward/back gameplay only. Source face correspondence follows exact nearest rest surface; no future or unsampled crash/ragdoll guarantee."
+      },
+      {
+        "component": "glove-R",
+        "vertices": 153861,
+        "recordedPoses": 482,
+        "packedWeightSHA256": "e7812229763ad48a73d2e08683c8e7d62c2a3cfa0fb5f270723524060bb87e04",
+        "allIntegerSums65535": true,
+        "allPoseVertexErrorMeters": {
+          "packedNativeTop4": {
+            "mean": 9.297300609696706e-08,
+            "p95": 3.1350099334909864e-07,
+            "p99": 4.3807495412696974e-07,
+            "max": 7.650637243963583e-07,
+            "verticesAbove1mm": 0,
+            "verticesAbove2mm": 0
+          }
+        },
+        "limitations": "Recorded neutral/forward/back gameplay only. Source face correspondence follows exact nearest rest surface; no future or unsampled crash/ragdoll guarantee."
+      }
+    ],
+    "accepted": false
+  },
+  "independentSourceFieldBakeLimits": [
+    {
+      "component": "boot-L",
+      "path": "docs/evidence/rider-rebuild/mobile-mesh02/boot-L-first-ray01-summary.json",
+      "sha256": "573ab14cdaeb782e82f777d90b397e8a07fc3f28570f5ab5cdc06fa3c4a79edd",
+      "samples": 30000,
+      "nearestSourceErrors": {
+        "albedo": {
+          "mean": 0.0011674984208693234,
+          "p95": 0.0044258932202327775,
+          "p99": 0.013072245503410936,
+          "max": 0.11445324162589694
+        },
+        "orm": {
+          "mean": 0.0046317553570978005,
+          "p95": 0.016547005816804544,
+          "p99": 0.08151251710093005,
+          "max": 0.7006536175807317
+        },
+        "normalDegrees": {
+          "mean": 4.203084118381691,
+          "p95": 3.7833857167539424,
+          "p99": 147.2569286201822,
+          "max": 177.52878870433685
+        }
+      },
+      "firstBakeRay": {
+        "method": "Every same receiver centroid ray from +3mm along interpolated receiver normal, -normal direction,10mm max; exactly declared bake-cage starting surface, separate from nearest-face evidence. Not a moving-camera acceptance.",
+        "hits": 30000,
+        "misses": 0,
+        "errors": {
+          "albedo": {
+            "mean": 0.0010488493416760368,
+            "p95": 0.003860634930888822,
+            "p99": 0.011025588504132778,
+            "max": 0.11453843815632754
+          },
+          "orm": {
+            "mean": 0.0039850297487655124,
+            "p95": 0.012473400949156643,
+            "p99": 0.06616481842325148,
+            "max": 0.7043039186294967
+          },
+          "normalDegrees": {
+            "mean": 1.2005743862519016,
+            "p95": 2.410170908880601,
+            "p99": 19.54066314873235,
+            "max": 164.84956563491207
+          }
+        },
+        "normalThresholdCounts": {
+          "15": 355,
+          "45": 175,
+          "90": 68
+        }
+      }
+    },
+    {
+      "component": "boot-R",
+      "path": "docs/evidence/rider-rebuild/mobile-mesh02/boot-R-first-ray01-summary.json",
+      "sha256": "f5ced1f5a6ccc017077125a964b7b67bfafd6661b635a80729bca9e0c31c1c3d",
+      "samples": 30000,
+      "nearestSourceErrors": {
+        "albedo": {
+          "mean": 0.0011628314853076981,
+          "p95": 0.004314624429858855,
+          "p99": 0.012513499371214334,
+          "max": 0.15527166675226198
+        },
+        "orm": {
+          "mean": 0.004562862476329848,
+          "p95": 0.0159785272620177,
+          "p99": 0.07608064008915752,
+          "max": 0.7084967543681463
+        },
+        "normalDegrees": {
+          "mean": 3.924039356413924,
+          "p95": 3.449397299874086,
+          "p99": 144.15358475201026,
+          "max": 176.42251022101723
+        }
+      },
+      "firstBakeRay": {
+        "method": "Every same receiver centroid ray from +3mm along interpolated receiver normal, -normal direction,10mm max; exactly declared bake-cage starting surface, separate from nearest-face evidence. Not a moving-camera acceptance.",
+        "hits": 30000,
+        "misses": 0,
+        "errors": {
+          "albedo": {
+            "mean": 0.0010576451277568384,
+            "p95": 0.003801167113738912,
+            "p99": 0.011275476135183303,
+            "max": 0.15624152781180875
+          },
+          "orm": {
+            "mean": 0.003956178427345524,
+            "p95": 0.01274453232586788,
+            "p99": 0.06452090936522326,
+            "max": 0.7084967543681463
+          },
+          "normalDegrees": {
+            "mean": 1.2941764577399968,
+            "p95": 2.399708919973441,
+            "p99": 22.391929076131305,
+            "max": 164.29796577097557
+          }
+        },
+        "normalThresholdCounts": {
+          "15": 388,
+          "45": 191,
+          "90": 89
+        }
+      }
+    },
+    {
+      "component": "glove-L",
+      "path": "docs/evidence/rider-rebuild/mobile-mesh02/glove-L-skin03-first-ray-summary.json",
+      "sha256": "d70db9277c0b8640ddd95cb38d3f1b198949db7dcce2fde7b4a3344fa97bb63e",
+      "samples": 30000,
+      "nearestSourceErrors": {
+        "albedo": {
+          "mean": 0.00013102771159163114,
+          "p95": 0.0008499947683832342,
+          "p99": 0.0037155645384663975,
+          "max": 0.1212231061774216
+        },
+        "orm": {
+          "mean": 0.0021776953008959808,
+          "p95": 0.0027205879249402594,
+          "p99": 0.007559202061517375,
+          "max": 0.5645820634866444
+        },
+        "normalDegrees": {
+          "mean": 8.527719452138744,
+          "p95": 71.29960242598952,
+          "p99": 164.88085797230485,
+          "max": 179.0356678664773
+        }
+      },
+      "firstBakeRay": {
+        "method": "Every same receiver centroid ray from +3mm along interpolated receiver normal, -normal direction,10mm max; exactly declared bake-cage starting surface, separate from nearest-face evidence. Not a moving-camera acceptance.",
+        "hits": 30000,
+        "misses": 0,
+        "errors": {
+          "albedo": {
+            "mean": 9.066450310220517e-05,
+            "p95": 0.0006085087149067129,
+            "p99": 0.0022277472623378927,
+            "max": 0.030199455127720477
+          },
+          "orm": {
+            "mean": 0.0020093156237457775,
+            "p95": 0.0020175844046781536,
+            "p99": 0.00355498672002631,
+            "max": 0.5655228844922936
+          },
+          "normalDegrees": {
+            "mean": 1.2376057646753997,
+            "p95": 1.9048162991795183,
+            "p99": 25.310007023214798,
+            "max": 171.9559580741332
+          }
+        },
+        "normalThresholdCounts": {
+          "15": 421,
+          "45": 166,
+          "90": 72
+        }
+      }
+    },
+    {
+      "component": "glove-R",
+      "path": "docs/evidence/rider-rebuild/mobile-mesh02/glove-R-skin03-first-ray-summary.json",
+      "sha256": "db674bc5e26ef73abe99fb1d7c8608086bca2b29da4c33a06e9ab13bc988efbb",
+      "samples": 30000,
+      "nearestSourceErrors": {
+        "albedo": {
+          "mean": 0.00012488948942033793,
+          "p95": 0.0008059103233276889,
+          "p99": 0.0036124033422951975,
+          "max": 0.033265496252619015
+        },
+        "orm": {
+          "mean": 0.002265862646947857,
+          "p95": 0.002593515035783712,
+          "p99": 0.0075259228152533995,
+          "max": 0.5675819618045352
+        },
+        "normalDegrees": {
+          "mean": 8.543409083887862,
+          "p95": 69.49115444076126,
+          "p99": 165.072901180244,
+          "max": 178.91960849054388
+        }
+      },
+      "firstBakeRay": {
+        "method": "Every same receiver centroid ray from +3mm along interpolated receiver normal, -normal direction,10mm max; exactly declared bake-cage starting surface, separate from nearest-face evidence. Not a moving-camera acceptance.",
+        "hits": 30000,
+        "misses": 0,
+        "errors": {
+          "albedo": {
+            "mean": 8.800987776399135e-05,
+            "p95": 0.0005496799967825003,
+            "p99": 0.002256320210551599,
+            "max": 0.025405597087188748
+          },
+          "orm": {
+            "mean": 0.002100529759108213,
+            "p95": 0.001963733596601977,
+            "p99": 0.0033919711849379024,
+            "max": 0.5675873871514341
+          },
+          "normalDegrees": {
+            "mean": 1.281332170162105,
+            "p95": 1.8029248202656165,
+            "p99": 23.78922574047666,
+            "max": 174.6393656855184
+          }
+        },
+        "normalThresholdCounts": {
+          "15": 393,
+          "45": 183,
+          "90": 83
+        }
+      }
+    }
+  ],
+  "pinnedRuntimeTargetMeaning": {
+    "ASTC4x4": {
+      "basisTranscoderFormat": 10,
+      "blockPixels": [
+        4,
+        4
+      ],
+      "bytesPerBlock": 16
+    },
+    "BC7": {
+      "basisTranscoderFormat": 7,
+      "blockPixels": [
+        4,
+        4
+      ],
+      "bytesPerBlock": 16
+    },
+    "RGBA32": {
+      "basisTranscoderFormat": 13,
+      "bytesPerPixel": 4
+    }
+  },
+  "hoodieAndIdentityMaps": "Source KTX bytes unchanged; hoodie albedo/ORM/normal remain4K. Jeans ORM is the independently measured2K resolution trial.",
+  "hoodiePriorNormalCompressionLimit": {
+    "meanDegrees": 0.299269,
+    "p99Degrees": 2.11,
+    "maxDegrees": 98.92657,
+    "pixelsAbove30Degrees": 46
+  },
+  "limits": [
+    "Components remain unaccepted builder checkpoints; compare played final candidate before judging art.",
+    "Compression compares new bakedPNG fields, independent of source-field and native posed witness limits.",
+    "All-pixel normal outliers remain included; no UV occupancy exclusions.",
+    "GPU totals assume the pinned ASTC4x4/BC7 transcode path; actual phone support, upload memory and FPS are unmeasured.",
+    "Unique geometry/texture stream totals exclude animation/bind buffers, staging, driver allocations, renderer work and other assets.",
+    "Hoodie atlas prior native transfer maximum9.713mm at hem/nearest-corner38.304mm remains independent.",
+    "Visual/project90% milestone is not a wire-reduction quota. No production pin or deployment."
+  ]
+}
