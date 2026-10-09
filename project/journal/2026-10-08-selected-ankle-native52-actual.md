@@ -1,0 +1,5 @@
+Finding: Actual native52 saves and independently qualifies exact3318 source42 lower-Jeans fields. Both missing canonical foot groups append at indices23/24, all23 old names/indices preserved. Source/saved witnesses protect all unrelated geometry/PBR/fields, keys, actions, rest, visible7 and full reference. RAW save succeeded; first combined guard then stopped50.301s at original memory bound before source witness. Resumed only unsatisfied witnesses under separate unchanged original guards: source61.482s exit0, saved69.120s exit0. CPU comparison and downstream receipt intake PASS. Engine deformation parity/contact/played art remain open; no garment/body/motion acceptance inferred.
+
+Validation: Actual reopened native SHA38955c39ce9faa660f879b15c2f8349c9d077bf77dd61b753c7b225524172630; strict original field witnesses and CPU intake pass. No native resave or original-limit change after interruption.
+
+Limits: Unaccepted initializer only; changed-surface engine parity and full dressed lean review remain required.
