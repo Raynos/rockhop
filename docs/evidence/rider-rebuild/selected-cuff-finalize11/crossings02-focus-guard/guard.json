@@ -1,0 +1,67 @@
+{
+  "accepted": false,
+  "lock": "/Users/raynos/projects/localai/.model.lock",
+  "method": "lockf -k",
+  "command": [
+    "/Applications/Blender.app/Contents/MacOS/Blender",
+    "-b",
+    "--threads",
+    "2",
+    "--python-exit-code",
+    "1",
+    "--python",
+    "assets/blender/rider-rebuild/selected-cuff-finalize11/check_crossings.py",
+    "--",
+    "harness/out/rider-rebuild/selected-cuff-finish06/intake02",
+    "harness/out/rider-rebuild/selected-cuff-finalize11/interior01",
+    "harness/out/rider-rebuild/selected-cuff-finalize11/crossings02-focus",
+    "focused"
+  ],
+  "controllerPID": 72049,
+  "pollSeconds": 1,
+  "startAnonymousBelowGiB": 55,
+  "stopAnonymousGiB": 65,
+  "stopAnonymousPlusWiredGiB": 96,
+  "limitSeconds": 180.0,
+  "guardSHA256": "cf8acd15d8b7484480bee74d23892be815d955ffd87115d3da8ed228ffb3d916",
+  "status": "worker returned; review pending",
+  "samples": [
+    {
+      "seconds": 0,
+      "anonymousGiB": 37.2,
+      "wiredGiB": 10.3,
+      "freeGiB": 26.8
+    },
+    {
+      "seconds": 0.045,
+      "anonymousGiB": 37.2,
+      "wiredGiB": 10.3,
+      "freeGiB": 26.8
+    },
+    {
+      "seconds": 1.091,
+      "anonymousGiB": 37.5,
+      "wiredGiB": 10.3,
+      "freeGiB": 26.4
+    },
+    {
+      "seconds": 2.135,
+      "anonymousGiB": 36.9,
+      "wiredGiB": 10.3,
+      "freeGiB": 27.0
+    },
+    {
+      "seconds": 3.177,
+      "anonymousGiB": 37.1,
+      "wiredGiB": 10.1,
+      "freeGiB": 27.0
+    }
+  ],
+  "physicalMemoryBytes": 137438953472,
+  "requiredPhysicalMemoryBytes": 137438953472,
+  "scope": "Future explicitly invoked owned Rockhop job only",
+  "pressureOrSwapLimits": "No separate pressure/swap gate exists in the pinned original guard; none altered",
+  "ownedChildPID": 72086,
+  "exitCode": 0,
+  "elapsedSeconds": 3.52
+}
