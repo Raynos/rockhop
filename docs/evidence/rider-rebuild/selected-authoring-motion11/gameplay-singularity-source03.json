@@ -1,0 +1,116 @@
+{
+  "accepted": false,
+  "status": "SINGULARITY03_SOURCE_FROZEN_ACTUAL_OBSERVATION_PENDING",
+  "input": {
+    "path": "assets/blender/rider-rebuild/selected-authoring-motion11/gameplay-diagnostic03.input.json",
+    "sha256": "539ee0ad928d67e60972f052d9839671f3fdef7ad339e382228d32fc8b5ecb49"
+  },
+  "sources": [
+    {
+      "path": "assets/blender/rider-rebuild/selected-authoring-motion11/gameplay_diagnostic03.py",
+      "sha256": "917856c9fc9848a104142cb3aad1f4c9efc728bba7ac4b5ab15ebd22b753ee90"
+    },
+    {
+      "path": "assets/blender/rider-rebuild/selected-authoring-motion11/test_gameplay_diagnostic03.py",
+      "sha256": "707b8a568257054188786c2318b4c78b5d037e69023c8c0239bf78e67960d164"
+    },
+    {
+      "path": "assets/blender/rider-rebuild/selected-authoring-motion11/run-gameplay-diagnostic03.sh",
+      "sha256": "f3f2c886edb1c26b1ba2d1750855874f93a341084a317521eaafab21388c6674"
+    }
+  ],
+  "actualInputPins": {
+    "firstNative": {
+      "path": "harness/out/rider-rebuild/selected-authoring-motion11/gameplay-native02/rookie-first-physical-controls.blend",
+      "sha256": "1c1df5126a086bb55b4796f1c8135aee8091ffd384b6013ef27b868d7aecd6af"
+    },
+    "firstPoseReceipt": {
+      "path": "harness/out/rider-rebuild/selected-authoring-motion11/gameplay-native02/rookie-first-physical-pose.json",
+      "sha256": "78a3c474ea03908e513aff7cd6b76ddfbcc9b03199ea4483c69f05e925f9c818"
+    },
+    "failedAction": {
+      "path": "harness/out/rider-rebuild/selected-authoring-motion11/gameplay-native02/failed-action.json",
+      "sha256": "4daf207b4da6e40129a2426dab9c2de34d60b2a317bf85db60c94858b5864f51"
+    },
+    "convertedReceipt": {
+      "path": "harness/out/rider-rebuild/selected-authoring-motion11/gameplay-converted02/receipt.json",
+      "sha256": "c12feb416599b1ed6409af4962bc3e70096ec6f28b0adecdd20d1dec5236957d"
+    },
+    "capturedPoses": {
+      "path": "harness/out/rider-rebuild/selected-authoring-motion11/gameplay-converted02/measured-gameplay-native-world.json",
+      "sha256": "f3e0444768655bf72500a9245745a559586a7717b3f6cb6b600b6e9d1d05c153"
+    },
+    "gameplayControlsRecipe": {
+      "path": "assets/blender/rider-rebuild/selected-authoring-motion11/gameplay_controls02.py",
+      "sha256": "9e3251cee5e94e2a427512202b2d0d6fcbde5f9e32f0d9597133982ac1ce044c"
+    },
+    "controlsRecipe": {
+      "path": "assets/blender/rider-rebuild/selected-authoring-motion11/controls.py",
+      "sha256": "b5b77c1af0442b87d4730834baf1e76bfae737a4531daad5e1aeada79293fd21"
+    },
+    "commonBuildRecipe": {
+      "path": "assets/blender/rider-rebuild/selected-authoring-motion11/build.py",
+      "sha256": "5b0c4d282b9003fc0968df84972d009d9d9e4b1b1b06bffb80b11dbd475cf003"
+    }
+  },
+  "actualFailure": {
+    "action": "RiderGameplayLeanRookie",
+    "frame": 51,
+    "sourceTick": 250,
+    "maximumAffineBoundWithin2mM": 0.0011842002859339118,
+    "worstBone": "DEF-forearm.R",
+    "positionResidualM": 0.000136027936621398,
+    "unchangedLimitM": 0.0001
+  },
+  "retainedNumericEvidence": {
+    "desiredElbowBendHeightM": {
+      "left": 0.00016329814856610585,
+      "right": 0.0001633012240077028
+    },
+    "desiredSegmentLengthMinusNativeRestM": {
+      "left": [
+        2.409548448545351e-07,
+        -1.7144817765490927e-07
+      ],
+      "right": [
+        9.260686373302462e-08,
+        -2.482733341135912e-07
+      ]
+    },
+    "doublePrecisionRightElbowDifferenceWithRestLengthsM": 9.794267581337753e-05,
+    "doublePrecisionRightElbowDifferenceWithRoundedControlTargetM": 8.413927703275377e-05,
+    "qualification": "Analytic estimates from retained Float32 seed matrices/nativeRest.head; not measured post-solver mechanism. They establish high conditioning sensitivity, not the exact remaining solver/pole contribution."
+  },
+  "oneBoundedObservation": [
+    "Open actual saved first control native; replay original frozen source keys2..51 with only two read-only callbacks inserted. AST regression removes the two callbacks and proves original solver AST unchanged.",
+    "Recover exact Python-double pole angles from actual first-pose receipt; verify their stored Float32 constraint values. Do not substitute newly rounded pole inputs.",
+    "At failed frame retain all75 actual/basis/desired matrices and full MCH/target/pole rest/basis/scale/constraint fields immediately before and after IK activation.",
+    "Key the failed last pose solely to preserve an unaccepted rig-only diagnostic, save it uncompressed, reopen, and measure both IK-on and IK-off keyed prepose. No diagnostic native becomes a successful control package."
+  ],
+  "validation": {
+    "actualInputPinsAndLineage": "PASS Python3.9 read_input, no bpy import",
+    "pythonAST": "PASS",
+    "observerASTRegressions": 2,
+    "observerASTResult": "PASS",
+    "bashSyntax": "PASS",
+    "whitespace": "PASS",
+    "parentSourceReview": "PASS complete source/pole-context review, two AST fixtures rerun, actual Python3.9 lineage validation and bash syntax rerun",
+    "nativeRun": "NOT RUN"
+  },
+  "conditionedCorrectionAfterMeasurement": [
+    "If actual saved keyed FK prepose passes unchanged all75 bound, expose explicit per-limb FK controls and authored IK/FK mode for singular intervals; retain live IK for ordinary reachable motion. Verify every key and mode boundary; do not label FK intervals as palm/pole-driven.",
+    "Gate every added control constraint with deterministic action mode. Move direct deform-finger curl drivers to nondeforming helper controls with gated copy constraints so generic source keys can drive original75 safely.",
+    "Preserve original actions unchanged and append named playback copies with live-controls mode0; author actions key mode1. No trusted persistent frame handlers or hidden manual switching.",
+    "Unified full-master integration must use actual qualified native10 receipts and explicit10 recipe/source snapshot/replay pins; no invented native08 status or recipe."
+  ],
+  "guard": {
+    "path": "assets/blender/hero-remaster/generation-comparison-2026-10-03/user-agent2/run_bounded96.py",
+    "sha256": "cf8acd15d8b7484480bee74d23892be815d955ffd87115d3da8ed228ffb3d916"
+  },
+  "parentCommand": "bash assets/blender/rider-rebuild/selected-authoring-motion11/run-gameplay-diagnostic03.sh assets/blender/rider-rebuild/selected-authoring-motion11/gameplay-diagnostic03.input.json harness/out/rider-rebuild/selected-authoring-motion11/gameplay-diagnostic03 docs/evidence/rider-rebuild/selected-authoring-motion11/gameplay-diagnostic-guard03",
+  "limits": [
+    "One source diagnostic; no new native execution or fix measured yet.",
+    "No iteration/tolerance adjustment, rest/skin change, appearance substitute, native/player promotion or heavy job by builder.",
+    "Only parent schedules actual CPU2 job under original admission/stop guard."
+  ]
+}
