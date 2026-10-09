@@ -23,3 +23,9 @@ Finding: Exact finite-face construction achieves bilateral thumb contact but req
 Validation: Child exit0 in3.610s; full vertex and triangle checks measure2.822/3.425mm penetration,268/306 crossings. Thumb residual11/37nanometres with0.800/0.783mm clearance.
 
 Limits: No player promotion. Independent thumb controls and descendant-aware contact closure required; parent moving judgment remains open.
+
+Finding: Independent thumb solutions still require158degree axial twist; inherited controls use global palm normal for thumb flex, so their pulp labels are not independent anatomy evidence.
+
+Validation: Retry child exits0 in9.303s; descendant-aware closure haszero inside vertices andzero finite triangle crossings bilaterally but labelled finger pads13.09–16.93mm away. Material/triangle normal agreement0.99953–0.99999 rules out inverted normals.
+
+Limits: Unaccepted grasp; thumb opposition-plane hypothesis and less curled descendant-safe finger construction follow. Original source/rest/75skin preserved.

@@ -1,0 +1,88 @@
+{
+  "accepted": false,
+  "lock": "/Users/raynos/projects/localai/.model.lock",
+  "method": "lockf -k",
+  "command": [
+    "node",
+    "assets/blender/rider-rebuild/selected-grip-kinematic02/construct.mjs",
+    "docs/evidence/rider-rebuild/selected-grip-kinematic02/independent04",
+    "./independent-contact.mjs"
+  ],
+  "controllerPID": 22093,
+  "pollSeconds": 1,
+  "startAnonymousBelowGiB": 55,
+  "stopAnonymousGiB": 65,
+  "stopAnonymousPlusWiredGiB": 96,
+  "limitSeconds": 180.0,
+  "guardSHA256": "cf8acd15d8b7484480bee74d23892be815d955ffd87115d3da8ed228ffb3d916",
+  "status": "worker returned; review pending",
+  "samples": [
+    {
+      "seconds": 0,
+      "anonymousGiB": 54.0,
+      "wiredGiB": 7.1,
+      "freeGiB": 26.2
+    },
+    {
+      "seconds": 0.032,
+      "anonymousGiB": 54.1,
+      "wiredGiB": 7.1,
+      "freeGiB": 26.2
+    },
+    {
+      "seconds": 1.061,
+      "anonymousGiB": 54.7,
+      "wiredGiB": 7.5,
+      "freeGiB": 24.1
+    },
+    {
+      "seconds": 2.119,
+      "anonymousGiB": 55.8,
+      "wiredGiB": 8.0,
+      "freeGiB": 22.1
+    },
+    {
+      "seconds": 3.191,
+      "anonymousGiB": 56.1,
+      "wiredGiB": 7.7,
+      "freeGiB": 22.7
+    },
+    {
+      "seconds": 4.254,
+      "anonymousGiB": 57.0,
+      "wiredGiB": 8.2,
+      "freeGiB": 21.2
+    },
+    {
+      "seconds": 5.333,
+      "anonymousGiB": 58.5,
+      "wiredGiB": 9.1,
+      "freeGiB": 18.7
+    },
+    {
+      "seconds": 6.398,
+      "anonymousGiB": 59.0,
+      "wiredGiB": 8.6,
+      "freeGiB": 18.5
+    },
+    {
+      "seconds": 7.469,
+      "anonymousGiB": 60.0,
+      "wiredGiB": 8.6,
+      "freeGiB": 17.4
+    },
+    {
+      "seconds": 8.578,
+      "anonymousGiB": 59.9,
+      "wiredGiB": 8.7,
+      "freeGiB": 17.3
+    }
+  ],
+  "physicalMemoryBytes": 137438953472,
+  "requiredPhysicalMemoryBytes": 137438953472,
+  "scope": "Future explicitly invoked owned Rockhop job only",
+  "pressureOrSwapLimits": "No separate pressure/swap gate exists in the pinned original guard; none altered",
+  "ownedChildPID": 22097,
+  "exitCode": 0,
+  "elapsedSeconds": 9.303
+}
