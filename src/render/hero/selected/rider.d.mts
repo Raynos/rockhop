@@ -1,16 +1,17 @@
+import type { Bone, Quaternion, Vector3 } from 'three';
 import type { GltfRider } from '../gltfRider';
 export function createSelectedRiderClass(metadata: unknown): typeof GltfRider;
 export function selectedGripPositionBike(driver: {
   sideZ: Record<string, number>; gripProfileHash?: string;
   gripSocketPositionBike?: Record<string, number[]>;
   gripSocketQuaternionBike?: Record<string, number[]>;
-}, side: string): import('three').Vector3;
+}, side: string): Vector3;
 type PronationBinding = {
-  byId: Map<string, import('three').Bone>;
+  byId: Map<string, Bone>;
   rests: Map<string, { rotationXYZW: number[] }>;
 };
 type PronationCalibration = {
-  wrist: string; restWrist: import('three').Quaternion;
+  wrist: string; restWrist: Quaternion;
   segments: { id: string; next: string; fraction: number }[];
 };
 export function calibrateSelectedForearmPronation(driver: {
@@ -20,5 +21,5 @@ export function calibrateSelectedForearmPronation(driver: {
   forearmPronation?: { schema: string; gripProfileHash: string };
 }, binding: PronationBinding, chain: string[], wrist: string): PronationCalibration | null;
 export function applySelectedForearmPronation(binding: PronationBinding,
-  calibration: PronationCalibration, targetWristQ: import('three').Quaternion,
+  calibration: PronationCalibration, targetWristQ: Quaternion,
   tolerance?: number): { radians: number; singular: boolean };
