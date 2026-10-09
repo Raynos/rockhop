@@ -41,3 +41,9 @@ Finding: Diagnose all low selected inner faces against the untouched exterior be
 Validation: Parent full133line source review, AST/hash and two actual pins pass; source normals compensate handed frames.
 
 Limits: Read-only source checkpoint; no cavity edit, clearance or moving qualification.
+
+Finding: Actual source hit order supports all low faces as inner arch floor, correcting the global height assumption.
+
+Validation: Originalguard3.243s exit0; parent verifies all858 rows per side,0unsupported/0outside plantar projection; untouched outerbottom13.24–17.66mm below.
+
+Limits: Ownership only. Astra83 may replace the source-selection predicate with literal component/cut identity; no clearance, moving or compact production acceptance.
