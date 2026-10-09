@@ -23,3 +23,9 @@ Finding: Replace invalid glove root/cuff construction assumptions with actual so
 Validation: Parent fully reviewed selector168lines, both-side wrappers/diffs and98line native seam. All AST/Node/pins pass; actual read-only source inventories1.771s/0.828s,356centers each. Original gates and one-call policy unchanged.
 
 Limits: Source checkpoint only; no simplification, wearer, selected bake, motion, engine or device result. Raw left62 normal failure stays visible; source is immutable.
+
+Finding: Corrected right glove source landmarks pass preparation, but the strict bitwise sum assumption fails2049 immutable source rows before any simplifier.
+
+Validation: Guard0.659s exit1, parent recipe/source/prepared/constructor pins and compressed originals match; candidateAttempts0, no native mutation.
+
+Limits: No compact/fit/bake/moving result. Diagnose full raw source sums and actual evaluated semantics; do not silently normalize or repeat the same preflight.

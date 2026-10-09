@@ -1,0 +1,195 @@
+{
+  "status": "REJECTED_RIGHT_SOURCE_FIELD_PREFLIGHT_NO_CANDIDATE",
+  "acceptedArt": false,
+  "exitCode": 1,
+  "elapsedSeconds": 0.659,
+  "guard": {
+    "path": "docs/evidence/rider-rebuild/selected-glove-family81/right-full-guard02/guard.json",
+    "sha256": "68ea0bbfe51c8b76060c844c612e4ef053f67676a622af50e787d2da12e63c33"
+  },
+  "workerLog": {
+    "path": "docs/evidence/rider-rebuild/selected-glove-family81/right-full-guard02/worker.log",
+    "sha256": "c147db8dc86ba49640073f77f1d5ec68632be62f8968ab3721cbf51cc5c0cf45"
+  },
+  "telemetry": {
+    "path": "docs/evidence/rider-rebuild/selected-glove-family81/right-full-guard02/telemetry.jsonl",
+    "sha256": "1f9c1ab9816216da27c6908a050950f7f3ce5281f120eb86fd6846659f8c048d"
+  },
+  "recipes": [
+    {
+      "path": "assets/blender/rider-rebuild/selected-glove-family81/construct_surface02.py",
+      "sha256": "f69993cc5ed8bd271bd18b17f6dfdfec6cdb1c28368fff401c0e97750539b7cc"
+    },
+    {
+      "path": "assets/blender/rider-rebuild/selected-glove-family81/construct_surface02.mjs",
+      "sha256": "202a01278c20ecdd5e0fcaa31c664feecd10f49673264910c4e6c49277c0a56a"
+    },
+    {
+      "path": "assets/blender/rider-rebuild/selected-glove-family81/surface_landmarks02.py",
+      "sha256": "887ab43cbec03415a818b0392ab296f47fc1eb6fa21426290dba071cd7f7f22c"
+    }
+  ],
+  "prepared": {
+    "path": "harness/out/rider-rebuild/selected-glove-family81/right-full02/prepared.json",
+    "sha256": "5037acc10254001ec76bde94e2dbadc253a496036aa3cce8864dcc92f9aaef33"
+  },
+  "constructor": {
+    "path": "harness/out/rider-rebuild/selected-glove-family81/right-full02/constructor.json",
+    "sha256": "88aab3e4196393259cbe66309c04d403980bcdd573394ef2c54170f920d16ad0"
+  },
+  "sourceBinary": {
+    "path": "harness/out/rider-rebuild/selected-glove-family81/right-full02/source.bin",
+    "sha256": "a56652455df93c5058225629a407f38ceb1e500dfe3c59db58ce2353a0e86721",
+    "layout": {
+      "positions": {
+        "dtype": "<f4",
+        "shape": [
+          323766,
+          3
+        ],
+        "byteOffset": 0,
+        "byteLength": 3885192,
+        "sha256": "f3fbc83397159e5eceb5b821ad72347b3caafc0ed1364ba667277048e1f257da"
+      },
+      "triangles": {
+        "dtype": "<i4",
+        "shape": [
+          567467,
+          3
+        ],
+        "byteOffset": 3885192,
+        "byteLength": 6809604,
+        "sha256": "06104ce708295634a740e5eec384d4b10db1eddb2286528a5b81ba1001ac46ca"
+      },
+      "triangleLoopIds": {
+        "dtype": "<i4",
+        "shape": [
+          567467,
+          3
+        ],
+        "byteOffset": 10694796,
+        "byteLength": 6809604,
+        "sha256": "adf5a123a43401b6db160922ae21c7b096663d0e94e31043a723c158d4c07a37"
+      },
+      "vertexNormals": {
+        "dtype": "<f4",
+        "shape": [
+          323766,
+          3
+        ],
+        "byteOffset": 17504400,
+        "byteLength": 3885192,
+        "sha256": "64f2d4588165d65296ced959b5c4d3bd1974b6e0092492fed328771ffe669540"
+      },
+      "cornerNormals": {
+        "dtype": "<f4",
+        "shape": [
+          1702401,
+          3
+        ],
+        "byteOffset": 21389592,
+        "byteLength": 20428812,
+        "sha256": "58a58f0dd4bf91fc1ba002aa46e8cb30dd6767f4fbfb23fcca012639722163a8"
+      },
+      "faceMaterialIds": {
+        "dtype": "<i4",
+        "shape": [
+          567467
+        ],
+        "byteOffset": 41818404,
+        "byteLength": 2269868,
+        "sha256": "8ff19fe70b542330b0c62fe4b607f19ee60e2c46b0e1af1f5b46002ac626d6c9"
+      },
+      "fieldIndices": {
+        "dtype": "<i4",
+        "shape": [
+          799654
+        ],
+        "byteOffset": 44088272,
+        "byteLength": 3198616,
+        "sha256": "42fc2e65b59116e605d65fc0ce712bdbd6de0ec0fb3084e68ee53ce4ee55cc27"
+      },
+      "fieldWeights": {
+        "dtype": "<f4",
+        "shape": [
+          799654
+        ],
+        "byteOffset": 47286888,
+        "byteLength": 3198616,
+        "sha256": "fbffadc2204d162ac1a58e0baff7badd2ab81590adce0342d8780ba173a02f63"
+      },
+      "uvLayer0": {
+        "dtype": "<f4",
+        "shape": [
+          1702401,
+          2
+        ],
+        "byteOffset": 50485504,
+        "byteLength": 13619208,
+        "sha256": "1e9f6da7ff860189de342479b14eca0da86632abd46574a0a5d692283b5d5379"
+      },
+      "fieldOffsets": {
+        "dtype": "<u4",
+        "shape": [
+          323767
+        ],
+        "byteOffset": 64104712,
+        "byteLength": 1295068,
+        "sha256": "d8b6cae0a4ddf63075f6b84bfe65c3c4100a8c8e745a7505c8d7c9d6a03b49ba"
+      },
+      "namedWeights": {
+        "dtype": "<f4",
+        "shape": [
+          323766,
+          75
+        ],
+        "byteOffset": 65399780,
+        "byteLength": 97129800,
+        "sha256": "74838a1f7afb0a8443184429d3b78812680a7362547f9847bc023e6b865a6c4b"
+      },
+      "centerOriginalVertexIds": {
+        "dtype": "<u4",
+        "shape": [
+          356
+        ],
+        "byteOffset": 162529580,
+        "byteLength": 1424,
+        "sha256": "fbe1b8800f8efe1fc093618584ad03b5e7c1af15f1c4611ac5ecc10b815485a9"
+      }
+    }
+  },
+  "sourceCPUAdmission": {
+    "path": "harness/out/rider-rebuild/selected-glove-family81/extract01/cpu-check.json",
+    "sha256": "4c593323090894014d301b5a6835b9f0f916cc95b6a6168d46203bc03550bf60"
+  },
+  "sourceObject": "ActualSelectedGlove.R",
+  "level": "full",
+  "sourceVertices": 323766,
+  "sourceTriangles": 567467,
+  "completeNamedFieldCount": 75,
+  "sourceCSRMemberships": 799654,
+  "requiredSemanticSourceFanFaces": 1729,
+  "surfaceLandmarkPreparationPassed": true,
+  "failure": {
+    "stage": "source attribute metric preflight",
+    "sourceReferencedRowsNotFloat32Normalized": 2049,
+    "assertion": "Source row sum differs from1; never normalize",
+    "predicate": "Math.fround(sum of all complete named source fields) !== 1",
+    "interpretation": "This strict constructor input assumption failed on immutable actual41 rows. No weights were normalized or pruned."
+  },
+  "candidateAttempts": 0,
+  "simplifierInvoked": false,
+  "targetVertices": null,
+  "targetTriangles": null,
+  "allocationPassed": null,
+  "sourceReferencedNormalNonzeroPreflightPassed": true,
+  "sourceReferencedUnboundRows": 0,
+  "geometricNormalChecks": "NOT_RUN",
+  "protectedFanRetention": "NOT_RUN",
+  "outputNamedFieldChecks": "NOT_RUN",
+  "nativeMutation": false,
+  "recipesUnchanged": true,
+  "maximumAnonymousGiB": 47.1,
+  "maximumAnonymousPlusWiredGiB": 56.900000000000006,
+  "limits": "Failed source preflight only; no candidate, reduction, budget, surface, fit, bake, motion or art result. No retries or recipe mutations."
+}
