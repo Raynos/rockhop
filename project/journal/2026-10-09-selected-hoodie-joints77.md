@@ -29,3 +29,9 @@ Finding: Repaint the complete continuous selected hoodie from actual native spin
 Validation: Parent full181-line paint source review, complete inspection/view/native diffs, four ASTs and declared input pins pass. Full71 inventory and exact geometry/UV/ancestry remain; own-side semantic support only, source-derived height intervals and saved meridian coefficients. Same33704edges/482actual matrices will be inspected. Source-only.
 
 Limits: No actual12candidate, contact, native, genuine bake, GPU or played-art acceptance. Native binding lineage remains explicit; production-four conditioning separate.
+
+Finding: Whole anatomical ownership removes nearest-body branch jumps and reduces worst stretch78.381x to10.732x, but selected hoodie remains unaccepted. Parent endpoint views still show shoulder/innerarm body exposure and bunching. Inherited angular cap blending needs correction; preserve the useful trunk/hood field and exact selected geometry.
+
+Validation: Original guard31.815s exit0; all482keys/33704edges measured. Parent exact reconstructed anatomical fields, finite arrays, geometry/UV/ancestry and image pins pass. Max edge13541/13542 lies on the first ordinary sleeve station;9.773mm becomes104.887mm. Both endpoints have identical limb-only fields, so this is not evidence to change split-arm operators.
+
+Limits: CPU geometry diagnosis, no source-PBR film. Native12/bake held; no finite contact, generic/heldout, production-four, GPU, played-art or device acceptance.
