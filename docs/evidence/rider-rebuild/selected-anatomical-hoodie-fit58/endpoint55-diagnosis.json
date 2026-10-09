@@ -1,0 +1,550 @@
+{
+  "acceptedArt": false,
+  "diagnosticOnly": true,
+  "recipe": {
+    "path": "assets/blender/rider-rebuild/selected-anatomical-hoodie-fit58/diagnose_endpoint.py",
+    "sha256": "45d3687bde8482d302deb814541cf3ef3eec80934c94437a5cfd5c76acc8a74d"
+  },
+  "geometryHelper": {
+    "path": "assets/blender/rider-rebuild/selected-anatomical-hoodie-fit58/geometry.py",
+    "sha256": "8f301f20da87f3e2f2dec34e2fcfde63b1c56187aed98f165a35d3a9b26dc091"
+  },
+  "actual55Failure": {
+    "path": "harness/out/rider-rebuild/selected-anatomical-hoodie-fit55/component01/construction-failure.json",
+    "sha256": "7f42838fd2da3c911c54f373c0418fd1deb10e00467143c4c95da60c24878f74"
+  },
+  "sources": {
+    "original47": {
+      "path": "harness/out/rider-rebuild/selected-proximal-fit-review54/original01/actual-hoodie-geometry.npz",
+      "sha256": "370a8bc8569113e422b66d05a8677f6d206628eb362cf731fb6903ac641e06fd"
+    },
+    "broad50": {
+      "path": "harness/out/rider-rebuild/selected-proximal-fit-review54/registered01/actual-hoodie-geometry.npz",
+      "sha256": "f158094abeffce39b20038f10b2526c4fdd5890fe91612cb43eaf6ff8227fdf3"
+    },
+    "originalSelectedGLB": {
+      "path": ".tmp/generation-comparison-2026-10-03/user-agent2/qualified-hunyuan-paint06/paint/painted.glb",
+      "sha256": "800d7a9717757b90b296a78c605cddb698c68d399a96e403aa381103e77d2eba"
+    },
+    "sourceFrames": {
+      "path": "assets/blender/rider-rebuild/shoulder-cage05/controls.json",
+      "sha256": "1abbc0ce87917b1c9ff968ef9088c9ea6b706c5ee9c3accee7a036f312916f67"
+    },
+    "fullReference": {
+      "path": "harness/out/rider-rebuild/selected-seated-anatomical09/reference05/original-full-reference.npz",
+      "sha256": "01f752d72e94dbab81cc7a193adbd2dd7bba26df919b48454d8937fa9665dcc5"
+    }
+  },
+  "contactMinimumM": 0.0026,
+  "orderedEndpointsExamined": [
+    {
+      "side": "L",
+      "sourceDepth": -0.007459250092506413,
+      "role": "torso",
+      "outerOriginalEndpoint": [
+        0.16507880375763623,
+        -0.007660683838081829,
+        1.1486340015555936
+      ],
+      "outerBroad50Endpoint": [
+        0.16889134119561514,
+        -0.007899321337323687,
+        1.1468953743478947
+      ],
+      "outerBroad50ActualClearanceM": 0.013317513591461877,
+      "originalEndpointAncestry": [
+        {
+          "sourceFace": 707328,
+          "barycentric": [
+            0.3433390806617502,
+            0.0,
+            0.6566609193382498
+          ]
+        },
+        {
+          "sourceFace": 707327,
+          "barycentric": [
+            0.0,
+            0.6566609193382498,
+            0.3433390806617502
+          ]
+        }
+      ],
+      "adjacentNormalVariants": [
+        {
+          "sourceNormalFace": 707326,
+          "pairedInnerFace": 696802,
+          "pairedInnerBarycentric": [
+            0.03406470536159889,
+            0.6147971563075407,
+            0.3511381383308604
+          ],
+          "endpointPair": [
+            [
+              0.16889134119561514,
+              -0.007899321337323687,
+              1.1468953743478947
+            ],
+            [
+              0.1645850685382445,
+              -0.009522896207082836,
+              1.145626395274682
+            ]
+          ],
+          "actualEndpointMinimumM": 0.009190425061820174,
+          "bodyXLineHits": [
+            {
+              "xFromCenter": 0.15535503095455272,
+              "outward": true,
+              "face": 10160
+            },
+            {
+              "xFromCenter": 0.26838400729288375,
+              "outward": false,
+              "face": 9578
+            },
+            {
+              "xFromCenter": 0.35403143303771245,
+              "outward": true,
+              "face": 9557
+            }
+          ],
+          "hasInterbodyInterval": true,
+          "oldIntervalMidpointMinimumM": 0.04175368147025022,
+          "oldIntervalCanStart": true
+        },
+        {
+          "sourceNormalFace": 707327,
+          "pairedInnerFace": 696802,
+          "pairedInnerBarycentric": [
+            0.028936883125014135,
+            0.6342167899122062,
+            0.33684632696277966
+          ],
+          "endpointPair": [
+            [
+              0.16889134119561514,
+              -0.007899321337323687,
+              1.1468953743478947
+            ],
+            [
+              0.16457561848883565,
+              -0.009508655653183965,
+              1.1456603635121725
+            ]
+          ],
+          "actualEndpointMinimumM": 0.009176597743361976,
+          "bodyXLineHits": [
+            {
+              "xFromCenter": 0.15535729896342532,
+              "outward": true,
+              "face": 10160
+            },
+            {
+              "xFromCenter": 0.26837188711817683,
+              "outward": false,
+              "face": 9578
+            },
+            {
+              "xFromCenter": 0.35402206943043274,
+              "outward": true,
+              "face": 9557
+            }
+          ],
+          "hasInterbodyInterval": true,
+          "oldIntervalMidpointMinimumM": 0.04175383667499862,
+          "oldIntervalCanStart": true
+        },
+        {
+          "sourceNormalFace": 707328,
+          "pairedInnerFace": 696802,
+          "pairedInnerBarycentric": [
+            0.0034439297399257995,
+            0.691929431615296,
+            0.30462663864477824
+          ],
+          "endpointPair": [
+            [
+              0.16889134119561514,
+              -0.007899321337323687,
+              1.1468953743478947
+            ],
+            [
+              0.16454190238588953,
+              -0.009438122786189199,
+              1.1457370981758854
+            ]
+          ],
+          "actualEndpointMinimumM": 0.009134442038105685,
+          "bodyXLineHits": [
+            {
+              "xFromCenter": 0.15536176075521835,
+              "outward": true,
+              "face": 10160
+            },
+            {
+              "xFromCenter": 0.2683351866979769,
+              "outward": false,
+              "face": 9578
+            },
+            {
+              "xFromCenter": 0.3539949242392548,
+              "outward": true,
+              "face": 9557
+            }
+          ],
+          "hasInterbodyInterval": true,
+          "oldIntervalMidpointMinimumM": 0.04175326641477879,
+          "oldIntervalCanStart": true
+        }
+      ]
+    },
+    {
+      "side": "L",
+      "sourceDepth": -0.007459250092506413,
+      "role": "sleeve",
+      "outerOriginalEndpoint": [
+        0.27747501976398625,
+        0.03244993635933695,
+        1.0727350253646752
+      ],
+      "outerBroad50Endpoint": [
+        0.2777945838048649,
+        0.032315112808133636,
+        1.0727560522747108
+      ],
+      "outerBroad50ActualClearanceM": 0.02039631397942017,
+      "originalEndpointAncestry": [
+        {
+          "sourceFace": 847117,
+          "barycentric": [
+            0.6566609193382498,
+            0.3433390806617502,
+            0.0
+          ]
+        },
+        {
+          "sourceFace": 848799,
+          "barycentric": [
+            0.0,
+            0.34333908066175023,
+            0.6566609193382498
+          ]
+        }
+      ],
+      "adjacentNormalVariants": [
+        {
+          "sourceNormalFace": 848799,
+          "pairedInnerFace": 850478,
+          "pairedInnerBarycentric": [
+            0.8808650758247779,
+            0.04172791350836879,
+            0.07740701066685333
+          ],
+          "endpointPair": [
+            [
+              0.2777945838048649,
+              0.032315112808133636,
+              1.0727560522747108
+            ],
+            [
+              0.2816758945689742,
+              0.02833836965994102,
+              1.075528694168171
+            ]
+          ],
+          "actualEndpointMinimumM": 0.014263769982556157,
+          "bodyXLineHits": [
+            {
+              "xFromCenter": 0.13834321080715226,
+              "outward": true,
+              "face": 10537
+            },
+            {
+              "xFromCenter": 0.3073293907032166,
+              "outward": false,
+              "face": 9691
+            },
+            {
+              "xFromCenter": 0.3459873474488878,
+              "outward": true,
+              "face": 9573
+            }
+          ],
+          "hasInterbodyInterval": true,
+          "oldIntervalMidpointMinimumM": 0.062027772144994615,
+          "oldIntervalCanStart": true
+        },
+        {
+          "sourceNormalFace": 848800,
+          "pairedInnerFace": 850479,
+          "pairedInnerBarycentric": [
+            0.8678058336143119,
+            0.09740156649556422,
+            0.03479259989012394
+          ],
+          "endpointPair": [
+            [
+              0.2777945838048649,
+              0.032315112808133636,
+              1.0727560522747108
+            ],
+            [
+              0.2815686296833027,
+              0.02840179810207354,
+              1.0757472161888266
+            ]
+          ],
+          "actualEndpointMinimumM": 0.014277632513505464,
+          "bodyXLineHits": [
+            {
+              "xFromCenter": 0.1383134373360793,
+              "outward": true,
+              "face": 10537
+            },
+            {
+              "xFromCenter": 0.3072700979548011,
+              "outward": false,
+              "face": 9691
+            },
+            {
+              "xFromCenter": 0.3459456309850223,
+              "outward": true,
+              "face": 9573
+            }
+          ],
+          "hasInterbodyInterval": true,
+          "oldIntervalMidpointMinimumM": 0.06203924882709725,
+          "oldIntervalCanStart": true
+        }
+      ]
+    },
+    {
+      "side": "L",
+      "sourceDepth": 0.005040749907493591,
+      "role": "torso",
+      "outerOriginalEndpoint": [
+        0.16128633115035976,
+        0.004899385741709346,
+        1.1483375671008347
+      ],
+      "outerBroad50Endpoint": [
+        0.16578754904847764,
+        0.005293831441355944,
+        1.146402917735582
+      ],
+      "outerBroad50ActualClearanceM": 0.011788928018411136,
+      "originalEndpointAncestry": [
+        {
+          "sourceFace": 696819,
+          "barycentric": [
+            0.0,
+            0.4214788839892054,
+            0.5785211160107946
+          ]
+        },
+        {
+          "sourceFace": 696818,
+          "barycentric": [
+            0.5785211160107946,
+            0.0,
+            0.4214788839892054
+          ]
+        }
+      ],
+      "adjacentNormalVariants": [
+        {
+          "sourceNormalFace": 696818,
+          "pairedInnerFace": 684818,
+          "pairedInnerBarycentric": [
+            0.10752902017429505,
+            0.5060758696865607,
+            0.38639511013914424
+          ],
+          "endpointPair": [
+            [
+              0.16578754904847764,
+              0.005293831441355944,
+              1.146402917735582
+            ],
+            [
+              0.16074152130848504,
+              0.004039351455962246,
+              1.1455388459171887
+            ]
+          ],
+          "actualEndpointMinimumM": 0.006895983986845373,
+          "bodyXLineHits": [
+            {
+              "xFromCenter": 0.15332303260666538,
+              "outward": true,
+              "face": 10330
+            },
+            {
+              "xFromCenter": 0.26341711972261317,
+              "outward": false,
+              "face": 9592
+            },
+            {
+              "xFromCenter": 0.34943309468334416,
+              "outward": true,
+              "face": 9556
+            }
+          ],
+          "hasInterbodyInterval": true,
+          "oldIntervalMidpointMinimumM": 0.04454383768260154,
+          "oldIntervalCanStart": true
+        },
+        {
+          "sourceNormalFace": 696819,
+          "pairedInnerFace": 684818,
+          "pairedInnerBarycentric": [
+            0.1071638854041842,
+            0.5108717222283983,
+            0.3819643923674175
+          ],
+          "endpointPair": [
+            [
+              0.16578754904847764,
+              0.005293831441355944,
+              1.146402917735582
+            ],
+            [
+              0.16074081675157822,
+              0.004040479546937291,
+              1.145549309019305
+            ]
+          ],
+          "actualEndpointMinimumM": 0.006893392162612493,
+          "bodyXLineHits": [
+            {
+              "xFromCenter": 0.1533240593353633,
+              "outward": true,
+              "face": 10330
+            },
+            {
+              "xFromCenter": 0.2634150942612156,
+              "outward": false,
+              "face": 9592
+            },
+            {
+              "xFromCenter": 0.3494305423927406,
+              "outward": true,
+              "face": 9556
+            }
+          ],
+          "hasInterbodyInterval": true,
+          "oldIntervalMidpointMinimumM": 0.04454395416117685,
+          "oldIntervalCanStart": true
+        }
+      ]
+    },
+    {
+      "side": "L",
+      "sourceDepth": 0.005040749907493591,
+      "role": "sleeve",
+      "outerOriginalEndpoint": [
+        0.279822974110906,
+        0.04371852471552407,
+        1.0868786307346432
+      ],
+      "outerBroad50Endpoint": [
+        0.28013287878586146,
+        0.04350870781958664,
+        1.0868684098926962
+      ],
+      "outerBroad50ActualClearanceM": 0.018282983058359483,
+      "originalEndpointAncestry": [
+        {
+          "sourceFace": 847250,
+          "barycentric": [
+            0.0,
+            0.780070550561126,
+            0.21992944943887402
+          ]
+        },
+        {
+          "sourceFace": 848904,
+          "barycentric": [
+            0.4155655409657648,
+            0.5844344590342352,
+            0.0
+          ]
+        }
+      ],
+      "adjacentNormalVariants": [
+        {
+          "sourceNormalFace": 848904,
+          "pairedInnerFace": 850566,
+          "pairedInnerBarycentric": [
+            0.0620566093018467,
+            0.527403132349345,
+            0.4105402583488083
+          ],
+          "endpointPair": [
+            [
+              0.28013287878586146,
+              0.04350870781958664,
+              1.0868684098926962
+            ],
+            [
+              0.28291635948676874,
+              0.03880294923197569,
+              1.0896180676577374
+            ]
+          ],
+          "actualEndpointMinimumM": 0.012604257198621448,
+          "bodyXLineHits": [
+            {
+              "xFromCenter": 0.12498679207069366,
+              "outward": true,
+              "face": 10343
+            }
+          ],
+          "hasInterbodyInterval": false,
+          "oldIntervalMidpointMinimumM": null,
+          "oldIntervalCanStart": false
+        },
+        {
+          "sourceNormalFace": 848905,
+          "pairedInnerFace": 850566,
+          "pairedInnerBarycentric": [
+            0.02322376401208126,
+            0.5949017747424921,
+            0.3818744612454267
+          ],
+          "endpointPair": [
+            [
+              0.28013287878586146,
+              0.04350870781958664,
+              1.0868684098926962
+            ],
+            [
+              0.28282226481379336,
+              0.03886163350525536,
+              1.0897949324994345
+            ]
+          ],
+          "actualEndpointMinimumM": 0.012630566009501,
+          "bodyXLineHits": [
+            {
+              "xFromCenter": 0.12496245793857154,
+              "outward": true,
+              "face": 10343
+            }
+          ],
+          "hasInterbodyInterval": false,
+          "oldIntervalMidpointMinimumM": null,
+          "oldIntervalCanStart": false
+        }
+      ]
+    }
+  ],
+  "firstNonexistentInterval": {
+    "side": "L",
+    "depth": 0.005040749907493591,
+    "role": "sleeve"
+  },
+  "finding": "Healthy rear sleeve paired endpoint lies in open exterior.55 incorrectly required it to have an opposing arm/torso hit on a horizontal X-line.",
+  "limit": "Actual55 log omitted endpoint context. CPU reconstruction establishes first failing predicate and covers adjacent normal alternatives; it does not claim the exact unlogged native BVH tie winner."
+}

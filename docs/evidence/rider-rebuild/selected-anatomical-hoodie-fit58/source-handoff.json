@@ -1,0 +1,87 @@
+{
+  "acceptedArt": false,
+  "actualConstructionExecuted": false,
+  "sourcePins": {
+    "cage.py": {
+      "path": "assets/blender/rider-rebuild/selected-anatomical-hoodie-fit58/cage.py",
+      "sha256": "83674e6da7fa07f2ca4e136cb0a2a933fbb7b9709e2143c104e5bbb0d47096f7"
+    },
+    "check.py": {
+      "path": "assets/blender/rider-rebuild/selected-anatomical-hoodie-fit58/check.py",
+      "sha256": "0b464eb3d1d1ccec7c14bb8224cfc6080781eb3cf04a1571b50fde256f4dc98b"
+    },
+    "component.py": {
+      "path": "assets/blender/rider-rebuild/selected-anatomical-hoodie-fit58/component.py",
+      "sha256": "a696304d8e3bb836b6868d2749506be039055135b3a5a1707dcca2e84c17c117"
+    },
+    "diagnose_endpoint.py": {
+      "path": "assets/blender/rider-rebuild/selected-anatomical-hoodie-fit58/diagnose_endpoint.py",
+      "sha256": "45d3687bde8482d302deb814541cf3ef3eec80934c94437a5cfd5c76acc8a74d"
+    },
+    "geometry.py": {
+      "path": "assets/blender/rider-rebuild/selected-anatomical-hoodie-fit58/geometry.py",
+      "sha256": "8f301f20da87f3e2f2dec34e2fcfde63b1c56187aed98f165a35d3a9b26dc091"
+    },
+    "input01.json": {
+      "path": "assets/blender/rider-rebuild/selected-anatomical-hoodie-fit58/input01.json",
+      "sha256": "b900c840f3803d2e63eeaf6cd52da35f5d4fb4b071bf34a4fd532b7ec0f9e577"
+    },
+    "meridian.py": {
+      "path": "assets/blender/rider-rebuild/selected-anatomical-hoodie-fit58/meridian.py",
+      "sha256": "68ca237c94cfbd349e28a5a7d84c459f86e23b6234bcbc160c83cf2382959b59"
+    },
+    "qualify.py": {
+      "path": "assets/blender/rider-rebuild/selected-anatomical-hoodie-fit58/qualify.py",
+      "sha256": "895a120b7b47e31bafd55a627c83004a2ca93a54b39bef521f80fa935300eb9a"
+    },
+    "sections.py": {
+      "path": "assets/blender/rider-rebuild/selected-anatomical-hoodie-fit58/sections.py",
+      "sha256": "01687d2f746616508f561d83c4f227d3686b68d6b2c11d9f09e64b7c8b2511a3"
+    },
+    "targets.py": {
+      "path": "assets/blender/rider-rebuild/selected-anatomical-hoodie-fit58/targets.py",
+      "sha256": "a9e8312201c7ddaa6f113cc0d33fe853c1953d6ae5d72c60582ede6a42b4e5e8"
+    }
+  },
+  "cpuFixtures": {
+    "path": "docs/evidence/rider-rebuild/selected-anatomical-hoodie-fit58/cpu-fixtures.json",
+    "sha256": "0a8c15b3e01b9c3b7478afebe4f3300d516172ad37bfa0d0721d9fc53bc43a1c"
+  },
+  "actual55EndpointDiagnosis": {
+    "path": "docs/evidence/rider-rebuild/selected-anatomical-hoodie-fit58/endpoint55-diagnosis.json",
+    "sha256": "284c233eaf438334ebaca96c53fd03a2ca43dc358d4db848c559419d4da66421"
+  },
+  "commands": {
+    "construct": "/Applications/Blender.app/Contents/MacOS/Blender -b -t 2 --python-exit-code 1 --python assets/blender/rider-rebuild/selected-anatomical-hoodie-fit58/component.py -- assets/blender/rider-rebuild/selected-anatomical-hoodie-fit58/input01.json harness/out/rider-rebuild/selected-anatomical-hoodie-fit58/component01",
+    "qualify": "/Applications/Blender.app/Contents/MacOS/Blender -b -t 2 --python-exit-code 1 --python assets/blender/rider-rebuild/selected-anatomical-hoodie-fit58/component.py -- qualify harness/out/rider-rebuild/selected-anatomical-hoodie-fit58/component01/component-pending.json",
+    "cpu": "OPENBLAS_NUM_THREADS=2 OMP_NUM_THREADS=2 /Applications/Blender.app/Contents/Resources/5.2/python/bin/python3.13 assets/blender/rider-rebuild/selected-anatomical-hoodie-fit58/check.py"
+  },
+  "expectedOutputs": [
+    "UNACCEPTED-selected-anatomical-hoodie-fit58.blend",
+    "component-raw.json",
+    "component-pending.json",
+    "expected-witness.json",
+    "anatomical-cage.npz",
+    "material-targets.json",
+    "qualification-inputs.npz",
+    "component-qualified.json",
+    "actual-tangent-and-pair.json"
+  ],
+  "failureOutput": "construction-failure.json now includes targetContext: side, source depth, role, station, center/direction/radius interval, fixed apex/endpoint and actual endpoint clearance where applicable.",
+  "qualificationAdmission": "component.py qualify_receipt(path), status UNACCEPTED_ANATOMICAL58_REOPENED_DISTAL_AND_MOTION_PENDING; same protected source/paired C2 certificate/actual saved-contact gates as55. Failed contact never admits distal51.",
+  "actualWitnessFaceIds": [
+    754365,
+    713389,
+    734276,
+    729981
+  ],
+  "method": "The connected shared axilla apex remains inside the feasible body gap. Its torso and sleeve branches then use distinct actual canonical75 centerlines, fixed apex/end angular correspondence, source material arclength order and radial clearance/ease roots. Open exterior is allowed. The actual healthy50 paired endpoint stays byte-exact in target constraints.",
+  "limits": [
+    "Frozen55 source and failure preserved unchanged. No58 native constructed yet.",
+    "CPU geometry witness reconstructs the first failed endpoint predicate and covers adjacent normal alternatives;55 did not log its exact BVH tie winner.",
+    "Original parent serial CPU2/guard policy unchanged; actual first58 runtime unmeasured.",
+    "Raw native and receipt precede full contact/tangent qualification in separate reopened process.",
+    "No lowered clearance, skipped failed endpoint, changed topology, new source fields, changed wearer or nearest-exit target reassignment.",
+    "Full triangle/self/body/glove relations and generic/actual-game moving review remain required."
+  ]
+}
