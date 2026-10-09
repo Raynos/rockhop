@@ -1,0 +1,76 @@
+--- frozen37/author.py
++++ allocation46/adapted-author.py
+@@ -88,12 +88,14 @@
+ def main():
+     args = sys.argv[sys.argv.index('--')+1:]; assert len(args) == 2
+     receipt_path = Path(args[0]).resolve(); out = Path(args[1]).resolve()
+-    base = ROOT/'harness/out/rider-rebuild/selected-production-constructor37'
++    base = ROOT/'harness/out/rider-rebuild/selected-production-allocation46'
+     assert receipt_path.is_relative_to(base) and out.is_relative_to(base) and not out.exists()
+     receipt = json.loads(receipt_path.read_text())
+-    assert receipt['status'] in ['UNACCEPTED_CANDIDATE_AWAITING_NATIVE_QUALIFICATION', 'REJECTED_ALLOCATION_ABOVE_8000']
++    assert receipt['status'] == 'UNACCEPTED_SCENE_BUDGET_PENDING'
+     assert receipt['candidateAttempts'] == 1 and receipt['acceptedArt'] is False
+     assert receipt['recipeSHA256'] == sha(HERE/'construct.mjs')
++    assert receipt['constructorAncestry'] == {'path': 'assets/blender/rider-rebuild/selected-production-constructor37/construct.mjs', 'sha256': '3d7ec9faa6d8f10140591c4303012f9ecba69c8d7dd6284d3b851052bbe3d741'}
++    assert receipt['simplificationTargetIsSoft'] is True and receipt['sceneBudgetPassed'] is False and receipt['allocationPassed'] is False
+     pins = receipt['censusSourcePins']
+     assert pins['productionAuthor']['sha256'] == ENGINE_SHA and pins['productionInput']['sha256'] == INPUT_SHA
+     assert pins['rejectedNative']['sha256'] == NATIVE_SHA
+@@ -130,7 +132,7 @@
+     # Retire only the old rejected derivative in this new diagnostic scene.
+     old = bpy.data.objects.get('Production.full.'+name)
+     if old: bpy.data.objects.remove(old, do_unlink=True)
+-    mesh = bpy.data.meshes.new('Constructor37.original-position-topology')
++    mesh = bpy.data.meshes.new('Constructor46.original-position-topology')
+     mesh.from_pydata(p.tolist(), [], f.tolist()); mesh.update()
+     target = source.copy(); target.data = mesh; target.name = 'Production.full.'+name
+     bpy.context.scene.collection.objects.link(target)
+@@ -146,7 +148,7 @@
+     ancestry = mesh.attributes.new('ProductionOriginalVertex', 'INT', 'POINT')
+     ancestry.data.foreach_set('value', original.astype(np.int32))
+     target['selectedProductionRole'] = name; target['selectedProductionLevel'] = 'full'
+-    target['qualificationState'] = 'UNACCEPTED_CONSTRUCTOR37_BEFORE_QUALIFICATION'
++    target['qualificationState'] = 'UNACCEPTED_CONSTRUCTOR46_BEFORE_QUALIFICATION'
+     target.hide_render = False; target.hide_set(False); bpy.context.view_layer.update()
+     assert np.array_equal(engine.points(target).astype(np.float32), p)
+     assert np.array_equal(engine.skin_rows(target, names).astype(np.float32), fields)
+@@ -157,7 +159,7 @@
+         assert tuple(sorted([inverse[int(a)], inverse[int(b)]])) in actual_edges
+     assert before == witness.retained(sources, rig), 'Selected source changed during construction'
+     out.mkdir(parents=True)
+-    report = {'status': 'UNACCEPTED_BEFORE_TRANSFER', 'acceptedArt': False, 'level': 'full',
++    report = {'status': 'UNACCEPTED_SCENE_BUDGET_PENDING', 'authorAncestry': {'path': str(FROZEN.relative_to(ROOT)), 'sha256': FROZEN_SHA}, 'sceneBudgetPassed': False, 'allocationPassed': False, 'acceptedArt': False, 'level': 'full',
+         'authoredFamilies': ['boots'], 'authoredSourceObjects': [name],
+         'constructor': {'path': str(receipt_path.relative_to(ROOT)), 'sha256': sha(receipt_path)},
+         'sourceMaster': pins['rejectedNative'], 'sourceWitness': before,
+@@ -168,13 +170,13 @@
+         'limits': 'Left boot only; no new right boot or complete selected rider. Exact source ancestry and original named fields precede unchanged frozen25 correspondence. Selected donor maps persist; target appearance awaits its fresh atlas and cage bake.'}
+     def write(): (out/'production.json').write_text(json.dumps(report, indent=2)+'\n')
+     write()
+-    native = out/'UNACCEPTED-constructor37-before-transfer.blend'
++    native = out/'UNACCEPTED-constructor46-before-transfer.blend'
+     bpy.ops.wm.save_as_mainfile(filepath=str(native), compress=False)
+     report['native'] = {'path': str(native.relative_to(ROOT)), 'sha256': sha(native)}; write()
+     try:
+-        assert len(f) <= spec['full'], 'Allocation exceeds8000; candidate retained unaccepted, no forced reduction'
++        assert len(f) == receipt['targetTriangles']  # Exact measured output; soft target never awards scene allocation
+         report['objects'][name] = {'sourceTriangles': len(sf), 'targetTriangles': len(f),
+-            'targetBudget': spec['full'], 'constructor': 'meshoptimizer1.1.1 index-only attributes',
++            'simplificationTargetTriangles': spec['full'], 'sceneBudgetPassed': False, 'constructor': 'meshoptimizer1.1.1 index-only attributes',
+             'originalPositionsAndFieldsExact': True}
+         # Frozen transfer enforces original vertex orientation/skin, reverse
+         # source vertices, target chord and FOUR/removed-mass/adjacency limits.
+@@ -188,10 +190,10 @@
+         native = out/'UNACCEPTED-selected-production-full.blend'
+         bpy.ops.wm.save_as_mainfile(filepath=str(native), compress=False)
+         report['native'] = {'path': str(native.relative_to(ROOT)), 'sha256': sha(native)}
+-        report['status'] = 'UNACCEPTED_LEFT_BOOT_GEOMETRY_AND_ATLAS_PREPARED'
++        report['status'] = 'UNACCEPTED_SCENE_BUDGET_PENDING'
+         report['restGeometryPassed'] = True; write()
+     except Exception as error:
+-        report['status'] = 'REJECTED_NATIVE_CONSTRUCTOR37_UNACCEPTED'; report['failure'] = repr(error); write(); raise
++        report['status'] = 'REJECTED_NATIVE_CONSTRUCTOR46_UNACCEPTED'; report['failure'] = repr(error); write(); raise
+
+
+ if __name__ == '__main__': main()
