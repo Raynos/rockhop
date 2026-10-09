@@ -11,3 +11,9 @@ Finding: The actual uploaded selected candidate and fitted bilateral profile com
 Validation: Original bounded memory guard returns0 in2.747seconds; Vite source/metadata and JavaScript size gates pass. Frozen manifest/metadata/version/load-manifest byte hashes retained.
 
 Limits: Build success is preparation, not an accepted grip or phone performance result. No asset promotion or player deployment in this checkpoint.
+
+Finding: The focused remaining plan now separates measured loading/runtime reductions from pending moving-grip and physical-phone acceptance while keeping the broad rebuild paused.
+
+Validation: Normal Mac Metal receipt reports59.98C1FPS,68.18% fewer submitted triangles and7.576second loader; one document/source request and no context loss. Parent status preserves all milestone gates.
+
+Limits: Informal85% estimate only; no grip/source promotion or physical iPhone pass.

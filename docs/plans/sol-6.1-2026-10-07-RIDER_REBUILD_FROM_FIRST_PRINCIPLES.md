@@ -995,3 +995,38 @@ the clipped outer floor has multiple boundary loops where the source assumed one
 Stop that recipe. Resolve exact actual topology/ownership before another cuff
 construction; do not delete loops or retry radial fitting constants. Preparations,
 control fixtures and the isolated phone comparison do not complete milestones.
+
+### Focused phone blockers — October9
+
+The broad rebuild remains paused. Asks369/372–377 authorize only bilateral
+hand grip, selected-source delivery optimization, startup/first-Garage loading
+and actual Level01 performance toward the user's informal90% milestone.
+The sixth comparison outfit preserves all five original riders and the chosen
+remaster face, hair, hoodie, jeans, distinct left/right gloves and boots.
+Required preload before the menu supersedes the earlier on-demand comparison
+loader. No generic replacements or delayed placeholder rider.
+
+- Loading: checked public build28b0390 cancels startup-only late SW reloads,
+  displays real offline asset completion and overlaps six code resources with
+  at most four requests while awaiting complete response bodies. Phone cause
+  and first-Garage recovery still require the user's device verdict.
+- Delivery: private585ae314 candidate is74,833,728bytes,783,580triangles and
+  223,843,848bytes of measured ASTC/BC7 textures plus decoded geometry.
+  Selected protected streams and native75/225 remain exact. Density/detail
+  transfer outliers stay explicit; moving review precedes promotion.
+- Grip: independent source profile659ff supplies articulated finger/thumb
+  rotations and explicit fitted palm socket positions/orientations. Actual
+  reduced-surface full-arm/cuff contact and both-bike forward/back motion
+  must pass parent review before replacing player controls.
+- Runtime: normal Mac Metal C1 submits59.98FPS with68.18% fewer triangles;
+  fresh normal flow loads in7.576seconds, fetches the selected rider once and
+  retains one document through Garage and gameplay without context loss.
+  Observed C1DPR1.5/canvas1266x585 matches the baseline render scale; this
+  proves neither physical iPhone performance nor resolution3 rendering.
+
+Next visible deliverable: qualified moving Garage orbit and both-bike lean
+clips using that exact optimized source/profile, followed by checked sixth
+outfit comparison deployment. HR27 requires instantaneous Garage selection,
+no initial30% stall/reload and sustained physical Level01>30FPS, with60FPS
+preferred. Keep R0–R5 open and all six milestones unaccepted; an informal85%
+progress estimate does not close the broad plan or device gates.
