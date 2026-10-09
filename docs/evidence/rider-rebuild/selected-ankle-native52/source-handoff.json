@@ -1,0 +1,75 @@
+{
+  "acceptedArt": false,
+  "nativeExecuted": false,
+  "status": "SOURCE_ONLY_CANONICAL_GROUP_APPEND_NATIVE52_INITIALIZER",
+  "sourcePins": [
+    {
+      "path": "assets/blender/rider-rebuild/selected-ankle-native52/apply.py",
+      "sha256": "a811620493c6059f8ebbe4be7ba79b6a29d3cb6f4fa9ab16b3f9c2c840bc068d"
+    },
+    {
+      "path": "assets/blender/rider-rebuild/selected-ankle-native52/input.json",
+      "sha256": "64744166cf271976939f1ceae435a7dc3b0523c37eb29e7e028213717f5ab1a3"
+    },
+    {
+      "path": "assets/blender/rider-rebuild/selected-ankle-native52/test_fixture.py",
+      "sha256": "0aaae1a4e7458e846417d01319d7730e6537a1213c97184c74108180640660cd"
+    }
+  ],
+  "fixtureReceipt": {
+    "path": "docs/evidence/rider-rebuild/selected-ankle-native52/fixtures.json",
+    "sha256": "7b4363dfe521b6d9436c5ccc3e8e6aa06ac61dd939430ccd1021954b928b3801"
+  },
+  "fixtureCount": 39,
+  "python39ASTPass": true,
+  "heavyExecution": false,
+  "parentSerialGuardRequired": true,
+  "predecessorFailure": {
+    "recipe": {
+      "path": "assets/blender/rider-rebuild/selected-ankle-native45/apply.py",
+      "sha256": "180a6f259fa9ac3636108c8a668da911c51a43c05b616f3c954d388251fceb01"
+    },
+    "workerLog": {
+      "path": "docs/evidence/rider-rebuild/selected-ankle-native45/native-guard01/worker.log",
+      "sha256": "bbc52249f2ed5c8368bf1e66895a0c9fd58e1c1c391b81e6ebe0425103bd2b08"
+    },
+    "finding": "Native45 failed its destination-group assertion on first source42 row before any RAW save; canonical75 rig contains DEF-foot.L/R and exact incoming first shin row passed. DEF-foot.L group was absent; right-foot group absence will be measured at52 intake rather than assumed."
+  },
+  "declaredChanges": {
+    "object": "RiderJeans",
+    "changedNativeVertices": 3318,
+    "source42LeftRows": 1652,
+    "source42RightRows": 1666,
+    "allowedGroupAppend": [
+      "DEF-foot.L",
+      "DEF-foot.R"
+    ],
+    "existingIndicesAndNames": "exact",
+    "allUnselectedAndSelectedNondeformMemberships": "exact-including-zero",
+    "fieldNormalization": false,
+    "fieldPruning": false
+  },
+  "qualification": {
+    "pendingStatus": "UNACCEPTED_ANKLE52_RAW_SAVED_WITNESSES_PENDING",
+    "receiptStatus": "ANKLE52_EXACT_REOPENED_FIELDS_PROTECTED_PASS_ART_PENDING",
+    "cpuIntake": "qualify_receipt(path) returns exact receipt dict after all actual pins and source/saved witness gates; does not import bpy",
+    "jeansProtection": "Original pinned complete fingerprint minus exact vertex-group block only; all geometry, topology, attributes, UV, normals, PBR and bind remain. Exact inventory and complete canonical fields qualified independently. Original shape state/coordinates separately exact.",
+    "otherMeshesProtection": "Unchanged complete original fingerprint plus exact full group digest",
+    "sourceAncestry": "Same native10 + qualified11 + field42 pins as45; no source master/action/rest edit or fallback."
+  },
+  "nextCommands": [
+    "/Applications/Blender.app/Contents/MacOS/Blender -b -t 2 --python-exit-code 1 --python assets/blender/rider-rebuild/selected-ankle-native52/apply.py -- save harness/out/rider-rebuild/selected-ankle-native52/native01",
+    "/Applications/Blender.app/Contents/MacOS/Blender -b -t 2 --python-exit-code 1 --python assets/blender/rider-rebuild/selected-ankle-native52/apply.py -- source harness/out/rider-rebuild/selected-ankle-native52/native01/pending.json",
+    "/Applications/Blender.app/Contents/MacOS/Blender -b -t 2 --python-exit-code 1 --python assets/blender/rider-rebuild/selected-ankle-native52/apply.py -- saved harness/out/rider-rebuild/selected-ankle-native52/native01/pending.json",
+    "python3 assets/blender/rider-rebuild/selected-ankle-native52/apply.py compare harness/out/rider-rebuild/selected-ankle-native52/native01/pending.json"
+  ],
+  "limits": [
+    "Parent must run guarded52 stages; no actual native save/reopen/export or Blender execution by this builder.",
+    "Source42 is an unaccepted initializer; deformation parity, finite contacts, moving art, phone and production gates remain open.",
+    "Actual before/appended/after group inventory is measured and recorded by the future native save; no invented source indices."
+  ],
+  "handoff": {
+    "path": "docs/evidence/rider-rebuild/selected-ankle-native52/HANDOFF.md",
+    "sha256": "fde737d8377e73479d4b7b4d36f1bf5bcb7528480b23c21294b5f29c5f5481d7"
+  }
+}

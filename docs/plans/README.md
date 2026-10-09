@@ -2075,3 +2075,5 @@ Parent reviewed proximal50 source and reproduced its deep paired-sheet/different
 Actual proximal50 saves/reopens selected Hoodie+gloves/fullref with topology/UV/PBR/source fields preserved, but contact FAIL remains−12.673mm after8 maps (guard173.531s exit0). Actual strain .032529..4.127195 requires shape review; no51 admission or art pass. Preserve real checkpoint and judge one supported continuation vs structural correction.
 
 Required ordinary-game gate48 passes11/11 (guard6.764s exit0), exact recorded clear/hash/crash/coldboot/1tick restart. Actual50 remains an unaccepted contact failure; native52 inventory repair and one shape diagnostic are next.
+
+Native52 source reviewed: explicit missing canonical foot-group append, unchanged original group indices and complete predicted field witnesses;39 meaningful CPU fixtures/source pins/Python3.9 pass. Parent actual save/reopen is pending; source42 remains an unaccepted ankle initializer.
