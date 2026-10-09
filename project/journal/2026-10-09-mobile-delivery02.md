@@ -17,3 +17,9 @@ Finding: The focused remaining plan now separates measured loading/runtime reduc
 Validation: Normal Mac Metal receipt reports59.98C1FPS,68.18% fewer submitted triangles and7.576second loader; one document/source request and no context loss. Parent status preserves all milestone gates.
 
 Limits: Informal85% estimate only; no grip/source promotion or physical iPhone pass.
+
+Finding: The frozen combined private engine build passes required played/replay checks. A first bundle-count failure came from copying into a dirty ignored dist with obsolete duplicate chunks; a clean frozen dist corrects the measurement.
+
+Validation: Original guard gate02 returns0 in10.311seconds;15/15 boot/clear/crash/instant-restart/bundle/determinism checks pass. All9 determinism checks preserve bit-identical finish8.591666666666667 and hash622bb2554e0f9a26. Gate01's dirty-dist bundle failure is retained explicitly.
+
+Limits: Partial required gate bundle, not complete ship or art acceptance. Mac timing never establishes the60FPS physical iPhone target. Actual derivative grip/cuff moving review and phone evidence remain open.
