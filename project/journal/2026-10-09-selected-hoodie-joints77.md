@@ -35,3 +35,9 @@ Finding: Whole anatomical ownership removes nearest-body branch jumps and reduce
 Validation: Original guard31.815s exit0; all482keys/33704edges measured. Parent exact reconstructed anatomical fields, finite arrays, geometry/UV/ancestry and image pins pass. Max edge13541/13542 lies on the first ordinary sleeve station;9.773mm becomes104.887mm. Both endpoints have identical limb-only fields, so this is not evidence to change split-arm operators.
 
 Limits: CPU geometry diagnosis, no source-PBR film. Native12/bake held; no finite contact, generic/heldout, production-four, GPU, played-art or device acceptance.
+
+Finding: Topology provenance does not imply torso ownership. The actual source armhole seam lies121–134mm down the arm; forcing0% arm there makes the short cap transition untenable. Correct seam and retained attachment-band arm ownership, then join six generated cap rows to consistent own-arm sleeve fields.
+
+Validation: Parent fully read source paint and complete inspection/view/native diffs. Four ASTs/frozen recipes/literal input pins pass. Actual12 first-station9.773mm edge becomes104.887mm with identical limb fields but angular torso shares35%→74%. Actual body has53–88% arm at misclassified seams. Lowerbound material-curve diagnostics remain distinguished from actual zipper-edge chains. Exact12 far trunk/hood/distal fields and geometry/UV/ancestry enforced.
+
+Limits: Source-only correction. One actual482/view check next; native/contact/selected bake/production-four/GPU/played art remain unqualified. No operator mutation, diffusion, old donor anchors or generic substitution.

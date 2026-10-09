@@ -1,0 +1,388 @@
+{
+  "status": "ACTUAL12_SEAM_OWNERSHIP_DIAGNOSIS_UNACCEPTED",
+  "acceptedArt": false,
+  "newCandidateExecuted": false,
+  "sourcePins": {
+    "actual12Receipt": {
+      "path": "harness/out/rider-rebuild/selected-hoodie-joints77/receiver12/receiver.json",
+      "sha256": "115aeff06087f24ca0fac029846e8f492aed699273fdc2d08f7b8cc13ba85139"
+    },
+    "actual12Arrays": {
+      "path": "harness/out/rider-rebuild/selected-hoodie-joints77/receiver12/receiver.npz",
+      "sha256": "02de0b13db3cb5c482937ebb8a3554ee131d06138f078ef6f303fdfec502565a"
+    },
+    "actual12Recipe": {
+      "path": "assets/blender/rider-rebuild/selected-hoodie-joints77/whole_anatomical_fields.py",
+      "sha256": "22aab060a8bab553c15c0d7f0f22e088eebad2a270d443d54192c63c104e5ed1"
+    },
+    "actual12Inspection": {
+      "path": "harness/out/rider-rebuild/selected-hoodie-joints77/inspect12/field-inspection.json",
+      "sha256": "b1a8cc3fcbcea083f173feafe67be3cb8bf7cce6dd16c79caf84a1a70fe06203"
+    },
+    "originalConstruction": {
+      "path": "harness/out/rider-rebuild/selected-hoodie-joints77/receiver08/construction.json",
+      "sha256": "f60c01a10ce83078b86200a28625c1baba8711ad7997b5736d9b24560d6e2a50"
+    },
+    "author": {
+      "path": "assets/blender/rider-rebuild/selected-hoodie-joints77/author.py",
+      "sha256": "9477ea7896d42a91f0c91c18aed760d2987aabb4b9bd8953ceccf95220361fb7"
+    },
+    "actual47BodyGuide": {
+      "path": "harness/out/rider-rebuild/selected-hoodie-joints77/body-guide01/actual-body-fields.json",
+      "sha256": "8fb18ac1722439375e3fa30a3b72b9696fb8d2459d4747892d3a454e6f2be6e3"
+    },
+    "actual482GameMatrices": {
+      "path": "harness/out/rider-rebuild/selected-authoring-motion11/gameplay-converted02/measured-gameplay-native-world.json",
+      "sha256": "f3e0444768655bf72500a9245745a559586a7717b3f6cb6b600b6e9d1d05c153"
+    },
+    "generic78ComparisonRecipe": {
+      "path": "assets/blender/rider-rebuild/selected-editable-controls78/compare-supports.py",
+      "sha256": "888dc386b9dac22f9f7668521110a2942a7383b6ce33b596359e5f3e27cd9689"
+    }
+  },
+  "actualFailedEdge": {
+    "action": "RiderGameplayLeanRookie",
+    "frame": 129,
+    "ids": [
+      13541,
+      13542
+    ],
+    "roles": [
+      "sleeve_panel_R",
+      "sleeve_panel_R"
+    ],
+    "restLengthM": 0.009773361793237402,
+    "posedLengthM": 0.10488742388940389,
+    "restPositions": [
+      [
+        -0.19326960387447717,
+        0.044350171542659855,
+        1.2588759243377705
+      ],
+      [
+        -0.19214292200047453,
+        0.03464715026363752,
+        1.2585588017192988
+      ]
+    ],
+    "posedPositions": [
+      [
+        -0.19272868114686292,
+        0.2389735202261712,
+        0.8990515679933656
+      ],
+      [
+        -0.1909850072224142,
+        0.3407397827422637,
+        0.9243884798988532
+      ]
+    ],
+    "namedFields": [
+      {
+        "DEF-shoulder.R": 0.08364453166723251,
+        "DEF-spine.001": 0.005072224885225296,
+        "DEF-spine.002": 0.26128706336021423,
+        "DEF-upper_arm.R": 0.23733894526958466,
+        "DEF-upper_arm.R.001": 0.412657231092453
+      },
+      {
+        "DEF-shoulder.R": 0.13706353306770325,
+        "DEF-spine.001": 0.03446624055504799,
+        "DEF-spine.002": 0.5719735622406006,
+        "DEF-upper_arm.R": 0.09365694224834442,
+        "DEF-upper_arm.R.001": 0.16283974051475525
+      }
+    ],
+    "firstOrdinaryStationM": 0.145,
+    "innerRightGeneratedRow": 36,
+    "circumferenceColumns": [
+      32,
+      33
+    ],
+    "oldAuthoredSkinBlend": [
+      0.6499961769201763,
+      0.2564966785380713
+    ],
+    "identicalLimbOnlyFields": {
+      "DEF-upper_arm.R": 0.36513899323816745,
+      "DEF-upper_arm.R.001": 0.6348610067618325
+    },
+    "sameLeftFieldPositionTermM": [
+      0.0035200670169596997,
+      -0.004512269418125269,
+      0.0014856888242360533
+    ],
+    "weightDifferenceTermM": [
+      -0.0017763930925110138,
+      0.10627853193421771,
+      0.02385122308125165
+    ],
+    "weightDifferenceTermNormM": 0.10893650795295068,
+    "nearbyBodyRestSpanM": 0.008474754674622591,
+    "nearbyBodyPosedSpanM": 0.007547352919048106,
+    "sameGarmentPointsWithRawBodyFieldsSpanDiagnosticOnlyM": 0.008682432297906316
+  },
+  "actual482SplitOperatorEvidence": {
+    "frames": 482,
+    "formula": "S=world @ inverse(rest); evaluate (S_pair0-S_pair1) on all eight corners of exact union body+receiver rest AABB. Convexity bounds every enclosed point.",
+    "maximumDisplacementM": {
+      "upperArmL": 1.8326546459286026e-07,
+      "upperArmR": 4.6107633660396556e-07,
+      "forearmL": 2.2913755686493494e-07,
+      "forearmR": 5.332122023911001e-07
+    },
+    "scope": "Independent actual482 comparison, not inherited from generic78. No group alias/merge or production-four permission."
+  },
+  "anatomicalSeamEvidence": {
+    "nativeUpperArmHalfTransitionWidthM": 0.06867546385139124,
+    "failedShortSeamStationRangeM": [
+      0.12139420907054127,
+      0.13443673604832124
+    ],
+    "anatomical10ArmAmountAtAllEightListedSeamParents": 1.0,
+    "actual12ArmAmountAtAllEightListedSeamParents": 0.0,
+    "reason": "These retained source-seam points are already121\u2013134mm down the native upper arm. Their ancestry labels cannot establish torso ownership."
+  },
+  "generatedAncestry": {
+    "perimeterVertices": 48,
+    "leftConsecutiveConstructionIds": [
+      12829,
+      15852
+    ],
+    "rightConsecutiveConstructionIds": [
+      15853,
+      18876
+    ],
+    "rowsPerSide": 63,
+    "wallRows": [
+      30,
+      30
+    ],
+    "capRowsPerWall": 6,
+    "ordinaryStationRowsPerWall": 24,
+    "lipRows": 3,
+    "firstOrdinaryRows": [
+      6,
+      36
+    ]
+  },
+  "deferredElbowFinding": {
+    "edge": [
+      9426,
+      9474
+    ],
+    "frame": 196,
+    "restLengthM": 0.007683842272121034,
+    "posedLengthM": 0.0005915952545535323,
+    "suM": [
+      0.26714553383874146,
+      0.27478543500313285
+    ],
+    "slM": [
+      0.2822581769152537,
+      0.2896337978994401
+    ],
+    "elbowStationM": 0.2747018553769975,
+    "selectedStationM": [
+      0.26714553383874146,
+      0.2896337978994401
+    ],
+    "forearmWeight": [
+      0.36000433564186096,
+      0.7669689655303955
+    ],
+    "note": "Separate observed su/sl station-switch compression. This seam correction keeps author.limb_fields unchanged."
+  },
+  "constructionDecision": "Replace false torso-only seam ownership and its adjacent retained attachment band with joint-centered own-arm paint bounded by actual clavicle geometry/surface distance; then use explicit generated cap parameters. Preserve12 far trunk/down hood, unchanged limb fields, full71 groups and geometry/UV/ancestry.",
+  "limits": "Read-only diagnosis of existing12/47/482 arrays. No new binding result, finite-contact, native/GPU, generic/heldout, genuine bake, production-four or moving-art acceptance.",
+  "interpolatedSeamMaterialPathEvidence": {
+    "formula": "Interpolated source seam point to six cap rows and first ring. Diagnostic material-path chord ratios; not claimed to be individual mesh-edge bounds. Superseded for exact edge bounds by actualConnectedEdgeChainBounds.",
+    "frames": 482,
+    "allWorstAction": "RiderGameplayLeanRookie",
+    "allWorstFrame": 129,
+    "rows": [
+      {
+        "side": "L",
+        "wall": "outer",
+        "column": 34,
+        "firstVertex": 9079,
+        "seamParents": [
+          8682,
+          8684
+        ],
+        "seamFraction": 0.08130444118570423,
+        "restPathM": 0.016537789237783606,
+        "posedEndpointChordM": 0.2619541508863517,
+        "rawBodyArmFractionAtParents": [
+          0.8783795833587646,
+          0.8776817917823792
+        ],
+        "interpolatedMaterialPathChordRatio": 15.839732089937966
+      },
+      {
+        "side": "L",
+        "wall": "inner",
+        "column": 35,
+        "firstVertex": 10520,
+        "seamParents": [
+          8653,
+          8662
+        ],
+        "seamFraction": 0.20996230354397571,
+        "restPathM": 0.021870051551938947,
+        "posedEndpointChordM": 0.25397253206216996,
+        "rawBodyArmFractionAtParents": [
+          0.6705121994018555,
+          0.622582197189331
+        ],
+        "interpolatedMaterialPathChordRatio": 11.61279988110743
+      },
+      {
+        "side": "R",
+        "wall": "outer",
+        "column": 36,
+        "firstVertex": 12105,
+        "seamParents": [
+          8429,
+          8428
+        ],
+        "seamFraction": 0.9664379825855357,
+        "restPathM": 0.011472708381205031,
+        "posedEndpointChordM": 0.26246592428374677,
+        "rawBodyArmFractionAtParents": [
+          0.5546412467956543,
+          0.5319897532463074
+        ],
+        "interpolatedMaterialPathChordRatio": 22.877416174347037
+      },
+      {
+        "side": "R",
+        "wall": "inner",
+        "column": 34,
+        "firstVertex": 13543,
+        "seamParents": [
+          8445,
+          8444
+        ],
+        "seamFraction": 0.9267698291889388,
+        "restPathM": 0.01800958249829845,
+        "posedEndpointChordM": 0.26022236406993,
+        "rawBodyArmFractionAtParents": [
+          0.7012451887130737,
+          0.6396328806877136
+        ],
+        "interpolatedMaterialPathChordRatio": 14.449105863198985
+      }
+    ]
+  },
+  "actualConnectedEdgeChainBounds": {
+    "frames": 482,
+    "formula": "For every first cap vertex, use each source neighbor connected by an actual zipper edge, followed by its six consecutive cap-to-first-ring edges. Verify all seven edges exist. Existing12 source endpoint versus unchanged own-limb first-ring endpoint chord divided by sum of exact rest-edge lengths lower-bounds at least one edge stretch, independently of intervening cap fields.",
+    "rows": [
+      {
+        "side": "L",
+        "wall": "outer",
+        "actualEdgeChainsMeasured": 150,
+        "column": 34,
+        "edgeChainVertexIds": [
+          8682,
+          8791,
+          8839,
+          8887,
+          8935,
+          8983,
+          9031,
+          9079
+        ],
+        "sourceSeamVertex": 8682,
+        "firstVertex": 9079,
+        "allSevenConsecutiveEdgesExist": true,
+        "restPathM": 0.016558566841551294,
+        "posedEndpointChordM": 0.2620408235687073,
+        "unavoidableMaximumActualEdgeStretchAtLeast": 15.825090786912444,
+        "bike": "rookie",
+        "frame": 129,
+        "raw11BodyArmFractionAtSourceSeamVertex": 0.8783795833587646,
+        "whole12ArmFractionAtSourceSeamVertex": 0.0
+      },
+      {
+        "side": "L",
+        "wall": "inner",
+        "actualEdgeChainsMeasured": 142,
+        "column": 35,
+        "edgeChainVertexIds": [
+          8653,
+          10232,
+          10280,
+          10328,
+          10376,
+          10424,
+          10472,
+          10520
+        ],
+        "sourceSeamVertex": 8653,
+        "firstVertex": 10520,
+        "allSevenConsecutiveEdgesExist": true,
+        "restPathM": 0.025021953854089708,
+        "posedEndpointChordM": 0.25674934913005193,
+        "unavoidableMaximumActualEdgeStretchAtLeast": 10.260963257594993,
+        "bike": "rookie",
+        "frame": 129,
+        "raw11BodyArmFractionAtSourceSeamVertex": 0.6705121994018555,
+        "whole12ArmFractionAtSourceSeamVertex": 0.0
+      },
+      {
+        "side": "R",
+        "wall": "outer",
+        "actualEdgeChainsMeasured": 144,
+        "column": 36,
+        "edgeChainVertexIds": [
+          8428,
+          11817,
+          11865,
+          11913,
+          11961,
+          12009,
+          12057,
+          12105
+        ],
+        "sourceSeamVertex": 8428,
+        "firstVertex": 12105,
+        "allSevenConsecutiveEdgesExist": true,
+        "restPathM": 0.01148947537582775,
+        "posedEndpointChordM": 0.2624068391236682,
+        "unavoidableMaximumActualEdgeStretchAtLeast": 22.838887811686817,
+        "bike": "rookie",
+        "frame": 129,
+        "raw11BodyArmFractionAtSourceSeamVertex": 0.5319897532463074,
+        "whole12ArmFractionAtSourceSeamVertex": 0.0
+      },
+      {
+        "side": "R",
+        "wall": "inner",
+        "actualEdgeChainsMeasured": 145,
+        "column": 34,
+        "edgeChainVertexIds": [
+          8444,
+          13255,
+          13303,
+          13351,
+          13399,
+          13447,
+          13495,
+          13543
+        ],
+        "sourceSeamVertex": 8444,
+        "firstVertex": 13543,
+        "allSevenConsecutiveEdgesExist": true,
+        "restPathM": 0.019001012400124764,
+        "posedEndpointChordM": 0.2593747167133576,
+        "unavoidableMaximumActualEdgeStretchAtLeast": 13.650573519527544,
+        "bike": "rookie",
+        "frame": 129,
+        "raw11BodyArmFractionAtSourceSeamVertex": 0.6396328806877136,
+        "whole12ArmFractionAtSourceSeamVertex": 0.0
+      }
+    ]
+  }
+}

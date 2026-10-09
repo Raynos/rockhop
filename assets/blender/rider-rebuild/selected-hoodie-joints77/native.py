@@ -47,7 +47,15 @@ def receiver(path):
     assert row['recipe']==pin(HERE/'author.py')
     for key in ('sourceReceiver','source47Receipt','fullBody','original47Geometry','actualGuides','receiver','editableOBJ','construction'):
         checked(row[key])
-    if 'wholeAnatomicalFieldBinding' in row:
+    if 'seamOwnershipBinding' in row:
+        assert all(key not in row for key in ('wholeAnatomicalFieldBinding','wearerFieldBinding','anatomicalFieldRepair','fieldRepair'))
+        binding=row['seamOwnershipBinding'];assert binding['recipe']==pin(HERE/'seam_ownership_fields.py')
+        runpy.run_path(str(checked(binding['recipe'])))['verify'](path)
+        assert row['correspondenceAndSkin']['healthyFieldsExactBeforeFloat32'] is False
+        assert row['correspondenceAndSkin']['sourceFarFieldAnchorsExact'] is False
+        assert row['correspondenceAndSkin']['farTrunk12FieldsExact'] is True
+        assert row['correspondenceAndSkin']['fullNamedFieldCount']==71
+    elif 'wholeAnatomicalFieldBinding' in row:
         assert all(key not in row for key in ('wearerFieldBinding','anatomicalFieldRepair','fieldRepair'))
         binding=row['wholeAnatomicalFieldBinding'];assert binding['recipe']==pin(HERE/'whole_anatomical_fields.py')
         runpy.run_path(str(checked(binding['recipe'])))['verify'](path)
@@ -73,7 +81,7 @@ def receiver(path):
 
 
 def control_field_lineage(report):
-    key=next((k for k in ('wholeAnatomicalFieldBinding','wearerFieldBinding','anatomicalFieldRepair','fieldRepair')if k in report),None)
+    key=next((k for k in ('seamOwnershipBinding','wholeAnatomicalFieldBinding','wearerFieldBinding','anatomicalFieldRepair','fieldRepair')if k in report),None)
     return {'kind':key or 'initialAuthoredJointFields',
             'recipe':report[key]['recipe']if key else report['recipe'],
             'input':report[key]['input']if key else report['sourceReceiver'],
