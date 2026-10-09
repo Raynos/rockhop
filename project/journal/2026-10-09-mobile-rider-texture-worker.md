@@ -41,3 +41,14 @@ Evidence: `docs/evidence/rider-rebuild/mobile-textures02/etc1s01/`.
 Limits: ETC1S remains lossy despite maximum configured settings; physical
 material appearance/FPS unaccepted, BC7 pixels unmeasured. No codec grid,
 family expansion or production pin. Visual/project90% is not a wire quota.
+
+Finding: Collect one component's pinned encoding receipts with a reusable
+summary helper, including guard refusals and the successful original guard.
+This keeps remaining fixed-family checkpoints consistent without codec trials.
+
+Validation: Replayed Boot-L's existing verified receipts in an ignored fresh
+summary directory: 5,614,184 wire bytes, 16,777,296 ASTC mip bytes, 108 runtime
+transcodes, native block/pixel parity and zero alpha differences reproduced.
+
+Limits: Summary collection performs no new encoding or art judgment. Full
+composition proof remains pending corrected component graft availability.
