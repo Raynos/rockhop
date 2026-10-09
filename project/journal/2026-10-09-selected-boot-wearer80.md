@@ -53,3 +53,9 @@ Finding: Construct the shoe cavity from actual selected inner parents and source
 Validation: Parent full605line source review, AST/hash and four new dependent pins pass; cut UV/raw-field interpolation and protected exterior checks are explicit.
 
 Limits: Source checkpoint only. Guarded construction/reopen/posed corridor, selected compact bake and moving art remain unrun.
+
+Finding: Reproduce the cut arithmetic only on actual original crossing triangles before changing the failed constructor.
+
+Validation: Parent full179line source review, AST/hash and three dependency pins pass; both float64/float32 plane and ULP comparisons preserve raw BMesh output.
+
+Limits: Source-only local fixture, not identical whole-mesh edge ordering. No candidate, tolerance change, source replacement or native save.
