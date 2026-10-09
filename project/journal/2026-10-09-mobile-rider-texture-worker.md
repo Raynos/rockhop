@@ -76,3 +76,15 @@ processes; a raced refusal returns to bounded waiting.
 
 Limits: Admission waiting is bounded separately from original shared-lock
 wait/child limits. No art candidate or device qualification in this probe.
+
+Finding: Encode only the chosen physically scaled skin03 left-glove source
+atlas, preserving selected-detail2K albedo/ORM/normal roles and source pins.
+
+Validation: Original queued guard returns0 in35.345s.3,763,473 wire bytes;
+108 pinned transcodes and36 native ASTC blocks/3 pixel comparisons pass.
+ASTC mip bytes16,777,296, alpha exact. Normal mean0.266°,p992.88°,max155.58°;
+315 of4,194,304 source pixels>30°, no UV/padding exclusions.
+Evidence: docs/evidence/rider-rebuild/mobile-textures02/components01/glove-L/.
+
+Limits: Compression is distinct from actual source-field/posed witnesses;
+parent moving judgment pending. No second atlas encoding or production edit.

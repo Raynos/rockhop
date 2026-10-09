@@ -211,3 +211,17 @@ Normal/skin/bake field witness qualification remains separate parent work.
 Both verified boot families now total11,150,174 wire bytes and33,554,592
 ASTC full-mip bytes. Corrected glove maps wait for the physically scaled
 density choice before encoding, avoiding duplicate atlas generations.
+
+## Final left glove atlas
+
+Use only physically scaled skin03/bake01, stablecf961b0da. The conservative
+skin02 maps were not encoded; rejected40K maps are excluded. The original
+guard/queue returns0 in35.345s. Three authored2K UASTC maps total3,763,473
+wire bytes and16,777,296 ASTC mip bytes.108 pinned runtime transcodes and
+all native block/pixel comparisons pass; every alpha pixel is unchanged.
+
+Normal compression versus this bakedPNG: mean0.266°,p992.88°,max155.58°;
+315 pixels>30°,38>60°,13>90° out4,194,304. Worst source-vector length0.0280,
+but other>90° source vectors include0.2874; no padding/occupancy exclusion.
+Builder's72/30K cage-normal>90° probes, two posed-facing misses and its
+342 actual posed witness maximum0.555mm remain separate unaccepted evidence.
