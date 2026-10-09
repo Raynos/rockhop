@@ -4,7 +4,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[4]
 SOURCE = ROOT / 'harness/out/rider-rebuild/mobile-textures02/combined01/rider.glb'
-CONTRACT = ROOT / 'harness/out/rider-rebuild/mobile-delivery02/stage03/rider-contract.json'
+CONTRACT = ROOT / 'harness/out/rider-rebuild/mobile-delivery02/stage04/rider-contract.json'
 PROFILE = ROOT / 'docs/evidence/rider-rebuild/selected-grip-kinematic02/thumbplane05/runtime-profile.json'
 TRANSFER = ROOT / 'docs/evidence/rider-rebuild/mobile-textures02/combined01/decoded-parity.json'
 EVIDENCE = ROOT / 'docs/evidence/rider-rebuild/fixed-grip-engine04'
@@ -38,6 +38,11 @@ def guarded(name, command):
 def main():
     assert len(sys.argv) == 2, 'Exact parent-approved compiled build directory required'
     build = Path(sys.argv[1]).resolve()
+    assert build == ROOT / 'harness/out/rider-rebuild/mobile-delivery02/build02'
+    gate = json.loads((ROOT / 'docs/evidence/rider-rebuild/mobile-delivery02/build03-guard/guard.json').read_text())
+    assert gate['exitCode'] == 0 and gate['status'] == 'worker returned; review pending'
+    built = json.loads((build / 'rider-remaster-source.json').read_text())
+    assert built['sha256'] == PINS['source'] and built['bytes'] == 74833728
     for name, p in [('source', SOURCE), ('contract', CONTRACT), ('profile', PROFILE)]:
         assert digest(p) == PINS[name], (name, 'Pinned input differs')
     assert digest(build / 'rider-remaster-contract.json') == PINS['contract']
