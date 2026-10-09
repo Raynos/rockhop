@@ -1,0 +1,434 @@
+{
+  "accepted": false,
+  "schema": "rockhop-selected-grip-profile-v1",
+  "sourceSHA256": "f814b8d7cde87b1e41b45eec75cd55fdea89b915bf9acae0e5a18b40d3a156af",
+  "sourceContractSHA256": "0301087649f7e2b2c442299bb21f61dc1e325c6b5b84afbc3ac5c4a594b72813",
+  "bikes": [
+    {
+      "asset": "bike-rookie.glb",
+      "sha256": "e55919d60267849358ef5e97f4731f42fac6eb2835b9998e1d146d056c0f10f7"
+    },
+    {
+      "asset": "bike-pro.glb",
+      "sha256": "0acc9ac86eeca76cc1812f8870eab36e2e25ca76d6a5cbe86d4a46a36cc12a86"
+    }
+  ],
+  "hands": {
+    "left": {
+      "wristQuaternionBike": [
+        -0.17448514461527986,
+        -0.08949797491699829,
+        -0.7025640514474586,
+        0.6840678331920557
+      ],
+      "wristPositionBike": [
+        0.21883044570272497,
+        0.83390059765915,
+        -0.3441135903328611
+      ],
+      "selectedPalmPadInWrist": [
+        -0.23578636180832202,
+        0.9472345524352404,
+        0.21714394824172567,
+        0,
+        0.8890843370086994,
+        0.3004724927018948,
+        -0.3453191607995586,
+        0,
+        -0.3923440241306052,
+        0.1116377346703152,
+        -0.9130187199212751,
+        0,
+        0.041098691583751235,
+        0.05092607166188984,
+        0.005168096552398813,
+        1
+      ],
+      "finitePalmTargetBike": [
+        0.26987351853877384,
+        0.7951149997177545,
+        -0.32998707078396355
+      ],
+      "selectedSurfaceWitness": {
+        "triangle": 299807,
+        "rows": [
+          232104,
+          229821,
+          232108
+        ],
+        "barycentric": [
+          0.029551421284767287,
+          0.17213577745595154,
+          0.7983128012592812
+        ],
+        "sourceFields": [
+          [
+            {
+              "jointId": "DEF-thumb.01.L",
+              "weight": 0.3876707103074693
+            },
+            {
+              "jointId": "DEF-palm.01.L",
+              "weight": 0.25384908827344166
+            },
+            {
+              "jointId": "DEF-hand.L",
+              "weight": 0.18402380407415886
+            },
+            {
+              "jointId": "DEF-palm.04.L",
+              "weight": 0.17445639734493018
+            }
+          ],
+          [
+            {
+              "jointId": "DEF-thumb.01.L",
+              "weight": 0.37419699397268635
+            },
+            {
+              "jointId": "DEF-palm.01.L",
+              "weight": 0.25720607309071486
+            },
+            {
+              "jointId": "DEF-hand.L",
+              "weight": 0.18974593728542
+            },
+            {
+              "jointId": "DEF-palm.04.L",
+              "weight": 0.17885099565117876
+            }
+          ],
+          [
+            {
+              "jointId": "DEF-thumb.01.L",
+              "weight": 0.38455786984054324
+            },
+            {
+              "jointId": "DEF-palm.01.L",
+              "weight": 0.25716029602502477
+            },
+            {
+              "jointId": "DEF-hand.L",
+              "weight": 0.18623636224917983
+            },
+            {
+              "jointId": "DEF-palm.04.L",
+              "weight": 0.17204547188525215
+            }
+          ]
+        ],
+        "poseConditioned": true,
+        "normalPatchSamples": 3304
+      },
+      "digits": {
+        "thumb": {
+          "jointIds": [
+            "DEF-thumb.01.L",
+            "DEF-thumb.02.L",
+            "DEF-thumb.03.L"
+          ],
+          "flexRadians": [
+            0.2661199581898623,
+            0.6062445915540599,
+            0.5184178644950491
+          ],
+          "opposition": {
+            "jointId": "DEF-thumb.01.L",
+            "axisLocal": [
+              0,
+              1,
+              0
+            ],
+            "radians": -0.2188436976815165
+          },
+          "limitsRadians": [
+            0.85,
+            0.85,
+            0.85,
+            0.7853981633974483
+          ]
+        },
+        "index": {
+          "jointIds": [
+            "DEF-f_index.01.L",
+            "DEF-f_index.02.L",
+            "DEF-f_index.03.L"
+          ],
+          "flexRadians": [
+            1.1442212514482692,
+            0.942609129376288,
+            0.0057787485517307394
+          ],
+          "opposition": null,
+          "limitsRadians": [
+            1.15,
+            1.15,
+            1.15
+          ]
+        },
+        "middle": {
+          "jointIds": [
+            "DEF-f_middle.01.L",
+            "DEF-f_middle.02.L",
+            "DEF-f_middle.03.L"
+          ],
+          "flexRadians": [
+            1.1442212514482692,
+            0.7445684703215981,
+            0.6128224003023482
+          ],
+          "opposition": null,
+          "limitsRadians": [
+            1.15,
+            1.15,
+            1.15
+          ]
+        },
+        "ring": {
+          "jointIds": [
+            "DEF-f_ring.01.L",
+            "DEF-f_ring.02.L",
+            "DEF-f_ring.03.L"
+          ],
+          "flexRadians": [
+            1.055654776257297,
+            1.0066964328772174,
+            0.22251983074461068
+          ],
+          "opposition": null,
+          "limitsRadians": [
+            1.15,
+            1.15,
+            1.15
+          ]
+        },
+        "pinky": {
+          "jointIds": [
+            "DEF-f_pinky.01.L",
+            "DEF-f_pinky.02.L",
+            "DEF-f_pinky.03.L"
+          ],
+          "flexRadians": [
+            0.0057787485517307394,
+            1.1442212514482692,
+            1.1442212514482692
+          ],
+          "opposition": null,
+          "limitsRadians": [
+            1.15,
+            1.15,
+            1.15
+          ]
+        }
+      }
+    },
+    "right": {
+      "wristQuaternionBike": [
+        0.7450723978244077,
+        0.6498450835477598,
+        0.1408807893395609,
+        -0.0521640928614219
+      ],
+      "wristPositionBike": [
+        0.2206247697615045,
+        0.8382201570870816,
+        0.33979422140358806
+      ],
+      "selectedPalmPadInWrist": [
+        0.35103526864990964,
+        0.9124762129980901,
+        0.21014614171226098,
+        0,
+        -0.8856045389780411,
+        0.3964250971664861,
+        -0.2419746740426222,
+        0,
+        -0.3041033388593044,
+        -0.1011647322400748,
+        0.9472522664240065,
+        0,
+        -0.03806245531280461,
+        0.053834094462840903,
+        0.005141085917332422,
+        1
+      ],
+      "finitePalmTargetBike": [
+        0.26987357730137107,
+        0.7951892858662617,
+        0.32998656758827066
+      ],
+      "selectedSurfaceWitness": {
+        "triangle": 299807,
+        "rows": [
+          232108,
+          229821,
+          232104
+        ],
+        "barycentric": [
+          0.8232009595515343,
+          0.15544131163980765,
+          0.02135772880865804
+        ],
+        "sourceFields": [
+          [
+            {
+              "jointId": "DEF-palm.01.R",
+              "weight": 0.3356069275959411
+            },
+            {
+              "jointId": "DEF-thumb.01.R",
+              "weight": 0.3059739070725567
+            },
+            {
+              "jointId": "DEF-hand.R",
+              "weight": 0.18733501182574197
+            },
+            {
+              "jointId": "DEF-palm.04.R",
+              "weight": 0.17108415350576028
+            }
+          ],
+          [
+            {
+              "jointId": "DEF-palm.01.R",
+              "weight": 0.3334401464866102
+            },
+            {
+              "jointId": "DEF-thumb.01.R",
+              "weight": 0.29784084840161745
+            },
+            {
+              "jointId": "DEF-hand.R",
+              "weight": 0.19082932784008544
+            },
+            {
+              "jointId": "DEF-palm.04.R",
+              "weight": 0.1778896772716869
+            }
+          ],
+          [
+            {
+              "jointId": "DEF-palm.01.R",
+              "weight": 0.3334706645304036
+            },
+            {
+              "jointId": "DEF-thumb.01.R",
+              "weight": 0.3079728389410239
+            },
+            {
+              "jointId": "DEF-hand.R",
+              "weight": 0.18498512245365073
+            },
+            {
+              "jointId": "DEF-palm.04.R",
+              "weight": 0.1735713740749218
+            }
+          ]
+        ],
+        "poseConditioned": true,
+        "normalPatchSamples": 3320
+      },
+      "digits": {
+        "thumb": {
+          "jointIds": [
+            "DEF-thumb.01.R",
+            "DEF-thumb.02.R",
+            "DEF-thumb.03.R"
+          ],
+          "flexRadians": [
+            0.12828457761729664,
+            0.6717067688691665,
+            0.8457287510704599
+          ],
+          "opposition": {
+            "jointId": "DEF-thumb.01.R",
+            "axisLocal": [
+              0,
+              1,
+              0
+            ],
+            "radians": -0.010332397820166248
+          },
+          "limitsRadians": [
+            0.85,
+            0.85,
+            0.85,
+            0.7853981633974483
+          ]
+        },
+        "index": {
+          "jointIds": [
+            "DEF-f_index.01.R",
+            "DEF-f_index.02.R",
+            "DEF-f_index.03.R"
+          ],
+          "flexRadians": [
+            1.1442212514482692,
+            0.9915674727563244,
+            0.0057787485517307394
+          ],
+          "opposition": null,
+          "limitsRadians": [
+            1.15,
+            1.15,
+            1.15
+          ]
+        },
+        "middle": {
+          "jointIds": [
+            "DEF-f_middle.01.R",
+            "DEF-f_middle.02.R",
+            "DEF-f_middle.03.R"
+          ],
+          "flexRadians": [
+            1.1442212514482692,
+            0.7935268137016926,
+            0.6502232465787323
+          ],
+          "opposition": null,
+          "limitsRadians": [
+            1.15,
+            1.15,
+            1.15
+          ]
+        },
+        "ring": {
+          "jointIds": [
+            "DEF-f_ring.01.R",
+            "DEF-f_ring.02.R",
+            "DEF-f_ring.03.R"
+          ],
+          "flexRadians": [
+            0.936830380824548,
+            1.055654776257297,
+            0.5220486395769085
+          ],
+          "opposition": null,
+          "limitsRadians": [
+            1.15,
+            1.15,
+            1.15
+          ]
+        },
+        "pinky": {
+          "jointIds": [
+            "DEF-f_pinky.01.R",
+            "DEF-f_pinky.02.R",
+            "DEF-f_pinky.03.R"
+          ],
+          "flexRadians": [
+            0.0057787485517307394,
+            1.1442212514482692,
+            1.1442212514482692
+          ],
+          "opposition": null,
+          "limitsRadians": [
+            1.15,
+            1.15,
+            1.15
+          ]
+        }
+      }
+    }
+  }
+}
