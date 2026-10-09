@@ -4,7 +4,7 @@ import path from 'node:path';
 import assert from 'node:assert/strict';
 import {MeshoptSimplifier} from 'meshoptimizer/simplifier';
 import {openGlb,fileSha,sha} from '../download-opt01/geometry01/glb.mjs';
-const [intake,out]=process.argv.slice(2),meta=JSON.parse(fs.readFileSync(path.join(intake,'intake.json')));
+const [intake,out,calibrationPath]=process.argv.slice(2),meta=JSON.parse(fs.readFileSync(path.join(intake,'intake.json')));
 assert.equal(meta.sha256,'127e316a8ff7910a4918b63f83e086e4e658062f102c73f17d0ee2f956750649');assert([2,3].includes(meta.meshIndex));
 await MeshoptSimplifier.ready;assert(!fs.existsSync(out));fs.mkdirSync(out,{recursive:true});
 function array(name,Type){const b=fs.readFileSync(path.join(intake,name+'.bin'));return new Type(b.buffer,b.byteOffset,b.byteLength/Type.BYTES_PER_ELEMENT);}
@@ -21,11 +21,14 @@ const activeIds=[...active].sort((a,b)=>a-b);assert(activeIds.length<=32);const 
 for(let v=0;v<first.length;v++)for(let k=0;k<4;k++){const j=ji[v*4+k],value=w[v*4+k];if(value<=0)continue;field[v*activeIds.length+activeIds.indexOf(j)]+=value;const m=names[j].match(/^DEF-(?:f_)?(thumb|index|middle|ring|pinky)\./);if(m)branch[v]|=1<<labels.indexOf(m[1]);}
 const locks=new Uint8Array(first.length);let boundaryEdges=0;
 for(let i=0;i<indices.length;i+=3)for(let k=0;k<3;k++){const a=indices[i+k],b=indices[i+(k+1)%3];if(branch[a]!==branch[b]){locks[a]=locks[b]=1;boundaryEdges++;}}
-const [reduced,error]=MeshoptSimplifier.simplifyWithAttributes(indices,p,3,field,activeIds.length,activeIds.map(()=>1),locks,120000,.0002,['ErrorAbsolute','LockBorder','Regularize']);
+const calibration=calibrationPath?JSON.parse(fs.readFileSync(calibrationPath)):null;
+if(calibration){assert.equal(calibration.sourceSHA256,meta.sha256);assert.equal(calibration.meshIndex,meta.meshIndex);for(const j of activeIds)assert(calibration.fields[j].active);}
+const attributeWeights=activeIds.map(j=>calibration?calibration.fields[j].attributeWeightMeters:1);
+const [reduced,error]=MeshoptSimplifier.simplifyWithAttributes(indices,p,3,field,activeIds.length,attributeWeights,locks,120000,.0002,['ErrorAbsolute','LockBorder','Regularize']);
 const used=[...new Set(reduced)].sort((a,b)=>a-b),map=new Uint32Array(first.length);map.fill(0xffffffff);used.forEach((v,i)=>map[v]=i);
 const finalIndices=Uint32Array.from(reduced,v=>map[v]),sourceRows=Uint32Array.from(used,v=>first[v]);
 const attrs={POSITION:{a:p,width:3},JOINTS_0:{a:ji,width:4},WEIGHTS_0:{a:w,width:4},_NATIVE_ID:{a:ids,width:1}};
 for(const [name,{a,width}] of Object.entries(attrs)){const b=new a.constructor(used.length*width);used.forEach((v,i)=>b.set(a.subarray(v*width,v*width+width),i*width));fs.writeFileSync(path.join(out,name+'.bin'),b);}
 fs.writeFileSync(path.join(out,'indices.bin'),finalIndices);fs.writeFileSync(path.join(out,'source-row.u32'),sourceRows);
-const report={accepted:false,sourceSHA256:meta.sha256,meshIndex:meta.meshIndex,sourceTriangles:indices.length/3,triangles:finalIndices.length/3,vertices:used.length,requestedTriangles:40000,absoluteAggregateErrorMeters:error,nativeVertexPositionsJointsWeightsExactOriginalRows:true,noInterpolatedOrDiscardedWeightMass:true,activeNativeJointIds:activeIds,activeNativeJointNames:activeIds.map(j=>names[j]),attributeWeights:activeIds.map(()=>1),protectedBranchBoundaryVertices:locks.reduce((a,b)=>a+b,0),protectedBoundaryDirectedEdges:boundaryEdges,flags:['ErrorAbsolute','LockBorder','Regularize'],sourceRowsSHA256:sha(sourceRows),limits:'Quadric error is not a hard surface/deformation bound. Original vertex fields are exact, triangle interiors and corrected grip require separate measured and played qualification.'};
+const report={accepted:false,sourceSHA256:meta.sha256,meshIndex:meta.meshIndex,sourceTriangles:indices.length/3,triangles:finalIndices.length/3,vertices:used.length,requestedTriangles:40000,absoluteAggregateErrorMeters:error,nativeVertexPositionsJointsWeightsExactOriginalRows:true,noInterpolatedOrDiscardedWeightMass:true,activeNativeJointIds:activeIds,activeNativeJointNames:activeIds.map(j=>names[j]),attributeWeights,physicalCalibration:calibrationPath??null,protectedBranchBoundaryVertices:locks.reduce((a,b)=>a+b,0),protectedBoundaryDirectedEdges:boundaryEdges,flags:['ErrorAbsolute','LockBorder','Regularize'],sourceRowsSHA256:sha(sourceRows),limits:'Quadric error is not a hard surface/deformation bound. Original vertex fields are exact, triangle interiors and corrected grip require separate measured and played qualification.'};
 fs.writeFileSync(path.join(out,'simplify.json'),JSON.stringify(report,null,2)+'\n');fs.closeSync(g.fd);console.log(JSON.stringify(report));

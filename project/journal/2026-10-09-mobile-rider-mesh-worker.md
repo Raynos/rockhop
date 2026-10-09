@@ -41,3 +41,9 @@ Finding: Actual posed selected-source geometry resolves the large historical glo
 Validation: Original guarded query exit0 in4.151s, only193 recorded failing witnesses at16 actual worst poses.192 same-facing surface distances mean0.075669mm,p99 0.415532mm,max0.480359mm; none above1mm. One thumb witness triangle222803 remains missing a same-facing source within0.5mm; nearest opposed surface0.218626mm. Earlier invocation refused original headroom and launched no model child; exact telemetry preserved.
 
 Limits: This checks recorded failing centroid geometry only. Two earlier uncovered rest-centroids, one posed missing-facing witness,61cage normal outliers, material continuity, future corrected grip and whole moving judgment remain explicit. No player or source-master changes.
+
+Finding: Native glove skin attributes now have physical metre scales derived from wrist-relative motion and a fixed-joint rotation envelope.
+
+Validation: Guarded calibration repair exit0 in0.188s;482played poses,22active fields;non-reference scales range0.464229 to0.978754 metres per unit normalized weight. Only source-supported native joint fields enter the bound. First attempt stopped on unused thigh-node tiny non-unit scale; failure retained and active-only computation asserts supported chains. Simplifier requires matching source and active fields; original four weight slots and branch locks remain. Recipes syntax checked.
+
+Limits: This is a calibrated method checkpoint, not a density/deformation result. Aggregate Meshopt error is not a hard deformation bound; original local-translation/scale assumptions and corrected grip still need qualification. No player assets or selected master changes.
