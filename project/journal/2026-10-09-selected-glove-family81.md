@@ -11,3 +11,9 @@ Finding: Actual distinct41 glove extraction and independent full geometry/field 
 Validation: Original guard21.002s exit0. Parent raw array/receipt/source/rest pins verified. Both323766v/567467tri,75stored names/max4 memberships; L284247referenced vertices/39519orphans. Five singular incident faces have positive area and opposing normals. No source/native mutation. Readable16line guarded runner replaces blocked inline launcher; first blocked attempt launched no process.
 
 Limits: Source identity only; current unmodified left metric refuses that singular row. No simplifier, compact allocation, fitted geometry, bake, moving art, engine or device acceptance. Do not synthesize a unit normal or call it an orphan.
+
+Finding: The right full source preparation refuses an eight-sector thumb-root circle before simplification. The root is embedded in the palm; this is an invalid construction assumption, not absent selected geometry.
+
+Validation: Original guard0.346s exit1, source/recipe/worker pins match, candidateAttempts0, no native mutation. Actual failure and runtime retained.
+
+Limits: No reduced glove, fit, bake or motion pass. Correct actual joint-plane/cuff-rim source ancestry without changing surface or allocation gates.

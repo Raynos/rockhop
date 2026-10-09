@@ -1,0 +1,50 @@
+{
+  "status": "REJECTED_RIGHT_SOURCE_LANDMARK_PREPARATION_NO_CANDIDATE",
+  "acceptedArt": false,
+  "exitCode": 1,
+  "elapsedSeconds": 0.346,
+  "guard": {
+    "path": "docs/evidence/rider-rebuild/selected-glove-family81/right-full-guard01/guard.json",
+    "sha256": "c3fdb06e4212a0609f06550f3243336bee2426b7b996bfc96d75d8b9a29d31be"
+  },
+  "workerLog": {
+    "path": "docs/evidence/rider-rebuild/selected-glove-family81/right-full-guard01/worker.log",
+    "sha256": "503247ab3a0214a03e9643e4c682c9937766b7cda439480ba7b8b271fadf08cf"
+  },
+  "recipes": [
+    {
+      "path": "assets/blender/rider-rebuild/selected-glove-family81/construct.py",
+      "sha256": "1a821b543685ade57d1d9deb8862afa3f40e86d03ca6ede6644b3f341278bc1c"
+    },
+    {
+      "path": "assets/blender/rider-rebuild/selected-glove-family81/construct.mjs",
+      "sha256": "15e379cf128a4246228d154f75c0a2709cc795406fae96a5288190306c064e54"
+    }
+  ],
+  "sourceCPUAdmission": {
+    "path": "harness/out/rider-rebuild/selected-glove-family81/extract01/cpu-check.json",
+    "sha256": "4c593323090894014d301b5a6835b9f0f916cc95b6a6168d46203bc03550bf60"
+  },
+  "sourceObject": "ActualSelectedGlove.R",
+  "level": "full",
+  "sourceVertices": 323766,
+  "sourceTriangles": 567467,
+  "failure": {
+    "stage": "semantic source-fan preparation",
+    "landmark": "thumb-joint1",
+    "sector": 1,
+    "assertion": "Missing actual source sector; no weaker fallback",
+    "predicate": "Original referenced source vertices with total right thumb bone field>=0.2, longitudinal distance from first thumb head<=0.35 times first thumb bone length, eight transverse angular sectors.",
+    "interpretation": "The construction assumption requiring a complete field-filtered ring at the embedded thumb root did not hold. This does not establish absent source glove geometry."
+  },
+  "candidateAttempts": 0,
+  "simplifierInvoked": false,
+  "targetVertices": null,
+  "targetTriangles": null,
+  "geometricNormalChecks": "NOT_RUN",
+  "outputNamedFieldChecks": "NOT_RUN",
+  "nativeMutation": false,
+  "maximumAnonymousGiB": 40.8,
+  "maximumAnonymousPlusWiredGiB": 50.9,
+  "limits": "Failed preparation only; no candidate, reduction, budget, surface, fit, bake, motion or art result. No retries or recipe mutations."
+}
