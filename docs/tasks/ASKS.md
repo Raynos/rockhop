@@ -585,3 +585,5 @@ Status: **open** (nobody on it) · **in flight** (owner named) · **needs pick**
 | 366 | Preload and prepare the remastered rider in the loading screen so Garage selection is instant. | **active — supersedes lazy sixth loading** | Initial loader must finish selected asset download, decode and instance preparation; reuse resident model with no Garage fetch/decode on first or repeated selection. Keep meaningful progress and visible retry. |
 
 | 367 | Explain the phone screenshot showing a blue helmet and Loading Mustard Remastered, then fix the visible mismatch. | **active — photo confirms old selection while remaster pending** | Original Mustard remains selected; remaster transfer pending. Verify old source identity and eliminate Garage loading through initial preload without substitute assets. |
+
+| 368 | Remove the stale placeholder rider and helmet shown while the remaster loads. | **active — remove player-facing fallback** | Real selected models must be ready before Garage/game; show load failure/retry instead of substitute. Preserve user-requested original five comparison outfits and shared IK math. |
