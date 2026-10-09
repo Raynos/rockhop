@@ -1,0 +1,89 @@
+[
+  {
+    "image": 1,
+    "width": 2048,
+    "height": 2048,
+    "sourceBytes": 3461898,
+    "exactRGBAFraction": 0.3471553325653076,
+    "channels": [
+      {
+        "channel": "R",
+        "rmse8bit": 6.252451625638368,
+        "psnrDB": 32.209796801906485,
+        "meanSigned8bit": -0.6637823581695557,
+        "maxAbsolute8bit": 142,
+        "p95Absolute8bit": 10,
+        "p99Absolute8bit": 32,
+        "identicalFraction": 0.7822616100311279
+      },
+      {
+        "channel": "G",
+        "rmse8bit": 6.093357895193673,
+        "psnrDB": 32.433669862887726,
+        "meanSigned8bit": -0.07303023338317871,
+        "maxAbsolute8bit": 138,
+        "p95Absolute8bit": 12,
+        "p99Absolute8bit": 30,
+        "identicalFraction": 0.4548945426940918
+      },
+      {
+        "channel": "B",
+        "rmse8bit": 7.149909046234822,
+        "psnrDB": 31.04479326488006,
+        "meanSigned8bit": 1.1663315296173096,
+        "maxAbsolute8bit": 146,
+        "p95Absolute8bit": 13,
+        "p99Absolute8bit": 40,
+        "identicalFraction": 0.5238516330718994
+      },
+      {
+        "channel": "A",
+        "rmse8bit": 0.0,
+        "psnrDB": null,
+        "meanSigned8bit": 0.0,
+        "maxAbsolute8bit": 0,
+        "p95Absolute8bit": 0,
+        "p99Absolute8bit": 0,
+        "identicalFraction": 1.0
+      }
+    ],
+    "decoder": "Three.js0.186.1 bundled Basis wasm RGBA32",
+    "authoredRGB": {
+      "mask": "source alpha > 0; no candidate-alpha masking",
+      "pixels": 4194304,
+      "channels": [
+        {
+          "channel": "R",
+          "rmse8bit": 6.252451625638368,
+          "p99Absolute8bit": 32,
+          "maxAbsolute8bit": 142
+        },
+        {
+          "channel": "G",
+          "rmse8bit": 6.093357895193673,
+          "p99Absolute8bit": 30,
+          "maxAbsolute8bit": 138
+        },
+        {
+          "channel": "B",
+          "rmse8bit": 7.149909046234822,
+          "p99Absolute8bit": 40,
+          "maxAbsolute8bit": 146
+        }
+      ]
+    },
+    "alpha": {
+      "sourceExtrema": [
+        255,
+        255
+      ],
+      "decodedExtrema": [
+        255,
+        255
+      ],
+      "changedPixels": 0,
+      "originalOpaquePixelsChanged": 0,
+      "originalZeroPixelsChanged": 0
+    }
+  }
+]

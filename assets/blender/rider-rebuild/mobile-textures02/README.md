@@ -150,3 +150,43 @@ Primary container reference checked2026-10-09:
 [Khronos KTX2 specification](https://registry.khronos.org/KTX/specs/2.0/ktxspec.v2.html).
 Its level index, independent supercompression and smallest-to-largest payload
 ordering permit exact reuse of the retained mip payloads.
+
+## One fixed ETC1S ORM comparison
+
+After component checkpointad16a911f, `etc1s-compare.py` tests only Boot-L ORM
+at authored2048²: maximum endpoint/selector caps16128 each, effort level6,
+backend endpoint/selector RDO disabled, linear data and full box-filter mips.
+The original guarded controller returns0 in36.221s. No albedo, normal,
+geometry, UV, shader factors or source alpha change is made in this trial.
+
+Wire bytes fall from2,259,626 UASTC to452,207 ETC1S, a1,807,419 byte saving.
+The pinned r186 Basis WASM passes48 transcodes (12mips ×ETC2-compatible RGB,
+ETC2RGBA,BC7,RGBA32). Native ETC1 blocks match actual runtime blocks at every
+mip, and native software pixels equal its RGBA32 decode exactly. ETC1 blocks
+are a valid ETC2RGB subset. Alpha remains255 everywhere, exactly like source.
+
+| Independent data channel | RMSE /255 | p95 /255 | p99 /255 | Maximum /255 |
+| --- | ---: | ---: | ---: | ---: |
+| R / AO data | 6.252 | 10 | 32 | 142 |
+| G / roughness | 6.093 | 12 | 30 | 138 |
+| B / metallic | 7.150 | 13 | 40 | 146 |
+
+All values compare to original baked PNG pixels. R is measured independently;
+the shader uses it as AO only when an occlusionTexture role exists. UASTC
+worst-channel RMSE was1.326/255, so ETC1S gives materially larger data error.
+Maximum configured codec settings do not make ETC1S lossless or establish
+appearance equivalence. Conservative composition therefore retains UASTC
+unless the parent explicitly chooses otherwise after moving judgment.
+
+Pinned KTX2Loader chooses ETC2RGB for opaque ETC1S when etc2Supported is true,
+even on ASTC-capable devices. Full-mip GPU data is2,796,216 bytes versus
+5,592,432 UASTC ASTC4x4/BC7. When ETC2/ETC1 are unavailable, supported BC7
+uses5,592,432 bytes; RGBA32 fallback22,369,620 bytes. BC7 transcoding passes,
+but its decoded pixels are not measured. Physical shader filtering/material
+appearance and actual-phone FPS remain unqualified.
+
+This is one fixed comparison, with no parameter grid or automatic family
+expansion. The90% goal is the visual/project milestone, not a wire-reduction
+quota. Quality and useful memory/performance gains drive the final choice.
+Primary codec reference:
+[Binomial Basis Universal](https://github.com/BinomialLLC/basis_universal).

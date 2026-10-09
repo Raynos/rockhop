@@ -28,3 +28,16 @@ Evidence: `docs/evidence/rider-rebuild/mobile-textures02/components01/boot-L/`.
 Limits: Normal compression outliers remain unaccepted and distinct from
 bake first-ray68/30,000 probes above90°. Original selected source and source
 provenance remain intact; no moving/device acceptance or production promotion.
+
+Finding: One maximum-configured ETC1S Boot-L ORM trial cuts wire1,807,419
+bytes and halves ETC2RGB texture allocation, while increasing independent
+roughness/metallic errors. Keep conservative UASTC pending moving judgment.
+
+Validation: Original guard returns0 in36.221s;48 pinned transcodes pass,
+all12 native ETC1 GPU blocks and native pixels match actual runtime. Alpha
+exact. Roughness RMSE6.093/255,p9930; metallic7.150/255,p9940; R/AO6.252/255.
+Evidence: `docs/evidence/rider-rebuild/mobile-textures02/etc1s01/`.
+
+Limits: ETC1S remains lossy despite maximum configured settings; physical
+material appearance/FPS unaccepted, BC7 pixels unmeasured. No codec grid,
+family expansion or production pin. Visual/project90% is not a wire quota.

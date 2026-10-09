@@ -1,0 +1,95 @@
+{
+  "accepted": false,
+  "case": "boot-L ORM2K, source albedo and normals remain UASTC",
+  "sourcePNG_SHA256": "5719d842b224ace564d7d7948b719483dc0d9b3475f580e0a4c95aea18e17861",
+  "originalSelectedMasterSHA256": "127e316a8ff7910a4918b63f83e086e4e658062f102c73f17d0ee2f956750649",
+  "ETC1SBytes": 452207,
+  "UASTCBytes": 2259626,
+  "wireSavingsBytes": 1807419,
+  "guardExitCode": 0,
+  "guardSeconds": 36.221,
+  "runtimeFormats": [
+    {
+      "name": "ETC2_RGB_via_ETC1",
+      "allLevelsSucceeded": true,
+      "totalMipBytes": 2796216
+    },
+    {
+      "name": "ETC2_RGBA",
+      "allLevelsSucceeded": true,
+      "totalMipBytes": 5592432
+    },
+    {
+      "name": "BC7",
+      "allLevelsSucceeded": true,
+      "totalMipBytes": 5592432
+    },
+    {
+      "name": "RGBA32",
+      "allLevelsSucceeded": true,
+      "totalMipBytes": 22369620
+    }
+  ],
+  "independentRGBAChannelErrors": [
+    {
+      "channel": "R",
+      "rmse8bit": 6.252451625638368,
+      "psnrDB": 32.209796801906485,
+      "meanSigned8bit": -0.6637823581695557,
+      "maxAbsolute8bit": 142,
+      "p95Absolute8bit": 10,
+      "p99Absolute8bit": 32,
+      "identicalFraction": 0.7822616100311279
+    },
+    {
+      "channel": "G",
+      "rmse8bit": 6.093357895193673,
+      "psnrDB": 32.433669862887726,
+      "meanSigned8bit": -0.07303023338317871,
+      "maxAbsolute8bit": 138,
+      "p95Absolute8bit": 12,
+      "p99Absolute8bit": 30,
+      "identicalFraction": 0.4548945426940918
+    },
+    {
+      "channel": "B",
+      "rmse8bit": 7.149909046234822,
+      "psnrDB": 31.04479326488006,
+      "meanSigned8bit": 1.1663315296173096,
+      "maxAbsolute8bit": 146,
+      "p95Absolute8bit": 13,
+      "p99Absolute8bit": 40,
+      "identicalFraction": 0.5238516330718994
+    },
+    {
+      "channel": "A",
+      "rmse8bit": 0.0,
+      "psnrDB": null,
+      "meanSigned8bit": 0.0,
+      "maxAbsolute8bit": 0,
+      "p95Absolute8bit": 0,
+      "p99Absolute8bit": 0,
+      "identicalFraction": 1.0
+    }
+  ],
+  "alpha": {
+    "sourceExtrema": [
+      255,
+      255
+    ],
+    "decodedExtrema": [
+      255,
+      255
+    ],
+    "changedPixels": 0,
+    "originalOpaquePixelsChanged": 0,
+    "originalZeroPixelsChanged": 0
+  },
+  "nativeETC1BlocksAndPixelsMatchPinnedRuntime": true,
+  "conservativeFinalChoice": "Retain UASTC pending parent moving judgment; no automatic family expansion",
+  "limits": [
+    "ETC1S remains lossy despite maximum configured codebook caps and effort; roughness and metallic loss materially higher than UASTC.",
+    "Physical GPU/shader filtering and moving appearance unqualified; BC7 pixels not measured.",
+    "One fixed comparison only;90% is project/visual milestone, not wire quota."
+  ]
+}

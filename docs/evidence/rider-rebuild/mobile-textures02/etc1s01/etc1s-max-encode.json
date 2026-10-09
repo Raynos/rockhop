@@ -1,0 +1,45 @@
+[
+  {
+    "image": 1,
+    "path": "harness/out/rider-rebuild/mobile-textures02/etc1s01/etc1s-max/image-01.ktx2",
+    "bytes": 452207,
+    "sha256": "762f441279a854a81a313a5da48ddda8ca6f6996193a541032de0bb9714368bc",
+    "size": [
+      2048,
+      2048
+    ],
+    "levels": 12,
+    "command": [
+      "/opt/homebrew/bin/basisu",
+      "-etc1s",
+      "-file",
+      "harness/out/rider-rebuild/mobile-textures02/components01/boot-L/original/image-01.png",
+      "-output_file",
+      "harness/out/rider-rebuild/mobile-textures02/etc1s01/etc1s-max/image-01.ktx2",
+      "-ktx2",
+      "-max_endpoints",
+      "16128",
+      "-max_selectors",
+      "16128",
+      "-comp_level",
+      "6",
+      "-no_selector_rdo",
+      "-no_endpoint_rdo",
+      "-mipmap",
+      "-mip_filter",
+      "box",
+      "-linear",
+      "-max_threads",
+      "2"
+    ],
+    "sourcePNG_SHA256": "5719d842b224ace564d7d7948b719483dc0d9b3475f580e0a4c95aea18e17861",
+    "sourceOriginalMasterSHA256": "127e316a8ff7910a4918b63f83e086e4e658062f102c73f17d0ee2f956750649",
+    "dfd": {
+      "model": 163,
+      "primaries": 0,
+      "transfer": 1
+    },
+    "accepted": false,
+    "scope": "Maximum configured endpoint/selector caps and effort, backend RDO disabled; ETC1S remains lossy, no appearance acceptance."
+  }
+]
