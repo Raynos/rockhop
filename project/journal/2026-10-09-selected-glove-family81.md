@@ -29,3 +29,9 @@ Finding: Corrected right glove source landmarks pass preparation, but the strict
 Validation: Guard0.659s exit1, parent recipe/source/prepared/constructor pins and compressed originals match; candidateAttempts0, no native mutation.
 
 Limits: No compact/fit/bake/moving result. Diagnose full raw source sums and actual evaluated semantics; do not silently normalize or repeat the same preflight.
+
+Finding: Replace invalid exact-float32 sum precondition with truthful raw-sum reporting. Preserve original stored fields and raw metric values; no numerical tolerance or normalization.
+
+Validation: Parent full R/L minimal diff and inventory/primary semantics review, AST/Node/pins pass. Actual3.061s bilateral source inventory confirms max5.2154e−8 error,25channels,≤4supports and all other source preconditions.
+
+Limits: Source checkpoint only; no target allocation/orientation/surface/fit/bake/moving acceptance. Raw source41 and all previous recipes immutable; left singular fan treatment unchanged.
