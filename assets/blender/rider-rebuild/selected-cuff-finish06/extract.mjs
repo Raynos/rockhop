@@ -14,7 +14,7 @@ for (const mi of [2,3,5]) {
   const node = j.nodes.find(n => n.mesh === mi), p = j.meshes[mi].primitives[0], skin = j.skins[node.skin];
   const directory = path.join(output, node.name); fs.mkdirSync(directory);
   const row = {meshIndex:mi, name:node.name, material:j.materials[p.material], attributes:{}, nativeJointNames:skin.joints.map(i=>j.nodes[i].name)};
-  for (const [name, ai] of Object.entries({...p.attributes,indices:p.indices,inverseBindMatrices:skin.inverseBindMatrices})) {
+  for (const [name, ai] of Object.entries({POSITION:p.attributes.POSITION,JOINTS_0:p.attributes.JOINTS_0,WEIGHTS_0:p.attributes.WEIGHTS_0,indices:p.indices,inverseBindMatrices:skin.inverseBindMatrices})) {
     const bytes = await accessorBytes(g,ai);
     fs.writeFileSync(path.join(directory,name+'.bin'),bytes);
     row.attributes[name] = {...j.accessors[ai], decodedSHA256:sha(bytes)};
