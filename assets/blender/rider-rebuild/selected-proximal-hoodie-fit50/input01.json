@@ -1,0 +1,94 @@
+{
+  "acceptedArt": false,
+  "pins": {
+    "gloveReceipt": {
+      "path": "harness/out/rider-rebuild/selected-sleeve-component47/intake01/intake-qualified.json",
+      "sha256": "55adfeb1c0a6ff43d640338af1062d05c2893b56695cc94fa79a46144fd532c5"
+    },
+    "gloveNative": {
+      "path": "harness/out/rider-rebuild/selected-sleeve-component47/intake01/UNACCEPTED-selected-sleeve-intake47.blend",
+      "sha256": "ff2ba521943db9b8586e75ed674fc8122d7612df5cf5d609ffb9ef48c9016bc7"
+    },
+    "referenceSamples": {
+      "path": "harness/out/rider-rebuild/selected-seated-anatomical09/reference05/original-full-reference.npz",
+      "sha256": "01f752d72e94dbab81cc7a193adbd2dd7bba26df919b48454d8937fa9665dcc5"
+    },
+    "fieldHelper": {
+      "path": "assets/blender/rider-rebuild/selected-sleeve-rebuild28/field.py",
+      "sha256": "09e24d646bbf013a1adb9a7bedc53dc29510507678dd40abbf11d1fe175e131a"
+    },
+    "priorInputs": {
+      "path": "assets/blender/rider-rebuild/glove-over-sleeve08/input.json",
+      "sha256": "912e724a6d296709c92a4c48704f5be490e7f228cdfe55b84814e76c85224eed"
+    },
+    "cuffInput": {
+      "path": "assets/blender/rider-rebuild/selected-cuff-topology10/input09.json",
+      "sha256": "076ce70b228895af9cd75ea9148abca85c57996938c19691fb6d3bdc9049d0f4"
+    },
+    "cuffEngine": {
+      "path": "assets/blender/rider-rebuild/astra-cuff-bearing18/construct09.py",
+      "sha256": "141e434136726814a69ff616fbb7de730750cb6680ee99b6879db7d0c6517e06"
+    },
+    "bridgeHelper": {
+      "path": "assets/blender/rider-rebuild/selected-sleeve-tailoring27/bridge3d.py",
+      "sha256": "13f05ed010994687d3333b166a8ee4265c78671d6570a55995e74ff573b7eaf2"
+    },
+    "component47": {
+      "path": "assets/blender/rider-rebuild/selected-sleeve-component47/component.py",
+      "sha256": "6fcc124b1fe5cf69a3cd0cd4114ff3fc16b6bd3e7741fb4b2b7488648c6bbd87"
+    },
+    "constructor47": {
+      "path": "assets/blender/rider-rebuild/selected-sleeve-component47/sleeve47.py",
+      "sha256": "a90e56476dffc95b1089a6d2af6df75e75fd3bfe10df173a9135d55014ea3b84"
+    },
+    "lifetimeWrapper38": {
+      "path": "assets/blender/rider-rebuild/selected-wardrobe-integration38/sleeve38.py",
+      "sha256": "d41ab8201abd8ca40bae501375af0ce4d40123cd910a82a9f2c7fa0f97e2a23f"
+    },
+    "checkpointHelper38": {
+      "path": "assets/blender/rider-rebuild/selected-wardrobe-integration38/sleeve_checkpoint.py",
+      "sha256": "a7519a567fcabe067f13342a955938553fd97d91ffe8a1c7e3c21b63235c265e"
+    },
+    "componentReceipt41": {
+      "path": "harness/out/rider-rebuild/selected-glove-component41/component01/component-qualified.json",
+      "sha256": "0136d429c4501386dad7e96a6113164adafb3f091d029f3e8b496803c6b1aa5b"
+    },
+    "component50": {
+      "path": "assets/blender/rider-rebuild/selected-proximal-hoodie-fit50/component.py",
+      "sha256": "1cf3ba48083cec2f711ad71009a054043f961d405e7ce4d5a1b88c8bd3674f1d"
+    },
+    "registration50": {
+      "path": "assets/blender/rider-rebuild/selected-proximal-hoodie-fit50/registration.py",
+      "sha256": "1cc7b09bcfd112ea55dcbc594c09cd8f81ac3e4453b2e775742c149548c1f29b"
+    },
+    "wrapper47": {
+      "path": "assets/blender/rider-rebuild/selected-sleeve-component47/sleeve47.py",
+      "sha256": "a90e56476dffc95b1089a6d2af6df75e75fd3bfe10df173a9135d55014ea3b84"
+    }
+  },
+  "constructionBudgetSeconds": 540,
+  "field": {
+    "fieldCellM": 0.04,
+    "clothClearanceM": 0.0025,
+    "contactSolveMarginM": 0.0001,
+    "contactReserveM": 0.003,
+    "contactPasses": 8,
+    "projectionIterations": 256,
+    "numericalContactToleranceM": 2e-05,
+    "maximumDerivativeBound": 0.85,
+    "maximumDisplacementM": 0.045
+  },
+  "limits": [
+    "One bounded construction candidate; no field-cell/ease/radius/station sweep.",
+    "540-second internal construction deadline requests a parent600-second CPU2 guard.",
+    "Actual first runtime is unmeasured. Dense qualifiers run separately so failures retain a real unaccepted native checkpoint.",
+    "8 contact linearizations exchange complete dense constraints; they do not change geometric targets.",
+    "Original outward detail, UV/PBR and original named skin fields are retained; generic/bike pose enclosure remains required."
+  ],
+  "sourceInput47": {
+    "path": "assets/blender/rider-rebuild/selected-sleeve-component47/input01.json",
+    "sha256": "7426ed1631f88fd4f6dc6c951ce10fb09d257c739add94f553243a8a3e2e6599"
+  },
+  "operation": "ONE_EXPLICIT_BROAD_PROXIMAL_SELECTED_HOODIE_REST_REGISTRATION",
+  "retired45mmRepairGateClaimed": false
+}
