@@ -1,0 +1,85 @@
+{
+  "status": "UNACCEPTED_GARAGE60_CAPTURE_SOURCE_ONLY_PARENT_RUN_PENDING",
+  "ask": 345,
+  "acceptedArt": false,
+  "browserRunExecuted": false,
+  "nativeRunExecuted": false,
+  "actualCodecOr60FPSQualified": false,
+  "sourcePins": {
+    "garage60-capture.mjs": {
+      "path": "harness/rider-rebuild/garage60-capture.mjs",
+      "sha256": "36db056ebd803d521d6c078060f552ae9fa026a894fbd9faa80d3bf16ab2111b"
+    },
+    "garage60-recorder.mjs": {
+      "path": "harness/rider-rebuild/garage60-recorder.mjs",
+      "sha256": "47cd88f36b6e445d31150d2adca81a653e1d3d488e21b25d7f0b084eab6413cf"
+    },
+    "garage60-proof.mjs": {
+      "path": "harness/rider-rebuild/garage60-proof.mjs",
+      "sha256": "03f5d127b369b7b4488e80cdb8b35fa5b9a0a44610800c83a05a0e8bb94c0019"
+    },
+    "garage60-capture.test.mjs": {
+      "path": "harness/rider-rebuild/garage60-capture.test.mjs",
+      "sha256": "c038eb88b536f81fca80ed567ce328f95699f5fce550fe00c5f88aba5ba7be23"
+    }
+  },
+  "dependencies": [
+    {
+      "path": "harness/lib/browser.ts",
+      "sha256": "145a81eec1c13f7c87a2910827f3cb5132b0ba2c80c494d7c42bd17fd017ca7d"
+    },
+    {
+      "path": "harness/rider-rebuild/private-dev-review.mjs",
+      "sha256": "33e966d66cd2d0b77e6b797f3b957935ef0010fd46c623ca605d74e9a221303b"
+    },
+    {
+      "path": "harness/rider-rebuild/private-engine-plugin.mjs",
+      "sha256": "0f41d5faca57b2f133d6c6b816ae661f9595036b6f159784edc1143de194979b"
+    },
+    {
+      "path": "harness/rider-rebuild/garage-capture-meter.mjs",
+      "sha256": "064e30694055d89da378dcd8eb19c4e41360dc29918e0d21eb4740024e58e92e"
+    },
+    {
+      "path": "src/ui/garage.ts",
+      "sha256": "7fa96e9d870bc87e37acb390fb9c7b88a239c35cb6f7781255bb51cfcc9e7440"
+    }
+  ],
+  "originalGuard": {
+    "path": "assets/blender/hero-remaster/generation-comparison-2026-10-03/user-agent2/run_bounded96.py",
+    "sha256": "cf8acd15d8b7484480bee74d23892be815d955ffd87115d3da8ed228ffb3d916"
+  },
+  "cpuFixtureGroupsPassed": 7,
+  "nodeSyntaxChecksPassed": 4,
+  "cpuFixtures": {
+    "path": "docs/evidence/rider-rebuild/garage60-capture/cpu-fixtures.tap",
+    "sha256": "121de607745bf3fef822f0ee6b07196ed77e2ac41bae28a8bc846d27549895a1"
+  },
+  "handoff": {
+    "path": "docs/evidence/rider-rebuild/garage60-capture/SOURCE_HANDOFF.md",
+    "sha256": "8e16b3e32053e63c5d978a0b77e5f6c084457f7661864c60a1b496a2a25cdc13"
+  },
+  "journal": {
+    "path": "project/journal/2026-10-09-garage60-capture-source.md",
+    "sha256": "8dfec495b8e22a458abdc6c429aca00cb75322d117170b8ef8e8d26b0033f90b"
+  },
+  "frozen51SourcesUnchanged": true,
+  "primaryAPISources": [
+    "https://www.w3.org/TR/mediacapture-fromelement/#html-canvas-element-media-capture-extensions",
+    "https://www.w3.org/TR/mediastream-recording/"
+  ],
+  "requestedFPS": 60,
+  "observedFPS": null,
+  "captureScope": "Actual selected Garage WebGL surface1:1 with capture-owned measured render/RAF HUD; DOM controls excluded.",
+  "proof": "Decoded PTS/count/hash cadence independent of render/RAF timestamps; MP4 conversion lossless frame/pixel/timing parity; no25FPS upscale/clock injection/interpolation.",
+  "limits": [
+    "Actual headless Metal copy and H264/VP8 support remain unexecuted; request60 never substitutes measured encoded FPS.",
+    "Below60 or incomplete orbit remains unaccepted and nonzero exit; even nominal60 requires parent real-time playback.",
+    "No game/asset/garment51 source edited in this capture unit; only parent may judge art or performance."
+  ],
+  "scheduler": "Increasing nearest chronological nominal slots floor((at-start)/period+.5); one NEW render per increasing slot, no catch-up requests/deadline reset. Actual timestamps unchanged.",
+  "schedulerFixtures": {
+    "path": "docs/evidence/rider-rebuild/garage60-capture/scheduler-fixtures.json",
+    "sha256": "6559fe95f889473d7fa05276bef875fcaf27a1cdf9d43b6805a4555e0819539e"
+  }
+}
