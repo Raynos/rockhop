@@ -1,7 +1,7 @@
 # Rebuild one dressed rider from first principles
 
 Created: 2026-10-07 · writer: Codex / gpt-6.1-sol · asks312/317–322.
-**Status: uncompleted; selected dressed rider and original actions played in private Garage/game; sixth-choice comparison built and uploaded; anatomical seated corrective and local cuff reconstruction active; accepted milestones0/6.**
+**Status: uncompleted; selected dressed actual forward/back gameplay filmed on both bikes; complete dressed gameplay native saved; editable control and cuff/ankle repairs active; accepted milestones0/6.**
 Current construction authority: [Astra workflow correction below](#astra-workflow-correction-and-advisory-cadence).
 Pending donor-registration experiments are historical controls, not the next production route.
 Execution owner: rider remodel agent #2, session01a117db-406b-7b70-a14f-d614b1d8f6e5.
@@ -34,18 +34,40 @@ H0 is October 8, 14:05 Panama / 19:05 UTC; target finish is October 9 at the sam
 | Target | Complete visible deliverable | Owner |
 | --- | --- | --- |
 | H+4 — missed; remains unaccepted | Selected dressed rider in convincing standing/deep seated/return on both bikes, clean cuff/ankle overlap, visible hands/hips/profiles | Native lead36 and production builders; parent judges |
-| H+10 | Compact selected-appearance production candidate and genuine full/LOD, compared moving in actual Garage | Wardrobe/production lead28 and native lead29 |
-| H+16 | Same master with editable Blender controls, complete generic and bike actions, consumed engine deformation/contact | Animation/runtime lead24 and native lead29 |
+| H+10 | Compact selected-appearance production candidate and genuine full/LOD, compared moving in actual Garage | Production constructor37 and parent |
+| H+16 | Same master with editable Blender controls, complete generic and bike actions, consumed engine deformation/contact | Native lead36, wardrobe integration38 and parent |
 | H+24 | Exact candidate reviewed on desktop/physical iPhone, bot/stranger/replay/restart and checked release/live SHA | Parent; human/device decisions through HR-23 |
 
-Native lead36 succeeds retired leads24/29 and owns actual gameplay-control
-reconstruction and replay on the complete selected master. Boot constructor37
-continues the measured folded-triangle repair with exact source ancestry.
-Existing wardrobe lead28 and earlier construction sources remain preserved
-work; their source preparation is not a completed wardrobe result. The parent
-schedules actual heavy jobs serially, integrates handoffs and judges played
-complete outfits. Source work proceeds concurrently. These are final-intent
-selected assets; no generic substitutions.
+Native lead36 owns conditioned live controls and deterministic generic-action
+activation. Wardrobe lead38 owns completed glove/sleeve transfer onto the latest
+complete dressed master. Boot constructor37 owns the measured folded-triangle
+production repair with exact selected-source ancestry. Earlier28/24/29 sources
+remain useful preserved work; preparation is not a completed rider. The parent
+schedules heavy jobs serially, integrates handoffs and judges played outfits;
+source construction proceeds concurrently.
+
+**Current execution, October 8, 19:35 Panama:** Both real-input Rookie03 and
+Pro04 films are naturally played and shared, showing forward/up, backward
+crouch and neutral return in the selected high-resolution outfit. Wrist holes,
+ankle overlap and finite seated contact remain rejected. The earlier stand-up
+clip does not satisfy gameplay motion. Save-first native10 now retains both
+241-frame sequences on the full selected outfit (native `35815e62…`), with
+independent preservation and reopened replay qualification still pending.
+
+Actual diagnostic03 reproduces the near-straight arm error only when IK is
+active: 1.184200 mm versus 0.028859 mm for the saved keyed FK prepose under the
+unchanged 0.1 mm bound. Use explicit editable per-limb FK/IK conditioning and
+safe action activation; stop solver/pole/iteration campaigns. Preserve original
+75 rest bones, selected appearance and useful jeans weights.
+
+Next actual results: qualify saved native10; execute glove04 and save-first
+sleeve38, then transfer only qualified wardrobe and play a fresh real export;
+qualify conditioned controls36 on the same master. Census35/constructor37
+provide the independent compact-boot path. All R0–R5 remain open; no additional
+sculpt is justified before these actual gameplay poses and clothing defects
+are reviewed. Required gate41 passes exact clear/crash/restart but misses boot
+ready by 5.071625 ms under observed shared load; no release/device pass.
+
 
 **Immediate gameplay priority, October 8, 16:30 Panama (ask356):** The user
 correctly identifies that the displayed stand-up/rest diagnostic does not show
