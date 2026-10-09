@@ -89,3 +89,9 @@ Finding: Saved15 verifies in its original numerical runtime, with every actual b
 Validation: Unchanged original guard exits0 in172.160s; all482 frames and36462 edges measured. Parent inspected both endpoint sheets and retained the exact binding/report.
 
 Limits: Painter views show shoulder patches but cannot establish body penetration; actual posed contact, native/bake and complete dressed moving art remain open.
+
+Finding: Classify shoulder patches using actual garment/body triangles at both bikes forward, backward and worst axilla poses.
+
+Validation: Parent full186line review, AST/hash/all15pins and frozen triangulation/pose/crossing function scopes pass. No authoring function or new field solve is invoked.
+
+Limits: Source checkpoint; finite crossings do not prove enclosure, native/GPU parity or art. Six-pose execution remains unrun.
