@@ -587,3 +587,7 @@ Status: **open** (nobody on it) · **in flight** (owner named) · **needs pick**
 | 367 | Explain the phone screenshot showing a blue helmet and Loading Mustard Remastered, then fix the visible mismatch. | **done — screenshot mismatch removed from live game** | Photo exposed procedural fallback during pending load. Required real sources now finish before menu; original Mustard comparison uses its genuine authored asset. Live source and13 actual ASTC maps verified. |
 
 | 368 | Remove the stale placeholder rider and helmet shown while the remaster loads. | **done — procedural rider and blue helmet removed and deployed** | Deleted616lines of fake rider geometry; retained IK math. Startup holder containszero meshes; required asset failure shows loader retry. Live source/visibility guard passes withno substitution. |
+
+| 369 | Make correct bilateral hand/glove grip on actual handlebars the next rider priority, preserving anatomy through riding leans. | **active — focused grip correction; broad remaster remains paused** | User live photos show selected near glove hanging below bar. Inspect actual palm/digit axes, finite grips and deformation; retain selected assets, shared75 rig and physics. Require played both-bike forward/back lean proof before promotion. |
+
+| 370 | Explain what remains to shrink the102MB remaster further. | **active — measure final geometry/texture share** | Explain production topology and texture budgeting from selected source bytes; no new appearance reduction or generic substitution authorized by this question. |
