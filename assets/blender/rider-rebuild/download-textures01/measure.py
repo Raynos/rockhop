@@ -1,13 +1,18 @@
 #!/usr/bin/env python3
 """Compare source decoded texels with pinned runtime RGBA transcode in bounded row chunks."""
-import json, math, sys
+import argparse, json, math
 from pathlib import Path
 import numpy as np
 from PIL import Image
 
-out=Path('harness/out/rider-rebuild/download-opt01/textures01')
-variant=sys.argv[1] if len(sys.argv)>1 else 'uastc'
-selected=set(map(int,sys.argv[2].split(','))) if len(sys.argv)>2 else None
+parser=argparse.ArgumentParser()
+parser.add_argument('variant',nargs='?',default='uastc')
+parser.add_argument('images',nargs='?')
+parser.add_argument('--out',type=Path,default=Path('harness/out/rider-rebuild/download-opt01/textures01'))
+args=parser.parse_args()
+out=args.out
+variant=args.variant
+selected=set(map(int,args.images.split(','))) if args.images else None
 rows=[]
 for image in json.loads((out/'inventory.json').read_text())['images']:
     if selected is not None and image['image'] not in selected:
