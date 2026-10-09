@@ -52,8 +52,12 @@ export function swBoot(enabled: boolean): Promise<void> {
     };
     let timer = setTimeout(done, CAP_MS);
     const changed = (): void => {
-      if (installing?.state === 'installed') adopt(installing);
-      else if (installing?.state !== 'installing') done();
+      if (installing?.state === 'installed') {
+        // Activation belongs to the admitted handover, not the install watch.
+        // Its next statechange must not cancel reload before clients.claim().
+        installing.removeEventListener('statechange', changed);
+        adopt(installing);
+      } else if (installing?.state !== 'installing') done();
     };
     /** A newer build is installed: activate it and come up on it, instead of booting the old one. */
     const adopt = (w: ServiceWorker | null): void => {

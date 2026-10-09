@@ -53,6 +53,20 @@ it('still reloads once for an update adopted within the startup handover', async
   await vi.advanceTimersByTimeAsync(2500); await boot;
 });
 
+it('keeps a timely installing update handover through activation', async () => {
+  const next = worker(); reg.installing = next;
+  const boot = swBoot(true); await flush();
+  next.state = 'installed'; next.dispatchEvent(new Event('statechange'));
+  expect(next.postMessage).toHaveBeenCalledWith({ type: 'SKIP_WAITING' });
+  next.state = 'activating'; next.dispatchEvent(new Event('statechange'));
+  next.state = 'activated'; next.dispatchEvent(new Event('statechange'));
+  sw.dispatchEvent(new Event('controllerchange'));
+  expect(reload).toHaveBeenCalledTimes(1);
+  await vi.advanceTimersByTimeAsync(2500); await boot;
+  sw.dispatchEvent(new Event('controllerchange'));
+  expect(reload).toHaveBeenCalledTimes(1);
+});
+
 it('finishes first-install control without reloading the new visitor', async () => {
   sw.controller = null; const boot = swBoot(true); await flush();
   sw.dispatchEvent(new Event('controllerchange')); await boot;
