@@ -1,0 +1,229 @@
+{
+  "accepted": false,
+  "input": {
+    "path": "harness/out/rider-rebuild/selected-ankle-field42/runtime02/rider.glb",
+    "sha256": "127e316a8ff7910a4918b63f83e086e4e658062f102c73f17d0ee2f956750649"
+  },
+  "mode": "field",
+  "limits": "Deterministic centroid samples, not exhaustive Hausdorff or moving-art acceptance",
+  "meshes": [
+    {
+      "mesh": 0,
+      "name": "LocallyRepairedSelectedDenseBoot.L.004",
+      "samples": 101823,
+      "sourceTriangles": 610934,
+      "candidateTriangles": 397474,
+      "triangleStep": 6,
+      "maxSurfaceDistanceMeters": 0.00014994355220670504,
+      "meanSurfaceDistanceMeters": 0.000003926526414538971,
+      "maxNormalAngleDegrees": 168.9676279403741,
+      "meanNormalAngleDegrees": 0.9227183484745795,
+      "maxUvTexels4096": 5698.408573749502,
+      "meanUvTexels4096": 79.73419379193645,
+      "maxInterpolatedNativeJointWeightL1": 0.00040496349187563174,
+      "thresholds": {
+        "geometryMeters": 0.0002,
+        "normalDegrees": 0.1,
+        "uvTexels4096": 0.25
+      },
+      "failures": {
+        "geometry": 0,
+        "normal": 54959,
+        "uv": 6271
+      },
+      "worst": {
+        "geometry": {
+          "sourceTriangle": 181368,
+          "candidateTriangle": 120044,
+          "meters": 0.00014994355220670504
+        },
+        "normal": {
+          "sourceTriangle": 170886,
+          "candidateTriangle": 113969,
+          "degrees": 168.9676279403741
+        },
+        "uv": {
+          "sourceTriangle": 185520,
+          "candidateTriangle": 122348,
+          "texels4096": 5698.408573749502
+        }
+      },
+      "caveat": "Closest geometry at coincident layered surfaces/chart seams can select another source sheet; failures need witnesses, never silent acceptance"
+    },
+    {
+      "mesh": 1,
+      "name": "LocallyRepairedSelectedDenseBoot.R.005",
+      "samples": 101823,
+      "sourceTriangles": 610934,
+      "candidateTriangles": 395452,
+      "triangleStep": 6,
+      "maxSurfaceDistanceMeters": 0.00017288194217781062,
+      "meanSurfaceDistanceMeters": 0.000003947795699459066,
+      "maxNormalAngleDegrees": 174.931864532485,
+      "meanNormalAngleDegrees": 0.9213624194571219,
+      "maxUvTexels4096": 5698.410019590585,
+      "meanUvTexels4096": 80.65003358716282,
+      "maxInterpolatedNativeJointWeightL1": 0.0003672471862782578,
+      "thresholds": {
+        "geometryMeters": 0.0002,
+        "normalDegrees": 0.1,
+        "uvTexels4096": 0.25
+      },
+      "failures": {
+        "geometry": 0,
+        "normal": 55316,
+        "uv": 6292
+      },
+      "worst": {
+        "geometry": {
+          "sourceTriangle": 145908,
+          "candidateTriangle": 98915,
+          "meters": 0.00017288194217781062
+        },
+        "normal": {
+          "sourceTriangle": 162132,
+          "candidateTriangle": 107892,
+          "degrees": 174.931864532485
+        },
+        "uv": {
+          "sourceTriangle": 185520,
+          "candidateTriangle": 122373,
+          "texels4096": 5698.410019590585
+        }
+      },
+      "caveat": "Closest geometry at coincident layered surfaces/chart seams can select another source sheet; failures need witnesses, never silent acceptance"
+    },
+    {
+      "mesh": 2,
+      "name": "Gloves__LocallySculptedSelected04.L",
+      "samples": 113829,
+      "sourceTriangles": 569142,
+      "candidateTriangles": 315762,
+      "triangleStep": 5,
+      "maxSurfaceDistanceMeters": 0.00016784373023423133,
+      "meanSurfaceDistanceMeters": 0.000004677755561723191,
+      "maxNormalAngleDegrees": 179.33256103112592,
+      "meanNormalAngleDegrees": 1.128347029270429,
+      "maxUvTexels4096": 5612.059501230784,
+      "meanUvTexels4096": 109.33953043234952,
+      "maxInterpolatedNativeJointWeightL1": 2.000000029627324,
+      "thresholds": {
+        "geometryMeters": 0.0002,
+        "normalDegrees": 0.1,
+        "uvTexels4096": 0.25
+      },
+      "failures": {
+        "geometry": 0,
+        "normal": 77518,
+        "uv": 12577
+      },
+      "worst": {
+        "geometry": {
+          "sourceTriangle": 328795,
+          "candidateTriangle": 191980,
+          "meters": 0.00016784373023423133
+        },
+        "normal": {
+          "sourceTriangle": 494775,
+          "candidateTriangle": 284543,
+          "degrees": 179.33256103112592
+        },
+        "uv": {
+          "sourceTriangle": 548755,
+          "candidateTriangle": 308169,
+          "texels4096": 5612.059501230784
+        }
+      },
+      "caveat": "Closest geometry at coincident layered surfaces/chart seams can select another source sheet; failures need witnesses, never silent acceptance"
+    },
+    {
+      "mesh": 3,
+      "name": "Gloves__LocallySculptedSelected04.R",
+      "samples": 113829,
+      "sourceTriangles": 569142,
+      "candidateTriangles": 315710,
+      "triangleStep": 5,
+      "maxSurfaceDistanceMeters": 0.000171254439286195,
+      "meanSurfaceDistanceMeters": 0.00000461853236832187,
+      "maxNormalAngleDegrees": 179.37819419718443,
+      "meanNormalAngleDegrees": 1.115905501222888,
+      "maxUvTexels4096": 5612.065971153529,
+      "meanUvTexels4096": 109.78763551400081,
+      "maxInterpolatedNativeJointWeightL1": 2.000000013249301,
+      "thresholds": {
+        "geometryMeters": 0.0002,
+        "normalDegrees": 0.1,
+        "uvTexels4096": 0.25
+      },
+      "failures": {
+        "geometry": 0,
+        "normal": 77332,
+        "uv": 12584
+      },
+      "worst": {
+        "geometry": {
+          "sourceTriangle": 314455,
+          "candidateTriangle": 182546,
+          "meters": 0.000171254439286195
+        },
+        "normal": {
+          "sourceTriangle": 494775,
+          "candidateTriangle": 284593,
+          "degrees": 179.37819419718443
+        },
+        "uv": {
+          "sourceTriangle": 548755,
+          "candidateTriangle": 307888,
+          "texels4096": 5612.065971153529
+        }
+      },
+      "caveat": "Closest geometry at coincident layered surfaces/chart seams can select another source sheet; failures need witnesses, never silent acceptance"
+    },
+    {
+      "mesh": 5,
+      "name": "painted.obj.002",
+      "samples": 102414,
+      "sourceTriangles": 921722,
+      "candidateTriangles": 830502,
+      "triangleStep": 9,
+      "maxSurfaceDistanceMeters": 0.0001385061277345311,
+      "meanSurfaceDistanceMeters": 9.21703409334829e-7,
+      "maxNormalAngleDegrees": 121.61979000295477,
+      "meanNormalAngleDegrees": 0.2578276014947481,
+      "maxUvTexels4096": 5547.990447673215,
+      "meanUvTexels4096": 39.17439210374465,
+      "maxInterpolatedNativeJointWeightL1": 0.019198146031308837,
+      "thresholds": {
+        "geometryMeters": 0.0002,
+        "normalDegrees": 0.1,
+        "uvTexels4096": 0.25
+      },
+      "failures": {
+        "geometry": 0,
+        "normal": 22394,
+        "uv": 1615
+      },
+      "worst": {
+        "geometry": {
+          "sourceTriangle": 649017,
+          "candidateTriangle": 585472,
+          "meters": 0.0001385061277345311
+        },
+        "uv": {
+          "sourceTriangle": 22077,
+          "candidateTriangle": 20060,
+          "texels4096": 5547.990447673215
+        },
+        "normal": {
+          "sourceTriangle": 910053,
+          "candidateTriangle": 820579,
+          "degrees": 121.61979000295477
+        }
+      },
+      "caveat": "Closest geometry at coincident layered surfaces/chart seams can select another source sheet; failures need witnesses, never silent acceptance"
+    }
+  ],
+  "passStrictProbes": false,
+  "elapsedSeconds": 3.977950292,
+  "peakRssBytes": 641105920
+}

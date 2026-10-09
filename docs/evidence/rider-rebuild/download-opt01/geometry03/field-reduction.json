@@ -1,0 +1,137 @@
+{
+  "schema": "selected-attribute-reduction/v1",
+  "accepted": false,
+  "source": {
+    "path": "harness/out/rider-rebuild/selected-ankle-field42/runtime02/rider.glb",
+    "sha256": "127e316a8ff7910a4918b63f83e086e4e658062f102c73f17d0ee2f956750649"
+  },
+  "mode": "field",
+  "meshes": [
+    {
+      "mesh": 0,
+      "name": "LocallyRepairedSelectedDenseBoot.L.004",
+      "originalTriangles": 610934,
+      "targetTriangles": 91640,
+      "triangles": 397474,
+      "triangleReductionPercent": 34.939944412980786,
+      "referencedVertices": 312661,
+      "originalVertices": 466146,
+      "aggregateEstimatedErrorMeters": 0.00019911867275368422,
+      "fullyLockedRows": 5734,
+      "protectedSeamRows": 0,
+      "jointBoundaryPositions": 3686,
+      "borderOrNonmanifoldPositions": 0,
+      "indices": {
+        "path": "harness/out/rider-rebuild/download-opt01/geometry03/field/mesh0-indices.u32",
+        "sha256": "1c8f9c37f97c2da2a2d24007c140041a53ad4440f1d36e579ce6cf0a312b0215",
+        "bytes": 4769688
+      },
+      "elapsedSeconds": 1.6692652500000003
+    },
+    {
+      "mesh": 1,
+      "name": "LocallyRepairedSelectedDenseBoot.R.005",
+      "originalTriangles": 610934,
+      "targetTriangles": 91640,
+      "triangles": 395452,
+      "triangleReductionPercent": 35.27091306098531,
+      "referencedVertices": 311468,
+      "originalVertices": 466146,
+      "aggregateEstimatedErrorMeters": 0.00019984626851510257,
+      "fullyLockedRows": 5630,
+      "protectedSeamRows": 0,
+      "jointBoundaryPositions": 3644,
+      "borderOrNonmanifoldPositions": 0,
+      "indices": {
+        "path": "harness/out/rider-rebuild/download-opt01/geometry03/field/mesh1-indices.u32",
+        "sha256": "0864e329a138d8a441bdacb7affcc063f379e235876325fc1bcee7990a085c3c",
+        "bytes": 4745424
+      },
+      "elapsedSeconds": 0.8143725420000001
+    },
+    {
+      "mesh": 2,
+      "name": "Gloves__LocallySculptedSelected04.L",
+      "originalTriangles": 569142,
+      "targetTriangles": 142285,
+      "triangles": 315762,
+      "triangleReductionPercent": 44.51964536091169,
+      "referencedVertices": 256201,
+      "originalVertices": 439646,
+      "aggregateEstimatedErrorMeters": 0.00019953369337599725,
+      "fullyLockedRows": 69603,
+      "protectedSeamRows": 0,
+      "jointBoundaryPositions": 45293,
+      "borderOrNonmanifoldPositions": 0,
+      "indices": {
+        "path": "harness/out/rider-rebuild/download-opt01/geometry03/field/mesh2-indices.u32",
+        "sha256": "84c80385af9d8370ec8c8328bac9eb85679aca1e3cc98ffc67a48cc1dd8f2667",
+        "bytes": 3789144
+      },
+      "elapsedSeconds": 0.8313826670000003
+    },
+    {
+      "mesh": 3,
+      "name": "Gloves__LocallySculptedSelected04.R",
+      "originalTriangles": 569142,
+      "targetTriangles": 142285,
+      "triangles": 315710,
+      "triangleReductionPercent": 44.52878192085631,
+      "referencedVertices": 256291,
+      "originalVertices": 439646,
+      "aggregateEstimatedErrorMeters": 0.00019991827139165252,
+      "fullyLockedRows": 69511,
+      "protectedSeamRows": 0,
+      "jointBoundaryPositions": 45213,
+      "borderOrNonmanifoldPositions": 0,
+      "indices": {
+        "path": "harness/out/rider-rebuild/download-opt01/geometry03/field/mesh3-indices.u32",
+        "sha256": "671b6face6413d6beeaabb7523f3caf81eab811c738ba1ab013e7cda3ed5550e",
+        "bytes": 3788520
+      },
+      "elapsedSeconds": 1.072024209
+    },
+    {
+      "mesh": 5,
+      "name": "painted.obj.002",
+      "originalTriangles": 921722,
+      "targetTriangles": 92172,
+      "triangles": 830502,
+      "triangleReductionPercent": 9.896693363074771,
+      "referencedVertices": 2388400,
+      "originalVertices": 2761252,
+      "aggregateEstimatedErrorMeters": 0.00019733158114831895,
+      "fullyLockedRows": 606631,
+      "protectedSeamRows": 0,
+      "jointBoundaryPositions": 99604,
+      "borderOrNonmanifoldPositions": 61,
+      "indices": {
+        "path": "harness/out/rider-rebuild/download-opt01/geometry03/field/mesh5-indices.u32",
+        "sha256": "269d71983cc75246155f2ad782a4e18fda7b2a825ed0d1001803b871184bccef",
+        "bytes": 9966024
+      },
+      "elapsedSeconds": 5.080247457999999
+    }
+  ],
+  "errorMeaning": "Meshopt aggregate quadric estimate, not a hard surface or deformation bound",
+  "settings": {
+    "targetErrorAbsoluteMeters": 0.0002,
+    "normalWeight": 0.1,
+    "uvWeight": 8,
+    "skinWeightWeight": 4,
+    "targetTriangleRatio": {
+      "boots": 0.15,
+      "gloves": 0.25,
+      "hoodie": 0.1
+    },
+    "flags": [
+      "ErrorAbsolute",
+      "LockBorder",
+      "Regularize",
+      "Permissive"
+    ],
+    "uvSeamPolicy": "Attribute-weighted only; must pass independent UV/appearance guard"
+  },
+  "elapsedSeconds": 9.661302292,
+  "peakRssBytes": 1544257536
+}
