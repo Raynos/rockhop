@@ -17,3 +17,9 @@ Finding: The right full source preparation refuses an eight-sector thumb-root ci
 Validation: Original guard0.346s exit1, source/recipe/worker pins match, candidateAttempts0, no native mutation. Actual failure and runtime retained.
 
 Limits: No reduced glove, fit, bake or motion pass. Correct actual joint-plane/cuff-rim source ancestry without changing surface or allocation gates.
+
+Finding: Replace invalid glove root/cuff construction assumptions with actual source-plane intersections and independently owned nonplanar sewn rims. Retain complete source fans and every stored field; separately preserve the known left singular fan and author derivative hard corner normals.
+
+Validation: Parent fully reviewed selector168lines, both-side wrappers/diffs and98line native seam. All AST/Node/pins pass; actual read-only source inventories1.771s/0.828s,356centers each. Original gates and one-call policy unchanged.
+
+Limits: Source checkpoint only; no simplification, wearer, selected bake, motion, engine or device result. Raw left62 normal failure stays visible; source is immutable.
