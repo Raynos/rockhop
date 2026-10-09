@@ -1,0 +1,501 @@
+{
+  "status": "READ_ONLY_ACTUAL_FROZEN_SUPPORT_FAILURE_REPRODUCED",
+  "acceptedArt": false,
+  "nativeGeometryChanged": false,
+  "nativeSaved": false,
+  "solverProjectionExecuted": false,
+  "sourceInput": {
+    "path": "assets/blender/rider-rebuild/selected-sleeve-component47/input01.json",
+    "sha256": "7426ed1631f88fd4f6dc6c951ce10fb09d257c739add94f553243a8a3e2e6599"
+  },
+  "sourceConstructor": {
+    "path": "assets/blender/rider-rebuild/selected-sleeve-component47/sleeve47.py",
+    "sha256": "a90e56476dffc95b1089a6d2af6df75e75fd3bfe10df173a9135d55014ea3b84"
+  },
+  "diagnosticRecipe": {
+    "path": "assets/blender/rider-rebuild/selected-sleeve-support49/diagnose.py",
+    "sha256": "e80b2b27415bc556c56840547e3585a26b57d0094f2092dd534c0be0843c5ae3"
+  },
+  "fullReference": {
+    "path": "harness/out/rider-rebuild/selected-seated-anatomical09/reference05/original-full-reference.npz",
+    "sha256": "01f752d72e94dbab81cc7a193adbd2dd7bba26df919b48454d8937fa9665dcc5"
+  },
+  "canonicalBody": {
+    "path": "docs/evidence/rider-rebuild/native-hand-repair01/native02/native-body.npz",
+    "sha256": "e62e9969503b7761e99463eccc3ca7be39e0c230a2948f2f87a224db52d0f9a2"
+  },
+  "fieldSettingsUnchanged": {
+    "fieldCellM": 0.04,
+    "clothClearanceM": 0.0025,
+    "contactSolveMarginM": 0.0001,
+    "contactReserveM": 0.003,
+    "contactPasses": 8,
+    "projectionIterations": 256,
+    "numericalContactToleranceM": 2e-05,
+    "maximumDerivativeBound": 0.85,
+    "maximumDisplacementM": 0.045
+  },
+  "support": {
+    "contactCoreNodes": 968,
+    "elasticSupportNodes": 3729
+  },
+  "totalConstraintSamples": 1500225,
+  "constraintVertices": 656420,
+  "constraintCentroids": 843805,
+  "affectedOriginalTriangles": 843805,
+  "frozenDeficientSamples": 9,
+  "frozenDeficientVertices": 7,
+  "frozenDeficientCentroids": 2,
+  "frozenMinimumGapM": 0.00228733173571527,
+  "globalMinimum": {
+    "sampleIndex": 1336853,
+    "classification": {
+      "kind": "centroid",
+      "support": "movable",
+      "clothDominantBone": "DEF-upper_arm.L",
+      "bodyDominantBone": "DEF-upper_arm.L",
+      "bodyRegionIds": [
+        1
+      ],
+      "sourceInnerFaceOrIncidentVertexSides": [],
+      "anyOriginalArmSeed": true
+    },
+    "originalNativeVertexId": null,
+    "originalNativeFaceId": 734276,
+    "clothVertices": [
+      676352,
+      676339,
+      676344
+    ],
+    "worldPoint": [
+      0.1750047355890274,
+      0.02354886382818222,
+      1.3649895985921223
+    ],
+    "sourcePoints": [
+      [
+        0.3384160101413727,
+        0.04459699988365173,
+        0.301813006401062
+      ],
+      [
+        0.3384160101413727,
+        0.04984400048851967,
+        0.3025209903717041
+      ],
+      [
+        0.3381820023059845,
+        0.04459699988365173,
+        0.30168798565864563
+      ]
+    ],
+    "signedFullReferenceGapM": -0.06894920021295547,
+    "requiredDisplacementAlongNormalM": 0.07154920021295548,
+    "effectiveActiveWeightSquared": 0.2141365644672686,
+    "activeCornerIds": 8,
+    "initialUnsafeVertices": [
+      true,
+      true,
+      true
+    ],
+    "namedClothSkinFieldMean": {
+      "DEF-upper_arm.L": 0.5142874221007029,
+      "DEF-spine.002": 0.23885037998358405,
+      "DEF-upper_arm.L.001": 0.16046363363663355,
+      "DEF-spine.001": 0.08639853447675705
+    },
+    "nearestFullReference": {
+      "fullReferenceTriangleId": 9838,
+      "fullReferenceVertexIds": [
+        6809,
+        6826,
+        6828
+      ],
+      "sourceVertexIds": [
+        8344,
+        8361,
+        8363
+      ],
+      "regionIds": [
+        1,
+        1,
+        1
+      ],
+      "namedSkinFieldMean": {
+        "DEF-upper_arm.L": 0.7598108053207397,
+        "DEF-shoulder.L": 0.1576476568977038,
+        "DEF-upper_arm.L.001": 0.04897271282970905,
+        "DEF-spine.002": 0.03356880446275075
+      },
+      "canonicalNative02TriangleIds": [
+        18873
+      ],
+      "canonicalCoordinatesExact": true
+    },
+    "isFrozenDeficientSample": false
+  },
+  "classifications": [
+    {
+      "classification": {
+        "anyOriginalArmSeed": false,
+        "bodyDominantBone": "DEF-spine.006",
+        "bodyRegionIds": [
+          0
+        ],
+        "clothDominantBone": "DEF-spine.006",
+        "kind": "centroid",
+        "sourceInnerFaceOrIncidentVertexSides": [],
+        "support": "no_active_ids"
+      },
+      "count": 2
+    },
+    {
+      "classification": {
+        "anyOriginalArmSeed": false,
+        "bodyDominantBone": "DEF-spine.006",
+        "bodyRegionIds": [
+          0
+        ],
+        "clothDominantBone": "DEF-spine.006",
+        "kind": "vertex",
+        "sourceInnerFaceOrIncidentVertexSides": [],
+        "support": "no_active_ids"
+      },
+      "count": 7
+    }
+  ],
+  "boundedWitnesses": [
+    {
+      "sampleIndex": 601087,
+      "classification": {
+        "kind": "vertex",
+        "support": "no_active_ids",
+        "clothDominantBone": "DEF-spine.006",
+        "bodyDominantBone": "DEF-spine.006",
+        "bodyRegionIds": [
+          0
+        ],
+        "sourceInnerFaceOrIncidentVertexSides": [],
+        "anyOriginalArmSeed": false
+      },
+      "originalNativeVertexId": 647753,
+      "originalNativeFaceId": null,
+      "clothVertices": [
+        647753
+      ],
+      "worldPoint": [
+        0.016549281775951385,
+        -0.07234202325344086,
+        1.5202664136886597
+      ],
+      "sourcePoints": [
+        [
+          0.01836399920284748,
+          -0.14468400180339813,
+          0.6217399835586548
+        ]
+      ],
+      "signedFullReferenceGapM": 0.00228733173571527,
+      "requiredDisplacementAlongNormalM": 0.00031266826428472984,
+      "effectiveActiveWeightSquared": 0.0,
+      "activeCornerIds": 0,
+      "initialUnsafeVertices": [
+        true
+      ],
+      "namedClothSkinFieldMean": {
+        "DEF-spine.006": 0.46294134855270386,
+        "DEF-spine.005": 0.35584837198257446,
+        "DEF-spine.004": 0.18121026456356049
+      },
+      "nearestFullReference": {
+        "fullReferenceTriangleId": 75476,
+        "fullReferenceVertexIds": [
+          30040,
+          30184,
+          30183
+        ],
+        "sourceVertexIds": [
+          -1,
+          -1,
+          -1
+        ],
+        "regionIds": [
+          0,
+          0,
+          0
+        ],
+        "namedSkinFieldMean": {
+          "DEF-spine.006": 0.429726501305898,
+          "DEF-spine.005": 0.36636772751808167,
+          "DEF-spine.004": 0.2039057711760203
+        },
+        "canonicalNative02TriangleIds": [],
+        "canonicalCoordinatesExact": false
+      },
+      "incidentAffectedOriginalFaceCount": 1,
+      "incidentAffectedOriginalFaceIdsFirst16": [
+        475705
+      ],
+      "originalVertexTouchedByAnyActiveId": false,
+      "scheduledRemovedIncidentFaceCount": 0
+    },
+    {
+      "sampleIndex": 603253,
+      "classification": {
+        "kind": "vertex",
+        "support": "no_active_ids",
+        "clothDominantBone": "DEF-spine.006",
+        "bodyDominantBone": "DEF-spine.006",
+        "bodyRegionIds": [
+          0
+        ],
+        "sourceInnerFaceOrIncidentVertexSides": [],
+        "anyOriginalArmSeed": false
+      },
+      "originalNativeVertexId": 649938,
+      "originalNativeFaceId": null,
+      "clothVertices": [
+        649938
+      ],
+      "worldPoint": [
+        0.016549281775951385,
+        -0.07234202325344086,
+        1.5202664136886597
+      ],
+      "sourcePoints": [
+        [
+          0.01836399920284748,
+          -0.14468400180339813,
+          0.6217399835586548
+        ]
+      ],
+      "signedFullReferenceGapM": 0.00228733173571527,
+      "requiredDisplacementAlongNormalM": 0.00031266826428472984,
+      "effectiveActiveWeightSquared": 0.0,
+      "activeCornerIds": 0,
+      "initialUnsafeVertices": [
+        true
+      ],
+      "namedClothSkinFieldMean": {
+        "DEF-spine.006": 0.46294134855270386,
+        "DEF-spine.005": 0.35584837198257446,
+        "DEF-spine.004": 0.18121026456356049
+      },
+      "nearestFullReference": {
+        "fullReferenceTriangleId": 75476,
+        "fullReferenceVertexIds": [
+          30040,
+          30184,
+          30183
+        ],
+        "sourceVertexIds": [
+          -1,
+          -1,
+          -1
+        ],
+        "regionIds": [
+          0,
+          0,
+          0
+        ],
+        "namedSkinFieldMean": {
+          "DEF-spine.006": 0.429726501305898,
+          "DEF-spine.005": 0.36636772751808167,
+          "DEF-spine.004": 0.2039057711760203
+        },
+        "canonicalNative02TriangleIds": [],
+        "canonicalCoordinatesExact": false
+      },
+      "incidentAffectedOriginalFaceCount": 1,
+      "incidentAffectedOriginalFaceIdsFirst16": [
+        478753
+      ],
+      "originalVertexTouchedByAnyActiveId": false,
+      "scheduledRemovedIncidentFaceCount": 0
+    },
+    {
+      "sampleIndex": 1092542,
+      "classification": {
+        "kind": "centroid",
+        "support": "no_active_ids",
+        "clothDominantBone": "DEF-spine.006",
+        "bodyDominantBone": "DEF-spine.006",
+        "bodyRegionIds": [
+          0
+        ],
+        "sourceInnerFaceOrIncidentVertexSides": [],
+        "anyOriginalArmSeed": false
+      },
+      "originalNativeVertexId": null,
+      "originalNativeFaceId": 478753,
+      "clothVertices": [
+        649937,
+        649938,
+        649939
+      ],
+      "worldPoint": [
+        0.016667840381463368,
+        -0.07220935821533203,
+        1.5201727549235027
+      ],
+      "sourcePoints": [
+        [
+          0.01836399920284748,
+          -0.14428600668907166,
+          0.6211450099945068
+        ],
+        [
+          0.01836399920284748,
+          -0.14468400180339813,
+          0.6217399835586548
+        ],
+        [
+          0.019047999754548073,
+          -0.14428600668907166,
+          0.6217399835586548
+        ]
+      ],
+      "signedFullReferenceGapM": 0.0022909778635948896,
+      "requiredDisplacementAlongNormalM": 0.00030902213640511024,
+      "effectiveActiveWeightSquared": 0.0,
+      "activeCornerIds": 0,
+      "initialUnsafeVertices": [
+        true,
+        true,
+        true
+      ],
+      "namedClothSkinFieldMean": {
+        "DEF-spine.006": 0.4588778614997864,
+        "DEF-spine.005": 0.3571332196394602,
+        "DEF-spine.004": 0.1839889238278071
+      },
+      "nearestFullReference": {
+        "fullReferenceTriangleId": 75476,
+        "fullReferenceVertexIds": [
+          30040,
+          30184,
+          30183
+        ],
+        "sourceVertexIds": [
+          -1,
+          -1,
+          -1
+        ],
+        "regionIds": [
+          0,
+          0,
+          0
+        ],
+        "namedSkinFieldMean": {
+          "DEF-spine.006": 0.429726501305898,
+          "DEF-spine.005": 0.36636772751808167,
+          "DEF-spine.004": 0.2039057711760203
+        },
+        "canonicalNative02TriangleIds": [],
+        "canonicalCoordinatesExact": false
+      }
+    },
+    {
+      "sampleIndex": 1089816,
+      "classification": {
+        "kind": "centroid",
+        "support": "no_active_ids",
+        "clothDominantBone": "DEF-spine.006",
+        "bodyDominantBone": "DEF-spine.006",
+        "bodyRegionIds": [
+          0
+        ],
+        "sourceInnerFaceOrIncidentVertexSides": [],
+        "anyOriginalArmSeed": false
+      },
+      "originalNativeVertexId": null,
+      "originalNativeFaceId": 475705,
+      "clothVertices": [
+        647753,
+        647742,
+        647740
+      ],
+      "worldPoint": [
+        0.015639801199237507,
+        -0.07286019126574199,
+        1.5201727549235027
+      ],
+      "sourcePoints": [
+        [
+          0.01836399920284748,
+          -0.14468400180339813,
+          0.6217399835586548
+        ],
+        [
+          0.01836399920284748,
+          -0.14428600668907166,
+          0.6211450099945068
+        ],
+        [
+          0.013117000460624695,
+          -0.14819100499153137,
+          0.6217399835586548
+        ]
+      ],
+      "signedFullReferenceGapM": 0.002317264676094055,
+      "requiredDisplacementAlongNormalM": 0.0002827353239059447,
+      "effectiveActiveWeightSquared": 0.0,
+      "activeCornerIds": 0,
+      "initialUnsafeVertices": [
+        true,
+        true,
+        true
+      ],
+      "namedClothSkinFieldMean": {
+        "DEF-spine.006": 0.47020626068115234,
+        "DEF-spine.005": 0.35142489274342853,
+        "DEF-spine.004": 0.1783688614765803
+      },
+      "nearestFullReference": {
+        "fullReferenceTriangleId": 75476,
+        "fullReferenceVertexIds": [
+          30040,
+          30184,
+          30183
+        ],
+        "sourceVertexIds": [
+          -1,
+          -1,
+          -1
+        ],
+        "regionIds": [
+          0,
+          0,
+          0
+        ],
+        "namedSkinFieldMean": {
+          "DEF-spine.006": 0.429726501305898,
+          "DEF-spine.005": 0.36636772751808167,
+          "DEF-spine.004": 0.2039057711760203
+        },
+        "canonicalNative02TriangleIds": [],
+        "canonicalCoordinatesExact": false
+      }
+    }
+  ],
+  "exactFailingArrays": {
+    "path": "harness/out/rider-rebuild/selected-sleeve-support49/diagnostic01/frozen-deficient-samples.npz",
+    "sha256": "6963b2ea20e8eb7d64f859f62e4ce5655408e02ba5bc4499023bd9d9ee4be66b"
+  },
+  "scheduledRemovalExcludedFromConstraints": {
+    "L": {
+      "terminalCutFaces": 5263,
+      "replacedInwardFaces": 18811
+    },
+    "R": {
+      "terminalCutFaces": 6103,
+      "replacedInwardFaces": 21383
+    }
+  },
+  "limits": [
+    "Raw bone names and region IDs are measured labels, not semantic garment ownership.",
+    "Region1 canonical triangle ancestry is reported only with explicit coordinate equality.",
+    "Nearest-oriented-face sign is exactly the source method; global solid containment is not proven.",
+    "No ease, support expansion, cloth strain, self intersection or moving-art acceptance follows."
+  ]
+}
