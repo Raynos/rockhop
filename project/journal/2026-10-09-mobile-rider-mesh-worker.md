@@ -23,3 +23,9 @@ Finding: The largest glove pose error addresses the wrong source sheet; the actu
 Validation: Guarded forensic exit0 in0.825s. Vertex11107 is100percent pinkyMCP. Unconstrained nearest sourceface413109 at0.009784mm carries palm/index/middle skin with source-normal dot-0.9258. Nearby sourceface356848 at0.053143mm carries the identical pinky field, weightL1difference3.54e-8 and normaldot+0.99295. Complete raw neighbor list retained.
 
 Limits: One witness does not qualify all540vertices flagged above1mm. Geometric correspondence must distinguish facing sheets independently of joint weights, retaining the original failed distribution. No candidate weights/geometry or player assets were modified by this diagnosis.
+
+Finding: Skin-aware index simplification retains original native field knots without interpolating or discarding weights; source branch boundaries constrain the achievable density.
+
+Validation: Installed meshoptimizer1.1.1 primary docs/API inspected. Guarded simplify exit0 in1.077s after original admission queue;569142 to244454triangles,122227retained original vertices;22active native weight attributes,6655protected finger branch boundary vertices. Source duplicate positions have identical native field rows, proven before welding. Returned indices use original positions and four joint/weight slots byte-exact; no top4 discard. Aggregate absolute quadric error0.198124mm. Requested40000triangles was not reached; actual result retained without weakening the field constraint.
+
+Limits: The error metric is not an independent geometry/skin bound. Exact retained corner fields do not prove interpolated triangle interiors. New selected-source atlas, geometric facing-sheet interior comparison over482played poses, corrected grip and complete moving judgment remain required. No player source or master changes.
