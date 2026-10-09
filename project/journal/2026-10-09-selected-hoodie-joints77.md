@@ -83,3 +83,9 @@ Finding: Continue the saved corrected hoodie in its original numerical runtime.
 Validation: Parent full driver/metadata reviewed; original NumPy2.3.4 loaded before matching cp313 Pillow; saved receipt/arrays/source pins checked before and after.
 
 Limits: Launcher checkpoint only; all482/views pending, no new solve/candidate or native/contact/art acceptance.
+
+Finding: Saved15 verifies in its original numerical runtime, with every actual bike lean measured and no new candidate.
+
+Validation: Unchanged original guard exits0 in172.160s; all482 frames and36462 edges measured. Parent inspected both endpoint sheets and retained the exact binding/report.
+
+Limits: Painter views show shoulder patches but cannot establish body penetration; actual posed contact, native/bake and complete dressed moving art remain open.
