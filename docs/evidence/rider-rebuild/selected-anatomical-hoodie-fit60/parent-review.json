@@ -1,0 +1,38 @@
+{
+  "acceptedArt": false,
+  "actualConstructionExecuted": false,
+  "changedSourceFullRead": [
+    "intervals.py",
+    "meridian.py",
+    "targets.py",
+    "component.py",
+    "check_intervals.py",
+    "preflight58.py",
+    "preflight_all.py"
+  ],
+  "retained58SourceCompared": [
+    "geometry.py",
+    "qualify.py",
+    "sections.py",
+    "cage.py"
+  ],
+  "parentCPUFixtureGroups": 15,
+  "retainedFullTargetPreflightScope": {
+    "recordedRightTorso33Passed": true,
+    "recordedRightTorsoSeconds": 2.506166832987219,
+    "allTargetsSeconds": 52.2595244999975,
+    "connectedSourceSections": 13,
+    "branches": 26,
+    "curveStations": 858,
+    "cageControlPoints": 656,
+    "minimumFinalBranchControlGapM": 0.002653472067835673,
+    "fixtureGroups": 15
+  },
+  "pinsVerified": true,
+  "finding": "Actual58 midpoint is not an existence proof. Exact unsigned clearance intervals intersect BOTH signed wall exterior domains; preserve requested ease/endpoints/source order and admit only reopened actual full-contact pass.",
+  "limits": [
+    "Full target preflight uses explicitly documented CPU adjacent-normal choice; actual Blender BVH ties still require execution",
+    "Parent reproduces15CPU groups; full target-stage report retained and pinned, not independently repeated",
+    "No native/cage/contact/art pass"
+  ]
+}

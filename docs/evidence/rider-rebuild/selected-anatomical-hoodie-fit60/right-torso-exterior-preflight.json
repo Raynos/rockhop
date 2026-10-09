@@ -1,0 +1,2953 @@
+{
+  "acceptedArt": false,
+  "cpuOnly": true,
+  "native58OffsetsWereNotRecorded": true,
+  "sourceRecipe": {
+    "path": "assets/blender/rider-rebuild/selected-anatomical-hoodie-fit60/preflight58.py",
+    "sha256": "227dcba91101b3921d28d97dc740a01d9988287bbc5cd539badca3bc180afd48"
+  },
+  "intervalRecipe": {
+    "path": "assets/blender/rider-rebuild/selected-anatomical-hoodie-fit60/intervals.py",
+    "sha256": "329ac7c14e4d8dfb8dc46f85971ab55a01ce977d27dc0bd700e1fda80946759c"
+  },
+  "meridianRecipe": {
+    "path": "assets/blender/rider-rebuild/selected-anatomical-hoodie-fit60/meridian.py",
+    "sha256": "a22f105e709b5f00f30406fb2baccfb366c8905eb807605e0ef91675cd55163b"
+  },
+  "diagnosticRecipe": {
+    "path": "assets/blender/rider-rebuild/selected-anatomical-hoodie-fit60/diagnose58.py",
+    "sha256": "9c6572b04e03e0ab53c1a942cd3e00d565ba7127e990c59fe25648901593424c"
+  },
+  "actual58Failure": {
+    "path": "harness/out/rider-rebuild/selected-anatomical-hoodie-fit58/component01/construction-failure.json",
+    "sha256": "b568285fa00d044de61367f7e572530705f19c5cfcd612e27c0b22617b767f35"
+  },
+  "sourcePins": {
+    "original47Arrays": {
+      "path": "harness/out/rider-rebuild/selected-proximal-fit-review54/original01/actual-hoodie-geometry.npz",
+      "sha256": "370a8bc8569113e422b66d05a8677f6d206628eb362cf731fb6903ac641e06fd"
+    },
+    "broad50Arrays": {
+      "path": "harness/out/rider-rebuild/selected-proximal-fit-review54/registered01/actual-hoodie-geometry.npz",
+      "sha256": "f158094abeffce39b20038f10b2526c4fdd5890fe91612cb43eaf6ff8227fdf3"
+    },
+    "body": {
+      "path": "harness/out/rider-rebuild/selected-seated-anatomical09/reference05/original-full-reference.npz",
+      "sha256": "01f752d72e94dbab81cc7a193adbd2dd7bba26df919b48454d8937fa9665dcc5"
+    }
+  },
+  "wallNormalCandidates": [
+    [
+      179385,
+      182807
+    ],
+    [
+      182492,
+      182493
+    ],
+    [
+      190026,
+      190027
+    ],
+    [
+      199824,
+      199825
+    ],
+    [
+      216025
+    ],
+    [
+      226982,
+      226983
+    ],
+    [
+      238304,
+      238305
+    ],
+    [
+      232155,
+      232156
+    ],
+    [
+      220330,
+      220331
+    ]
+  ],
+  "chosenWallAncestry": [
+    {
+      "offsetsFromExactRecordedApex": true
+    },
+    {
+      "sourceNormalFace": 182492,
+      "innerOriginalFace": 194900,
+      "innerOriginalBarycentric": [
+        0.03918117491569004,
+        0.7509938318546855,
+        0.20982499322962447
+      ]
+    },
+    {
+      "sourceNormalFace": 190026,
+      "innerOriginalFace": 200128,
+      "innerOriginalBarycentric": [
+        0.38181268062308915,
+        0.6112582173119364,
+        0.006929102064974438
+      ]
+    },
+    {
+      "sourceNormalFace": 199824,
+      "innerOriginalFace": 216335,
+      "innerOriginalBarycentric": [
+        0.45997816516117546,
+        0.5269575998620044,
+        0.01306423497682012
+      ]
+    },
+    {
+      "sourceNormalFace": 216025,
+      "innerOriginalFace": 227439,
+      "innerOriginalBarycentric": [
+        0.536375331457139,
+        0.09781246863521768,
+        0.36581219990764335
+      ]
+    },
+    {
+      "sourceNormalFace": 226982,
+      "innerOriginalFace": 244635,
+      "innerOriginalBarycentric": [
+        0.6813819233287037,
+        0.2522919139221768,
+        0.06632616274911936
+      ]
+    },
+    {
+      "sourceNormalFace": 238304,
+      "innerOriginalFace": 249921,
+      "innerOriginalBarycentric": [
+        0.8568788708443834,
+        0.06798336410157645,
+        0.07513776505404016
+      ]
+    },
+    {
+      "sourceNormalFace": 232155,
+      "innerOriginalFace": 249649,
+      "innerOriginalBarycentric": [
+        0.08057862038296637,
+        0.06121257812576564,
+        0.858208801491268
+      ]
+    },
+    {
+      "sourceNormalFace": 220330,
+      "innerOriginalFace": 231864,
+      "innerOriginalBarycentric": [
+        0.4319239802200158,
+        0.4023289675985631,
+        0.1657470521814211
+      ]
+    }
+  ],
+  "exactRecordedApexAndEndpointUsed": true,
+  "all33Passed": true,
+  "elapsedSeconds": 2.506166832987219,
+  "stations": [
+    {
+      "parameter": 0.0,
+      "passed": true,
+      "actualMinimumM": 0.0033323205008060288,
+      "targetPair": [
+        [
+          -0.1874679624781968,
+          0.00834815475837686,
+          1.2746557710976474
+        ],
+        [
+          -0.1840261085967313,
+          0.008003047667443752,
+          1.2834605782585509
+        ]
+      ],
+      "intervals": null
+    },
+    {
+      "parameter": 0.03125,
+      "passed": true,
+      "actualMinimumM": 0.003333581307951927,
+      "targetPair": [
+        [
+          -0.1880507720634371,
+          0.008396563959822018,
+          1.2714251993522696
+        ],
+        [
+          -0.1839091094673991,
+          0.008160555816160951,
+          1.278148044391826
+        ]
+      ],
+      "intervals": {
+        "side": "R",
+        "sourceDepth": 0.00837549939751625,
+        "role": "torso",
+        "materialCurveParameter": 0.03125,
+        "canonicalStation": 0.32370123522634386,
+        "center": [
+          -2.503612457848216e-16,
+          -0.02321078445688146,
+          1.277054335158233
+        ],
+        "direction": [
+          -0.985895842584552,
+          0.16692775332411727,
+          -0.012021345376402082
+        ],
+        "desiredRetainedEaseM": 0.0033334710943115444,
+        "radiusIntervalM": [
+          0.18280300842558322,
+          0.19384663359555956
+        ],
+        "pairedWallOffsetsM": [
+          [
+            -0.0020708312980189944,
+            0.00011800407183053381,
+            -0.0033614225197783013
+          ],
+          [
+            0.0020708312980189944,
+            -0.0001180040718305325,
+            0.003361422519778246
+          ]
+        ],
+        "exteriorDomain": "INTERBODY_EXTERIOR",
+        "owningBodyExitFace": 3237,
+        "analyticClearanceIntervals": {
+          "method": "EXACT_TRIANGLE_PRISM_EDGE_CYLINDER_VERTEX_SPHERE_LINE_UNION",
+          "requestedClearanceM": 0.0033334710943115444,
+          "candidateTriangleWallPairs": 11,
+          "blockedIntervalsM": [
+            [
+              0.18280300842558322,
+              0.1886404376652242
+            ],
+            [
+              0.18950698039673516,
+              0.19384663359555956
+            ]
+          ],
+          "pairedWallExteriorDomainsM": [
+            [
+              [
+                0.18280300842558322,
+                0.19314976934080755
+              ]
+            ],
+            [
+              [
+                0.18503488830139933,
+                0.19384663359555956
+              ]
+            ]
+          ],
+          "feasibleExteriorIntervalsM": [
+            [
+              0.1886404376652242,
+              0.18950698039673516
+            ]
+          ]
+        },
+        "selectedRadiusM": 0.18864055687451375
+      }
+    },
+    {
+      "parameter": 0.0625,
+      "passed": true,
+      "actualMinimumM": 0.0033412001590809276,
+      "targetPair": [
+        [
+          -0.18864632642914705,
+          0.00845551258087634,
+          1.2682002410310589
+        ],
+        [
+          -0.18380460879858793,
+          0.00832699364611826,
+          1.2728322569953696
+        ]
+      ],
+      "intervals": {
+        "side": "R",
+        "sourceDepth": 0.00837549939751625,
+        "role": "torso",
+        "materialCurveParameter": 0.0625,
+        "canonicalStation": 0.3194042399810924,
+        "center": [
+          -2.50519339199181e-16,
+          -0.023516380402903273,
+          1.2727677336436105
+        ],
+        "direction": [
+          -0.985567025612094,
+          0.16886579403996604,
+          -0.011915604448860952
+        ],
+        "desiredRetainedEaseM": 0.0033410897999871176,
+        "radiusIntervalM": [
+          0.18272207079747713,
+          0.19568205605227668
+        ],
+        "pairedWallOffsetsM": [
+          [
+            -0.002420858815279566,
+            6.425946737904135e-05,
+            -0.0023160079821553763
+          ],
+          [
+            0.002420858815279566,
+            -6.425946737904048e-05,
+            0.0023160079821552652
+          ]
+        ],
+        "exteriorDomain": "INTERBODY_EXTERIOR",
+        "owningBodyExitFace": 3237,
+        "analyticClearanceIntervals": {
+          "method": "EXACT_TRIANGLE_PRISM_EDGE_CYLINDER_VERTEX_SPHERE_LINE_UNION",
+          "requestedClearanceM": 0.0033410897999871176,
+          "candidateTriangleWallPairs": 10,
+          "blockedIntervalsM": [
+            [
+              0.18272207079747713,
+              0.18895249667009265
+            ],
+            [
+              0.19054874022142992,
+              0.19568205605227668
+            ]
+          ],
+          "pairedWallExteriorDomainsM": [
+            [
+              [
+                0.18272207079747713,
+                0.1942004431947836
+              ]
+            ],
+            [
+              [
+                0.1853434697404872,
+                0.19568205605227668
+              ]
+            ]
+          ],
+          "feasibleExteriorIntervalsM": [
+            [
+              0.18895249667009265,
+              0.19054874022142992
+            ]
+          ]
+        },
+        "selectedRadiusM": 0.1889526158793822
+      }
+    },
+    {
+      "parameter": 0.09375,
+      "passed": true,
+      "actualMinimumM": 0.0033605956881594687,
+      "targetPair": [
+        [
+          -0.18921590143447284,
+          0.008519781939261459,
+          1.2649790027028667
+        ],
+        [
+          -0.1836777188257359,
+          0.008495189963652719,
+          1.2675160514591781
+        ]
+      ],
+      "intervals": {
+        "side": "R",
+        "sourceDepth": 0.00837549939751625,
+        "role": "torso",
+        "materialCurveParameter": 0.09375,
+        "canonicalStation": 0.3151072447358409,
+        "center": [
+          -2.505710582061475e-16,
+          -0.023815734676619092,
+          1.2684805811468878
+        ],
+        "direction": [
+          -0.9852342858929701,
+          0.17080445179534687,
+          -0.011800048638042297
+        ],
+        "desiredRetainedEaseM": 0.003360485418094732,
+        "radiusIntervalM": [
+          0.1826432863193082,
+          0.1974489149040689
+        ],
+        "pairedWallOffsetsM": [
+          [
+            -0.002769091304368482,
+            1.2295987804369861e-05,
+            -0.0012685243781557732
+          ],
+          [
+            0.0027690913043684814,
+            -1.2295987804369429e-05,
+            0.001268524378155608
+          ]
+        ],
+        "exteriorDomain": "INTERBODY_EXTERIOR",
+        "owningBodyExitFace": 3237,
+        "analyticClearanceIntervals": {
+          "method": "EXACT_TRIANGLE_PRISM_EDGE_CYLINDER_VERTEX_SPHERE_LINE_UNION",
+          "requestedClearanceM": 0.003360485418094732,
+          "candidateTriangleWallPairs": 9,
+          "blockedIntervalsM": [
+            [
+              0.1826432863193082,
+              0.18924097075249297
+            ],
+            [
+              0.19153171539018343,
+              0.1974489149040689
+            ]
+          ],
+          "pairedWallExteriorDomainsM": [
+            [
+              [
+                0.1826432863193082,
+                0.195159680474534
+              ]
+            ],
+            [
+              [
+                0.18560806203682456,
+                0.1974489149040689
+              ]
+            ]
+          ],
+          "feasibleExteriorIntervalsM": [
+            [
+              0.18924097075249297,
+              0.19153171539018343
+            ]
+          ]
+        },
+        "selectedRadiusM": 0.18924108996178252
+      }
+    },
+    {
+      "parameter": 0.125,
+      "passed": true,
+      "actualMinimumM": 0.0033958893416116275,
+      "targetPair": [
+        [
+          -0.18979270797850292,
+          0.008596893605173298,
+          1.2617528170347707
+        ],
+        [
+          -0.18356894390019804,
+          0.008670476055208199,
+          1.2622072606532972
+        ]
+      ],
+      "intervals": {
+        "side": "R",
+        "sourceDepth": 0.00837549939751625,
+        "role": "torso",
+        "materialCurveParameter": 0.125,
+        "canonicalStation": 0.31081024949058944,
+        "center": [
+          -2.5050499428878166e-16,
+          -0.024108740173738093,
+          1.2641928692387807
+        ],
+        "direction": [
+          -0.9848976188979778,
+          0.17274369909736734,
+          -0.011674532592432278
+        ],
+        "desiredRetainedEaseM": 0.003395779161088096,
+        "radiusIntervalM": [
+          0.18256668447426744,
+          0.19915732054962593
+        ],
+        "pairedWallOffsetsM": [
+          [
+            -0.0031118820391524307,
+            -3.6791225017450345e-05,
+            -0.00022722180926329388
+          ],
+          [
+            0.0031118820391524303,
+            3.6791225017450345e-05,
+            0.00022722180926307541
+          ]
+        ],
+        "exteriorDomain": "INTERBODY_EXTERIOR",
+        "owningBodyExitFace": 3237,
+        "analyticClearanceIntervals": {
+          "method": "EXACT_TRIANGLE_PRISM_EDGE_CYLINDER_VERTEX_SPHERE_LINE_UNION",
+          "requestedClearanceM": 0.003395779161088096,
+          "candidateTriangleWallPairs": 10,
+          "blockedIntervalsM": [
+            [
+              0.18256668447426744,
+              0.18954326312544617
+            ],
+            [
+              0.19245879911542352,
+              0.19915732054962593
+            ]
+          ],
+          "pairedWallExteriorDomainsM": [
+            [
+              [
+                0.18256668447426744,
+                0.1961252703890014
+              ]
+            ],
+            [
+              [
+                0.18586921613238366,
+                0.19915732054962593
+              ]
+            ]
+          ],
+          "feasibleExteriorIntervalsM": [
+            [
+              0.18954326312544617,
+              0.19245879911542352
+            ]
+          ]
+        },
+        "selectedRadiusM": 0.18954338233473572
+      }
+    },
+    {
+      "parameter": 0.15625,
+      "passed": true,
+      "actualMinimumM": 0.003450097565378245,
+      "targetPair": [
+        [
+          -0.1896168606832251,
+          0.0087065565091727,
+          1.257351808940747
+        ],
+        [
+          -0.1834039102305194,
+          0.00868549707375601,
+          1.2580856034329977
+        ]
+      ],
+      "intervals": {
+        "side": "R",
+        "sourceDepth": 0.00837549939751625,
+        "role": "torso",
+        "materialCurveParameter": 0.15625,
+        "canonicalStation": 0.306513254245338,
+        "center": [
+          -2.503097389301439e-16,
+          -0.024395289789969465,
+          1.2599045894900036
+        ],
+        "direction": [
+          -0.9845570203069995,
+          0.17468350607739128,
+          -0.011538911071347389
+        ],
+        "desiredRetainedEaseM": 0.003449989481313237,
+        "radiusIntervalM": [
+          0.182293164100311,
+          0.2010785975692333
+        ],
+        "pairedWallOffsetsM": [
+          [
+            -0.003106475226352851,
+            1.0529717708344036e-05,
+            -0.00036689724612542845
+          ],
+          [
+            0.003106475226352857,
+            -1.0529717708344036e-05,
+            0.0003668972461252669
+          ]
+        ],
+        "exteriorDomain": "INTERBODY_EXTERIOR",
+        "owningBodyExitFace": 3219,
+        "analyticClearanceIntervals": {
+          "method": "EXACT_TRIANGLE_PRISM_EDGE_CYLINDER_VERTEX_SPHERE_LINE_UNION",
+          "requestedClearanceM": 0.003449989481313237,
+          "candidateTriangleWallPairs": 16,
+          "blockedIntervalsM": [
+            [
+              0.182293164100311,
+              0.18943572006664725
+            ],
+            [
+              0.1941768559998929,
+              0.2010785975692333
+            ]
+          ],
+          "pairedWallExteriorDomainsM": [
+            [
+              [
+                0.182293164100311,
+                0.19818317854588038
+              ]
+            ],
+            [
+              [
+                0.1856306189628633,
+                0.2010785975692333
+              ]
+            ]
+          ],
+          "feasibleExteriorIntervalsM": [
+            [
+              0.18943572006664725,
+              0.1941768559998929
+            ]
+          ]
+        },
+        "selectedRadiusM": 0.1894358392759368
+      }
+    },
+    {
+      "parameter": 0.1875,
+      "passed": true,
+      "actualMinimumM": 0.0035252248839245737,
+      "targetPair": [
+        [
+          -0.18928107470203404,
+          0.008795905483551747,
+          1.2529652488173177
+        ],
+        [
+          -0.18308434003985752,
+          0.008677129609095745,
+          1.2539557935555152
+        ]
+      ],
+      "intervals": {
+        "side": "R",
+        "sourceDepth": 0.00837549939751625,
+        "role": "torso",
+        "materialCurveParameter": 0.1875,
+        "canonicalStation": 0.30221625900008653,
+        "center": [
+          -2.4997388361329473e-16,
+          -0.024675276421022397,
+          1.255615733471272
+        ],
+        "direction": [
+          -0.9842124860232986,
+          0.17662384046001744,
+          -0.011393038970904637
+        ],
+        "desiredRetainedEaseM": 0.003525116898709092,
+        "radiusIntervalM": [
+          0.1819433497409743,
+          0.20361625557318258
+        ],
+        "pairedWallOffsetsM": [
+          [
+            -0.0030983673310882543,
+            5.938793722800117e-05,
+            -0.0004952723690987618
+          ],
+          [
+            0.0030983673310882665,
+            -5.938793722800117e-05,
+            0.0004952723690986562
+          ]
+        ],
+        "exteriorDomain": "INTERBODY_EXTERIOR",
+        "owningBodyExitFace": 3220,
+        "analyticClearanceIntervals": {
+          "method": "EXACT_TRIANGLE_PRISM_EDGE_CYLINDER_VERTEX_SPHERE_LINE_UNION",
+          "requestedClearanceM": 0.003525116898709092,
+          "candidateTriangleWallPairs": 13,
+          "blockedIntervalsM": [
+            [
+              0.1819433497409743,
+              0.1891690998515405
+            ],
+            [
+              0.19669279055874506,
+              0.20361625557318258
+            ]
+          ],
+          "pairedWallExteriorDomainsM": [
+            [
+              [
+                0.1819433497409743,
+                0.2007976256752347
+              ]
+            ],
+            [
+              [
+                0.1852775793401712,
+                0.20361625557318258
+              ]
+            ]
+          ],
+          "feasibleExteriorIntervalsM": [
+            [
+              0.1891690998515405,
+              0.19669279055874506
+            ]
+          ]
+        },
+        "selectedRadiusM": 0.18916921906083006
+      }
+    },
+    {
+      "parameter": 0.21875,
+      "passed": true,
+      "actualMinimumM": 0.0036223367022567626,
+      "targetPair": [
+        [
+          -0.18893439629107223,
+          0.008890644880095028,
+          1.2485942831701142
+        ],
+        [
+          -0.18275959922753396,
+          0.008672116821024006,
+          1.24981316236947
+        ]
+      ],
+      "intervals": {
+        "side": "R",
+        "sourceDepth": 0.00837549939751625,
+        "role": "torso",
+        "materialCurveParameter": 0.21875,
+        "canonicalStation": 0.2979192637548351,
+        "center": [
+          -2.494860198212947e-16,
+          -0.02494859296260607,
+          1.2513262927533009
+        ],
+        "direction": [
+          -0.9838640121879572,
+          0.17856466753256797,
+          -0.011236771351180582
+        ],
+        "desiredRetainedEaseM": 0.003622228828508095,
+        "radiusIntervalM": [
+          0.1815676046325841,
+          0.20614053218167766
+        ],
+        "pairedWallOffsetsM": [
+          [
+            -0.003087398531769127,
+            0.00010926402953551072,
+            -0.0006094395996779086
+          ],
+          [
+            0.0030873985317691442,
+            -0.00010926402953551072,
+            0.0006094395996778571
+          ]
+        ],
+        "exteriorDomain": "INTERBODY_EXTERIOR",
+        "owningBodyExitFace": 3220,
+        "analyticClearanceIntervals": {
+          "method": "EXACT_TRIANGLE_PRISM_EDGE_CYLINDER_VERTEX_SPHERE_LINE_UNION",
+          "requestedClearanceM": 0.003622228828508095,
+          "candidateTriangleWallPairs": 12,
+          "blockedIntervalsM": [
+            [
+              0.1815676046325841,
+              0.18889488605267615
+            ],
+            [
+              0.19918299731860697,
+              0.20614053218167766
+            ]
+          ],
+          "pairedWallExteriorDomainsM": [
+            [
+              [
+                0.1815676046325841,
+                0.20337787257208398
+              ]
+            ],
+            [
+              [
+                0.18489202779776825,
+                0.20614053218167766
+              ]
+            ]
+          ],
+          "feasibleExteriorIntervalsM": [
+            [
+              0.18889488605267615,
+              0.19918299731860697
+            ]
+          ]
+        },
+        "selectedRadiusM": 0.1888950052619657
+      }
+    },
+    {
+      "parameter": 0.25,
+      "passed": true,
+      "actualMinimumM": 0.0037416521828039185,
+      "targetPair": [
+        [
+          -0.18860526519523743,
+          0.008995404321317698,
+          1.244241326218564
+        ],
+        [
+          -0.18245823335860112,
+          0.008676394812604371,
+          1.2456546680114944
+        ]
+      ],
+      "intervals": {
+        "side": "R",
+        "sourceDepth": 0.00837549939751625,
+        "role": "torso",
+        "materialCurveParameter": 0.25,
+        "canonicalStation": 0.2936222685095836,
+        "center": [
+          -2.4883473903720427e-16,
+          -0.025215132310429662,
+          1.2470362589068051
+        ],
+        "direction": [
+          -0.9835115951944505,
+          0.18050595011511522,
+          -0.011069963464569416
+        ],
+        "desiredRetainedEaseM": 0.003741544408936774,
+        "radiusIntervalM": [
+          0.18119395566015534,
+          0.2086177156397417
+        ],
+        "pairedWallOffsetsM": [
+          [
+            -0.003073515918318153,
+            0.00015950475435666403,
+            -0.000706670896465195
+          ],
+          [
+            0.0030735159183181747,
+            -0.00015950475435666403,
+            0.000706670896465195
+          ]
+        ],
+        "exteriorDomain": "INTERBODY_EXTERIOR",
+        "owningBodyExitFace": 3220,
+        "analyticClearanceIntervals": {
+          "method": "EXACT_TRIANGLE_PRISM_EDGE_CYLINDER_VERTEX_SPHERE_LINE_UNION",
+          "requestedClearanceM": 0.003741544408936774,
+          "candidateTriangleWallPairs": 15,
+          "blockedIntervalsM": [
+            [
+              0.18119395566015534,
+              0.18864203832443782
+            ],
+            [
+              0.20158539356715852,
+              0.2086177156397417
+            ]
+          ],
+          "pairedWallExteriorDomainsM": [
+            [
+              [
+                0.18119395566015534,
+                0.2059141989127656
+              ]
+            ],
+            [
+              [
+                0.18450349469882685,
+                0.2086177156397417
+              ]
+            ]
+          ],
+          "feasibleExteriorIntervalsM": [
+            [
+              0.18864203832443782,
+              0.20158539356715852
+            ]
+          ]
+        },
+        "selectedRadiusM": 0.18864215753372737
+      }
+    },
+    {
+      "parameter": 0.28125,
+      "passed": true,
+      "actualMinimumM": 0.003882627002310475,
+      "targetPair": [
+        [
+          -0.18824860367691867,
+          0.009084844912387001,
+          1.2400632158782203
+        ],
+        [
+          -0.18216800586461063,
+          0.008705121396368719,
+          1.2413241501039942
+        ]
+      ],
+      "intervals": {
+        "side": "R",
+        "sourceDepth": 0.00837549939751625,
+        "role": "torso",
+        "materialCurveParameter": 0.28125,
+        "canonicalStation": 0.2893252732643321,
+        "center": [
+          -2.480086327440839e-16,
+          -0.025474787360202374,
+          1.2427456235024998
+        ],
+        "direction": [
+          -0.9831552317033515,
+          0.18244764853107773,
+          -0.010892470785349459
+        ],
+        "desiredRetainedEaseM": 0.003882519328916337,
+        "radiusIntervalM": [
+          0.18082243254630964,
+          0.2110257890396603
+        ],
+        "pairedWallOffsetsM": [
+          [
+            -0.0030402989061540228,
+            0.00018986175800914058,
+            -0.0006304671128870141
+          ],
+          [
+            0.003040298906154031,
+            -0.00018986175800914074,
+            0.0006304671128870141
+          ]
+        ],
+        "exteriorDomain": "INTERBODY_EXTERIOR",
+        "owningBodyExitFace": 3220,
+        "analyticClearanceIntervals": {
+          "method": "EXACT_TRIANGLE_PRISM_EDGE_CYLINDER_VERTEX_SPHERE_LINE_UNION",
+          "requestedClearanceM": 0.003882519328916337,
+          "candidateTriangleWallPairs": 18,
+          "blockedIntervalsM": [
+            [
+              0.18082243254630964,
+              0.1883814290940078
+            ],
+            [
+              0.20382221831116104,
+              0.2110257890396603
+            ]
+          ],
+          "pairedWallExteriorDomainsM": [
+            [
+              [
+                0.18082243254630964,
+                0.20837520932412776
+              ]
+            ],
+            [
+              [
+                0.18408294501043238,
+                0.2110257890396603
+              ]
+            ]
+          ],
+          "feasibleExteriorIntervalsM": [
+            [
+              0.1883814290940078,
+              0.20382221831116104
+            ]
+          ]
+        },
+        "selectedRadiusM": 0.18838154830329734
+      }
+    },
+    {
+      "parameter": 0.3125,
+      "passed": true,
+      "actualMinimumM": 0.004044038228092118,
+      "targetPair": [
+        [
+          -0.18791268333221403,
+          0.00918526044589349,
+          1.235892927834057
+        ],
+        [
+          -0.18190086812409786,
+          0.008743404877905772,
+          1.2369879897243234
+        ]
+      ],
+      "intervals": {
+        "side": "R",
+        "sourceDepth": 0.00837549939751625,
+        "role": "torso",
+        "materialCurveParameter": 0.3125,
+        "canonicalStation": 0.28502827801908065,
+        "center": [
+          -2.4699629242499407e-16,
+          -0.02572745100763338,
+          1.2384543781111
+        ],
+        "direction": [
+          -0.9827949186571597,
+          0.18438972057841607,
+          -0.010704149040466699
+        ],
+        "desiredRetainedEaseM": 0.004043930655763264,
+        "radiusIntervalM": [
+          0.18045306499723443,
+          0.21415536589862907
+        ],
+        "pairedWallOffsetsM": [
+          [
+            -0.0030059076040580765,
+            0.00022092778399385805,
+            -0.0005475309451332029
+          ],
+          [
+            0.0030059076040580713,
+            -0.00022092778399385843,
+            0.0005475309451332029
+          ]
+        ],
+        "exteriorDomain": "INTERBODY_EXTERIOR",
+        "owningBodyExitFace": 3220,
+        "analyticClearanceIntervals": {
+          "method": "EXACT_TRIANGLE_PRISM_EDGE_CYLINDER_VERTEX_SPHERE_LINE_UNION",
+          "requestedClearanceM": 0.004043930655763264,
+          "candidateTriangleWallPairs": 20,
+          "blockedIntervalsM": [
+            [
+              0.18045306499723443,
+              0.18814368599149717
+            ],
+            [
+              0.20643330881484806,
+              0.21415536589862907
+            ]
+          ],
+          "pairedWallExteriorDomainsM": [
+            [
+              [
+                0.18045306499723443,
+                0.21147869266402744
+              ]
+            ],
+            [
+              [
+                0.1836622909550217,
+                0.21415536589862907
+              ]
+            ]
+          ],
+          "feasibleExteriorIntervalsM": [
+            [
+              0.18814368599149717,
+              0.20643330881484806
+            ]
+          ]
+        },
+        "selectedRadiusM": 0.18814380520078672
+      }
+    },
+    {
+      "parameter": 0.34375,
+      "passed": true,
+      "actualMinimumM": 0.004224075177300602,
+      "targetPair": [
+        [
+          -0.18739813680737574,
+          0.00925853708263416,
+          1.2317315771121657
+        ],
+        [
+          -0.1814564895490381,
+          0.00875402242959091,
+          1.2326493928749718
+        ]
+      ],
+      "intervals": {
+        "side": "R",
+        "sourceDepth": 0.00837549939751625,
+        "role": "torso",
+        "materialCurveParameter": 0.34375,
+        "canonicalStation": 0.2807312827738292,
+        "center": [
+          -2.4578630956299543e-16,
+          -0.025973016148431862,
+          1.2341625143033201
+        ],
+        "direction": [
+          -0.9824306532952486,
+          0.18633212150145975,
+          -0.01050485424154299
+        ],
+        "desiredRetainedEaseM": 0.004223961662889901,
+        "radiusIntervalM": [
+          0.17997294977295317,
+          0.217285342116031
+        ],
+        "pairedWallOffsetsM": [
+          [
+            -0.0029708236291688386,
+            0.0002522573265216249,
+            -0.00045890788140291825
+          ],
+          [
+            0.0029708236291688212,
+            -0.0002522573265216254,
+            0.00045890788140291825
+          ]
+        ],
+        "exteriorDomain": "INTERBODY_EXTERIOR",
+        "owningBodyExitFace": 3774,
+        "analyticClearanceIntervals": {
+          "method": "EXACT_TRIANGLE_PRISM_EDGE_CYLINDER_VERTEX_SPHERE_LINE_UNION",
+          "requestedClearanceM": 0.004223961662889901,
+          "candidateTriangleWallPairs": 27,
+          "blockedIntervalsM": [
+            [
+              0.17997294977295317,
+              0.18772540885684352
+            ],
+            [
+              0.20930833210832997,
+              0.217285342116031
+            ]
+          ],
+          "pairedWallExteriorDomainsM": [
+            [
+              [
+                0.17997294977295317,
+                0.21457918381280444
+              ]
+            ],
+            [
+              [
+                0.18315025223895504,
+                0.217285342116031
+              ]
+            ]
+          ],
+          "feasibleExteriorIntervalsM": [
+            [
+              0.18772540885684352,
+              0.20930833210832997
+            ]
+          ]
+        },
+        "selectedRadiusM": 0.18772552806613307
+      }
+    },
+    {
+      "parameter": 0.375,
+      "passed": true,
+      "actualMinimumM": 0.004420400827429205,
+      "targetPair": [
+        [
+          -0.18634369222277394,
+          0.009233866889816846,
+          1.22758164841283
+        ],
+        [
+          -0.18047258780269287,
+          0.008667081021371972,
+          1.2283132572184745
+        ]
+      ],
+      "intervals": {
+        "side": "R",
+        "sourceDepth": 0.00837549939751625,
+        "role": "torso",
+        "materialCurveParameter": 0.375,
+        "canonicalStation": 0.27643428752857774,
+        "center": [
+          -2.4436727564114824e-16,
+          -0.02621137567830701,
+          1.2298700236498759
+        ],
+        "direction": [
+          -0.9820624331689238,
+          0.1882748039633995,
+          -0.010294442718116026
+        ],
+        "desiredRetainedEaseM": 0.004420286657505044,
+        "radiusIntervalM": [
+          0.17907586521428415,
+          0.21994103915576058
+        ],
+        "pairedWallOffsetsM": [
+          [
+            -0.002935552210040543,
+            0.0002833929342224362,
+            -0.00036580440282231333
+          ],
+          [
+            0.0029355522100405155,
+            -0.00028339293422243686,
+            0.00036580440282231333
+          ]
+        ],
+        "exteriorDomain": "INTERBODY_EXTERIOR",
+        "owningBodyExitFace": 3878,
+        "analyticClearanceIntervals": {
+          "method": "EXACT_TRIANGLE_PRISM_EDGE_CYLINDER_VERTEX_SPHERE_LINE_UNION",
+          "requestedClearanceM": 0.004420286657505044,
+          "candidateTriangleWallPairs": 24,
+          "blockedIntervalsM": [
+            [
+              0.17907586521428415,
+              0.18675800717673957
+            ],
+            [
+              0.21196925788368381,
+              0.21994103915576058
+            ]
+          ],
+          "pairedWallExteriorDomainsM": [
+            [
+              [
+                0.17907586521428415,
+                0.2171477490343225
+              ]
+            ],
+            [
+              [
+                0.18214261274645185,
+                0.21994103915576058
+              ]
+            ]
+          ],
+          "feasibleExteriorIntervalsM": [
+            [
+              0.18675800717673957,
+              0.21196925788368381
+            ]
+          ]
+        },
+        "selectedRadiusM": 0.18675812638602912
+      }
+    },
+    {
+      "parameter": 0.40625,
+      "passed": true,
+      "actualMinimumM": 0.004630269941405366,
+      "targetPair": [
+        [
+          -0.18525901130755187,
+          0.009209443499124993,
+          1.2234277029470895
+        ],
+        [
+          -0.17948758157545713,
+          0.00858104500735406,
+          1.223983825038058
+        ]
+      ],
+      "intervals": {
+        "side": "R",
+        "sourceDepth": 0.00837549939751625,
+        "role": "torso",
+        "materialCurveParameter": 0.40625,
+        "canonicalStation": 0.2721372922833263,
+        "center": [
+          -2.4272815606396263e-16,
+          -0.02644241985431983,
+          1.225576898615264
+        ],
+        "direction": [
+          -0.98169025474666,
+          0.19021776299924906,
+          -0.010072059124090371
+        ],
+        "desiredRetainedEaseM": 0.00463015580831454,
+        "radiusIntervalM": [
+          0.1779436987691375,
+          0.222523375725064
+        ],
+        "pairedWallOffsetsM": [
+          [
+            -0.002885714866047377,
+            0.0003141992458854658,
+            -0.00027806104548422546
+          ],
+          [
+            0.002885714866047354,
+            -0.0003141992458854662,
+            0.00027806104548422546
+          ]
+        ],
+        "exteriorDomain": "INTERBODY_EXTERIOR",
+        "owningBodyExitFace": 3878,
+        "analyticClearanceIntervals": {
+          "method": "EXACT_TRIANGLE_PRISM_EDGE_CYLINDER_VERTEX_SPHERE_LINE_UNION",
+          "requestedClearanceM": 0.00463015580831454,
+          "candidateTriangleWallPairs": 24,
+          "blockedIntervalsM": [
+            [
+              0.1779436987691375,
+              0.18577466622806657
+            ],
+            [
+              0.21423597239950098,
+              0.222523375725064
+            ]
+          ],
+          "pairedWallExteriorDomainsM": [
+            [
+              [
+                0.1779436987691375,
+                0.21971100729315676
+              ]
+            ],
+            [
+              [
+                0.18093857898595947,
+                0.222523375725064
+              ]
+            ]
+          ],
+          "feasibleExteriorIntervalsM": [
+            [
+              0.18577466622806657,
+              0.21423597239950098
+            ]
+          ]
+        },
+        "selectedRadiusM": 0.18577478543735612
+      }
+    },
+    {
+      "parameter": 0.4375,
+      "passed": true,
+      "actualMinimumM": 0.004850594068490759,
+      "targetPair": [
+        [
+          -0.18419098155687003,
+          0.009190276821149769,
+          1.219278848180991
+        ],
+        [
+          -0.1785126559966287,
+          0.008502515575492304,
+          1.2196531226413285
+        ]
+      ],
+      "intervals": {
+        "side": "R",
+        "sourceDepth": 0.00837549939751625,
+        "role": "torso",
+        "materialCurveParameter": 0.4375,
+        "canonicalStation": 0.26784029703807477,
+        "center": [
+          -2.408672846855678e-16,
+          -0.026665972823276093,
+          1.2212831540573157
+        ],
+        "direction": [
+          -0.9813141065070693,
+          0.1921612306479158,
+          -0.0098328940862194
+        ],
+        "desiredRetainedEaseM": 0.004850479973221867,
+        "radiusIntervalM": [
+          0.17681172208106283,
+          0.22516976574870853
+        ],
+        "pairedWallOffsetsM": [
+          [
+            -0.0028391627801206774,
+            0.000343880622828733,
+            -0.0001871372301686963
+          ],
+          [
+            0.0028391627801206583,
+            -0.00034388062282873327,
+            0.0001871372301686963
+          ]
+        ],
+        "exteriorDomain": "INTERBODY_EXTERIOR",
+        "owningBodyExitFace": 3878,
+        "analyticClearanceIntervals": {
+          "method": "EXACT_TRIANGLE_PRISM_EDGE_CYLINDER_VERTEX_SPHERE_LINE_UNION",
+          "requestedClearanceM": 0.004850479973221867,
+          "candidateTriangleWallPairs": 24,
+          "blockedIntervalsM": [
+            [
+              0.17681172208106283,
+              0.18480494735829542
+            ],
+            [
+              0.21650558152520577,
+              0.22516976574870853
+            ]
+          ],
+          "pairedWallExteriorDomainsM": [
+            [
+              [
+                0.17681172208106283,
+                0.22235288341095275
+              ]
+            ],
+            [
+              [
+                0.1797370573630012,
+                0.22516976574870853
+              ]
+            ]
+          ],
+          "feasibleExteriorIntervalsM": [
+            [
+              0.18480494735829542,
+              0.21650558152520577
+            ]
+          ]
+        },
+        "selectedRadiusM": 0.18480506656758497
+      }
+    },
+    {
+      "parameter": 0.46875,
+      "passed": true,
+      "actualMinimumM": 0.005078029583449406,
+      "targetPair": [
+        [
+          -0.18313772249769084,
+          0.009175806144852063,
+          1.215133965542576
+        ],
+        [
+          -0.17754476484933118,
+          0.008431718917248351,
+          1.2153227401370028
+        ]
+      ],
+      "intervals": {
+        "side": "R",
+        "sourceDepth": 0.00837549939751625,
+        "role": "torso",
+        "materialCurveParameter": 0.46875,
+        "canonicalStation": 0.2635433017928233,
+        "center": [
+          -2.387928116037284e-16,
+          -0.026881789461782237,
+          1.2169888282975567
+        ],
+        "direction": [
+          -0.9809339839632307,
+          0.19410518621923997,
+          -0.00957579181157061
+        ],
+        "desiredRetainedEaseM": 0.005077915527028734,
+        "radiusIntervalM": [
+          0.17567996029186292,
+          0.22791739522398002
+        ],
+        "pairedWallOffsetsM": [
+          [
+            -0.002796478824179836,
+            0.0003720436138018553,
+            -9.438729721340984e-05
+          ],
+          [
+            0.0027964788241798206,
+            -0.00037204361380185544,
+            9.438729721340984e-05
+          ]
+        ],
+        "exteriorDomain": "INTERBODY_EXTERIOR",
+        "owningBodyExitFace": 3878,
+        "analyticClearanceIntervals": {
+          "method": "EXACT_TRIANGLE_PRISM_EDGE_CYLINDER_VERTEX_SPHERE_LINE_UNION",
+          "requestedClearanceM": 0.005077915527028734,
+          "candidateTriangleWallPairs": 24,
+          "blockedIntervalsM": [
+            [
+              0.17567996029186292,
+              0.18384634408162917
+            ],
+            [
+              0.21886725729450685,
+              0.22791739522398002
+            ]
+          ],
+          "pairedWallExteriorDomainsM": [
+            [
+              [
+                0.17567996029186292,
+                0.22507171081613928
+              ]
+            ],
+            [
+              [
+                0.17853901724381407,
+                0.22791739522398002
+              ]
+            ]
+          ],
+          "feasibleExteriorIntervalsM": [
+            [
+              0.18384634408162917,
+              0.21886725729450685
+            ]
+          ]
+        },
+        "selectedRadiusM": 0.18384646329091872
+      }
+    },
+    {
+      "parameter": 0.5,
+      "passed": true,
+      "actualMinimumM": 0.005309062699634913,
+      "targetPair": [
+        [
+          -0.1820794851175943,
+          0.009161944968954476,
+          1.2109919144026131
+        ],
+        [
+          -0.17656323898279322,
+          0.0083652548394184,
+          1.2109943201068893
+        ]
+      ],
+      "intervals": {
+        "side": "R",
+        "sourceDepth": 0.00837549939751625,
+        "role": "torso",
+        "materialCurveParameter": 0.5,
+        "canonicalStation": 0.25924630654757186,
+        "center": [
+          -2.3651335045767103e-16,
+          -0.027089621375375794,
+          1.2126939607655118
+        ],
+        "direction": [
+          -0.9805498850499037,
+          0.19604954815424108,
+          -0.009300408439332468
+        ],
+        "desiredRetainedEaseM": 0.005308949189135667,
+        "radiusIntervalM": [
+          0.17450549639541857,
+          0.23036341475675465
+        ],
+        "pairedWallOffsetsM": [
+          [
+            -0.0027581230674005447,
+            0.0003983450647680382,
+            -1.2028521380047508e-06
+          ],
+          [
+            0.002758123067400531,
+            -0.0003983450647680382,
+            1.2028521380047508e-06
+          ]
+        ],
+        "exteriorDomain": "INTERBODY_EXTERIOR",
+        "owningBodyExitFace": 3876,
+        "analyticClearanceIntervals": {
+          "method": "EXACT_TRIANGLE_PRISM_EDGE_CYLINDER_VERTEX_SPHERE_LINE_UNION",
+          "requestedClearanceM": 0.005308949189135667,
+          "candidateTriangleWallPairs": 20,
+          "blockedIntervalsM": [
+            [
+              0.17450549639541857,
+              0.18287824810709352
+            ],
+            [
+              0.22111352254223968,
+              0.23036341475675465
+            ]
+          ],
+          "pairedWallExteriorDomainsM": [
+            [
+              [
+                0.17450549639541857,
+                0.22751034201148704
+              ]
+            ],
+            [
+              [
+                0.17730276333001796,
+                0.23036341475675465
+              ]
+            ]
+          ],
+          "feasibleExteriorIntervalsM": [
+            [
+              0.18287824810709352,
+              0.22111352254223968
+            ]
+          ]
+        },
+        "selectedRadiusM": 0.18287836731638307
+      }
+    },
+    {
+      "parameter": 0.53125,
+      "passed": true,
+      "actualMinimumM": 0.005540096319355598,
+      "targetPair": [
+        [
+          -0.18100577466477677,
+          0.009156132516000184,
+          1.2068495714682739
+        ],
+        [
+          -0.17553884400792652,
+          0.008288000653293583,
+          1.2066714336723192
+        ]
+      ],
+      "intervals": {
+        "side": "R",
+        "sourceDepth": 0.00837549939751625,
+        "role": "torso",
+        "materialCurveParameter": 0.53125,
+        "canonicalStation": 0.2549493113023204,
+        "center": [
+          -2.3403751488662216e-16,
+          -0.027289220169594296,
+          1.2083985908907067
+        ],
+        "direction": [
+          -0.9801618086444186,
+          0.19799422629374364,
+          -0.009006399349566166
+        ],
+        "desiredRetainedEaseM": 0.005539982851242598,
+        "radiusIntervalM": [
+          0.17331136954369733,
+          0.23281267401964517
+        ],
+        "pairedWallOffsetsM": [
+          [
+            -0.0027334653284251317,
+            0.0004340659313533001,
+            8.90688979773737e-05
+          ],
+          [
+            0.002733465328425116,
+            -0.0004340659313533001,
+            -8.90688979773492e-05
+          ]
+        ],
+        "exteriorDomain": "INTERBODY_EXTERIOR",
+        "owningBodyExitFace": 3876,
+        "analyticClearanceIntervals": {
+          "method": "EXACT_TRIANGLE_PRISM_EDGE_CYLINDER_VERTEX_SPHERE_LINE_UNION",
+          "requestedClearanceM": 0.005539982851242598,
+          "candidateTriangleWallPairs": 24,
+          "blockedIntervalsM": [
+            [
+              0.17331136954369733,
+              0.18188037007737753
+            ],
+            [
+              0.2232618003061682,
+              0.23281267401964517
+            ]
+          ],
+          "pairedWallExteriorDomainsM": [
+            [
+              [
+                0.17331136954369733,
+                0.22994092592509202
+              ]
+            ],
+            [
+              [
+                0.1760600792298529,
+                0.23281267401964517
+              ]
+            ]
+          ],
+          "feasibleExteriorIntervalsM": [
+            [
+              0.18188037007737753,
+              0.2232618003061682
+            ]
+          ]
+        },
+        "selectedRadiusM": 0.18188048928666709
+      }
+    },
+    {
+      "parameter": 0.5625,
+      "passed": true,
+      "actualMinimumM": 0.005767531829686713,
+      "targetPair": [
+        [
+          -0.17993396506818277,
+          0.009149456677750344,
+          1.2027077996299484
+        ],
+        [
+          -0.17451140318843997,
+          0.008220633156013497,
+          1.202352750959326
+        ]
+      ],
+      "intervals": {
+        "side": "R",
+        "sourceDepth": 0.00837549939751625,
+        "role": "torso",
+        "materialCurveParameter": 0.5625,
+        "canonicalStation": 0.25065231605706895,
+        "center": [
+          -2.313739185298084e-16,
+          -0.027480337449975266,
+          1.2041027581026662
+        ],
+        "direction": [
+          -0.979769754626479,
+          0.1999391216865559,
+          -0.008693419256991899
+        ],
+        "desiredRetainedEaseM": 0.005767418405049466,
+        "radiusIntervalM": [
+          0.17211741254373394,
+          0.2353004089121649
+        ],
+        "pairedWallOffsetsM": [
+          [
+            -0.0027112809398713994,
+            0.00046441176086842395,
+            0.00017752433531120364
+          ],
+          [
+            0.002711280939871382,
+            -0.00046441176086842395,
+            -0.00017752433531116103
+          ]
+        ],
+        "exteriorDomain": "INTERBODY_EXTERIOR",
+        "owningBodyExitFace": 3876,
+        "analyticClearanceIntervals": {
+          "method": "EXACT_TRIANGLE_PRISM_EDGE_CYLINDER_VERTEX_SPHERE_LINE_UNION",
+          "requestedClearanceM": 0.005767418405049466,
+          "candidateTriangleWallPairs": 25,
+          "blockedIntervalsM": [
+            [
+              0.17211741254373394,
+              0.1808818515715643
+            ],
+            [
+              0.22541473367343287,
+              0.2353004089121649
+            ]
+          ],
+          "pairedWallExteriorDomainsM": [
+            [
+              [
+                0.17211741254373394,
+                0.23239760402230777
+              ]
+            ],
+            [
+              [
+                0.1748202950413473,
+                0.2353004089121649
+              ]
+            ]
+          ],
+          "feasibleExteriorIntervalsM": [
+            [
+              0.1808818515715643,
+              0.22541473367343287
+            ]
+          ]
+        },
+        "selectedRadiusM": 0.18088197078085386
+      }
+    },
+    {
+      "parameter": 0.59375,
+      "passed": true,
+      "actualMinimumM": 0.005987855950016628,
+      "targetPair": [
+        [
+          -0.17886110437019848,
+          0.009141498068289141,
+          1.1985653428175573
+        ],
+        [
+          -0.17347768243500453,
+          0.008162740456159468,
+          1.1980396694916433
+        ]
+      ],
+      "intervals": {
+        "side": "R",
+        "sourceDepth": 0.00837549939751625,
+        "role": "torso",
+        "materialCurveParameter": 0.59375,
+        "canonicalStation": 0.24635532081181746,
+        "center": [
+          -2.285311750264563e-16,
+          -0.027662724822056242,
+          1.1998065018309156
+        ],
+        "direction": [
+          -0.9793737239390786,
+          0.2018841263976544,
+          -0.008361122314447914
+        ],
+        "desiredRetainedEaseM": 0.005987742569956793,
+        "radiusIntervalM": [
+          0.17092360785419503,
+          0.23796272143786734
+        ],
+        "pairedWallOffsetsM": [
+          [
+            -0.0026917109675969803,
+            0.0004893788060648365,
+            0.0002628366629570156
+          ],
+          [
+            0.0026917109675969617,
+            -0.0004893788060648365,
+            -0.00026283666295696094
+          ]
+        ],
+        "exteriorDomain": "INTERBODY_EXTERIOR",
+        "owningBodyExitFace": 3876,
+        "analyticClearanceIntervals": {
+          "method": "EXACT_TRIANGLE_PRISM_EDGE_CYLINDER_VERTEX_SPHERE_LINE_UNION",
+          "requestedClearanceM": 0.005987742569956793,
+          "candidateTriangleWallPairs": 23,
+          "blockedIntervalsM": [
+            [
+              0.17092360785419503,
+              0.1798795213165367
+            ],
+            [
+              0.22766677417928857,
+              0.23796272143786734
+            ]
+          ],
+          "pairedWallExteriorDomainsM": [
+            [
+              [
+                0.17092360785419503,
+                0.23503251716961068
+              ]
+            ],
+            [
+              [
+                0.17358392984343549,
+                0.23796272143786734
+              ]
+            ]
+          ],
+          "feasibleExteriorIntervalsM": [
+            [
+              0.1798795213165367,
+              0.22766677417928857
+            ]
+          ]
+        },
+        "selectedRadiusM": 0.17987964052582625
+      }
+    },
+    {
+      "parameter": 0.625,
+      "passed": true,
+      "actualMinimumM": 0.006197722095711497,
+      "targetPair": [
+        [
+          -0.17755470736220277,
+          0.009084198450425253,
+          1.1944228942797568
+        ],
+        [
+          -0.1722050687714967,
+          0.008065946853679668,
+          1.1937353803236586
+        ]
+      ],
+      "intervals": {
+        "side": "R",
+        "sourceDepth": 0.00837549939751625,
+        "role": "torso",
+        "materialCurveParameter": 0.625,
+        "canonicalStation": 0.24205832556656598,
+        "center": [
+          -2.2551789801579236e-16,
+          -0.027836133891374747,
+          1.1955098615049797
+        ],
+        "direction": [
+          -0.978973718650516,
+          0.20382912331659916,
+          -0.00800916222627638
+        ],
+        "desiredRetainedEaseM": 0.006197611720766289,
+        "radiusIntervalM": [
+          0.1693586815452023,
+          0.240687746338171
+        ],
+        "pairedWallOffsetsM": [
+          [
+            -0.002674819295353055,
+            0.000509125798372793,
+            0.00034375697804918046
+          ],
+          [
+            0.002674819295353035,
+            -0.000509125798372793,
+            -0.0003437569780491193
+          ]
+        ],
+        "exteriorDomain": "INTERBODY_EXTERIOR",
+        "owningBodyExitFace": 3875,
+        "analyticClearanceIntervals": {
+          "method": "EXACT_TRIANGLE_PRISM_EDGE_CYLINDER_VERTEX_SPHERE_LINE_UNION",
+          "requestedClearanceM": 0.006197611720766289,
+          "candidateTriangleWallPairs": 24,
+          "blockedIntervalsM": [
+            [
+              0.1693586815452023,
+              0.1786358183395916
+            ],
+            [
+              0.23004113002118132,
+              0.240687746338171
+            ]
+          ],
+          "pairedWallExteriorDomainsM": [
+            [
+              [
+                0.1693586815452023,
+                0.23768773793089665
+              ]
+            ],
+            [
+              [
+                0.1719421534976096,
+                0.240687746338171
+              ]
+            ]
+          ],
+          "feasibleExteriorIntervalsM": [
+            [
+              0.1786358183395916,
+              0.23004113002118132
+            ]
+          ]
+        },
+        "selectedRadiusM": 0.17863593754888116
+      }
+    },
+    {
+      "parameter": 0.65625,
+      "passed": true,
+      "actualMinimumM": 0.006394052345315674,
+      "targetPair": [
+        [
+          -0.1761310021979942,
+          0.009005714237897205,
+          1.1903156636450087
+        ],
+        [
+          -0.17082181397416196,
+          0.007951012185208864,
+          1.1894023157739535
+        ]
+      ],
+      "intervals": {
+        "side": "R",
+        "sourceDepth": 0.00837549939751625,
+        "role": "torso",
+        "materialCurveParameter": 0.65625,
+        "canonicalStation": 0.23776133032131452,
+        "center": [
+          -2.2234270113704314e-16,
+          -0.028000316263468314,
+          1.1912128765543843
+        ],
+        "direction": [
+          -0.9785697420174839,
+          0.2057739859664234,
+          -0.0076371923718890926
+        ],
+        "desiredRetainedEaseM": 0.006393936715381432,
+        "radiusIntervalM": [
+          0.16809275666936427,
+          0.2438153968984987
+        ],
+        "pairedWallOffsetsM": [
+          [
+            -0.0026545941119161375,
+            0.0005273510263441707,
+            0.0004566739355275647
+          ],
+          [
+            0.002654594111916117,
+            -0.0005273510263441708,
+            -0.0004566739355275271
+          ]
+        ],
+        "exteriorDomain": "INTERBODY_EXTERIOR",
+        "owningBodyExitFace": 3464,
+        "analyticClearanceIntervals": {
+          "method": "EXACT_TRIANGLE_PRISM_EDGE_CYLINDER_VERTEX_SPHERE_LINE_UNION",
+          "requestedClearanceM": 0.006393936715381432,
+          "candidateTriangleWallPairs": 26,
+          "blockedIntervalsM": [
+            [
+              0.16809275666936427,
+              0.1772753478702744
+            ],
+            [
+              0.23241896854200053,
+              0.2438153968984987
+            ]
+          ],
+          "pairedWallExteriorDomainsM": [
+            [
+              [
+                0.16809275666936427,
+                0.240760583116339
+              ]
+            ],
+            [
+              [
+                0.1706834851466346,
+                0.2438153968984987
+              ]
+            ]
+          ],
+          "feasibleExteriorIntervalsM": [
+            [
+              0.1772753478702744,
+              0.23241896854200053
+            ]
+          ]
+        },
+        "selectedRadiusM": 0.17727546707956396
+      }
+    },
+    {
+      "parameter": 0.6875,
+      "passed": true,
+      "actualMinimumM": 0.006574083324198589,
+      "targetPair": [
+        [
+          -0.1752137294094099,
+          0.009031940750138547,
+          1.186185299727507
+        ],
+        [
+          -0.1699349903195667,
+          0.007952431832845743,
+          1.1850894900789057
+        ]
+      ],
+      "intervals": {
+        "side": "R",
+        "sourceDepth": 0.00837549939751625,
+        "role": "torso",
+        "materialCurveParameter": 0.6875,
+        "canonicalStation": 0.23346433507606307,
+        "center": [
+          -2.1901419802943524e-16,
+          -0.02815502354387447,
+          1.186915586408654
+        ],
+        "direction": [
+          -0.9781617985492135,
+          0.20771857831326146,
+          -0.007244865939764438
+        ],
+        "desiredRetainedEaseM": 0.006573967722508068,
+        "radiusIntervalM": [
+          0.1670926157741786,
+          0.24718616604246268
+        ],
+        "pairedWallOffsetsM": [
+          [
+            -0.002639369544921619,
+            0.0005397544586464025,
+            0.0005479048243007752
+          ],
+          [
+            0.002639369544921599,
+            -0.0005397544586464026,
+            -0.0005479048243007552
+          ]
+        ],
+        "exteriorDomain": "INTERBODY_EXTERIOR",
+        "owningBodyExitFace": 3464,
+        "analyticClearanceIntervals": {
+          "method": "EXACT_TRIANGLE_PRISM_EDGE_CYLINDER_VERTEX_SPHERE_LINE_UNION",
+          "requestedClearanceM": 0.006573967722508068,
+          "candidateTriangleWallPairs": 24,
+          "blockedIntervalsM": [
+            [
+              0.1670926157741786,
+              0.1764270936714898
+            ],
+            [
+              0.23523213248163743,
+              0.24718616604246268
+            ]
+          ],
+          "pairedWallExteriorDomainsM": [
+            [
+              [
+                0.1670926157741786,
+                0.24404737854846503
+              ]
+            ],
+            [
+              [
+                0.1696479711652014,
+                0.24718616604246268
+              ]
+            ]
+          ],
+          "feasibleExteriorIntervalsM": [
+            [
+              0.1764270936714898,
+              0.23523213248163743
+            ]
+          ]
+        },
+        "selectedRadiusM": 0.17642721288077934
+      }
+    },
+    {
+      "parameter": 0.71875,
+      "passed": true,
+      "actualMinimumM": 0.0067354946217496854,
+      "targetPair": [
+        [
+          -0.17429053525092517,
+          0.009057254262467148,
+          1.1820375477869123
+        ],
+        [
+          -0.16903330759296376,
+          0.007963012729399156,
+          1.1807996050327512
+        ]
+      ],
+      "intervals": {
+        "side": "R",
+        "sourceDepth": 0.00837549939751625,
+        "role": "torso",
+        "materialCurveParameter": 0.71875,
+        "canonicalStation": 0.2291673398308116,
+        "center": [
+          -2.1554100233219508e-16,
+          -0.028300007338130748,
+          1.182618030497314
+        ],
+        "direction": [
+          -0.9777498940726451,
+          0.20966275457699868,
+          -0.006831836072124686
+        ],
+        "desiredRetainedEaseM": 0.006735379049354996,
+        "radiusIntervalM": [
+          0.1660921447293393,
+          0.2505839854484213
+        ],
+        "pairedWallOffsetsM": [
+          [
+            -0.0026286138289807197,
+            0.0005471207665339955,
+            0.0006189713770806576
+          ],
+          [
+            0.0026286138289806985,
+            -0.0005471207665339956,
+            -0.0006189713770806499
+          ]
+        ],
+        "exteriorDomain": "INTERBODY_EXTERIOR",
+        "owningBodyExitFace": 3464,
+        "analyticClearanceIntervals": {
+          "method": "EXACT_TRIANGLE_PRISM_EDGE_CYLINDER_VERTEX_SPHERE_LINE_UNION",
+          "requestedClearanceM": 0.006735379049354996,
+          "candidateTriangleWallPairs": 31,
+          "blockedIntervalsM": [
+            [
+              0.1660921447293393,
+              0.175568216274662
+            ],
+            [
+              0.238335938817722,
+              0.2505839854484213
+            ]
+          ],
+          "pairedWallExteriorDomainsM": [
+            [
+              [
+                0.1660921447293393,
+                0.24741799349366267
+              ]
+            ],
+            [
+              [
+                0.16862088465798838,
+                0.2505839854484213
+              ]
+            ]
+          ],
+          "feasibleExteriorIntervalsM": [
+            [
+              0.175568216274662,
+              0.238335938817722
+            ]
+          ]
+        },
+        "selectedRadiusM": 0.17556833548395154
+      }
+    },
+    {
+      "parameter": 0.75,
+      "passed": true,
+      "actualMinimumM": 0.006876469511369803,
+      "targetPair": [
+        [
+          -0.17335793887576267,
+          0.009082101615382988,
+          1.1778744878551661
+        ],
+        [
+          -0.1681145684380497,
+          0.007981388581929464,
+          1.1765306850914627
+        ]
+      ],
+      "intervals": {
+        "side": "R",
+        "sourceDepth": 0.00837549939751625,
+        "role": "torso",
+        "materialCurveParameter": 0.75,
+        "canonicalStation": 0.22487034458556013,
+        "center": [
+          -2.1193172768454928e-16,
+          -0.028435019251774673,
+          1.1783202482498893
+        ],
+        "direction": [
+          -0.9773340357985912,
+          0.21160635904324693,
+          -0.0063977560205391555
+        ],
+        "desiredRetainedEaseM": 0.006876353969334559,
+        "radiusIntervalM": [
+          0.1650913091720393,
+          0.25370522883593255
+        ],
+        "pairedWallOffsetsM": [
+          [
+            -0.002621685218856491,
+            0.000550356516726762,
+            0.0006719013818517997
+          ],
+          [
+            0.0026216852188564693,
+            -0.0005503565167267621,
+            -0.0006719013818517997
+          ]
+        ],
+        "exteriorDomain": "INTERBODY_EXTERIOR",
+        "owningBodyExitFace": 3464,
+        "analyticClearanceIntervals": {
+          "method": "EXACT_TRIANGLE_PRISM_EDGE_CYLINDER_VERTEX_SPHERE_LINE_UNION",
+          "requestedClearanceM": 0.006876353969334559,
+          "candidateTriangleWallPairs": 37,
+          "blockedIntervalsM": [
+            [
+              0.1650913091720393,
+              0.17469578557151072
+            ],
+            [
+              0.24138584959804063,
+              0.25370522883593255
+            ]
+          ],
+          "pairedWallExteriorDomainsM": [
+            [
+              [
+                0.1650913091720393,
+                0.25054064040660506
+              ]
+            ],
+            [
+              [
+                0.16760117909762995,
+                0.25370522883593255
+              ]
+            ]
+          ],
+          "feasibleExteriorIntervalsM": [
+            [
+              0.17469578557151072,
+              0.24138584959804063
+            ]
+          ]
+        },
+        "selectedRadiusM": 0.17469590478080027
+      }
+    },
+    {
+      "parameter": 0.78125,
+      "passed": true,
+      "actualMinimumM": 0.006995782032099719,
+      "targetPair": [
+        [
+          -0.17231762709443463,
+          0.009083096314556697,
+          1.173696702580097
+        ],
+        [
+          -0.1670750762746253,
+          0.0079870589290154,
+          1.1722834305340097
+        ]
+      ],
+      "intervals": {
+        "side": "R",
+        "sourceDepth": 0.00837549939751625,
+        "role": "torso",
+        "materialCurveParameter": 0.78125,
+        "canonicalStation": 0.22057334934030864,
+        "center": [
+          -2.0819498772572434e-16,
+          -0.028559810890343776,
+          1.1740222790959054
+        ],
+        "direction": [
+          -0.9769142323888602,
+          0.21354922587697164,
+          -0.005942279312694771
+        ],
+        "desiredRetainedEaseM": 0.006995669549763238,
+        "radiusIntervalM": [
+          0.16386934413298668,
+          0.256853702343644
+        ],
+        "pairedWallOffsetsM": [
+          [
+            -0.0026212754099046746,
+            0.0005480186927706491,
+            0.0007066360230436696
+          ],
+          [
+            0.0026212754099046508,
+            -0.0005480186927706492,
+            -0.0007066360230436696
+          ]
+        ],
+        "exteriorDomain": "INTERBODY_EXTERIOR",
+        "owningBodyExitFace": 3463,
+        "analyticClearanceIntervals": {
+          "method": "EXACT_TRIANGLE_PRISM_EDGE_CYLINDER_VERTEX_SPHERE_LINE_UNION",
+          "requestedClearanceM": 0.006995669549763238,
+          "candidateTriangleWallPairs": 39,
+          "blockedIntervalsM": [
+            [
+              0.16386934413298668,
+              0.17370638035676672
+            ],
+            [
+              0.24431987353537435,
+              0.256853702343644
+            ]
+          ],
+          "pairedWallExteriorDomainsM": [
+            [
+              [
+                0.16386934413298668,
+                0.25365667311542817
+              ]
+            ],
+            [
+              [
+                0.1662923380890537,
+                0.256853702343644
+              ]
+            ]
+          ],
+          "feasibleExteriorIntervalsM": [
+            [
+              0.17370638035676672,
+              0.24431987353537435
+            ]
+          ]
+        },
+        "selectedRadiusM": 0.17370649956605627
+      }
+    },
+    {
+      "parameter": 0.8125,
+      "passed": true,
+      "actualMinimumM": 0.007092893933280991,
+      "targetPair": [
+        [
+          -0.17091039547103867,
+          0.009009037669855845,
+          1.169512384276638
+        ],
+        [
+          -0.1656685567351182,
+          0.00791868158772462,
+          1.168052231434838
+        ]
+      ],
+      "intervals": {
+        "side": "R",
+        "sourceDepth": 0.00837549939751625,
+        "role": "torso",
+        "materialCurveParameter": 0.8125,
+        "canonicalStation": 0.2162763540950572,
+        "center": [
+          -2.0433939609494692e-16,
+          -0.02867413385937559,
+          1.1697241624648875
+        ],
+        "direction": [
+          -0.9764904940242973,
+          0.21549117893811573,
+          -0.005465059930570095
+        ],
+        "desiredRetainedEaseM": 0.007092781479562242,
+        "radiusIntervalM": [
+          0.16243005234238003,
+          0.2600187257020922
+        ],
+        "pairedWallOffsetsM": [
+          [
+            -0.0026209193679602475,
+            0.0005451780410656124,
+            0.0007300764208998865
+          ],
+          [
+            0.0026209193679602224,
+            -0.0005451780410656124,
+            -0.0007300764208998865
+          ]
+        ],
+        "exteriorDomain": "INTERBODY_EXTERIOR",
+        "owningBodyExitFace": 3583,
+        "analyticClearanceIntervals": {
+          "method": "EXACT_TRIANGLE_PRISM_EDGE_CYLINDER_VERTEX_SPHERE_LINE_UNION",
+          "requestedClearanceM": 0.007092781479562242,
+          "candidateTriangleWallPairs": 45,
+          "blockedIntervalsM": [
+            [
+              0.16243005234238003,
+              0.1723410117417413
+            ],
+            [
+              0.24731489835299178,
+              0.2600187257020922
+            ]
+          ],
+          "pairedWallExteriorDomainsM": [
+            [
+              [
+                0.16243005234238003,
+                0.25680243819553106
+              ]
+            ],
+            [
+              [
+                0.1648892387317059,
+                0.2600187257020922
+              ]
+            ]
+          ],
+          "feasibleExteriorIntervalsM": [
+            [
+              0.1723410117417413,
+              0.24731489835299178
+            ]
+          ]
+        },
+        "selectedRadiusM": 0.17234113095103085
+      }
+    },
+    {
+      "parameter": 0.84375,
+      "passed": true,
+      "actualMinimumM": 0.007168023399366255,
+      "targetPair": [
+        [
+          -0.16966160698967517,
+          0.008975308269964316,
+          1.1653206503555018
+        ],
+        [
+          -0.1644203533264677,
+          0.007890772920027496,
+          1.1638315720037866
+        ]
+      ],
+      "intervals": {
+        "side": "R",
+        "sourceDepth": 0.00837549939751625,
+        "role": "torso",
+        "materialCurveParameter": 0.84375,
+        "canonicalStation": 0.21197935884980573,
+        "center": [
+          -2.0037356643144342e-16,
+          -0.028777739764407635,
+          1.1654259377863605
+        ],
+        "direction": [
+          -0.9760628324736996,
+          0.2174320315995894,
+          -0.004965752500242615
+        ],
+        "desiredRetainedEaseM": 0.007167908896958095,
+        "radiusIntervalM": [
+          0.1612202695063482,
+          0.26317489729191634
+        ],
+        "pairedWallOffsetsM": [
+          [
+            -0.0026206268316037408,
+            0.0005422676749684105,
+            0.0007445391758574894
+          ],
+          [
+            0.0026206268316037147,
+            -0.0005422676749684105,
+            -0.0007445391758574894
+          ]
+        ],
+        "exteriorDomain": "INTERBODY_EXTERIOR",
+        "owningBodyExitFace": 3583,
+        "analyticClearanceIntervals": {
+          "method": "EXACT_TRIANGLE_PRISM_EDGE_CYLINDER_VERTEX_SPHERE_LINE_UNION",
+          "requestedClearanceM": 0.007167908896958095,
+          "candidateTriangleWallPairs": 45,
+          "blockedIntervalsM": [
+            [
+              0.1612202695063482,
+              0.1711374086225288
+            ],
+            [
+              0.25036447421104363,
+              0.26317489729191634
+            ]
+          ],
+          "pairedWallExteriorDomainsM": [
+            [
+              [
+                0.1612202695063482,
+                0.2599588973940442
+              ]
+            ],
+            [
+              [
+                0.16367484655695322,
+                0.26317489729191634
+              ]
+            ]
+          ],
+          "feasibleExteriorIntervalsM": [
+            [
+              0.1711374086225288,
+              0.25036447421104363
+            ]
+          ]
+        },
+        "selectedRadiusM": 0.17113752783181835
+      }
+    },
+    {
+      "parameter": 0.875,
+      "passed": true,
+      "actualMinimumM": 0.0072222355139638615,
+      "targetPair": [
+        [
+          -0.16853543956084946,
+          0.00897543000906232,
+          1.161124269275594
+        ],
+        [
+          -0.16329463233957864,
+          0.00789610649042452,
+          1.1596195296115235
+        ]
+      ],
+      "intervals": {
+        "side": "R",
+        "sourceDepth": 0.00837549939751625,
+        "role": "torso",
+        "materialCurveParameter": 0.875,
+        "canonicalStation": 0.20768236360455428,
+        "center": [
+          -1.9630611237444047e-16,
+          -0.028870380210977455,
+          1.1611276444898495
+        ],
+        "direction": [
+          -0.9756312611635547,
+          0.21937158656801653,
+          -0.004444012493551719
+        ],
+        "desiredRetainedEaseM": 0.007222119217183237,
+        "radiusIntervalM": [
+          0.16015525516106188,
+          0.26621842700054027
+        ],
+        "pairedWallOffsetsM": [
+          [
+            -0.0026204036106354193,
+            0.0005396617593188992,
+            0.0007523698320351959
+          ],
+          [
+            0.0026204036106353924,
+            -0.0005396617593188992,
+            -0.0007523698320351959
+          ]
+        ],
+        "exteriorDomain": "INTERBODY_EXTERIOR",
+        "owningBodyExitFace": 3584,
+        "analyticClearanceIntervals": {
+          "method": "EXACT_TRIANGLE_PRISM_EDGE_CYLINDER_VERTEX_SPHERE_LINE_UNION",
+          "requestedClearanceM": 0.007222119217183237,
+          "candidateTriangleWallPairs": 46,
+          "blockedIntervalsM": [
+            [
+              0.16015525516106188,
+              0.17005904407781208
+            ],
+            [
+              0.25340117641697896,
+              0.26621842700054027
+            ]
+          ],
+          "pairedWallExteriorDomainsM": [
+            [
+              [
+                0.16015525516106188,
+                0.2630317684044656
+              ]
+            ],
+            [
+              [
+                0.1626560558267201,
+                0.26621842700054027
+              ]
+            ]
+          ],
+          "feasibleExteriorIntervalsM": [
+            [
+              0.17005904407781208,
+              0.25340117641697896
+            ]
+          ]
+        },
+        "selectedRadiusM": 0.17005916328710163
+      }
+    },
+    {
+      "parameter": 0.90625,
+      "passed": true,
+      "actualMinimumM": 0.007257529253183591,
+      "targetPair": [
+        [
+          -0.1675776186536987,
+          0.009020432038661834,
+          1.1569251274311683
+        ],
+        [
+          -0.16233740885703882,
+          0.007946431551260373,
+          1.1554142917807073
+        ]
+      ],
+      "intervals": {
+        "side": "R",
+        "sourceDepth": 0.00837549939751625,
+        "role": "torso",
+        "materialCurveParameter": 0.90625,
+        "canonicalStation": 0.2033853683593028,
+        "center": [
+          -1.921456475631645e-16,
+          -0.028951806804622567,
+          1.15682932200488
+        ],
+        "direction": [
+          -0.9751957952485479,
+          0.22130963570764917,
+          -0.003899496441830917
+        ],
+        "desiredRetainedEaseM": 0.007257412960176601,
+        "radiusIntervalM": [
+          0.1592144915665812,
+          0.2691234243061336
+        ],
+        "pairedWallOffsetsM": [
+          [
+            -0.002620104898329947,
+            0.0005370002437007313,
+            0.0007554178252304043
+          ],
+          [
+            0.00262010489832992,
+            -0.0005370002437007313,
+            -0.0007554178252304047
+          ]
+        ],
+        "exteriorDomain": "INTERBODY_EXTERIOR",
+        "owningBodyExitFace": 3584,
+        "analyticClearanceIntervals": {
+          "method": "EXACT_TRIANGLE_PRISM_EDGE_CYLINDER_VERTEX_SPHERE_LINE_UNION",
+          "requestedClearanceM": 0.007257412960176601,
+          "candidateTriangleWallPairs": 49,
+          "blockedIntervalsM": [
+            [
+              0.1592144915665812,
+              0.1691531057729058
+            ],
+            [
+              0.25640740221202696,
+              0.2691234243061336
+            ]
+          ],
+          "pairedWallExteriorDomainsM": [
+            [
+              [
+                0.1592144915665812,
+                0.2659318598520668
+              ]
+            ],
+            [
+              [
+                0.16171369849221745,
+                0.2691234243061336
+              ]
+            ]
+          ],
+          "feasibleExteriorIntervalsM": [
+            [
+              0.1691531057729058,
+              0.25640740221202696
+            ]
+          ]
+        },
+        "selectedRadiusM": 0.16915322498219534
+      }
+    },
+    {
+      "parameter": 0.9375,
+      "passed": true,
+      "actualMinimumM": 0.0072769248664245455,
+      "targetPair": [
+        [
+          -0.16660394395548178,
+          0.009070990062390183,
+          1.1527270365303735
+        ],
+        [
+          -0.1613638009217804,
+          0.007999075639602714,
+          1.151213940583912
+        ]
+      ],
+      "intervals": {
+        "side": "R",
+        "sourceDepth": 0.00837549939751625,
+        "role": "torso",
+        "materialCurveParameter": 0.9375,
+        "canonicalStation": 0.19908837311405134,
+        "center": [
+          -1.8790078563684224e-16,
+          -0.029021771150880508,
+          1.1525310097609767
+        ],
+        "direction": [
+          -0.9747564516827781,
+          0.22324595986788606,
+          -0.003331862161912992
+        ],
+        "desiredRetainedEaseM": 0.007276808578284216,
+        "radiusIntervalM": [
+          0.15827213897740172,
+          0.2720336035361769
+        ],
+        "pairedWallOffsetsM": [
+          [
+            -0.002620071516850706,
+            0.0005359572113937344,
+            0.0007565479732306628
+          ],
+          [
+            0.0026200715168506784,
+            -0.0005359572113937344,
+            -0.000756547973230663
+          ]
+        ],
+        "exteriorDomain": "INTERBODY_EXTERIOR",
+        "owningBodyExitFace": 3584,
+        "analyticClearanceIntervals": {
+          "method": "EXACT_TRIANGLE_PRISM_EDGE_CYLINDER_VERTEX_SPHERE_LINE_UNION",
+          "requestedClearanceM": 0.007276808578284216,
+          "candidateTriangleWallPairs": 48,
+          "blockedIntervalsM": [
+            [
+              0.15827213897740172,
+              0.16823049076055072
+            ],
+            [
+              0.2592815020103412,
+              0.2720336035361769
+            ]
+          ],
+          "pairedWallExteriorDomainsM": [
+            [
+              [
+                0.15827213897740172,
+                0.2688386128911746
+              ]
+            ],
+            [
+              [
+                0.16077088930790837,
+                0.2720336035361769
+              ]
+            ]
+          ],
+          "feasibleExteriorIntervalsM": [
+            [
+              0.16823049076055072,
+              0.2592815020103412
+            ]
+          ]
+        },
+        "selectedRadiusM": 0.16823060996984027
+      }
+    },
+    {
+      "parameter": 0.96875,
+      "passed": true,
+      "actualMinimumM": 0.007284543566126659,
+      "targetPair": [
+        [
+          -0.1656176890450823,
+          0.009127189470695645,
+          1.1485310156663573
+        ],
+        [
+          -0.16037747291602644,
+          0.008055775791812865,
+          1.1470174456778164
+        ]
+      ],
+      "intervals": {
+        "side": "R",
+        "sourceDepth": 0.00837549939751625,
+        "role": "torso",
+        "materialCurveParameter": 0.96875,
+        "canonicalStation": 0.19479137786879985,
+        "center": [
+          -1.8358014023470004e-16,
+          -0.0290800248552888,
+          1.1482327471876645
+        ],
+        "direction": [
+          -0.974313249291617,
+          0.22518032871485408,
+          -0.002740768994600485
+        ],
+        "desiredRetainedEaseM": 0.007284427283959789,
+        "radiusIntervalM": [
+          0.1573281328426256,
+          0.27494885052203555
+        ],
+        "pairedWallOffsetsM": [
+          [
+            -0.0026201080645279363,
+            0.0005357068394413899,
+            0.0007567849942704733
+          ],
+          [
+            0.0026201080645279085,
+            -0.0005357068394413899,
+            -0.0007567849942704734
+          ]
+        ],
+        "exteriorDomain": "INTERBODY_EXTERIOR",
+        "owningBodyExitFace": 3584,
+        "analyticClearanceIntervals": {
+          "method": "EXACT_TRIANGLE_PRISM_EDGE_CYLINDER_VERTEX_SPHERE_LINE_UNION",
+          "requestedClearanceM": 0.007284427283959789,
+          "candidateTriangleWallPairs": 47,
+          "blockedIntervalsM": [
+            [
+              0.1573281328426256,
+              0.1672947226694009
+            ],
+            [
+              0.262176986988337,
+              0.27494885052203555
+            ]
+          ],
+          "pairedWallExteriorDomainsM": [
+            [
+              [
+                0.1573281328426256,
+                0.27175121322308005
+              ]
+            ],
+            [
+              [
+                0.15982692752676883,
+                0.27494885052203555
+              ]
+            ]
+          ],
+          "feasibleExteriorIntervalsM": [
+            [
+              0.1672947226694009,
+              0.262176986988337
+            ]
+          ]
+        },
+        "selectedRadiusM": 0.16729484187869045
+      }
+    },
+    {
+      "parameter": 1.0,
+      "passed": true,
+      "actualMinimumM": 0.007285577877465304,
+      "targetPair": [
+        [
+          -0.16468955478391364,
+          0.009205111323593276,
+          1.1443375804002327
+        ],
+        [
+          -0.1594493143464935,
+          0.00813373069280083,
+          1.1428239941071474
+        ]
+      ],
+      "intervals": null
+    }
+  ]
+}

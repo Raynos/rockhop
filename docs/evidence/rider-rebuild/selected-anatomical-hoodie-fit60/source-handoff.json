@@ -1,0 +1,131 @@
+{
+  "acceptedArt": false,
+  "actualConstructionExecuted": false,
+  "sourcePins": {
+    "cage.py": {
+      "path": "assets/blender/rider-rebuild/selected-anatomical-hoodie-fit60/cage.py",
+      "sha256": "7034acfb14fa707e98baa1c6131b54f7584e6d4c4f2b9cb027a01d705796af29"
+    },
+    "check.py": {
+      "path": "assets/blender/rider-rebuild/selected-anatomical-hoodie-fit60/check.py",
+      "sha256": "c6df255e25c194d8faa5cb6c3f340fa43096e60f27c914b8abc72a0046d3d61b"
+    },
+    "check_intervals.py": {
+      "path": "assets/blender/rider-rebuild/selected-anatomical-hoodie-fit60/check_intervals.py",
+      "sha256": "5f8b4a41a6b095b495880d012bbcd16d807d359eaa9ae0f90d6dd99fa46eddf7"
+    },
+    "component.py": {
+      "path": "assets/blender/rider-rebuild/selected-anatomical-hoodie-fit60/component.py",
+      "sha256": "8efabcf9dc7c9165766be7b3096c18a3b91610677a96f402e7b3c34470329af4"
+    },
+    "diagnose58.py": {
+      "path": "assets/blender/rider-rebuild/selected-anatomical-hoodie-fit60/diagnose58.py",
+      "sha256": "9c6572b04e03e0ab53c1a942cd3e00d565ba7127e990c59fe25648901593424c"
+    },
+    "geometry.py": {
+      "path": "assets/blender/rider-rebuild/selected-anatomical-hoodie-fit60/geometry.py",
+      "sha256": "8f301f20da87f3e2f2dec34e2fcfde63b1c56187aed98f165a35d3a9b26dc091"
+    },
+    "input01.json": {
+      "path": "assets/blender/rider-rebuild/selected-anatomical-hoodie-fit60/input01.json",
+      "sha256": "8c81efd750378a8348511cd870eae0993b11865e7cffbfba85432fedac6edf47"
+    },
+    "intervals.py": {
+      "path": "assets/blender/rider-rebuild/selected-anatomical-hoodie-fit60/intervals.py",
+      "sha256": "329ac7c14e4d8dfb8dc46f85971ab55a01ce977d27dc0bd700e1fda80946759c"
+    },
+    "meridian.py": {
+      "path": "assets/blender/rider-rebuild/selected-anatomical-hoodie-fit60/meridian.py",
+      "sha256": "a22f105e709b5f00f30406fb2baccfb366c8905eb807605e0ef91675cd55163b"
+    },
+    "preflight58.py": {
+      "path": "assets/blender/rider-rebuild/selected-anatomical-hoodie-fit60/preflight58.py",
+      "sha256": "227dcba91101b3921d28d97dc740a01d9988287bbc5cd539badca3bc180afd48"
+    },
+    "preflight_all.py": {
+      "path": "assets/blender/rider-rebuild/selected-anatomical-hoodie-fit60/preflight_all.py",
+      "sha256": "be98aa902aa04351070a8e1c115d1a0f0794a8defc98ce77a7ab6eec11ba794b"
+    },
+    "qualify.py": {
+      "path": "assets/blender/rider-rebuild/selected-anatomical-hoodie-fit60/qualify.py",
+      "sha256": "895a120b7b47e31bafd55a627c83004a2ca93a54b39bef521f80fa935300eb9a"
+    },
+    "sections.py": {
+      "path": "assets/blender/rider-rebuild/selected-anatomical-hoodie-fit60/sections.py",
+      "sha256": "01687d2f746616508f561d83c4f227d3686b68d6b2c11d9f09e64b7c8b2511a3"
+    },
+    "targets.py": {
+      "path": "assets/blender/rider-rebuild/selected-anatomical-hoodie-fit60/targets.py",
+      "sha256": "a6e70ed8f322b85ddbfed3330cce52d70b640d0ce9906b4671b82c3efac6512e"
+    }
+  },
+  "evidencePins": {
+    "all-branches-preflight.json": {
+      "path": "docs/evidence/rider-rebuild/selected-anatomical-hoodie-fit60/all-branches-preflight.json",
+      "sha256": "0f67ec5349b6e9f36558f0c2ccd0ea5dc9d9a9f1eab0a0e77c0dbd5b3b497758"
+    },
+    "cpu-fixtures.json": {
+      "path": "docs/evidence/rider-rebuild/selected-anatomical-hoodie-fit60/cpu-fixtures.json",
+      "sha256": "aec0da3b8c35ee764817493d75815a9458b4852af757538610695ebbb12b0477"
+    },
+    "interval-fixtures.json": {
+      "path": "docs/evidence/rider-rebuild/selected-anatomical-hoodie-fit60/interval-fixtures.json",
+      "sha256": "9e9d229c673be2c402d49e7a108146504b113ad12bb4dbe2b03dab8b76c33787"
+    },
+    "ray58-diagnosis.json": {
+      "path": "docs/evidence/rider-rebuild/selected-anatomical-hoodie-fit60/ray58-diagnosis.json",
+      "sha256": "b4cb7845fc86c27415e631ec356a13c79c33f11ef1a030cc02d76fb88862dd97"
+    },
+    "right-torso-exterior-preflight.json": {
+      "path": "docs/evidence/rider-rebuild/selected-anatomical-hoodie-fit60/right-torso-exterior-preflight.json",
+      "sha256": "7e06b51fe9468706b4664aaa9850552631f7d64f536f08ccc05c14b0c97e8d02"
+    }
+  },
+  "commands": {
+    "construct": "/Applications/Blender.app/Contents/MacOS/Blender -b -t 2 --python-exit-code 1 --python assets/blender/rider-rebuild/selected-anatomical-hoodie-fit60/component.py -- assets/blender/rider-rebuild/selected-anatomical-hoodie-fit60/input01.json harness/out/rider-rebuild/selected-anatomical-hoodie-fit60/component01",
+    "qualify": "/Applications/Blender.app/Contents/MacOS/Blender -b -t 2 --python-exit-code 1 --python assets/blender/rider-rebuild/selected-anatomical-hoodie-fit60/component.py -- qualify harness/out/rider-rebuild/selected-anatomical-hoodie-fit60/component01/component-pending.json",
+    "cpu": "OPENBLAS_NUM_THREADS=2 OMP_NUM_THREADS=2 /Applications/Blender.app/Contents/Resources/5.2/python/bin/python3.13 assets/blender/rider-rebuild/selected-anatomical-hoodie-fit60/check.py",
+    "intervalCPU": "OPENBLAS_NUM_THREADS=2 OMP_NUM_THREADS=2 /Applications/Blender.app/Contents/Resources/5.2/python/bin/python3.13 assets/blender/rider-rebuild/selected-anatomical-hoodie-fit60/check_intervals.py",
+    "recordedBranchCPU": "OPENBLAS_NUM_THREADS=2 OMP_NUM_THREADS=2 /Applications/Blender.app/Contents/Resources/5.2/python/bin/python3.13 assets/blender/rider-rebuild/selected-anatomical-hoodie-fit60/preflight58.py NEW_OUTPUT_JSON",
+    "allTargetsCPU": "OPENBLAS_NUM_THREADS=2 OMP_NUM_THREADS=2 /Applications/Blender.app/Contents/Resources/5.2/python/bin/python3.13 assets/blender/rider-rebuild/selected-anatomical-hoodie-fit60/preflight_all.py NEW_OUTPUT_JSON"
+  },
+  "expectedOutputs": [
+    "UNACCEPTED-selected-anatomical-hoodie-fit60.blend",
+    "component-raw.json",
+    "component-pending.json",
+    "expected-witness.json",
+    "anatomical-cage.npz",
+    "material-targets.json",
+    "qualification-inputs.npz",
+    "component-qualified.json",
+    "actual-tangent-and-pair.json"
+  ],
+  "failureOutput": "construction-failure.json includes exact paired offsets plus full analytic forbidden/feasible and both wall exterior intervals, anatomical side/depth/role/station/frame/ease and minimum-clearance diagnosis on infeasibility.",
+  "qualificationAdmission": "component.py qualify_receipt(path); status UNACCEPTED_ANATOMICAL60_REOPENED_DISTAL_AND_MOTION_PENDING. Unchanged source/topology/paired C2/saved contact/native reopen gates. Never admit raw or CPU-only output.",
+  "actualWitnessFaceIds": [
+    754365,
+    713389,
+    734276,
+    729981
+  ],
+  "finding": "Actual58 failed a midpoint existence assumption; prescribed ray is feasible at unchanged requested ease.",
+  "method": "Exact line intersection with every candidate triangle clearance prism/edge cylinder/vertex sphere; complement intersected with BOTH paired-wall signed exterior ray domains. Named branch, material station order, healthy50 endpoint pair/ease and2.6mm minimum unchanged.",
+  "cpuScope": {
+    "recordedRightTorso33Passed": true,
+    "recordedRightTorsoSeconds": 2.506166832987219,
+    "allTargetsSeconds": 52.2595244999975,
+    "connectedSourceSections": 13,
+    "branches": 26,
+    "curveStations": 858,
+    "cageControlPoints": 656,
+    "minimumFinalBranchControlGapM": 0.002653472067835673,
+    "fixtureGroups": 15
+  },
+  "limits": [
+    "CPU source normal choices are explicitly recorded; native BVH tie choices still require actual guarded construction.",
+    "No60 cage/native constructed. Every full native contact/tangent/selfcontact/art/generic/game gate remains open.",
+    "Parent original serial guard and CPU2 policy unchanged; source60 first native runtime unmeasured.",
+    "Raw native and receipt precede expensive postchecks; separate reopen required before downstream51 intake."
+  ],
+  "retention": "Retain source60 directory, these evidencePins, this handoff and owned journal. right-torso-preflight.json is a superseded preliminary CPU output before explicit signed-ray-domain intersection; use right-torso-exterior-preflight.json. No retained input references the preliminary output."
+}
