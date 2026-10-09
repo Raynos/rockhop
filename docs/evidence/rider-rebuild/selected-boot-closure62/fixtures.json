@@ -1,0 +1,39 @@
+{
+  "status": "CPU_FIXED_POINT_SOURCE_FIXTURES_PASSED_UNACCEPTED",
+  "actual59": {
+    "path": "harness/out/rider-rebuild/selected-boot-fan59/candidate01/constructor.json",
+    "sha256": "e969f9f5f84fffe9d1a13320c374a7a93f929f1f11b1b4b2c975635a6a5fe69f"
+  },
+  "actual59Census": {
+    "verticesExamined": 13246,
+    "trianglesExamined": 26520,
+    "minimumNormalDot": 0.019989553093820472,
+    "threshold": 0.25,
+    "undefinedNormals": 0,
+    "failingVertices": 1,
+    "failures": [
+      {
+        "targetVertexId": 6886,
+        "originalVertexId": 120878,
+        "normalDot": 0.019989553093820472
+      }
+    ],
+    "passed": false,
+    "method": "Float64 geometric face normals and atan2 corner-angle vertex weighting; compare to native donor vertex normal at exact original index. CPU proxy only; unchanged native gate still required."
+  },
+  "augmentedProtection": {
+    "centers": 451,
+    "vertices": 2053,
+    "faces": 2232,
+    "edges": 4152
+  },
+  "constructorRecipeSHA256": "56ac49d3d2001f65ea39bb6d151768e8b9626c8c192bf1ed90fa03ffaefa42cc",
+  "checks": [
+    "Actual59 full census reproduces exactly one failure: target6886/original120878, dot0.0199895531",
+    "Existing2227 protected faces still pass; monotone augmentation adds the failing donor fan and rejects the unchanged old candidate",
+    "Every failing fan grows together; closure is deterministic, duplicate-safe and preserves previous centers/vertices/faces",
+    "No-progress repeated failure rejects; positive/reversed/degenerate geometry fixtures distinguish pass/failure",
+    "Loop always re-reduces original source with frozen attributes/error/flags and retains exact fans before CPU completion"
+  ],
+  "limits": "No reduction or native job ran. Passing closure/source fixtures do not show that the future constructor reaches a fixed point or qualifies art."
+}

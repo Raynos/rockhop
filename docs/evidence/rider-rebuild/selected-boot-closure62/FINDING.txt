@@ -1,0 +1,20 @@
+Actual59 preserves all 2227 required source faces and repairs all 13
+old normal failures, but full CPU census finds one new failure:
+target 6886, donor ancestor 120878, dot 0.0199895531 against 0.25.
+
+Constructor62 solves accumulated topology constraints to a fixed point.
+Every iteration reduces the immutable original source with unchanged
+attributes, ErrorAbsolute, 1mm and soft 8000 triangle target. It verifies
+all accumulated exact donor fans, then computes every candidate vertex
+normal. All failing original fans are protected together for the next
+iteration. Locks and exact fan requirements only grow. A full CPU pass
+stops; failure with no new protectable fan rejects. The existing parent
+guard bounds the whole job. Intermediate candidates and per-iteration
+constraints/results remain explicitly unaccepted in its output directory.
+
+Validation: five CPU fixture groups pass, including the actual59
+regression, deterministic monotone growth, all-failures admission,
+no-progress rejection and positive/reversed/degenerate geometry.
+No simplifier or native job ran. No normal/error threshold was changed.
+Limits: native geometry/contact/skin, source appearance bake, motion
+and whole-scene allocation remain required even after CPU convergence.

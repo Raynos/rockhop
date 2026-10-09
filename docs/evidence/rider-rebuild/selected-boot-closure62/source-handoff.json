@@ -1,0 +1,70 @@
+{
+  "status": "SOURCE_READY_FIXED_POINT_CONSTRAINT_CONSTRUCTOR_UNACCEPTED",
+  "acceptedArt": false,
+  "files": [
+    {
+      "path": "assets/blender/rider-rebuild/selected-boot-closure62/closure.mjs",
+      "sha256": "89cb51a5d9587a0c6726ab65d7678b9e0072756d16973dab3263e96e849ce294"
+    },
+    {
+      "path": "assets/blender/rider-rebuild/selected-boot-closure62/construct.mjs",
+      "sha256": "56ac49d3d2001f65ea39bb6d151768e8b9626c8c192bf1ed90fa03ffaefa42cc"
+    },
+    {
+      "path": "assets/blender/rider-rebuild/selected-boot-closure62/check.mjs",
+      "sha256": "db88f4b9435c7a0d672609060d50189fb04f9c7b02589420d2f134cfc83a72ca"
+    },
+    {
+      "path": "docs/evidence/rider-rebuild/selected-boot-closure62/fixtures.json",
+      "sha256": "1e0feced36047dca14d8af0e2229efa640ab8ac30e4bb53eb9f75996b7804d2d"
+    }
+  ],
+  "actual59Regression": {
+    "verticesExamined": 13246,
+    "trianglesExamined": 26520,
+    "minimumNormalDot": 0.019989553093820472,
+    "threshold": 0.25,
+    "undefinedNormals": 0,
+    "failingVertices": 1,
+    "failures": [
+      {
+        "targetVertexId": 6886,
+        "originalVertexId": 120878,
+        "normalDot": 0.019989553093820472
+      }
+    ],
+    "passed": false,
+    "method": "Float64 geometric face normals and atan2 corner-angle vertex weighting; compare to native donor vertex normal at exact original index. CPU proxy only; unchanged native gate still required."
+  },
+  "firstAugmentation": {
+    "centers": 451,
+    "vertices": 2053,
+    "faces": 2232,
+    "edges": 4152
+  },
+  "parentCommand": [
+    "node",
+    "assets/blender/rider-rebuild/selected-boot-closure62/construct.mjs",
+    "harness/out/rider-rebuild/selected-production-census35/bootL01/census.json",
+    "docs/evidence/rider-rebuild/selected-boot-fan59/fan-census.json",
+    "harness/out/rider-rebuild/selected-boot-closure62/candidate01"
+  ],
+  "executionPolicy": "Parent original guarded serial stage only, after source review. The original external guard bounds the whole invocation. No local timeout replacement, parameter sweep, or forced target count.",
+  "iterationRule": "Reduce the same immutable original source each iteration. Require every accumulated exact oriented donor fan and all existing locks. Census every resulting vertex. Add every failing original fan together, monotonically. Stop only on a full CPU normal pass; reject if no new fan is available.",
+  "frozenPolicy": {
+    "minimumNormalDot": 0.25,
+    "maximumSurfaceErrorM": 0.001,
+    "targetTriangles": 8000,
+    "targetIsSoft": true,
+    "sceneBudgetPassed": false,
+    "flags": [
+      "ErrorAbsolute"
+    ]
+  },
+  "localApiEvidence": {
+    "path": "docs/evidence/rider-rebuild/selected-boot-fan59/meshoptimizer-api.json",
+    "sha256": "31bda865f38974a3443b13b9f340970b8a5ab07287df8367201ca0b56d981695"
+  },
+  "validation": "Five CPU fixture groups passed. Actual59 one remaining failure reproduced; no-progress rejection, all-failures simultaneous growth, monotone closure, geometry mutations and source reset checks pass. No simplifier/native job ran.",
+  "limits": "The future fixed point and native geometry/art/scene allocation remain unproven. Worst-case original source topology remains honest unallocated output. Native61 is held because actual59 has a measured CPU normal failure; a final62 receipt will need separate native admission."
+}
