@@ -1,0 +1,91 @@
+{
+  "acceptedArt": false,
+  "nativeRunExecuted": false,
+  "status": "FROZEN_SOURCE_ONLY_NATIVE10_REPLAY_QUALIFIER11_LIFETIME_CORRECTION",
+  "sourcePins": [
+    {
+      "path": "assets/blender/rider-rebuild/selected-wardrobe-integration38/gameplay_qualify11.py",
+      "sha256": "aefc733547c24149221675c2992c9ce7904d0524a84a73311ba88b896f4f194f"
+    },
+    {
+      "path": "assets/blender/rider-rebuild/selected-wardrobe-integration38/intake_qualifier11.py",
+      "sha256": "b5281ec36ace75eb3b6b5acd9f946e71ff5be323a5c9f6568efb089f0f5edcd9"
+    },
+    {
+      "path": "assets/blender/rider-rebuild/selected-wardrobe-integration38/test_gameplay_qualify11.py",
+      "sha256": "59a6334b4d1582806409d91333989124b1e0fed4d056f07d4e13ec2a3b7a7ae3"
+    }
+  ],
+  "fixtureReceipt": {
+    "path": "docs/evidence/rider-rebuild/selected-wardrobe-integration38/gameplay11-fixtures.json",
+    "sha256": "21163a65ed08e4b2579d715c717f0da8104a83b90817bbbdeaa4c68cdd74b200"
+  },
+  "frozenSavedGenerationRecipe": {
+    "path": "assets/blender/rider-rebuild/selected-seated-anatomical09/gameplay_checkpoint10.py",
+    "sha256": "a4da0f6719e9f43cb97e01d3139be2c279d2c0e3cd695d76f001ae444127fa61"
+  },
+  "actualInputs": {
+    "pending": {
+      "path": "harness/out/rider-rebuild/selected-seated-anatomical09/gameplay10/pending.json",
+      "sha256": "3c9492f9567d76c4be8bfebf53ba05f14e7bde22cc11721116d9b8bad6089c13"
+    },
+    "sourceSnapshot": {
+      "path": "harness/out/rider-rebuild/selected-seated-anatomical09/gameplay10-source01/snapshot.json",
+      "sha256": "71c7c251f4d92ed91b12c1fdb4b142871e0f284eb003c945cb025d3a9a73f24a"
+    },
+    "savedSnapshot": {
+      "path": "harness/out/rider-rebuild/selected-seated-anatomical09/gameplay10-saved01/snapshot.json",
+      "sha256": "6f379f1f9ca9d8cedd9556ec06554ac393dd87a570cbdc1149647ecec5cdd92e"
+    },
+    "nativeFromActualPendingReceipt": {
+      "path": "harness/out/rider-rebuild/selected-seated-anatomical09/gameplay10/UNACCEPTED-selected-gameplay-checkpoint10.blend",
+      "sha256": "35815e62180aabc37588668f426d3709bad139b5f50d6b1f82ccfa60af848ce8"
+    }
+  },
+  "priorFailure": {
+    "manifest": {
+      "path": "docs/evidence/rider-rebuild/selected-seated-anatomical09/gameplay10-qualification-failed01/manifest.json",
+      "sha256": "8a871665a07238c22dc8fe3acc1cf8cc568aeabff5d785303c655f1976be6e09"
+    },
+    "elapsedSeconds": 41.613,
+    "anonymousGiBAtStop": 65.3,
+    "exitCode": -15,
+    "savedSnapshotJSONBytes": 155872052,
+    "finding": "Frozen10 keeps both parsed comparison snapshots while opening the full native. This avoidable retained allocation is established; it is not proven to be the sole cause of the global memory stop."
+  },
+  "method": [
+    "Use exact pinned frozen10.pending_at, compare_snapshots, records and rig_and_objects. No frozen source or pending receipt changes.",
+    "After unchanged snapshot comparison and source recipe identity check, delete before/after dictionaries and collect before helper import/native open.",
+    "Convert captured matrix lists to NumPy float64 arrays and preserve action records/bone names; delete package and collect before helper import/native open.",
+    "Replay with unchanged original08 .0001m affine bound and shape-zero helper; release replay arrays before unchanged complete-body surface extraction.",
+    "Only all successful existing gates emit receipt.json. recipe/recipeSHA256 remain actual saved-generation10, while qualificationRecipe names actual11 and qualifiedPending pins the exact saved checkpoint."
+  ],
+  "intake": {
+    "inspection": "Frozen38 validates saved-generation recipe10 and all original08 ancestry but ignores an extra qualificationRecipe field. It must not be treated as a gate for new qualifier provenance.",
+    "requiredWrapper": "intake_qualifier11.py byte-pins frozen38 integrate.py and lineage.py, runs all unchanged38 gates, verifies the explicit actual11 qualificationRecipe and qualifiedPending, then calls the original38 mesh transplant. Existing integration config still pins targetRecipe=actual saved-generation10. The wrapper adds intakeRecipe/targetQualificationRecipe to the pending integration receipt.",
+    "frozen38SourcesUnchanged": true
+  },
+  "validation": {
+    "pythonASTFiles": 3,
+    "behaviorFixtures": 17,
+    "passed": true,
+    "weakReferenceLifetimeAssertions": true,
+    "actualBlenderOrNativeReplay": false
+  },
+  "nextParentInvocation": "/Applications/Blender.app/Contents/MacOS/Blender -b -t 2 --python-exit-code 1 --python assets/blender/rider-rebuild/selected-wardrobe-integration38/gameplay_qualify11.py -- harness/out/rider-rebuild/selected-seated-anatomical09/gameplay10/pending.json harness/out/rider-rebuild/selected-seated-anatomical09/gameplay10-source01/snapshot.json harness/out/rider-rebuild/selected-seated-anatomical09/gameplay10-saved01/snapshot.json harness/out/rider-rebuild/selected-seated-anatomical09/gameplay11-qualified01",
+  "admission": "Parent unchanged CPU2 serial wall/host memory guard. Output must be fresh. No builder heavy execution or raised guard.",
+  "limits": [
+    "No actual qualifier11 receipt, replay, surface extraction, memory peak or runtime improvement has been measured.",
+    "Preservation, rest, fields, action, shape-zero, .1mm replay and surface gates are unchanged; no gate is inferred from preparation.",
+    "No native10 resave, geometry edit, normal-player asset, runtime export or release change.",
+    "Wrist holes, ankle overlap, finite contacts, moving art, mobile and release acceptance remain open."
+  ],
+  "parentReview": {
+    "sourcesRead": 3,
+    "sourcePinsVerified": true,
+    "python39ASTPass": true,
+    "fixturesReplayed": 17,
+    "actualSnapshotPinsVerified": true,
+    "nativeExecuted": false
+  }
+}
