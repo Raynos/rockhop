@@ -1,0 +1,276 @@
+{
+  "acceptedArt": false,
+  "status": "SOURCE_DERIVED_ANKLE_FIELDS_NATIVE_AND_MOVING_REVIEW_PENDING",
+  "recipeSHA256": "3436ddf37900123659ae2e06a13649308451d4b3dfc2ce0c399e45c78fc5e826",
+  "sources": {
+    "reference": {
+      "path": "harness/out/rider-rebuild/selected-seated-anatomical09/reference05/original-full-reference.npz",
+      "sha256": "01f752d72e94dbab81cc7a193adbd2dd7bba26df919b48454d8937fa9665dcc5"
+    },
+    "canonicalFields": {
+      "path": "docs/evidence/rider-rebuild/head-neck-anatomical02/conditioned01/weights-native-named.json",
+      "sha256": "7945411b1dec4240295bab4797584f5accbbfbeecae2955807b2f341b8e9fafe"
+    },
+    "originalBody": {
+      "path": "harness/out/rider-rebuild/native-hand-repair01/native02/native-body.npz",
+      "sha256": "e62e9969503b7761e99463eccc3ca7be39e0c230a2948f2f87a224db52d0f9a2"
+    },
+    "gameplayMatrices": {
+      "path": "harness/out/rider-rebuild/selected-authoring-motion11/gameplay-converted02/measured-gameplay-native-world.json",
+      "sha256": "f3e0444768655bf72500a9245745a559586a7717b3f6cb6b600b6e9d1d05c153"
+    },
+    "genericMatrices": {
+      "path": "harness/out/rider-rebuild/selected-authoring-motion11/native05/action-06-RiderRangeOfMotion/native-action-matrices.npz",
+      "sha256": "8d045c8f1c69dada4675f61d4ab745ae1fe74f403946cc706fce33fcbcfc6f49"
+    },
+    "genericReceipt": {
+      "path": "harness/out/rider-rebuild/selected-authoring-motion11/native05/action-06-RiderRangeOfMotion/receipt.json",
+      "sha256": "c79a3d24a129e0b6063075335cd4c82bd10e522938c4bbad04088dd4aae6e6bc"
+    },
+    "runtime": {
+      "path": "harness/out/rider-rebuild/selected-seated-anatomical09/transport02/rider.glb",
+      "sha256": "ff9d78e2c5c40a4be1218b57611c5e71db10a2de7b636ec1589358176f907a0f"
+    },
+    "hemSelection": {
+      "path": "assets/blender/rider-rebuild/selected-ankle-overlap26/hem-selection.npz",
+      "sha256": "0c5948cd601a011ee580455336565f64f4a5503bd56d5a88e0103f1c46c54af7"
+    },
+    "upperSelection": {
+      "path": "assets/blender/rider-rebuild/selected-seated-anatomical09/selection.json",
+      "sha256": "13a58ef7033085beee5af31eee64e3a0af809281a0cea36efb3886652bc4b739"
+    }
+  },
+  "canonicalRowsBelow24cmExactBasisAndNamedFields": 2638,
+  "sides": {
+    "L": {
+      "frozenHemVertices": 1724,
+      "actualCanonicalSupportCeilingM": 0.20317503809928894,
+      "inspectedVertices": 1731,
+      "changedVertices": 1652,
+      "additionalIdsBeyondFrozenHem": [
+        2084,
+        12518,
+        12521,
+        12524,
+        12527,
+        12530,
+        12533
+      ],
+      "outwardSameLegHitCount": 1731,
+      "maximumRayHitCount": 1,
+      "minimumRadialBodyStandOffM": 0.026898325334507478,
+      "maximumRadialBodyStandOffM": 0.06604068205052191,
+      "minimumFootWeight": 0.00019135599697973343,
+      "maximumFootWeight": 0.9177534280601657,
+      "maximumSupportCount": 2,
+      "incidentDecodedTriangleEdges": 5154,
+      "boundaryCrossingEdges": 391,
+      "maximumBoundaryFieldL1Jump": 0.1525688819327104,
+      "envelopes": [
+        {
+          "action": "RiderGameplayLeanRookie",
+          "frames": 241,
+          "maximumCanonicalFieldDepartureM": 0.03653296312422752,
+          "maximumOldEdgeStretchRatio": 1.0000064991974624,
+          "maximumNewEdgeStretchRatio": 1.8563583331357605,
+          "maximumBoundaryDisplacementJumpM": 0.0031723658490038008,
+          "departureFrame": 50,
+          "departureNativeID": 14
+        },
+        {
+          "action": "RiderGameplayLeanPro",
+          "frames": 241,
+          "maximumCanonicalFieldDepartureM": 0.03666136364995345,
+          "maximumOldEdgeStretchRatio": 1.0000064943222413,
+          "maximumNewEdgeStretchRatio": 1.8520677294352534,
+          "maximumBoundaryDisplacementJumpM": 0.003183162685448295,
+          "departureFrame": 50,
+          "departureNativeID": 14
+        },
+        {
+          "action": "RiderIdle",
+          "frames": 73,
+          "maximumCanonicalFieldDepartureM": 0.012288746316711644,
+          "maximumOldEdgeStretchRatio": 1.0000031576829462,
+          "maximumNewEdgeStretchRatio": 1.178292090591215,
+          "maximumBoundaryDisplacementJumpM": 0.001001602740342721,
+          "departureFrame": 37,
+          "departureNativeID": 1766
+        },
+        {
+          "action": "RiderWalk",
+          "frames": 31,
+          "maximumCanonicalFieldDepartureM": 0.04836727325589847,
+          "maximumOldEdgeStretchRatio": 1.0000158009274507,
+          "maximumNewEdgeStretchRatio": 1.6602072194657127,
+          "maximumBoundaryDisplacementJumpM": 0.0040887790053911605,
+          "departureFrame": 24,
+          "departureNativeID": 1766
+        },
+        {
+          "action": "RiderJog",
+          "frames": 19,
+          "maximumCanonicalFieldDepartureM": 0.05847760627908425,
+          "maximumOldEdgeStretchRatio": 1.000018795246533,
+          "maximumNewEdgeStretchRatio": 1.830254626503718,
+          "maximumBoundaryDisplacementJumpM": 0.004829038411630962,
+          "departureFrame": 12,
+          "departureNativeID": 1766
+        },
+        {
+          "action": "RiderTurn90",
+          "frames": 73,
+          "maximumCanonicalFieldDepartureM": 0.057443748209993234,
+          "maximumOldEdgeStretchRatio": 1.0000046691123137,
+          "maximumNewEdgeStretchRatio": 1.8630292039448033,
+          "maximumBoundaryDisplacementJumpM": 0.00419963017323042,
+          "departureFrame": 49,
+          "departureNativeID": 6766
+        },
+        {
+          "action": "RiderJumpLand",
+          "frames": 61,
+          "maximumCanonicalFieldDepartureM": 0.05099381405934708,
+          "maximumOldEdgeStretchRatio": 1.0000049658311976,
+          "maximumNewEdgeStretchRatio": 1.746328381556598,
+          "maximumBoundaryDisplacementJumpM": 0.004056578715705712,
+          "departureFrame": 15,
+          "departureNativeID": 1767
+        },
+        {
+          "action": "RiderRangeOfMotion",
+          "frames": 289,
+          "maximumCanonicalFieldDepartureM": 0.05495497513227553,
+          "maximumOldEdgeStretchRatio": 1.0000032720966348,
+          "maximumNewEdgeStretchRatio": 1.8914758577781505,
+          "maximumBoundaryDisplacementJumpM": 0.004139907033024807,
+          "departureFrame": 196,
+          "departureNativeID": 6791
+        }
+      ]
+    },
+    "R": {
+      "frozenHemVertices": 1717,
+      "actualCanonicalSupportCeilingM": 0.20388293266296387,
+      "inspectedVertices": 1726,
+      "changedVertices": 1666,
+      "additionalIdsBeyondFrozenHem": [
+        4070,
+        8987,
+        8993,
+        18134,
+        18135,
+        18136,
+        18143,
+        18144,
+        18145
+      ],
+      "outwardSameLegHitCount": 1726,
+      "maximumRayHitCount": 1,
+      "minimumRadialBodyStandOffM": 0.02964890535080522,
+      "maximumRadialBodyStandOffM": 0.05828816044764357,
+      "minimumFootWeight": 1.296638897071718e-06,
+      "maximumFootWeight": 0.9185513057457438,
+      "maximumSupportCount": 2,
+      "incidentDecodedTriangleEdges": 5198,
+      "boundaryCrossingEdges": 391,
+      "maximumBoundaryFieldL1Jump": 0.06273151056334411,
+      "envelopes": [
+        {
+          "action": "RiderGameplayLeanRookie",
+          "frames": 241,
+          "maximumCanonicalFieldDepartureM": 0.03844735541239736,
+          "maximumOldEdgeStretchRatio": 1.00000671691077,
+          "maximumNewEdgeStretchRatio": 1.779664906528647,
+          "maximumBoundaryDisplacementJumpM": 0.0014605024400576496,
+          "departureFrame": 50,
+          "departureNativeID": 686
+        },
+        {
+          "action": "RiderGameplayLeanPro",
+          "frames": 241,
+          "maximumCanonicalFieldDepartureM": 0.038569078369115065,
+          "maximumOldEdgeStretchRatio": 1.0000067118147649,
+          "maximumNewEdgeStretchRatio": 1.7756666265236674,
+          "maximumBoundaryDisplacementJumpM": 0.0014648386947265074,
+          "departureFrame": 50,
+          "departureNativeID": 686
+        },
+        {
+          "action": "RiderIdle",
+          "frames": 73,
+          "maximumCanonicalFieldDepartureM": 0.012276903574540275,
+          "maximumOldEdgeStretchRatio": 1.0000034357668983,
+          "maximumNewEdgeStretchRatio": 1.165565884600537,
+          "maximumBoundaryDisplacementJumpM": 0.0004263175012729813,
+          "departureFrame": 37,
+          "departureNativeID": 3752
+        },
+        {
+          "action": "RiderWalk",
+          "frames": 31,
+          "maximumCanonicalFieldDepartureM": 0.04832105045427064,
+          "maximumOldEdgeStretchRatio": 1.0000127427317689,
+          "maximumNewEdgeStretchRatio": 1.6323557685754846,
+          "maximumBoundaryDisplacementJumpM": 0.0017730542334580437,
+          "departureFrame": 9,
+          "departureNativeID": 3752
+        },
+        {
+          "action": "RiderJog",
+          "frames": 19,
+          "maximumCanonicalFieldDepartureM": 0.05842173774062177,
+          "maximumOldEdgeStretchRatio": 1.000014401337323,
+          "maximumNewEdgeStretchRatio": 1.754816366537045,
+          "maximumBoundaryDisplacementJumpM": 0.0020705168358272946,
+          "departureFrame": 3,
+          "departureNativeID": 3752
+        },
+        {
+          "action": "RiderTurn90",
+          "frames": 73,
+          "maximumCanonicalFieldDepartureM": 0.058951732232687404,
+          "maximumOldEdgeStretchRatio": 1.0000053935208086,
+          "maximumNewEdgeStretchRatio": 2.150591540144508,
+          "maximumBoundaryDisplacementJumpM": 0.0024038576182765434,
+          "departureFrame": 25,
+          "departureNativeID": 686
+        },
+        {
+          "action": "RiderJumpLand",
+          "frames": 61,
+          "maximumCanonicalFieldDepartureM": 0.05089388870033366,
+          "maximumOldEdgeStretchRatio": 1.000004160078697,
+          "maximumNewEdgeStretchRatio": 1.6623039290545034,
+          "maximumBoundaryDisplacementJumpM": 0.001712537458315286,
+          "departureFrame": 15,
+          "departureNativeID": 3752
+        },
+        {
+          "action": "RiderRangeOfMotion",
+          "frames": 289,
+          "maximumCanonicalFieldDepartureM": 0.05473785930306267,
+          "maximumOldEdgeStretchRatio": 1.0000034841124457,
+          "maximumNewEdgeStretchRatio": 1.7667953532815903,
+          "maximumBoundaryDisplacementJumpM": 0.001721758594862917,
+          "departureFrame": 198,
+          "departureNativeID": 8693
+        }
+      ]
+    }
+  },
+  "limits": [
+    "CPU field derivation and deformation evidence only; native execution and complete-outfit played art review pending.",
+    "Rest radial cloth/body stand-off is measured, not changed. Boot/cloth intersection, selected detail and collar overlap require actual posed triangles and clips.",
+    "Canonical anatomical field transfer is a declared lower-jeans ancestry change; upper author02 and unrelated fields stay protected."
+  ],
+  "patch": {
+    "path": "assets/blender/rider-rebuild/selected-ankle-field42/field-patch.npz",
+    "sha256": "be502fdd857cbaca77db3164e02f62c3a9df1d36d25bab504fbafd618273d3c4"
+  },
+  "namedRows": {
+    "path": "assets/blender/rider-rebuild/selected-ankle-field42/field-rows.json",
+    "sha256": "c2908e7ef95b4d1420167da996616f8bc998ae037c369bce3c3182d29988d0af"
+  },
+  "derivationOutput": "harness/out/rider-rebuild/selected-ankle-field42/derived03"
+}
