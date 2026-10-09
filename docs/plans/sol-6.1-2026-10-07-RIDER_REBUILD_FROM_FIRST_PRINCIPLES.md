@@ -38,7 +38,7 @@ H0 is October 8, 14:05 Panama / 19:05 UTC; target finish is October 9 at the sam
 | H+16 | Same master with editable Blender controls, complete generic and bike actions, consumed engine deformation/contact | Parent and next concrete controls builder |
 | H+24 | Exact candidate reviewed on desktop/physical iPhone, bot/stranger/replay/restart and checked release/live SHA | Parent; human/device decisions through HR-23 |
 
-**Current execution, October 8, 20:21 Panama:** Both actual-input Rookie03
+**Current execution, October 8, 20:55 Panama:** Both actual-input Rookie03
 and Pro04 films show the selected complete outfit leaning forward/backward and
 returning to neutral. Garage stage forces neutral; the stand-up diagnostic
 cannot demonstrate gameplay leans. Native10 is saved and independently reopened:
@@ -60,18 +60,26 @@ Ankle builder42 derives3318 lower-jeans fields from actual outward same-leg
 canonical body triangles, preserving selected rest geometry/maps and unrelated
 fields. Two fixtures pass. This is an initializer: edge stretch2.15 and a3.18mm
 left boundary displacement jump require moving review. Its calibrated private
-runtime is next; native application/parity remains pending. Glove builder41
-supplies an exact-method component-only constructor with separate raw save,
-reopen and full-master mesh transplant; parent source review passes8fixtures.
-Neither source is accepted garment art. Lead36 is retired; Astra builders37/38
-are capacity interrupted. Parent owns integration and played judgment.
+runtime02 now plays on both bikes with unchanged actual-input trajectories.
+Wide views do not establish decisive ankle improvement; native45 application
+and deformation parity remain pending. Glove41 actual construction completes
+in62.885s and saves the selected pair (`5af37790…`). Independent reopen passes
+in11.003s: exact constructed geometry/fields, original75rest/full anatomy and
+selected PBR/metadata. Full-master attachment is queued; sleeve38 repair and
+complete-outfit moving acceptance remain next. This is verified garment work,
+not accepted garment art. Lead36 is retired; Astra builders37/38 are capacity
+interrupted. Parent owns integration and played judgment.
 
 Conditioned controls04 fail near-extension at1.1842mm. Adapter05 proves mode
 refresh but stops at unreachable left arm tick280. Do not repeat pole/solver
 campaigns or relax0.1mm. Native10 already preserves actual gameplay; editable
 controls and all generic actions remain required before completion. Next visible
-result: actual dressed gameplay with ankle42, then exact selected glove/sleeve
-repair in the same film. Current-game gate43 passes all11 checks; allR0–R5,
+result: exact selected glove/sleeve repair in fresh complete-outfit gameplay.
+Production46 now explicitly treats8000 as a soft request and retains exact
+above-target output for unchanged quality gates; whole-scene500k remains
+required. Actual census35 and candidate execution still pending. Gate43 passes
+all11 checks; subsequent gate44 misses bootready372.044ms against300ms while
+exact clear/crash/restart pass. No threshold is waived. AllR0–R5,
 finite contacts, compact production, physical-phone and release gates remain open.
 
 **Immediate gameplay priority, October 8, 16:30 Panama (ask356):** The user
