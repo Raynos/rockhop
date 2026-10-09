@@ -15,6 +15,21 @@ const SIDES = ['left', 'right'];
 const suffix = side => side === 'left' ? 'Left' : 'Right';
 const sanitize = name => THREE.PropertyBinding.sanitizeNodeName(name);
 
+/** A fitted palm socket can sit above the bar axis while its actual pads wrap the bar. */
+export function selectedGripPositionBike(driver, side) {
+  fail(SIDES.includes(side), 'Unknown grip side');
+  const fitted = driver.gripSocketPositionBike;
+  if (!fitted) return V(RIDER_PROFILE.grip.x, RIDER_PROFILE.grip.y, driver.sideZ[side] * RIDER_PROFILE.grip.z);
+  fail(/^[a-f0-9]{64}$/.test(driver.gripProfileHash ?? ''), 'Fitted grip profile identity required');
+  for (const hand of SIDES) {
+    const p = fitted[hand], q = driver.gripSocketQuaternionBike?.[hand];
+    fail(Array.isArray(p) && p.length === 3 && p.every(Number.isFinite), `Invalid grip socket position ${hand}`);
+    fail(Array.isArray(q) && q.length === 4 && q.every(Number.isFinite)
+      && Math.abs(q.reduce((sum, value) => sum + value * value, 0) - 1) < 1e-6, `Invalid grip socket orientation ${hand}`);
+  }
+  return V().fromArray(fitted[side]);
+}
+
 /** Native shape tracks share the actual loaded mesh's influence array. */
 export function preparePrivateClipTrack(track, binding, metadata) {
   const parsed = THREE.PropertyBinding.parseTrackName(track.name), node = binding.exact(parsed.nodeName);
@@ -100,6 +115,7 @@ export function createSelectedRiderClass(metadata) {
     restP = new Map();
     limbs = new Map();
     handTargets = new Map();
+    handGripPositions = new Map();
     soleFrames = new Map();
 
     constructor(gltf, lib) {
@@ -143,7 +159,7 @@ export function createSelectedRiderClass(metadata) {
         jointNames: Object.fromEntries([...this.binding.byId].map(([id, bone]) => [id, bone.name])),
         contractSchema: this.binding.contract.schema, geometry: metadata.selectedRiderSource?.geometryPolicy ?? 'Unchanged author FOUR',
         massApproximation: this.anthropometry.approximation,
-
+        gripProfileHash: this.driver.gripProfileHash ?? null,
       };
       this.scene.traverse(node => {
         if (node.isMesh) this.debug.candidate.visibleMeshes.push({ name: node.name, skinned: !!node.isSkinnedMesh, triangles: (node.geometry.index?.count ?? node.geometry.attributes.position.count) / 3 });
@@ -193,6 +209,7 @@ export function createSelectedRiderClass(metadata) {
       limb('arm', 'upperArm', 'forearm', wrist);
       limb('leg', 'thigh', 'shin', foot);
       const hand = this.binding.contract.hands[side]; fail(hand, `Hand ${side} required`);
+      this.handGripPositions.set(side, selectedGripPositionBike(this.driver, side));
       const axes = hand.axesInWrist, wristQ = this.restQ.get(wrist);
       const forward = V().fromArray(axes.forward).applyQuaternion(wristQ), normal = V().fromArray(axes.normal).applyQuaternion(wristQ);
       const alignment = alignPalm(forward, normal, V().fromArray(this.driver.palmForwardBike ?? [1, -0.25, 0]), V().fromArray(this.driver.palmNormalBike ?? [0, -1, 0]));
@@ -336,7 +353,7 @@ export function createSelectedRiderClass(metadata) {
       this.setWorld(head, this.frameQ().multiply(headSwing).multiply(this.restQ.get(head)));
       SIDES.forEach((side, index) => {
         const sign = this.driver.sideZ[side], s = suffix(side);
-        const grip = V(RIDER_PROFILE.grip.x, RIDER_PROFILE.grip.y, sign * RIDER_PROFILE.grip.z);
+        const grip = this.handGripPositions.get(side);
         const gripWorld = this.bike.frame.matrixWorld.clone().multiply(new THREE.Matrix4().compose(grip, this.handTargets.get(side), V(1, 1, 1)));
         this.solveLimb(this.limbs.get('arm' + s), solvePalmSocketTarget(this.binding, side, gripWorld), V(p.elbow.x, p.elbow.y, sign * p.elbow.z), 'arm', index);
         const sole = this.soleFrames.get(side);
