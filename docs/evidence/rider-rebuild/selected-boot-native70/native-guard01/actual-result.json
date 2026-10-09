@@ -1,0 +1,125 @@
+{
+  "status": "ACTUAL_NATIVE_REST_GEOMETRY_AND_SKIN_PASSED_UNACCEPTED",
+  "acceptedArt": false,
+  "production": {
+    "path": "harness/out/rider-rebuild/selected-boot-native70/native01/production.json",
+    "sha256": "518fe4ce2f7da86adc176c45d3d3393f70d1b1a4daaae0701ff245baa2681465"
+  },
+  "native": {
+    "path": "harness/out/rider-rebuild/selected-boot-native70/native01/UNACCEPTED-selected-production-full.blend",
+    "sha256": "ffac10be163895d2ecb76d6552c9e357b86122d522543b7117974884be0ea52c"
+  },
+  "rawBeforeQualification": {
+    "path": "harness/out/rider-rebuild/selected-boot-native70/native01/UNACCEPTED-constructor67-before-transfer.blend",
+    "sha256": "6b4825155ee235110394f3640b3870d0804b74a07242f2bea8ebc8c4a416771b"
+  },
+  "guard": {
+    "path": "docs/evidence/rider-rebuild/selected-boot-native70/native-guard01/guard.json",
+    "sha256": "516e23d45bb32c4e31f147012e3695b6d47690ed59fbac6bb417023f8de0c745"
+  },
+  "workerLog": {
+    "path": "docs/evidence/rider-rebuild/selected-boot-native70/native-guard01/worker.log",
+    "sha256": "14b2a6ebdf1ff634dfb2f45db070cdc4c6da8d5af475cd30f75e6f482dec3efe"
+  },
+  "telemetry": {
+    "path": "docs/evidence/rider-rebuild/selected-boot-native70/native-guard01/telemetry.jsonl",
+    "sha256": "5379e92c40b57cc92d4645f2b789c588a3e63bc7c0eb7fbbdbf78ed693fe96ba"
+  },
+  "wrapper": {
+    "path": "/tmp/rockhop-gameplay-telemetry-queuefast.py",
+    "sha256": "c91ea70a18c0add43bf3129d59822428d67c6d39a63d43575fd822d8a571585b"
+  },
+  "exitCode": 0,
+  "elapsedSeconds": 20.749,
+  "triangles": 30456,
+  "vertices": 15214,
+  "constructor": {
+    "path": "harness/out/rider-rebuild/selected-boot-surface67/candidate01/constructor.json",
+    "sha256": "14b4f68aee996befc290a5cfc135029b5a7e5b6933d42398e3eae1a2347eb487"
+  },
+  "sourceMasterHashVerified": true,
+  "sourceIdentityAfterProduction": true,
+  "transfer": {
+    "maximumTargetVertexDistanceM": 0.0,
+    "maximumSourceVertexDistanceM": 0.0008830513688735664,
+    "minimumSourceNormalDot": 0.38008496475556847,
+    "maximumSourceSkinL1": 0.0,
+    "copiedShapeKeys": []
+  },
+  "transferArraysOriginalPositionsAndSourceReferencesExact": true,
+  "fourFieldsExactOriginalNamedWeights": true,
+  "fourFieldRemovedMassMaximum": 0.0,
+  "fourFieldAdditionalAdjacentL1Maximum": 0.0,
+  "surfaceSamples": {
+    "target-face-centroids": {
+      "samples": 30456,
+      "exactInheritedAncestryBearings": 5522,
+      "unchangedNearestBVHBearings": 24934,
+      "actualProof68": {
+        "path": "harness/out/rider-rebuild/selected-boot-witness68/proof01/diagnostic.json",
+        "sha256": "9373ab042e0899ec5366a92386fd775dc82837c511345f8110917c26632b15ae"
+      },
+      "missingBearings": 0,
+      "over1mmCount": 0,
+      "normalBelowPoint25Count": 0,
+      "maximumDistanceM": 0.0007186773582361639,
+      "minimumNormalDot": 0.25053727626800537,
+      "arrays": {
+        "path": "harness/out/rider-rebuild/selected-boot-native70/native01/target-face-centroids.npz",
+        "sha256": "626ad43ffb00439eff05bc75bed7456f796c349d4b14e236d9d602b429a7bd29"
+      }
+    },
+    "target-edge-midpoints": {
+      "samples": 45684,
+      "exactInheritedAncestryBearings": 0,
+      "unchangedNearestBVHBearings": 45684,
+      "actualProof68": {
+        "path": "harness/out/rider-rebuild/selected-boot-witness68/proof01/diagnostic.json",
+        "sha256": "9373ab042e0899ec5366a92386fd775dc82837c511345f8110917c26632b15ae"
+      },
+      "missingBearings": 0,
+      "over1mmCount": 0,
+      "normalBelowPoint25Count": 0,
+      "maximumDistanceM": 0.0008917678496800363,
+      "minimumNormalDot": null,
+      "arrays": {
+        "path": "harness/out/rider-rebuild/selected-boot-native70/native01/target-edge-midpoints.npz",
+        "sha256": "a68fa7a9bc4c88284c7efb5842a3ee9aa57cd76bd786f1adbda6e06a449dada8"
+      }
+    },
+    "source-face-centroids": {
+      "samples": 610934,
+      "exactInheritedAncestryBearings": 5522,
+      "unchangedNearestBVHBearings": 605412,
+      "actualProof68": {
+        "path": "harness/out/rider-rebuild/selected-boot-witness68/proof01/diagnostic.json",
+        "sha256": "9373ab042e0899ec5366a92386fd775dc82837c511345f8110917c26632b15ae"
+      },
+      "missingBearings": 0,
+      "over1mmCount": 0,
+      "normalBelowPoint25Count": 0,
+      "maximumDistanceM": 0.0008827699348330498,
+      "minimumNormalDot": null,
+      "arrays": {
+        "path": "harness/out/rider-rebuild/selected-boot-native70/native01/source-face-centroids.npz",
+        "sha256": "c9af5b34fe820413191082eba5ed5878fe0b477e1456d55525d516db79ff80e2"
+      }
+    }
+  },
+  "allSurfaceArraysVerified": true,
+  "exactInheritedAncestryIDsAndZeroDistancesVerifiedBothDirections": true,
+  "distanceOnlyNormalArraysIntentionallyNaN": true,
+  "telemetrySummary": {
+    "samples": 11,
+    "peakGuardAnonymousGiB": 55.3,
+    "peakGuardAnonymousPlusWiredGiB": 64.0,
+    "peakObservedOwnedRSSKiB": 1208640,
+    "pressureCodes": [
+      "1"
+    ],
+    "initialSwap": "total = 7168.00M  used = 5489.19M  free = 1678.81M  (encrypted)",
+    "finalSwap": "total = 7168.00M  used = 5489.19M  free = 1678.81M  (encrypted)"
+  },
+  "bakeEligibility": "LEFT_BOOT_ONLY_NOT_A_BILATERAL_FAMILY32_INPUT",
+  "limits": "One unchanged original guarded native run. Rest geometry and skin only; whole-scene allocation, bilateral boot family, posed/contact parity, atlas/PBR bake, moving art and device review remain pending. Parent is sole judge; no retry, source change or bake."
+}
