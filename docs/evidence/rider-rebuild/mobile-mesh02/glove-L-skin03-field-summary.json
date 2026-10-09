@@ -1,0 +1,36 @@
+{
+  "samples": 30000,
+  "method": "Deterministic low-face centroids, nearest exact source face barycentric source field versus bilinear actual baked4K atlas; includes source facets and filtered texels",
+  "errors": {
+    "albedo": {
+      "mean": 0.00013102771159163114,
+      "p95": 0.0008499947683832342,
+      "p99": 0.0037155645384663975,
+      "max": 0.1212231061774216
+    },
+    "orm": {
+      "mean": 0.0021776953008959808,
+      "p95": 0.0027205879249402594,
+      "p99": 0.007559202061517375,
+      "max": 0.5645820634866444
+    },
+    "normalDegrees": {
+      "mean": 8.527719452122117,
+      "p95": 71.29960242598952,
+      "p99": 164.88085797230485,
+      "max": 179.0356678664773
+    }
+  },
+  "thresholdCounts": {
+    "normalDegrees": {
+      "15": 1987,
+      "45": 1693,
+      "90": 1441
+    },
+    "albedoMeanAbsoluteError": {
+      "0.05": 1,
+      "0.1": 1
+    }
+  },
+  "accepted": false
+}

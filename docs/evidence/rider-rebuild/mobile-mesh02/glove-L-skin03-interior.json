@@ -1,0 +1,172 @@
+{
+  "accepted": false,
+  "method": "Every receiver triangle centroid. Independently choose nearest source geometric face in the same facing hemisphere; no native joint/weight field enters source-face selection. Original nearest opposed-sheet counts retained. Compare exact native75 LBS coefficient fields under all482historical played poses.",
+  "triangles": 243618,
+  "originalNearestOpposedFaces": 244,
+  "facingSourceMisses": 2,
+  "measuredFacingTriangles": 243616,
+  "missingFacingWitnesses": [
+    {
+      "triangle": 4463,
+      "localPosition": [
+        0.431392103433609,
+        0.8083366751670837,
+        0.06145656108856201
+      ],
+      "geometricNormal": [
+        0.4937896728515625,
+        0.7641295194625854,
+        -0.4150637090206146
+      ],
+      "nearestSourceFace": 8664,
+      "nearestDistanceMeters": 1.683104710537009e-05,
+      "nativeCornerSupport": [
+        [
+          {
+            "joint": "DEF-f_pinky.02.L",
+            "weight": 0.9922851920127869
+          },
+          {
+            "joint": "DEF-f_pinky.01.L",
+            "weight": 0.00771481916308403
+          }
+        ],
+        [
+          {
+            "joint": "DEF-f_pinky.02.L",
+            "weight": 0.9909058213233948
+          },
+          {
+            "joint": "DEF-f_pinky.01.L",
+            "weight": 0.00909417774528265
+          }
+        ],
+        [
+          {
+            "joint": "DEF-f_pinky.02.L",
+            "weight": 0.9931766390800476
+          },
+          {
+            "joint": "DEF-f_pinky.01.L",
+            "weight": 0.006823374889791012
+          }
+        ]
+      ],
+      "unconstrainedNearestPoseErrorMeters": 1.6600824878392385e-05,
+      "qualification": "No same-facing source within original0.5mmminimum search; nearest result retained as ambiguous, not counted as qualified coverage."
+    },
+    {
+      "triangle": 74699,
+      "localPosition": [
+        0.44562461972236633,
+        0.866011917591095,
+        0.07972988486289978
+      ],
+      "geometricNormal": [
+        -0.6037063002586365,
+        -0.7562128305435181,
+        -0.25235071778297424
+      ],
+      "nearestSourceFace": 164139,
+      "nearestDistanceMeters": 1.163817913152343e-07,
+      "nativeCornerSupport": [
+        [
+          {
+            "joint": "DEF-f_ring.01.L",
+            "weight": 0.6599295139312744
+          },
+          {
+            "joint": "DEF-palm.03.L",
+            "weight": 0.3329445719718933
+          },
+          {
+            "joint": "DEF-f_pinky.01.L",
+            "weight": 0.00712592015042901
+          }
+        ],
+        [
+          {
+            "joint": "DEF-f_ring.01.L",
+            "weight": 0.660132884979248
+          },
+          {
+            "joint": "DEF-palm.03.L",
+            "weight": 0.33276721835136414
+          },
+          {
+            "joint": "DEF-f_pinky.01.L",
+            "weight": 0.0070998952724039555
+          }
+        ],
+        [
+          {
+            "joint": "DEF-f_ring.01.L",
+            "weight": 0.6916853785514832
+          },
+          {
+            "joint": "DEF-palm.03.L",
+            "weight": 0.3056084215641022
+          },
+          {
+            "joint": "DEF-f_pinky.01.L",
+            "weight": 0.002706191036850214
+          }
+        ]
+      ],
+      "unconstrainedNearestPoseErrorMeters": 1.157709110571148e-07,
+      "qualification": "No same-facing source within original0.5mmminimum search; nearest result retained as ambiguous, not counted as qualified coverage."
+    }
+  ],
+  "restSourceSurfaceMeters": {
+    "mean": 6.2745341628837364e-06,
+    "p95": 2.671320771696628e-05,
+    "p99": 5.214470456849092e-05,
+    "max": 0.0002842674730345607
+  },
+  "playedInteriorErrorMeters": {
+    "mean": 1.577910712904439e-05,
+    "p95": 4.495183829114857e-05,
+    "p99": 0.00015599897581037846,
+    "max": 0.018040326385475224
+  },
+  "trianglesAbove1mm": 344,
+  "trianglesAbove2mm": 147,
+  "bikes": [
+    {
+      "bike": "rookie",
+      "recordedPoses": 241,
+      "reportSHA256": "9ca4af67bf9dcacfda99fbc364939c47b38aa0074d5399ad28b207f63cbf4788",
+      "worst": {
+        "meters": 0.018040326385475224,
+        "triangle": 208367,
+        "sourceFace": 504466,
+        "tick": 1035,
+        "phase": "neutral-return",
+        "localPosition": [
+          0.3966926336288452,
+          0.878454864025116,
+          0.1440686583518982
+        ]
+      }
+    },
+    {
+      "bike": "pro",
+      "recordedPoses": 241,
+      "reportSHA256": "205c95f230136077665780d5c08cf5ac94c8d0d77968ca3e03e16d5199dbbaf0",
+      "worst": {
+        "meters": 0.018040326345407164,
+        "triangle": 208367,
+        "sourceFace": 504466,
+        "tick": 1035,
+        "phase": "neutral-return",
+        "localPosition": [
+          0.3966926336288452,
+          0.878454864025116,
+          0.1440686583518982
+        ]
+      }
+    }
+  ],
+  "elapsedSeconds": 11.10849191620946,
+  "limits": "Centroids and recorded neutral/forward/back gameplay only; no exhaustive intra-triangle or future corrected-grip guarantee. Rest source is geometrically overlapping in some places, hemisphere correspondence is explicit and original nearest failures retained elsewhere."
+}

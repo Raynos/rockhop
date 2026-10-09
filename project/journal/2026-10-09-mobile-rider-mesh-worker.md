@@ -47,3 +47,9 @@ Finding: Native glove skin attributes now have physical metre scales derived fro
 Validation: Guarded calibration repair exit0 in0.188s;482played poses,22active fields;non-reference scales range0.464229 to0.978754 metres per unit normalized weight. Only source-supported native joint fields enter the bound. First attempt stopped on unused thigh-node tiny non-unit scale; failure retained and active-only computation asserts supported chains. Simplifier requires matching source and active fields; original four weight slots and branch locks remain. Recipes syntax checked.
 
 Limits: This is a calibrated method checkpoint, not a density/deformation result. Aggregate Meshopt error is not a hard deformation bound; original local-translation/scale assumptions and corrected grip still need qualification. No player assets or selected master changes.
+
+Finding: A single physically calibrated native-field simplification retains selected glove motion but does not materially lower its constrained density.
+
+Validation: Complete guarded left unit exit0 in36.967s;243618triangles versus244454prior,0.34percent fewer. Original corner positions/four weight slots remain exact,482played-pose corner error0. Rest-centroid coverage243616of243618,344sheet-sensitive errorsabove1mm; actual posed-source query exit0 in4.152s across18worstposes,342same-facing witnesses max0.554525mm and noneabove1mm. Two posed missing-facing witnesses and two rest missing-facing witnesses retained. Atlas selected-source normal/albedo/ORM witnesses retained compressed.
+
+Limits: Density plateau persists after physical calibration; no quota sweep or weaker skin bound authorized. Complete paired candidate and actual phone/render judgment must determine whether this conservative reduction is useful. Corrected grip, atlas normals/material and moving acceptance remain open. No player/source promotion.
