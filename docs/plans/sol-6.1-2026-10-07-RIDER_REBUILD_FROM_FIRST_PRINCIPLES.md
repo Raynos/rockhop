@@ -38,7 +38,7 @@ H0 is October 8, 14:05 Panama / 19:05 UTC; target finish is October 9 at the sam
 | H+16 | Same master with editable Blender controls, complete generic and bike actions, consumed engine deformation/contact | Parent and next concrete controls builder |
 | H+24 | Exact candidate reviewed on desktop/physical iPhone, bot/stranger/replay/restart and checked release/live SHA | Parent; human/device decisions through HR-23 |
 
-**Current execution, October 8, 22:10 Panama:** Fresh clean-context Astra6
+**Current execution, October 8, 23:15 Panama:** Fresh clean-context Astra6
 X-High review53 is complete. The parent checked its recommendations against
 actual50 receipts, current51/52 source and the existing played lean evidence.
 Keep qualified native10 and original actions/rest as the motion foundation;
@@ -63,17 +63,18 @@ sliver. Known paired cloth moves67mm down the crease and stretches~2.5× while
 remaining inside the body. Stop additional nearest-exit projection and
 normal-smoothing-only repairs. These are actual local geometric failures.
 
-New constructor55 starts from original47 material coordinates, with selected
-shoulder/sleeve frames and actual canonical upperarm/torso landmarks defining
-axial/ring correspondence. Use useful50 fit as reference where healthy; fit
-transverse ease/contact and the connected shoulder–chest/back region through
-one C2 shared cage/map carrying both original sheets and their normal detail.
-The smooth basis addresses the credible trilinear derivative-break mechanism
-for bands; anatomical correspondence prevents downward material escape.
-Preserve original topology/UV/PBR/named fields; no generic replacement, blanket
-strain cap or clearance waiver. Save one actual unaccepted candidate, reuse54
-for the known compression/pair/appearance witnesses, then proceed to distal51.
-Astra49 owns55 source; parent owns actual guard, integration and judgment.
+Frozen55 fails before native save because its complete-meridian horizontal
+body-gap requirement excludes an actually healthy rear sleeve endpoint18.283mm
+outside the reference. Frozen58 retains the shared axilla apex but uses distinct
+actual75 torso/arm radial branches, fixed healthy endpoint/ease and original
+material arclength. Parent9CPU groups pass. Actual58 advances through left
+branches, then fails26.676s before cage solve/raw save: a right torso interval
+requests3.333mm interpolated ease but the chosen radial midpoint gives3.042mm.
+Astra49 owns60: determine actual paired-wall feasible intervals before changing
+that existence/ease assumption. Keep2.6mm minimum, exact endpoints, source
+order, C2 injectivity, original UV/PBR/fields and independent reopened contact.
+No failed50/55/58 result enters distal51. Source material may move downward
+when anatomically needed; collapsing distinct material stations is the defect.
 
 Native45 failed before save because the Jeans lacks a required canonical foot
 vertex group; its protected helper also incorrectly bundled fields into geometry.
@@ -94,9 +95,14 @@ No generic action audit or unrelated controls campaign precedes that art review.
 
 Review53 finds documentation/audit throughput outpacing integration. Preserve
 required small commits and third-round gates; stop extra unchanged timing or
-observer campaigns and repeated status expansions. Ordinary-game gate48 passes
-all11 checks under original guard6.764s; this is not rider/device acceptance.
-Production46 still needs actual boot census35 and a whole-scene allocation;
+observer campaigns and repeated status expansions. Ordinary-game gate53 passes
+10/11 checks; boot359.713ms exceeds300ms, while clear/exact replay/crash/restart
+pass. Gate52 and prior failures remain; no immediate unchanged timing rerun.
+Actual boot census35 is complete; candidate46 retains23658 triangles and exact
+source positions/fields. Numerical56 and consistent-normal57 fixes expose a
+real reduction-induced source fan loss at3667. Builder56 owns59: protect the
+actual folded source fans in one index-only construction, then apply unchanged
+geometry/skin gates. Whole-scene allocation, atlases and moving review remain;
 roughly358MB/3.9M-triangle delivery is not a mobile candidate. H+4 is missed;
 the24-hour target is still a stretch, and no credible completion time is proven.
 Editable generic controls/actions, source identity, deterministic input, complete
