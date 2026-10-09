@@ -38,7 +38,7 @@ H0 is October 8, 14:05 Panama / 19:05 UTC; target finish is October 9 at the sam
 | H+16 | Same master with editable Blender controls, complete generic and bike actions, consumed engine deformation/contact | Parent and next concrete controls builder |
 | H+24 | Exact candidate reviewed on desktop/physical iPhone, bot/stranger/replay/restart and checked release/live SHA | Parent; human/device decisions through HR-23 |
 
-**Current execution, October 8, 20:55 Panama:** Both actual-input Rookie03
+**Current execution, October 8, 21:30 Panama:** Both actual-input Rookie03
 and Pro04 films show the selected complete outfit leaning forward/backward and
 returning to neutral. Garage stage forces neutral; the stand-up diagnostic
 cannot demonstrate gameplay leans. Actual held-input footage is retained for
@@ -69,10 +69,23 @@ and deformation parity remain pending. Glove41 actual construction completes
 in62.885s and saves the selected pair (`5af37790…`). Independent reopen passes
 in11.003s: exact constructed geometry/fields, original75rest/full anatomy and
 selected PBR/metadata. Whole-master attachment stopped before its witness at
-the unchanged memory bound; no attached output exists. Component-sleeve47 now
-intakes only original Hoodie plus qualified glove41, exact75 and full reference,
-retaining frozen28/38 geometry math. Merge the wardrobe once into native10 after
-component save/reopen, then judge fresh complete-outfit movement. This is garment work,
+the unchanged memory bound; no attached output exists. Component47 genuinely
+intakes and reopens only original Hoodie plus qualified glove41, exact75 and
+full reference in34.073s. Frozen28 sleeve geometry then fails before any
+projection at a deficient frozen-field boundary; no constructed sleeve exists.
+Fresh clean Astra6 X-High49 targets this construction failure. The parent
+verified its support/triangle-constraint closure diagnosis and executed one
+read-only exact first-fit witness in28.441s: nine unsupported shallow neck
+constraints need at most0.313mm, separately from a movable proximal upper-arm
+sample with source signedgap−68.949mm. That minimum requires71.549mm signed
+clearance travel if valid, exceeding the unchanged45mm artist guard. Stop
+unchanged and support-only solver retries. Verify solid/reference orientation
+and original sheet ownership before a supported broader garment correction;
+distal inner-cuff exclusion does not identify proximal exterior cloth. This
+is a targeted advisory, not a new completed whole-goal deep review. Preserve
+selected detail, exact75/native actions and all contact/strain gates. After a
+real saved/reopened garment, merge wardrobe once into native10 using scoped
+component47/full-master witnesses and replay, then judge actual game leans. This is garment work,
 not accepted garment art. Lead36 is retired; Astra builders37/38 are capacity
 interrupted. Parent owns integration and played judgment.
 

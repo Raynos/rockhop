@@ -2057,3 +2057,5 @@ Required current-game gate46 completes10/11: cold-ready401.76ms misses300ms; fir
 Fresh clean Astra6 X-High49 identifies frozen28 support/triangle-constraint closure fault as the necessary first-solve failure. Parent verified exact field source and five read-only diagnostic fixtures. One actual49 native-ID/body-region witness is next; no ease/support/geometry change or constructed sleeve claimed.
 
 Actual Astra49 diagnostic succeeds28.441s:9 shallow unsupported neck constraints (+2.287mmgap,0.313mmdeficit) separate from movable upperarm signedgap−68.949mm against exactcanonicaltri18873. Stop support-only/unchanged reruns; verify deep witness solid/orientation before genuine selected-cloth correction. No constructed sleeve or art accepted.
+
+Active rider execution21:30Panama adopts fresh targeted Astra49 correction: stop unchanged/support-only sleeve retries after actual9 shallow frozen neck rows plus separate deep upper-arm witness. Verify solid/orientation and proximal sheet ownership, then correct genuine selected garment fit, one native10 merge/replay and actual lean film. AllR0–R5 remain open.
