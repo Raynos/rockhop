@@ -36,11 +36,13 @@ Only the parent may judge played comparisons and choose any delivery path.
 Run with the bundled Python from `load_workspace_dependencies`, which has PIL
 and numpy. Scripts default to the ignored harness output texture directory.
 
-## Optional runtime integration, for parent implementation only
+## Selected runtime integration
 
-The current app has no KTX2 loader and `loadGltf` has no renderer argument.
-A KTX2 GLB alone therefore fails to load. Ordinary/lossless PNG deliveries need
-no loader change. Keep KTX2 optional and lazy for the selected rider only:
+At the initial texture checkpoint the app had no KTX2 loader and `loadGltf`
+had no renderer argument. The parent now owns that runtime integration and
+its tests. Ordinary/lossless PNG deliveries need no loader change. Decoder
+setup applies only to the selected source; that source is now mandatory in
+initial loading, including native rig, instances, shaders and GPU uploads.
 
 1. Pass the active WebGLRenderer to a selected-asset loader configuration hook
    before requesting its GLB. One renderer-owned KTX2Loader may serve clones.
@@ -101,3 +103,9 @@ channel RMSE is 1.171 of 255. Software ASTC linear decode does not prove
 sRGB hardware filtering equivalence. BC7 transcoding passed every mip,
 but decoded BC7 pixels are not measured here. Moving and physical iPhone
 judgment remain with the parent; 204 MB of textures is still substantial.
+
+The later [atlas composition recipe](composition01/README.md) records the
+combined geometry/atlas/KTX2 construction candidate, protected-part parity,
+decoded stream totals and the new hoodie normal compression outliers.
+Parent moving Garage and Rookie/Pro comparisons qualified delivery; physical
+phone and final rider art acceptance remain open.
