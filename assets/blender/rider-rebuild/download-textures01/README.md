@@ -10,11 +10,20 @@ Only the parent may judge played comparisons and choose any delivery path.
   data maps use linear filtering. `--variant uastc-rdo05 --rdo 0.5` creates
   the separate conservative RDO trial after the baseline checkpoint. Linear DFD primaries are explicitly patched
   to unspecified as required by KHR_texture_basisu. No geometry change.
+- `verify_astc.py`: native ASTC software pixel decode; proves every native
+  ASTC mip GPU block byte matches the pinned runtime, then measures actual
+  software-decoded texels. Native decoder uses the linear ASTC profile;
+  sRGB GPU sampling and filtering remain played-review gates.
 - `runtime-transcode.mjs`: actual Three0.186.1 pinned Basis WASM validates
   every map and mip against ASTC4x4, BC7 and RGBA32 without a browser. Saves
   level0 RGBA32 for decoded comparisons.
+- `plot_comparison.py`: worst source-authored 256² grid texel crops with
+  original/baseline/RDO ASTC decode and a 16x RGB error display. Diagnostic
+  support only, never still-image art acceptance.
 - `measure.py`: bounded-row texel RMSE/PSNR/bias/percentiles and authored
-  normal angular differences. These measurements do not imply art acceptance.
+  normal angular differences. Authored RGB uses the original alpha>0 mask;
+  alpha differences and extrema include every original source pixel. These
+  measurements do not imply art acceptance.
 - `lossless_png.py`: oxipng2 with two threads, without its RGB-under-alpha
   modification option or metadata stripping. Proves decoded RGBA byte identity.
 - `repack.py SOURCE OUTPUT --maps DIRECTORY`: changes embedded image payloads
@@ -38,10 +47,13 @@ no loader change. Keep KTX2 optional and lazy for the selected rider only:
 2. Dynamically import `three/examples/jsm/loaders/KTX2Loader.js` inside that
    selected-asset path; instantiate, `setWorkerLimit(1)`, then
    `detectSupport(renderer)` before attaching with `GLTFLoader.setKTX2Loader`.
-3. Host the **matching pinned** `basis_transcoder.js` (57,529 bytes) and
-   `basis_transcoder.wasm` (527,333 bytes) behind a versioned same-origin path,
-   then `setTranscoderPath(pathWithTrailingSlash)`. These are available in
-   `node_modules/three/examples/jsm/libs/basis/`; no new dependency is required.
+3. Preserve the **matching pinned** `basis_transcoder.js` (57,529 bytes) and
+   `basis_transcoder.wasm` (527,333 bytes) in the build. The installed loader's
+   default static `new URL(..., import.meta.url)` routes let Vite emit hashed
+   same-origin artifacts without manual public duplicates. Verify emitted
+   artifact routes in the build and network harness; alternatively configure
+   a versioned directory with `setTranscoderPath(pathWithTrailingSlash)` when
+   the build does not emit default routes. No new dependency is required.
    The loader fetches both lazily on its first KTX2 parse and builds a Blob
    worker. Deployment CSP must already permit that worker route.
 4. On renderer teardown call `dispose`. Retain the PNG sibling as a fallback.
@@ -55,9 +67,8 @@ no loader change. Keep KTX2 optional and lazy for the selected rider only:
    textures. Gate the KTX2 candidate on played desktop/mobile comparisons and
    a physical iPhone report before adoption; metrics are proxies.
 
-The loader's default `import.meta.url` URLs can work under a bundler, but the
-explicit same-origin versioned path makes pinned production bytes reviewable.
-This recipe intentionally does not edit app source, dependencies or public files.
+The parent implements and verifies runtime/bundle integration. This recipe
+intentionally does not edit app source, dependencies or public files.
 
 ## Primary references checked 2026-10-09
 
@@ -71,3 +82,22 @@ UASTC is lossy block encoding; Zstandard over the blocks is lossless. Full-mip
 UASTC can be larger on download than optimized PNG for smooth/repetitive maps.
 Compare measured bytes rather than presuming the compressed GPU format also
 minimizes network bytes.
+
+## Measured conservative RDO0.5 checkpoint
+
+All dimensions retained: 9 maps at 4096², 2 at 1024² and 1 at 256².
+Full mip KTX2 payloads total 52,739,968 bytes, versus 68,486,725 for no RDO
+and 57,027,628 for original PNGs. ASTC4x4/BC7 GPU mip allocation is
+204,210,496 bytes versus RGBA's 816,840,688. The pinned Three WASM passed
+444 transcodes (148 total mip levels across 12 maps × 3 formats).
+All 148 native ASTC mip block payloads compare byte-identical to actual
+pinned runtime output; all 12 software linear-profile level0 decoded images
+compare byte-identical to its RGBA32 output. All 153,157,632 level0 alpha
+values compare exact to original PNG alpha. UASTC RGB remains lossy.
+
+Normal map: source-authored mean angular error 0.432°, p95 1.32°, p99 2.00°,
+maximum 18.84° (the no-RDO maximum is also 18.84°). Worst authored albedo
+channel RMSE is 1.171 of 255. Software ASTC linear decode does not prove
+sRGB hardware filtering equivalence. BC7 transcoding passed every mip,
+but decoded BC7 pixels are not measured here. Moving and physical iPhone
+judgment remain with the parent; 204 MB of textures is still substantial.

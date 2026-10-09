@@ -1,0 +1,70 @@
+{
+  "schemaVersion": 1,
+  "status": "unaccepted texture checkpoint; parent moving judgment and physical iPhone validation pending",
+  "source": "harness/out/rider-rebuild/selected-ankle-field42/runtime02/rider.glb",
+  "sourceSHA256": "127e316a8ff7910a4918b63f83e086e4e658062f102c73f17d0ee2f956750649",
+  "sourceGLBBytes": 358409072,
+  "codec": "Basis Universal2.50 UASTC LDR4x4 level3 / RDO lambda0.5 dictionary4096 / Zstd18",
+  "dimensionsPreserved": true,
+  "fullMipmaps": true,
+  "sourceTexturePNGBytes": 57027628,
+  "baselineUASTCNoRDOBytes": 68486725,
+  "uastcRDO05Bytes": 52739968,
+  "gpuTextureMipBytesASTCOrBC7": 204210496,
+  "gpuTextureMipBytesRGBA": 816840688,
+  "pinnedRuntime": "Three0.186.1 bundled Basis JS57,529B and WASM527,333B",
+  "transcodeValidation": {
+    "maps": 12,
+    "mips": 148,
+    "formats": [
+      "ASTC4x4",
+      "BC7",
+      "RGBA32"
+    ],
+    "successes": 444
+  },
+  "nativeASTCProof": {
+    "mipGPUBlocksByteIdenticalToPinnedRuntime": 148,
+    "level0PixelsExactlyEqualToPinnedRGBA32Maps": 12,
+    "profile": "Native software ASTC linear decode; sRGB GPU filtering/render remains a played-review gate"
+  },
+  "alpha": {
+    "level0PixelsCompared": 153157632,
+    "changedPixels": 0,
+    "allSourcePixelsMeasured": true
+  },
+  "normalAngularDegrees": {
+    "authoredPixels": 5853008,
+    "mean": 0.4323111299272314,
+    "p95": 1.32,
+    "p99": 2.0,
+    "max": 18.84
+  },
+  "worstAuthoredAlbedoRMSE8bit": 1.1713605641684641,
+  "combinedGeometry02": {
+    "output": "harness/out/rider-rebuild/download-opt01/textures01/rider-uastc-rdo05-geometry02.glb",
+    "bytes": 146902124,
+    "sha256": "8455f71f4914d94d6ce1b3c02fb54c07df562aa25d9b3eb988d43cc6e8fd3e70",
+    "unchangedSemanticFields": [
+      "nodes",
+      "scenes",
+      "scene",
+      "skins",
+      "animations",
+      "meshes",
+      "accessors",
+      "materials",
+      "samplers"
+    ],
+    "nonImagePayloadsUnchanged": true
+  },
+  "limits": [
+    "UASTC/RDO is lossy; original master unchanged",
+    "PNG literal byte identity is not claimed for RGB",
+    "ASTC software linear pixel profile does not prove sRGB GPU filtering equivalence",
+    "BC7 transcode is validated, but native decoded BC7 pixels are not measured here",
+    "204MB native compressed texture allocation remains substantial; physical iPhone pass pending",
+    "No source/package/public/commit/browser changes by this texture builder"
+  ],
+  "authoredRGBMask": "source alpha > 0; never candidate-alpha masked"
+}

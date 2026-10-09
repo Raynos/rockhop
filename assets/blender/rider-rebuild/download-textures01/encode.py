@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """Preserved-size UASTC LDR4x4, no RDO; encode sequentially with two CPUs."""
-import argparse, hashlib, json, struct, subprocess, time
+import argparse, hashlib, json, re, struct, subprocess, time
 from pathlib import Path
 
 DEFAULT = Path('harness/out/rider-rebuild/download-opt01/textures01')
@@ -45,7 +45,9 @@ def main():
         assert struct.unpack_from('<I', payload, 44)[0] == 2  # Zstandard
         results.append({'image':row['image'], 'path':str(output), 'bytes':len(payload),
                         'sha256':hashlib.sha256(payload).hexdigest(), 'command':command,
-                        'encodeSeconds':time.monotonic()-start, 'size':[width,height],
+                        'encodeSeconds':time.monotonic()-start, 'nativeEncodeSeconds':
+                        float(re.search(r'size \d+ bytes in ([0-9.]+) secs',log.read_text()).group(1)),
+                        'size':[width,height],
                         'levels':struct.unpack_from('<I',payload,40)[0],
                         'dfd':{'model':payload[dfd_offset+12], 'primaries':payload[dfd_offset+13],
                                'transfer':payload[dfd_offset+14], 'flags':payload[dfd_offset+15]}})
