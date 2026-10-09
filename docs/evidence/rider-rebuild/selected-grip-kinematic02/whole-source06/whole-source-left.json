@@ -1,0 +1,49 @@
+{
+  "accepted": false,
+  "side": "left",
+  "sourceSHA256": "f814b8d7cde87b1e41b45eec75cd55fdea89b915bf9acae0e5a18b40d3a156af",
+  "profilePath": "docs/evidence/rider-rebuild/selected-grip-kinematic02/thumbplane05/runtime-profile.json",
+  "profileSHA256": "659ff94c1611e0ce95310ab090e94637832ac2bbfbac7f9554f903595bd05972",
+  "fixedProfile": true,
+  "nativeDigitalTranslationsPreserved": true,
+  "sourceVertices": 439642,
+  "sourceTriangles": 569142,
+  "previouslyHandOwnedTriangles": 398718,
+  "previouslyExcludedTriangles": 170424,
+  "excludedTrianglesAABBDisjoint": 170424,
+  "excludedTrianglesAABBOverlap": 0,
+  "excludedOverlapWitnesses": [],
+  "foreignPositiveInfluenceNames": [
+    "DEF-forearm.L",
+    "DEF-forearm.L.001"
+  ],
+  "finiteBarBounds": {
+    "min": [
+      0.2489648461341858,
+      0.7619433403015137,
+      -0.4267578125
+    ],
+    "max": [
+      0.2990136742591858,
+      0.7958788871765137,
+      -0.25830078125
+    ]
+  },
+  "fullSurface": {
+    "scope": "Every vertex and triangle in the complete selected source glove primitive, with all four positive skin weights; no material, weight, palm, wrist or cuff exclusions. Foreign forearm joints remain at native rest in this offline fixture.",
+    "ownedVertices": 439642,
+    "checkedVertices": 48410,
+    "insideCount": 0,
+    "maxPenetrationM": 0,
+    "worst": [],
+    "ownedTriangles": 569142,
+    "overlappingPairs": 79412,
+    "crossingPairs": 0,
+    "crossingWitnesses": []
+  },
+  "limits": [
+    "No arm IK in this fixed offline fixture: forearm/cuff deformation must be rechecked after runtime limb IK and through moving leans.",
+    "Collision-clear geometry is not an anatomical or moving-art acceptance.",
+    "Both source bikes have identical exact grip surfaces, verified by the source loader."
+  ]
+}

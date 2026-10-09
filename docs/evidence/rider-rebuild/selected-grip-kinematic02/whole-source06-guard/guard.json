@@ -1,0 +1,58 @@
+{
+  "accepted": false,
+  "lock": "/Users/raynos/projects/localai/.model.lock",
+  "method": "lockf -k",
+  "command": [
+    "node",
+    "assets/blender/rider-rebuild/selected-grip-kinematic02/construct-thumb-plane.mjs",
+    "docs/evidence/rider-rebuild/selected-grip-kinematic02/whole-source06",
+    "./verify-whole-source.mjs"
+  ],
+  "controllerPID": 84306,
+  "pollSeconds": 1,
+  "startAnonymousBelowGiB": 55,
+  "stopAnonymousGiB": 65,
+  "stopAnonymousPlusWiredGiB": 96,
+  "limitSeconds": 180.0,
+  "guardSHA256": "cf8acd15d8b7484480bee74d23892be815d955ffd87115d3da8ed228ffb3d916",
+  "status": "worker returned; review pending",
+  "samples": [
+    {
+      "seconds": 0,
+      "anonymousGiB": 40.6,
+      "wiredGiB": 7.1,
+      "freeGiB": 8.7
+    },
+    {
+      "seconds": 0.028,
+      "anonymousGiB": 40.6,
+      "wiredGiB": 7.1,
+      "freeGiB": 8.7
+    },
+    {
+      "seconds": 1.058,
+      "anonymousGiB": 41.2,
+      "wiredGiB": 7.1,
+      "freeGiB": 8.1
+    },
+    {
+      "seconds": 2.09,
+      "anonymousGiB": 41.4,
+      "wiredGiB": 7.2,
+      "freeGiB": 7.8
+    },
+    {
+      "seconds": 3.123,
+      "anonymousGiB": 40.3,
+      "wiredGiB": 7.1,
+      "freeGiB": 8.9
+    }
+  ],
+  "physicalMemoryBytes": 137438953472,
+  "requiredPhysicalMemoryBytes": 137438953472,
+  "scope": "Future explicitly invoked owned Rockhop job only",
+  "pressureOrSwapLimits": "No separate pressure/swap gate exists in the pinned original guard; none altered",
+  "ownedChildPID": 84310,
+  "exitCode": 0,
+  "elapsedSeconds": 3.15
+}

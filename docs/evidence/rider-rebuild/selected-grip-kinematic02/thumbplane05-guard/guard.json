@@ -1,0 +1,46 @@
+{
+  "accepted": false,
+  "lock": "/Users/raynos/projects/localai/.model.lock",
+  "method": "lockf -k",
+  "command": [
+    "node",
+    "assets/blender/rider-rebuild/selected-grip-kinematic02/construct-thumb-plane.mjs",
+    "docs/evidence/rider-rebuild/selected-grip-kinematic02/thumbplane05",
+    "./thumb-opposition-plane.mjs"
+  ],
+  "controllerPID": 60163,
+  "pollSeconds": 1,
+  "startAnonymousBelowGiB": 55,
+  "stopAnonymousGiB": 65,
+  "stopAnonymousPlusWiredGiB": 96,
+  "limitSeconds": 180.0,
+  "guardSHA256": "cf8acd15d8b7484480bee74d23892be815d955ffd87115d3da8ed228ffb3d916",
+  "status": "worker returned; review pending",
+  "samples": [
+    {
+      "seconds": 0,
+      "anonymousGiB": 53.6,
+      "wiredGiB": 7.2,
+      "freeGiB": 16.0
+    },
+    {
+      "seconds": 0.03,
+      "anonymousGiB": 53.6,
+      "wiredGiB": 7.2,
+      "freeGiB": 15.9
+    },
+    {
+      "seconds": 1.062,
+      "anonymousGiB": 54.2,
+      "wiredGiB": 7.4,
+      "freeGiB": 15.0
+    }
+  ],
+  "physicalMemoryBytes": 137438953472,
+  "requiredPhysicalMemoryBytes": 137438953472,
+  "scope": "Future explicitly invoked owned Rockhop job only",
+  "pressureOrSwapLimits": "No separate pressure/swap gate exists in the pinned original guard; none altered",
+  "ownedChildPID": 60167,
+  "exitCode": 1,
+  "elapsedSeconds": 1.22
+}

@@ -29,3 +29,9 @@ Finding: Independent thumb solutions still require158degree axial twist; inherit
 Validation: Retry child exits0 in9.303s; descendant-aware closure haszero inside vertices andzero finite triangle crossings bilaterally but labelled finger pads13.09–16.93mm away. Material/triangle normal agreement0.99953–0.99999 rules out inverted normals.
 
 Limits: Unaccepted grasp; thumb opposition-plane hypothesis and less curled descendant-safe finger construction follow. Original source/rest/75skin preserved.
+
+Finding: Actual thumb/index opposition-plane controls yield finite bilateral thumb contact with23.29/22.31degree CMC twist, independently articulated MCP/IP and descendant-safe finger closure. Exact socket positions/orientations and30 native-local axis-angle controls are exported as an unaccepted private-review candidate.
+
+Validation: Thumb pulp clearance1.19993/1.19974mm with normal dot approximately-1; full439642 vertices and569142 triangles per glove havezero inside vertices andzero finite-bar crossings. Every previously excluded170424/171824 cuff triangle is AABB-disjoint from the finite bars. Runtime rotation replay error<5.2e-8rad; socket position replay<27nm. Guarded construction/full verification exit0 in5.2s/3.15s. Initial CMC-ray setup failure retained with corrected precondition.
+
+Limits: Fixed center-ray finger labels retain1.46–7.8mm gaps despite distinct distal-owned contact witnesses at1.2mm. Forearms remain native rest in offline verification; parent must qualify actual runtime IK/cuff skin and moving both-bike leans. Source geometry/rest/75skin and digital translations remain unchanged. No production promotion.

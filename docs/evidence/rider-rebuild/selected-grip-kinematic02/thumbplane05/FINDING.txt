@@ -1,0 +1,48 @@
+Finding: Native thumb/index opposition-plane controls produce a bilateral
+finite-bar contact candidate with unchanged source geometry, native rest,
+inverse binds, shared75 skin and digital translations. This is unaccepted
+construction evidence for private moving review, not production art approval.
+
+Runtime handoff: runtime-profile.json, SHA256
+659ff94c1611e0ce95310ab090e94637832ac2bbfbac7f9554f903595bd05972.
+Apply all30 digitFlex entries as restLocalQuaternion * axisAngle, plus the
+explicit gripSocketPositionBike and gripSocketQuaternionBike for each side.
+The exported socket quaternion already includes source socket-in-wrist
+rotation; wristQuaternionBike must not be substituted for it.
+
+Construction: the actual CMC-to-thumb-end shaft and index MCP define the
+thumb opposition plane. Project its hinge off each native thumb shaft.
+Independent MCP/IP equations solve reach length and reach-dot-pulp-normal
+against actual finite lower bar faces; CMC maps the resulting reach/normal
+frame into contact. Proximal-first finger closure uses first actual source
+skin contact, with descendants included at PIP/DIP. No weighted coordinate
+descent, mesh edits, rest edits or translated digital joints are used.
+
+Measured left/right thumb pulp clearance:1.19993/1.19974mm; outward normal
+dot bar outward normal approximately-1; target residual0.824/2.456um.
+CMC swing66.363/65.889deg, axial twist23.291/22.311deg. MCP flex53.678/53.027deg
+and IP flex15.871/17.418deg. Every finger has a distal-owned skin contact
+witness at1.2mm clearance with normal dot between-0.987 and-1. Fixed shaft
+center-ray labels still have1.46–7.8mm gaps and the index label has only
+-0.368 normal agreement; actual contact witnesses and these labels are
+distinct evidence, not interchangeable acceptance criteria.
+
+Verification: exported native-local rotation replay error<5.2e-8rad; socket
+position replay<27nm and rotation<6e-8rad. Guarded construction exits0 in
+5.2s. The first setup failure (no CMC shaft-center-ray pulp) is retained;
+CMC thenar/web is not falsely required to be a fingertip pulp label.
+
+Whole-source receipt: ../whole-source06/whole-source-{left,right}.json.
+All439642 vertices and569142 triangles per glove are included. Zero inside
+vertices, zero bar crossings. The previously weight-excluded170424/171824
+triangles are each AABB-disjoint from the finite bars. Their foreign skin
+influences are only DEF-forearm and DEF-forearm.001 on the matching side.
+Fixed-profile full verification exits0 in3.15s under the original guards.
+Both source bikes' exact finite grip surfaces are identical and SHA checked.
+
+Limits: the offline fixture leaves forearm bones at native rest. Parent must
+recheck cuff skin after actual limb IK, and play Garage/game forward/back
+leans on both bikes before any promotion. Contact/collision equations alone
+do not establish anatomical or moving visual quality. Density derivatives
+must re-register semantic source material regions; runtime must not depend
+on this source's old row indices. Broad rider art remains paused.
