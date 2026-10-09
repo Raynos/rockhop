@@ -1,0 +1,35 @@
+{
+  "accepted": false,
+  "status": "ACTUAL_BOTH_BIKE_NATIVE_MATRIX_CONVERSION_PASS_BLENDER_PENDING",
+  "input": {
+    "path": "assets/blender/rider-rebuild/selected-authoring-motion11/gameplay-convert02.input.json",
+    "sha256": "971be8e5da99e4287991413b64439057dc126eae9a3850e80036ea9828b573d7"
+  },
+  "recipe": {
+    "path": "assets/blender/rider-rebuild/selected-authoring-motion11/gameplay_convert02.mjs",
+    "sha256": "84ee2f2d11c448666a06ed427dde09793a071e7868cbd2e03b4450b8d07ecfb6"
+  },
+  "nativePoseJSON": {
+    "path": "harness/out/rider-rebuild/selected-authoring-motion11/gameplay-converted02/measured-gameplay-native-world.json",
+    "sha256": "f3e0444768655bf72500a9245745a559586a7717b3f6cb6b600b6e9d1d05c153"
+  },
+  "original75RestExact": true,
+  "all482MatricesPerOriginalBoneFinite": true,
+  "actions": [
+    {
+      "name": "RiderGameplayLeanRookie",
+      "frames": 241,
+      "originalJoints": 75,
+      "hierarchyMaximumAffineBoundWithin2mM": 0
+    },
+    {
+      "name": "RiderGameplayLeanPro",
+      "frames": 241,
+      "originalJoints": 75,
+      "hierarchyMaximumAffineBoundWithin2mM": 0
+    }
+  ],
+  "guardElapsedSeconds": 0.798,
+  "next": "Required gate40, actual controls02 and complete native08 replay; source09 requires both actual pass receipts.",
+  "limits": "Coordinate-converted actual observations only; no Blender construction, live control solve, skin/contact/art/device or release pass. AllR0\u2013R5 open."
+}
