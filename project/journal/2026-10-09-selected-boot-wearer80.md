@@ -35,3 +35,9 @@ Finding: The original shoe cut refusal isolates to localZ−2.414mm, not the for
 Validation: Frozen diagnostic originalguard1.063s exit0; parent source/input and selected-ID pins match. First0.180s launcher import conflict retained and corrected with NumPy preload/runpy; recipe unchanged.
 
 Limits: Analytical source clipping only, not BMesh replay, deletion or wearable fit. Do not infer collateral exterior loss solely from the old combined assertion or change guard by hunch.
+
+Finding: Diagnose all low selected inner faces against the untouched exterior before changing the cavity cut.
+
+Validation: Parent full133line source review, AST/hash and two actual pins pass; source normals compensate handed frames.
+
+Limits: Read-only source checkpoint; no cavity edit, clearance or moving qualification.
