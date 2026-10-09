@@ -17,3 +17,9 @@ Finding: Local anatomical painting still creates a12.512x seam jump against inco
 Validation: Original guard6.459s exit0;482actual keys expose1.823mm seam→22.804mm. Parent finite/geometry-UV-far-field checks pass and fully reviews exact47 full-reference field extractor. Body02 is not identical wearer geometry; no substitution.
 
 Limits: Rejected local result; whole-wearer extraction/binding still pending. No native/contact/bake/production-four/played-art/device acceptance.
+
+Finding: Whole-wearer nearest-face transfer binds exact47 fields without altering selected geometry, but is rejected for bilateral armhole tearing and hood branch jumps. Garment adjacency must guide anatomical field painting; Euclidean nearest body alone does not define cloth ownership.
+
+Validation: Original guards103.046s and9.187s exit0. Parent reconstructs all full71 mapped fields exactly from triangle/barycentric witnesses; finite arrays, unchanged geometry/UV/ancestry,482keys and33704edges verified. Rookie129 edge1.014mm grows79.515mm (78.381x); its nearest body samples are9.908mm apart on different torso/arm sheets. Parent endpoint vision shows bilateral triangular body exposure.
+
+Limits: Unaccepted CPU geometry diagnosis only, without source PBR. No native11, bake, contact, production-four, GPU or played-art/device pass. Hold assembly; preserve selected appearance and correct continuous anatomical ownership.

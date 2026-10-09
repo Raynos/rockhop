@@ -47,7 +47,31 @@ def receiver(path):
     assert row['recipe']==pin(HERE/'author.py')
     for key in ('sourceReceiver','source47Receipt','fullBody','original47Geometry','actualGuides','receiver','editableOBJ','construction'):
         checked(row[key])
+    if 'wearerFieldBinding' in row:
+        assert 'anatomicalFieldRepair' not in row and 'fieldRepair' not in row
+        binding=row['wearerFieldBinding'];assert binding['recipe']==pin(HERE/'wearer_fields.py')
+        runpy.run_path(str(checked(binding['recipe'])))['verify'](path)
+        assert row['correspondenceAndSkin']['healthyFieldsExactBeforeFloat32'] is False
+        assert row['correspondenceAndSkin']['sourceFarFieldAnchorsExact'] is False
+    elif 'anatomicalFieldRepair' in row:
+        assert 'fieldRepair' not in row
+        repair=row['anatomicalFieldRepair'];assert repair['recipe']==pin(HERE/'anatomical_fields.py')
+        runpy.run_path(str(checked(repair['recipe'])))['verify'](path)
+        assert row['correspondenceAndSkin']['healthyFieldsExactBeforeFloat32'] is False
+    elif 'fieldRepair' in row:
+        repair=row['fieldRepair'];assert repair['recipe']==pin(HERE/'field_repair.py')
+        runpy.run_path(str(checked(repair['recipe'])))['verify'](path)
+        assert row['correspondenceAndSkin']['healthyFieldsExactBeforeFloat32'] is False
     return row
+
+
+def control_field_lineage(report):
+    key=next((k for k in ('wearerFieldBinding','anatomicalFieldRepair','fieldRepair')if k in report),None)
+    return {'kind':key or 'initialAuthoredJointFields',
+            'repair':report[key]if key else None,
+            'fullCanonicalFieldInventory':report['correspondenceAndSkin']['fullNamedFieldCount'],
+            'localSourceFieldsUnchanged':report['correspondenceAndSkin']['healthyFieldsExactBeforeFloat32'],
+            'productionFourConditioned':False}
 
 
 def helpers(source_receipt):
@@ -136,6 +160,7 @@ def author(receiver_path,output):
     garment['acceptedArt']=False;garment['constructionStatus']='AUTHORED_JOINTS_REAL_BAKE_CONTACT_MOTION_PENDING'
     garment['denseSelectedBakeAuthority']=DONOR;garment['sourceUVStatus']='Selected sampling preview only; genuine bake atlas absent'
     garment['nativeIdentitySemantic']='Saved authored receiver row; not original dense-source vertex identity'
+    garment['controlFieldAuthority']=json.dumps(control_field_lineage(report),sort_keys=True)
     body=bpy.data.objects[C['REFERENCE']];body.hide_render=True;body.hide_set(False)
     assert C['canonical'](H['rest'](rig))==rest
     assert {name:geometry(bpy.data.objects[name])for name in protected}==protected
@@ -156,6 +181,7 @@ def author(receiver_path,output):
     pending={'status':'AUTHORED77_NATIVE_SAVED_REOPEN_PENDING','acceptedArt':False,'recipe':pin(__file__),
              'receiverReceipt':pin(receiver_path),'source47Receipt':report['source47Receipt'],'componentHelper':COMPONENT,
              'actualGuides':report['actualGuides'],'native':pin(native),'expectedWitness':pin(output/'expected-native-witness.json'),
+             'controlFieldLineage':control_field_lineage(report),
              'sourceCuffInput':glove['priorInput'],'sourceGloveReceipt':receipt['componentReceipt'],
              'denseBakeSourceObject':DONOR,'targetObject':TARGET,'independentReopenPassed':False,
              'detailBakePassed':False,'finiteContactPassed':False,'movingReviewPassed':False,
@@ -171,7 +197,8 @@ def reopen(pending_path):
     assert row['status']=='AUTHORED77_NATIVE_SAVED_REOPEN_PENDING'and row['recipe']==pin(__file__)
     assert row['componentHelper']==COMPONENT
     source=json.loads(checked(row['source47Receipt']).read_text());C,H,geometry,glove=helpers(source)
-    receiver(checked(row['receiverReceipt']));checked(row['actualGuides']);checked(row['sourceCuffInput']);checked(row['sourceGloveReceipt'])
+    report=receiver(checked(row['receiverReceipt']));assert row['controlFieldLineage']==control_field_lineage(report)
+    checked(row['actualGuides']);checked(row['sourceCuffInput']);checked(row['sourceGloveReceipt'])
     expected=json.loads(checked(row['expectedWitness']).read_text())
     assert bpy.ops.wm.open_mainfile(filepath=str(checked(row['native'])),use_scripts=False)=={'FINISHED'}
     assert sorted(o.name for o in bpy.data.objects)==expected['objectNames']
@@ -179,6 +206,7 @@ def reopen(pending_path):
     assert C['canonical'](H['rest'](rig))==expected['rest']==source['expectedRest']
     assert {name:geometry(bpy.data.objects[name])for name in expected['protectedGeometry']}==expected['protectedGeometry']
     donor,garment=bpy.data.objects[DONOR],bpy.data.objects[TARGET]
+    assert garment['controlFieldAuthority']==json.dumps(row['controlFieldLineage'],sort_keys=True)
     assert geometry(donor)==expected['donorGeometry']and normal_sha(donor,np)==expected['donorNormals']
     assert donor_original_named_geometry(donor,geometry)==expected['donorOriginalNamedGeometry']==source['expectedHoodieGeometry']
     assert C['canonical'](C['metadata'](donor,H['packed_maps']))==expected['donorMetadata']
@@ -205,7 +233,7 @@ def qualify_receipt(receipt_path):
     for key,value in pending.items():
         if key not in ('status','independentReopenPassed'):assert row[key]==value
     assert pending['status']=='AUTHORED77_NATIVE_SAVED_REOPEN_PENDING'
-    receiver(checked(row['receiverReceipt']))
+    report=receiver(checked(row['receiverReceipt']));assert row['controlFieldLineage']==control_field_lineage(report)
     source=json.loads(checked(row['source47Receipt']).read_text());checked(source['native'])
     expected=json.loads(checked(row['expectedWitness']).read_text())
     assert expected['rest']==source['expectedRest']
