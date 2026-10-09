@@ -38,7 +38,7 @@ H0 is October 8, 14:05 Panama / 19:05 UTC; target finish is October 9 at the sam
 | H+16 — missed; remains unaccepted | Same master with editable Blender controls, complete generic and bike actions, consumed engine deformation/contact | Parent and next concrete controls builder |
 | H+24 | Exact candidate reviewed on desktop/physical iPhone, bot/stranger/replay/restart and checked release/live SHA | Parent; human/device decisions through HR-23 |
 
-**Current execution, October 9, 07:14 Panama:** The independent
+**Current execution, October 9, 08:12 Panama:** The independent
 [Astra6 X-High advisory74](../evidence/rider-rebuild/astra-production-advisory74/FINDING.md)
 remains the broad production review. Preserve selected appearance, native10
 physical motion, distinct glove41 geometry, ankle52 and useful boot70 work.
@@ -46,31 +46,38 @@ All R0–R5 remain open, 0/6 accepted. Existing42 films demonstrate actual forwa
 back/neutral inputs in selected clothes, with rejected cuff/ankle/hood defects;
 their25FPS encoding is not smooth60FPS evidence. No repaired complete film yet.
 
-**Active construction route:** Three concrete builders work on the same selected
-master: Astra82 owns the connected hoodie shoulder/cap; Astra81 owns distinct
-original-index glove receivers;79 owns the real selected-source atlas/detail bake
-and complete engine recipient. The parent reviews actual results and owns the
-bilateral boot cavity/collar correction. Build models and materials; source
+**Active construction route:** Concrete builders work on the selected master.
+Astra82 builds the connected hoodie shoulder/cap; Astra81 authors coherent
+selected-derived glove exteriors; Astra83 repairs the distinct shoe cavities,
+collars and local left toe;79 builds the genuine selected-source atlas/detail
+bake and complete engine recipient. The parent reviews actual results. Source
 preparation and identity checks do not count as a completed rider.
 
-- Hoodie13 is inadmissible. Anatomical scalar ownership reduces worst recorded
-  stretch10.732→5.949× but collapses a22.999mm lower-trunk edge to0.458mm.
-  Geometry zipper connections and sampled field meridians also disagree. Replace
-  that cap connection with one literal selected-seam loop shared by geometry and
-  fields. One bounded linear field extension may use only the actual connected
-  anatomical shoulder patch, meaningful12 trunk/collar and47 arm boundaries.
-  Preserve lower trunk/downhood. No heuristic scalar retry or garment optimizer.
-- Gloves81 use independent actual41 arrays, complete stored fields and source
-  fans. Replace invalid circular thumb-root/flat-cuff assumptions with measured
-  joint-plane surfaces and real1688+71 nonplanar cuff circuits. One original-index
-  candidate per side/level; unchanged0.5mm gates. Left320543 has a known undefined
-  source average: retain its five positive-area faces/raw failure and deliberately
-  author nonzero derivative corner normals. Never export zero shading normals.
-- Boots80 found only local left toe escape≤1.7803mm in checked closed sections;
-  the hidden heel floor is3–10mm above the plantar surface. Construction01 stopped
-  before saving a native when its cavity selection hit a guard. Diagnose both
-  predicates and actual source connectivity before another cut. Preserve the
-  selected exterior and distinct left/right fields; no whole-shoe replacement.
+- Hoodie14 shares the actual retained seam, preserves12 trunk/hood and builds
+ 16184 vertices/32084 triangles with zero degenerate fans or inconsistent shared
+ windings. Its single bounded field solve stops verification on four floating
+ remainder negatives at two terminal vertices (minimum−2.22e−16);482 and views
+ did not run. Frozen15 clamps only the newly constructed torso remainder at
+ zero, preserving literal body witnesses and arm values. One actual construction
+ and full recorded forward/back inspection follows; no native art acceptance.
+- Gloves81: R03 preserves1729 protected source fans and full fields, but its one
+ 69201-triangle candidate has three proven reversed source triangles and
+ opposite-facing overlaps, plus broader changed-fan failures. Stop Meshopt,
+ lock/error tuning and L/LOD copies of that route. Build one selected-derived
+ R exterior with actual finger joint/tip strips, connected webs/thumb saddle,
+ palm/dorsum panels and clean cuff rim/lining, then independent L. Preserve41
+ sculpt silhouette, pads, UV/PBR and full-field ancestry; transfer fine detail
+ through genuine source baking.8k is provisional allocation, not topology
+ authority; whole-scene/device gates remain required. No generic/body-offset
+ glove shell or isolated normal flip to conceal topology failure.
+- Boots80: Actual floor01 verifies all858 disputed low faces per side as inner
+ arch lining,0unsupported/0outside wearer projection. An untouched exterior
+ bottom lies13.24–17.66mm below them; the old global minZ guard was wrong.
+ Astra83 uses pinned inner-component/source-edge cut identity, not a looser
+ height threshold. Preserve selected exterior, own-side raw fields/PBR and all
+ 3318 ankle rows; remove obsolete inner floor, thin only the source-bounded
+ collar return and correct only measured local left toe escape≤1.7803mm.
+ Construction/reopen/posed corridor and production compaction remain required.
 - Bake79 must create a genuinely nonoverlapping atlas and source-wall-aware cage.
   PreviewUV and REJECTED_DRAFT_cornerBakeUV are not baked production appearance.
   Old global-nearest parents do not establish same-wall ancestry. Final geometry,
