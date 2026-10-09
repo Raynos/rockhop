@@ -15,3 +15,9 @@ Finding: Coupled full01 reduces penetration but remains rejected: L2.799/R2.556m
 Validation: Unchanged guard exit0 in9.687s; sourcef814b8 unchanged; actual native head/tail rest angles verified against loaded75shaft geometry. Full finite-surface tests prevent promotion.
 
 Limits: Offline unaccepted pose. Next correction must use anatomically identified distal palmar pressure material and actual CMC swing/opposed contact sectors; no further socket-ray count sweep or cap escalation.
+
+Finding: Opposed01 is rejected: a curved material facet normal was forced into the skeletal hand frame, pitching the proximal digits into the finite grip. L15.692/R15.635mm penetration and3,320/2,808 crossing pairs are worse than the preceding candidate. Thumb pads remain37–46mm away and face away from the grip.
+
+Validation: Guarded exact source solve exit0 in9.562s, unchanged selected GLB, rest rig and skin weights. Recipe, profile, exhaustive finite-surface report and guard telemetry retained. No candidate integrated.
+
+Limits: Numerical fitting is frozen pending a concrete anatomical-frame diagnosis. Material normals must be measured contact constraints, not substitutes for anatomical wrist axes. No new played rider result or grip acceptance.

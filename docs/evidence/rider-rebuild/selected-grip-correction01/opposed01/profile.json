@@ -1,0 +1,434 @@
+{
+  "accepted": false,
+  "schema": "rockhop-selected-grip-profile-v1",
+  "sourceSHA256": "f814b8d7cde87b1e41b45eec75cd55fdea89b915bf9acae0e5a18b40d3a156af",
+  "sourceContractSHA256": "0301087649f7e2b2c442299bb21f61dc1e325c6b5b84afbc3ac5c4a594b72813",
+  "bikes": [
+    {
+      "asset": "bike-rookie.glb",
+      "sha256": "e55919d60267849358ef5e97f4731f42fac6eb2835b9998e1d146d056c0f10f7"
+    },
+    {
+      "asset": "bike-pro.glb",
+      "sha256": "0acc9ac86eeca76cc1812f8870eab36e2e25ca76d6a5cbe86d4a46a36cc12a86"
+    }
+  ],
+  "hands": {
+    "left": {
+      "wristQuaternionBike": [
+        -0.17326470628261245,
+        -0.04148274265117044,
+        -0.8456353570448668,
+        0.5031494475148883
+      ],
+      "wristPositionBike": [
+        0.21164461826978412,
+        0.8501503599096769,
+        -0.34659267576599734
+      ],
+      "selectedPalmPadInWrist": [
+        -0.6061265058698735,
+        0.7240318127942807,
+        0.3292242289744268,
+        0,
+        0.7036696469204068,
+        0.6810991270190934,
+        -0.20236849353775155,
+        0,
+        -0.3707555621766022,
+        0.10900418907389064,
+        -0.922311444079198,
+        0,
+        0.023078867375917134,
+        0.07564863829936022,
+        0.005383319873778394,
+        1
+      ],
+      "finitePalmTargetBike": [
+        0.2684510519411409,
+        0.7950732209283776,
+        -0.34170712728681846
+      ],
+      "selectedSurfaceWitness": {
+        "triangle": 297062,
+        "rows": [
+          227625,
+          227630,
+          229994
+        ],
+        "barycentric": [
+          0.4705818306607405,
+          0.1873101806183955,
+          0.34210798872086395
+        ],
+        "anatomicalProbe": "One outer volar ray10mm proximal to actual middle-MCP base, along declared palmar direction; distal palm pressure region rather than inherited thumb-web socket",
+        "sourceFields": [
+          [
+            {
+              "jointId": "DEF-hand.L",
+              "weight": 0.4451667048142214
+            },
+            {
+              "jointId": "DEF-palm.01.L",
+              "weight": 0.44281681544213014
+            },
+            {
+              "jointId": "DEF-thumb.01.L",
+              "weight": 0.05770962081330587
+            },
+            {
+              "jointId": "DEF-palm.04.L",
+              "weight": 0.054306858930342566
+            }
+          ],
+          [
+            {
+              "jointId": "DEF-hand.L",
+              "weight": 0.46073090714885173
+            },
+            {
+              "jointId": "DEF-palm.01.L",
+              "weight": 0.439658197909514
+            },
+            {
+              "jointId": "DEF-thumb.01.L",
+              "weight": 0.05355916685740444
+            },
+            {
+              "jointId": "DEF-palm.04.L",
+              "weight": 0.046051728084229804
+            }
+          ],
+          [
+            {
+              "jointId": "DEF-palm.01.L",
+              "weight": 0.4648966201266499
+            },
+            {
+              "jointId": "DEF-hand.L",
+              "weight": 0.42789349202716104
+            },
+            {
+              "jointId": "DEF-thumb.01.L",
+              "weight": 0.06050202182040131
+            },
+            {
+              "jointId": "DEF-palm.04.L",
+              "weight": 0.04670786602578775
+            }
+          ]
+        ],
+        "poseConditioned": true,
+        "normalPatchSamples": 1875
+      },
+      "digits": {
+        "thumb": {
+          "jointIds": [
+            "DEF-thumb.01.L",
+            "DEF-thumb.02.L",
+            "DEF-thumb.03.L"
+          ],
+          "flexRadians": [
+            0.8430889740575936,
+            0.006911025942406331,
+            0.8430889740575936
+          ],
+          "opposition": {
+            "jointId": "DEF-thumb.01.L",
+            "axisLocal": [
+              -0.8254057494663246,
+              0,
+              -0.5645399443333792
+            ],
+            "radians": -0.1391994681729366
+          },
+          "limitsRadians": [
+            0.85,
+            0.85,
+            0.85
+          ]
+        },
+        "index": {
+          "jointIds": [
+            "DEF-f_index.01.L",
+            "DEF-f_index.02.L",
+            "DEF-f_index.03.L"
+          ],
+          "flexRadians": [
+            0.2758462979997807,
+            1.5010014535300127,
+            0.45256583480202384
+          ],
+          "opposition": null,
+          "limitsRadians": [
+            1.4255953801428158,
+            1.5133055641329665,
+            1.1848327376589949
+          ]
+        },
+        "middle": {
+          "jointIds": [
+            "DEF-f_middle.01.L",
+            "DEF-f_middle.02.L",
+            "DEF-f_middle.03.L"
+          ],
+          "flexRadians": [
+            0.009915109502500807,
+            1.4927372068122566,
+            1.1578397476765547
+          ],
+          "opposition": null,
+          "limitsRadians": [
+            1.2194778528339918,
+            1.5049735731732405,
+            1.167330869941896
+          ]
+        },
+        "ring": {
+          "jointIds": [
+            "DEF-f_ring.01.L",
+            "DEF-f_ring.02.L",
+            "DEF-f_ring.03.L"
+          ],
+          "flexRadians": [
+            1.0387095436303853,
+            1.538897584780723,
+            1.1244492205377175
+          ],
+          "opposition": null,
+          "limitsRadians": [
+            1.2879153805886097,
+            1.5515123401130582,
+            1.1336666317163435
+          ]
+        },
+        "pinky": {
+          "jointIds": [
+            "DEF-f_pinky.01.L",
+            "DEF-f_pinky.02.L",
+            "DEF-f_pinky.03.L"
+          ],
+          "flexRadians": [
+            1.792476228985611,
+            1.356603645224427,
+            1.1156649394821907
+          ],
+          "opposition": null,
+          "limitsRadians": [
+            1.8071696363255818,
+            1.367724088349886,
+            1.1248103435582115
+          ]
+        }
+      }
+    },
+    "right": {
+      "wristQuaternionBike": [
+        0.852743970357744,
+        0.4764266289808967,
+        0.20784841928536688,
+        -0.05142395178304311
+      ],
+      "wristPositionBike": [
+        0.21611706236648004,
+        0.853348199306259,
+        0.337966418634975
+      ],
+      "selectedPalmPadInWrist": [
+        0.6265483696568275,
+        0.6656265304658114,
+        0.4054361385229712,
+        0,
+        -0.6381047732284354,
+        0.7367905365710161,
+        -0.22352181907474125,
+        0,
+        -0.44750356296174765,
+        -0.1186635039068055,
+        0.886374375744866,
+        0,
+        -0.024072890458505802,
+        0.07584379266386174,
+        0.007233580174365993,
+        1
+      ],
+      "finitePalmTargetBike": [
+        0.2705094982141118,
+        0.7953573619872125,
+        0.33005216994023445
+      ],
+      "selectedSurfaceWitness": {
+        "triangle": 294151,
+        "rows": [
+          227625,
+          225396,
+          225390
+        ],
+        "barycentric": [
+          0.35808341310938563,
+          0.11128537757298684,
+          0.5306312093176275
+        ],
+        "anatomicalProbe": "One outer volar ray10mm proximal to actual middle-MCP base, along declared palmar direction; distal palm pressure region rather than inherited thumb-web socket",
+        "sourceFields": [
+          [
+            {
+              "jointId": "DEF-palm.01.R",
+              "weight": 0.482230869001297
+            },
+            {
+              "jointId": "DEF-hand.R",
+              "weight": 0.4111238269626917
+            },
+            {
+              "jointId": "DEF-thumb.01.R",
+              "weight": 0.05491721980621042
+            },
+            {
+              "jointId": "DEF-palm.04.R",
+              "weight": 0.051728084229800866
+            }
+          ],
+          [
+            {
+              "jointId": "DEF-hand.R",
+              "weight": 0.45300984206912337
+            },
+            {
+              "jointId": "DEF-palm.01.R",
+              "weight": 0.4507972838941024
+            },
+            {
+              "jointId": "DEF-thumb.01.R",
+              "weight": 0.04953078507667658
+            },
+            {
+              "jointId": "DEF-palm.04.R",
+              "weight": 0.04666208896009766
+            }
+          ],
+          [
+            {
+              "jointId": "DEF-palm.01.R",
+              "weight": 0.4586861982146944
+            },
+            {
+              "jointId": "DEF-hand.R",
+              "weight": 0.436240177004654
+            },
+            {
+              "jointId": "DEF-thumb.01.R",
+              "weight": 0.054108491645685514
+            },
+            {
+              "jointId": "DEF-palm.04.R",
+              "weight": 0.05096513313496605
+            }
+          ]
+        ],
+        "poseConditioned": true,
+        "normalPatchSamples": 1903
+      },
+      "digits": {
+        "thumb": {
+          "jointIds": [
+            "DEF-thumb.01.R",
+            "DEF-thumb.02.R",
+            "DEF-thumb.03.R"
+          ],
+          "flexRadians": [
+            0.7664445218705698,
+            0.3246711095625,
+            0.8430889740575936
+          ],
+          "opposition": {
+            "jointId": "DEF-thumb.01.R",
+            "axisLocal": [
+              0.8241554223989437,
+              0,
+              -0.5663636991637254
+            ],
+            "radians": -0.5975516591761609
+          },
+          "limitsRadians": [
+            0.85,
+            0.85,
+            0.85
+          ]
+        },
+        "index": {
+          "jointIds": [
+            "DEF-f_index.01.R",
+            "DEF-f_index.02.R",
+            "DEF-f_index.03.R"
+          ],
+          "flexRadians": [
+            0.2874056055428018,
+            1.4166568399874455,
+            0.5593672403639867
+          ],
+          "opposition": null,
+          "limitsRadians": [
+            1.4254383320766701,
+            1.5132938299364769,
+            1.1847588272839156
+          ]
+        },
+        "middle": {
+          "jointIds": [
+            "DEF-f_middle.01.R",
+            "DEF-f_middle.02.R",
+            "DEF-f_middle.03.R"
+          ],
+          "flexRadians": [
+            0.00997064761008484,
+            1.476043498975153,
+            0.8749267852097938
+          ],
+          "opposition": null,
+          "limitsRadians": [
+            1.2263085885076586,
+            1.4881430225455332,
+            1.178121254319701
+          ]
+        },
+        "ring": {
+          "jointIds": [
+            "DEF-f_ring.01.R",
+            "DEF-f_ring.02.R",
+            "DEF-f_ring.03.R"
+          ],
+          "flexRadians": [
+            0.9396452580427997,
+            1.3963183555631065,
+            1.0202630754258963
+          ],
+          "opposition": null,
+          "limitsRadians": [
+            1.2880848821455855,
+            1.5514648395145627,
+            1.133625639362107
+          ]
+        },
+        "pinky": {
+          "jointIds": [
+            "DEF-f_pinky.01.R",
+            "DEF-f_pinky.02.R",
+            "DEF-f_pinky.03.R"
+          ],
+          "flexRadians": [
+            1.7975320447792924,
+            1.3532494368282215,
+            1.115647453861932
+          ],
+          "opposition": null,
+          "limitsRadians": [
+            1.8122668959943289,
+            1.364342384609825,
+            1.1247927146036443
+          ]
+        }
+      }
+    }
+  }
+}
