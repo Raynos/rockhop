@@ -15,3 +15,11 @@ Finding: Profile659ff94c remains authored against sourcef814b8d7 while the paren
 Validation: Silent Node syntax, scoped oxlint and owned whitespace checks pass. The transfer receipt reports native75,264 exact protected accessor streams, exact decoded graft delivery and783580 triangles/496791 vertices. Its authoring/candidate SHA fields match the requested transfer.
 
 Limits: The receipt's proved source preservation covers the declared protected streams and graft delivery. Changed-density glove/cuff surface contact and moving appearance still require actual derivative qualification. No new browser capture, player promotion, normal FPS or device pass is claimed.
+
+## Rookie actual moving capture
+
+Finding: The private derivative585ae314 activates fitted profile659ff94c through 1200 trusted held-input physics ticks and 241 finite native75 witnesses. All1023 observed submissions retain the exact visible author skins, actual full Rookie bike and fitted profile. The loader-trimmed played movie and complete raw stream are retained for parent moving judgment; no art acceptance is inferred.
+
+Validation: Original unchanged guard exits0 after25.438 seconds once admission succeeds. Capture, presence and encoding checks pass with zero page errors, faults or invalid submissions. The private upstream572476 and original fit-authoring030108 contract pins remain separate. Encoded presentation is25fps; measured forced-harness render85.1fps/RAF92.1fps is explicitly not normal-player performance.
+
+Limits: Close optical framing preserves both hands, cuffs and elbows but crops head/legs. Actual derivative whole-glove/bar and cuff surface qualification is the density worker's separate task. Pro motion, whole-rider Garage orbit, parent movie judgment and physical-device/performance acceptance remain pending. The original queue waited outside its55GiB admission gate before launch; no guard threshold or foreign process changed.
