@@ -51,6 +51,8 @@ assert.equal(runtimeMetadata.metadataSHA256, upstreamContractSHA256);
 assert.deepEqual(runtimeMetadata.driver, contract.driver, 'Requested and built runtime grip driver differ');
 assert.equal(sha(profileBytes), profileSHA256, 'Exact source-pinned profile bytes required');
 assert.equal(gripProfile.schema, 'rockhop-selected-grip-kinematic-v2');
+const profileAuthoringContractSHA256 = runtimeMetadata.driver.selectedGripProfile?.authoringContractSHA256
+  ?? contract.mobileDelivery02?.parentContractSHA256 ?? upstreamContractSHA256;
 let profileApplicationTransfer = null;
 if (gripProfile.source.sha256 !== selected.sha256) {
   const declaration = runtimeMetadata.driver.selectedGripProfile;
@@ -63,12 +65,12 @@ if (gripProfile.source.sha256 !== selected.sha256) {
   assert.equal(transfer.nativeJoints, 75); assert.equal(transfer.nativeJSONAndAllDecodedAccessorViewsExactToGraft, true);
   assert(transfer.protectedSelectedAccessorStreamsExact.length > 0 && transfer.protectedSelectedAccessorStreamsExact.every(row => row.exact === true));
   profileApplicationTransfer = { declaration: structuredClone(declaration), receipt: { path: path.resolve(transferPath), sha256: sha(transferBytes) },
-    authoringSourceSHA256: gripProfile.source.sha256, appliesToSourceSHA256: selected.sha256,
+    authoringSourceSHA256: gripProfile.source.sha256, authoringContractSHA256: profileAuthoringContractSHA256, appliesToSourceSHA256: selected.sha256,
     protectedExactAccessorStreams: transfer.protectedSelectedAccessorStreamsExact.length, nativeJoints: transfer.nativeJoints,
     geometry: { vertices: transfer.geometry.vertices, triangles: transfer.geometry.triangles },
     limits: 'Protected source rig/accessor streams and exact graft delivery only. Changed-density glove/cuff contact and moving appearance require actual derivative qualification; authoring-source finite-surface results do not establish derivative contact.' };
 }
-assert.equal(gripProfile.contractSHA256, upstreamContractSHA256);
+assert.equal(gripProfile.contractSHA256, profileAuthoringContractSHA256, 'Fitted authoring contract remains distinct from derivative upstream bytes');
 assert.equal(runtimeMetadata.driver.gripProfileHash, profileSHA256, 'Built driver declares exact fitted profile');
 for (const side of ['left', 'right']) {
   const hand = gripProfile.hands[side];
