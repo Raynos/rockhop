@@ -1,0 +1,64 @@
+{
+  "acceptedArt": false,
+  "operation": "DENSE_SOURCE_MATERIAL_GRAPH_AND_ACTUAL_BODY_CONTACT73",
+  "native47": {
+    "path": "harness/out/rider-rebuild/selected-sleeve-component47/intake01/UNACCEPTED-selected-sleeve-intake47.blend",
+    "sha256": "ff2ba521943db9b8586e75ed674fc8122d7612df5cf5d609ffb9ef48c9016bc7"
+  },
+  "input65": {
+    "path": "assets/blender/rider-rebuild/selected-anatomical-hoodie-fit65/input01.json",
+    "sha256": "24b887a1617e6c4282f249a3613eea010e92203faac75d6b7d1e656767d8f462"
+  },
+  "original47Arrays": {
+    "path": "harness/out/rider-rebuild/selected-proximal-fit-review54/original01/actual-hoodie-geometry.npz",
+    "sha256": "370a8bc8569113e422b66d05a8677f6d206628eb362cf731fb6903ac641e06fd"
+  },
+  "bodyReference": {
+    "path": "harness/out/rider-rebuild/selected-seated-anatomical09/reference05/original-full-reference.npz",
+    "sha256": "01f752d72e94dbab81cc7a193adbd2dd7bba26df919b48454d8937fa9665dcc5"
+  },
+  "retained72": {
+    "path": "harness/out/rider-rebuild/selected-anatomical-hoodie-fit72/component01/qualification-inputs.npz",
+    "sha256": "2d453e2c6e0cdd351912c4810571107855b647dea7789e3124e665a5a8faadde"
+  },
+  "targets65": {
+    "path": "harness/out/rider-rebuild/selected-anatomical-hoodie-fit65/component01/fixed-material-targets.npz",
+    "sha256": "821f1095759ff60dde341b3235859e88aabd8c4ccb0ab400a23d8abad186608b"
+  },
+  "worker": {
+    "path": "assets/blender/rider-rebuild/selected-anatomical-hoodie-fit73/worker.py",
+    "sha256": "b1198ab4d047a454d956ead1a6ae6456b16f06e544d77df8ab1a5a823264c680"
+  },
+  "dense": {
+    "path": "assets/blender/rider-rebuild/selected-anatomical-hoodie-fit73/dense.py",
+    "sha256": "aff2a2ce960595d832cccc4e9de5df928464c555aba89c0057684acdaa17c718"
+  },
+  "native": {
+    "path": "assets/blender/rider-rebuild/selected-anatomical-hoodie-fit73/native.py",
+    "sha256": "dea8b72d767f48a072e1a4c490c38b0350f931decff40bcb15fb7c0367316500"
+  },
+  "settings": {
+    "fieldCellM": 0.04,
+    "clothClearanceM": 0.0025,
+    "contactSolveMarginM": 0.0001,
+    "contactReserveM": 0.003,
+    "contactPasses": 8,
+    "projectionIterations": 256,
+    "numericalContactToleranceM": 2e-05,
+    "maximumDerivativeBound": 0.85,
+    "maximumDisplacementM": 0.045
+  },
+  "scipyVersion": "1.18.1",
+  "numerical": {
+    "primalToleranceM": 5e-06,
+    "equationTolerance": 1e-06,
+    "cgAtol": 1e-08
+  },
+  "limits": [
+    "One source-relative dense material solve; no continuous injectivity certificate.",
+    "Full contact in every linearization; clearance/tolerance unchanged65.",
+    "Graph smoothness and measured source-wall vectors are construction energies, not geometry pass thresholds.",
+    "Original native source/UV/PBR/skin and75bone rest stay exact; source detail normals use measured triangle derivatives.",
+    "No art, self-crossing, moving, game or device acceptance is implied."
+  ]
+}

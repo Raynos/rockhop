@@ -1,0 +1,84 @@
+{
+  "actualGarmentConstructed": false,
+  "acceptedArt": false,
+  "planeWithPairedWalls": {
+    "minimumM": 0.002599610299033793,
+    "steps": [
+      {
+        "primalResidualM": 3.897009662086337e-07,
+        "linearizedMaximumDeficitM": 3.897009662086337e-07,
+        "stationarityEquationResidual": 8.193512220945304e-07,
+        "dualEquationResidual": 8.157553374864923e-07,
+        "cgInfo": [
+          0,
+          0,
+          0
+        ],
+        "inner": 16
+      }
+    ],
+    "constraintVertices": 6,
+    "constraintCentroids": 2,
+    "sourceWallSpanM": 0.006,
+    "constructedWallSpansM": [
+      0.005989809946845533,
+      0.005989728074616582,
+      0.005989728074616589
+    ]
+  },
+  "allVerticesOutsideButCentroidInsideSphere": {
+    "minimumM": 0.002599999117226748,
+    "steps": [
+      {
+        "primalResidualM": 8.827730768601327e-10,
+        "linearizedMaximumDeficitM": 8.827731878824352e-10,
+        "stationarityEquationResidual": 7.908660109120621e-07,
+        "dualEquationResidual": 7.908660138379734e-07,
+        "cgInfo": [
+          0,
+          0,
+          0
+        ],
+        "inner": 46
+      }
+    ],
+    "constraintVertices": 3,
+    "constraintCentroids": 1
+  },
+  "independent144VertexTangentialGuideObjective": {
+    "zero": {
+      "primalResidualM": 2.9796990569375126e-10,
+      "linearizedMaximumDeficitM": 2.9796990569375126e-10,
+      "stationarityEquationResidual": 0.00010110192467552581,
+      "dualEquationResidual": 0.00010110205130772061,
+      "cgInfo": [
+        0,
+        0,
+        0
+      ],
+      "inner": 256,
+      "objectiveConverged": false,
+      "maximumActualCoordinateErrorAgainstIndependentSparseSolveM": 0.008940036739659788,
+      "guideXM": 0.01490345830387874,
+      "meanXM": 0.006385873666219575
+    },
+    "objectiveMinimum": {
+      "primalResidualM": 9.396865619619443e-07,
+      "linearizedMaximumDeficitM": 5.392571845695693e-07,
+      "stationarityEquationResidual": 9.179819296157446e-07,
+      "dualEquationResidual": 9.180855740369686e-07,
+      "cgInfo": [
+        0,
+        0,
+        0
+      ],
+      "inner": 57,
+      "objectiveConverged": true,
+      "maximumActualCoordinateErrorAgainstIndependentSparseSolveM": 1.9527404988145536e-09,
+      "guideXM": 0.02005376479497531,
+      "meanXM": 0.014470159452448145
+    }
+  },
+  "actualTangentInverseTranspose": true,
+  "limits": "Small algebra/contact checks; actual source native and complete contact remain untested."
+}
