@@ -106,7 +106,7 @@ page.on('response', response => {
 // Cheap post-render presence witness. It reads scene identities/counts once per
 // instance, never skin coordinates, indices, textures or whole geometry buffers.
 function installComparisonMonitor({ logicals, aliases }) {
-  const owner = window.__render, original = owner.render, cache = new WeakMap();
+  const owner = globalThis.window.__render, original = owner.render, cache = new WeakMap();
   const state = { frames: 0, invalidFrames: 0, examples: [], lastLogical: null };
   const details = rider => {
     if (!rider?.source?.scene || !rider.scene) return null;
@@ -131,7 +131,7 @@ function installComparisonMonitor({ logicals, aliases }) {
       visibleSkins: part?.skins.filter(mesh => visible(mesh) && inScene(mesh) && mesh.geometry.attributes.position.count > 0).length ?? 0,
       sourceSHA256: rider?.debug?.candidate?.sourceSHA256 ?? null,
       authorMeshRoles: rider?.debug?.candidate?.authorMeshRoles ?? null,
-      jointIds: rider?.binding ? [...rider.binding.byId.keys()].sort() : null,
+      jointIds: rider?.binding ? [...rider.binding.byId.keys()].sort((a, b) => a < b ? -1 : a > b ? 1 : 0) : null,
       stageClip: rider?.debug?.stageClip ?? null, rootName: rider?.root?.name ?? null };
   };
   function wrapped(...args) {
@@ -147,14 +147,14 @@ function installComparisonMonitor({ logicals, aliases }) {
     return result;
   }
   owner.render = wrapped;
-  window.__garageComparison = { inspect, state, stop() { if (owner.render === wrapped) owner.render = original; return state; } };
+  globalThis.window.__garageComparison = { inspect, state, stop() { if (owner.render === wrapped) owner.render = original; return state; } };
 }
 
 async function orbit() {
   const box = await page.locator('.garage-stage').boundingBox(); assert(box);
   const x = box.x + fullTurnPixels + 40, y = box.y + box.height * .55;
   assert(x < 932 && x - fullTurnPixels >= 0, 'Full pointer turn stays inside phone viewport');
-  assert(await page.evaluate(({ x, y }) => !!document.elementFromPoint(x, y)?.closest('.garage-stage'), { x, y }), 'Orbit starts on actual stage');
+  assert(await page.evaluate(({ x, y }) => !!globalThis.document.elementFromPoint(x, y)?.closest('.garage-stage'), { x, y }), 'Orbit starts on actual stage');
   await page.mouse.move(x, y); await page.mouse.down();
   const start = performance.now(); let progress = 0, moves = 0, maximumStepPx = 0;
   while (progress < 1) {
@@ -174,22 +174,22 @@ try {
   await page.locator('.menu-screen.live .menu-item[data-id=garage]').tap();
   await page.waitForSelector('.garage-screen.live');
   await page.locator(`button[data-bike=${bike}]`).tap();
-  await page.evaluate(() => window.__render.whenReady());
+  await page.evaluate(() => globalThis.window.__render.whenReady());
   report.bootToGarageReadyMs = performance.now() - bootAt;
   report.meter = await page.evaluate(installGarageCaptureMeter);
-  // The full/LOD selected slots deliberately share one parsed full document.
+  // The full/LOD selected slots deliberately share one parsed full globalThis.document.
   // heroDocUrl can retain either alias after concurrent cache resolution.
   await page.evaluate(installComparisonMonitor, { logicals: [oldAsset.logical, newAsset.logical],
     aliases: { [selectedLod.logical]: newAsset.logical } });
   const controls = await page.locator('button[data-outfit]').evaluateAll(buttons => buttons.map(button => {
-    const r = button.getBoundingClientRect(), hit = document.elementFromPoint(r.x + r.width / 2, r.y + r.height / 2);
+    const r = button.getBoundingClientRect(), hit = globalThis.document.elementFromPoint(r.x + r.width / 2, r.y + r.height / 2);
     return { id: button.dataset.outfit, text: button.textContent.replace(/\s+/g, ' ').trim(),
       width: r.width, height: r.height, x: r.x, y: r.y,
-      withinViewport: r.x >= 0 && r.y >= 0 && r.right <= innerWidth && r.bottom <= innerHeight,
+      withinViewport: r.x >= 0 && r.y >= 0 && r.right <= globalThis.innerWidth && r.bottom <= globalThis.innerHeight,
       centerReachable: hit === button || button.contains(hit), disabled: button.disabled };
   }));
   report.controls = controls;
-  assert.deepEqual(controls.map(row => row.id).sort(), [...originalIds, newId].sort(), 'Five original choices plus sixth selected');
+  assert.deepEqual(controls.map(row => row.id).sort((a, b) => a < b ? -1 : a > b ? 1 : 0), [...originalIds, newId].sort((a, b) => a < b ? -1 : a > b ? 1 : 0), 'Five original choices plus sixth selected');
   assert.match(controls.find(row => row.id === newId).text, /Mustard.*Remastered/);
   for (const button of controls) assert(button.withinViewport && button.centerReachable && !button.disabled
     && button.width >= 44 && button.height >= 44, `Reachable phone touch target: ${button.id}`);
@@ -198,16 +198,16 @@ try {
     const expectedAsset = id === newId ? newAsset : oldAsset, at = performance.now();
     await page.locator(`button[data-outfit=${id}]`).tap();
     await page.locator(`button[data-outfit=${id}][aria-pressed=true]`).waitFor({ timeout: 180000 });
-    await page.evaluate(() => window.__render.whenReady());
-    await page.waitForFunction(logical => window.__garageComparison.state.lastLogical === logical,
+    await page.evaluate(() => globalThis.window.__render.whenReady());
+    await page.waitForFunction(logical => globalThis.window.__garageComparison.state.lastLogical === logical,
       expectedAsset.logical, { polling: 100, timeout: 180000 });
     const readyMs = performance.now() - at;
-    const identity = await page.evaluate(() => window.__garageComparison.inspect());
+    const identity = await page.evaluate(() => globalThis.window.__garageComparison.inspect());
     const surface = await page.evaluate(() => {
-      const d = window.__render.debugInfo(), canvas = document.querySelector('canvas').getBoundingClientRect();
+      const d = globalThis.window.__render.debugInfo(), canvas = globalThis.document.querySelector('canvas').getBoundingClientRect();
       return { deviceClass: d.deviceClass, profile: d.profile, rendererDpr: d.dpr,
         canvasW: d.canvasW, canvasH: d.canvasH, canvasRect: { x: canvas.x, y: canvas.y, width: canvas.width, height: canvas.height },
-        viewport: { width: innerWidth, height: innerHeight }, horizontalOverflow: document.documentElement.scrollWidth > innerWidth };
+        viewport: { width: globalThis.innerWidth, height: globalThis.innerHeight }, horizontalOverflow: globalThis.document.documentElement.scrollWidth > globalThis.innerWidth };
     });
     assert.equal(surface.deviceClass, 'phone', 'Actual game uses phone renderer profile');
     assert.equal(surface.horizontalOverflow, false, 'Phone Garage has no horizontal overflow');
@@ -215,7 +215,7 @@ try {
     if (id === newId) {
       assert.equal(identity.selectedMarker, true); assert.equal(identity.boundNativeJoints, 75); assert.equal(identity.skeletonBones, 75);
       assert.equal(identity.sourceSHA256, newAsset.sha256);
-      assert.deepEqual(identity.jointIds, Object.keys(contract.specification.jointNames).sort());
+      assert.deepEqual(identity.jointIds, Object.keys(contract.specification.jointNames).sort((a, b) => a < b ? -1 : a > b ? 1 : 0));
       assert.deepEqual(identity.authorMeshRoles, contract.specification.meshNames);
       assert.equal(identity.stageClip, 'Riding IK/breathing', 'Comparison default is on-bike riding solver');
     } else { assert.equal(identity.selectedMarker, false); assert.equal(identity.boundNativeJoints, null); }
@@ -227,15 +227,15 @@ try {
     }
     const still = `${phase}-front.png`;
     await page.screenshot({ path: path.join(out, still) });
-    await page.evaluate(() => window.__garageCaptureMeter.reset());
+    await page.evaluate(() => globalThis.window.__garageCaptureMeter.reset());
     const motion = await orbit();
-    const performanceStats = await page.evaluate(() => window.__garageCaptureMeter.read());
+    const performanceStats = await page.evaluate(() => globalThis.window.__garageCaptureMeter.read());
     assert(performanceStats.rendered.frames > 0, 'Actual rendered Garage frames required');
     report.choices.push({ id, visit: previous ? 2 : 1, readyMs, identity, surface,
       catalogSHA256: expectedAsset.sha256, frontStill: still, movie: 'deployed-garage-comparison.mp4', motion, performance: performanceStats });
   }
   await Promise.all(pendingHeaders);
-  report.presence = await page.evaluate(() => window.__garageComparison.state);
+  report.presence = await page.evaluate(() => globalThis.window.__garageComparison.state);
   assert.equal(report.presence.invalidFrames, 0, 'No missing/generic/blank-geometry rider submissions');
   assert.deepEqual(report.errors, []);
   const selectedRequests = report.requests.filter(row => row.catalogSHA256 === newAsset.sha256);
@@ -257,8 +257,8 @@ try {
 } catch (error) { report.failure = String(error.stack).replaceAll(entryURL.href, publicBase); process.exitCode = 1; }
 finally {
   try {
-    report.presence = await page.evaluate(() => window.__garageComparison?.stop() ?? null);
-    report.finalMeter = await page.evaluate(() => window.__garageCaptureMeter?.stop() ?? null);
+    report.presence = await page.evaluate(() => globalThis.window.__garageComparison?.stop() ?? null);
+    report.finalMeter = await page.evaluate(() => globalThis.window.__garageCaptureMeter?.stop() ?? null);
   } catch (error) { report.finalReadError = error.message; }
   const video = page.video(); await context.close(); await browser.close();
   const raw = await video.path(), movie = path.join(out, 'deployed-garage-comparison.mp4');

@@ -2085,3 +2085,5 @@ Diagnostic54 source reviewed for one matched original47/saved50 component compar
 Normal-game sixth comparison guard03 completes all four played Garage orbits with actual selected native75 source, zero runtime errors/invalid submissions and59.4–60.0 submitted FPS. Executed verifier exits1 on an absent public Content-Length header; release/deployment/device/art remain pending. [Preserved finding](../evidence/rider-rebuild/sixth-outfit-release01/local-play03/FINDING.md). Broader production remains paused.
 
 The production Garage verifier now records absent public Content-Length as unknown and checks an exact byte count whenever supplied, preserving independent streamed-source/catalog pins. This corrects the guard03 harness-only failure; its original failed receipt remains unchanged. Remote checked deployment verification remains pending.
+
+Production Garage verifier lint now uses explicit browser globals and unchanged UTF-16 string ordering inside serialized page callbacks; source syntax and strict owned lint pass. The original guard03 failure receipt remains preserved. Final played gate and checked live deployment remain pending.
