@@ -14,6 +14,8 @@ import { preview } from 'vite';
 import { webkit } from 'playwright';
 import { register } from 'tsx/esm/api';
 import { installGarageCaptureMeter } from './garage-capture-meter.mjs';
+import { validateCuffTransfer, BASELINE, RUNTIME } from '../../assets/blender/rider-rebuild/focused-delivery07/transfer.mjs';
+import { verifyParityFiles } from '../../assets/blender/rider-rebuild/focused-delivery07/verify-parity.mjs';
 
 const arg = (name, fallback) => process.argv.find(v => v.startsWith(`--${name}=`))?.slice(name.length + 3) ?? fallback;
 for (const name of ['build', 'source', 'contract', 'profile', 'profile-sha256', 'out']) assert(arg(name), `Missing --${name}`);
@@ -60,6 +62,45 @@ if (gripProfile.source.sha256 !== selected.sha256) {
   assert.equal(declaration.appliesToSourceSHA256, selected.sha256, 'Explicit derivative source application');
   const transferPath = arg('transfer'); assert(transferPath, 'Derivative profile application requires --transfer=decoded-parity.json');
   const transferBytes = await fs.readFile(transferPath), transfer = JSON.parse(transferBytes);
+  if (transfer.schema === 'selected-cuff-profile-transfer-v1') {
+    const baselineTransferBytes = await fs.readFile(transfer.baselineProfileTransferReceipt.path);
+    const baselineTransferSHA256 = sha(baselineTransferBytes);
+    assert.equal(baselineTransferSHA256, '2e9aa3ec652ac5a2732d9a66122bf9ae898bed6a914edb73d143e6c0bc77c3bc');
+    const historical = JSON.parse(baselineTransferBytes);
+    assert.equal(historical.pass, true); assert.equal(historical.candidate.sha256, BASELINE);
+    assert.equal(historical.selectedCheckpointReference.sha256, gripProfile.source.sha256);
+    assert.equal(historical.nativeJoints, 75);
+    assert.equal(historical.nativeJSONAndAllDecodedAccessorViewsExactToGraft, true);
+    assert(historical.protectedSelectedAccessorStreamsExact.length > 0
+      && historical.protectedSelectedAccessorStreamsExact.every(row => row.exact === true));
+    assert.equal(transfer.parityReceipt.path, 'source-parity.json');
+    const parityPath = path.join(path.dirname(path.resolve(transferPath)), 'source-parity.json');
+    const verified = await verifyParityFiles(parityPath, source, { decoded: false });
+    assert.equal(verified.parityReceiptSHA256, transfer.parityReceipt.sha256);
+    const facts = validateCuffTransfer(transfer, { sourceSHA256: selected.sha256,
+      profileSHA256, baselineTransferSHA256 }, verified.baselineJSON, verified.candidateJSON);
+    const baselineRuntimeBytes = await fs.readFile('harness/out/rider-rebuild/mobile-delivery02/stage04/rider-remaster-contract.json');
+    assert.equal(sha(baselineRuntimeBytes), RUNTIME);
+    const baselineRuntime = JSON.parse(baselineRuntimeBytes);
+    assert.deepEqual(runtimeMetadata.nativeRest, baselineRuntime.nativeRest, 'Exact normalized native75 rest');
+    assert.deepEqual(runtimeMetadata.specification, baselineRuntime.specification, 'Exact native roles/specification');
+    const actualDriver = structuredClone(runtimeMetadata.driver), baselineDriver = structuredClone(baselineRuntime.driver);
+    delete actualDriver.selectedGripProfile; delete baselineDriver.selectedGripProfile;
+    assert.deepEqual(actualDriver, baselineDriver, 'Exact pose/contact driver beyond explicit source declaration');
+    assert.equal(declaration.applicationTransferSHA256, sha(transferBytes));
+    assert.equal(declaration.baselineApplicationSourceSHA256, BASELINE);
+    assert.equal(declaration.authoringContractSHA256, profileAuthoringContractSHA256);
+    profileApplicationTransfer = { declaration: structuredClone(declaration),
+      receipt: { path: path.resolve(transferPath), sha256: sha(transferBytes) },
+      authoringSourceSHA256: gripProfile.source.sha256, authoringContractSHA256: profileAuthoringContractSHA256,
+      baselineApplicationSourceSHA256: BASELINE, appliesToSourceSHA256: selected.sha256,
+      protectedExactAccessorStreams: facts.protectedAccessors, nativeJoints: facts.nativeJoints,
+      geometry: facts.geometry, changedSleeveStreams: facts.changedAccessors,
+      unchangedGloveStreams: facts.gloveStreams, unchangedImagePayloads: facts.imagePayloads,
+      exactNativeAnimationChannels: facts.animationChannels,
+      actualOriginalBINPrefixChecked: verified.actualOriginalBINPrefixChecked,
+      limits: 'Declared sleeve correction only. Exact native rest/rig/glove streams and unchanged pose driver support inherited finite-bar measurement; parent new-source played judgment, replay and physical iPhone FPS remain open.' };
+  } else {
   assert.equal(transfer.pass, true); assert.equal(transfer.candidate.sha256, selected.sha256);
   assert.equal(transfer.selectedCheckpointReference.sha256, gripProfile.source.sha256);
   assert.equal(transfer.nativeJoints, 75); assert.equal(transfer.nativeJSONAndAllDecodedAccessorViewsExactToGraft, true);
@@ -69,6 +110,7 @@ if (gripProfile.source.sha256 !== selected.sha256) {
     protectedExactAccessorStreams: transfer.protectedSelectedAccessorStreamsExact.length, nativeJoints: transfer.nativeJoints,
     geometry: { vertices: transfer.geometry.vertices, triangles: transfer.geometry.triangles },
     limits: 'Protected source rig/accessor streams and exact graft delivery only. Changed-density glove/cuff contact and moving appearance require actual derivative qualification; authoring-source finite-surface results do not establish derivative contact.' };
+  }
 }
 assert.equal(gripProfile.contractSHA256, profileAuthoringContractSHA256, 'Fitted authoring contract remains distinct from derivative upstream bytes');
 assert.equal(runtimeMetadata.driver.gripProfileHash, profileSHA256, 'Built driver declares exact fitted profile');

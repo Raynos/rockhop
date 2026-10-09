@@ -1,0 +1,35 @@
+{
+  "accepted": false,
+  "scope": "Metadata/lineage parser and deterministic serializer checks, not candidate parity or moving acceptance",
+  "checks": [
+    {
+      "command": "node --test assets/blender/rider-rebuild/focused-delivery07/transfer.test.mjs",
+      "passed": 13,
+      "failed": 0
+    },
+    {
+      "command": "python3 assets/blender/rider-rebuild/focused-delivery07/test_compile.py",
+      "passed": 4,
+      "failed": 0
+    },
+    {
+      "command": "node --check harness/rider-rebuild/selected-grip-review.mjs",
+      "exitCode": 0
+    },
+    {
+      "command": "node --check assets/blender/rider-rebuild/focused-delivery07/transfer.mjs",
+      "exitCode": 0
+    },
+    {
+      "command": "node --check assets/blender/rider-rebuild/focused-delivery07/verify-parity.mjs",
+      "exitCode": 0
+    },
+    {
+      "command": "python3 -m py_compile assets/blender/rider-rebuild/focused-delivery07/compile.py",
+      "exitCode": 0
+    }
+  ],
+  "candidateAvailable": false,
+  "heavyOrBrowserJobsLaunched": false,
+  "productionPinsApplied": false
+}
