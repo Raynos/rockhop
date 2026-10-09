@@ -13,6 +13,7 @@ PINS = {
     'source': '585ae314e2b354768a1385e5a85828c142d542b47f8d9fe948f46c7478c112ef',
     'contract': '36bc9a83454f6e885bb0a5d6d90b76d2bbe6658d93144d2da55ce068f627d4ff',
     'profile': '659ff94c1611e0ce95310ab090e94637832ac2bbfbac7f9554f903595bd05972',
+    'normalizedRuntimeContract': '50b9bad4b983e24e9aa946bdfaa1009f2a98b3578bd4c1788e672bc7fdfcf94c',
 }
 def digest(p):
     h = hashlib.sha256()
@@ -45,9 +46,15 @@ def main():
     assert built['sha256'] == PINS['source'] and built['bytes'] == 74833728
     for name, p in [('source', SOURCE), ('contract', CONTRACT), ('profile', PROFILE)]:
         assert digest(p) == PINS[name], (name, 'Pinned input differs')
-    assert digest(build / 'rider-remaster-contract.json') == PINS['contract']
+    assert built['contractSHA256'] == PINS['contract']
+    assert digest(build / 'rider-remaster-contract.json') == PINS['normalizedRuntimeContract']
+    runtime = json.loads((build / 'rider-remaster-contract.json').read_text())
+    assert runtime['sourceSHA256'] == PINS['source'] and runtime['metadataSHA256'] == PINS['contract']
     OUT.mkdir(parents=True, exist_ok=True)
     contract = json.loads(CONTRACT.read_text())
+    assert all(runtime[key] == contract[key] for key in ['driver', 'specification'])
+    staged_runtime = json.loads((CONTRACT.parent / 'rider-remaster-contract.json').read_text())
+    assert runtime == staged_runtime, 'Exact staged normalized rest/metadata required'
     declaration = contract['driver']['forearmPronation']
     assert declaration == {'schema': 'native-segment-twist-v1', 'gripProfileHash': PINS['profile']}
     assert contract['driver']['gripProfileHash'] == PINS['profile']

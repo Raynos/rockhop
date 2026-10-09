@@ -29,3 +29,17 @@ movie/contact process launched.
 
 Limits: Capture success is unaccepted evidence. Parent moving-art judgment
 and physical phone performance remain required.
+
+Finding: The successful private build exposed an overly strict preflight:
+normalized runtime metadata is a distinct wrapper around the raw contract.
+The runner now pins both byte streams separately and requires exact raw
+source/hash references, raw driver/specification equality and exact staged
+normalized metadata/rest equality.
+The first preflight stopped before any browser/contact process.
+
+Validation: Guard build03 exit0 in4.945s; raw stage04 SHA36bc9a...,
+normalized runtime SHA50b9bad4..., source SHA585ae314... and profile
+SHA659ff94c... match. Python syntax, raw driver/specification equality and
+exact staged normalized metadata/rest equality checks pass.
+
+Limits: No fixed movie has run yet; parent art and phone gates stay open.
