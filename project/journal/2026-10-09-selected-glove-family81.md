@@ -41,3 +41,9 @@ Finding: One corrected-input selected right glove reduction preserves source pos
 Validation: Originalguard11.461s exit2,1Meshoptcall,69201tri/35114v;133vertex/785face normal failures. Parent receipt/source/compressed-original pins match;1729required fans retained and86689rawmemberships independently exact.
 
 Limits: Face-sample0.430806mm alone is not bidirectional surface or wearable acceptance. Native/fit/bake/moving/device remain unrun; classify actual failures and choose proper topology without generic substitution.
+
+Finding: Stop Meshopt after literal source triangle reversals and opposite overlaps, rather than treating every failure as a nearest-wall error.
+
+Validation: Saved classification0.488s; parent source/read/hash and three reversal/overlap witnesses verified.393 changed opposing faces and125 new fan failures remain.
+
+Limits: No candidate, gate waiver or native mutation. Selected-derived topology and complete dressed moving review remain unrun.
