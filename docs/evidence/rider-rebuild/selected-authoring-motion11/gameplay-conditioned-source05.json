@@ -1,0 +1,57 @@
+{
+  "accepted": false,
+  "status": "CONDITIONED05_REFRESH_SOURCE_ONLY_NATIVE_PENDING",
+  "sources": {
+    "gameplay_conditioned05.py": {
+      "path": "assets/blender/rider-rebuild/selected-authoring-motion11/gameplay_conditioned05.py",
+      "sha256": "0a42ce506fea992022ec3c6d0463aaae9f8fdb9a3f6ee9ebe9b78037a6bd2286"
+    },
+    "test_gameplay_conditioned05.py": {
+      "path": "assets/blender/rider-rebuild/selected-authoring-motion11/test_gameplay_conditioned05.py",
+      "sha256": "ecfc6f69b96a275ff1a4cec80a1decbff27dd8be15bf9f3b606b55031020e71f"
+    },
+    "run-gameplay-conditioned05.sh": {
+      "path": "assets/blender/rider-rebuild/selected-authoring-motion11/run-gameplay-conditioned05.sh",
+      "sha256": "53c0fe1685b66ae83d7919348d445a02b93021b722ca5d2930f7e46478acd0ed"
+    },
+    "gameplay-conditioned05.input.json": {
+      "path": "assets/blender/rider-rebuild/selected-authoring-motion11/gameplay-conditioned05.input.json",
+      "sha256": "a1f1e590661d86b3feaa7b3e460b3cb5485b3d2c82f9f457c2aaf40162dffa84"
+    }
+  },
+  "baseRecipe": {
+    "path": "assets/blender/rider-rebuild/selected-authoring-motion11/gameplay_conditioned04.py",
+    "sha256": "308f7e988e18847e10fff3d24b60f73500977ddbabd3397d60a8bea2033d013b"
+  },
+  "actualFailure": {
+    "path": "harness/out/rider-rebuild/selected-authoring-motion11/gameplay-conditioned-analysis04/failed-analysis.json",
+    "sha256": "9e45f2f26160013110debe6586943971e541183490ddb7d1d188947503c22332"
+  },
+  "sourceValidation": {
+    "python": "3.9.6",
+    "fixturesPassed": 4,
+    "python39SyntaxFiles": 2,
+    "shellSyntax": "PASS"
+  },
+  "actualFinding": "At Rookie frame51/sourceTick250, requested FK and IK bounds were identical1.1842075575mm. That does not prove the evaluated influences switched.",
+  "change": "After original04.set_modes, record original IK influences, rig.update_tag(), view_layer.update(), read evaluated rig IK influences and require every requested mode exactly, unmuted and live=1. Emit witness before assertion.",
+  "qualification": "Frozen04 analysis/build gate logic is retained. Every output names actual adapter05 recipe/input and original04 recipe/input separately, before writing. No old recipe is claimed as the adapter executor.",
+  "pending": [
+    "Actual influence witness",
+    "Actual all482 FK/IK analysis",
+    "Saved action/bake and all546 generic replay",
+    "Complete selected dressed integration and art/contact/device review"
+  ],
+  "parentCommands": [
+    "bash assets/blender/rider-rebuild/selected-authoring-motion11/run-gameplay-conditioned05.sh --analyze assets/blender/rider-rebuild/selected-authoring-motion11/gameplay-conditioned05.input.json harness/out/rider-rebuild/selected-authoring-motion11/gameplay-conditioned-analysis05 docs/evidence/rider-rebuild/selected-authoring-motion11/gameplay-conditioned-analysis-guard05",
+    "bash assets/blender/rider-rebuild/selected-authoring-motion11/run-gameplay-conditioned05.sh --build assets/blender/rider-rebuild/selected-authoring-motion11/gameplay-conditioned05.input.json harness/out/rider-rebuild/selected-authoring-motion11/gameplay-conditioned-analysis05/receipt.json harness/out/rider-rebuild/selected-authoring-motion11/gameplay-conditioned-native05 docs/evidence/rider-rebuild/selected-authoring-motion11/gameplay-conditioned-native-guard05"
+  ],
+  "parentReview": {
+    "sourcesRead": true,
+    "sourcePinsVerified": true,
+    "fixturesReplayed": 4,
+    "actualInputAncestryRevalidated": true,
+    "python39ASTAndBashSyntax": true,
+    "nativeExecuted": false
+  }
+}

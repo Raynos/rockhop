@@ -1,0 +1,26 @@
+{
+  "accepted": false,
+  "pins": {
+    "sourceInput": {
+      "path": "assets/blender/rider-rebuild/selected-authoring-motion11/gameplay-conditioned04.input.json",
+      "sha256": "7c2e901ac05cd2010dfeda0d41639ace4f677e24ca98418a0a3bffc6030a5dbf"
+    },
+    "sourceRecipe": {
+      "path": "assets/blender/rider-rebuild/selected-authoring-motion11/gameplay_conditioned04.py",
+      "sha256": "308f7e988e18847e10fff3d24b60f73500977ddbabd3397d60a8bea2033d013b"
+    },
+    "adapter": {
+      "path": "assets/blender/rider-rebuild/selected-authoring-motion11/gameplay_conditioned05.py",
+      "sha256": "0a42ce506fea992022ec3c6d0463aaae9f8fdb9a3f6ee9ebe9b78037a6bd2286"
+    },
+    "actualFailure": {
+      "path": "harness/out/rider-rebuild/selected-authoring-motion11/gameplay-conditioned-analysis04/failed-analysis.json",
+      "sha256": "9e45f2f26160013110debe6586943971e541183490ddb7d1d188947503c22332"
+    }
+  },
+  "limits": [
+    "Source only; actual evaluated-influence and all75 pose evidence required.",
+    "Only explicit dependency tagging and influence assertions change frozen04 execution.",
+    "No geometry/rest/solver/branch-policy/tolerance edits."
+  ]
+}
