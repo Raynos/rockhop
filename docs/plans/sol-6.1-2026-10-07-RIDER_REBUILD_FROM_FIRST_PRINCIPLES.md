@@ -38,75 +38,68 @@ H0 is October 8, 14:05 Panama / 19:05 UTC; target finish is October 9 at the sam
 | H+16 | Same master with editable Blender controls, complete generic and bike actions, consumed engine deformation/contact | Parent and next concrete controls builder |
 | H+24 | Exact candidate reviewed on desktop/physical iPhone, bot/stranger/replay/restart and checked release/live SHA | Parent; human/device decisions through HR-23 |
 
-**Current execution, October 8, 23:15 Panama:** Fresh clean-context Astra6
-X-High review53 is complete. The parent checked its recommendations against
-actual50 receipts, current51/52 source and the existing played lean evidence.
-Keep qualified native10 and original actions/rest as the motion foundation;
-stop additional offline IK rebuilding before the next repaired outfit film.
-Both actual-input Rookie/Pro films show the complete selected outfit through
-forward/back/neutral; the Garage stage and stand-up diagnostic do not substitute
-for real gameplay input. All six acceptance gates remain open.
+**Current execution, October 9, 00:25 Panama:** Fresh clean-context Astra 6
+X-High review53 keeps qualified native10 and the original action/rest data as
+the motion foundation. The parent checked that advice against played films and
+actual native/source receipts. Stop further offline IK reconstruction before
+the next repaired complete-outfit film. Both existing Rookie/Pro films use real
+forward/back/neutral inputs with the complete selected outfit; the Garage
+neutral stage and stand-up diagnostic do not establish gameplay leans. Those
+films still show open clothing/contact defects. All R0–R5 remain open, 0/6.
 
-Actual proximal50 saves and independently reopens the original selected
-hoodie, glove41, full anatomy and native75 with exact source order/topology,
-UV/PBR and named fields. Eight shared maps reduce the deepest penetration from
-68.949mm to12.673mm, but contact still FAILS against the2.6mm target. Preserve
-this checkpoint; do not send it to distal51 or retry unchanged from the original.
-Maximum movement is74.675mm; median1.93mm and P9940.17mm. Ambient3D singular
-values0.032529–4.127195 do not measure cloth-tangent strain or award art quality.
+Keep the selected high-resolution garment appearance, UV/PBR identity and useful
+rig/action work. Failed50/55/58/60/64 are retained evidence and cannot enter
+final assembly. Actual radial interval construction now completes native targets;
+the next failure exposed loss of constraint modes in the coarse C2 solver.
+Frozen65 solves all 656 CPU constraints with a coarse-plus-original-wall-scale
+sparse basis in 28 certified maps, preserving the existing derivative bound,
+iteration limit and nominal 2.6 mm clearance. Parent full source/pin review and
+21 CPU groups pass. Its first native attempt stopped at the original memory
+boundary after 14.097 s while loading the source, before targets or a new garment.
+The available process RSS cannot attribute the global memory rise. The source is
+already isolated; no geometry replacement or guard change is justified. Retry
+only after a material capacity change, under the unchanged original guard.
 
-Diagnostic54 is complete: matched selected-PBR turntables preserve the useful
-broad coverage/silhouette improvement, but show torso bands and residual axilla
-penetration. Parent independently verifies actual well-shaped source face754365
-retains4.40% area and face7133892.28%; the66.19× extreme is separately a source
-sliver. Known paired cloth moves67mm down the crease and stretches~2.5× while
-remaining inside the body. Stop additional nearest-exit projection and
-normal-smoothing-only repairs. These are actual local geometric failures.
+Next garment deliverable: actual65 full-cloth transport → independent reopened
+source/contact/tangent qualification → distal51 cuffs and six complete dense
+layer cuts → one complete merge into qualified native52 → immediate dressed
+actual forward/back/neutral films on both bikes. Show wrists, ankles, hips and
+side/three-quarter profiles in motion. Native52 already independently preserves
+all 3,318 exact ankle fields, existing group indices and protected source data;
+changed-surface export/deformation and moving art remain open. Inherited exact
+native10 action/rest replay is useful; concentrate new verification on changed
+surfaces rather than repeating unchanged rig checks. No generic controls or
+unrelated diagnostic campaign precedes this complete-outfit review.
 
-Frozen55 fails before native save because its complete-meridian horizontal
-body-gap requirement excludes an actually healthy rear sleeve endpoint18.283mm
-outside the reference. Frozen58 retains the shared axilla apex but uses distinct
-actual75 torso/arm radial branches, fixed healthy endpoint/ease and original
-material arclength. Parent9CPU groups pass. Actual58 advances through left
-branches, then fails26.676s before cage solve/raw save: a right torso interval
-requests3.333mm interpolated ease but the chosen radial midpoint gives3.042mm.
-Astra49 owns60: determine actual paired-wall feasible intervals before changing
-that existence/ease assumption. Keep2.6mm minimum, exact endpoints, source
-order, C2 injectivity, original UV/PBR/fields and independent reopened contact.
-No failed50/55/58 result enters distal51. Source material may move downward
-when anatomically needed; collapsing distinct material stations is the defect.
+Boot production must check vertices and facets together. Actual62 passes the
+complete vertex census, but native63 rejects 95 face normals after passing skin
+transfer. Diagnosis66 finds one identical inherited source face with a wrong
+native nearest-face bearing and 94 newly folded faces. Frozen67 checks every
+native sample against the complete original source, catches all new failures,
+and protects all failing target and source-bearing fans simultaneously. Parent
+six CPU groups and 13 proof mutations pass. Obtain the bounded native inherited
+face proof, then run the joint vertex/face fixed point from the immutable source.
+Retain the existing 1 mm/0.25 gates; do not choose a bearing by favorable normal.
+Only qualified geometry proceeds to selected-PBR bake, bilateral integration
+and whole-scene allocation. The existing ~358 MB/3.9 M-triangle source is not a
+phone candidate; preserve it as the appearance reference while completing LOD.
 
-Native45 failed before save because the Jeans lacks a required canonical foot
-vertex group; its protected helper also incorrectly bundled fields into geometry.
-New52 explicitly appends only missing canonical foot groups, keeps every old
-index/name, and separately qualifies complete predicted memberships and all
-protected geometry/PBR/actions/rest. Actual52 saves and independently
-reopens; both foot groups append23/24, exact3318 fields and protected source
-witnesses pass. CPU51 intake accepts the actual qualified52 native. Changed
-skin deformation parity and played art remain open.
+The Garage recorder source captures actual rendered canvas frames with a measured
+render/RAF HUD, starts after readiness and retains genuine presentation timing.
+Parent review found a near-60-FPS scheduling defect; correct it before freezing.
+No upgraded rotation video or smooth-60 result is established yet. Do not add
+loading footage, fabricated frames or FPS labels unsupported by decoded timing.
 
-After qualified garment construction: distal51 retains proximal positions
-outside exact cuff surgery, then one complete merge into actual qualified52.
-Use inherited byte-exact native10 action/rest replay evidence; new verification
-must concentrate on changed clothing/ankle deformation and export parity.
-Immediately film complete dressed actual neutral → forward → backward → neutral
-on both bikes, unobscured side/three-quarter views and moving wrist close-ups.
-No generic action audit or unrelated controls campaign precedes that art review.
-
-Review53 finds documentation/audit throughput outpacing integration. Preserve
-required small commits and third-round gates; stop extra unchanged timing or
-observer campaigns and repeated status expansions. Ordinary-game gate53 passes
-10/11 checks; boot359.713ms exceeds300ms, while clear/exact replay/crash/restart
-pass. Gate52 and prior failures remain; no immediate unchanged timing rerun.
-Actual boot census35 is complete; candidate46 retains23658 triangles and exact
-source positions/fields. Numerical56 and consistent-normal57 fixes expose a
-real reduction-induced source fan loss at3667. Builder56 owns59: protect the
-actual folded source fans in one index-only construction, then apply unchanged
-geometry/skin gates. Whole-scene allocation, atlases and moving review remain;
-roughly358MB/3.9M-triangle delivery is not a mobile candidate. H+4 is missed;
-the24-hour target is still a stretch, and no credible completion time is proven.
-Editable generic controls/actions, source identity, deterministic input, complete
-moving art, production LOD, physical phone and checked release remain required.
+Keep coherent small checkpoints and required third-round ship gates. Gate58
+passes 10/11; boot readiness 373.519 ms exceeds 300 ms, while exact replay,
+clear/crash/instant restart pass. Earlier passes and failures remain retained;
+no unchanged latency rerun or waiver. Documentation and audit throughput must
+serve the next assembled moving result. H+4 and H+10 are missed/unaccepted;
+the October9 14:05 Panama finish target remains a stretch without a proven
+forecast. Generic editable controls/actions, independent moving art, source
+identity, deterministic replay, device and checked-release gates remain required.
+Human device/art decisions stay filed through HR-23; they do not block useful
+construction. Never call source readiness, preparation or a check a finished rider.
 
 **Immediate gameplay priority, October 8, 16:30 Panama (ask356):** The user
 correctly identifies that the displayed stand-up/rest diagnostic does not show
