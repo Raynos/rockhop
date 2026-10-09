@@ -8,7 +8,8 @@ import bpy, numpy as np, json, sys, time, math, hashlib
 from pathlib import Path
 from mathutils import Vector
 from mathutils.bvhtree import BVHTree
-MODE,IN,OUT=sys.argv[sys.argv.index('--')+1:]
+MODE,IN,OUT,BAKE=sys.argv[sys.argv.index('--')+1:]
+BAKE=Path(BAKE).resolve()
 IN,OUT=Path(IN).resolve(),Path(OUT).resolve();OUT.mkdir(parents=True,exist_ok=True)
 
 def log(s): print(s,flush=True)
@@ -76,6 +77,6 @@ assert MODE=='audit'
 bpy.ops.wm.open_mainfile(filepath=str(IN/'prepared.blend'),use_scripts=False)
 images={}
 for kind in ('albedo','orm','normal'):
- images[kind]=bpy.data.images.load(str(OUT/(kind+'.png')),check_existing=False)
+ images[kind]=bpy.data.images.load(str(BAKE/(kind+'.png')),check_existing=False)
  images[kind].colorspace_settings.name='sRGB' if kind=='albedo' else 'Non-Color'
 audit_fields(bpy.data.objects['ExactSelectedComponentDense'],bpy.data.objects['AtlasReducedComponent'],images,OUT)

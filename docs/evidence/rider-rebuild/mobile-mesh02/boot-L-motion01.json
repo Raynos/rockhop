@@ -1,0 +1,72 @@
+{
+  "accepted": false,
+  "sourceSHA256": "127e316a8ff7910a4918b63f83e086e4e658062f102c73f17d0ee2f956750649",
+  "method": "Every final seam vertex; exact original source face barycentric weighted skinned positions versus collapse-propagated native top4 receiver skinned positions under every recorded actual gameplay pose. Native inverse binds and original75jointorder. Identity native mesh/root bind; attached-mode world cancellation; rigid skeletonWorld verified.",
+  "vertices": 29245,
+  "bikes": [
+    {
+      "bike": "rookie",
+      "reportSHA256": "9ca4af67bf9dcacfda99fbc364939c47b38aa0074d5399ad28b207f63cbf4788",
+      "recordedPoses": 241,
+      "worst": {
+        "collapseNativeTop4": {
+          "meters": 0.0001963318240399812,
+          "vertex": 11826,
+          "sourceFace": 262128,
+          "tick": 285,
+          "phase": "forward",
+          "localPosition": [
+            0.1777893304824829,
+            0.04505768045783043,
+            0.010353912599384785
+          ]
+        }
+      },
+      "poseMaximumMeters": {
+        "collapseNativeTop4": {
+          "mean": 0.00019631664451011808,
+          "max": 0.0001963318240399812
+        }
+      },
+      "maxPalmHandSkinMatrixComponentDifference": 2.5785187385274355e-07
+    },
+    {
+      "bike": "pro",
+      "reportSHA256": "205c95f230136077665780d5c08cf5ac94c8d0d77968ca3e03e16d5199dbbaf0",
+      "recordedPoses": 241,
+      "worst": {
+        "collapseNativeTop4": {
+          "meters": 0.00019633089184173223,
+          "vertex": 11826,
+          "sourceFace": 262128,
+          "tick": 280,
+          "phase": "forward",
+          "localPosition": [
+            0.1777893304824829,
+            0.04505768045783043,
+            0.010353912599384785
+          ]
+        }
+      },
+      "poseMaximumMeters": {
+        "collapseNativeTop4": {
+          "mean": 0.00019631653094082623,
+          "max": 0.00019633089184173223
+        }
+      },
+      "maxPalmHandSkinMatrixComponentDifference": 2.5785187385274355e-07
+    }
+  ],
+  "allPoseVertexErrorMeters": {
+    "collapseNativeTop4": {
+      "mean": 2.9223147198348157e-05,
+      "p95": 7.42709117205147e-05,
+      "p99": 0.00010148377008925695,
+      "max": 0.0001963318240399812,
+      "verticesAbove1mm": 0,
+      "verticesAbove2mm": 0
+    }
+  },
+  "elapsedSeconds": 1.3449239996261895,
+  "limitations": "Recorded neutral/forward/back gameplay only. Source face correspondence follows exact nearest rest surface; no future or unsampled crash/ragdoll guarantee."
+}
