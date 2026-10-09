@@ -1,0 +1,117 @@
+{
+  "accepted": false,
+  "lock": "/Users/raynos/projects/localai/.model.lock",
+  "method": "lockf -k",
+  "command": [
+    "/usr/bin/env",
+    "TRIALS_BROWSER_BACKEND=metal",
+    "pnpm",
+    "harness:gate",
+    "--dev",
+    "--only=boot,clear,crash,restart",
+    "--quick",
+    "--jobs=1",
+    "--quiet-timing"
+  ],
+  "controllerPID": 65190,
+  "pollSeconds": 1,
+  "startAnonymousBelowGiB": 55,
+  "stopAnonymousGiB": 65,
+  "stopAnonymousPlusWiredGiB": 96,
+  "limitSeconds": 600.0,
+  "guardSHA256": "cf8acd15d8b7484480bee74d23892be815d955ffd87115d3da8ed228ffb3d916",
+  "status": "worker returned; review pending",
+  "samples": [
+    {
+      "seconds": 0,
+      "anonymousGiB": 51.6,
+      "wiredGiB": 9.7,
+      "freeGiB": 18.6
+    },
+    {
+      "seconds": 0.087,
+      "anonymousGiB": 51.8,
+      "wiredGiB": 9.7,
+      "freeGiB": 18.4
+    },
+    {
+      "seconds": 1.159,
+      "anonymousGiB": 54.0,
+      "wiredGiB": 9.8,
+      "freeGiB": 14.2
+    },
+    {
+      "seconds": 2.244,
+      "anonymousGiB": 52.6,
+      "wiredGiB": 9.9,
+      "freeGiB": 15.2
+    },
+    {
+      "seconds": 3.315,
+      "anonymousGiB": 53.7,
+      "wiredGiB": 9.2,
+      "freeGiB": 14.7
+    },
+    {
+      "seconds": 4.388,
+      "anonymousGiB": 53.5,
+      "wiredGiB": 9.3,
+      "freeGiB": 14.9
+    },
+    {
+      "seconds": 5.462,
+      "anonymousGiB": 53.1,
+      "wiredGiB": 9.2,
+      "freeGiB": 17.4
+    },
+    {
+      "seconds": 6.545,
+      "anonymousGiB": 53.5,
+      "wiredGiB": 9.8,
+      "freeGiB": 18.1
+    },
+    {
+      "seconds": 7.615,
+      "anonymousGiB": 53.8,
+      "wiredGiB": 9.8,
+      "freeGiB": 20.1
+    },
+    {
+      "seconds": 8.692,
+      "anonymousGiB": 53.7,
+      "wiredGiB": 9.8,
+      "freeGiB": 22.8
+    },
+    {
+      "seconds": 9.79,
+      "anonymousGiB": 53.2,
+      "wiredGiB": 9.9,
+      "freeGiB": 23.1
+    },
+    {
+      "seconds": 10.911,
+      "anonymousGiB": 53.3,
+      "wiredGiB": 9.9,
+      "freeGiB": 23.4
+    },
+    {
+      "seconds": 12.006,
+      "anonymousGiB": 53.4,
+      "wiredGiB": 9.8,
+      "freeGiB": 27.3
+    },
+    {
+      "seconds": 13.096,
+      "anonymousGiB": 53.1,
+      "wiredGiB": 9.9,
+      "freeGiB": 37.0
+    }
+  ],
+  "physicalMemoryBytes": 137438953472,
+  "requiredPhysicalMemoryBytes": 137438953472,
+  "scope": "Future explicitly invoked owned Rockhop job only",
+  "pressureOrSwapLimits": "No separate pressure/swap gate exists in the pinned original guard; none altered",
+  "ownedChildPID": 65200,
+  "exitCode": 1,
+  "elapsedSeconds": 13.75
+}

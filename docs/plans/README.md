@@ -2051,3 +2051,5 @@ Component47 actual intake succeeds: original selected Hoodie + qualified41 bilat
 Actual sleeve47 geometry fails at contact pass0: deficient zero-effective-support constraint,28.98s exit1; no constructed output. Original Hoodie/glove intake intact. Fresh clean Astra6 X-High49 owns exact offending-sample diagnosis; stop unchanged retries/ease sweeps. Complete garment moving acceptance remains open.
 
 One component47-to-native10 merge source ready and parent-reviewed: exact38 transplant, scoped donor and complete target/merged preservation, actual qualified11 target fact, separate original08 merged replay. CPU source/scope/17mutation fixtures pass. Actual donor construction failed; no merge, replay or moving-art result invented.
+
+Required current-game gate46 completes10/11: cold-ready401.76ms misses300ms; firstframe624.83ms and exact clear/hash/crash/1tick restart pass. No ship/rider/device acceptance or timing waiver.
