@@ -38,75 +38,55 @@ H0 is October 8, 14:05 Panama / 19:05 UTC; target finish is October 9 at the sam
 | H+16 | Same master with editable Blender controls, complete generic and bike actions, consumed engine deformation/contact | Parent and next concrete controls builder |
 | H+24 | Exact candidate reviewed on desktop/physical iPhone, bot/stranger/replay/restart and checked release/live SHA | Parent; human/device decisions through HR-23 |
 
-**Current execution, October 8, 21:30 Panama:** Both actual-input Rookie03
-and Pro04 films show the selected complete outfit leaning forward/backward and
-returning to neutral. Garage stage forces neutral; the stand-up diagnostic
-cannot demonstrate gameplay leans. Actual held-input footage is retained for
-both bikes. The existing game forward profile lifts the hips over the pegs;
-that physical motion must be distinguished from the stand-up diagnostic.
-Native10 is saved and independently reopened:
-qualifier11 verifies all482 gameplay keys within0.020169mm of their original
-75-joint source, exact selected geometry/PBR/fields/rest and original actions.
-This technical foundation does not accept the visible wrists, ankles or saddle.
+**Current execution, October 8, 22:10 Panama:** Fresh clean-context Astra6
+X-High review53 is complete. The parent checked its recommendations against
+actual50 receipts, current51/52 source and the existing played lean evidence.
+Keep qualified native10 and original actions/rest as the motion foundation;
+stop additional offline IK rebuilding before the next repaired outfit film.
+Both actual-input Rookie/Pro films show the complete selected outfit through
+forward/back/neutral; the Garage stage and stand-up diagnostic do not substitute
+for real gameplay input. All six acceptance gates remain open.
 
-Fresh clean-context Astra6 X-High advisory43 started October9 at01:05UTC and
-inspected the previous12hours and actual played evidence. Its final synthesis
-was interrupted by model capacity; it is a partial review, not a completed deep
-review. The parent verified and adopted its useful interim corrections:
-stop offline IK rebuilding until the next clothing film; isolate exact selected
-glove construction from the full outfit; judge one complete outfit moving on
-both bikes; allocate production geometry against the whole-scene budget rather
-than an unsupported exact8000-triangle boot requirement. The last completed
-whole review remains review24 at19:05UTC. No new24h forecast is established.
+Actual proximal50 saves and independently reopens the original selected
+hoodie, glove41, full anatomy and native75 with exact source order/topology,
+UV/PBR and named fields. Eight shared maps reduce the deepest penetration from
+68.949mm to12.673mm, but contact still FAILS against the2.6mm target. Preserve
+this checkpoint; do not send it to distal51 or retry unchanged from the original.
+Maximum movement is74.675mm; median1.93mm and P9940.17mm. Ambient3D singular
+values0.032529–4.127195 do not measure cloth-tangent strain or award art quality.
 
-Ankle builder42 derives3318 lower-jeans fields from actual outward same-leg
-canonical body triangles, preserving selected rest geometry/maps and unrelated
-fields. Two fixtures pass. This is an initializer: edge stretch2.15 and a3.18mm
-left boundary displacement jump require moving review. Its calibrated private
-runtime02 now plays on both bikes with unchanged actual-input trajectories.
-Wide views do not establish decisive ankle improvement; native45 application
-and deformation parity remain pending. Glove41 actual construction completes
-in62.885s and saves the selected pair (`5af37790…`). Independent reopen passes
-in11.003s: exact constructed geometry/fields, original75rest/full anatomy and
-selected PBR/metadata. Whole-master attachment stopped before its witness at
-the unchanged memory bound; no attached output exists. Component47 genuinely
-intakes and reopens only original Hoodie plus qualified glove41, exact75 and
-full reference in34.073s. Frozen28 sleeve geometry then fails before any
-projection at a deficient frozen-field boundary; no constructed sleeve exists.
-Fresh clean Astra6 X-High49 targets this construction failure. The parent
-verified its support/triangle-constraint closure diagnosis and executed one
-read-only exact first-fit witness in28.441s: nine unsupported shallow neck
-constraints need at most0.313mm, separately from a movable proximal upper-arm
-sample with source signedgap−68.949mm. That minimum requires71.549mm signed
-clearance travel, exceeding the unchanged45mm small-repair artist guard.
-Parent independently verifies the point inside both real full anatomy and
-canonical native02 using winding1, three outward ray exits and exhaustive
-triangle distance. Stop unchanged and support-only solver retries. Astra49
-owns one new proximal selected-Hoodie rest-registration50, moving paired cloth
-continuously across shoulder/axilla into a measured healthy retained boundary
-before distal cuff construction. Keep exact source UV/PBR/fields and report
-actual source displacement/strain as new unaccepted garment art; never claim
-the new broad registration passed the frozen45mm small-repair gate. Original
-proximal sheet ownership proof remains separate; inward-only deletion is not
-a supported repair. Distal cuff reconstruction follows genuine anatomical fit. This
-is a targeted advisory, not a new completed whole-goal deep review. Preserve
-selected detail, exact75/native actions and all contact/strain gates. After a
-real saved/reopened garment, merge wardrobe once into native10 using scoped
-component47/full-master witnesses and replay, then judge actual game leans. This is garment work,
-not accepted garment art. Lead36 is retired; Astra builders37/38 are capacity
-interrupted. Parent owns integration and played judgment.
+Next construction decision: one matched original47/registered50 moving
+component diagnostic54 with actual triangle tangent stretch/area and paired
+wall separation. If silhouette/detail/layers survive and residual contact is
+localized, justify one bounded continuation from the saved work. If cloth is
+stretched/collapsed, stop contact projection and author a coherent selected
+shoulder/axilla control surface carrying the original garment detail. Do not
+invent a new strain cap, loosen clearance or discard useful selected source.
 
-Conditioned controls04 fail near-extension at1.1842mm. Adapter05 proves mode
-refresh but stops at unreachable left arm tick280. Do not repeat pole/solver
-campaigns or relax0.1mm. Native10 already preserves actual gameplay; editable
-controls and all generic actions remain required before completion. Next visible
-result: exact selected glove/sleeve repair in fresh complete-outfit gameplay.
-Production46 now explicitly treats8000 as a soft request and retains exact
-above-target output for unchanged quality gates; whole-scene500k remains
-required. Actual census35 and candidate execution still pending. Gate43 passes
-all11 checks; subsequent gate44 misses bootready372.044ms against300ms while
-exact clear/crash/restart pass. No threshold is waived. AllR0–R5,
-finite contacts, compact production, physical-phone and release gates remain open.
+Native45 failed before save because the Jeans lacks a required canonical foot
+vertex group; its protected helper also incorrectly bundled fields into geometry.
+New52 explicitly appends only missing canonical foot groups, keeps every old
+index/name, and separately qualifies complete predicted memberships and all
+protected geometry/PBR/actions/rest. Parent reviewed39 mutation fixtures and
+source pins; actual52 save/reopen remains next independent work.
+
+After qualified garment construction: distal51 retains proximal positions
+outside exact cuff surgery, then one complete merge into actual qualified52.
+Use inherited byte-exact native10 action/rest replay evidence; new verification
+must concentrate on changed clothing/ankle deformation and export parity.
+Immediately film complete dressed actual neutral → forward → backward → neutral
+on both bikes, unobscured side/three-quarter views and moving wrist close-ups.
+No generic action audit or unrelated controls campaign precedes that art review.
+
+Review53 finds documentation/audit throughput outpacing integration. Preserve
+required small commits and third-round gates; stop extra unchanged timing or
+observer campaigns and repeated status expansions. Ordinary-game gate48 passes
+all11 checks under original guard6.764s; this is not rider/device acceptance.
+Production46 still needs actual boot census35 and a whole-scene allocation;
+roughly358MB/3.9M-triangle delivery is not a mobile candidate. H+4 is missed;
+the24-hour target is still a stretch, and no credible completion time is proven.
+Editable generic controls/actions, source identity, deterministic input, complete
+moving art, production LOD, physical phone and checked release remain required.
 
 **Immediate gameplay priority, October 8, 16:30 Panama (ask356):** The user
 correctly identifies that the displayed stand-up/rest diagnostic does not show
