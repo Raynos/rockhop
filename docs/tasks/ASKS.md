@@ -579,3 +579,9 @@ Status: **open** (nobody on it) · **in flight** (owner named) · **needs pick**
 | 363 | Explain the best technique to reduce the remastered rider download size while preserving selected appearance. | **done — lossless geometry packing first; production topology/bake/KTX2 advised** | Prioritize actual300MB geometry payload, full-attribute dedup/compression, then production topology/baked detail and compressed textures. Advice only; broader construction remains paused. |
 
 | 364 | Optimize the selected remastered rider download while preserving its appearance, rig and dressed animation. | **active — scoped optimization authorized; broader rebuild paused** | Keep selected high-resolution master; full-attribute dedup and Meshopt first, then measured topology/bake and KTX2 texture candidates. Judge moving dressed Garage/game parity before production promotion. |
+
+| 365 | Fix Mustard Remastered failing to load in the Garage on the user phone. | **active — user reports deployed failure** | Diagnose actual selected load/decode/readiness; optimize selected derivative and validate headless phone Garage before stable claim. Physical-phone confirmation remains human. |
+
+| 366 | Preload and prepare the remastered rider in the loading screen so Garage selection is instant. | **active — supersedes lazy sixth loading** | Initial loader must finish selected asset download, decode and instance preparation; reuse resident model with no Garage fetch/decode on first or repeated selection. Keep meaningful progress and visible retry. |
+
+| 367 | Explain the phone screenshot showing a blue helmet and Loading Mustard Remastered, then fix the visible mismatch. | **active — photo confirms old selection while remaster pending** | Original Mustard remains selected; remaster transfer pending. Verify old source identity and eliminate Garage loading through initial preload without substitute assets. |
