@@ -71,3 +71,9 @@ Finding: Reduced glove contact must be remeasured under actual full-arm runtime 
 Validation: Prepared verifier imports unchanged author finite-surface collision equations and uses actual selected-grip-played02 report matrices. Source585a, profile659f, rawstage02contract and actual captured driver/bike identity are asserted; actual Rookie trace241samples schema inspected. Recipe syntax passes. Semantic witnesses preserve original source-normal hemisphere and actual positive native fields.
 
 Limits: Preparation checkpoint only; no played reduced-surface result or rider acceptance. Actual captured runtime inputs and original guard are required before measurements. Parent moving and actualphone gates remain open.
+
+Finding: The actual movie shows cuff intrusion despite plausible finger contact; projection can identify garment triangles independently of finite bar collision.
+
+Validation: Visually inspected full-01.png1440x900 atHUDtick147. Readonly helper projects actual capturedtick145/150 native75 transforms and camera rays through parentpixels384/493 and414/484 against both reduced gloves and selected hoodie,retaining exact positive native fields. Syntax passes;actual projection result remains pending original admission.
+
+Limits: Preparation only;tick147 is bracketed rather than fabricated from captured poses. Foreground glove geometry and hoodie shadow are distinguished by sorted camera-ray garment hits. Parent measured60–72degree wrist-only axial roll;field edits are inappropriate before native forearm roll diagnosis. No pose/asset changes.
