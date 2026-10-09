@@ -11,3 +11,9 @@ Finding: Actual bilateral sections separate exterior toe envelope from an open h
 Validation: Parent viewed both twelve-section images; all pins/finite arrays/anatomical orthonormal frames pass. Original guard third invocation1.848s exit0; standard-library shadow and relative-pin failures retained.
 
 Limits: Rest section diagnosis only, no local shoe construction, complete3D fit, native/bake/played art or device pass.
+
+Finding: Checked right exterior sections fit; left local toe escapes1.78mm while heel internal footbed stands3–10mm above plantar. Preserve selected exterior and target only those construction regions.
+
+Validation: Original guard0.28s exit0; parent full-source/pins/closed-contour and named exact section-probe review. Full actual classified receipt retained.
+
+Limits: Selected sections only, no exhaustive3D, moving, bake, native or art acceptance. No geometry changed or hidden.
