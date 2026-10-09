@@ -48,3 +48,25 @@ and [pro](../../docs/evidence/rider-rebuild/fixed-grip-engine04/garage-pro01-sum
 Limits: Unaccepted moving appearance, not physical iPhone performance.
 Parent owns the third-round ship gate on the final corrected candidate
 before checked deploy; the current pre-cuff candidate has no full closure.
+
+## Exhaustive both-bike finite-bar archive
+
+Finding: Every reduced glove vertex/triangle in all 241 actual native75
+poses on each bike has zero bar penetration, inside vertices or crossings.
+All five declared source-normal pulp buckets remain present at every pose;
+nearest gaps range from 0.5765 to 1.1895 mm across both sides and bikes.
+Parent accepts this bar measurement only and rejects dark cuff breaks.
+
+Validation: Original unchanged 420-second guard completed Rookie in
+62.736 seconds and Pro in 76.772 seconds. Exact captured report/bike/source/
+contract/profile hashes match both results. All sample counts and finite
+bar results checked; compressed full witnesses round-trip exactly. See
+[rookie](../../docs/evidence/rider-rebuild/fixed-grip-engine04/rookie01-contact05/receipt.json)
+and [pro](../../docs/evidence/rider-rebuild/fixed-grip-engine04/pro01-contact05/receipt.json).
+
+Limits: Declared pulp hemisphere labels are source-normal classifications,
+not independent anatomical certification. Working-tree source hashes agree
+across all four captures; retained compiled bytes are inventoried after
+capture, not a compiled-source snapshot. No repeated tests/captures were
+started. Cuff correction, final corrected-source played/replay/checked deploy
+and sustained physical iPhone performance remain with the parent.

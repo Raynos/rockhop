@@ -1,0 +1,24 @@
+{
+  "accepted": false,
+  "name": "pro01-contact",
+  "command": [
+    "python3",
+    "/tmp/rockhop-gameplay-telemetry-queuefast.py",
+    "/Users/raynos/projects/games/rockhop/docs/evidence/rider-rebuild/fixed-grip-engine04/pro01-contact-telemetry.jsonl",
+    "/Users/raynos/projects/games/rockhop/docs/evidence/rider-rebuild/fixed-grip-engine04/pro01-contact-guard/guard.json",
+    "python3",
+    "assets/blender/hero-remaster/generation-comparison-2026-10-03/user-agent2/run_bounded96.py",
+    "--out",
+    "/Users/raynos/projects/games/rockhop/docs/evidence/rider-rebuild/fixed-grip-engine04/pro01-contact-guard",
+    "--limit-seconds",
+    "420",
+    "--",
+    "node",
+    "assets/blender/rider-rebuild/mobile-mesh02/verify-played-grip.mjs",
+    "/Users/raynos/projects/games/rockhop/harness/out/rider-rebuild/mobile-textures02/combined01/rider.glb",
+    "/Users/raynos/projects/games/rockhop/harness/out/rider-rebuild/mobile-delivery02/stage04/rider-contract.json",
+    "/Users/raynos/projects/games/rockhop/harness/out/rider-rebuild/fixed-grip-engine04/pro01/report.json",
+    "/Users/raynos/projects/games/rockhop/harness/out/rider-rebuild/fixed-grip-engine04/pro01-contact"
+  ],
+  "limits": "Actual Mac diagnostic/played evidence only; no phone FPS or art acceptance."
+}

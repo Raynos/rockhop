@@ -1,0 +1,38 @@
+{
+  "accepted": false,
+  "sourceSHA256": "585ae314e2b354768a1385e5a85828c142d542b47f8d9fe948f46c7478c112ef",
+  "contractSHA256": "36bc9a83454f6e885bb0a5d6d90b76d2bbe6658d93144d2da55ce068f627d4ff",
+  "playedReportSHA256": "2c993b7496337d539b785666314aa200a4ea036a269b38357b1443732fdbc4fe",
+  "finiteBikeGeometrySource": "bike-pro.glb",
+  "finiteBikeGeometrySHA256": "0acc9ac86eeca76cc1812f8870eab36e2e25ca76d6a5cbe86d4a46a36cc12a86",
+  "bothAuthoredBikeSurfaceRecordsExact": true,
+  "poses": 241,
+  "profileSHA256": "659ff94c1611e0ce95310ab090e94637832ac2bbfbac7f9554f903595bd05972",
+  "method": "Exact authored finite44-triangle bar closest-face signed distance and segment/triangle crossings, unchanged source equations. Every reduced vertex/triangle and actual packed4slots including cuff; each captured full-arm pose uses native75 world matrices and bikeFrameWorld inverse. No fitting or pose mutation.",
+  "results": [
+    {
+      "side": "left",
+      "vertices": 154561,
+      "triangles": 243618,
+      "samples": 241,
+      "maxPenetrationMeters": 0,
+      "maxInsideVertices": 0,
+      "maxCrossingPairs": 0
+    },
+    {
+      "side": "right",
+      "vertices": 153861,
+      "triangles": 244038,
+      "samples": 241,
+      "maxPenetrationMeters": 0,
+      "maxInsideVertices": 0,
+      "maxCrossingPairs": 0
+    }
+  ],
+  "limits": [
+    "Finite collision/contact measure is not moving-art acceptance.",
+    "Semantic buckets use actual native influence and original source-row normal hemisphere relative to authored pulp labels/palm anatomy. Every positive forearm field is explicitly a cuff influence. Missing source pulp labels remain explicit unavailable buckets. Dorsal/pulp hemisphere inference is not independent anatomical certification. Surface normal dots are retained.",
+    "The original3mm expanded finite-bar AABB limits expensive vertex queries; all triangles receive original broadphase and edge-crossing checks. Unseen semantic buckets are outside this near-bar region.",
+    "Normal-only shading and phoneFPS remain parent gates."
+  ]
+}

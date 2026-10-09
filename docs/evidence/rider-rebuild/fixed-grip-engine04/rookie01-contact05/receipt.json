@@ -1,0 +1,130 @@
+{
+  "accepted": false,
+  "measurement": {
+    "accepted": false,
+    "sourceSHA256": "585ae314e2b354768a1385e5a85828c142d542b47f8d9fe948f46c7478c112ef",
+    "contractSHA256": "36bc9a83454f6e885bb0a5d6d90b76d2bbe6658d93144d2da55ce068f627d4ff",
+    "playedReportSHA256": "94b282e7348b17b2c8a3de26b6dbdf5de951bf2a383891d3c30bc341bf5e8bdc",
+    "finiteBikeGeometrySource": "bike-rookie.glb",
+    "finiteBikeGeometrySHA256": "e55919d60267849358ef5e97f4731f42fac6eb2835b9998e1d146d056c0f10f7",
+    "bothAuthoredBikeSurfaceRecordsExact": true,
+    "poses": 241,
+    "profileSHA256": "659ff94c1611e0ce95310ab090e94637832ac2bbfbac7f9554f903595bd05972",
+    "method": "Exact authored finite44-triangle bar closest-face signed distance and segment/triangle crossings, unchanged source equations. Every reduced vertex/triangle and actual packed4slots including cuff; each captured full-arm pose uses native75 world matrices and bikeFrameWorld inverse. No fitting or pose mutation.",
+    "results": [
+      {
+        "side": "left",
+        "vertices": 154561,
+        "triangles": 243618,
+        "samples": 241,
+        "maxPenetrationMeters": 0,
+        "maxInsideVertices": 0,
+        "maxCrossingPairs": 0
+      },
+      {
+        "side": "right",
+        "vertices": 153861,
+        "triangles": 244038,
+        "samples": 241,
+        "maxPenetrationMeters": 0,
+        "maxInsideVertices": 0,
+        "maxCrossingPairs": 0
+      }
+    ],
+    "limits": [
+      "Finite collision/contact measure is not moving-art acceptance.",
+      "Semantic buckets use actual native influence and original source-row normal hemisphere relative to authored pulp labels/palm anatomy. Every positive forearm field is explicitly a cuff influence. Missing source pulp labels remain explicit unavailable buckets. Dorsal/pulp hemisphere inference is not independent anatomical certification. Surface normal dots are retained.",
+      "The original3mm expanded finite-bar AABB limits expensive vertex queries; all triangles receive original broadphase and edge-crossing checks. Unseen semantic buckets are outside this near-bar region.",
+      "Normal-only shading and phoneFPS remain parent gates."
+    ]
+  },
+  "guardElapsedSeconds": 62.736,
+  "verifier": {
+    "path": "assets/blender/rider-rebuild/mobile-mesh02/verify-played-grip.mjs",
+    "sha256": "e493b911fb50d51549d846e89dbcfc97cac77f7c63a142f06c9a5a6e09c4490b",
+    "bytes": 11214
+  },
+  "archives": [
+    {
+      "original": {
+        "path": "harness/out/rider-rebuild/fixed-grip-engine04/rookie01-contact/left.json",
+        "sha256": "c36f38fb3b628dee6402913dd92fb576dc8f42405e7648d344f4f9eae938f205",
+        "bytes": 3435990
+      },
+      "compressed": {
+        "path": "docs/evidence/rider-rebuild/fixed-grip-engine04/rookie01-contact05/left.json.gz",
+        "sha256": "77aba92907f4aa7d706bde5ce2dafddaba058bcaa144399f66f16b525db821db",
+        "bytes": 191483
+      }
+    },
+    {
+      "original": {
+        "path": "harness/out/rider-rebuild/fixed-grip-engine04/rookie01-contact/right.json",
+        "sha256": "cde595ac58f123d628d94d96d5edce55cc099e1f6bcb7fb601d2beb287cad98d",
+        "bytes": 3404290
+      },
+      "compressed": {
+        "path": "docs/evidence/rider-rebuild/fixed-grip-engine04/rookie01-contact05/right.json.gz",
+        "sha256": "bb44181f58ef95032867557ee4caef209f843151d5cd4246ebf4d04d736c2ea4",
+        "bytes": 199872
+      }
+    }
+  ],
+  "declaredPulpGapRangesMeters": {
+    "left": {
+      "thumb": {
+        "minimum": 0.0005764920967437543,
+        "maximum": 0.0005765320351364666,
+        "samples": 241
+      },
+      "index": {
+        "minimum": 0.0010708863311747927,
+        "maximum": 0.0010709097465677157,
+        "samples": 241
+      },
+      "middle": {
+        "minimum": 0.0009980713885761223,
+        "maximum": 0.0009981101766878327,
+        "samples": 241
+      },
+      "ring": {
+        "minimum": 0.0009850873909257986,
+        "maximum": 0.0009851307349389741,
+        "samples": 241
+      },
+      "pinky": {
+        "minimum": 0.0011894116167508021,
+        "maximum": 0.0011894339118604933,
+        "samples": 241
+      }
+    },
+    "right": {
+      "thumb": {
+        "minimum": 0.000740207672017148,
+        "maximum": 0.000740403300413014,
+        "samples": 241
+      },
+      "index": {
+        "minimum": 0.0010200915786887537,
+        "maximum": 0.0010203486180226041,
+        "samples": 241
+      },
+      "middle": {
+        "minimum": 0.0010042096900177077,
+        "maximum": 0.0010044084761381905,
+        "samples": 241
+      },
+      "ring": {
+        "minimum": 0.0010064716019479382,
+        "maximum": 0.0010067276073186576,
+        "samples": 241
+      },
+      "pinky": {
+        "minimum": 0.0011792144915637117,
+        "maximum": 0.0011793772893274486,
+        "samples": 241
+      }
+    }
+  },
+  "limits": "Exhaustive finite-bar interaction only. Declared source-normal pulp buckets are not independent anatomy certification. Cuff appearance, final corrected-source replay/deploy and sustained physical iPhone FPS remain parent gates."
+}
