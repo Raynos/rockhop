@@ -1,7 +1,7 @@
 # Rebuild one dressed rider from first principles
 
 Created: 2026-10-07 · writer: Codex / gpt-6.1-sol · asks312/317–322.
-**Status: uncompleted; selected dressed actual forward/back gameplay filmed on both bikes; complete dressed gameplay native saved; editable control and cuff/ankle repairs active; accepted milestones0/6.**
+**Status: paused by user October9; finite checkpoint and checked sixth-outfit deployment remain authorized (ask360). Existing builders finish current units; no new experiments. R0–R5 remain open,0/6accepted.**
 Current construction authority: [Astra workflow correction below](#astra-workflow-correction-and-advisory-cadence).
 Pending donor-registration experiments are historical controls, not the next production route.
 Execution owner: rider remodel agent #2, session01a117db-406b-7b70-a14f-d614b1d8f6e5.
