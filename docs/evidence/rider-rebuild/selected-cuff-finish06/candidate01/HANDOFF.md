@@ -1,0 +1,13 @@
+# Selected cuff source candidate01 — unaccepted
+
+The selected source is emitted at `harness/out/rider-rebuild/selected-cuff-finish06/candidate01/rider.glb`. Exact source/native/material/glove parity is independently verified. This is not a moving-art or complete-clearance pass.
+
+Source construction: fit07 measured every one of the two241-pose native sequences, using actual source exterior sheet ownership outside the original wearer. Original internal cuff caps/folds remain retained. The local native hand branch owns the whole cuff; nearest immutable glove cuff fields condition hoodie carriers, with digit support removed. fit08 retains every measured displacement lower bound and fixes the remaining face98738 by spreading its displacement maximum through the connected field. Exact float32 geometry has zero new inversions/degeneracies; eight source zero-area faces remain separately recorded.
+
+Maximum displacement is24.3563mm, with8421 changed POSITION rows. The largest is source left row29721 near10.7mm beyond the wrist and32.6mm radial distance, exterior-classified and outside the canonical wearer. It is not the buried right cap identified earlier. This peak is substantial and requires parent silhouette judgment; no small-fit acceptance is claimed.
+
+Pending independent finite clearance: run `assets/blender/rider-rebuild/selected-cuff-finish06/validate.py` under Blender through the unchanged queue plus bounded96 guard, with arguments `-- harness/out/rider-rebuild/selected-cuff-finish06/intake02 harness/out/rider-rebuild/selected-cuff-finish06/fit08 harness/out/rider-rebuild/selected-cuff-finish06/validate01`. It checks all rest-covered cuff vertex aliases against the actual source exterior sheet in all482 recorded native poses. It has been syntax checked, not executed. Original source coverage includes all three observed glove witness triangles by assertion. Failure must remain a rejection, not a threshold adjustment. Finite vertex clearance does not establish all triangle crossings or unseen poses.
+
+Parent/owner05 staging uses candidate01/parity.json (selected-cuff-source-parity-v1), linking fit08 report and patch. All old BIN bytes, original materials/images, glove streams, native75 rest/animations remain exact. Only hoodie POSITION/NORMAL/TANGENT/JOINTS_0/WEIGHTS_0 change; normals/tangents use the source face deformation differential and retain normal padding/tangent handedness.
+
+Next: independent clearance, actual both-bike moving clips in the same camera, source appearance judgment, normal lifecycle/replay gates, then only parent may promote/deploy. Original bar-contact qualification can be inherited through exact unchanged glove fields and native driver.

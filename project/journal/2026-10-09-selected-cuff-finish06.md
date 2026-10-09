@@ -84,3 +84,17 @@ ownership now includes the whole ipsilateral native hand branch; its conditioned
 carrier still excludes digit support.
 Validation: Exact source face rows/fields inspected; source syntax passes.
 Limits: Corrected full pose envelope is pending; no inversion gate is waived.
+
+Finding: Emitted selected cuff candidate01 preserves all original glove,
+native75, animation, material/image and original BIN payload bytes. Five
+hoodie streams carry the local fit/carrier correction. Exact float32 source
+geometry has zero new inversions/degeneracies after one connected update.
+
+Validation: fit07 measures all482 actual poses; fit08 fixes face98738 while
+retaining every lower bound, exits0 in3.111seconds. Emission and independent
+complete parity verification exit0 in0.856seconds. Exact counts/identity are
+recorded in selected-cuff-finish06/candidate01/verification.json.
+
+Limits: Maximum cuff displacement24.3563mm is substantial and unaccepted.
+Independent full finite cuff clearance, actual movies and parent appearance
+judgment remain pending; no complete art, phone, or deployment claim.
