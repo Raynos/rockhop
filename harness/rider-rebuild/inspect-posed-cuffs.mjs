@@ -1,6 +1,6 @@
 /** Read-only page.evaluate probe for the existing silent actual Garage harness. */
 export function inspectActualCuffFragment(options = {}) {
-  const debug = window.__render.debug, { THREE, rider } = debug;
+  const debug = globalThis.window.__render.debug, { THREE, rider } = debug;
   const camera = debug.rig.camera, canvas = debug.renderer.domElement;
   const rect = canvas.getBoundingClientRect(), vec = () => new THREE.Vector3();
   const meshes = rider.binding.meshes.map(row => row.mesh);
@@ -65,7 +65,7 @@ export function inspectActualCuffFragment(options = {}) {
       return row;
     }) };
   });
-  return { acceptedArt: false, stageTime: window.__render.stageTime,
+  return { acceptedArt: false, stageTime: globalThis.window.__render.stageTime,
     sourceSHA256: rider.debug.candidate.sourceSHA256,
     canvas: { x: rect.x, y: rect.y, width: rect.width, height: rect.height },
     cameraWorld: camera.matrixWorld.toArray(), cameraProjection: camera.projectionMatrix.toArray(),

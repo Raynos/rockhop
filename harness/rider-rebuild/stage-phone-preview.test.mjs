@@ -6,7 +6,7 @@ import crypto from 'node:crypto';
 import assert from 'node:assert/strict';
 import { stagePhonePreview } from './stage-phone-preview.mjs';
 
-test('stage the actual comparison outputs with final budget and private-file guards', async t => {
+void test('stage the actual comparison outputs with final budget and private-file guards', async t => {
   const base = fs.mkdtempSync(path.join(os.tmpdir(), 'rockhop-phone-stage-'));
   t.after(() => fs.rmSync(base, { recursive: true, force: true }));
   const root = path.join(base, 'fixture-root'), build = path.join(root, 'build');

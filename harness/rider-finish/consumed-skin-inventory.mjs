@@ -56,7 +56,7 @@ export function inventoryConsumedSkin(scene, contract) {
     assert.equal(weights.itemSize, 4); assert.equal(indices.itemSize, 4);
     assert.equal(native.itemSize, 1); assert.equal(corner.itemSize, 1); assert.equal(region.itemSize, 1);
     assert(!native.normalized && !corner.normalized && !region.normalized);
-    assert.deepEqual(object.skeleton.bones.map(bone => bone.name).sort(), [...loadedNames].sort());
+    assert.deepEqual(object.skeleton.bones.map(bone => bone.name).sort((a, b) => a < b ? -1 : a > b ? 1 : 0), [...loadedNames].sort((a, b) => a < b ? -1 : a > b ? 1 : 0));
     let normalizedSumMaximumDelta = 0;
     for (let row = 0; row < position.count; row++) {
       const rid = region.getX(row), vid = native.getX(row), cid = corner.getX(row);
@@ -90,7 +90,7 @@ export function inventoryConsumedSkin(scene, contract) {
           ? [{ key, name: material[key].name, dimensions: [material[key].image?.width, material[key].image?.height] }] : []) })),
       compiledNormalRoute: 'UNMEASURED; rendered shader source/readback required' });
   });
-  assert.deepEqual(bones.sort(), [...loadedNames].sort(), 'Actual cloned rig must expose all51 unique declared joints');
+  assert.deepEqual(bones.sort((a, b) => a < b ? -1 : a > b ? 1 : 0), [...loadedNames].sort((a, b) => a < b ? -1 : a > b ? 1 : 0), 'Actual cloned rig must expose all51 unique declared joints');
   assert(meshes.length, 'No consumed candidate skinned meshes');
   const regions = contract.regions.map(region => {
     const actual = consumed.get(region.id);

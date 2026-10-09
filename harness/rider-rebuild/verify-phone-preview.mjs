@@ -15,7 +15,7 @@ const oldId = 'street-mustard', selectedId = 'street-remastered';
 // Count actual renderer submissions, caching only mesh references/bone counts.
 // Native joint lists and author metadata are read once after each choice is ready.
 function installWitness({ aliases }) {
-  const owner = window.__render, original = owner.render, cache = new WeakMap();
+  const owner = globalThis.window.__render, original = owner.render, cache = new WeakMap();
   const state = { expected: null, frames: 0, invalidFrames: 0, lastLogical: null, examples: [] };
   const inspect = (full = true) => {
     const rider = owner.debug.rider;
@@ -45,7 +45,7 @@ function installWitness({ aliases }) {
       selectedMarker: rider?.source?.scene?.userData?.privateSelectedRider === true,
       visibleSkins: parts?.skins.filter(visible).length ?? 0 };
     return full ? { ...row, skeletonBones: parts?.bones ?? 0, boundNativeJoints: rider?.binding?.byId?.size ?? null,
-      jointIds: rider?.binding ? [...rider.binding.byId.keys()].sort() : null,
+      jointIds: rider?.binding ? [...rider.binding.byId.keys()].sort((a, b) => a < b ? -1 : a > b ? 1 : 0) : null,
       sourceSHA256: rider?.debug?.candidate?.sourceSHA256 ?? null,
       authorMeshRoles: rider?.debug?.candidate?.authorMeshRoles ?? null, stageClip: rider?.debug?.stageClip ?? null } : row;
   };
@@ -65,7 +65,7 @@ function installWitness({ aliases }) {
     return result;
   }
   owner.render = wrapped;
-  window.__phonePreviewWitness = { inspect, state,
+  globalThis.window.__phonePreviewWitness = { inspect, state,
     begin(expected) { const row = inspect(false); Object.assign(state, { expected, sourceUUID: row.sourceUUID,
       instanceUUID: row.instanceUUID, frames: 0, invalidFrames: 0, examples: [] }); },
     stop() { if (owner.render === wrapped) owner.render = original; return state; } };
@@ -187,36 +187,36 @@ async function main() {
     assert.equal(await page.evaluate(() => navigator.webdriver), true, 'Silent automation mode required');
     save('before-garage-load'); await page.locator('.menu-screen.live .menu-item[data-id=garage]').tap();
     await page.waitForSelector('.garage-screen.live'); await page.locator('button[data-bike=rookie]').tap();
-    await page.evaluate(() => window.__render.whenReady());
+    await page.evaluate(() => globalThis.window.__render.whenReady());
     await page.evaluate(installWitness, { aliases: { [lod.logical]: selected.logical } });
-    report.surface = await page.evaluate(() => ({ deviceClass: window.__render.debugInfo().deviceClass,
-      width: innerWidth, height: innerHeight, horizontalOverflow: document.documentElement.scrollWidth > innerWidth }));
+    report.surface = await page.evaluate(() => ({ deviceClass: globalThis.window.__render.debugInfo().deviceClass,
+      width: globalThis.innerWidth, height: globalThis.innerHeight, horizontalOverflow: globalThis.document.documentElement.scrollWidth > globalThis.innerWidth }));
     assert.equal(report.surface.deviceClass, 'phone'); assert.equal(report.surface.horizontalOverflow, false);
     report.controls = await page.locator('button[data-outfit]').evaluateAll(buttons => buttons.map(button => {
-      const r = button.getBoundingClientRect(), hit = document.elementFromPoint(r.x + r.width / 2, r.y + r.height / 2);
+      const r = button.getBoundingClientRect(), hit = globalThis.document.elementFromPoint(r.x + r.width / 2, r.y + r.height / 2);
       return { id: button.dataset.outfit, text: button.textContent.replace(/\s+/g, ' ').trim(), width: r.width, height: r.height,
-        withinViewport: r.x >= 0 && r.y >= 0 && r.right <= innerWidth && r.bottom <= innerHeight,
+        withinViewport: r.x >= 0 && r.y >= 0 && r.right <= globalThis.innerWidth && r.bottom <= globalThis.innerHeight,
         reachable: hit === button || button.contains(hit), disabled: button.disabled };
     }));
-    assert.deepEqual(report.controls.map(row => row.id).sort(), [...originals, selectedId].sort());
+    assert.deepEqual(report.controls.map(row => row.id).sort((a, b) => a < b ? -1 : a > b ? 1 : 0), [...originals, selectedId].sort((a, b) => a < b ? -1 : a > b ? 1 : 0));
     assert.match(report.controls.find(row => row.id === selectedId).text, /Mustard.*Remastered/);
     for (const button of report.controls) assert(button.withinViewport && button.reachable && !button.disabled
       && button.width >= 44 && button.height >= 44, `Reachable 44px phone target: ${button.id}`);
     for (const [index, id] of [oldId, selectedId, oldId, selectedId].entries()) {
       const expected = id === selectedId ? selected : oldAsset, phase = `choice-${index + 1}-${id}`;
-      await page.evaluate(() => window.__phonePreviewWitness.begin(null));
+      await page.evaluate(() => globalThis.window.__phonePreviewWitness.begin(null));
       save(phase + '-before-load');
       await page.locator(`button[data-outfit=${id}]`).tap();
       await page.locator(`button[data-outfit=${id}][aria-pressed=true]`).waitFor();
-      await page.evaluate(() => window.__render.whenReady());
-      await page.waitForFunction(logical => window.__phonePreviewWitness.state.lastLogical === logical,
+      await page.evaluate(() => globalThis.window.__render.whenReady());
+      await page.waitForFunction(logical => globalThis.window.__phonePreviewWitness.state.lastLogical === logical,
         expected.logical, { polling: 100, timeout: 180000 });
-      const identity = await page.evaluate(() => window.__phonePreviewWitness.inspect());
+      const identity = await page.evaluate(() => globalThis.window.__phonePreviewWitness.inspect());
       assert.equal(identity.logical, expected.logical); assert(identity.sourceUUID && identity.instanceUUID && identity.visibleSkins > 0);
       if (id === selectedId) {
         assert.equal(identity.selectedMarker, true); assert.equal(identity.boundNativeJoints, 75); assert.equal(identity.skeletonBones, 75);
         assert.equal(identity.sourceSHA256, selected.sha256); assert.equal(identity.stageClip, 'Riding IK/breathing');
-        assert.deepEqual(identity.jointIds, Object.keys(contract.specification.jointNames).sort());
+        assert.deepEqual(identity.jointIds, Object.keys(contract.specification.jointNames).sort((a, b) => a < b ? -1 : a > b ? 1 : 0));
         assert.deepEqual(identity.authorMeshRoles, contract.specification.meshNames);
       } else {
         assert.equal(identity.selectedMarker, false); assert.equal(identity.boundNativeJoints, null); assert(identity.skeletonBones > 0);
@@ -230,9 +230,9 @@ async function main() {
       }
       const choice = { id, visit: prior ? 2 : 1, identity, submitted: null }; report.choices.push(choice);
       save(phase + '-ready');
-      await page.evaluate(logical => window.__phonePreviewWitness.begin(logical), expected.logical);
+      await page.evaluate(logical => globalThis.window.__phonePreviewWitness.begin(logical), expected.logical);
       await page.waitForTimeout(2000);
-      choice.submitted = await page.evaluate(() => ({ ...window.__phonePreviewWitness.state }));
+      choice.submitted = await page.evaluate(() => ({ ...globalThis.window.__phonePreviewWitness.state }));
       assert(choice.submitted.frames > 0, 'Actual render submissions required'); assert.equal(choice.submitted.invalidFrames, 0);
       save(phase + '-submitted');
     }
@@ -240,7 +240,7 @@ async function main() {
   } catch (error) {
     report.failure = sanitize(error.stack ?? error.message).slice(0, 4000); process.exitCode = 1; save(report.phase + '-failed');
   } finally {
-    try { if (page) await page.evaluate(() => window.__phonePreviewWitness?.stop()); } catch {}
+    try { if (page) await page.evaluate(() => globalThis.window.__phonePreviewWitness?.stop()); } catch { /* Page termination can make the final read-only witness unavailable. */ }
     try { await context?.close(); await browser?.close(); } catch (error) { report.cleanupError = sanitize(error.message).slice(0, 2000); process.exitCode = 1; }
     save(report.phase);
     console.log(JSON.stringify({ out, phase: report.phase, choices: report.choices.length,

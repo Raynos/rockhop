@@ -15,7 +15,10 @@ export const REFERENCE_SHA = '58677cc37aff6b22bb98144762eb5a93dfe689ac207ea0b74a
 const REFERENCE_CONTRACT_SHA = '32d67e9031bd6865a561ba29dc6d2765ace49ad13bfb08bd61df07df85440ee4';
 const CALIBRATION_SHA = '0b85504e221e33e63505a0cf18a7231ed7143f2730b4402a50994c40c4869cbc';
 const sha = bytes => crypto.createHash('sha256').update(bytes).digest('hex');
-const sorted = values => [...values].sort();
+const sorted = values => [...values].sort((a, b) => {
+  const left = String(a), right = String(b);
+  return left < right ? -1 : left > right ? 1 : 0;
+});
 const exact = (a, b, why) => assert.deepEqual(a, b, why);
 const require = (value, why) => assert(value, why);
 

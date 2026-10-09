@@ -1,6 +1,6 @@
 /** Read-only actual prepared selected denim maps and UV addressing. */
 export const inspectPreparedRiderMaterials = () => {
-  const rider = window.__render.debug.rider;
+  const rider = globalThis.window.__render.debug.rider;
   const rows = [];
   rider.scene.traverse(mesh => {
     if (!mesh.isMesh) return;
@@ -11,7 +11,7 @@ export const inspectPreparedRiderMaterials = () => {
       const maps = {};
       for (const key of ['map', 'roughnessMap', 'metalnessMap', 'normalMap']) {
         const texture = material[key], image = texture.image;
-        const canvas = document.createElement('canvas');
+        const canvas = globalThis.document.createElement('canvas');
         canvas.width = image.width; canvas.height = image.height;
         const context = canvas.getContext('2d', { willReadFrequently: true });
         context.drawImage(image, 0, 0);
@@ -40,7 +40,7 @@ export const inspectPreparedRiderMaterials = () => {
 };
 
 /** Cheap inventory once per review; kept out of the player controller bundle. */
-export const inspectRiderMaterialInventory = () => window.__render.debug.rider.materials.map(material => ({
+export const inspectRiderMaterialInventory = () => globalThis.window.__render.debug.rider.materials.map(material => ({
   name: material.name, baseColor: material.color?.toArray(),
   roughness: material.roughness, metalness: material.metalness,
   maps: Object.fromEntries(['map', 'normalMap', 'roughnessMap', 'metalnessMap'].map(key => {

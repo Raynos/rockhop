@@ -24,6 +24,8 @@ const within = (parent, child) => child === parent || child.startsWith(parent + 
 function publicPath(value) {
   assert.equal(typeof value, 'string', 'Asset URL must be a string');
   const relative = value.replace(/^\.\//, '');
+  // URL controls are intentionally rejected before constructing public file paths.
+  // oxlint-disable-next-line eslint/no-control-regex
   assert(relative && !relative.includes('\\') && !/[?#%\x00-\x1f]/.test(relative), `Unsafe asset URL: ${value}`);
   assert(!path.posix.isAbsolute(relative) && relative.split('/').every(part => part && part !== '..'
     && !part.startsWith('.') && !privateNames.test(part)), `Private or unsafe asset URL: ${value}`);
@@ -88,7 +90,7 @@ export async function stagePhonePreview({ build, out, root = repo }) {
   assert.equal(inputs.comparison.label, 'Mustard · Remastered');
   assert.equal(inputs.comparison.lodAliasesFull, true);
   assert.deepEqual(inputs.modelSlots, selectedSlots);
-  assert.deepEqual(Object.keys(review.mapping).sort(), [...selectedSlots].sort());
+  assert.deepEqual(Object.keys(review.mapping).sort((a, b) => a < b ? -1 : a > b ? 1 : 0), [...selectedSlots].sort((a, b) => a < b ? -1 : a > b ? 1 : 0));
   assert.equal(inputs.selectedRiderSource?.canonicalLogical, selectedSlots[0]);
   assert.deepEqual(inputs.selectedRiderSource.modelSlots, selectedSlots);
   assert.equal(inputs.selectedRiderSource.texturePolicy, 'preserve-authored-images');

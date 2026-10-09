@@ -1,6 +1,6 @@
 /** Read-only identity correction: include every visible scene mesh, not only garments. */
 export function identifyActualWristFragment() {
-  const { THREE, scene, renderer, rig } = window.__render.debug;
+  const { THREE, scene, renderer, rig } = globalThis.window.__render.debug;
   const camera = rig.camera, rect = renderer.domElement.getBoundingClientRect();
   const meshes = []; scene.traverseVisible(node => { if (node.isMesh) meshes.push(node); });
   const ray = new THREE.Raycaster(); ray.layers.mask = camera.layers.mask;
@@ -40,7 +40,7 @@ export function identifyActualWristFragment() {
       hasBoundingBox: !!mesh.boundingBox,
     })) };
   });
-  return { acceptedArt: false, stageTime: window.__render.stageTime, visibleMeshes: meshes.length,
+  return { acceptedArt: false, stageTime: globalThis.window.__render.stageTime, visibleMeshes: meshes.length,
     cameraWorld: camera.matrixWorld.toArray(), rows,
     skinFrames: meshes.filter(mesh => /^(ActualSelectedGlove[LR]|RiderHoodie)$/.test(mesh.name)).map(mesh => ({
       name: mesh.name, matrixWorld: mesh.matrixWorld.toArray(), bindMatrix: mesh.bindMatrix.toArray(),

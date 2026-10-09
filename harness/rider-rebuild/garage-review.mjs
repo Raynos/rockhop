@@ -69,8 +69,8 @@ const eventTime = () => ({ epochMs: Date.now(), monotonicMs: performance.now(),
   secondsSincePageCreation: (performance.now() - videoStartMonotonicMs) / 1000, phase: capturePhase });
 page.on('pageerror', error => {
   report.errors.push(error.message);
-  if (report.errorDetails.length < 64) report.errorDetails.push({ ...eventTime(), name: String(error.name).slice(0, 1024),
-    message: String(error.message).slice(0, 4096), stack: String(error.stack ?? '').slice(0, 8192), pageURL: page.url().slice(0, 2048) });
+  if (report.errorDetails.length < 64) report.errorDetails.push({ ...eventTime(), name: error.name.slice(0, 1024),
+    message: error.message.slice(0, 4096), stack: (error.stack ?? '').slice(0, 8192), pageURL: page.url().slice(0, 2048) });
   else report.diagnosticDrops.errorDetails++;
 });
 page.on('framenavigated', frame => {
@@ -90,7 +90,7 @@ try {
   await page.waitForSelector('.garage-screen.live');
   await page.locator(`button[data-bike=${requestedBike}]`).click();
   await page.locator('button[data-outfit=street-mustard]').click();
-  await page.evaluate(async () => window.__render.whenReady());
+  await page.evaluate(async () => globalThis.window.__render.whenReady());
   await page.locator(`button[data-bike=${requestedBike}][aria-pressed=true]`).waitFor();
   Object.assign(report.videoTimeline, { garageReadyEpochMs: Date.now(),
     garageReadyOffsetSeconds: (performance.now() - videoStartMonotonicMs) / 1000 });
@@ -103,7 +103,7 @@ try {
     const inspectAt = performance.now();
     // Five cheap read-only witnesses only; no per-frame pose readback or clock injection.
     const diagnostic = await page.evaluate(() => {
-      const renderer = window.__render, rider = renderer.debug.rider;
+      const renderer = globalThis.window.__render, rider = renderer.debug.rider;
       const boneLocalTRS = [...rider.binding.byId].map(([id, bone]) => ({
         id, name: bone.name, parent: bone.parent?.isBone ? bone.parent.name : null,
         translation: bone.position.toArray(), rotationXYZW: bone.quaternion.toArray(),
@@ -126,7 +126,7 @@ try {
         boneLocalTRS };
     });
     assert.equal(diagnostic.boneLocalTRS.length, 75, 'Capture every actual native75 local TRS');
-    assert.deepEqual(diagnostic.boneLocalTRS.map(row => row.id).sort(), Object.keys(contract.specification.jointNames).sort(), 'Exact declared joint identities');
+    assert.deepEqual(diagnostic.boneLocalTRS.map(row => row.id).sort((a, b) => a < b ? -1 : a > b ? 1 : 0), Object.keys(contract.specification.jointNames).sort((a, b) => a < b ? -1 : a > b ? 1 : 0), 'Exact declared joint identities');
     for (const bone of diagnostic.boneLocalTRS) {
       for (const [key, width] of [['translation', 3], ['rotationXYZW', 4], ['scale', 3]]) {
         assert.equal(bone[key].length, width); assert(bone[key].every(Number.isFinite), `Finite actual ${bone.id} ${key}`);
@@ -223,7 +223,7 @@ try {
   const box = await page.locator('.garage-stage').boundingBox();
   assert(box);
   const center = { x: box.x + box.width * .5, y: box.y + box.height * .45 };
-  await page.evaluate(() => window.__garageCaptureMeter.reset());
+  await page.evaluate(() => globalThis.window.__garageCaptureMeter.reset());
   await page.mouse.move(center.x, center.y); await page.mouse.down();
   const orbitAt = performance.now();
   let progress = 0, nextQuarter = 1, inspectionPauseMs = 0, pointerMoves = 0, maximumPointerStepPx = 0;
@@ -254,7 +254,7 @@ try {
   if (requestedClip) {
       const first = report.snapshots[0], nativeAction = isNativeActionDiagnostic(development?.receipt.diagnosticKind);
       const target = nativeAction ? first.debug.nativeClipEpoch + 2 + first.clipDuration : first.riderStageTime + first.clipDuration;
-      const before = await page.evaluate(() => window.__render.debug.rider.stageTime);
+      const before = await page.evaluate(() => globalThis.window.__render.debug.rider.stageTime);
       report.clipCoverage = { name: requestedClip, durationSeconds: first.clipDuration,
         firstRiderStageTime: first.riderStageTime, beforeFinalWaitStageTime: before,
         nativeAction, actionEpochStageTime: nativeAction ? first.debug.nativeClipEpoch : null, leadInSeconds: nativeAction ? 2 : 0,
@@ -262,7 +262,7 @@ try {
       if (before < target) {
         // Clock-only polling extends the uninterrupted film if dense rendering
         // advanced less than one complete cycle during the existing orbit.
-        await page.waitForFunction(targetTime => window.__render.debug.rider.stageTime >= targetTime,
+        await page.waitForFunction(targetTime => globalThis.window.__render.debug.rider.stageTime >= targetTime,
           target, { polling: 250, timeout: 60000 });
       }
   }
@@ -294,7 +294,7 @@ try {
 } catch (error) { report.failure = error.stack; process.exitCode = 1; }
 finally {
   capturePhase = 'cleanup';
-  try { report.actualFramePerformance = await page.evaluate(() => window.__garageCaptureMeter?.stop() ?? null); }
+  try { report.actualFramePerformance = await page.evaluate(() => globalThis.window.__garageCaptureMeter?.stop() ?? null); }
   catch (error) { report.performanceReadError = error.message; }
   if (report.actualFramePerformance && report.actualFramePerformance.rendered.frames === 0) {
     report.failure ??= 'No actual Three-rendered game frames observed by the capture meter';

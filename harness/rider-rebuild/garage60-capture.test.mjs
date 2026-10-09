@@ -11,23 +11,23 @@ import {installGarage60Recorder} from './garage60-recorder.mjs';
 const fixture=(fps=60,count=121)=>({streams:[{codec_type:'video',codec_name:'h264',pix_fmt:'yuv420p',width:1280,height:720,avg_frame_rate:'60/1'}],
   frames:Array.from({length:count},(_,i)=>({media_type:'video',best_effort_timestamp_time:(i/fps).toFixed(6)}))});
 const hashes=count=>Array.from({length:count},(_,i)=>i.toString(16).padStart(32,'0'));
-test('Real decoded PTS/count define cadence;25fps marked60 cannot pass',()=> {
+void test('Real decoded PTS/count define cadence;25fps marked60 cannot pass',()=> {
   const sixty=decodeProof(fixture(),hashes(121));assert(sixty.nominal60CadenceObserved);assert(Math.abs(sixty.observedFPS-60)<1e-10);
   const slow=decodeProof(fixture(25),hashes(121));assert.equal(slow.observedFPS,25);assert.equal(slow.nominal60CadenceObserved,false);
   assert.throws(()=>cadence([0,0,.1]),/Non-increasing/);
 });
-test('Dropped frame fails nominal60 even with average near60',()=> {
+void test('Dropped frame fails nominal60 even with average near60',()=> {
   const data=fixture(60,1201);data.frames.splice(100,1);
   const proof=decodeProof(data,hashes(data.frames.length));assert(!proof.nominal60CadenceObserved);
   assert(proof.intervalSeconds.maximum>.03);
 });
-test('Silent video format and exact decoded digest count are mandatory',()=> {
+void test('Silent video format and exact decoded digest count are mandatory',()=> {
   const data=fixture();data.streams.push({codec_type:'audio'});
   assert.throws(()=>decodeProof(data,hashes(121)),/Silent/);
   assert.throws(()=>decodeProof(fixture(),hashes(120)),/Every decoded/);
   assert.deepEqual(parseFrameHashes('#format: frame checksums\n0, 0, 0, 1, 20, '+hashes(1)[0]+'\n'),hashes(1));
 });
-test('Lossless presentation preserves frames, normalized timing and pixels',()=> {
+void test('Lossless presentation preserves frames, normalized timing and pixels',()=> {
   const a=decodeProof(fixture(),hashes(121)),b=structuredClone(a);
   b.timestamps=b.timestamps.map(t=>t+10);
   assert(comparePresentation(a,b,hashes(121),hashes(121)).decodedPixelsExact);
@@ -40,18 +40,18 @@ test('Lossless presentation preserves frames, normalized timing and pixels',()=>
   const pixels=hashes(121);pixels[10]='f'.repeat(32);
   assert.throws(()=>comparePresentation(a,b,hashes(121),pixels),/decoded pixels/);
 });
-test('Identical repeated pictures remain measurable as frozen footage',()=> {
+void test('Identical repeated pictures remain measurable as frozen footage',()=> {
   const row=decodeProof(fixture(),Array(121).fill('f'.repeat(32)));
   assert.equal(row.uniqueDecodedFrames,1);assert(row.distinctFraction<.01);
 });
-test('File/URL source identities agree without browser or source mutation',()=> {
+void test('File/URL source identities agree without browser or source mutation',()=> {
   const dir=fs.mkdtempSync(path.join(os.tmpdir(),'rockhop-garage60-pin-'));
   try {const file=path.join(dir,'receipt.json');fs.writeFileSync(file,'unaccepted fixture\n');
     assert.deepEqual(filePin(file),filePin(pathToFileURL(file)));}
   finally {fs.rmSync(dir,{recursive:true,force:true});}
 });
 
-test('Exact recorder scheduler retains near60 renders with jitter and samples120 without30Hz collapse',()=> {
+void test('Exact recorder scheduler retains near60 renders with jitter and samples120 without30Hz collapse',()=> {
   const start=1234.25,duration=20000;
   for(const realFPS of [30,59.4,60,60.1,120]) {
     for(const jitter of [0,.4]) {

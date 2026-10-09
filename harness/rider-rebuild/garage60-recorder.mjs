@@ -18,39 +18,39 @@ export function installGarage60Recorder({ fps = 60, bitrate = 16000000, expected
     };
   };
   if (schedulerTestOnlyStart !== null) return createSlotScheduler(schedulerTestOnlyStart);
-  const owner = window.__render, gpu = owner?.renderer, surface = owner?.canvas;
+  const owner = globalThis.window.__render, gpu = owner?.renderer, surface = owner?.canvas;
   if (!owner || typeof owner.render !== 'function' || !surface || !Number.isFinite(gpu?.info?.render?.frame))
     throw new Error('Actual game WebGL canvas/render counter required');
-  if (window.__garage60Recorder) throw new Error('Recorder already installed');
+  if (globalThis.window.__garage60Recorder) throw new Error('Recorder already installed');
   const gl=gpu.getContext(),debug=gl.getExtension('WEBGL_debug_renderer_info');
   const actualRenderer=String(gl.getParameter(debug?debug.UNMASKED_RENDERER_WEBGL:gl.RENDERER));
   if (!/Metal/.test(actualRenderer)) throw new Error('Actual game canvas must use Metal');
-  const canvas = document.createElement('canvas');
+  const canvas = globalThis.document.createElement('canvas');
   canvas.width = surface.width; canvas.height = surface.height;
   const ctx = canvas.getContext('2d', { alpha: false });
-  if (!ctx || !canvas.captureStream || !window.MediaRecorder) throw new Error('Canvas recording unavailable');
+  if (!ctx || !canvas.captureStream || !globalThis.window.MediaRecorder) throw new Error('Canvas recording unavailable');
   const choices = ['video/mp4;codecs=avc1.42001E', 'video/webm;codecs=vp8'];
-  const mimeType = choices.find(type => MediaRecorder.isTypeSupported(type));
+  const mimeType = choices.find(type => globalThis.MediaRecorder.isTypeSupported(type));
   if (!mimeType) throw new Error('No supported H264/VP8 MediaRecorder');
   const stream = canvas.captureStream(0), track = stream.getVideoTracks()[0];
   if (!track || typeof track.requestFrame !== 'function' || stream.getAudioTracks().length)
     throw new Error('Manual video-only canvas capture required');
-  const recorder = new MediaRecorder(stream, { mimeType, videoBitsPerSecond: bitrate });
+  const recorder = new globalThis.MediaRecorder(stream, { mimeType, videoBitsPerSecond: bitrate });
   const chunks = [], failures = [], rendered = [], raf = [], requests = [], slots = [], hud = [], copyCpuMs = [];
   const recent = [], recentRaf = [];
   let active = true, armed = false, started = null, ended = null, scheduleSlot = null;
   let heartbeatId, lastHud = -Infinity, label = 'Render / RAF: measuring…', totalBytes = 0;
   const original = owner.render;
   const percentile = (values, q) => [...values].sort((a,b) => a-b)[Math.floor((values.length-1)*q)] ?? null;
-  let hudEpoch = performance.now();
+  const hudEpoch = performance.now();
   const pollRaf = () => {
     if (!active) return;
     const at = performance.now(); recentRaf.push(at);
     while (recentRaf[0] < at-2000) recentRaf.shift();
     if (started !== null && ended === null) raf.push(at);
-    heartbeatId = requestAnimationFrame(pollRaf);
+    heartbeatId = globalThis.requestAnimationFrame(pollRaf);
   };
-  heartbeatId = requestAnimationFrame(pollRaf);
+  heartbeatId = globalThis.requestAnimationFrame(pollRaf);
   const draw = at => {
     if (surface.width !== canvas.width || surface.height !== canvas.height)
       throw new Error('Drawing buffer resized during film');
@@ -84,7 +84,7 @@ export function installGarage60Recorder({ fps = 60, bitrate = 16000000, expected
     if (started !== null && ended === null) rendered.push(at);
     if (!armed || ended !== null) return result;
     try {
-      if (!document.querySelector('.garage-screen.live') || !owner.stageOn
+      if (!globalThis.document.querySelector('.garage-screen.live') || !owner.stageOn
           || owner.debug.rider.debug.candidate.sourceSHA256 !== expectedSourceSHA256)
         throw new Error('Actual selected Garage source disappeared during film');
       if (started === null) {
@@ -102,11 +102,11 @@ export function installGarage60Recorder({ fps = 60, bitrate = 16000000, expected
     return result;
   }
   owner.render = wrapped;
-  window.__garage60Recorder = {
+  globalThis.window.__garage60Recorder = {
     arm() { if (armed || started !== null) throw new Error('Recorder cannot restart'); armed = true; },
     started() { return started !== null; },
     async finish() {
-      ended = performance.now(); armed = false; active = false; cancelAnimationFrame(heartbeatId);
+      ended = performance.now(); armed = false; active = false; globalThis.cancelAnimationFrame(heartbeatId);
       if (owner.render === wrapped) owner.render = original;
       if (recorder.state !== 'inactive') await new Promise((resolve,reject) => {
         recorder.onstop = resolve; recorder.onerror = event => reject(event.error); recorder.stop();
@@ -125,9 +125,9 @@ export function installGarage60Recorder({ fps = 60, bitrate = 16000000, expected
       let text = ''; for (let at=0; at<bytes.length; at+=32768) text += String.fromCharCode(...bytes.subarray(at,at+32768));
       return btoa(text);
     },
-    dispose() { active=false;cancelAnimationFrame(heartbeatId); if (owner.render===wrapped) owner.render=original;
+    dispose() { active=false;globalThis.cancelAnimationFrame(heartbeatId); if (owner.render===wrapped) owner.render=original;
       if(recorder.state!=='inactive') recorder.stop(); stream.getTracks().forEach(value=>value.stop()); }
   };
-  return { supportedMimeTypes:choices.filter(type=>MediaRecorder.isTypeSupported(type)),chosenMimeType:mimeType,
+  return { supportedMimeTypes:choices.filter(type=>globalThis.MediaRecorder.isTypeSupported(type)),chosenMimeType:mimeType,
     width:canvas.width,height:canvas.height,requestedFPS:fps,audioTracks:stream.getAudioTracks().length,actualRenderer };
 }

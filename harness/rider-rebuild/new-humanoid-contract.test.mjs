@@ -45,8 +45,8 @@ function fixture() {
   const mesh = (name, color) => {
     const geometry = new BufferGeometry();
     geometry.setAttribute('position', new Float32BufferAttribute([0.9, 1.47, 0, 0.94, 1.47, 0, 0.91, 1.49, 0], 3));
-    geometry.setAttribute('skinIndex', new Uint16BufferAttribute(Array(3).fill([6, 0, 0, 0]).flat(), 4));
-    geometry.setAttribute('skinWeight', new Float32BufferAttribute(Array(3).fill([1, 0, 0, 0]).flat(), 4));
+    geometry.setAttribute('skinIndex', new Uint16BufferAttribute(Array.from({ length: 3 }, () => [6, 0, 0, 0]).flat(), 4));
+    geometry.setAttribute('skinWeight', new Float32BufferAttribute(Array.from({ length: 3 }, () => [1, 0, 0, 0]).flat(), 4));
     const skin = new SkinnedMesh(geometry, new MeshStandardMaterial({ color })); skin.name = name;
     root.add(skin); skin.bind(skeleton, new Matrix4()); return skin;
   };
@@ -65,7 +65,7 @@ function fixture() {
   return { root, bones, body, glove, spec, contract, binding: bindHumanoidContract(root, contract) };
 }
 
-test('serialized rest contract survives a real SkeletonUtils clone with one wearer skeleton', () => {
+void test('serialized rest contract survives a real SkeletonUtils clone with one wearer skeleton', () => {
   const { root, contract } = fixture();
   assert.equal(contract.jointCount, 22);
   assert.equal(contract.joints.find(row => row.id === 'forearm').parentJointId, 'forearm-twist');
@@ -83,7 +83,7 @@ test('serialized rest contract survives a real SkeletonUtils clone with one wear
   assert.ok(maxError(axes.normal, [0, 0, 1]) < 1e-12);
 });
 
-test('world orientation uses actual extra spine, twist and metacarpal parents', () => {
+void test('world orientation uses actual extra spine, twist and metacarpal parents', () => {
   const { binding, bones } = fixture();
   for (const id of ['spine-extra', 'forearm-twist', 'middle-meta']) bones.get(id).quaternion.copy(rotate(2, -1, 3));
   binding.root.updateWorldMatrix(true, true);
@@ -95,7 +95,7 @@ test('world orientation uses actual extra spine, twist and metacarpal parents', 
   assert.deepEqual(target.toArray(), untouched);
 });
 
-test('identical frames reset all joint TRS and produce identical skin deformation without drift', () => {
+void test('identical frames reset all joint TRS and produce identical skin deformation without drift', () => {
   const { binding, bones, body, glove } = fixture();
   const delta = rotate(1, 1, -1);
   const frame = () => {
@@ -128,7 +128,7 @@ test('identical frames reset all joint TRS and produce identical skin deformatio
   }
 });
 
-test('wrist target rotates the calibrated palm offset AND the palm orientation', () => {
+void test('wrist target rotates the calibrated palm offset AND the palm orientation', () => {
   const { binding } = fixture();
   const local = new Matrix4().fromArray(binding.contract.hands.left.socketInWrist);
   const target = new Matrix4().compose(new Vector3(0.27, 0.78, 0.33), rotate(1, 0, 2), new Vector3(1, 1, 1));
@@ -140,7 +140,7 @@ test('wrist target rotates the calibrated palm offset AND the palm orientation',
   assert.ok(unrotatedOffset.distanceTo(new Vector3().setFromMatrixPosition(wrist)) > 0.01);
 });
 
-test('missing joints, ambiguous names, detached glove skeleton and bad anatomical landmarks fail intake', () => {
+void test('missing joints, ambiguous names, detached glove skeleton and bad anatomical landmarks fail intake', () => {
   {
     const { root, spec } = fixture(); delete spec.jointNames['forearm-twist'];
     assert.throws(() => captureHumanoidContract(root, spec), /Declare every actual joint/);
@@ -160,7 +160,7 @@ test('missing joints, ambiguous names, detached glove skeleton and bad anatomica
   }
 });
 
-test('source rest, inverse binds, hand axes and socket calibration are checked on binding', () => {
+void test('source rest, inverse binds, hand axes and socket calibration are checked on binding', () => {
   for (const kind of ['rest', 'inverse', 'axis', 'socket', 'parent']) {
     const { root, contract, bones } = fixture();
     if (kind === 'rest') bones.get('middle-meta').position.x += 0.01;
@@ -172,14 +172,14 @@ test('source rest, inverse binds, hand axes and socket calibration are checked o
   }
 });
 
-test('world-quaternion solve explicitly rejects nonuniform or reflected parent scales', () => {
+void test('world-quaternion solve explicitly rejects nonuniform or reflected parent scales', () => {
   for (const scale of [[1, 2, 1], [-1, 1, 1]]) {
     const { binding, bones } = fixture(); bones.get('middle-meta').scale.fromArray(scale);
     assert.throws(() => setJointWorldQuaternion(binding, 'middle-prox', rotate(1, 2, 3)), /nonreflected similarity parent/);
   }
 });
 
-test('actual 16.45ppm export residual needs explicit bounded admission and leaves source scales intact', () => {
+void test('actual 16.45ppm export residual needs explicit bounded admission and leaves source scales intact', () => {
   const { binding, bones } = fixture(), parent = bones.get('middle-meta');
   parent.scale.set(1.0000164508819593, 0.9999999403953558, 1.0000002384185798);
   const sourceScale = parent.scale.toArray(), target = rotate(1, -3, 2);

@@ -150,7 +150,7 @@ export function createPrivateRiderClass(metadata) {
       });
       // Garage defaults to the selected bike's contact solver. Authored actions
       // are diagnostic overrides, never an implicit source-contract default.
-      const selectedClip = metadata.previewClip ?? (typeof location === 'object' ? new URLSearchParams(location.search).get('riderClip') : null);
+      const selectedClip = metadata.previewClip ?? (typeof globalThis.location === 'object' ? new URLSearchParams(globalThis.location.search).get('riderClip') : null);
       if (selectedClip) {
         const clip = gltf.animations.find(item => item.name === selectedClip);
         fail(clip, `Clip ${selectedClip} required`);

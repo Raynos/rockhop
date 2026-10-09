@@ -9,14 +9,14 @@ const metadata = { shapeDerivative: { accepted: false, kind: 'native-relative-sh
   previewClip: 'Anatomical09VolumeRestKey', qualificationState: 'UNACCEPTED_POSED_VOLUME',
   diagnosticMotion: { accepted: false, previewClip: 'Anatomical09VolumeRestKey', status: 'UNACCEPTED_POSED_VOLUME', kind: 'native-posed-volume' } };
 
-test('native volume source remains explicit and cannot reuse the failed helper', () => {
+void test('native volume source remains explicit and cannot reuse the failed helper', () => {
   assert.equal(sourceDiagnosticKind(metadata, metadata.previewClip, true), 'native-posed-volume');
   assert.throws(() => sourceDiagnosticKind(metadata, metadata.previewClip, false), /allow-failed-diagnostic/);
   assert.throws(() => sourceDiagnosticKind({ ...metadata, corrective: {} }, metadata.previewClip, true), /failed corrective/);
   assert.throws(() => sourceDiagnosticKind({ ...metadata, shapeDerivative: { ...metadata.shapeDerivative, accepted: true } }, metadata.previewClip, true));
 });
 
-test('actual runtime updates native mesh arrays through rest, key, return and cycle', () => {
+void test('actual runtime updates native mesh arrays through rest, key, return and cycle', () => {
   const scene = new THREE.Group(), bone = new THREE.Bone(); bone.name = 'joint'; scene.add(bone);
   const meshes = ['Jeans', 'Body'].map(name => {
     const mesh = new THREE.SkinnedMesh(new THREE.BufferGeometry(), new THREE.MeshBasicMaterial());
@@ -43,7 +43,7 @@ test('actual runtime updates native mesh arrays through rest, key, return and cy
 });
 
 // A travelling action must retain its final root position across long Garage clocks.
-test('native one-shot actions hold the initial frame and clamp without root teleport', () => {
+void test('native one-shot actions hold the initial frame and clamp without root teleport', () => {
   const clip = { name: 'RiderJog', duration: .75 };
   const native = { nativeAuthoringMotion: {}, genericActions: { RiderJog: { durationSeconds: .75, leadInSeconds: 2, playback: 'ONCE' } } };
   for (const [clock, expected] of [[10,0],[11.9,0],[12.375,.375],[12.75,.75],[50,.75]]) {
@@ -54,7 +54,7 @@ test('native one-shot actions hold the initial frame and clamp without root tele
   assert.throws(() => privateStageClipTime(clip, 13, 10, { nativeAuthoringMotion: {}, genericActions: {} }), /playback/);
 });
 
-test('native library intake permits only the six declared actions and exact presentation', () => {
+void test('native library intake permits only the six declared actions and exact presentation', () => {
   const names = ['RiderIdle','RiderWalk','RiderJog','RiderTurn90','RiderJumpLand','RiderRangeOfMotion'];
   const declared = { ...metadata, qualificationState: 'UNACCEPTED_NATIVE_ACTION_LIBRARY',
     nativeAuthoringMotion: { accepted: false, kind: 'native-control-action-library', actions: names.map(name => ({ name })), presentation: { positionBike: [-.6,-.34,.65] } },
@@ -65,7 +65,7 @@ test('native library intake permits only the six declared actions and exact pres
   assert.throws(() => sourceDiagnosticKind({ ...declared, genericActions: { RiderJog: { playback: 'LOOP', leadInSeconds: 2 } } }, 'RiderJog', true));
 });
 
-test('native seated bike actions require origin placement and matching bike sources', () => {
+void test('native seated bike actions require origin placement and matching bike sources', () => {
   const names = ['RiderBikeSeatedLeanRookie', 'RiderBikeSeatedLeanPro'];
   const bikes = ['rookie', 'pro'].map((name, index) => ({ name, clip: names[index],
     bike: { path: `public/models/bike-${name}.glb`, sha256: String(index).repeat(64) } }));
@@ -83,7 +83,7 @@ test('native seated bike actions require origin placement and matching bike sour
   assert.throws(() => sourceDiagnosticKind({ ...declared, corrective: {} }, names[0], true));
 });
 
-test('actual gameplay review cannot silently select an authored stage action', () => {
+void test('actual gameplay review cannot silently select an authored stage action', () => {
   const physical = { accepted: false, qualificationState: 'UNACCEPTED_GAMEPLAY_LEAN_REVIEW',
     gameplayLeanReview: { accepted: false, kind: 'simulated-rider-com-and-torso' } };
   assert.equal(sourceDiagnosticKind(physical, undefined, true), 'actual-gameplay-lean');

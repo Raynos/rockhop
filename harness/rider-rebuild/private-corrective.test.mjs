@@ -13,7 +13,7 @@ const runtime = path.resolve('harness/rider-rebuild/private-rider.mjs');
 const original = fs.readFileSync(runtime, 'utf8');
 const transformed = metadata => privateEnginePlugin(metadata).transform(original, runtime)?.code;
 
-test('corrective source substitution is conditional and follows calibration and final bone pose', () => {
+void test('corrective source substitution is conditional and follows calibration and final bone pose', () => {
   assert.equal(transformed({}), undefined);
   const code = transformed({ corrective: {} });
   assert.match(code, /import \{ prepareSeatedCorrective \} from .*apply-morph02\.mjs/);
@@ -28,7 +28,7 @@ const contractPath = path.resolve('harness/out/rider-rebuild/selected-seated-cor
 const authorPath = path.resolve('harness/out/rider-rebuild/selected-seated-author04/authored01/rookie.json');
 const available = [source, contractPath, authorPath].every(file => fs.existsSync(file));
 
-test('actual native75 saved author key reaches runtime morph through appended TRS, then returns to zero', {
+void test('actual native75 saved author key reaches runtime morph through appended TRS, then returns to zero', {
   skip: !available && 'Ignored diagnostic inputs absent; no full GLB read is required',
 }, () => {
   // Read only the original GLB JSON header. No BIN, textures, vertex positions,
@@ -79,6 +79,8 @@ test('actual native75 saved author key reaches runtime morph through appended TR
   // Evaluate the transformed actual class; dependencies outside update are not
   // exercised. Constructor/calibration ordering is checked separately above.
   const body = transformed(metadata).replace(/^import .*;\n/gm, '').replace(/^export function /gm, 'function ');
+  // Execute the actual scoped source transform to verify its behavior.
+  // oxlint-disable-next-line typescript/no-implied-eval
   const create = Function('THREE', 'resetHumanoidPose', 'prepareSeatedCorrective', body + '\nreturn createPrivateRiderClass;')(THREE, resetHumanoidPose, prepareSeatedCorrective);
   const rider = Object.create(create(metadata).prototype);
   Object.assign(rider, { bike: {}, release: null, stage: true, scene, roles: metadata.specification.roles,

@@ -47,7 +47,7 @@ const poseFrame = lean => {
 };
 const snapshot = rider => JSON.stringify([...rider.binding.byId].map(([id, bone]) => [id, bone.position.toArray(), bone.quaternion.toArray(), bone.scale.toArray(), bone.matrixWorld.toArray()]));
 
-test('private plugin scopes rider, part merge and awaited model-catalog metadata', () => {
+void test('private plugin scopes rider, part merge and awaited model-catalog metadata', () => {
   const plugin = privateEnginePlugin({ driver: { assetToBikeQuaternionXYZW: [0, 0, 0, 1] } });
   assert.equal(plugin.transform('untouched', '/src/main.ts'), null);
   assert.match(plugin.transform('legacy', '/src/render/hero/gltfRider.ts').code, /createPrivateRiderClass/);
@@ -59,11 +59,13 @@ test('private plugin scopes rider, part merge and awaited model-catalog metadata
   plugin.buildEnd();
 });
 
-test('private metadata load shares a request, retries failure, and preserves actual catalog receipts', async () => {
+void test('private metadata load shares a request, retries failure, and preserves actual catalog receipts', async () => {
   const metadata = { driver: { assetToBikeQuaternionXYZW: [0, 0, 0, 1] } }, plugin = privateEnginePlugin(metadata);
   const loader = plugin.transform('              resolve(g);', '/src/render/hero/gltf.ts').code;
   const prefix = loader.split('\n              void')[0].replace('export const', 'const');
   let requests = 0;
+  // Execute the actual scoped source transform to verify its behavior.
+  // oxlint-disable-next-line typescript/no-implied-eval
   const get = new Function('fetch', 'document', `${prefix}\nreturn { load: loadPrivateRiderMetadata, metadata: privateRiderMetadata };`);
   const module = get(async () => {
     requests++;
@@ -81,7 +83,7 @@ test('private metadata load shares a request, retries failure, and preserves act
   assert.equal(row.bytes, Buffer.byteLength(bundle['model-catalog.json'].source)); assert.ok(row.gz > 0); assert.equal(row.phase, 'other');
 });
 
-test('actual exported assembly loads all explicitly declared objects and the complete shared skeleton', { skip }, async () => {
+void test('actual exported assembly loads all explicitly declared objects and the complete shared skeleton', { skip }, async () => {
   const { rider } = await instance();
   assert.equal(rider.debug.bones, Object.keys(metadata.specification.jointNames).length);
   assert.deepEqual(rider.debug.candidate.authorMeshRoles, metadata.specification.meshNames);
@@ -93,7 +95,7 @@ test('actual exported assembly loads all explicitly declared objects and the com
   for (const { mesh } of rider.binding.meshes) assert.deepEqual([...mesh.geometry.attributes.skinWeight.array], originalWeights.get(mesh.name));
 });
 
-test('actual forward/back/neutral targets retain finite full-hierarchy control and report real socket residuals', { skip }, async () => {
+void test('actual forward/back/neutral targets retain finite full-hierarchy control and report real socket residuals', { skip }, async () => {
   const { rider } = await instance();
   for (let index = 0; index <= 40; index++) {
     const f = poseFrame(-1 + index / 20), before = JSON.stringify(f);
@@ -121,7 +123,7 @@ test('actual forward/back/neutral targets retain finite full-hierarchy control a
   }
 });
 
-test('actual COM and socket errors remain bike-local at different world bike leans', { skip }, async () => {
+void test('actual COM and socket errors remain bike-local at different world bike leans', { skip }, async () => {
   const { rider, frame } = await instance(), base = frame.position.clone();
   for (const lean of [-1, 0, 1]) {
     const f = poseFrame(lean); rider.update(f);
@@ -137,7 +139,7 @@ test('actual COM and socket errors remain bike-local at different world bike lea
   }
 });
 
-test('anatomical upper-spine flex leaves the explicit physical pelvis carrier fixed', { skip }, async () => {
+void test('anatomical upper-spine flex leaves the explicit physical pelvis carrier fixed', { skip }, async () => {
   const { rider } = await instance(), frame = poseFrame(0.4), p = rider.physicsTarget(frame);
   let expected;
   for (const flex of [0, -0.3, 0.3]) {
@@ -147,7 +149,7 @@ test('anatomical upper-spine flex leaves the explicit physical pelvis carrier fi
   }
 });
 
-test('actual repeated frame is byte-identical after every joint transform was perturbed', { skip }, async () => {
+void test('actual repeated frame is byte-identical after every joint transform was perturbed', { skip }, async () => {
   const { rider } = await instance(), frame = poseFrame(0.35);
   rider.update(frame); const expected = snapshot(rider);
   for (let n = 0; n < 40; n++) {
@@ -158,7 +160,7 @@ test('actual repeated frame is byte-identical after every joint transform was pe
   }
 });
 
-test('actual crash releases both contacts and restart restores the exact ride pose', { skip }, async () => {
+void test('actual crash releases both contacts and restart restores the exact ride pose', { skip }, async () => {
   const { rider } = await instance(), frame = poseFrame(0);
   rider.update(frame); const expected = snapshot(rider);
   const pelvis = rider.bone(rider.role('pelvis')).getWorldPosition(new THREE.Vector3());
@@ -171,7 +173,7 @@ test('actual crash releases both contacts and restart restores the exact ride po
   assert.equal(snapshot(rider), expected);
 });
 
-test('Garage defaults to seated contact IK even when the source declares a preview clip', { skip }, async () => {
+void test('Garage defaults to seated contact IK even when the source declares a preview clip', { skip }, async () => {
   loaded ??= await loadRigAt(pathToFileURL(source), true);
   const Rider = createPrivateRiderClass({ ...metadata, driver: { ...metadata.driver, garageClip: 'implicit-standing-action' } });
   const rider = new Rider(loaded, { complete() {} }), frame = new THREE.Group();
@@ -191,7 +193,7 @@ test('Garage defaults to seated contact IK even when the source declares a previ
   rider.dispose();
 });
 
-test('actual named authored clip drives complete rig in Garage without stale contact claims', { skip }, async () => {
+void test('actual named authored clip drives complete rig in Garage without stale contact claims', { skip }, async () => {
   const selected = loaded?.animations[0]?.name ?? (await loadRigAt(pathToFileURL(source), true)).animations[0].name;
   const Rider = createPrivateRiderClass({ ...metadata, previewClip: selected });
   const rider = new Rider(loaded, { complete() {} }), frame = new THREE.Group(); rider.attach({ frame }); rider.setStage(true);

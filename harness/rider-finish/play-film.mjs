@@ -43,8 +43,8 @@ try {
     page.on('pageerror', error => errors.push(error.message));
     await page.goto(`http://127.0.0.1:${server.address().port}/`);
     const result = await page.evaluate(async index => {
-      const video = document.querySelector('video');
-      const canvas = document.querySelector('canvas');
+      const video = globalThis.document.querySelector('video');
+      const canvas = globalThis.document.querySelector('canvas');
       if (!video.requestVideoFrameCallback) throw new Error('Actual presented video callback required');
       video.muted = true; video.volume = 0; video.playbackRate = 1;
       const ready = new Promise((resolve, reject) => {
@@ -67,10 +67,11 @@ try {
       };
       video.requestVideoFrameCallback(onFrame);
       const wallStart = performance.now();
-      await new Promise(async (resolve, reject) => {
+      await new Promise((resolve, reject) => {
         const timeout = setTimeout(() => reject(new Error('Playback timeout')), (video.duration + 10) * 1000);
         video.addEventListener('ended', () => { ended = true; clearTimeout(timeout); resolve(); }, { once: true });
-        try { await video.play(); } catch (error) { clearTimeout(timeout); reject(error); }
+        try { void video.play().catch(error => { clearTimeout(timeout); reject(error); }); }
+        catch (error) { clearTimeout(timeout); reject(error); }
       });
       return { frames, events, duration: video.duration, width: video.videoWidth, height: video.videoHeight,
         wallSeconds: (performance.now() - wallStart) / 1000, ended: video.ended,

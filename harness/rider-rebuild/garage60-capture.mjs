@@ -92,18 +92,18 @@ export async function main(argv=process.argv.slice(2)) {
     await page.waitForSelector('.garage-screen.live');
     await page.locator(`button[data-bike=${bike}]`).click();
     await page.locator(`button[data-outfit=${outfit}]`).click();
-    await page.evaluate(async()=>window.__render.whenReady());
+    await page.evaluate(async()=>globalThis.window.__render.whenReady());
     const inspect=()=>page.evaluate(()=> {
-      const owner=window.__render,rider=owner.debug.rider;
+      const owner=globalThis.window.__render,rider=owner.debug.rider;
       return {garage:owner.debugInfo().garage,candidate:structuredClone(rider.debug.candidate),stageTime:owner.stageTime,
-        stageClip:rider.debug.stageClip??null,jointIds:[...rider.binding.byId.keys()].sort(),camera:owner.camera()};
+        stageClip:rider.debug.stageClip??null,jointIds:[...rider.binding.byId.keys()].sort((a, b) => a < b ? -1 : a > b ? 1 : 0),camera:owner.camera()};
     });
     const validate=value=> {
       assert(value.garage.on);assert.equal(value.candidate.sourceSHA256,contract.glbSHA256);
       assert.deepEqual(value.candidate.authorMeshRoles,expected);
       const visible=new Set(value.candidate.visibleMeshes.filter(row=>row.skinned&&row.triangles>0).map(row=>row.name));
       for(const name of Object.values(expected))assert(visible.has(name),`Missing actual selected outfit part: ${name}`);
-      assert.deepEqual(value.jointIds,Object.keys(contract.specification.jointNames).sort());assert.equal(value.jointIds.length,75);
+      assert.deepEqual(value.jointIds,Object.keys(contract.specification.jointNames).sort((a, b) => a < b ? -1 : a > b ? 1 : 0));assert.equal(value.jointIds.length,75);
       if(clip)assert.equal(value.stageClip,clip);
     };
     report.before=await inspect();validate(report.before);
@@ -113,8 +113,8 @@ export async function main(argv=process.argv.slice(2)) {
     const box=await page.locator('.garage-stage').boundingBox();assert(box);
     const center={x:box.x+box.width*.72,y:box.y+box.height*.45};
     await page.mouse.move(center.x,center.y);await page.mouse.down();
-    await page.evaluate(()=> {window.__garageCaptureMeter.reset();window.__garage60Recorder.arm();});
-    await page.waitForFunction(()=>window.__garage60Recorder.started(),null,{timeout:10000});
+    await page.evaluate(()=> {globalThis.window.__garageCaptureMeter.reset();globalThis.window.__garage60Recorder.arm();});
+    await page.waitForFunction(()=>globalThis.window.__garage60Recorder.started(),null,{timeout:10000});
     const start=performance.now();let fraction=0,moves=0,maxStepPx=0;
     while(fraction<1) {
       const previous=fraction;fraction=Math.min(1,(performance.now()-start)/(seconds*1000));
@@ -125,14 +125,14 @@ export async function main(argv=process.argv.slice(2)) {
     await page.waitForTimeout(100);await page.mouse.up(); // No inherited release inertia.
     report.orbit={requestedSeconds:seconds,actualSeconds:(performance.now()-start)/1000,moves,maxStepPx,
       fullTurnPixels,pointerDegrees:360,driver:'One continuous real held mouse through actual Garage handlers; no camera injection'};
-    report.capture=await page.evaluate(()=>window.__garage60Recorder.finish());
-    report.actualFramePerformance=await page.evaluate(()=>window.__garageCaptureMeter.stop());
+    report.capture=await page.evaluate(()=>globalThis.window.__garage60Recorder.finish());
+    report.actualFramePerformance=await page.evaluate(()=>globalThis.window.__garageCaptureMeter.stop());
     report.after=await inspect();validate(report.after);assert(report.after.stageTime>report.before.stageTime);
     await Promise.all(responses);assert.deepEqual(report.errors,[]);
     for(const asset of [selected,selectedBike])assert(report.requests.some(row=>row.status===200&&row.catalogSHA256===asset.sha256));
     const raw=path.join(out,report.capture.mimeType.startsWith('video/mp4')?'garage-canvas-raw.mp4':'garage-canvas-raw.webm');
     for(let index=0;index<report.capture.chunkCount;index++) {
-      const bytes=await page.evaluate(index=>window.__garage60Recorder.chunk(index),index);
+      const bytes=await page.evaluate(index=>globalThis.window.__garage60Recorder.chunk(index),index);
       fs.appendFileSync(raw,Buffer.from(bytes,'base64'));
     }
     assert.equal(fs.statSync(raw).size,report.capture.totalBytes);report.raw=pin(raw);
@@ -154,7 +154,7 @@ export async function main(argv=process.argv.slice(2)) {
     if(!observed60)process.exitCode=1;
   } catch(error) {report.failure=error.stack;process.exitCode=1;}
   finally {
-    if(page)await page.evaluate(()=> {window.__garage60Recorder?.dispose();window.__garageCaptureMeter?.stop();}).catch(()=>{});
+    if(page)await page.evaluate(()=> {globalThis.window.__garage60Recorder?.dispose();globalThis.window.__garageCaptureMeter?.stop();}).catch(()=>{});
     await launched?.close();
     if(development)await server?.close();else if(server)await new Promise(resolve=>server.httpServer.close(resolve));
     fs.writeFileSync(path.join(out,'report.json'),JSON.stringify(report,null,2)+'\n');

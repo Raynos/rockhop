@@ -17,7 +17,7 @@ const transformed = (p, file) => p.transform(read(file), '/' + file).code;
 const transpile = (code, module = ts.ModuleKind.ESNext) => ts.transpileModule(code, { compilerOptions: { module, target: ts.ScriptTarget.ES2020 } }).outputText;
 const evaluate = code => import('data:text/javascript,' + encodeURIComponent(transpile(code)));
 
-test('comparison appends a separately normalized sixth preset and keeps all originals', async () => {
+void test('comparison appends a separately normalized sixth preset and keeps all originals', async () => {
   const p = plugin(), presets = await evaluate(transformed(p, 'src/core/riderPresets.ts'));
   assert.deepEqual(presets.RIDER_PRESETS.map(row => row.id), [...original, comparisonRider.id]);
   assert.equal(presets.riderPreset(comparisonRider.id).label, 'Mustard · Remastered');
@@ -30,10 +30,10 @@ test('comparison appends a separately normalized sixth preset and keeps all orig
   const api = await evaluate(urls);
   original.forEach(id => assert.equal(api.riderUrl(id), `models/rider-${id}.glb`));
   assert.deepEqual(api.heroFiles(comparisonRider.id, 'pro'), ['models/bike-pro.glb', 'models/bike-pro-lod.glb', comparisonRider.full, comparisonRider.lod]);
-  assert.deepEqual(Object.keys(api.HERO_FILES_BY_OUTFIT_CLASS).sort(), [...original].sort(), 'Eager boot inventory remains the original five');
+  assert.deepEqual(Object.keys(api.HERO_FILES_BY_OUTFIT_CLASS).sort((a, b) => a < b ? -1 : a > b ? 1 : 0), [...original].sort((a, b) => a < b ? -1 : a > b ? 1 : 0), 'Eager boot inventory remains the original five');
 });
 
-test('comparison wrapper uses legacy driver for originals and selected driver only for tagged documents', async () => {
+void test('comparison wrapper uses legacy driver for originals and selected driver only for tagged documents', async () => {
   const p = plugin();
   let code = p.transform('export class GltfRider { constructor(gltf, lib) { this.source = gltf; this.lib = lib; } }', '/src/render/hero/gltfRider.ts').code;
   code = code.replace("import { privateSelectedRiderClass } from './gltf';", 'class Selected { constructor(gltf) { this.source = gltf; this.native75 = true; } } const privateSelectedRiderClass = Selected;');
@@ -44,13 +44,15 @@ test('comparison wrapper uses legacy driver for originals and selected driver on
   assert(old instanceof GltfRider); assert(selected instanceof GltfRider);
 });
 
-test('new source is requested only when selected and omitted from eager offline pack', async () => {
+void test('new source is requested only when selected and omitted from eager offline pack', async () => {
   const p = plugin(), renderer = transformed(p, 'src/render/index.ts');
   const expression = renderer.slice(renderer.indexOf('    const inventory ='), renderer.indexOf('    this.heroLoading++;'));
   const old = ['models/rider-street-mustard.glb', 'models/bike-rookie.glb'];
   const heroPair = (_outfit, bike, detail) => [`models/bike-${bike}${detail === 'lod' ? '-lod' : ''}.glb`, detail === 'lod' ? comparisonRider.lod : comparisonRider.full];
   const state = { riderOutfit: original[0], bikeClass: 'rookie', heroDocs: new Map(), models: { riderModel: 'gltf', bikeModel: 'gltf' } };
   // The original method's filtering refers to its already captured model choice.
+  // Execute the actual scoped source transform to verify its behavior.
+  // oxlint-disable-next-line typescript/no-implied-eval
   const run = Function('HERO_FILE_SET', 'heroPair', 'want', expression + ';return files;');
   assert.deepEqual(run.call(state, old, heroPair, state.models), old);
   state.riderOutfit = comparisonRider.id;
@@ -68,7 +70,7 @@ test('new source is requested only when selected and omitted from eager offline 
   assert.match(transformed(p, 'src/render/hero/lod.ts'), /if \(!root.userData.privateSelectedRider\) mergeSkinnedByMaterial/);
 });
 
-test('private snapshots keep original bytes and alias full/LOD to one emitted URL', () => {
+void test('private snapshots keep original bytes and alias full/LOD to one emitted URL', () => {
   const directory = fs.mkdtempSync(path.join(os.tmpdir(), 'rockhop-comparison-'));
   try {
     const root = path.join(directory, 'repo'), out = path.join(directory, 'out');
@@ -83,6 +85,8 @@ test('private snapshots keep original bytes and alias full/LOD to one emitted UR
     });
     const js = transpile(section + ';export {assets,values};', ts.ModuleKind.CommonJS);
     const exports = {}, module = { exports };
+    // Execute the actual scoped source transform to verify its behavior.
+    // oxlint-disable-next-line typescript/no-implied-eval
     Function('fs', 'path', 'root', 'out', 'mapping', 'readModelCatalog', 'module', 'exports', js)(fs, path, root, out, comparisonModelMapping(source), readModelCatalog, module, exports);
     const values = module.exports.values;
     for (const id of original) for (const detail of ['', '-lod']) assert.equal(fs.readFileSync(path.join(out, `.inputs/models/rider-${id}${detail}.glb`), 'utf8'), id + detail);
@@ -94,13 +98,13 @@ test('private snapshots keep original bytes and alias full/LOD to one emitted UR
   } finally { fs.rmSync(directory, { recursive: true, force: true }); }
 });
 
-test('comparison rejects old-slot aliases and detects source anchor drift', () => {
+void test('comparison rejects old-slot aliases and detects source anchor drift', () => {
   assert.throws(() => privateEnginePlugin({ ...metadata, selectedRiderSource: { ...metadata.selectedRiderSource, modelSlots: ['models/rider-street-mustard.glb'], canonicalLogical: 'models/rider-street-mustard.glb' } }), /only the new/);
   assert.throws(() => comparisonSnapshotSource('changed recipe'), /source changed/);
   assert.throws(() => plugin().transform('changed presets', '/src/core/riderPresets.ts'), /source changed/);
 });
 
-test('all scoped actual sources parse and selected alias has one exact load receipt', async () => {
+void test('all scoped actual sources parse and selected alias has one exact load receipt', async () => {
   const p = plugin();
   const nativeFiles = ['private-comparison-loader.mjs', 'private-rider.mjs', 'new-humanoid-contract.mjs', 'anthropometric-inverse.mjs'].map(name => path.resolve('harness/rider-rebuild', name));
   await p.buildStart.call({ resolve: async id => ({ id }) });
@@ -135,7 +139,7 @@ test('all scoped actual sources parse and selected alias has one exact load rece
   assert.throws(() => p.generateBundle.handler.call({ emitFile() {} }, null, bundle), /static player dependency/);
 });
 
-test('only comparison isolates exact native modules; vendor closures and normal budget policy remain intact', async () => {
+void test('only comparison isolates exact native modules; vendor closures and normal budget policy remain intact', async () => {
   const normal = privateEnginePlugin({ ...metadata, comparison: false }), options = { manualChunks: { three: ['three'], 'sentry-errors': ['@sentry/browser'] } };
   await normal.buildStart.call({ resolve() { throw Error('normal build must not resolve private chunks'); } });
   assert.equal(normal.outputOptions(options), null);
@@ -155,12 +159,14 @@ test('only comparison isolates exact native modules; vendor closures and normal 
 });
 
 // Low-tier calls run again after loading and when all resident heroes rebudget.
-test('selected document preserves authored maps across repeated texture budgets', () => {
+void test('selected document preserves authored maps across repeated texture budgets', () => {
   const code = transformed(plugin(), 'src/render/hero/gltf.ts');
   const start = code.indexOf('export function shrinkTextures(');
   const end = code.indexOf('/** Hero surfaces', start);
   const fn = transpile(code.slice(start, end), ts.ModuleKind.CommonJS);
   const exports = {}, module = { exports };
+  // Execute the actual scoped source transform to verify its behavior.
+  // oxlint-disable-next-line typescript/no-implied-eval
   Function('module', 'exports', fn)(module, exports);
   let selectedTraversals = 0, originalTraversals = 0;
   const selected = { userData: { privateSelectedRider: true }, traverse() { selectedTraversals++; } };
@@ -172,7 +178,7 @@ test('selected document preserves authored maps across repeated texture budgets'
   assert.equal(originalTraversals, 1, 'Original hero retains ordinary texture budget');
 });
 
-test('optional selected loader rejects HTTP and missing metadata before constructing a driver', async () => {
+void test('optional selected loader rejects HTTP and missing metadata before constructing a driver', async () => {
   const { loadSelectedRiderClass } = await import('./private-comparison-loader.mjs');
   const original = globalThis.fetch;
   try {

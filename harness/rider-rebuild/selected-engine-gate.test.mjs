@@ -21,7 +21,7 @@ const rigOnly = () => {
 };
 const SHA_NEW = crypto.createHash('sha256').update('new source identity, not asset bytes').digest('hex');
 
-test('original actual 75-joint control is decoded without mutating source bytes', options, () => {
+void test('original actual 75-joint control is decoded without mutating source bytes', options, () => {
   assert.equal(reference.sha256, REFERENCE_SHA);
   assert.equal(reference.document.skins[0].joints.length, 75);
   const inverse = reference.accessor(reference.document.skins[0].inverseBindMatrices);
@@ -29,7 +29,7 @@ test('original actual 75-joint control is decoded without mutating source bytes'
   assert.equal(decodeGLB(fs.readFileSync(base + 'rider.glb')).sha256, REFERENCE_SHA);
 });
 
-test('exact actual rig control inputs produce a measured calibration invariant', options, () => {
+void test('exact actual rig control inputs produce a measured calibration invariant', options, () => {
   const proof = proveDriverInvariant(reference, rigOnly(), contract, structuredClone(contract));
   assert.equal(proof.jointCount, 75);
   assert.equal(proof.allRestHierarchyAndInverseBindsExact, true);
@@ -41,14 +41,14 @@ test('exact actual rig control inputs produce a measured calibration invariant',
   assert.equal(calibration.sourceSHA256, REFERENCE_SHA, 'Original calibration remains intact');
 });
 
-test('one real rest joint displacement rejects inherited calibration', options, () => {
+void test('one real rest joint displacement rejects inherited calibration', options, () => {
   const candidate = rigOnly(), index = candidate.document.skins[0].joints[13];
   const node = candidate.document.nodes[index];
   node.translation = [...(node.translation ?? [0, 0, 0])]; node.translation[0] += 1e-7;
   assert.throws(() => proveDriverInvariant(reference, candidate, contract, contract), /rest transform/);
 });
 
-test('a changed actual skin inverse bind rejects inherited calibration', options, () => {
+void test('a changed actual skin inverse bind rejects inherited calibration', options, () => {
   const candidate = rigOnly(), original = candidate.accessor;
   candidate.accessor = index => {
     const rows = original(index);
@@ -58,13 +58,13 @@ test('a changed actual skin inverse bind rejects inherited calibration', options
   assert.throws(() => proveDriverInvariant(reference, candidate, contract, contract), /inverse bind/);
 });
 
-test('native source endpoint and sole changes require fresh calibration', options, () => {
+void test('native source endpoint and sole changes require fresh calibration', options, () => {
   const changed = structuredClone(contract);
   changed.nativeRest.bones.find(row => row.name === 'SoleSocket.L').head[2] += 1e-7;
   assert.throws(() => proveDriverInvariant(reference, rigOnly(), contract, changed), /endpoint\/mass\/socket/);
 });
 
-test('digit semantic roles and axes cannot be silently changed under old proof', options, () => {
+void test('digit semantic roles and axes cannot be silently changed under old proof', options, () => {
   const changed = structuredClone(contract);
   changed.specification.hands.left.digits.index.reverse();
   assert.throws(() => proveDriverInvariant(reference, rigOnly(), contract, changed), /semantic input/);
@@ -73,7 +73,7 @@ test('digit semantic roles and axes cannot be silently changed under old proof',
   assert.throws(() => proveDriverInvariant(reference, rigOnly(), contract, changedAxis), /axes, limits or placement/);
 });
 
-test('rejected actual coarse outfit cannot pass selected seven-piece intake', options, () => {
+void test('rejected actual coarse outfit cannot pass selected seven-piece intake', options, () => {
   assert.throws(() => inspectSelectedSource(reference, contract,
     { authorObjects: Object.keys(contract.specification.meshNames) },
     { glbSHA256: reference.sha256, nativeReceiptSHA256: 'receipt' }, 'receipt'), /Complete real selected native inventory/);
@@ -81,25 +81,25 @@ test('rejected actual coarse outfit cannot pass selected seven-piece intake', op
   assert.equal(SELECTED_OBJECTS.length, 7);
 });
 
-test('a forged source SHA fails before complete-outfit claims are considered', options, () => {
+void test('a forged source SHA fails before complete-outfit claims are considered', options, () => {
   const bad = structuredClone(contract); bad.glbSHA256 = SHA_NEW;
   assert.throws(() => inspectSelectedSource(reference, bad, {}, {}, 'receipt'), /Contract binds exact GLB/);
 });
 
-test('calibration transfer requires a new identity and the preceding exact proof', () => {
+void test('calibration transfer requires a new identity and the preceding exact proof', () => {
   assert.throws(() => deriveCalibration(calibration, REFERENCE_SHA, REFERENCE_SHA, {}), /New selected source SHA/);
   assert.throws(() => deriveCalibration(calibration, REFERENCE_SHA, SHA_NEW, {}), /Proof precedes/);
   assert.throws(() => deriveCalibration({ ...calibration, sourceSHA256: SHA_NEW }, REFERENCE_SHA, SHA_NEW, {}), /Original calibration/);
 });
 
-test('named-field receipt encoding matches actual Python receipt bytes', () => {
+void test('named-field receipt encoding matches actual Python receipt bytes', () => {
   // Numeric boundary vectors exercise the cross-language receipt, not model art.
   const rows = [[['JointA', 1]], [['JointA', 1678 / 2 ** 24], ['JointB', 1 - 1678 / 2 ** 24]]];
   const pythonEncoding = '[[["JointA",1.0]],[["JointA",0.00010001659393310547],["JointB",0.9998999834060669]]]';
   assert.equal(hashNamedFields(rows), crypto.createHash('sha256').update(pythonEncoding).digest('hex'));
 });
 
-test('all 10582 actual body field encodings match the independent Python proof', options, () => {
+void test('all 10582 actual body field encodings match the independent Python proof', options, () => {
   const fields = JSON.parse(fs.readFileSync('harness/out/rider-rebuild/construction01/rig04/weights-four.json'));
   const proof = JSON.parse(fs.readFileSync('docs/evidence/rider-rebuild/construction02/selected-field-protocol01.json'));
   const rows = fields.map(field => {
@@ -123,6 +123,6 @@ test('all 10582 actual body field encodings match the independent Python proof',
   assert.equal(hashNamedFields(rows), proof.canonicalNamedFieldSHA256);
 });
 
-test('malformed GLB header rejects decoding', () => {
+void test('malformed GLB header rejects decoding', () => {
   assert.throws(() => decodeGLB(Buffer.alloc(32)), /Expected GLB/);
 });

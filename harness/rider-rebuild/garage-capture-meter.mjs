@@ -1,17 +1,17 @@
 /** Browser-side capture instrumentation: real render submissions and real RAF.
  * No pose, camera, animation-clock or frame-cap changes. */
 export function installGarageCaptureMeter() {
-  const owner = window.__render, gpu = owner?.renderer;
+  const owner = globalThis.window.__render, gpu = owner?.renderer;
   if (!owner || typeof owner.render !== 'function' || !Number.isFinite(gpu?.info?.render?.frame)) {
     throw new Error('Actual Three renderer frame counter required for Garage FPS');
   }
-  if (window.__garageCaptureMeter) throw new Error('Garage capture meter already installed');
-  const productMeter = document.querySelector('.fpsmeter');
+  if (globalThis.window.__garageCaptureMeter) throw new Error('Garage capture meter already installed');
+  const productMeter = globalThis.document.querySelector('.fpsmeter');
   const productMeterVisible = !!productMeter && !productMeter.hidden
-    && getComputedStyle(productMeter).display !== 'none';
+    && globalThis.getComputedStyle(productMeter).display !== 'none';
   // The product pill counts App frames. This capture always shows actual
   // Three render submissions separately, including skipped-draw detection.
-  const overlay = document.createElement('pre');
+  const overlay = globalThis.document.createElement('pre');
   if (overlay) {
     overlay.id = 'garage-capture-fps';
     overlay.setAttribute('aria-label', 'Measured Garage render performance');
@@ -19,7 +19,7 @@ export function installGarageCaptureMeter() {
       + 'z-index:2147483647;pointer-events:none;margin:0;padding:4px 8px;border-radius:5px;'
       + 'background:rgba(0,0,0,.86);color:#fff;font:12px/1.3 monospace;font-variant-numeric:tabular-nums;';
     overlay.textContent = 'Render FPS: measuring…';
-    document.body.append(overlay);
+    globalThis.document.body.append(overlay);
   }
   const original = owner.render;
   let start = performance.now(), lastPaint = start, rafId, active = true;
@@ -67,9 +67,9 @@ export function installGarageCaptureMeter() {
       }
       lastPaint = now;
     }
-    rafId = requestAnimationFrame(heartbeat);
+    rafId = globalThis.requestAnimationFrame(heartbeat);
   }
-  rafId = requestAnimationFrame(heartbeat);
+  rafId = globalThis.requestAnimationFrame(heartbeat);
   const read = () => {
     const end = performance.now();
     return { durationMs: end - start, renderCalls, skippedCalls, rendered: measure(rendered, end),
@@ -77,13 +77,13 @@ export function installGarageCaptureMeter() {
       samples: [...samples], productMeterVisible, overlay: overlay ? 'actual render/RAF capture meter' : 'existing product FPS HUD',
       meaning: 'One game render counted only when Three render.frame advances; multiple passes coalesced. CPU submissions, not GPU completion or encoded video frames.' };
   };
-  window.__garageCaptureMeter = { read, reset() {
+  globalThis.window.__garageCaptureMeter = { read, reset() {
     // Reset measurement only; never touch the application's animation clock.
     start = lastPaint = performance.now();
     rendered.length = raf.length = cpuMs.length = samples.length = 0;
     renderCalls = skippedCalls = 0;
   }, stop() {
-    const result = read(); active = false; cancelAnimationFrame(rafId);
+    const result = read(); active = false; globalThis.cancelAnimationFrame(rafId);
     if (owner.render === wrapped) owner.render = original;
     return result;
   } };

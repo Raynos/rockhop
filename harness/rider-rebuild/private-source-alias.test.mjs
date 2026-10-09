@@ -11,11 +11,13 @@ const metadata = {
   selectedRiderSource: { sourceSHA256: sha, modelSlots, canonicalLogical: modelSlots[0] },
 };
 
-test('ten declared identical rider slots share one parsed document and its textures; bikes stay distinct', async () => {
+void test('ten declared identical rider slots share one parsed document and its textures; bikes stay distinct', async () => {
   const source = fs.readFileSync(new URL('../../src/render/hero/gltf.ts', import.meta.url), 'utf8');
   const transformed = privateEnginePlugin(metadata).transform(source, '/src/render/hero/gltf.ts').code;
   const resolution = transformed.split('\n').find(line => line.includes('url = modelAssetUrl('));
   assert.ok(resolution);
+  // Execute the actual scoped source transform to verify its behavior.
+  // oxlint-disable-next-line typescript/no-implied-eval
   const resolve = new Function('url', 'modelAssetUrl', `${resolution}\nreturn url;`);
   const cache = new Map(), fetched = [];
   const load = logical => {
@@ -38,7 +40,7 @@ test('ten declared identical rider slots share one parsed document and its textu
   assert.ok(transformed.includes('          shrinkTextures(g.scene);'), 'Existing measured texture derivative policy remains');
 });
 
-test('private aliases require exact declared rider slots, a declared canonical slot and identical source SHA', () => {
+void test('private aliases require exact declared rider slots, a declared canonical slot and identical source SHA', () => {
   assert.deepEqual(selectedRiderAliases({}), {});
   assert.equal(Object.keys(selectedRiderAliases(metadata)).length, 10);
   for (const selectedRiderSource of [

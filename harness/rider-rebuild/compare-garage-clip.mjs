@@ -76,7 +76,7 @@ for (const channel of clip.channels) {
 }
 const declaredNames = Object.values(contract.specification.jointNames);
 assert.equal(new Set(declaredNames).size, 75);
-assert.deepEqual([...sourceNames].sort(), [...declaredNames].sort());
+assert.deepEqual([...sourceNames].sort((a, b) => a < b ? -1 : a > b ? 1 : 0), [...declaredNames].sort((a, b) => a < b ? -1 : a > b ? 1 : 0));
 assert.equal(tracks.size, 225); assert(duration > 0);
 const maximum = { translationComponentM: 0, translationEuclideanM: 0,
   quaternionComponentSignInvariant: 0, quaternionAngleRadians: 0, scaleComponent: 0 };
@@ -113,7 +113,7 @@ for (const snapshot of actual.snapshots) {
       expected: { translation, rotationXYZW: rotation, scale },
       actual: { translation: observed.translation, rotationXYZW: observed.rotationXYZW, scale: observed.scale } });
   }
-  assert.deepEqual([...seen].sort(), Object.keys(contract.specification.jointNames).sort());
+  assert.deepEqual([...seen].sort((a, b) => a < b ? -1 : a > b ? 1 : 0), Object.keys(contract.specification.jointNames).sort((a, b) => a < b ? -1 : a > b ? 1 : 0));
   snapshots.push({ name: snapshot.name, riderStageTime: snapshot.riderStageTime, clipTime: snapshot.clipTime,
     durationSeconds: duration, bones });
 }

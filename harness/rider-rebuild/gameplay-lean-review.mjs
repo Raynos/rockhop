@@ -63,15 +63,15 @@ try {
       .then(row => report.loaded.push(row)).catch(error => report.errors.push(error.message)));
   });
   await page.goto(development.server.resolvedUrls.local[0] + '?harness=1&audio=0&sw=0&outfit=street-mustard&physics=v2&hz=120&track=b1-first-ride');
-  await page.waitForFunction(() => window.__rockhop?.ready && window.__rockhop.info().trackId === 'b1-first-ride', null, { timeout: 120000 });
+  await page.waitForFunction(() => globalThis.window.__rockhop?.ready && globalThis.window.__rockhop.info().trackId === 'b1-first-ride', null, { timeout: 120000 });
   report.browser.renderer = await page.evaluate(() => {
-    const gl = window.__render.debug.renderer.getContext(), extension = gl.getExtension('WEBGL_debug_renderer_info');
+    const gl = globalThis.window.__render.debug.renderer.getContext(), extension = gl.getExtension('WEBGL_debug_renderer_info');
     return String(gl.getParameter(extension ? extension.UNMASKED_RENDERER_WEBGL : gl.RENDERER));
   });
   if (backend === 'metal') assert(/Metal/.test(report.browser.renderer)
     && !/swiftshader|llvmpipe|software/i.test(report.browser.renderer), 'Actual game renderer must use Metal');
   report.camera = await page.evaluate(async ({ bike, cameraYaw }) => {
-    const t = window.__rockhop, r = window.__render;
+    const t = globalThis.window.__rockhop, r = globalThis.window.__render;
     // Main already loads this registered track; avoid warming and discarding flat-test.
     if (bike !== 'rookie') { t.setBike(bike); await t.loadTrack('b1-first-ride', 138717428); }
     await r.whenReady();
@@ -82,24 +82,24 @@ try {
     const id = Array.isArray(candidate.roles.pelvis) ? candidate.roles.pelvis[0] : candidate.roles.pelvis;
     const pelvis = r.debug.rider.binding.byId.get(id);
     const p = pelvis.getWorldPosition(new r.debug.THREE.Vector3());
-    window.__gameplayLeanCamera = { mode: 'orbit', x: p.x, y: p.y + .12, yaw: cameraYaw, pitch: .08,
+    globalThis.window.__gameplayLeanCamera = { mode: 'orbit', x: p.x, y: p.y + .12, yaw: cameraYaw, pitch: .08,
       dist: 4.6, screenX: .5, screenY: .5 };
-    r.setCameraOverride(window.__gameplayLeanCamera);
+    r.setCameraOverride(globalThis.window.__gameplayLeanCamera);
     t.render(true);
-    return structuredClone(window.__gameplayLeanCamera);
+    return structuredClone(globalThis.window.__gameplayLeanCamera);
   }, { bike, cameraYaw });
   report.readyOffsetSeconds = (performance.now() - started) / 1000;
   await page.evaluate(installGarageCaptureMeter);
   report.played = await page.evaluate(async phases => {
-    const t = window.__rockhop, rider = window.__render.debug.rider;
+    const t = globalThis.window.__rockhop, rider = globalThis.window.__render.debug.rider;
     const inputs = phases.flatMap(phase => Array.from({ length: phase.ticks }, () =>
       ({ throttle: 0, brake: 0, lean: phase.lean, hop: false, restart: false })));
     const endpoints = new Map(); let end = 0;
     for (const phase of phases) { end += phase.ticks; endpoints.set(end, phase.name); }
     const samples = [], faults = [], motionSamples = [], started = performance.now(); let tick = 0, maximumCatchupTicks = 0;
-    const label = document.createElement('div');
+    const label = globalThis.document.createElement('div');
     label.style.cssText = 'position:fixed;bottom:24px;left:50%;transform:translateX(-50%);z-index:2147483647;background:#000d;color:white;padding:8px 14px;font:18px monospace';
-    document.body.append(label);
+    globalThis.document.body.append(label);
     const joints = [...rider.binding.byId], originalUpdate = rider.update;
     const rootBone = joints.find(([, bone]) => !bone.parent?.isBone)[1];
     let latestFrame;
@@ -126,7 +126,7 @@ try {
       joints: [...rider.binding.byId].map(([id, bone]) => ({ id, position: bone.position.toArray(),
         quaternion: bone.quaternion.toArray(), scale: bone.scale.toArray() })) });
     // Force a draw of the existing state so the observer has an actual initial frame.
-    window.__render.setCameraOverride(window.__gameplayLeanCamera);
+    globalThis.window.__render.setCameraOverride(globalThis.window.__gameplayLeanCamera);
     t.render(true); t.render(true); motionSnapshot(); samples.push(snapshot('initial'));
     try { await new Promise((resolve, reject) => {
       function frame() {
@@ -142,10 +142,10 @@ try {
             if (endpoints.has(tick)) samples.push(snapshot(endpoints.get(tick)));
           }
           t.render(true);
-          if (tick === inputs.length) resolve(); else requestAnimationFrame(frame);
+          if (tick === inputs.length) resolve(); else globalThis.requestAnimationFrame(frame);
         } catch (error) { reject(error); }
       }
-      requestAnimationFrame(frame);
+      globalThis.requestAnimationFrame(frame);
     }); } finally { rider.update = originalUpdate; }
     return { samples, faults, motionSamples,
       jointOrder: joints.map(([id, bone]) => ({ id, loadedName: bone.name })),
@@ -153,7 +153,7 @@ try {
       ticks: tick, maximumCatchupTicks,
       wallSeconds: (performance.now() - started) / 1000, finalHash: t.hashState(), inputs };
   }, phases);
-  report.performance = await page.evaluate(() => window.__garageCaptureMeter.stop());
+  report.performance = await page.evaluate(() => globalThis.window.__garageCaptureMeter.stop());
   await page.screenshot({ path: path.join(out, 'gameplay-return.png') });
   await Promise.all(responses);
   assert.deepEqual(report.errors, []);
