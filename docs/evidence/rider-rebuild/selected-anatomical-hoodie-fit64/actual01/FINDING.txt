@@ -1,0 +1,4 @@
+Finding: Actual64 completes native body/meridian target construction, then fails the C2 cage interpolation comparison at0.002554402288853254m residual versus native coordinate precision. No cage deformation or raw native exists. The precision correction passes its former stage; this new failure is a solver issue requiring CPU diagnosis.
+Validation: Original guard32.560s exit1. Full failure, worker log and telemetry retained. Nominal2.6mm clearance and all final native/source/C2 gates unchanged.
+Next: Diagnose complete target matrix conditioning/rank and constraint consistency before another native run. Existing Gram solve squares the matrix condition number; direct-solve correction must be demonstrated against actual constraints. Preserve frozen64.
+Limits: No numerical solver correction is yet proven, no garment admitted, no new complete-outfit appearance or motion acceptance.
