@@ -13,4 +13,4 @@ if mode=='prepare':
  subprocess.run(['node',str(recipe/'extract.mjs'),str(root/'harness/out/rider-rebuild/selected-ankle-field42/runtime02/rider.glb'),str(intake),str(index)],check=True)
 elif mode=='bake':intake=base/'prepare01';out=base/stage
 else:raise ValueError(mode)
-subprocess.run(['/Applications/Blender.app/Contents/MacOS/Blender','-b','--threads','2','--python',str(recipe/'rebuild.py'),'--',mode,str(intake),str(out)],check=True)
+subprocess.run(['/Applications/Blender.app/Contents/MacOS/Blender','-b','--threads','2','--python-exit-code','1','--python',str(recipe/'rebuild.py'),'--',mode,str(intake),str(out)],check=True)

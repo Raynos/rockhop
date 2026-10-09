@@ -21,10 +21,10 @@ for row,p in enumerate(centers):
  hit,norm,face,distance=tree.find_nearest(Vector(p))
  if np.array(norm)@normal[row]<=0:
   opposed+=1;candidates=[q for q in tree.find_nearest_range(Vector(p),max(.0005,distance*2+1e-7)) if np.array(q[1])@normal[row]>0]
-  if not candidates:misses.append(row);continue
-  hit,norm,face,distance=min(candidates,key=lambda q:q[3])
+  if not candidates:misses.append(row)
+  else:hit,norm,face,distance=min(candidates,key=lambda q:q[3])
  faces[row]=face;bcs[row]=bary(np.array(hit),sp[si[face]]);distances[row]=distance
-assert not misses,('No independent facing source sheet',misses[:20])
+covered=np.ones(n,bool);covered[misses]=False;assert covered.any()
 rows=np.arange(n);delta=np.zeros((n,75,4));sourcep=np.column_stack([sp,np.ones(len(sp))]);lowp=np.column_stack([lp,np.ones(len(lp))])
 for corner in range(3):
  lv=li[:,corner];sv=si[faces,corner]
@@ -36,9 +36,9 @@ for bike in ('rookie','pro'):
  path=root/f'harness/out/rider-rebuild/selected-ankle-field42/gameplay-{bike}01/report.json';r=json.loads(path.read_text());assert r['source']['source']['sha256']=='127e316a8ff7910a4918b63f83e086e4e658062f102c73f17d0ee2f956750649';worst=None
  for sample in r['played']['motionSamples']:
   byId={b['id']:b for b in sample['joints']};world=np.array([byId[name]['worldMatrix'] for name in names]).reshape(75,4,4).transpose(0,2,1);mat=world@ib;flat=mat[:,:3,:].transpose(0,2,1).reshape(300,3)
-  error=np.linalg.norm(delta@flat,axis=1);maximum=np.maximum(maximum,error);at=int(error.argmax())
+  error=np.linalg.norm(delta@flat,axis=1);maximum=np.maximum(maximum,error);at=int(np.argmax(np.where(covered,error,-1)))
   if worst is None or error[at]>worst['meters']:worst={'meters':float(error[at]),'triangle':at,'sourceFace':int(faces[at]),'tick':sample['tick'],'phase':sample['phase'],'localPosition':centers[at].tolist()}
  results.append({'bike':bike,'recordedPoses':len(r['played']['motionSamples']),'reportSHA256':hashlib.sha256(path.read_bytes()).hexdigest(),'worst':worst})
 def stats(a):return {k:float(v) for k,v in [('mean',a.mean()),('p95',np.quantile(a,.95)),('p99',np.quantile(a,.99)),('max',a.max())]}
-report={'accepted':False,'method':'Every receiver triangle centroid. Independently choose nearest source geometric face in the same facing hemisphere; no native joint/weight field enters source-face selection. Original nearest opposed-sheet counts retained. Compare exact native75 LBS coefficient fields under all482historical played poses.','triangles':n,'originalNearestOpposedFaces':opposed,'facingSourceMisses':len(misses),'restSourceSurfaceMeters':stats(distances),'playedInteriorErrorMeters':stats(maximum),'trianglesAbove1mm':int((maximum>.001).sum()),'trianglesAbove2mm':int((maximum>.002).sum()),'bikes':results,'elapsedSeconds':time.monotonic()-start,'limits':'Centroids and recorded neutral/forward/back gameplay only; no exhaustive intra-triangle or future corrected-grip guarantee. Rest source is geometrically overlapping in some places, hemisphere correspondence is explicit and original nearest failures retained elsewhere.'}
+report={'accepted':False,'method':'Every receiver triangle centroid. Independently choose nearest source geometric face in the same facing hemisphere; no native joint/weight field enters source-face selection. Original nearest opposed-sheet counts retained. Compare exact native75 LBS coefficient fields under all482historical played poses.','triangles':n,'originalNearestOpposedFaces':opposed,'facingSourceMisses':len(misses),'measuredFacingTriangles':int(covered.sum()),'missingFacingWitnesses':[{'triangle':int(v),'localPosition':centers[v].tolist(),'geometricNormal':normal[v].tolist(),'nearestSourceFace':int(faces[v]),'nearestDistanceMeters':float(distances[v]),'nativeCornerSupport':[[{'joint':names[int(jj)],'weight':float(ww)} for jj,ww in zip(lj[vertex],lw[vertex]) if ww>0] for vertex in li[v]],'unconstrainedNearestPoseErrorMeters':float(maximum[v]),'qualification':'No same-facing source within original0.5mmminimum search; nearest result retained as ambiguous, not counted as qualified coverage.'} for v in misses],'restSourceSurfaceMeters':stats(distances[covered]),'playedInteriorErrorMeters':stats(maximum[covered]),'trianglesAbove1mm':int((maximum[covered]>.001).sum()),'trianglesAbove2mm':int((maximum[covered]>.002).sum()),'bikes':results,'elapsedSeconds':time.monotonic()-start,'limits':'Centroids and recorded neutral/forward/back gameplay only; no exhaustive intra-triangle or future corrected-grip guarantee. Rest source is geometrically overlapping in some places, hemisphere correspondence is explicit and original nearest failures retained elsewhere.'}
 (out/'interior.json').write_text(json.dumps(report,indent=2)+'\n');np.savez(out/'interior-witnesses.npz',sourceFaces=faces,sourceBary=bcs,centers=centers,maximumMeters=maximum);print(json.dumps(report))
