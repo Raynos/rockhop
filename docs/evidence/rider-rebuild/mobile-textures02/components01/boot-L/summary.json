@@ -1,0 +1,204 @@
+{
+  "accepted": false,
+  "component": "boot-L",
+  "sourceBakerCheckpoint": "dcce19850",
+  "sourceOriginalMasterSHA256": "127e316a8ff7910a4918b63f83e086e4e658062f102c73f17d0ee2f956750649",
+  "sourceBakeMetadataSHA256": "ff80c1af6dbe69cf7714087c68f119cb52c756c1e42ee12c920b558faba8c6f0",
+  "sourcePNGBytes": 8164212,
+  "KTX2Bytes": 5614184,
+  "textureGPUBytesFullMip": {
+    "ASTC4x4": 16777296,
+    "BC7": 16777296,
+    "RGBA32": 67108860
+  },
+  "transcodes": 108,
+  "alphaChangedPixels": 0,
+  "nativeASTCAndPinnedRuntimeBlockPixelProof": true,
+  "guardExitCode": 0,
+  "normalAngularDegrees": {
+    "authoredPixels": 4194304,
+    "mean": 0.33001044439151883,
+    "p95": 1.35,
+    "p99": 2.37,
+    "max": 122.16
+  },
+  "normalOutliers": {
+    "image": 2,
+    "pixels": 4194304,
+    "mask": "All source pixels; no UV or alpha exclusion",
+    "countsAboveDegrees": {
+      "5": 8490,
+      "10": 1798,
+      "30": 124,
+      "60": 18,
+      "90": 4
+    },
+    "fractionsAboveDegrees": {
+      "5": 0.0020241737365722656,
+      "10": 0.0004286766052246094,
+      "30": 2.956390380859375e-05,
+      "60": 4.291534423828125e-06,
+      "90": 9.5367431640625e-07
+    },
+    "worstPixels": [
+      {
+        "x": 577,
+        "y": 264,
+        "degrees": 122.15575150034482,
+        "sourceRGBA": [
+          128,
+          127,
+          130,
+          255
+        ],
+        "decodedRGBA": [
+          131,
+          132,
+          124,
+          255
+        ],
+        "sourceVectorLength": 0.02037706832433966,
+        "decodedVectorLength": 0.05246701239317513
+      },
+      {
+        "x": 578,
+        "y": 264,
+        "degrees": 104.64921380294513,
+        "sourceRGBA": [
+          131,
+          124,
+          129,
+          255
+        ],
+        "decodedRGBA": [
+          131,
+          132,
+          124,
+          255
+        ],
+        "sourceVectorLength": 0.04056502130505327,
+        "decodedVectorLength": 0.05246701239317513
+      },
+      {
+        "x": 1843,
+        "y": 1691,
+        "degrees": 102.03890813330743,
+        "sourceRGBA": [
+          125,
+          138,
+          120,
+          255
+        ],
+        "decodedRGBA": [
+          122,
+          114,
+          117,
+          255
+        ],
+        "sourceVectorLength": 0.10308579943603852,
+        "decodedVectorLength": 0.1409038762605622
+      },
+      {
+        "x": 9,
+        "y": 873,
+        "degrees": 99.00978895645424,
+        "sourceRGBA": [
+          132,
+          131,
+          118,
+          255
+        ],
+        "decodedRGBA": [
+          154,
+          130,
+          147,
+          255
+        ],
+        "sourceVectorLength": 0.08689615610258954,
+        "decodedVectorLength": 0.258793818853277
+      },
+      {
+        "x": 581,
+        "y": 265,
+        "degrees": 83.73155027847152,
+        "sourceRGBA": [
+          131,
+          139,
+          122,
+          255
+        ],
+        "decodedRGBA": [
+          116,
+          139,
+          139,
+          255
+        ],
+        "sourceVectorLength": 0.10368081620707661,
+        "decodedVectorLength": 0.15622419048660452
+      },
+      {
+        "x": 2011,
+        "y": 901,
+        "degrees": 81.0729941267321,
+        "sourceRGBA": [
+          117,
+          110,
+          129,
+          255
+        ],
+        "decodedRGBA": [
+          136,
+          119,
+          119,
+          255
+        ],
+        "sourceVectorLength": 0.16049711317396959,
+        "decodedVectorLength": 0.11547005383792514
+      },
+      {
+        "x": 281,
+        "y": 30,
+        "degrees": 80.62163136302964,
+        "sourceRGBA": [
+          123,
+          133,
+          113,
+          255
+        ],
+        "decodedRGBA": [
+          128,
+          136,
+          129,
+          255
+        ],
+        "sourceVectorLength": 0.12664906087807962,
+        "decodedVectorLength": 0.06781026065015913
+      },
+      {
+        "x": 2019,
+        "y": 592,
+        "degrees": 76.57962258165352,
+        "sourceRGBA": [
+          128,
+          139,
+          134,
+          255
+        ],
+        "decodedRGBA": [
+          90,
+          126,
+          155,
+          255
+        ],
+        "sourceVectorLength": 0.10368081620707668,
+        "decodedVectorLength": 0.3649166584685267
+      }
+    ],
+    "accepted": false
+  },
+  "limits": [
+    "Compression errors compare to the new bakedPNG, not original selected high-poly normal field.",
+    "Baker first-ray normals68/30000>90degrees remain independent unaccepted source-field limits; native482posemax0.196mm is a separate proxy.",
+    "Actual combined appearance and phone memory/FPS unqualified. No production pin/deployment."
+  ]
+}

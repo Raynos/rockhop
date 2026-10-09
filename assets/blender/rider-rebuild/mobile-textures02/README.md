@@ -93,6 +93,42 @@ loader supports KHR, but that does not establish future authoring-tool parity.
 KHR additionally prohibits sharing an EXT-labeled fallback buffer. No KHR
 candidate or new runtime requirement was introduced.
 
+## Checkpointed component encoding
+
+`component.py boot-L` verifies the density builder's dcce19850 bake metadata
+against actual PNG bytes, original selected-master SHA and2048² dimensions.
+It preserves albedo sRGB and ORM/normal linear roles, all source alpha, and
+separates bake-metadata SHA from current GLB and compiled native-rest hashes.
+The unchanged original bounded96 controller/shared model lock runs one
+sequential two-CPU encoder family: UASTC level3,RDO0.5,dictionary4096,Zstd18,
+full box-filter mips, with no resize/renormalization/swizzle/channel removal.
+
+Boot-L three maps encode to5,614,184 bytes versus8,164,212 source PNG bytes.
+Guard returns0 in57.931s with original admission/stop thresholds unchanged.
+All108 pinned runtime transcodes pass across36mips; all native ASTC blocks
+and linear software pixels equal runtime output. All12,582,912 alpha pixels
+remain exact. Full-mip ASTC4x4/BC7 streams total16,777,296 bytes.
+Albedo worst-channel RMSE0.552/255; ORM1.326/255.
+
+Boot-L normal compression versus its new PNG: mean0.330°,p951.35°,p992.37°,
+max122.16°. All4,194,304 pixels included;8,490 exceed5°,1,798 exceed10°,
+124 exceed30°,18 exceed60°,4 exceed90°. The worst-error source vector length
+is0.0204 at texel577,264; no short-vector or UV exclusions hide that error.
+`normal-outliers.py` records exact locations and source/decoded vectors.
+This compression proof is separate from the builder's68/30,000 first-ray
+normal field probes above90°, and its482 native-pose maximum0.196mm.
+Neither error family, nor component appearance, is accepted from these metrics.
+
+```sh
+python3 assets/blender/rider-rebuild/mobile-textures02/component.py boot-L
+python3 assets/blender/hero-remaster/generation-comparison-2026-10-03/user-agent2/run_bounded96.py --out harness/out/rider-rebuild/mobile-textures02/components01/boot-L/encode-guard01 --limit-seconds 300 -- python3 assets/blender/rider-rebuild/download-textures01/encode.py --out harness/out/rider-rebuild/mobile-textures02/components01/boot-L --variant uastc-rdo05 --rdo 0.5
+```
+
+Use a fresh numbered guard directory for a new run; substitute bundled Python
+where PIL/numpy is required. Runtime/native decode and metrics use the existing
+texture recipe with `--out` set to this component directory. Later components
+use the same declared settings and retain separate left/right source pins.
+
 The future component bake composition is expected to replace four shared4K
 boot/glove maps with twelve component2K albedo/ORM/normal maps. Including jeans
 ORM2K and unchanged hoodie/identity maps, expected texture GPU streams are
