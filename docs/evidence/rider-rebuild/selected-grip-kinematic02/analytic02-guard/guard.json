@@ -1,0 +1,52 @@
+{
+  "accepted": false,
+  "lock": "/Users/raynos/projects/localai/.model.lock",
+  "method": "lockf -k",
+  "command": [
+    "node",
+    "assets/blender/rider-rebuild/selected-grip-kinematic02/construct.mjs",
+    "docs/evidence/rider-rebuild/selected-grip-kinematic02/analytic02",
+    "./analytic-contact.mjs"
+  ],
+  "controllerPID": 37602,
+  "pollSeconds": 1,
+  "startAnonymousBelowGiB": 55,
+  "stopAnonymousGiB": 65,
+  "stopAnonymousPlusWiredGiB": 96,
+  "limitSeconds": 180.0,
+  "guardSHA256": "cf8acd15d8b7484480bee74d23892be815d955ffd87115d3da8ed228ffb3d916",
+  "status": "worker returned; review pending",
+  "samples": [
+    {
+      "seconds": 0,
+      "anonymousGiB": 52.4,
+      "wiredGiB": 7.5,
+      "freeGiB": 27.4
+    },
+    {
+      "seconds": 0.032,
+      "anonymousGiB": 52.4,
+      "wiredGiB": 7.5,
+      "freeGiB": 27.3
+    },
+    {
+      "seconds": 1.063,
+      "anonymousGiB": 53.0,
+      "wiredGiB": 7.6,
+      "freeGiB": 25.7
+    },
+    {
+      "seconds": 2.095,
+      "anonymousGiB": 53.3,
+      "wiredGiB": 7.6,
+      "freeGiB": 26.2
+    }
+  ],
+  "physicalMemoryBytes": 137438953472,
+  "requiredPhysicalMemoryBytes": 137438953472,
+  "scope": "Future explicitly invoked owned Rockhop job only",
+  "pressureOrSwapLimits": "No separate pressure/swap gate exists in the pinned original guard; none altered",
+  "ownedChildPID": 37611,
+  "exitCode": 0,
+  "elapsedSeconds": 3.073
+}
