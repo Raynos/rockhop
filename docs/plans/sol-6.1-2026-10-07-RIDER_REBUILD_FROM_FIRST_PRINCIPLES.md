@@ -48,8 +48,10 @@ clothes with rejected cuff/ankle/hood art; no repaired complete film yet.
 
 1.82 measures actual47 full body against saved77 receiver15 at121/129/193 on both
  bikes. Same-runtime binding/all482 measurements pass unchanged; axilla edge
- 1.343→14.364mm is a hotspot, not a whole-garment verdict. Painter shoulder
- patches require actual crossings and depth-correct views. Deliberately repair
+ 1.343→14.364mm is a hotspot, not a whole-garment verdict. Actual six-pose
+ check confirms4441–5990 crossings, bilateral inner/outer caps plus retained hood
+ and front torso, zero degenerates. Repair before native/bake; depth-correct views
+ guide local sculpting. Deliberately repair
  local shape/fields if needed; preserve healthy panels and recheck six poses.
  No global optimizer or requirement to preserve demonstrably failed weights.
 2.79/85 genuinely bake every rebuilt sleeve/cap/cuff panel from identified
