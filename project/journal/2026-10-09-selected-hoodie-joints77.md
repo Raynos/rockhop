@@ -65,3 +65,9 @@ Finding: Actual shared-seam construction saves coherent topology but rejects a n
 Validation: Originalguard54.791s exit1;16184v/32084tri,zero degenerate fans or inconsistent shared windings. Parent identifies four negative scalars all fixed body-boundary values, minimum−2.22e−16.
 
 Limits: All482/views did not run; no native or moving acceptance. Preserve14 and clamp only roundoff-negative constructed remainder in immutable15.
+
+Finding: Correct only the floating-point torso remainder in newly constructed anatomical boundary values.
+
+Validation: Parent full four wrappers/native diff reviewed; AST/hash and immutable14 original pins pass. Literal body samples and geometry remain unchanged; max(0,1-ownsum) replaces only the negative remainder.
+
+Limits: New15 candidate/all482/views not yet run; no field-source rewrite, geometry/contact or moving-art acceptance.

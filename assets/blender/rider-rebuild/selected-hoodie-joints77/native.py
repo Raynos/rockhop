@@ -20,6 +20,8 @@ COMPONENT = {'path': 'assets/blender/rider-rebuild/selected-sleeve-component47/c
              'sha256': '6fcc124b1fe5cf69a3cd0cd4114ff3fc16b6bd3e7741fb4b2b7488648c6bbd87'}
 CONNECTED_CAP_BINDING = {'path': 'assets/blender/rider-rebuild/selected-hoodie-joints77/connected_cap_binding.py',
                          'sha256': '12168f54407c6473678d832f6545f736f7e80fc528e026d8b4e5dfaea6ec4145'}
+CONNECTED_CAP_BINDING15 = {'path': 'assets/blender/rider-rebuild/selected-hoodie-joints77/connected_cap_binding15.py',
+                           'sha256': 'fbbc65482ce51632ae657c0693cc6515fce8807af197bf463a936e9128f25b40'}
 
 
 def sha(path):
@@ -43,6 +45,13 @@ def write(path,row):
     assert not path.exists();path.write_text(json.dumps(row,indent=2)+'\n')
 
 
+def connected_cap_verifier(report):
+    recipe=report['connectedCapBinding']['recipe']
+    if recipe==pin(HERE/'connected_cap15.py'):return CONNECTED_CAP_BINDING15
+    assert recipe==pin(HERE/'connected_cap.py')
+    return CONNECTED_CAP_BINDING
+
+
 def receiver(path):
     row=json.loads(Path(path).read_text())
     assert row['status']=='AUTHORED_SELECTED_HOODIE_JOINT_RECEIVER_UNACCEPTED' and row['acceptedArt'] is False
@@ -51,8 +60,7 @@ def receiver(path):
         checked(row[key])
     if 'connectedCapBinding' in row:
         assert all(key not in row for key in ('seamOwnershipBinding','wholeAnatomicalFieldBinding','wearerFieldBinding','anatomicalFieldRepair','fieldRepair'))
-        binding=row['connectedCapBinding'];assert binding['recipe']==pin(HERE/'connected_cap.py')
-        runpy.run_path(str(checked(CONNECTED_CAP_BINDING)))['verify'](path)
+        runpy.run_path(str(checked(connected_cap_verifier(row))))['verify'](path)
         assert row['correspondenceAndSkin']['healthyFieldsExactBeforeFloat32'] is False
         assert row['correspondenceAndSkin']['sourceFarFieldAnchorsExact'] is False
         assert row['correspondenceAndSkin']['farTrunk12FieldsExact'] is True
@@ -96,7 +104,7 @@ def control_field_lineage(report):
             'recipe':report[key]['recipe']if key else report['recipe'],
             'input':report[key]['input']if key else report['sourceReceiver'],
             'repair':report[key]if key else None,
-            **({'bindingVerifier':CONNECTED_CAP_BINDING}if key=='connectedCapBinding'else{}),
+            **({'bindingVerifier':connected_cap_verifier(report)}if key=='connectedCapBinding'else{}),
             'fullCanonicalFieldInventory':report['correspondenceAndSkin']['fullNamedFieldCount'],
             'localSourceFieldsUnchanged':report['correspondenceAndSkin']['healthyFieldsExactBeforeFloat32'],
             'productionFourConditioned':False}
