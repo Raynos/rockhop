@@ -44,7 +44,7 @@ loader removal is488.5ms and resident remaster equip259.3ms. Normal C1 submits
 59.96FPS at actualDPR1.5/canvas1266×585. Active native75 materials retain21
 complete ASTC4×4 streams187,433,520B plus3 tiny RGBA defaults48B.
 
-Validation: Original shared guard exit0 in102.745s, no threshold modification.
+Validation: Original shared guard exit 0 in102.745s, no threshold modification.
 No page/network errors, context loss/restoration or later loader insertion;
 automation audio remains null. Exact source/raw metadata/grip identities
 match the supplied a069/ba355/659ff pins. Executed recipe, emitted build
@@ -55,3 +55,22 @@ Limits: Private runtime diagnosis only. Mac touch viewport/FPS does not qualify
 physical iPhone >30FPS floor/60FPS target. C1 includes real crashes/automatic
 respawn, not an uninterrupted phone review window. Typed mip bytes do not
 measure GPU allocation. Parent cuff art/source promotion remain independent.
+
+# Actual public final deployment smoke
+
+Finding: Actual public d98497f6c/sourcea069 cold boots and enters first
+Garage without a second document or loader. The sixth remaster is resident:
+equip 18.0ms with no subsequent requests, all selected roles/native75 and
+both hand-on-grip flags present, no selected helmet mesh.
+
+Validation: Checked deploy 38007837120 succeeded; public version/source/raw
+metadata/grip match final pins. Silent public smoke passes unchanged guard
+exit 0 in 16.437s. Cold loader 12.769s, setup 30 dwell 1.401s with changing text,
+Garage 589.8ms. No page/network errors, context loss, audio or reinsertion.
+Exact recipe/report/guard retained losslessly; live sixth-outfit PNG saved
+under docs/evidence/rider-rebuild/focused-mobile-gate09/public-smoke01/.
+
+Limits: Immediate screenshot FPS includes startup/entry work, with no warm
+benchmark. Mac Metal cannot qualify physical iPhone loading/>30 FPS/60 target
+(HR27). Parent accepts focused delivery; broad art/cuff hem overlap stays
+open. Typed-array texture bytes do not measure actual GPU allocation.
