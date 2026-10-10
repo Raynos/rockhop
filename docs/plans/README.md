@@ -2185,3 +2185,5 @@ Actual headless desktop Metal guard01 passes14/14 unchanged ordinary-game checks
 **Active rider texture snapshot correction:** Riding reparents selected meshes away from the empty rider root. Snapshot diagnostics now inspect the active rider scene and exclude bike maps; targeted regression passes. This corrects payload evidence only; physical iPhone FPS remains unmeasured.
 
 **Fresh actual grip trace verification (asks369/381/382):** New captures retain exact normalized hand/finger bar frames but vary distal-forearm visual interpolation. Finite-bar checker now admits explicitly proven cuff derivatives so the complete glove certificate can be measured against current played02 traces; original collision equations and source protections stay intact.
+
+**Candidate02 normal runtime verified (asks374–376/381/382):** Guarded frozen build5b766271c/sourcea069 completed cold loading and first Garage without reload, fetched selected source once, and rendered native75 with complete ASTC mip payloads. SETUP30 dwell93ms; normal C1 submitted59.96FPS on MacMetal. This remains a private runtime diagnosis, not cuff art acceptance or physical iPhone qualification.
