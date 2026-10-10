@@ -1,0 +1,43 @@
+{
+  "accepted": false,
+  "sourceSHA256": "a069b90c847734513ed8c79df596cfcfa0602363e767659655458eb045d319b7",
+  "sourceParity": {
+    "path": "harness/out/rider-rebuild/selected-cuff-finalize11/candidate02/parity.json",
+    "sha256": "73bfa534dddb69be8facb2ba40ddf51b2551f9b8051c17033aded59cac4596b9",
+    "pass": true
+  },
+  "contractSHA256": "ba355c07e5e520fa2a91e6c16e58ada3b7568212eb914855fa13f45161c34a5b",
+  "playedReportSHA256": "492ccaf5fa1d913bd67a29c1ba07773d543bc4fe7ec84b22f1a6d21280df0405",
+  "finiteBikeGeometrySource": "bike-rookie.glb",
+  "finiteBikeGeometrySHA256": "e55919d60267849358ef5e97f4731f42fac6eb2835b9998e1d146d056c0f10f7",
+  "bothAuthoredBikeSurfaceRecordsExact": true,
+  "poses": 241,
+  "profileSHA256": "659ff94c1611e0ce95310ab090e94637832ac2bbfbac7f9554f903595bd05972",
+  "method": "Exact authored finite44-triangle bar closest-face signed distance and segment/triangle crossings, unchanged source equations. Every reduced vertex/triangle and actual packed4slots including cuff; each captured full-arm pose uses native75 world matrices and bikeFrameWorld inverse. No fitting or pose mutation.",
+  "results": [
+    {
+      "side": "left",
+      "vertices": 154561,
+      "triangles": 243618,
+      "samples": 241,
+      "maxPenetrationMeters": 0,
+      "maxInsideVertices": 0,
+      "maxCrossingPairs": 0
+    },
+    {
+      "side": "right",
+      "vertices": 153861,
+      "triangles": 244038,
+      "samples": 241,
+      "maxPenetrationMeters": 0,
+      "maxInsideVertices": 0,
+      "maxCrossingPairs": 0
+    }
+  ],
+  "limits": [
+    "Finite collision/contact measure is not moving-art acceptance.",
+    "Semantic buckets use actual native influence and original source-row normal hemisphere relative to authored pulp labels/palm anatomy. Every positive forearm field is explicitly a cuff influence. Missing source pulp labels remain explicit unavailable buckets. Dorsal/pulp hemisphere inference is not independent anatomical certification. Surface normal dots are retained.",
+    "The original3mm expanded finite-bar AABB limits expensive vertex queries; all triangles receive original broadphase and edge-crossing checks. Unseen semantic buckets are outside this near-bar region.",
+    "Normal-only shading and phoneFPS remain parent gates."
+  ]
+}

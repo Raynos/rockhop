@@ -1,10 +1,10 @@
 /** Immutable selected source; both detail names intentionally draw the same high-resolution asset. */
-export const SELECTED_RIDER_BYTES = 101885432;
+export const SELECTED_RIDER_BYTES = 77876632;
 export const SELECTED_RIDER_ASSET = {
-  url: 'https://b47ghqoufyfsjh9t.public.blob.vercel-storage.com/rider-remaster/f814b8d7cde87b1e41b45eec75cd55fdea89b915bf9acae0e5a18b40d3a156af/rider.glb',
+  url: 'https://b47ghqoufyfsjh9t.public.blob.vercel-storage.com/rider-remaster/a069b90c847734513ed8c79df596cfcfa0602363e767659655458eb045d319b7/rider.glb',
   bytes: SELECTED_RIDER_BYTES,
-  sha256: 'f814b8d7cde87b1e41b45eec75cd55fdea89b915bf9acae0e5a18b40d3a156af',
-  contractSHA256: '0301087649f7e2b2c442299bb21f61dc1e325c6b5b84afbc3ac5c4a594b72813',
+  sha256: 'a069b90c847734513ed8c79df596cfcfa0602363e767659655458eb045d319b7',
+  contractSHA256: 'ba355c07e5e520fa2a91e6c16e58ada3b7568212eb914855fa13f45161c34a5b',
 } as const;
 
 export function isSelectedRiderLogical(path: string): boolean {

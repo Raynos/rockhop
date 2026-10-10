@@ -26,3 +26,16 @@ a069 played02 full-glove contact measurement follows.
 
 Limits: This admits an honest derivative measurement; no collision threshold
 or equation changes, and no physical iPhone or universal cuff claim.
+
+Finding: Promote the selected77.88MB derivative with fitted bilateral digits
+and distributed native forearm rotation. All selected maps/glove/native
+records are protected; original masters remain. Both actual bike grips now
+pass full-surface contact; parent accepts focused moving presentation.
+
+Validation: Fresh Rookie and Pro241-pose whole-glove checks each havezero
+bar penetration/inside vertices/triangle crossings and all five pulp buckets.
+Public immutable body hashes exactly. Gate15/15 and normal loading/runtime
+pass; source/header/hash match frozen packet. Checked deployment follows.
+
+Limits: Terminal cuff/hem overlaps remain, with no universal cloth pass.
+Broader rider art stays paused; physical iPhone pacing/loading remains open.
