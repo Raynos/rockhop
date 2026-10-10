@@ -1,0 +1,110 @@
+{
+  "accepted": false,
+  "schema": "selected-cuff-junction-attribution-summary-v1",
+  "sourceUnchanged": true,
+  "crossingReportRemainsFailed": true,
+  "sourceFaceSummary": {
+    "L": {
+      "uniqueFaces": 19,
+      "centroidWristStationMeters": [
+        -0.002271384310029428,
+        0.03057003417174505
+      ],
+      "originalOuterSheetCornerCounts": {
+        "2": 13,
+        "3": 2,
+        "1": 4
+      },
+      "centroidsBehindAnotherSourceOutwardSheetByMoreThan10Microns": [
+        97924
+      ]
+    },
+    "R": {
+      "uniqueFaces": 30,
+      "centroidWristStationMeters": [
+        0.009433389032287146,
+        0.06166730731451922
+      ],
+      "originalOuterSheetCornerCounts": {
+        "3": 12,
+        "2": 14,
+        "1": 4
+      },
+      "centroidsBehindAnotherSourceOutwardSheetByMoreThan10Microns": [
+        718
+      ]
+    }
+  },
+  "playedEndpointContactLines": [
+    {
+      "bike": "rookie",
+      "tick": 1200,
+      "side": "L",
+      "pairsWithin10MicronsOfPlayedSightlineFront": 130,
+      "pixelBounds1440x900": [
+        [
+          1067.4993765347222,
+          464.2431043201622
+        ],
+        [
+          1073.4615507884125,
+          495.22924354371224
+        ]
+      ]
+    },
+    {
+      "bike": "rookie",
+      "tick": 1200,
+      "side": "R",
+      "pairsWithin10MicronsOfPlayedSightlineFront": 16,
+      "pixelBounds1440x900": [
+        [
+          452.86100548380136,
+          556.6365068681757
+        ],
+        [
+          458.5286063431399,
+          564.8642657902062
+        ]
+      ]
+    },
+    {
+      "bike": "pro",
+      "tick": 1200,
+      "side": "L",
+      "pairsWithin10MicronsOfPlayedSightlineFront": 7,
+      "pixelBounds1440x900": [
+        [
+          973.1689791946549,
+          563.1168316178895
+        ],
+        [
+          978.797522972179,
+          588.5726964681693
+        ]
+      ]
+    },
+    {
+      "bike": "pro",
+      "tick": 1200,
+      "side": "R",
+      "pairsWithin10MicronsOfPlayedSightlineFront": 101,
+      "pixelBounds1440x900": [
+        [
+          343.8411827810095,
+          441.95336794465726
+        ],
+        [
+          361.73489253452453,
+          513.4698052135464
+        ]
+      ]
+    }
+  ],
+  "finding": "Residual focused-pose intersections lie at the terminal cuff/glove junction. They are not all hidden caps: most source centroids are outer radial sheet and some junction lines are directly visible. Original proximal forearm leakface99621 is absent. Parent moving review determines the focused visual release; this does not establish universally intersection-free cloth.",
+  "limits": [
+    "Ten-micron sightline grouping describes numerical contact at the crossing point only; no crossings are removed or converted into a universal pass.",
+    "This camera attribution covers10 original-fixture poses. Complete original and exact current482-pose source-face coverage is separately recorded in qualification.json; no exact original/current pose identity is claimed.",
+    "No hidden-cap claim for actual outward source faces, no phone acceptance, no release authority."
+  ]
+}

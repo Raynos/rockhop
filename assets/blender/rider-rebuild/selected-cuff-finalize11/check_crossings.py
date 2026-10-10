@@ -24,7 +24,7 @@ def exact_crossings(a,b):
    coplanar|=parallel&(plane<=64*np.finfo(float).eps*pscale)
  return result,points,crossings,coplanar
 
-def main(intake,fit_path,out_path,mode='all'):
+def main(intake,fit_path,out_path,mode='all',resume_path=''):
  a=np.array([[[0.,0.,0.],[1.,0.,0.],[0.,1.,0.]]])
  b=np.array([[[.2,.2,-1.],[.2,.2,1.],[.7,.2,0.]]])
  assert exact_crossings(a,b)[0][0], 'Known crossing must be reported'
@@ -39,13 +39,23 @@ def main(intake,fit_path,out_path,mode='all'):
   faces=candidates[(np.sum(normals*radial,axis=1)>0)&(signed>=0)]
   # Entire actual glove, including native digit surfaces, participates.
   sides[side]={'g':g,'faces':faces}
- result={'schema':'selected-cuff-finite-crossing-v1','accepted':False,'source':report['source'],'patchSHA256':D['sha'](fit/'patch.npz'),'samples':[],
+ result={'schema':'selected-cuff-finite-crossing-v1','accepted':False,'source':report['source'],'patchSHA256':D['sha'](fit/'patch.npz'),'fitReportSHA256':D['sha'](fit/'report.json'),'playedReports':report['playedReports'],'samples':[],
   'method':'Actual native75 pose matrices; all actual glove triangles versus retained source exterior sleeve sheet. BVH candidates confirmed by float64 finite segment-triangle intersection in both directions. Native digit surfaces remain eligible; no must-hide ray ownership is used.',
   'limits':['Finite recorded poses, not unseen-pose proof.','Original radial exterior-sheet identity excludes retained internal sleeve caps/folds; moving parent visibility remains required.','Coplanar ambiguous pairs are reported separately and never called a pass.']}
+ completed=set()
+ if resume_path:
+  previous=json.loads(Path(resume_path).read_text())
+  assert previous['patchSHA256']==result['patchSHA256'] and previous['playedReports']==result['playedReports']
+  assert previous['fitReportSHA256']==result['fitReportSHA256']
+  result['samples']=previous['samples'];completed={(q['bike'],q['tick'],q['side']) for q in result['samples']}
+  assert len(completed)==len(result['samples'])
+  result['resumedFrom']={'path':resume_path,'sha256':D['sha'](resume_path),'completedSidePoseSamples':len(completed)}
  for bike,played in report['playedReports'].items():
   poses=json.loads(Path(played['path']).read_text())['played']['motionSamples'];assert len(poses)==241
   if mode!='all':poses=[q for q in poses if q['tick'] in [0,265,280,600,1200]]
   for pi,sample in enumerate(poses):
+   if all((bike,sample['tick'],side) in completed for side in ['L','R']):continue
+   assert all((bike,sample['tick'],side) not in completed for side in ['L','R'])
    byname={j['id']:j['worldMatrix'] for j in sample['joints']};world=np.array([byname[n] for n in names]).reshape(-1,4,4).transpose(0,2,1);mat=world@h['ib'];hp=D['skin'](z['positionsAfter'],z['jointsAfter'],z['weightsAfter'],mat)
    for side,data in sides.items():
     g=data['g'];gp=D['skin'](g['POSITION'],g['JOINTS_0'],g['WEIGHTS_0'],mat);faces=data['faces'];ht=D['tree'](hp,f[faces]);gt=D['tree'](gp,g['indices']);pairs=np.array(ht.overlap(gt),dtype=int).reshape(-1,2)
