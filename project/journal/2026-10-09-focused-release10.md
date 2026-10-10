@@ -59,3 +59,14 @@ measurements; no code or asset changed in this documentation round.
 
 Limits: Broad production stays paused/unaccepted. Physical Level01 FPS
 and first-Garage acceptance cannot be inferred from Mac measurements.
+
+Finding: Required final-round boot/clear/crash/restart checks remain green
+after the release and plan checkpoints, using the frozen final source.
+
+Validation: Unchanged memory guard admits run16.36seconds; gate03 passes
+all15checks, including bit-equal finish/hash and deterministic replay.
+Foreign dist and previous partial metrics are restored in finally.
+Live d98497f first-Garage smoke separately proves public delivery.
+
+Limits: Frozen build03 records5b766271c with exact selecteda069 pins,
+not a physical phone. No full-remaster or phone acceptance is claimed.
