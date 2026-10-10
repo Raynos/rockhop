@@ -50,3 +50,12 @@ Authenticated inbox changes from503 to200, four existing entries/zero new.
 
 Limits: Public first-Garage smoke follows. Physical iPhone FPS/loading and
 terminal cuff/hem art remain open; the broad remaster is still paused.
+
+Finding: Replace stale private-candidate instructions in the active plan
+with the checked selected-source release and the remaining phone gate.
+
+Validation: Plan matches public d98497f6c/a069 identities and run03/contact
+measurements; no code or asset changed in this documentation round.
+
+Limits: Broad production stays paused/unaccepted. Physical Level01 FPS
+and first-Garage acceptance cannot be inferred from Mac measurements.

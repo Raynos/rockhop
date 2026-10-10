@@ -998,35 +998,48 @@ control fixtures and the isolated phone comparison do not complete milestones.
 
 ### Focused phone blockers — October9
 
-The broad rebuild remains paused. Asks369/372–377 authorize only bilateral
-hand grip, selected-source delivery optimization, startup/first-Garage loading
-and actual Level01 performance toward the user's informal90% milestone.
-The sixth comparison outfit preserves all five original riders and the chosen
+The broad rebuild remains paused. Asks369/372–377 authorize bilateral grip,
+selected-source delivery optimization, startup/first-Garage loading and
+actual Level01 performance toward the user's informal90% milestone.
+The sixth comparison outfit preserves all five original riders and chosen
 remaster face, hair, hoodie, jeans, distinct left/right gloves and boots.
-Required preload before the menu supersedes the earlier on-demand comparison
-loader. No generic replacements or delayed placeholder rider.
+Required preload before the menu supersedes on-demand comparison loading.
+No generic replacements or delayed placeholder rider.
 
-- Loading: checked public build28b0390 cancels startup-only late SW reloads,
-  displays real offline asset completion and overlaps six code resources with
-  at most four requests while awaiting complete response bodies. Phone cause
-  and first-Garage recovery still require the user's device verdict.
-- Delivery: private585ae314 candidate is74,833,728bytes,783,580triangles and
-  223,843,848bytes of measured ASTC/BC7 textures plus decoded geometry.
-  Selected protected streams and native75/225 remain exact. Density/detail
-  transfer outliers stay explicit; moving review precedes promotion.
-- Grip: independent source profile659ff supplies articulated finger/thumb
-  rotations and explicit fitted palm socket positions/orientations. Actual
-  reduced-surface full-arm/cuff contact and both-bike forward/back motion
-  must pass parent review before replacing player controls.
-- Runtime: normal Mac Metal C1 submits59.98FPS with68.18% fewer triangles;
-  fresh normal flow loads in7.576seconds, fetches the selected rider once and
-  retains one document through Garage and gameplay without context loss.
-  Observed C1DPR1.5/canvas1266x585 matches the baseline render scale; this
-  proves neither physical iPhone performance nor resolution3 rendering.
+Checked production build `d98497f6c` is live; deployment38007837120 passed
+all CI/release steps and independent public version/source/contract checks.
 
-Next visible deliverable: qualified moving Garage orbit and both-bike lean
-clips using that exact optimized source/profile, followed by checked sixth
-outfit comparison deployment. HR27 requires instantaneous Garage selection,
-no initial30% stall/reload and sustained physical Level01>30FPS, with60FPS
-preferred. Keep R0–R5 open and all six milestones unaccepted; an informal85%
-progress estimate does not close the broad plan or device gates.
+- Loading: real pack-completion progress, bounded four-worker resource
+  warmup and startup-only service-worker handover fixes are shipped.
+  Corrected-source cold loader completes in4.353seconds in the normal Mac
+  run; SETUP30% dwell93ms, first Garage488.5ms and resident equip259.3ms.
+  Selected source fetched once; no second document, context loss or loader
+  reinsertion. These are automated diagnosis timings, not phone acceptance.
+- Delivery: live sourcea069b90c is77,876,632bytes and783,580triangles,
+  wire23.56% and triangles69.58% below the previous selected public source.
+  Native75/rest/225channels, selected maps and certified glove streams are
+  protected. Original masters remain. Actual21ASTC mip payloads total
+  187,433,520bytes plus three tiny defaults; this is retained data, not a
+  measured GPU allocation. Both-bike lean and full seated Garage review
+  pass for focused engine delivery; boot/clear/crash/restart/replay15/15.
+- Grip: profile659ff94c supplies fitted palm sockets, articulated digits and
+  thumb opposition. Native forearm rotation shares twist across two segments
+  instead of forcing it into the wrist. Fresh complete-glove finite-bar
+  checks pass241actual forward/back/return poses on each bike, with zero
+  penetration/inside vertices/crossings and all five pulp buckets present.
+  Original forearm glove islands are absent in played review. Terminal
+  cuff/hem overlaps remain explicit; universal cloth clearance is false.
+- Runtime: normal Mac Metal C1 submits59.96FPS with68.18% fewer triangles
+  at baselineDPR1.5/canvas1266x585. This proves neither iPhone>30FPS nor the
+  requested60FPS target. Actual riding receipts record source/build/native/
+  grip, frame timing, DPR and selected mip formats. Production review inbox
+  is restored securely and can now receive the phone report.
+
+Next required visible result: on live landscape iPhone Safari/Home Screen,
+confirm initial preload and instantaneous sixth-outfit Garage comparison
+without30% stall/reload, then ride Level01 normally for25seconds and send
+its20second FPS receipt through **✎ Note** while riding (`?review=1`). HR27
+owns the physical>30FPS floor/60FPS target and loading judgment. Parent
+will diagnose any measured failure from that actual source/device receipt.
+Keep R0–R5 open and all six broad milestones unaccepted; this focused release
+and an informal visual percentage do not close broad art or device gates.
