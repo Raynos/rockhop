@@ -39,3 +39,14 @@ pass; source/header/hash match frozen packet. Checked deployment follows.
 
 Limits: Terminal cuff/hem overlaps remain, with no universal cloth pass.
 Broader rider art stays paused; physical iPhone pacing/loading remains open.
+
+Finding: Checked release d98497f6c now publicly serves the selected77.88MB
+rider and fitted bilateral grip. Restore the existing review password as
+a production Secret so the phone FPS inbox can receive real measurements.
+
+Validation: Run38007837120 passes full CI and deployment; public version,
+source and exact normalized contract pass independent HTTP assertions.
+Authenticated inbox changes from503 to200, four existing entries/zero new.
+
+Limits: Public first-Garage smoke follows. Physical iPhone FPS/loading and
+terminal cuff/hem art remain open; the broad remaster is still paused.
